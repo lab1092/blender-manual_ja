@@ -6,7 +6,7 @@ CHAPTERS:=$(notdir $(sort $(CHAPTERS_FULL:%/=%)))
 # intersect make goals and possible chapters
 QUICKY_CHAPTERS=$(filter $(MAKECMDGOALS),$(CHAPTERS))
 
-$(CHAPTERS): all
+$(CHAPTERS): all gettext
 
 all:
 	# './' (input), './html/' (output)
@@ -14,15 +14,28 @@ all:
 	sphinx-build -b html ./manual ./html
 	@echo "firefox" $(shell pwd)"/html/"
 
-pdf:
+allja:
+	# './' (input), './html/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	sphinx-build -b latex ./manual ./latex
+	sphinx-build -D language='ja' -b html ./manual ./html
+	@echo "firefox" $(shell pwd)"/html/"
+
+    
+gettext:
+	# './' (input), './locale/' (output)
+	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+	sphinx-build -b gettext ./manual ./locale
+	@echo "pot files are updated. "
+
+pdf:
+	sphinx-build -b gettext -a -E -c ./manual . ./locale/
 	make -C ./latex
 	@echo "evince latex/blender_manual.pdf"
 
 
+
 clean:
-	rm -rf html latex
+	rm -rf html latex locale
 
 
 # -----------------------------------------------------------------------------
@@ -36,4 +49,5 @@ help:
 	@echo "Chapters - for quickly building a single chapter"
 
 	@$(foreach ch,$(CHAPTERS),echo "- "$(ch);)
+	
 
