@@ -138,6 +138,7 @@ Translation steps for blender-manual
 *************************************
 
 below is a sample for adding 'ja' locale.
+you can try translation to your own Sphinx project.
 
 :projectroot: ~/GitHub/blender-manual_i18n
 :documentroot: ~/GitHub/blender-manual_i18n/manual
@@ -157,14 +158,16 @@ Edit files
 
 Add 'allja' and 'gettext' target to ./Makefile
 
-   ::
+   .. code-block::
+
       allja:
           # './' (input), './html/' (output)
           QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
           sphinx-build -D language='ja' -b html ./manual ./html
           @echo "firefox" $(shell pwd)"/html/"  
 
-   ::
+   .. code-block::
+
       gettext:
 	      # './' (input), './locale/' (output)
 	      QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
@@ -175,7 +178,8 @@ Add 'allja' and 'gettext' target to ./Makefile
 
 Add locale directory and gettext option to manual/conf.py
 
-   ::
+   .. code-block::
+
       locale_dirs = ['./']   # path is example but recommended.
       gettext_compact = False     # optional. 
 
@@ -185,14 +189,18 @@ Bluld POT files
 
 after add 'gettext' target , run ``make gettext`` command.
 
-   :: 
+   .. code-block::
+
       $ make gettext
 
 
 Update message file
 ======================
 
-   :: 
+To sync messages to ja locale, run the command
+
+   .. code-block::
+
       $ sphinx-intl update -d manual -p ./locale -l ja
 
 
@@ -201,14 +209,17 @@ Translate it
 
 You can translate message text (.po file ). 
 
-   Before:
-   :: 
+   Before
+   
+   .. code-block:: 
       #: ../manual/contents.rst:3
       msgid "Blender Manual contents"
       msgstr ""
 
-   After:
-   :: 
+   After
+
+   .. code-block::
+    
       #: ../manual/contents.rst:3
       msgid "Blender Manual contents"
       msgstr "Blenderマニュアルコンテンツ"
@@ -218,13 +229,21 @@ Build i18ned html
 
 Bulid mo files:
 
-   :: 
+   .. code-block::
+    
       $ sphinx-intl build -d manual
 
-Bulid html files:
+Bulid html files
 
-   :: 
+   .. code-block::
+    
       $ make allja
+
+Japanese Transletion(only Top page)
+=====================================
+
+* http://lab1092.site44.com/blender-manual_ja/contents.html
+
 
 
 
