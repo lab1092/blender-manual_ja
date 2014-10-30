@@ -212,6 +212,7 @@ You can translate message text (.po file ).
    Before
    
    .. code-block:: 
+   
       #: ../manual/contents.rst:3
       msgid "Blender Manual contents"
       msgstr ""
