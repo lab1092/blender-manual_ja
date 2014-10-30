@@ -1,0 +1,2697 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-30 21:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../manual/materials/properties/transparency.rst:3
+msgid "Transparency"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:5
+msgid "Reference"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:12
+msgid ""
+"Materials in Blender can be set to be transparent, so that light can pass "
+"through any objects using the material. Transparency is controlled using an "
+"\"alpha\" channel, where each pixel has an additional value, range 0-1, in "
+"addition to its RGB color values. If alpha=0, then the pixel is transparent,"
+" and the RGB values for the surface contribute nothing to the pixel's "
+"appearance; for alpha=1, the surface is fully opaque, and the color of the "
+"surface determines the final color of the pixel."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:23
+msgid "Transparency Panel"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:26
+msgid ""
+"In Blender, there are three ways in which the transparency of a material can"
+" be set: Mask, Z-Buffer and Ray-trace. Each of these is explained in more "
+"detail below. The :doc:`Material Preview </materials/properties/preview>` "
+"option with a sphere object gives a good demonstration of the capabilities "
+"of these three options."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:33
+msgid "Common Options"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:35
+msgid ""
+"The following property controls are available for all transparency options:"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:37
+msgid "Alpha"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:38
+msgid ""
+"Sets the transparency of the material by setting all pixels in the alpha "
+"channel to the given value."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:43
+#: ../manual/materials/properties/transparency.rst:174
+msgid "Fresnel"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:40
+msgid ""
+"Sets the power of the Fresnel effect. The Fresnel effect controls how "
+"transparent the material is, depending on the angle between the surface "
+"normal and the viewing direction. Typically, the larger the angle, the more "
+"opaque a material becomes (this generally occurs on the outline of the "
+"object)."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:45
+msgid "Specular -"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:46
+msgid "Controls the alpha/falloff for the specular color."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:49
+msgid "Blend"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:48
+msgid ""
+"Controls the blending between transparent and non-transparent areas. Only "
+"used if Fresnel is greater than 0."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:51
+msgid "Mask"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:56
+msgid ""
+"This option simply masks the Background.  It uses the alpha channel to mix "
+"the color of each pixel on the active object plane with the color of the "
+"corresponding background pixel, according to the alpha channel of the pixel."
+" Thus for alpha = 1, the object color is seen - the object is completely "
+"opaque; but if alpha = 0, only the background is seen - the object is "
+"transparent (but note that any other object behind the active object "
+"disappears)."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:63
+msgid ""
+"This is useful for making textures of solid or semi-transparent objects from"
+" photographic reference material - a mask is made with alpha opaque for "
+"pixels within the object, and transparent for pixels outside the object."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:67
+msgid ""
+"See :doc:`Mask Transparency </materials/properties/mask_transparency>`."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:71
+msgid "Z Buffer"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:73
+msgid ""
+"This uses the alpha buffer for transparent faces. The alpha value of each "
+"pixel determines the mix of the basic color of the material, and the color "
+"of the pixel is determined from the objects/background behind it. Only basic"
+" settings are available with this option; it does not calculate refractions."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:80
+msgid "Raytraced Transparency"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:82
+msgid ""
+"Uses ray tracing to calculate refractions. Ray tracing allows for complex "
+"refractions, falloff, and blurring, and is used for simulating the "
+"refraction of light rays through a transparent material, like a lens."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:87
+msgid ""
+"Note that the RayTrace option is only available in the Blender Render and "
+"Cycles render engines, but not in the Game Engine."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:90
+msgid ""
+"A ray is sent from the camera and travels through the scene until it "
+"encounters an object. If the first object hit by the ray is non-transparent,"
+" then the ray takes the color of the object."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:94
+msgid ""
+"If the object is transparent, then the ray continues its path through it to "
+"the next object, and so on, until a non-transparent object is finally "
+"encountered which gives the whole chain of rays its color. Eventually, the "
+"first transparent object inherits the colors of its background, proportional"
+" to its :guilabel:`Alpha` value (and the Alpha value of each transparent "
+"Material hit in between)."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:101
+msgid ""
+"But while the ray travels through the transparent object, it can be "
+"deflected from its course according to the Index of Refraction (IOR) of the "
+"material. When you actually look through a plain sphere of glass, you will "
+"notice that the background is upside-down and distorted: this is all because"
+" of the Index of Refraction of glass."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:108
+msgid "Enable Raytracing"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:110
+msgid "To get ray-traced transparency, you need to:"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:112
+msgid ""
+"enable ray tracing in your Render settings.  This is done in the Render "
+"context  → Shading Panel. Ray tracing is enabled by default."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:113
+msgid "set your Alpha value to something other than 1.0."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:114
+msgid ""
+"in order for the background material to receive light passing through your "
+"transparent object, :guilabel:`Receive Transparent` must be turned on for "
+"that material in the Material → Shadow panel."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:118
+msgid "Options"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:122
+msgid "The Transparency Panel."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:125
+msgid ""
+"In addition to the common options given above, the following property "
+"controls are available:"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:129
+msgid "IOR"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:128
+msgid ""
+"Index of Refraction.  Sets how much a ray traveling through the material "
+"will be refracted, hence producing a distorted image of its background.  See"
+" FIXME(TODO: Internal Link; [[#IOR values for Common Materials|IOR values "
+"for Common Materials]]) below."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:132
+msgid "Filter"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:132
+msgid ""
+"Amount of filtering for transparent ray trace. The higher this value, the "
+"more the base color of the material will show. The material will still be "
+"transparent but it will start to take on the color of the material. Disabled"
+" (0.0) by default."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:134
+msgid "Falloff"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:135
+msgid ""
+"How fast light is absorbed as it passes through the material. Gives 'depth' "
+"and 'thickness' to glass."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:137
+msgid "Limit"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:137
+msgid ""
+"Materials thicker than this are not transparent. This is used to control the"
+" threshold after which the filter color starts to come into play."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:146
+#: ../manual/materials/properties/transparency.rst:200
+msgid "Depth"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:140
+msgid ""
+"Sets the maximum number of transparent surfaces a single ray can travel "
+"through. There is no typical value. Transparent objects outside the "
+":guilabel:`Depth` range will be rendered pitch black if viewed through the "
+"transparent object that the :guilabel:`Depth` is set for.  In other words, "
+"if you notice black areas on the surface of a transparent object, the "
+"solution is probably to increase its :guilabel:`Depth` value (this is a "
+"common issue with ray tracing transparent objects). You may also need to "
+"turn on transparent shadows on the background object."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:157
+msgid "Gloss"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:149
+msgid "Settings for the glossiness of the material."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:151
+msgid "Amount"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:152
+msgid ""
+"The clarity of the refraction. Set this to something lower than zero to get "
+"a blurry refraction."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:153
+msgid "Threshold"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:154
+msgid ""
+"Threshold for adaptive sampling. If a sample contributes less than this "
+"amount (as a percentage), sampling is stopped."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:157
+msgid "Samples"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:156
+msgid "Number of cone samples averaged for blurry refraction."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:160
+msgid "Examples"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:163
+msgid "Index of Refraction"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:167
+msgid ""
+"Influence of the IOR of an Object on the distortion of the background: "
+"spheres of Water, Glass and Diamond (top to bottom)."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:170
+msgid ""
+"(*Influence of the IOR of an Object on the distortion of the background: "
+"spheres of Water, Glass  and Diamond (top to bottom).*). There are different"
+" values for typical materials: Air is **1.000** (no refraction), Alcohol is "
+"**1.329**, Glass is **1.517**, Plastic is **1.460**, Water is **1.333** and "
+"Diamond is **2.417**."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:181
+msgid ""
+"16 pieces of glass rotated in various directions demonstrate the angle-"
+"dependent Fresnel effect with ray-traced (left) and alpha buffered "
+"transparency (right).  Note that the major difference is the lack of IOR "
+"effect in the latter case.  (Download `.blend "
+"<http://wiki.blender.org/index.php/:File:Manual25-Material-"
+"FresnelExample.blend>`__.)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:187
+msgid ""
+"Settings for Fresnel using ray-traced (left) and Z transparency (right)."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:191
+msgid ""
+"Note the specular highlight in the F4 glass tile (which is facing midway "
+"between the light and the camera); the Fresnel effect can be seen in row C "
+"and column 6 where the faces are turned away from the camera."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:195
+msgid ""
+"The amount of Fresnel effect can be controlled by either increasing the "
+":guilabel:`Blend` value or decreasing the :guilabel:`Alpha` value."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:206
+msgid ""
+"A simple scene with three glasses on a surface, and three lamps.  Depth was "
+"set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min,"
+" and 11 min respectively. (Download `.blend "
+"<http://wiki.blender.org/index.php/:File:Manual25-Material-"
+"3GlassesExample.blend>`__.)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:209
+msgid ""
+"Increasing :guilabel:`Depth` also considerably increases render time. Each "
+"time a light ray passes through a surface, the ray-tracing algorithm is "
+"called recursively.  In the example above, each side of each glass has an "
+"exterior and an interior surface. Light rays thus have to pass through four "
+"surfaces for each glass."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:215
+msgid ""
+"But not only that, at every point on a surface, some of the light can be "
+"reflected, or mirrored off the surface in various directions. This results "
+"in multiple rays needing to be calculated for each point (often referred to "
+"as a **tree of rays** [http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle. "
+"html]). In each of the rendered images above there are 640×400=256 000 "
+"pixels. By increasing :guilabel:`Depth`, at least one tree of rays is added "
+"to each pixel."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:222
+msgid ""
+"Be kind to your computer. Carefully placing objects in a scene to avoid "
+"overlapping transparent objects is often an interesting alternative."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:227
+msgid "Hints"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:230
+msgid "Transparent shadows"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:237
+msgid "No transparent shadows"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:237
+msgid "No transparent shadows, environment lighting enabled"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:243
+msgid "Transparent shadows enabled, alpha set to 0.0"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:243
+msgid "As previous, alpha set to 0.25"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:249
+msgid ""
+"Transparent shadows with ambient occlusion set to multiply, distance 1 "
+"(radius of sphere)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:249
+msgid "As previous, distance increased to 2 (diameter of sphere)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:252
+msgid ""
+"By default, the shadows of transparent objects are rendered solid black, as "
+"if the object was not transparent at all. But in reality, the more "
+"transparent an object is, the lighter its shadow will be."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:256
+msgid ""
+"In Blender, transparent shadows are set on the materials that receive the "
+"shadows from the transparent object. This is enabled and disabled with the "
+":guilabel:`Receive Transparent` button, in the :guilabel:`Material` context "
+"→ :guilabel:`Shadow` panel. The shadow's brightness is dependent on the "
+":guilabel:`Alpha` value of the shadow casting material."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:262
+msgid ""
+"Alternatives to transparent ray-traced shadows can be found in the "
+":guilabel:`World` context, namely the :guilabel:`Ambient Occlusion`, "
+":guilabel:`Environment Lighting`, and :guilabel:`Gather` panels.  "
+"Alternatively, a texture can be used to control the :guilabel:`Intensity` "
+"value of the shadow-receiving material."
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:269
+msgid "IOR values for Common Materials"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:271
+msgid ""
+"The following list provides some index of refraction values to use when ray-"
+"traced transparency is used for various liquids, solids (gems), and gases:"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:274
+msgid "Acetone"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:275
+#: ../manual/materials/properties/transparency.rst:289
+#: ../manual/materials/properties/transparency.rst:471
+#: ../manual/materials/properties/transparency.rst:473
+msgid "``1.36``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:276
+msgid "Actinolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:277
+msgid "``1.618``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:278
+msgid "Agalmatolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:279
+#: ../manual/materials/properties/transparency.rst:407
+#: ../manual/materials/properties/transparency.rst:859
+msgid "``1.550``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:280
+#: ../manual/materials/properties/transparency.rst:282
+msgid "Agate"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:281
+#: ../manual/materials/properties/transparency.rst:725
+#: ../manual/materials/properties/transparency.rst:769
+#: ../manual/materials/properties/transparency.rst:817
+msgid "``1.544``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:283
+#: ../manual/materials/properties/transparency.rst:303
+#: ../manual/materials/properties/transparency.rst:429
+#: ../manual/materials/properties/transparency.rst:583
+#: ../manual/materials/properties/transparency.rst:591
+#: ../manual/materials/properties/transparency.rst:701
+#: ../manual/materials/properties/transparency.rst:703
+#: ../manual/materials/properties/transparency.rst:741
+msgid "``1.540``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:284
+msgid "Air"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:285
+msgid "``1.000``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:286
+msgid "Alcohol"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:287
+#: ../manual/materials/properties/transparency.rst:621
+msgid "``1.329``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:288
+msgid "Alcohol, Ethyl (grain)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:290
+#: ../manual/materials/properties/transparency.rst:292
+msgid "Alexandrite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:291
+#: ../manual/materials/properties/transparency.rst:397
+#: ../manual/materials/properties/transparency.rst:503
+msgid "``1.745``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:293
+msgid "``1.750``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:294
+msgid "Almandine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:295
+msgid "``1.83``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:296
+msgid "Aluminum"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:297
+msgid "``1.44``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:298
+msgid "Amber"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:299
+msgid "``1.545``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:300
+msgid "Amblygonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:301
+msgid "``1.611``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:302
+msgid "Amethyst"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:304
+msgid "Ammolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:305
+#: ../manual/materials/properties/transparency.rst:455
+#: ../manual/materials/properties/transparency.rst:637
+#: ../manual/materials/properties/transparency.rst:721
+#: ../manual/materials/properties/transparency.rst:845
+msgid "``1.600``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:306
+msgid "Anatase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:307
+msgid "``2.490``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:308
+msgid "Andalusite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:309
+msgid "``1.640``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:310
+msgid "Anhydrite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:311
+msgid "``1.571``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:312
+msgid "Apatite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:313
+msgid "``1.632``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:314
+msgid "Apophyllite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:315
+#: ../manual/materials/properties/transparency.rst:647
+msgid "``1.536``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:316
+msgid "Aquamarine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:317
+msgid "``1.575``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:318
+msgid "Aragonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:319
+#: ../manual/materials/properties/transparency.rst:617
+#: ../manual/materials/properties/transparency.rst:681
+#: ../manual/materials/properties/transparency.rst:753
+#: ../manual/materials/properties/transparency.rst:815
+msgid "``1.530``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:320
+msgid "Argon"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:321
+msgid "``1.000281``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:322
+msgid "Asphalt"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:323
+msgid "``1.635``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:324
+#: ../manual/materials/properties/transparency.rst:326
+msgid "Axinite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:325
+msgid "``1.674 - 1.704``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:327
+msgid "``1.675``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:328
+msgid "Azurite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:329
+#: ../manual/materials/properties/transparency.rst:805
+msgid "``1.730``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:330
+msgid "Barite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:331
+msgid "``1.636``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:332
+msgid "Barytocalcite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:333
+msgid "``1.684``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:334
+msgid "Beer"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:335
+msgid "``1.345``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:336
+msgid "Benitoite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:337
+msgid "``1.757``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:338
+msgid "Benzene"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:339
+msgid "``1.501``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:340
+msgid "Beryl"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:341
+msgid "``1.57 - 1.60``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:342
+msgid "Beryl, Red"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:343
+msgid "``1.570 - 1.598``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:344
+msgid "Beryllonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:345
+msgid "``1.553``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:346
+msgid "Brazilianite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:347
+msgid "``1.603``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:348
+msgid "Bromine (liq)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:349
+msgid "``1.661``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:350
+msgid "Bronze"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:351
+msgid "``1.18``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:352
+msgid "Brownite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:353
+msgid "``1.567``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:354
+msgid "Calcite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:355
+#: ../manual/materials/properties/transparency.rst:357
+#: ../manual/materials/properties/transparency.rst:425
+#: ../manual/materials/properties/transparency.rst:663
+msgid "``1.486``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:356
+msgid "Calspar"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:358
+msgid "Cancrinite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:359
+msgid "``1.491``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:360
+msgid "Carbon Dioxide (gas)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:361
+msgid "``1.000449``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:362
+msgid "Carbon Disulfide"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:363
+msgid "``1.628``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:364
+msgid "Carbon Tetrachloride"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:365
+#: ../manual/materials/properties/transparency.rst:695
+msgid "``1.460``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:366
+msgid "Carbonated Beverages"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:367
+msgid "``1.34 - 1.356``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:368
+msgid "Cassiterite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:369
+msgid "``1.997``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:370
+msgid "Celestite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:371
+msgid "``1.622``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:372
+msgid "Cerussite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:373
+msgid "``1.804``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:374
+msgid "Ceylonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:375
+msgid "``1.770``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:376
+msgid "Chalcedony"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:377
+#: ../manual/materials/properties/transparency.rst:715
+msgid "``1.544 - 1.553``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:378
+msgid "Chalk"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:379
+msgid "``1.510``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:380
+msgid "Chalybite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:381
+#: ../manual/materials/properties/transparency.rst:827
+msgid "``1.630``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:382
+msgid "Chlorine (gas)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:383
+msgid "``1.000768``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:384
+msgid "Chlorine (liq)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:385
+msgid "``1.385``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:386
+msgid "Chrome Green"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:387
+msgid "``2.4``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:388
+msgid "Chrome Red"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:389
+msgid "``2.42``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:390
+msgid "Chrome Tourmaline"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:391
+#: ../manual/materials/properties/transparency.rst:835
+#: ../manual/materials/properties/transparency.rst:837
+#: ../manual/materials/properties/transparency.rst:839
+#: ../manual/materials/properties/transparency.rst:843
+msgid "``1.61 - 1.64``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:392
+msgid "Chrome Yellow"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:393
+msgid "``2.31``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:394
+msgid "Chromium"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:395
+msgid "``2.97``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:396
+msgid "Chrysoberyl"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:398
+msgid "Chrysoberyl, Cat's eye"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:399
+msgid "``1.746 - 1.755``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:400
+msgid "Chrysocolla"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:401
+#: ../manual/materials/properties/transparency.rst:603
+#: ../manual/materials/properties/transparency.rst:625
+msgid "``1.500``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:402
+msgid "Chrysoprase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:403
+msgid "``1.534``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:404
+#: ../manual/materials/properties/transparency.rst:406
+msgid "Citrine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:405
+msgid "``1.532 - 1.554``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:408
+msgid "Clinohumite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:409
+msgid "``1.625 - 1.675``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:410
+msgid "Clinozoisite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:411
+msgid "``1.724``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:412
+msgid "Cobalt Blue"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:413
+msgid "``1.74``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:414
+msgid "Cobalt Green"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:415
+msgid "``1.97``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:416
+msgid "Cobalt Violet"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:417
+msgid "``1.71``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:418
+msgid "Colemanite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:419
+#: ../manual/materials/properties/transparency.rst:565
+msgid "``1.586``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:420
+msgid "Copper"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:421
+msgid "``1.10``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:422
+msgid "Copper Oxide"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:423
+msgid "``2.705``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:424
+#: ../manual/materials/properties/transparency.rst:426
+msgid "Coral"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:427
+msgid "``1.486 - 1.658``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:428
+msgid "Cordierite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:430
+msgid "Corundum"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:431
+msgid "``1.766``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:432
+msgid "Cranberry Juice (25%)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:433
+msgid "``1.351``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:434
+msgid "Crocoite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:435
+msgid "``2.310``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:436
+msgid "Crystal"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:437
+msgid "``2.000``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:438
+msgid "Cuprite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:439
+msgid "``2.850``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:440
+#: ../manual/materials/properties/transparency.rst:442
+msgid "Danburite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:441
+msgid "``1.627 - 1.641``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:443
+msgid "``1.633``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:444
+msgid "Diamond"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:445
+msgid "``2.417``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:446
+msgid "Diopside"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:447
+msgid "``1.680``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:448
+msgid "Dolomite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:449
+msgid "``1.503``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:450
+msgid "Dumortierite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:451
+msgid "``1.686``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:452
+msgid "Ebonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:453
+#: ../manual/materials/properties/transparency.rst:529
+msgid "``1.66``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:454
+msgid "Ekanite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:456
+msgid "Elaeolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:457
+#: ../manual/materials/properties/transparency.rst:479
+#: ../manual/materials/properties/transparency.rst:875
+msgid "``1.532``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:458
+msgid "Emerald"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:459
+#: ../manual/materials/properties/transparency.rst:461
+msgid "``1.560 - 1.605``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:460
+msgid "Emerald Catseye"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:462
+msgid "Emerald, Synth flux"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:463
+msgid "``1.561``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:464
+msgid "Emerald, Synth hydro"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:465
+msgid "``1.568``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:466
+msgid "Enstatite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:467
+msgid "``1.663``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:468
+msgid "Epidote"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:469
+msgid "``1.733``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:470
+msgid "Ethanol"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:472
+msgid "Ethyl Alcohol"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:474
+msgid "Euclase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:475
+msgid "``1.652``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:476
+msgid "Fabulite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:477
+msgid "``2.409``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:478
+msgid "Feldspar, Adventurine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:480
+msgid "Feldspar, Albite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:481
+#: ../manual/materials/properties/transparency.rst:483
+#: ../manual/materials/properties/transparency.rst:487
+#: ../manual/materials/properties/transparency.rst:629
+#: ../manual/materials/properties/transparency.rst:687
+msgid "``1.525``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:482
+msgid "Feldspar, Amazonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:484
+msgid "Feldspar, Labradorite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:485
+msgid "``1.565``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:486
+msgid "Feldspar, Microcline"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:488
+msgid "Feldspar, Oligoclase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:489
+#: ../manual/materials/properties/transparency.rst:789
+msgid "``1.539``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:490
+msgid "Flourite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:491
+msgid "``1.434``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:492
+msgid "Formica"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:493
+#: ../manual/materials/properties/transparency.rst:659
+msgid "``1.47``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:494
+msgid "Garnet, Andradite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:495
+msgid "``1.88 - 1.94``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:496
+#: ../manual/materials/properties/transparency.rst:498
+msgid "Garnet, Demantoid"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:497
+msgid "``1.880 - 1.9``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:499
+msgid "``1.880``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:500
+msgid "Garnet, Grossular"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:501
+msgid "``1.738``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:502
+msgid "Garnet, Hessonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:504
+msgid "Garnet, Mandarin"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:505
+msgid "``1.790 - 1.8``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:506
+msgid "Garnet, Pyrope"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:507
+msgid "``1.73 - 1.76``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:508
+#: ../manual/materials/properties/transparency.rst:510
+msgid "Garnet, Rhodolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:509
+msgid "``1.740 - 1.770``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:511
+msgid "``1.760``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:512
+msgid "Garnet, Spessartite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:513
+#: ../manual/materials/properties/transparency.rst:711
+msgid "``1.810``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:514
+msgid "Garnet, Tsavorite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:515
+msgid "``1.739 - 1.744``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:516
+msgid "Garnet, Uvarovite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:517
+msgid "``1.74 - 1.87``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:518
+msgid "Gaylussite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:519
+#: ../manual/materials/properties/transparency.rst:527
+msgid "``1.517``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:520
+msgid "Glass"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:521
+msgid "``1.51714``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:522
+msgid "Glass, Albite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:523
+msgid "``1.4890``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:524
+msgid "Glass, Crown"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:525
+#: ../manual/materials/properties/transparency.rst:793
+msgid "``1.520``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:526
+msgid "Glass, Crown, Zinc"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:528
+msgid "Glass, Flint, Dense"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:530
+msgid "Glass, Flint, Heaviest"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:531
+msgid "``1.89``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:532
+msgid "Glass, Flint, Heavy"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:533
+msgid "``1.65548``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:534
+msgid "Glass, Flint, Lanthanum"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:535
+msgid "``1.80``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:536
+msgid "Glass, Flint, Light"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:537
+msgid "``1.58038``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:538
+msgid "Glass, Flint, Medium"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:539
+msgid "``1.62725``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:540
+msgid "Glycerine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:541
+#: ../manual/materials/properties/transparency.rst:655
+msgid "``1.473``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:542
+msgid "Gold"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:543
+msgid "``0.47``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:544
+msgid "Hambergite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:545
+msgid "``1.559``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:546
+msgid "Hauyne"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:547
+msgid "``1.490 - 1.505``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:548
+msgid "Hauynite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:549
+#: ../manual/materials/properties/transparency.rst:689
+msgid "``1.502``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:550
+msgid "Helium"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:551
+msgid "``1.000036``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:552
+msgid "Hematite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:553
+msgid "``2.940``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:554
+msgid "Hemimorphite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:555
+msgid "``1.614``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:556
+msgid "Hiddenite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:557
+#: ../manual/materials/properties/transparency.rst:615
+msgid "``1.655``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:558
+msgid "Honey, 13% water content"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:559
+msgid "``1.504``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:560
+msgid "Honey, 17% water content"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:561
+msgid "``1.494``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:562
+msgid "Honey, 21% water content"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:563
+msgid "``1.484``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:564
+msgid "Howlite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:566
+msgid "Hydrogen (gas)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:567
+msgid "``1.000140``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:568
+msgid "Hydrogen (liq)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:569
+msgid "``1.0974``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:570
+msgid "Hypersthene"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:571
+#: ../manual/materials/properties/transparency.rst:661
+msgid "``1.670``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:572
+msgid "Ice"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:573
+msgid "``1.309``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:574
+msgid "Idocrase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:575
+msgid "``1.713``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:576
+msgid "Iodine Crystal"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:577
+msgid "``3.34``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:578
+msgid "Iolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:579
+msgid "``1.522 - 1.578``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:580
+msgid "Iron"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:581
+msgid "``1.51``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:582
+msgid "Ivory"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:584
+msgid "Jade, Jadeite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:585
+msgid "``1.64 - 1.667``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:586
+msgid "Jade, Nephrite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:587
+msgid "``1.600 - 1.641``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:588
+msgid "Jadeite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:589
+#: ../manual/materials/properties/transparency.rst:595
+msgid "``1.665``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:590
+msgid "Jasper"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:592
+msgid "Jet"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:593
+msgid "``1.660``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:594
+msgid "Kornerupine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:596
+msgid "Kunzite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:597
+msgid "``1.660 - 1.676``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:598
+msgid "Kyanite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:599
+msgid "``1.715``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:600
+msgid "Labradorite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:601
+#: ../manual/materials/properties/transparency.rst:671
+msgid "``1.560 - 1.572``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:602
+msgid "Lapis Gem"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:604
+msgid "Lapis Lazuli"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:605
+msgid "``1.50 - 1.55``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:606
+msgid "Lazulite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:607
+msgid "``1.615``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:608
+msgid "Lead"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:609
+msgid "``2.01``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:610
+msgid "Leucite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:611
+msgid "``1.509``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:612
+msgid "Magnesite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:613
+msgid "``1.515``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:614
+msgid "Malachite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:616
+msgid "Meerschaum"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:618
+msgid "Mercury (liq)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:619
+msgid "``1.62``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:620
+msgid "Methanol"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:622
+msgid "Milk"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:623
+#: ../manual/materials/properties/transparency.rst:813
+msgid "``1.35``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:624
+msgid "Moldavite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:626
+msgid "Moonstone"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:627
+msgid "``1.518 - 1.526``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:628
+msgid "Moonstone, Adularia"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:630
+msgid "Moonstone, Albite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:631
+#: ../manual/materials/properties/transparency.rst:649
+msgid "``1.535``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:632
+msgid "Morganite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:633
+msgid "``1.585 - 1.594``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:634
+msgid "Natrolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:635
+msgid "``1.480``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:636
+msgid "Nephrite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:638
+msgid "Nitrogen (gas)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:639
+msgid "``1.000297``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:640
+msgid "Nitrogen (liq)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:641
+msgid "``1.2053``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:642
+msgid "Nylon"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:643
+msgid "``1.53``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:644
+msgid "Obsidian"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:645
+msgid "``1.489``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:646
+msgid "Oil of Wintergreen"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:648
+msgid "Oil, Clove"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:650
+msgid "Oil, Lemon"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:651
+msgid "``1.481``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:652
+msgid "Oil, Neroli"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:653
+msgid "``1.482``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:654
+msgid "Oil, Orange"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:656
+msgid "Oil, Safflower"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:657
+msgid "``1.466``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:658
+msgid "Oil, vegetable (50- C)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:660
+msgid "Olivine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:662
+msgid "Onyx"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:664
+msgid "Opal, Black"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:665
+#: ../manual/materials/properties/transparency.rst:669
+msgid "``1.440 - 1.460``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:666
+msgid "Opal, Fire"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:667
+msgid "``1.430 - 1.460``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:668
+msgid "Opal, White"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:670
+msgid "Oregon Sunstone"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:672
+msgid "Oxygen (gas)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:673
+msgid "``1.000276``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:674
+msgid "Oxygen (liq)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:675
+msgid "``1.221``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:676
+msgid "Padparadja"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:677
+#: ../manual/materials/properties/transparency.rst:739
+msgid "``1.760 - 1.773``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:678
+msgid "Painite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:679
+msgid "``1.787``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:680
+msgid "Pearl"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:682
+msgid "Periclase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:683
+#: ../manual/materials/properties/transparency.rst:713
+msgid "``1.740``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:684
+msgid "Peridot"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:685
+msgid "``1.635 - 1.690``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:686
+msgid "Peristerite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:688
+msgid "Petalite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:690
+msgid "Phenakite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:691
+#: ../manual/materials/properties/transparency.rst:783
+msgid "``1.650``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:692
+msgid "Phosgenite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:693
+msgid "``2.117``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:694
+msgid "Plastic"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:696
+msgid "Plexiglas"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:697
+msgid "``1.50``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:698
+msgid "Polystyrene"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:699
+msgid "``1.55``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:700
+msgid "Prase"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:702
+msgid "Prasiolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:704
+msgid "Prehnite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:705
+#: ../manual/materials/properties/transparency.rst:821
+#: ../manual/materials/properties/transparency.rst:851
+msgid "``1.610``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:706
+msgid "Proustite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:707
+msgid "``2.790``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:708
+msgid "Purpurite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:709
+msgid "``1.840``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:710
+msgid "Pyrite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:712
+msgid "Pyrope"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:714
+msgid "Quartz"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:716
+msgid "Quartz, Fused"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:717
+msgid "``1.45843``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:718
+msgid "Rhodizite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:719
+#: ../manual/materials/properties/transparency.rst:873
+msgid "``1.690``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:720
+msgid "Rhodochrisite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:722
+msgid "Rhodonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:723
+msgid "``1.735``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:724
+msgid "Rock Salt"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:726
+msgid "Rubber, Natural"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:727
+msgid "``1.5191``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:728
+msgid "Ruby"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:729
+#: ../manual/materials/properties/transparency.rst:737
+msgid "``1.757 - 1.779``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:730
+msgid "Rum, White"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:731
+msgid "``1.361``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:732
+msgid "Rutile"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:733
+msgid "``2.62``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:734
+msgid "Sanidine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:735
+msgid "``1.522``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:736
+msgid "Sapphire"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:738
+msgid "Sapphire, Star"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:740
+msgid "Scapolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:742
+msgid "Scapolite, Yellow"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:743
+msgid "``1.555``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:744
+msgid "Scheelite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:745
+msgid "``1.920``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:746
+msgid "Selenium, Amorphous"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:747
+msgid "``2.92``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:748
+msgid "Serpentine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:749
+msgid "``1.560``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:750
+msgid "Shampoo"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:751
+msgid "``1.362``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:752
+msgid "Shell"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:754
+msgid "Silicon"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:755
+msgid "``4.24``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:756
+msgid "Sillimanite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:757
+msgid "``1.658``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:758
+msgid "Silver"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:759
+msgid "``0.18``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:760
+msgid "Sinhalite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:761
+msgid "``1.699``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:762
+msgid "Smaragdite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:763
+msgid "``1.608``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:764
+msgid "Smithsonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:765
+msgid "``1.621``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:766
+msgid "Sodalite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:767
+msgid "``1.483``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:768
+msgid "Sodium Chloride"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:770
+msgid "Spessartite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:771
+msgid "``1.79 - 1.81``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:772
+msgid "Sphalerite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:773
+msgid "``2.368``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:774
+msgid "Sphene"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:775
+msgid "``1.885``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:776
+msgid "Spinel"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:777
+msgid "``1.712 - 1.717``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:778
+msgid "Spinel, Blue"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:779
+msgid "``1.712 - 1.747``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:780
+msgid "Spinel, Red"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:781
+msgid "``1.708 - 1.735``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:782
+msgid "Spodumene"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:784
+msgid "Star Ruby"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:785
+msgid "``1.76 - 1.773``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:786
+msgid "Staurolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:787
+msgid "``1.739``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:788
+msgid "Steatite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:790
+msgid "Steel"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:791
+msgid "``2.50``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:792
+msgid "Stichtite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:794
+msgid "Strontium Titanate"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:795
+msgid "``2.410``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:796
+msgid "Styrofoam"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:797
+msgid "``1.595``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:798
+msgid "Sugar Solution 30%"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:799
+msgid "``1.38``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:800
+msgid "Sugar Solution 80%"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:801
+msgid "``1.49``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:802
+msgid "Sulphur"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:803
+#: ../manual/materials/properties/transparency.rst:887
+msgid "``1.960``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:804
+msgid "Synthetic Spinel"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:806
+msgid "Taaffeite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:807
+msgid "``1.720``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:808
+msgid "Tantalite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:809
+msgid "``2.240``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:810
+msgid "Tanzanite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:811
+msgid "``1.690-1.7``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:812
+msgid "Teflon"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:814
+msgid "Thomsonite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:816
+msgid "Tiger eye"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:818
+msgid "Topaz"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:819
+msgid "``1.607 - 1.627``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:820
+msgid "Topaz, Blue"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:822
+msgid "Topaz, Imperial"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:823
+msgid "``1.605 - 1.640``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:824
+msgid "Topaz, Pink"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:825
+#: ../manual/materials/properties/transparency.rst:829
+msgid "``1.620``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:826
+msgid "Topaz, White"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:828
+msgid "Topaz, Yellow"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:830
+#: ../manual/materials/properties/transparency.rst:832
+msgid "Tourmaline"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:831
+msgid "``1.603 - 1.655``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:833
+msgid "``1.624``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:834
+msgid "Tourmaline, Blue"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:836
+msgid "Tourmaline, Catseye"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:838
+msgid "Tourmaline, Green"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:840
+msgid "Tourmaline, Paraiba"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:841
+msgid "``1.61 - 1.65``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:842
+msgid "Tourmaline, Red"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:844
+msgid "Tremolite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:846
+msgid "Tugtupite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:847
+msgid "``1.496``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:848
+msgid "Turpentine"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:849
+msgid "``1.472``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:850
+msgid "Turquoise"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:852
+msgid "Ulexite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:853
+msgid "``1.490``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:854
+msgid "Uvarovite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:855
+msgid "``1.870``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:856
+msgid "Wardite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:857
+msgid "``1.590``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:858
+msgid "Variscite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:860
+msgid "Water (0- C)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:861
+msgid "``1.33346``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:862
+msgid "Water (100- C)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:863
+msgid "``1.31766``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:864
+msgid "Water (20- C)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:865
+msgid "``1.33283``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:866
+msgid "Water (gas)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:867
+msgid "``1.000261``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:868
+msgid "Water (35- C, room temp)"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:869
+msgid "``1.33157``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:870
+msgid "Whisky"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:871
+msgid "``1.356``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:872
+msgid "Willemite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:874
+msgid "Witherite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:876
+msgid "Vivianite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:877
+msgid "``1.580``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:878
+msgid "Vodka"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:879
+msgid "``1.363``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:880
+msgid "Wulfenite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:881
+msgid "``2.300``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:882
+msgid "Zincite"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:883
+msgid "``2.010``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:884
+msgid "Zircon"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:885
+msgid "``1.777 - 1.987``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:886
+msgid "Zircon, High"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:888
+msgid "Zircon, Low"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:889
+msgid "``1.800``"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:892
+msgid "Zirconia, Cubic"
+msgstr ""
+
+#: ../manual/materials/properties/transparency.rst:891
+msgid "``2.173 - 2.21``"
+msgstr ""

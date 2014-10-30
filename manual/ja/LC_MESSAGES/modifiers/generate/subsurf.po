@@ -1,0 +1,808 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-30 21:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../manual/modifiers/generate/subsurf.rst:5
+msgid "Subdivision Surfaces (\"Subsurf\") Modifier"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:7
+#: ../manual/modifiers/generate/subsurf.rst:155
+#: ../manual/modifiers/generate/subsurf.rst:186
+msgid "Reference"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:19
+msgid ""
+"Click to zoom; Subsurfs levels 0 to 3, without and with Smooth Shading. This"
+" was rendered from: `SubsurfDemo.blend "
+"<http://wiki.blender.org/index.php/Media:SubsurfDemo.blend>`__"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:22
+msgid ""
+"Subdivision Surface (:guilabel:`Subsurf` in short) is a method of "
+"subdividing the faces of a mesh to give a smooth appearance, to enable "
+"modeling of complex smooth surfaces with simple, low-vertex meshes. This "
+"allows high resolution mesh modeling without the need to save and maintain "
+"huge amounts of data and gives a smooth *organic* look to the object."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:28
+msgid ""
+"This process creates virtual geometry that is generated at display time, but"
+" it can be converted to real geometry that you could edit with the "
+":guilabel:`Apply` feature. Like the rest of the modifiers, this is a non-"
+"destructive tool, not affecting the underlying mesh until you hit "
+":guilabel:`Apply` (and even then, you have Undo/Redo capabilities)."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:34
+msgid ""
+"Also, like the rest of the Modifiers, order of execution has an important "
+"bearing on the results. For this, see the FIXME(TODO: Internal Link; "
+"[[#Order_of_the_Modifier_Stack|Order of the Modifier Stack]] ) section on "
+"this page."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:39
+msgid ""
+"There are two algorithms available: Simple (subdivides  mesh) and the "
+"default `Catmull-Clark "
+"<http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__ "
+"(subdivides and smooths mesh)."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:43
+msgid ""
+"Keep in mind that this is a different operation than its companion, "
+":doc:`Smooth Shading </modeling/meshes/smoothing>`. You can see the "
+"difference between the two in the grid image to the right."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:47
+msgid "MultiResolution Modifier"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:49
+msgid ""
+"Another way to subdivide is with the :doc:`MultiResolution Modifier "
+"</modifiers/generate/multiresolution>`. This differs from Subsurf in that "
+"MultiRes allows you to edit the mesh at several subdivision levels without "
+"losing information at the other levels. It is slightly more complicated to "
+"use, but more powerful."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:53
+msgid "Options"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:57
+msgid "Modifier's panel"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:60
+msgid ""
+":guilabel:`Subsurf` is a :doc:`modifier </modifiers>`. To add it to a mesh, "
+"press :guilabel:`Add Modifier` and select :guilabel:`Subdivision Surface` "
+"from the list."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:68
+msgid "Type"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:63
+msgid "This toggle button allows you to choose the subdivision algorithm:"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:65
+msgid "Catmull-Clark"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:66
+msgid ""
+"The default option, subdivides and smooths the surfaces. According to `its "
+"Wikipedia page "
+"<http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__,"
+" the \"arbitrary-looking formula was chosen by Catmull and Clark based on "
+"the aesthetic appearance of the resulting surfaces rather than on a "
+"mathematical derivation.\""
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:68
+msgid "Simple"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:68
+msgid ""
+"Only subdivides the surfaces, without any smoothing (similar to :kbd:`W` → "
+":guilabel:`Subdivide`, in :guilabel:`Edit mode`).  Can be used, for example,"
+" to increase base mesh resolution when using displacement maps or textured "
+"emitters with indirect lighting."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:77
+msgid "Subdivisions"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:71
+msgid ""
+"Recursively adds more geometry. For some detailed examples of the numbers, "
+"see the FIXME(TODO: Internal Link; [[#Performance_Considerations|Performance"
+" Considerations]]) section."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:74
+msgid "View"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:75
+msgid "Affects the display resolution for the 3D views only."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:77
+msgid "Render"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:77
+msgid ""
+"Affects the subdivision level used during rendering. For the internal "
+":guilabel:`Blender Render`, the status line at the top of the "
+":guilabel:`Render Result` will tell you the current Frame, then after that "
+"the number of the final, generated vertices and faces. This can give you a "
+"clue at the overall performance impact of all Modifiers."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:79
+msgid ""
+"The right combination of these settings will allow you to keep a fast and "
+"lightweight approximation of your model when interacting with it in 3D, but "
+"use a higher quality version when rendering."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:84
+msgid "View less than or equal to Render"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:86
+msgid ""
+"Be careful not to set the :guilabel:`View` higher than the "
+":guilabel:`Render` setting, or else your preview would display higher "
+"quality than your render."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:91
+msgid ""
+"Subdivide UVs on and off -- see the `.blend "
+"<http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-"
+"SubdivideUVsExample.blend>`__ for the source of this image."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:99
+msgid "Options:"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:95
+msgid "Subdivide UVs"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:96
+msgid ""
+"When enabled, the UV maps will also be subsurfed (i.e. Blender will add "
+"\"virtual\" coordinates for all sub-faces created by this modifier). The "
+"easiest way to understand its effects is to view `Manual-Modifiers-Generate-"
+"Subsurf-SubdivideUVsExample.blend <http://wiki.blender.org/index.php/Media"
+":Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:99
+msgid "Optimal Display"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:98
+msgid ""
+"Restricts the wireframe display to only show a warped mesh cage edges, "
+"rather than the subdivided result, to help visualization. Without this, Edit"
+" Mode can look cluttered with lines that are not really there."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:105
+msgid "Edit Cage Off (Default)"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:112
+msgid "Edit Cage On"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:127
+msgid "Edit Cage Mode"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:116
+msgid ""
+"To view and edit the results of the subdivision (\"isolines\") while you're "
+"editing the mesh, you must enable the :guilabel:`Editing Cage` mode by "
+"clicking in the inverted triangle button in the modifier panel header (next "
+"to the arrows for moving the modifier up and down the stack). This lets you "
+"grab the points as they lie in their new subdivided locations, rather than "
+"on the original mesh."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:118
+msgid ""
+"Notice the comparison of screenshots to the right. With the edit cage off, "
+"some vertices are buried under the subsurfed mesh. With dense vertex "
+"configurations, you might have to even click the \"Eye\" icon so that you "
+"can see these vertices. The \"edit cage on\" version does not suffer from "
+"this problem. It does, however, have its own disadvantage---it can look "
+"*too* nice. Notice the three quads running in the middle of Suzanne's ear. "
+"You can only tell how crooked they are in the \"edit cage off\" version. "
+"When you are modelling, you will more often want to see your mesh "
+"deformities in their full ugliness---so you can apply your skills until it "
+"is sheer prettiness."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:130
+msgid "Order of the Modifier Stack"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:134
+msgid ""
+"Notice that the Armature Modifier before the Subsurf comes out much better "
+"in this case. Also, the Mirror before the Subsurf is clearly correct "
+"compared to the other way around."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:137
+msgid ""
+"The :doc:`Evaluation order </modifiers/the_stack>` of Modifiers is often "
+"significant, but especially so in the case of the Subsurf. The key to "
+"deciding your Modifier stack order is to picture the changes at each step, "
+"perhaps by temporarily Apply'ing the Modifiers, or perhaps by simply "
+"tinkering with the order until things come out right. To see the file behind"
+" these screenshots, you can look at `Manual-Modifiers-Generate-"
+"Subsurf_OrderOfExecution.blend <http://wiki.blender.org/index.php/Media"
+":Manual-Modifiers-Generate-Subsurf_OrderOfExecution.blend>`__."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:147
+msgid "Control"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:149
+msgid ""
+"Subsurf rounds off edges, and often this is not what you want. There are "
+"several solutions."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:153
+msgid "Weighted Creases"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:166
+msgid "A Subsurfed Cube with Creased Edges"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:169
+msgid ""
+"Weighted edge creases for subdivision surfaces allows you to change the way "
+":guilabel:`Subsurf` subdivides the geometry to give the edges a smooth or "
+"sharp appearance."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:173
+msgid ""
+"The crease weight of selected edges can be changed using "
+":guilabel:`Transform Properties` (:kbd:`N`) and change the Median Transform "
+"slider. A higher value makes the edge \"stronger\" and more resistant to "
+"subsurf. Another way to remember it is that the weight refers to the edge's "
+"sharpness. Edges with a higher weight will be deformed less by subsurf. "
+"Recall that the subsurfed shape is a product of all intersecting edges, so "
+"to make the edges of an area sharper, you have to increase the weight of all"
+" the surrounding edges."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:184
+msgid "Edge Loops"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:195
+msgid ""
+"A Subsurf Level 2 Cube, the same with an Edge Loop, and the same with six "
+"Edge Loops"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:198
+msgid ""
+"The Subsurf modifier demonstrates why good, clean topology is so important. "
+"As you can see in the figure, the Subsurf modifier has a drastic effect on a"
+" default Cube. Until you add in additional Loops (with :kbd:`Ctrl-r`), the "
+"shape is almost unrecognizable. A mesh with a deliberate topology has good "
+"placement of Edge Loops, which allow the placement of more Loops (or removal"
+" of Loops, with :menuselection:`[x] --> Edge Loop`) to control the "
+"sharpness/smoothness of the resultant mesh."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:209
+msgid "Combination"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:213
+msgid ""
+"Purple edges are Creased, Orange are intended to be rounded off. See: "
+"`File:WoodBlock.blend "
+"<http://wiki.blender.org/index.php/File:WoodBlock.blend>`__"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:216
+msgid ""
+"It is valuable to know the use of all three tools: Smooth/Flat Shading, Edge"
+" Creases and Edge Loops. Consider the task of modelling a 2\"x4\" block of "
+"wood that has had a notch cut out. The factory edges are rounded off (a good"
+" task for Smooth Shading and some Edge Loops), but the edges where the saw "
+"touched are crisp (a good task for Flat Shading and Edge Crease). Note that "
+"we had to add some extra edge loops near the Creased edges -- this was only "
+"to limit the effects of the Smooth Shading, which bleeds over onto the flat "
+"faces."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:226
+msgid "Limitations & Workarounds"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:228
+msgid ""
+"Blender's subdivision system produces nice smooth subsurfed meshes, but any "
+"subsurfed face (that is, any small face created by the algorithm from a "
+"single face of the original mesh), shares the overall normal orientation of "
+"that original face."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:237
+msgid ""
+"Solid view of subsurfed meshes with inconsistent normals (top) and "
+"consistent normals (bottom). Note the ugly dark areas that appear."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:244
+msgid ""
+"Side view of the above meshes' normals, with random normals (top) and with "
+"coherent normals (bottom)."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:247
+msgid ""
+"Abrupt normal changes can produce ugly black gouges (See: *Solid view of "
+"subsurfed meshes with inconsistent normals (top) and consistent normals "
+"(bottom)*), even though these flipped normals are not an issue for the shape"
+" itself (See: *Side view of subsurfed meshes*)."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:253
+msgid ""
+"A quick way to fix this (one which works 90% of the time) is to use "
+"Blender's \"Make Normals Consistent\" operation: In Edit Mode, select all "
+"with :kbd:`a`, then hit :kbd:`Ctrl-n` to recalculate the normals to point "
+"outside. If you still have some ugly black gouges after a :kbd:`Ctrl-n`, you"
+" will have to manually flip some normals. To do this (still in Edit Mode), "
+"look in the :kbd:`n` Properties Panel, on the right, in the :guilabel:`Mesh "
+"Display` subsection (it is roughly the 3rd up from the bottom). There you "
+"can turn on the little cyan \"Face Normals\" sticks (as seen in our pictures"
+" to the right), and you can change their size to be more appropriate for the"
+" scale of your mesh. If you then go around your mesh in :guilabel:`Face "
+"Select` mode (:kbd:`Ctrl-Tab`, :kbd:`f`) selecting bad faces, you can then "
+"use the :menuselection:`Specials --> Flip Normals` functionality (shortcut: "
+":kbd:`w`, :kbd:`n`) to fix them. Smoothing out normals is good for the mesh,"
+" and it's good for the soul."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:270
+msgid ""
+"Note that one problem that will prevent Blender from automatically "
+"recalculate normals correctly is if the mesh is not \"Manifold\". A \"Non-"
+"Manifold\" mesh contains an edge that is not connected to (exactly) two "
+"faces. Generally, this means that \"out\" cannot be computed."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:278
+msgid "A \"Non-Manifold\" mesh."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:281
+msgid ""
+"(*A \"Non-Manifold\" mesh*) shows a very simple example of a \"Non-"
+"Manifold\" mesh. In general a non-manifold mesh occurs when you have "
+"internal faces or edges that are unexpectedly open."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:283
+msgid ""
+"A non-manifold mesh is not a problem for conventional meshes, but can give "
+"rise to ugly artifacts when subsurfed. Also, it does not allow decimation, "
+"so it is better to avoid them as much as possible."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:287
+msgid ""
+"To locate the non-Manifold components, you can be in either "
+":guilabel:`Vertex Select` mode or :guilabel:`Edge Select` mode and deselect "
+"all vertices. Now, either go to :menuselection:`Select --> Non Manifold` or "
+"hit :kbd:`Ctrl-Alt-Shift-m`. Sometimes, it can take some clever work to make"
+" these areas Manifold, but with determination and creativity you will be "
+"able to figure it out. Sometimes it is only a matter of Removing Doubles "
+"(:kbd:`w`,\\ :kbd:`r`) or of manually merging some vertices (:kbd:`Alt-m`)."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:297
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:299
+msgid ""
+"Great levels of Subsurf demands more video memory, and a faster graphics "
+"card. Blender could potentially crash if your level of Subsurf surpasses "
+"your system memory."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:302
+msgid ""
+"Note about potential crashes: Be aware that the Subsurf Modifier will need "
+"more and more memory at higher levels of subsurf, and the more dense your "
+"base mesh, the more memory you will need. In 32 bit systems, Blender could "
+"potentially crash with *malloc* errors, when you surpass 2~3 GiB of memory "
+"used. This is not a Blender bug.  Blender, when paired with a 64 bit system,"
+" could use 64 GiB of memory, thus reducing the chances of *malloc()* errors."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:310
+msgid ""
+"Another note about using high levels of Subsurf with a graphics card with a "
+"low total amount of Vram: When you move, edit, or otherwise work in your "
+"mesh, some parts of the geometry will disappear visually. Your mesh will "
+"actually be O.K., because the render is generated using your Object Data, "
+"even though it cannot be shown by your graphics card."
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:316
+msgid ""
+"The resulting Vertex, Edge, and Face counts from the Modifier's effect on a "
+"Cube, Quadrilateral Plane, and Triangle can be found in these tables:"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:321
+msgid "Cube Subdivision Level"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:321
+#: ../manual/modifiers/generate/subsurf.rst:345
+#: ../manual/modifiers/generate/subsurf.rst:369
+msgid "Resulting Verts"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:321
+#: ../manual/modifiers/generate/subsurf.rst:345
+#: ../manual/modifiers/generate/subsurf.rst:369
+msgid "Resulting Edges"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:321
+#: ../manual/modifiers/generate/subsurf.rst:345
+#: ../manual/modifiers/generate/subsurf.rst:369
+msgid "Resulting Faces"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:323
+#: ../manual/modifiers/generate/subsurf.rst:347
+#: ../manual/modifiers/generate/subsurf.rst:371
+msgid "0"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:323
+msgid "8"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:323
+#: ../manual/modifiers/generate/subsurf.rst:349
+#: ../manual/modifiers/generate/subsurf.rst:375
+msgid "12"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:323
+#: ../manual/modifiers/generate/subsurf.rst:335
+#: ../manual/modifiers/generate/subsurf.rst:359
+#: ../manual/modifiers/generate/subsurf.rst:383
+msgid "6"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:325
+#: ../manual/modifiers/generate/subsurf.rst:347
+#: ../manual/modifiers/generate/subsurf.rst:349
+#: ../manual/modifiers/generate/subsurf.rst:371
+#: ../manual/modifiers/generate/subsurf.rst:373
+msgid "1"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:325
+msgid "26"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:325
+#: ../manual/modifiers/generate/subsurf.rst:377
+msgid "48"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:325
+msgid "24"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:327
+#: ../manual/modifiers/generate/subsurf.rst:351
+#: ../manual/modifiers/generate/subsurf.rst:375
+msgid "2"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:327
+msgid "98"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:327
+#: ../manual/modifiers/generate/subsurf.rst:379
+msgid "192"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:327
+msgid "96"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:329
+#: ../manual/modifiers/generate/subsurf.rst:353
+#: ../manual/modifiers/generate/subsurf.rst:371
+#: ../manual/modifiers/generate/subsurf.rst:371
+#: ../manual/modifiers/generate/subsurf.rst:373
+#: ../manual/modifiers/generate/subsurf.rst:377
+msgid "3"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:329
+msgid "386"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:329
+#: ../manual/modifiers/generate/subsurf.rst:381
+msgid "768"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:329
+msgid "384"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:331
+#: ../manual/modifiers/generate/subsurf.rst:347
+#: ../manual/modifiers/generate/subsurf.rst:347
+#: ../manual/modifiers/generate/subsurf.rst:349
+#: ../manual/modifiers/generate/subsurf.rst:355
+#: ../manual/modifiers/generate/subsurf.rst:379
+msgid "4"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:331
+msgid "1538"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:331
+#: ../manual/modifiers/generate/subsurf.rst:383
+msgid "3072"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:331
+msgid "1536"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:333
+#: ../manual/modifiers/generate/subsurf.rst:357
+#: ../manual/modifiers/generate/subsurf.rst:381
+msgid "5"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:333
+msgid "6146"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:333
+msgid "12288"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:333
+msgid "6144"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:335
+msgid "24578"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:335
+msgid "49152"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:335
+msgid "24576"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:337
+#: ../manual/modifiers/generate/subsurf.rst:361
+#: ../manual/modifiers/generate/subsurf.rst:385
+msgid "Formulae"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:337
+msgid "3*2**(2*n)+4)/2"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:337
+msgid "3*4**n"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:337
+msgid "verts - 2"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:341
+msgid ""
+"While we're at it, here is the pattern for subdividing a quadrilateral "
+"plane:"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:345
+msgid "Quad Subdivision Level"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:349
+#: ../manual/modifiers/generate/subsurf.rst:373
+msgid "9"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:351
+msgid "25"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:351
+msgid "40"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:351
+msgid "16"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:353
+msgid "81"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:353
+msgid "144"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:353
+msgid "64"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:355
+msgid "289"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:355
+msgid "544"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:355
+msgid "256"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:357
+msgid "1089"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:357
+msgid "2112"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:357
+msgid "1024"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:359
+msgid "4225"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:359
+msgid "8320"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:359
+msgid "4096"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:361
+msgid "((2**n+2)**2)/4"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:361
+msgid "2**(n-1)*(2**n+2)"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:361
+msgid "4**(n-1)"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:365
+msgid "And, of course, triangles:"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:369
+msgid "Tri Subdivision Level"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:373
+msgid "7"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:375
+msgid "19"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:375
+msgid "30"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:377
+msgid "61"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:377
+msgid "108"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:379
+msgid "217"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:379
+msgid "408"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:381
+msgid "817"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:381
+msgid "1584"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:383
+msgid "3169"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:383
+msgid "6240"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:385
+msgid "Do you know it?"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:385
+msgid "3*(2**(n-3))*(2**n+2)"
+msgstr ""
+
+#: ../manual/modifiers/generate/subsurf.rst:389
+msgid "Category:Modifiers]]"
+msgstr ""

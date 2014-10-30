@@ -1,0 +1,539 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-30 21:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../manual/render/cycles/nodes/osl.rst:4
+msgid "Open Shading Language"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:6
+msgid ""
+"Users can now create their own nodes using the [http://code.google. "
+"com/p/openshadinglanguage/ Open Shading Language] (OSL). Note that these "
+"nodes will only work for CPU rendering; there is no support for running OSL "
+"code on the GPU. **To enable it, select Open Shading Language as the shading"
+" system** in the render settings."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:12
+msgid ""
+"Note: on Linux, C/C++ compiler tools (in particular /usr/bin/cpp) must be "
+"installed to compile OSL scripts."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:17
+msgid "Script Node"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:19
+msgid ""
+"OSL was designed for node-based shading, and **each OSL shader corresponds "
+"to a node** in a node setup. To add an OSL shader, add a script node and "
+"link it to a text datablock or an external file. Input and output sockets "
+"will be created from the shader parameters on clicking the update button in "
+"the node or the text editor."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:25
+msgid ""
+"OSL shaders can be linked to the node in a few different ways. With the "
+"**Internal** mode, a text datablock is used to store the OSL shader, and the"
+" OSO bytecode is stored in the node itself. This is useful for distributing "
+"a .blend file with everything packed into it."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:30
+msgid ""
+"The **External** mode can be used to specify a .osl file on disk, and this "
+"will then be automatically compiled into a .oso file in the same directory. "
+"It is also possible to specify a path to a .oso file, which will then be "
+"used directly, with compilation done manually by the user. The third option "
+"is to specify just the module name, which will be looked up in the shader "
+"search path."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:37
+msgid ""
+"The shader search path is located in the same place as the scripts or "
+"configuration path, under:"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:42
+msgid "Linux"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:43
+msgid "``/home/$user/.config/blender/`` *Version Number* ``/shaders/``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:44
+msgid "Windows"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:45
+msgid ""
+"``C:\\Users\\$user\\AppData\\Roaming\\Blender Foundation\\Blender\\`` "
+"*Version Number* ``\\shaders\\``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:48
+msgid "Mac OS X"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:47
+msgid ""
+"``/Users/$user/Library/Application Support/Blender/`` *Version Number* "
+"``/shaders/``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:50
+msgid ""
+"(Replace *Version Number* with the release number of your current Blender "
+"installation, e.g. *2.65* or *2.66*.)"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:52
+msgid ""
+"For use in production, we suggest to **use a node group to wrap shader "
+"script nodes**, and link that into other .blend files. This makes it easier "
+"to make changes to the node afterwards as sockets are added or removed, "
+"without having to update the script nodes in all files."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:59
+msgid "Writing Shaders"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:61
+msgid ""
+"For more details on how to write shaders, see the "
+"[https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-"
+"languagespec. pdf OSL specification]. Here is a simple example:"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:66
+msgid ""
+"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen\">shader</span> "
+") simple_material("
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:70
+msgid ""
+"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">color</span> "
+") Diffuse_Color = color( FIXME(Tag Unsupported:span; <span style=\"color: "
+"red;\">0.6</span> ), FIXME(Tag Unsupported:span; <span style=\"color: "
+"red;\">0.8</span> ), FIXME(Tag Unsupported:span; <span style=\"color: "
+"red;\">0.6</span> )),"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:83
+msgid ""
+"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">float</span> "
+") Noise_Factor = FIXME(Tag Unsupported:span; <span style=\"color: "
+"red;\">0.5</span> ),"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:90
+msgid ""
+"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">output "
+"closure color</span> ) BSDF = FIXME(Tag Unsupported:span; <span "
+"style=\"color: orange;\">diffuse</span> )(N)) {"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:98
+msgid ""
+"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">color</span> "
+") material_color = Diffuse_Color * FIXME(Tag Unsupported:span; <span "
+"style=\"color: orange;\">mix</span> )( FIXME(Tag Unsupported:span; <span "
+"style=\"color: red;\">1.0</span> ), FIXME(Tag Unsupported:span; <span "
+"style=\"color: orange;\">noise</span> )(P * FIXME(Tag Unsupported:span; "
+"<span style=\"color: red;\">10.0</span> )), Noise_Factor); BSDF = "
+"material_color * FIXME(Tag Unsupported:span; <span style=\"color: "
+"orange;\">diffuse</span> )(N); }"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:121
+msgid "Closures"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:123
+msgid ""
+"OSL is different from, for example, RSL or GLSL, in that it does not have a "
+"light loop. There is no access to lights in the scene, and the material must"
+" be built from closures that are implemented in the render engine itself. "
+"This is more limited, but also makes it possible for the render engine to do"
+" optimizations and ensure all shaders can be importance sampled."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:129
+msgid ""
+"The available closures in Cycles correspond to the shader nodes and their "
+"sockets; for more details on what they do and the meaning of the parameters,"
+" see the :doc:`shader nodes manual </render/cycles/nodes/shaders>`."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:135
+msgid "BSDF"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:137
+msgid "``diffuse(N)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:138
+msgid "``oren_nayar(N, roughness)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:139
+msgid "``reflection(N)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:140
+msgid "``refraction(N, ior)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:141
+msgid "``microfacet_beckmann(N, roughness)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:142
+msgid "``microfacet_beckmann_refraction(N, roughness, ior)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:143
+msgid "``microfacet_ggx(N, roughness)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:144
+msgid "``microfacet_ggx_refraction(N, roughness, ior)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:145
+msgid "``phong_ramp(N, exponent, colors[8])``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:146
+msgid "``diffuse_ramp(N, colors[8])``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:147
+msgid "``translucent(N)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:148
+msgid "``transparent()``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:149
+msgid "``ashikhmin_velvet(N, roughness)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:150
+msgid "``ward(N, T, roughness_u, roughness_v)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:151
+msgid "``diffuse_toon(N, size, smooth)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:152
+msgid "``glossy_toon(N, size, smooth)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:153
+msgid "``westin_sheen(N, roughness)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:154
+msgid "``westin_backscatter(N, edginess)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:155
+msgid "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:156
+msgid "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:160
+msgid "BSSRDF"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:162
+msgid "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:163
+msgid "``bssrdf_gaussian(N, radius, texture_blur)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:167
+msgid "Volume"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:169
+msgid "``henyey_greenstein(g)``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:171
+#: ../manual/render/cycles/nodes/osl.rst:177
+msgid "FIXME(Template Unsupported: NewIn; {{NewIn|2.70}} )"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:175
+msgid "``absorption()``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:183
+msgid "Other"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:185
+msgid "``emission()``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:186
+msgid "``ambient_occlusion()``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:187
+msgid "``holdout()``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:188
+msgid "``background()``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:192
+msgid "Attributes"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:194
+msgid ""
+"Some object, particle and mesh attributes are available to the built-in "
+"getattribute() function. UV maps and vertex colors can be retrieved using "
+"their name. Other attributes are listed below:"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:199
+msgid "``geom:generated``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:200
+msgid "Generated texture coordinates"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:201
+msgid "``geom:uv``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:202
+msgid "Default render UV map"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:203
+msgid "``geom:dupli_generated``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:204
+msgid "For instances, generated coordinate from duplicator object"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:205
+msgid "``geom:dupli_uv``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:206
+msgid "For instances, UV coordinate from duplicator object"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:207
+msgid "``geom:trianglevertices``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:208
+msgid "3 vertex coordinates of the triangle"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:209
+msgid "``geom:numpolyvertices``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:210
+msgid "Number of vertices in the polygon (always returns 3 currently)"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:211
+msgid "``geom:polyvertices``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:212
+msgid "Vertex coordinates array of the polygon (always 3 vertices currently)"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:213
+msgid "``geom:name``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:214
+msgid "Name of the object"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:215
+msgid "``geom:is_curve``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:216
+msgid "Is object a strand or not"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:217
+msgid "``geom:curve_intercept``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:218
+msgid "Point along the strand, from root to tip"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:219
+msgid "``geom:curve_thickness``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:220
+msgid "Thickness of the strand"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:221
+msgid "``geom:curve_tangent_normal``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:222
+msgid "Tangent Normal of the strand"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:223
+msgid "``path:ray_length``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:224
+msgid "Ray distance since last hit"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:225
+msgid "``object:location``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:226
+msgid "Object location"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:227
+msgid "``object:index``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:228
+msgid "Object index number"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:229
+msgid "``object:random``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:230
+msgid "Per object random number generated from object index and name"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:231
+msgid "``material:index``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:232
+msgid "Material index number"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:233
+msgid "``particle:index``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:234
+msgid "Particle instance number"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:235
+msgid "``particle:age``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:236
+msgid "Particle age in frames"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:237
+msgid "``particle:lifetime``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:238
+msgid "Total lifespan of particle in frames"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:239
+msgid "``particle:location``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:240
+msgid "Location of the particle"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:241
+msgid "``particle:size``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:242
+msgid "Size of the particle"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:243
+msgid "``particle:velocity``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:244
+msgid "Velocity of the particle"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:247
+msgid "``particle:angular_velocity``"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:246
+msgid "Angular velocity of the particle"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:250
+msgid "Trace"
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:252
+msgid ""
+"We support the trace(point pos, vector dir, ...) function, to trace rays "
+"from the OSL shader. The \"shade\" parameter is not supported currently, but"
+" attributes can be retrieved from the object that was hit using the "
+"getmessage(\"trace\", .. ) function. See the OSL specification for details "
+"on how to use this."
+msgstr ""
+
+#: ../manual/render/cycles/nodes/osl.rst:257
+msgid ""
+"This function can't be used instead of lighting; the main purpose is to "
+"allow shaders to \"probe\" nearby geometry, for example to apply a projected"
+" texture that can be blocked by geometry, apply more \"wear\" to exposed "
+"geometry, or make other ambient occlusion-like effects."
+msgstr ""
