@@ -239,7 +239,7 @@ Bulid html files
     
       $ make allja
 
-Japanese Transletion(only Top page)
+Japanese Translation(only Top page)
 =====================================
 
 * http://lab1092.site44.com/blender-manual_ja/contents.html
