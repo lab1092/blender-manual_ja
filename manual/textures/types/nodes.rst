@@ -67,10 +67,6 @@ inside the texture node that you've just added, you can select which output you 
 See also
 ========
 
--
-
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.4/Source/Textures/Nodes - Blender 2.49|Development page]]
-)
+- `Development page <http://wiki.blender.org/index.php/Dev:2.4/Source/Textures/Nodes - Blender 2.49>`_
 
 

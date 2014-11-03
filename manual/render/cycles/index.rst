@@ -4,9 +4,8 @@ Cycles Render Engine
 
 Cycles is a ray tracing renderer focused on interactivity and ease of use,
 while still supporting many production features.
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.6/Source/Render/Cycles|Developer documentation]]
-) is also available.
+`Developer documentation <http://wiki.blender.org/index.php/Dev:2.6/Source/Render/Cycles>`_
+is also available.
 
 
 Getting Started

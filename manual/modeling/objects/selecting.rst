@@ -276,7 +276,7 @@ Particle System
    Selects all objects that use the same :guilabel:`Particle System`
 Library
    Selects all objects that are in the same
-:guilabel:`FIXME(Link Type Unsupported: dev; [[Dev:2.5/Source/Data_system/LibraryBrowser|Library]])`
+:guilabel:`Library <http://wiki.blender.org/index.php/Dev:2.5/Source/Data_system/LibraryBrowser>`_
 :guilabel:`Library (Object Data)`
 
 

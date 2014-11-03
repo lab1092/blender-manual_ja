@@ -1,0 +1,196 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/modeling/texts/editing.rst:5
+msgid "Text Editing"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:8
+msgid "Text Boxes"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:10
+#: ../../manual/modeling/texts/editing.rst:131
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:19
+msgid "Text frame."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:22
+msgid ""
+"Text \"Boxes\" allow you to distribute the text amongst rectangular areas "
+"within a single text object. An arbitrary number of freely positionable and "
+"re-sizable text frames are allowed per text object."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:26
+msgid ""
+"Text flows continuously from the lowest-numbered frame to the highest-"
+"numbered frame with text inside each frame word-wrapped. Text flows between "
+"frames when a lower-numbered frame can't fit any more text. If the last "
+"frame is reached, text overflows out of it."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:31
+msgid ""
+"Text frames are very similar to the concept of *frames* from a desktop "
+"publishing application, like Scribus. You use frames to control the "
+"placement and flow of text."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:34
+msgid "Frames are controlled in the :guilabel:`Text Boxes` panel."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:38
+msgid "Frame size"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:40
+msgid ""
+"By default the first frame for a new text object, and any additional frames,"
+" has a size of **zero** for both :guilabel:`Width` and :guilabel:`Height`, "
+"which means the frame is initially not visible."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:44
+msgid ""
+"Frames with a width of **0.0** are ignored completely during text flow (no "
+"wordwrap happens), and frames with a height of **0.0** flow forever (no "
+"flowing to the next text frame)."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:48
+msgid ""
+"In order for the frame to become visible, the frame's :guilabel:`Width` must"
+" be greater than **0.0**."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:54
+msgid ""
+"Technically the height is never actually **0.0** because the font itself "
+"always contributes height."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:61
+msgid "Frame width."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:64
+msgid ""
+"(*Frame width*) is a text object with a width of **5.0**. And because the "
+"frame width is greater than **0.0** it is now visible and is drawn in the "
+"active theme color as a dashed rectangle. The text has overflowed because "
+"the text has reached the end of the last frame, the default frame."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:68
+msgid "Adding/Deleting a Frame"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:70
+msgid ""
+"To add a frame click the :kbd:`Add Textbox` button on the :guilabel:`Text "
+"Boxes` panel. A new frame is inserted just after (in text flow order) the "
+"current one, with its attributes (position and size). Be sure to modify the "
+"offset for the new frame in the :guilabel:`X` and/or :guilabel:`Y` fields. "
+"Just an :guilabel:`X` modification will create a new column."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:75
+msgid ""
+"To delete the current frame, click the :kbd:`Delete` button. Any text in "
+"higher frames will be re-flowed downward into lower frames."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:80
+msgid "Example: Text Flow"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:86
+msgid "wrapping"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:89
+msgid ""
+"With two or more frames you can organize text to a finer degree. For "
+"example, create a text object and enter \"\\ ``Blender is super duper`` \". "
+"This text object has a frame; it just isn't visible because its "
+":guilabel:`Width` is **0.0**."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:95
+msgid ""
+"Set the width to **5.0**. The frame is now visible and text is wrapping "
+"according to the new width, as shown in (*Text 2*). Notice that the text has"
+" overflowed out of the frame. This is because the text has reached the end "
+"of the last frame, which just happens to be the default/initial frame."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:106
+msgid "text flowing from box 1 to box 2"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:109
+msgid ""
+"When we add another frame and set its width and height, the text will flow "
+"into the new frame."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:113
+msgid "Example: Multiple columns"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:119
+msgid "Text 5."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:122
+msgid ""
+"To create two columns of text just create a text object and adjust the "
+"initial frame's :guilabel:`Width` and :guilabel:`Height` to your "
+"requirements, then insert a new frame. The new frame will have the same size"
+" as the initial frame. Set the :guilabel:`X` position to something greater "
+"or less than the width of the initial frame; see (*Text 5*)."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:129
+msgid "Assigning Materials"
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:138
+msgid ""
+"Each character can have a different :guilabel:`Material index` in order to "
+"have different materials on different characters."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:141
+msgid ""
+"You can assign indices either as you type, or after by selecting blocks of "
+"text and clicking on the :kbd:`Assign` button in the Materials panel."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:149
+msgid "Red Green Blue."
+msgstr ""
+
+#: ../../manual/modeling/texts/editing.rst:152
+msgid ""
+"For example, to create (*Red Green Blue*) you would need to create three "
+"separate materials and three separate material indices. Each word would be "
+"assigned a :guilabel:`Material index` by selecting the characters for each "
+"word and clicking the :kbd:`Assign` button. (*Red Green Blue*) is still one "
+"single :guilabel:`Text` object."
+msgstr ""

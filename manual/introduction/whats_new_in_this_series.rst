@@ -54,20 +54,11 @@ The list of tabs themselves are organized so that the most general controls appe
 appear on the right, following reading direction. Furthermore,
 available tabs depend on the selection (i.e. Mesh options are different from Camera options).
 
+`Read more about new UI design rules <http://wiki.blender.org/index.php/Dev:2.5/Source/Development/WinterCamp/UIRules>`_
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Source/Development/WinterCamp/UIRules|Read more about new UI design rules »]]
-)
+`Read more about 2.5 UI Paradigms <http://wiki.blender.org/index.php/Dev:2.5/Source/UI/UIParadigms>`_
 
-
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Source/UI/UIParadigms|Read more about 2.5 UI Paradigms »]]
-)
-
-
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Source/Development/WinterCamp/Properties|Read more about new properties panel »]]
-)
+`Read more about new properties panel <http://wiki.blender.org/index.php/Dev:2.5/Source/Development/WinterCamp/Properties>`_
 
 
 Multi-screen
@@ -123,9 +114,7 @@ from the output image size to the modifiers options. Now you can set keys in eve
 This new system is called *Animato*.
 
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Source/Animation/Animato|Read more about Animato »]]
-)
+`Read more about Animato <http://wiki.blender.org/index.php/Dev:2.5/Source/Animation/Animato>`_
 
 
 Dope sheet and graph editor

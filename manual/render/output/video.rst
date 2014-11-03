@@ -228,8 +228,9 @@ AVI Jpeg
 AVI Raw
    Audio-Video Interlaced (AVI) uncompressed frames.
 Frameserver
-   Blender puts out FIXME(Link Type Unsupported: dev;
-   [[Dev:Source/Render/Frameserver|frames upon request]]) as part of a render farm.
+   Blender puts out `frames upon request
+   <http://wiki.blender.org/index.php/Dev:Source/Render/Frameserver>`_
+   as part of a render farm.
    The port number is specified in the OpenGL User Preferences panel.
 H.264
    Encodes movies with the H.264 codec. See :doc:`Advanced Encoding </render/output_options#advanced_encoding>`.
@@ -246,7 +247,7 @@ QuickTime
    .. note:: Reads GIF if QuickTime is Installed
 
       Blender can read GIF files on Windows and Mac platforms with
-      FIXME(Link Type Unsupported: http; [[http://www.apple.com/quicktime/download QuickTime]]) installed.
+      `QuickTime <http://www.apple.com/quicktime/download>`_ installed.
       The GIF capabilities (as well as flattened PSD,
       flattened PDF on Mac, and others) come along with QuickTime.
 Xvid

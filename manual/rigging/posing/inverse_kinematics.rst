@@ -58,9 +58,7 @@ Most the time people will use the *Standard* IK solver.
 There is some documentation for the *iTaSC* "instantaneous Task Specification using
 Constraints" IK solver here.
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:Source/GameEngine/RobotIKSolver|Robot IK Solver]]
-)
+`Robot IK Solver <http://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`_
 
 
 Bone IK Panel

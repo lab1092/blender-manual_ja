@@ -3,9 +3,13 @@ About this manual
 *****************
 
 This manual is a mediawiki implementation that is written by a world-wide collaboration of volunteer
-FIXME(Link Type Unsupported: dev;
-[[Dev:Ref/Release_Notes/Source_code/Contributors|authors]]
-). It is updated daily, and this is the English version. Other language versions are translated, generally, from this English source for the convenience of our world-wide audience. It is constantly out of date, thanks to the tireless work of some 50 or more volunteer developers, working from around the world on this code base. However, it is the constructive goal to provide you with the best possible professional documentation on this incredible package.
+`authors <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/Source_code/Contributors>`_.
+It is updated daily, and this is the English version. Other language versions are translated,
+generally, from this English source for the convenience of our world-wide audience.
+It is constantly out of date, thanks to the tireless work of some 50 or more volunteer developers,
+working from around the world on this code base.
+However, it is the constructive goal to provide you with the
+best possible professional documentation on this incredible package.
 
 To assist you in the best and most efficient way possible,
 this manual is organized according to the creative process generally followed by 3D artists,

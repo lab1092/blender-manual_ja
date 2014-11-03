@@ -1,0 +1,508 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/materials/nodes/types/color.rst:3
+msgid "Material Color Nodes"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:6
+msgid "MixRGB"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:10
+msgid "MixRGB node"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:13
+msgid ""
+"This node mixes a base color or image (threaded to the top socket) together "
+"with a second color or image (bottom socket) by working on the individual "
+"and corresponding pixels in the two images or surfaces. The way the output "
+"image is produced is selected in the drop-down menu. The size (output "
+"resolution) of the image produced by the mix node is the size of the base "
+"image. The alpha and Z channels (for compositing nodes) are mixed as well."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:21
+msgid "Not one, not two, but count 'em, sixteen mixing choices include:"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:25
+msgid "Mix"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:25
+msgid "The background pixel is covered by the foreground using alpha values."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:27
+msgid "Add"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:27
+msgid ""
+"The pixels are added together. Fac controls how much of the second socket to"
+" add in. Gives a bright result. The \"opposite\" to Subtract mode."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:29
+msgid "Subtract"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:29
+msgid ""
+"The foreground pixel (bottom socket) is subtracted from the background one. "
+"Gives a dark result. The \"opposite\" to Add mode."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:31
+msgid "Multiply"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:33
+msgid "Screen"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:33
+msgid ""
+"Both pixel values are inverted, multiplied by each other, the result is "
+"inverted again. This returns a brighter result than both input pixels in "
+"most cases (except one of them equals 0.0). Completely black layers do not "
+"change the background at all (and vice versa) - completely white layers give"
+" a white result. The \"opposite\" of Multiply mode."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:35
+msgid "Overlay"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:35
+msgid ""
+"A combination of Screen and Multiply mode, depending on the base color."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:37
+msgid "Divide"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:39
+msgid "Difference"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:39
+msgid ""
+"Both pixels are subtracted from one another, the absolute value is taken. So"
+" the result shows the distance between both parameters, black stands for "
+"equal colors, white for opposite colors (one is black, the other white). The"
+" result looks a bit strange in many cases. This mode can be used to invert "
+"parts of the base image, and to compare two images (results in black if they"
+" are equal)."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:41
+msgid "Darken"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:41
+msgid ""
+"Both pixels are compared to each other, the smaller one is taken. Completely"
+" white layers do not change the background at all, and completely black "
+"layers give a black result."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:43
+msgid "Lighten"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:43
+msgid ""
+"Both parameters are compared to each other, the larger one is taken. "
+"Completely black layers do not change the image at all and white layers give"
+" a white result."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:45
+msgid "Dodge"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:45
+msgid ""
+"Some kind of inverted Multiply mode (the multiplication is replaced by a "
+"division of the \"inverse\"). Results in lighter areas of the image."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:47
+msgid "Burn"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:47
+msgid ""
+"Some kind of inverted Screen mode (the multiplication is replaced by a "
+"division of the \"inverse\"). Results in darker images, since the image is "
+"burned onto the paper, er..image (showing my age)."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:49
+#: ../../manual/materials/nodes/types/color.rst:79
+#: ../../manual/materials/nodes/types/color.rst:120
+#: ../../manual/materials/nodes/types/color.rst:127
+#: ../../manual/materials/nodes/types/color.rst:222
+#: ../../manual/materials/nodes/types/color.rst:229
+#: ../../manual/materials/nodes/types/color.rst:257
+#: ../../manual/materials/nodes/types/color.rst:266
+msgid "Color"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:49
+msgid ""
+"Adds a color to a pixel, tinting the overall whole with the color. Use this "
+"to increase the tint of an image."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:51
+#: ../../manual/materials/nodes/types/color.rst:251
+msgid "Value"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:51
+msgid ""
+"The RGB values of both pixels are converted to HSV values. The values of "
+"both pixels are blended, and the hue and saturation of the base image is "
+"combined with the blended value and converted back to RGB."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:53
+#: ../../manual/materials/nodes/types/color.rst:249
+msgid "Saturation"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:53
+msgid ""
+"The RGB values of both pixels are converted to HSV values. The saturation of"
+" both pixels are blended, and the hue and value of the base image is "
+"combined with the blended saturation and converted back to RGB."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:55
+#: ../../manual/materials/nodes/types/color.rst:247
+msgid "Hue"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:55
+msgid ""
+"The RGB values of both pixels are converted to HSV values. The hue of both "
+"pixels are blended, and the value and saturation of the base image is "
+"combined with the blended hue and converted back to RGB."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:57
+msgid "Soft Light"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:57
+msgid ""
+"Lightens or darkens base color depending on the blend color brightness. The "
+"effect is softer than that of Linear Light or Overlay modes, with pure white"
+" and pure black blend colors not yielding pure white/black results."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:59
+msgid "Linear Light"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:59
+msgid ""
+"Brightens base color depending on blend color. If blend color is more than "
+"50% bright, base color is brightened by the blend color values, otherwise it"
+" is darkened by the blend color values."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:64
+#: ../../manual/materials/nodes/types/color.rst:114
+#: ../../manual/materials/nodes/types/color.rst:216
+#: ../../manual/materials/nodes/types/color.rst:243
+msgid "Inputs"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:66
+#: ../../manual/materials/nodes/types/color.rst:245
+#: ../../manual/materials/nodes/types/color.rst:253
+msgid "Fac"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:67
+msgid ""
+"The amount of mixing of the bottom socket is selected by the Factor input "
+"field (Fac:). A factor of zero does not use the bottom socket, whereas a "
+"value of 1.0 makes full use. In Mix mode, 50:50 (0.50) is an even mix "
+"between the two, but in Add mode, 0.50 means that only half of the second "
+"socket's influence will be applied."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:68
+msgid "Color 1"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:69
+#: ../../manual/materials/nodes/types/color.rst:71
+#: ../../manual/materials/nodes/types/color.rst:119
+#: ../../manual/materials/nodes/types/color.rst:221
+#: ../../manual/materials/nodes/types/color.rst:256
+msgid ""
+"Input color value. The value can be provided by another node or set "
+"manually. Includes a color swatch, allowing you to select the color directly"
+" on the node."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:72
+msgid "Color 2"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:75
+#: ../../manual/materials/nodes/types/color.rst:123
+#: ../../manual/materials/nodes/types/color.rst:225
+#: ../../manual/materials/nodes/types/color.rst:260
+msgid "Outputs"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:78
+#: ../../manual/materials/nodes/types/color.rst:126
+#: ../../manual/materials/nodes/types/color.rst:228
+#: ../../manual/materials/nodes/types/color.rst:263
+msgid "Value of the color, combined by the node."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:82
+#: ../../manual/materials/nodes/types/color.rst:130
+msgid "Controls"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:86
+msgid "Clamp"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:85
+msgid "Clamp result of the node to 0...1 range."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:89
+msgid "RGB Curves"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:93
+msgid "RGB Curves node"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:96
+msgid ""
+"For each color component channel (RGB) or the composite (C), this node "
+"allows you to define a bezier curve that varies the input (across the "
+"bottom, or x-axis) to produce an output value (the y-axis). By default, it "
+"is a straight line with a constant slope, so that .5 along the x-axis "
+"results in a . 5 y-axis output. Click and drag along the curve to create a "
+"control point and to change the curve's shape. Use the :guilabel:`X` to "
+"delete the selected (white) point."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:104
+msgid ""
+"Clicking on each :guilabel:`C R G B` component displays the curve for that "
+"channel. For example, making the composite curve flatter (by clicking and "
+"dragging the left-hand point of the curve up) means that a little amount of "
+"color will result in a lot more color (a higher Y value). Effectively, this "
+"bolsters the faint details while reducing overall contrast. You can also set"
+" a curve just for the red, and for example, set the curve so that a little "
+"red does not show at all, but a lot of red does."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:116
+#: ../../manual/materials/nodes/types/color.rst:218
+msgid "Fac:"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:117
+msgid ""
+"Factor. The degree of node's influence in node tree. The value can be "
+"provided by another node or set manually. Value range - from «-1» (inverted "
+"effect) to «1»."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:134
+msgid "Curve channel selector"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:148
+msgid "Channel selector"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:138
+msgid "Allows to select appropriate curve channel."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:140
+msgid "C"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:141
+msgid "Composite curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:142
+msgid "R"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:143
+msgid "Red channel curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:144
+msgid "G"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:145
+msgid "Green channel curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:148
+msgid "B"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:147
+msgid "Blue channel curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:152
+msgid "Node curve controls"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:157
+msgid "Zoom in curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:162
+msgid "Zoom out curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:167
+msgid "Advanced tools for curve"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:170
+msgid "Reset View"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:171
+msgid "Resets view of the cuve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:172
+msgid "Vector Handle"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:173
+msgid "Vector type of curve point's handle."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:174
+msgid "Auto Handle"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:175
+msgid "Automatic type of curve point's handle."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:176
+msgid "Extend Horizontal"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:177
+msgid "Extends the curve horizontal."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:178
+msgid "Extend Extrapolated"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:179
+msgid "Extends the curve extrapolated."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:182
+msgid "Reset Curve"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:181
+msgid "Resets the curve in default (removes all added curve's points)."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:186
+msgid "Clipping options display of the curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:191
+msgid "Deletes points of the curve."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:194
+msgid "Here are some common curves you can use to achieve desired effects:"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:205
+msgid "Invert"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:209
+msgid "Invert node"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:212
+msgid "This node simply inverts the input values and colors."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:219
+#: ../../manual/materials/nodes/types/color.rst:246
+#: ../../manual/materials/nodes/types/color.rst:254
+msgid ""
+"Factor. The degree of node's influence in node tree. The value can be "
+"provided by another node or set manually."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:232
+msgid "Hue Saturation Value"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:236
+msgid "Hue Saturation Value node"
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:239
+msgid "Use this node to adjust the Hue, Saturation, and Value of an input."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:248
+msgid ""
+"Input hue value of color. The value can be provided by another node or set "
+"manually."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:250
+msgid ""
+"Input saturation value of color . The value can be provided by another node "
+"or set manually."
+msgstr ""
+
+#: ../../manual/materials/nodes/types/color.rst:252
+msgid ""
+"Input HSV-Value of color. The value can be provided by another node or set "
+"manually."
+msgstr ""

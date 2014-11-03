@@ -1,4 +1,3 @@
-
 Post Install Configuration
 **************************
 
@@ -7,39 +6,35 @@ want to make depending on your hardware.
 
 This section **only** covers system specific user preferences.
 
-
 .. tip::
-
    The key combination :kbd:`Ctrl-U` saves all the settings of the
    currently open Blender file into the default Blender file.
    The settings in the default Blender file are read when Blender is first started or when :kbd:`Ctrl-N`
    is pressed to start a new file. If you accidentally change the settings in your default Blender file
    (i.e. you save your work in progress as the default)
-   you can restore factory settings from the file menu press :kbd:`Ctrl-U` to save the newly loaded factory settings.
+   you can restore factory settings from the file menu and  press :kbd:`Ctrl-U` again to save the
+   newly loaded factory settings.
 
-
-The following section titles match the user preference categories.
+The following sections list some commonly customized preferences in their respective categories.
 
 
 Input
 =====
 
-- If you don't have a numpad you may want to enable 'Emulate Numpad'
-- If you don't have a middle mouse button you can enable 'Emulate 3 Button Mouse'
+- If you don't have a number pad you may want to enable 'Emulate Numpad'.
+- If you don't have a middle mouse button you can enable 'Emulate 3 Button Mouse'.
 
 
-File Paths
-==========
+File
+====
 
 This isn't essential but you may want to set the paths for more useful default locations.
 
-
 - Temp Directory: You may want to change this if you have a faster disk for temp file storage.
-- Image Editor: Useful so you can edit images externally (from the image space), for example the path to an editor like the GIMP can be set here.
-
+- Image Editor: Useful so you can open an image in the UV/Image Editor in another editor (like the GIMP)
+  from the ``Edit Externally`` button in the ``Image`` menu.
 
 .. tip::
-
    ``//`` at the start of a path in blender signifies the directory of the currently opened .blend file,
    used to reference relative-paths.
 
@@ -50,11 +45,9 @@ System
 While there are many settings here you may want to set in special-cases,
 this document focuses on common features.
 
+- VBOs (Vertex Buffer Objects), can improve viewport performance, keep this enabled unless it gives
+  problems (some older GPU's do not support VBOs).
 
-- VBOs (Vertex Buffer Objects), can give a good speed boost to the viewport performance, keep this enabled unless it gives problems (some older GPU's do not support VBOs)
-
-Sequencer / Clip Editor:
+Sequencer/Clip Editor:
 
 - Memory Cache Limit: If you use the sequencer for movie clips you may want to increase the cache limit since this will make scrubbing a lot faster - but take care the limit stays under your total system memory.
-
-

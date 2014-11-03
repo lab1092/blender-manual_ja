@@ -142,7 +142,10 @@ you can try translation to your own Sphinx project.
 
 :projectroot: ~/GitHub/blender-manual_i18n
 :documentroot: ~/GitHub/blender-manual_i18n/manual
-:i18nroot: ~/GitHub/blender-manual_i18n/manual
+:pot files: ~/GitHub/blender-manual_i18n/locale/pot
+:po files(ja): ~/GitHub/blender-manual_i18n/ja
+:html files(en): ~/GitHub/blender-manual_i18n/html/en
+:html files(ja): ~/GitHub/blender-manual_i18n/html/ja
 
 
 Install sphinx-intl package
@@ -156,31 +159,40 @@ Install sphinx-intl package for translation
 Edit files
 ============
 
+Change 'all' target on ./Makefile 
+
+   .. code-block::
+
+      all:
+          # './' (input), './html/en/' (output)
+          QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
+          sphinx-build -b html ./manual ./html/en
+          @echo "firefox" $(shell pwd)"/html/en"
+
 Add 'allja' and 'gettext' target to ./Makefile
 
    .. code-block::
 
       allja:
-          # './' (input), './html/' (output)
+          # './' (input), './html/ja/' (output)
           QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-          sphinx-build -D language='ja' -b html ./manual ./html
-          @echo "firefox" $(shell pwd)"/html/"  
+          sphinx-build -D language='ja' -b html ./manual ./html/ja
+          @echo "firefox" $(shell pwd)"/html/ja"  
 
    .. code-block::
 
       gettext:
-	      # './' (input), './locale/' (output)
+	      # './' (input), './locale/pot/' (output)
 	      QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
-	      sphinx-build -b gettext ./manual ./locale
+	      sphinx-build -b gettext ./manual ./locale/pot
 	      @echo "pot files are updated. "
 
- 
 
 Add locale directory and gettext option to manual/conf.py
 
    .. code-block::
 
-      locale_dirs = ['./']   # path is example but recommended.
+      locale_dirs = ['../locale/']   # path is example but recommended.
       gettext_compact = False     # optional. 
 
 
@@ -201,7 +213,7 @@ To sync messages to ja locale, run the command
 
    .. code-block::
 
-      $ sphinx-intl update -d manual -p ./locale -l ja
+      $ sphinx-intl update -d ./locale/ -p ./locale/pot -l ja
 
 
 Translate it
@@ -232,7 +244,7 @@ Bulid mo files:
 
    .. code-block::
     
-      $ sphinx-intl build -d manual
+      $ sphinx-intl build -d locale
 
 Bulid html files
 
@@ -240,7 +252,7 @@ Bulid html files
     
       $ make allja
 
-Japanese Translation(only Top page)
+Japanese Translation Sample
 =====================================
 
 * http://lab1092.site44.com/blender-manual_ja/contents.html

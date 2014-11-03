@@ -1,0 +1,335 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/physics/soft_body/collisions.rst:6
+msgid "Collisions"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:8
+msgid ""
+"There are two different collision types that you may use: collision between "
+"different objects and internal collision. We should set one thing straight "
+"from the start: the primary targets of the collision calculation are the "
+"vertices of a Soft Body. So if you have too few vertices too few collision "
+"takes place. Secondarily, you can use edges and faces to improve the "
+"collision calculation."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:17
+msgid "Collisions with other objects"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:19
+msgid ""
+"For a *Soft Body* to collide with another object there are a few "
+"prerequisites:"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:21
+msgid ""
+"Both objects have to share a layer, but the layer does not necessarily have "
+"to be visible."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:22
+msgid "The collision object has to be a mesh object."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:23
+msgid ""
+"You have to activate the option :guilabel:`Collision` in the "
+":guilabel:`Collision` panel of the :guilabel:`Physics` sub-context (*Image "
+"1*) for the collision object. The collision object may also be a Soft Body."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:24
+msgid ""
+"If you use modifiers such as :guilabel:`Array` and :guilabel:`Mirror` you "
+"have to activate :guilabel:`EV.M.Stack` to ensure that collision calculation"
+" is based on the modified object. The sequence of :guilabel:`Modifiers` is "
+"not important."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:28
+msgid "Examples"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:33
+msgid "Image 2a: A Soft Body cube colliding with a plane."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:33
+msgid ""
+"Image 2b: A Soft Body plane colliding with a cube - no interaction at all."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:33
+msgid "Image 2c: Collision with CFace activated."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:37
+msgid ""
+"A cube colliding with a plane works pretty well (*Image 2a*), but a plane "
+"falls right through a cube that it is supposed to collide with (*Image 2b*)."
+" Why is that? Because the default method of calculation only checks to see "
+"if the four vertices of the plane collides with the cube as the plane is "
+"pulled down by gravity. You can activate :guilabel:`CFace` to enable "
+"collision between the face of the plane and the object instead (*Image 2c*),"
+" but this type of calculation takes much longer."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:44
+msgid ""
+"Let's have a closer look at the collision calculation, so you can get an "
+"idea of how we might optimize it."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:49
+msgid "Calculating Collisions"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:54
+msgid ""
+"Image 3a: Visualization of the collision of a Soft Body vertex with a plane."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:54
+msgid ""
+"Image 3b: Six Soft Body vertices with different speed. `Blend file "
+"<http://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:59
+msgid ""
+"Soft Body simulation is by default done on a per vertex basis. If the "
+"vertices of the Soft Body do not collide with the collision object there "
+"will be no interaction between the two objects."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:63
+msgid ""
+"In (*Image 3a*), you can see a vertex colliding with a plane. If a vertex "
+"penetrates the zone between :guilabel:`Outer` and :guilabel:`Inner`, it is "
+"repulsed by a force in the direction of the face normal. The position that a"
+" vertex finally ends up in is dependent on the forces that act upon it. In "
+"the example gravity and the repulsion force of the face balance out. The "
+"speed at which the vertex is pulled out of the collision zone is influenced "
+"by the :guilabel:`Choke` parameter (*Image 4*)."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:71
+msgid ""
+"Now lets see what happens if we make vertices heavier and let them travel at"
+" a faster speed. In (*Image 3b*), you can see vertices traveling at "
+"different speeds. The two on the far right (5 and 6) are traveling so fast "
+"that they pass right through the collision zone (this is because of the "
+"default solver precision - which we can fix later). You will notice that the"
+" fourth vertex also travels quite fast and because it is heavier it breaches"
+" the inner zone. The first three vertices collide OK."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:82
+msgid ""
+"Image 3d: Also Edges and Faces can be used for the collision calculation."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:85
+msgid ""
+"You can set up your collision so that edges and even faces are included in "
+"the collision calculation (*Image 3d*). The collision is then calculated "
+"differently. It is checked whether the edge or face intersects with the "
+"collision object, the collision zones are not used."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:92
+msgid "Good collisions"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:96
+msgid "Image 4: Parameters for Soft Body calculation."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:99
+msgid ""
+"If the collision you have set up is not behaving properly, you can try the "
+"following:"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:102
+msgid "The best way"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:104
+msgid ""
+"Add :guilabel:`Loop Cuts` to your Soft Body object in strategic areas that "
+"you know are most likely to be involved in a collision."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:107
+msgid ""
+"The Soft Body object must have more subdivisions than the collision object."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:108
+msgid "Check the direction of the face normals."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:109
+msgid ""
+"If the collision object has sharp spikes they might penetrate the Soft Body."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:110
+msgid ""
+"The resolution of the solver must match the speed at which Soft Body "
+"vertices are traveling. Lower the parameter :guilabel:`Error Lim` and "
+"carefully increase :guilabel:`Min S`."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:111
+msgid ""
+":guilabel:`Outer` and :guilabel:`Inner` should be large enough, but zones of"
+" opposite faces should not overlap, or you have forces in opposite "
+"directions."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:112
+msgid "If you use strong forces you should use large zones."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:113
+msgid ""
+"Set :guilabel:`Choke` to a high enough value (all the way up if necessary) "
+"if you have difficulties with repelled vertices."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:114
+msgid ""
+"Colliding faces are difficult to control and need long calculation times. "
+"Try not to use them."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:116
+msgid ""
+"Often it is better to create a simplified mesh to use as your collision "
+"object, however this may be difficult if you are using an animated mesh."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:121
+msgid "Self Collision"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:123
+msgid ""
+":guilabel:`Self Collision` is working only if you have activated "
+":guilabel:`Use Edges`."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:125
+msgid ""
+"When enabled, allows you to control how Blender will prevent the Soft Body "
+"from intersecting with itself. Every vertex is surrounded with an elastic "
+"virtual ball. Vertices may not penetrate the balls of other vertices. If you"
+" want a good result you may have to adjust the size of these balls. Normally"
+" it works pretty well with the default options."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:140
+msgid "Ball Size Caclulation"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:133
+msgid "Man (\"manual\")"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:134
+msgid "The :guilabel:`Ball Size` directly sets the ball size (in BU)."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:135
+msgid "Av (\"average\")"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:136
+msgid ""
+"The average length of all edges attached to the vertex is calculated and "
+"then multiplied with the :guilabel:`Ball Size` setting. Works well with "
+"evenly distributed vertices."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:137
+msgid "Min / Max"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:138
+msgid ""
+"The ball size is as large as the smallest/largest spring length of the "
+"vertex multiplied with the :guilabel:`Ball Size`."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:140
+msgid "AvMiMax (\"average min/max\")"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:140
+msgid "Size = ((Min + Max)/2) × :guilabel:`Ball Size`."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:153
+msgid "Ball Size"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:143
+msgid ""
+"Default 0.49 BU or fraction of the length of attached edges. The edge length"
+" is computed based on the algorithm you choose. You know how when someone "
+"stands too close to you, and feel uncomfortable? We call that our \"personal"
+" space\", and this setting is the factor that is multiplied by the spring "
+"length. It is a spherical distance (radius) within which, if another vertex "
+"of the same mesh enters, the vertex starts to deflect in order to avoid a "
+"self-collision."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:150
+msgid ""
+"Set this value to the fractional distance between vertices that you want "
+"them to have their own \"space\". Too high of a value will include too many "
+"vertices all the time and slow down the calculation. Too low of a level will"
+" let other vertices get too close and thus possibly intersect because there "
+"won't be enough time to slow them down."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:156
+msgid "Stiffness"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:156
+msgid "Default 1.0. How elastic that ball of personal space is."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:159
+msgid "Damping"
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:159
+msgid ""
+"Default 0.5. How the vertex reacts. A low value just slows down the vertex "
+"as it gets too close. A high value repulses it."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collisions.rst:161
+msgid ""
+"Collisions with other objects are set in the (other) :doc:`Collision panel "
+"</physics/collision>`. To collide with another object they have to share at "
+"least one common layer."
+msgstr ""

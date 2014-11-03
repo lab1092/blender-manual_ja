@@ -192,7 +192,7 @@ and a procedural texture, to give a very realistic look. When you navigate to th
 and select :guilabel:`Material` s,
 the browser will show you a sphere sample of that material to help you visualize the texture that goes with the name.
 For more information on using the :guilabel:`Image Browser`,
-see FIXME(Link Type Unsupported: dev; [[Dev:Ref/Release Notes/Vitals/File operations|the release notes]]).
+see `the release notes <http://wiki.blender.org/index.php/Dev:Ref/Release Notes/Vitals/File operations>`_
 
 
 .. note:: Blender Extension: Library
@@ -220,7 +220,7 @@ When you dive into the file, there will be a :guilabel:`NodeTree` option.
 :kbd:`lmb` on the one you want and then :kbd:`lmb` .
 
 
-.. note:: FIXME(Link Type Unsupported: http; [[http://verse.blender.org Verse]])
+.. note:: `Verse <http://verse.blender.org>`_
 
    Verse is an amazing OpenSource collaboration tool that integrates with Blender. Verse enables multiple people to work on, link, and share objects and modifications in Blender files in real time.
 

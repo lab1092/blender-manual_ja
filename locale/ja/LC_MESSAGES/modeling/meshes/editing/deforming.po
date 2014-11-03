@@ -1,0 +1,218 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:5
+msgid "Deforming Geometry"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:8
+msgid "Push/Pull"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:10
+msgid ""
+"Similar to shrink/flatten, this transformation consists of translating all "
+"selected elements along the line joining their original position to the "
+"Average position of the points. All translations are of same value, and are "
+"controlled by the mouse. It results in something that looks a bit like the "
+"scale effect, but much more deforming."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:15
+msgid ""
+"Note that unlike the preceding ones, you can :doc:`lock "
+"</3d_interaction/transform_control/axis_locking>` this transformation on "
+"axis - even though this has no real interest (except perhaps with a \"plane "
+"locking\"...)."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:22
+msgid "mesh before push/pull"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:29
+msgid "Pulled out using a negative value"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:36
+msgid "Pushed in using a positive value"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:40
+msgid "Warp"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:43
+#: ../../manual/modeling/meshes/editing/deforming.rst:98
+#: ../../manual/modeling/meshes/editing/deforming.rst:147
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:51
+msgid ""
+"The :guilabel:`Warp` transformation is useful in very specific cases. It "
+"works by warping the selected elements around the 3D cursor (always the 3D "
+"cursor; it does not take into account the pivot point setting...). It is "
+"also view-dependent. The points that line up vertically with the cursor will"
+" remain in place. Each point's distance to the cursor's **horizontal "
+"position** corresponds to the radius it will be from the cursor after the "
+"tool has been activated. The tool will then wrap the point around the "
+"cursor. A value of 360 will wrap the mesh into a complete circle, so that "
+"the points furthest to the left and the right will line up with each other "
+"and the cursor position."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:60
+msgid ""
+"To use this tool, set the cursor in the view where the center should be. "
+"Activate the tool, then move the cursor or enter the value of the angle the "
+"mesh should be warped to."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:65
+#: ../../manual/modeling/meshes/editing/deforming.rst:168
+msgid "Example"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:67
+msgid "A cylinder is warped into a semicircular shape"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:70
+msgid ""
+"Switch to top view and move the mesh away from the 3D cursor. This distance "
+"defines the radius of the warp."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:71
+msgid ""
+"Place the mesh in :guilabel:`Edit` mode (:kbd:`tab`) and press :kbd:`A` to "
+"select all vertices. Press :kbd:`shift-W` to activate the warp transform "
+"tool. Move the mouse left or right to interactively define the amount of "
+"warp."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:78
+msgid "Cylinder before being warped."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:85
+msgid "Cylinder warped, using a small angle."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:92
+msgid "Warp using larger angle."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:96
+msgid "Shear"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:106
+msgid ""
+"The :guilabel:`Shear` transformation applies a shearing on your selection of"
+" elements (in :guilabel:`Edit` mode, vertices/edges/control points/...). "
+"Like the other transform tools, it uses the view space, and is centered on "
+"the pivot point: the shear occurs along the view's x-axis passing through "
+"the pivot point. Everything that is \"above\" this axis (i.e. has a positive"
+" y-axis position) will move (shear) in the same direction as your mouse "
+"pointer (but always parallel to the x-axis). And everything that is "
+"\"below\" this x-axis will move in the opposite direction. The further away "
+"from the x-axis an element is, the more it moves."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:115
+msgid ""
+"When the tool becomes active, move the mouse left to right to interactively "
+"control the shearing. To make the effect work on the vertical axis instead "
+"of the horizontal one, click the :kbd:`mmb` and then move the mouse up or "
+"down. Alternatively enter a numerical value from 0 to infinity. To finish "
+"with the tool, press the :kbd:`lmb`."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:127
+msgid "before shearing"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:134
+msgid "Horizonatl shearing"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:141
+msgid "Vertical shearing"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:145
+msgid "To Sphere"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:156
+msgid ""
+"This command \"spherifies\" the selected mesh elements. It does this by "
+"finding the average position of the elements, and moves them toward the "
+"average distance they are from this point. Using a value of 1 puts all of "
+"the vertices an equal distance from this point, creating a spherical shape."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:162
+msgid ""
+"When the tool becomes active, drag the mouse left or right to interactively "
+"control the effect, or type in a value from 0 to 1 to manually control it."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:170
+msgid "First, start with a :doc:`Cube </modeling/meshes/primitives#cube>`."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:172
+msgid "Press :kbd:`tab` to switch into :guilabel:`Edit` mode."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:173
+msgid ""
+"Make sure all the vertices of the cube are selected by pressing :kbd:`A` "
+"twice. Then, go to the :guilabel:`Editing` context by pressing :kbd:`F9`. "
+"You should be able to see the :guilabel:`Mesh Tools` panel now."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:174
+msgid ""
+"Subdivide the cube by pressing the :guilabel:`Subdivide` button in the "
+":guilabel:`Mesh Tools` panel, or with :menuselection:`[W] --> Subdivide`. "
+"You can do this as many times as you want; the more you subdivide, the "
+"smoother your sphere will be."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:175
+msgid ""
+"Now, press :kbd:`shift-alt-S` and move your mouse left or right to "
+"interactively control the proportion of \"spherification\" (or directly type"
+" a value, like \"1.000\" to achieve the same effect as below) - preferably "
+"using the :guilabel:`Median Point` pivot point!"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:176
+msgid ""
+"Alternatively, you can use the :guilabel:`To Sphere` button (in the "
+":guilabel:`Mesh Tools` panel). Select \"100\" to make your sphere. Note that"
+" you *should not move the 3D cursor* - or you won't get a sphere, but a "
+"piece of sphere..."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:183
+msgid "Subdivided cube, before"
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/deforming.rst:190
+msgid "Subdivided cube, after warp"
+msgstr ""

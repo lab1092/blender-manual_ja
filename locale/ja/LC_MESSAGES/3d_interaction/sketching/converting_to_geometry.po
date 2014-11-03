@@ -1,0 +1,276 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:3
+msgid "Converting Sketches to Objects"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:5
+msgid ""
+"In the 3D view, sketches on the active layer can be converted to geometry, "
+"based on the current view settings, by transforming the points recorded when"
+" drawing (which make up the strokes) into 3D-space. Currently, all points "
+"will be used, so it may be necessary to simplify or subdivide parts of the "
+"created geometry for standard use."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:13
+msgid "Grease Pencil panel in 3D View."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:16
+msgid ""
+"Sketches can currently be converted into curves, as proposed by the "
+":guilabel:`Convert Grease Pencil` menu popped-up by the :guilabel:`Convert` "
+"button in the grease pencil properties"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:19
+msgid ""
+":guilabel:`Path` will create NURBS 3D curves of order 2 (i.e. behaving like "
+"polylines)."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:20
+msgid ""
+":guilabel:`Bezier Curve` will create Bezier curves, with free \"aligned\" "
+"handles (i.e. also behaving like polylines)."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:23
+msgid "Why \"polyline-like\" curves?"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:25
+msgid ""
+"To get by default curves following exactly the grease pencil strokes. If you"
+" want a smoothed curve, just edit it to get auto handles (for Bezier), or "
+"raise its order (for NURBS)."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:29
+msgid "Converting to Mesh"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:31
+msgid ""
+"If you want to convert your sketch to a mesh, simply choose first "
+":guilabel:`NURBS`, and then convert the created curve to a mesh."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:36
+msgid "General Options"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:40
+msgid "The Convert to Curve options."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:43
+msgid ""
+"Stroke's width will be used to set the curve's control points' radii and "
+"weights (**not** NURBS weights, but those used e.g. as goal by the softbody "
+"simulation...). The default behavior is to get strokes' width (as defined in"
+" its settings - and which might have been modulated by the pen pressure), to"
+" multiply it by a given constant (0.1), and to assign it directly to "
+"weights. Radii get the same value scaled by the :guilabel:`Radius Fac` "
+"factor (e.g. with a **10.0** factor, a stroke width of **3** will give radii"
+" of **3.0** ...)."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:51
+msgid ""
+":guilabel:`Normalize Weight` (enabled by default) will scale weights value "
+"so that they tightly fit into the ``[0.0, 1.0]`` range."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:53
+msgid ""
+"All this means that with a pressure tablet, you can directly control the "
+"radius and weight of the created curve, which can affect e.g. the width of "
+"an extrusion, or the size of an object through a :guilabel:`Follow Path` "
+"constraint or :guilabel:`Curve` modifier!"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:58
+msgid ""
+":guilabel:`Link Strokes` (enabled by default) will create a single spline "
+"(i.e. curve element) from all strokes in active grease pencil layer. This "
+"especially useful if you want to use the curve as a path. All the strokes "
+"are linked in the curve by \"zero weights/radii\" sections."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:64
+msgid "Timing"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:66
+msgid ""
+"Grease pencil now stores \"dynamic\" data, i.e. how fast they were drawn. "
+"When converting to curve, those data can be used to create an "
+":guilabel:`Evaluate Time` F-Curve (in other words, a path animation), that "
+"can be used e.g. to control another object's position along that curve "
+"(:guilabel:`Follow Path` constraint, or, trough a driver, :guilabel:`Curve` "
+"modifier). So this allows you to reproduce your drawing movements."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:76
+msgid ""
+"All those \"timing\" options need :guilabel:`Link Stroke` to be enabled - "
+"else they would not make much sense!"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:82
+msgid ""
+"Please note that if you use this tool with older grease pencil's strokes "
+"(i.e. some without any timing data), you will only have a subset of those "
+"options available (namely, only linear progression along the curve over a "
+"specified range of frames)."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:98
+msgid "Timing Mode"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:89
+msgid "This control let you choose how timing data are used."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:91
+msgid "No Timing"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:92
+msgid ""
+"Just create the curve, without any animation data (hence all following "
+"options will be hidden)..."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:93
+msgid "Linear"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:94
+msgid "The path animation will be a linear one."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:95
+msgid "Original"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:96
+msgid ""
+"The path animation will reflect to original timing, including for the "
+"\"gaps\" (i.e. time between strokes drawing)."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:98
+msgid "Custom Gaps"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:98
+msgid ""
+"The path animation will reflect to original timing, but the \"gaps\" will "
+"get custom values. This is especially useful if you have very large pauses "
+"between some of your strokes, and would rather like to have \"reasonable\" "
+"ones!"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:101
+msgid "Frame Range"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:101
+msgid ""
+"The \"length\" of the created path animation, in frames. In other words, the"
+" highest value of :guilabel:`Evaluation Time`."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:104
+msgid "Start Frame"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:104
+msgid "The starting frame of the path animation."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:107
+msgid "Realtime"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:107
+msgid ""
+"When enabled, the path animation will last exactly the same duration it took"
+" you do draw the strokes."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:110
+msgid "End Frame"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:110
+msgid ""
+"When :guilabel:`Realtime` is disabled, this defines the end frame of the "
+"path animation. This means that the drawing timing will be scaled up or down"
+" to fit into the specified range."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:113
+msgid "Gap Duration"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:113
+msgid ""
+":guilabel:`Custom Gaps` only. The average duration (in frames) of each gap "
+"between actual strokes. Please note that the value entered here will only be"
+" exact if :guilabel:`Realtime` is enabled, else it will be scaled, exactly "
+"as the actual strokes' timing is!"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:116
+msgid "Gap Randomness"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:116
+msgid ""
+"Only when :guilabel:`Gap Duration` is non-null. The number of frames actual "
+"gap duration can vary of. This allows the creation of gaps having an average"
+" well defined duration, yet keeping some random variations to avoid an "
+"\"always the same\" effect."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:120
+msgid "Random Seed"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:119
+msgid ""
+"The seed fed to the random generator managing gaps duration variations. "
+"Change it to get another set of gaps duration in the path animation."
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:123
+msgid "Example"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:125
+msgid ""
+"Here is a simple \"hand writing\" video created with curves converted from "
+"sketch data:"
+msgstr ""
+
+#: ../../manual/3d_interaction/sketching/converting_to_geometry.rst:129
+msgid ""
+"And the blend file: `File:ManGreasePencilConvertToCurveDynamicExample.blend "
+"<http://wiki.blender.org/index.php/file:ManGreasePencilConvertToCurveDynamicExample.blend>`__"
+msgstr ""

@@ -83,7 +83,5 @@ Development guidelines
 ======================
 
 If you are a script developer, you may be interested in the
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Py/Scripts/Guidelines/Addons|Add-Ons development guidelines]]
-).
+`Add-ons development guidelines <http://wiki.blender.org/index.php/Dev:2.5/Py/Scripts/Guidelines/Addons>`_
 

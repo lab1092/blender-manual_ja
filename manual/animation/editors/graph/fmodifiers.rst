@@ -41,9 +41,8 @@ Poly Order
    Specify the order of the polynomial, or the highest power of 'x' for this polynomial. (number of coefficients - 1).
 
 Change the Coefficient values to change the shape of the curve. See
-FIXME(Link Type Unsupported: http;
-[[http://en.wikipedia.org/wiki/Polynomial The Wikipedia Page]]
-) for more information on polynomials.
+`The Wikipedia Page <http://en.wikipedia.org/wiki/Polynomial>`_
+for more information on polynomials.
 
 
 Built-in Function

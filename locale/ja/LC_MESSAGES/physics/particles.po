@@ -1,0 +1,384 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/physics/particles.rst:3
+msgid "Particles"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:5
+msgid ""
+"Particles are lots of items emitted from mesh objects, typically in the "
+"thousands. Each particle can be a point of light or a mesh, and be joined or"
+" dynamic. They may react to many different influences and forces, and have "
+"the notion of a lifespan. Dynamic particles can represent fire, smoke, mist,"
+" and other things such as dust or magic spells."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:11
+msgid ""
+":doc:`Hair </physics/particles/hair>` type particles are a subset of regular"
+" particles. Hair systems form strands that can represent hair, fur, grass "
+"and bristles."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:13
+msgid ""
+"You see particles as a :guilabel:`Particle` modifier, but all settings are "
+"done in the :guilabel:`Particle tab`."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:21
+msgid ""
+"Image 1: Some fur made from particles (`Blend file "
+"<http://wiki.blender.org/index.php/Media:Blender3D FurExample "
+"2.49.blend>`__)."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:24
+msgid ""
+"Particles generally flow out from their mesh into space. Their movement can "
+"be affected by many things, including:"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:27
+msgid "Initial velocity out from the mesh."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:28
+msgid "Movement of the emitter (vertex, face or object) itself."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:29
+msgid "Movement according to \"gravity\" or \"air resistance\"."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:30
+msgid "Influence of force fields like wind, vortexes or guided along a curve."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:31
+msgid "Interaction with other objects like collisions."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:32
+msgid ""
+"Partially intelligent members of a flock (herd, school, ...), that react to "
+"other members of their flock, while trying to reach a target or avoid "
+"predators."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:33
+msgid ""
+"Smooth motion with softbody physics (only :guilabel:`Hair` particle "
+"systems)."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:34
+msgid ""
+"Or even manual transformation with :doc:`Lattices "
+"</modifiers/deform/lattice>`."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:36
+msgid "Particles may be rendered as:"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:38
+msgid ":doc:`Halos </materials/halos>` (for Flames, Smoke, Clouds)."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:39
+msgid ""
+"Meshes which in turn may be animated (e.g. fish, bees, ...). In these cases,"
+" each particle \"carries\" another object."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:40
+msgid ""
+":doc:`Strands </materials/properties/strands>` (for :doc:`Hair, Fur, Grass "
+"</physics/particles/hair>`); the complete way of a particle will be shown as"
+" a strand. These strands can be manipulated in the 3D window (combing, "
+"adding, cutting, moving, etc)."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:42
+msgid ""
+"Every object may carry many particle systems. Each particle system may "
+"contain up to 100. 000 particles. Certain particle types (:guilabel:`Hair` "
+"and :guilabel:`Keyed`) may have up to 10.000 children for each particle "
+"(children move and emit more or less like their respective parents). The "
+"size of your memory and your patience are your practical boundaries."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:49
+msgid "Incompatibility with Prior Versions"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:51
+msgid ""
+"There are many differences between the \"old\" particle system that was used"
+" up to and including version 2.45, and the \"new\" particle system. There "
+"are many things possible now that could not be done with the old system. The"
+" new system is incompatible to the old system, though Blender tries to "
+"convert old particle systems, which works only to some extent. The old "
+"system is most like the new :guilabel:`Emitter` system (keep reading to find"
+" out what that is). If you are using an old version of Blender 2.45 and "
+"previous, :doc:`click here to access the old documentation "
+"</physics/particles/blender_2.45_particles>`."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:60
+msgid "Workflow"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:62
+msgid "The process for working with standard particles is:"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:64
+msgid "Create the mesh which will emit the particles."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:65
+msgid ""
+"Create one or more Particle Systems to emit from the mesh. Many times, "
+"multiple particle systems interact or merge with each other to achieve the "
+"overall desired effect."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:66
+msgid "Tailor each Particle System's settings to achieve the desired effect."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:67
+msgid "Animate the base mesh and other particle meshes involved in the scene."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:68
+msgid "Define and shape the path and flow of the particles."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:69
+msgid ""
+"For :doc:`Hair </physics/particles/hair>` particle systems: Sculpt the "
+"emitter's flow (cut the hair to length and comb it for example)."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:70
+msgid "Make final render and do physics simulation(s), and tweak as needed."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:74
+msgid "Creating a Particle System"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:78
+msgid "Image 2: Adding a particle system."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:81
+msgid ""
+"To add a new particle system to an object, go to the :guilabel:`Particles` "
+"tab of the object :guilabel:`Settings` editor and click the small "
+":guilabel:`+` button. An object can have many Particle Systems."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:85
+msgid ""
+"Each particle system has separate settings attached to it. These settings "
+"can be shared among different particle systems, so one doesn't have to copy "
+"every setting manually and can use the same effect on multiple objects. "
+"Using the :guilabel:`Random` property they can be randomized to look "
+"slightly different, even when using the same settings."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:93
+msgid "Types of Particle systems"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:97
+msgid "Image 3: Particle system types."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:100
+msgid ""
+"After you have created a particle system, the :guilabel:`Property` window "
+"fills with many panels and buttons. But don't panic! There are two different"
+" types of particle systems, and you can change between these two with the "
+":guilabel:`Type` drop-down list:"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:108
+msgid "Emitter"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:106
+msgid ""
+"This parallels the old system to the greatest extent. In such a system, "
+"particles are emitted from the selected object from the :guilabel:`Start` "
+"frame to the :guilabel:`End` frame and have a certain lifespan."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:113
+msgid ":doc:`Hair </physics/particles/hair>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:111
+msgid ""
+"This system type is rendered as strands and has some very special "
+"properties: it may be edited in the 3D window in realtime and you can also "
+"animate the strands with :doc:`Cloth Simulation </physics/cloth>`."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:115
+msgid ""
+"The settings in the :guilabel:`Particle System` panel are partially "
+"different for each system type. For example, in *Image 3* they are shown for"
+" only system type :guilabel:`Emitter`."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:120
+msgid "Common Options"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:122
+msgid ""
+"Each system has the same basic sets of controls, but options within those "
+"sets vary based on the system employed. These sets of controls are:"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:125
+msgid ":doc:`Emission </physics/particles/emission>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:126
+msgid ""
+"Settings for the initial distribution of particles on the emitter and the "
+"way they are born into the scene."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:128
+msgid ":doc:`Cache </physics/particles/cache_and_bake>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:128
+msgid ""
+"In order to increase realtime response and avoid unnecessary recalculation "
+"of particles, the particle data can be cached in memory or stored on disk."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:130
+msgid ":doc:`Velocity </physics/particles/physics>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:131
+msgid "Initial speed of particles."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:132
+msgid ":doc:`Rotation </physics/particles/physics>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:133
+msgid "Rotational behavior of particles."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:134
+msgid ":doc:`Physics </physics/particles/physics>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:135
+msgid "How the movement of the particles behaves."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:136
+msgid ":doc:`Render </physics/particles/visualization>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:137
+msgid "Rendering options."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:138
+msgid ":doc:`Display </physics/particles/visualization>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:139
+msgid "Realtime display in the 3D View."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:140
+msgid ":doc:`Children </physics/particles/children>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:141
+msgid "Control the creation of additional child particles."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:142
+msgid ":doc:`Field Weights </physics/particles/physics>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:143
+msgid "Factors for external forces."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:144
+msgid ":doc:`Force Field Settings </physics/particles/physics>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:145
+msgid "Makes particles force fields."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:148
+msgid ":doc:`Vertex Groups </physics/particles/vertexgroups>`"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:147
+msgid "Influencing various settings with vertex groups."
+msgstr ""
+
+#: ../../manual/physics/particles.rst:151
+msgid "Links"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:153
+msgid ""
+"`Tutorials "
+"<http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Particle_Systems>`__"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:154
+msgid ""
+"`Physics Caching and Baking <http://www.blender.org/development/release-"
+"logs/blender-246/physics-caching-and-baking/>`__"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:155
+msgid ""
+"`Particle Rewrite Documentation "
+"<http://wiki.blender.org/index.php/BlenderDev/Particles_Rewrite_Doc>`__"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:156
+msgid ""
+"`Thoughts about the particle rewrite code "
+"<http://wiki.blender.org/index.php/BlenderDev/Particles_Rewrite>`__"
+msgstr ""
+
+#: ../../manual/physics/particles.rst:157
+msgid ""
+"`Static Particle Fur Library "
+"<http://cs.unm.edu/~sketch/gallery/resource/furlib.html>`__"
+msgstr ""

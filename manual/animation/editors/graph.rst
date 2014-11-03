@@ -32,7 +32,7 @@ and :doc:`Editing </animation/editors/graph/editing>` for more info.
 
 
 Navigation
-^^^^^^^^^^
+----------
 
 As with most windows, you can:
 
@@ -55,7 +55,7 @@ These are some other useful tools.
 
 
 2D Cursor
-^^^^^^^^^
+---------
 
 .. figure:: /images/Doc_Graph_2DCursor.jpg
 
@@ -64,7 +64,7 @@ These are some other useful tools.
 
 The current frame is represented by a green vertical line called the *Time Cursor*.
 
-As in the :doc:`Timeline </animation/editors/timeline>`, you can change the current frame by pressing or holding :kbd:`lmb`.
+As in the :doc:`Timeline </animation/editors/timeline>`, you can change the current frame by pressing or holding :kbd:`LMB`.
 
 The green horizontal line is called the *Cursor*.
 This can be disabled via the *View Menu* or the *View Properties* panel.
@@ -74,7 +74,7 @@ The *2D Cursor* mostly used for editing tools.
 
 
 View Axes
-^^^^^^^^^
+---------
 
 For *Actions* the X-axis represents time,
 the Y-axis represents the value to set the property.
@@ -89,7 +89,7 @@ Note that *Drivers* use radians for rotation properties.
 
 
 Markers
-^^^^^^^
+-------
 
 Like with most animation editors, markers are shown at the bottom of the editor.
 
@@ -117,13 +117,13 @@ Here you'll find.
 
 
 Menus
-^^^^^
+-----
 
 See :doc:`Header Menus </animation/editors/graph/editing#header_menus>` for more info.
 
 
 Header Controls
-^^^^^^^^^^^^^^^
+---------------
 
 .. figure:: /images/Doc_Graph_Header_Mode.jpg
 
@@ -222,7 +222,7 @@ Lock curve from editing
 
 
 Channel Editing
-^^^^^^^^^^^^^^^
+---------------
 
 *Select channel* :kbd:`LMB`
 
@@ -256,7 +256,7 @@ The panels in the *Properties Region*.
 
 
 View Properties Panel
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 .. figure:: /images/Doc_Graph_View_Properties_Panel.jpg
 
@@ -283,7 +283,7 @@ Cursor Y
 
 
 Active F-Curve Panel
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 .. figure:: /images/Doc_Graph_Active_Fcurve_Panel.jpg
 
@@ -312,7 +312,7 @@ Color Mode
 
 
 Active Keyframe Panel
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 .. figure:: /images/Doc_Graph_Active_Keyframe_Panel.jpg
 
@@ -346,7 +346,7 @@ Right Handle
 
 
 Drivers Panel
-^^^^^^^^^^^^^
+-------------
 
 .. figure:: /images/Doc_Graph_Drivers_Panel.jpg
 
@@ -357,7 +357,7 @@ See :doc:`Drivers Panel </animation/basics/drivers#drivers_panel>` for more info
 
 
 Modifiers Panel
-^^^^^^^^^^^^^^^
+---------------
 
 .. figure:: /images/Doc_Graph_Modifiers_Panel.jpg
 

@@ -233,11 +233,7 @@ or otherwise experiment and ``svn revert`` to get back to normalcy.
 Here is an example of the trail to get to the bottom of the handling of the options.
 We will observe the handling of the ``use_shape_match`` property, as an example.
 
-- Start by getting
-
-FIXME(Link Type Unsupported: dev;
-[[Dev:Doc/Building_Blender|The Blender Source Tree]]
-)
+- Start by getting `The Blender Source Tree <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_
 
 - If you search it for ``use_shape_match`` (e.g., by ``grep -r use_shape_match .``), this will lead you to `blender/source/blender/makesrna/intern/rna_object_force.c <https://svn.blender.org/svnroot/bf-blender/trunk/blender/source/blender/makesrna/intern/rna_object_force.c>`__, which says:
 

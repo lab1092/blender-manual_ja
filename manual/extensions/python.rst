@@ -32,16 +32,12 @@ Links that are useful while writing scripts.
   - Official API documentation. Use this for referencing while writing scripts.
 -
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Py/API/Intro|API introduction]]
-)
+`API introduction <http://www.blender.org/documentation/blender_python_api_2_72_release/info_quickstart.html>`_
 
   - A short introduction to get you started with the API. Contains examples.
 -
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Py/Scripts/Cookbook|CookBook]]
-)
+`CookBook <http://wiki.blender.org/index.php/Dev:2.5/Py/Scripts/Cookbook>`_
 
   - A section of handy code snippets (yet to be written)
 - :doc:`FAQ </extensions/python/faq>`
@@ -51,16 +47,12 @@ Links that deal with distributing your scripts.
 
 -
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:Py/Sharing|Sharing scripts]]
-)
+`Sharing scripts <http://wiki.blender.org/index.php/Dev:Py/Sharing>`_
 
   - Information on how to share your scripts and get them included in the official Blender distribution.
 -
 
-FIXME(Link Type Unsupported: dev;
-[[Dev:2.5/Py/Scripts/Guidelines/Addons|Creating Add-Ons]]
-)
+`Creating Add-Ons <http://wiki.blender.org/index.php/Dev:2.5/Py/Scripts/Guidelines/Addons>`_
 
   - As of Blender 2.5 Alpha1, this is the new way to spread scripts for Blender.
 - `Extensions project <https://projects.blender.org/projects/bf-extensions/>`__

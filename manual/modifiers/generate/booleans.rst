@@ -543,10 +543,7 @@ usually the modifier will simply run faster and produce a better output mesh.
 However there are also some changes in behavior. In particular, Carve will perform Boolean
 operations only if the intersection of two meshes is a closed loop of edges.
 
-release Notes and Development Page:
-FIXME(Link Type Unsupported: dev;
-[[Dev:Ref/Release_Notes/2.62/Boolean_Modifier|Boolean Modifier]]
-)
+Release Notes and Development Page: `Boolean Modifier <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.62/Boolean_Modifier>`_
 
 
 Useful Links

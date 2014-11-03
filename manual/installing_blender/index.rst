@@ -12,4 +12,3 @@
    other_oss.rst
    configuration.rst
    directorylayout.rst
-
