@@ -255,8 +255,8 @@ Bulid html files
 Japanese Translation Sample
 =====================================
 
-* http://lab1092.site44.com/blender-manual_ja/contents.html
-
+* http://lab1092.site44.com/blender-manual/ja/contents.html
+* http://lab1092.site44.com/blender-manual/en/contents.html
 
 
 
