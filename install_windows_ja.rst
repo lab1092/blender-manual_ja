@@ -7,7 +7,7 @@ Blenderマニュアルのインストールガイド
 .. caution::
    [訳者注]このドキュメントは"install_windows.rst"を日本語に訳したものです。
    なお、OS Xについては 
-   `Blenderのマニュアルをローカル環境でビルドする <http://lab1092.wordpress.com/2014/10/29/blender%E3%81%AE%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%92%B0%E5%A2%83%E3%81%A7%E3%83%93%E3%83%AB%E3%83%89%E3%81%99%E3%82%8B/>"_
+   `Blenderのマニュアルをローカル環境でビルドする <http://lab1092.wordpress.com/2014/10/29/blender%E3%81%AE%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%92%B0%E5%A2%83%E3%81%A7%E3%83%93%E3%83%AB%E3%83%89%E3%81%99%E3%82%8B/>`_
    にビルドした手順を載せていますので、ご参考まで。
    
    なお、対象となるリポジトリは https://github.com/lab1092/blender-manual_i18n ではないのでお間違いなきよう。
