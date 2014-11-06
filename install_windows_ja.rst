@@ -4,7 +4,14 @@ Blenderマニュアルのインストールガイド
 
 このガイドにはWindows 8.1を使用しました。
 
-
+.. caution::
+   [訳者注]このドキュメントは"install_windows.rst"を日本語に訳したものです。
+   なお、OS Xについては 
+   `Blenderのマニュアルをローカル環境でビルドする <http://lab1092.wordpress.com/2014/10/29/blender%E3%81%AE%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%82%92%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%92%B0%E5%A2%83%E3%81%A7%E3%83%93%E3%83%AB%E3%83%89%E3%81%99%E3%82%8B/>"_
+   にビルドした手順を載せていますので、ご参考まで。
+   
+   なお、対象となるリポジトリは https://github.com/lab1092/blender-manual_i18n ではないのでお間違いなきよう。
+   
 
 コンピューターにgitをインストールする
 ===============================
@@ -19,67 +26,66 @@ Blenderマニュアルのインストールガイド
 
 - インストールが成功したことを確かめるためにGit bashをスタートメニューから開始します。 
 
-   *Git bash が開き、コンソールプロンプトの$が表示されたら、, in the following mentioned as prompt.*
+   *Git bash が開き、コンソールプロンプトの$が表示されたらプロンプトにて以下で言及するものに従います。*
 
 .. tip::
 
-   You can use the Windows clipboard,
-   if you click on the Git Bash program icon in the left window corner and use the commands under Edit.
+   Windowsのクリップボードを使えるので
+   ウィンドウ左隅のGit Bashアイコンをクリックするとエディット時のコマンドを使用できます。
 
 
-Installing Python on your computer
+Pythonをインストールする
 ==================================
 
-- Download Python installation package for Windows from here: https://www.python.org/downloads/
+- Windows 向け Python インストールパッケージをここからダウンロードします: https://www.python.org/downloads/
 
-   *In this guide version 3.4.1 is used.*
+   *このガイドでは 3.4.1 を使います*
 
-- Install Python with the installation wizard.
+- インストールウィザードに従ってインストールします。
  
-   *In this guide the default settings are used. Python will be installed to C:\\Python34*
+   *このガイドではデフォルト設定でインストールします。ファイルは C:\\Python34 にインストールされます。*
 
-- You can check the installation with the following steps
-   - Start the Git Bash.
-   - Run ``cd /c/Python34/`` at the prompt.
-   - Run ``python`` at the prompt. The Python shell is started and the Python version is shown.
-   - Type ``exit()`` at the Python prompt and press Enter to exit the Python shell.
+- 以下の手順で正常にインストールできたことを確認します。
+   - Git Bashを開始します。
+   - ``cd /c/Python34/`` とプロンプトに入力し、実行します。
+   - ``python`` とプロンプトに入力し、実行します。 Pythonシェルが開始し、 Pythonのバージョンが表示されます。
+   - ``exit()`` と Python prompt に入力し、Enterきーを押すとPythonシェルを抜けます。
 
 
-Downloading the Blender Manual git repository
+GitリポジトリからBlenderマニュアルをダウンロード
 =============================================
-- Create a new folder on your disk with your Windows Explorer.
+- エクスプローラーを使ってディスク上に新しいフォルダを作成します。.
 
-  *In this guide C:\\blender\\ is used.*
+  *このガイドでは C:\\blender\\ を使います。*
 
-- Start the Git Bash, if it is not running.
-- Move into the new folder:
+- Git Bashを実行していない場合には、開始します。
+- 新しいフォルダに移って以下のコマンドを実行します。:
 
   .. code-block:: bash
 
      cd /c/blender
 
-- To download the git repository of the Blender Manual to your disk, run this command at the prompt:
+- ディスクにGitリポジトリのBlenderマニュアルをダウンロードするためにプロンプト上でこのコマンドを実行します。:
 
   .. code-block:: bash
 
      git clone git://git.blender.org/blender-manual.git
 
-  *If the download is finished the prompt comes back with* ``$``
-  *and on the disk a new folder blender-manual (C:\\blender\\blender-manual) is created.*
+  *ダウンロードが終了したら右のマークが表示されます* ``$``
+  *ディスク上にはblender-manual (C:\\blender\\blender-manual) が作成されています*
 
 
-Setting up the local copy
-=========================
+ローカルコピーをセットアップする
+=================================
 
-- Open the file "C:\\blender\\blender-manual\\requirements.txt" with a text editor (e.g. notepad).
-- Remove the last line ``wsgiref==0.1.2`` and save the file.
+- "C:\\blender\\blender-manual\\requirements.txt" をテキストエディタで開きます (e.g.ノードパッド).
+- 最後の行``wsgiref==0.1.2`` を削除して、ファイルを保存します。
 
-  *This line must be deleted because with Python 3.4.1 the package wsgiref is already
-  installed and otherwise during the next steps it would be come to an error.*
+  *この行はPython3.4.1ですでに標準パッケージに含まれているwsgirefをインストールしないようにするための措置です。*
 
-- Start the Git Bash, if it is not running.
-- Move into the new folder blender-manual of your local clone of the downloaded
-  git repository with running the command at the prompt.
+- Git Bashを実行していない場合には、開始します。
+- Gitリポジトリからダウンロードされたローカル上の複製として新しく作成された blender-manual
+  フォルダにプロンプト上で移動します。
 
   .. code-block:: bash
 
@@ -87,18 +93,18 @@ Setting up the local copy
 
      /c/Python34/Scripts/pip install -r requirements.txt
 
-  *A lot of information are logged. At the end the prompt comes back with* ``$`` *and above the line:*
+  *たくさんのログ出力があります。最後に右のマークが表示されます* ``$`` *そして以下のメッセージが表示されます:*
 
   ``Successfully installed Jinja2 MarkupSafe Pygments Sphinx docutils sphinx-rtd-theme Cleaning up...`` ...is shown.
 
-  During the setup some warnings are shown, they are no problem, it's important that no errors are shown.
+  インストール中に幾つかの警告が表示されますが, 問題はありません。 エラーが出ないことが重要です。
 
 
-Building the Blender manual the first time
+はじめてBlenderマニュアルをビルドする
 ==========================================
 
-- Start the Git Bash, if it is not running.
-- Move into the blender-manual folder and build the manual by running the commands:
+- Git Bashを実行していない場合には、開始します。
+- blender-manual フォルダに移動し、以下のコマンドを実行しマニュアルをビルドします。:
 
   .. code-block:: bash
 
@@ -106,13 +112,14 @@ Building the Blender manual the first time
 
      /c/Python34/Scripts/sphinx-build -b html ./manual ./html
 
-  *The building process takes some time you can see a % progress running.
-  At the end the line "build succeeded" is shown and the prompt comes back.
-  The Blender Manual is build in the subfolder html (C:\\blender\\blender-manual\\html).*
+  *ビルドプロセスは少し時間がかかり、パーセンテージで進み具合を確認できます。
+  最後に"build succeeded" と表示され、プロンプトが帰ってきます。
+  ビルドされたマニュアルは html フォルダに出力されます。(C:\\blender\\blender-manual\\html).*
 
-- You can exit the Git Bash with running the command ``exit`` at the prompt.
-- Open the file "C:\\blender\\blender-manual\\html\\contents.html" in your web browser and read the manual.
+- 実行しているGit Bash を抜ける場合には、プロンプト上で ``exit`` コマンドを実行します.
+- Webブラウザで "C:\\blender\\blender-manual\\html\\contents.html" を開いてマニュアルを読むことができます。
 
-At this point the installation guide for the Blender Manual on Microsoft Windows is finished.
+これでWindows上でのBlenderマニュアルインストール作業は完了しました。
+次のステップはBlender Manual project documentationのドキュメントの編集です。
 The next steps for editing the manual are shown in the Blender Manual project documentation.
 
