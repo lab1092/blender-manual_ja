@@ -24,7 +24,7 @@ you can try translation to your own Sphinx project.
 :projectroot: ~/GitHub/blender-manual_i18n
 :documentroot: ~/GitHub/blender-manual_i18n/manual
 :pot files: ~/GitHub/blender-manual_i18n/locale/pot
-:po files(ja): ~/GitHub/blender-manual_i18n/ja
+:po files(ja): ~/GitHub/blender-manual_i18n/locale/ja
 :html files(en): ~/GitHub/blender-manual_i18n/html/en
 :html files(ja): ~/GitHub/blender-manual_i18n/html/ja
 
