@@ -5,7 +5,7 @@ States
 In the BGE, an object can have different "states". At any time while the game is playing,
 the current state of the object defines its behavior. For instance,
 a character in your game may have states representing awake, sleeping or dead. At any moment
-their behaviour in response to a loud bang will be dependant on their current state;
+their behavior in response to a loud bang will be dependent on their current state;
 they may crouch down (awake); wake up (asleep) or do nothing (dead).
 
 
@@ -50,7 +50,7 @@ Editing States
 States are set up and edited using the Controller (center) column of the Game Logic Panel.
 To see the State panel, click on the State Panel Button shown.
 The panel shows two areas for each of the 30 available states; these show Visible states,
-and Initial states (see below|).  Setting up the State system for a game is performed by
+and Initial states (see below).  Setting up the State system for a game is performed by
 choosing the appropriate state for each controller in the object's logic.
 
 The display of an object's state logic, and other housekeeping,

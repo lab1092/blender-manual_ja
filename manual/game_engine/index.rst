@@ -9,7 +9,7 @@
 
    introduction.rst
    screen_layout.rst
-   logic.rst
+   logic/index.rst
    camera.rst
    camera/editing.rst
    camera/stereo.rst

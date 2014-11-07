@@ -7,15 +7,6 @@ Each GameObject in the game may store a collection of logical components (Logic 
 which control its behavior within the scene. Logic bricks can be combined to perform
 user-defined actions that determine the progression of the simulation.
 
-.. toctree::
-   :maxdepth: 1
-
-   /game_engine/logic/editor.rst
-   /game_engine/logic/sensors/index.rst
-   /game_engine/logic/controllers/index.rst
-   /game_engine/logic/actuators/index.rst
-   /game_engine/logic/properties.rst
-   /game_engine/logic/states.rst
 
 Logic Bricks
 ============

@@ -2,6 +2,24 @@
 Introduction to Game Engine
 ***************************
 
+The Blender Game Engine (BGE) is Blender's tool for real time projects, from architectural visualizations and simulations to games.
+
+A word of warning,
+before you start any big or serious project with the Blender Game Engine, you should note that it is currently not very supported and that there are plans for its retargeting and refactoring that, in the very least, will break compatibility. For further information, you should get in touch with the developers via mailing list or IRC and read the `development roadmap <http://code.blender.org/index.php/2013/06/blender-roadmap-2-7-2-8-and-beyond/>`_.
+
+
+data-conversion -->
+input
+|
+animation, physics and logic
+|
+rendering
+
+different renderer, logic is done via logic bricks or python
+press 'P' to play in preview mode in the embedded player
+
+use cases and sample games
+
 Blender has its own built in Game Engine that allows you to create interactive 3D applications
 or simulations. The major difference between Game Engine and the conventional Blender  system
 is  in the rendering process. In the normal Blender engine,

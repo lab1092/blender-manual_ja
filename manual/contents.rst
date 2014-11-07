@@ -26,7 +26,6 @@
    composite_nodes/index.rst
    sequencer/index.rst
    extensions/index.rst
-   py/index.rst
    game_engine/index.rst
    motion_tracking/index.rst
    glossary/index.rst

@@ -1,21 +1,9 @@
 Post Install Configuration
 **************************
 
-Blender will normally run fine without _any_ configuration but there are some changes you may
+Blender will normally run fine without any configuration but there are some changes you may
 want to make depending on your hardware.
-
 This section **only** covers system specific user preferences.
-
-.. tip::
-   The key combination :kbd:`Ctrl-U` saves all the settings of the
-   currently open Blender file into the default Blender file.
-   The settings in the default Blender file are read when Blender is first started or when :kbd:`Ctrl-N`
-   is pressed to start a new file. If you accidentally change the settings in your default Blender file
-   (i.e. you save your work in progress as the default)
-   you can restore factory settings from the file menu and  press :kbd:`Ctrl-U` again to save the
-   newly loaded factory settings.
-
-The following sections list some commonly customized preferences in their respective categories.
 
 
 Input

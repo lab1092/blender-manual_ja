@@ -54,7 +54,7 @@ Type menu
 Value field
    Sets the initial value of the property.
 
-FIXME(Template Unsupported: Shortcut/Keypress; {{Shortcut/Keypress|I}}) information button
+:guilabel:`i` information button
    Display property value in debug information.
    If debugging is turned on, the value of the property is given in the top left-hand corner of the screen while the
    game is running. To turn debugging on, tick :guilabel:`Show Debug Properties` in the :guilabel:`Game` menu. All

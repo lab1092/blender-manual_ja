@@ -1,5 +1,5 @@
-Other supported operating systems
-*********************************
+Other Operating Systems
+***********************
 
 FreeBSD
 =======
