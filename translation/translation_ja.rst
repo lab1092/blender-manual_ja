@@ -97,9 +97,15 @@ POTファイルの生成、POファイルの更新(MOファイルの生成)、HT
 
       .. code-block::
         
+         $ cd <プロジェクトフォルダの親フォルダ>
          $ git clone git://git.blender.org/blender-manual.git
          
    一度取得したあとはpull?
+   
+      .. code-block::
+
+         $ cd <プロジェクトフォルダの親フォルダ>
+         $ git pull 
 
 2. POTファイルの生成
 
