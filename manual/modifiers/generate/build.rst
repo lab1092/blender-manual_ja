@@ -5,13 +5,6 @@
 Build Modifier
 **************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 The :guilabel:`Build` modifier causes the faces of the mesh object to appear,
 one after the other, over time.
 If the material of the mesh is a halo rather than a standard one,

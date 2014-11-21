@@ -75,6 +75,7 @@ the key used by the window manager to Super (Windows Key)
 - Ubuntu 11.04: Settings > Window Manger Tweak > Accessibility > Change Window Key to Super
 - Ubuntu 12.04 (Unity/Gnome): Command line (effective at next login):
   gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier 'none'
+- KDE: System Settings > Window Behavior > Window Behavior > Window Actions , Switch 'Alt' for 'Meta' key
 - Other versions: todo
 
 

@@ -5,14 +5,6 @@
 Multiresolution Modifier
 ************************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Object mode
-   | Panel:    Properties Window → Context Button :guilabel:`Modifiers`
-
-   .. figure:: /images/CZ_Modifier_ContextButton.jpg
-
 .. figure:: /images/Multires_modifier_image.jpg
    :width: 500px
    :figwidth: 500px

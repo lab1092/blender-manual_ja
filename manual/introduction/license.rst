@@ -19,30 +19,28 @@ Since the source code is universally available, there are also many more chances
 
 When a program is licensed under the GNU General Public License (the GPL):
 
-
-- you have the right to use the program for any purpose;
-- you have the right to modify the program, and have access to the source codes;
-- you have the right to copy and distribute the program;
-- you have the right to improve the program, and release your own versions.
+- You have the right to use the program for any purpose.
+- You have the right to modify the program, and have access to the source codes.
+- You have the right to copy and distribute the program.
+- You have the right to improve the program, and release your own versions.
 
 In return for these rights, you have some responsibilities if you distribute a GPL'd program,
 responsibilities that are designed to protect your freedoms and the freedoms of others:
 
-
 - You must provide a copy of the GPL with the program,
-  so that recipienta are aware of their rights under the license.
+  so that recipients are aware of their rights under the license.
 - You must include the source code or make the source code freely available.
 - If you modify the code and distribute the modified version,
   you must license your modifications under the GPL and make the source code of your changes available.
-  (You may not use GPL'd code as part of a proprietary program.)
+  (you may not use GPL'd code as part of a proprietary program.)
 - You may not restrict the licensing of the program beyond the terms of the GPL.
-  (You may not turn a GPL'd program into a proprietary product.)
+  (you may not turn a GPL'd program into a proprietary product.)
 
-For more on the GPL, check the `GNU Project Web site <http://www.gnu.org>`__.
-
+For more on the GPL, check the its page on the
+`GNU Project web site <https://www.gnu.org/licenses/licenses.html#GPL>`__.
 
 .. note::
 
-   The GPL only applies to the blender application and **not** the artwork you create with it;
-   for more info see:  `Blender License <http://www.blender.org/about/license/>`__
+   The GPL only applies to the Blender application and **not** the artwork you create with it;
+   for more info see the `Blender License <http://www.blender.org/about/license/>`__.
 

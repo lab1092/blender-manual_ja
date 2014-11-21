@@ -5,13 +5,6 @@
 Cast Modifier
 *************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 This modifier shifts the shape of a mesh, curve,
 surface or lattice to any of a few pre-defined shapes (sphere, cylinder, cuboid).
 

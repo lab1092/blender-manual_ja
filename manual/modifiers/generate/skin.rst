@@ -2,13 +2,6 @@
 Skin Modifier
 *************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 The :guilabel:`Skin` modifier uses vertices and edges to create a skinned surface,
 using a per-vertex radius to better define the shape.
 

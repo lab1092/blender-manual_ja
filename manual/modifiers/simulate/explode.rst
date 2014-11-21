@@ -5,14 +5,6 @@
 Explode Modifier
 ****************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any Mode
-   | Panel:    Editing Context → Modifiers
-   | Hotkey:    :kbd:`none`
-
-
 The Explode Modifier is used to alter the mesh geometry (by moving/rotating its faces)
 in a way that (roughly)
 tracks underlying emitted particles that makes it look as if the mesh is being exploded

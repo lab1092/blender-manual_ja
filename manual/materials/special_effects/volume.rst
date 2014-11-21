@@ -19,13 +19,17 @@ which represents the various interactions of light in a volume relatively realis
 
    Solid rendering
 
- The process of rendering a solid surface involves the camera finding a piece of geometry, then calculating the light that bounces from light sources (lamp objects, or other geometry), off the surface, and towards the camera. The light that arrives at the camera is the final colour that's rendered.
+   The process of rendering a solid surface involves the camera finding a piece of geometry,
+   then calculating the light that bounces from light sources (lamp objects, or other geometry),
+   off the surface, and towards the camera.
+   The light that arrives at the camera is the final colour that's rendered.
 
 .. figure:: /images/Volumerendering-volume_eq.jpg
 
    Volume rendering
 
- Rendering a volume works differently. Light enters a 3D region of space (defined as the volume) that may be filled with small particles, such as smoke, mist or clouds.
+   Rendering a volume works differently. Light enters a 3D region of space (defined as the volume) that may be filled
+   with small particles, such as smoke, mist or clouds.
 
 The light bounces around off the various molecules, being scattered or absorbed,
 until some light passes through the volume and reaches the camera.

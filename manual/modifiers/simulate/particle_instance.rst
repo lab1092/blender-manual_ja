@@ -5,13 +5,6 @@
 Particle Instance Modifier
 **************************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers` (:guilabel:`Editing` context, :kbd:`F9`)
-
-
 When a :guilabel:`ParticleInstance` modifier is added to an object, that object will be used
 as a particle shape on an object which has a particle system associated with it. This means
 that to use this modifier you must also have another object which has a particle system on it,

@@ -5,13 +5,6 @@
 Shrinkwrap Modifier
 *******************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     All modes
-   | Panel:    :guilabel:`Modifiers`
-
-
 Description
 ===========
 

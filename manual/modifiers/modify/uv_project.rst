@@ -2,13 +2,6 @@
 UV Project Modifier
 *******************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers` (:guilabel:`Generate`)
-
-
 .. figure:: /images/Uvproject.jpg
 
    Projecting the Blender logo onto Suzanne.

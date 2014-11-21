@@ -11,7 +11,8 @@ Materials available in the currently-open Blender file can be investigated by cl
 
 .. figure:: /images/Manual-Material-MatButton.jpg
 
- in the Properties Window Header. In this section we look at how to assign or remove a material to/from the Active Object in Blender, either by:
+   in the Properties Window Header.
+   In this section we look at how to assign or remove a material to/from the Active Object in Blender, either by:
 
 - creating a new material,
 - re-using an existing material, or
@@ -39,9 +40,9 @@ The Shading context window then appears. This contains the following elements:
    Add new material
 
 
--   Context - The currently-selected scene and object
--   Object Material Slots (3) - this window shows the "slots" for the material (or materials) that this object data contains.
--   Active Material (2). Initially empty, asking for "New".
+   - Context - The currently-selected scene and object
+   - Object Material Slots (3) - this window shows the "slots" for the material (or materials) that this object data contains.
+   - Active Material (2). Initially empty, asking for "New".
 
 To add a new material, click "+" in the Active Material box.
 This action has a series of effects:
@@ -57,7 +58,8 @@ This action has a series of effects:
 - adds the new material to the Available Materials list,
 - adds the new material to the Object Material Slots list for the active object (or its object data - see below)
 - brings up a :doc:`preview </materials/preview>` of the new material,
-- provides you with a range of panels allowing you to select the :doc:`properties </materials/properties/introduction>` of the new material.
+- provides you with a range of panels allowing you to select the
+  :doc:`properties </materials/properties/introduction>` of the new material.
 
 
 New Material Panel Buttons
@@ -71,22 +73,28 @@ Material are as follows:
 
 .. figure:: /images/Doc_2.6_Materials_Available_Button_Icon.jpg
 
- - Available Materials
+   Available Materials
    See Reusing Existing Materials below.
-Name
-   Like other datablocks, Blender will automatically set the name of the new material to Material, Material.001 and so on. You can change this by over-typing with your own choice of name.
 
+Name
+   Like other datablocks, Blender will automatically set the name of the new material to
+   ``Material``, ``Material.001`` and so on.
+   You can change this by over-typing with your own choice of name.
 Number of Users
    Specifies the number of meshes which use this material.
-F  - Fake User;
-   If lit, this material will always be saved within the Blender file, even if it has no meshes which use it (see Deleting a Material).
+F  - Fake User
+   When enabled, this material will always be saved within the Blender file,
+   even if it has no meshes which use it (see Deleting a Material).
 X
    Delete this material (see Deleting a Material).
 
 
 .. tip:: Naming materials
 
-   It's a very good idea to give your materials clear names so you can keep track of them, especially when they're linked to multiple objects. Try to make your names descriptive of the material, not its function (e.g. "Yellow Painted" rather than "Kitchen Table Color")
+   It's a very good idea to give your materials clear names so you can keep track of them,
+   especially when they're linked to multiple objects.
+   Try to make your names descriptive of the material,
+   not its function (e.g. "Yellow Painted" rather than "Kitchen Table Color")
 
 
 **Nodes**
@@ -104,9 +112,22 @@ Data
    Link material to object or to object's data
 
 
-   The Link pop-up menu has two choices, Data and Object. These two menu choices determine whether the material is linked to the object or to the data, (in this case) the mesh (or curve, nurbs, etc.). The Data menu item determines that this material will be linked to the mesh's datablock which is linked to the object's datablock. The Object menu item determines that the material will be linked to the object's data block directly.
-   This has consequences of course. For example, different objects may share the same mesh datablock. Since this datablock defines the shape of the object, any change in edit mode will be reflected on all of those objects. Moreover, anything linked to that mesh datablock will be shared by every object that shares that mesh. So, if the material is linked to the mesh, every object will share it.
-   On the other hand, if the material is linked directly to the object datablock, the objects can have different materials and still share the same mesh. Short explanation: If connected to the object, you can have several instances of the same obData using different materials. If linked to mesh data, you can't. See :doc:`Data System </data_system/data_system>` for more information.
+   The Link pop-up menu has two choices, Data and Object.
+   These two menu choices determine whether the material is linked to the object or to the data,
+   (in this case) the mesh (or curve, nurbs, etc.).
+   The Data menu item determines that this material will be linked to the mesh's
+   datablock which is linked to the object's datablock.
+   The Object menu item determines that the material will be linked to the object's data block directly.
+   This has consequences of course. For example, different objects may share the same mesh datablock.
+   Since this datablock defines the shape of the object,
+   any change in edit mode will be reflected on all of those objects.
+   Moreover, anything linked to that mesh datablock will be shared by every object that shares that mesh.
+   So, if the material is linked to the mesh, every object will share it.
+   On the other hand, if the material is linked directly to the object datablock,
+   the objects can have different materials and still share the same mesh.
+   Short explanation: If connected to the object,
+   you can have several instances of the same obData using different materials.
+   If linked to mesh data, you can't. See :doc:`Data System </data_system/data_system>` for more information.
 
 
 Object Render Format (menu)
@@ -154,7 +175,9 @@ between many objects. Instead of creating duplicate materials,
 you can simply re-use an existing material.
 There are several ways to do this using the Available Materials menu:
 
-   :guilabel:`Single Object -`  With the object selected, click the sphere located to the left of the Material name. A drop-down list appears showing all the materials available in the current Blender file. To use one, just click on it.
+   :guilabel:`Single Object -`  With the object selected, click the sphere located to the left of the Material name.
+   A drop-down list appears showing all the materials available in the current Blender file.
+   To use one, just click on it.
 
 
 .. figure:: /images/Manual-Material-MatMenu-AddFirst-SelectExistButton.jpg
@@ -169,10 +192,18 @@ There are several ways to do this using the Available Materials menu:
 
 .. tip:: Searching for Materials
 
-   The search field at the bottom of the material list allows you to search the names in the list.  For example, by entering "wood" all existent materials are filtered so that only materials containing "wood" are displayed in the list.
+   The search field at the bottom of the material list allows you to search the names in the list.
+   For example, by entering "wood" all existent materials are filtered so that
+   only materials containing "wood" are displayed in the list.
 
 
-   :guilabel:`Multiple Objects -`  In the 3D View, with :kbd:`ctrl-L` you can quickly link all selected objects to the material (and other aspects) of the :doc:`active object </modeling/objects/selecting#selections_and_the_active_object>`. Very useful if you need to set a large number of objects to the same material; just select all of them, then the object that has the desired material, and :kbd:`ctrl-L` link them to that "parent". (See Tip on Linking Data in Creating about data linking.)
+   :guilabel:`Multiple Objects -`  In the 3D View, with :kbd:`ctrl-L`
+   you can quickly link all selected objects to the material (and other aspects) of the
+   :doc:`active object </modeling/objects/selecting#selections_and_the_active_object>`.
+   Very useful if you need to set a large number of objects to the same material;
+   just select all of them,
+   then the object that has the desired material, and :kbd:`ctrl-L` link them to that "parent".
+   (See Tip on Linking Data in Creating about data linking.)
 
 
 Deleting a Material
@@ -192,5 +223,4 @@ then the material will be retained when the file is saved, even if it has no use
 Only if it has 0 "real" users, and no "Fake" user, will the material be permanently deleted.
 Note that it will still remain in the Materials list until the Blender file is saved,
 but will have disappeared when the file is reloaded.
-
 

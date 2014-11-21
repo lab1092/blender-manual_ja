@@ -4,14 +4,6 @@
 Subdivision Surfaces ("Subsurf") Modifier
 *****************************************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any Mode
-   | Panel:    Modifiers > Add > Generate > Subdivision Surface
-   | Hotkey:   Using the regular #s, not keypad #s: :kbd:`ctrl-0`,  :kbd:`ctrl-1`,  :kbd:`ctrl-2`,  :kbd:`ctrl-3`,  :kbd:`ctrl-4`,   :kbd:`ctrl-5`. Note, this only affects the :guilabel:`View` value while leaving :guilabel:`Render` at 2 (see below).
-
-
 .. figure:: /images/SubsurfSmoothingDemoGrid-HiRes.jpg
    :width: 300px
    :figwidth: 300px

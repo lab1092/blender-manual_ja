@@ -23,13 +23,6 @@ multithreaded with OpenMP to take advantage of multiple cores.
 Ocean Modifier
 **************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Modifiers` context
-
-
 Description
 ===========
 

@@ -5,13 +5,6 @@
 Modifiers
 *********
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 Modifiers are automatic operations that affect an object in a non-destructive way. With modifiers,
 you can perform many effects automatically that would otherwise be tedious to do manually
 (such as subdivision surfaces) and without affecting the base topology of your object.

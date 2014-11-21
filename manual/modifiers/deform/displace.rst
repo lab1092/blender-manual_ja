@@ -2,13 +2,6 @@
 Displace Modifier
 *****************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 Description
 ===========
 

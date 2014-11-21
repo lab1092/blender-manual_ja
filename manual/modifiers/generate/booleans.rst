@@ -2,13 +2,6 @@
 Boolean Modifier
 ****************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any :guilabel:`3d View` Mode, can only be applied when in :guilabel:`Object` Mode.
-   | Panel:    :guilabel:`Modifiers`
-
-
 Introduction
 ============
 

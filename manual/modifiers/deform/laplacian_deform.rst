@@ -2,13 +2,6 @@
 Laplacian Deform
 ****************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 Description
 ===========
 

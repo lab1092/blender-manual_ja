@@ -31,11 +31,10 @@ and various extra options and buttons appear in the :guilabel:`Shadow` panel.
 Buffer Type
    There more than one way to generate buffered shadows. The shadow buffer generation type controls which generator to use.
 There are four shadow generation types, those being:
-
-   - :guilabel:`Classical`
-   - :guilabel:`Classic-Halfway`
-   - :guilabel:`Irregular`
-   - :guilabel:`Deep`
+   - Classical
+   - Classic-Halfway
+   - Irregular
+   - Deep
 
 For more information on the different shadow generation methods see these links:
 

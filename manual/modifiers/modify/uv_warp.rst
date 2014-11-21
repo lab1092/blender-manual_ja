@@ -2,13 +2,6 @@
 UV Warp Modifier
 ****************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers` (:guilabel:`Generate`)
-
-
 .. figure:: /images/Uvwarp.jpg
 
    Projecting the Blender logo onto Suzanne.

@@ -2,13 +2,6 @@
 Curve Modifier
 **************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 The :guilabel:`Curve` Modifier provides a simple but efficient method of defining a
 deformation on a mesh based on the position of an curve object.
 

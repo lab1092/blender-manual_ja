@@ -2,13 +2,6 @@
 WeightVGroup Modifiers
 **********************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Any mode
-   | Panel:    :guilabel:`Modifiers` (:guilabel:`Modifiers` properties)
-
-
 Description
 ===========
 

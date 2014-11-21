@@ -2,13 +2,6 @@
 Armature Modifier
 *****************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Modifiers`
-
-
 Description
 ===========
 

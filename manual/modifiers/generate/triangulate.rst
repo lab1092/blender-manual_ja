@@ -2,15 +2,6 @@
 Triangulate Modifier
 ********************
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     Object mode
-   | Panel:    Properties Window → Context Button :guilabel:`Modifiers`
-
-   .. figure:: /images/CZ_Modifier_ContextButton.jpg
-
-
 Description
 ===========
 
