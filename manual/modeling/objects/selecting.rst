@@ -276,8 +276,8 @@ Particle System
    Selects all objects that use the same **Particle System**
 Library
    Selects all objects that are in the same
-   :guilabel:`Library <http://wiki.blender.org/index.php/Dev:2.5/Source/Data_system/LibraryBrowser>`_
-   :guilabel:`Library (Object Data)`
+   `Library <http://wiki.blender.org/index.php/Dev:2.5/Source/Data_system/LibraryBrowser>`_
+   `Library (Object Data)`
 
 
 Select All by Type

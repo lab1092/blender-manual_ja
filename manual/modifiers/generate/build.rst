@@ -5,15 +5,16 @@
 Build Modifier
 **************
 
-The :guilabel:`Build` modifier causes the faces of the mesh object to appear,
-one after the other, over time.
-If the material of the mesh is a halo rather than a standard one,
-then the vertices of the mesh, not the faces, appear one after another.
+The Build modifier causes the faces of the mesh object to appear one after the other over time.
 
-By default, faces (or vertices) appear in the order in which they are stored in memory
-(by default, the order of creation). The face/vertex order can be altered in :guilabel:`Edit
-mode` by selecting :guilabel:`Sort Faces` from the :guilabel:`Search Menu`
-:kbd:`Space`.
+By default, faces appear in the order in which they are stored in memory
+(by default, the order of creation). The face/vertex order can be altered in Edit Mode
+by selecting :guilabel:`Sort Faces` from the *Search Menu* (:kbd:`Space`)
+
+.. note::
+
+   When using Blender Render, if the material of the mesh is a halo rather than a standard one,
+   then the vertices of the mesh, not the faces, appear one after another.
 
 
 Options
@@ -36,6 +37,6 @@ Randomize
    Randomizes the order in which the faces are built.
 
 Seed
-   The random seed. Changing this value gives a different "random" order when :guilabel:`"Randomize"` is checked - this order being always the same for a given seed/object set.
-
-
+   The random seed.
+   Changing this value gives a different "random" order when :guilabel:`"Randomize"` is checked -
+   this order is always the same for a given seed/object set.

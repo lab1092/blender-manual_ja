@@ -20,7 +20,7 @@ So from this example, if the Driver Value is 2.0 the property will be 0.5.
 
 The Driver Value is determined by Driver Variables or a Scripted Expression.
 
-Most the settings for the drivers :doc:`F-Curves </animation/editors/graph/fcurves>` are found in 
+Most the settings for the drivers :doc:`F-Curves </animation/editors/graph/fcurves>` are found in
 the :doc:`Graph Editor </animation/editors/graph>`.
 
 
@@ -158,11 +158,11 @@ UI
 The common way to add a driver to a property is to right click a property, then add a driver via the context menu.
 
 Add Drivers
-    This will add drivers to the set of properties related to the selected one. 
-    For example, it will add drivers to X, Y, and Z for Rotation. 
+    This will add drivers to the set of properties related to the selected one.
+    For example, it will add drivers to X, Y, and Z for Rotation.
 
 Add Single Driver
-    This will add a single driver to the selected property. 
+    This will add a single driver to the selected property.
 
 .. figure:: /images/Doc_Add_Driver2.jpg
 
@@ -203,12 +203,12 @@ First make sure you are in the Front Ortho view. :kbd:`Numpad5`, :kbd:`Numpad1`.
 (5) In the channels region, select the **Y Euler Rotation** property.
 (6) Press :kbd:`N` to open the properties region, scroll down to *Drivers* panel.
 (7) Change the *Type* to *Averaged Value*, this will return the averaged value of the driver variables.
-(8) Modify the driver variable settings. 
+(8) Modify the driver variable settings.
 
-- *Type* - *Transform Channel* 
+- *Type* - *Transform Channel*
 - *Ob/Bone* - *Cube*
 - *Transform Type* - *X Location*
-- *Transform Space* - *World Space* 
+- *Transform Space* - *World Space*
 
 .. figure:: /images/animation_drivers_transform.jpg
 

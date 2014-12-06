@@ -47,7 +47,7 @@ Learning good lighting techniques,
 and then learning about the different kinds of lamps in Blender are two different topics.
 
 The first, or conceptual understanding, is learned by taking courses in art and media, by reading books,
-and by trial and error. 
+and by trial and error.
 Once you have the conceptual knowledge, you can easily learn Blender (or any other CG package). Learning both
 at the same time is difficult, since you are dealing with two issues, but not impossible.
 In this manual, the conceptual knowledge is usually addressed in a short paragraph or two at the beginning

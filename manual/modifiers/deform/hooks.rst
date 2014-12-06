@@ -2,9 +2,6 @@
 Hook Modifier
 *************
 
-Description
-===========
-
 .. figure:: /images/25-Manual-Modifiers-Hook-example1.jpg
 
    Two spheres used as Hooks to deform a subdivided cube.

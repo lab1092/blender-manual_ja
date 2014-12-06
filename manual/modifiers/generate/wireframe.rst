@@ -2,9 +2,6 @@
 Wireframe Modifier
 ******************
 
-Description
-===========
-
 .. figure:: /images/Wireframe_Modifier_Panel.jpg
 
    Wireframe Modifier
@@ -41,7 +38,8 @@ Options
 Thickness
    The depth or size of the wireframes.
 Offset
-   A value between ``-1`` and ``1`` to change whether the wireframes are generated inside or outside the original mesh. Set to zero, :guilabel:`Offset` will center the wireframes around the original edges.
+   A value between ``-1`` and ``1`` to change whether the wireframes are generated inside or outside the original mesh.
+   Set to zero, :guilabel:`Offset` will center the wireframes around the original edges.
 Vertex Group
    Restrict the modifier to only this vertex group.
 
@@ -53,7 +51,8 @@ Vertex Group
    :width: 350px
    :figwidth: 350px
 
-   Wireframes on a displaced plane. In this example, the wireframes carry a second (dark) material while the displaced plane uses its original one.
+   Wireframes on a displaced plane.
+   In this example, the wireframes carry a second (dark) material while the displaced plane uses its original one.
 
 
 Crease Edges
@@ -69,14 +68,18 @@ Relative Thickness
 Boundary
    Creates wireframes on mesh island boundaries.
 Replace Original
-   If this option is enabled, the original mesh is replaced by the generated wireframe. If not, the wireframe is generated on top of it.
+   If this option is enabled, the original mesh is replaced by the generated wireframe.
+   If not, the wireframe is generated on top of it.
 Material Offset
-   Uses the chosen material index as the material for the wireframe; this is applied as an offset from the first material.
+   Uses the chosen material index as the material for the wireframe;
+   this is applied as an offset from the first material.
 
 
 Hints
 =====
 
-- Wireframe thickness is an approximation. While **Even Thickness** should yield good results in many cases, skinny faces can cause ugly spikes, in this case you can either reduce the extreme angles in the geometry or disable the **Even Thickness** option.
+- Wireframe thickness is an approximation. While **Even Thickness** should yield good results in many cases,
+  skinny faces can cause ugly spikes, in this case you can either reduce the extreme angles in the geometry
+  or disable the **Even Thickness** option.
 
 

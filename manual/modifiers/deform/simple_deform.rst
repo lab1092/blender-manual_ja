@@ -2,9 +2,6 @@
 Simple Deform Modifier
 **********************
 
-Description
-===========
-
 .. figure:: /images/25-Manual-Modifiers-Simpledeform.jpg
 
    Simple Deform

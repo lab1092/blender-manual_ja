@@ -22,18 +22,19 @@ Video Tutorials
 ===============
 
 .. youtube:: ON9Sod3GUEg
+
 `An introduction to Freestyle plugin for Blender: "sketching" Suzanne / HD <http://www.youtube.com/watch?v=ON9Sod3GUEg>`__
 
-
 .. youtube:: Uq1-KoZ7Uv4
+
 `Using freestyle in blender <http://www.youtube.com/watch?v=Uq1-KoZ7Uv4>`__
 
-
 .. youtube:: 1T_impeCV-0
+
 `Tutorial: Blender 3D - Freestyle and Composite <http://www.youtube.com/watch?v=1T_impeCV-0>`__
 
-
 .. youtube:: J3LI_MTnY7U
+
 `Blender Tutorial: Freestyle <https://www.youtube.com/watch?feature=player_embedded&v=J3LI_MTnY7U>`__
 
 

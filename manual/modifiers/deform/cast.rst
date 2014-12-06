@@ -8,22 +8,21 @@ Cast Modifier
 This modifier shifts the shape of a mesh, curve,
 surface or lattice to any of a few pre-defined shapes (sphere, cylinder, cuboid).
 
-It is equivalent to the :guilabel:`To Sphere` tool in the :guilabel:`Editing` context
-(:guilabel:`Mesh` ? :guilabel:`Transform` ? :guilabel:`To Sphere` :kbd:`Alt-Shift-S`)
-and what other programs call "Spherify" or "Spherize", but, as written above,
-it is not limited to casting to a sphere.
+It is equivalent to the :guilabel:`To Sphere` tool in :guilabel:`Edit Mode`
+(:menuselection:`Mesh --> Transform --> To Sphere` or :kbd:`Alt+Shift+S`)
+and what other programs call "Spherify" or "Spherize", but, as written above, it is not limited to casting to a sphere.
 
 
-.. note::
+.. tip::
 
    The :doc:`Smooth modifier </modifiers/deform/smooth>` is a good companion to :guilabel:`Cast`,
    since the cast shape sometimes needs smoothing to look nicer or even to fix shading artifacts.
 
 
-.. important::
+.. note::
 
-   For performance, this modifier works only with local coordinates.
-   If the modified object looks wrong, you may need to apply the object's rotation (:kbd:`ctrl-A`),
+   For performance reasons, this modifier only works with local coordinates.
+   If the modified object looks wrong, you may need to apply its rotation (:kbd:`Ctrl A`),
    especially when casting to a cylinder.
 
 
@@ -32,7 +31,7 @@ Options
 
 .. figure:: /images/25-Manual-Modifiers-cast.jpg
 
-   cast modifier
+   Cast Modifier
 
 
 Cast Type
@@ -46,7 +45,7 @@ Factor
    The factor to control blending between original and cast vertex positions.
    It's a linear interpolation: ``0.0`` gives original coordinates (i.e. modifier has no effect),
    ``1.0`` casts to the target shape.
-   Values below or above ``[0.0, 1.0]`` deform the mesh, sometimes in interesting ways.
+   Values below ``0.0`` or above ``1.0`` exaggerate the deformation, sometimes in interesting ways.
 
 Radius
    If non-zero, this radius defines a sphere of influence. Vertices outside it are not affected by the modifier.

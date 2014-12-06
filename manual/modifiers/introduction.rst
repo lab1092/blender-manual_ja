@@ -1,15 +1,24 @@
 
 ..    TODO/Review: {{review|text=Needs to stay updated with new modifiers being added}} .
 
+##############
+ Introduction
+##############
+
+.. admonition:: Reference
+
+   Modifiers are added from the :guilabel:`Modifiers` context of the Properties Editor.
+
 
 Modifiers
 *********
 
 Modifiers are automatic operations that affect an object in a non-destructive way. With modifiers,
-you can perform many effects automatically that would otherwise be tedious to do manually
-(such as subdivision surfaces) and without affecting the base topology of your object.
-Modifiers work by changing how an object is displayed and rendered, but not the actual object geometry.
-You can add several modifiers to a single object to form a :doc:`Modifier Stack </modifiers/the_stack>` and you can
+you can perform many effects automatically that would otherwise be too tedious to do manually
+(such as subdivision surfaces) and without affecting the base geometry of your object.
+
+They work by changing how an object is displayed and rendered, but not the geometry which you can edit directly.
+You can add several modifiers to a single object to form a :doc:`Modifier Stack </modifiers/the_stack>` and
 :guilabel:`Apply` a modifier if you wish to make its changes permanent.
 
 
@@ -26,9 +35,8 @@ There are four types of modifiers:
 Modify
 ======
 
-The :guilabel:`Modify` group of modifiers are tools a bit similar to the :guilabel:`Deform
-Modifiers` (see below), but which do not directly affect the shape of the object;
-rather they affect some other data, like vertex groups...
+The :guilabel:`Modify` group of modifiers are tools similar to the :guilabel:`Deform Modifiers` (see below),
+but which do not directly affect the shape of the object; rather they affect some other data, such as vertex groups.
 
 :doc:`Mesh Cache </modifiers/modify/mesh_cache>`
    Apply animated mesh data (from external file) to a mesh.
@@ -67,7 +75,8 @@ general appearance of or automatically add new geometry to an object.
 :doc:`Remesh </modifiers/generate/remesh>`
    Can fix heavily triangulated meshes, and other issues, with careful Threshold adjustments.
 :doc:`Screw </modifiers/generate/screw>`
-   Generate geometry in a helix-pattern from a simple profile.  Similar to the :guilabel:`Screw` tool in the mesh editing context.
+   Generate geometry in a helix-pattern from a simple profile.
+   Similar to the :doc:`Screw Tool </modeling/meshes/editing/duplicating/screw>` in edit mode.
 :doc:`Skin </modifiers/generate/skin>`
    Automatically generate topology.
 :doc:`Solidify </modifiers/generate/solidify>`
@@ -83,7 +92,7 @@ general appearance of or automatically add new geometry to an object.
 Deform
 ======
 
-The :guilabel:`Deform` group of modifiers only change the shape of an object,
+The :guilabel:`Deform` group of modifiers only change the shape of an object without adding new geometry,
 and are available for meshes, and often texts, curves, surfaces and/or lattices.
 
 :doc:`Armature </modifiers/deform/armature>`
@@ -103,13 +112,14 @@ and are available for meshes, and often texts, curves, surfaces and/or lattices.
 :doc:`Lattice </modifiers/deform/lattice>`
    Use a Lattice object to deform your object.
 :doc:`Mesh Deform </modifiers/deform/mesh_deform>`
-   Allows you to deform your object by modifying the shape of another mesh, used as a "Mesh Deform Cage" (like when using a lattice).
+   Allows you to deform your object by modifying the shape of another mesh,
+   used as a "Mesh Deform Cage" (like when using a lattice).
 :doc:`Shrinkwrap </modifiers/deform/shrinkwrap>`
    Allows you to shrink/wrap your object to/around the surface of a target mesh object.
 :doc:`Simple Deform </modifiers/deform/simple_deform>`
    Applies some advanced deformations to your object.
 :doc:`Smooth </modifiers/deform/smooth>`
-   Smooth the geometry of a mesh.  Similar to the :guilabel:`Smooth` tool in the mesh editing context.
+   Smooth the geometry of a mesh. Similar to the :guilabel:`Smooth` tool in the mesh editing context.
 :doc:`Warp </modifiers/deform/warp>`
    Warp a mesh by specifying two points the mesh stretches between.
 :doc:`Wave </modifiers/deform/wave>`
@@ -119,10 +129,10 @@ and are available for meshes, and often texts, curves, surfaces and/or lattices.
 Simulate
 ========
 
-The :guilabel:`Simulate` group of modifiers activate simulations.  In most cases, these
+The :guilabel:`Simulate` group of modifiers activate simulations. In most cases, these
 modifiers are automatically added to the modifiers stack whenever a :guilabel:`Particle
-System` or :guilabel:`Physics` simulation is enabled, and their only role is to define the
-place in the modifiers stack used as base data by the tool they represent.  Generally,
+System` or :guilabel:`Physics` simulation is enabled. Their only role is to define the
+place in the modifier stack used as base data by the tool they represent. Generally,
 the attributes of these modifiers are accessible in separate panels.
 
 :doc:`Cloth </physics/cloth>`
@@ -148,3 +158,54 @@ the attributes of these modifiers are accessible in separate panels.
    Quickly creates a realistic, animated ocean.
 
 
+Interface
+*********
+
+.. figure:: /images/25-Manual-Modifiers-Subsurf.jpg
+
+   Panel Layout (Subsurf as an example)
+
+
+Each modifier has been brought in from a different part of Blender,
+so each has its own unique settings and special considerations. However,
+each modifier's interface has the same basic components, see (*Panel Layout
+(Subsurf as an example)*).
+
+At the top is the :guilabel:`panel header`.
+The icons each represent different settings for the modifier (left to right):
+
+Arrow
+   Collapse modifier to show only the header and not its options.
+Icon
+   A quick visual reference of the modifier's type.
+Name
+   Every modifier has a unique name per object. Two modifiers on one object must have unique names,
+   but two modifiers on different objects can have the same name. The default name is based off the modifier type.
+Camera
+   Toggles visibility of the modifier effect in the render.
+Eye
+   Toggles visibility of the modifier effect in the 3D view.
+Box
+   Displays the modified geometry in edit mode, as well as the original geometry which you can edit.
+Triangle
+   When enabled, the final modified geometry will be shown in edit mode and can be edited directly.
+Up arrow
+   Moves modifier up in the stack.
+Down arrow
+   Moves modifier down in the stack.
+Cross
+   Deletes the modifier.
+
+.. note:: The *Box* and *Triangle* icons may not be available depending on the type of modifier.
+
+Below the header are two buttons:
+
+Apply
+   Makes the modifier "real" - converts the object's geometry to match the applied modifier, and deletes the modifier.
+Copy
+   Creates a duplicate of the modifier at the bottom of the stack.
+
+.. warning:: Applying a modifier that is not first in the stack will ignore the stack order and
+             could produce undesired results.
+
+Below this header, all of the options unique to each modifier will be displayed.

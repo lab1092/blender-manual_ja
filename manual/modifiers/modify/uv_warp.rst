@@ -2,12 +2,10 @@
 UV Warp Modifier
 ****************
 
-.. figure:: /images/Uvwarp.jpg
+The **UV Warp** modifier uses two objects to define a transformation which is applied to the chosen UV coordinates.
 
-   Projecting the Blender logo onto Suzanne.
-
-
-**UV Warp** uses 2 objects to define a transformation which is applied to the UV coordinates.
+Its purpose is to give you direct control over the object's UVs in the 3D View,
+allowing you to directly translate, rotate and scale existing UV coordinates using controller objects or bones.
 
 `Download an example <http://wiki.blender.org/index.php/:File:Uvwarp.blend>`__
 
@@ -17,24 +15,27 @@ Options
 
 .. figure:: /images/Uvwarp_ui.jpg
 
-- **UV Center**
-  The center point of the :doc:`UV map </textures/mapping/uv>`
-  to use when applying scale or rotation. With (0, 0) bottom left and (1, 1) top right. Defaults to (0.5, 0.5).
-- **UV Axis**
-  The axis to use when mapping the 3D coordinates into 2D.
-- **From/To**
-  The two objects used to define the transformation, when these objects overlap eachother - there will be no warp value, only the difference in transformation is used, note that bones can be used for armature objects.
-- **Vertex Group**
-  The vertex group can be used to scale the influence of the transformation per-vertex.
-- **UV Map**
+UV Center
+   The center point of the :doc:`UV map </textures/mapping/uv>` to use when applying scale or rotation.
+   With (0, 0) at the bottom left and (1, 1) at the top right. Defaults to (0.5, 0.5).
+UV Axis
+   The axes to use when mapping the 3D coordinates into 2D.
+From/To
+   The two objects used to define the transformation. See *Usage* below.
+Vertex Group
+   The vertex group can be used to scale the influence of the transformation per-vertex.
+UV Map
    Which :doc:`UV map </textures/mapping/uv>` to modify. Defaults to the active rendering layer.
 
 
 Usage
 =====
 
-The UV Warp modifiers main usage is to give you direct control over UV's as you do with
-objects and bones, so you can directly rotate,
-scale and translate existing UV coordinates using objects and bones.
+How the UVs are warped is determined by the difference between the transforms (location, rotation and scale)
+of the *from* and *to* objects.
 
+If the *to* object has the same transforms as the *from* object, the UVs will not be changed.
 
+Assuming the *UV Axis* of the modifier is X/Y and the scale of the objects are (1, 1, 1), if the *to* object is
+one unit away from the *from* object on the X-axis, the UVs will be transformed on the U-axis (horizontally)
+by one full UV space (the entire width of the image)

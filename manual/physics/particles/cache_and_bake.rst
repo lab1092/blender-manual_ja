@@ -12,7 +12,11 @@ Cache
    Image 4: Cache panel for particles.
 
 
-:guilabel:`Emitter` systems use a unified system for caching and baking (together with softbody and cloth). The results of the simulation are automatically cached to disk when the animation is played, so that the next time it runs, it can play again quickly by reading in the results from the disk. If you :guilabel:`Bake` the simulation the cache is protected and you will be asked when you're trying to change a setting that will make a recalculating necessary.
+:guilabel:`Emitter` systems use a unified system for caching and baking (together with softbody and cloth).
+The results of the simulation are automatically cached to disk when the animation is played,
+so that the next time it runs, it can play again quickly by reading in the results from the disk.
+If you :guilabel:`Bake` the simulation the cache is protected and you will be asked when you're
+trying to change a setting that will make a recalculating necessary.
 
 
 .. tip:: Beware of the :guilabel:`Start` and :guilabel:`End` Settings
@@ -42,6 +46,8 @@ Baking
 Two notes at the end:
 
 - For renderfarms, it is best to bake all the physics systems, and then copy the blendcache to the renderfarm as well.
-- Be careful with the sequence of modifiers in the modifier stack (as always). You may have a different number of faces in the 3D window and for rendering (e.g. when using subdivision surface), if so, the rendered result may be very different from what you see in the 3D window.
+- Be careful with the sequence of modifiers in the modifier stack (as always).
+  You may have a different number of faces in the 3D window and for rendering (e.g. when using subdivision surface),
+  if so, the rendered result may be very different from what you see in the 3D window.
 
 

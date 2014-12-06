@@ -12,6 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../manual/modifiers/deform/cast.rst:6
+#: ../../manual/modifiers/deform/cast.rst:34
 msgid "Cast Modifier"
 msgstr ""
 
@@ -21,114 +22,86 @@ msgid ""
 "of a few pre-defined shapes (sphere, cylinder, cuboid)."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:11
-msgid ""
-"It is equivalent to the :guilabel:`To Sphere` tool in the "
-":guilabel:`Editing` context (:guilabel:`Mesh` ? :guilabel:`Transform` ? "
-":guilabel:`To Sphere` :kbd:`Alt-Shift-S`) and what other programs call "
-"\"Spherify\" or \"Spherize\", but, as written above, it is not limited to "
-"casting to a sphere."
-msgstr ""
-
-#: ../../manual/modifiers/deform/cast.rst:19
+#: ../../manual/modifiers/deform/cast.rst:18
 msgid ""
 "The :doc:`Smooth modifier </modifiers/deform/smooth>` is a good companion to"
 " :guilabel:`Cast`, since the cast shape sometimes needs smoothing to look "
 "nicer or even to fix shading artifacts."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:25
-msgid ""
-"For performance, this modifier works only with local coordinates. If the "
-"modified object looks wrong, you may need to apply the object's rotation "
-"(:kbd:`ctrl-A`), especially when casting to a cylinder."
-msgstr ""
-
-#: ../../manual/modifiers/deform/cast.rst:31
+#: ../../manual/modifiers/deform/cast.rst:30
 msgid "Options"
 msgstr "オプション"
 
-#: ../../manual/modifiers/deform/cast.rst:35
-msgid "cast modifier"
-msgstr ""
-
-#: ../../manual/modifiers/deform/cast.rst:39
+#: ../../manual/modifiers/deform/cast.rst:38
 msgid "Cast Type"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:39
+#: ../../manual/modifiers/deform/cast.rst:38
 msgid ""
 "Menu to choose cast type (target shape): :guilabel:`Sphere`, "
 ":guilabel:`Cylinder` or :guilabel:`Cuboid`."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:43
+#: ../../manual/modifiers/deform/cast.rst:42
 msgid "X, Y, Z"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:42
+#: ../../manual/modifiers/deform/cast.rst:41
 msgid ""
 "Toggle buttons to enable/disable the modifier in the X, Y, Z axes directions"
 " (X and Y only for :guilabel:`Cylinder` cast type)."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:49
+#: ../../manual/modifiers/deform/cast.rst:48
 msgid "Factor"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:46
-msgid ""
-"The factor to control blending between original and cast vertex positions. "
-"It's a linear interpolation: ``0.0`` gives original coordinates (i.e. "
-"modifier has no effect), ``1.0`` casts to the target shape. Values below or "
-"above ``[0.0, 1.0]`` deform the mesh, sometimes in interesting ways."
-msgstr ""
-
-#: ../../manual/modifiers/deform/cast.rst:52
+#: ../../manual/modifiers/deform/cast.rst:51
 msgid "Radius"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:52
+#: ../../manual/modifiers/deform/cast.rst:51
 msgid ""
 "If non-zero, this radius defines a sphere of influence. Vertices outside it "
 "are not affected by the modifier."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:56
+#: ../../manual/modifiers/deform/cast.rst:55
 msgid "Size"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:55
+#: ../../manual/modifiers/deform/cast.rst:54
 msgid ""
 "Alternative size for the projected shape. If zero, it is defined by the "
 "initial shape and the control object, if any."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:59
+#: ../../manual/modifiers/deform/cast.rst:58
 msgid "From radius"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:59
+#: ../../manual/modifiers/deform/cast.rst:58
 msgid ""
 "If activated, calculate :guilabel:`Size` from :guilabel:`Radius`, for "
 "smoother results."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:63
+#: ../../manual/modifiers/deform/cast.rst:62
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:62
+#: ../../manual/modifiers/deform/cast.rst:61
 msgid ""
 "A vertex group name, to restrict the effect to the vertices in it only. This"
 " allows for selective, real-time casting, by painting vertex weights."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:70
+#: ../../manual/modifiers/deform/cast.rst:69
 msgid "Control Object"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:66
+#: ../../manual/modifiers/deform/cast.rst:65
 msgid ""
 "The name of an object to control the effect. The location of this object's "
 "center defines the center of the projection. Also, its size and rotation "
@@ -136,17 +109,65 @@ msgid ""
 "object also animates the modified object."
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:73
+#: ../../manual/modifiers/deform/cast.rst:72
 msgid "Example"
 msgstr ""
 
-#: ../../manual/modifiers/deform/cast.rst:79
+#: ../../manual/modifiers/deform/cast.rst:78
 msgid ""
 "Top: Suzanne without modifiers. Middle: Suzanne with each type of Cast "
 "Modifier (Sphere, Cylinder and Cuboid). Bottom: Same as above, but now only "
 "X axis is enabled. `Sample blend file "
 "<http://wiki.blender.org/index.php/Media:263-Cast-Modifier.blend>`__"
 msgstr ""
+
+#: ../../manual/modifiers/deform/cast.rst:11
+msgid ""
+"It is equivalent to the :guilabel:`To Sphere` tool in :guilabel:`Edit Mode` "
+"(:menuselection:`Mesh --> Transform --> To Sphere` or :kbd:`Alt+Shift+S`) "
+"and what other programs call \"Spherify\" or \"Spherize\", but, as written "
+"above, it is not limited to casting to a sphere."
+msgstr ""
+
+#: ../../manual/modifiers/deform/cast.rst:24
+msgid ""
+"For performance reasons, this modifier only works with local coordinates. If"
+" the modified object looks wrong, you may need to apply its rotation "
+"(:kbd:`Ctrl A`), especially when casting to a cylinder."
+msgstr ""
+
+#: ../../manual/modifiers/deform/cast.rst:45
+msgid ""
+"The factor to control blending between original and cast vertex positions. "
+"It's a linear interpolation: ``0.0`` gives original coordinates (i.e. "
+"modifier has no effect), ``1.0`` casts to the target shape. Values below "
+"``0.0`` or above ``1.0`` exaggerate the deformation, sometimes in "
+"interesting ways."
+msgstr ""
+
+#~ msgid ""
+#~ "It is equivalent to the :guilabel:`To Sphere` tool in the "
+#~ ":guilabel:`Editing` context (:guilabel:`Mesh` ? :guilabel:`Transform` ? "
+#~ ":guilabel:`To Sphere` :kbd:`Alt-Shift-S`) and what other programs call "
+#~ "\"Spherify\" or \"Spherize\", but, as written above, it is not limited to "
+#~ "casting to a sphere."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For performance, this modifier works only with local coordinates. If the "
+#~ "modified object looks wrong, you may need to apply the object's rotation "
+#~ "(:kbd:`ctrl-A`), especially when casting to a cylinder."
+#~ msgstr ""
+
+#~ msgid "cast modifier"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The factor to control blending between original and cast vertex positions. "
+#~ "It's a linear interpolation: ``0.0`` gives original coordinates (i.e. "
+#~ "modifier has no effect), ``1.0`` casts to the target shape. Values below or "
+#~ "above ``[0.0, 1.0]`` deform the mesh, sometimes in interesting ways."
+#~ msgstr ""
 
 #~ msgid "Reference"
 #~ msgstr ""

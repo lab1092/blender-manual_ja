@@ -2,9 +2,6 @@
 Triangulate Modifier
 ********************
 
-Description
-===========
-
 The :guilabel:`Triangulate` modifier converts all faces in a mesh
 (whether it be quads or N-gons) to triangular faces.
 This modifier does the exact same function as the Ctrl+T triangulate in :guilabel:`Edit Mode`

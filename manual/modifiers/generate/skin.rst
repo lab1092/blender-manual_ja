@@ -45,7 +45,9 @@ Example
 
 .. note:: Skin Node Set Flag
 
-   One of the mesh's vertices must be set to :guilabel:`Root`.  If you by accident delete the default root vertex, select a vertex, hit the :guilabel:`Skin Node Set Flag` button, and in the :guilabel:`Mesh Tools` menu set the new vertex to root.
+   One of the mesh's vertices must be set to :guilabel:`Root`.
+   If you by accident delete the default root vertex, select a vertex,
+   hit the :guilabel:`Skin Node Set Flag` button, and in the :guilabel:`Mesh Tools` menu set the new vertex to root.
 
 
 .. figure:: /images/Skin-header-00.jpg
@@ -54,8 +56,11 @@ Example
 
 
 - In the modifiers' menu, add a :guilabel:`Skin` modifier.
-- :kbd:`Tab` into edit mode and start extruding.  To see the actual "Z spheres", :kbd:`Z` to change to wireframe mode.  These spheres are actual meshes with a lot of polygons, so performance issues might occur on older computers.
-- Try to get  sketch results similar to the picture (Simple creature, made with only the Skin modifier.), through extruding the vertices of the object.
+- :kbd:`Tab` into edit mode and start extruding.
+  To see the actual "Z spheres", :kbd:`Z` to change to wireframe mode.
+  These spheres are actual meshes with a lot of polygons, so performance issues might occur on older computers.
+- Try to get  sketch results similar to the picture (Simple creature, made with only the Skin modifier.),
+  through extruding the vertices of the object.
 - Use :kbd:`Ctrl-A` to change the size of the different regions within the creature.
 - Use :guilabel:`Mark Loose` at regions like the neck, to merge these faces more together.
 - To get smoother results, activate :guilabel:`Smooth Shading` and use :kbd:`Ctrl-3` on the object.

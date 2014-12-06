@@ -138,7 +138,7 @@ Baking can be advantageous for a few reasons:
 
 
 Data Files
-^^^^^^^^^^
+----------
 
 Sim data is stored in disk as sequences of OpenEXR image maps, one for each of displacement,
 normal and foam (if enabled to be generated). Upon loading the data from these baked files,
@@ -151,7 +151,7 @@ they can also be opened and rendered in any other application or renderer that s
 
 
 Baking Foam
-^^^^^^^^^^^
+-----------
 
 Baking also provides improved foam capabilities. When simulating live,
 the ocean simulator retrieves data for that current frame only. In the case of the foam map,

@@ -2,9 +2,6 @@
 Displace Modifier
 *****************
 
-Description
-===========
-
 The :guilabel:`Displace` modifier displaces vertices in a mesh based on the intensity of a
 texture. Either procedural or image textures can be used.
 The displacement can be along a particular local axis, along the vertex normal,

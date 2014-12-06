@@ -5,12 +5,28 @@
 ############
 
 .. toctree::
+   :maxdepth: 2
 
+   introduction.rst
    the_stack.rst
+
+Modify
+======
+
+.. toctree::
+   :maxdepth: 1
+
    modify/mesh_cache.rst
    modify/uv_project.rst
    modify/uv_warp.rst
    modify/vertex_weight.rst
+
+Generate
+========
+
+.. toctree::
+   :maxdepth: 1
+
    generate/array.rst
    generate/bevel.rst
    generate/booleans.rst
@@ -27,6 +43,13 @@
    generate/subsurf.rst
    generate/triangulate.rst
    generate/wireframe.rst
+
+Deform
+======
+
+.. toctree::
+   :maxdepth: 1
+
    deform/armature.rst
    deform/cast.rst
    deform/curve.rst
@@ -41,6 +64,13 @@
    deform/smooth.rst
    deform/warp.rst
    deform/wave.rst
+
+Simulate
+========
+
+.. toctree::
+   :maxdepth: 1
+
    simulate/explode.rst
    simulate/ocean.rst
    simulate/particle_instance.rst

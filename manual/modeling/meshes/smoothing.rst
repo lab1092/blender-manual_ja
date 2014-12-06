@@ -70,6 +70,8 @@ only the selected edges will receive the "smoothing" attribute. You can set edge
 in the same way by selecting edges and clicking the :guilabel:`Flat` button.
 
 
+.. _auto_smooth:
+
 Auto Smooth
 ===========
 

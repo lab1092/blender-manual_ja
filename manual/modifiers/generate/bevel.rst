@@ -1,21 +1,12 @@
 
-..    TODO/Review: {{review|}} .
-
 Bevel Modifier
 **************
 
-.. figure:: /images/Manual_-_Bevel_Modifier_Default_Cube.jpg
-   :width: 250px
-   :figwidth: 250px
-
-   Default bevel.
-
-
-The :guilabel:`Bevel` modifier adds the ability to bevel the edges of the mesh it is applied
+The Bevel modifier adds the ability to bevel the edges of the mesh it is applied
 to, allowing control of how and where the bevel is applied to the mesh.
 
-The :guilabel:`Bevel` modifier is a non-destructive alternative to the
-:doc:`Bevel Operation </modeling/meshes/editing/subdividing/bevel>` in mesh editing mode.
+The Bevel modifier is a non-destructive alternative to the
+:doc:`Bevel Operation </modeling/meshes/editing/subdividing/bevel>` in edit mode.
 
 
 +--------------------------------------------------+------------------------------------------------+
@@ -23,22 +14,11 @@ The :guilabel:`Bevel` modifier is a non-destructive alternative to the
 +   :width: 150px                                  |   :width: 150px                                +
 +   :figwidth: 150px                               |   :figwidth: 150px                             +
 +                                                  |                                                +
-+   Unbeveled square.                              |   Beveled square.                              +
++   Unbeveled                                      |   Beveled                                      +
 +--------------------------------------------------+------------------------------------------------+
 
 
-The picture *Unbeveled square* shows a square which has unbeveled edges as the angles
-
-between the corners of the square are 90- (perpendicular).
-
-The picture *Beveled square* shows a square which has beveled corners.
-
-Although the two pictures show 2D squares,
-the Blender :guilabel:`Bevel` modifier can work on both 2D and 3D meshes of almost any shape,
-not just squares and cubes...
-
-The picture *Default bevel* shows a Blender 3D cube with a bevel applied using just the
-default :guilabel:`Bevel` modifier settings.
+The images above show the side views of a plain (unbeveled) cube and a beveled one.
 
 
 Options
@@ -50,92 +30,66 @@ Options
 
 
 Width
------
-
-The :guilabel:`Width` numeric field controls the width/amount of the bevel applied to the base
-mesh. It can range from ``0.0`` (no bevel applied) to ``1.0`` (Blender Units).
-This value is in fact the "backing up" of the two new edges relatively to the original
-(beveled) one, along the two concerned faces.
+   The size of the bevel affect. See :guilabel:`Width Method` below.
 
 
-.. note::
+   .. figure:: /images/Manual_-_Bevel_Modifier_-_3_Beveled_Cubes.jpg
+      :width: 610px
+      :figwidth: 610px
 
-   When using Metric or Imperial units the :guilabel:`Width` value has a unit.
-   E.g. when 1 Blenderunit is 1m a useful value is between 0cm and 100cm.
-   When it seems that decreasing the :guilabel:`Width` has no effect
-   anymore check if the unit changed to m instead of cm.
-
-
-.. figure:: /images/Manual_-_Bevel_Modifier_-_3_Beveled_Cubes.jpg
-   :width: 610px
-   :figwidth: 610px
-
-   Three Cubes with 0.1, 0.3 and 0.5 bevel Widths.
+      Three Cubes with 0.1, 0.3 and 0.5 bevel Widths.
 
 
 Segments
---------
-
-Set the number of bevel segments for round edges/verts.
-
-
+   The number of edge loops added along the bevel's face.
+Profile
+   The shape of the bevel, from concave to convex - has no effect if :guilabel:`Segments` is less than ``2``.
+Material
+   The index of the material slot to use for the bevel.
+   When set to ``-1``, the material of the nearest original face will be used.
 Only Vertices
--------------
-
-The :guilabel:`Only Vertices` button alters the way in which a bevel is applied to the mesh.
-When it is active, only the areas near vertices are beveled; the edges are left unbeveled.
+   When enabled, only the areas near vertices are beveled; the edges are left unbeveled.
 
 
-.. figure:: /images/Manual_-_3_Beveled_Cubes_Vertices_Only.jpg
-   :width: 610px
-   :figwidth: 610px
+   .. figure:: /images/Manual_-_3_Beveled_Cubes_Vertices_Only.jpg
+      :width: 610px
+      :figwidth: 610px
 
-   Three cubes with 0.1, 0.3 and 0.5' bevel Widths, with Only Vertices option enabled.
+      Three cubes with 0.1, 0.3 and 0.5' bevel Widths, with Only Vertices option enabled.
 
+
+Clamp Overlap
+   When enabled, the width of each beveled edge will be limited such that they cannot intersect each other.
+   Edges that are far apart will still bevel with the full width, only edges too close to each other are affected.
 
 Limit Method
-------------
+   Used to control where a bevel is applied to the mesh.
 
-This section of the :guilabel:`Bevel` modifier is used to control where and when a bevel is
-applied to the underlying mesh. The first row of three buttons (mutually exclusive)
-controls the algorithm used, and might add some extra options.
+   None
+      No limit, all edges will be beveled.
+   Angle
+      Only edges where the adjacent faces form an angle smaller than the defined threshold will be beveled.
+      Intended to allow you to bevel only the sharp edges of an object without affecting its smooth surfaces.
+   Weight
+      Use each edge's bevel weight to determine the width of the bevel.
+      When the bevel weight is ``0.0``, no bevel is applied.
+      See :doc:`here </modeling/meshes/editing/edges>` about adjusting bevel weights.
+   Vertex Group
+      Use weights from a vertex group to determine the width of the bevel.
+      When the vertex weight is ``0.0``, no bevel is applied.
+      An edge is only beveled if both of its vertices are in the vertex group.
+      See :doc:`here </modeling/meshes/vertex_groups/vertex_groups>` about adjusting vertex group weights.
 
-None
-   This button will apply the :guilabel:`Bevel` modifier to the whole underlying mesh,
-   without any way to prevent the bevel on some edges/vertices.
+.. TODO someone who understands these should write them in plain English, for now just copied the tool-tips.
 
+Width Method
+   Used to control how the :guilabel:`Width` is measured.
 
-.. figure:: /images/Manual_CZ_BevelModifier_Angle_IF.jpg
-
-   Bevel modifier with the Angle limit enabled.
-
-
-Angle
-   This button will only bevel edges where faces make sharp angles. When selected,
-   it displays the :guilabel:`Angle` numeric field, used to set the angle above which an edge will be beveled
-   (it is in fact the complementary angle, i.e. ``180 - (angle between faces)``).
-   When the angle between meeting faces is less than the angle in the slider box,
-   a bevel on those specific edges will not be applied. Similarly,
-   when the angle between two edges is less than this limit, the vertex is not beveled.
-
-
-
-.. figure:: /images/Manual_CZ_BevelModifier_Weight_IF.jpg
-
-   Bevel modifier with Weight button active.
-
-
-Weight
-   Use bevel weights to determine how much bevel is applied; apply them separately in vert/edge select mode.
-   See :doc:`Here </modeling/meshes/editing/edges>` about adjusting bevel weights.
-   The three options specify what edge weight to use for weighting a vertex.
-
-   Average
-      Uses the average bevel weight at the vertex
-   Sharpest
-      Uses the smallest bevel weight at the vertex
-   Largest
-      Uses the largest bevel weight at the vertex
-Vertex Group
-   Use a vertex group to determine which parts of the mesh get beveled.
-
+   Offset
+      Amount is offset of new edges from original.
+   Width
+      Amount is width of new face.
+   Depth
+      Amount is perpendicular distance from original edge to bevel face.
+   Percent
+      Amount is percent of adjacent edge length.

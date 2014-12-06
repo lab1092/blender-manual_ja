@@ -2,9 +2,6 @@
 Mesh Deform Modifier
 ********************
 
-Description
-===========
-
 The :guilabel:`Mesh Deform` modifier allows an arbitrary closed mesh (of any closed shape,
 not just the cuboid shape of a :guilabel:`Lattice` modifier)
 to act as a deformation cage around another mesh.

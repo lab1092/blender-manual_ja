@@ -5,9 +5,6 @@
 Shrinkwrap Modifier
 *******************
 
-Description
-===========
-
 The :guilabel:`Shrinkwrap` modifier allows an object to "shrink" to the surface of another
 object. It moves each vertex of the object being modified to the closest position on the
 surface of the given mesh (using one of the three methods available).

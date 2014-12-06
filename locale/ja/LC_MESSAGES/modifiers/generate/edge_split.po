@@ -11,102 +11,163 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/modifiers/generate/edge_split.rst:6
-msgid "EdgeSplit Modifier"
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:9
-msgid "Description"
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:11
-msgid ""
-"The :guilabel:`EdgeSplit` modifier splits edges within a mesh. The edges to "
-"split can be determined from the edge angle (i.e. angle between faces "
-"forming this edge), and/or edges marked as sharp."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:15
-msgid ""
-"Splitting an edge affects vertex normal generation at that edge, making the "
-"edge appear sharp. Hence, this modifier can be used to achieve the same "
-"effect as the :guilabel:`Autosmooth` button, making edges appear sharp when "
-"their angle is above a certain threshold. It can also be used for manual "
-"control of the smoothing process, where the user defines which edges should "
-"appear smooth or sharp (see :doc:`Mesh Smoothing "
-"</modeling/meshes/smoothing>` for other ways to do this). If desired, both "
-"modes can be active at once. The output of the :guilabel:`EdgeSplit` "
-"modifier is available to export scripts, making it quite useful for creators"
-" of game content."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:26
+#: ../../manual/modifiers/generate/edge_split.rst:22
 msgid "Options"
 msgstr "オプション"
 
-#: ../../manual/modifiers/generate/edge_split.rst:30
-msgid "EdgeSplit modifier."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:38
-msgid "From Edge Angle"
-msgstr ""
-
 #: ../../manual/modifiers/generate/edge_split.rst:34
-msgid ""
-"If this button is enabled, edges will be split if their edge angle is "
-"greater than the :guilabel:`Split Angle` setting."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:36
-msgid "The edge angle is the angle between the two faces which use that edge."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:37
-msgid "If more than two faces use an edge, it is always split."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:38
-msgid "If fewer than two faces use an edge, it is never split."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:41
 msgid "Split Angle"
 msgstr ""
 
-#: ../../manual/modifiers/generate/edge_split.rst:41
-msgid ""
-"This is the angle above which edges will be split if the :guilabel:`From "
-"Edge Angle` button is selected, from ``0`` (all edges are split) to ``180`` "
-"(no edges are split). This performs the same action as the "
-":menuselection:`Edge Specials --> Edge Split` menu item (:kbd:`ctrl-E`, in "
-":guilabel:`Edit mode`)"
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:45
-msgid "From Marked As Sharp"
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:44
-msgid ""
-"If this button is enabled, edges will be split if they are marked as sharp, "
-"using the :menuselection:`Edge Specials --> Mark Sharp` menu item "
-"(:kbd:`ctrl-E`, in :guilabel:`Edit mode`)."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:48
+#: ../../manual/modifiers/generate/edge_split.rst:46
 msgid "Examples"
 msgstr "例"
 
-#: ../../manual/modifiers/generate/edge_split.rst:54
-msgid "EdgeSplit modifier output with From Marked As Sharp selected."
-msgstr ""
-
-#: ../../manual/modifiers/generate/edge_split.rst:61
+#: ../../manual/modifiers/generate/edge_split.rst:59
 msgid ""
 "(From Left to right): Flat Shading, Smooth Shading, Smooth Shading with Edge"
 " Split."
 msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:3
+msgid "Edge Split Modifier"
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:5
+msgid ""
+"The Edge Split modifier splits edges within a mesh. The edges to split can "
+"be determined from the edge angle (i.e. angle between faces forming this "
+"edge), and/or edges marked as sharp."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:9
+msgid ""
+"Splitting an edge affects vertex normal generation at that edge, making the "
+"edge appear sharp. Hence, this modifier can be used to achieve the same "
+"effect as :ref:`Auto Smooth <auto_smooth>`, making edges appear sharp when "
+"their angle is above a certain threshold. It can also be used for manual "
+"control of the smoothing process, where the user defines which edges should "
+"appear smooth or sharp (see :doc:`Mesh Smoothing "
+"</modeling/meshes/smoothing>` for other ways to do this). If desired, both "
+"modes can be active at once."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:17
+msgid ""
+"The output of the Edge Split modifier is available to export scripts, making"
+" it quite useful for creators of game content."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:26
+msgid "Edge Split modifier."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:34
+msgid "Edge Angle"
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:30
+msgid ""
+"When enabled, edges will be split if the angle between its two adjacent "
+"faces is greater than the :guilabel:`Split Angle`."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:34
+msgid "On ``0``, all edges are split. On ``180``, no edges are split."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:38
+msgid "Sharp Edges"
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:37
+msgid ""
+"When enabled, edges will be split if they were marked as sharp using "
+":menuselection:`Edge Specials --> Mark Sharp` (Menu shortcut: :kbd:`Ctrl-E` "
+"in Edit Mode)."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:42
+msgid ""
+"Non-manifold edges (edges shared by more than two faces) will always be "
+"split."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:52
+msgid "Edge Split modifier output with From Marked As Sharp selected."
+msgstr ""
+
+#: ../../manual/modifiers/generate/edge_split.rst:64
+msgid ""
+"Splitting edges can also be performed manually in Edit Mode using: "
+":menuselection:`Edge Specials --> Edge Split` (Menu shortcut: "
+":kbd:`Ctrl-E`)."
+msgstr ""
+
+#~ msgid "EdgeSplit Modifier"
+#~ msgstr ""
+
+#~ msgid "Description"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`EdgeSplit` modifier splits edges within a mesh. The edges to "
+#~ "split can be determined from the edge angle (i.e. angle between faces "
+#~ "forming this edge), and/or edges marked as sharp."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Splitting an edge affects vertex normal generation at that edge, making the "
+#~ "edge appear sharp. Hence, this modifier can be used to achieve the same "
+#~ "effect as the :guilabel:`Autosmooth` button, making edges appear sharp when "
+#~ "their angle is above a certain threshold. It can also be used for manual "
+#~ "control of the smoothing process, where the user defines which edges should "
+#~ "appear smooth or sharp (see :doc:`Mesh Smoothing "
+#~ "</modeling/meshes/smoothing>` for other ways to do this). If desired, both "
+#~ "modes can be active at once. The output of the :guilabel:`EdgeSplit` "
+#~ "modifier is available to export scripts, making it quite useful for creators"
+#~ " of game content."
+#~ msgstr ""
+
+#~ msgid "EdgeSplit modifier."
+#~ msgstr ""
+
+#~ msgid "From Edge Angle"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If this button is enabled, edges will be split if their edge angle is "
+#~ "greater than the :guilabel:`Split Angle` setting."
+#~ msgstr ""
+
+#~ msgid "The edge angle is the angle between the two faces which use that edge."
+#~ msgstr ""
+
+#~ msgid "If more than two faces use an edge, it is always split."
+#~ msgstr ""
+
+#~ msgid "If fewer than two faces use an edge, it is never split."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is the angle above which edges will be split if the :guilabel:`From "
+#~ "Edge Angle` button is selected, from ``0`` (all edges are split) to ``180`` "
+#~ "(no edges are split). This performs the same action as the "
+#~ ":menuselection:`Edge Specials --> Edge Split` menu item (:kbd:`ctrl-E`, in "
+#~ ":guilabel:`Edit mode`)"
+#~ msgstr ""
+
+#~ msgid "From Marked As Sharp"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If this button is enabled, edges will be split if they are marked as sharp, "
+#~ "using the :menuselection:`Edge Specials --> Mark Sharp` menu item "
+#~ "(:kbd:`ctrl-E`, in :guilabel:`Edit mode`)."
+#~ msgstr ""
+
+#~ msgid "EdgeSplit modifier output with From Marked As Sharp selected."
+#~ msgstr ""
 
 #~ msgid "Reference"
 #~ msgstr ""

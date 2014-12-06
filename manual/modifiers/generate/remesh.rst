@@ -2,9 +2,6 @@
 Remesh Modifier
 ***************
 
-Description
-===========
-
 The Remesh modifier is a tool for generating new mesh topology based on an input surface.
 The output follows the surface curvature of the input, but its topology contains only quads.
 
@@ -32,7 +29,8 @@ There are three basic modes available in the remesh modifier: Blocks, Smooth and
    :width: 600px
    :figwidth: 600px
 
-   This example shows a cone with each of the different remesh modes. From left to right: original cone, Blocks, Smooth, and Sharp
+   This example shows a cone with each of the different remesh modes.
+   From left to right: original cone, Blocks, Smooth, and Sharp
 
 
 Note that the output topology is almost identical between the three modes;
@@ -70,7 +68,9 @@ threshold to control how small a disconnected component must be to be removed.
    :width: 600px
    :figwidth: 600px
 
-   The input mesh (left) is fairly noisy, so the initial output of the remesh modifier (center) contains small disconnected pieces. Enabling Remove Disconnected Pieces (right) deletes those faces.
+   The input mesh (left) is fairly noisy,
+   so the initial output of the remesh modifier (center) contains small disconnected pieces.
+   Enabling Remove Disconnected Pieces (right) deletes those faces.
 
 
 Sharpness

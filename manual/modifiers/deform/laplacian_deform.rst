@@ -2,9 +2,6 @@
 Laplacian Deform
 ****************
 
-Description
-===========
-
 The :guilabel:`Laplacian Deform` modifier allows you to pose a mesh while preserving geometric
 details of the surface.
 

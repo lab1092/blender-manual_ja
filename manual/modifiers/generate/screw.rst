@@ -2,9 +2,6 @@
 Screw Modifier
 **************
 
-Description
-===========
-
 The :guilabel:`Screw` modifier is similar to the :guilabel:`Screw` tool in the :guilabel:`Tool
 Shelf` in that it takes a profile object, a :guilabel:`Mesh` or a :guilabel:`Curve`,
 to create a helix-like shape.

@@ -310,7 +310,7 @@ To modify your new Texture, you can:
     based on a render of :doc:`Vertex Paint </materials/vertex_paint>` colors,
     Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.
 - Paint using :doc:`Texture Paint </textures/painting>`.
-  - Use the UV/Image Editor menu *Image* →\ *New*. Then start painting your mesh with
+  - Use the UV/Image Editor menu *Image* → *New*. Then start painting your mesh with
 - Use external software to create an image
   - Using your favorite image painting program, you could use an exported UV layout to create a texture.
     Then save your changes, and back in Blender, use the Image→Open menu command to load it as your UV image
@@ -355,5 +355,5 @@ The File→Append function automatically goes into .
 blend files and shows you the image textures packed in it.
 The public domain Blender Texture CD is also a great resource,
 and there are many other sources of public domain (and licensed) textures. All textures on the
-Elephants Dream CD are liberally licensed under [http://creativecommons.org/licenses/by/2.5/
-CC-BY 2.5].
+Elephants Dream CD are liberally licensed under
+[http://creativecommons.org/licenses/by/2.5/CC-BY 2.5].
