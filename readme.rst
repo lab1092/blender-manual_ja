@@ -156,8 +156,7 @@ result
 Japanese Translation Sample
 =====================================
 
-* http://lab1092.site44.com/blender-manual/ja/contents.html
-* http://lab1092.site44.com/blender-manual/en/contents.html
+* http://blender-manual-i18n.readthedocs.org/ja/latest/contents.html
 
 
 
