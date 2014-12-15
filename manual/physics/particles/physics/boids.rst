@@ -1,4 +1,5 @@
 
+*****
 Boids
 *****
 
@@ -15,8 +16,8 @@ Boids can handle only a certain amount of information,
 therefore the sequence of the Behaviour settings is very important.
 In certain situations only the first three parameter are evaluated.
 
-To view the subpanel to the right, add a :guilabel:`Particle System` of type
-:guilabel:`Emitter` and look in the middle area of the :guilabel:`Particle System` tab.
+To view the subpanel to the right, add a *Particle System* of type
+*Emitter* and look in the middle area of the *Particle System* tab.
 
 
 Physics
@@ -91,9 +92,9 @@ Alliance
 ========
 
 The relations box allows you to set up other particle systems to react with the boids.
-Setting the type to :guilabel:`Enemy` will cause the systems to fight with each other.
-:guilabel:`Friend` will make the systems work together.
-:guilabel:`Neutral` will not cause them to align or fight with each other.
+Setting the type to *Enemy* will cause the systems to fight with each other.
+*Friend* will make the systems work together.
+*Neutral* will not cause them to align or fight with each other.
 
 
 Deflectors and Effectors

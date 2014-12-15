@@ -1,10 +1,11 @@
 
+*************
 Hair Dynamics
 *************
 
 Hair particles can now be made dynamic using Cloth physics.
 
-To enable hair physics, click the check box beside :guilabel:`Hair Dynamics`.
+To enable hair physics, click the check box beside *Hair Dynamics*.
 
 
 Settings

@@ -1,11 +1,12 @@
 
+***********
 Mesh Bisect
 ***********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Bisect`
 
 

@@ -8,6 +8,7 @@
    }} .
 
 
+********
 Surfaces
 ********
 
@@ -17,7 +18,7 @@ Surfaces
 
 
 Curves are 2D objects, and surfaces are their 3D extension. Note however that in Blender,
-you only have NURBS surfaces, no Bézier (you have the :guilabel:`Bezier` knot type, though;
+you only have NURBS surfaces, no Bézier (you have the *Bezier* knot type, though;
 see below), nor polygonal (but for these, you have meshes!).
 Even though curves and surfaces share the same object type (with texts also...),
 they are not the same thing; for example,
@@ -26,7 +27,7 @@ you cannot have in the same object both curves and surfaces.
 As surfaces are 2D, they have two interpolation axes, U (as for curves) and V.
 It is important to understand that *you can control the interpolation rules (knot, order,
 resolution) independently for each of these two dimensions*
-(the :guilabel:`U` and :guilabel:`V` fields for all these settings, of course).
+(the *U* and *V* fields for all these settings, of course).
 
 You may ask yourself "but the surface appears to be 3D, why is it only 2D?".
 In order to be 3D, the object needs to have "Volume," and a surface, even when it is closed,
@@ -52,9 +53,9 @@ Finding Surface Tools
    Surface Tools.
 
 
-The panels of the :guilabel:`Editing` context are the same as for :doc:`curves </modeling/curves>`,
-just with fewer options... And as usual, you have the :guilabel:`Select` and :guilabel:`Surface`
-menus in the 3D view headers, and the :guilabel:`Specials` (:kbd:`W`) pop-up one.
+The panels of the *Editing* context are the same as for :doc:`curves </modeling/curves>`,
+just with fewer options... And as usual, you have the *Select* and *Surface*
+menus in the 3D view headers, and the *Specials* (:kbd:`W`) pop-up one.
 
 
 Visualization
@@ -74,7 +75,7 @@ Surface Structure
 
 Many of the concepts from :doc:`curves </modeling/curves>`, especially :doc:`NURBS </modeling/curves#nurbs>` ones,
 carry directly over to NURBS surfaces,
-such as control points, :guilabel:`Order`, :guilabel:`Weight`, :guilabel:`Resolution`, etc.
+such as control points, *Order*, *Weight*, *Resolution*, etc.
 Here we will just talk about the differences.
 
 It is very important to understand the difference between NURBS curves and NURBS surfaces:
@@ -88,11 +89,11 @@ However, you can have "2D" surfaces made of curves
 or, to a lesser extent, the filling of closed 2D curves. And you can have "1D" curves made of surfaces,
 like a NURBS surface with only one row (either in U or V direction) of control points produces only a curve...
 
-Visually you can tell which is which by entering :guilabel:`Edit` mode and looking at the 3D window's header:
-either the header shows "\ :guilabel:`Surface` " or "\ :guilabel:`Curve` " as one of the menu choices. Also,
+Visually you can tell which is which by entering *Edit* mode and looking at the 3D window's header:
+either the header shows "\ *Surface* " or "\ *Curve* " as one of the menu choices. Also,
 you can :doc:`extrude </modeling/curves/editing/advanced>` a whole NURBS surface curve to create a surface,
-but you can't with a simple NURBS curve (we talk here about the "standard" :guilabel:`Extrude` tool,
-the one activated with the :guilabel:`E` shortcut, not the quite-specific curve extrusion tools - yes, I know,
+but you can't with a simple NURBS curve (we talk here about the "standard" *Extrude* tool,
+the one activated with the *E* shortcut, not the quite-specific curve extrusion tools - yes, I know,
 it's not easy to follow...).
 
 
@@ -122,11 +123,11 @@ be able to "merge" different pieces of surfaces if at least one of their rows ma
 Surface Resolution
 ==================
 
-Just like :doc:`NURBS curves </modeling/curves#nurbs>`, :guilabel:`Resolution` controls the detail of the surface.
-The higher the :guilabel:`Resolution` the more detailed and smoother the surface is.
-The lower the :guilabel:`Resolution` the rougher the surface. However, here you have two resolution settings,
+Just like :doc:`NURBS curves </modeling/curves#nurbs>`, *Resolution* controls the detail of the surface.
+The higher the *Resolution* the more detailed and smoother the surface is.
+The lower the *Resolution* the rougher the surface. However, here you have two resolution settings,
 one for each interpolation axis (U and V). Note that unlike with curves, you have only one resolution
-(the :guilabel:`Resol U` and :guilabel:`V` fields, in the :guilabel:`Curve Tools` panel)...
+(the *Resol U* and *V* fields, in the *Curve Tools* panel)...
 
 
 +-----------------------------------------------+-----------------------------------------------+
@@ -154,7 +155,7 @@ Closed and Open Surfaces
 
 Like curves, surfaces can be closed (cyclical) or open, independently in both directions,
 allowing you to easily create a tube, donut or sphere shape,
-and they can be drawn as "solids" in :guilabel:`Edit` mode.
+and they can be drawn as "solids" in *Edit* mode.
 This makes working with surfaces quite easy.
 
 
@@ -162,8 +163,8 @@ Knots
 =====
 
 Just like with :doc:`NURBS curves </modeling/curves#knots>`, NURBS surfaces have two knot vectors,
-one for each U and V axis. Here again, they can be one of :guilabel:`Uniform`, :guilabel:`Endpoint`,
-or :guilabel:`Bezier`, with the same properties as for curves. And as with curves, only open surfaces
+one for each U and V axis. Here again, they can be one of *Uniform*, *Endpoint*,
+or *Bezier*, with the same properties as for curves. And as with curves, only open surfaces
 (in the relevant direction) are affected by this setting...
 
 
@@ -174,21 +175,21 @@ or :guilabel:`Bezier`, with the same properties as for curves. And as with curve
 
 In (*Endpoint U*), the U interpolation axis is labeled as "\ ``U`` " and the V
 interpolation axis is labeled as "\ ``V`` ". The ``U`` 's interpolation axis has
-been set to :guilabel:`Endpoint` and as such the surface now extends to the outer edges from
+been set to *Endpoint* and as such the surface now extends to the outer edges from
 "\ ``E1`` " to "\ ``E2`` " along the ``U`` interpolation axis.
 
 To cause the surface to extend to all edges you would set the ``V`` 's axis to
-:guilabel:`Endpoint` as well.
+*Endpoint* as well.
 
 
 Order
 =====
 
 One more time, this property is the same as with :doc:`NURBS Curves </modeling/curves#order>`;
-it specifies how much the control points are taken into account for calculating the curve of the surface shape. For high :guilabel:`Orders`, (*1*), the surface pulls away from the control points, creating a smoother surface - assuming that the
+it specifies how much the control points are taken into account for calculating the curve of the surface shape. For high *Orders*, (*1*), the surface pulls away from the control points, creating a smoother surface - assuming that the
 FIXME(TODO: Internal Link;
 [[#Surface Resolution|resolution]]
-) is high enough. For lowest :guilabel:`Orders`, (*2*), the surface follows the control points,
+) is high enough. For lowest *Orders*, (*2*), the surface follows the control points,
 creating a surface that tends to follow the grid cage.
 
 
@@ -200,7 +201,7 @@ creating a surface that tends to follow the grid cage.
 
 
 For illustration purposes, in both (*Order 4 surface*) and (*Order 2 surface*),
-the knot vectors were set to :guilabel:`Endpoint`, causing the surface to extend to all edges.
+the knot vectors were set to *Endpoint*, causing the surface to extend to all edges.
 
 You can set independently the order for each interpolation axis, and like curves,
 it cannot be lower than **2**,
@@ -217,20 +218,20 @@ Weight
    Surface Weight 5.
 
 
-Guess what? Yes, it works exactly like :doc:`NURBS Curves </modeling/curves#weight>` ! :guilabel:`Weight` specifies
+Guess what? Yes, it works exactly like :doc:`NURBS Curves </modeling/curves#weight>` ! *Weight* specifies
 how much each control point "pulls" on the curve.
 
 In (*Surface Weight 5*), a single control point, labeled "\ ``C`` ",
-has had its :guilabel:`Weight` set to **5.0** while all others are at their default of **1.
+has had its *Weight* set to **5.0** while all others are at their default of **1.
 0**. As you can see, that control point *pulls* the surface towards it.
 
-If all the control points have the same :guilabel:`Weight` then each effectively cancels each
+If all the control points have the same *Weight* then each effectively cancels each
 other out. It is the difference in the weights that cause the surface to move towards or away
 from a control point.
 
-The :guilabel:`Weight` of any particular control point is visible in the
+The *Weight* of any particular control point is visible in the
 :doc:`Transform Properties panel </ce/panels/transform_properties/curve_mode>`
-(:kbd:`N`), *in the* :guilabel:`W` *field* (and not the :guilabel:`Weight` field...).
+(:kbd:`N`), *in the* *W* *field* (and not the *Weight* field...).
 
 
 Preset Weights
@@ -246,7 +247,7 @@ Preset Weights
 NURBS can create pure shapes such as circles, cylinders, and spheres
 (note that a Bézier circle is not a pure circle). To create pure circles, globes,
 or cylinders, you must set to specific values the weights of the control points - some of
-which are provided as presets in the :guilabel:`Curve Tools` panel (lower right corner).
+which are provided as presets in the *Curve Tools* panel (lower right corner).
 This is not intuitive, and you should read more on NURBS before trying this.
 
 We saw with 1D :doc:`NURBS curves </ling/curves#preset_weights>` how to create a circle;
@@ -260,8 +261,8 @@ Primitives
 ==========
 
 To help get started in creating surfaces there are four preset NURBS surfaces,
-found in the :menuselection:`Add --> Surface` menu: :guilabel:`NURBS Surface`, :guilabel:`NURBS Tube`,
-:guilabel:`NURBS Sphere` and :guilabel:`NURBS Torus`.
+found in the :menuselection:`Add --> Surface` menu: *NURBS Surface*, *NURBS Tube*,
+*NURBS Sphere* and *NURBS Torus*.
 
 
 .. figure:: /images/NurbsPrimitives.jpg
@@ -270,7 +271,7 @@ found in the :menuselection:`Add --> Surface` menu: :guilabel:`NURBS Surface`, :
 
 
 There are also two preset NURBS surface curves (with only one control point on each V-row):
-:guilabel:`NURBS Curve` and :guilabel:`NURBS Circle`.
+*NURBS Curve* and *NURBS Circle*.
 
 
 .. figure:: /images/NurbsCurvePrimitives.jpg

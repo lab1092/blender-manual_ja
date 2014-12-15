@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=add}} .
 
 
+******************
 Soft Body settings
 ******************
 
@@ -34,7 +35,7 @@ Soft Body Cache
 
 .. note:: Start- and Endframe
 
-   The :guilabel:`Start` and :guilabel:`End` settings in the :guilabel:`Collision` panel are not only valid for the baking, but for all Soft Body simulations. So if your animation lasts longer than 250 frames, you have to increase the :guilabel:`End` value.
+   The *Start* and *End* settings in the *Collision* panel are not only valid for the baking, but for all Soft Body simulations. So if your animation lasts longer than 250 frames, you have to increase the *End* value.
 
 
 Cache
@@ -62,7 +63,7 @@ Compression
       Effective but slow compression.
 
 Bake
-   Calculates the simulation and protects the cache. You need to be in :guilabel:`Object` mode to bake.
+   Calculates the simulation and protects the cache. You need to be in *Object* mode to bake.
 Free Bake
    Clears the cache.
 
@@ -96,23 +97,23 @@ Default
    If no vertex group is used, this numeric field is the default goal weight for all vertices.
    If a vertex group is present and assigned,
    this button instead shows an popup selector button that allows you to choose the name of the goal vertex group.
-   A :guilabel:`Goal` value of 1.0 means no Soft Body simulation, the vertex stays at its original (animated)
-   position. When setting :guilabel:`Goal` to 0.0, the object is only influenced by physical laws.
+   A *Goal* value of 1.0 means no Soft Body simulation, the vertex stays at its original (animated)
+   position. When setting *Goal* to 0.0, the object is only influenced by physical laws.
    By setting goal values between 0.0 and 1.0,
    you can blend between having the object affected only by the animation system,
    and having the object affected only by the soft body effect.
 
 Minimum / Maximum
-   When you paint the values in vertex-groups (using :guilabel:`Weight Paint` mode),
-   you can use the :guilabel:`G Min` and :guilabel:`G Max` to fine-tune (clamp) the weight values.
-   The lowest vertex-weight (blue) will become :guilabel:`G Min`, the highest value (red) becomes :guilabel:`G Max`
+   When you paint the values in vertex-groups (using *Weight Paint* mode),
+   you can use the *G Min* and *G Max* to fine-tune (clamp) the weight values.
+   The lowest vertex-weight (blue) will become *G Min*, the highest value (red) becomes *G Max*
    (please note that the blue-red color scale may be altered by User Preferences).
 
 Stiffness
-   The spring stiffness for :guilabel:`Goal`. A low value creates very weak springs (more flexible "attachment" to the goal), a high value creates a strong spring (a stiffer "attachment" to the goal).
+   The spring stiffness for *Goal*. A low value creates very weak springs (more flexible "attachment" to the goal), a high value creates a strong spring (a stiffer "attachment" to the goal).
 
 Damping
-   The friction for :guilabel:`Goal`. Higher values dampen the effect of the goal on the soft body.
+   The friction for *Goal*. Higher values dampen the effect of the goal on the soft body.
 
 Vertex Group
    Use a vertex group to specify goal weights.
@@ -151,14 +152,14 @@ Shear
 
 Aerodynamics
    Simple
-      If you turn on :guilabel:`Aero` the force is not confined to the vertices, but has an effect also on the edges.
+      If you turn on *Aero* the force is not confined to the vertices, but has an effect also on the edges.
       The angle and the relative speed between medium and edge is used to calculate the force on the edge.
       This force results that vertices with little connecting edges (front of a plane)
       fall faster than vertices with more connecting edges (middle of a plane).
       If all vertices have the same amount of edges in a direction they fall with equal speed.
       An edge moving in its own direction feels no force,
       and an edge moving perpendicular to its own direction feels maximum force
-      (think of a straw moving through air). Try it with an :guilabel:`Factor` of 30 at first.
+      (think of a straw moving through air). Try it with an *Factor* of 30 at first.
 
    Lift Force
       Use an aerodynamic model that is closer to physical laws and looks more interesting. Disable for a more muted simulation.
@@ -171,7 +172,7 @@ Edge
 
 Face
    Checks for any portion of the face of the softbody mesh colliding (compute intensive!).
-   While :guilabel:`CFace` enabled is great, and solves lots of collision errors,
+   While *CFace* enabled is great, and solves lots of collision errors,
    there doesn't seem to be any dampening settings for it,
    so parts of the softbody object near a collision mesh tend to "jitter" as they bounce off and fall back,
    even when there's no motion of any meshes. Edge collision has dampening, so that can be controlled,
@@ -181,19 +182,19 @@ Face
 Soft Body Self Collision
 ========================
 
-:guilabel:`Self Collision` is working only if you have activated :guilabel:`Use Edges`.
+*Self Collision* is working only if you have activated *Use Edges*.
 
 Self Collision
    When enabled, allows you to control how Blender will prevent the Soft Body from intersecting with itself. Every vertex is surrounded with an elastic virtual ball. Vertices may not penetrate the balls of other vertices. If you want a good result you may have to adjust the size of these balls. Normally it works pretty well with the default options.
 
 Manual
-   The :guilabel:`Ball Size` directly sets the ball size (in BU).
+   The *Ball Size* directly sets the ball size (in BU).
 Averavge ("average")
-   The average length of all edges attached to the vertex is calculated and then multiplied with the :guilabel:`Ball Size` setting. Works well with evenly distributed vertices.
+   The average length of all edges attached to the vertex is calculated and then multiplied with the *Ball Size* setting. Works well with evenly distributed vertices.
 Minimal / Maximal
-   The ball size is as large as the smallest/largest spring length of the vertex multiplied with the :guilabel:`Ball Size`.
+   The ball size is as large as the smallest/largest spring length of the vertex multiplied with the *Ball Size*.
 AvMiMax
-   Size = ((Min + Max)/2) × :guilabel:`Ball Size`.
+   Size = ((Min + Max)/2) × *Ball Size*.
 
 
 Size
@@ -219,13 +220,13 @@ Min Step
    Minimum simulation steps per frame. Increase this value, if the Soft Body misses fast moving collision objects.
 
 Max Step
-   Maximum simulation steps per frame. Normally the number of simulation steps is set dynamically (with the :guilabel:`Error Limit`) but you have probably a good reason to change it.
+   Maximum simulation steps per frame. Normally the number of simulation steps is set dynamically (with the *Error Limit*) but you have probably a good reason to change it.
 
 Auto-Step
    helps the Solver figure out how much work it needs to do based on how fast things are moving.
 
 Error Limit
-   Rules the overall quality of the solution delivered. Default 0.1. The most critical setting that says how precise the solver should check for collisions. Start with a value that is 1/2 the average edge length. If there are visible errors, jitter, or over-exaggerated responses, decrease the value. The solver keeps track of how "bad" it is doing and the :guilabel:`Error Limit` causes the solver to do some "adaptive step sizing".
+   Rules the overall quality of the solution delivered. Default 0.1. The most critical setting that says how precise the solver should check for collisions. Start with a value that is 1/2 the average edge length. If there are visible errors, jitter, or over-exaggerated responses, decrease the value. The solver keeps track of how "bad" it is doing and the *Error Limit* causes the solver to do some "adaptive step sizing".
 
 Fuzzy
    Fuzziness while on collision, high values make collision handling faster but less stable.

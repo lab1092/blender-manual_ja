@@ -1,4 +1,5 @@
 
+*******************
 Procedural Textures
 *******************
 
@@ -48,12 +49,12 @@ Noise Basis
 
 
 Each noise-based Blender texture (with the exception of Voronoi and simple noise) has a
-:guilabel:`Noise Basis` setting that allows the user to select which algorithm is used to
+*Noise Basis* setting that allows the user to select which algorithm is used to
 generate the texture. This list includes the original Blender noise algorithm.
-The :guilabel:`Noise Basis` settings makes the procedural textures extremely flexible
-(especially :guilabel:`Musgrave`).
+The *Noise Basis* settings makes the procedural textures extremely flexible
+(especially *Musgrave*).
 
-The :guilabel:`Noise Basis` governs the structural appearance of the texture :
+The *Noise Basis* governs the structural appearance of the texture :
 
 
 +-------------------------------------------------+-------------------------------------------+------------------------------------------------+
@@ -82,8 +83,8 @@ The :guilabel:`Noise Basis` governs the structural appearance of the texture :
 +   Voronoi F4                                                                                                                                 +
 +-------------------------------------------------+-------------------------------------------+------------------------------------------------+
 
-There are two more possible settings for :guilabel:`Noise Basis`,
-which are relatively similar to :guilabel:`Blender Original`:
+There are two more possible settings for *Noise Basis*,
+which are relatively similar to *Blender Original*:
 Improved Perlin and Original Perlin
 
 
@@ -91,15 +92,15 @@ Nabla
 -----
 
 Almost all procedural textures in Blender use derivatives for calculating normals for texture
-mapping (with as exception :guilabel:`Blend` and :guilabel:`Magic`).
+mapping (with as exception *Blend* and *Magic*).
 This is important for Normal and Displacment Maps.
-The strength of the effect is controlled with the :guilabel:`Nabla` Number Button.
+The strength of the effect is controlled with the *Nabla* Number Button.
 
 
 Hints
 =====
 
-Use the size buttons in the :guilabel:`Mapping` panel to set the size that the procedural
+Use the size buttons in the *Mapping* panel to set the size that the procedural
 textures are mapped to.
 
 Procedural textures can either produce colored textures, intensity only textures,
@@ -107,6 +108,6 @@ textures with alpha values and normal textures.
 If intensity only ones are used the result is a black and white texture,
 which can be greatly enhanced by the use of ramps.
 If on the other hand you use ramps and need an intensity value,
-you have to switch on :guilabel:`No RGB` in the :guilabel:`Mapping` panel.
+you have to switch on *No RGB* in the *Mapping* panel.
 
 

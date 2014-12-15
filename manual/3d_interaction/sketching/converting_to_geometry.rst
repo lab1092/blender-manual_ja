@@ -13,11 +13,13 @@ so it may be necessary to simplify or subdivide parts of the created geometry fo
    Grease Pencil panel in 3D View.
 
 
-Sketches can currently be converted into curves, as proposed by the :guilabel:`Convert Grease
-Pencil` menu popped-up by the :guilabel:`Convert` button in the grease pencil properties
+Sketches can currently be converted into curves,
+as proposed by the *Convert Grease Pencil* menu popped-up by the *Convert* button in the grease pencil properties
 
-- :guilabel:`Path` will create NURBS 3D curves of order 2 (i.e. behaving like polylines).
-- :guilabel:`Bezier Curve` will create Bezier curves, with free "aligned" handles (i.e. also behaving like polylines).
+Path
+   Create NURBS 3D curves of order 2 (i.e. behaving like polylines).
+Bezier Curve
+   Create Bezier curves, with free "aligned" handles (i.e. also behaving like polylines).
 
 
 .. note:: Why "polyline-like" curves?
@@ -29,7 +31,7 @@ Pencil` menu popped-up by the :guilabel:`Convert` button in the grease pencil pr
 .. note:: Converting to Mesh
 
    If you want to convert your sketch to a mesh,
-   simply choose first :guilabel:`NURBS`, and then convert the created curve to a mesh.
+   simply choose first *NURBS*, and then convert the created curve to a mesh.
 
 
 General Options
@@ -45,17 +47,17 @@ Stroke's width will be used to set the curve's control points' radii and weights
 The default behavior is to get strokes' width
 (as defined in its settings - and which might have been modulated by the pen pressure),
 to multiply it by a given constant (0.1), and to assign it directly to weights.
-Radii get the same value scaled by the :guilabel:`Radius Fac` factor (e.g.
+Radii get the same value scaled by the *Radius Fac* factor (e.g.
 with a **10.0** factor, a stroke width of **3** will give radii of **3.0** ...).
 
-:guilabel:`Normalize Weight` (enabled by default) will scale weights value so that they tightly fit into the ``[0.0, 1.0]`` range.
+*Normalize Weight* (enabled by default) will scale weights value so that they tightly fit into the ``[0.0, 1.0]`` range.
 
 All this means that with a pressure tablet,
 you can directly control the radius and weight of the created curve, which can affect e.g.
-the width of an extrusion, or the size of an object through a :guilabel:`Follow Path`
-constraint or :guilabel:`Curve` modifier!
+the width of an extrusion, or the size of an object through a *Follow Path*
+constraint or *Curve* modifier!
 
-:guilabel:`Link Strokes` (enabled by default) will create a single spline (i.e. curve element)
+*Link Strokes* (enabled by default) will create a single spline (i.e. curve element)
 from all strokes in active grease pencil layer. This especially useful if you want to use the curve as a path.
 All the strokes are linked in the curve by "zero weights/radii" sections.
 
@@ -65,15 +67,15 @@ Timing
 
 Grease pencil now stores "dynamic" data, i.e. how fast they were drawn.
 When converting to curve,
-those data can be used to create an :guilabel:`Evaluate Time` F-Curve (in other words,
+those data can be used to create an *Evaluate Time* F-Curve (in other words,
 a path animation), that can be used e.g. to control another object's position along that curve
-(:guilabel:`Follow Path` constraint, or, trough a driver, :guilabel:`Curve` modifier).
+(*Follow Path* constraint, or, trough a driver, *Curve* modifier).
 So this allows you to reproduce your drawing movements.
 
 
 .. warning::
 
-   All those "timing" options need :guilabel:`Link Stroke` to be enabled - else
+   All those "timing" options need *Link Stroke* to be enabled - else
    they would not make much sense!
 
 
@@ -98,7 +100,7 @@ Timing Mode
       The path animation will reflect to original timing, but the "gaps" will get custom values. This is especially useful if you have very large pauses between some of your strokes, and would rather like to have "reasonable" ones!
 
 Frame Range
-   The "length" of the created path animation, in frames. In other words, the highest value of :guilabel:`Evaluation Time`.
+   The "length" of the created path animation, in frames. In other words, the highest value of *Evaluation Time*.
 
 Start Frame
    The starting frame of the path animation.
@@ -107,13 +109,13 @@ Realtime
    When enabled, the path animation will last exactly the same duration it took you do draw the strokes.
 
 End Frame
-   When :guilabel:`Realtime` is disabled, this defines the end frame of the path animation. This means that the drawing timing will be scaled up or down to fit into the specified range.
+   When *Realtime* is disabled, this defines the end frame of the path animation. This means that the drawing timing will be scaled up or down to fit into the specified range.
 
 Gap Duration
-   :guilabel:`Custom Gaps` only. The average duration (in frames) of each gap between actual strokes. Please note that the value entered here will only be exact if :guilabel:`Realtime` is enabled, else it will be scaled, exactly as the actual strokes' timing is!
+   *Custom Gaps* only. The average duration (in frames) of each gap between actual strokes. Please note that the value entered here will only be exact if *Realtime* is enabled, else it will be scaled, exactly as the actual strokes' timing is!
 
 Gap Randomness
-   Only when :guilabel:`Gap Duration` is non-null. The number of frames actual gap duration can vary of. This allows the creation of gaps having an average well defined duration, yet keeping some random variations to avoid an "always the same" effect.
+   Only when *Gap Duration* is non-null. The number of frames actual gap duration can vary of. This allows the creation of gaps having an average well defined duration, yet keeping some random variations to avoid an "always the same" effect.
 
 Random Seed
    The seed fed to the random generator managing gaps duration variations. Change it to get another set of gaps duration in the path animation.

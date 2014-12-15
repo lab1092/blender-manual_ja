@@ -1,16 +1,17 @@
 
+************************
 Armature Panels Overview
 ************************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode`, :guilabel:`Edit mode` and :guilabel:`Pose mode`
-   | Panel:    All in :guilabel:`Properties` window, :guilabel:`Object data` property
+   | Mode:     *Object mode*, *Edit mode* and *Pose mode*
+   | Panel:    All in *Properties* window, *Object data* property
 
 
 Let's first have a general overview of the various panels gathering the armature settings,
-in :guilabel:`Properties` window, :guilabel:`Object data` context:
+in *Properties* window, *Object data* context:
 
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyWindow.jpg
@@ -132,12 +133,12 @@ Bone Panels Overview
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode`, :guilabel:`Edit mode` and :guilabel:`Pose mode`
-   | Panel:    All in :guilabel:`Properties` window, :guilabel:`Bone` property
+   | Mode:     *Object mode*, *Edit mode* and *Pose mode*
+   | Panel:    All in *Properties* window, *Bone* property
 
 
 Let's first have a general grasp of the various panels gathering the bone settings,
-in :guilabel:`Properties` window, :guilabel:`Bone` context:
+in *Properties* window, *Bone* context:
 
 
 .. figure:: /images/Man2.5RiggingBonePrincipalsBonePropertyWindow.jpg

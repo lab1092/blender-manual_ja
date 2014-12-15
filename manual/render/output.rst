@@ -1,4 +1,5 @@
 
+**************
 Output Options
 **************
 
@@ -11,15 +12,15 @@ Dimensions
 
 Resolution
    The Dimensions section has settings for the size of the rendered images.
-   By default the dimensions :guilabel:`SizeX` and :guilabel:`SizeY` are 1920?1080 and can be changed by adjusting
+   By default the dimensions *SizeX* and *SizeY* are 1920?1080 and can be changed by adjusting
    the X and Y fields. These buttons control the overall size of the image.
 
-   The :guilabel:`Percentage` slider will scale the currently set resolution by that value.
+   The *Percentage* slider will scale the currently set resolution by that value.
    This is useful for small test renders that are the same proportions as the final image.
 
 Aspect Ratio
    Just below are two more settings,
-   :guilabel:`AspX` and :guilabel:`AspY` which control the shape of the pixels along the respective axis.
+   *AspX* and *AspY* which control the shape of the pixels along the respective axis.
    By default it is 1:1 since computer screen pixels are square. If television shorts are being made,
    and since TV pixels are not square, you want to change this aspect ratio to match the destination video standard:
    PAL for Europe, and NTSC for the Americas.
@@ -28,18 +29,18 @@ Aspect Ratio
 
 Border
    You can render just a portion of the view instead of rendering the entire frame. While in Camera View,
-   enable :guilabel:`Border` and press :kbd:`ctrl-B`, then drag a rectangle to define the area you want to render.
-   :kbd:`ctrl-alt-B` is the shortcut to disable the border.
-   Note that this disables the :guilabel:`Save Buffers` option in :guilabel:`Performance` and :guilabel:`Full Sample`
-   option in :guilabel:`Anti-Aliasing`.
+   enable *Border* and press :kbd:`Ctrl-B`, then drag a rectangle to define the area you want to render.
+   :kbd:`Ctrl-Alt-B` is the shortcut to disable the border.
+   Note that this disables the *Save Buffers* option in *Performance* and *Full Sample*
+   option in *Anti-Aliasing*.
 
-   Enabling :guilabel:`Crop` will crop the rendered image to the :guilabel:`Border` size,
+   Enabling *Crop* will crop the rendered image to the *Border* size,
    instead of rendering a black region around it.
 
 Frame Range
-   Set the :guilabel:`Start` and :guilabel:`End` frames for :doc:`Rendering Animations
+   Set the *Start* and *End* frames for :doc:`Rendering Animations
    </render/workflows/animations>`.
-   :guilabel:`Step` controls the number of frames to advance by for each frame in the timeline.
+   *Step* controls the number of frames to advance by for each frame in the timeline.
 
 Frame Rate
    For an :doc:`Animation </render/workflows/animations>` the frame rate,
@@ -56,30 +57,7 @@ Presets
 To make life easier the topmost menu provides some common presets (par = Pixel Aspect Ratio).
 You can add your own or remove one with the + and - buttons:
 
-+---------------------------+-----------------------------+
-+:guilabel:`DVCPRO HD 1080p`|1280x1080, 3:2par 24fps      +
-+---------------------------+-----------------------------+
-+:guilabel:`DVCPRO HD 720p` |960x720 4:3par  24fps        +
-+---------------------------+-----------------------------+
-+:guilabel:`HDTV 1080p`     |1920×1080 square pixels 24fps+
-+---------------------------+-----------------------------+
-+:guilabel:`HDTV 720p`      |1280x720 square pixels 24fps +
-+---------------------------+-----------------------------+
-+:guilabel:`HDV 1080p`      |1440x1080 4:3par 23.98fps    +
-+---------------------------+-----------------------------+
-+:guilabel:`HDV NTSC 1080p` |1440x1080 4:3par 29.97fps    +
-+---------------------------+-----------------------------+
-+:guilabel:`HDV PAL 1080p`  |1440x1080 4:3par 25fps       +
-+---------------------------+-----------------------------+
-+:guilabel:`TV NTSC 16:9`   |720x480 4:3.3par 29.97fps    +
-+---------------------------+-----------------------------+
-+:guilabel:`NTSC 4:3`       |720×480 10:11par. 29.97fps   +
-+---------------------------+-----------------------------+
-+:guilabel:`PAL 16:9`       |720x576 16:11par 25fps       +
-+---------------------------+-----------------------------+
-+:guilabel:`PAL 4:3`        |720x576 12:11par 25fps       +
-+---------------------------+-----------------------------+
-
+See: :term:`Video Presets`
 
 These are just the presets; you can set any resolution you wish,
 subject to your PC's memory restrictions;
@@ -97,7 +75,7 @@ File Locations
 ==============
 
 By default, each frame of an animation is saved in the /tmp directory. Change this or any
-field by :kbd:`shift-Lmb` clicking in the name field and entering a new name.
+field by :kbd:`Shift-LMB` clicking in the name field and entering a new name.
 If you use the // and do not save a new .blend file somewhere,
 Blender assumes the // to refer to the Blender install folder.
 
@@ -121,8 +99,8 @@ File Type
 Blender supports a wide mix of image formats. These formats are listed in alphabetical order.
 
 
-The output format for Animations **Animation** :kbd:`ctrl-f12` is selected using the
-:guilabel:`File Format` Menu. From here you can select many image or animation formats.
+The output format for Animations **Animation** :kbd:`Ctrl-F12` is selected using the
+*File Format* Menu. From here you can select many image or animation formats.
 When rendering static images,
 you can select the file type after you render when you save the image.
 
@@ -152,7 +130,7 @@ For example, if Jpeg is selected, you can specify a compression level (Quality:9
 Higher quality takes more disk space,
 but results in a better looking picture with less compression encoding artifacts.
 
-The default image type is :guilabel:`Targa`, but,
+The default image type is *Targa*, but,
 since the image is stored in a buffer and then saved, it is possible to change the image file
 type after the rendering and before saving using this menu. (**Attention** :
 this is only valid for static images, not when rendering animations!).
@@ -161,11 +139,11 @@ this is only valid for static images, not when rendering animations!).
 Channels
 --------
 
-Blender renders color (:guilabel:`RGB`) images by default, but Black and White
-(:guilabel:`BW`) and color with Alpha Channel (:guilabel:`RGBA`) are also possible.  Beware:
+Blender renders color (*RGB*) images by default, but Black and White
+(*BW*) and color with Alpha Channel (*RGBA*) are also possible.  Beware:
 unless the Extensions button of the Output panel is set,
-Blender does *not* automatically add extensions to filenames, hence any :guilabel:`.tga` or
-:guilabel:`.png` extension must be explicitly written in the File Save window.
+Blender does *not* automatically add extensions to filenames, hence any *.tga* or
+*.png* extension must be explicitly written in the File Save window.
 
 **OpenEXR** and **OpenEXR Multilayer** formats are the only formats that store Z-depth buffer information.
 **OpenEXR Multilayer** is the only format that stores Render Layer and

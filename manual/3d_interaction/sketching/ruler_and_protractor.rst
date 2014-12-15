@@ -31,7 +31,7 @@ Here are common steps for using the ruler.
 
 - Activate the Ruler from the toolshelf.
 - Click and drag in the viewport to define the initial start/end point for the ruler.
-- Orbit the view and click on either end of the ruler to re-position it. Holding :kbd:`ctrl` enables snap to elements.
+- Orbit the view and click on either end of the ruler to re-position it. Holding :kbd:`Ctrl` enables snap to elements.
 - Click on the middle to measure angles.
 - Press Enter to store the ruler for later use or Esc to cancel.
 
@@ -44,10 +44,10 @@ Here are common steps for using the ruler.
 Shortcuts
 =========
 
-- :kbd:`ctrl-lmb` Adds new ruler.
-- :kbd:`lmb` Drag end-points to place them, Hold Ctrl to snap, Hold Shift to measure thickness.
-- :kbd:`lmb` Drag center-point to measure angles, drag out of the view to convert back to a ruler.
-- :kbd:`delete` Deletes the ruler.
-- :kbd:`ctrl-c` Copies the rulers value to the clipboard.
-- :kbd:`esc` Exits
-- :kbd:`return` Saves the rulers for the next time the tool is activated.
+- :kbd:`Ctrl-LMB` Adds new ruler.
+- :kbd:`LMB` Drag end-points to place them, Hold Ctrl to snap, Hold Shift to measure thickness.
+- :kbd:`LMB` Drag center-point to measure angles, drag out of the view to convert back to a ruler.
+- :kbd:`Del` Deletes the ruler.
+- :kbd:`Ctrl-C` Copies the rulers value to the clipboard.
+- :kbd:`Esc` Exits
+- :kbd:`Enter` Saves the rulers for the next time the tool is activated.

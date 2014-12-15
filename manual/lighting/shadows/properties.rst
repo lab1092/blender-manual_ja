@@ -1,4 +1,5 @@
 
+******************************
 Common Shadowing Lamps Options
 ******************************
 
@@ -15,7 +16,7 @@ This Layer Only
    When this option is enabled, only the objects on the same layer as the light source will cast shadows.
 Only Shadow
    The light source will not illuminate an object but will generate the shadows that would normally appear.
-   This feature is often used to control how and where shadows fall by having a light which illuminates but has no shadow, combined with a second light which doesn't illuminate but has :guilabel:`Only Shadow` enabled, allowing the user to control shadow placement by moving the "Shadow Only" light around.
+   This feature is often used to control how and where shadows fall by having a light which illuminates but has no shadow, combined with a second light which doesn't illuminate but has *Only Shadow* enabled, allowing the user to control shadow placement by moving the "Shadow Only" light around.
 
 Shadow color
    This color picker control allows you to choose the color of your cast shadows (black by default).

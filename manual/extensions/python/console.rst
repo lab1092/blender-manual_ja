@@ -1,4 +1,5 @@
 
+***********************
 The Console Editor Type
 ***********************
 
@@ -7,8 +8,11 @@ Python Reporting & more features have been added.
 Testing one-liners in the console is a good way to learn the Python API.
 
 
+Usage
+=====
+
 Accessing Built-in Python Console
-=================================
+---------------------------------
 
 Launching the Console using mouse.
 
@@ -32,7 +36,7 @@ the interpreter is loaded and is ready to accept commands at the prompt **>>>**
 
 
 First look at the Console Environment
-=====================================
+-------------------------------------
 
 To check what is loaded into the interpreter environment, type dir()
 at the prompt and execute it.
@@ -56,7 +60,7 @@ bpy'
 
 
 Auto Completion at work
-=======================
+-----------------------
 
 Now, type bpy. and then press :kbd:`Ctrl-Space` and you will see the Console
 auto-complete feature in action.
@@ -88,7 +92,7 @@ Now that you got a hang of this, lets proceed to investigate some of modules in 
 
 
 Before tinkering with the modules..
-===================================
+-----------------------------------
 
 If you look at the 3D Viewport in the default Blender scene, you will notice 3 objects: Cube,
 Lamp and Camera.
@@ -109,10 +113,10 @@ the bpy module provides functionality to access and modify data.
 
 
 Examples
-********
+========
 
 bpy.context
-===========
+-----------
 
 Note
    For the commands below to show the proper output, make sure you have selected object(s) in the 3D view.
@@ -124,7 +128,7 @@ Note
 
 
 Try it out!
------------
+^^^^^^^^^^^
 
 bpy.context.mode
    Will print the current 3D View mode (Object, Edit, Sculpt etc.,)
@@ -132,48 +136,42 @@ bpy.context.mode
 bpy.context.object or bpy.context.active_object
    Will give access to the active object in the 3D View
 
-::
-
+.. code-block:: python
 
    >>> bpy.context.object.location.x = 1
 
 
 Change x location to a value of 1
 
-::
-
+.. code-block:: python
 
    >>> bpy.context.object.location.x += 0.5
 
 
 Move object from previous x location by 0.5 unit
 
-::
-
+.. code-block:: python
 
    >>> bpy.context.object.location = [1, 2, 3]
 
 
 Changes x, y, z location
 
-::
-
+.. code-block:: python
 
    >>> bpy.context.object.location.xyz = [1, 2, 3]
 
 
 Same as above
 
-::
-
+.. code-block:: python
 
    >>> type(bpy.context.object.location)
 
 
 Data type of objects location
 
-::
-
+.. code-block:: python
 
    >>> dir(bpy.context.object.location)
 
@@ -183,8 +181,7 @@ Now that is a lot of data that you have access to
 bpy.context.selected_objects
    Will give access to a list of all selected objects.
 
-::
-
+.. code-block:: python
 
    >>> bpy.context.selected_objects then press {{Shortcut|Ctrl|Space}}
 
@@ -193,17 +190,16 @@ bpy.context.selected_objects
 
 Prints out name of first object in the list
 
-::
-
+.. code-block:: python
 
    >>> [object for object in bpy.context.selected_objects if object != bpy.context.object]
 
 
-Complex one.. But this prints a list of objects not including the active object
+Complex one... But this prints a list of objects not including the active object
 
 
 bpy.data
-========
+--------
 
 bpy.data has a bunch of functions and variables that give you access to all the data in the
 Blender file.
@@ -217,7 +213,7 @@ That's a lot of data.
 
 
 Try it out!
------------
+^^^^^^^^^^^
 
 .. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Console-Example-bpy-data.jpg
    :width: 600px
@@ -225,25 +221,23 @@ Try it out!
 
 
 Exercise
---------
+^^^^^^^^
 
-::
-
+.. code-block:: python
 
    >>> for object in bpy.data.scenes['Scene'].objects: print(object.name)
 
- :kbd:`Enter` twice
+:kbd:`Enter` twice
 Prints the names of all objects belonging to the Blender scene with name "Scene"
 
-::
-
+.. code-block:: python
 
    >>> bpy.data.scenes['Scene'].objects.unlink(bpy.context.active_object)
 
 
 Unlink the active object from the Blender scene named 'Scene'
-::
 
+.. code-block:: python
 
    >>> bpy.data.materials['Material'].shadows
 
@@ -251,7 +245,7 @@ Unlink the active object from the Blender scene named 'Scene'
 
 
 bpy.ops
-=======
+-------
 
 The tool/action system in Blender 2.5 is built around the concept of operators. These
 operators can be called directly from console or can be executed by click of a button or
@@ -264,13 +258,12 @@ delete the existing Cube object by selecting it and pressing :kbd:`X`
 
 
 Try it out!
------------
+^^^^^^^^^^^
 
 The following commands are used to specify that the objects are created in layer 1.
 So first we define an array variable for later reference:
 
-::
-
+.. code-block:: python
 
    >>> mylayers = [False]*20
    >>> mylayers[0] = True
@@ -278,8 +271,7 @@ So first we define an array variable for later reference:
 
 We create a reference to the operator that is used for creating a cube mesh primitive
 
-::
-
+.. code-block:: python
 
    >>> add_cube = bpy.ops.mesh.primitive_cube_add
 
@@ -288,8 +280,7 @@ Now in a for loop, we create the five objects like this (In the screenshot above
 I used another method)
 Press ENTER-KEY twice after entering the command at the shell prompt.
 
-::
-
+.. code-block:: python
 
    >>> for index in range(0, 5):
    ...     add_cube(location=(index*3, 0, 0), layers=mylayers)
@@ -298,5 +289,4 @@ Press ENTER-KEY twice after entering the command at the shell prompt.
 .. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Console-Example-bpy-ops.jpg
    :width: 400px
    :figwidth: 400px
-
 

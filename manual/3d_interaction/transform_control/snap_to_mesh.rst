@@ -15,12 +15,12 @@ Snap
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes
-   | Hotkey:   :kbd:`shift-S`
+   | Mode:     *Object* and *Edit* modes
+   | Hotkey:   :kbd:`Shift-S`
 
 
-The :guilabel:`Snap` menu
-(also available from the 3D header in both :guilabel:`Object` and :guilabel:`Edit` mode
+The *Snap* menu
+(also available from the 3D header in both *Object* and *Edit* mode
 (:menuselection:`Object --> Snap` and :menuselection:`Mesh --> Snap`).
 This menu provides a number of options to move the cursor or your selection to a defined point
 (the cursor, selection or the grid).
@@ -94,8 +94,8 @@ Snap Target
    Snap Target menu.
 
 
-Snap target options become active when either :guilabel:`Vertex`, :guilabel:`Edge`,
-:guilabel:`Face`, or :guilabel:`Volume` is selected as the snap element.
+Snap target options become active when either *Vertex*, *Edge*,
+*Face*, or *Volume* is selected as the snap element.
 These determine what part of the selection snaps to the target objects.
 
 Active

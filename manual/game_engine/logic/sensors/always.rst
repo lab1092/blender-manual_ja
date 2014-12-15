@@ -1,4 +1,5 @@
 
+*************
 Always Sensor
 *************
 
@@ -9,9 +10,9 @@ Always Sensor
    Always sensor
 
 
-The :guilabel:`Always` sensor is used for things that need to be done every logic tick,
-or at every *x* logic tick (with non-null :guilabel:`f`), or at start-up
-(with :guilabel:`Tap`).
+The *Always* sensor is used for things that need to be done every logic tick,
+or at every *x* logic tick (with non-null *f*), or at start-up
+(with *Tap*).
 
 See :doc:`Sensor Common Options </game_engine/logic/sensors/common_options>` for common options.
 

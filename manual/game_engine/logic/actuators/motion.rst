@@ -1,4 +1,5 @@
 
+***************
 Motion Actuator
 ***************
 
@@ -62,7 +63,7 @@ Servo Control
 Servo control is a powerful way to achieve motion in way which mimics the movement of objects
 in the physical world. It consists in a servo controller that adjusts the force on the object
 in order to achieve a given speed. Uses the Proportional - Integral - Derivative (PID)
-equations of motion :guilabel:`See Ref.`.
+equations of motion *See Ref.*.
 
 Reference Ob
    Specifies the object which the actuator owner uses as a reference for movement, for moving platforms for example. If empty it will use world reference.

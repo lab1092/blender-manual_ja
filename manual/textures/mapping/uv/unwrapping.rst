@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=additional examples|split=X}} .
 
 
+*****************
 UV Mapping a Mesh
 *****************
 
@@ -57,11 +58,11 @@ unwrapping your model is done within Edit Mode in the 3D View window. This
 process creates one or more UV Islands in the :doc:`UV/Image Editor window
 </textures/mapping/uv_image_editor>`.
 
-To begin, choose the :guilabel:`UV Editing` :doc:`screen layout </interface/screens>`
+To begin, choose the *UV Editing* :doc:`screen layout </interface/screens>`
 from the selection list at the top of your screen in the User Preferences
 window header. This sets one of the panes to show you the UV/Image Editor
-window (:kbd:`Shift+f10`), and  the other pane to the 3D window
-(:kbd:`Shift+f5`).
+window (:kbd:`Shift-F10`), and  the other pane to the 3D window
+(:kbd:`Shift-F5`).
 
 Enter edit mode, as all unwrapping is done in Edit mode. You can be in vertex,
 face, or edge selection mode.
@@ -139,10 +140,9 @@ Basic Mapping
 *************
 
 Based on the fundamental geometry of the object, and how it is being viewed,
-the :guilabel:`Mesh→UV Unwrap→Cube, Cylinder,
-and Sphere` UV Calculations attempt to unfold the faces for you as an initial best fit. Here,
-the view from the 3D window is especially important. Also,
-the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel)
+the *Mesh→UV Unwrap→Cube, Cylinder, and Sphere* UV Calculations attempt to unfold the faces for you as an initial best fit.
+Here, the view from the 3D window is especially important.
+Also, the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel)
 should be set (in Blender units) to encompass the object.
 
 The following settings are common for the Cube, Cylinder, and Sphere mappings:
@@ -223,13 +223,13 @@ Radius
 Project From View
 =================
 
-In the 3D window, the :guilabel:`Face→Unwrap UVs→Project from View` option maps the face as
+In the 3D window, the *Face→Unwrap UVs→Project from View* option maps the face as
 seen through the view of the 3D window it was selected from.
 It is almost like you had x-ray vision or squashed the mesh flat as a pancake onto the UV map.
 Use this option if you are using a picture of a real object as a UV Texture for an object that
 you have modeled. You will get some stretching in areas where the model recedes away from you.
 
-Using :guilabel:`Project from View (Bounds)` will do the same as above,
+Using *Project from View (Bounds)* will do the same as above,
 but scales the UVs to the bounds of the UV space.
 
 .. _reset-uvs:
@@ -238,7 +238,7 @@ Resetting UVs
 =============
 
 In the 3D window,
-:guilabel:`Face→Unwrap→Reset` maps each selected face to the same area of the image,
+*Face→Unwrap→Reset* maps each selected face to the same area of the image,
 as previously discussed.  To map all the faces of an object (a cube, for example)
 to the same image, select all the faces of the cube,
 and unwrap them using the Reset menu option.
@@ -298,8 +298,8 @@ Marking Seams
 
 
 To add an edge to a seam,
-simply select the edge and :kbd:`ctrl-E` :guilabel:`Mark Seam`.
-To take an edge out of a seam, select it, :kbd:`ctrl-E` and :guilabel:`Clear Seam`.
+simply select the edge and :kbd:`Ctrl-E` *Mark Seam*.
+To take an edge out of a seam, select it, :kbd:`Ctrl-E` and *Clear Seam*.
 
 In the example to the right, the back-most edge of the cylinder was selected as the seam
 (to hide the seam), and the default unwrap calculation was used.
@@ -307,7 +307,7 @@ In the UV/Image Editor window, you can see that all the faces are nicely unwrapp
 just as if you cut the seam with a scissors and spread out the fabric.
 
 
-When marking seams, you can use the :guilabel:`Select→Linked Faces` or :kbd:`ctrl-L` in
+When marking seams, you can use the *Select→Linked Faces* or :kbd:`Ctrl-L` in
 Face Select Mode to check your work.
 This menu option selects all faces connected to the selected one, up to a seam.
 If faces outside your intended seam are selected, you know that your seam is not continuous.
@@ -354,13 +354,13 @@ Unwrap
 
 Begin by selecting all faces to be unwrapped in the 3D View. With our faces selected,
 it is now time to unwrap them. In the 3D View,
-select :guilabel:`Mesh` →UV Unwrap or :kbd:`U` and select Unwrap.
+select *Mesh* →UV Unwrap or :kbd:`U` and select Unwrap.
 
-You can also do this from the UV/Image Editor window with command :guilabel:`UVs→Unwrap` or
+You can also do this from the UV/Image Editor window with command *UVs→Unwrap* or
 command :kbd:`E`. This method will unwrap all of the faces and reset previous work. The
 UVs menu will appear in the UV/Image Editor window after unwrapping has been performed once.
 
-The :guilabel:`Face→Unwrap→Unwrap` option unwraps the faces of the object to provide the
+The *Face→Unwrap→Unwrap* option unwraps the faces of the object to provide the
 'best fit' scenario based on how the faces are connected and will fit within the image,
 and takes into account any seams within the selected faces. If possible, each selected face
 gets its own different area of the image and is not *tucked under* any other faces.
@@ -440,19 +440,19 @@ when it is essential to utilize as much UV space as possible.
 It can also work on several meshes at once.
 It has several options that appear in the Tool Shelf:
 
-You can set the tool to map just :guilabel:`Selected Faces` or :guilabel:`All Faces` if
+You can set the tool to map just *Selected Faces* or *All Faces* if
 working with a single mesh.
 
-The :guilabel:`Selected Mesh Object` option works on multiple meshes. To use this,
-in :guilabel:`Object Mode` select several mesh objects,
-then go into :guilabel:`Edit Mode` and activate the tool.
+The *Selected Mesh Object* option works on multiple meshes. To use this,
+in *Object Mode* select several mesh objects,
+then go into *Edit Mode* and activate the tool.
 
 Share Tex Space
    This is useful if mapping more than one mesh. It attempts to fit all of the objects' faces in the UV bounds without overlapping.
 New UV Layer
    If mapping multiple meshes, this option creates a new UV layer for each mesh. See :doc:`Managing the Layout </textures/mapping/uv/layout_management>`.
 New Image
-   Assigns new images for every mesh, but only one if :guilabel:`Shared Tex Space` is enabled.
+   Assigns new images for every mesh, but only one if *Shared Tex Space* is enabled.
 
    Image Size
       Set the size of the new image.
@@ -466,7 +466,7 @@ Margin
 Follow Active Quads
 ===================
 
-The :guilabel:`Face→Unwrap→Follow Active Quads` takes the selected faces and lays them out
+The *Face→Unwrap→Follow Active Quads* takes the selected faces and lays them out
 by following continuous face loops, even if the mesh face is irregularly shaped.
 Note that it does not respect the image size,
 so you may have to scale them all down a bit to fit the image area.

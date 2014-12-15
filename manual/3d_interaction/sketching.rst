@@ -2,10 +2,11 @@
 ..    TODO/Review: {{review|fixes= proposed merge with [[Doc:2.6/Manual/3D_interaction/Sketching/Drawing|Drawing]]}} .
 
 
+******************
 Viewport Sketching
 ******************
 
-The :guilabel:`Grease Pencil` is a tool that allows you to draw sketches and annotations in
+The *Grease Pencil* is a tool that allows you to draw sketches and annotations in
 the 3D view and UV/Image editor windows using freehand strokes. It is a tool that can be
 linked back to traditional 2D paper and pencil workflows where rough "guideline" sketches were
 often used for planning and quickly communicating ideas. In digital fields,

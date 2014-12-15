@@ -1,6 +1,7 @@
 
-Optimizing Render Performance
-*****************************
+################################
+  Optimizing Render Performance
+################################
 
 .. toctree::
    :maxdepth: 2

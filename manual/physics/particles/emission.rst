@@ -1,10 +1,11 @@
 
+*****************
 Particle Emission
 *****************
 
-The :guilabel:`Emitter` system works just like its name says: it emits/produces particles for a certain amount of time.
-In such a system, particles are emitted from the selected object from the :guilabel:`Start`
-frame to the :guilabel:`End` frame and have a certain lifespan.
+The *Emitter* system works just like its name says: it emits/produces particles for a certain amount of time.
+In such a system, particles are emitted from the selected object from the *Start*
+frame to the *End* frame and have a certain lifespan.
 These particles are rendered default as :doc:`Halos </materials/halos>`,
 but you may also render these kind of particles as objects
 (depending on the particle system's render settings, see :doc:`Visualization </physics/particles/visualization>`).
@@ -18,7 +19,7 @@ Options
    Image 2a: Settings for particle Emission.
 
 
-The buttons in the :guilabel:`Emission` panel control the way particles are emitted over time:
+The buttons in the *Emission* panel control the way particles are emitted over time:
 
 Amount
    The maximum amount of parent particles used in the simulation.
@@ -33,18 +34,18 @@ Random
    A random variation of the lifetime of a given particle.
    The shortest possible lifetime is *Lifetime* ``×(1-`` *Rand* ``)``.
    Values above 1.0 are not allowed.
-   For example with the default :guilabel:`Lifetime` value of 50 a :guilabel:`Random` setting of 0.5
+   For example with the default *Lifetime* value of 50 a *Random* setting of 0.5
    will give you particles with lives ranging from 50 frames to ``50×(1.0-0.5)`` =25 frames, and with a
-   :guilabel:`Random` setting of 0.75 you'll get particles with lives ranging from 50 frames to
+   *Random* setting of 0.75 you'll get particles with lives ranging from 50 frames to
    ``50×(1.0-0.75)`` =12.5 frames.
 
 
 Emission Location
 =================
 
-:guilabel:`Emit From` parameters define how and where the particles are emitted,
+*Emit From* parameters define how and where the particles are emitted,
 giving precise control over their distribution. You may use vertex groups to confine the emission,
-that is done in the :guilabel:`Vertexgroups` panel.
+that is done in the *Vertexgroups* panel.
 
 Verts
    Emit particles from the vertices of a mesh.
@@ -95,5 +96,5 @@ Grid
 
 .. tip:: Your mesh must be watertight to emit particles from the volume.
 
-   Some modifiers like :guilabel:`Edge Split` break up the surface,
+   Some modifiers like *Edge Split* break up the surface,
    in which case volume emission will not work correctly!

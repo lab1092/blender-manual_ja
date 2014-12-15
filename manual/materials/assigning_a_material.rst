@@ -4,6 +4,7 @@ FIXME(Tag Unsupported:div;
 )
 
 
+********************
 Assigning a Material
 ********************
 
@@ -175,7 +176,7 @@ between many objects. Instead of creating duplicate materials,
 you can simply re-use an existing material.
 There are several ways to do this using the Available Materials menu:
 
-   :guilabel:`Single Object -`  With the object selected, click the sphere located to the left of the Material name.
+   *Single Object -*  With the object selected, click the sphere located to the left of the Material name.
    A drop-down list appears showing all the materials available in the current Blender file.
    To use one, just click on it.
 
@@ -197,12 +198,12 @@ There are several ways to do this using the Available Materials menu:
    only materials containing "wood" are displayed in the list.
 
 
-   :guilabel:`Multiple Objects -`  In the 3D View, with :kbd:`ctrl-L`
+   *Multiple Objects -*  In the 3D View, with :kbd:`Ctrl-L`
    you can quickly link all selected objects to the material (and other aspects) of the
    :doc:`active object </modeling/objects/selecting#selections_and_the_active_object>`.
    Very useful if you need to set a large number of objects to the same material;
    just select all of them,
-   then the object that has the desired material, and :kbd:`ctrl-L` link them to that "parent".
+   then the object that has the desired material, and :kbd:`Ctrl-L` link them to that "parent".
    (See Tip on Linking Data in Creating about data linking.)
 
 

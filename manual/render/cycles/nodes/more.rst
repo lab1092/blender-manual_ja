@@ -1,5 +1,6 @@
 .. _more:
 
+**********
 More Nodes
 **********
 
@@ -83,7 +84,7 @@ Texture Coordinates
 ===================
 
 Commonly used texture coordinates,
-typically used as inputs for the :guilabel:`Vector` input for texture nodes.
+typically used as inputs for the *Vector* input for texture nodes.
 
 Generated
    Automatically-generated texture coordinates from the vertex positions of the mesh without deformation,
@@ -278,13 +279,13 @@ Vector output
 Layer Weight
 ============
 
-Output weights typically used for layering shaders with the :guilabel:`Mix Shader` node.
+Output weights typically used for layering shaders with the *Mix Shader* node.
 
 Blend input
    Blend between the first and second shader.
 Fresnel output
    Dielectric fresnel weight, useful for example to layer diffuse and glossy shaders to create a plastic material.
-   This is like the :guilabel:`Fresnel` node,
+   This is like the *Fresnel* node,
    except that the input of this node is in the often more-convenient 0.0 to 1.0 range.
 Facing output
    Weight that blends from the first to the second shader as the surface goes from facing the viewer to viewing it at
@@ -296,7 +297,7 @@ Fresnel
 
 Dielectric fresnel, computing how much light is reflected off a layer,
 where the rest will be refracted through the layer.
-The resulting weight can be used for layering shaders with the :guilabel:`Mix Shader` node.
+The resulting weight can be used for layering shaders with the *Mix Shader* node.
 It is dependent on the angle between the surface normal and the viewing direction.
 
 The most common use is to mix between two BSDFs using it as a blending factor in a mix shader

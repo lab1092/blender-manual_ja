@@ -1,6 +1,7 @@
 
-Motion Tracking
-***************
+##################
+  Motion Tracking
+##################
 
 Introduction
 ============
@@ -191,7 +192,7 @@ Marker panel
   and then it can be moved to the needed location. When it's moved to the desired position,
   FIXME(Template Unsupported: Shortcut/Mouse; {{Shortcut/Mouse|lmb}}) can be used to finish placing the new marker.
   Also, :kbd:`Enter` and :kbd:`Space` can be used to finish placing the marker.
-  But it's faster to use :kbd:`Ctrl-lmb` to place markers directly on the footage.
+  But it's faster to use :kbd:`Ctrl-LMB` to place markers directly on the footage.
   This shortcut will place the marker in the place you've clicked.
   One more feature here: until you've released the mouse button,
   you can adjust the marker position by moving the mouse and using
@@ -428,7 +429,7 @@ Pixel Aspect Ratio
 Optical Center
    is the optical center of the lens used in the camera. In most cases it's equal to the image center,
    but it can be different in some special cases. Check camera/lens specifications in such cases.
-   To set the optical center to the center of image, there's a :kbd:`Center` button below the sliders.
+   To set the optical center to the center of image, there's a :kbd:`Enter` button below the sliders.
 Undistortion K1, K2 and K3
    are coefficients used to compensate for lens distortion when the  movie was shot. Currently these values can be
    tweaked by hand only (there are no calibration tools yet) using tools available in Distortion mode. Basically, just

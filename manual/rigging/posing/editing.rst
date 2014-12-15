@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=update|text=inbetweens, pose menu tools}} .
 
 
+*************
 Editing Poses
 *************
 
@@ -12,8 +13,8 @@ Editing Poses
    Pose Tools
 
 
-In :guilabel:`Pose` mode, bones behave like objects. So the transform actions
-(grab/rotate/scale, etc.) are very similar to the same ones in :guilabel:`Object` mode
+In *Pose* mode, bones behave like objects. So the transform actions
+(grab/rotate/scale, etc.) are very similar to the same ones in *Object* mode
 (all available ones are regrouped in the :menuselection:`Pose --> Transform` sub-menu). However,
 there are some important specificities:
 
@@ -21,17 +22,17 @@ there are some important specificities:
 - The "transform center" of a given bone
   (i.e. its default pivot point, when it is the only selected one) is *its root*.
   Note by the way that some pivot point options seem to not work properly - in fact,
-  except for the :guilabel:`3D Cursor` one, all others appear to always use the median point of the selection
-  (and not e.g. the active bone's root when :guilabel:`Active Object` is selected, etc.).
+  except for the *3D Cursor* one, all others appear to always use the median point of the selection
+  (and not e.g. the active bone's root when *Active Object* is selected, etc.).
 
 
 Selecting Bones
 ===============
 
-Selection in :guilabel:`Pose` mode is very similar to the one in :doc:`Edit mode </rigging/armatures/selecting>`,
+Selection in *Pose* mode is very similar to the one in :doc:`Edit mode </rigging/armatures/selecting>`,
 with a few specificities:
 
-- You can only select *whole bones* in :guilabel:`Pose` mode, not roots/tips...
+- You can only select *whole bones* in *Pose* mode, not roots/tips...
 
 
 .. figure:: /images/Doc26-rigging-selectGrouped.jpg
@@ -39,12 +40,12 @@ with a few specificities:
    The Select Grouped pop-up menu.
 
 
-- You can select bones based on their group and/or layer, through the :guilabel:`Select Grouped` pop-up menu (:kbd:`shift-G`):
+- You can select bones based on their group and/or layer, through the *Select Grouped* pop-up menu (:kbd:`Shift-G`):
 
   - To select all bones belonging to the same group(s) as the selected ones,
-    use the :guilabel:`In Same Group` entry (:kbd:`shift-G-num1`).
+    use the *In Same Group* entry (:kbd:`Shift-G-Numpad1`).
   - To select all bones belonging to the same layer(s) as the selected ones,
-    use the :guilabel:`In Same Layer` entry (:kbd:`shift-G-num2`).
+    use the *In Same Layer* entry (:kbd:`Shift-G-Numpad2`).
 
 
 Basic Posing
@@ -52,9 +53,9 @@ Basic Posing
 
 As previously noted,
 bones' transformations are performed based on the *rest position* of the armature,
-which is its state as defined in :guilabel:`Edit` mode. This means that in rest position,
-in :guilabel:`Pose` mode, each bone has a scale of **1.0**, and null rotation and position
-(as you can see it in the :guilabel:`Transform Properties` panel, in the 3D views,
+which is its state as defined in *Edit* mode. This means that in rest position,
+in *Pose* mode, each bone has a scale of **1.0**, and null rotation and position
+(as you can see it in the *Transform Properties* panel, in the 3D views,
 :kbd:`N`).
 
 
@@ -68,21 +69,21 @@ in :guilabel:`Pose` mode, each bone has a scale of **1.0**, and null rotation an
 
 
 Moreover, the local space for these actions is the bone's own one
-(visible when you enable the :guilabel:`Axes` option of the :guilabel:`Armature` panel).
+(visible when you enable the *Axes* option of the *Armature* panel).
 This is especially important when using axis locking - for example,
-there is no specific "bone roll" tool in :guilabel:`Pose` mode,
+there is no specific "bone roll" tool in *Pose* mode,
 as you can rotate around the bone's main axis just by locking on the local Y axis
 (:kbd:`R-Y-Y`)... This also works with several bones selected;
 each one is locked to its own local axis!
 
 When you pose your armature,
 you are supposed to have one or more objects skinned on it! And obviously,
-when you transform a bone in :guilabel:`Pose` mode,
+when you transform a bone in *Pose* mode,
 its related objects or object's shape is moved/deformed accordingly, in real time.
 Unfortunately, if you have a complex rig set-up and/or a heavy skin object,
 this might produce lag, and make interactive editing very painful.
-If you experience such troubles, try enabling the :guilabel:`Delay Deform` button of the
-:guilabel:`Armature` panel - the skin objects will only be updated once you validate the
+If you experience such troubles, try enabling the *Delay Deform* button of the
+*Armature* panel - the skin objects will only be updated once you validate the
 transform operation.
 
 
@@ -100,29 +101,29 @@ Rest Pose
 
 Once you have transformed some bones, if you want to return to their rest position,
 just clear their transformations
-(usual :kbd:`alt-G` / :kbd:`alt-R` / :kbd:`alt-S` shortcuts,
-or :menuselection:`Pose --> Clear Transform --> Clear User Transform`, :kbd:`W-num5`, to clear
+(usual :kbd:`Alt-G` / :kbd:`Alt-R` / :kbd:`Alt-S` shortcuts,
+or :menuselection:`Pose --> Clear Transform --> Clear User Transform`, :kbd:`W-5`, to clear
 everything at once... - commands also available in the :menuselection:`Pose --> Clear Transform` sub-menu).
 
-Note that in :guilabel:`Envelope` visualization, :kbd:`Alt-S` does not clear the scale,
-but rather scales the :guilabel:`Distance` influence area of the selected bones (also
+Note that in *Envelope* visualization, :kbd:`Alt-S` does not clear the scale,
+but rather scales the *Distance* influence area of the selected bones (also
 available through the :menuselection:`Pose --> Scale Envelope Distance` menu entry - only effective in
-:guilabel:`Envelope` visualization, even though it is always available...).
+*Envelope* visualization, even though it is always available...).
 
 Conversely, you may define the current pose as the new rest position (i.e.
-"apply" current transformations to the :guilabel:`Edit` mode),
+"apply" current transformations to the *Edit* mode),
 using the :menuselection:`Pose --> Apply Pose as Restpose` menu entry
-(or :kbd:`ctrl-A` and confirm the pop-up dialog). **When you do so,
+(or :kbd:`Ctrl-A` and confirm the pop-up dialog). **When you do so,
 the skinned objects/geometry is also reset to its default, undeformed state**,
 which generally means you'll have to skin it again.
 
-Whereas in :guilabel:`Edit` mode, you always see your armature in its rest position,
-in :guilabel:`Object` and :guilabel:`Pose` ones,
+Whereas in *Edit* mode, you always see your armature in its rest position,
+in *Object* and *Pose* ones,
 you see it by default in its *pose position* (i.e.
-as it was transformed in the :guilabel:`Pose` mode).
+as it was transformed in the *Pose* mode).
 If you want to see it in the rest position in all modes,
-enable the :guilabel:`Rest Position` button in the :guilabel:`Armature` panel
-(:guilabel:`Editing` context, :kbd:`F9`).
+enable the *Rest Position* button in the *Armature* panel
+(*Editing* context, :kbd:`F9`).
 
 
 In-Betweens
@@ -130,17 +131,17 @@ In-Betweens
 
 There are several tools for editing poses in an animation.
 
-Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`alt-E`)
+Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`Alt-E`)
    Relax pose is somewhat related to the above topic - but it is only useful with keyframed bones (see the :doc:`animation chapter </animation>`). When you edit such a bone (and hence take it "away" from its "keyed position"), using this command will progressively "bring it back" to its "keyed position", with smaller and smaller steps as it comes near it.
 
-Push Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`ctrl-E`)
+Push Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`Ctrl-E`)
    Push pose exaggerates the current pose.
 
-Breakdowner (:menuselection:`Pose --> In-Betweens --> Pose Breakdowner` or :kbd:`shift-E`)
+Breakdowner (:menuselection:`Pose --> In-Betweens --> Pose Breakdowner` or :kbd:`Shift-E`)
    Creates a suitable breakdown pose on the current frame
 
 
-There are also in :guilabel:`Pose` mode a bunch of armature-specific editing options/tools, like :doc:`auto-bones naming </rigging/armatures/editing/properties#naming_bones>`, :doc:`properties switching/enabling/disabling </rigging/armatures/editing/properties#properties>`, etc., that we already described in the armature editing pages - follow the links above...
+There are also in *Pose* mode a bunch of armature-specific editing options/tools, like :doc:`auto-bones naming </rigging/armatures/editing/properties#naming_bones>`, :doc:`properties switching/enabling/disabling </rigging/armatures/editing/properties#properties>`, etc., that we already described in the armature editing pages - follow the links above...
 
 
 Copy/Paste Pose
@@ -149,8 +150,8 @@ Copy/Paste Pose
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Pose` mode
-   | Panel:    :guilabel:`3D View` header
+   | Mode:     *Pose* mode
+   | Panel:    *3D View* header
    | Menu:     :menuselection:`Pose --> Copy Current Pose`, :menuselection:`Pose --> Paste Pose`, :menuselection:`Pose --> Paste Flipped Pose`
 
 
@@ -159,7 +160,7 @@ Copy/Paste Pose
    Copy and paste pose buttons in the 3D View header in Pose mode.
 
 
-Blender allows you to copy and paste a pose, either through the :guilabel:`Pose` menu, or
+Blender allows you to copy and paste a pose, either through the *Pose* menu, or
 directly using the three "copy/paste" buttons found at the right part of the 3D views header:
 
 :menuselection:`Pose --> Copy Current Pose`
@@ -180,27 +181,40 @@ Here are important points:
   - The rest position of the bones, and
   - The current pose of their parents.
 
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+**Examples of pose copy/paste.**                                                                |+-------------------------------------------------------------+--------------------------------------------------------------+                                                                          +
-+                                                                                                |+.. figure:: /images/ManRiggingPosingCopyPoseExRestArmaOrg.jpg|.. figure:: /images/ManRiggingPosingCopyPoseExRestArmaDest.jpg+                                                                          +
-+                                                                                                |+                                                             |                                                              +                                                                          +
-+                                                                                                |+   The rest position of our original armature.               |   The rest position of our destination armature.             +                                                                          +
-+                                                                                                |+-------------------------------------------------------------+--------------------------------------------------------------+                                                                          +
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingPosingCopyPoseExPose1ArmaOrg.jpg                                  |.. figure:: /images/ManRiggingPosingCopyPoseExPastedPose1ArmaDest.jpg                                                         |.. figure:: /images/ManRiggingPosingCopyPoseExPastedMirrPose1ArmaDest.jpg+
-+                                                                                                |                                                                                                                              |                                                                         +
-+   The first copied pose (note that only forearm and finger2_a are selected and hence copied)...|   ...pasted on the destination armature...                                                                                   |   ...and mirror-pasted on the destination armature.                     +
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingPosingCopyPoseExPose2ArmaOrg.jpg                                  |.. figure:: /images/ManRiggingPosingCopyPoseExPastedPose2ArmaDest.jpg                                                         |.. figure:: /images/ManRiggingPosingCopyPoseExPastedMirrPose2ArmaDest.jpg+
-+                                                                                                |                                                                                                                              |                                                                         +
-+   The same pose as above is copied, but this time with all bones selected, ...                 |   ...pasted on the destination armature...                                                                                   |   ...and mirror-pasted on the destination armature.                     +
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+
+
+.. list-table::
+
+   * - Examples of pose copy/paste.
+     - .. figure:: /images/ManRiggingPosingCopyPoseExRestArmaOrg.jpg
+
+          The rest position of our original armature.
+     - .. figure:: /images/ManRiggingPosingCopyPoseExRestArmaDest.jpg
+
+          The rest position of our destination armature.
+   * - .. figure:: /images/ManRiggingPosingCopyPoseExPose1ArmaOrg.jpg
+
+          The first copied pose (note that only forearm and finger2_a are selected and hence copied).
+     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedPose1ArmaDest.jpg
+
+          ...pasted on the destination armature...
+     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedMirrPose1ArmaDest.jpg
+
+          ...and mirror-pasted on the destination armature.
+   * - .. figure:: /images/ManRiggingPosingCopyPoseExPose2ArmaOrg.jpg
+
+          The same pose as above is copied, but this time with all bones selected, ...
+     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedPose2ArmaDest.jpg
+
+          ...pasted on the destination armature...
+     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedMirrPose2ArmaDest.jpg
+
+          ...and mirror-pasted on the destination armature.
 
 
 Effects of Bones Relationships
 ==============================
 
-Bones relationships are crucial in :guilabel:`Pose` mode - they have important effects on
+Bones relationships are crucial in *Pose* mode - they have important effects on
 transformations behavior.
 
 By default, children bones inherit:
@@ -221,7 +235,7 @@ By default, children bones inherit:
 
 
 Exactly like standard children objects. You can modify this behavior on a per-bone basis,
-using their sub-panels in the :guilabel:`Armature Bones` panel:
+using their sub-panels in the *Armature Bones* panel:
 
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg
@@ -239,12 +253,12 @@ Inherit Scale
 
 These inheriting behaviors propagate along the bones' hierarchy.
 So when you scale down a bone, all its descendants are by default scaled down accordingly.
-However, if you set one bone's :guilabel:`Inherit Scale` or :guilabel:`Inherit Rotation`
+However, if you set one bone's *Inherit Scale* or *Inherit Rotation*
 property on in this "family", this will break the scaling propagation, i.e. this bone *and
 all its descendants* will no longer be affected when you scale one of its ancestors.
 
 +-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
-+**Examples of transforming parented/connected bones with** :guilabel:`Inherit Rotation` **disabled.**                                                                                                                                                                           +
++**Examples of transforming parented/connected bones with** *Inherit Rotation* **disabled.**                                                                                                                                                                           +
 +-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 +.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBone.jpg                          |.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInRotation.jpg|.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInScaling.jpg+
 +   :width: 200px                                                                                     |   :width: 200px                                                                     |   :width: 200px                                                                    +

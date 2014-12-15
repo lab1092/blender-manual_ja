@@ -1,4 +1,5 @@
 
+****************************
 Displaying and Saving Images
 ****************************
 
@@ -28,7 +29,7 @@ Full Screen
    The Image editor replaces the UI, showing the render.
 
 For each of these options,
-pressing :kbd:`esc` will close the render view and return to the previous view.
+pressing :kbd:`Esc` will close the render view and return to the previous view.
 
 
 Saving
@@ -50,34 +51,34 @@ Key Short-Cuts
 - :kbd:`A` toggle frame skipping.
 - :kbd:`P` toggle ping-pong.
 - :kbd:`F` flip drawing on the X axis.
-- :kbd:`Shift+F` flip drawing on the Y axis.
+- :kbd:`Shift-F` flip drawing on the Y axis.
 - :kbd:`Enter` start playback (when paused).
-- :kbd:`pad0` toggle looping.
-- :kbd:`padperiod` manual frame stepping.
-- :kbd:`left` step back one frame.
-- :kbd:`right` step forward one frame.
-- :kbd:`down` step back 10 frames.
-- :kbd:`up` step forward 10 frames.
-- :kbd:`shift-down` use backward playback.
-- :kbd:`shift-up` use forward playback.
-- :kbd:`shift` hold to show frame numbers.
-- :kbd:`lmb` scrub in time.
-- :kbd:`ctrl-plus` zoom in
-- :kbd:`ctrl-minus` zoom out
-- :kbd:`esc` quit
-- :kbd:`pad1` 60 fps
-- :kbd:`pad2` 50 fps
-- :kbd:`pad3` 30 fps
-- :kbd:`pad4` 25 fps
-- :kbd:`shift-pad4` 24 fps
-- :kbd:`pad5` 20 fps
-- :kbd:`pad6` 15 fps
-- :kbd:`pad7` 12 fps
-- :kbd:`pad8` 10 fps
-- :kbd:`pad9` 6 fps
-- :kbd:`pad/` 5 fps
-- :kbd:`minus` slow down playback.
-- :kbd:`plus` speed up playback.
+- :kbd:`Numpad0` toggle looping.
+- :kbd:`Numpadperiod` manual frame stepping.
+- :kbd:`Left` step back one frame.
+- :kbd:`Right` step forward one frame.
+- :kbd:`Down` step back 10 frames.
+- :kbd:`Up` step forward 10 frames.
+- :kbd:`Shift-Down` use backward playback.
+- :kbd:`Shift-Up` use forward playback.
+- :kbd:`Shift` hold to show frame numbers.
+- :kbd:`LMB` scrub in time.
+- :kbd:`Ctrl-Plus` zoom in
+- :kbd:`Ctrl-Minus` zoom out
+- :kbd:`Esc` quit
+- :kbd:`Numpad1` 60 fps
+- :kbd:`Numpad2` 50 fps
+- :kbd:`Numpad3` 30 fps
+- :kbd:`Numpad4` 25 fps
+- :kbd:`Shift-Numpad4` 24 fps
+- :kbd:`Numpad5` 20 fps
+- :kbd:`Numpad6` 15 fps
+- :kbd:`Numpad7` 12 fps
+- :kbd:`Numpad8` 10 fps
+- :kbd:`Numpad9` 6 fps
+- :kbd:`Numpad/` 5 fps
+- :kbd:`Minus` slow down playback.
+- :kbd:`Plus` speed up playback.
 
 
 Display Options
@@ -91,7 +92,7 @@ Slot Menu
    If an image has been rendered to a slot, it can be viewed by selecting that slot.
    Empty slots appear as blank grids in the image editor.
    Use the shortcut :kbd:`J` to cycle through saved renders and
-   :kbd:`alt-J` to cycle backwards through the saved renders.
+   :kbd:`Alt-J` to cycle backwards through the saved renders.
 
 Render Layer
    If you are using :doc:`Render Layers </render/post_process/layers>`,
@@ -118,6 +119,6 @@ Display Mode
       as specified in the :doc:`Camera settings </render/camera/introduction>`.
 
 Curves Panel
-   The :guilabel:`Curves` Panel is available in the :guilabel:`Properties` Panel.
+   The *Curves* Panel is available in the *Properties* Panel.
    You can use this to adjust the colors of the image.
 

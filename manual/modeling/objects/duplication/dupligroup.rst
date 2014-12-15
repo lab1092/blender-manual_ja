@@ -1,15 +1,16 @@
 
+**********
 DupliGroup
 **********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Object` → :guilabel:`Duplication` → :guilabel:`Group`
+   | Mode:     *Object* mode
+   | Panel:    *Object* → *Duplication* → *Group*
 
 
-:guilabel:`Duplication Group` or :guilabel:`DupliGroup` allows you to create an instance of a group for each instance of another object.
+*Duplication Group* or *DupliGroup* allows you to create an instance of a group for each instance of another object.
 
 
 Basic Usage
@@ -18,10 +19,10 @@ Basic Usage
 - Create a number of objects and group them by
    - selecting them all,
    - :kbd:`Ctrl-G`, and
-   - eventually rename your group in :guilabel:`Object` → :guilabel:`Groups`
+   - eventually rename your group in *Object* → *Groups*
 - Create a DupliGroup by
-   - adding another object (:kbd:`Shift-A`), say an :guilabel:`Empty`,
-   - in :guilabel:`Object` → :guilabel:`Duplication` enable :guilabel:`Group`, and
+   - adding another object (:kbd:`Shift-A`), say an *Empty*,
+   - in *Object* → *Duplication* enable *Group*, and
    - select the name of your newly created group in the selection box that appears.
 
 
@@ -39,11 +40,11 @@ Example
 From here, you can use the easy way or the hard way:
 
 - The easy way:
-   - Select :guilabel:`Add` → :guilabel:`Group Instance` → ``[name of group you just linked]``.
+   - Select *Add* → *Group Instance* → ``[name of group you just linked]``.
 - The hard way:
-   - Select :guilabel:`Add` → :guilabel:`Empty`, and select the empty that you added.
-   - Switch to the :guilabel:`Object` context, and in the :guilabel:`Duplication` panel, click :guilabel:`Group`.
-   - In the dropdown box that appears next to :guilabel:`Group:`, pick the group that you linked.
+   - Select *Add* → *Empty*, and select the empty that you added.
+   - Switch to the *Object* context, and in the *Duplication* panel, click *Group*.
+   - In the dropdown box that appears next to *Group:*, pick the group that you linked.
 
 At this point, an instance of the group will appear. You can duplicate the empty,
 and the DupliGroup settings will be preserved for each empty. This way,

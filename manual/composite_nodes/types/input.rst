@@ -3,6 +3,7 @@
    |copy=X}} .
 
 
+*********************
 Composite Input Nodes
 *********************
 
@@ -26,7 +27,7 @@ Render Layers Node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
-   | Menu:     :kbd:`shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Render Layers
+   | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Render Layers
 
 
 .. figure:: /images/Manual-Compositing-RenderLayer_Node.jpg
@@ -42,19 +43,19 @@ Select the scene and the active render layer from the yellow selection list at t
 Blender uses the active camera for that scene to create an image of the objects specified in the
 :doc:`RenderLayer </render/post_process/layers>`.
 
-The :guilabel:`Image` is input into the map, along with the following data:
+The *Image* is input into the map, along with the following data:
 
-- :guilabel:`Alpha` (transparency) mask
+- *Alpha* (transparency) mask
 
 Depending on the Renderlayer passes that are enabled, other sockets are available.
 By default the Z is enabled:
 
-- :guilabel:`Z` depth map (how far away each pixel is from the camera)
+- *Z* depth map (how far away each pixel is from the camera)
 
 The example shows that two other passes are enabled:
 
-- :guilabel:`Normal` vector set (how light bounces off the surface)
-- :guilabel:`Speed` vector set (how fast an object is moving from one frame to the next)
+- *Normal* vector set (how light bounces off the surface)
+- *Speed* vector set (how fast an object is moving from one frame to the next)
 
 Use the re-render button (Small landscape icon - to the right of the Renderlayer name)
 to re-render the scene and refresh the image and map.
@@ -72,7 +73,7 @@ and then use the Image input node instead.
 Using the Alpha Socket
 ----------------------
 
-Using the :guilabel:`Alpha` output socket is crucial in overlaying images on top of one
+Using the *Alpha* output socket is crucial in overlaying images on top of one
 another and letting a background image "show through" the image in front of it.
 
 In a Blender scene, your objects are floating out there in virtual space.
@@ -144,7 +145,7 @@ The available sockets are:
 Using the Z value Socket
 ------------------------
 
-Using the :guilabel:`Z` output socket is crucial in producing realistic images,
+Using the *Z* output socket is crucial in producing realistic images,
 since items farther away are blurrier (but more on that later).
 
 Imagine a camera hovering over an X-Y plane. When looking through the camera at the plane,
@@ -182,7 +183,7 @@ Using the Speed Socket
 Even though things may be animated in our scene,
 a single image or frame from the animation does not portray any motion;
 the image from the frame is simply where things are at that particular time. However,
-from the :guilabel:`Render Layers` node, Blender puts out a vector set that says how particular pixels are moving,
+from the *Render Layers* node, Blender puts out a vector set that says how particular pixels are moving,
 or will move, to the next frame. You use this socket to create a
 :doc:`blurring effect. </ls/composite_nodes/types/filter/vector_blur>`.
 
@@ -195,7 +196,7 @@ Image node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
-   | Menu:     :kbd:`shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Image
+   | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Image
 
 
 .. figure:: /images/Tutorials-NTR-ComImage.jpg
@@ -203,8 +204,8 @@ Image node
    Image node
 
 
-The :guilabel:`Image` node injects any image :doc:`format that is supported by Blender </render/output>`.
-Besides inputting the actual image, this node can also input :guilabel:`Alpha` and depth (:guilabel:`Z`) values
+The *Image* node injects any image :doc:`format that is supported by Blender </render/output>`.
+Besides inputting the actual image, this node can also input *Alpha* and depth (*Z*) values
 if the image has them. If the image is a MultiLayer format, all saved render passes are input. Use this node to input:
 
 - A single image from a file (such as a JPG picture)
@@ -221,7 +222,7 @@ FIXME(TODO: Internal Link;
 To select an image file or generated image from the UV/Image Editor,
 click on the small arrow selector button to the left of the name and pick an existing image
 (e.g. loaded in the UV editor or elsewhere)
-or click on :guilabel:`LOAD NEW` to select a file from your hard disk via a file-browser.
+or click on *LOAD NEW* to select a file from your hard disk via a file-browser.
 These images can be e.g. previously rendered images, matte paintings, a picture of your cat,
 whatever. Blender really doesn't care.
 
@@ -240,14 +241,14 @@ The picture may or may not have an alpha (transparency) and/or Z (depth) channel
 depending on the format. If the image format does not support A and/or Z,
 default values are supplied (1.0 for A, 0.0 for Z).
 
-- Alpha/Transparency Channel
-  - If a transparency channel is detected, the :guilabel:`Alpha` output socket will supply it.
+Alpha/Transparency Channel
+  - If a transparency channel is detected, the *Alpha* output socket will supply it.
   - If it does not have an Alpha channel (e.g. JPG images),
     Blender will supply one, setting the whole image to completely opaque
-    (an Alpha of 1.00, which will show in a :guilabel:`Viewer`
-    node as white - if connected to the :guilabel:`Image` input socket).
-- Z/depth Channel
-  - If a Z (depth) channel is detected, the :guilabel:`Z` output socket will supply it.
+    (an Alpha of 1.00, which will show in a *Viewer*
+    node as white - if connected to the *Image* input socket).
+Z/depth Channel
+  - If a Z (depth) channel is detected, the *Z* output socket will supply it.
   - If it does not have a Z channel (e.g. JPG or PNG images),
     Blender will supply one, setting the whole image to be at the camera (a depth of 0.00).
     To view the Z-depth channel, use the Map Value to ColorRamp noodle given above in the Render Layer input node,
@@ -291,12 +292,12 @@ When nodes receive inputs with differently sized Images, these rules apply:
 
 - The first/top Image input socket defines the output size.
 - The composite is centered by default,
-  unless a translation has been assigned to a buffer using a :guilabel:`Translate` node.
+  unless a translation has been assigned to a buffer using a *Translate* node.
 
 So each node in a composite can operate on different sized images, as defined by its inputs.
-Only the :guilabel:`Composite` output node has a fixed size,
-as defined by the :guilabel:`Scene buttons` (Format Panel - :kbd:`f10`).
-The :guilabel:`Viewer` node always shows the size from its input, but when not linked
+Only the *Composite* output node has a fixed size,
+as defined by the *Scene buttons* (Format Panel - :kbd:`F10`).
+The *Viewer* node always shows the size from its input, but when not linked
 (or linked to a value) it shows a small 320x256 pixel image.
 
 
@@ -326,26 +327,26 @@ that you want to introduce into the animation you are about to render.
 You can start at the beginning and only use the beginning,
 or even pick out a set of frames from the middle of an existing animation.
 
-The :guilabel:`Frs` number button is the number of frames in the sequence that you want to
+The *Frs* number button is the number of frames in the sequence that you want to
 show.  For example, if you want to show 2 seconds of the animation, and are running 30 fps,
 you would put 60 here.
 
-The :guilabel:`SFra` number button sets the start frame of the animation; namely, at what
+The *SFra* number button sets the start frame of the animation; namely, at what
 point in the animation that you *are going to render* do you want this sequence to start
 playing.  For example,
 if you want to introduce this clip ten seconds into the composite output,
 you would put 300 here (at 30 fps).
 
-The :guilabel:`First` number button sets the first number in the animated sequence name.
+The *First* number button sets the first number in the animated sequence name.
 For example, if your images were called "credits-0001.png", "credits-0002.png" through
 "credits-0300.png" and you wanted to start picking up with frame 20, you'd put 20 here.
 
 To have the movie/sequence start over and repeat when it is done,
-press the :guilabel:`Cycl` ic button. For example, if you were compositing a fan into a room,
+press the *Cycl* ic button. For example, if you were compositing a fan into a room,
 and the fan animation lasted 30 frames, the animation would start over at frame 31, 61, 91,
 and so on, continuously looping. As you scrub from frame to frame,
 to see the actual video frame used for the current frame of animation,
-press the auto button to the right of the :guilabel:`Cycl` ic button.
+press the auto button to the right of the *Cycl* ic button.
 
 
 Generated Images
@@ -381,7 +382,7 @@ If the input animation (avi or frame set) was encoded at a frame rate that is *d
 the resultant animation will appear to run faster or slower. Blender Nodes do not adjust input video frame rates. Use
 the scale control inside the :doc:`Video Sequence Editor </sequencer>` to stretch or compress video to the desired
 speed, and input it here. You can incorporate "Slow-Mo" into your video. To do so,
-:guilabel:`ANIM` ate a video segment at 60 frames per second, and input it via this node,
+*ANIM* ate a video segment at 60 frames per second, and input it via this node,
 using Render settings that have an animation frame rate of the normal 30 fps;
 the resulting video will be played at half speed. Do the opposite to mimic Flash running around at hyperspeed.
 
@@ -506,13 +507,22 @@ To use Blender to get this effect, build on the Cut and Fade splices discussed a
 In the above example, showing frame 27, we have adjusted some parameters to show you the power
 of Blender and how to use its Nodes to achieve just the blended crossover effect you desire:
 
-- Postfeed: Even though there were only 15 frames of animation in the Toucan strip, the cutover (top Time node) does not occur until frame 30. Blender continues to put out the last frame of an animation, *automatically extending it for you*, for frames out of the strip's range.
-- Prefeed: Even though the swirl does not start playing until frame 34, Blender supplies the first frame of it for Frames 31 through 33. In fact, it supplies this image all the way back to frame 1.
-- Partial Fade: Notice the second 'wink' Time node. Like a real wink, it does not totally fade to black; only about 75%. When transitioning between scenes where you want some visual carryover, use this effect because there is not a break in perceptual sequence.
+- Postfeed: Even though there were only 15 frames of animation in the Toucan strip,
+  the cutover (top Time node) does not occur until frame 30.
+  Blender continues to put out the last frame of an animation,
+  *automatically extending it for you*, for frames out of the strip's range.
+- Prefeed: Even though the swirl does not start playing until frame 34,
+  Blender supplies the first frame of it for Frames 31 through 33.
+  In fact, it supplies this image all the way back to frame 1.
+- Partial Fade: Notice the second 'wink' Time node.
+  Like a real wink, it does not totally fade to black; only about 75%.
+  When transitioning between scenes where you want some visual carryover,
+  use this effect because there is not a break in perceptual sequence.
 
 .. note:: Multiple Feeds
 
-   The above examples call out two feeds, but by replicating the Input, Time and Mix nodes, you can have multiple feeds at any one time; just set the Time node to tell the Mixer when to cut over to using it.
+   The above examples call out two feeds, but by replicating the Input, Time and Mix nodes,
+   you can have multiple feeds at any one time; just set the Time node to tell the Mixer when to cut over to using it.
 
 
 Texture Node
@@ -522,7 +532,7 @@ Texture Node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
-   | Menu:     :kbd:`shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Texture
+   | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Texture
 
 
 .. figure:: /images/Tutorials-NTR-Tex.jpg
@@ -530,7 +540,7 @@ Texture Node
    Texture node
 
 
-The :guilabel:`Texture` node makes 3D textures available to the compositor.
+The *Texture* node makes 3D textures available to the compositor.
 
 The Texture node makes 3D textures available to the compositor. A texture,
 from the list of textures available in the current blend file,
@@ -544,17 +554,19 @@ is selected and introduced through the value and/or color socket.
 
 .. note::
 
-   **You cannot edit the textures themselves in the node window**. To use this node, create and edit the texture in the normal texture buttons, then select the texture from the menu button on the node.
+   **You cannot edit the textures themselves in the node window**.
+   To use this node, create and edit the texture in the normal texture buttons,
+   then select the texture from the menu button on the node.
 
 
-You can change the :guilabel:`Offset` and a :guilabel:`Scale`
+You can change the *Offset* and a *Scale*
 (which is called Offs XYZ and Size XYZ in the Materials Texture Map Input panel)
 for the texture by clicking on the label and setting the sliders,
 thus affecting how the texture is applied to the image. For animation,
 note that this is a vector input socket, because the XYZ values are needed.
 
-Texture nodes can output a straight black-and-white :guilabel:`Value` image
-(don't mistake this for alpha) and an image (:guilabel:`Color`).
+Texture nodes can output a straight black-and-white *Value* image
+(don't mistake this for alpha) and an image (*Color*).
 
 
 Example
@@ -574,7 +586,7 @@ Value node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
-   | Menu:     :kbd:`shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Value
+   | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Value
 
 
 The Value node has no inputs; it just outputs a numerical value
@@ -591,7 +603,7 @@ RGB node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
-   | Menu:     :kbd:`shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → RGB
+   | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → RGB
 
 
 The RGB node has no inputs.
@@ -621,7 +633,7 @@ Time node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
-   | Menu:     :kbd:`shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Time
+   | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Time
 
 
 .. figure:: /images/Tutorials-NTR-ComTime.jpg
@@ -629,10 +641,10 @@ Time node
    Time node
 
 
-The Time node generates a :guilabel:`fac` tor value (from 0.00 to 1.00)
+The Time node generates a *fac* tor value (from 0.00 to 1.00)
 (that changes according to the curve drawn) as time progresses through your movie (frames).
 
-The :guilabel:`Start` and :guilabel:`End` NumButtons specify the range of time the values
+The *Start* and *End* NumButtons specify the range of time the values
 should be output along, and this range becomes the X-axis of the graph.
 The curve defines the Y-value and hence the factor that is output.
 In the example to the right,
@@ -641,7 +653,10 @@ since the timespan is 250 frames and the line is straight from corner to corner,
 
 .. note:: Note on output values
 
-   The :doc:`Map Value </osite_nodes/types/vector#map_value_node>` node can be used to map the output to a more appropriate value. With some time curves, it is possible that the Time node may output a number larger than one or less than zero. To be safe, use the Min/Max clamping function of the Map Value node to limit output.
+   The :doc:`Map Value </osite_nodes/types/vector#map_value_node>`
+   node can be used to map the output to a more appropriate value.
+   With some time curves, it is possible that the Time node may output a number larger than one or less than zero.
+   To be safe, use the Min/Max clamping function of the Map Value node to limit output.
 
 
 You can reverse time (unfortunately, only in Blender and not in the real world)
@@ -653,7 +668,10 @@ doing so is easily overlooked in your node map and can be very confusing
 
 .. note:: Time is Relative
 
-   In Blender, time is measured in frames. The actual duration of a time span depends on how fast those frames whiz by (frame rate). You set the frame rate in your animation settings (:doc:`Scene Context </ce/buttons/scene_context>` F10 ). Common settings range from 5 seconds per frame for slideshows (0.2 fps), to 30 fps for US movies.
+   In Blender, time is measured in frames.
+   The actual duration of a time span depends on how fast those frames whiz by (frame rate).
+   You set the frame rate in your animation settings (:doc:`Scene Context </ce/buttons/scene_context>` F10 ).
+   Common settings range from 5 seconds per frame for slideshows (0.2 fps), to 30 fps for US movies.
 
 
 Time Node Examples

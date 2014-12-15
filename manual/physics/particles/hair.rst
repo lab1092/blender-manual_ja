@@ -1,4 +1,5 @@
 
+****
 Hair
 ****
 
@@ -60,7 +61,7 @@ Emission
 ========
 
 Amount
-   Set the amount of hair strands. Use as little particles as possible, especially if you plan to use softbody animation later. But you need enough particles to have good control. For a "normal" haircut I found some thousand (very roughly 2000) particles to give enough control. You may need a lot more particles if you plan to cover a body with fur. Volume will be produced later with :guilabel:`Children`.
+   Set the amount of hair strands. Use as little particles as possible, especially if you plan to use softbody animation later. But you need enough particles to have good control. For a "normal" haircut I found some thousand (very roughly 2000) particles to give enough control. You may need a lot more particles if you plan to cover a body with fur. Volume will be produced later with *Children*.
 
 
 Hair Dynamics
@@ -81,7 +82,7 @@ Steps
    The number of segments (control points minus 1) of the hair strand. In between the control points the segments are interpolated. The number of control points is important:
 
 - for the softbody animation, because the control points are animated like vertices, so more control points mean longer calculation times.
-- for the interactive editing, because you can only move the control points (but you may recalculate the number of control points in :guilabel:`Particle` Mode).
+- for the interactive editing, because you can only move the control points (but you may recalculate the number of control points in *Particle* Mode).
 
    10 Segments should be sufficient even for very long hair, 5 Segments are enough for shorter hair, and 2 or 3 segments should be enough for short fur.
 

@@ -1,20 +1,21 @@
 
+***********
 Duplication
 ***********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` and :guilabel:`Object` modes
-   | Menu:     :guilabel:`Object` → :guilabel:`Duplicate`
-   | Hotkey:   :kbd:`shift-D`
+   | Mode:     *Edit* and *Object* modes
+   | Menu:     *Object* → *Duplicate*
+   | Hotkey:   :kbd:`Shift-D`
 
 
 Description
 ===========
 
 This will create a visually-identical copy of the selected object(s). The copy is created at
-the same position as the original object and you are automatically placed in :guilabel:`Grab`
+the same position as the original object and you are automatically placed in *Grab*
 mode. Reference (*Duplicate Example*) for the discussions below.
 
 This copy is a new object, which "\ **shares** " some datablocks with the original object
@@ -24,9 +25,9 @@ This is why this form of duplication is sometimes called "shallow link",
 because not all datablocks are shared; some of them are "hard copied"!
 
 Note that you can choose which types of datablock will be linked or copied when duplicating:
-in the :guilabel:`User Preferences` ' (available in the :guilabel:`File` menu)
-:guilabel:`Editing` "tab", activate those types of datablocks you want to really copy in the
-:guilabel:`Duplicate Data` list — the others will just be linked.
+in the *User Preferences* ' (available in the *File* menu)
+*Editing* "tab", activate those types of datablocks you want to really copy in the
+*Duplicate Data* list — the others will just be linked.
 
 
 Examples
@@ -55,9 +56,9 @@ Linked Duplicates
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Menu:     :guilabel:`Object` → :guilabel:`Duplicate Linked`
-   | Hotkey:   :kbd:`alt-D`
+   | Mode:     *Object* mode
+   | Menu:     *Object* → *Duplicate Linked*
+   | Hotkey:   :kbd:`Alt-D`
 
 
 Description
@@ -66,7 +67,7 @@ Description
 You also have the choice of creating a *Linked Duplicate* rather than a *Duplicate*;
 this is called a deep link.
 This will create a new object with **all** of its data linked to the original object.
-If you modify one of the linked objects in :guilabel:`Edit mode`,
+If you modify one of the linked objects in *Edit mode*,
 all linked copies are modified. Transform properties (object datablocks) still remain copies,
 not links, so you still can rotate, scale, and move freely without affecting the other copy.
 Reference (*Duplicate Example*) for the discussions below.
@@ -82,9 +83,9 @@ Examples
    The object Cone.001 was linked duplicated.  Though both these cones are separate objects with unique names, the single mesh named Cone, highlighted in the Outliner, is shared by both.
 
 
-The left cone is a :guilabel:`Linked Duplicate` of the middle cone (using :kbd:`alt-D`).
+The left cone is a *Linked Duplicate* of the middle cone (using :kbd:`Alt-D`).
 
-- As a vertex is moved in :guilabel:`Edit mode` in one object, the same vertex is moved in the original cone as well.  The mesh data are links, not copies.
+- As a vertex is moved in *Edit mode* in one object, the same vertex is moved in the original cone as well.  The mesh data are links, not copies.
 - In contrast, if one of these two cones is rotated or rescaled in object mode, the other remains unchanged.  The transform properties are copied, not linked.
 - As in the previous example, the newly created cone has inherited the material of the original cone.  The material properties are linked, not copied.
 
@@ -101,12 +102,12 @@ Procedural Duplication
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode` and :guilabel:`Edit mode`
-   | Panel:    :guilabel:`Object settings`
+   | Mode:     *Object mode* and *Edit mode*
+   | Panel:    *Object settings*
 
 
 There are currently four ways in Blender to procedurally duplicate objects.
-These options are located in the :guilabel:`Object` menu.
+These options are located in the *Object* menu.
 
 ..    Comment: <!--
    [[Image:Manual-Part-II-ObjectMode-Duplicate-Anim-Settings-Panel.png|frame|right|{{Literal|Anim settings}} panel.]]
@@ -126,11 +127,11 @@ Linked Library Duplication
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     :guilabel:`File` → :guilabel:`Link Append`
+   | Menu:     *File* → *Link Append*
    | Hotkey:   :kbd:`Shift-F1`
 
 
-:doc:`Linked Libraries </data_system/linked_libraries>` :Linked Libraries are also a form of duplication.  Any object or datablock in other :guilabel:`.blend` files can be reused in the current file.
+:doc:`Linked Libraries </data_system/linked_libraries>` :Linked Libraries are also a form of duplication.  Any object or datablock in other *.blend* files can be reused in the current file.
 
 
 Hints

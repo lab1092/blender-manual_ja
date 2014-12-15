@@ -1,4 +1,5 @@
 
+*************
 Render Baking
 *************
 
@@ -21,11 +22,11 @@ Use Render Bake in intensive light/shadow solutions,
 such as AO or soft shadows from area lights. If you bake AO for the main objects,
 you will not have to enable it for the full render, saving render time.
 
-Use :guilabel:`Full Render` or :guilabel:`Textures` to create an image texture;
+Use *Full Render* or *Textures* to create an image texture;
 baked procedural textures can be used as a starting point for further texture painting.
-Use :guilabel:`Normals` to make a low-resolution mesh look like a high-resolution mesh.
+Use *Normals* to make a low-resolution mesh look like a high-resolution mesh.
 To do that, UV-unwrap a high-resolution, finely sculpted mesh and bake its normals.
-Save that normal map, and :guilabel:`Mapping` (texture settings)
+Save that normal map, and *Mapping* (texture settings)
 the UV of a similarly unwrapped low-resolution mesh.
 The low-resolution mesh will look just like the high-resolution,
 but will have much fewer faces/polygons.
@@ -112,7 +113,7 @@ Normal Space
       since then the normal map can be used for animated objects too.
 
 For materials the same spaces can be chosen as well, in the image texture options,
-next to the existing :guilabel:`Normal Map` setting. For correct results,
+next to the existing *Normal Map* setting. For correct results,
 the setting here should match the setting used for baking.
 
 Textures
@@ -133,7 +134,7 @@ Displacement
 
 Similar to baking normal maps,
 displacement maps can also be baked from a high-res object to an unwrapped low-res object,
-using the :guilabel:`Selected to Active` option.
+using the *Selected to Active* option.
 
 Normalized
    Normalize to the distance.
@@ -201,7 +202,7 @@ Select to Active
 
    Distance
       Controls how far a point on another object can be away from the point on the active object.
-      Only needed for :guilabel:`Selected to Active`.
+      Only needed for *Selected to Active*.
       A typical use case is to make a detailed, high poly object,
       and then bake it's normals onto an object with a low polygon count.
       The resulting normal map can then be applied to make the low poly object look more detailed.
@@ -224,8 +225,8 @@ Workflow
 - In a UV/Image Editor window, either create a new image or open an existing one.
   If your 3D view is in textured display mode, you should now see the image mapped to your mesh.
   Ensure that all faces are selected.
-- In the Bake panel at the bottom of the :guilabel:`Render menu`, bake your desired type of image
-  (:guilabel:`Full Render` etcetera.)
+- In the Bake panel at the bottom of the *Render menu*, bake your desired type of image
+  (*Full Render* etcetera.)
 - When rendering is complete, Blender replaces the image with the Baked image.
 - Save the image.
 - Apply the image to the mesh as a UV texture. For displacement and normal maps,

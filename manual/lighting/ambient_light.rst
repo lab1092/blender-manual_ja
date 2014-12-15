@@ -2,8 +2,9 @@
 ..    TODO/Review: {{review|partial=X}} .
 
 
+********************
 Environment Lighting
-====================
+********************
 
 Environment light provides light coming from all directions.
 

@@ -3,6 +3,7 @@
    *some options are not explained at the end of the page}} .
 
 
+************
 Smoke Domain
 ************
 
@@ -98,9 +99,9 @@ Show High Resolution
    Show high resolution using amplification.
 
 Noise Method
-   :guilabel:`Wavelet`
+   *Wavelet*
 
-   :guilabel:`FFT`
+   *FFT*
 
 Strength
    Strength of noise.

@@ -1,4 +1,5 @@
 
+******
 Stroke
 ******
 
@@ -26,7 +27,7 @@ Plain
 
 Sketchy
    This chaining option allows for generating chains of feature edges with sketchy multiple strokes.
-   Basically, it generates :guilabel:`Round` strokes instead of a single one.
+   Basically, it generates *Round* strokes instead of a single one.
    It is only really useful if you use some random-driven modifiers in the line style!
 
 Rounds
@@ -81,7 +82,7 @@ Selection
 
 
 You can also choose to only select (i.e. render)
-chains longer than :guilabel:`Min 2D Length` and/or shorter than :guilabel:`Max 2D Length`.
+chains longer than *Min 2D Length* and/or shorter than *Max 2D Length*.
 
 
 Caps
@@ -120,7 +121,7 @@ Dashed Line
    Dashes Line UI
 
 
-By enabling the :guilabel:`Dashed Line` check box,
+By enabling the *Dashed Line* check box,
 you can specify three pairs of dash and gap lengths.
 Dash values define the lengths of dash strokes,
 while gap values specify intervals between two dashes.

@@ -1,4 +1,5 @@
 
+*****
 Lamps
 *****
 
@@ -19,7 +20,7 @@ each with its own unique strengths and limitations. Here are the available lamps
    Visual height and shadow markers of two points lamps.  Ray Shadow is enabled on the left lamp.
 
 
-You can add new lamps to a scene using the :guilabel:`Add` menu in the top header, or with
+You can add new lamps to a scene using the *Add* menu in the top header, or with
 (:menuselection:`[Shift][A] --> Add --> Lamp`).
 
 Once added, a lamp's position is indicated in the 3D View by a solid dot in a circle, but most

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=z depth|im=examples}} .
 
 
+***********
 Input Nodes
 ***********
 
@@ -126,7 +127,7 @@ Fresnel
 
 Dielectric fresnel,
 computing how much light is refracted through and how much is reflected off a layer.
-The resulting weight can be used for layering shaders with the :guilabel:`Mix Shader` node.
+The resulting weight can be used for layering shaders with the *Mix Shader* node.
 It is dependent on the angle between the surface normal and the viewing direction.
 
 IOR input
@@ -139,7 +140,7 @@ Fresnel output
 Layer Weight
 ============
 
-Output weights typically used for layering shaders with the :guilabel:`Mix Shader` node.
+Output weights typically used for layering shaders with the *Mix Shader* node.
 
 Blend input
    Blend between the first and second shader.
@@ -157,7 +158,7 @@ Texture Coordinates
 ===================
 
 Commonly used texture coordinates,
-typically used as inputs for the :guilabel:`Vector` input for texture nodes.
+typically used as inputs for the *Vector* input for texture nodes.
 
 Generated
    Automatically generated texture coordinates from the vertex positions of the mesh without deformation,

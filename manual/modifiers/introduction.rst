@@ -1,13 +1,13 @@
 
 ..    TODO/Review: {{review|text=Needs to stay updated with new modifiers being added}} .
 
-##############
+**************
  Introduction
-##############
+**************
 
 .. admonition:: Reference
 
-   Modifiers are added from the :guilabel:`Modifiers` context of the Properties Editor.
+   Modifiers are added from the *Modifiers* context of the Properties Editor.
 
 
 Modifiers
@@ -19,7 +19,7 @@ you can perform many effects automatically that would otherwise be too tedious t
 
 They work by changing how an object is displayed and rendered, but not the geometry which you can edit directly.
 You can add several modifiers to a single object to form a :doc:`Modifier Stack </modifiers/the_stack>` and
-:guilabel:`Apply` a modifier if you wish to make its changes permanent.
+*Apply* a modifier if you wish to make its changes permanent.
 
 
 .. figure:: /images/25-Manual-Modifiers-menu.jpg
@@ -35,7 +35,7 @@ There are four types of modifiers:
 Modify
 ======
 
-The :guilabel:`Modify` group of modifiers are tools similar to the :guilabel:`Deform Modifiers` (see below),
+The *Modify* group of modifiers are tools similar to the *Deform Modifiers* (see below),
 but which do not directly affect the shape of the object; rather they affect some other data, such as vertex groups.
 
 :doc:`Mesh Cache </modifiers/modify/mesh_cache>`
@@ -51,7 +51,7 @@ but which do not directly affect the shape of the object; rather they affect som
 Generate
 ========
 
-The :guilabel:`Generate` group of modifiers are constructive tools that either change the
+The *Generate* group of modifiers are constructive tools that either change the
 general appearance of or automatically add new geometry to an object.
 
 :doc:`Array </modifiers/generate/array>`
@@ -92,7 +92,7 @@ general appearance of or automatically add new geometry to an object.
 Deform
 ======
 
-The :guilabel:`Deform` group of modifiers only change the shape of an object without adding new geometry,
+The *Deform* group of modifiers only change the shape of an object without adding new geometry,
 and are available for meshes, and often texts, curves, surfaces and/or lattices.
 
 :doc:`Armature </modifiers/deform/armature>`
@@ -119,7 +119,7 @@ and are available for meshes, and often texts, curves, surfaces and/or lattices.
 :doc:`Simple Deform </modifiers/deform/simple_deform>`
    Applies some advanced deformations to your object.
 :doc:`Smooth </modifiers/deform/smooth>`
-   Smooth the geometry of a mesh. Similar to the :guilabel:`Smooth` tool in the mesh editing context.
+   Smooth the geometry of a mesh. Similar to the *Smooth* tool in the mesh editing context.
 :doc:`Warp </modifiers/deform/warp>`
    Warp a mesh by specifying two points the mesh stretches between.
 :doc:`Wave </modifiers/deform/wave>`
@@ -129,9 +129,9 @@ and are available for meshes, and often texts, curves, surfaces and/or lattices.
 Simulate
 ========
 
-The :guilabel:`Simulate` group of modifiers activate simulations. In most cases, these
-modifiers are automatically added to the modifiers stack whenever a :guilabel:`Particle
-System` or :guilabel:`Physics` simulation is enabled. Their only role is to define the
+The *Simulate* group of modifiers activate simulations. In most cases, these
+modifiers are automatically added to the modifiers stack whenever a *Particle System*
+or *Physics* simulation is enabled. Their only role is to define the
 place in the modifier stack used as base data by the tool they represent. Generally,
 the attributes of these modifiers are accessible in separate panels.
 
@@ -171,7 +171,7 @@ so each has its own unique settings and special considerations. However,
 each modifier's interface has the same basic components, see (*Panel Layout
 (Subsurf as an example)*).
 
-At the top is the :guilabel:`panel header`.
+At the top is the *panel header*.
 The icons each represent different settings for the modifier (left to right):
 
 Arrow

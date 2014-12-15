@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=examples}} .
 
 
+****************
 Texture Painting
 ****************
 
@@ -118,9 +119,9 @@ To use a brush, click on its name. Use the selector up/down arrow,
 if there are more brushes on the flyout window than can be displayed at once.
 Name your brush by clicking on the name field and entering any name you wish,
 such as "Red Air" for a red airbrush. To toss out a brush,
-click the brush delete :guilabel:`X` button next to its name.
+click the brush delete *X* button next to its name.
 If you want to keep this brush around for the next time you run Blender,
-click the :guilabel:`F` ake user button next to the brush delete X button.
+click the *F* ake user button next to the brush delete X button.
 
 If you have a tablet pen with pressure sensitivity,
 toggle the small "P" button next to the opacity, size,
@@ -159,7 +160,7 @@ There are four different types of brushes
       when you click, takes the colors under the cursor, and blends them in the direction you move the mouse. Similar to the "smudge" tool of *Gimp*.
 
    Clone
-      copies the colors from the image specified (Tex.Dirt in the example), to the active image. The background image is shown when this brush is selected; use the :guilabel:`B` lend slider to control how prominent the background image is.
+      copies the colors from the image specified (Tex.Dirt in the example), to the active image. The background image is shown when this brush is selected; use the *B* lend slider to control how prominent the background image is.
 
 Enable Pressure Sensitivity
    The icon to the right of the following three settings will enable or disable tablet pressure sensitivity to control how strong the effect is.
@@ -183,10 +184,14 @@ Blend
 - Multiply: the RGB value of the base is multiplied by the brush color
 - Lighten: the RGB value of the base color is increased by the brush color
 - Darken: tones down the colors
-- Erase Alpha: makes the image transparent where painted, allowing background colors and lower-level textures to show through. As you 'paint', the false checkerboard background will be revealed
+- Erase Alpha: makes the image transparent where painted,
+  allowing background colors and lower-level textures to show through.
+  As you 'paint', the false checkerboard background will be revealed
 - Add Alpha: makes the image more opaque where painted
 
-   In order to see the effects of the Erase and Add Alpha mix modes in the UV/Image Editor, you must enable the alpha channel display by clicking the Display Alpha or the Alpha-Only button. Transparent (no alpha) areas will then show a checkered background.
+   In order to see the effects of the Erase and Add Alpha mix modes in the UV/Image Editor,
+   you must enable the alpha channel display by clicking the Display Alpha or the Alpha-Only button.
+   Transparent (no alpha) areas will then show a checkered background.
 
 Image
    When using the clone brush, this allows you to select an image as a clone source.
@@ -214,8 +219,10 @@ it must only be defined. The example to the right shows the effects of painting 
 (banded) wood texture.
 Switching the texture to Rings makes a target/flower type of brush painting pattern.
 
-Note: In Clone paint mode,
-this field changes to indicate the picture image or texture that you are cloning from.
+.. note::
+
+   In Clone paint mode,
+   this field changes to indicate the picture image or texture that you are cloning from.
 
 Brush Mapping
    Sets how the texture is applied to the brush
@@ -232,12 +239,14 @@ Brush Mapping
       Random applying of texture.
 
 Angle
-   This is the rotation angle of the texture brush. It can be changed interactively via :kbd:`ctrl-F` in the 3D view. While in the interactive rotation you can enter a value numerically as well. Can be set to:
+   This is the rotation angle of the texture brush.
+   It can be changed interactively via :kbd:`Ctrl-F` in the 3D view.
+   While in the interactive rotation you can enter a value numerically as well. Can be set to:
 
    User
       Directly input the angle value.
    Rake
-      Angle follows the direction of the brush stroke. Not available with :guilabel:`3D` textures.
+      Angle follows the direction of the brush stroke. Not available with *3D* textures.
    Random
       Angle is randomized.
 
@@ -255,13 +264,14 @@ Stroke Method
    Allows set the way applying strokes.
 
    Airbrush
-      Flow of the brush continues as long as the mouse click is held, determined by the :guilabel:`Rate` setting. If disabled, the brush only modifies the color when the brush changes its location.
+      Flow of the brush continues as long as the mouse click is held, determined by the *Rate* setting.
+      If disabled, the brush only modifies the color when the brush changes its location.
 
       Rate
          Interval between paints for airbrush
 
    Space
-      Creates brush stroke as a series of dots, whose spacing is determined by the :guilabel:`Spacing` setting.
+      Creates brush stroke as a series of dots, whose spacing is determined by the *Spacing* setting.
 
       Spacing
          Represents the percentage of the brush diameter. Limit brush application to the distance specified by spacing.
@@ -312,7 +322,7 @@ Saving
 ======
 
 If the header menu item Image has an asterisk next to it,
-it means that the image has been changed, but not saved. Use the :guilabel:`Image→Save Image`
+it means that the image has been changed, but not saved. Use the *Image→Save Image*
 option to save your work with a different name or overwrite the original image.
 
 .. note:: UV Textures
@@ -325,7 +335,7 @@ The image format for saving is independent of the format for rendering.
 The format for saving a UV image is selected in the header of the Save Image window,
 and defaults to PNG (.png).
 
-If Packing is enabled in the window header, or if you manually :guilabel:`Image→Pack Image`,
+If Packing is enabled in the window header, or if you manually *Image→Pack Image*,
 saving your images to a separate file is not necessary.
 
 

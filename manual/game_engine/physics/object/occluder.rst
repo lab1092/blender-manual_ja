@@ -1,4 +1,5 @@
 
+*******************
 Occlude Object Type
 *******************
 
@@ -16,17 +17,15 @@ There is a demo .blend file to examplify some concepts:
 
 Now observe what happens to the profiling stats for each of the following (in order):
 
-- Hit :kbd:`p` as the scene is. It hums along at a fairly slow rate. On my system the Rasterizer step takes 130ms.
+- Hit :kbd:`P` as the scene is. It hums along at a fairly slow rate. On my system the Rasterizer step takes 130ms.
   The framerate will finally jump up once the "Cube" object has completely moved out of the view frustum.
   FIXME(Tag Unsupported:span;
-  <span style="color: #E7007A">??? - It's as if the Occluder doesn't do anything while the Cube is behind it.</span>
-)
-
+  <span style="color: #E7007A">??? - It's as if the Occluder doesn't do anything while the Cube is behind it.</span>)
 - Delete the "Cube.OffCamera" object above,
   and notice that there is no improvement in speed.
   This is the view frustum culling working for you - it does not matter if that object exists or not.
-- Hit :kbd:`z` to view wireframe. Notice that in the 3D Viewport you can see "Cube.BG", but once you hit :kbd:`p`, it is not there.
-- Make the "Occluder" object take up the whole camera's view with :kbd:`s-x-5`. You will see a huge leap in framerate,
+- Hit :kbd:`Z` to view wireframe. Notice that in the 3D Viewport you can see "Cube.BG", but once you hit :kbd:`P`, it is not there.
+- Make the "Occluder" object take up the whole camera's view with :kbd:`S-X-5`. You will see a huge leap in framerate,
   since almost nothing is being Rasterized. On my system the Rasterizer step drops to 5ms.
 - Try a run with :menuselection:`World properties --> Physics --> Occlusion Culling` disabled. It will be slow again.
 - Reenable :menuselection:`World properties --> Physics --> Occlusion Culling` and run it one more time to prove to yourself that your speed is back.

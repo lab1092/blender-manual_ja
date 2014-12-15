@@ -1,4 +1,5 @@
 
+**************
 Sensor Editing
 **************
 
@@ -35,26 +36,26 @@ ones are visible and easier to reach. Both these can be controlled individually.
 **Sensors**
 
 +------------------------+----------------------------------------------------+
-+:guilabel:`Show Objects`|Expands all objects.                                +
++*Show Objects*|Expands all objects.                                +
 +------------------------+----------------------------------------------------+
-+:guilabel:`Hide Objects`|Collapses all objects to just a bar with their name.+
++*Hide Objects*|Collapses all objects to just a bar with their name.+
 +------------------------+----------------------------------------------------+
-+:guilabel:`Show Sensors`|Expands all sensors.                                +
++*Show Sensors*|Expands all sensors.                                +
 +------------------------+----------------------------------------------------+
-+:guilabel:`Hide Sensors`|Collapses all sensors to bars with their names.     +
++*Hide Sensors*|Collapses all sensors to bars with their names.     +
 +------------------------+----------------------------------------------------+
 
 
 It is also possible to filter which sensors are viewed using the four heading buttons:
 
 +-----------------+--------------------------------------------------------------------+
-+:guilabel:`Sel`  |Shows all sensors for selected objects.                             +
++*Sel*  |Shows all sensors for selected objects.                             +
 +-----------------+--------------------------------------------------------------------+
-+:guilabel:`Act`  |Shows only  sensors belonging to the active object.                 +
++*Act*  |Shows only  sensors belonging to the active object.                 +
 +-----------------+--------------------------------------------------------------------+
-+:guilabel:`Link` |Shows sensors which have a link to a controller.                    +
++*Link* |Shows sensors which have a link to a controller.                    +
 +-----------------+--------------------------------------------------------------------+
-+:guilabel:`State`|Only sensors connected to a controller with active states are shown.+
++*State*|Only sensors connected to a controller with active states are shown.+
 +-----------------+--------------------------------------------------------------------+
 
 

@@ -1,4 +1,5 @@
 
+************
 Logic Editor
 ************
 
@@ -36,7 +37,7 @@ We will look at each one individually.
 
 3) Links
    Links (3A) indicate the direction of logical flow between objects.
-   Link lines are drawn by :kbd:`Lmb` dragging from one Link node (3B) to another.
+   Link lines are drawn by :kbd:`LMB` dragging from one Link node (3B) to another.
    Links can only be drawn from Sensors to Controllers, or from Controllers to Actuators.
    You cannot directly link Sensors to Actuators; likewise,
    Actuators cannot be linked back to Sensors
@@ -49,7 +50,7 @@ We will look at each one individually.
 
    Links can be created between logic bricks belonging to different objects.
 
-   To delete a link between two nodes, :kbd:`Lmb` drag between the two nodes.
+   To delete a link between two nodes, :kbd:`LMB` drag between the two nodes.
 
 
 4) Sensor Area

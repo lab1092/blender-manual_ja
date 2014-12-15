@@ -1,4 +1,5 @@
 
+**************
 Weight Editing
 **************
 
@@ -11,7 +12,7 @@ Weight Editing
 
 As mentioned before in :doc:`Vertex Groups </modeling/meshes/vertex_groups>` each entry
 in a Vertex Group also contains a weight value in the range of [0.0,1.0].
-Blender provides a :guilabel:`Vertex Weights` panel from where you can get (and edit)
+Blender provides a *Vertex Weights* panel from where you can get (and edit)
 information about the weight values of each Vertex of a mesh.
 That is: to which Vertex Groups the vertex is assigned with which weight value.
 
@@ -19,9 +20,9 @@ The Vertex Weights panel can be found in the left property sidebar of the 3D Vie
 It is available in Edit mode and in Weight Paint mode
 (when Vertex Selection masking is enabled as well). The panel is separated into the sections
 
-- :guilabel:`Vertex Group Categories` (1)
-- :guilabel:`Weight Table` (2)
-- :guilabel:`function bar` (3)
+- Vertex Group Categories (1)
+- Weight Table (2)
+- function bar (3)
 
 
 Vertex Group Categories
@@ -35,7 +36,7 @@ However we can identify 2 implicit categories of Vertex Groups:
 The ``Deform Groups``
 ---------------------
 
-These Vertex groups are sometimes also named :guilabel:`Weight Groups`.
+These Vertex groups are sometimes also named *Weight Groups*.
 They are used for defining the weight tables of Armature bones.
 All Deform Groups of an Object are strictly related to each other via their weight values.
 
@@ -48,16 +49,16 @@ that allows restricting the Vertex Weight panel to display only the Deform bones
 The ``Other Groups``
 --------------------
 
-All other usages of Vertex Groups are summarized into the :guilabel:`Other` category.
+All other usages of Vertex Groups are summarized into the *Other* category.
 These vertex groups can be found within Shape keys, Modifiers, etc...
 There is really no good name for this category,
-so we kept it simple and named it :guilabel:`Other`.
+so we kept it simple and named it *Other*.
 
 
 The Weight Table
 ----------------
 
-The Weight Table shows all weights associated to the :guilabel:`active vertex`.
+The Weight Table shows all weights associated to the *active vertex*.
 Note that a vertex does not necessarily have to be associated to any vertex groups.
 In that case the Vertex Weights Panel is not displayed.
 
@@ -99,8 +100,8 @@ Display Weights in Edit Mode
 
 When you are in edit mode, you can make the Weights of the active Group visible on the mesh:
 
-Search the :guilabel:`Mesh Display` panel in the Properties sidebar.
-And there enable the :guilabel:`Show Weights` option.
+Search the *Mesh Display* panel in the Properties sidebar.
+And there enable the *Show Weights* option.
 Now you can see the weights of the active Vertex Group displayed on the mesh surface.
 
 
@@ -130,7 +131,7 @@ Change a weight
 ===============
 
 You can either enter a new weight value manually (click on the number and edit the value),
-or you can change the weight by :kbd:`lmb` and while holding down the mouse button,
+or you can change the weight by :kbd:`LMB` and while holding down the mouse button,
 drag right or left to increase/decrease the weight value. You also can use the right/left
 arrows displayed around the weight value to change the weight in steps.
 
@@ -145,7 +146,7 @@ arrows displayed around the weight value to change the weight in steps.
 Paste a weight to other verts
 =============================
 
-:kbd:`lmb` the Paste Icon allows you to forward a single weight of the active Vertex to all selected vertices.
+:kbd:`LMB` the Paste Icon allows you to forward a single weight of the active Vertex to all selected vertices.
 But note that weights are only pasted to verts which already have a weight value in the affected Vertex Group.
 
 
@@ -159,7 +160,7 @@ But note that weights are only pasted to verts which already have a weight value
 Delete a weight from a Group
 ============================
 
-:kbd:`lmb` the Delete Icon will instantly remove the weight from the active vertex.
+:kbd:`LMB` the Delete Icon will instantly remove the weight from the active vertex.
 Thus the entire row disappears when you click on the delete icon.
 
 
@@ -187,7 +188,7 @@ Copy
 .. tip:: The filter setting is respected
 
    Note that both functions only work on the Vertex Groups currently displayed in the Weights Table.
-   So if for example only the :guilabel:`Deform weights` are displayed,
+   So if for example only the *Deform weights* are displayed,
    then Normalize and Copy only affect the Deform bones.
 
 
@@ -213,7 +214,7 @@ Whenever a Weight Group is locked, all data changing functions get disabled:
 .. tip:: The filter setting is respected
 
    If you have for example all deform weight groups unlocked and all other vertex groups locked,
-   then you can safely select :guilabel:`Deform` from the Filter row
+   then you can safely select *Deform* from the Filter row
    and use all available functions from the Weight table again.
 
 

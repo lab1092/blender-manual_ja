@@ -1,4 +1,5 @@
 
+****************
 Material Preview
 ****************
 
@@ -10,10 +11,10 @@ Material Preview
 
 
 The Preview panel gives a quick visualization of the active material and its properties,
-including its :guilabel:`Shaders`, :guilabel:`Ramps`,
-:guilabel:`Mirror Transp` properties and :guilabel:`Textures`.
+including its *Shaders*, *Ramps*,
+*Mirror Transp* properties and *Textures*.
 It provides several shapes that are very useful for designing new shaders: for some shaders
-(like those based on :guilabel:`Ramp` colors, or a Diffuse shader like :guilabel:`Minnaert`),
+(like those based on *Ramp* colors, or a Diffuse shader like *Minnaert*),
 one needs fairly complex or specific previewing shapes to decide if the shader being designed
 achieves its goal.
 

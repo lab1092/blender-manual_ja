@@ -1,5 +1,6 @@
 
 
+************
 Introduction
 ************
 
@@ -40,7 +41,7 @@ Accessing and Activating Nodes
 ==============================
 
 Access the :doc:`Node Editor </materials/nodes/editor>` and enable
-:guilabel:`Composite Nodes` by clicking on the *Image* icon.
+*Composite Nodes* by clicking on the *Image* icon.
 
 
 .. figure:: /images/Manual-Compositing-Node_Header.jpg
@@ -53,7 +54,7 @@ Access the :doc:`Node Editor </materials/nodes/editor>` and enable
    Select the Node Editor window
 
 
-To activate nodes for compositing, click the :guilabel:`Use Nodes` checkbox.
+To activate nodes for compositing, click the *Use Nodes* checkbox.
 Blender creates a default starting noodle, consisting of two nodes threaded together.
 
 
@@ -64,9 +65,9 @@ Blender creates a default starting noodle, consisting of two nodes threaded toge
 
 To use this mini-map,
 you must now tell Blender to use the Compositing Node map that has been created,
-and to composite the image using composition nodes. To do so, switch to the :guilabel:`Render`
-button area and activate the :guilabel:`Compositing` button located below the
-:guilabel:`Post Processing` tab.
+and to composite the image using composition nodes. To do so, switch to the *Render*
+button area and activate the *Compositing* button located below the
+*Post Processing* tab.
 This tells Blender to composite the final image by running it through the composition node map.
 
 

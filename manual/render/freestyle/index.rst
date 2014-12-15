@@ -1,7 +1,8 @@
 .. _render-freestyle:
 
-Freestyle
-*********
+############
+  Freestyle
+############
 
 .. toctree::
    :maxdepth: 2

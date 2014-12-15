@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|}} .
 
 
+*****************************
 Animating Material Attributes
 *****************************
 
@@ -17,7 +18,7 @@ a video screen lighting up, the surface of a river or lake, a light lighting up
 (with an halo material), etc., etc.
 
 The possibilities are nearly unlimited. For example,
-you could keyframe the :guilabel:`Glossiness` of raytraced reflection/transparency,
+you could keyframe the *Glossiness* of raytraced reflection/transparency,
 which would enable the simulation of condensation spreading over a mirror or window...).
 
 
@@ -31,29 +32,29 @@ whole book!
 Add a plane and a camera, such that the plane faces the camera and covers the whole view.
 
 Add a material to the plane. As we won't use any light,
-set its :guilabel:`Emit` value to ``1.0``.
+set its *Emit* value to ``1.0``.
 
-Create Fcurves for :guilabel:`R`, :guilabel:`G` and :guilabel:`B`,
+Create Fcurves for *R*, *G* and *B*,
 with a few random control points, all in the ``[0.0, 1.0]`` range.
 Manage to have three different length between the first and last keyframes,
-and enable the :guilabel:`Cyclic` extend mode (:kbd:`E-pad2`). This way,
+and enable the *Cyclic* extend mode (:kbd:`E-Numpad2`). This way,
 with the three curves cycling over various periods, you'll get a never-the-same color
 animation! Unless you want to get a "time-tileable" animation, in which case you should manage
-to get exactly the same color at start and end... You can also create an :guilabel:`Emit`
+to get exactly the same color at start and end... You can also create an *Emit*
 Fcurve, e.g. to create a fade in/out...
 
 Now, let's add a bit of fun in this plain colored background.
-Add a texture to the material and, in the :guilabel:`Texture` sub-context,
-select a procedural texture (:guilabel:`DistortedNoise`, for example,
+Add a texture to the material and, in the *Texture* sub-context,
+select a procedural texture (*DistortedNoise*, for example,
 but any one will work - follow your taste!), and set it to your liking.
 
-Back in the :guilabel:`Material` sub-context,
+Back in the *Material* sub-context,
 choose to what you want to map the texture - for this example,
-I chose to map it to diffuse color in :guilabel:`Difference` mode, in a first texture channel,
-and to emit value in :guilabel:`Mul` tiply mode, in a second texture channel.
+I chose to map it to diffuse color in *Difference* mode, in a first texture channel,
+and to emit value in *Mul* tiply mode, in a second texture channel.
 
 Finally, animate the Z offset of the mapping of both channels
-(define a first :guilabel:`OfsZ` Fcurve,
+(define a first *OfsZ* Fcurve,
 and use the copy/paste buttons to exactly copy it to the second texture channel's curve).
 Here again, you can either have two different values for start and end,
 or the same if you want a cyclic animation...

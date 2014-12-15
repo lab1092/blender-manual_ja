@@ -1,4 +1,5 @@
 
+******************************
 Using Constraints in Animation
 ******************************
 
@@ -32,32 +33,32 @@ which is a sort of :doc:`Animation Driver </animation/editors/graph/drivers>` fo
 We should also mention the classical :doc:`Child Of constraint </constraints/relationship/child_of>`,
 which creates parent/child relationship.
 These relationships indeed imply indirect animation (as transforming the parent affects by default all its children).
-But the :guilabel:`Child Of` constraint is also very important, as it allows you to parent your objects to bones,
+But the *Child Of* constraint is also very important, as it allows you to parent your objects to bones,
 and hence use :doc:`Armatures </animation/armatures>` to animate them!
 
-Back to our simple :guilabel:`Copy Location` example,
+Back to our simple *Copy Location* example,
 you can have two different behaviors of this constraint:
 
-- When its :guilabel:`Offset` button is disabled (the default), the location of the owner is "absolutely"
+- When its *Offset* button is disabled (the default), the location of the owner is "absolutely"
   controlled by the constraint's target, which means nothing (except other constraints below in the stack...)
   will be able to control the owner's position. Not even the object's animation curves.
-- However, when the :guilabel:`Offset` button is enabled,
+- However, when the *Offset* button is enabled,
   the location of the owner is "relatively" controlled by the constraint's target.
   This means that location's properties of the owner are offset from the location of the target.
   And these owner's location properties can be controlled e.g.
-  by its :guilabel:`Loc...` curves (or actions, or NLA...)!
+  by its *Loc...* curves (or actions, or NLA...)!
 
 
 Example
 -------
 
-Let's use the :guilabel:`Copy Location` constraint and its :guilabel:`Offset` button.
+Let's use the *Copy Location* constraint and its *Offset* button.
 For example, you can make your owner (let's call it ``moon``)
 describe perfect circles centered on the ``(0.0, 0.0, 0.0)`` point
-(using e.g. pydriven :guilabel:`LocX` / :guilabel:`LocY` animation curves,
+(using e.g. pydriven *LocX* / *LocY* animation curves,
 see :doc:`this page </animation/editors/graph/drivers#drivers>`),
 and then make it copy the location of a target (called, I don't know... ``earth``, for example) -
-with the :guilabel:`Offset` button enabled.
+with the *Offset* button enabled.
 Congratulation, you just modeled a satellite in a (simplified) orbit around its planet...
 Just do the same thing with its planet around its star (which you might call ``sun``, what do you think?),
 and why not, for the star around its galaxy...
@@ -84,11 +85,11 @@ FIXME(TODO: Internal Link;
 [[user:Tnboma/Doc:2.5/Manual/Animation/Graph Editor|this page]]
 )):
 
-- You can animate the :guilabel:`Influence` of a constraint. For example, in the
+- You can animate the *Influence* of a constraint. For example, in the
 
 FIXME(TODO: Internal Link;
 [[#Example|"solar system" example above]]
-), I used it to first stick the camera to the "moon", then to the "earth", and finally to nothing, using two :guilabel:`Copy Location` constraints with :guilabel:`Offset` set, and their :guilabel:`Influence` cross-fading together...
+), I used it to first stick the camera to the "moon", then to the "earth", and finally to nothing, using two *Copy Location* constraints with *Offset* set, and their *Influence* cross-fading together...
 
 - More anecdotal, you can also, for some constraints using an armature's bone as target, animate where along this bone (between root and tip) lays the real target point (``0.0`` means "full-root", and ``1.0``, "full-tip").
 

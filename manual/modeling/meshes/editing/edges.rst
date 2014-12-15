@@ -1,13 +1,14 @@
 
 ..    TODO/Review: {{review|}} .
 
+**************
 Make Edge/Face
 **************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Edges --> Make Edge/Face`
    | Hotkey:   :kbd:`F`
 
@@ -28,9 +29,9 @@ Mark Seam and Clear Seam
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in :guilabel:`Edge Specials` menu)
-   | Hotkey:   :kbd:`ctrl-E-pad1` and :kbd:`ctrl-E-pad2`
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
+   | Menu:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in *Edge Specials* menu)
+   | Hotkey:   :kbd:`Ctrl-E-Numpad1` and :kbd:`Ctrl-E-Numpad2`
 
 
 Seams are a way to create separations, "islands", in UV maps. See the :doc:`UVTexturing section </textures/mapping/uv>` for more details. These commands set or unset this flag for selected edges.
@@ -42,12 +43,12 @@ Mark Sharp and Clear Sharp
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in :guilabel:`Edge Specials` menu)
-   | Hotkey:   :kbd:`ctrl-E-pad1` and :kbd:`ctrl-E-pad2`
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
+   | Menu:     :menuselection:`Mesh --> Edges --> Mark Seam/Clear Seam` (or the same options in *Edge Specials* menu)
+   | Hotkey:   :kbd:`Ctrl-E-Numpad1` and :kbd:`Ctrl-E-Numpad2`
 
 
-The :guilabel:`Sharp` flag is used by the :doc:`EdgeSplit modifier </modifiers/generate/edge_split>`, which is part of the smoothing technics. As seams, it is a property of edges, and these commands set or unset it for selected ones.
+The *Sharp* flag is used by the :doc:`EdgeSplit modifier </modifiers/generate/edge_split>`, which is part of the smoothing technics. As seams, it is a property of edges, and these commands set or unset it for selected ones.
 
 
 Adjust Bevel Weight
@@ -56,9 +57,9 @@ Adjust Bevel Weight
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
    | Menu:     :menuselection:`Mesh --> Edges --> Adjust Bevel Weight`
-   | Hotkey:   :kbd:`ctrl-shift-E`
+   | Hotkey:   :kbd:`Ctrl-Shift-E`
 
 
 This edge property (a value between **0.0** and **1.0**) is used by the :doc:`Bevel modifier </modifiers/generate/bevel>` to control the bevel intensity of the edges. This command enters an interactive mode (a bit like transform tools), where by moving the mouse (or typing a value with the keyboard) you can set the (average) bevel weight of selected edges.
@@ -70,9 +71,9 @@ Crease SubSurf
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
    | Menu:     :menuselection:`Mesh --> Edges --> Crease SubSurf`
-   | Hotkey:   :kbd:`shift-E`
+   | Hotkey:   :kbd:`Shift-E`
 
 
 This edge property (a value between **0.0** and **1.0**) is used by the
@@ -89,8 +90,8 @@ Edge Slide
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
-   | Menu:     :menuselection:`Mesh --> Edges --> Slide Edge` (or the same option in :guilabel:`Edge Specials` menu)
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
+   | Menu:     :menuselection:`Mesh --> Edges --> Slide Edge` (or the same option in *Edge Specials* menu)
    | Hotkey:   :menuselection:`[ctrl][E] --> [pad6]`
 
 
@@ -98,23 +99,23 @@ Slides one or more edges across adjacent faces with a few restrictions involving
 of edges (i.e. the selection must make sense, see below.)
 
 Even:kbd:`E`
-   Forces the edge loop to match the shape of the adjacent edge loop. You can flip to the opposite vertex using :kbd:`F`. Use :kbd:`Alt-wheel` to change the control edge.
+   Forces the edge loop to match the shape of the adjacent edge loop. You can flip to the opposite vertex using :kbd:`F`. Use :kbd:`Alt-Wheel` to change the control edge.
 Flip :kbd:`F`
    When Even mode is active, this flips between the two adjacent edge loops the active edge loop will match
 
-:kbd:`lmb` confirms the tool, and :kbd:`rmb` or :kbd:`Esc` cancels.
+:kbd:`LMB` confirms the tool, and :kbd:`RMB` or :kbd:`Esc` cancels.
 
 This tool has a factor,
-which is displayed in the 3D View footer and in the :guilabel:`Tool Shelf`
+which is displayed in the 3D View footer and in the *Tool Shelf*
 (after confirmation).
 A numerical value between ``-1`` and ``1`` can be entered for precision.
 
-In *Proportional* mode, :kbd:`wheel`,
+In *Proportional* mode, :kbd:`Wheel`,
 or :kbd:`←` and :kbd:`→` changes the selected edge for calculating a proportion.
 Unlike *Percentage* mode, *Proportional*
 
-Holding :kbd:`ctrl` or :kbd:`shift` control the precision of the sliding.
-:kbd:`ctrl` snaps movement to 10% steps per move and :kbd:`shift` snaps movement
+Holding :kbd:`Ctrl` or :kbd:`Shift` control the precision of the sliding.
+:kbd:`Ctrl` snaps movement to 10% steps per move and :kbd:`Shift` snaps movement
 to 1% steps. The default is 5% steps per move.
 
 
@@ -150,7 +151,7 @@ Movement of the sliding edge loop is restricted to this length. As you move the 
 length indicator in the header changes showing where along the length of the edge you are.
 
 To change the control edge that determines the position of the edge loop,
-use the :kbd:`Alt-wheel` to scroll to a different edge.
+use the :kbd:`Alt-Wheel` to scroll to a different edge.
 
 
 .. figure:: /images/EdgeSlide3.jpg
@@ -199,7 +200,7 @@ Rotate Edge
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
    | Menu:     :menuselection:`Mesh --> Edges --> Rotate Edge CW / Rotate Edge CCW`
    | Hotkey:   :menuselection:`[ctrl][E] --> Rotate Edge CW`   and :menuselection:`[ctrl][E] --> Rotate Edge CCW`
 
@@ -229,8 +230,8 @@ Using Face Selection
 
 To rotate an edge based on faces you must select two faces, (*Adjacent selected faces*),
 otherwise Blender notifies you with an error message, "\ ``ERROR:
-Could not find any select edges that can be rotated`` ". Using either :guilabel:`Rotate
-Edge CW` or :guilabel:`Rotate Edge CCW` will produce exactly the same results as if you had
+Could not find any select edges that can be rotated`` ". Using either *Rotate Edge CW*
+or *Rotate Edge CCW* will produce exactly the same results as if you had
 selected the common edge shown in (*Selected edge rotated CW and CCW.*).
 
 
@@ -240,25 +241,25 @@ Delete Edge Loop
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode (:guilabel:`Vertex` or :guilabel:`Edge` select modes)
+   | Mode:     *Edit* mode (*Vertex* or *Edge* select modes)
    | Menu:     :menuselection:`Mesh --> Delete --> Edge Loop`
    | Hotkey:   :menuselection:`[X]/[Del] --> [g]`
 
 
-:guilabel:`Delete Edge Loop` allows you to delete a selected edge loop if it is between two other edge loops. This will create one face-loop where two previously existed.
+*Delete Edge Loop* allows you to delete a selected edge loop if it is between two other edge loops. This will create one face-loop where two previously existed.
 
 
 .. note::
 
-   The :guilabel:`Edge Loop` option is very different to the :guilabel:`Edges` option, even if you use it on edges that look like an edge loop. Deleting an edge loop merges the surrounding faces together to preserve the surface of the mesh. By deleting a chain of edges, the edges are removed, deleting the surrounding faces as well. This will leave holes in the mesh where the faces once were.
+   The *Edge Loop* option is very different to the *Edges* option, even if you use it on edges that look like an edge loop. Deleting an edge loop merges the surrounding faces together to preserve the surface of the mesh. By deleting a chain of edges, the edges are removed, deleting the surrounding faces as well. This will leave holes in the mesh where the faces once were.
 
 
 Example
 =======
 
 The selected edge loop on the UV Sphere has been deleted and the faces have been merged with
-the surrounding edges. If the edges had been deleted by choosing :guilabel:`Edges` from the
-(:guilabel:`Erase` *Menu*)
+the surrounding edges. If the edges had been deleted by choosing *Edges* from the
+(*Erase* *Menu*)
 there would be an empty band of deleted faces all the way around the sphere instead.
 
 
@@ -282,7 +283,7 @@ Collapse
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Delete --> Edge Collapse`
    | Hotkey:   :menuselection:`[alt][M] --> [pad3]`
 
@@ -312,12 +313,12 @@ Edge Split
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Edges --> Edge Split`
    | Hotkey:   :menuselection:`[Ctrl][E] --> Edge Split`
 
 
-:guilabel:`Edge split` is similar to the rip tool. When two or more touching interior edges, or a border edge is selected when using :guilabel:`Edge split`, a hole will be created, and the selected edges are duplicated to form the border of the hole
+*Edge split* is similar to the rip tool. When two or more touching interior edges, or a border edge is selected when using *Edge split*, a hole will be created, and the selected edges are duplicated to form the border of the hole
 
 
 .. figure:: /images/EdgeSplit1.jpg
@@ -340,11 +341,11 @@ Bridge Edge Loops
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Edges --> Bridge Edge Loops`
 
 
-:guilabel:`Bridge Edge Loops` connects multiple edge loops with faces.
+*Bridge Edge Loops* connects multiple edge loops with faces.
 
 Simple example showing 2 closed edge loops.
 

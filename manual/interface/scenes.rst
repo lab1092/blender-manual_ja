@@ -1,4 +1,5 @@
 
+******
 Scenes
 ******
 
@@ -12,7 +13,7 @@ Blender's Scenes work in much the same way. You can have an empty Scene, a compl
 independent copy of your Scene or a new copy that links to your original Scene in a number of
 ways.
 
-You can select and create scenes with the :guilabel:`Scene selector` in the Info window header
+You can select and create scenes with the *Scene selector* in the Info window header
 (the bar at the top of most Blender layouts, see *Screen and Scene selectors*).
 
 
@@ -39,7 +40,8 @@ You can add a new scene by clicking
 .. figure:: /images/Manual-Part-I-Interface-Screens-AddView-Button25.jpg
    :align: center
 
- in the Scene selector option. When you create a new scene, you can choose between five options to control its contents (*Add Scene menu*).
+ in the Scene selector option. When you create a new scene,
+ you can choose between five options to control its contents (*Add Scene menu*).
 
 To choose between these options,
 you need to clearly understand the difference between "Objects" and "Object Data".
@@ -79,7 +81,7 @@ Link Object Data
    *single instance of* the "ObData" is now being shared by all of the Objects in all of the Scenes that link to it.
    If you want to make changes to an Object in the new Scene independently of the Objects in the other Scenes, you
    will have to manually make the object in the new Scene a "single-user" copy by :kbd:`LMB` the number in the
-   :guilabel:`Object Data` panel of the Properties Window.
+   *Object Data* panel of the Properties Window.
    More information at the :doc:`Window Type </interface/window_types>` page.
    This has the effect of making a new independent copy of the ObData.
 
@@ -88,9 +90,12 @@ Link Object Data
    :align: center
 
 Full Copy
-   Is the deepest form of copying available.  Nothing is shared.  This option creates a fully independent Scene with copies of the currently selected Scene's contents.  Every Object in the original Scene is duplicated, and a duplicate, private copy of its ObData is made as well.
+   Is the deepest form of copying available. Nothing is shared.
+   This option creates a fully independent Scene with copies of the currently selected Scene's contents.
+   Every Object in the original Scene is duplicated, and a duplicate, private copy of its ObData is made as well.
 
-To better understand the way Blender works with data, read through :doc:`Blender's Library and Data System. </data_system>`
+To better understand the way Blender works with data,
+read through :doc:`Blender's Library and Data System. </data_system>`
 
 
 A brief example
@@ -120,7 +125,7 @@ Deleting a Scene
 
 .. |deleteview-button| image:: /images/Manual-Part-I-Interface-Screens-DeleteView-Button25.jpg
 
-You can delete a scene by using the :guilabel:`Delete datablock` button
+You can delete a scene by using the *Delete datablock* button
 (|deleteview-button|) from the Scene selector option (see *Screen and Scene
 selectors*).
 

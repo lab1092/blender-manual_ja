@@ -1,8 +1,9 @@
 
-Inderect Lighting
-=================
+*****************
+Indirect Lighting
+*****************
 
-:guilabel:`Inderect Lighting` adds inderect light bouncing of surrounding objects. It's modes the light that is reflected from other surfaces to the current surface.
+*Inderect Lighting* adds inderect light bouncing of surrounding objects. It's modes the light that is reflected from other surfaces to the current surface.
 Is more comprehensive, more physically correct, and produces more realistic images.
 It is also more computationally expensive.
 Take a look at the following examples of a scene lit with Direct Lighting and both
@@ -55,7 +56,7 @@ Inderect Lighting only works with Approximate gather method.
 Options
 =======
 
-The :guilabel:`Inderect Lighting` panel contains two options:
+The *Inderect Lighting* panel contains two options:
 
 Factor
    Defines how much surrounding objects contribute to light.
@@ -63,7 +64,7 @@ Factor
 Bounces
    Number of inderect deffuse light bounces.
 
-The :guilabel:`Gather` panel contains settings for the inderect lighting quality.
+The *Gather* panel contains settings for the inderect lighting quality.
 Note that these settings also apply to Environment Lighting and Ambient Occlusion.
 
 
@@ -75,8 +76,8 @@ Approximate
    The Inderect Lighting panel, Approximate method.
 
 
-The :guilabel:`Approximate` method gives a much smoother result for the same amount of render
-time, but as its name states, it is only an approximation of the :guilabel:`Raytrace` method,
+The *Approximate* method gives a much smoother result for the same amount of render
+time, but as its name states, it is only an approximation of the *Raytrace* method,
 which implies it might produce some artifacts - and it cannot use the sky's texture as the
 base color
 

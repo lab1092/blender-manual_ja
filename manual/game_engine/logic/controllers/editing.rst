@@ -1,4 +1,5 @@
 
+******************
 Controller Editing
 ******************
 
@@ -36,24 +37,24 @@ Both these can be controlled individually.
 **Controllers**
 
 +----------------------------+----------------------------------------------------+
-+:guilabel:`Show Objects`    |Expands all objects.                                +
++*Show Objects*    |Expands all objects.                                +
 +----------------------------+----------------------------------------------------+
-+:guilabel:`Hide Objects`    |Collapses all objects to just a bar with their name.+
++*Hide Objects*    |Collapses all objects to just a bar with their name.+
 +----------------------------+----------------------------------------------------+
-+:guilabel:`Show Controllers`|Expands all Controllers.                            +
++*Show Controllers*|Expands all Controllers.                            +
 +----------------------------+----------------------------------------------------+
-+:guilabel:`Hide Controllers`|Collapses all Controllers to bars with their names. +
++*Hide Controllers*|Collapses all Controllers to bars with their names. +
 +----------------------------+----------------------------------------------------+
 
 
 It is also possible to filter which controllers are viewed using the three heading buttons:
 
 +----------------+---------------------------------------------------------+
-+:guilabel:`Sel` |Shows all controllers for selected objects.              +
++*Sel* |Shows all controllers for selected objects.              +
 +----------------+---------------------------------------------------------+
-+:guilabel:`Act` |Shows only  controllers belonging to the active object.  +
++*Act* |Shows only  controllers belonging to the active object.  +
 +----------------+---------------------------------------------------------+
-+:guilabel:`Link`|Shows controllers which have a link to actuators/sensors.+
++*Link*|Shows controllers which have a link to actuators/sensors.+
 +----------------+---------------------------------------------------------+
 
 

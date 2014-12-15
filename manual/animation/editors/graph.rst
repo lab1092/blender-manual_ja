@@ -1,4 +1,5 @@
 
+************
 Graph Editor
 ************
 
@@ -36,13 +37,13 @@ Navigation
 
 As with most windows, you can:
 
-*Pan* :kbd:`mmb`
+*Pan* :kbd:`MMB`
    Pan the view vertically (values) or horizontally (time) with click and drag.
 
-*Zoom* :kbd:`wheel`
+*Zoom* :kbd:`Wheel`
    Zoom in and out with the mouse wheel.
 
-*Scale View* :kbd:`ctrl-mmb`
+*Scale View* :kbd:`Ctrl-MMB`
    Scale the view vertically or horizontally.
 
 These are some other useful tools.
@@ -234,7 +235,7 @@ Channel Editing
 
 *Border Deselect* :kbd:`Shift-Drag-LMB` or :kbd:`B` :kbd:`Shift-Drag-LMB`
 
-*Delete selected* :kbd:`X` or :kbd:`Delete`
+*Delete selected* :kbd:`X` or :kbd:`Del`
 
 *Lock selected* :kbd:`Tab`
 

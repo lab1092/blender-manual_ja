@@ -1,4 +1,5 @@
 
+*********************
 Material Vector Nodes
 *********************
 
@@ -31,11 +32,11 @@ The resulting colorized output can be easily varied by moving the light source
 The (face) normal is the direction of the face in relation to the camera.
 You can use it to do the following:
 
-- Use this node to create a fixed direction → output :guilabel:`Normal`.
-- Calcuate the :guilabel:`Dot` -Product with the :guilabel:`Normal` -Input. The :guilabel:`Dot` -Product is a scalar value (a number).
-  - If two normals are pointing in the same direction the :guilabel:`Dot` -Product is 1.
-  - If they are perpendicular the :guilabel:`Dot` -Product is zero (0).
-  - If they are antiparallel (facing directly away from each other) the :guilabel:`Dot` -Product is -1. *And you never thought you would use the Vector Calculus class you took in college - shame on you!*
+- Use this node to create a fixed direction → output *Normal*.
+- Calcuate the *Dot* -Product with the *Normal* -Input. The *Dot* -Product is a scalar value (a number).
+  - If two normals are pointing in the same direction the *Dot* -Product is 1.
+  - If they are perpendicular the *Dot* -Product is zero (0).
+  - If they are antiparallel (facing directly away from each other) the *Dot* -Product is -1. *And you never thought you would use the Vector Calculus class you took in college - shame on you!*
 
 So now we can do all sorts of things that depends on the viewing angle
 (like electron scanning microscope effect).
@@ -164,7 +165,7 @@ The Vector Curves node maps an input vector x, y, and z components to a diagonal
 Use this node to remap a vector value using curve controls.
 
 Click and drag along the curve to create a control point and to change the curve's shape.
-Use the :guilabel:`X` to delete the selected (white) point.
+Use the *X* to delete the selected (white) point.
 
 
 Inputs

@@ -1,4 +1,5 @@
 
+****
 Mist
 ****
 
@@ -28,7 +29,7 @@ Minimum
 Start
    The distance from the camera at which the mist starts to fade in
 Depth
-   The distance from :guilabel:`Start` of the mist, that it fades in over. Objects further from the camera than :guilabel:`Start+Depth` are completely hidden by the mist.
+   The distance from *Start* of the mist, that it fades in over. Objects further from the camera than *Start+Depth* are completely hidden by the mist.
 
 
 .. figure:: /images/25-Manual-World-MistFalloff.jpg
@@ -41,26 +42,26 @@ Depth
 Height
    Makes the mist intensity decrease with height, for a more realistic effect. If greater than 0, it sets, in Blender units, an interval around z=0 in which the mist goes from maximum intensity (below) to zero (above).
 Falloff
-   The decay rate of the mist (:guilabel:`Quadratic` / :guilabel:`Linear` / :guilabel:`Inverse Quadratic`). These settings control the rate of change of the mist's strength further and further into the distance.
+   The decay rate of the mist (*Quadratic* / *Linear* / *Inverse Quadratic*). These settings control the rate of change of the mist's strength further and further into the distance.
 
 
 .. note:: Mist distances
 
-   To visualize the mist distances in the 3D View, select your camera, go to the camera menu, and enable :guilabel:`Show Mist`.
+   To visualize the mist distances in the 3D View, select your camera, go to the camera menu, and enable *Show Mist*.
 
    The camera will show mist limits as a line projecting from the camera starting from
-   :guilabel:`Start` and of distance :guilabel:`Depth`.
+   *Start* and of distance *Depth*.
 
-   To get a better view to evaluate the :guilabel:`Mist` visualization,
-   :kbd:`Shift-pad1` with the camera selected
-   (:kbd:`pad5` to toggle perspective view on and off).
+   To get a better view to evaluate the *Mist* visualization,
+   :kbd:`Shift-Numpad1` with the camera selected
+   (:kbd:`Numpad5` to toggle perspective view on and off).
    This will place the 3D view right over the camera looking down.
 
 
 Transparency
 ============
 
-Because :guilabel:`Mist` works by adjusting transparency,
+Because *Mist* works by adjusting transparency,
 this can sometimes cause objects to be partially transparent when they shouldn't be.
 One workaround is to set the Mist settings as desired, but turn Mist off.
 The Mist data is still available for compositing even though it is off.  Use :doc:`Do Composite </composite_nodes>`
@@ -79,7 +80,7 @@ Examples
 
 
 In this example (`.blend <http://wiki.blender.org/index.php/:File:25-Manual-World-Mist-Example1.blend>`__)
-the :guilabel:`Mist` :guilabel:`Height` options has been limited to create smoke covering the floor.
+the *Mist* *Height* options has been limited to create smoke covering the floor.
 
 
 This simple scene was inspired by [http://stefan-morrell.cgsociety.org/gallery/536375/ Stefan

@@ -22,15 +22,15 @@ Object mode
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode`
+   | Mode:     *Object mode*
    | Menu:     Via the icon in the header indicated by the yellow square in the below image.
 
    .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-proportional-edit-header-icon.jpg
-   | Hotkey:   :kbd:`o`
+   | Hotkey:   :kbd:`O`
 
 
-Proportional editing is typically used in :guilabel:`Edit mode`, however,
-it can also be used in :guilabel:`Object mode`. In :guilabel:`Object mode` the tool works on
+Proportional editing is typically used in *Edit mode*, however,
+it can also be used in *Object mode*. In *Object mode* the tool works on
 entire objects rather than individual mesh components. In the image below,
 the green cube is the active Object, while the red and blue cubes are located within the
 proportional edit tool's radius of influence. When the green cube is moved to the right,
@@ -48,12 +48,12 @@ Edit mode
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Mesh --> Proportional Editing` and via the highlighted icon in the below image
 
 
    .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-proportional-edit-header-icon-edit-mode.jpg
-   | Hotkey:   :kbd:`o` / :kbd:`alt-o` / :kbd:`shift-o`
+   | Hotkey:   :kbd:`O` / :kbd:`Alt-O` / :kbd:`Shift-O`
 
 
 When working with dense geometry, it can become difficult to make subtle adjustments to the
@@ -72,7 +72,7 @@ Influence
 ---------
 
 You can increase or decrease the radius of the proportional editing influence with the mouse
-wheel :kbd:`wheelup` / :kbd:`wheeldown` or :kbd:`pgup` / :kbd:`pgdown`
+wheel :kbd:`WheelUp` / :kbd:`WheelDown` or :kbd:`PageUp` / :kbd:`PageDown`
 respectively. As you change the radius,
 the points surrounding your selection will adjust their positions accordingly.
 
@@ -99,12 +99,12 @@ Options
    Falloff menu.
 
 
-The :guilabel:`Proportional Editing` mode menu is on the :guilabel:`3D View` header.
+The *Proportional Editing* mode menu is on the *3D View* header.
 
-Disable (:kbd:`o` or :kbd:`Alt-o`)
+Disable (:kbd:`O` or :kbd:`Alt-O`)
    Proportional Editing is Off, only selected vertices will be affected.
 
-Enable (:kbd:`o` or :kbd:`Alt-o`)
+Enable (:kbd:`O` or :kbd:`Alt-O`)
    Vertices other than the selected vertex are affected, within a defined radius.
 
 Projected (2D)
@@ -118,17 +118,17 @@ Projected (2D)
    The difference between regular and Projected (2D) proportional option (right).
 
 
-Connected (:kbd:`alt-o`)
+Connected (:kbd:`Alt-O`)
    Rather than using a radius only, the proportional falloff spreads via connected geometry. This means that you can
    proportionally edit the vertices in a finger of a hand without affecting the other fingers.
    While the other vertices are physically close (in 3D space),
    they are far away following the topological edge connections of the mesh.
-   The icon will have a grey center when :guilabel:`Connected` is active.
-   This mode is only available in :guilabel:`Edit mode`.
+   The icon will have a grey center when *Connected* is active.
+   This mode is only available in *Edit mode*.
 
 
 Falloff
-   While you are editing, you can change the curve profile used by either using the :menuselection:`Mesh --> Proportional Falloff` submenu, using the toolbar icon (*Falloff menu*), or by pressing :kbd:`shift-o` to toggle between the various options.
+   While you are editing, you can change the curve profile used by either using the :menuselection:`Mesh --> Proportional Falloff` submenu, using the toolbar icon (*Falloff menu*), or by pressing :kbd:`Shift-O` to toggle between the various options.
 
 
 +-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
@@ -161,15 +161,15 @@ Falloff
 Examples
 --------
 
-Switch to a front view (:kbd:`pad1`) and activate the grab tool with :kbd:`g`.
+Switch to a front view (:kbd:`Numpad1`) and activate the grab tool with :kbd:`G`.
 As you drag the point upwards, notice how nearby vertices are dragged along with it.
-When you are satisfied with the placement, click :kbd:`lmb` to fix the position.
+When you are satisfied with the placement, click :kbd:`LMB` to fix the position.
 If you are not satisfied,
-cancel the operation and revert your mesh to the way it looked before with :kbd:`rmb`
-(or :kbd:`esc`).
+cancel the operation and revert your mesh to the way it looked before with :kbd:`RMB`
+(or :kbd:`Esc`).
 
 You can use the proportional editing tool to produce great effects with the scaling
-(:kbd:`s`) and rotation (:kbd:`r`) tools,
+(:kbd:`S`) and rotation (:kbd:`R`) tools,
 as *A landscape obtained via proportional editing* shows.
 
 

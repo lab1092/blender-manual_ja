@@ -11,152 +11,65 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:5
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:6
 msgid "Area Raytraced Shadows"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:11
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:12
 msgid "Adaptive QMC settings"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:14
-msgid ""
-"The :guilabel:`Area` light source can only cast ray-traced shadows. The ray-"
-"traced shadows settings of this lamp are mostly shared with other lamps, as "
-"described in :doc:`Raytraced Properties "
-"</lighting/shadows/raytraced_properties>`. However, there are some specifics"
-" with this lamp, which are detailed below:"
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:18
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:19
 msgid "Shadow Samples"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:23
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:24
 msgid "Samples"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:21
-msgid ""
-"This have the same role as with other lamps, but when using a "
-":guilabel:`Rectangle` :guilabel:`Area` lamp, you have two samples settings: "
-":guilabel:`Samples X` and :guilabel:`Samples Y`, for the two axes of the "
-"area plane. Note also that when using the :guilabel:`Constant Jittered` "
-"sample generator method, this is more or less equivalent to the number of "
-"virtual lamps in the area. With QMC sample generator methods, it behaves "
-"similarly to with :guilabel:`Lamp` or :guilabel:`Spot` lamps."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:26
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:27
 msgid "Sample Generator Types"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:30
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:31
 msgid "Adaptive QMC;\\ Constant QMC"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:29
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:30
 msgid ""
 "These common setting are described in :doc:`Shadow Properties "
 "</lighting/shadows/properties>`."
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:36
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:37
 msgid "Constant Jittered settings"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:57
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:58
 msgid "Constant Jittered"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:40
-msgid ""
-"The :guilabel:`Area` lamp has a third sample generator method, "
-":guilabel:`Constant Jittered`, which is more like simulating an array of "
-"lights. It has the same options as the old one: :guilabel:`Umbra`, "
-":guilabel:`Dither` and :guilabel:`Jitter`."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:42
-msgid ""
-"The following three parameters are only available when using the "
-":guilabel:`Constant Jittered` sample generator method, and are intended to "
-"artificially boost the \"soft\" shadow effect, with possible loss in "
-"quality:"
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:45
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:46
 msgid "Umbra"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:45
-msgid ""
-"Emphasizes the intensity of shadows in the area fully within the shadow "
-"rays. The light transition between fully shadowed areas and fully lit areas "
-"changes more quickly (i.e. a sharp shadow gradient). You need "
-":guilabel:`Samples` values equal to or greater than ``2`` to see any "
-"influence of this button."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:53
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:54
 msgid "Dither"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:48
-msgid ""
-"Applies a sampling over the borders of the shadows, similar to the way anti-"
-"aliasing is applied by the :guilabel:`OSA` button on the borders of an "
-"object. It artificially softens the borders of shadows; when "
-":guilabel:`Samples` is set very low, you can expect poor results, so "
-":guilabel:`Dither` is better used with medium :guilabel:`Samples` values. It"
-" is not useful at all with high :guilabel:`Samples` values, as the borders "
-"will already appear soft."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:57
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:58
 msgid "Jitter"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:56
-msgid ""
-"Adds noise to break up the edges of solid shadow samples, offsetting them "
-"from each other in a pseudo-random way. Once again, this option is not very "
-"useful when you use high :guilabel:`Samples` values where the drawback is "
-"that noise generates quite visible graininess."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:60
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:61
 msgid "Technical Details"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:66
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:67
 msgid "Principles behind the Area light"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:69
-msgid ""
-"The (*Principles behind the* :guilabel:`Area` *light*) picture helps to "
-"understand how the soft shadows are simulated."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:72
-msgid ""
-"``(a)`` is the :guilabel:`Area` light as defined in Blender. If its shape is"
-" :guilabel:`Square`, then the softness of the shadow is defined by the "
-"number of light :guilabel:`Samples` in each direction of the shape. For "
-"example, ``(b)`` illustrates the equivalent case of an :guilabel:`Area` "
-"light (:guilabel:`Square` shape), with :guilabel:`Samples` set at ``3`` on "
-"the :guilabel:`Shadow and Spot` panel."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:74
-msgid ""
-"The :guilabel:`Area` lamp is then considered as a grid with a resolution of "
-"three in each direction, and with a light \"dupliverted\" at each node for a"
-" total of nine lights."
-msgstr ""
-
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:77
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:78
 msgid ""
 "In case ``(a)``, the energy (``E``) is ``E/1``, and in case ``(b)``, the "
 "energy of each individual pseudo-light is equal to ``E/ (Nbr of lights)``. "
@@ -165,30 +78,208 @@ msgid ""
 "individual shadows overlap, and lighter everywhere else)."
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:85
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:86
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:87
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:15
 msgid ""
-"You will note that changing the :guilabel:`Size` parameter of your area lamp"
-" doesn't affect the lighting intensity of your scene. On the other hand, "
-"rescaling the lamp using the :kbd:`S` in the 3D View could dramatically "
-"increase or decrease the lighting intensity of the scene. This behavior has "
-"been coded this way so that you can fine tune all your light settings and "
-"then decide to scale up (or down) the whole scene without suffering from a "
-"drastic change in the lighting intensity. If you only want to change the "
-"dimensions of your :guilabel:`Area` lamp, without messing with its lighting "
-"intensity, you are strongly encouraged to use the :guilabel:`Size` button(s)"
-" instead."
+"The *Area* light source can only cast ray-traced shadows. The ray-traced "
+"shadows settings of this lamp are mostly shared with other lamps, as "
+"described in :doc:`Raytraced Properties "
+"</lighting/shadows/raytraced_properties>`. However, there are some specifics"
+" with this lamp, which are detailed below:"
 msgstr ""
 
-#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:97
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:22
 msgid ""
-"If your computer isn't very fast, when using the :guilabel:`Constant "
-"Jittered` sample generator method, you could find it useful to set a low "
-":guilabel:`Samples` value (like ``2``) and activate :guilabel:`Umbra`, "
-":guilabel:`Dither`, and/or :guilabel:`Jitter` in order to simulate slightly "
-"softer shadows. However, these results will never be better than the same "
-"lighting with high :guilabel:`Samples` values."
+"This have the same role as with other lamps, but when using a *Rectangle* "
+"*Area* lamp, you have two samples settings: *Samples X* and *Samples Y*, for"
+" the two axes of the area plane. Note also that when using the *Constant "
+"Jittered* sample generator method, this is more or less equivalent to the "
+"number of virtual lamps in the area. With QMC sample generator methods, it "
+"behaves similarly to with *Lamp* or *Spot* lamps."
 msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:41
+msgid ""
+"The *Area* lamp has a third sample generator method, *Constant Jittered*, "
+"which is more like simulating an array of lights. It has the same options as"
+" the old one: *Umbra*, *Dither* and *Jitter*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:43
+msgid ""
+"The following three parameters are only available when using the *Constant "
+"Jittered* sample generator method, and are intended to artificially boost "
+"the \"soft\" shadow effect, with possible loss in quality:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:46
+msgid ""
+"Emphasizes the intensity of shadows in the area fully within the shadow "
+"rays. The light transition between fully shadowed areas and fully lit areas "
+"changes more quickly (i.e. a sharp shadow gradient). You need *Samples* "
+"values equal to or greater than ``2`` to see any influence of this button."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:49
+msgid ""
+"Applies a sampling over the borders of the shadows, similar to the way anti-"
+"aliasing is applied by the *OSA* button on the borders of an object. It "
+"artificially softens the borders of shadows; when *Samples* is set very low,"
+" you can expect poor results, so *Dither* is better used with medium "
+"*Samples* values. It is not useful at all with high *Samples* values, as the"
+" borders will already appear soft."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:57
+msgid ""
+"Adds noise to break up the edges of solid shadow samples, offsetting them "
+"from each other in a pseudo-random way. Once again, this option is not very "
+"useful when you use high *Samples* values where the drawback is that noise "
+"generates quite visible graininess."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:70
+msgid ""
+"The (*Principles behind the* *Area* *light*) picture helps to understand how"
+" the soft shadows are simulated."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:73
+msgid ""
+"``(a)`` is the *Area* light as defined in Blender. If its shape is *Square*,"
+" then the softness of the shadow is defined by the number of light *Samples*"
+" in each direction of the shape. For example, ``(b)`` illustrates the "
+"equivalent case of an *Area* light (*Square* shape), with *Samples* set at "
+"``3`` on the *Shadow and Spot* panel."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:75
+msgid ""
+"The *Area* lamp is then considered as a grid with a resolution of three in "
+"each direction, and with a light \"dupliverted\" at each node for a total of"
+" nine lights."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:88
+msgid ""
+"You will note that changing the *Size* parameter of your area lamp doesn't "
+"affect the lighting intensity of your scene. On the other hand, rescaling "
+"the lamp using the :kbd:`S` in the 3D View could dramatically increase or "
+"decrease the lighting intensity of the scene. This behavior has been coded "
+"this way so that you can fine tune all your light settings and then decide "
+"to scale up (or down) the whole scene without suffering from a drastic "
+"change in the lighting intensity. If you only want to change the dimensions "
+"of your *Area* lamp, without messing with its lighting intensity, you are "
+"strongly encouraged to use the *Size* button(s) instead."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:98
+msgid ""
+"If your computer isn't very fast, when using the *Constant Jittered* sample "
+"generator method, you could find it useful to set a low *Samples* value "
+"(like ``2``) and activate *Umbra*, *Dither*, and/or *Jitter* in order to "
+"simulate slightly softer shadows. However, these results will never be "
+"better than the same lighting with high *Samples* values."
+msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Area` light source can only cast ray-traced shadows. The ray-"
+#~ "traced shadows settings of this lamp are mostly shared with other lamps, as "
+#~ "described in :doc:`Raytraced Properties "
+#~ "</lighting/shadows/raytraced_properties>`. However, there are some specifics"
+#~ " with this lamp, which are detailed below:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This have the same role as with other lamps, but when using a "
+#~ ":guilabel:`Rectangle` :guilabel:`Area` lamp, you have two samples settings: "
+#~ ":guilabel:`Samples X` and :guilabel:`Samples Y`, for the two axes of the "
+#~ "area plane. Note also that when using the :guilabel:`Constant Jittered` "
+#~ "sample generator method, this is more or less equivalent to the number of "
+#~ "virtual lamps in the area. With QMC sample generator methods, it behaves "
+#~ "similarly to with :guilabel:`Lamp` or :guilabel:`Spot` lamps."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Area` lamp has a third sample generator method, "
+#~ ":guilabel:`Constant Jittered`, which is more like simulating an array of "
+#~ "lights. It has the same options as the old one: :guilabel:`Umbra`, "
+#~ ":guilabel:`Dither` and :guilabel:`Jitter`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following three parameters are only available when using the "
+#~ ":guilabel:`Constant Jittered` sample generator method, and are intended to "
+#~ "artificially boost the \"soft\" shadow effect, with possible loss in "
+#~ "quality:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Emphasizes the intensity of shadows in the area fully within the shadow "
+#~ "rays. The light transition between fully shadowed areas and fully lit areas "
+#~ "changes more quickly (i.e. a sharp shadow gradient). You need "
+#~ ":guilabel:`Samples` values equal to or greater than ``2`` to see any "
+#~ "influence of this button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Applies a sampling over the borders of the shadows, similar to the way anti-"
+#~ "aliasing is applied by the :guilabel:`OSA` button on the borders of an "
+#~ "object. It artificially softens the borders of shadows; when "
+#~ ":guilabel:`Samples` is set very low, you can expect poor results, so "
+#~ ":guilabel:`Dither` is better used with medium :guilabel:`Samples` values. It"
+#~ " is not useful at all with high :guilabel:`Samples` values, as the borders "
+#~ "will already appear soft."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Adds noise to break up the edges of solid shadow samples, offsetting them "
+#~ "from each other in a pseudo-random way. Once again, this option is not very "
+#~ "useful when you use high :guilabel:`Samples` values where the drawback is "
+#~ "that noise generates quite visible graininess."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The (*Principles behind the* :guilabel:`Area` *light*) picture helps to "
+#~ "understand how the soft shadows are simulated."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``(a)`` is the :guilabel:`Area` light as defined in Blender. If its shape is"
+#~ " :guilabel:`Square`, then the softness of the shadow is defined by the "
+#~ "number of light :guilabel:`Samples` in each direction of the shape. For "
+#~ "example, ``(b)`` illustrates the equivalent case of an :guilabel:`Area` "
+#~ "light (:guilabel:`Square` shape), with :guilabel:`Samples` set at ``3`` on "
+#~ "the :guilabel:`Shadow and Spot` panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Area` lamp is then considered as a grid with a resolution of "
+#~ "three in each direction, and with a light \"dupliverted\" at each node for a"
+#~ " total of nine lights."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You will note that changing the :guilabel:`Size` parameter of your area lamp"
+#~ " doesn't affect the lighting intensity of your scene. On the other hand, "
+#~ "rescaling the lamp using the :kbd:`S` in the 3D View could dramatically "
+#~ "increase or decrease the lighting intensity of the scene. This behavior has "
+#~ "been coded this way so that you can fine tune all your light settings and "
+#~ "then decide to scale up (or down) the whole scene without suffering from a "
+#~ "drastic change in the lighting intensity. If you only want to change the "
+#~ "dimensions of your :guilabel:`Area` lamp, without messing with its lighting "
+#~ "intensity, you are strongly encouraged to use the :guilabel:`Size` button(s)"
+#~ " instead."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your computer isn't very fast, when using the :guilabel:`Constant "
+#~ "Jittered` sample generator method, you could find it useful to set a low "
+#~ ":guilabel:`Samples` value (like ``2``) and activate :guilabel:`Umbra`, "
+#~ ":guilabel:`Dither`, and/or :guilabel:`Jitter` in order to simulate slightly "
+#~ "softer shadows. However, these results will never be better than the same "
+#~ "lighting with high :guilabel:`Samples` values."
+#~ msgstr ""

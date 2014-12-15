@@ -5,13 +5,14 @@
    }} .
 
 
+***************************
 Rigid Body Joint Constraint
 ***************************
 
 Description
 ===========
 
-The :guilabel:`Rigid Body Joint` constraint is very special. Basically, it is used by the
+The *Rigid Body Joint* constraint is very special. Basically, it is used by the
 physical part of the Blender Game Engine to simulate a joint between its owner and its target.
 It offers four joint types: hinge type, ball-and-socket type, cone-twist, and generic six-DoF
 (degrees of freedom) type.
@@ -22,7 +23,7 @@ the other end of the stick rotating around the joint/pivot point...
 
 This constraint is of no use in most "standard" static or animated projects. However,
 you can use its results outside of the BGE, through the :menuselection:`Game --> Record Animation` menu entry
-(from the main menu of the :guilabel:`User Preferences` window,
+(from the main menu of the *User Preferences* window,
 see :doc:`Rigid Bodies </physics/using_ge>` for more info on this topic).
 
 
@@ -51,7 +52,7 @@ Joint Type:
       Limits
          Angular limits for the X axis
    Cone Twist
-      similar to :guilabel:`Ball`, this is a point-to-point joint with limits added for the cone and twist axis
+      similar to *Ball*, this is a point-to-point joint with limits added for the cone and twist axis
 
       Limits
          Angular limits
@@ -72,7 +73,7 @@ Linked Collision
    When enabled, this will disable the collision detection between the owner and the target (in the physical engine of the BGE).
 
 Display Pivot
-   When enabled, this will draw the pivot of the joint in the 3D views. Most useful, especially with the :guilabel:`Generic 6DOF` joint type!
+   When enabled, this will draw the pivot of the joint in the 3D views. Most useful, especially with the *Generic 6DOF* joint type!
 
 Pivot
    These three numeric fields allow you to relocate the pivot point, *in the owner's space*.

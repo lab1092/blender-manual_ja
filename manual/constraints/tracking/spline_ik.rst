@@ -4,22 +4,23 @@
    }} .
 
 
+********************
 Spline IK Constraint
 ********************
 
-The :guilabel:`Spline IK` constraint aligns a chain of bones along a curve. By leveraging the
+The *Spline IK* constraint aligns a chain of bones along a curve. By leveraging the
 ease and flexibility of achieving aesthetically pleasing shapes offered by curves and the
 predictability and well-integrated control offered by bones,
-:guilabel:`Spline IK` is an invaluable tool in the riggers' toolbox.
+*Spline IK* is an invaluable tool in the riggers' toolbox.
 It is particularly well suited for rigging flexible body parts such as tails, tentacles,
 and spines, as well as inorganic items such as ropes.
 
-To set up :guilabel:`Spline IK`,
+To set up *Spline IK*,
 it is necessary to have a chain of connected bones and a curve to constrain these bones to.
 
-- With the last bone in the chain selected, add a :guilabel:`Spline IK` constraint from the :guilabel:`Bone Constraints` tab in the :guilabel:`Properties Editor`.
+- With the last bone in the chain selected, add a *Spline IK* constraint from the *Bone Constraints* tab in the *Properties Editor*.
 - Set the 'Chain Length' setting to the number of bones in the chain (starting from and including the selected bone) that should be influenced by the curve.
-- Finally, set :guilabel:`Target` to the curve that should control the curve.
+- Finally, set *Target* to the curve that should control the curve.
 
 
 Options

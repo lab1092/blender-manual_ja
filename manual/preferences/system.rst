@@ -1,9 +1,10 @@
 
 
+******************
 System preferences
 ******************
 
-This picture shows the :guilabel:`System` tab in the :guilabel:`User Preferences` editor in
+This picture shows the *System* tab in the *User Preferences* editor in
 Blender. Options are explained below.
 
 
@@ -20,9 +21,9 @@ DPI
    Useful for taking screen shots for book printing and use of high resolution monitors,
    (such as Retina Display and others) matching the screen DPI with Blender DPI.
    During normal usage, most Blender users might prefer to zoom screen elements
-   pressing :kbd:`ctrl` and dragging :kbd:`mmb` left and right over a panel to resize its contents,
+   pressing :kbd:`Ctrl` and dragging :kbd:`MMB` left and right over a panel to resize its contents,
    or use the :kbd:`Numpad-+` and :kbd:`Numpad--` to zoom in and out the contents.
-   Pressing :kbd:`home` (Show All) will reset the zooming at the screen/panel focused by the mouse pointer.
+   Pressing :kbd:`Home` (Show All) will reset the zooming at the screen/panel focused by the mouse pointer.
    Minimum: **48** , Maximum: **128** , Default:\ **72**
 Frame Server Port
    TCP/IP port used in conjunction with the IP Address of the machine for frameserver rendering.
@@ -54,22 +55,22 @@ Sound
       Uses OpenAL soft API for Linux and OpenAL from creative Labs for Windows.
       This API provides buffered sound rendering with 3D/spatial support. Useful for the BGE Games.
 
-:guilabel:`'Specific sound options'` (With :guilabel:`SDL` or :guilabel:`OpenAL` enabled)
+*'Specific sound options'* (With *SDL* or *OpenAL* enabled)
 
 
 
    Channels
       Set the audio channel count. Available options are:
-      *Stereo* (Default) , :guilabel:`4 Channels` , :guilabel:`5.1 Surround` , :guilabel:`7.1 Surround`
+      *Stereo* (Default) , *4 Channels* , *5.1 Surround* , *7.1 Surround*
    Mixing Buffer
       Set the number of samples used by the audio mixing buffer. Available options are:
-       :guilabel:`512` , :guilabel:`1024` , *2048* (Default), :guilabel:`4096` , :guilabel:`8192`, :guilabel:`16384`, and :guilabel:`32768`
+       *512* , *1024* , *2048* (Default), *4096* , *8192*, *16384*, and *32768*
    Sample Rate
       Set the audio sample rate. Available options are:
-      *44.1 Khz* (Default), :guilabel:`48 Khs` , :guilabel:`96 Khz` and :guilabel:`192Khz`
+      *44.1 Khz* (Default), *48 Khs* , *96 Khz* and *192Khz*
    Sample Format
       Set the audio sample format. Available options are:
-      *32 bit float* (Default),  :guilabel:`8 bit Unsigned` , :guilabel:`16 Bits Signed` , :guilabel:`24 Bits Signed` , :guilabel:`32 Bits Signed` , :guilabel:`32 Bits Float` and :guilabel:`64 Bits Float`
+      *32 bit float* (Default),  *8 bit Unsigned* , *16 Bits Signed* , *24 Bits Signed* , *32 Bits Signed* , *32 Bits Float* and *64 Bits Float*
 
 
 Screencast
@@ -81,11 +82,11 @@ TODO
 Compute Device
 ==============
 
-:guilabel:`The Options here will set the compute device used by the Cycles Render Engine`
+*The Options here will set the compute device used by the Cycles Render Engine*
 
 
    None
-      When set to :guilabel:`None` or the only option is :guilabel:`None`:
+      When set to *None* or the only option is *None*:
       your CPU will be used as a computing device for Cycles Render Engine
 
 
@@ -97,7 +98,7 @@ Compute Device
       the user will be able to choose whether to use CPU or other computing device for Cycles Rendering.
 
 
-:guilabel:`OpenCL''`:sup:`1`  is unsupported, see: :doc:`Cycles </render/cycles>` Render engine page
+*OpenCL''*:sup:`1`  is unsupported, see: :doc:`Cycles </render/cycles>` Render engine page
 
 
 Open GL
@@ -118,7 +119,7 @@ GPU MipMap Generation
    Enables the use of 16 Bit per component Texture Images (Floating point Images).
 Anisotropic Filtering
    Set the level of anisotropic filtering. Available Options are:
-   :guilabel:`Off'' (No Filtering)` , 2x (Default) , :guilabel:`4x` , :guilabel:`8x` , :guilabel:`16x`
+   *Off'' (No Filtering)* , 2x (Default) , *4x* , *8x* , *16x*
 VBOs
    Use Vertex Buffer Objects, or vertex arrays if unsupported, for viewport rendering.
    Helps to speed up viewport rendering by allowing vertex array data to be stored in Graphics card memory.
@@ -157,11 +158,11 @@ Window Draw Method
 Region Overlap
    This checkbox will enable Blender to draw regions overlapping the 3D Window.
    It means that the Object Tools and Transform Properties Tab,
-   which are opened by using the shortcuts :kbd:`t` and :kbd:`n` will be drawn overlapping the 3D View Window.
+   which are opened by using the shortcuts :kbd:`T` and :kbd:`N` will be drawn overlapping the 3D View Window.
 
 
-   If you have a capable graphics card and drivers with :guilabel:`Triple Buffer` support,
-   clicking the checkbox will enable the overlapping regions to be drawn using the :guilabel:`Triple Buffer` method,
+   If you have a capable graphics card and drivers with *Triple Buffer* support,
+   clicking the checkbox will enable the overlapping regions to be drawn using the *Triple Buffer* method,
    which will also enable them to be drawn using Alpha, showing the 3D View contents trough the
    Object Tools and Transform Properties Tab.
 
@@ -184,7 +185,7 @@ Limit Size
    (e.g.: the option 256 means a texture of 256x256 pixels)
    This is useful for game engineers, whereas the texture limit matches paging blocks of the textures in the target graphic card memory .
    Available Options are:
-   *Off* (No limit - Default) , :guilabel:`128`, :guilabel:`256`, :guilabel:`512`, :guilabel:`1024`, :guilabel:`2048`, :guilabel:`4096`, :guilabel:`8192`.
+   *Off* (No limit - Default) , *128*, *256*, *512*, *1024*, *2048*, *4096*, *8192*.
 Time Out
    Time since last access of a GL texture in seconds, after which it is freed. Set to 0 to keep textures allocated.
    Minimum: **0** , Maximum: **3600** , Default: **120**
@@ -215,8 +216,8 @@ Solid OpenGL lights
 ===================
 
 Solid OpenGL Lights
-   :guilabel:`Solid OpenGL Lights`  are used to light the 3D Window,
-   mostly during :guilabel:`Solid view`. Lighting is constant and position "world" based.
+   *Solid OpenGL Lights*  are used to light the 3D Window,
+   mostly during *Solid view*. Lighting is constant and position "world" based.
    There are three virtual light sources, also called OpenGL auxiliary lamps,
    used to illuminate 3D View scenes, which will not display in renders.
 
@@ -228,7 +229,7 @@ Solid OpenGL Lights
 
 
    Direction:
-      Clicking with :kbd:`lmb` in the sphere and dragging the mouse cursor
+      Clicking with :kbd:`LMB` in the sphere and dragging the mouse cursor
       let's the user change the direction of the lamp by rotating the sphere.
       The direction of the lamp will be the same as shown at the sphere surface.
 
@@ -249,11 +250,11 @@ Color Picker Type
 =================
 
 Color Picker Type
-   Choose which type of color dialog you prefer - it will show when clicking :kbd:`lmb` on any color field.
+   Choose which type of color dialog you prefer - it will show when clicking :kbd:`LMB` on any color field.
 
 
    There are **4** types of color pickers available for Blender:
-      :guilabel:`Circle` (Default), :guilabel:`Square (HS + V)` , :guilabel:`Square (SV + H)` and :guilabel:`Square (HV + S)`
+      *Circle* (Default), *Square (HS + V)* , *Square (SV + H)* and *Square (HV + S)*
 
 
       The color pickers are detailed at the :doc:`Buttons and Controls </interface/buttons_and_controls>` page.
@@ -263,7 +264,7 @@ Custom Weight Paint Range
 =========================
 
 Custom Weight Paint Range
-   :guilabel:`Mesh skin weighting` is used to control how much a bone deforms the mesh of a character.
+   *Mesh skin weighting* is used to control how much a bone deforms the mesh of a character.
    To visualize and paint these weights, Blender uses a color ramp (from blue to green, and from yellow to red).
    Enabling the checkbox will enable an alternate map using a ramp starting with an empty range.
    Now you can create your custom map using the common color ramp options.

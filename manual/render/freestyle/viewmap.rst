@@ -1,4 +1,5 @@
 
+********
 Viewmaps
 ********
 
@@ -20,9 +21,9 @@ Face Smoothness
 
 
 Crease Angle
-   If two adjacent faces form an angle less than the defined :guilabel:`Crease Angle`,
-   the edge between them will be rendered when using :guilabel:`Crease` edge type selection in a line set.
-   The value also affects :guilabel:`Silhouette` edge type selection.
+   If two adjacent faces form an angle less than the defined *Crease Angle*,
+   the edge between them will be rendered when using *Crease* edge type selection in a line set.
+   The value also affects *Silhouette* edge type selection.
 
 Culling
    Ignore the edges that are out of view (saves some processing time and memory,
@@ -39,11 +40,11 @@ Advanced Options
    Advanced Options
 
 
-:guilabel:`Sphere Radius`
-It affects the calculation of curvatures for :guilabel:`Ridge`,
-:guilabel:`Valley` and :guilabel:`Suggestive Contour` edge type selection in a line set.
+*Sphere Radius*
+It affects the calculation of curvatures for *Ridge*,
+*Valley* and *Suggestive Contour* edge type selection in a line set.
 
 Kr Derivative Epsilon
-   It provides you with control over the output of :guilabel:`Suggestive Contour` and :guilabel:`Silhouette`
+   It provides you with control over the output of *Suggestive Contour* and *Silhouette*
    edge type selection (further information in
    `this pdf <http://wiki.blender.org/index.php/file:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf>`__).

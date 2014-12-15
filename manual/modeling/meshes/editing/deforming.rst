@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review|text=move?}} .
 
+******************
 Deforming Geometry
 ******************
 
@@ -43,12 +44,12 @@ Warp
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh/Curve/Surface --> Transform --> Warp`
-   | Hotkey:   :kbd:`shift-W`
+   | Hotkey:   :kbd:`Shift-W`
 
 
-The :guilabel:`Warp` transformation is useful in very specific cases.
+The *Warp* transformation is useful in very specific cases.
 It works by warping the selected elements around the 3D cursor (always the 3D cursor;
 it does not take into account the pivot point setting...). It is also view-dependent.
 The points that line up vertically with the cursor will remain in place. Each point's distance
@@ -68,7 +69,7 @@ A cylinder is warped into a semicircular shape
 
 
 - Switch to top view and move the mesh away from the 3D cursor. This distance defines the radius of the warp.
-- Place the mesh in :guilabel:`Edit` mode (:kbd:`tab`) and press :kbd:`A` to select all vertices. Press :kbd:`shift-W` to activate the warp transform tool. Move the mouse left or right to interactively define the amount of warp.
+- Place the mesh in *Edit* mode (:kbd:`Tab`) and press :kbd:`A` to select all vertices. Press :kbd:`Shift-W` to activate the warp transform tool. Move the mouse left or right to interactively define the amount of warp.
 
 
 .. figure:: /images/WarpTool1.jpg
@@ -98,13 +99,13 @@ Shear
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Object/Mesh/Curve/Surface --> Transform --> Shear`
-   | Hotkey:   :kbd:`ctrl-alt-shift-S`
+   | Hotkey:   :kbd:`Ctrl-Alt-Shift-S`
 
 
-The :guilabel:`Shear` transformation applies a shearing on your selection of elements
-(in :guilabel:`Edit` mode, vertices/edges/control points/...). Like the other transform tools,
+The *Shear* transformation applies a shearing on your selection of elements
+(in *Edit* mode, vertices/edges/control points/...). Like the other transform tools,
 it uses the view space, and is centered on the pivot point:
 the shear occurs along the view's x-axis passing through the pivot point.
 Everything that is "above" this axis (i.e. has a positive y-axis position) will move (shear)
@@ -115,9 +116,9 @@ The further away from the x-axis an element is, the more it moves.
 When the tool becomes active,
 move the mouse left to right to interactively control the shearing.
 To make the effect work on the vertical axis instead of the horizontal one,
-click the :kbd:`mmb` and then move the mouse up or down.
+click the :kbd:`MMB` and then move the mouse up or down.
 Alternatively enter a numerical value from 0 to infinity. To finish with the tool,
-press the :kbd:`lmb`.
+press the :kbd:`LMB`.
 
 
 .. figure:: /images/Shear1.jpg
@@ -147,10 +148,10 @@ To Sphere
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` modes
-   | Panel:    :guilabel:`Mesh Tools` (:guilabel:`Editing` context)
+   | Mode:     *Edit* modes
+   | Panel:    *Mesh Tools* (*Editing* context)
    | Menu:     :menuselection:`Mesh/Curve/Surface --> Transform --> To Sphere`
-   | Hotkey:   :kbd:`shift-alt-S`
+   | Hotkey:   :kbd:`Shift-Alt-S`
 
 
 This command "spherifies" the selected mesh elements.
@@ -169,11 +170,11 @@ Example
 
 First, start with a :doc:`Cube </modeling/meshes/primitives#cube>`.
 
-- Press :kbd:`tab` to switch into :guilabel:`Edit` mode.
-- Make sure all the vertices of the cube are selected by pressing :kbd:`A` twice. Then, go to the :guilabel:`Editing` context by pressing :kbd:`F9`. You should be able to see the :guilabel:`Mesh Tools` panel now.
-- Subdivide the cube by pressing the :guilabel:`Subdivide` button in the :guilabel:`Mesh Tools` panel, or with :menuselection:`[W] --> Subdivide`. You can do this as many times as you want; the more you subdivide, the smoother your sphere will be.
-- Now, press :kbd:`shift-alt-S` and move your mouse left or right to interactively control the proportion of "spherification" (or directly type a value, like "1.000" to achieve the same effect as below) - preferably using the :guilabel:`Median Point` pivot point!
-- Alternatively, you can use the :guilabel:`To Sphere` button (in the :guilabel:`Mesh Tools` panel). Select "100" to make your sphere. Note that you *should not move the 3D cursor* - or you won't get a sphere, but a piece of sphere...
+- Press :kbd:`Tab` to switch into *Edit* mode.
+- Make sure all the vertices of the cube are selected by pressing :kbd:`A` twice. Then, go to the *Editing* context by pressing :kbd:`F9`. You should be able to see the *Mesh Tools* panel now.
+- Subdivide the cube by pressing the *Subdivide* button in the *Mesh Tools* panel, or with :menuselection:`[W] --> Subdivide`. You can do this as many times as you want; the more you subdivide, the smoother your sphere will be.
+- Now, press :kbd:`Shift-Alt-S` and move your mouse left or right to interactively control the proportion of "spherification" (or directly type a value, like "1.000" to achieve the same effect as below) - preferably using the *Median Point* pivot point!
+- Alternatively, you can use the *To Sphere* button (in the *Mesh Tools* panel). Select "100" to make your sphere. Note that you *should not move the 3D cursor* - or you won't get a sphere, but a piece of sphere...
 
 
 .. figure:: /images/ToSphereBefore.jpg

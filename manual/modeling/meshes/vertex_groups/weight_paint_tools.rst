@@ -1,4 +1,5 @@
 
+************
 Weight Tools
 ************
 
@@ -54,7 +55,10 @@ Operator Parameters
 Lock Active
    Keep the values of the active group while normalizing all the others.
 
-Please note: Currently this tool normalizes ALL vertex groups except the locked vertex groups.
+
+.. note::
+
+   Currently this tool normalizes ALL vertex groups except the locked vertex groups.
 
 
 Normalize
@@ -135,8 +139,6 @@ Examples:
 - original 0.5 remains 0.5
 - original 0.0 converts to 1.0
 
-Note: Please see how the parameter settings change the behavior.
-
 
 Operator Parameters
 -------------------
@@ -147,13 +149,15 @@ Operator Parameters
 
 
 Subset
-   Restrict the tool to a subset. See above (:guilabel:`The Subset Option`) about how subsets are defined.
+   Restrict the tool to a subset. See above (*The Subset Option*) about how subsets are defined.
 Add Weights
    Add verts that have no weight before inverting (these weights will all be set to 1.0)
 Remove Weights
    Remove verts from the Vertex Group if they are 0.0 after inverting.
 
-Note: Locked vertex Groups are not affected.
+.. note::
+
+   Locked vertex Groups are not affected.
 
 
 Clean
@@ -170,7 +174,7 @@ This tool is useful for clearing your weight groups of very low (or zero-) weigh
 In the example shown, I used a cutoff value of 0.139 (see operator options below)
 so all blue parts (left side) are cleaned out (right side).
 
-Note, the images use the :guilabel:`Show Zero weights` =Active option so that unreferenced
+Note, the images use the *Show Zero weights* =Active option so that unreferenced
 Weights are shown in Black.
 
 
@@ -183,7 +187,7 @@ Operator Parameters
 
 
 Subset
-   Restrict the tool to a subset. See above (:guilabel:`The Subset Option`) for how subsets are defined.
+   Restrict the tool to a subset. See above (*The Subset Option*) for how subsets are defined.
 Limit
    This is the minimum weight value that will be kept in the Group.
    Weights below this value will be removed from the group.
@@ -203,7 +207,9 @@ Levels
 Adds an offset and a scale to all weights of the selected Weight Groups.
 with this tool you can raise or lower the overall "heat" of the weight group.
 
-Note: No weight will ever be set to values above 1.0 or below 0.0 regardless of the settings.
+.. note::
+
+   No weight will ever be set to values above 1.0 or below 0.0 regardless of the settings.
 
 
 Operator Parameters
@@ -215,7 +221,7 @@ Operator Parameters
 
 
 Subset
-   Restrict the tool to a subset. See above (:guilabel:`The Subset Option`) for how subsets are defined.
+   Restrict the tool to a subset. See above (*The Subset Option*) for how subsets are defined.
 Offset
    A value from the range [-1.0,1.0]) to be added to all weights in the Vertex Group.
 Gain
@@ -223,9 +229,11 @@ Gain
    The drag sliders of this value allow only a range of [-10.0, 10.0].
    However, you can enter any factor you like here by typing from the keyboard.
 
-Note: Whichever Gain and Offset you choose,
-in all cases the final value of each weight will be clamped to the range [0.0, 1.0].
-So you will never get negative weights or overheated areas (weight > 1.0) with this tool.
+.. note::
+
+   Whichever Gain and Offset you choose,
+   in all cases the final value of each weight will be clamped to the range [0.0, 1.0].
+   So you will never get negative weights or overheated areas (weight > 1.0) with this tool.
 
 
 Blend
@@ -430,7 +438,7 @@ Operator Parameters
 -------------------
 
 Subset
-   Restrict the tool to a subset. See above (:guilabel:`The Subset Option`) for how subsets are defined.
+   Restrict the tool to a subset. See above (*The Subset Option*) for how subsets are defined.
 Limit
    Maximum number of weights allowed on each vertex (default:4)
 
@@ -450,8 +458,8 @@ this is useful at times when painting gradual changes in weight becomes difficul
 
 The gradient tool can be accessed from the Toolbar as a key shortcut:
 
-- Linear: :kbd:`alt-LMB` and drag
-- Radial: :kbd:`alt-ctrl-LMB` and drag
+- Linear: :kbd:`Alt-LMB` and drag
+- Radial: :kbd:`Alt-Ctrl-LMB` and drag
 
 The following weight paint options are used to control the gradient:
 

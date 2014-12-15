@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text= elaborate, exampls?}} .
 
 
+***********
 Input Nodes
 ***********
 
@@ -27,7 +28,7 @@ The shape of the curve can be manipulated to vary the output over time in differ
 
 :kbd:`+`:Zoom in.
 :kbd:`-`:Zoom out
-:guilabel:`Tools`:
+*Tools*:
 
    Reset View
       Resets curve view
@@ -66,10 +67,10 @@ Clipping Options:
    Min X/Y and Max X/Y
       Set the minimum and maximum bounds of the curve points.
 
-:kbd:`x`:Delete curve points. The first and last points cannot be deleted.
-:guilabel:`X and Y` The coordinates of the selected edit point.
-:guilabel:`Sta`:Specify the start frame to use.
-:guilabel:`End`:Specify the end frame to use.
+:kbd:`X`:Delete curve points. The first and last points cannot be deleted.
+*X and Y* The coordinates of the selected edit point.
+*Sta*:Specify the start frame to use.
+*End*:Specify the end frame to use.
 
 
 Coordinates

@@ -1,5 +1,6 @@
 ..    TODO/Review: {{review}} .
 
+*****************
 Installing on Mac
 *****************
 

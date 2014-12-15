@@ -1,4 +1,5 @@
 
+****************
 Arranging frames
 ****************
 
@@ -16,11 +17,11 @@ and it is very easy to work in one window and hop over to work in another.
 Maximizing a window
 ===================
 
-You can maximize a window frame to fill the whole application window with the :guilabel:`View`
-→ :guilabel:`Toggle Full Screen` menu entry. To return to normal size,
-use again :guilabel:`View` → :guilabel:`Toggle Full Screen`.
-A quicker way to achieve this is to use :kbd:`shift-space`,
-:kbd:`ctrl-down` or :kbd:`ctrl-up` to toggle between maximized and framed windows.
+You can maximize a window frame to fill the whole application window with the *View*
+→ *Toggle Full Screen* menu entry. To return to normal size,
+use again *View* → *Toggle Full Screen*.
+A quicker way to achieve this is to use :kbd:`Shift-Space`,
+:kbd:`Ctrl-Down` or :kbd:`Ctrl-Up` to toggle between maximized and framed windows.
 NOTE: The window your mouse is currently hovering over is the one that will be maximized using
 the keyboard shortcuts.
 
@@ -33,7 +34,7 @@ Splitting a window
 In the upper right and lower left corners of a window are the window splitter widgets,
 and they look like a little ridged thumb grip. It both splits and combines window panes.
 When you hover over it, your cursor will change to a cross.
-:kbd:`Lmb` and drag it to the left to split the pane vertically,
+:kbd:`LMB` and drag it to the left to split the pane vertically,
 or downward to split it horizontally.
 
 
@@ -59,23 +60,23 @@ you must first merge those two, and then join the bottom one up to the upper one
 To merge the current window with the one above it
 (in the picture the properties window is being merged "over" the Outliner),
 hover the mouse pointer over the window splitter. When the pointer changes to a cross,
-:kbd:`Lmb` click and drag up to begin the process of combining.
+:kbd:`LMB` click and drag up to begin the process of combining.
 The upper window will get a little darker, overlaid with an arrow pointing up.
 This indicates that the lower (current) frame will "take over" that darkened frame space.
-Let go of the :kbd:`Lmb` to merge. If you want the reverse to occur,
+Let go of the :kbd:`LMB` to merge. If you want the reverse to occur,
 move your mouse cursor back into the original (lower) frame,
 and it will instead get the arrow overlay.
 
 
 In the same way, windows may be merged left to right or vice versa.
 
-If you press :kbd:`esc` before releasing the mouse, the operation will be aborted.
+If you press :kbd:`Esc` before releasing the mouse, the operation will be aborted.
 
 
 Changing window size
 ====================
 
-You can resize window frames by dragging their borders with :kbd:`Lmb`. Simply move your
+You can resize window frames by dragging their borders with :kbd:`LMB`. Simply move your
 mouse cursor over the border between two frames until it changes to a double-headed arrow,
 and then click and drag.
 
@@ -83,7 +84,7 @@ and then click and drag.
 Swapping contents
 =================
 
-You can swap the contents between two frames with :kbd:`ctrl-Lmb` on one of the
+You can swap the contents between two frames with :kbd:`Ctrl-LMB` on one of the
 splitters of the initial frame, dragging towards the target frame,
 and releasing the mouse there. Those two frames don't need to be side by side,
 though they must be inside the same window.
@@ -96,7 +97,7 @@ You may wish to have a new full window containing Blender frames. This can be us
 for instance, if you have multiple monitors and want them to show different information on the
 same instance of Blender.
 
-All you need to do is :kbd:`shift-Lmb` on a frame splitter, and drag slightly.
+All you need to do is :kbd:`Shift-LMB` on a frame splitter, and drag slightly.
 A new window pops up, with its maximize, minimize, close and other buttons
 (depending on your platform), containing a single frame with a duplicate of the initial window
 on which you performed the operation.
@@ -107,7 +108,7 @@ you can also arrange its contents in the same way discussed so far (split and re
 and tune them as needed), and so on.
 
 There is, though, another way to get an extra window: *File* → *User Preferences...*
-(or :kbd:`ctrl-alt-u`) pops a new window also,
+(or :kbd:`Ctrl-Alt-U`) pops a new window also,
 with the *User Preferences* window in its only frame.
 You can then proceed the same way with this window.
 

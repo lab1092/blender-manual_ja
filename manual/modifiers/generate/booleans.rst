@@ -1,4 +1,5 @@
 
+****************
 Boolean Modifier
 ****************
 
@@ -9,8 +10,8 @@ The Boolean modifier performs operations on meshes that are otherwise too comple
 to achieve with as few steps by editing meshes manually, meaning you can achieve results
 with little effort to make mesh operations like Unions, Differences and Intersections.
 
-The Boolean modifier uses one of three Boolean operations (:guilabel:`Difference`
-(negation), :guilabel:`Union` (conjunction), and :guilabel:`Intersect` (disjunction))
+The Boolean modifier uses one of three Boolean operations (*Difference*
+(negation), *Union* (conjunction), and *Intersect* (disjunction))
 to create a single compound object out of two mesh objects.
 
 .. TODO: Update image with 'Show all Edges' enabled
@@ -55,7 +56,7 @@ The results of the mesh operation will only be shown in Object Mode of the 3D Vi
 .. tip:: This is a dynamic real-time modifier!
 
    If you have marked your Objects to show the Edges
-   (in Properties Window, Object context, Display panel, enable :guilabel:`Wire`),
+   (in Properties Window, Object context, Display panel, enable *Wire*),
    you will see the Edge creation process while you're moving your Objects. Depending on your mesh topology,
    you can also enable X-Ray and Transparency and see the topology being created in real time.
 
@@ -64,11 +65,11 @@ Usage
 =====
 
 Using the default Blender install, with the desired mesh Object selected,
-go to the :guilabel:`Properties Window` which is located at the right of your Blender Screen,
+go to the *Properties Window* which is located at the right of your Blender Screen,
 below the Outliner. Click on the Modifiers Context, which is represented by a wrench (see Fig.
-2 - The Boolean modifier; the wrench is highlighted in blue). Then, click on the :guilabel:`Add
-Modifier` Button and Blender will show you a list of all of the available Modifiers. The
-Boolean modifier is located on the third row in the :guilabel:`Generate` Column.
+2 - The Boolean modifier; the wrench is highlighted in blue). Then, click on the *Add Modifier*
+Button and Blender will show you a list of all of the available Modifiers.
+The Boolean modifier is located on the third row in the *Generate* Column.
 
 You can also click on the *Add Modifier* Button and use :kbd:`N` to add the
 Boolean modifier,
@@ -155,12 +156,14 @@ See their captions for more information.
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Union)_(GBAFN).jpg
 
-   Fig. 4 - Union - The first active Material of the Cube is added to the new topology; other materials remain in the old topology
+   Fig. 4 - Union - The first active Material of the Cube
+   is added to the new topology; other materials remain in the old topology
 
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Difference)_(GBAFN)_.jpg
 
-   Fig. 5 - Difference - The Icosphere was subtracted from the Cube; the new topology has received the first active Material of the Cube
+   Fig. 5 - Difference - The Icosphere was subtracted from the Cube;
+   the new topology has received the first active Material of the Cube
 
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Intersect)_(GBAFN)_.jpg
@@ -430,7 +433,7 @@ For situations where you have two concurrent faces at the same position,
 the modifier will operate on the target mesh using both faces,
 but the resulting normals will get messed. To avoid duplicated faces,
 you can remove doubles for the vertices before recalculating the normals outside or inside.
-The button for remove doubles is located in the :guilabel:`Mesh Tools` Panel in the 3D View, while in Edit Mode.
+The button for remove doubles is located in the *Mesh Tools* Panel in the 3D View, while in Edit Mode.
 
 The best usage scenario for this modifier is when you have clean meshes with faces pointing
 clearly to a direction (inwards/outwards)
@@ -509,7 +512,7 @@ However there are also some changes in behavior. In particular, Carve will perfo
 operations only if the intersection of two meshes is a closed loop of edges.
 
 Release Notes and Development Page:
-`Boolean Modifier <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.62/Boolean_Modifier>`_
+`Boolean Modifier <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.62/Boolean_Modifier>`__
 
 
 Useful Links

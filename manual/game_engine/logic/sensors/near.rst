@@ -1,4 +1,5 @@
 
+***********
 Near sensor
 ***********
 
@@ -9,8 +10,8 @@ Near sensor
    Near sensor
 
 
-A :guilabel:`Near` sensor detects objects that move to within a specific distance of
-themselves. It can filter objects with properties, like the :guilabel:`Collision` sensor.
+A *Near* sensor detects objects that move to within a specific distance of
+themselves. It can filter objects with properties, like the *Collision* sensor.
 
 
 See :doc:`Sensor Common Options </game_engine/logic/sensors/common_options>` for common options.
@@ -33,6 +34,6 @@ Notes:
 
 .. note:: Note about soft bodies
 
-   The :guilabel:`Near` sensor can not detect soft bodies. This is a limitation in Bullet, the physics library used by the Game Engine.
+   The *Near* sensor can not detect soft bodies. This is a limitation in Bullet, the physics library used by the Game Engine.
 
 

@@ -1,5 +1,6 @@
 ..    TODO/Review: {{review}} .
 
+**************
 Fluid Obstacle
 **************
 
@@ -7,9 +8,9 @@ This object will be used as an obstacle in the simulation. As with a fluid objec
 obstacle objects currently should not intersect. As for fluid objects,
 the actual mesh geometry is used for obstacles. For objects with a volume,
 make sure that the normals of the obstacle are calculated correctly, and radiating properly
-(use the :guilabel:`Flip Normal` button, in :guilabel:`Edit mode`,
-:guilabel:`Mesh Tools` panel, :guilabel:`Editing` context [\ :kbd:`f9` ]),
-particularly when using a spinned container. Applying the Modifier :guilabel:`SubSurf` before
+(use the *Flip Normal* button, in *Edit mode*,
+*Mesh Tools* panel, *Editing* context [\ :kbd:`F9` ]),
+particularly when using a spinned container. Applying the Modifier *SubSurf* before
 baking the simulation could also be a good idea if the mesh is not animated.
 
 
@@ -18,11 +19,16 @@ FIXME(Template Unsupported: Doc:2.6/Manual/Physics/Fluid/volume_init;
 )
 
 Boundary type
-   Determines the stickiness of the obstacle surface, called "Surface Adhesion". Surface Adhesion depends in real-world on the fluid and the graininess or friction/adhesion/absorption qualities of the surface.
+   Determines the stickiness of the obstacle surface, called "Surface Adhesion".
+   Surface Adhesion depends in real-world on the fluid and the graininess or
+   friction/adhesion/absorption qualities of the surface.
 
-   - :guilabel:`Noslip` causes the fluid to stick to the obstacle (zero velocity).
-   - :guilabel:`Free` (-slip) allows movement along the obstacle (only zero normal velocity).
-   - :guilabel:`Part` (-slip) mixes both types, with 0 being mostly noslip, and 1 being identical to freeslip.
+   Noslip
+      causes the fluid to stick to the obstacle (zero velocity).
+   Free
+      (-slip) allows movement along the obstacle (only zero normal velocity).
+   Part
+      (-slip) mixes both types, with 0 being mostly noslip, and 1 being identical to freeslip.
 
    Note that if the mesh is moving, it will be treated as noslip automatically.
 
@@ -53,5 +59,8 @@ PartSlip Amount
 
 
 Impact Factor
-   Amount of fluid volume correction for gain/loss from impacting with moving objects. If this object is not moving, this setting has no effect. However, it if is and the fluid collides with it, a negative value takes volume away from the Domain, and a positive number adds to it. Ranges from -2.0 to 10.0.
+   Amount of fluid volume correction for gain/loss from impacting with moving objects.
+   If this object is not moving, this setting has no effect.
+   However, it if is and the fluid collides with it, a negative value takes volume away from the Domain,
+   and a positive number adds to it. Ranges from -2.0 to 10.0.
 

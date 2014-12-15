@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=area filter|im=update screenshot?}} .
 
 
+****************
 Environment Maps
 ****************
 
@@ -23,7 +24,7 @@ viewpoint, we can render the light that reaches the
 surface of an object (and hence, the light that might ultimately be reflected to the camera).
 Blender's environment mapping renders a
 cubic image map of the scene in the six cardinal directions from any point. When the six tiles
-of the image are mapped onto an object using the :guilabel:`Refl` input coordinates,
+of the image are mapped onto an object using the *Refl* input coordinates,
 they create the visual complexity that the eye expects to see from shiny reflections.
 
 
@@ -61,20 +62,20 @@ Image File
    When saved as an image file, environment maps can be loaded from disk. This option allows the fastest rendering with environment maps, and also gives the ability to modify or use the environment map in an external application.
 
    When using planar reflections, if the camera is the only moving object and you have a reflecting plane,
-   the Empty must move too and you must use :guilabel:`Anim` environment map.
-   If the reflecting object is small and the Empty is in its center, the environment map can be :guilabel:`Static`,
+   the Empty must move too and you must use *Anim* environment map.
+   If the reflecting object is small and the Empty is in its center, the environment map can be *Static*,
    even if the object itself rotates since the Empty does not move. If, on the other hand,
-   the Object translates the Empty should follow it and the environment map be of :guilabel:`Anim` type.
+   the Object translates the Empty should follow it and the environment map be of *Anim* type.
 
 
 Options in dropdown menu:
 
 Clear Environment Map
-   Clears the currently rendered environment map from memory. This is useful to refresh a :guilabel:`Static` environment maps and you have changed things in your scene since the last time the environment map was rendered. :guilabel:`Anim` environment maps do this automatically on every render.
+   Clears the currently rendered environment map from memory. This is useful to refresh a *Static* environment maps and you have changed things in your scene since the last time the environment map was rendered. *Anim* environment maps do this automatically on every render.
 Save Environment Map
-   Saves the currently stored static environment map to disk as an image file. This can be loaded again with :guilabel:`Load`.
+   Saves the currently stored static environment map to disk as an image file. This can be loaded again with *Load*.
 Clear All Environment Maps
-   Does the same as :guilabel:`Free Data`, but with all environment maps in the scene. This is a useful shortcut when using recursive environment maps (when the :guilabel:`Depth` is greater than 0).
+   Does the same as *Free Data*, but with all environment maps in the scene. This is a useful shortcut when using recursive environment maps (when the *Depth* is greater than 0).
 
 
 .. note::
@@ -88,12 +89,12 @@ Viewpoint Object
 
 
    - For planar reflections, the object should be in a location mirrored from the camera, on the other side of the plane of reflection (see Examples). This is the most accurate usage of Environment maps.
-   - For spherical reflections, the object should be in the center of the sphere. Generally, if the reflecting sphere's object center point is in the center of its vertices, you can just use the name of the actual sphere object as the :guilabel:`Ob:`
+   - For spherical reflections, the object should be in the center of the sphere. Generally, if the reflecting sphere's object center point is in the center of its vertices, you can just use the name of the actual sphere object as the *Ob:*
    - For irregular reflections, there's no hard and fast rule, you will probably need to experiment and hope that the inaccuracy doesn't matter.
 
 Ignore Layers
    The layers to exclude from the environment map creation.
-   Since environment maps work by rendering the scene from the location of the :guilabel:`Ob:` object,
+   Since environment maps work by rendering the scene from the location of the *Ob:* object,
    you will need to exclude the actual reflecting surface from the environment map,
    otherwise it will occlude other objects that should be reflected on the surface itself.
 
@@ -154,7 +155,7 @@ Examples
 ========
 
 In this example,
-an empty is used as the :guilabel:`Ob:` of the reflecting plane's environment map.
+an empty is used as the *Ob:* of the reflecting plane's environment map.
 It is located in the specular position of the camera with respect to the reflecting surface.
 (This is possible, strictly speaking, only for planar reflecting surfaces.) Ideally, the
 location of the empty would mirror the location of the camera across the plane of the polygon
@@ -169,10 +170,10 @@ onto which it is being mapped.
 +-----------------------------------------------------------------------+-----------------------------------------------+
 
 
-The following images show the effect of the :guilabel:`Depth`.
+The following images show the effect of the *Depth*.
 The first render has depth set to 0. This means the environment map on the plane has rendered
 before the environment map of the sphere, so the sphere's reflection isn't shown.
-By raising the :guilabel:`Depth`, the environment map is rendered recursively,
+By raising the *Depth*, the environment map is rendered recursively,
 in order to get reflections of reflections.
 
 +-----------------------------------------------+----------------------------------------------------------+
@@ -188,10 +189,10 @@ in order to get reflections of reflections.
 Limitations
 ===========
 
-Because environment maps are calculated from the exact location of the :guilabel:`Viewpoint
-Object` 's object center, and not from actual reflecting surface,
-they can often be inaccurate, especially with spheres. In the following image, the rectangular
-prism and the smaller spheres are touching the sides of the large reflecting sphere,
+Because environment maps are calculated from the exact location of the *Viewpoint Object's* object center,
+and not from actual reflecting surface, they can often be inaccurate, especially with spheres.
+In the following image, the rectangular prism and the smaller spheres
+are touching the sides of the large reflecting sphere,
 but because the environment map is calculated from the center of the sphere,
 the surrounding objects look artificially far away.
 

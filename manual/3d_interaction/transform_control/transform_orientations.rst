@@ -8,8 +8,8 @@ Transform Orientations
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes
-   | Hotkey:   :kbd:`alt-Space`
+   | Mode:     *Object* and *Edit* modes
+   | Hotkey:   :kbd:`Alt-Space`
 
 
 .. figure:: /images/Orientations-Menu-2.5+.jpg
@@ -20,8 +20,8 @@ Transform Orientations
 Orientations affect the behavior of Transformations: Location, Rotation, and Scale.
 You will see an effect on the 3D Manipulator (the widget in the center of the selection),
 as well as on transformation constraints (like :doc:`axis locking </3d_interaction/transform_control/axis_locking>`).
-This means that, when you hit :kbd:`g-x`, it will constrain to the :guilabel:`global` x-axis,
-but if you hit :kbd:`g-x-x` it will constrain to your :guilabel:`Transform Orientation` s x-axis.
+This means that, when you hit :kbd:`G-X`, it will constrain to the *global* x-axis,
+but if you hit :kbd:`G-X-X` it will constrain to your *Transform Orientation* s x-axis.
 
 
 .. figure:: /images/Alt+Space-Menu.jpg
@@ -31,7 +31,7 @@ but if you hit :kbd:`g-x-x` it will constrain to your :guilabel:`Transform Orien
 
 The Orientations options can be set on the 3D View's header (or "footer",
 since it is at the bottom of the view by default),
-or with :kbd:`alt-Space` or through the :guilabel:`Orientation` menu in a 3D view header.
+or with :kbd:`Alt-Space` or through the *Orientation* menu in a 3D view header.
 
 
 In addition to the four built-in options, you can define a
@@ -55,10 +55,10 @@ Please note two things:
   selection, which represents the current Transform Orientation.
 
   - If you click on one of the axes of the Manipulator with :kbd:`LMB`,
-    it will allow you to constrain movement to only this direction. An example of a keyboard equivalent is :kbd:`g-z-z`.
+    it will allow you to constrain movement to only this direction. An example of a keyboard equivalent is :kbd:`G-Z-Z`.
   - If you :kbd:`Shift-LMB` click,
     it will lock the axis you clicked on and allow you to move in the plane of the two remaining axes.
-    The keyboard analogue is :kbd:`g-Shift-Z-Shift-Z-`.
+    The keyboard analogue is :kbd:`G-Shift-Z-Shift-Z-`.
 
 
 Orientations
@@ -77,7 +77,7 @@ When using the Global orientation, the orientation's x,y,z matches world's x,y,z
 When this mode is selected,
 the local coordinates of the object are subjected to the Global coordinates.
 This is good to place objects in the scene. To constrain an axis,
-hit :kbd:`g` and the desired axis. To constrain to a local axis,
+hit :kbd:`G` and the desired axis. To constrain to a local axis,
 hit the desired axis two times. The difference between Global and Local, is more noticeable
 when you have an object in which the origin is not located at the exact center of the object,
 and doesn't match the Global coordinates.
@@ -116,8 +116,8 @@ it becomes more interesting.
 
 As you see, the light blue lines indicate the faces' normals,
 and the darker blue lines indicate the vertex normals (these were turned on in the
-:kbd:`n` Properties Panel under :menuselection:`Mesh Display --> Normals --> Face` and
-:guilabel:`Vertex`).
+:kbd:`N` Properties Panel under :menuselection:`Mesh Display --> Normals --> Face` and
+*Vertex*).
 Selecting any given face will cause our Manipulator's z-axis to align with that normal.
 The same goes for Vertex Select Mode.
 Edge Select is different--A selected Edge has the z-axis aligned with it
@@ -125,8 +125,8 @@ Edge Select is different--A selected Edge has the z-axis aligned with it
 If you select several elements, it will orient towards the average of those normals.
 
 A great example of how this is useful is in Vertex Select Mode: Pick a vertex and then do
-:kbd:`g-z-z` to tug it away from the mesh and shove it into the mesh.
-To make this even more useful, select a nearby vertex and hit :kbd:`Shift-r` to repeat
+:kbd:`G-Z-Z` to tug it away from the mesh and shove it into the mesh.
+To make this even more useful, select a nearby vertex and hit :kbd:`Shift-R` to repeat
 the same movement---except along that second vertex's normal instead.
 
 
@@ -139,21 +139,21 @@ Gimbal
 ------
 
 Gimbal's behavior highly depends on the :doc:`Rotation Mode </3d_interaction/transformations/basics/rotate>`
-that you are in (accessible in the :kbd:`n` Properties Panel in the :guilabel:`3D View`,
-in top section, :guilabel:`Transform`).
+that you are in (accessible in the :kbd:`N` Properties Panel in the *3D View*,
+in top section, *Transform*).
 
 XYZ Euler
    the default rotation mode, the object Manipulator's z-axis will always point to the global z-axis,
    where the other two will remain perpendicular to each other.
-   In the other :guilabel:`Euler` rotation modes,
+   In the other *Euler* rotation modes,
    the last axis applied will be the one for which the Manipulator stays fixed.
-   So, for :guilabel:`YZX Euler`, the x-axis of the Manipulator will be the same as the global x-axis.
+   So, for *YZX Euler*, the x-axis of the Manipulator will be the same as the global x-axis.
 Axis Angle
    The x, y, and z coordinates define a point relative to the object origin through which an imaginary "skewer" passes.
    The w value is the rotation of this skewer. Here, the Manipulator's z-axis stays aligned with this skewer.
 Quaternion
    Though Quaternion rotation is very different from the Euler and Axis Angle rotation modes,
-   the Manipulator behaves the same as in :guilabel:`Local` mode.
+   the Manipulator behaves the same as in *Local* mode.
 
 
 .. figure:: /images/Manual-3D_interaction-Transform_Control-Transform_Orientations-05.View.jpg
@@ -167,7 +167,7 @@ View
 The manipulator will match the 3D view, Y → Up/Down, X → Left/Right,
 Z → Towards/Away from you.
 
-This way you can constrain movement to one View axis with :kbd:`g-x-x`.
+This way you can constrain movement to one View axis with :kbd:`G-X-X`.
 
 
 ..    Comment: <!--[[File:Manual-3D_interaction-Transform_Control-Transform_Orientations-06.Foozle.png|frame|right|Custom Orientations.]]
@@ -181,7 +181,7 @@ Custom Orientations
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes
+   | Mode:     *Object* and *Edit* modes
    | Hotkey:   :kbd:`Ctrl-Alt-Space`
 
 
@@ -198,7 +198,7 @@ orientations defined from objects use the local orientation of the object wherea
 defined from selected mesh elements (vertices, edges, faces)
 use the normal orientation of the selection.
 
-The :guilabel:`Transform Orientations` panel, found in the "\ :kbd:`n` Properties Panel,
+The *Transform Orientations* panel, found in the "\ :kbd:`N` Properties Panel,
 " can be used to manage transform orientations: selecting the active orientation,
 adding and deleting custom orientations.
 
@@ -212,7 +212,7 @@ adding and deleting custom orientations.
 
 The default name for these orientations comes from whatever you have selected. If an edge,
 it will be titled, "Edge," if an object, it will take that object's name, etc. The Toolshelf
-(:kbd:`t` in the 3D View)
+(:kbd:`T` in the 3D View)
 allows you to rename the custom orientation after you hit :kbd:`Ctrl-Alt-Space`.
 
 
@@ -222,13 +222,13 @@ allows you to rename the custom orientation after you hit :kbd:`Ctrl-Alt-Space`.
 
 
 The technique of creating custom orientations can become important in creating precise meshes.
-In :guilabel:`Figure 1`, to achieve this effect:
+In *Figure 1*, to achieve this effect:
 
 - Select the object's sloping top edge
 - Create a Custom Orientation with :kbd:`Ctrl-Alt-Space` and rename it "Top Edge".
 - Select the objects's bottom, right edge.
-- Extrude with :kbd:`e`.
-- Cancel the extrusion's default movement by hitting :kbd:`RMB` or :kbd:`Escape`.
-- Hit :kbd:`g` to reinitiate movement.
-- Hit :kbd:`z-z` to constrain to the "Top Edge" orientation.
+- Extrude with :kbd:`E`.
+- Cancel the extrusion's default movement by hitting :kbd:`RMB` or :kbd:`Esc`.
+- Hit :kbd:`G` to reinitiate movement.
+- Hit :kbd:`Z-Z` to constrain to the "Top Edge" orientation.
 

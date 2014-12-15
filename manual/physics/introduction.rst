@@ -1,4 +1,5 @@
 
+**********************************
 Introduction to Physics Simulation
 **********************************
 
@@ -38,11 +39,10 @@ measurement [m×s\ :sup:`-2` ]).
 Gravity is practically same around whole **Earth**.
 South and North poles have g = 9.832 m×s\ :sup:`-2`, on the equator g = 9.
 780 m×s\ :sup:`-2`.
-For detail computing of falling in :guilabel:`Prague` or :guilabel:`Boston` use 9.81373.
+For detail computing of falling in *Prague* or *Boston* use 9.81373.
 For rendering scenes from **Moon** use value 6 times smaller, e.g. 1.622 m×s\ :sup:`-2`.
 The most popular and probably not colonized **Mars** has g = 3.69.
 
 
-Note that you can scale down the gravity value per physics system in the :guilabel:`Field
-Weights tab.`
+Note that you can scale down the gravity value per physics system in the *Field Weights tab.*
 

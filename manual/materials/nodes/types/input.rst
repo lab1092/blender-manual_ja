@@ -1,8 +1,9 @@
 
+********************
 Material Input Nodes
 ********************
 
-A starting material is created in the Materials Panel. The :guilabel:`Nodes` button is enabled
+A starting material is created in the Materials Panel. The *Nodes* button is enabled
 to add that material to the list of noded materials shown in the Node Editor window header.
 Other inputs to the node map include:
 
@@ -22,7 +23,7 @@ Material Node
    :class: refbox
 
    | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Material Nodes </materials/nodes>`
-   | Menu:     :kbd:`shift-A` → Input → Material
+   | Menu:     :kbd:`Shift-A` → Input → Material
 
 
 .. figure:: /images/26-Manual-Material-Node.jpg
@@ -41,10 +42,12 @@ Output
 Materials can output color (which includes shading and any textures assigned to it), alpha,
 and the final normal calculated from any textures it has.
 
-
-- :guilabel:`Color` - value of the color, combined by the node.
-- :guilabel:`Alpha` - value of the alpha, combined by the node.
-- :guilabel:`Normal` - direction of the normal, combined by the node.
+Color
+   value of the color, combined by the node.
+Alpha
+   value of the alpha, combined by the node.
+Normal
+   direction of the normal, combined by the node.
 
 
 Input
@@ -54,15 +57,24 @@ Materials can take inputs for colors, inputs for diffuse color and specularity c
 a value for reflectivity, and a normal.
 
 
-- :guilabel:`Color` - The base color of the paint. Can be set
-  - manually by :kbd:`lmb` clicking on the color swatch applet next to the socket, choosing a color using the control panel that pops up, and pressing :kbd:`Enter`
-  - based on an Active Material which is specified using the material panels, or
-  - plugged in from an RGB color generator.
-- :guilabel:`Spec` - The color that is reflected as you get perpendicular to the light source reflecting off the surface. The color can be
-  - plugged in from another node or
-  - set manually by :kbd:`lmb` clicking on and using the color swatch applet.
-- :guilabel:`Refl:` - The degree to which the material reflects light and gives off its color. The value can be provided by another node or set manually.
-- :guilabel:`Normal` - The lighting condition.
+Color
+   The base color of the paint. Can be set
+
+   - manually by :kbd:`LMB` clicking on the color swatch applet next to the socket,
+     choosing a color using the control panel that pops up, and pressing :kbd:`Enter`
+   - based on an Active Material which is specified using the material panels, or
+   - plugged in from an RGB color generator.
+Spec
+   The color that is reflected as you get perpendicular to the light source reflecting off the surface.
+   The color can be
+
+   - plugged in from another node or...
+   - set manually by :kbd:`LMB` clicking on and using the color swatch applet.
+Refl:
+   The degree to which the material reflects light and gives off its color.
+   The value can be provided by another node or set manually.
+Normal
+   The lighting condition.
 
 
 Controls
@@ -75,12 +87,14 @@ Diffuse toggle
 Specular toggle
    Turns on/off Specularity calculation.
 Invert Normal toggle
-   Inverts the material input normal when activated (which, of course, is a combination of the 3D normal given to it by the 3D object plus the normal input point).
+   Inverts the material input normal when activated
+   (which, of course, is a combination of the 3D normal given to it by the 3D object plus the normal input point).
 
 
 .. note:: Normal Override
 
-   The normal input socket does not in any way blend the source normal with the underlying geometry. Any plugged in Geometry here overrides the Normal lighting conditions.
+   The normal input socket does not in any way blend the source normal with the underlying geometry.
+   Any plugged in Geometry here overrides the Normal lighting conditions.
 
 
 Using the Material Node with Specularity
@@ -98,16 +112,17 @@ you have to specify at least a basic input color, and optionally a specularity c
 The specularity color is the color that shines under intense light.
 
 For example, consider the mini-map to the right. The base color, a dark blue,
-is connected from an RGB color generator node to the :guilabel:`Color` input socket.
-The specular color, yellow, is connected to the :guilabel:`Spec` input.
-Under :guilabel:`Normal` lighting conditions on a flat surface,
+is connected from an RGB color generator node to the *Color* input socket.
+The specular color, yellow, is connected to the *Spec* input.
+Under *Normal* lighting conditions on a flat surface,
 this material will produce a deep blue color and,
 as you approach a spot perpendicular to the light,
 you will see the yellow specular color mix in.
 
 .. note:: Enable Spec
 
-   To see specularity, you have to enable it by clicking the blue Spec button located just below the material color swatch in the node.
+   To see specularity, you have to enable it by clicking the blue Spec button
+   located just below the material color swatch in the node.
 
 
 Extended Material Node
@@ -149,9 +164,12 @@ Output
 
 Materials can additionaly output the followings:
 
-- :guilabel:`Diffuse` - value of the diffuse color, combined by the node.
-- :guilabel:`Spec` - value of the specular color, combined by the node.
-- :guilabel:`AO` - value of the Ambient Occlusion, combined by the node.
+Diffuse
+   value of the diffuse color, combined by the node.
+Spec
+   value of the specular color, combined by the node.
+AO
+   value of the Ambient Occlusion, combined by the node.
 
 
 Camera Data Node
@@ -199,7 +217,9 @@ The light textures and the shadow textures affect the Color and Shadow outputs, 
 
 .. note:: Portability to Various Scenes
 
-   If multiple materials use a Lamp Data node linking to the same lamp object, including the Lamp Data node into a node group is recommended. Otherwise, when the mesh objects are imported to the other scene, all the materials may need to be modified.
+   If multiple materials use a Lamp Data node linking to the same lamp object,
+   including the Lamp Data node into a node group is recommended.
+   Otherwise, when the mesh objects are imported to the other scene, all the materials may need to be modified.
 
 
 Value Node
@@ -309,10 +329,10 @@ Front/Back
 
 .. note::
 
-   These are exactly the same settings as in the :doc:`Mapping </textures/mapping>` panel for :doc:`Textures </textures>`, though a few settings - like :guilabel:`Stress` or :guilabel:`Tangent` - are missing here. Normally you would use this node as input for a
-   FIXME(TODO: Internal Link;
-   [[#Texture Node|Texture Node]]
-   ).
+   These are exactly the same settings as in the
+   :doc:`Mapping </textures/mapping>` panel for :doc:`Textures </textures>`,
+   though a few settings - like *Stress* or *Tangent* - are missing here.
+   Normally you would use this node as input for a FIXME(TODO: Internal Link; [[#Texture Node|Texture Node]]).
 
 
 Geometry Node Example using a UV image
@@ -325,8 +345,8 @@ Geometry Node Example using a UV image
    Setup to render an UV-Mapped Image Texture.
 
 
-E.g.: To render an UV-mapped image, you would use the :guilabel:`UV` output and plug it into
-the :guilabel:`Vector` Input of a texture node. Then you plug the color output of the texture
+E.g.: To render an UV-mapped image, you would use the *UV* output and plug it into
+the *Vector* Input of a texture node. Then you plug the color output of the texture
 node into the color input of the material node - which corresponds to the setting on the
-:guilabel:`Map To` panel.
+*Map To* panel.
 

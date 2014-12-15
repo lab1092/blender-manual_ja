@@ -11,114 +11,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/rigging/posing/editing.rst:6
+#: ../../manual/rigging/posing/editing.rst:7
 msgid "Editing Poses"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:12
+#: ../../manual/rigging/posing/editing.rst:13
 msgid "Pose Tools"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:15
-msgid ""
-"In :guilabel:`Pose` mode, bones behave like objects. So the transform "
-"actions (grab/rotate/scale, etc.) are very similar to the same ones in "
-":guilabel:`Object` mode (all available ones are regrouped in the "
-":menuselection:`Pose --> Transform` sub-menu). However, there are some "
-"important specificities:"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:20
+#: ../../manual/rigging/posing/editing.rst:21
 msgid ""
 "Bones' relationships are crucial, as FIXME(TODO: Internal Link; [[#Effects "
 "of Bones Relationships|detailed below]])."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:21
-msgid ""
-"The \"transform center\" of a given bone (i.e. its default pivot point, when"
-" it is the only selected one) is *its root*. Note by the way that some pivot"
-" point options seem to not work properly - in fact, except for the "
-":guilabel:`3D Cursor` one, all others appear to always use the median point "
-"of the selection (and not e.g. the active bone's root when :guilabel:`Active"
-" Object` is selected, etc.)."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:29
+#: ../../manual/rigging/posing/editing.rst:30
 msgid "Selecting Bones"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:31
-msgid ""
-"Selection in :guilabel:`Pose` mode is very similar to the one in :doc:`Edit "
-"mode </rigging/armatures/selecting>`, with a few specificities:"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:34
-msgid ""
-"You can only select *whole bones* in :guilabel:`Pose` mode, not "
-"roots/tips..."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:39
+#: ../../manual/rigging/posing/editing.rst:40
 msgid "The Select Grouped pop-up menu."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:46
-msgid ""
-"To select all bones belonging to the same layer(s) as the selected ones, use"
-" the :guilabel:`In Same Layer` entry (:kbd:`shift-G-num2`)."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:51
+#: ../../manual/rigging/posing/editing.rst:52
 msgid "Basic Posing"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:53
-msgid ""
-"As previously noted, bones' transformations are performed based on the *rest"
-" position* of the armature, which is its state as defined in "
-":guilabel:`Edit` mode. This means that in rest position, in :guilabel:`Pose`"
-" mode, each bone has a scale of **1.0**, and null rotation and position (as "
-"you can see it in the :guilabel:`Transform Properties` panel, in the 3D "
-"views, :kbd:`N`)."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:65
+#: ../../manual/rigging/posing/editing.rst:66
 msgid ""
 "An example of locally-Y-axis locked rotation, with two bones selected. Note "
 "that the two green lines materializing the axes are centered on the "
 "armature's center, and not each bone's root..."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:70
-msgid ""
-"Moreover, the local space for these actions is the bone's own one (visible "
-"when you enable the :guilabel:`Axes` option of the :guilabel:`Armature` "
-"panel). This is especially important when using axis locking - for example, "
-"there is no specific \"bone roll\" tool in :guilabel:`Pose` mode, as you can"
-" rotate around the bone's main axis just by locking on the local Y axis "
-"(:kbd:`R-Y-Y`)... This also works with several bones selected; each one is "
-"locked to its own local axis!"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:78
-msgid ""
-"When you pose your armature, you are supposed to have one or more objects "
-"skinned on it! And obviously, when you transform a bone in :guilabel:`Pose` "
-"mode, its related objects or object's shape is moved/deformed accordingly, "
-"in real time. Unfortunately, if you have a complex rig set-up and/or a heavy"
-" skin object, this might produce lag, and make interactive editing very "
-"painful. If you experience such troubles, try enabling the :guilabel:`Delay "
-"Deform` button of the :guilabel:`Armature` panel - the skin objects will "
-"only be updated once you validate the transform operation."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:90
+#: ../../manual/rigging/posing/editing.rst:91
 msgid "Auto IK"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:92
+#: ../../manual/rigging/posing/editing.rst:93
 msgid ""
 "The auto IK option in the tool shelf enables a temporary ik constraint when "
 "posing bones. The chain acts from the tip of the selected bone to root of "
@@ -126,64 +56,19 @@ msgid ""
 " by applying the resulting transform to the bones in the chain."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:99
+#: ../../manual/rigging/posing/editing.rst:100
 msgid "Rest Pose"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:101
-msgid ""
-"Once you have transformed some bones, if you want to return to their rest "
-"position, just clear their transformations (usual :kbd:`alt-G` / "
-":kbd:`alt-R` / :kbd:`alt-S` shortcuts, or :menuselection:`Pose --> Clear "
-"Transform --> Clear User Transform`, :kbd:`W-num5`, to clear everything at "
-"once... - commands also available in the :menuselection:`Pose --> Clear "
-"Transform` sub-menu)."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:107
-msgid ""
-"Note that in :guilabel:`Envelope` visualization, :kbd:`Alt-S` does not clear"
-" the scale, but rather scales the :guilabel:`Distance` influence area of the"
-" selected bones (also available through the :menuselection:`Pose --> Scale "
-"Envelope Distance` menu entry - only effective in :guilabel:`Envelope` "
-"visualization, even though it is always available...)."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:112
-msgid ""
-"Conversely, you may define the current pose as the new rest position (i.e. "
-"\"apply\" current transformations to the :guilabel:`Edit` mode), using the "
-":menuselection:`Pose --> Apply Pose as Restpose` menu entry (or "
-":kbd:`ctrl-A` and confirm the pop-up dialog). **When you do so, the skinned "
-"objects/geometry is also reset to its default, undeformed state**, which "
-"generally means you'll have to skin it again."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:119
-msgid ""
-"Whereas in :guilabel:`Edit` mode, you always see your armature in its rest "
-"position, in :guilabel:`Object` and :guilabel:`Pose` ones, you see it by "
-"default in its *pose position* (i.e. as it was transformed in the "
-":guilabel:`Pose` mode). If you want to see it in the rest position in all "
-"modes, enable the :guilabel:`Rest Position` button in the "
-":guilabel:`Armature` panel (:guilabel:`Editing` context, :kbd:`F9`)."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:129
+#: ../../manual/rigging/posing/editing.rst:130
 msgid "In-Betweens"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:131
+#: ../../manual/rigging/posing/editing.rst:132
 msgid "There are several tools for editing poses in an animation."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:134
-msgid ""
-"Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or "
-":kbd:`alt-E`)"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:134
+#: ../../manual/rigging/posing/editing.rst:135
 msgid ""
 "Relax pose is somewhat related to the above topic - but it is only useful "
 "with keyframed bones (see the :doc:`animation chapter </animation>`). When "
@@ -192,102 +77,73 @@ msgid ""
 "\"keyed position\", with smaller and smaller steps as it comes near it."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:137
-msgid ""
-"Push Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or "
-":kbd:`ctrl-E`)"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:137
+#: ../../manual/rigging/posing/editing.rst:138
 msgid "Push pose exaggerates the current pose."
 msgstr ""
 
 #: ../../manual/rigging/posing/editing.rst:141
-msgid ""
-"Breakdowner (:menuselection:`Pose --> In-Betweens --> Pose Breakdowner` or "
-":kbd:`shift-E`)"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:140
 msgid "Creates a suitable breakdown pose on the current frame"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:143
-msgid ""
-"There are also in :guilabel:`Pose` mode a bunch of armature-specific editing"
-" options/tools, like :doc:`auto-bones naming "
-"</rigging/armatures/editing/properties#naming_bones>`, :doc:`properties "
-"switching/enabling/disabling "
-"</rigging/armatures/editing/properties#properties>`, etc., that we already "
-"described in the armature editing pages - follow the links above..."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:147
+#: ../../manual/rigging/posing/editing.rst:148
 msgid "Copy/Paste Pose"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:149
+#: ../../manual/rigging/posing/editing.rst:150
 msgid "Reference"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:159
+#: ../../manual/rigging/posing/editing.rst:160
 msgid "Copy and paste pose buttons in the 3D View header in Pose mode."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:162
-msgid ""
-"Blender allows you to copy and paste a pose, either through the "
-":guilabel:`Pose` menu, or directly using the three \"copy/paste\" buttons "
-"found at the right part of the 3D views header:"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:165
+#: ../../manual/rigging/posing/editing.rst:166
 msgid ":menuselection:`Pose --> Copy Current Pose`"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:166
+#: ../../manual/rigging/posing/editing.rst:167
 msgid "to copy the current pose of selected bones into the pose buffer."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:167
+#: ../../manual/rigging/posing/editing.rst:168
 msgid ":menuselection:`Pose --> Paste Pose`"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:168
+#: ../../manual/rigging/posing/editing.rst:169
 msgid "paste the buffered pose to the currently posed armature."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:171
+#: ../../manual/rigging/posing/editing.rst:172
 msgid ":menuselection:`Pose --> Paste Flipped Pose`"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:170
+#: ../../manual/rigging/posing/editing.rst:171
 msgid ""
 "paste the **X axis mirrored** buffered pose to the currently posed armature."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:173
+#: ../../manual/rigging/posing/editing.rst:174
 msgid "Here are important points:"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:175
+#: ../../manual/rigging/posing/editing.rst:176
 msgid ""
 "This tool works at the Blender session level, which means you can use it "
 "across armatures, scenes, and even files. However, the pose buffer is not "
 "saved, so you lose it when you close Blender."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:176
+#: ../../manual/rigging/posing/editing.rst:177
 msgid "There is only one pose buffer."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:177
+#: ../../manual/rigging/posing/editing.rst:178
 msgid ""
 "Only the selected bones are taken into account during copying (i.e. you copy"
 " only selected bones' pose)."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:178
+#: ../../manual/rigging/posing/editing.rst:179
 msgid ""
 "During pasting, on the other hand, bone selection has no importance. The "
 "copied pose is applied on a per-name basis (i.e. if you had a \"\\ "
@@ -296,7 +152,7 @@ msgid ""
 "and if there is no such named bone, nothing will happen...)."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:179
+#: ../../manual/rigging/posing/editing.rst:180
 msgid ""
 "What is copied and pasted is in fact the position/rotation/scale of each "
 "bone, in its own space. This means that the resulting pasted pose might be "
@@ -304,148 +160,93 @@ msgid ""
 "position of the bones, and - The current pose of their parents."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:184
-msgid "**Examples of pose copy/paste.**"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:187
+#: ../../manual/rigging/posing/editing.rst:190
 msgid "The rest position of our original armature."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:187
+#: ../../manual/rigging/posing/editing.rst:193
 msgid "The rest position of our destination armature."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:192
-msgid ""
-"The first copied pose (note that only forearm and finger2_a are selected and"
-" hence copied)..."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:192
-#: ../../manual/rigging/posing/editing.rst:196
+#: ../../manual/rigging/posing/editing.rst:199
+#: ../../manual/rigging/posing/editing.rst:208
 msgid "...pasted on the destination armature..."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:192
-#: ../../manual/rigging/posing/editing.rst:196
+#: ../../manual/rigging/posing/editing.rst:202
+#: ../../manual/rigging/posing/editing.rst:211
 msgid "...and mirror-pasted on the destination armature."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:196
+#: ../../manual/rigging/posing/editing.rst:205
 msgid ""
 "The same pose as above is copied, but this time with all bones selected, ..."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:201
+#: ../../manual/rigging/posing/editing.rst:215
 msgid "Effects of Bones Relationships"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:203
-msgid ""
-"Bones relationships are crucial in :guilabel:`Pose` mode - they have "
-"important effects on transformations behavior."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:206
+#: ../../manual/rigging/posing/editing.rst:220
 msgid "By default, children bones inherit:"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:208
+#: ../../manual/rigging/posing/editing.rst:222
 msgid "Their parent position, with their own offset of course."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:209
+#: ../../manual/rigging/posing/editing.rst:223
 msgid ""
 "Their parent rotation (i.e. they keep a constant rotation relatively to "
 "their parent)."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:210
+#: ../../manual/rigging/posing/editing.rst:224
 msgid "Their parent scale, here again with their own offset."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:213
+#: ../../manual/rigging/posing/editing.rst:227
 msgid "**Examples of transforming parented/connected bones.**"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:219
+#: ../../manual/rigging/posing/editing.rst:233
 msgid "The armature in its rest position."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:219
+#: ../../manual/rigging/posing/editing.rst:233
 msgid "Rotation of a root bone."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:219
+#: ../../manual/rigging/posing/editing.rst:233
 msgid "Scaling of a root bone."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:223
-msgid ""
-"Exactly like standard children objects. You can modify this behavior on a "
-"per-bone basis, using their sub-panels in the :guilabel:`Armature Bones` "
-"panel:"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:231
+#: ../../manual/rigging/posing/editing.rst:245
 msgid "The Armature Bones panel in Pose mode."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:235
+#: ../../manual/rigging/posing/editing.rst:249
 msgid "Inherit Rotation"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:235
+#: ../../manual/rigging/posing/editing.rst:249
 msgid ""
 "When disabled, this will \"break\" the rotation relationship to the bone's "
 "parent. This means that the child will keep its rotation in the armature "
 "object space when its parent is rotated."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:238
+#: ../../manual/rigging/posing/editing.rst:252
 msgid "Inherit Scale"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:238
+#: ../../manual/rigging/posing/editing.rst:252
 msgid ""
 "When disabled, this will \"break\" the scale relationship to the bone's "
 "parent."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:240
-msgid ""
-"These inheriting behaviors propagate along the bones' hierarchy. So when you"
-" scale down a bone, all its descendants are by default scaled down "
-"accordingly. However, if you set one bone's :guilabel:`Inherit Scale` or "
-":guilabel:`Inherit Rotation` property on in this \"family\", this will break"
-" the scaling propagation, i.e. this bone *and all its descendants* will no "
-"longer be affected when you scale one of its ancestors."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:247
-msgid ""
-"**Examples of transforming parented/connected bones with** "
-":guilabel:`Inherit Rotation` **disabled.**"
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:253
-msgid "The yellow outlined Inherit Rotation disabled bone in the armature."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:253
-msgid ""
-"Rotation of a bone with a Inherit Rotation disabled bone among its "
-"descendants."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:253
-msgid ""
-"Scaling of a bone with a Inherit Rotation disabled bone among its "
-"descendants."
-msgstr ""
-
-#: ../../manual/rigging/posing/editing.rst:257
+#: ../../manual/rigging/posing/editing.rst:271
 msgid ""
 "Connected bones have another specificity: they cannot be translated. Indeed,"
 " as their root must be at their parent's tip, if you don't move the parent, "
@@ -455,7 +256,7 @@ msgid ""
 "operation."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:263
+#: ../../manual/rigging/posing/editing.rst:277
 msgid ""
 "Bones relationships also have important consequences on how selections of "
 "multiple bones behave when transformed. There are many different situations,"
@@ -463,15 +264,15 @@ msgid ""
 "give you a good idea of the problem:"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:267
+#: ../../manual/rigging/posing/editing.rst:281
 msgid "Non-related selected bones are transformed independently, as usual."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:274
+#: ../../manual/rigging/posing/editing.rst:288
 msgid "Scaling bones, some of them related."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:277
+#: ../../manual/rigging/posing/editing.rst:291
 msgid ""
 "When several bones of the same \"family\" are selected, *only the \"most "
 "parent\" ones are really transformed* - the descendants are just handled "
@@ -482,13 +283,13 @@ msgid ""
 "should have been twice smaller!)."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:284
+#: ../../manual/rigging/posing/editing.rst:298
 msgid ""
 "When connected and unconnected bones are selected, and you start a grab "
 "operation, only the unconnected bones are affected."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:286
+#: ../../manual/rigging/posing/editing.rst:300
 msgid ""
 "When a child connected hinge bone is in the selection, and the \"most "
 "parent\" selected one is connected, when you hit :kbd:`G`, nothing happens -"
@@ -497,7 +298,7 @@ msgid ""
 "behavior..."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:291
+#: ../../manual/rigging/posing/editing.rst:305
 msgid ""
 "So, when posing a chain of bones, you should always edit its elements from "
 "the root bone to the tip bone. This process is known as **forward "
@@ -507,23 +308,377 @@ msgid ""
 "whole chain just by moving its tip."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:297
+#: ../../manual/rigging/posing/editing.rst:311
 msgid ""
 "Note that this feature is somewhat extended/completed by the :doc:`pose "
 "library </rigging/posing/pose_library>` tool."
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:42
+#: ../../manual/rigging/posing/editing.rst:16
 msgid ""
-"You can select bones based on their group and/or layer, through the "
-":guilabel:`Select Grouped` pop-up menu (:kbd:`shift-G`):"
+"In *Pose* mode, bones behave like objects. So the transform actions "
+"(grab/rotate/scale, etc.) are very similar to the same ones in *Object* mode"
+" (all available ones are regrouped in the :menuselection:`Pose --> "
+"Transform` sub-menu). However, there are some important specificities:"
 msgstr ""
 
-#: ../../manual/rigging/posing/editing.rst:44
+#: ../../manual/rigging/posing/editing.rst:22
+msgid ""
+"The \"transform center\" of a given bone (i.e. its default pivot point, when"
+" it is the only selected one) is *its root*. Note by the way that some pivot"
+" point options seem to not work properly - in fact, except for the *3D "
+"Cursor* one, all others appear to always use the median point of the "
+"selection (and not e.g. the active bone's root when *Active Object* is "
+"selected, etc.)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:32
+msgid ""
+"Selection in *Pose* mode is very similar to the one in :doc:`Edit mode "
+"</rigging/armatures/selecting>`, with a few specificities:"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:35
+msgid "You can only select *whole bones* in *Pose* mode, not roots/tips..."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:43
+msgid ""
+"You can select bones based on their group and/or layer, through the *Select "
+"Grouped* pop-up menu (:kbd:`Shift-G`):"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:45
 msgid ""
 "To select all bones belonging to the same group(s) as the selected ones, use"
-" the :guilabel:`In Same Group` entry (:kbd:`shift-G-num1`)."
+" the *In Same Group* entry (:kbd:`Shift-G-Numpad1`)."
 msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:47
+msgid ""
+"To select all bones belonging to the same layer(s) as the selected ones, use"
+" the *In Same Layer* entry (:kbd:`Shift-G-Numpad2`)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:54
+msgid ""
+"As previously noted, bones' transformations are performed based on the *rest"
+" position* of the armature, which is its state as defined in *Edit* mode. "
+"This means that in rest position, in *Pose* mode, each bone has a scale of "
+"**1.0**, and null rotation and position (as you can see it in the *Transform"
+" Properties* panel, in the 3D views, :kbd:`N`)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:71
+msgid ""
+"Moreover, the local space for these actions is the bone's own one (visible "
+"when you enable the *Axes* option of the *Armature* panel). This is "
+"especially important when using axis locking - for example, there is no "
+"specific \"bone roll\" tool in *Pose* mode, as you can rotate around the "
+"bone's main axis just by locking on the local Y axis (:kbd:`R-Y-Y`)... This "
+"also works with several bones selected; each one is locked to its own local "
+"axis!"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:79
+msgid ""
+"When you pose your armature, you are supposed to have one or more objects "
+"skinned on it! And obviously, when you transform a bone in *Pose* mode, its "
+"related objects or object's shape is moved/deformed accordingly, in real "
+"time. Unfortunately, if you have a complex rig set-up and/or a heavy skin "
+"object, this might produce lag, and make interactive editing very painful. "
+"If you experience such troubles, try enabling the *Delay Deform* button of "
+"the *Armature* panel - the skin objects will only be updated once you "
+"validate the transform operation."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:102
+msgid ""
+"Once you have transformed some bones, if you want to return to their rest "
+"position, just clear their transformations (usual :kbd:`Alt-G` / "
+":kbd:`Alt-R` / :kbd:`Alt-S` shortcuts, or :menuselection:`Pose --> Clear "
+"Transform --> Clear User Transform`, :kbd:`W-5`, to clear everything at "
+"once... - commands also available in the :menuselection:`Pose --> Clear "
+"Transform` sub-menu)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:108
+msgid ""
+"Note that in *Envelope* visualization, :kbd:`Alt-S` does not clear the "
+"scale, but rather scales the *Distance* influence area of the selected bones"
+" (also available through the :menuselection:`Pose --> Scale Envelope "
+"Distance` menu entry - only effective in *Envelope* visualization, even "
+"though it is always available...)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:113
+msgid ""
+"Conversely, you may define the current pose as the new rest position (i.e. "
+"\"apply\" current transformations to the *Edit* mode), using the "
+":menuselection:`Pose --> Apply Pose as Restpose` menu entry (or "
+":kbd:`Ctrl-A` and confirm the pop-up dialog). **When you do so, the skinned "
+"objects/geometry is also reset to its default, undeformed state**, which "
+"generally means you'll have to skin it again."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:120
+msgid ""
+"Whereas in *Edit* mode, you always see your armature in its rest position, "
+"in *Object* and *Pose* ones, you see it by default in its *pose position* "
+"(i.e. as it was transformed in the *Pose* mode). If you want to see it in "
+"the rest position in all modes, enable the *Rest Position* button in the "
+"*Armature* panel (*Editing* context, :kbd:`F9`)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:135
+msgid ""
+"Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or "
+":kbd:`Alt-E`)"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:138
+msgid ""
+"Push Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or "
+":kbd:`Ctrl-E`)"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:142
+msgid ""
+"Breakdowner (:menuselection:`Pose --> In-Betweens --> Pose Breakdowner` or "
+":kbd:`Shift-E`)"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:144
+msgid ""
+"There are also in *Pose* mode a bunch of armature-specific editing "
+"options/tools, like :doc:`auto-bones naming "
+"</rigging/armatures/editing/properties#naming_bones>`, :doc:`properties "
+"switching/enabling/disabling "
+"</rigging/armatures/editing/properties#properties>`, etc., that we already "
+"described in the armature editing pages - follow the links above..."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:163
+msgid ""
+"Blender allows you to copy and paste a pose, either through the *Pose* menu,"
+" or directly using the three \"copy/paste\" buttons found at the right part "
+"of the 3D views header:"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:187
+msgid "Examples of pose copy/paste."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:196
+msgid ""
+"The first copied pose (note that only forearm and finger2_a are selected and"
+" hence copied)."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:217
+msgid ""
+"Bones relationships are crucial in *Pose* mode - they have important effects"
+" on transformations behavior."
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:237
+msgid ""
+"Exactly like standard children objects. You can modify this behavior on a "
+"per-bone basis, using their sub-panels in the *Armature Bones* panel:"
+msgstr ""
+
+#: ../../manual/rigging/posing/editing.rst:254
+msgid ""
+"These inheriting behaviors propagate along the bones' hierarchy. So when you"
+" scale down a bone, all its descendants are by default scaled down "
+"accordingly. However, if you set one bone's *Inherit Scale* or *Inherit "
+"Rotation* property on in this \"family\", this will break the scaling "
+"propagation, i.e. this bone *and all its descendants* will no longer be "
+"affected when you scale one of its ancestors."
+msgstr ""
+
+#~ msgid ""
+#~ "In :guilabel:`Pose` mode, bones behave like objects. So the transform "
+#~ "actions (grab/rotate/scale, etc.) are very similar to the same ones in "
+#~ ":guilabel:`Object` mode (all available ones are regrouped in the "
+#~ ":menuselection:`Pose --> Transform` sub-menu). However, there are some "
+#~ "important specificities:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The \"transform center\" of a given bone (i.e. its default pivot point, when"
+#~ " it is the only selected one) is *its root*. Note by the way that some pivot"
+#~ " point options seem to not work properly - in fact, except for the "
+#~ ":guilabel:`3D Cursor` one, all others appear to always use the median point "
+#~ "of the selection (and not e.g. the active bone's root when :guilabel:`Active"
+#~ " Object` is selected, etc.)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Selection in :guilabel:`Pose` mode is very similar to the one in :doc:`Edit "
+#~ "mode </rigging/armatures/selecting>`, with a few specificities:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can only select *whole bones* in :guilabel:`Pose` mode, not "
+#~ "roots/tips..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To select all bones belonging to the same layer(s) as the selected ones, use"
+#~ " the :guilabel:`In Same Layer` entry (:kbd:`shift-G-num2`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As previously noted, bones' transformations are performed based on the *rest"
+#~ " position* of the armature, which is its state as defined in "
+#~ ":guilabel:`Edit` mode. This means that in rest position, in :guilabel:`Pose`"
+#~ " mode, each bone has a scale of **1.0**, and null rotation and position (as "
+#~ "you can see it in the :guilabel:`Transform Properties` panel, in the 3D "
+#~ "views, :kbd:`N`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Moreover, the local space for these actions is the bone's own one (visible "
+#~ "when you enable the :guilabel:`Axes` option of the :guilabel:`Armature` "
+#~ "panel). This is especially important when using axis locking - for example, "
+#~ "there is no specific \"bone roll\" tool in :guilabel:`Pose` mode, as you can"
+#~ " rotate around the bone's main axis just by locking on the local Y axis "
+#~ "(:kbd:`R-Y-Y`)... This also works with several bones selected; each one is "
+#~ "locked to its own local axis!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you pose your armature, you are supposed to have one or more objects "
+#~ "skinned on it! And obviously, when you transform a bone in :guilabel:`Pose` "
+#~ "mode, its related objects or object's shape is moved/deformed accordingly, "
+#~ "in real time. Unfortunately, if you have a complex rig set-up and/or a heavy"
+#~ " skin object, this might produce lag, and make interactive editing very "
+#~ "painful. If you experience such troubles, try enabling the :guilabel:`Delay "
+#~ "Deform` button of the :guilabel:`Armature` panel - the skin objects will "
+#~ "only be updated once you validate the transform operation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once you have transformed some bones, if you want to return to their rest "
+#~ "position, just clear their transformations (usual :kbd:`alt-G` / "
+#~ ":kbd:`alt-R` / :kbd:`alt-S` shortcuts, or :menuselection:`Pose --> Clear "
+#~ "Transform --> Clear User Transform`, :kbd:`W-num5`, to clear everything at "
+#~ "once... - commands also available in the :menuselection:`Pose --> Clear "
+#~ "Transform` sub-menu)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that in :guilabel:`Envelope` visualization, :kbd:`Alt-S` does not clear"
+#~ " the scale, but rather scales the :guilabel:`Distance` influence area of the"
+#~ " selected bones (also available through the :menuselection:`Pose --> Scale "
+#~ "Envelope Distance` menu entry - only effective in :guilabel:`Envelope` "
+#~ "visualization, even though it is always available...)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Conversely, you may define the current pose as the new rest position (i.e. "
+#~ "\"apply\" current transformations to the :guilabel:`Edit` mode), using the "
+#~ ":menuselection:`Pose --> Apply Pose as Restpose` menu entry (or "
+#~ ":kbd:`ctrl-A` and confirm the pop-up dialog). **When you do so, the skinned "
+#~ "objects/geometry is also reset to its default, undeformed state**, which "
+#~ "generally means you'll have to skin it again."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whereas in :guilabel:`Edit` mode, you always see your armature in its rest "
+#~ "position, in :guilabel:`Object` and :guilabel:`Pose` ones, you see it by "
+#~ "default in its *pose position* (i.e. as it was transformed in the "
+#~ ":guilabel:`Pose` mode). If you want to see it in the rest position in all "
+#~ "modes, enable the :guilabel:`Rest Position` button in the "
+#~ ":guilabel:`Armature` panel (:guilabel:`Editing` context, :kbd:`F9`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or "
+#~ ":kbd:`alt-E`)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Push Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or "
+#~ ":kbd:`ctrl-E`)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Breakdowner (:menuselection:`Pose --> In-Betweens --> Pose Breakdowner` or "
+#~ ":kbd:`shift-E`)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are also in :guilabel:`Pose` mode a bunch of armature-specific editing"
+#~ " options/tools, like :doc:`auto-bones naming "
+#~ "</rigging/armatures/editing/properties#naming_bones>`, :doc:`properties "
+#~ "switching/enabling/disabling "
+#~ "</rigging/armatures/editing/properties#properties>`, etc., that we already "
+#~ "described in the armature editing pages - follow the links above..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Blender allows you to copy and paste a pose, either through the "
+#~ ":guilabel:`Pose` menu, or directly using the three \"copy/paste\" buttons "
+#~ "found at the right part of the 3D views header:"
+#~ msgstr ""
+
+#~ msgid "**Examples of pose copy/paste.**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The first copied pose (note that only forearm and finger2_a are selected and"
+#~ " hence copied)..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Bones relationships are crucial in :guilabel:`Pose` mode - they have "
+#~ "important effects on transformations behavior."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Exactly like standard children objects. You can modify this behavior on a "
+#~ "per-bone basis, using their sub-panels in the :guilabel:`Armature Bones` "
+#~ "panel:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These inheriting behaviors propagate along the bones' hierarchy. So when you"
+#~ " scale down a bone, all its descendants are by default scaled down "
+#~ "accordingly. However, if you set one bone's :guilabel:`Inherit Scale` or "
+#~ ":guilabel:`Inherit Rotation` property on in this \"family\", this will break"
+#~ " the scaling propagation, i.e. this bone *and all its descendants* will no "
+#~ "longer be affected when you scale one of its ancestors."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Examples of transforming parented/connected bones with** "
+#~ ":guilabel:`Inherit Rotation` **disabled.**"
+#~ msgstr ""
+
+#~ msgid "The yellow outlined Inherit Rotation disabled bone in the armature."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rotation of a bone with a Inherit Rotation disabled bone among its "
+#~ "descendants."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Scaling of a bone with a Inherit Rotation disabled bone among its "
+#~ "descendants."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can select bones based on their group and/or layer, through the "
+#~ ":guilabel:`Select Grouped` pop-up menu (:kbd:`shift-G`):"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To select all bones belonging to the same group(s) as the selected ones, use"
+#~ " the :guilabel:`In Same Group` entry (:kbd:`shift-G-num1`)."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "You can select bones based on their group and/or layer, through the "

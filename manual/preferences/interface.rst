@@ -1,3 +1,5 @@
+
+*********
 Interface
 *********
 
@@ -19,7 +21,7 @@ Object Info
 Large Cursors
    Use large mouse cursors when available.
 View Name
-   Display the name and type of the current view in the top left corner of the 3D window. For example: :guilabel:`User Persp` or :guilabel:`Top Ortho`.
+   Display the name and type of the current view in the top left corner of the 3D window. For example: *User Persp* or *Top Ortho*.
 Playback FPS
    Show the frames per second screen refresh rate while an animation is played back. It appears in the viewport corner, displaying red if the frame rate set can't be reached.
 Global Scene
@@ -52,7 +54,7 @@ Auto Perspective
 Smooth View
    Length of time the animation takes when changing the view with the numpad (Top/Side/Front/Camera...). Reduce to zero to remove the animation.
 Rotation Angle
-   Rotation step size in degrees, when :kbd:`pad4`, :kbd:`pad6`, :kbd:`pad8`, or :kbd:`pad2` are used to rotate the 3D view.
+   Rotation step size in degrees, when :kbd:`Numpad4`, :kbd:`Numpad6`, :kbd:`Numpad8`, or :kbd:`Numpad2` are used to rotate the 3D view.
 
 
 2D Viewports
@@ -79,7 +81,7 @@ Open on Mouse Over
 Menu Open Delay
    Time for the menu to open.
 Top Level
-   Time delay in 1/10 second before a menu opens (:guilabel:`Open on Mouse Over` needs to be enabled).
+   Time delay in 1/10 second before a menu opens (*Open on Mouse Over* needs to be enabled).
 Sub Level
    Same as above for sub menus (for example: :menuselection:`File --> Open Recent`).
 

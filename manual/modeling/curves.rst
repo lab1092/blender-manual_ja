@@ -1,4 +1,5 @@
 
+******
 Curves
 ******
 
@@ -40,7 +41,7 @@ Curve Primitives
    Add Curve menu.
 
 
-In Object mode, the :guilabel:`Add Curve` menu,
+In Object mode, the *Add Curve* menu,
 Blender provides five different curve primitives:
 
 Bezier Curve
@@ -48,11 +49,11 @@ Bezier Curve
 Bezier Circle
    Adds a closed, circle-shaped 2D Bezier curve (made of four control points).
 NURBS Curve
-   Adds an open 2D NURBS curve, with four control points, with :guilabel:`Uniform` knots.
+   Adds an open 2D NURBS curve, with four control points, with *Uniform* knots.
 NURBS Circle
    Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).
 Path
-   Adds a NURBS open 3D curve made of five aligned control points, with :guilabel:`Endpoint` knots and the :guilabel:`CurvePath` setting enabled.
+   Adds a NURBS open 3D curve made of five aligned control points, with *Endpoint* knots and the *CurvePath* setting enabled.
 
 
 Bezier Curves
@@ -63,7 +64,7 @@ The main elements used in editing Bezier Curves are the Control Points and Handl
 can be found in the middle of the pink line while the Handles comprise the extensions from the
 Control Point. By default the arrows on the Segment represents the direction and
 **relative** speed and direction of movement Objects will have when moving along the curve.
-This can be altered by defining a custom :guilabel:`Speed` Ipo.
+This can be altered by defining a custom *Speed* Ipo.
 
 
 .. figure:: /images/Modeling_Curves_control-points-handles.jpg
@@ -76,18 +77,18 @@ Editing Bezier Curves
 
 A Bezier curve can be edited by moving the locations of the Control Points and Handles.
 
-- Add a Curve by :kbd:`shift-a` to bring up the :guilabel:`Add` menu, followed by :menuselection:`Curve --> Bezier`.
-- Press :kbd:`TAB` to enter :guilabel:`Edit mode`.
+- Add a Curve by :kbd:`Shift-A` to bring up the *Add* menu, followed by :menuselection:`Curve --> Bezier`.
+- Press :kbd:`Tab` to enter *Edit mode*.
 - Select one of the Control Points and move it around. Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
 - Now select one of the Handles and move it around. Notice how this changes the curvature of the curve.
 
 To add more Control Points
 
 - Select at least two adjacent Control Points.
-- Press :kbd:`W` and select :guilabel:`Subdivide`.
+- Press :kbd:`W` and select *Subdivide*.
 - Optionally, you can press :kbd:`F6` immediately after the subdivision to modify the number of subdivisions.
 
-Note that while in :guilabel:`Edit mode` you cannot directly select a Segment. To do so,
+Note that while in *Edit mode* you cannot directly select a Segment. To do so,
 select all of the Control Points that make up the Segment you want to move.
 
 There are four Bezier curve handle types.
@@ -96,19 +97,27 @@ or by pressing the appropriate hotkey combination. Handles can be rotated, moved
 scaled and shrunk/fattened like any vertex in a mesh.
 
 
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-+**Bezier Curve Handle Types**                                                                                                                                                                                                                                                                                                                                +
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-+:guilabel:`Type`             |:guilabel:`Shortcut`|:guilabel:`Usage`                                                                                                                                                                                                                               |:guilabel:`Appearance`                                   +
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-+Automatic                    |:kbd:`V-A`          |This handle has a completely automatic length and direction which is set by Blender to ensure the smoothest result. These handles convert to :guilabel:`Aligned` handles when moved.                                                            |.. figure:: /images/Modeling_Curves_automatic-handles.jpg+
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-+Vector                       |:kbd:`V-V`          |Both parts of a handle always point to the previous handle or the next handle which allows you to create curves or sections thereof made of straight lines or with sharp corners. Vector handles convert to :guilabel:`Free` handles when moved.|.. figure:: /images/Modeling_Curves_vector-handles.jpg   +
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-+Aligned                      |:kbd:`V-L`          |These handles always lie in a straight line, and give a continuous curve without sharp angles.                                                                                                                                                  |.. figure:: /images/Modeling_Curves_aligned-handles.jpg  +
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-+Free                         |:kbd:`V-F`          |The handles are independent of each other.                                                                                                                                                                                                      |.. figure:: /images/Modeling_Curves_free-handles.jpg     +
-+-----------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
+Bezier Curve Handle Types
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Automatic :kbd:`V-A`
+   This handle has a completely automatic length and direction which is set by Blender to ensure the smoothest result.
+   These handles convert to *Aligned* handles when moved.
+
+   .. figure:: /images/Modeling_Curves_automatic-handles.jpg
+Vector :kbd:`V-V`
+   Both parts of a handle always point to the previous handle or the next handle which allows you to create curves or sections thereof made of straight lines or with sharp corners.
+   Vector handles convert to *Free* handles when moved.
+
+   .. figure:: /images/Modeling_Curves_vector-handles.jpg
+Aligned :kbd:`V-L`
+   These handles always lie in a straight line, and give a continuous curve without sharp angles.
+
+   .. figure:: /images/Modeling_Curves_aligned-handles.jpg
+Free :kbd:`V-F`
+   The handles are independent of each other.
+
+   .. figure:: /images/Modeling_Curves_free-handles.jpg
 
 
 Additionally,
@@ -121,11 +130,12 @@ the :kbd:`V-T` shortcut can be used to toggle between Free and Aligned handle ty
 Curve Properties
 ================
 
-Curve Properties can be set from the :guilabel:`Object Data` option in the
-:guilabel:`Properties Header` (shown below in blue).
+Curve Properties can be set from the *Object Data* option in the
+*Properties Header* (shown below in blue).
 
 
 .. figure:: /images/Icon-library_Properties_header-curve.jpg
+
 
 Shape
 -----
@@ -142,9 +152,9 @@ Shape
 Resolution
    The *resolution* property defines the number of points that are computed between every pair of Control Points.
    Curves can be made more or less smooth by increasing and decreasing the resolution respectively.
-   The :guilabel:`Preview U` setting determines the resolution in the 3D viewport while the :guilabel:`Render U` setting
-   determines the Curve's render resolution. If :guilabel:`Render U` is set to zero (0),
-   then the :guilabel:`Preview U` setting is used for both the 3D viewport and render resolution.
+   The *Preview U* setting determines the resolution in the 3D viewport while the *Render U* setting
+   determines the Curve's render resolution. If *Render U* is set to zero (0),
+   then the *Preview U* setting is used for both the 3D viewport and render resolution.
 
 
 
@@ -154,7 +164,7 @@ Resolution
 
 
 Twisting
-   A 3D Curve has Control Points that are not located on the Curve's local XY plane. This gives the Curve a twist which can affect the Curve normals. You can alter how the twist of the Curve is calculated by choosing from :guilabel:`Minimum, Tangent` and :guilabel:`Z-Up` options from the drop-down menu.
+   A 3D Curve has Control Points that are not located on the Curve's local XY plane. This gives the Curve a twist which can affect the Curve normals. You can alter how the twist of the Curve is calculated by choosing from *Minimum, Tangent* and *Z-Up* options from the drop-down menu.
 
 
 .. figure:: /images/Modeling_Curves_shape-twist.jpg
@@ -163,7 +173,7 @@ Twisting
 
 
 Fill
-   Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling). When set to :guilabel:`Half` (the default) the Curve is displayed as half a cylinder. The :guilabel:`Fill Deformed` option allows you to indicate whether the Curve should be filled before or after (default) applying any Shape Keys or Modifiers.
+   Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling). When set to *Half* (the default) the Curve is displayed as half a cylinder. The *Fill Deformed* option allows you to indicate whether the Curve should be filled before or after (default) applying any Shape Keys or Modifiers.
 
 
 .. figure:: /images/Modeling_Curves_shape-fill.jpg
@@ -172,7 +182,7 @@ Fill
 
 
 Path/Curve-Deform
-   These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property. The :guilabel:`Radius, Stretch` and :guilabel:`Bounds Clamp` options control how Objects use the Curve and are dealt with in more detail in the appropriate links below.
+   These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property. The *Radius, Stretch* and *Bounds Clamp* options control how Objects use the Curve and are dealt with in more detail in the appropriate links below.
 
 :doc:`Read more about Basic Curve Editing » </modeling/curves/editing>`
 :doc:`Read more about Paths » </animation/techs/object/path>`
@@ -232,8 +242,8 @@ Bevel Object
 Fill Caps
    Seals the ends of a beveled Curve.
 Map Taper
-   For Curves using a Taper Object and with modifications to the :guilabel:`Start/End Bevel Factor`
-   the :guilabel:`Map Taper` option will apply the taper to the beveled part of the Curve (not the whole Curve).
+   For Curves using a Taper Object and with modifications to the *Start/End Bevel Factor*
+   the *Map Taper* option will apply the taper to the beveled part of the Curve (not the whole Curve).
 
 
 .. figure:: /images/Modeling_Curves_geometry-map-taper.jpg
@@ -243,9 +253,9 @@ Map Taper
 
 Start Bevel Factor and End Bevel Factor
    These options determine where to start the Bevel operation on the Curve being beveled.
-   Increasing the :guilabel:`Start Bevel Factor` to 0.5 will start beveling the Curve 50% of the distance from the start
+   Increasing the *Start Bevel Factor* to 0.5 will start beveling the Curve 50% of the distance from the start
    of the Curve (in effect shortening the Curve).
-   Decreasing the :guilabel:`End Bevel Factor` by 0.25 will start beveling the Curve 25% of the distance from the end
+   Decreasing the *End Bevel Factor* by 0.25 will start beveling the Curve 25% of the distance from the end
    of the Curve (again, shortening the Curve).
 
 
@@ -275,7 +285,7 @@ Active Spline
    Curves Active Spline panel.
 
 
-The :guilabel:`Active Spline` panel becomes available during :guilabel:`Edit mode`.
+The *Active Spline* panel becomes available during *Edit mode*.
 
 Cyclic
    Closes the Curve.
@@ -285,7 +295,7 @@ Interpolation
    Tilt
       Alters how the tilt of a segment is calculated.
    Radius
-      Alters how the radius of a Beveled Curve is calculated. The effects are easier to see after Shrinking/Fattening a control point :kbd:`alt-s`.
+      Alters how the radius of a Beveled Curve is calculated. The effects are easier to see after Shrinking/Fattening a control point :kbd:`Alt-S`.
    Smooth
       Smooths the normals of the Curve
 
@@ -310,10 +320,10 @@ Editing NURBS Curves
 
 A NURBS Curve is edited by moving the location of the Control Points.
 
-- Place a Curve by :kbd:`shift-a` to bring up the Add menu, followed by :menuselection:`Curve --> NURBS curve`.
-- Press :kbd:`TAB` to enter :guilabel:`Edit mode`.
+- Place a Curve by :kbd:`Shift-A` to bring up the Add menu, followed by :menuselection:`Curve --> NURBS curve`.
+- Press :kbd:`Tab` to enter *Edit mode*.
 - Select one of the Control Points and move it around. Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
-- If you want to add additional Control Points, select both of them, press :kbd:`W` and select :guilabel:`Subdivide`. Press :kbd:`F6` immediately after to determine how many subdivisions to make.
+- If you want to add additional Control Points, select both of them, press :kbd:`W` and select *Subdivide*. Press :kbd:`F6` immediately after to determine how many subdivisions to make.
 
 
 Active Spline
@@ -327,8 +337,8 @@ Active Spline
 One of the characteristics of a NURBS object is the *knot vector*. This is a sequence of
 numbers used to determine the influence of the control points on the curve.
 While you cannot edit the knot vectors directly, you can influence them through the
-:guilabel:`Endpoint` and :guilabel:`Bezier` options in the Active Spline panel. Note that the
-:guilabel:`Endpoint` and :guilabel:`Bezier` settings only apply to open NURBS curves.
+*Endpoint* and *Bezier* options in the Active Spline panel. Note that the
+*Endpoint* and *Bezier* settings only apply to open NURBS curves.
 
 Cyclic
    Makes the NURBS curve cyclic.
@@ -353,7 +363,7 @@ Endpoint
 
 
 Order
-   The order of the NURBS curve determines the area of influence of the control points over the curve. Higher order values means that a single control point has a greater influence over a greater relative proportion of the curve. The valid range of :guilabel:`Order` values is 2-6 depending on the number of control points present in the curve.
+   The order of the NURBS curve determines the area of influence of the control points over the curve. Higher order values means that a single control point has a greater influence over a greater relative proportion of the curve. The valid range of *Order* values is 2-6 depending on the number of control points present in the curve.
 
 
 .. figure:: /images/Modeling_Curves_nurbs-order.jpg
@@ -367,8 +377,8 @@ Path
 ====
 
 
-As mentioned above, Curves are often used as :doc:`paths </animation/techs/object/path>`. Any curve can be used as a Path if the :guilabel:`Path Animation` option is selected.
+As mentioned above, Curves are often used as :doc:`paths </animation/techs/object/path>`. Any curve can be used as a Path if the *Path Animation* option is selected.
 
-The Path option available from the :guilabel:`Add Curve` menu is identical to a 3D NURBS
-curve, except that you do not have access to the :guilabel:`Active Spline` panel.
+The Path option available from the *Add Curve* menu is identical to a 3D NURBS
+curve, except that you do not have access to the *Active Spline* panel.
 

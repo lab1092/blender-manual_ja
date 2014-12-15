@@ -1,4 +1,5 @@
 
+***********
 Camera View
 ***********
 
@@ -7,13 +8,13 @@ Camera View
 
    | Mode:     All modes
    | Menu:     :menuselection:`View --> Camera --> Active Camera`
-   | Hotkey:   :kbd:`pad0`
+   | Hotkey:   :kbd:`Numpad0`
 
 
 Cameras View can be used to virtually compose shots and preview how the scene will look when
 rendered.
-Pressing :kbd:`pad0` will show the scene as viewed from the currently active camera. In
-this view you can also set the :guilabel:`Render Border` which defines the portion of the
+Pressing :kbd:`Numpad0` will show the scene as viewed from the currently active camera. In
+this view you can also set the *Render Border* which defines the portion of the
 camera view to be rendered.
 
 
@@ -33,12 +34,12 @@ Render Border
 
 
 While in camera view,
-you can define a :guilabel:`Render Border` by pressing :kbd:`Ctrl-B`.
+you can define a *Render Border* by pressing :kbd:`Ctrl-B`.
 This will allow you to draw out a dotted orange rectangle within the camera view.
 Your renders will now be limited to the part of scene visible within the render border.
 This can be very useful for reducing render times. The border can be disabled by disabling the
-:guilabel:`Border` option in the :guilabel:`Dimensions` panel of the :guilabel:`Render`
-context or by using :kbd:`Ctrl-B` to set a :guilabel:`Render Border` larger than the
+*Border* option in the *Dimensions* panel of the *Render*
+context or by using :kbd:`Ctrl-B` to set a *Render Border* larger than the
 camera view.
 
 

@@ -5,18 +5,18 @@ Precision
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes
-   | Hotkey:   :kbd:`ctrl` and/or :kbd:`shift`
+   | Mode:     *Object* and *Edit* modes
+   | Hotkey:   :kbd:`Ctrl` and/or :kbd:`Shift`
 
 
 Description
 ===========
 
-Holding :kbd:`ctrl` or :kbd:`shift` during a transformation operation
+Holding :kbd:`Ctrl` or :kbd:`Shift` during a transformation operation
 (such as grab/move, rotate or scale)
 will allow you to perform the transformation in either fixed amounts,
 very small amounts or both. The magnitude of the transformation can be viewed in the 3D window
-header in the bottom left hand corner. Releasing :kbd:`ctrl` or :kbd:`shift`
+header in the bottom left hand corner. Releasing :kbd:`Ctrl` or :kbd:`Shift`
 during the transformation will cause the movement to revert back to its normal mode of
 operation.
 
@@ -29,15 +29,15 @@ Usage
 With hotkeys
 ------------
 
-Press :kbd:`g`, :kbd:`r` or :kbd:`s` and then hold either :kbd:`ctrl`,
-:kbd:`shift` or :kbd:`ctrl-shift`.
+Press :kbd:`G`, :kbd:`R` or :kbd:`S` and then hold either :kbd:`Ctrl`,
+:kbd:`Shift` or :kbd:`Ctrl-Shift`.
 
 
 With the Transform Manipulator
 ------------------------------
 
-Hold :kbd:`ctrl`,
-:kbd:`shift` or :kbd:`ctrl-shift` and click on the appropriate manipulator handle.
+Hold :kbd:`Ctrl`,
+:kbd:`Shift` or :kbd:`Ctrl-Shift` and click on the appropriate manipulator handle.
 Then move the mouse in the desired direction. The reverse action will also work i.e.
 clicking the manipulator handle and then holding the shortcut key for precision control.
 
@@ -61,9 +61,9 @@ Grab/move transformations
 
 
 For grab/move operations at the default zoom level,
-holding :kbd:`ctrl` will cause your selection to move by increments of 1 Blender Unit
+holding :kbd:`Ctrl` will cause your selection to move by increments of 1 Blender Unit
 (1 BU) (i.e. between the two light grey lines). Zooming in enough to see the next set of grey
-lines will now cause :kbd:`ctrl` movements to occur by 1/10 of a BU. Zooming in further
+lines will now cause :kbd:`Ctrl` movements to occur by 1/10 of a BU. Zooming in further
 until the next set of grey lines becomes visible will cause movement to happen by 1/100 of a
 BU and so on until the zoom limit is reached.
 Zooming out will have the opposite effect and cause movement to happen by increments of 10,
@@ -75,19 +75,19 @@ Zooming out will have the opposite effect and cause movement to happen by increm
 Rotation transformations
 ------------------------
 
-Holding :kbd:`ctrl` will cause rotations of 5 degrees.
+Holding :kbd:`Ctrl` will cause rotations of 5 degrees.
 
 
 Scale transformations
 ---------------------
 
-Holding :kbd:`ctrl` will cause size changes in increments of 0.1 BU.
+Holding :kbd:`Ctrl` will cause size changes in increments of 0.1 BU.
 
 
 .. note:: Snapping modes
 
    Note that if you have a :doc:`Snap Element </3d_interaction/transform_control/snap#snap_element>` option enabled,
-   holding :kbd:`ctrl` will cause the selection to snap to the nearest element.
+   holding :kbd:`Ctrl` will cause the selection to snap to the nearest element.
 
    :doc:`Read more about Snapping » </3d_interaction/transform_control/snap>`
 
@@ -95,7 +95,7 @@ Holding :kbd:`ctrl` will cause size changes in increments of 0.1 BU.
 Holding SHIFT
 =============
 
-Holding :kbd:`shift` during transformations allows for very fine control that does not
+Holding :kbd:`Shift` during transformations allows for very fine control that does not
 rely on fixed increments. Rather, large movements of the mouse across the screen only result
 in small transformations of the selection.
 
@@ -106,20 +106,20 @@ Holding CTRL and SHIFT
 Grab/move transformations
 -------------------------
 
-For grab/move operations at the default zoom level, holding :kbd:`ctrl-shift` will cause
-your selection to move by increments of 1/10 Blender Units. Holding :kbd:`ctrl-shift` at
+For grab/move operations at the default zoom level, holding :kbd:`Ctrl-Shift` will cause
+your selection to move by increments of 1/10 Blender Units. Holding :kbd:`Ctrl-Shift` at
 any zoom level will cause the transformation increments to always be 1/10 of the increment if
-you were only holding :kbd:`ctrl`.
+you were only holding :kbd:`Ctrl`.
 
 
 Rotation transformations
 ------------------------
 
-Holding :kbd:`ctrl-shift` will cause rotations of 1 degree.
+Holding :kbd:`Ctrl-Shift` will cause rotations of 1 degree.
 
 
 Scale transformations
 ---------------------
 
-Holding :kbd:`ctrl-shift` will cause size changes in 0.01 BU increments.
+Holding :kbd:`Ctrl-Shift` will cause size changes in 0.01 BU increments.
 

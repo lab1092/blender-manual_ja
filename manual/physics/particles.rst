@@ -1,4 +1,5 @@
 
+*********
 Particles
 *********
 
@@ -10,8 +11,8 @@ and other things such as dust or magic spells.
 
 :doc:`Hair </physics/particles/hair>` type particles are a subset of regular particles. Hair systems form strands that can represent hair, fur, grass and bristles.
 
-You see particles as a :guilabel:`Particle` modifier,
-but all settings are done in the :guilabel:`Particle tab`.
+You see particles as a *Particle* modifier,
+but all settings are done in the *Particle tab*.
 
 
 .. figure:: /images/Blender3D_FurExample_2.49.jpg
@@ -30,7 +31,7 @@ Their movement can be affected by many things, including:
 - Influence of force fields like wind, vortexes or guided along a curve.
 - Interaction with other objects like collisions.
 - Partially intelligent members of a flock (herd, school, ...), that react to other members of their flock, while trying to reach a target or avoid predators.
-- Smooth motion with softbody physics (only :guilabel:`Hair` particle systems).
+- Smooth motion with softbody physics (only *Hair* particle systems).
 - Or even manual transformation with :doc:`Lattices </modifiers/deform/lattice>`.
 
 Particles may be rendered as:
@@ -40,7 +41,7 @@ Particles may be rendered as:
 - :doc:`Strands </materials/properties/strands>` (for :doc:`Hair, Fur, Grass </physics/particles/hair>`); the complete way of a particle will be shown as a strand. These strands can be manipulated in the 3D window (combing, adding, cutting, moving, etc).
 
 Every object may carry many particle systems. Each particle system may contain up to 100.
-000 particles. Certain particle types (:guilabel:`Hair` and :guilabel:`Keyed`)
+000 particles. Certain particle types (*Hair* and *Keyed*)
 may have up to 10.000 children for each particle
 (children move and emit more or less like their respective parents).
 The size of your memory and your patience are your practical boundaries.
@@ -51,7 +52,7 @@ The size of your memory and your patience are your practical boundaries.
    There are many differences between the "old" particle system that was used up to and including version 2.45,
    and the "new" particle system. There are many things possible now that could not be done with the old system.
    The new system is incompatible to the old system, though Blender tries to convert old particle systems,
-   which works only to some extent. The old system is most like the new :guilabel:`Emitter` system
+   which works only to some extent. The old system is most like the new *Emitter* system
    (keep reading to find out what that is). If you are using an old version of Blender 2.45 and previous,
    :doc:`click here to access the old documentation </physics/particles/blender_2.45_particles>`.
 
@@ -78,14 +79,14 @@ Creating a Particle System
    Image 2: Adding a particle system.
 
 
-To add a new particle system to an object, go to the :guilabel:`Particles` tab of the object
-:guilabel:`Settings` editor and click the small :guilabel:`+` button.
+To add a new particle system to an object, go to the *Particles* tab of the object
+*Settings* editor and click the small *+* button.
 An object can have many Particle Systems.
 
 Each particle system has separate settings attached to it.
 These settings can be shared among different particle systems, so one doesn't have to copy
 every setting manually and can use the same effect on multiple objects.
-Using the :guilabel:`Random` property they can be randomized to look slightly different,
+Using the *Random* property they can be randomized to look slightly different,
 even when using the same settings.
 
 
@@ -98,22 +99,22 @@ Types of Particle systems
 
 
 After you have created a particle system,
-the :guilabel:`Property` window fills with many panels and buttons.
+the *Property* window fills with many panels and buttons.
 But don't panic! There are two different types of particle systems,
-and you can change between these two with the :guilabel:`Type` drop-down list:
+and you can change between these two with the *Type* drop-down list:
 
 Emitter
    This parallels the old system to the greatest extent.
    In such a system, particles are emitted from the selected object
-   from the :guilabel:`Start` frame to the :guilabel:`End` frame and have a certain lifespan.
+   from the *Start* frame to the *End* frame and have a certain lifespan.
 
 :doc:`Hair </physics/particles/hair>`
    This system type is rendered as strands and has some very special properties:
    it may be edited in the 3D window in realtime and you can also animate
    the strands with :doc:`Cloth Simulation </physics/cloth>`.
 
-The settings in the :guilabel:`Particle System` panel are partially different for each system
-type. For example, in *Image 3* they are shown for only system type :guilabel:`Emitter`.
+The settings in the *Particle System* panel are partially different for each system
+type. For example, in *Image 3* they are shown for only system type *Emitter*.
 
 
 Common Options

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|}} .
 
 
+******************
 Exposure and Range
 ******************
 
@@ -9,15 +10,17 @@ Exposure and Range
    :class: refbox
 
    | Mode:     All modes
-   | Panel:    :guilabel:`World` (:guilabel:`Shading` context, :guilabel:`World` sub-context)
+   | Panel:    *World* (*Shading* context, *World* sub-context)
 
 
 Description
 ===========
 
-:guilabel:`Exposure` and :guilabel:`Range` are similar to the "Color Curves" tool in Gimp or Photoshop.
+*Exposure* and *Range* are similar to the "Color Curves" tool in Gimp or Photoshop.
 
-These controls affect the rendered image, and the results are baked into the render. For information on achieving similar affects with render controls, see :doc:`Color Management and Exposure </render/post_process/cm_and_exposure>`.
+These controls affect the rendered image, and the results are baked into the render.
+For information on achieving similar affects with render controls,
+see :doc:`Color Management and Exposure </render/post_process/cm_and_exposure>`.
 
 Previously Blender clipped color directly with "\ ``1.0`` " (or 255)
 when it exceeded the possible RGB space.
@@ -41,19 +44,25 @@ Exposure
 Range
    The range of input colors that are mapped to visible colors ``(0.0 - 1.0)``.
 
-So without :guilabel:`Exposure` we will get a linear correction of all color values:
+So without *Exposure* we will get a linear correction of all color values:
 
-- :guilabel:`Range` > ``1.0`` : the picture will become darker; with :guilabel:`Range` = ``2.0``, a color value of ``1.0`` (the brightest by default) will be clipped to ``0.5`` (half bright) (:guilabel:`Range` *:* ``2.0``).
-- :guilabel:`Range` < ``1.0`` : the picture will become brighter; with :guilabel:`Range` = ``0.5``, a color value of ``0.5`` (half bright by default) will be clipped to ``1.0`` (the brightest) (:guilabel:`Range` *:* ``0.5``).
+Range` > ``1.0``
+   the picture will become darker; with *Range* = ``2.0``,
+   a color value of ``1.0`` (the brightest by default) will be clipped to ``0.5``
+   (half bright) (*Range* *:* ``2.0``).
+Range` < ``1.0``
+   the picture will become brighter; with *Range* = ``0.5``,
+   a color value of ``0.5`` (half bright by default) will be clipped to ``1.0``
+   (the brightest) (*Range* *:* ``0.5``).
 
 
 Examples
 ========
 
 With a linear correction every color value will get changed,
-which is probably not what we want. :guilabel:`Exposure` brightens the darker pixels,
+which is probably not what we want. *Exposure* brightens the darker pixels,
 so that the darker parts of the image won't be changed at all
-(:guilabel:`Range` : ``2.0``, :guilabel:`Exposure` : ``0.3``).
+(*Range* : ``2.0``, *Exposure* : ``0.3``).
 
 
 +----------------------------------------------------------+----------------------------------------------------------------------+
@@ -74,9 +83,8 @@ so that the darker parts of the image won't be changed at all
 Hints
 =====
 
-Try to find the best :guilabel:`Range` value,
-so that overexposed parts are barely not too bright. Now turn up the :guilabel:`Exposure`
+Try to find the best *Range* value,
+so that overexposed parts are barely not too bright. Now turn up the *Exposure*
 value until the overall brightness of the image is satisfying.
 This is especially useful with area lamps.
-
 

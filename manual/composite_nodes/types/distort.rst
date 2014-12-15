@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+***********************
 Composite Distort Nodes
 ***********************
 
@@ -90,7 +91,7 @@ which makes it look like the "Hello!" is still moving as the camera moves with i
 
 
 Use the Map Value node to scale the X (left to right) offsets that feed the Translate node.
-Note that :guilabel:`offsets` are used to position the dancing "Hello!" down to look like it
+Note that *offsets* are used to position the dancing "Hello!" down to look like it
 is walking along the street (in the render scene,
 it is centered on camera and just dances in place).
 The matte is adjusted up to fake a camera height of an observer, bringing the horizon up.
@@ -167,7 +168,7 @@ but minimum blur when there is maximum translate.
 The two Map Value node settings are different to achieve this; the math is left to the reader.
 
 Use this Blender noodle to mimic camera shake.
-The amount of shake is set by the :guilabel:`Size` values,
+The amount of shake is set by the *Size* values,
 and the blur should be proportional to the amount and direction of motion
 (predominantly X in this example).
 Use the Time start and end to vary the duration of the shake; ten seconds for an earthquake,
@@ -376,7 +377,7 @@ Dispersion
    This simulates chromatic aberration, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.
 
 Projector
-   Enable or disable slider projection mode. When on, distortion is only applied horizontally. Disables :guilabel:`Jitter` and :guilabel:`Fit`.
+   Enable or disable slider projection mode. When on, distortion is only applied horizontally. Disables *Jitter* and *Fit*.
 Jitter
    Adds jitter to the distortion. Faster, but noisier.
 Fit

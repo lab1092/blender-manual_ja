@@ -2,32 +2,33 @@
 ..    TODO/Review: {{review|im=examples|partial=X|text = expand basic selection tools}} .
 
 
+***************
 Basic Selection
 ***************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Hotkey:   :kbd:`rmb` and :kbd:`shift-rmb`
+   | Mode:     *Edit* mode
+   | Hotkey:   :kbd:`RMB` and :kbd:`Shift-RMB`
 
 
-The most common way to select an element is to :kbd:`rmb` on that item;
+The most common way to select an element is to :kbd:`RMB` on that item;
 this will replace the existing selection with the new item.
 
 
 Adding to a Selection
 =====================
 
-To add to the existing selection, hold down :kbd:`shift` while right clicking.
+To add to the existing selection, hold down :kbd:`Shift` while right clicking.
 Clicking again on a selected item will deselect it.
 
-As in :guilabel:`Object` mode, there is a unique *active* element,
+As in *Object* mode, there is a unique *active* element,
 displayed in a lighter shade (in general, the last element selected).
 Depending on the tools used, this element might be very important!
 
 Note that there is no option to choose what element to select between overlapping ones
-(like the :kbd:`alt-rmb` click in :guilabel:`Object` mode). However,
+(like the :kbd:`Alt-RMB` click in *Object* mode). However,
 if you are in solid, shaded, or textured viewport shading mode
 (not bounding box or wireframe),
 you will have a fourth button in the header that looks like a cube,
@@ -44,20 +45,20 @@ Selecting Elements in a Region
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Hotkey:   :kbd:`B`, :kbd:`C`, and :kbd:`ctrl-lmb` click and drag
+   | Mode:     *Edit* mode
+   | Hotkey:   :kbd:`B`, :kbd:`C`, and :kbd:`Ctrl-LMB` click and drag
 
 
 Region selection allows you to select groups of elements within a 2D region in your 3D view.
 The region can be either a circle or rectangle.
-The circular region is only available in :guilabel:`Edit mode`. The rectangular region,
+The circular region is only available in *Edit mode*. The rectangular region,
 or "\ *Border Select* ",
-is available in both :guilabel:`Edit mode` and :guilabel:`Object` mode.
+is available in both *Edit mode* and *Object* mode.
 
 
 .. note::
 
-   What is selected using both these tools is affected by the :guilabel:`Limit Selection to visible` feature (available under the 3D viewport) in :guilabel:`Solid Viewport Shading Mode`.
+   What is selected using both these tools is affected by the *Limit Selection to visible* feature (available under the 3D viewport) in *Solid Viewport Shading Mode*.
 
    For example,
 
@@ -68,7 +69,7 @@ is available in both :guilabel:`Edit mode` and :guilabel:`Object` mode.
 Rectangular region (Border select)
 ----------------------------------
 
-:guilabel:`Border Select` is available in either :guilabel:`Edit mode` or :guilabel:`Object` mode. To activate the tool use the :kbd:`B`. Use :guilabel:`Border Select` to select a group of objects by drawing a rectangle while holding down :kbd:`lmb`. In doing this you will select all objects that lie within or touch this rectangle. If any object that was last active appears in the group it will become selected *and* active.
+*Border Select* is available in either *Edit mode* or *Object* mode. To activate the tool use the :kbd:`B`. Use *Border Select* to select a group of objects by drawing a rectangle while holding down :kbd:`LMB`. In doing this you will select all objects that lie within or touch this rectangle. If any object that was last active appears in the group it will become selected *and* active.
 
 
 +-------------------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------+
@@ -80,30 +81,30 @@ Rectangular region (Border select)
 +-------------------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------+
 
 
-In (*Start*), :guilabel:`Border Select` has been activated and is indicated by showing a
+In (*Start*), *Border Select* has been activated and is indicated by showing a
 dotted cross-hair cursor. In (*Selecting*),
-the *selection region* is being chosen by drawing a rectangle with the :kbd:`lmb`.
+the *selection region* is being chosen by drawing a rectangle with the :kbd:`LMB`.
 The selection area is only covering the selection handles of three faces. Finally,
-by releasing :kbd:`lmb` the selection is complete; see (*Complete*).
+by releasing :kbd:`LMB` the selection is complete; see (*Complete*).
 
 
 .. note::
 
-   Border select adds to the previous selection, so in order to select only the contents of the rectangle, deselect all with :kbd:`A` first. In addition, you can use :kbd:`mmb` while you draw the border to deselect all objects within the rectangle.
+   Border select adds to the previous selection, so in order to select only the contents of the rectangle, deselect all with :kbd:`A` first. In addition, you can use :kbd:`MMB` while you draw the border to deselect all objects within the rectangle.
 
 
 Circular region
 ---------------
 
-This selection tool is only available in :guilabel:`Edit mode` and can be activated with
+This selection tool is only available in *Edit mode* and can be activated with
 :kbd:`C`.
 Once in this mode the cursor changes to a dashed cross-hair with a 2D circle surrounding it.
 The tool will operate on whatever the current select mode is.
-Clicking or dragging with the :kbd:`lmb`,
+Clicking or dragging with the :kbd:`LMB`,
 causing elements to be inside the circle will cause those elements to be selected.
 
-You can enlarge or shrink the circle region using :kbd:`pad+` and :kbd:`pad-`,
-or the :kbd:`wheel`.
+You can enlarge or shrink the circle region using :kbd:`Numpad+` and :kbd:`Numpad-`,
+or the :kbd:`Wheel`.
 
 
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -116,26 +117,26 @@ or the :kbd:`wheel`.
 +Circle Region Select                                                                                                                                   +
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+
 
-(*Circle Region Select*) is an example of selecting edges while in :guilabel:`Edge Select Mode`. As soon as an edge intersects the circle the edge becomes selected. The tool is interactive such that edges are selected while the circle region is being dragged with the :kbd:`lmb`.
+(*Circle Region Select*) is an example of selecting edges while in *Edge Select Mode*. As soon as an edge intersects the circle the edge becomes selected. The tool is interactive such that edges are selected while the circle region is being dragged with the :kbd:`LMB`.
 
 If you want to deselect elements,
-either hold :kbd:`mmb` or :kbd:`alt-lmb` and begin clicking or dragging again.
+either hold :kbd:`MMB` or :kbd:`Alt-LMB` and begin clicking or dragging again.
 
-For :guilabel:`Faces` select mode,
+For *Faces* select mode,
 the circle must intersect the face indicators usually represented by small pixel squares;
 one at the center of each face.
 
-To exit from this tool, click :kbd:`rmb`, or hit the :kbd:`Esc` key.
+To exit from this tool, click :kbd:`RMB`, or hit the :kbd:`Esc` key.
 
 
 Lasso region
 ------------
 
-:guilabel:`Lasso` select is similar to :guilabel:`Border` select in that you select objects based on a region, except :guilabel:`Lasso` is a hand-drawn region that generally forms a circular/round-shaped form; kind of like a lasso.
+*Lasso* select is similar to *Border* select in that you select objects based on a region, except *Lasso* is a hand-drawn region that generally forms a circular/round-shaped form; kind of like a lasso.
 
-:guilabel:`Lasso` is available in either :guilabel:`Edit Mode` or :guilabel:`Object Mode`. To activate the tool use the :kbd:`ctrl-lmb` while dragging. The one difference between :guilabel:`Lasso` and :guilabel:`Border` select is that in :guilabel:`Object mode`, :guilabel:`Lasso` only selects objects where the lasso region intersects the objects' center.
+*Lasso* is available in either *Edit Mode* or *Object Mode*. To activate the tool use the :kbd:`Ctrl-LMB` while dragging. The one difference between *Lasso* and *Border* select is that in *Object mode*, *Lasso* only selects objects where the lasso region intersects the objects' center.
 
-To deselect, use :kbd:`ctrl-shift-lmb` while dragging.
+To deselect, use :kbd:`Ctrl-Shift-LMB` while dragging.
 
 
 +------------------------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+
@@ -148,7 +149,7 @@ To deselect, use :kbd:`ctrl-shift-lmb` while dragging.
 +Lasso selection                                                                                                                                                                                                           +
 +------------------------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+
 
-(*Lasso selection*) is an example of using the :guilabel:`Lasso` select tool in :guilabel:`Vertex Select Mode`.
+(*Lasso selection*) is an example of using the *Lasso* select tool in *Vertex Select Mode*.
 
 
 Additional Selection Tools
@@ -158,9 +159,9 @@ The select menu in edit mode contains additional tool for selecting components:
 
 (De)select All :kbd:`A`
    Select all or none of the mesh components.
-Invert Selection :kbd:`ctrl-I`
+Invert Selection :kbd:`Ctrl-I`
    Selects all components that are not selected, and deselect currently selected components.
-More :kbd:`ctrl-num+`
+More :kbd:`Ctrl-Numpad+`
    Propagates selection by adding components that are adjacent to selected elements.
-Less :kbd:`ctrl-num-`
+Less :kbd:`Ctrl-Numpad-`
    Deselects components that form the bounds of the current selection

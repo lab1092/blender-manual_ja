@@ -1,4 +1,5 @@
 
+***************************
 Procedural textures: Stucci
 ***************************
 
@@ -9,7 +10,7 @@ Procedural textures: Stucci
    Stucci Texture Panels
 
 
-The :guilabel:`Stucci` texture is based on noise functions.
+The *Stucci* texture is based on noise functions.
 
 Often used for
    Stone, Asphalt, Oranges. Normally for Bump-Mapping to create grainy surfaces.
@@ -27,5 +28,5 @@ Soft / Hard
 Size
    Dimension of the Noise table
 Turbulence
-   Depth of the :guilabel:`Stucci` calculations
+   Depth of the *Stucci* calculations
 

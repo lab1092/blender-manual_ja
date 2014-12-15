@@ -1,4 +1,5 @@
 
+******************
 Mirror Reflections
 ******************
 
@@ -13,11 +14,10 @@ then the ray bounces from its current location and travels up to another object,
 until a non-reflective object is finally met and gives the whole chain of rays its color.
 
 Eventually, the first reflective object inherits the colors of its environment,
-proportional to its :guilabel:`Reflectivity` value. Obviously,
-if there are only reflective objects in the scene, then the render could last forever. This is
-why a mechanism for limiting the travel of a single ray is set through the :guilabel:`Depth`
-value: this parameter sets the maximum number of bounces allowed for a single ray.
-
+proportional to its *Reflectivity* value.
+Obviously, if there are only reflective objects in the scene, then the render could last forever.
+This is why a mechanism for limiting the travel of a single ray is set through the *Depth* value:
+this parameter sets the maximum number of bounces allowed for a single ray.
 
 .. note::
 
@@ -29,7 +29,7 @@ value: this parameter sets the maximum number of bounces allowed for a single ra
 The *Color Swatch* in the mirror panel is the color of the light reflected back.  Usually,
 for normal mirrors, use white. However, some mirrors color the reflection (e.g. metals),
 so you can change the color by clicking on the swatch.
-The amount of mirrored reflection is determined by the :guilabel:`Reflectivity` value.
+The amount of mirrored reflection is determined by the *Reflectivity* value.
 If set to something greater than 0, mirrored reflectivity will be activated and the reflection
 will be tinted the color set in the swatch.
 
@@ -45,7 +45,8 @@ Options
 Enable ray-traced reflections
    Enable or disable ray-traced reflections
 Reflectivity
-   Sets the amount of reflectiveness of the object.  Use a value of 1.0 if you need a perfect mirror, or set it to 0.0 if you don't want any reflection.
+   Sets the amount of reflectiveness of the object.
+   Use a value of 1.0 if you need a perfect mirror, or set it to 0.0 if you don't want any reflection.
 
 
 .. figure:: /images/Manual-2.5-Material-MirrorColor.jpg
@@ -69,16 +70,17 @@ Blend
    A controlling factor to adjust how the blending happens between the reflective and non-reflective areas.
 Depth
    Maximum allowed number of light inter-reflections.
-   If your scene contains many reflective objects and/or if the camera zooms in on such a reflective object, you will
-   need to increase this value if you want to see surrounding reflections in the reflection of the reflected object (!).
+   If your scene contains many reflective objects and/or if the camera zooms in on such a reflective object,
+   you will need to increase this value if you want to see surrounding
+   reflections in the reflection of the reflected object (!).
    In this case, a Depth of 4 or 5 is typically a good value.
 Max Dist
    Maximum distance of reflected rays away from camera (Z-Depth) in Blender units.
    Reflections further than this range fade out to reduce compute time.
 
 Fade to
-   The color that rays with no intersection within the :guilabel:`Max Distance` take.
-   :guilabel:`Material` color can be best for indoor scenes, :guilabel:`Sky` color (World settings)
+   The color that rays with no intersection within the *Max Distance* take.
+   *Material* color can be best for indoor scenes, *Sky* color (World settings)
    for outdoor scenes.
 
 
@@ -97,20 +99,28 @@ Gloss
    You can also use this value to mimic depth of field in mirrors.
 
    Amount
-      The shininess of the reflection.  Values < 1.0 give diffuse, blurry reflections and activate the settings below.
+      The shininess of the reflection.
+      Values < 1.0 give diffuse, blurry reflections and activate the settings below.
    Threshold
-      Threshold for adaptive sampling.  If a sampling contributes less than this amount (as percentage), sampling is stopped.  Raising the threshold will make the adaptive sampler skip more often, however the reflections could become noisier.
+      Threshold for adaptive sampling.
+      If a sampling contributes less than this amount (as percentage), sampling is stopped.
+      Raising the threshold will make the adaptive sampler skip more often,
+      however the reflections could become noisier.
    Samples
-      Number of cone samples averaged for blurry reflection.  More samples will give a smoother result, but will also increase render time.
+      Number of cone samples averaged for blurry reflection.
+      More samples will give a smoother result, but will also increase render time.
 
 
 .. figure:: /images/Manual-2.5-Material-RayMirror-AnisotropicExample.jpg
 
-   Anisotropic tangent reflecting spheres with anisotropic set to 0.0, 0.75, 1.0. (`.blend <http://wiki.blender.org/index.php/:File:Manual-2.5-Material-Mirror-anisotropic-example.blend>`__)
+   Anisotropic tangent reflecting spheres with anisotropic set to 0.0, 0.75, 1.0.
+   (`.blend <http://wiki.blender.org/index.php/:File:Manual-2.5-Material-Mirror-anisotropic-example.blend>`__)
 
 
    Anisotropic
-      The shape of the reflection, from 0.0 (circular) to 1.0 (fully stretched along the tangent).  If the :guilabel:`Tangent Shading` is on, Blender automatically renders blurry reflections as anisotropic reflections.
+      The shape of the reflection, from 0.0 (circular) to 1.0 (fully stretched along the tangent).
+      If the *Tangent Shading* is on,
+      Blender automatically renders blurry reflections as anisotropic reflections.
       When Tangent is switched on, the *Anisotropic* slider controls the strength of this anisotropic reflection,
       with a range of 1.0 (default) being fully anisotropic and 0.0 being fully circular,
       as is when tangent shading on the material is switched off.
@@ -119,9 +129,9 @@ Gloss
       or based on the mesh's UV co-ordinates.
 
 
-
 Examples
 --------
+
 
 Fresnel
 ^^^^^^^
@@ -149,7 +159,5 @@ Fresnel 0.0 stands for a perfect mirror Material, while Fresnel 5.
 0 could stand for a glossy Material.  It's barely noticeable but in the lower picture,
 the Material is perfectly reflective around the edges.
 
-The smoothness of the Fresnel limit can be further controlled using the :guilabel:`Blend`
-slider.
-
+The smoothness of the Fresnel limit can be further controlled using the *Blend* slider.
 

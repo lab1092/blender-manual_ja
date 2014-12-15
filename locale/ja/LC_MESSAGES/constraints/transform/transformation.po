@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/constraints/transform/transformation.rst:5
+#: ../../manual/constraints/transform/transformation.rst:6
 msgid "Transformation Constraint"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:7
+#: ../../manual/constraints/transform/transformation.rst:8
 msgid ""
 "This constraint is more complex and versatile than the other \"transform\" "
 "constraints. It allows you to map one type of transform properties (i.e. "
@@ -27,198 +27,98 @@ msgid ""
 "values."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:14
+#: ../../manual/constraints/transform/transformation.rst:15
 msgid ""
 "So, e.g. you can use the position of the target along the X axis to control "
 "the rotation of the owner around the Z axis, stating that **1 BU** along the"
 " target X axis corresponds to"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:17
+#: ../../manual/constraints/transform/transformation.rst:18
 msgid ""
 "``10`` around the owner Z axis. Typical uses for this include gears (see "
 "note below),"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:19
+#: ../../manual/constraints/transform/transformation.rst:20
 msgid "and rotation based on location setups."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:23
+#: ../../manual/constraints/transform/transformation.rst:24
 msgid "Options"
 msgstr "オプション"
 
-#: ../../manual/constraints/transform/transformation.rst:29
+#: ../../manual/constraints/transform/transformation.rst:30
 msgid "Transformation panel"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:41
+#: ../../manual/constraints/transform/transformation.rst:42
 msgid "Target"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:33
+#: ../../manual/constraints/transform/transformation.rst:34
 msgid ""
 "This constraint uses one target, and is not functional (red state) when it "
 "has none."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:38
+#: ../../manual/constraints/transform/transformation.rst:39
 msgid "Bone"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:36
-msgid ""
-"If :guilabel:`Target` is an :guilabel:`Armature`, a new field is displayed "
-"offering the optional choice to set an individual bone as "
-":guilabel:`Target`."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:38
+#: ../../manual/constraints/transform/transformation.rst:39
 msgid "Head/Tail"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:39
-msgid ""
-"If a :guilabel:`Bone` is set as :guilabel:`Target`, a new field is displayed"
-" offering the optional choice of where along this bone the target point "
-"lies."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:41
+#: ../../manual/constraints/transform/transformation.rst:42
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:41
-msgid ""
-"If :guilabel:`Target` is a :guilabel:`Mesh`, a new field is displayed "
-"offering the optional choice to set a :guilabel:`Vertex Group` as target."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:46
+#: ../../manual/constraints/transform/transformation.rst:47
 msgid "Extrapolate"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:44
-msgid ""
-"By default, the :guilabel:`min` and :guilabel:`max` values bound the input "
-"and output values; all values outside these ranges are clipped to them. When"
-" you enable this button, the :guilabel:`min` and :guilabel:`max` values are "
-"no longer strict limits, but rather \"markers\" defining a proportional "
-"(linear) mapping between input and corresponding output values. Let's "
-"illustrate that with two graphs (*The* :guilabel:`Extrapolate` "
-"*principles*). In these pictures, the input range (in abscissa) is set to "
-"[\\ **1.0**, **4.0** ], and its corresponding output range (in ordinate), to"
-" [\\ **1.0**, **2.0** ]. The yellow curve represents the mapping between "
-"input and output."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:49
-msgid "**The** :guilabel:`Extrapolate` **principles.**"
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:53
-msgid ""
-"Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] "
-"range."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:53
-msgid ""
-"Extrapolate enabled: the output values are \"free\" to proportionally follow"
-" the input ones."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:59
+#: ../../manual/constraints/transform/transformation.rst:60
 msgid "Note that:"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:65
+#: ../../manual/constraints/transform/transformation.rst:66
 msgid ""
 "Conversely, when mapping transform properties to rotation or scale, the "
 "owner's existing rotation or scale is overridden by the result of evaluating"
 " this constraint."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:72
+#: ../../manual/constraints/transform/transformation.rst:73
 msgid ""
 "Similarly, when using the scale transform properties of the target as input,"
 " whatever the real values are, the constraint will always take their "
 "absolute values (i.e. invert negative ones)."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:74
-msgid ""
-"When a :guilabel:`min` value is higher than its corresponding "
-":guilabel:`max` one, both are considered equal to the :guilabel:`max` one. "
-"This implies you cannot create \"reversed\" mappings..."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:79
+#: ../../manual/constraints/transform/transformation.rst:80
 msgid "Source"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:78
-msgid ""
-"It contains the input (from target) settings. The three :guilabel:`Loc`, "
-":guilabel:`Rot` and :guilabel:`Scale` toggle buttons, mutually exclusive, "
-"allow you to select which type of property to use. The :guilabel:`X:`, "
-":guilabel:`Y:` and :guilabel:`Z:` :guilabel:`min` and :guilabel:`max` "
-"numeric fields control the lower and upper bounds of the input value range, "
-"independently for each axis. Note that if a min value is higher than its "
-"corresponding max value, the constraint behaves as if it had the same value "
-"as the max one."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:86
+#: ../../manual/constraints/transform/transformation.rst:87
 msgid "Destination"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:82
+#: ../../manual/constraints/transform/transformation.rst:83
 msgid "It contains the output (to owner) settings."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:84
-msgid ""
-"The three :guilabel:`Loc`, :guilabel:`Rot` and :guilabel:`Scale` toggle "
-"buttons, mutually exclusive, allow you to select which type of property to "
-"control."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:85
-msgid ""
-"The three :guilabel:`Axis Mapping` drop-down lists allow you to select which"
-" input axis to map to, respectively (from top to bottom), the X, Y and Z "
-"output (owner) axes."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:86
-msgid ""
-"The :guilabel:`min` and :guilabel:`max` numeric fields control the lower and"
-" upper bounds of the output value range, independently for each mapped axis."
-" Note that if a min value is higher than its corresponding max value, the "
-"constraint behaves as if it had the same value as the max one."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:92
+#: ../../manual/constraints/transform/transformation.rst:93
 msgid "Space"
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:89
+#: ../../manual/constraints/transform/transformation.rst:90
 msgid ""
 "This constraint allows you to choose in which space to evaluate its owner's "
 "and target's transform properties."
 msgstr ""
 
-#: ../../manual/constraints/transform/transformation.rst:61
-msgid ""
-"When mapping transform properties to location (i.e. `Loc`, `Destination` "
-"button is enabled), the owner's existing location is added to the result of "
-"evaluating this constraint (exactly like when the :guilabel:`Offset` button "
-"of the :doc:`Copy Location constraint "
-"</constraints/transform/copy_location>` is enabled...)."
-msgstr ""
-
-#: ../../manual/constraints/transform/transformation.rst:67
+#: ../../manual/constraints/transform/transformation.rst:68
 msgid ""
 "When using the rotation transform properties of the target as input, "
 "whatever the real values are, the constraint will always \"take them back\" "
@@ -227,6 +127,171 @@ msgid ""
 "``((420 + 180) modulo 360) - 180 = 60- ...)``. This is why this constraint "
 "is not really suited for gears!"
 msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:37
+msgid ""
+"If *Target* is an *Armature*, a new field is displayed offering the optional"
+" choice to set an individual bone as *Target*."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:40
+msgid ""
+"If a *Bone* is set as *Target*, a new field is displayed offering the "
+"optional choice of where along this bone the target point lies."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:42
+msgid ""
+"If *Target* is a *Mesh*, a new field is displayed offering the optional "
+"choice to set a *Vertex Group* as target."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:45
+msgid ""
+"By default, the *min* and *max* values bound the input and output values; "
+"all values outside these ranges are clipped to them. When you enable this "
+"button, the *min* and *max* values are no longer strict limits, but rather "
+"\"markers\" defining a proportional (linear) mapping between input and "
+"corresponding output values. Let's illustrate that with two graphs (*The* "
+"*Extrapolate* *principles*). In these pictures, the input range (in "
+"abscissa) is set to [\\ **1.0**, **4.0** ], and its corresponding output "
+"range (in ordinate), to [\\ **1.0**, **2.0** ]. The yellow curve represents "
+"the mapping between input and output."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:62
+msgid ""
+"When mapping transform properties to location (i.e. `Loc`, `Destination` "
+"button is enabled), the owner's existing location is added to the result of "
+"evaluating this constraint (exactly like when the *Offset* button of the "
+":doc:`Copy Location constraint </constraints/transform/copy_location>` is "
+"enabled...)."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:75
+msgid ""
+"When a *min* value is higher than its corresponding *max* one, both are "
+"considered equal to the *max* one. This implies you cannot create "
+"\"reversed\" mappings..."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:79
+msgid ""
+"It contains the input (from target) settings. The three *Loc*, *Rot* and "
+"*Scale* toggle buttons, mutually exclusive, allow you to select which type "
+"of property to use. The *X:*, *Y:* and *Z:* *min* and *max* numeric fields "
+"control the lower and upper bounds of the input value range, independently "
+"for each axis. Note that if a min value is higher than its corresponding max"
+" value, the constraint behaves as if it had the same value as the max one."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:85
+msgid ""
+"The three *Loc*, *Rot* and *Scale* toggle buttons, mutually exclusive, allow"
+" you to select which type of property to control."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:86
+msgid ""
+"The three *Axis Mapping* drop-down lists allow you to select which input "
+"axis to map to, respectively (from top to bottom), the X, Y and Z output "
+"(owner) axes."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:87
+msgid ""
+"The *min* and *max* numeric fields control the lower and upper bounds of the"
+" output value range, independently for each mapped axis. Note that if a min "
+"value is higher than its corresponding max value, the constraint behaves as "
+"if it had the same value as the max one."
+msgstr ""
+
+#~ msgid ""
+#~ "If :guilabel:`Target` is an :guilabel:`Armature`, a new field is displayed "
+#~ "offering the optional choice to set an individual bone as "
+#~ ":guilabel:`Target`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a :guilabel:`Bone` is set as :guilabel:`Target`, a new field is displayed"
+#~ " offering the optional choice of where along this bone the target point "
+#~ "lies."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If :guilabel:`Target` is a :guilabel:`Mesh`, a new field is displayed "
+#~ "offering the optional choice to set a :guilabel:`Vertex Group` as target."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, the :guilabel:`min` and :guilabel:`max` values bound the input "
+#~ "and output values; all values outside these ranges are clipped to them. When"
+#~ " you enable this button, the :guilabel:`min` and :guilabel:`max` values are "
+#~ "no longer strict limits, but rather \"markers\" defining a proportional "
+#~ "(linear) mapping between input and corresponding output values. Let's "
+#~ "illustrate that with two graphs (*The* :guilabel:`Extrapolate` "
+#~ "*principles*). In these pictures, the input range (in abscissa) is set to "
+#~ "[\\ **1.0**, **4.0** ], and its corresponding output range (in ordinate), to"
+#~ " [\\ **1.0**, **2.0** ]. The yellow curve represents the mapping between "
+#~ "input and output."
+#~ msgstr ""
+
+#~ msgid "**The** :guilabel:`Extrapolate` **principles.**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] "
+#~ "range."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Extrapolate enabled: the output values are \"free\" to proportionally follow"
+#~ " the input ones."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When a :guilabel:`min` value is higher than its corresponding "
+#~ ":guilabel:`max` one, both are considered equal to the :guilabel:`max` one. "
+#~ "This implies you cannot create \"reversed\" mappings..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It contains the input (from target) settings. The three :guilabel:`Loc`, "
+#~ ":guilabel:`Rot` and :guilabel:`Scale` toggle buttons, mutually exclusive, "
+#~ "allow you to select which type of property to use. The :guilabel:`X:`, "
+#~ ":guilabel:`Y:` and :guilabel:`Z:` :guilabel:`min` and :guilabel:`max` "
+#~ "numeric fields control the lower and upper bounds of the input value range, "
+#~ "independently for each axis. Note that if a min value is higher than its "
+#~ "corresponding max value, the constraint behaves as if it had the same value "
+#~ "as the max one."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The three :guilabel:`Loc`, :guilabel:`Rot` and :guilabel:`Scale` toggle "
+#~ "buttons, mutually exclusive, allow you to select which type of property to "
+#~ "control."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The three :guilabel:`Axis Mapping` drop-down lists allow you to select which"
+#~ " input axis to map to, respectively (from top to bottom), the X, Y and Z "
+#~ "output (owner) axes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`min` and :guilabel:`max` numeric fields control the lower and"
+#~ " upper bounds of the output value range, independently for each mapped axis."
+#~ " Note that if a min value is higher than its corresponding max value, the "
+#~ "constraint behaves as if it had the same value as the max one."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When mapping transform properties to location (i.e. `Loc`, `Destination` "
+#~ "button is enabled), the owner's existing location is added to the result of "
+#~ "evaluating this constraint (exactly like when the :guilabel:`Offset` button "
+#~ "of the :doc:`Copy Location constraint "
+#~ "</constraints/transform/copy_location>` is enabled...)."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "When mapping transform properties to location (i.e. :guilabel:`Loc` "

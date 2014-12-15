@@ -1,4 +1,5 @@
 
+********************
 Scripting & Security
 ********************
 
@@ -100,11 +101,13 @@ In this case the user-preferences are still used but you may want to override th
 - Disable with ``-Y`` or ``--disable-autoexec``
 
 Example - rendering an animation in background mode, allowing drivers and other scripts to run:
-::
 
+.. code-block:: sh
 
    blender --background --enable-autoexec my_movie.blend --render-anim
 
+.. note::
 
-Note: these command line arguments can be used to start a regular blender instance and will
-still override the user-preferences.
+   These command line arguments can be used to start a regular blender instance and will
+   still override the user-preferences.
+

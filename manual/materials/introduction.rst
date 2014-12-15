@@ -1,4 +1,5 @@
 
+*************************
 Introduction to Materials
 *************************
 
@@ -23,8 +24,8 @@ The basic (un-textured) Blender  material is uniform across each face of an obje
 different faces of the object may use different materials
 (see :doc:`Multiple Materials </materials/multiple_materials>`).
 
-In Blender, materials can (optionally) have associated textures. Textures :guilabel:`describe` the substance: e.g.
-:guilabel:`polished` brass, :guilabel:`dirty` glass or :guilabel:`embroidered` linen.
+In Blender, materials can (optionally) have associated textures. Textures *describe* the substance: e.g.
+*polished* brass, *dirty* glass or *embroidered* linen.
 The :doc:`Textures </textures>` chapter describes how to add textures to materials.
 
 

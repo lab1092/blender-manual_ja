@@ -6,6 +6,7 @@
    }} .
 
 
+***********
 Editing UVs
 ***********
 
@@ -29,7 +30,7 @@ and then tweak the layout.
 Selecting UVs
 *************
 
-Selection tools are available in the :guilabel:`Select Menu` and Header bar,
+Selection tools are available in the *Select Menu* and Header bar,
 and the shortcuts listed below:
 
 Border Select ; :kbd:`B`
@@ -38,23 +39,23 @@ Border Select ; :kbd:`B`
 Select/Deselect All ; :kbd:`A`
    Selects or de-selects all UV coordinates. When initially unwrapping, you will want to select All UVs to rotate, scale, and move them around.
 
-Linked UVs:kbd:`ctrl-L`
-   This menu item selects all UVs that are part of the same UV map. Recall that a map is made for every submesh and seamed part of the mesh, and is analogous to a piece of cloth. Selecting :guilabel:`Linked UVs` works similarly to the command in 3D View. It will select all UVs that are 'connected' to currently selected UVs.
+Linked UVs:kbd:`Ctrl-L`
+   This menu item selects all UVs that are part of the same UV map. Recall that a map is made for every submesh and seamed part of the mesh, and is analogous to a piece of cloth. Selecting *Linked UVs* works similarly to the command in 3D View. It will select all UVs that are 'connected' to currently selected UVs.
 
-Pinned UVs ; :kbd:`shift-P`
+Pinned UVs ; :kbd:`Shift-P`
    You can pin UVs so they don't move between multiple unwrap operations. This menu item selects them all. See Pinning
 
-Border Select Pinned ; :kbd:`shift-B`
+Border Select Pinned ; :kbd:`Shift-B`
    Use the box lasso to select only pinned UV coordinates.
 
-Unlink Selection ; :kbd:`alt-L`
+Unlink Selection ; :kbd:`Alt-L`
    Cuts apart the selected UVs from the map. Only those UVs which belong to fully selected faces remain selected following this command. As the name implies, this is particularly useful to unlink faces and move them elsewhere. The hotkey is analogous to the mesh Separate command.
 
 
 Selection Modes
 ===============
 
-Turning on the :guilabel:`Sync Selection` button in the header causes selection of components
+Turning on the *Sync Selection* button in the header causes selection of components
 in the 3D view to sync with their corresponding elements in the UV editor.
 This is off by default.
 These two modes have very different results when transforming components in the UV editor.
@@ -64,23 +65,23 @@ Only selected faces are displayed in the UV editor,
 and the following selection modes are available:
 
 
-- :guilabel:`Vertex`
+- *Vertex*
 
       Select individual vertices
 
-- :guilabel:`Edge`
+- *Edge*
 
       Select edges
 
-- :guilabel:`Face`
+- *Face*
 
       Select faces
 
-- :guilabel:`Island`
+- *Island*
 
       Select contiguous groups of Faces
 
-   The :guilabel:`Sticky Selection Mode` menu is available in this mode. This controls how UVs are selected:
+   The *Sticky Selection Mode* menu is available in this mode. This controls how UVs are selected:
 
    Shared Vertex
       Selects UVs that share a mesh vertex, even if they are in different UV locations.
@@ -89,13 +90,13 @@ and the following selection modes are available:
    Disabled
       Disables Sticky Selection. When you move a UV in this mode, each face owns its own UVs, allowing them to be separated.
 
-When :guilabel:`Sync Selection` is **On** the following can be selected:
+When *Sync Selection* is **On** the following can be selected:
 
-- :guilabel:`Vertex`
-- :guilabel:`Edge`
-- :guilabel:`Face`
+- *Vertex*
+- *Edge*
+- *Face*
 
-   In this Mode, selection behaves differently. When selecting UVs or Edges, it behave like :guilabel:`Shared Vertex` mode above. When selecting Faces, it behaves as in :guilabel:`Disabled Stick Selection` above.
+   In this Mode, selection behaves differently. When selecting UVs or Edges, it behave like *Shared Vertex* mode above. When selecting Faces, it behaves as in *Disabled Stick Selection* above.
 
 
 Transforming UVs
@@ -107,7 +108,7 @@ UVs can be:
 - Rotated :kbd:`R`
 - Scaled :kbd:`S`
 
-They can also be hidden or shown using the :kbd:`H` and :kbd:`alt-H` respectively,
+They can also be hidden or shown using the :kbd:`H` and :kbd:`Alt-H` respectively,
 the same way as in Edit Mode.
 
 
@@ -116,21 +117,21 @@ Axis Locking
 
 Transformations can be locked to an axis by pressing :kbd:`X` or :kbd:`Y` after
 one of the transform tools. Also,
-holding the :kbd:`mmb` will constrain movement to the X or Y axis.
+holding the :kbd:`MMB` will constrain movement to the X or Y axis.
 
 
 Pivot Points
 ============
 
 The UV editor has a 2D cursor.
-Its position can be changed by :kbd:`lmb` clicking in the UV editor.
+Its position can be changed by :kbd:`LMB` clicking in the UV editor.
 You can also manually adjust its position in the Properties Panel.
 The range by default is from 0 to 256 starting from the lower left corner.
-By enabling :guilabel:`Normalized` under :guilabel:`Coordinates`,
+By enabling *Normalized* under *Coordinates*,
 the range changes from 0 to 1.
 
 The 2D Cursor can be snapped to nearest pixels or to selected elements,
-by selecting :guilabel:`UVs Menu` under :guilabel:`Snap`.
+by selecting *UVs Menu* under *Snap*.
 
 The Pivot Point can be changed to:
 
@@ -148,9 +149,9 @@ Proportional Editing is available in UV editing. The controls are the same as in
 Snapping
 ========
 
-Snapping in UV is also similar to :doc:`Snapping in 3D </3d_interaction/transform_control/snap>`, but only snapping to UVs works, however, the :guilabel:`Snap to Pixels` option in the :guilabel:`UVs Menu` will force the UVs to snap to the pixels of an image if loaded.
+Snapping in UV is also similar to :doc:`Snapping in 3D </3d_interaction/transform_control/snap>`, but only snapping to UVs works, however, the *Snap to Pixels* option in the *UVs Menu* will force the UVs to snap to the pixels of an image if loaded.
 
-Additional tools can be found in the :guilabel:`UVs Menu` under the :guilabel:`Snap` Submenu:
+Additional tools can be found in the *UVs Menu* under the *Snap* Submenu:
 
 Snap Pixels
    Moves selection to nearest pixel
@@ -163,32 +164,32 @@ Snap to Adjacent Unselected
 Weld and Align
 ==============
 
-the :guilabel:`Weld` tool, :kbd:`W-1` will move selected UVs to their average position
+the *Weld* tool, :kbd:`W-1` will move selected UVs to their average position
 
-:guilabel:`Align`, :kbd:`W-2`,\ :kbd:`W-3`, and :kbd:`W-4` will line up selected UVs on the X axis, Y axis, or automatically chosen axis.
+*Align*, :kbd:`W-2`,\ :kbd:`W-3`, and :kbd:`W-4` will line up selected UVs on the X axis, Y axis, or automatically chosen axis.
 
 
 Mirror
 ======
 
-Components can be mirrored on the Y axis or the X axis. You can select :guilabel:`Mirror X`
-and :guilabel:`Mirror Y` from the :guilabel:`Snap` sub menu in the :guilabel:`UV` menu.
+Components can be mirrored on the Y axis or the X axis. You can select *Mirror X*
+and *Mirror Y* from the *Snap* sub menu in the *UV* menu.
 
-You can also use the hotkey :kbd:`ctrl-M` then enter :kbd:`X` or :kbd:`Y`,
-or hold the :kbd:`mmb` and drag in the mirror direction.
+You can also use the hotkey :kbd:`Ctrl-M` then enter :kbd:`X` or :kbd:`Y`,
+or hold the :kbd:`MMB` and drag in the mirror direction.
 
 
 Stitch
 ======
 
-:guilabel:`Stitch`, :kbd:`V`, will join selected UVs that share Vertices. You set the tool to limit stitching by distance in the Tool Settings, by activating :guilabel:`Use Limit` and adjusting the :guilabel:`Limit Distance`
+*Stitch*, :kbd:`V`, will join selected UVs that share Vertices. You set the tool to limit stitching by distance in the Tool Settings, by activating *Use Limit* and adjusting the *Limit Distance*
 
 
 Minimize Stretch
 ================
 
-the :guilabel:`Minimize Stretch` tool,
-:kbd:`ctrl-V` Reduces UV stretch by minimizing angles. This essentially relaxes the UVs
+the *Minimize Stretch* tool,
+:kbd:`Ctrl-V` Reduces UV stretch by minimizing angles. This essentially relaxes the UVs
 
 
 Face Mirror and Rotate UVs
@@ -196,10 +197,10 @@ Face Mirror and Rotate UVs
 
 Recall how the orientation of the UV Texture is relative to each face? Well,
 you might find that, for example, the image is upside down or laying on its side. If so,
-use :guilabel:`Face→Rotate UVs` (in the 3D window in Face Select mode)
+use *Face→Rotate UVs* (in the 3D window in Face Select mode)
 menu to rotate the UVs per face in 90-degree turns.
 
-The :guilabel:`Face→Mirror UVs` to flips the image over like a pankcake in a pan,
+The *Face→Mirror UVs* to flips the image over like a pankcake in a pan,
 mirroring the UVs per face and showing you the image 'reversed'.
 
 
@@ -210,9 +211,9 @@ When Unwrapping a model it is sometimes useful to "Lock" certain UVs,
 so that parts of a UV layout stay the same shape, and/or in the same place.
 
 Pinning is done selecting a UV,
-then by selecting :guilabel:`Pin` from the :guilabel:`UVs` menu,
+then by selecting *Pin* from the *UVs* menu,
 or the shortcut :kbd:`P`.
-You can :guilabel:`Unpin a UV` with the shorctut :kbd:`Alt-P`
+You can *Unpin a UV* with the shorctut :kbd:`Alt-P`
 
 Pinning is most effective when using the Unwrap method of UV mapping, for organic objects.
 An example is when you are modeling a symmetrical object using the :doc:`Mirror Modifier </modifiers/generate/mirror>`.
@@ -245,8 +246,8 @@ each UV unwrap is its own linked set of coordinates.
 
 You can lay them on top of one another, and they will onionskin
 (the bottom one will show through the top one). To grab only one though,
-:kbd:`rmb` select one of the UV coordinates,
-and use :guilabel:`Select` →\ :guilabel:`Linked UVs` (:kbd:`ctrl-L`)
+:kbd:`RMB` select one of the UV coordinates,
+and use *Select* →\ *Linked UVs* (:kbd:`Ctrl-L`)
 to select connected UVs, not border select because UVs from both will be selected.
 
 
@@ -349,14 +350,14 @@ and painting could thus be different for each side of the face, which is more re
 Average Island Scale
 ====================
 
-Using the :guilabel:`Average Island Scale` tool, shortcut :kbd:`ctrl-A`,
+Using the *Average Island Scale* tool, shortcut :kbd:`Ctrl-A`,
 will scale each UV island so that they are all approximately the same scale.
 
 
 Packing Islands
 ===============
 
-The :guilabel:`Pack Islands` tool, shortcut :kbd:`ctrl-P`, will uniformly scale,
+The *Pack Islands* tool, shortcut :kbd:`Ctrl-P`, will uniformly scale,
 then individually transform each Island so that they fill up the UV space as much as possible.
 This is an important tool for efficiently making use of the texture space.
 
@@ -364,7 +365,7 @@ This is an important tool for efficiently making use of the texture space.
 Constraining to Image Bounds
 ============================
 
-Turning on :guilabel:`Constrain to Image Bounds` will prevent UVs from being moved outside the
+Turning on *Constrain to Image Bounds* will prevent UVs from being moved outside the
 0 to 1 UV range.
 
 

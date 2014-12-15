@@ -5,14 +5,14 @@ Median Point as Pivot
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode` and :guilabel:`Edit mode`
+   | Mode:     *Object mode* and *Edit mode*
    | Menu:     Select from the following icon in the 3D window header
 
    .. figure:: /images/Icon-library_3D-Window_header-pivot-point.jpg
-   | Hotkey:   :kbd:`ctrl-,`
+   | Hotkey:   :kbd:`Ctrl-,`
 
 
-The :guilabel:`Median Point` can be considered to be broadly similar to the concept of Center
+The *Median Point* can be considered to be broadly similar to the concept of Center
 of Gravity (COG). If we assume that every element (Object, face, vertex etc)
 of the selection has the same mass,
 the median point would sit at the point of equilibrium for the selection (the COG).

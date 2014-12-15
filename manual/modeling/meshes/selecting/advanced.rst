@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review|partial=X|text= expand advanced selection tools|im=examples}} .
 
+******************
 Advanced Selection
 ******************
 
@@ -8,7 +9,7 @@ The select menu in edit mode contains additional tool for selecting components:
 
 Mirror
    Select mesh items at the mirrored location.
-Linked :kbd:`ctrl-L`
+Linked :kbd:`Ctrl-L`
    Selects all components that are connected to the current selection.
 Select Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
@@ -41,9 +42,9 @@ Select Similar
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Select --> Similar...`
-   | Hotkey:   :kbd:`shift-G`
+   | Hotkey:   :kbd:`Shift-G`
 
 
 Select components that have similar attributes to the ones selected,
@@ -71,13 +72,13 @@ Edge Selection Mode:
    Face Angles
       Selects all edges that are between two faces forming a similar angle, as with those already selected.
    Crease
-      Selects all edges that have a similar :guilabel:`Crease` value as those already selected. The :guilabel:`Crease` value is a setting used by the :doc:`Subsurf Modifier </modifiers/generate/subsurf>`.
+      Selects all edges that have a similar *Crease* value as those already selected. The *Crease* value is a setting used by the :doc:`Subsurf Modifier </modifiers/generate/subsurf>`.
    Bevel
-      Selects all edges that have the same :guilabel:`Bevel Weight` as those already selected.
+      Selects all edges that have the same *Bevel Weight* as those already selected.
    Seam
-      Selects all edges that have the same :guilabel:`Seam` state as those already selected. :guilabel:`Seam` is a true/false setting used in :doc:`UV-texturing </textures/mapping/uv>`.
+      Selects all edges that have the same *Seam* state as those already selected. *Seam* is a true/false setting used in :doc:`UV-texturing </textures/mapping/uv>`.
    Sharpness
-      Selects all edges that have the same :guilabel:`Sharp` state as those already selected. :guilabel:`Sharp` is a true/false setting (a flag) used by the :doc:`EdgeSplit Modifier </modifiers/generate/edge_split>`.
+      Selects all edges that have the same *Sharp* state as those already selected. *Sharp* is a true/false setting (a flag) used by the :doc:`EdgeSplit Modifier </modifiers/generate/edge_split>`.
 
 
 Face Selection Mode:
@@ -109,24 +110,24 @@ Edge Loops and Vertex Loops
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode → :guilabel:`Vertex` or :guilabel:`Edge` select mode
+   | Mode:     *Edit* mode → *Vertex* or *Edge* select mode
    | Menu:     :menuselection:`Select --> Edge Loop` or :menuselection:`Mesh --> Edges --> Edge Loop`
-   | Hotkey:   :kbd:`alt-rmb` or :kbd:`ctrl-E` → :menuselection:`Edge Loop`
+   | Hotkey:   :kbd:`Alt-RMB` or :kbd:`Ctrl-E` → :menuselection:`Edge Loop`
 
 
-Holding :kbd:`alt` while selecting an edge selects a loop of edges that are connected in
+Holding :kbd:`Alt` while selecting an edge selects a loop of edges that are connected in
 a line end to end, passing through the edge under the mouse pointer.
-Holding :kbd:`alt-shift` while clicking adds to the current selection.
+Holding :kbd:`Alt-Shift` while clicking adds to the current selection.
 
 Edge loops can also be selected based on an existing edge selection,
 using either :menuselection:`Select --> Edge Loop`,
-or the :guilabel:`Edge Loop Select` option of the :guilabel:`Edge Specials` menu
-(:kbd:`ctrl-E`).
+or the *Edge Loop Select* option of the *Edge Specials* menu
+(:kbd:`Ctrl-E`).
 
 
-.. note:: :guilabel:`Vertex` mode
+.. note:: *Vertex* mode
 
-   In :guilabel:`Vertex` select mode, you can also select edge loops, by using the same hotkeys, *and clicking on the edges* (not on the vertices).
+   In *Vertex* select mode, you can also select edge loops, by using the same hotkeys, *and clicking on the edges* (not on the vertices).
 
 
 .. figure:: /images/Broken-Manual-Part-II-EdgeF.jpg
@@ -147,15 +148,15 @@ Face Loops
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode → :guilabel:`Face` or :guilabel:`Vertex` select modes
-   | Hotkey:   :kbd:`alt-rmb`
+   | Mode:     *Edit* mode → *Face* or *Vertex* select modes
+   | Hotkey:   :kbd:`Alt-RMB`
 
 
-In face select mode, holding :kbd:`alt` while selecting an **edge** selects a loop of
+In face select mode, holding :kbd:`Alt` while selecting an **edge** selects a loop of
 faces that are connected in a line end to end, along their opposite edges.
 
 In vertex select mode,
-the same can be accomplished by using :kbd:`ctrl-alt` to select an edge,
+the same can be accomplished by using :kbd:`Ctrl-Alt` to select an edge,
 which selects the face loop implicitly.
 
 
@@ -164,20 +165,20 @@ which selects the face loop implicitly.
    Face loop selection.
 
 
-This face loop was selected by clicking with :kbd:`alt-rmb` on an edge,
-in :guilabel:`face` select mode.
+This face loop was selected by clicking with :kbd:`Alt-RMB` on an edge,
+in *face* select mode.
 The loop extends perpendicular from the edge that was selected.
 
 
 .. figure:: /images/Manual-Part-II-EdgeFace-LoopingEdge-Algors-Vertex-Select.jpg
 
-   :kbd:`alt` versus :kbd:`ctrl-alt` in vertex select mode.
+   :kbd:`Alt` versus :kbd:`Ctrl-Alt` in vertex select mode.
 
 
-A face loop can also be selected in :guilabel:`Vertex` select mode.
-Technically :kbd:`ctrl-alt-rmb` will select an :guilabel:`Edge Ring`,
-however in :guilabel:`Vertex` select mode, selecting an :guilabel:`Edge Ring` implicitly
-selects a :guilabel:`Face Loop` since selecting opposite edges of a face implicitly selects
+A face loop can also be selected in *Vertex* select mode.
+Technically :kbd:`Ctrl-Alt-RMB` will select an *Edge Ring*,
+however in *Vertex* select mode, selecting an *Edge Ring* implicitly
+selects a *Face Loop* since selecting opposite edges of a face implicitly selects
 the entire face.
 
 
@@ -187,22 +188,22 @@ Edge Ring
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode → :guilabel:`Edge` select mode
+   | Mode:     *Edit* mode → *Edge* select mode
    | Menu:     :menuselection:`Select --> Edge Ring` or :menuselection:`Mesh --> Edges --> Edge Ring`
-   | Hotkey:   :kbd:`ctrl-alt-rmb` or :kbd:`ctrl-E` → :menuselection:`Select --> Edge Ring`
+   | Hotkey:   :kbd:`Ctrl-Alt-RMB` or :kbd:`Ctrl-E` → :menuselection:`Select --> Edge Ring`
 
 
-In :guilabel:`Edge` select mode, holding :kbd:`ctrl-alt` while selecting an edge selects a sequence of edges that are not connected, but on opposite sides to each other continuing along a :doc:`face loop </modeling/meshes/mesh_structures>`.
+In *Edge* select mode, holding :kbd:`Ctrl-Alt` while selecting an edge selects a sequence of edges that are not connected, but on opposite sides to each other continuing along a :doc:`face loop </modeling/meshes/mesh_structures>`.
 
 As with edge loops, you can also select edge rings based on current selection,
 using either :menuselection:`Select --> Edge Ring`,
-or the :guilabel:`Edge Ring Select` option of the :guilabel:`Edge Specials` menu
-(:kbd:`ctrl-E`).
+or the *Edge Ring Select* option of the *Edge Specials* menu
+(:kbd:`Ctrl-E`).
 
 
-.. note:: :guilabel:`Vertex` mode
+.. note:: *Vertex* mode
 
-   In :guilabel:`Vertex` select mode, you can use the same hotkeys when *clicking on the edges* (not on the vertices), but this will directly select the corresponding face loop...
+   In *Vertex* select mode, you can use the same hotkeys when *clicking on the edges* (not on the vertices), but this will directly select the corresponding face loop...
 
 
 .. figure:: /images/Manual-Part-II-EdgeFace-LoopingEdge-Algors-Select.jpg
@@ -222,15 +223,15 @@ Path Selection
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Hotkey:   :kbd:`ctrl-rmb` and the menu item :menuselection:`Select` → :guilabel:`Shortest Path`
+   | Mode:     *Edit* mode
+   | Hotkey:   :kbd:`Ctrl-RMB` and the menu item :menuselection:`Select` → *Shortest Path*
 
 
 .. figure:: /images/Select_face_path.jpg
    :width: 200px
    :figwidth: 200px
 
-   Select a face or vertex path with :kbd:`ctrl-rmb`
+   Select a face or vertex path with :kbd:`Ctrl-RMB`
 
 
 Selects all geometry along the shortest path from the active vertex/edge/face to the one which
@@ -243,12 +244,12 @@ Loop Inner-Region
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode → :guilabel:`Edge` select mode
+   | Mode:     *Edit* mode → *Edge* select mode
    | Menu:     :menuselection:`Select --> Select Loop Inner-Region` or :menuselection:`Mesh --> Edges --> Select Loop Inner-Region`
-   | Hotkey:   :kbd:`ctrl-E` → :menuselection:`Select Loop Inner-Region`
+   | Hotkey:   :kbd:`Ctrl-E` → :menuselection:`Select Loop Inner-Region`
 
 
-:guilabel:`Select Loop Inner-Region` selects all edges that are inside a closed loop of edges. While it is possible to use this operator in  :guilabel:`Vertex` and :guilabel:`Face` selection modes, results may be unexpected. Note that if the selected loop of edges is not closed, then all connected edges on the mesh will be considered inside the loop.
+*Select Loop Inner-Region* selects all edges that are inside a closed loop of edges. While it is possible to use this operator in  *Vertex* and *Face* selection modes, results may be unexpected. Note that if the selected loop of edges is not closed, then all connected edges on the mesh will be considered inside the loop.
 
 
 .. figure:: /images/Mesh.loop.select1.jpg
@@ -278,12 +279,12 @@ Boundary Loop
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode → :guilabel:`Edge` select mode
+   | Mode:     *Edit* mode → *Edge* select mode
    | Menu:     :menuselection:`Select --> Select Boundary Loop` or :menuselection:`Mesh --> Edges --> Select Boundary Loop`
-   | Hotkey:   :kbd:`ctrl-E` → :menuselection:`Select Boundary Loop`
+   | Hotkey:   :kbd:`Ctrl-E` → :menuselection:`Select Boundary Loop`
 
 
-:guilabel:`Select Boundary Loop` is the "logical inverse" of :guilabel:`Select Loop Inner-Region`, based on all regions currently selected, it selects only the edges at the border of these regions. It can operate in any select mode, but will always switch to :guilabel:`Edge` select mode when run.
+*Select Boundary Loop* is the "logical inverse" of *Select Loop Inner-Region*, based on all regions currently selected, it selects only the edges at the border of these regions. It can operate in any select mode, but will always switch to *Edge* select mode when run.
 
 All this is much more simple to illustrates with examples:
 

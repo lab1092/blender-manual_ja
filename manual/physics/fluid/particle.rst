@@ -1,5 +1,6 @@
 ..    TODO/Review: {{review}} .
 
+********
 Particle
 ********
 
@@ -31,11 +32,11 @@ Particle type
       Surface splashes of the fluid result in droplets being strewn about, like fresh water, with low Surface Tension.
 
    Floats
-      The surface tension of the fluid is higher and the fluid heavier, like cold seawater and soup. Breakaways are clumpier and fall back to the surface faster than :guilabel:`Drops`, as with high Surface Tension.
+      The surface tension of the fluid is higher and the fluid heavier, like cold seawater and soup. Breakaways are clumpier and fall back to the surface faster than *Drops*, as with high Surface Tension.
 
    Tracer
       Droplets follow the surface of the water where it existed, like a fog suspended above previous fluid levels. Use this to see where the fluid level has been.
 
 Path (bake directory)
-   The simulation run from which to load the particles. This should usually have the same value as the fluid domain object (e.g. copy by :kbd:`ctrl-C`, :kbd:`ctrl-V`).
+   The simulation run from which to load the particles. This should usually have the same value as the fluid domain object (e.g. copy by :kbd:`Ctrl-C`, :kbd:`Ctrl-V`).
 

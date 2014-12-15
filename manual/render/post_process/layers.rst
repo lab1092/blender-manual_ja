@@ -1,4 +1,5 @@
 
+*************
 Render Layers
 *************
 
@@ -96,8 +97,8 @@ Mask Layers
    layer 1 is selected and layer 3 is designated as the Z-mask (as indicated by the black dot). Therefore,
    only that part of Layer 1 which is in front of the object on layer 3 (the cube) is rendered.
 
-You can select that layer by :kbd:`Lmb` clicking the button. To select multiple layers,
-:kbd:`shift-Lmb` click.  (The dot in the button in this case turns *dark gray.*)
+You can select that layer by :kbd:`LMB` clicking the button. To select multiple layers,
+:kbd:`Shift-LMB` click.  (The dot in the button in this case turns *dark gray.*)
 
 
 .. note:: Layer Sets AND each other

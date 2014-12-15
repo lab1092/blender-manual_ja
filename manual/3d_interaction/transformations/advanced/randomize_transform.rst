@@ -7,7 +7,7 @@ Randomize Transform
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
+   | Mode:     *Object* mode
    | Menu:     :menuselection:`Object --> Transform --> Randomize Transform`
 
 

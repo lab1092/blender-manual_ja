@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/data_system/data_system.rst:12
+#: ../../manual/data_system/data_system.rst:13
 msgid "Overview"
 msgstr "概要"
 
-#: ../../manual/data_system/data_system.rst:14
+#: ../../manual/data_system/data_system.rst:15
 msgid ""
 "Each .blend file contains a database. This database contains all scenes, "
 "objects, meshes, textures, etc. that are in the file. A file can contain "
@@ -24,141 +24,50 @@ msgid ""
 "possible to create links between different objects."
 msgstr ""
 
-#: ../../manual/data_system/data_system.rst:21
-#: ../../manual/data_system/data_system.rst:38
+#: ../../manual/data_system/data_system.rst:22
+#: ../../manual/data_system/data_system.rst:39
 msgid "Reference"
 msgstr "リファレンス"
 
-#: ../../manual/data_system/data_system.rst:28
-msgid ""
-"To access the database, press :kbd:`shift-F4` and the window will change to "
-"a :guilabel:`Data Select Browser` window, which lists the Objects in your "
-".blend file. To go up a level, click the breadcrumbs (``..``) and then you "
-"will see the overall structure of a file: :guilabel:`Action`, "
-":guilabel:`Armature`, :guilabel:`Brush`, :guilabel:`Camera`, "
-":guilabel:`Curve`, :guilabel:`Group`, and so on (including "
-":guilabel:`Object` s)."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:35
-msgid ""
-":kbd:`lmb` selecting any datablock type, :guilabel:`Mesh`, for example, will"
-" give you a listing of the meshes used in the file, along with how many "
-"users there are for each one. For example, if you had a car mesh, and used "
-"that car mesh for six cars in a parking lot scene, the :guilabel:`Mesh` "
-"listing would show the Car and then the number 6."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:45
-msgid ""
-":kbd:`rmb` selecting certain kinds of datablocks (:guilabel:`Material` s, "
-":guilabel:`Image` s, :guilabel:`Texture` s...) and pressing :kbd:`F` will "
-"assign a \"fake user\" to those datablocks. With a fake user in place, "
-"Blender will keep those datablocks in the file, even if they have no \"real "
-"user\". Datablocks without a user, real or fake, are not saved in the .blend"
-" file. Pressing :kbd:`F` again toggles the fake user assignment. Performing "
-"this action is the same as clicking the :guilabel:`F` button next to "
-"material/image/... names."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:49
+#: ../../manual/data_system/data_system.rst:50
 msgid "Outliner and OOPS Schematic"
 msgstr "アウトライナーとOopsスケマティック"
 
-#: ../../manual/data_system/data_system.rst:51
-msgid ""
-"You can easily inspect the contents of your file by using the "
-":guilabel:`Outliner` window. This window displays the Blender data system "
-"(:doc:`fully documented here </data_system/the_outliner>`). This window "
-"offers two views of the database. The :guilabel:`Outliner` view allows you "
-"to do simple operations on the objects. These operations include selecting, "
-"renaming, deleting and linking. The :guilabel:`OOPS Schematic` (Object-"
-"Oriented Programming System) view allows you to easily see how datablocks "
-"are linked. You can filter the view by using buttons found in the header."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:61
+#: ../../manual/data_system/data_system.rst:62
 msgid "Users (Sharing)"
 msgstr "ユーザー(シェア)"
 
-#: ../../manual/data_system/data_system.rst:63
-msgid ""
-"Many datablocks can be shared among other datablocks - re-use is encouraged."
-" For example, suppose you have a material for one object, named \"\\ "
-"``Glossy`` \". You can select a second object, for example, one that does "
-"not have a material yet. Instead of clicking :guilabel:`ADD NEW` for the "
-"material, click the little up-down arrow next to the :guilabel:`ADD NEW`, "
-"which brings up a list of existing materials. Select \"\\ ``Glossy`` \". "
-"Now, these two objects share the same material. You will notice a \"2\" next"
-" to the name of the material, indicating that there are two users (the two "
-"objects) for this material. Other common examples include:"
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:73
+#: ../../manual/data_system/data_system.rst:74
 msgid "Sharing textures among materials."
 msgstr ""
 
-#: ../../manual/data_system/data_system.rst:74
+#: ../../manual/data_system/data_system.rst:75
 msgid "Sharing meshes between objects (\"clones\")."
 msgstr ""
 
-#: ../../manual/data_system/data_system.rst:75
+#: ../../manual/data_system/data_system.rst:76
 msgid ""
 "Sharing Ipo curves between objects, for example to make all the lights dim "
 "together."
 msgstr ""
 
-#: ../../manual/data_system/data_system.rst:79
+#: ../../manual/data_system/data_system.rst:80
 msgid "Fake User"
 msgstr "フェイクユーザー"
 
-#: ../../manual/data_system/data_system.rst:81
-msgid ""
-"Remember that Blender does not save datablocks that are not linked to "
-"anything in the *current* file.  If you're building a \".blend\" file to "
-"serve as a library of things that you intend to link-to from *other* files, "
-"you'll need to make sure that they don't accidentally get deleted from the "
-"current (the library) file.  Do this by giving the datablocks a \"fake user,"
-" \" by hitting the :guilabel:`F` button next to the name of the datablock. "
-"This prevents the user count from ever becoming zero:  therefore, the "
-"datablock will not be deleted. (Blender does not keep track of how many "
-"other files link to this one.)"
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:93
+#: ../../manual/data_system/data_system.rst:94
 msgid "Copying and Linking Objects Between Scenes"
 msgstr "シーン間のコピーとリンク"
 
-#: ../../manual/data_system/data_system.rst:95
-msgid ""
-"Sometimes you may want to link or copy objects between scenes. This is "
-"possible by first selecting objects you want to link or copy and then using "
-"the :guilabel:`Make Links` and :guilabel:`Make Single User` items found in "
-":guilabel:`Object` menu in the 3D viewport header. Use :guilabel:`Make "
-"Links` to make links between scenes. To make a plain copy, you first make a "
-"link and then use :guilabel:`Make Single User` to make a stand-alone copy of"
-" the object in your current scene. Further information on working with "
-"scenes can be found :doc:`here </data_system/scene_creation>`."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:104
+#: ../../manual/data_system/data_system.rst:105
 msgid "Appending or Linking Across Files"
 msgstr "ファイルをまたいだ追加とリンク"
 
-#: ../../manual/data_system/data_system.rst:106
-msgid ""
-"The content of one .blend file is easily accessed and put into your current "
-"file by using the :guilabel:`File` ? :guilabel:`Append` function (accessed "
-"at any time by :kbd:`shift-F1`). To find out more about how to copy or link "
-"objects across .blend files, :doc:`click here "
-"</data_system/linked_libraries>`."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:113
+#: ../../manual/data_system/data_system.rst:114
 msgid "Proxy Objects"
 msgstr "プロクシーオブジェクト"
 
-#: ../../manual/data_system/data_system.rst:115
+#: ../../manual/data_system/data_system.rst:116
 msgid ""
 ":doc:`Proxy objects </data_system/linked_libraries>` allow you to make "
 "(parts of) linked data local. For example, this allows an animator to make a"
@@ -173,38 +82,228 @@ msgid ""
 "to the painter's proxy."
 msgstr ""
 
-#: ../../manual/data_system/data_system.rst:127
+#: ../../manual/data_system/data_system.rst:128
 msgid "Pack and Unpack Data"
 msgstr "データのパックとアンパック"
 
-#: ../../manual/data_system/data_system.rst:129
-msgid ""
-"Blender has the ability to encapsulate (incorporate) various kinds of data "
-"within the .blend file that is normally saved outside of the . blend file. "
-"For example, an image texture that is an external ``.jpg`` file can be put "
-"\"inside\" the .blend file via :guilabel:`File` → :guilabel:`External Data` "
-"→ :guilabel:`Pack into .blend file`. When the .blend file is saved, a copy "
-"of that ``.jpg`` file is put inside the .blend file. The .blend file can "
-"then be copied or emailed anywhere, and the image texture moves with it."
-msgstr ""
-
-#: ../../manual/data_system/data_system.rst:137
+#: ../../manual/data_system/data_system.rst:138
 msgid ""
 "You know that an image texture is packed because you will see a little "
 "\"Christmas present gift box\" displayed in the header."
 msgstr ""
 
-#: ../../manual/data_system/data_system.rst:142
+#: ../../manual/data_system/data_system.rst:143
 msgid "Unpack Data"
 msgstr "アンパックデータ"
 
-#: ../../manual/data_system/data_system.rst:144
+#: ../../manual/data_system/data_system.rst:29
 msgid ""
-"When you have received a packed file, you can :guilabel:`File` → "
-":guilabel:`External Data` → :guilabel:`Unpack into Files...` . You will be "
-"presented with the option to create the original directory structure or put "
-"the file in the ``//`` (directory where the .blend file is). Use \"original "
-"locations\" if you will be modifying the textures and re-packing and "
-"exchanging .blend files, so that when you send it back and the originator "
-"unpacks, his copies of the textures will be updated."
+"To access the database, press :kbd:`Shift-F4` and the window will change to "
+"a *Data Select Browser* window, which lists the Objects in your .blend file."
+" To go up a level, click the breadcrumbs (``..``) and then you will see the "
+"overall structure of a file: *Action*, *Armature*, *Brush*, *Camera*, "
+"*Curve*, *Group*, and so on (including *Object* s)."
 msgstr ""
+
+#: ../../manual/data_system/data_system.rst:36
+msgid ""
+":kbd:`LMB` selecting any datablock type, *Mesh*, for example, will give you "
+"a listing of the meshes used in the file, along with how many users there "
+"are for each one. For example, if you had a car mesh, and used that car mesh"
+" for six cars in a parking lot scene, the *Mesh* listing would show the Car "
+"and then the number 6."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:46
+msgid ""
+":kbd:`RMB` selecting certain kinds of datablocks (*Material* s, *Image* s, "
+"*Texture* s...) and pressing :kbd:`F` will assign a \"fake user\" to those "
+"datablocks. With a fake user in place, Blender will keep those datablocks in"
+" the file, even if they have no \"real user\". Datablocks without a user, "
+"real or fake, are not saved in the .blend file. Pressing :kbd:`F` again "
+"toggles the fake user assignment. Performing this action is the same as "
+"clicking the *F* button next to material/image/... names."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:52
+msgid ""
+"You can easily inspect the contents of your file by using the *Outliner* "
+"window. This window displays the Blender data system (:doc:`fully documented"
+" here </data_system/the_outliner>`). This window offers two views of the "
+"database. The *Outliner* view allows you to do simple operations on the "
+"objects. These operations include selecting, renaming, deleting and linking."
+" The *OOPS Schematic* (Object-Oriented Programming System) view allows you "
+"to easily see how datablocks are linked. You can filter the view by using "
+"buttons found in the header."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:64
+msgid ""
+"Many datablocks can be shared among other datablocks - re-use is encouraged."
+" For example, suppose you have a material for one object, named \"\\ "
+"``Glossy`` \". You can select a second object, for example, one that does "
+"not have a material yet. Instead of clicking *ADD NEW* for the material, "
+"click the little up-down arrow next to the *ADD NEW*, which brings up a list"
+" of existing materials. Select \"\\ ``Glossy`` \". Now, these two objects "
+"share the same material. You will notice a \"2\" next to the name of the "
+"material, indicating that there are two users (the two objects) for this "
+"material. Other common examples include:"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:82
+msgid ""
+"Remember that Blender does not save datablocks that are not linked to "
+"anything in the *current* file.  If you're building a \".blend\" file to "
+"serve as a library of things that you intend to link-to from *other* files, "
+"you'll need to make sure that they don't accidentally get deleted from the "
+"current (the library) file.  Do this by giving the datablocks a \"fake user,"
+" \" by hitting the *F* button next to the name of the datablock. This "
+"prevents the user count from ever becoming zero:  therefore, the datablock "
+"will not be deleted. (Blender does not keep track of how many other files "
+"link to this one.)"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:96
+msgid ""
+"Sometimes you may want to link or copy objects between scenes. This is "
+"possible by first selecting objects you want to link or copy and then using "
+"the *Make Links* and *Make Single User* items found in *Object* menu in the "
+"3D viewport header. Use *Make Links* to make links between scenes. To make a"
+" plain copy, you first make a link and then use *Make Single User* to make a"
+" stand-alone copy of the object in your current scene. Further information "
+"on working with scenes can be found :doc:`here "
+"</data_system/scene_creation>`."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:107
+msgid ""
+"The content of one .blend file is easily accessed and put into your current "
+"file by using the *File* ? *Append* function (accessed at any time by "
+":kbd:`Shift-F1`). To find out more about how to copy or link objects across "
+".blend files, :doc:`click here </data_system/linked_libraries>`."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:130
+msgid ""
+"Blender has the ability to encapsulate (incorporate) various kinds of data "
+"within the .blend file that is normally saved outside of the . blend file. "
+"For example, an image texture that is an external ``.jpg`` file can be put "
+"\"inside\" the .blend file via *File* → *External Data* → *Pack into .blend "
+"file*. When the .blend file is saved, a copy of that ``.jpg`` file is put "
+"inside the .blend file. The .blend file can then be copied or emailed "
+"anywhere, and the image texture moves with it."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:145
+msgid ""
+"When you have received a packed file, you can *File* → *External Data* → "
+"*Unpack into Files...* . You will be presented with the option to create the"
+" original directory structure or put the file in the ``//`` (directory where"
+" the .blend file is). Use \"original locations\" if you will be modifying "
+"the textures and re-packing and exchanging .blend files, so that when you "
+"send it back and the originator unpacks, his copies of the textures will be "
+"updated."
+msgstr ""
+
+#~ msgid ""
+#~ "To access the database, press :kbd:`shift-F4` and the window will change to "
+#~ "a :guilabel:`Data Select Browser` window, which lists the Objects in your "
+#~ ".blend file. To go up a level, click the breadcrumbs (``..``) and then you "
+#~ "will see the overall structure of a file: :guilabel:`Action`, "
+#~ ":guilabel:`Armature`, :guilabel:`Brush`, :guilabel:`Camera`, "
+#~ ":guilabel:`Curve`, :guilabel:`Group`, and so on (including "
+#~ ":guilabel:`Object` s)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":kbd:`lmb` selecting any datablock type, :guilabel:`Mesh`, for example, will"
+#~ " give you a listing of the meshes used in the file, along with how many "
+#~ "users there are for each one. For example, if you had a car mesh, and used "
+#~ "that car mesh for six cars in a parking lot scene, the :guilabel:`Mesh` "
+#~ "listing would show the Car and then the number 6."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":kbd:`rmb` selecting certain kinds of datablocks (:guilabel:`Material` s, "
+#~ ":guilabel:`Image` s, :guilabel:`Texture` s...) and pressing :kbd:`F` will "
+#~ "assign a \"fake user\" to those datablocks. With a fake user in place, "
+#~ "Blender will keep those datablocks in the file, even if they have no \"real "
+#~ "user\". Datablocks without a user, real or fake, are not saved in the .blend"
+#~ " file. Pressing :kbd:`F` again toggles the fake user assignment. Performing "
+#~ "this action is the same as clicking the :guilabel:`F` button next to "
+#~ "material/image/... names."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can easily inspect the contents of your file by using the "
+#~ ":guilabel:`Outliner` window. This window displays the Blender data system "
+#~ "(:doc:`fully documented here </data_system/the_outliner>`). This window "
+#~ "offers two views of the database. The :guilabel:`Outliner` view allows you "
+#~ "to do simple operations on the objects. These operations include selecting, "
+#~ "renaming, deleting and linking. The :guilabel:`OOPS Schematic` (Object-"
+#~ "Oriented Programming System) view allows you to easily see how datablocks "
+#~ "are linked. You can filter the view by using buttons found in the header."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Many datablocks can be shared among other datablocks - re-use is encouraged."
+#~ " For example, suppose you have a material for one object, named \"\\ "
+#~ "``Glossy`` \". You can select a second object, for example, one that does "
+#~ "not have a material yet. Instead of clicking :guilabel:`ADD NEW` for the "
+#~ "material, click the little up-down arrow next to the :guilabel:`ADD NEW`, "
+#~ "which brings up a list of existing materials. Select \"\\ ``Glossy`` \". "
+#~ "Now, these two objects share the same material. You will notice a \"2\" next"
+#~ " to the name of the material, indicating that there are two users (the two "
+#~ "objects) for this material. Other common examples include:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Remember that Blender does not save datablocks that are not linked to "
+#~ "anything in the *current* file.  If you're building a \".blend\" file to "
+#~ "serve as a library of things that you intend to link-to from *other* files, "
+#~ "you'll need to make sure that they don't accidentally get deleted from the "
+#~ "current (the library) file.  Do this by giving the datablocks a \"fake user,"
+#~ " \" by hitting the :guilabel:`F` button next to the name of the datablock. "
+#~ "This prevents the user count from ever becoming zero:  therefore, the "
+#~ "datablock will not be deleted. (Blender does not keep track of how many "
+#~ "other files link to this one.)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes you may want to link or copy objects between scenes. This is "
+#~ "possible by first selecting objects you want to link or copy and then using "
+#~ "the :guilabel:`Make Links` and :guilabel:`Make Single User` items found in "
+#~ ":guilabel:`Object` menu in the 3D viewport header. Use :guilabel:`Make "
+#~ "Links` to make links between scenes. To make a plain copy, you first make a "
+#~ "link and then use :guilabel:`Make Single User` to make a stand-alone copy of"
+#~ " the object in your current scene. Further information on working with "
+#~ "scenes can be found :doc:`here </data_system/scene_creation>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The content of one .blend file is easily accessed and put into your current "
+#~ "file by using the :guilabel:`File` ? :guilabel:`Append` function (accessed "
+#~ "at any time by :kbd:`shift-F1`). To find out more about how to copy or link "
+#~ "objects across .blend files, :doc:`click here "
+#~ "</data_system/linked_libraries>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Blender has the ability to encapsulate (incorporate) various kinds of data "
+#~ "within the .blend file that is normally saved outside of the . blend file. "
+#~ "For example, an image texture that is an external ``.jpg`` file can be put "
+#~ "\"inside\" the .blend file via :guilabel:`File` → :guilabel:`External Data` "
+#~ "→ :guilabel:`Pack into .blend file`. When the .blend file is saved, a copy "
+#~ "of that ``.jpg`` file is put inside the .blend file. The .blend file can "
+#~ "then be copied or emailed anywhere, and the image texture moves with it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you have received a packed file, you can :guilabel:`File` → "
+#~ ":guilabel:`External Data` → :guilabel:`Unpack into Files...` . You will be "
+#~ "presented with the option to create the original directory structure or put "
+#~ "the file in the ``//`` (directory where the .blend file is). Use \"original "
+#~ "locations\" if you will be modifying the textures and re-packing and "
+#~ "exchanging .blend files, so that when you send it back and the originator "
+#~ "unpacks, his copies of the textures will be updated."
+#~ msgstr ""

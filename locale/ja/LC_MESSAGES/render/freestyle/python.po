@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/render/freestyle/python.rst:3
+#: ../../manual/render/freestyle/python.rst:4
 msgid "Python Scripting Mode"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:5
+#: ../../manual/render/freestyle/python.rst:6
 msgid ""
 "The Python Scripting mode offers full programmability for line stylization. "
 "In this control mode, all stylization operations are written as Python "
@@ -24,7 +24,7 @@ msgid ""
 "and the output is a set of stylized strokes."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:10
+#: ../../manual/render/freestyle/python.rst:11
 msgid ""
 "A style module is composed of successive calls of five basic operators: "
 "selection, chaining, splitting, sorting and stroke creation. The selection "
@@ -38,7 +38,7 @@ msgid ""
 "shaders."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:20
+#: ../../manual/render/freestyle/python.rst:21
 msgid ""
 "Python style modules are stored within .blend files as text datablocks. "
 "External style module files first need to be loaded in the Text Editor "
@@ -46,14 +46,14 @@ msgid ""
 "allows you to select a module from the list of loaded style modules."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:30
+#: ../../manual/render/freestyle/python.rst:31
 msgid ""
 "A screen capture of a style module (cartoon.py) loaded in the Text Editor "
 "window (left), as well as Freestyle options in the Python Scripting mode in "
 "the Render Layers buttons (right)"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:34
+#: ../../manual/render/freestyle/python.rst:35
 msgid ""
 "Freestyle for Blender comes with a number of Python style modules that can "
 "serve as a starting point of your own style module writing. See also the "
@@ -61,23 +61,23 @@ msgid ""
 "manual for the full detail of style module constructs."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:44
+#: ../../manual/render/freestyle/python.rst:45
 msgid ""
 "By T.K. using the Python Scripting mode (`File:Turning_Pages.zip "
 "<http://wiki.blender.org/index.php/File:Turning_Pages.zip>`__, CC0)"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:44
+#: ../../manual/render/freestyle/python.rst:45
 msgid ""
 "By T.K. using the Python Scripting mode (`File:Lily_Broken_Topology.zip "
 "<http://wiki.blender.org/index.php/File:Lily_Broken_Topology.zip>`__, CC0)"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:49
+#: ../../manual/render/freestyle/python.rst:50
 msgid "Writing Style Modules"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:51
+#: ../../manual/render/freestyle/python.rst:52
 msgid ""
 "A style module is a piece of code responsible for the stylization of "
 "Freestyle line drawing. The input of a style module is a set of feature "
@@ -88,27 +88,27 @@ msgid ""
 "functions in parentheses):"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:59
+#: ../../manual/render/freestyle/python.rst:60
 msgid "Selection (Operators.select())"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:60
+#: ../../manual/render/freestyle/python.rst:61
 msgid "Chaining (Operators.chain(), Operators.bidirectional_chain())"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:61
+#: ../../manual/render/freestyle/python.rst:62
 msgid "Splitting (Operators.sequential_split(), Operators.recursive_split())"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:62
+#: ../../manual/render/freestyle/python.rst:63
 msgid "Sorting (Operators.sort())"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:63
+#: ../../manual/render/freestyle/python.rst:64
 msgid "Stroke creation (Operators.create())"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:65
+#: ../../manual/render/freestyle/python.rst:66
 msgid ""
 "The input view map is populated with a set of ViewEdge objects.  The "
 "selection operation is used to pick up ViewEdges of interest to artists "
@@ -124,25 +124,25 @@ msgid ""
 "chains."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:76
+#: ../../manual/render/freestyle/python.rst:77
 msgid ""
 "ViewEdges, Chains and Strokes are generically referred to as one-dimensional"
 " (1D) elements. A 1D element is a polyline that is a series of connected "
 "straight lines. Vertices of 1D elements are called 0D elements in general."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:80
+#: ../../manual/render/freestyle/python.rst:81
 msgid ""
 "All the operators act on a set of active 1D elements. The initial active set"
 " is the set of ViewEdges in the input view map. The active set is updated by"
 " the operators."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:86
+#: ../../manual/render/freestyle/python.rst:87
 msgid "Selection"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:88
+#: ../../manual/render/freestyle/python.rst:89
 msgid ""
 "The selection operator goes through every element of the active set and "
 "keeps only the ones satisfying a certain predicate.  The Operators.select() "
@@ -150,7 +150,7 @@ msgid ""
 " that represents a 1D element. For example:"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:98
+#: ../../manual/render/freestyle/python.rst:99
 msgid ""
 "This selection operation uses the QuantitativeInvisibilityUP1D predicate to "
 "select only the visible ViewEdge (more precisely, those whose quantitative "
@@ -158,7 +158,7 @@ msgid ""
 "selectively apply the style to a fraction of the active 1D elements."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:103
+#: ../../manual/render/freestyle/python.rst:104
 msgid ""
 "It is noted that QuantitativeInvisibilityUP1D is a class implementing the "
 "predicate that tests line visibility, and the Operators.select() method "
@@ -171,11 +171,11 @@ msgid ""
 "functions."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:114
+#: ../../manual/render/freestyle/python.rst:115
 msgid "Chaining"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:116
+#: ../../manual/render/freestyle/python.rst:117
 msgid ""
 "The chaining operators act on the set of active ViewEdge objects and "
 "determine the topology of the future strokes. The idea is to implement an "
@@ -190,25 +190,25 @@ msgid ""
 "during the march along the graph."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:127
+#: ../../manual/render/freestyle/python.rst:128
 msgid ""
 "Chaining can be either unidirectional (Operators::chain()) or bidirectional "
 "(Operators::bidirectional_chain()).  In the latter case, the chaining will "
 "propagate in the two directions from the starting edge."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:131
+#: ../../manual/render/freestyle/python.rst:132
 msgid "The following is a code example of bidirectional chaining:"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:140
+#: ../../manual/render/freestyle/python.rst:141
 msgid ""
 "The chaining operator uses the ChainSilhouetteIterator as the chaining rule "
 "and stops chaining as soon as the iterator has come to an invisible "
 "ViewEdge."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:143
+#: ../../manual/render/freestyle/python.rst:144
 msgid ""
 "The chaining operators process the set of active ViewEdge objects in order. "
 "The active ViewEdges can be previously sorted using the Operators::sort() "
@@ -224,11 +224,11 @@ msgid ""
 "been constructed."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:158
+#: ../../manual/render/freestyle/python.rst:159
 msgid "Splitting"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:160
+#: ../../manual/render/freestyle/python.rst:161
 msgid ""
 "The splitting operation is used to refine the topology of each Chain. "
 "Splitting is performed either sequentially or recursively.  Sequential "
@@ -239,7 +239,7 @@ msgid ""
 "split operation, the active set of chains is set to the new chains."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:175
+#: ../../manual/render/freestyle/python.rst:176
 msgid ""
 "In this example, the chain is split every 2 units. A more elaborated version"
 " uses two predicates instead of one: One to determine the starting point of "
@@ -249,7 +249,7 @@ msgid ""
 "details)."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:181
+#: ../../manual/render/freestyle/python.rst:182
 msgid ""
 "Recursive splitting (Operators::recursiveSplit()) evaluates a function on "
 "the 0D elements along the Chain at a given resolution and find the point "
@@ -259,7 +259,7 @@ msgid ""
 "condition."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:194
+#: ../../manual/render/freestyle/python.rst:195
 msgid ""
 "In the code example above, the Chains are recursively split at points of the"
 " highest 2D curvature. The curvature is evaluated at points along the Chain "
@@ -267,24 +267,24 @@ msgid ""
 "anymore."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:201
+#: ../../manual/render/freestyle/python.rst:202
 msgid "Sorting"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:203
+#: ../../manual/render/freestyle/python.rst:204
 msgid ""
 "The sorting operator (Operators::sort()) arranges the stacking order of "
 "active 1D elements. It takes as argument a binary predicate used as a "
 "\"smaller than\" operator to order two 1D elements."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:213
+#: ../../manual/render/freestyle/python.rst:214
 msgid ""
 "In this code example, the sorting uses the Length2DBP1D binary predicate to "
 "sort the Interface1D objects in the ascending order in terms of 2D length."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:216
+#: ../../manual/render/freestyle/python.rst:217
 msgid ""
 "The sorting is particularly useful when combined with causal density.  "
 "Indeed, the causal density evaluates the density of the resulting image as "
@@ -294,11 +294,11 @@ msgid ""
 "operator to insure that the most \"important\" lines are drawn first."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:224
+#: ../../manual/render/freestyle/python.rst:225
 msgid "Stroke creation"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:226
+#: ../../manual/render/freestyle/python.rst:227
 msgid ""
 "Finally, the stroke creation operator (Operators::create()) takes the active"
 " set of Chains as input and build Strokes.  The operator takes two "
@@ -308,7 +308,7 @@ msgid ""
 " Shaders that will be responsible for the shading of each built stroke."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:244
+#: ../../manual/render/freestyle/python.rst:245
 msgid ""
 "In this example, the DensityUP1D predicate is used to remove all Chains "
 "whose mean density is higher than 0.1. Each chain is transformed into a "
@@ -316,11 +316,11 @@ msgid ""
 " it a constant thickness of 2 units and a dark gray constant color."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:251
+#: ../../manual/render/freestyle/python.rst:252
 msgid "User control on the pipeline definition"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:253
+#: ../../manual/render/freestyle/python.rst:254
 msgid ""
 "Style module writing offers different types of user control, even though "
 "individual style modules have a fixed pipeline structure. One is the "
@@ -329,14 +329,14 @@ msgid ""
 "pipeline."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:258
+#: ../../manual/render/freestyle/python.rst:259
 msgid ""
 "Different pipeline control structures can be defined by sequencing the "
 "selection, chaining, splitting, and sorting operations. The stroke creation "
 "is always the last operation that concludes a style module."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:262
+#: ../../manual/render/freestyle/python.rst:263
 msgid ""
 "Predicates, functions, chaining iterators, and stroke shaders can be defined"
 " by inheriting base classes and overriding appropriate methods.  See the "
@@ -344,98 +344,98 @@ msgid ""
 "on the user-scriptable constructs."
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:267
+#: ../../manual/render/freestyle/python.rst:268
 msgid "UnaryPredicate0D"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:268
+#: ../../manual/render/freestyle/python.rst:269
 msgid "UnaryPredicate1D"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:269
+#: ../../manual/render/freestyle/python.rst:270
 msgid "BinaryPredicate0D"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:270
+#: ../../manual/render/freestyle/python.rst:271
 msgid "BinaryPredicate1D"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:271
+#: ../../manual/render/freestyle/python.rst:272
 msgid "UnaryFunction0DDouble"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:272
+#: ../../manual/render/freestyle/python.rst:273
 msgid "UnaryFunction0DEdgeNature"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:273
+#: ../../manual/render/freestyle/python.rst:274
 msgid "UnaryFunction0DFloat"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:274
+#: ../../manual/render/freestyle/python.rst:275
 msgid "UnaryFunction0DId"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:275
+#: ../../manual/render/freestyle/python.rst:276
 msgid "UnaryFunction0DMaterial"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:276
+#: ../../manual/render/freestyle/python.rst:277
 msgid "UnaryFunction0DUnsigned"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:277
+#: ../../manual/render/freestyle/python.rst:278
 msgid "UnaryFunction0DVec2f"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:278
+#: ../../manual/render/freestyle/python.rst:279
 msgid "UnaryFunction0DVec3f"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:279
+#: ../../manual/render/freestyle/python.rst:280
 msgid "UnaryFunction0DVectorViewShape"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:280
+#: ../../manual/render/freestyle/python.rst:281
 msgid "UnaryFunction0DViewShape"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:281
+#: ../../manual/render/freestyle/python.rst:282
 msgid "UnaryFunction1DDouble"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:282
+#: ../../manual/render/freestyle/python.rst:283
 msgid "UnaryFunction1DEdgeNature"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:283
+#: ../../manual/render/freestyle/python.rst:284
 msgid "UnaryFunction1DFloat"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:284
+#: ../../manual/render/freestyle/python.rst:285
 msgid "UnaryFunction1DUnsigned"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:285
+#: ../../manual/render/freestyle/python.rst:286
 msgid "UnaryFunction1DVec2f"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:286
+#: ../../manual/render/freestyle/python.rst:287
 msgid "UnaryFunction1DVec3f"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:287
+#: ../../manual/render/freestyle/python.rst:288
 msgid "UnaryFunction1DVectorViewShape"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:288
+#: ../../manual/render/freestyle/python.rst:289
 msgid "UnaryFunction1DVoid"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:289
+#: ../../manual/render/freestyle/python.rst:290
 msgid "ViewEdgeIterator"
 msgstr ""
 
-#: ../../manual/render/freestyle/python.rst:290
+#: ../../manual/render/freestyle/python.rst:291
 msgid "StrokeShader"
 msgstr ""

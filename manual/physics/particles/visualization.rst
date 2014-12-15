@@ -5,10 +5,11 @@
    }} .
 
 
+**********************
 Particle Visualization
 **********************
 
-With the items in the :guilabel:`Display` and :guilabel:`Render` panel you can set the way the particles will be rendered or depicted in the view ports in various ways. Some option are valid only for the 3D window, the particles then are rendered always as :doc:`Halos </materials/halos>`. Some of the options will be rendered as shown in the 3D window.
+With the items in the *Display* and *Render* panel you can set the way the particles will be rendered or depicted in the view ports in various ways. Some option are valid only for the 3D window, the particles then are rendered always as :doc:`Halos </materials/halos>`. Some of the options will be rendered as shown in the 3D window.
 
 
 Viewport Display
@@ -26,12 +27,12 @@ Circle
 Cross
    Particles are displayed as 6-point crosses that align to the rotation of the particles. Their size is independent of the distance from the camera.
 Axis
-   Particles are displayed as 3-point axes. This useful if you want to see the orientation and rotation of particles in the view port. Increase the :guilabel:`Draw Size` until you can clearly distinguish the axis.
+   Particles are displayed as 3-point axes. This useful if you want to see the orientation and rotation of particles in the view port. Increase the *Draw Size* until you can clearly distinguish the axis.
 
 Particles visualized like Point, Circle, Cross and Axis don't have any special options,
 but can be very useful when you have multiple particle systems at play,
 if you don't want to confuse particles of one system from another (e.g.
-in simulations using :guilabel:`Boids` physics).
+in simulations using *Boids* physics).
 
 Display
    Specifies the percentage of all particles to show in the viewport (all particles are still rendered).
@@ -56,7 +57,7 @@ None
 Material
    Particles are colored according to the material they are given.
 Velocity
-   Color particles according to their speed. The color is a ramp from blue to green to red, Blue being the slowest, and Red being velocities approaching the value of :guilabel:`Max` or above. Increasing :guilabel:`Max` allows for a wider range of particle velocities.
+   Color particles according to their speed. The color is a ramp from blue to green to red, Blue being the slowest, and Red being velocities approaching the value of *Max* or above. Increasing *Max* allows for a wider range of particle velocities.
 Acceleration
    Color particles according to their acceleration.
 
@@ -72,21 +73,21 @@ Parent
    Use a different object's coordinates to determine the birth of particles.
 
 Emitter
-   When disabled, the emitter is no longer rendered. Activate the button :guilabel:`Emitter` to also render the mesh.
+   When disabled, the emitter is no longer rendered. Activate the button *Emitter* to also render the mesh.
 Parents
-   Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default :guilabel:`Parents` are not rendered if you activate :guilabel:`Children`.. See :doc:`Children </physics/particles/children>`
+   Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default *Parents* are not rendered if you activate *Children*.. See :doc:`Children </physics/particles/children>`
 
 Unborn
    Render particles before they are born.
 Died
-   Render particles after they have died. This is very useful if particles die in a collision (:guilabel:`Die on hit`), so you can cover objects with particles.
+   Render particles after they have died. This is very useful if particles die in a collision (*Die on hit*), so you can cover objects with particles.
 
 
 None
 ====
 
 
-When set to :guilabel:`None` particles are not rendered.
+When set to *None* particles are not rendered.
 This is useful if you are using the particles to duplicate objects.
 
 
@@ -112,8 +113,8 @@ Line
 
 The Line visualization mode creates (more or less thin)
 polygon lines with the strand renderer in the direction of particles velocities. The thickness
-of the line is set with the parameter :guilabel:`Start` of the :guilabel:`Strands` shader
-(:guilabel:`Material` sub-context, :guilabel:`Links and Pipeline` panel).
+of the line is set with the parameter *Start* of the *Strands* shader
+(*Material* sub-context, *Links and Pipeline* panel).
 
 Back
    Set the length of the particle's tail.
@@ -136,7 +137,7 @@ Path
    Image 3: The Visualization panel for Path visualization.
 
 
-The :guilabel:`Path` visualization needs a :doc:`Hair </physics/hair>` particle system or :doc:`Keyed </physics/particles/physics/keyed>` particles.
+The *Path* visualization needs a :doc:`Hair </physics/hair>` particle system or :doc:`Keyed </physics/particles/physics/keyed>` particles.
 
 Strand render
    [Keypointstrands] Use the strand primitive for rendering. Very fast and effective renderer.
@@ -148,7 +149,7 @@ Pixel
    How many pixels path has to cover to produce another render segment (very short hair or long hair viewed from far away need fewer parts). (only for Adaptive render).
 
 B-Spline
-   Interpolate hair using B-Splines. This may be an option for you if you want to use low :guilabel:`Render` values. You loose a bit of control but gain smoother paths.
+   Interpolate hair using B-Splines. This may be an option for you if you want to use low *Render* values. You loose a bit of control but gain smoother paths.
 Steps
    Set the number of subdivisions of the rendered paths (the value is a power of 2). You should set this value carefully, because if you increase the render value by two you need four times more memory to render. Also the rendering is faster if you use low render values (sometimes drastically). But how low you can go with this value depends on the waviness of the hair.(the value is a power of 2). This means 0 steps give 1 subdivision, 1 give 2 subdivisions, 2→4, 3→8, 4→16, ... *n* ``→2`` *n*.
 
@@ -170,7 +171,7 @@ Please see also the manual page about :doc:`Strands </materials/properties/stran
 Object
 ======
 
-In the Object visualization mode the specified object (:guilabel:`Dupli Object:` field)
+In the Object visualization mode the specified object (*Dupli Object:* field)
 is duplicated in place of each particle.
 The duplicated object has to be at the center of the coordinate system,
 or it will get an offset to the particle.
@@ -186,7 +187,7 @@ Random Size
 Group
 =====
 
-In the Group visualization mode, the objects that belong to the group (:guilabel:`GR:` field)
+In the Group visualization mode, the objects that belong to the group (*GR:* field)
 are duplicated sequentially in the place of the particles.
 
 WholeGroup
@@ -214,12 +215,12 @@ Billboard
    Image 4: Billboard visualization for particles.
 
 
-:guilabel:`Billboards` are aligned square planes. They are aligned to the camera by default, but you can choose another object that they should be aligned to.
+*Billboards* are aligned square planes. They are aligned to the camera by default, but you can choose another object that they should be aligned to.
 
 If you move a billboard around it's target, it always faces the center of it's target.
-The size of a billboard is set with the parameter :guilabel:`Size` of the particle
+The size of a billboard is set with the parameter *Size* of the particle
 (in Blender Units). You can use them e.g. for [http://en.wikipedia.org/wiki/Sprite_
-(computer_graphics) Sprites], or to replace :guilabel:`Halo` visualization.
+(computer_graphics) Sprites], or to replace *Halo* visualization.
 Everything that can be done with a halo can also be done with a billboard.
 But billboards are real objects, they are seen by raytracing,
 they appear behind transparent objects,
@@ -245,9 +246,9 @@ Since you use normal materials for the billboard you have all freedoms in mixing
 your liking. The material itself is animated in absolute time.
 
 The main thing to understand is that if the object doesn't have any *UV Layers*,
-you need to create at least one in the objects :guilabel:`Editing` context,
+you need to create at least one in the objects *Editing* context,
 for any of these to work. Moreover,
-the texture has to be set to UV coordinates in the :guilabel:`Map Input` panel.
+the texture has to be set to UV coordinates in the *Map Input* panel.
 If you want to see examples for some of the animation possibilities, see the
 [http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Billboard_Animation Billboard Animation
 Tutorial].
@@ -296,19 +297,19 @@ Billboard Time-Index (X-Y)
 
 The animation of the UV textures is a bit tricky.
 The UV texture is split into rows and columns (N times N). The texture should be square.
-You have to use :guilabel:`UV Split` in the UV channel and fill in the name of the UV layer.
+You have to use *UV Split* in the UV channel and fill in the name of the UV layer.
 This generated UV coordinates for this layer.
 
 Split UV's
    The amount of rows/columns in the texture to be used.
-   Coordinates are a single part of the :guilabel:`UV Split` grid, which is a n?n grid over the whole texture. What
-   the part is used for each particle and at what time is determined by the :guilabel:`Offset` and
-   :guilabel:`Animate` controls. These can be used to make each billboard unique or to use an "animated" texture for
+   Coordinates are a single part of the *UV Split* grid, which is a n?n grid over the whole texture. What
+   the part is used for each particle and at what time is determined by the *Offset* and
+   *Animate* controls. These can be used to make each billboard unique or to use an "animated" texture for
    them by having each frame of the animation in a grid in a big image.
 Billboard Split UV
    Set the name of the *UV layer* to use with billboards
-   (you can use a different one for each :guilabel:`UV Channel`). By default, it is the active UV layer
-   (check the :guilabel:`Mesh` panel in the :guilabel:`Editing` context, :kbd:`f9`).
+   (you can use a different one for each *UV Channel*). By default, it is the active UV layer
+   (check the *Mesh* panel in the *Editing* context, :kbd:`F9`).
 Animate
    Dropdown menu, indicating how the split UVs could be animated (changing from particle to particle with time):
 
@@ -317,12 +318,12 @@ Animate
    Age
       The sections of the texture are gone through sequentially in particles' lifetimes.
    Angle
-      Change the section based on the angle of rotation around the :guilabel:`Align to` axis, if :guilabel:`View` is used the change is based on the amount of tilt.
+      Change the section based on the angle of rotation around the *Align to* axis, if *View* is used the change is based on the amount of tilt.
    Frame
       The section is changes according to the frame.
 
 Offset
-   Specifies how to choose the first part (of all the parts in the n×n grid in the texture defined by the :guilabel:`UV Split` number) for all particles.
+   Specifies how to choose the first part (of all the parts in the n×n grid in the texture defined by the *UV Split* number) for all particles.
 
    None
       All particles start from the first part.

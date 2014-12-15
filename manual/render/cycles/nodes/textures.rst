@@ -1,5 +1,6 @@
 .. _textures:
 
+*************
 Texture Nodes
 *************
 
@@ -19,7 +20,7 @@ Image Datablock
    Image datablock used as the image source. Currently not all images supported by Blender can be used by Cycles.
    In particular, generated, packed images or animations are not supported currently.
 Projection
-   Projection to use for mapping the textures. :guilabel:`Flat` will use the XY coordinates for mapping.
+   Projection to use for mapping the textures. *Flat* will use the XY coordinates for mapping.
    Box will map the image to the 6 sides of a virtual box, based on the normal, using XY,
    YZ and XYZ coordinates depending on the side.
 Projection Blend
@@ -139,7 +140,7 @@ Wave Texture
 Procedural bands or rings texture with noise distortion.
 
 Type
-   :guilabel:`Bands` or :guilabel:`Rings` shaped waves.
+   *Bands* or *Rings* shaped waves.
 Vector input
    Texture coordinate to sample texture at;
    defaults to Generated texture coordinates if the socket is left unconnected.
@@ -172,7 +173,7 @@ Voronoi Texture
 Procedural texture producing Voronoi cells.
 
 Type
-   :guilabel:`Intensity` or :guilabel:`Cells` output.
+   *Intensity* or *Cells* output.
 Vector input
    Texture coordinate to sample texture at;
    defaults to Generated texture coordinates if the socket is left unconnected.
@@ -235,8 +236,8 @@ Gradient Texture
 A gradient texture.
 
 Type
-   The gradient can be :guilabel:`Linear`, :guilabel:`Quadratic`, :guilabel:`Easing`, :guilabel:`Diagonal`,
-   :guilabel:`Spherical`, :guilabel:`Quadratic Sphere` or :guilabel:`Radial`.
+   The gradient can be *Linear*, *Quadratic*, *Easing*, *Diagonal*,
+   *Spherical*, *Quadratic Sphere* or *Radial*.
 Vector input
    Texture coordinate to sample texture at;
    defaults to Generated texture coordinates if the socket is left unconnected.

@@ -1,4 +1,5 @@
 
+**************************
 Static Physics Object Type
 **************************
 
@@ -49,8 +50,10 @@ FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/AnisotropicFricti
 Collision Bounds
 ================
 
-Note: The Static type differs from the others in that it defaults to a Triangle Mesh bounds,
-instead of a simple sphere.
+.. note::
+
+   The Static type differs from the others in that it defaults to a Triangle Mesh bounds,
+   instead of a simple sphere.
 
 
 FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/Collision_Bounds;

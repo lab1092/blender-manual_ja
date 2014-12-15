@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+*********************
 Edge (Toon) Rendering
 *********************
 
@@ -92,4 +93,4 @@ perceived effect of a larger color palette by creating a sort of visual color mi
 For example, if you take a grid and distribute red and yellow pixels evenly across it,
 the image would appear to be orange.
 
-The :guilabel:`Dither` value ranges from 0 to 2.
+The *Dither* value ranges from 0 to 2.

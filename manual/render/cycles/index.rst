@@ -1,10 +1,11 @@
 
-Cycles Render Engine
-********************
+#######################
+  Cycles Render Engine
+#######################
 
 Cycles is a ray tracing renderer focused on interactivity and ease of use,
 while still supporting many production features.
-`Developer documentation <http://wiki.blender.org/index.php/Dev:2.6/Source/Render/Cycles>`_
+`Developer documentation <http://wiki.blender.org/index.php/Dev:2.6/Source/Render/Cycles>`__
 is also available.
 
 

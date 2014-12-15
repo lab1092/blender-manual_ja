@@ -2,15 +2,16 @@
 ..    TODO/Review: {{review|im=needs example}} .
 
 
+*********
 Duplicate
 *********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Duplicate`
-   | Hotkey:   :kbd:`shift-D`
+   | Hotkey:   :kbd:`Shift-D`
 
 
 This tool simply duplicates the selected elements,
@@ -19,8 +20,8 @@ and places the duplicate at the location of the original. Once the duplication i
 *only the new duplicated elements are selected*,
 and you are automatically placed in grab/move mode, so you can translate your copy elsewhere...
 
-In the :guilabel:`Tool Shelf` are settings for :guilabel:`Vector` offset,
-:guilabel:`Proportional Editing`, :guilabel:`Duplication Mode` (non-functional?),
-and :guilabel:`Axis Constraints`.
+In the *Tool Shelf* are settings for *Vector* offset,
+*Proportional Editing*, *Duplication Mode* (non-functional?),
+and *Axis Constraints*.
 
-Note that duplicated elements belong to the same :doc:`vertex groups </modeling/meshes/vertex_groups>` as the "original" ones. The same goes for the :doc:`material indices </materials/multiple_materials>`, the edge's :guilabel:`Sharp` and :guilabel:`Seam` flags, and probably for the other vertex/edge/face properties...
+Note that duplicated elements belong to the same :doc:`vertex groups </modeling/meshes/vertex_groups>` as the "original" ones. The same goes for the :doc:`material indices </materials/multiple_materials>`, the edge's *Sharp* and *Seam* flags, and probably for the other vertex/edge/face properties...

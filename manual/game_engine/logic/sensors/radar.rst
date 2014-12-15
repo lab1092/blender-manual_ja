@@ -1,4 +1,5 @@
 
+************
 Radar Sensor
 ************
 
@@ -9,7 +10,7 @@ Radar Sensor
    Radar sensor
 
 
-The :guilabel:`Radar` sensor works much like a :guilabel:`Near` sensor,
+The *Radar* sensor works much like a *Near* sensor,
 but only within an angle from an axis, forming an invisible cone with the top in the objects'
 center and base at a distance on an axis.
 
@@ -38,6 +39,6 @@ This sensor is useful for giving bots sight only in front of them, for example.
 
 .. note:: Note about soft bodies
 
-   The :guilabel:`Radar` sensor can not detect soft bodies.
+   The *Radar* sensor can not detect soft bodies.
    This is a limitation in Bullet, the physics library used by the Game Engine.
 

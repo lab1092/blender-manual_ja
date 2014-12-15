@@ -1,8 +1,9 @@
 
+*****************
 Solidify Modifier
 *****************
 
-The :guilabel:`Solidify` modifier takes the surface of any mesh and adds a depth to it.
+The Solidify modifier takes the surface of any mesh and adds depth to it.
 
 
 Options
@@ -13,41 +14,54 @@ Options
    Solidify modifier
 
 
-.. figure:: /images/26-Manual-Modifiers-Solidify-Clamp.jpg
-
-   Clamp Offset
-
-
 Thickness
    The depth to be solidified.
 Offset
    A value between ``-1`` and ``1`` to locate the solidified output inside or outside the original mesh.
-   Set to zero, :guilabel:`Offset` will center the solidified output on the original mesh.
+   Set to ``0.0``, the solidified output will be centered on the original mesh.
 Clamp
    A value between ``0`` and ``2`` to clamp offsets to avoid self intersection.
+
+
+   .. figure:: /images/26-Manual-Modifiers-Solidify-Clamp.jpg
+
+      Clamp Offset
+
+
 Vertex Group
-   Restrict the modifier to only this vertex group.
+   Only vertices in this group are solidified - their weights are multiplied by the thickness,
+   so vertices with lower weights will be less thick.
 
    Invert
-      Inverts the previous selection.
+      Reverses the vertex group, so that only vertices which are **not** in the vertex group are solidified.
+   Factor
+      How much the vertex weights are taken into account.
 
-
-.. figure:: /images/25-Manual-Modifiers-Solidify-Rims.jpg
-   :width: 350px
-   :figwidth: 350px
-
-   Rim and edges.  In this example, the object was assigned a second material used to color the rim red.
+      - On ``0.0``, vertices with zero weight will have no thickness at all.
+      - On ``0.5``, vertices with zero weight will be half as thick as those with full weight.
+      - On ``1.0``, the weights are ignored and the *thickness* value is used for every vertex.
 
 
 Crease
    These options are intended for usage with the :doc:`Subdivision Surface </modifiers/generate/subsurf>` modifier.
 
+
+   .. figure:: /images/25-Manual-Modifiers-Solidify-Rims.jpg
+      :width: 350px
+      :figwidth: 350px
+
+      Rim and edges.  In this example, the object was assigned a second material used to color the rim red.
+
+
    Inner
-      Assign a crease to the inner edges.
+      Set a crease to the inner edges.
    Outer
-      Assign a crease to the outer edges.
+      Set a crease to the outer edges.
    Rim
-      Assign a crease to the rim.
+      Set a crease to the rim.
+
+Flip Normals
+   Reverse the normals of all geometry (both the inner and outer surfaces).
 Even Thickness
    Maintain thickness by adjusting for sharp corners.
    Sometimes improves quality but also increases computation time.
@@ -56,22 +70,42 @@ High Quality Normals
    Sometimes improves quality but also increases computation time.
 Fill Rim
    Fills the gap between the inner and outer edges.
-Rim Material
-   Uses the object's second material for the rim; this is applied as an offset from the current material.
+Only Rim
+   TODO
+
+.. note::
+
+   *Fill Rim* and *Only Rim* only make a difference on non-manifold objects,
+   since the "rims" are generated from the borders of the original geometry.
+
+Material Index Offset
+   Choose a different material to use for the new geometry;
+   this is applied as an offset from the original material of the face from which it was solidified.
+
+   - A value of ``0`` means it will use the same material.
+   - A value of ``1`` means it will use the material immediately below the original material.
+   - A value of ``-2`` means the material two positions above the original material will be used.
+
+   These are clamped to the top-most and bottom-most material slots.
+
+   Rim
+      Similarly, you can give another material to the rim faces.
 
 
-Hints
-=====
+.. warning::
 
-- The modifier thickness is applied before object scale;
-  if maintaining a fixed thickness is important use unscaled objects (or account for the scale).
+  The modifier thickness is calculated using local vertex coordinates. If the object has non-uniform scale,
+  the thickness will vary on different sides of the object.
 
+  To fix this, either apply (:kbd:`Ctrl-A`) or clear (:kbd:`Alt-S`) scale.
 
-- Solidify thickness is an approximation. While "Even Thickness" and "High Quality Normals",
-  should yield good results, the architectural/CAD modeling the final wall thickness isn't guaranteed,
-  depending on the mesh topology.
-  To look at it differently -
-  maintaining precise wall thickness in some cases would need to add / remove faces on the offset shell -
+.. warning::
+
+  Solidify thickness is an approximation. While "Even Thickness" and "High Quality Normals" should yield good results,
+  the final wall thickness isn't guaranteed and may vary depending on the mesh topology.
+
+  In order to maintain precise wall thickness in every case, we would need to add/remove faces on the offset shell -
   something this modifier doesn't do since this would add a lot of complexity and slow down the modifier.
 
+  Hence it is not recommended to use this for purposes requiring accuracy such as architectural/CAD modeling.
 

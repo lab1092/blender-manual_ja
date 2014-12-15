@@ -1,4 +1,5 @@
 
+***************
 Keyed Particles
 ***************
 
@@ -34,7 +35,7 @@ This will be the system thats is visible.
 or a normal particle system. This second system is the target of the keyed system.
 
 Loops
-   Sets the number of times the keys are looped. Disabled if :guilabel:`Use Timing` is enabled.
+   Sets the number of times the keys are looped. Disabled if *Use Timing* is enabled.
 
 
 Keys

@@ -1,4 +1,5 @@
 
+************
 Video Output
 ************
 
@@ -30,33 +31,7 @@ Dimensions Presets
 The rendering size is strictly dictated by the TV standard.
 Blender has 11 pre-set settings for your convenience:
 
-
-+---------------------------+------------------+--------------------+----------+
-+Preset                     |Resolution (X x Y)|Aspect Ratio (X x Y)|Frame Rate+
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`DVCPRO HD 1080p`|1280x1080         |3:2                 |24 fps    +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`DVCPRO HD 720p` |960x720           |4:3                 |24 fps    +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`HDTV 1080p`     |1920x1080         |1:1                 |24 fps    +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`HDTV 720p`      |1280x720          |1:1                 |24 fps    +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`HDV 1080p`      |1440x1080         |4:3                 |23.98 fps +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`HDV NTSC 1080p` |1440x1080         |4:3                 |29.97 fps +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`HDV PAL 1080p`  |1440x1080         |4:3                 |25 fps    +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`TV NTSC 16:9`   |720x480           |40:33               |29.97 fps +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`TV NTSC 4:3`    |720x486           |10:11               |29.97 fps +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`TV PAL 16:9`    |720x576           |16:11               |25 fps    +
-+---------------------------+------------------+--------------------+----------+
-+:guilabel:`TV PAL 4:3`     |720x576           |12:11               |25 fps    +
-+---------------------------+------------------+--------------------+----------+
-
+See: :term:`Video Presets`
 
 Note that if you render your animation at 1600x1200 resolution, and then burn a DVD,
 your image will not be clearer or crisper on the TV; in fact the DVD burning software will
@@ -152,7 +127,7 @@ Options
 
 
 Fields
-   Enable field rendering. When the :guilabel:`Fields` button in the :guilabel:`Render` Panel is pressed
+   Enable field rendering. When the *Fields* button in the *Render* Panel is pressed
    (*Post Processing* section), Blender prepares each frame in two passes.
    On the first it renders only the even lines,
    then it *advances in time by half a time step* and renders all the odd lines.
@@ -162,7 +137,7 @@ Fields
 Upper First / Lower First
    Toggles between rendering the even and odd frames first.
 Still
-   Disables the half-frame time step between fields (:guilabel:`x`).
+   Disables the half-frame time step between fields (*x*).
 
 
 .. note:: Setting up the correct field order
@@ -220,7 +195,7 @@ but some support the Alpha channel as well. Codecs that support RGBA include:
 AVI Codec
    AVI codec compression. Available codecs are operating-system dependent.
    When an AVI codec is initially chosen, the codec dialog is automatically launched.
-   The codec can be changed directly using the :guilabel:`Set Codec` button which appears (*AVI Codec settings.*).
+   The codec can be changed directly using the *Set Codec* button which appears (*AVI Codec settings.*).
 AVI Jpeg
    AVI but with Jpeg compression.
    Lossy, smaller files but not as small as you can get with a Codec compression algorithm.
@@ -229,7 +204,7 @@ AVI Raw
    Audio-Video Interlaced (AVI) uncompressed frames.
 Frameserver
    Blender puts out `frames upon request
-   <http://wiki.blender.org/index.php/Dev:Source/Render/Frameserver>`_
+   <http://wiki.blender.org/index.php/Dev:Source/Render/Frameserver>`__
    as part of a render farm.
    The port number is specified in the OpenGL User Preferences panel.
 H.264
@@ -247,7 +222,7 @@ QuickTime
    .. note:: Reads GIF if QuickTime is Installed
 
       Blender can read GIF files on Windows and Mac platforms with
-      `QuickTime <http://www.apple.com/quicktime/download>`_ installed.
+      `QuickTime <http://www.apple.com/quicktime/download>`__ installed.
       The GIF capabilities (as well as flattened PSD,
       flattened PDF on Mac, and others) come along with QuickTime.
 Xvid
@@ -259,8 +234,8 @@ Advanced Encoding
 
 .. figure:: /images/Manual-Render-FFMPEG-Video-2.5+.jpg
 
-If the  :guilabel:`H.264`, :guilabel:`MPEG`, :guilabel:`Ogg Theora`,
-or :guilabel:`Xvid` codecs are chosen, an :guilabel:`Encoding` panel becomes available.
+If the  *H.264*, *MPEG*, *Ogg Theora*,
+or *Xvid* codecs are chosen, an *Encoding* panel becomes available.
 This has settings for encoding these file types, and other formats using FFmpeg.
 
 `FFmpeg <http://ffmpeg.org>`__, short for Fast Forward Moving Pictures Expert Group,
@@ -373,7 +348,7 @@ Bitrate
    See also: `ffmpeg -b:v <http://ffmpeg.org/ffmpeg.html#Description>`__
 
 Rate
-   The bitrate control also includes a :guilabel:`Minimum` and a :guilabel:`Maximum`.
+   The bitrate control also includes a *Minimum* and a *Maximum*.
 
    Buffer
       The `decoder bitstream buffer <http://en.wikipedia.org/wiki/Video_buffering_verifier>`__ size.

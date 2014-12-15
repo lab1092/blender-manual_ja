@@ -1,6 +1,7 @@
 
-Nodes
-*****
+########
+  Nodes
+########
 
 .. toctree::
    :maxdepth: 2

@@ -1,16 +1,17 @@
 
+*****************
 Weight Paint Mode
 *****************
 
 Vertex Groups can potentially have a very large number of associated vertices and thus a large
-number of weights (one weight per assigned vertex). :guilabel:`Weight Painting` is a method to
+number of weights (one weight per assigned vertex). *Weight Painting* is a method to
 maintain large amounts of weight information in a very intuitive way.
 It is primarily used for rigging meshes,
 where the vertex groups are used to define the relative bone influences on the mesh.
 But we use it also for controlling particle emission, hair density, many modifiers,
 shape keys, etc.
 
-The basic principle of the method is: the weight information is literally :guilabel:`painted`
+The basic principle of the method is: the weight information is literally *painted*
 on top of the Mesh body by using a set of Weight brushes.
 And since painting is always associated with color, we also need to define ...
 
@@ -22,12 +23,12 @@ Weight Paint in a nutshell
    Weight Painted Vertex Group
 
 
-- You enter :guilabel:`Weight Paint` mode from the Mode Menu (hotkey=\ :kbd:`ctrl-tab`).
+- You enter *Weight Paint* mode from the Mode Menu (hotkey=\ :kbd:`Ctrl-Tab`).
   The selected Mesh Object is displayed slightly shaded with a rainbow color spectrum.
 - The color visualizes the weights associated to each vertex in the active Vertex Group.
   Blue means unweighted; Red means fully weighted.
-- You can customize the colors in the weight gradient by enabling :guilabel:`Custom Weight Paint Range`
-  in the :guilabel:`System` tab of the :guilabel:`User Preferences`.
+- You can customize the colors in the weight gradient by enabling *Custom Weight Paint Range*
+  in the *System* tab of the *User Preferences*.
 - You assign weights to the vertices of the Object by painting on it with weight brushes.
   Starting to paint on a mesh automatically adds weights to the active Vertex Group
   (a new Vertex Group is created if needed).
@@ -38,16 +39,16 @@ Weight Paint in a nutshell
    The shortcuts can speed up your weight painting:
 
    Weight color picker
-      :kbd:`ctrl-lmb` change current weight value to the weight value of clicked vertex
+      :kbd:`Ctrl-LMB` change current weight value to the weight value of clicked vertex
    Resize the brush
       :kbd:`F` then drag to new brush size
    Create linear gradient
-      :kbd:`alt-lmb` then drag
+      :kbd:`Alt-LMB` then drag
    Create radial gradient
-      :kbd:`alt-ctrl-lmb` then drag
+      :kbd:`Alt-Ctrl-LMB` then drag
    Draw a *Clipping Border*
-      :kbd:`alt-B` then drag the clipping border to select the part of the 3D window which shall be kept visible.
-      You can then draw only in this part. Press :kbd:`alt-B` again to remove the *clipping border*.
+      :kbd:`Alt-B` then drag the clipping border to select the part of the 3D window which shall be kept visible.
+      You can then draw only in this part. Press :kbd:`Alt-B` again to remove the *clipping border*.
 
 The weighting Color Code
 ========================
@@ -82,7 +83,7 @@ Brushes
 
 
 Painting needs paint brushes and Blender provides a Brush Panel within the Tool Shelf when it
-operates in :guilabel:`Weight Paint Mode`. You find predefined Brush Presets when you click on
+operates in *Weight Paint Mode*. You find predefined Brush Presets when you click on
 the large Brush Icon at the top of the brush Panel.
 And you can make your own presets as needed.
 See below for the available brush presets and to create custom presets.
@@ -102,27 +103,30 @@ Strength
    What that means exactly also depends on the Brush Blending mode.
 Radius
    The radius defines the area of influence of the brush.
-   Note: You can also change the Brush radius with a keyboard shortcut while painting.
-   Just press :kbd:`F` at any time, then drag the mouse to increase/reduce the brush radius.
-   Finally click :kbd:`lmb` to use the new setting.
-   Or press the :kbd:`esc` key at any time to return to the current settings.
+
+   .. note::
+
+      You can also change the Brush radius with a keyboard shortcut while painting.
+      Just press :kbd:`F` at any time, then drag the mouse to increase/reduce the brush radius.
+      Finally click :kbd:`LMB` to use the new setting.
+      Or press the :kbd:`Esc` key at any time to return to the current settings.
 Blend mode
    The brush Blending mode defines in which way the weight value is applied to the Vertex Group while painting.
    Blender provides 7 different Blending modes:
 
 
 Mix
-   In this Blend mode the Weight value defines the :guilabel:`target weight` that will eventually
+   In this Blend mode the Weight value defines the *target weight* that will eventually
    be reached when you paint long enough on the same location of the mesh.
    And the strength determines how many strokes you need to arrive at the target weight.
    Note that for strength = 1.0 the target weight is painted immediately,
    and for Weight = 0.0 the brush just does nothing.
 Add
-   In this blend mode the specified weight value is :guilabel:`added` to the vertex weights.
+   In this blend mode the specified weight value is *added* to the vertex weights.
    The strength determines which fraction of the weight gets added per stroke.
    However, the brush will not paint weight values above 1.0.
 Subtract
-   In this blend mode the specified weight is :guilabel:`subtracted` from the vertex weights.
+   In this blend mode the specified weight is *subtracted* from the vertex weights.
    The strength determines which fraction of the weight gets removed per stroke.
    However the brush will not paint weight values below 0.0.
 Lighten
@@ -258,7 +262,7 @@ Selection Masking
 If you have a complex mesh,
 it is sometimes not easy to paint on all vertices in Weight Paint mode.
 Suppose you only want to paint on a small area of the Mesh and keep the rest untouched.
-This is where :guilabel:`selection masking` comes into play. When this mode is enabled,
+This is where *selection masking* comes into play. When this mode is enabled,
 a brush will only paint on the selected verts or faces.
 The option is available from the footer menu bar of the 3D viewport
 (see icons surrounded by the yellow frame):
@@ -266,10 +270,10 @@ The option is available from the footer menu bar of the 3D viewport
 
 .. figure:: /images/26-Manual-Modeling-Meshes-weight-paint-select.jpg
 
-You can choose between :guilabel:`Face Selection masking` (left icon)
-and :guilabel:`Vertex selection masking` (right icon).
+You can choose between *Face Selection masking* (left icon)
+and *Vertex selection masking* (right icon).
 
-:guilabel:`Select` mode has some advantages over the default :guilabel:`Weight Paint` mode:
+*Select* mode has some advantages over the default *Weight Paint* mode:
 
 - The original mesh edges are drawn, even when modifiers are active.
 - You can select faces to restrict painting to the vertices of the selected faces.
@@ -281,13 +285,13 @@ Details about selecting
 
 The following standard selection operations are supported:
 
-- :kbd:`rmb` - Single faces. Use :kbd:`shift-rmb` to select multiple.
+- :kbd:`RMB` - Single faces. Use :kbd:`Shift-RMB` to select multiple.
 - :kbd:`A` - All faces, also to de-select.
 - :kbd:`B` - Block/Box selection.
 - :kbd:`C` - Select with brush.
 - :kbd:`L` - Pick linked (under the mouse cursor).
-- :kbd:`ctrl-L` - Select linked.
-- :kbd:`ctrl-I` - Invert selection (:guilabel:`Inverse`).
+- :kbd:`Ctrl-L` - Select linked.
+- :kbd:`Ctrl-I` - Invert selection (*Inverse*).
 
 
 .. tip:: Selecting Deform Groups
@@ -308,7 +312,9 @@ Vertex Selection Masking
 In this mode you can select one or more vertices and then paint only on the selection.
 All unselected vertices are protected from unintentional changes.
 
-Note: This option can also be toggled with the :kbd:`v` key:
+.. note::
+
+   This option can also be toggled with the :kbd:`V` key:
 
 
 Face Selection Masking
@@ -324,7 +330,7 @@ Face Selection Masking
    hidden faces
 
 
-The :guilabel:`Face Selection masking` allows you to select faces and limit the weight paint
+The *Face Selection masking* allows you to select faces and limit the weight paint
 tool to those faces, very similar to Vertex selection masking.
 
 
@@ -333,7 +339,7 @@ Hide/Unhide Faces
 
 You also can hide selected faces as in Edit Mode with the keyboard Shortcut :kbd:`H`,
 then paint on the remaining visible faces and finally unhide the hidden faces again by using
-:kbd:`alt-H`
+:kbd:`Alt-H`
 
 
 Hide/Unhide Vertices
@@ -354,7 +360,7 @@ The Clipping Border
 -------------------
 
 To constrain the paint area further you can use the *Clipping Border*.
-Press :kbd:`alt-B` and :kbd:`lmb` -drag a rectangular area.
+Press :kbd:`Alt-B` and :kbd:`LMB` -drag a rectangular area.
 The selected area will be "cut out" as the area of interest.
 The rest of the 3D window gets hidden.
 
@@ -364,7 +370,7 @@ The rest of the 3D window gets hidden.
    The Clipping Border is used to select interesting parts for local painting
 
 
-You make the entire mesh visible again by pressing :kbd:`alt-B` a second time.
+You make the entire mesh visible again by pressing :kbd:`Alt-B` a second time.
 
 All weight paint tools that use the view respect this clipping, including border select,
 weight gradient and of course brush strokes.
@@ -403,7 +409,7 @@ Show Zero Weights
    - All
 
 **Unified Settings:**
-The :guilabel:`Size`, :guilabel:`Strength` and :guilabel:`Weight` of the brush can be set to
+The *Size*, *Strength* and *Weight* of the brush can be set to
 be shared across different brushes, as opposed to per-brush.
 
 
@@ -443,32 +449,32 @@ To modify automatically assigned weights, jump into the middle of the process wh
 
 - Create an armature.
 - Create a mesh that will be deformed when the armature's bone(s) move.
-- With the mesh selected, create an :guilabel:`Armature` modifier for your mesh
-  (located in the :guilabel:`Editing` context, :guilabel:`Modifiers` panel).
+- With the mesh selected, create an *Armature* modifier for your mesh
+  (located in the *Editing* context, *Modifiers* panel).
   Enter the name of the armature.
 
 *Pick up here for modifying automatically assigned weights.*
 
 
-- Select the armature in 3D View, and bring the armature to :guilabel:`Pose` **mode** (:kbd:`ctrl-tab`,
+- Select the armature in 3D View, and bring the armature to *Pose* **mode** (:kbd:`Ctrl-Tab`,
   or the 3D View window header mode selector).
 - Select a desired bone in the armature.
-- Select your mesh (using :kbd:`rmb`) and change immediately to :guilabel:`Weight Paint` mode.
+- Select your mesh (using :kbd:`RMB`) and change immediately to *Weight Paint* mode.
   The mesh will be colored according to the weight (degree) that the selected bone movement affects the mesh.
   Initially, it will be all blue (no effect).
 - Weight paint to your heart's content.
   The mesh around the bone itself should be red (generally)
   and fade out through the rainbow to blue for vertices farther away from the bone.
 
-You may select a different bone with :kbd:`rmb` while weight painting,
-provided the armature was left in :guilabel:`Pose` mode as described above.
+You may select a different bone with :kbd:`RMB` while weight painting,
+provided the armature was left in *Pose* mode as described above.
 This will activate the vertex group sharing the name with the selected bone,
 and display related weights. If the mesh skins the bones,
 you will not be able to see the bones because the mesh is painted. If so,
-turn on :guilabel:`X-Ray` view (:guilabel:`Buttons` window, :guilabel:`Editing` context,
-:guilabel:`Armature` panel). While there on that panel,
-you can also change how the bones are displayed (:guilabel:`Octahedron`, :guilabel:`Stick`,
-:guilabel:`B-Bone`, or :guilabel:`Envelope`) and enable :guilabel:`Draw Names` to ensure the
+turn on *X-Ray* view (*Buttons* window, *Editing* context,
+*Armature* panel). While there on that panel,
+you can also change how the bones are displayed (*Octahedron*, *Stick*,
+*B-Bone*, or *Envelope*) and enable *Draw Names* to ensure the
 name of the selected bone matches up to the vertex group.
 
 If you paint on the mesh, a vertex group is created for the bone.
@@ -476,7 +482,7 @@ If you paint on vertices outside the group,
 the painted vertices are automatically added to the vertex group.
 
 If you have a symmetrical mesh and a symmetrical armature you can use the option
-:guilabel:`X-Mirror`.
+*X-Mirror*.
 Then the mirrored groups with the mirrored weights are automatically created.
 
 
@@ -493,7 +499,7 @@ Faces or vertices with zero weight generate no particles. A weight of 0.
 This option "conserves" the total indicated number of particles, adjusting the distributions
 so that the proper weights are achieved while using the actual number of particles called for.
 Use this to make portions of your mesh hairier than others by weight painting a vertex group,
-and then calling out the name of the vertex group in the :guilabel:`VGroup:` field
-(:guilabel:`Particles` panel, :guilabel:`Object` context).
+and then calling out the name of the vertex group in the *VGroup:* field
+(*Particles* panel, *Object* context).
 
 

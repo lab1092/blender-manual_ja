@@ -2,25 +2,26 @@
 ..    TODO/Review: {{review|text=Notes section is a mess.}} .
 
 
+*****************
 Action Constraint
 *****************
 
-The :guilabel:`Action` constraint is powerful. It allows you control an :doc:`Action </animation/editors/dopesheet/action>` using the transformations of another object.
+The *Action* constraint is powerful. It allows you control an :doc:`Action </animation/editors/dopesheet/action>` using the transformations of another object.
 
-The underlying idea of the :guilabel:`Action` constraint is very similar to the one behind the :doc:`Drivers </animation/editors/graph/drivers>`, except that the former uses a whole action (i.e. a bunch a Fcurves of the same type), while the latter controls a single Fcurve of their "owner"...
+The underlying idea of the *Action* constraint is very similar to the one behind the :doc:`Drivers </animation/editors/graph/drivers>`, except that the former uses a whole action (i.e. a bunch a Fcurves of the same type), while the latter controls a single Fcurve of their "owner"...
 
-Note that even if the constraint accepts the :guilabel:`Mesh` action type,
-only the :guilabel:`Object`,
-:guilabel:`Pose` and :guilabel:`Constraint` types are really working,
+Note that even if the constraint accepts the *Mesh* action type,
+only the *Object*,
+*Pose* and *Constraint* types are really working,
 as constraints can only affect objects' or bones' transform properties,
 and not meshes' shapes... . Also note that only the object transformation (location, rotation,
 scale) is affected by the action,
 if the action contains keyframes for other properties they are ignored,
 as constraints do not influence those.
 
-As an example, let's assume you have defined an :guilabel:`Object` action
+As an example, let's assume you have defined an *Object* action
 (it can be assigned to any object, or even no object at all),
-and have mapped it on your owner through an :guilabel:`Action` constraint,
+and have mapped it on your owner through an *Action* constraint,
 so that moving the target in the ``[0.0,
 2.0]`` range along its X axis maps the action content on the owner in the ``[0,
 100]`` frame range. This will mean that when the target's X property is **0.0**,
@@ -85,12 +86,12 @@ Action Range Start / End
 Notes
 =====
 
-- When the linked action affects some location properties, the owner's existing location is added to the result of evaluating this constraint (exactly as when the :guilabel:`Offset` button of the :doc:`Copy Location constraint </constraints/transform/copy_location>` is enabled...).
+- When the linked action affects some location properties, the owner's existing location is added to the result of evaluating this constraint (exactly as when the *Offset* button of the :doc:`Copy Location constraint </constraints/transform/copy_location>` is enabled...).
 - When the linked action affects some scale properties, the owner's existing scale is multiplied with the result of evaluating this constraint.
 - When the linked action affects some rotation properties, the owner's existing rotation is overridden by the result of evaluating this constraint.
-- Unlike usual, you can have a :guilabel:`Start` value higher than the :guilabel:`End` one, or a :guilabel:`Min` one higher than a :guilabel:`Max` one: this will reverse the mapping of the action (i.e. it will be "played" reversed...), unless you have both sets reversed, obviously!
-- When using a :guilabel:`Constraint` action, it is the constraint *channel's names* that are used to determine to which constraints of the owner apply the action. E.g. if you have a constraint channel named "trackto_empt1", its keyed :guilabel:`Influence` and/or :guilabel:`Head/Tail` values (the only ones you can key) will be mapped to the ones of the owner's constraint named "trackto_empt1".
-- Similarly, when using a :guilabel:`Pose` action (which is obviously only meaningful and working when constraining a bone!), it is the bone's name that is used to determine which bone *channel's names* from the action to use (e.g. if the constrained bone is named "arm", it will use and only use the action's bone channel named "arm"...). Unfortunately, using a :guilabel:`Pose` action on a whole armature object (to affect all the keyed bones in the action at once) won't work...
-- Note also that you can use the :doc:`pose library feature </rigging/posing/pose_library>` to create/edit a :guilabel:`Pose` action datablock... just remember that in this situation, there's one pose per frame!
+- Unlike usual, you can have a *Start* value higher than the *End* one, or a *Min* one higher than a *Max* one: this will reverse the mapping of the action (i.e. it will be "played" reversed...), unless you have both sets reversed, obviously!
+- When using a *Constraint* action, it is the constraint *channel's names* that are used to determine to which constraints of the owner apply the action. E.g. if you have a constraint channel named "trackto_empt1", its keyed *Influence* and/or *Head/Tail* values (the only ones you can key) will be mapped to the ones of the owner's constraint named "trackto_empt1".
+- Similarly, when using a *Pose* action (which is obviously only meaningful and working when constraining a bone!), it is the bone's name that is used to determine which bone *channel's names* from the action to use (e.g. if the constrained bone is named "arm", it will use and only use the action's bone channel named "arm"...). Unfortunately, using a *Pose* action on a whole armature object (to affect all the keyed bones in the action at once) won't work...
+- Note also that you can use the :doc:`pose library feature </rigging/posing/pose_library>` to create/edit a *Pose* action datablock... just remember that in this situation, there's one pose per frame!
 
 

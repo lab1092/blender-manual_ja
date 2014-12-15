@@ -1,4 +1,5 @@
 
+*****************
 Decimate Modifier
 *****************
 
@@ -40,13 +41,13 @@ Decimate Type
 
          .. note::
 
-            Although the :guilabel:`Ratio` is directly proportional to the number of remaining faces,
+            Although the *Ratio* is directly proportional to the number of remaining faces,
             triangles are used when calculating the ratio.
 
             This means that if your mesh contains quads, the number of remaining faces will be larger than expected,
             because quads remain unchanged if their edges are not collapsed.
 
-            This is only true if the :guilabel:`Triangulate` option is disabled.
+            This is only true if the *Triangulate* option is disabled.
 
          .. note::
 
@@ -70,7 +71,7 @@ Decimate Type
 
       All Boundaries
          When enabled, all vertices along the boundaries of faces are dissolved.
-         This can give nicer results when using a high :guilabel:`Angle Limit`.
+         This can give nicer results when using a high *Angle Limit*.
 
       Delimit
          Prevent dissolving geometry in certain places.

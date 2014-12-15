@@ -1,4 +1,5 @@
 
+***************
 Selecting Edges
 ***************
 
@@ -6,7 +7,7 @@ Selecting Edges
 
    Buttons for the selection modes
 
-Edges can be selected in much the same way as vertices and faces - by right-clicking them while Edge Select Mode is activated. Pressing :kbd:`shift` while clicking will add/subtract to the existing selection.
+Edges can be selected in much the same way as vertices and faces - by right-clicking them while Edge Select Mode is activated. Pressing :kbd:`Shift` while clicking will add/subtract to the existing selection.
 
 
 Edge Loops
@@ -17,11 +18,11 @@ Edge Loops
 
    | Mode:     Edit Mode (Mesh)
    | Menu:     :menuselection:`Select --> Edge Loop`
-   | Hotkey:   :kbd:`alt-rmb` - or :kbd:`shift-alt-rmb` for modifying existing selection
+   | Hotkey:   :kbd:`Alt-RMB` - or :kbd:`Shift-Alt-RMB` for modifying existing selection
 
 
 Edge loops can be selected by first selecting an edge (vertex or edge selection mode),
-and then going to :menuselection:`Select --> Edge Loop`. The shortcut :kbd:`alt-rmb` on an edge
+and then going to :menuselection:`Select --> Edge Loop`. The shortcut :kbd:`Alt-RMB` on an edge
 (either vertex or edge select mode) is a quicker and more powerful way of doing so.
 More powerful, because you can add/remove loops from an existing selection if you press
 :kbd:`Shift` too.
@@ -34,9 +35,9 @@ Note, that if you want to select a loop while being in vertex select mode, you s
    An edge loop
 
 
-.. note:: :kbd:`alt` on Linux
+.. note:: :kbd:`Alt` on Linux
 
-   :kbd:`alt` is on some Linux distros caught by the windows manager. If you see the above shortcut not working, make sure that blender can properly recognize the usage of :kbd:`alt`.
+   :kbd:`Alt` is on some Linux distros caught by the windows manager. If you see the above shortcut not working, make sure that blender can properly recognize the usage of :kbd:`Alt`.
 
 
 Edge Rings
@@ -47,7 +48,7 @@ Edge Rings
 
    | Mode:     Edit Mode (Mesh)
    | Menu:     :menuselection:`Select --> Edge Ring`
-   | Hotkey:   :kbd:`alt-ctrl-rmb` - or :kbd:`shift-alt-ctrl-rmb` for modifying existing selection
+   | Hotkey:   :kbd:`Alt-Ctrl-RMB` - or :kbd:`Shift-Alt-Ctrl-RMB` for modifying existing selection
 
 
 Edge Rings are selected similarly.

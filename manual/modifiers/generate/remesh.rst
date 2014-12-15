@@ -1,8 +1,9 @@
 
+***************
 Remesh Modifier
 ***************
 
-The Remesh modifier is a tool for generating new mesh topology based on an input surface.
+The Remesh modifier is a tool for generating new mesh topology.
 The output follows the surface curvature of the input, but its topology contains only quads.
 
 
@@ -10,44 +11,32 @@ The output follows the surface curvature of the input, but its topology contains
    :width: 600px
    :figwidth: 600px
 
-
-Usage
------
-
-In the modifier panel, add a Remesh modifier. (This modifier is only available for meshes.)
-The input mesh should have some thickness to it; if the input is completely flat,
-add a solify modifier above the remesh modifier.
-
+Options
+=======
 
 Mode
-^^^^
-
-There are three basic modes available in the remesh modifier: Blocks, Smooth and Sharp.
+   There are three basic modes available in the remesh modifier: Blocks, Smooth and Sharp.
 
 
-.. figure:: /images/Remesh-mode-cone-example.jpg
-   :width: 600px
-   :figwidth: 600px
+   .. figure:: /images/Remesh-mode-cone-example.jpg
+      :width: 600px
+      :figwidth: 600px
 
-   This example shows a cone with each of the different remesh modes.
-   From left to right: original cone, Blocks, Smooth, and Sharp
-
-
-Note that the output topology is almost identical between the three modes;
-what changes is the smoothing. In Blocks mode, there is no smoothing at all.
-The Smooth and Sharp modes generate similar output in places where the mesh is already smooth,
-but Sharp mode preserves sharp details better. In this example, the circular bottom of the
-cone and the top point of the cone are accurately reproduced in Sharp mode.
+      This example shows a cone with each of the different remesh modes.
+      From left to right: original cone, Blocks, Smooth, and Sharp
 
 
-Octree Depth and Scale
-^^^^^^^^^^^^^^^^^^^^^^
+   The output topology is almost identical between the three modes;
+   what changes is the smoothing.
 
-The Octree Depth sets the resolution of the output.
-Low values will generate larger faces relative the input,
-higher values generate a denser output.
-The result can be tweaked further by setting the Scale;
-lower values effectively decrease the output resolution.
+   Blocks
+      There is no smoothing at all.
+   Smooth
+      Output a smooth surface.
+   Sharp
+      Similar to *Smooth*, but preserves sharp edges and corners.
+      In the above image, the circular bottom of the cone and the top
+      point of the cone are more accurately reproduced in Sharp mode.
 
 
 .. figure:: /images/Remesh-depth-cone-example.jpg
@@ -57,49 +46,46 @@ lower values effectively decrease the output resolution.
    Input mesh, and the low to high resolution output meshes
 
 
-Disconnected Pieces
-^^^^^^^^^^^^^^^^^^^
-
-To filter out small disconnected pieces of the output, enabled Remove Disconnected and set the
-threshold to control how small a disconnected component must be to be removed.
-
-
-.. figure:: /images/Remesh-remove-disconnected-example.jpg
-   :width: 600px
-   :figwidth: 600px
-
-   The input mesh (left) is fairly noisy,
-   so the initial output of the remesh modifier (center) contains small disconnected pieces.
-   Enabling Remove Disconnected Pieces (right) deletes those faces.
-
+Octree Depth
+   The Octree Depth sets the resolution of the output. Low values will generate larger faces relative to the input,
+   higher values will generate a denser output.
+Scale
+   The result can be tweaked further by setting the Scale;
+   lower values effectively decrease the output resolution.
 
 Sharpness
-^^^^^^^^^
+   Shown when using the *Sharp Mode* - Higher values produce edges more similar to the input,
+   while lower values filter out noise.
 
-In Sharp mode,
-set the Sharpness value to control how closely the output follows sharp edges in the input
-(use lower values to filter out noise).
+Smooth Shading
+   Output faces with smooth shading rather than flat shading.
+   The smooth/flat shading of the input faces is not preserved.
+Remove Disconnected Pieces
+   Filter out small disconnected pieces of the output.
+
+   Threshold
+      Use this to control how small a disconnected component must be to be removed.
 
 
-Demo Videos
------------
+   .. figure:: /images/Remesh-remove-disconnected-example.jpg
+      :width: 600px
+      :figwidth: 600px
 
-FIXME(Tag Unsupported:div;
-<div style="text-align: center !important;">
-<youtube width="640" height="360">TvNHiHdrjUw</youtube>
+      The input mesh (left) is fairly noisy,
+      so the initial output of the remesh modifier (center) contains small disconnected pieces.
+      Enabling Remove Disconnected Pieces (right) deletes those faces.
 
-<youtube width="640" height="360">Mh-gUnS2c0Y</youtube>
 
-<youtube width="640" height="360">dker8gRuww4</youtube>
+Usage
+=====
 
-<youtube width="640" height="360">5njU1nIyC6I</youtube>
+In the modifier panel, add a Remesh modifier.
+The input mesh should have some thickness to it; if the input is completely flat,
+add a :doc:`solidify </modifiers/generate/solidify>` modifier above the remesh modifier.
 
-<vimeo width="640" height="360" >21096739</vimeo>
 
-<vimeo width="640" height="360" >21330126</vimeo>
-</div>
-)
-
+Examples
+========
 
 .. figure:: /images/Remesh-text-00.jpg
    :width: 640px
@@ -108,3 +94,14 @@ FIXME(Tag Unsupported:div;
    Remesh modifier applied to text to improve topology
 
 
+.. youtube:: Mh-gUnS2c0Y
+   :width: 640
+   :height: 360
+
+.. youtube:: dker8gRuww4
+   :width: 640
+   :height: 360
+
+.. vimeo:: 21096739
+   :width: 640
+   :height: 360

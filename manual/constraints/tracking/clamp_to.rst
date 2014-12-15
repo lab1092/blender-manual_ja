@@ -2,25 +2,26 @@
 ..    TODO/Review: {{review|im=examples}} .
 
 
+*******************
 Clamp To Constraint
 *******************
 
-The :guilabel:`Clamp To` constraint clamps an object to a curve. The :guilabel:`Clamp To` constraint is very similar
+The *Clamp To* constraint clamps an object to a curve. The *Clamp To* constraint is very similar
 to the :doc:`Follow Path </constraints/relationship/follow_path>` constraint,
-but instead of using the evaluation time of the target curve, :guilabel:`Clamp To`
+but instead of using the evaluation time of the target curve, *Clamp To*
 will get the actual location properties of its owner
-(those shown in the :guilabel:`Transform Properties` panel, :kbd:`N`),
+(those shown in the *Transform Properties* panel, :kbd:`N`),
 and judge where to put it by "mapping" this location along the target curve.
 
-One benefit is that when you are working with :guilabel:`Clamp To`,
+One benefit is that when you are working with *Clamp To*,
 it is easier to see what your owner will be doing; since you are working in the 3D view, it
 will just be a lot more precise than sliding keys around on a time Ipo and playing the
 animation over and over.
 
 A downside is that unlike in the :doc:`Follow Path constraint </constraints/relationship/follow_path>`,
-:guilabel:`Clamp To` doesn't have any option to track your owner's rotation (pitch, roll, yaw)
+*Clamp To* doesn't have any option to track your owner's rotation (pitch, roll, yaw)
 to the banking of the targeted curve, but you don't always need rotation on,
-so in cases like this it's usually a lot handier to fire up a :guilabel:`Clamp To`,
+so in cases like this it's usually a lot handier to fire up a *Clamp To*,
 and get the bits of rotation you do need some other way.
 
 The mapping from the object's original position to its position on the curve is not perfect,
@@ -65,11 +66,11 @@ Main Axis
 
    For example if you are animating a rocket launch,
    it will be the Z axis because the main direction of the launch path is up.
-   The default :guilabel:`Auto` option chooses the axis which the curve is longest in (or X if they are equal).
+   The default *Auto* option chooses the axis which the curve is longest in (or X if they are equal).
    This is usually the best option.
 
 Cyclic
-   By default, once the object has reached one end of its target curve, it will be constrained there. When the :guilabel:`Cyclic` option is enabled, as soon as it reaches one end of the curve, it is instantaneously moved to its other end.
+   By default, once the object has reached one end of its target curve, it will be constrained there. When the *Cyclic* option is enabled, as soon as it reaches one end of the curve, it is instantaneously moved to its other end.
    This is of course primarily designed for closed curves (circles & co), as this allows your owner to go around it over and over.
 
 

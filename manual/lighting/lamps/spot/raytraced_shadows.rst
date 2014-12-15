@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|fixes = remove from index}} .
 
 
+*****************
 Raytraced Shadows
 *****************
 
@@ -12,7 +13,7 @@ Raytraced Shadows
    Shadow panel
 
 
-The :guilabel:`Spot` light source can only cast raytraced shadows.
+The *Spot* light source can only cast raytraced shadows.
 It shares with other lamp types the same common shadowing options,
 described in :doc:`Shadows Properties </lighting/shadows/properties>`.
 

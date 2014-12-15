@@ -1,6 +1,7 @@
 ..    TODO/Review: {{review|text=todo: review the viscosity table commented text}} .
 
 
+************
 Fluid Domain
 ************
 
@@ -98,7 +99,7 @@ Display quality
    When no baked data is found, the original mesh will be displayed by default.
 
    After you have baked a domain, it is displayed (usually) in the Blender window as the preview mesh.
-   To see the size and scope of the original domain box, select :guilabel:`Geometry` in the left dropdown.
+   To see the size and scope of the original domain box, select *Geometry* in the left dropdown.
 
 Time
 
@@ -118,8 +119,8 @@ Time
 .. tip:: Start and end times have nothing to do with how many frames are baked
 
    If you set *Start* time to 3.0, and *End* time to 4.0, you will simulate 1 second of fluid motion.
-   That one second of fluid motion will be spread across however-many frames are set in the :guilabel:`Anim` panel
-   (:guilabel:`Scene` context → :guilabel:`Render` sub-context → :guilabel:`Anim` and :guilabel:`Output` panel).
+   That one second of fluid motion will be spread across however-many frames are set in the *Anim* panel
+   (*Scene* context → *Render* sub-context → *Anim* and *Output* panel).
 
    This means, for example, that if you have Blender set to make 250 frames at 25 fps, the fluid
    will look like it had already been flowing for 3 seconds at the start of the simulation,
@@ -300,7 +301,7 @@ Here you can add particles to the fluid simulated, to enhance the visual effect.
 
 Tracer Particles
    Number of tracer particles to be put into the fluid at the beginning of the simulation.
-   To display them create another object with the :guilabel:`Particle` fluid type,
+   To display them create another object with the *Particle* fluid type,
    explained below, that uses the same bake directory as the domain.
 
 Generate Particles
@@ -330,9 +331,9 @@ Bake Button
 Perform the actual fluid simulation. Blender will continue to work normally,
 except there will be a status bar in the top of the window, next to the render pulldown.
 Pressing :kbd:`Esc` or the "x" next to the status bar will abort the simulation.
-Afterwards two "\ ``.bobj.gz`` " (one for the :guilabel:`Final` quality,
-one for the :guilabel:`Preview` quality), plus one "\ ``.bvel.gz`` "
-(for the :guilabel:`Final` quality) will be in the selected output directory for each frame.
+Afterwards two "\ ``.bobj.gz`` " (one for the *Final* quality,
+one for the *Preview* quality), plus one "\ ``.bvel.gz`` "
+(for the *Final* quality) will be in the selected output directory for each frame.
 
 
 Bake directory
@@ -366,17 +367,17 @@ Unique domain
 Selecting a Baked Domain
    After a domain has been baked, it changes to the fluid mesh.
    To re-select the domain so that you can bake it again after you have made changes,
-   go to any frame and select (:kbd:`Rmb`) the fluid mesh.
-   Then you can click the :guilabel:`BAKE` button again to recompute the fluid flows inside that domain.
+   go to any frame and select (:kbd:`RMB`) the fluid mesh.
+   Then you can click the *BAKE* button again to recompute the fluid flows inside that domain.
 
 Baking always starts at Frame #1
-   The fluid simulator disregards the :guilabel:`Sta` setting in the :guilabel:`Anim` panel,
+   The fluid simulator disregards the *Sta* setting in the *Anim* panel,
    it will always bake from frame 1.
    If you wish the simulation to start later than frame 1, you must key the fluid objects in your domain
    to be inactive until the frame you desire to start the simulation. See
    FIXME(TODO: Internal Link; [[#Animating Fluid Property Changes|below]]) for more information.
 
-Baking always ends at the :guilabel:`End` Frame set in the :guilabel:`Anim` panel
+Baking always ends at the *End* Frame set in the *Anim* panel
    If your frame-rate is 25 frames per second,
    and ending time is 4.0 seconds, then you should (if your start time is 0)
    set your animation to end at frame ``4.0 × 25 = 100``
@@ -398,7 +399,7 @@ Baking processing time
 
    If the mesh has modifiers, the rendering settings are used for exporting the mesh to the fluid solver.
    Depending on the setting, calculation times and memory use might exponentially increase.
-   For example, when using a moving mesh with :guilabel:`Subsurf` as an obstacle,
+   For example, when using a moving mesh with *Subsurf* as an obstacle,
    it might help to decrease simulation time by switching it off, or to a low subdivision level.
    When the setup/rig is correct, you can always increase settings to yield a more realistic result.
 

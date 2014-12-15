@@ -2,12 +2,13 @@
 ..    TODO/Review: {{review|text=we need command line options for this page, explained and some examples for rendering, opening Blender with debug flag, and how to open Blender for screencasts/screenshots}} .
 
 
+******************
 The Console Window
 ******************
 
-The :guilabel:`Console Window` is an operating system text window that displays messages about
+The *Console Window* is an operating system text window that displays messages about
 Blender operations, status, and internal errors. If Blender crashes on you,
-the :guilabel:`Console Window` may be able to indicate the cause or error.
+the *Console Window* may be able to indicate the cause or error.
 
 
 Windows XP/Vista/7
@@ -22,21 +23,21 @@ Windows XP/Vista/7
 
 
 When Blender is started on a Windows operating system,
-the :guilabel:`Console Window` is first created as a separate window on the desktop.
+the *Console Window* is first created as a separate window on the desktop.
 Assuming that the right start-up conditions are met, the main Blender window should also
-appear and the :guilabel:`Console Window` will then be toggled off.
+appear and the *Console Window* will then be toggled off.
 To display the console again, go to :menuselection:`Window --> Toggle System Console`.
 
-The screenshot on the right shows the Blender :guilabel:`Console Window` on Windows XP
+The screenshot on the right shows the Blender *Console Window* on Windows XP
 directly after starting Blender and then a short while later after opening a file along with
 the relevant messages.
 
 
 .. tip:: Closing the Blender Console Window
 
-   The Blender :guilabel:`Console Window` must remain open while Blender is running.  Closing the :guilabel:`Console Window` will also close Blender, and unsaved work would be lost.  To turn off the console without closing Blender, toggle the console state to off via re-selecting Toggle System Console option from the drop-down menu :menuselection:`Window --> Toggle System Console`.
+   The Blender *Console Window* must remain open while Blender is running.  Closing the *Console Window* will also close Blender, and unsaved work would be lost.  To turn off the console without closing Blender, toggle the console state to off via re-selecting Toggle System Console option from the drop-down menu :menuselection:`Window --> Toggle System Console`.
 
-   Note the Blender :guilabel:`Console Window` can look very similar to MS-DOS,
+   Note the Blender *Console Window* can look very similar to MS-DOS,
    so make sure that you are closing the correct window if an instance of MS-DOS is open.
 
 
@@ -51,17 +52,17 @@ Linux
    Starting Blender from a Linux console window and subsequent messages.
 
 
-The Blender :guilabel:`Console Window` in Linux will generally only be visible on the Desktop
-if Blender is started from a Linux Terminal/\ :guilabel:`Console Window` as Blender uses the
-:guilabel:`Console Window` it is started from to display Console output.
+The Blender *Console Window* in Linux will generally only be visible on the Desktop
+if Blender is started from a Linux Terminal/\ *Console Window* as Blender uses the
+*Console Window* it is started from to display Console output.
 
 Depending on your Desktop Environment setup, a Blender icon may appear on your desktop or an
 entry for Blender added to your menu after you install Blender.
 When you start Blender using a Desktop icon or menu entry rather than a Terminal window, the
-Blender :guilabel:`Console Window` text will most likely be hidden on the Terminal that your
+Blender *Console Window* text will most likely be hidden on the Terminal that your
 `XWindows <http://en.wikipedia.org/wiki/Xwindows>`__ server was started from.
 
-This screenshot shows Blender started from a Linux Terminal/\ :guilabel:`Console Window` and the
+This screenshot shows Blender started from a Linux Terminal/\ *Console Window* and the
 resulting console text being printed to it. This example shows that when Blender was started
 it was unable to access a library related to the Pulseaudio sound server. When Blender closed,
 it saved the recovery file to */tmp/quit.blend*.
@@ -94,10 +95,10 @@ adapted to the particular Blender version:
 Console Window Status and Error Messages
 ========================================
 
-The :guilabel:`Blender Console Window` can display many different types of Status and Error Messages.
+The *Blender Console Window* can display many different types of Status and Error Messages.
 Some messages simply inform the user what Blender is doing, but have no real impact on Blender's ability to function.
 Other messages can indicate serious errors that will most likely prevent Blender carrying out a particular task and
-may even make Blender non-responsive or shut down completely. The :guilabel:`Blender Console Window` messages can
+may even make Blender non-responsive or shut down completely. The *Blender Console Window* messages can
 also originate internally from within the Blender code or from external sources such as
 :doc:`Python scripts </extensions/python/add-ons>`.
 

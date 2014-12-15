@@ -1,4 +1,5 @@
 
+*************************
 COLLADA Import and Export
 *************************
 
@@ -38,7 +39,7 @@ Export Data Options
 ===================
 
 Apply Modifiers
-^^^^^^^^^^^^^^^
+---------------
 
 All active Modifiers will be applied in a non destructive mode. That is,
 the modifiers will be applied to copies of the meshes.
@@ -52,14 +53,14 @@ That is now done automatically in the background.
 
 
 Selection Only
-^^^^^^^^^^^^^^
+--------------
 
 When selection only is enabled, then only the selected objects will be exported.
 Otherwise the entire scene is exported with all visible and all invisible objects.
 
 
 Include Children
-^^^^^^^^^^^^^^^^
+----------------
 
 When this option is enabled then all children of the selected objects will also be exported
 regardless of their selection state.
@@ -72,7 +73,7 @@ regardless of their selection state.
 
 
 Include Armatures
-^^^^^^^^^^^^^^^^^
+-----------------
 
 When this option is enabled, then all armatures related to the selected objects will also be
 exported regardless of their selection state.
@@ -84,7 +85,7 @@ exported regardless of their selection state.
 
 
 Include Shape keys
-^^^^^^^^^^^^^^^^^^
+------------------
 
 .. note:: Shape keys
 
@@ -95,14 +96,14 @@ Texture Options
 ===============
 
 Only Active UV layer
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 When your mesh contains multiple UV layers, then Blender exports all layers by default.
 This option allows you to only export the active UV layers.
 
 
 Include Textures
-^^^^^^^^^^^^^^^^
+----------------
 
 Blender supports 2 ways to texturise your objects.
 
@@ -124,7 +125,7 @@ The new option allows to directly export render results.
    See also the "Copy" option below.
 
 Copy
-^^^^
+----
 
 When you export images either material based image textures or surface textures,
 then we create absolute file references in the export file.
@@ -138,7 +139,7 @@ Armature Options
 ================
 
 Deform Bones Only
-^^^^^^^^^^^^^^^^^
+-----------------
 
 When this option is enabled,
 then the exporter strips all non deformiung bones from the exported armatures. This option is
@@ -149,7 +150,7 @@ But please note the restrictions further down.
 
 
 Export for Second Life
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 This option is very special. In fact some issues with bone orientation are calculated
 differently when this option is enabled. This is only relevant for rigged meshes.
@@ -163,7 +164,7 @@ Collada Options
 ===============
 
 Triangulate
-^^^^^^^^^^^
+-----------
 
 The Mesh con be triangulated on the Fly. The triangulation is based on the same function which
 is used in the User interface for triangulating the current selection of faces.
@@ -173,7 +174,7 @@ The mesh itself is not affected.
 
 
 Use Object Instances
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 In Blender you can reuse the same mesh for multiple Objects.
 This is named "object instanciation". When you enable this option,
@@ -181,7 +182,7 @@ then Blender will propagate object instantiation to the Collada file.
 
 
 Transformation Type
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Collada supports 2 types of Transformation matrix specifications.
 Either as <Matrix> or as a set of transformation decompositions (for Translate,
@@ -193,7 +194,7 @@ This is ongoing development and we may provide a less ambiguous method in the fu
 
 
 Sort by Object Name
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 The export order of data is bound to internal object order and it can not be influenced in a
 reliable way. this option ensures that the Geometry nodes and the Object nodes are both
@@ -215,15 +216,14 @@ then Blender will adjust itself to the unit system as provided by the Collada fi
 
 
 Technical details
-*****************
+=================
 
 Mesh
-
 ----
 
 
 Import
-------
+^^^^^^
 
 Supported geometry types are
 
@@ -236,16 +236,16 @@ Supported geometry types are
 
 
 Export
-------
+^^^^^^
 
 Mesh data is exported as <polylist>, <lines> and <vertices>.
 
 
 Light
-=====
+-----
 
 Import
-------
+^^^^^^
 
 Blender does a best effort on importing lights from a .dae.
 If a Blender profile is detected for lights, all values from these will be used instead.
@@ -254,7 +254,7 @@ support has been added in Blender 2.57.
 
 
 Export
-------
+^^^^^^
 
 A Blender profile for lights has been added through the <extra> tag.
 The entire Lamp struct from Blender will be exported through this profile,
@@ -262,22 +262,24 @@ with the exception of Light curve falloff .
 
 
 Material & Effect
-=================
+-----------------
 
 Export
-------
+^^^^^^
 
 Since Blender 2.57 some changes to export of effects have been made. Most notably <
 lambert> is exported if and only if specularity is 0.
 
 
 Animation
-=========
+---------
 
-Export&Import
--------------
+Export & Import
+^^^^^^^^^^^^^^^
 
-- Support for Object(Mesh, Camera, Light) transform Animations. Only euler rotations, which is the default option for Objects, can be exported for now. For armature bone animations euler and quaternion rotation types are supported.
+- Support for Object(Mesh, Camera, Light) transform Animations.
+  Only euler rotations, which is the default option for Objects, can be exported for now.
+  For armature bone animations euler and quaternion rotation types are supported.
 - Import and export of animations for the following parameters are supported:-
   - Light
   - Camera
@@ -287,15 +289,18 @@ Export&Import
 - Animations of Armatures in Object mode.
 - Fully rigified Armature animations. For export of rigified Armature animations
   - Select Bake Action. ( press space in 3d view and Type Bake Action )
-  - If you have only the deform bones selected check "only selected". This will give smaller dae. Otherwise uncheck "Only Selected".
+  - If you have only the deform bones selected check "only selected".
+    This will give smaller dae. Otherwise uncheck "Only Selected".
   - Check "Clear Constraints".
   - Bake Action.
-  - Select the mesh and the deform bones. Then export to COLLADA while checking only selected option. ( Selecting only the Mesh and bones is not strictly necessary. Selecting and export only selected will give smaller dae.)
+  - Select the mesh and the deform bones. Then export to COLLADA while checking only selected option.
+    (Selecting only the Mesh and bones is not strictly necessary.
+    Selecting and export only selected will give smaller dae.)
   - `Demonstration <http://www.youtube.com/watch?v=GTlmmd13J1w>`__
 
 
 Nodes
-=====
+-----
 
 On import parent transformations for <instance_node>s is properly propagated to child
 node instances. Blender materials are exported with the following mapping:
@@ -310,7 +315,7 @@ is added for those joint nodes. To correctly derive the bone→tail location on 
 
 
 Important things to remember
-============================
+----------------------------
 
 - object and datablock names are constrained to 21 characters (bytes).
 - uv layer names are constrained to 32 characters (bytes).

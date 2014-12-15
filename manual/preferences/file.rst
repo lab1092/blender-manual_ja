@@ -1,4 +1,5 @@
 
+****************
 File Preferences
 ****************
 
@@ -76,7 +77,7 @@ Relative Paths
 Compress File
    Compress ``.blend`` file when saving.
 Load UI
-   Default setting is to load the Window layout (the :doc:`Screens </interface/screens>`) of the saved file. This can be changed individually when loading a file from the :guilabel:`Open Blender File` panel of the :guilabel:`File Browser` window.
+   Default setting is to load the Window layout (the :doc:`Screens </interface/screens>`) of the saved file. This can be changed individually when loading a file from the *Open Blender File* panel of the *File Browser* window.
 
 
 .. figure:: /images/Manual-Interface-Configuration-File-filefilter-25.jpg
@@ -85,13 +86,13 @@ Load UI
 
 
 Filter File Extensions
-   By activating this, file dialog windows will only show appropriate files (i.e. ``.blend`` files when loading a complete :guilabel:`Blender` setting). The selection of file types may be changed in the file dialog window.
+   By activating this, file dialog windows will only show appropriate files (i.e. ``.blend`` files when loading a complete *Blender* setting). The selection of file types may be changed in the file dialog window.
 Hide Dot File/Datablocks
    Hide file which start with ``.`` on file browsers (in Linux and Apple systems, ``.`` files are hidden).
 Hide Recent Locations
-   Hides the :guilabel:`Recent` panel of the :guilabel:`File Browser` window which displays recently accessed folders.
+   Hides the *Recent* panel of the *File Browser* window which displays recently accessed folders.
 Show Thumbnails
-   Displays a thumbnail of images and movies when using the :guilabel:`File Browser`.
+   Displays a thumbnail of images and movies when using the *File Browser*.
 
 
 Auto Save
@@ -102,11 +103,11 @@ Save Versions
 Recent Files
    Number of files displayed in :menuselection:`File --> Open Recent`.
 Save Preview Images
-   Previews of images and materials in the :guilabel:`File Browser` window are created on demand. To save these previews into your ``.blend`` file, enable this option (at the cost of increasing the size of your ``.blend`` file).
+   Previews of images and materials in the *File Browser* window are created on demand. To save these previews into your ``.blend`` file, enable this option (at the cost of increasing the size of your ``.blend`` file).
 Auto Save Temporary File
    Enable Auto Save (create a temporary file).
 Timer
    Time to wait between automatic saves.
 
-:doc:`Read more about Auto Save options » </vitals/undo_and_redo#save_and_auto_save>`
+:doc:`Read more about Auto Save options » </basics/undo_and_redo#save_and_auto_save>`
 

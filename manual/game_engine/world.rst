@@ -2,6 +2,7 @@
 ..    TODO/Review: {{Review|partial=x|im=needs images?}} .
 
 
+*************
 World Physics
 *************
 
@@ -68,7 +69,7 @@ Game Physics
 
 The Game Physics located in the World panel determine the type of physical rules that govern the game engine scene,
 and the gravity value to be used. Based on the physics engine selected, in physics simulations in the game engine,
-Blender will automatically move :guilabel:`Actors` in the downward (-Z) direction.
+Blender will automatically move *Actors* in the downward (-Z) direction.
 After you arrange the actors and they move as you wish, you can then bake this computed motion into keyframes
 (see :ref:`game_engine-physics-bake-keyframes` for more info).
 

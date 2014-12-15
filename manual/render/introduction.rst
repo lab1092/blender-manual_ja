@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X|text=needs review and at least some img}} .
 
 
+************
 Introduction
 ************
 
@@ -42,19 +43,19 @@ and subsequent pages explain more.
 Overview
 ========
 
-The rendering of the current scene is performed by pressing the big :guilabel:`Image` button
-in the :guilabel:`Render` panel, or by pressing :kbd:`f12`
+The rendering of the current scene is performed by pressing the big *Image* button
+in the *Render* panel, or by pressing :kbd:`F12`
 (you can define how the rendered image is displayed on-screen in the :doc:`Render Output Options </render/output>`).
 See also the :doc:`Render Window </render/display>`.
 
-A movie is produced by pressing the big :guilabel:`Animation` button.
+A movie is produced by pressing the big *Animation* button.
 The result of a rendering is kept in a buffer and shown in its own window.
-It can be saved by pressing :kbd:`f3` or via the :guilabel:`File→Save Image`
-menu using the output option in the :guilabel:`Output` panel.
+It can be saved by pressing :kbd:`F3` or via the *File→Save Image*
+menu using the output option in the *Output* panel.
 Animations are saved according to the format specified, usually as a series of frames in the output directory.
 See :doc:`Output Options </render/output>` and :doc:`Animations </render/workflows/animations>`.
 
-The image is rendered according to the dimensions defined in the :guilabel:`Dimensions` Panel.
+The image is rendered according to the dimensions defined in the *Dimensions* Panel.
 
 Workflow
 In general, the process for rendering is:
@@ -68,41 +69,6 @@ In general, the process for rendering is:
 - Iterate the above steps until satisfied with the quality level
 - Render progressively higher-quality full-size images, making small refinements and using more compute time
 - Save your images
-
-
-Distributed Render Farm
-=======================
-
-There are several levels of CPU allocation that you can use to decrease overall render time by
-applying more brainpower to the task.
-
-First, if you have a multi-core CPU, you can increase the number of threads,
-and Blender will use that number of CPUs to compute the render.
-
-Second, if you have a local area network with available PCs,
-you can split the work up by frames. For example, if you want to render a 200-frame animation,
-and have 5 PCs of roughly equal processing power,
-you can allocate PC#1 to produce frames 1-40, PC#2 to frames 41-80, and so on.
-If one PC is slower than the others, simply allocate fewer frames to that PC.
-To do LAN renders, map the folder containing the .blend file
-(in which you should have packed your external data, like the textures, ...)
-as a shareable drive. Start Blender on each PC and open the .blend file.
-Change the Start and End frame counts on that PC, but do not save the .blend file.
-Start Rendering. If you use relative paths for your output pathspec,
-the rendered frames will be placed on the host PC.
-
-Third, you can do WAN rendering,
-which is where you email or fileshare or Verse-share the .blend file (with packed data!)
-across the Internet, and use anyone's PC to perform some of the rendering.
-They would in turn email you the finished frames as they are done.
-If you have reliable friends, this is a way for you to work together.
-
-Fourth, you can use a render farm service. These services, like BURP,
-are run by an organization. You email them your file,
-and then they distribute it out across their PCs for rendering.
-BURP is mentioned because it is free, and is a service that uses fellow Blender users' PCs
-with a BOINC-type of background processing.
-Other services are paid subscriptions or pay-as-you-go services.
 
 
 Render Workbench Integration
@@ -135,21 +101,21 @@ and each Render Layer is mixed inside the Compositor.
 The active render layer is the render layer that is displayed and checked active.
 If the displayed render layer is not checked active/enabled,
 then the next checked render layer in the list is used to compute the image. The image is
-displayed as the final render if :guilabel:`Compositing` and :guilabel:`Sequencer` are NOT
+displayed as the final render if *Compositing* and *Sequencer* are NOT
 enabled.
 
-If :guilabel:`Compositing` is enabled, the render layers are fed into the Compositor.
+If *Compositing* is enabled, the render layers are fed into the Compositor.
 The nodes manipulate the image and send it to the Composite output, where it can be saved, or,
 if *Do Sequence* is on, it is sent to the Sequencer.
 
-If :guilabel:`Sequencer` is enabled, the result from the compositor
+If *Sequencer* is enabled, the result from the compositor
 (if Do Composite is enabled) or the active Render layer (if Do Composite is not enabled)
 is fed into the Scene strip in the Sequencer. There,
 it is manipulated according to the VSE settings,
 and finally delivered as the image for that scene.
 
 Things get a little more complicated when a .blend file has multiple scenes,
-for example Scene A and Scene B. In Scene B, if :guilabel:`Compositing` is enabled,
+for example Scene A and Scene B. In Scene B, if *Compositing* is enabled,
 the Render Layer node in Scene B's compositor can pull in a Render Layer from Scene A.
 Note that this image will not be the post-processed one.
 If you want to pull in the composited and/or sequenced result from Scene A,
@@ -166,14 +132,14 @@ and then exercise your creativity in developing your own unique workflow.
 
 
 The Render Settings Panel
-*************************
+=========================
 
 The Render tab contains all of the options for the internal render engine, or an external one,
 if selected.
 
 
 Render
-======
+------
 
 Here you can activate the rendering process,
 by rendering a :doc:`Still Image </render/display>` or an :doc:`Animation </render/workflows/animations>`.
@@ -183,28 +149,28 @@ This are described on the :doc:`Render Display </render/display>` page.
 
 
 Layers
-======
+------
 
 The Layers menu contains options for rendering in :doc:`Layers </render/post_process/layers>` and
 :doc:`Passes </render/post_process/passes>`
 
 
 Dimensions
-==========
+----------
 
 This menu has settings for the size of the rendered images (see :doc:`Output Options </render/output>`),
 and options for rendering sequences (see :doc:`Animations </render/workflows/animations>`)).
 
 
 Anti-Aliasing
-=============
+-------------
 
 :doc:`Antialiasing </render/internal/antialiasing>`
 is important for producing high quality renders that do not have "jaggies" or stair-stepped pixel artifacts.
 
 
 Motion Blur
-===========
+-----------
 
 :doc:`Motion Blur </render/post_process/motion_blur>` is an important effect in rendering moving images.
 It prevents the animation from appearing unrealistic and stuttery,
@@ -212,7 +178,7 @@ as in stop-motion, where each frame is a perfect still image.
 
 
 Shading
-=======
+-------
 
 These are options for controlling what shading effects are calculated in the render.
 Deselecting them disables them.
@@ -234,21 +200,21 @@ Deselecting them disables them.
 
 
 Output
-======
+------
 
 Set where images are rendered to and what file type. See
 :doc:`Output Options </render/output>`.
 
 
 Performance
-===========
+-----------
 
 Control the way the renderer performs with respect to the computer's memory and processor.
 See :doc:`Performance </render/performance/index>`.
 
 
 Post Processing
-===============
+---------------
 
 Control effects that are applied after the image has been rendered.
 If you are using the :doc:`Compositor </composite_nodes>` or :doc:`Sequencer </sequencer>`,
@@ -262,7 +228,7 @@ You can also enable :doc:`Edge Rendering </render/post_process/index>` to create
 
 
 Stamp
-=====
+-----
 
 :doc:`Stamping </render/post_process/index>` inserts text over the rendered images,
 as well as stamps meta-data into image formats that support it (PNG, JPEG and EXR).

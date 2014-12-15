@@ -1,6 +1,7 @@
 ..    TODO/Review: {{review|text=check see-also and external links}} .
 
 
+**************
 Fluid Appendix
 **************
 
@@ -12,19 +13,19 @@ Limitations & Workarounds
    *Workaround:* For previews, move the domain around to encompass each fluid flow part, and then for final, scale up the size of the domain to include all fluid objects (but computation will take longer). This is actually a benefit, because it lets you control how much compute time is used, by varying the size and location of the domain.
 
 
-- If the setup seems to go wrong, make sure all the normals are correct (hence, enter :guilabel:`Edit mode`, select all, and recalculate normals once in a while).
+- If the setup seems to go wrong, make sure all the normals are correct (hence, enter *Edit mode*, select all, and recalculate normals once in a while).
 
 
 - Currently there's a problem with zero gravity simulation - simply select a very small gravity until this is fixed.
 
 
-- If an object is initialized as :guilabel:`Volume`, it has to be closed and have an inner side (a plane won't work). To use planes, switch to :guilabel:`Shell`, or extrude the plane.
+- If an object is initialized as *Volume*, it has to be closed and have an inner side (a plane won't work). To use planes, switch to *Shell*, or extrude the plane.
 
 
-- Blender freezes after clicking :guilabel:`BAKE`. Pressing :kbd:`Esc` makes it work again after a while - this can happen if the resolution is too high and memory is swapped to hard disk, making everything horribly slow. Reducing the resolution should help in this case.
+- Blender freezes after clicking *BAKE*. Pressing :kbd:`Esc` makes it work again after a while - this can happen if the resolution is too high and memory is swapped to hard disk, making everything horribly slow. Reducing the resolution should help in this case.
 
 
-- Blender crashes after clicking :guilabel:`BAKE` - this can happen if the resolution is really high and more than 2GB are allocated, causing Blender to crash. Reduce the resolution. Many operating systems limit the total amount of memory that can be allocated by a *process*, such as Blender, even if the *machine* has more memory installed. Sux...
+- Blender crashes after clicking *BAKE* - this can happen if the resolution is really high and more than 2GB are allocated, causing Blender to crash. Reduce the resolution. Many operating systems limit the total amount of memory that can be allocated by a *process*, such as Blender, even if the *machine* has more memory installed. Sux...
 
 
 - The meshes should be closed, so if some parts of e.g. a fluid object are not initialized as fluid in the simulation, check that all parts of connected vertices are closed meshes. Unfortunately, the Suzanne (monkey) mesh in Blender is not a closed mesh (the eyes are separate).

@@ -2,12 +2,13 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+*******************************
 Current Screen Layout and Scene
 *******************************
 
 Scenes are a way to organize your work. Scenes can share objects, but can, for example,
 differ from one another in their rendered resolution or their camera view.
-The current window layout and scene are shown in the :guilabel:`Info` window header,
+The current window layout and scene are shown in the *Info* window header,
 usually displayed at the top of your screen:
 
 
@@ -28,9 +29,9 @@ screen layouts when the file is saved. By default, this saved UI is loaded,
 over-riding any user defaults or the current screen layout. However, you can work on a blend
 file using your current UI settings by ignoring the UI settings saved in the file.
 This is done by restarting Blender or resetting it with
-(:guilabel:`File` → :guilabel:`New`, or :kbd:`ctrl-X`),
-and opening the file browser with (:guilabel:`File` → :guilabel:`Open...`,
-or :kbd:`F1`). Turn off the :guilabel:`Load UI` button in the file browser header,
+(*File* → *New*, or :kbd:`Ctrl-X`),
+and opening the file browser with (*File* → *Open...*,
+or :kbd:`F1`). Turn off the *Load UI* button in the file browser header,
 and then open the file. This way,
 Blender will not disturb your current screen layout when it loads the new file.
 
@@ -41,9 +42,9 @@ Working with Scenes
 Select a scene to work on by clicking the up-down arrow next to the scene name.
 Scenes and the objects they contain are generally specific to the project you are working on.
 However,
-they too can be saved in their current state to be re-used by pressing :kbd:`ctrl-U`.
+they too can be saved in their current state to be re-used by pressing :kbd:`Ctrl-U`.
 They will then appear the next time Blender starts or when the user selects
-:guilabel:`File` → :guilabel:`New` (:kbd:`ctrl-X`).
+*File* → *New* (:kbd:`Ctrl-X`).
 
 Blender comes with one default scene, which contains a camera, a lamp, and a box.
 
@@ -68,7 +69,7 @@ If you want them to appear in a different order, start them with a numerical ord
 like "\ ``1-`` ".
 The internal reference for a scene is the three-letter abbreviation "SCE".
 
-To add a scene, click on the scene list button, and select :guilabel:`Add New`.
+To add a scene, click on the scene list button, and select *Add New*.
 While you are adding a new scene, you have these options:
 
 
@@ -97,11 +98,11 @@ waiting for you to do creative things.
 Naming a Scene
 ==============
 
-By :kbd:`shift-lmb` -clicking on the scene name (usually "\ ``Scene.001`` "),
+By :kbd:`Shift-LMB` -clicking on the scene name (usually "\ ``Scene.001`` "),
 you can change the name of the scene. For example,
 "\ ``BoyMeetsGirl`` " is usually the first of three acts.
 
-You then proceed to model the props and objects in the scene using the :guilabel:`2-Model`
+You then proceed to model the props and objects in the scene using the *2-Model*
 window layout.
 
 
@@ -110,7 +111,7 @@ Linking to a Scene
 
 You can, at any moment, link any object from one scene to another.
 Just open the scene where these objects are,
-use :kbd:`ctrl-L` → :guilabel:`To Scene...`,
+use :kbd:`Ctrl-L` → *To Scene...*,
 and choose the scene where you want your objects to appear.
 Those will be linked to the original objects; to make them single user (independent,
 unlinked...) in a given scene go to that scene, select them and use :kbd:`U`.
@@ -121,6 +122,6 @@ Material, Texture...) that you want.
 Removing a scene from the file
 ==============================
 
-You can delete the current scene by clicking the :guilabel:`X` next to the name.
+You can delete the current scene by clicking the *X* next to the name.
 
 

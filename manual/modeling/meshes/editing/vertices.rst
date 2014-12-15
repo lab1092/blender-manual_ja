@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=merging examples}} .
 
 
+************
 Vertex Tools
 ************
 
@@ -19,9 +20,9 @@ Merging Vertices
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`, :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
-   | Hotkey:   :kbd:`alt-M`
+   | Hotkey:   :kbd:`Alt-M`
 
 
 This tool allows you to merge all selected vertices to an unique one, deleting all others. You
@@ -29,10 +30,10 @@ can choose the location of the surviving vertex in the menu this tool pops up be
 executing:
 
 At First
-   Only available in :guilabel:`Vertex` select mode, it will place the remaining vertex at the location of the first one selected.
+   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the first one selected.
 
 At Last
-   Only available in :guilabel:`Vertex` select mode, it will place the remaining vertex at the location of the last one selected (the active one).
+   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the last one selected (the active one).
 
 At Center
    Available in all select modes, it will place the remaining vertex at the center of the selection.
@@ -53,14 +54,14 @@ AutoMerge Editing
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> AutoMerge Editing`
 
 
-The :guilabel:`Mesh` menu as a related toggle option: :guilabel:`AutoMerge Editing`.
+The *Mesh* menu as a related toggle option: *AutoMerge Editing*.
 When enabled,
-as soon as a vertex moves closer to another one than the :guilabel:`Limit` setting
-(:guilabel:`Mesh Tools` panel, see below), they are automatically merged.
+as soon as a vertex moves closer to another one than the *Limit* setting
+(*Mesh Tools* panel, see below), they are automatically merged.
 
 
 Remove Doubles
@@ -69,8 +70,8 @@ Remove Doubles
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Editing` context → :guilabel:`Mesh Tools`
+   | Mode:     *Edit* mode
+   | Panel:    *Editing* context → *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`, :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
 
@@ -92,7 +93,7 @@ Rip
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Rip`
    | Hotkey:   :kbd:`V`
 
@@ -164,7 +165,7 @@ Rip Fill
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Rip Fill`
    | Hotkey:   :kbd:`Alt-V`
 
@@ -193,7 +194,7 @@ Split
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Split`
    | Hotkey:   :kbd:`Y`
 
@@ -215,7 +216,7 @@ Separate
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Separate`
    | Hotkey:   :kbd:`P`
 
@@ -229,7 +230,7 @@ Vertex Connect
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Connect` or :menuselection:`[Ctrl][V] --> Vertex Connect`
    | Hotkey:   :kbd:`J`
 
@@ -265,24 +266,24 @@ Vertex Slide
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Editing` context → :guilabel:`Mesh Tools`
+   | Mode:     *Edit* mode
+   | Panel:    *Editing* context → *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Slide` or :menuselection:`[Ctrl][V] --> Vertex Slide`
    | Hotkey:   :menuselection:`[Shift][V] --> Vertex Slide`
 
 
 Vertex Slide will transform a vertex along one of its adjacent edges.
 Use :kbd:`Shift-V` to enter tool. Highlight the desired edge by moving the mouse,
-then confirm with :kbd:`lmb`.
+then confirm with :kbd:`LMB`.
 Drag the cursor to specify the position along the line formed by the edge,
-then :kbd:`lmb` again to move the vertex.
+then :kbd:`LMB` again to move the vertex.
 
 
 There are three options available by holding the following keys:
 
-- :guilabel:`Snap to Midpoint` :kbd:`Shift`
-- :guilabel:`Snap to Endpoint` :kbd:`Alt`
-- :guilabel:`Snap and Merge to Endpoint` :kbd:`Control`
+- Snap to Midpoint :kbd:`Shift`
+- Snap to Endpoint :kbd:`Alt`
+- Snap and Merge to Endpoint :kbd:`Ctrl`
 
 
 .. figure:: /images/VertexSlide1.jpg
@@ -312,8 +313,8 @@ Smooth
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Editing` context → :guilabel:`Mesh Tools`
+   | Mode:     *Edit* mode
+   | Panel:    *Editing* context → *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Smooth`, :menuselection:`Specials --> Smooth` or :menuselection:`Vertex Specials --> Smooth`
    | Hotkey:   :menuselection:`[ctrl][V] --> Smooth vertex`
 
@@ -327,9 +328,9 @@ Make Vertex Parent
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Make Vertex Parent`
-   | Hotkey:   :kbd:`ctrl-P`
+   | Hotkey:   :kbd:`Ctrl-P`
 
 
 This will parent the other selected object(s) to the vertices/edges/faces selected, as described :doc:`here </modeling/objects/groups_and_parenting>`.
@@ -341,12 +342,12 @@ Add Hook
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Add Hook`
-   | Hotkey:   :kbd:`ctrl-H`
+   | Hotkey:   :kbd:`Ctrl-H`
 
 
-Adds a :doc:`Hook Modifier </modifiers/deform/hooks>` (using either a new empty, or the current selected object) linked to the selection. Note that even if it appears in the history menu, this action cannot be undone in :guilabel:`Edit` mode - probably because it involves other objects...
+Adds a :doc:`Hook Modifier </modifiers/deform/hooks>` (using either a new empty, or the current selected object) linked to the selection. Note that even if it appears in the history menu, this action cannot be undone in *Edit* mode - probably because it involves other objects...
 
 
 Blend From Shape, Propagate Shapes
@@ -355,7 +356,7 @@ Blend From Shape, Propagate Shapes
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`(Vertex) Specials --> Blend From Shape` and :menuselection:`Vertex Specials --> Shape Propagate`
    | Hotkey:   :menuselection:`[W] --> [alt][Blend From Shape]` or :menuselection:`[ctrl][V] --> Blend From Shape`, and :menuselection:`[W] --> [alt][Shape Propagate]` or :menuselection:`[ctrl][V] --> Shape Propagate`
 

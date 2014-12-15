@@ -1,6 +1,6 @@
-###########
+***********
  The Stack
-###########
+***********
 
 A modifier is defined as the application of a "process" or "algorithm" upon objects. They can
 be applied in just about any order the users chooses. This kind of functionality is often referred to as a
@@ -19,8 +19,8 @@ For example, the image below shows :doc:`SubSurf </modifiers/generate/subsurf>` 
 +---------------------------------------------------------------+---------------------------------------------------------------+
 
 
-On the left, the :guilabel:`Mirror` modifier is the last item in the stack and
-the result looks like two surfaces. On the right, the :guilabel:`Subsurf` modifier is the last
+On the left, the *Mirror* modifier is the last item in the stack and
+the result looks like two surfaces. On the right, the *Subsurf* modifier is the last
 item in the stack and the result is a single merged surface.
 
 Modifiers are calculated from top to bottom in the stack. In this example, the desired result (on right) is achieved

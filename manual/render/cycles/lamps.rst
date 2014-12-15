@@ -1,4 +1,5 @@
 
+*****
 Lamps
 *****
 
@@ -24,7 +25,7 @@ Point Lamp
 ==========
 
 Point lamps emit light equally in all directions.
-By setting the :guilabel:`Size` larger than zero, they become spherical lamps,
+By setting the *Size* larger than zero, they become spherical lamps,
 which give softer shadows and shading. The strength of point lamps is specified in Watts.
 
 
@@ -32,7 +33,7 @@ Spot Lamp
 =========
 
 Spot lamps emit light in a particular direction, inside a cone.
-By setting the :guilabel:`Size` larger than zero, they can cast softer shadows and shading.
+By setting the *Size* larger than zero, they can cast softer shadows and shading.
 The size parameter defines the size of the cone,
 while the blend parameter can soften the edges of the cone.
 

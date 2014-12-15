@@ -1,3 +1,5 @@
+
+********************
 Fedora based systems
 ********************
 
@@ -68,7 +70,10 @@ are also used by Gnome Shell. What follows is a list of the major conflicting ke
 ALT+Left Mouse Button
 ---------------------
 
-:kbd:`ALT+LMB` is a common keyboard shortcut used by Blender. It is also used by Gnome Shell to move windows around. Because of this conflict, using this keyboard shortcut to do edge loop selection does work as expected. A common fix for this is to tell Gnome Shell to instead use :kbd:`SUPER+LMB`. The :kbd:`SUPER` key is also often called the :kbd:`Windows` key.
+:kbd:`ALT-LMB` is a common keyboard shortcut used by Blender. It is also used by Gnome Shell to move windows around.
+Because of this conflict, using this keyboard shortcut to do edge loop selection does work as expected.
+A common fix for this is to tell Gnome Shell to instead use :kbd:`SUper-LMB`.
+The :kbd:`SUper` key is also often called the :kbd:`Windows` key.
 
 To have Gnome Shell use the :kbd:`SUPER` key rather than :kbd:`ALT`
 key when moving windows on the desktop, type the following command in a terminal window:

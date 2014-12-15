@@ -1,4 +1,5 @@
 
+*************
 Lighting Rigs
 *************
 
@@ -33,7 +34,7 @@ Environment or Ambient Only
    Environment (Ambient) lighting only.
 
 
-In the :guilabel:`World` context, there is a panel :guilabel:`Environment Lighting`,
+In the *World* context, there is a panel *Environment Lighting*,
 where you enable environment or ambient lighting of your scene. Ambient light is the scattered
 light that comes from sunlight being reflected off every surface it hits, hitting your object,
 and traveling to camera.
@@ -63,20 +64,20 @@ Single Rig
 
 The sole, or key, spot light rig provides a dramatic, showy,
 yet effective illumination of one object or a few objects close together.
-It is a single :guilabel:`Spot` light, usually with a hard edge.
+It is a single *Spot* light, usually with a hard edge.
 Halos are enabled in this render to remind you of a smoky nightclub scene.
 It is placed above and directly in front of the subject;
 in this case **10 BU** in front and **10 BU** high, just like a stage,
 it shines down at about a ``40`` degrees angle. We use quadratic attenuation.
 
-You can make the spot wider by increasing :guilabel:`Size Spot Shape` and softening the edge
-by increasing :guilabel:`Blend Spot Shape`, and parent it to the main actor,
+You can make the spot wider by increasing *Size Spot Shape* and softening the edge
+by increasing *Blend Spot Shape*, and parent it to the main actor,
 so that the spot follows him as he moves around. Objects close to the main actor will
 naturally be more lit and your viewer will pay attention to them.
 
 Moving this spot directly overhead and pointing down gives the interrogation effect.
 At the opposite end of the show-off emotional spectrum is one soft candlelight
-(:guilabel:`Point` lamp, short falloff :guilabel:`Distance`, yellow light)
+(*Point* lamp, short falloff *Distance*, yellow light)
 placed really up close to the subject, dramatizing the fearful "lost in the darkness" effect.
 
 Somewhere in the macabre spectrum is a hard spot on the floor shining upward. For fun,
@@ -86,7 +87,7 @@ Look in the mirror and turn it on. Ghoulies! Don't blame me for nightmares,
 and I hope you get the point: lighting, **even with a single light, varying the intensity,
 location and direction, changes everything** in a scene.
 
-Use this rig, with :guilabel:`Environment Lighting` light
+Use this rig, with *Environment Lighting* light
 (and props receiving and being lit by ambient light in their material settings)
 for scenes that feature one main actor or a product being spotlighted.
 Do not use this rig for big open spaces or to show all aspects of a model.
@@ -109,21 +110,21 @@ lighting rig provides a balanced illumination of untextured objects hanging out 
 space. This rig is used in real studios for lighting a product, especially a glossy one.
 
 Both lights are almost the same but do different things. Both emulate very wide,
-soft light by being :guilabel:`Hemi`. In real life,
+soft light by being *Hemi*. In real life,
 these lights bounce light off the inside of a silver umbrella.
 
-Notice how we use low :guilabel:`Energy` to bring out the dimensionality of the sphere;
+Notice how we use low *Energy* to bring out the dimensionality of the sphere;
 I can't stress that enough. Hard, bright lights actually flatten it and make you squint.
-Soft lights allow your eye to focus. We disable specular for right :guilabel:`Hemi`,
+Soft lights allow your eye to focus. We disable specular for right *Hemi*,
 so we don't get that shiny forehead or nose.
 
 The lamp on the left however, lets it be known that it is there by enabling specular;
 specular flare is that bright spot that is off center above midline on the sphere.
 
 Use this rig to give even illumination of a scene, where there is no main focus.
-The :guilabel:`Hemi` 's will light up background objects and props,
-so :guilabel:`Environment Lighting` is not that important.
-At the opposite end of the lighting spectrum, two narrow :guilabel:`Spot` lights at higher
+The *Hemi* 's will light up background objects and props,
+so *Environment Lighting* is not that important.
+At the opposite end of the lighting spectrum, two narrow *Spot* lights at higher
 power with a hard edge gives a "This is the Police, come out with your hands up" kind of look,
 as if the subject is caught in the crossfire.
 
@@ -160,13 +161,13 @@ or with multiple people, keeping the key light on the main actor.
 This rig is also used to light products from all angles,
 and the side fill lights light up the props.
 
-The key light is the :guilabel:`Area` light placed slightly above and to the left of the
+The key light is the *Area* light placed slightly above and to the left of the
 camera. It allows the specular to come out. It is about **30 BU** back from the subject,
 and travels with the camera. A little specular shine lets you know there's a light there,
 and that you're not looking at a ghost. In real life, it is a spot with baffles, or blinders,
 that limit the area of the light.
 
-The two sidelights are reduced to only fill; each of them are :guilabel:`Hemi` lights placed
+The two sidelights are reduced to only fill; each of them are *Hemi* lights placed
 **20 BU** to the side and **5 BU** in front of the subject, at ground level.
 They don't cause a spotshine on the surface by disabling specular, and at ground level,
 light under the chin or any horizontal surfaces,
@@ -223,19 +224,19 @@ Four-point Rig
 
 
 The four-point lighting rig provides a better simulation of outside lighting,
-by adding a :guilabel:`Sun` lamp ``30`` Blender Units above, ``10`` to the side,
+by adding a *Sun* lamp ``30`` Blender Units above, ``10`` to the side,
 and **15 BU** behind the subject.
 This sunlight provides backlighting and fills the top of the subject;
 even producing an intentional glare on the top of their head,
 telling you there is a sun up there. Notice it is colored yellow,
 which balances out the blue sidelights.
 
-Changing the key light to a :guilabel:`Spot`, select :guilabel:`Inverse Square`, disable
-:guilabel:`Specular` and pure white light combines with and softens the top sun flare while
+Changing the key light to a *Spot*, select *Inverse Square*, disable
+*Specular* and pure white light combines with and softens the top sun flare while
 illuminating the face, resulting in a bright sunshine effect.
 Two lights above means sharper shadows as well,
 so you might want to adjust the side fill lights. In this picture,
-they are still :guilabel:`Hemi`, disable :guilabel:`Specular`.
+they are still *Hemi*, disable *Specular*.
 
 Use this rig when the camera will be filming from behind the characters,
 looking over their shoulder or whatnot, because the sun provides the backlight there.
@@ -258,12 +259,12 @@ here is what I suggest you do:
 
 
 - First, try deactivating all materials
-  (create a default, gray one, and enter its name in the :guilabel:`Mat` field, :guilabel:`Layer` panel,
-  :guilabel:`Render Layers` context - to get back all your normal materials, just erase this text field!).
+  (create a default, gray one, and enter its name in the *Mat* field, *Layer* panel,
+  *Render Layers* context - to get back all your normal materials, just erase this text field!).
   See if you get those problems with just grayness objects. If you don't have the problem anymore,
   that should tell you that you've got a materials-interacting-with-light problem.
   Check the material settings, especially ambient,
-  reflection and all those little buttons and sliders in the :guilabel:`Material` context .
+  reflection and all those little buttons and sliders in the *Material* context .
   You can set some lights to affect only certain materials,
   so if there's an issue with only a few objects being really bright, start with those.
 - Then start "killing" lights (e.g. moving them to an unused layer);
@@ -278,7 +279,7 @@ here is what I suggest you do:
   Shadow-only lights can throw off the look of the scene as well.
   Overly textured lights can make your scene have random weird colors.
   Don't go too far off a slight tinge of blue or yellow or shades of white,
-  or your material may show blue in the :guilabel:`Material` context but render green, and you will be very confused.
+  or your material may show blue in the *Material* context but render green, and you will be very confused.
 - Look at your environment settings
-  :guilabel:`World` context: :guilabel:`Horizon`, :guilabel:`Zenith`, and :guilabel:`Environment Lighting`.
+  *World* context: *Horizon*, *Zenith*, and *Environment Lighting*.
 

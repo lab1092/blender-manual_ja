@@ -1,4 +1,5 @@
 
+******
 Camera
 ******
 
@@ -53,11 +54,11 @@ Fisheye
 
 Fisheye lenses are typically wide angle lenses with strong distortion,
 useful for creating panoramic images for e.g. dome projection, or as an artistic effect.
-The :guilabel:`Fisheye Equisolid` lens will best match real cameras.
+The *Fisheye Equisolid* lens will best match real cameras.
 It provides a lens focal length and field of view angle,
 and will also take the sensor dimensions into account.
 
-The :guilabel:`Fisheye Equidistant` lens does not correspond to any real lens model; it will
+The *Fisheye Equidistant* lens does not correspond to any real lens model; it will
 give a circular fisheye that doesn't take any sensor information into account but rather uses
 the whole sensor. This is a good lens for full dome projection.
 
@@ -86,7 +87,7 @@ Aperture Blades
    If this setting is 3 or more, a polygonal-shaped aperture will be used instead of a circle,
    which will affect the shape of out of focus highlights in the rendered image.
 Aperture Rotation
-   Rotation of the :guilabel:`Aperture Blades`.
+   Rotation of the *Aperture Blades*.
 
 Focal Distance
    Distance at which objects are in perfect focus. Alternatively,

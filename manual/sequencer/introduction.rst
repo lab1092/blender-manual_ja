@@ -2,8 +2,9 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
-Sequence Editing
-****************
+************
+Introduction
+************
 
 In addition to modeling and animation, Blender has a fully functional Video Sequence Editor (VSE) as well as an advanced node-based editor that also manipulates a video stream. :doc:`Compositing Nodes </composite_nodes/types>` operate equally well on images or video streams, and can apply detailed image manipulation on the stream.
 

@@ -1,4 +1,5 @@
 
+**********
 UV Mapping
 **********
 
@@ -97,7 +98,7 @@ This difference is caused by the 'stretching' (technically called mapping) of th
 (XYZ) onto a 2D plane (i.e the UV map).
 
 If a 3D object has a UV map, then, in addition to the 3D-coordinates X, Y, and Z,
-each point on the object will have corresponding U and V coordinates. (:guilabel:`P` in the
+each point on the object will have corresponding U and V coordinates. (*P* in the
 image above is an example of how a point on a 3D object might be mapped onto a 2D image.)
 
 

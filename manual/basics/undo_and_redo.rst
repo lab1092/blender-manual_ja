@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review}} .
 
+************************************
 Recovering from mistakes or problems
 ************************************
 
@@ -9,20 +10,23 @@ and reduce the chance of losing their work in the event of operation errors,
 computer failures, or power outages.
 There are two ways for you to recover from mistakes or problems:
 
-At the :ref:`User Level <options-for-actions>` (Relating to :guilabel:`Actions`)
+At the :ref:`User Level <options-for-actions>` (Relating to *Actions*)
 
-- For your actions, there are options like :guilabel:`Undo`, :guilabel:`Redo` and an :guilabel:`Undo History`,
+- For your actions, there are options like *Undo*, *Redo* and an *Undo History*,
   used to roll back from mistakes under normal operation, or return back to a specific action.
-- Blender also has new features like :guilabel:`Repeat` and :guilabel:`Repeat History`,
-  and the new :guilabel:`Redo Last` which you can use in conjunction with the options listed.
+- Blender also has new features like *Repeat* and *Repeat History*,
+  and the new *Redo Last* which you can use in conjunction with the options listed.
 
-At the :ref:`System Level <options-for-files>` (Relating to :guilabel:`Files`)
+At the :ref:`System Level <options-for-files>` (Relating to *Files*)
 
 - There are options to save your files like
-  :guilabel:`Auto Save` that saves your file automatically over time, and :guilabel:`Save on Quit`,
+  *Auto Save* that saves your file automatically over time, and *Save on Quit*,
   which saves your Blender file automatically when you exit Blender.
-  Note: In addition to these functions being enabled by default,
-  the :guilabel:`Save on Quit` functionality cannot be disabled.
+
+  .. note::
+
+      In addition to these functions being enabled by default,
+      the *Save on Quit* functionality cannot be disabled.
 
 
 .. _options-for-actions:
@@ -39,14 +43,14 @@ Options for Actions (User Level)
 The commands listed below will let you roll back an accidental action, redo your last action,
 or let you choose to recover to a specific point,
 by picking from a list of recent actions recorded by Blender. Two new features that were added
-to the Blender 2.5x series are the :guilabel:`Repeat` and :guilabel:`Repeat History` commands.
+to the Blender 2.5x series are the *Repeat* and *Repeat History* commands.
 
 To enable or disable Undo,
-go to the :guilabel:`User Preferences` window and click on the :guilabel:`Editing` tab.
+go to the *User Preferences* window and click on the *Editing* tab.
 In this section you can set:
 
 Global Undo
-   This enables Blender to save actions done when you are **not** in :guilabel:`Edit Mode`.
+   This enables Blender to save actions done when you are **not** in *Edit Mode*.
    For example, duplicating Objects, changing panel settings or switching between modes.
    The default Blender Installation comes with the option *Global Undo* enabled.
 
@@ -67,10 +71,10 @@ Undo
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Ctrl`:kbd:`z`
+   | Hotkey:   :kbd:`Ctrl-Z`
 
 
-Like most programs, if you want to undo your last action, just press :kbd:`Ctrl`:kbd:`z`
+Like most programs, if you want to undo your last action, just press :kbd:`Ctrl-Z`
 
 Redo
 ----
@@ -79,10 +83,11 @@ Redo
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Shift`:kbd:`Ctrl`:kbd:`z`
+   | Hotkey:   :kbd:`Ctrl-Shift-Z`
 
 
-To roll back your Undo action, press :kbd:`Shift`:kbd:`Ctrl`:kbd:`z`
+To roll back your Undo action, press :kbd:`Ctrl-Shift-Z`
+
 
 Redo Last
 ---------
@@ -94,21 +99,21 @@ Redo Last
    | Hotkey:   :kbd:`F6`
 
 
-Redo Last (New feature) is short for :guilabel:`Redo(ing your) Last (Action)`. Hitting
+Redo Last (New feature) is short for *Redo(ing your) Last (Action)*. Hitting
 :kbd:`F6` after an action will present you a context-sensitive Pop-Up Window based on
-your last action taken and the :guilabel:`Mode` and :guilabel:`Window` in which Blender is
+your last action taken and the *Mode* and *Window* in which Blender is
 being used.
 
-For example, if your last action was a rotation in :guilabel:`Object` Mode,
+For example, if your last action was a rotation in *Object* Mode,
 the Window will show you the last value changed for the angle (see Fig:Redo Last - Rotation),
 where you can change your action back completely by typing **0** (zero)
 in the numeric field. There are other useful options, based on your action context,
 and you can not only Undo actions, but change them completely using the available options.
 
-If you are in :guilabel:`Edit` Mode,
+If you are in *Edit* Mode,
 the Window will also change its contents based on your last action taken.
 In our second example (at the right), the last action taken was a Vertex Move;
-we did a :guilabel:`Scale` on a Face, and, as you can see,
+we did a *Scale* on a Face, and, as you can see,
 the contents of the Pop-Up Window are different, because of your context (Edit Mode).
 (See Fig:Redo Last - Scale)
 
@@ -135,24 +140,23 @@ Undo History
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Ctrl`:kbd:`Alt`:kbd:`z`
+   | Hotkey:   :kbd:`Ctrl-Alt-Z`
 
 
 .. figure:: /images/Manual-Vitals-Undo-Redo-Ctrl+Alt+z_Menu.jpg
    :align: right
 
-   The Undo History menu, which appears upon :kbd:`Ctrl`:kbd:`Alt`:kbd:`z` press.
+   The Undo History menu, which appears upon :kbd:`Ctrl-Alt-Z` press.
 
 
 There is also a Undo History of your actions, recorded by Blender.
-You can access the history with :kbd:`Ctrl`:kbd:`Alt`:kbd:`z`.
+You can access the history with :kbd:`Ctrl-Alt-Z`.
 
 Rolling back actions using the *Undo History* feature will take you back to the
 action you choose. Much like how you can alternate between going backward in
-time with :kbd:`Ctrl`:kbd:`z` and then forward with
-:kbd:`Shift`:kbd:`Ctrl`:kbd:`z`, you can hop around on the Undo timeline as
-much as you want as long as you do not make a new change.  Once you do make a
-new change, the Undo History is truncated at that point.
+time with :kbd:`Ctrl-Z` and then forward with :kbd:`Ctrl-Shift-Z`,
+you can hop around on the Undo timeline as much as you want as long as you do not make a new change.
+Once you do make a new change, the Undo History is truncated at that point.
 
 
 Repeat Last
@@ -162,20 +166,20 @@ Repeat Last
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Shift`:kbd:`r`
+   | Hotkey:   :kbd:`Shift-R`
 
 
-The Repeat Last feature will Repeat your last action when you press :kbd:`Shift`:kbd:`r`.
+The Repeat Last feature will Repeat your last action when you press :kbd:`Shift-R`.
 
-In the example Images below, we duplicated a *Monkey* :guilabel:`Mesh`,
-and then we moved the Object a bit. Using repeat :kbd:`Shift`:kbd:`r`,
-the *Monkey* was also duplicated and moved.
+In the example Images below, we duplicated a *Monkey* *Mesh*,
+and then we moved the Object a bit.
+Using repeat :kbd:`Shift-R`, the *Monkey* was also duplicated and moved.
 
 
 +------------------------------------------+------------------------------------------+------------------------------------------+
 +.. figure:: /images/UndoRedo-00.Repeat.jpg|.. figure:: /images/UndoRedo-01.Repeat.jpg|.. figure:: /images/UndoRedo-02.Repeat.jpg+
 +                                          |                                          |                                          +
-+   Suzanne.                               |   After a :kbd:`Shift`:kbd:`d` and move. |   After a :kbd:`Shift`:kbd:`r`.          +
++   Suzanne.                               |   After a :kbd:`Shift-D` and move.       |   After a :kbd:`Shift-R`.                +
 +------------------------------------------+------------------------------------------+------------------------------------------+
 
 
@@ -203,8 +207,8 @@ but the list contains only repeated actions.  To access Repeat History, use :kbd
 
 .. note:: There are two separate Histories for Blender
 
-   Blender uses two separate Histories, one dedicated for the :guilabel:`Edit` Mode,
-   and one dedicated for the :guilabel:`Object` Mode.
+   Blender uses two separate Histories, one dedicated for the *Edit* Mode,
+   and one dedicated for the *Object* Mode.
 
 
 Blender Search
@@ -248,12 +252,12 @@ Save and Auto Save
 Computer crashes,
 power outages or simply forgetting to save can result in the loss or corruption of your work.
 To reduce the chance of losing files when those events occur,
-Blender can use an :guilabel:`Autosave` function. The :guilabel:`File` tab of the
-:guilabel:`User Preferences` window allows you to configure the two ways that Blender provides
+Blender can use an *Autosave* function. The *File* tab of the
+*User Preferences* window allows you to configure the two ways that Blender provides
 for you to regress to a previous version of your work.
 
 Save on Quit
-   The function :guilabel:`Save on Quit` is enabled by default in Blender.
+   The function *Save on Quit* is enabled by default in Blender.
    Blender will always save your files when you quit the application under normal operation.
 
 Save Versions
@@ -266,9 +270,9 @@ Save Versions
 
 Auto Save Temporary Files
    Checking this box tells Blender to *automatically* save a backup copy of your work-in-progress to the Temp
-   directory (refer to the :guilabel:`File` panel in the :guilabel:`User Preferences` window for its location).
-   This will also enable the :guilabel:`Timer
-   (mins)` control which specifies the number of minutes between each Auto Save.
+   directory (refer to the *File* panel in the *User Preferences* window for its location).
+   This will also enable the *Timer (mins)*
+   control which specifies the number of minutes between each Auto Save.
    The default value of the Blender installation is **5** (5 minutes). The minimum is **1**,
    and the Maximum is **60**
    (Save at every one hour).The Auto Saved files are named using a random number and have a ``.blend`` extension.
@@ -290,8 +294,8 @@ Recovering Auto Saves
 
 Recover Last Session
    :menuselection:`File --> Recover Last Session` will open the ``quit.blend``
-   that is saved into the :guilabel:`Temp` directory when you exit Blender.
-   Note that files in your :guilabel:`Temp` directory are deleted when you reboot.
+   that is saved into the *Temp* directory when you exit Blender.
+   Note that files in your *Temp* directory are deleted when you reboot.
 
 
 .. figure:: /images/Manual-Vitals-Undo-Display_File_Date.jpg
@@ -315,7 +319,7 @@ Recover Auto Save
 
 .. important::
 
-   When recovering an Auto Saved file, you will lose any changes made since the last :guilabel:`Auto Save` was
+   When recovering an Auto Saved file, you will lose any changes made since the last *Auto Save* was
    performed.Only **one** Auto Saved file exists for each project
    (i.e. Blender does not keep older versions -
    hence you won't be able to go back more than a few minutes with this tool).
@@ -329,7 +333,7 @@ Recent Files
    This setting controls how many recent files are listed in the :menuselection:`File --> Open Recent` sub-menu.
 
 Save Preview Images
-   Previews of images and materials in the :guilabel:`File Browser` window are created on demand.
+   Previews of images and materials in the *File Browser* window are created on demand.
    To save these previews into your ``.blend`` file, enable this option
    (at the cost of increasing the size of your .blend file).
 

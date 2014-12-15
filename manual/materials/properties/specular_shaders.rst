@@ -1,4 +1,5 @@
 
+****************
 Specular Shaders
 ****************
 
@@ -35,7 +36,7 @@ Specular Color
 Intensity
    The intensity, or brightness of the specular highlight. This has a range of [0-1].
 Ramp
-   Allows you to set a range of specular colors for :guilabel:`Material`,
+   Allows you to set a range of specular colors for *Material*,
    and define how the range will vary over a surface. See :doc:`Ramps </materials/properties/ramps>` for details.
 
 As a result, a material has at least two different colors, a diffuse, and a specular one.

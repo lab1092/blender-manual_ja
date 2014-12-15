@@ -1,4 +1,5 @@
 
+************
 Core Options
 ************
 
@@ -9,7 +10,7 @@ Core Options
    Freestyle core options.
 
 
-Activating Freestyle in the :guilabel:`Render` context of the :guilabel:`Buttons` window will
+Activating Freestyle in the *Render* context of the *Buttons* window will
 give you the following options:
 
 Line Thickness
@@ -23,4 +24,4 @@ Line Thickness
       and **2.0** with **960**.
 
 Line Thickness
-   Only for :guilabel:`Absolute` line thickness: base line thickness in pixels, **1.0** by default.
+   Only for *Absolute* line thickness: base line thickness in pixels, **1.0** by default.

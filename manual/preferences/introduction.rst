@@ -1,22 +1,25 @@
 
-This chapter explains how to change Blender's default configuration with the :guilabel:`User
-Preferences` editor.
+************
+Introduction
+************
 
-The Blender :guilabel:`User Preferences` editor contains many of the settings that you can
+This chapter explains how to change Blender's default configuration with the *User Preferences* editor.
+
+The Blender *User Preferences* editor contains many of the settings that you can
 change to control the way Blender behaves each time you open the application.
 
 
 Open User Preferences
 *********************
 
-To open a Blender :guilabel:`User Preferences` editor
-go to :menuselection:`File --> User Preferences` or press :kbd:`ctrl-alt-u`.
-Mac users can press :kbd:`cmd-,`.
+To open a Blender *User Preferences* editor
+go to :menuselection:`File --> User Preferences` or press :kbd:`Ctrl-Alt-U`.
+Mac users can press :kbd:`Cmd-,`.
 You can also load the Preferences editor in any window by selecting
 
 .. figure:: /images/User-preferences-icon.jpg
 
- :guilabel:`User Preferences` from the Window type selection menu.
+ *User Preferences* from the Window type selection menu.
 
 
 .. figure:: /images/User-preferences.jpg
@@ -33,7 +36,7 @@ The options are: *Interface*, *Editing*, *Input*, *Add-Ons*, *Themes*,
 Configure
 =========
 
-Now that you have opened the :guilabel:`User Preferences` editor,
+Now that you have opened the *User Preferences* editor,
 you can configure Blender to your liking.
 Select what you want to change in the following list:
 
@@ -48,9 +51,9 @@ Save the new preferences
 
 Once you have set your preferences, you will need to manually save them,
 otherwise the new configuration will be lost after a restart.
-Blender saves its preferences to :guilabel:`userpref.blend` in your user folder.
+Blender saves its preferences to *userpref.blend* in your user folder.
 
-In the :guilabel:`User Preferences` window, click on :guilabel:`Save User Settings`.
+In the *User Preferences* window, click on *Save User Settings*.
 This will save all of the new preferences.
 
 
@@ -61,7 +64,7 @@ There are two ways to restore the default Blender settings:
 
 
 - Go to :menuselection:`File --> Load Factory Settings` and then save the preferences
-  with :kbd:`ctrl-u` or via the :guilabel:`User Preferences` editor.
+  with :kbd:`Ctrl-U` or via the *User Preferences* editor.
 - Delete the ``startup.blend`` file from the following location on your computer:
 
   Linux

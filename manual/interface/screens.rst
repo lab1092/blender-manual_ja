@@ -1,4 +1,5 @@
 
+*******
 Screens
 *******
 
@@ -37,12 +38,12 @@ Video Editing
    Cutting and editing of animation sequences.
 
 Blender sorts these screen layouts for you automatically in alphabetical and/or numerical
-order. The list is available in the :guilabel:`Info Window` header that is at the top of the
+order. The list is available in the *Info Window* header that is at the top of the
 layout for preset screens. This is often confused for a menu bar by those new to Blender;
-however it is simply a window showing only its :guilabel:`header`.
+however it is simply a window showing only its *header*.
 
-To change to the next alphabetically listed screen press :kbd:`ctrl-right`;
-to change to the previous screen, press :kbd:`ctrl-left`.
+To change to the next alphabetically listed screen press :kbd:`Ctrl-Right`;
+to change to the previous screen, press :kbd:`Ctrl-Left`.
 
 
 .. figure:: /images/Manual-Part-I-ConceptScreens25.jpg
@@ -72,7 +73,7 @@ created based on your current layout.
 
 You might want to give the new screen not only a *name* but also a *number* in front of it
 so that you can predictably scroll to it using the arrow keys.
-You can rename the layout by :kbd:`lmb` in the field and typing a new name,
+You can rename the layout by :kbd:`LMB` in the field and typing a new name,
 or clicking again to position the cursor in the field to edit.
 For example you could use the name "6-MyScreen". See *Screen and Scene selectors* above.
 
@@ -82,7 +83,7 @@ Deleting a Screen
 
 .. |deleteview-button| image:: /images/Manual-Part-I-Interface-Screens-DeleteView-Button25.jpg
 
-You can delete a screen by using the :guilabel:`Delete datablock` button
+You can delete a screen by using the *Delete datablock* button
 (|deleteview-button|). See *Screen and Scene selectors* above.
 
 
@@ -91,11 +92,11 @@ Rearranging a Screen
 
 Use the :doc:`window controls </interface/window_system/arranging_frames>`
 to move frame borders, split and consolidate windows.
-When you have a layout that you like, press :kbd:`ctrl-U` to update your User defaults.
+When you have a layout that you like, press :kbd:`Ctrl-U` to update your User defaults.
 Be aware that all of the current scenes become part of those defaults,
 so consider customizing your layouts with only a single, simple scene.
 
-The properties window has a special option: pressing :kbd:`rmb` on its background will
+The properties window has a special option: pressing :kbd:`RMB` on its background will
 allow you to arrange its panels horizontally or vertically. Of the two,
 vertically-arranged panels have greater support.
 
@@ -104,9 +105,9 @@ Overriding Defaults
 -------------------
 
 When you save a .blend file, the screen layouts are also saved in it. When you open a file,
-enabling the :guilabel:`Load UI` checkbox in the file browser indicates that Blender should
+enabling the *Load UI* checkbox in the file browser indicates that Blender should
 use the file's screen layouts (overriding your defaults in the process).
-Leaving the :guilabel:`Load UI` checkbox disabled tells Blender to use the current layout.
+Leaving the *Load UI* checkbox disabled tells Blender to use the current layout.
 
 
 Additional Layouts
@@ -144,6 +145,6 @@ your workflow as this will help increase your productivity. Some examples could 
 .. note:: Reuse your Layouts
 
    If you create a new window layout and would like to use it for future .blend files,
-   simply save it as the User default by pressing :kbd:`ctrl-U`
+   simply save it as the User default by pressing :kbd:`Ctrl-U`
    (don't forget: all screens and scenes themselves will be saved as default too).
 

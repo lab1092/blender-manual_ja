@@ -1,20 +1,21 @@
 ..    TODO/Review: {{review}} .
 
+******************************
 Animating the fluid properties
 ******************************
 
-A new type of Ipo Curve, :guilabel:`FluidSim`, is available for fluid domain objects.
+A new type of Ipo Curve, *FluidSim*, is available for fluid domain objects.
 Unlike most other animatable values in Blender,
-:guilabel:`FluidSim` Ipos cannot be keyframed by simply using the :kbd:`I` key;
+*FluidSim* Ipos cannot be keyframed by simply using the :kbd:`I` key;
 you must manually set values by clicking in the Ipo window. In order to set a keyframe, you
-must select the property you wish to animate in the Ipo window and :kbd:`ctrl-Lmb` click
+must select the property you wish to animate in the Ipo window and :kbd:`Ctrl-LMB` click
 to set the keyframe to the desired location in the Ipo window.
 
 
 .. tip:: Enter Properties
 
    Note that you do not have to be exact on where you click; we recommend that after you set the control point,
-   open the :guilabel:`Transform Properties` panel (:kbd:`N`) and round the X value to a whole frame number,
+   open the *Transform Properties* panel (:kbd:`N`) and round the X value to a whole frame number,
    and then set the Y value that you wish.
 
 
@@ -27,7 +28,7 @@ Fac-Visc
 Fac-Tim
    Changes the speed of the simulation; like the Speed Control in the VSE can speed up or slow down a video,
    this curve can speed up or slow down the fluid motion during a frame sequence.
-   If the value for :guilabel:`Fac-Tim` is less than or equal to zero, time (and the fluid) stands still;
+   If the value for *Fac-Tim* is less than or equal to zero, time (and the fluid) stands still;
    the fluid freezes. For values between 0.0 and 1.0, the fluid runs slower and will look thicker.
    1.0 is normal fluid motion, and values greater than 1.0 will make the fluid flow faster,
    possibly appearing thinner.
@@ -39,8 +40,8 @@ GravX / GravY / GravZ
    or watering the plants on the Space Shuttle).
    Changes in these curves make the fluid slosh around due to external forces.
 
-The :guilabel:`Fluid`, :guilabel:`Obstacle`, :guilabel:`Inflow`,
-:guilabel:`Outflow` and :guilabel:`Particle` objects can use the following channels:
+The *Fluid*, *Obstacle*, *Inflow*,
+*Outflow* and *Particle* objects can use the following channels:
 
 VelX / VelY / VelZ
    Spurts of water from the garden hose can be simulated via these curves,
@@ -50,14 +51,14 @@ VelX / VelY / VelZ
 
 Active
    When Active transitions from 0.0 to something greater than 0 (such as between 0.1 and 1.0), the object's function
-   (designated as an :guilabel:`Inflow`, or :guilabel:`Outflow`, etc.) resumes its effect.
+   (designated as an *Inflow*, or *Outflow*, etc.) resumes its effect.
    Crossing down to 0.0 and then at some point, back up, re-establishes the effect and the resulting fluid sim.
    Use this for dripping, or any kind of intermittent inflow.
-   This active status also works for objects designated as :guilabel:`Outflow` and :guilabel:`Obstacle`,
+   This active status also works for objects designated as *Outflow* and *Obstacle*,
    so you can also simulate (for example) a drain plugging up.
 
 
-You can also control the force settings of :guilabel:`Control` objects:
+You can also control the force settings of *Control* objects:
 
 AttrForceStr, AttrForceRa
    These curves control the values of the attraction force settings.

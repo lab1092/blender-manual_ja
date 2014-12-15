@@ -1,11 +1,12 @@
 
+************************
 Copy Location Constraint
 ************************
 
 Description
 ===========
 
-The :guilabel:`Copy Location` constraint forces its owner to have the same location as its
+The *Copy Location* constraint forces its owner to have the same location as its
 target.
 
 
@@ -30,18 +31,18 @@ Target
    This constraint uses one target, and is not functional (red state) when it has none.
 
    Bone
-      If :guilabel:`Target` is an :guilabel:`Armature`, a new field is displayed offering the optional choice to set an individual bone as :guilabel:`Target`.
+      If *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*.
 
       Head/Tail
-         If a :guilabel:`Bone` is set as :guilabel:`Target`, a new field is displayed offering the optional choice of where along this bone the target point lies.
+         If a *Bone* is set as *Target*, a new field is displayed offering the optional choice of where along this bone the target point lies.
    Vertex Group
-      If :guilabel:`Target` is a :guilabel:`Mesh`, a new field is displayed offering the optional choice to set a :guilabel:`Vertex Group` as target.
+      If *Target* is a *Mesh*, a new field is displayed offering the optional choice to set a *Vertex Group* as target.
 
 X, Y, Z
    These buttons control which axes (i.e. coordinates) are constrained - by default, all three ones are.
 
    Invert
-      The :guilabel:`Invert` buttons invert their respective preceding coordinates.
+      The *Invert* buttons invert their respective preceding coordinates.
 
 Offset
    When enabled, this control allows the owner to be translated (using its current transform properties), relative to its target's position.

@@ -1,5 +1,7 @@
+
+********************
 Debian based systems
-====================
+********************
 
 Installing Blender on Debian and its derivatives (Ubuntu, Mint and others), is quite straightforward.
 

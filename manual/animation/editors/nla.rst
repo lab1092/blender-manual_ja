@@ -7,6 +7,7 @@
    }} .
 
 
+***************************
 Non-Linear Animation Editor
 ***************************
 
@@ -88,7 +89,7 @@ A meta strip can be moved and duplicated like a normal strip.
    :class: refbox
 
    | Menu:     Add → Add Meta-Strips
-   | Hotkey:   :kbd:`shift-G`
+   | Hotkey:   :kbd:`Shift-G`
 
 
 +------------------------------------------+------------------------------------------+
@@ -105,7 +106,7 @@ A meta strip still contains the underlying strips. You can ungroup a Meta strip.
    :class: refbox
 
    | Menu:     Add → Remove Meta-Strips
-   | Hotkey:   :kbd:`alt-G`
+   | Hotkey:   :kbd:`Alt-G`
 
 
 Editing Strips

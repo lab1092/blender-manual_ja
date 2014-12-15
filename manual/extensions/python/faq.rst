@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X}} .
 
 
+************
 Introduction
 ************
 
@@ -115,5 +116,5 @@ Customization
 *************
 
 How do I automate custom hotkeys?
----------------------------------
+=================================
 

@@ -2,15 +2,16 @@
 ..    TODO/Review: {{review|im= examples}} .
 
 
+*********************
 Shrinkwrap Constraint
 *********************
 
-The :guilabel:`Shrinkwrap` constraint is the "object counterpart" of the :doc:`Shrinkwrap modifier </modifiers/deform/shrinkwrap>`. It moves the owner origin and therefore the owner object's location to the surface of its target.
+The *Shrinkwrap* constraint is the "object counterpart" of the :doc:`Shrinkwrap modifier </modifiers/deform/shrinkwrap>`. It moves the owner origin and therefore the owner object's location to the surface of its target.
 
 This implies that the target *must* have a surface. In fact,
 the constraint is even more selective, as it can only use meshes as targets. Hence,
 the *Shrinkwrap* option is only shown in the *Add Constraint to Active Object* menu,
-:kbd:`ctrl-alt-C`, (or its bone's equivalent),
+:kbd:`Ctrl-Alt-C`, (or its bone's equivalent),
 when the selected inactive object is a mesh.
 
 
@@ -39,7 +40,7 @@ Shrinkwrap Type
       The chosen target's surface's point will be the nearest one to the original owner's location. This is the default and most commonly useful option.
    Projection
       The target's surface's point is determined by projecting the owner's center along a given axis.
-      This axis is controlled by the three :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z` toggle buttons that show up when you select this type. This mean the projection axis can only be aligned with one of the global axes, median to both of them (XY, XZ or YZ), or to the three ones (XYZ).
+      This axis is controlled by the three *X*, *Y* and *Z* toggle buttons that show up when you select this type. This mean the projection axis can only be aligned with one of the global axes, median to both of them (XY, XZ or YZ), or to the three ones (XYZ).
       When the projection of the owner's center along the selected direction does not hit the target's surface, the owner's location is left unchanged.
 
    Nearest Vertex

@@ -1,4 +1,5 @@
 
+********************
 Rendering Animations
 ********************
 
@@ -82,7 +83,7 @@ Frame Sequence Workflow
 =======================
 
 - First prepare your animation.
-- In the :guilabel:`Dimensions` panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use,
+- In the *Dimensions* panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use,
   as well as the frame rate, which should already be set.
 - In the Output panel set up your animation to be rendered out as images,
   generally using a format that does not compromise any quality
@@ -109,7 +110,7 @@ Frame Sequence Workflow
 - Click the ANIMATION render button and Blender will render out the sequence editor output into your movie.
 
 Why go through all this hassle? Well, first of all, if you render out single frames you can
-stop the render at any time by pressing :kbd:`esc` in the render window.
+stop the render at any time by pressing :kbd:`Esc` in the render window.
 You will not lose the frames you have already rendered,
 since they have been written out to individual files.
 You can always adjust the range you want to continue from where you left off.
@@ -125,7 +126,7 @@ Options
 -------
 
 Output Panel
-   By default the animation is rendered in the directory specified in the :guilabel:`Output` Panel
+   By default the animation is rendered in the directory specified in the *Output* Panel
    (*Animation location and extensions.*).
    If an AVI format has been selected, then the name will be ``####_####.avi``
    where the '####' indicates the start and end frame of the animation,
@@ -160,8 +161,8 @@ Argh! My bratty sister turned off the PC right in the middle of rendering my mov
    rather than as a movie file from the beginning.
    This allows you an easy recovery if there is a problem and you have to re-start the rendering,
    since the frames you have already rendered will still be in the Output directory.
-   Just change the :guilabel:`START` frame number to the frame number where you want to pick up from,
-   and click :guilabel:`ANIM` again.
+   Just change the *START* frame number to the frame number where you want to pick up from,
+   and click *ANIM* again.
 
 
 I only need to re-render a few frames in the middle

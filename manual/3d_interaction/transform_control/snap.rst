@@ -14,12 +14,12 @@ Snap
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes
-   | Hotkey:   :kbd:`shift-S`
+   | Mode:     *Object* and *Edit* modes
+   | Hotkey:   :kbd:`Shift-S`
 
 
-The :guilabel:`Snap` menu
-(also available from the 3D header in both :guilabel:`Object` and :guilabel:`Edit` mode
+The *Snap* menu
+(also available from the 3D header in both *Object* and *Edit* mode
 (:menuselection:`Object --> Snap` and :menuselection:`Mesh --> Snap`).
 This menu provides a number of options to move the cursor or your selection to a defined point
 (the cursor, selection or the grid).
@@ -86,9 +86,12 @@ Vertex
    Snap to vertices of mesh objects.
 Increment
    Snap to grid points. When in Orthographic view, the snapping increment changes depending on zoom level.
-   Please note: in this context the grid does not mean the visual grid cue displayed.
-   Snapping will use the resolution of the displayed grid,
-   but all transformations are relative to the initial position (before the snap operation).
+
+   .. note::
+
+      In this context the grid does not mean the visual grid cue displayed.
+      Snapping will use the resolution of the displayed grid,
+      but all transformations are relative to the initial position (before the snap operation).
 
 
 Snap Target
@@ -99,8 +102,8 @@ Snap Target
    Snap Target menu.
 
 
-Snap target options become active when either :guilabel:`Vertex`, :guilabel:`Edge`,
-:guilabel:`Face`, or :guilabel:`Volume` is selected as the snap element.
+Snap target options become active when either *Vertex*, *Edge*,
+*Face*, or *Volume* is selected as the snap element.
 These determine what part of the selection snaps to the target objects.
 
 Active

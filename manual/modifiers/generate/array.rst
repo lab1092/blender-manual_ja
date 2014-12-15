@@ -1,4 +1,5 @@
 
+**************
 Array Modifier
 **************
 
@@ -23,23 +24,23 @@ Options
 
 Fit Type menu
    Controls how the length of the array is determined. There are three choices, activating respectively the
-   display of the :guilabel:`Curve`, :guilabel:`Length` or :guilabel:`Count` settings explained below:.
+   display of the *Curve*, *Length* or *Count* settings explained below:.
 
    Fit Curve
-      Generates enough copies to fit within the length of the curve object specified in :guilabel:`Curve`.
+      Generates enough copies to fit within the length of the curve object specified in *Curve*.
    Fit Length
-      Generates enough copies to fit within the fixed length given by :guilabel:`Length`.
+      Generates enough copies to fit within the fixed length given by *Length*.
    Fixed Count
-      Generates the number of copies specified in :guilabel:`Count`.
+      Generates the number of copies specified in *Count*.
 
 Curve
-   The Curve object to use for :guilabel:`Fit Curve`.
+   The Curve object to use for *Fit Curve*.
 
 Length
-   The length to use for :guilabel:`Fit Length`.
+   The length to use for *Fit Length*.
 
 Count
-   The number of duplicates to use for :guilabel:`Fixed Count`.
+   The number of duplicates to use for *Fixed Count*.
 
 
 .. note::
@@ -76,10 +77,10 @@ Object Offset
 
 Merge
    If enabled, vertices in each copy will be merged with vertices
-   in the next copy that are within the given :guilabel:`Distance`.
+   in the next copy that are within the given *Distance*.
 
 First Last
-   If enabled **and** :guilabel:`Merge` is enabled, vertices in the first copy will be merged with vertices
+   If enabled **and** *Merge* is enabled, vertices in the first copy will be merged with vertices
    in the last copy (this is useful for circular objects).
 
    +-------------------------------------------------------------------+-----------------------------------------------------------+
@@ -87,27 +88,27 @@ First Last
    +-------------------------------------------------------------------+-----------------------------------------------------------+
    + | Subsurf discontinuity caused by                                 | | Subsurf discontinuity eliminated                        +
    + | not merging vertices between first                              | | by merging vertices between first                       +
-   + | and last copies (:guilabel:`First Last` off).                   | | and last copies (:guilabel:`First Last` on).            +
+   + | and last copies (*First Last* off).                   | | and last copies (*First Last* on).            +
    +-------------------------------------------------------------------+-----------------------------------------------------------+
-   +:guilabel:`First Last` merge example.                                                                                          +
+   +*First Last* merge example.                                                                                          +
    +-------------------------------------------------------------------+-----------------------------------------------------------+
 
 
 Distance
-   Controls the merge distance for :guilabel:`Merge`.
+   Controls the merge distance for *Merge*.
 
 Start cap
    The mesh object to be used as a start cap.
    A single copy of this object will be placed at the "beginning" of the array - in fact,
    as if it was in position ``-1``, i.e. one "array step" before the first "regular" array copy.
-   Of course, if :guilabel:`Merge` is activated,
-   and the :guilabel:`Start cap` is near enough to the first copy, they will be merged.
+   Of course, if *Merge* is activated,
+   and the *Start cap* is near enough to the first copy, they will be merged.
 
 End cap
    The mesh object to be used as an end cap.
    A single copy of this object will be placed at the "end" of the array - in fact,
    as if it was in position **n+1**, i.e. one "array step" after the last "regular" array copy.
-   And as :guilabel:`Start cap`, it can be merged with the last copy...
+   And as *Start cap*, it can be merged with the last copy...
 
 
 Hints
@@ -117,7 +118,7 @@ Offset Calculation
 ------------------
 
 The transformation applied from one copy to the next is calculated as the sum of the three
-different components (:guilabel:`Relative`, :guilabel:`Constant` and :guilabel:`Object`),
+different components (*Relative*, *Constant* and *Object*),
 all of which can be enabled/disabled independently of the others. This allows, for example,
 a relative offset of ``1.0, 0.0, 0.0`` and a constant offset of ``0.1, 0.0, 0.0``,
 giving an array of objects neatly spaced along the X axis with a constant ``0.1``

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=needs verification that it's up to date with 2.6|fixes=[[User:bob_holcomb/Doc:2.6/Manual/Composite Nodes/Types/Matte|X]]}} .
 
 
+*********************
 Composite Matte Nodes
 *********************
 
@@ -27,7 +28,10 @@ will complicate matters and mandate lower falloff values.
 
 .. note:: Garbage Matte
 
-   Garbage matte is not a node, but a technique where the foreground is outlined using a closed curve (bezier or nurbs). Only the area within the curve is processed using these matte nodes; everything else is garbage and thus discarded.
+   Garbage matte is not a node,
+   but a technique where the foreground is outlined using a closed curve (bezier or nurbs).
+   Only the area within the curve is processed using these matte nodes;
+   everything else is garbage and thus discarded.
 
 
 Difference Key Node
@@ -46,25 +50,25 @@ foreground object.
 
 There are two inputs to this node.
 
-- The first is an input :guilabel:`Image` that is to be keyed.
-- The :guilabel:`Key Color` can be input as an RGB value or selected using the color picker by clicking on the :guilabel:`Key Color` box to bring up the color dialog, then clicking on the eye dropper tool and selecting a color.
+- The first is an input *Image* that is to be keyed.
+- The *Key Color* can be input as an RGB value or selected using the color picker by clicking on the *Key Color* box to bring up the color dialog, then clicking on the eye dropper tool and selecting a color.
 
-The selectable color spaces are :guilabel:`RGB` (default), :guilabel:`HSV`, :guilabel:`YUV`,
-and :guilabel:`YCbCr`.
+The selectable color spaces are *RGB* (default), *HSV*, *YUV*,
+and *YCbCr*.
 
 You can adjust the tolerance of each color in the colorspace individually so that you can have
 more red variance or blue variance in what you would allow to be transparent.
 I find that about 0.15 (or 15%) is plenty of variance if the background is evenly lit.
 Any more unevenness and you risk cutting into the foreground image.
 
-When the :guilabel:`Falloff` value is high, pixels that are close to the :guilabel:`Key Color`
-are more transparent than pixels that are not as close to the :guilabel:`Key Color`
-(but still considered close enough to be keyed).  When the :guilabel:`Falloff` value is low,
-it does not matter how close the pixel color (:guilabel:`Image`)
-is to the :guilabel:`Key Color`, it is transparent.
+When the *Falloff* value is high, pixels that are close to the *Key Color*
+are more transparent than pixels that are not as close to the *Key Color*
+(but still considered close enough to be keyed).  When the *Falloff* value is low,
+it does not matter how close the pixel color (*Image*)
+is to the *Key Color*, it is transparent.
 
-The outputs of this node are the :guilabel:`Image` with an alpha channel adjusted for the
-keyed selection and a black and white :guilabel:`Matte` (i.e the alpha mask).
+The outputs of this node are the *Image* with an alpha channel adjusted for the
+keyed selection and a black and white *Matte* (i.e the alpha mask).
 
 Simple Example
 --------------
@@ -137,11 +141,11 @@ Chroma Key Node
    Chroma Key node
 
 
-The :guilabel:`Chroma Key` node determines if a pixel is foreground or background
+The *Chroma Key* node determines if a pixel is foreground or background
 (and thereby should be transparent) based on its chroma values.
 This is useful for compositing images that have been shot in front of a green or blue screen.
 
-There is one input to this node, the :guilabel:`Image` that is to be keyed.
+There is one input to this node, the *Image* that is to be keyed.
 
 Control this node using:
 
@@ -160,8 +164,8 @@ Threshold
 Alpha threshold
    The setting that determines the tolerance of pixels that should be considered transparent after they have been processed. A low value means that only pixels that are considered totally transparent will be transparent, a high value means that pixels that are mostly transparent will be considered transparent.
 
-The outputs of this node are the :guilabel:`Image` with an alpha channel adjusted for the
-keyed selection and a black and white :guilabel:`Matte` (i.e the alpha mask).
+The outputs of this node are the *Image* with an alpha channel adjusted for the
+keyed selection and a black and white *Matte* (i.e the alpha mask).
 
 
 Color Key
@@ -173,8 +177,8 @@ Color Key
 
 
 The color key node creates a matte based on a specified color of the input image.
-The sliders represent threshold values for :guilabel:`Hue`, :guilabel:`Saturation`,
-and :guilabel:`Value`. Higher values in this node's context mean a wider range of colors from
+The sliders represent threshold values for *Hue*, *Saturation*,
+and *Value*. Higher values in this node's context mean a wider range of colors from
 the specified will be added to the matte.
 
 
@@ -186,23 +190,23 @@ Luminance Key Node
    Luminance Key node
 
 
-The :guilabel:`Luminance Key` node determines background objects from foreground objects by
+The *Luminance Key* node determines background objects from foreground objects by
 the difference in the luminance (brightness) levels.  For example,
 this is useful when compositing stock footage of explosions (very bright)
 which are normally shot against a solid, dark background.
 
-There is one input to this node, the :guilabel:`Image` that is to be keyed.
+There is one input to this node, the *Image* that is to be keyed.
 
 Control this node using:
 
-- The :guilabel:`High` value selector determines the lowest values that are considered foreground. (which is supposed to be - relatively - light: from this value to 1.0).
-- The :guilabel:`Low` value selector determines the hightes values that are considered to be background objects. (which is supposed to be - relatively - dark: from 0.0 to this value).
+- The *High* value selector determines the lowest values that are considered foreground. (which is supposed to be - relatively - light: from this value to 1.0).
+- The *Low* value selector determines the hightes values that are considered to be background objects. (which is supposed to be - relatively - dark: from 0.0 to this value).
 
 It is possible to have a separation between the two values to allow for a gradient of
 transparency between foreground and background objects.
 
-The outputs of this node are the :guilabel:`Image` with an alpha channel adjusted for the
-keyed selection and a black and white :guilabel:`Matte` (i.e the alpha mask).
+The outputs of this node are the *Image* with an alpha channel adjusted for the
+keyed selection and a black and white *Matte* (i.e the alpha mask).
 
 
 Example
@@ -244,7 +248,7 @@ Color Spill Node
    Color Spill node
 
 
-The :guilabel:`Color Spill` node reduces one of the RGB channels so that it is not greater
+The *Color Spill* node reduces one of the RGB channels so that it is not greater
 than any of the others.
 This is common when compositing images that were shot in front of a green or blue screen.
 In some cases, if the foreground object is reflective, it will show the green or blue color;
@@ -254,9 +258,9 @@ light from the background onto the foreground objects,
 coloring them with a tinge of green or blue. To remove the green (or blue) light,
 you use this fancy node.
 
-There is one input to this node, the :guilabel:`Image` to be processed.
+There is one input to this node, the *Image* to be processed.
 
-The :guilabel:`Enhance` slider allows you to reduce the selected channel's input to the image
+The *Enhance* slider allows you to reduce the selected channel's input to the image
 greater than the color spill algorithm normally allows.
 This is useful for exceptionally high amounts of color spill.
 
@@ -273,25 +277,31 @@ Channel Key Node
    Channel Key node
 
 
-The :guilabel:`Channel Key` node determines background objects from foreground objects by the
+The *Channel Key* node determines background objects from foreground objects by the
 difference in the selected channel's levels.  For example in YUV color space,
 this is useful when compositing stock footage of explosions (very bright)
 which are normally shot against a solid, dark background.
 
-There is one input to this node, the :guilabel:`Image` that is to be keyed.
+There is one input to this node, the *Image* that is to be keyed.
 
 Control this node using:
 
-- :guilabel:`Color Space` buttons selects what color space the channels will represent.
-- :guilabel:`Channel` buttons selects the channel to use to determine the matte.
-- :guilabel:`High` value selector determines the lowest values that are considered foreground. (which is supposed to be - relatively - height values: from this value to 1.0).
-- :guilabel:`Low` value selector determines the highest values that are considered to be background objects. (which is supposed to be - relatively - low values: from 0.0 to this value).
+Color Space
+   buttons selects what color space the channels will represent.
+Channel
+   buttons selects the channel to use to determine the matte.
+High
+   value selector determines the lowest values that are considered foreground.
+   (which is supposed to be - relatively - height values: from this value to 1.0).
+Low
+   value selector determines the highest values that are considered to be background objects.
+   (which is supposed to be - relatively - low values: from 0.0 to this value).
 
 It is possible to have a separation between the two values to allow for a gradient of
 transparency between foreground and background objects.
 
-The outputs of this node are the :guilabel:`Image` with an alpha channel adjusted for the
-keyed selection and a black and white :guilabel:`Matte` (i.e the alpha mask).
+The outputs of this node are the *Image* with an alpha channel adjusted for the
+keyed selection and a black and white *Matte* (i.e the alpha mask).
 
 
 Distance Key

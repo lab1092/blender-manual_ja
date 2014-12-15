@@ -1,4 +1,5 @@
 
+************
 Introduction
 ************
 
@@ -108,34 +109,34 @@ Render Settings
 ===============
 
 - :doc:`Output Panel </render/output>`
-  - Disable :guilabel:`Edge` rendering.
-  - :guilabel:`Save Buffers`.
+  - Disable *Edge* rendering.
+  - *Save Buffers*.
 
   - Render to an :doc:`Image Editor </ce/windows/uv-image>` window,
     not a popup. :doc:`Render Window </render/display>`.
-  - Use multiple :guilabel:`Threads` on a multi-core CPU (with multiple :guilabel:`Parts`).
+  - Use multiple *Threads* on a multi-core CPU (with multiple *Parts*).
 - :doc:`Render Layers Panel </render/post_process/layers>`
   - Render only the Layers of interest.
-  - Render with all lights set to one simple spot (enter its name in the :guilabel:`Light:` field).
+  - Render with all lights set to one simple spot (enter its name in the *Light:* field).
   - Render with one material override (enter its name in the Mat: field).
 
-  - Disable unnecessary Render Passes, such as :guilabel:`Z`,
-    or only render the pass of interest, such as :guilabel:`Diffuse`.
+  - Disable unnecessary Render Passes, such as *Z*,
+    or only render the pass of interest, such as *Diffuse*.
 - :doc:`Render Panel </render/options>`
-  - Turn off :guilabel:`Shadows`.
-  - Turn off :guilabel:`Environment Mapping`.
-  - Turn off :guilabel:`Panoramic Rendering`.
-  - Turn off :guilabel:`Raytracing`.
+  - Turn off *Shadows*.
+  - Turn off *Environment Mapping*.
+  - Turn off *Panoramic Rendering*.
+  - Turn off *Raytracing*.
   - Turn off SSS Subsurface Scattering.
-  - Turn off or lower oversampling/aliasing :guilabel:`OSA`.
-  - Turn off or lower :guilabel:`Motion Blur`.
+  - Turn off or lower oversampling/aliasing *OSA*.
+  - Turn off or lower *Motion Blur*.
 
   - Render in Parts. This will also allow you to render HUGE images on a weak PC.
     On a multi-core PC, it will assign a thread to each part as well.
   - Increase the octree resolution.
   - Render at a percentage size of your final resolution (like 25%).
-  - Turn off :guilabel:`Fields` rendering.
-  - Use :guilabel:`Border` rendering to render a subset of the full image.
+  - Turn off *Fields* rendering.
+  - Use *Border* rendering to render a subset of the full image.
 - :doc:`Anim Panel </render/workflows/animations>`
 
   - Decrease the frame count of the animation (and use a lower framerate for the same duration of animation).
@@ -151,11 +152,11 @@ Render Settings
 - :doc:`Format Panel </render/output>`
   - Render at a lower resolution. Smaller pictures take less time to render.
   - Choose a faster CODEC or CODEC settings.
-  - Render in black and white (:guilabel:`BW` button).
-  - If using FFMPEG, do not activate :guilabel:`Multiplex audio`.
-  - If using FFMPEG, :guilabel:`Autosplit Output` (:guilabel:`Video` panel button).
+  - Render in black and white (*BW* button).
+  - If using FFMPEG, do not activate *Multiplex audio*.
+  - If using FFMPEG, *Autosplit Output* (*Video* panel button).
 
-  - Render only RGB if you just need color; the A channel (:guilabel:`RGBA` button)
+  - Render only RGB if you just need color; the A channel (*RGBA* button)
     takes more memory and is unused when saving a movie file.
 
 

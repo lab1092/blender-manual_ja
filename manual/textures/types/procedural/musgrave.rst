@@ -1,4 +1,5 @@
 
+*****************************
 Procedural textures: Musgrave
 *****************************
 
@@ -60,10 +61,10 @@ Octaves
    Octave controls the number of times the original noise pattern is overlayed on itself and
    scaled/contrasted with the fractal dimension and lacunarity settings.  Range: 0 to 8.
 Intensity
-   Light intensity. Called :guilabel:`Offset` for :guilabel:`Hetero Terrain`. Range: 0 to 10.
+   Light intensity. Called *Offset* for *Hetero Terrain*. Range: 0 to 10.
 
 
-The :guilabel:`Hybrid Multifractal` and :guilabel:`Ridged Multifractal` types have these additional settings:
+The *Hybrid Multifractal* and *Ridged Multifractal* types have these additional settings:
 
 Offset
    Both have a "Fractal Offset" button that serves as a "sea level"

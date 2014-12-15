@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=missing dupli part}} .
 
 
+***************
 Texture Mapping
 ***************
 
@@ -22,24 +23,24 @@ Coordinates
    Mapping Coordinate menu
 
 
-- :guilabel:`Coordinates`
+Coordinates
   Mapping works by using a set of coordinates to guide the mapping process.
   These coordinates can come from anywhere, usually the object to which the texture is being applied to.
-- :guilabel:`Global`
+Global
   The scene's global 3D coordinates. This is also useful for animations;
   if you move the object, the texture moves across it.
   It can be useful for letting objects appear or disappear at a certain position in space.
-- :guilabel:`Object`
-  Uses an object as source for coordinates.  Often used with an :guilabel:`Empty`,
+Object
+  Uses an object as source for coordinates.  Often used with an *Empty*,
   this is an easy way to place a small image at a given point on the object
   (see the FIXME(TODO: Internal Link; [[#Position a Decal on a Mesh|example below]])).
   This object can also be animated, to move a texture around or through a surface.
 
-  - :guilabel:`Object`
+  Object
     Select the name of an object.
-- :guilabel:`Generated`
+Generated
   The original undeformed coordinates of the object.  This is the default option for mapping textures.
-- :guilabel:`UV`
+UV
   UV mapping is a very precise way of mapping a 2D texture to a 3D surface.
   Each vertex of a mesh has its own UV co-ordinates which can be unwrapped and laid flat like a skin.
   You can almost think of UV coordinates as a mapping that works on a 2D plane with its own local coordinate system
@@ -48,28 +49,28 @@ Coordinates
   as seen in :doc:`UV Mapping </textures/mapping/uv>`.
   You can use multiple textures with one set of UV coordinates.
 
-  - :guilabel:`Layer`
+  Layer
     Select your UV layer to use it for mapping.
-- :guilabel:`Strand/Particle`
+Strand/Particle
   Uses normalized 1D strand texture coordinate or particle age(X) and trail position (Y).
   Use when texture is applied to hair strands or particles.
-- :guilabel:`Sticky`
+Sticky
   Uses a mesh's sticky coordinates, which are a form of per-vertex UV co-ordinates.
   If you have made sticky coordinates first (in (usually)
-  :guilabel:`Camera View` → :kbd:`Space` → type :guilabel:`Sticky` →  choose :guilabel:`Add Sticky` / :guilabel:`Remove Sticky`),
+  Camera View` → :kbd:`Space` → type *Sticky* →  choose *Add Sticky* / *Remove Sticky*)
   the texture can be rendered in camera view (so called :doc:`Camera Mapping </ls/textures/uv/camera_mapping>`).
-- :guilabel:`Window`
+Window
   The rendered image window coordinates. This is well suited to blending two objects.
-- :guilabel:`Normal`
+Normal
   Uses the direction of the surface's normal vector as coordinates.
   This is very useful when creating certain special effects that depend on viewing angle.
-- :guilabel:`Reflection`
+Reflection
   Uses the direction of the reflection vector as coordinates.
   This is useful for adding reflection maps — you will need this input when Environment Mapping.
-- :guilabel:`Stress`
+Stress
   Uses the difference of edge length compared to original coordinates of the mesh.
   This is useful, for example, when a mesh is deformed by modifiers.
-- :guilabel:`Tangent`
+Tangent
   Uses the optional tangent vector as texture coordinates.
 
 
@@ -83,20 +84,20 @@ Projection
    Projection menu
 
 
-- :guilabel:`Flat`
+Flat
   Flat mapping gives the best results on single planar faces.
   It does produce interesting effects on the sphere, but compared to a sphere-mapped sphere the result looks flat.
   On faces that are not in the mapping plane the last pixel of the texture is extended,
   which produces stripes on the cube and cylinder.
-- :guilabel:`Cube`
+Cube
   Cube mapping often gives the most useful results when the objects are not too curvy and organic
   (notice the seams on the sphere).
-- :guilabel:`Tube`
+Tube
   Tube mapping maps the texture around an object like a label on a bottle.
   The texture is therefore more stretched on the cylinder.
   This mapping is of course very good for making the label on a bottle or assigning stickers to rounded objects.
   However, this is not a cylindrical mapping so the ends of the cylinder are undefined.
-- :guilabel:`Sphere`
+Sphere
   Sphere mapping is the best type for mapping a sphere, and it is perfect for making planets and similar objects.
   It is often very useful for creating organic objects. It also produces interesting effects on a cylinder.
 
@@ -104,8 +105,7 @@ Projection
 Inheriting coordinates from the parent object
 =============================================
 
-:guilabel:`From Dupli`
-
+From Dupli
    Duplis instanced from vertices, faces, or particles, inherit texture coordinates from their parent.
 
 **Todo: explaination**
@@ -119,7 +119,7 @@ Coordinate Offset, Scaling and Transformation
    Offset panel
 
 
-- :guilabel:`Offset`
+Offset
   The texture co-ordinates can be translated by an offset. Enlarging of the Ofs moves the texture towards the top left.
 
 
@@ -128,7 +128,7 @@ Coordinate Offset, Scaling and Transformation
    Size panel
 
 
-- :guilabel:`Size`
+Size
    These buttons allow you to change the mapping of axes between the texture's own coordinate system,
    and the mapping system you choose (Generated, UV, etcetera.)
    More precisely, to each axis of the texture corresponds one of four choices,

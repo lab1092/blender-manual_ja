@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X|text=Partially}} .
 
 
+****************
 Cloth Simulation
 ****************
 
@@ -28,7 +29,7 @@ Description
 ===========
 
 A piece of cloth is any mesh, open or enclosed, that has been designated as cloth. The
-:guilabel:`Cloth` panels are located in the :guilabel:`Physics` sub-context and consist of
+*Cloth* panels are located in the *Physics* sub-context and consist of
 three panels of options. Cloth is either an open or closed mesh and is mass-less,
 in that all cloth is assumed to have the same density, or mass per square unit.
 
@@ -39,7 +40,7 @@ Cloth is a specialized simulation of fabrics.
 Once the object is designated as Cloth,
 a Cloth :doc:`modifier </modifiers>` will be added to the object's modifier stack automatically.
 As a :doc:`modifier </modifiers>` then, it can interact with other modifiers,
-such as :guilabel:`Armature` and :guilabel:`Smooth`. In these cases,
+such as *Armature* and *Smooth*. In these cases,
 the ultimate shape of the mesh is computed in accordance with the order of the modifier stack. For example,
 you should smooth the cloth *after* the modifier computes the shape of the cloth.
 
@@ -47,7 +48,7 @@ So you edit the Cloth settings in two places: use the F7 Physics buttons to edit
 properties of the cloth and use the Modifier stack to  edit the Modifier properties related to
 display and interaction with other modifiers.
 
-You can :guilabel:`Apply` the cloth modifier to freeze, or lock in,
+You can *Apply* the cloth modifier to freeze, or lock in,
 the shape of the mesh at that frame, which removes the modifier. For example,
 you can drape a flat cloth over a table, let the simulation run, and then apply the modifier.
 In this sense, you are using the simulator to save yourself a lot of modeling time.
@@ -79,7 +80,7 @@ Workflow
 A general process for working with cloth is to:
 
 - Model the cloth object as a general starting shape.
-- Designate the object as a "cloth" in the :guilabel:`Physics` tab of the :guilabel:`Properties` window.
+- Designate the object as a "cloth" in the *Physics* tab of the *Properties* window.
 - Model other deflection objects that will interact with the cloth.
   Ensure the Deflection modifier is last on the modifier stack, after any other mesh deforming modifiers.
 - Light the cloth and assign materials and textures, UV-unwrapping if desired.
@@ -91,10 +92,10 @@ A general process for working with cloth is to:
 
 
 Creating Cloth Simulations
-**************************
+==========================
 
 This section discusses how to use those options to get the effect you want.
-First, enable :guilabel:`Cloth`. Set up for the kind of cloth you are simulating.
+First, enable *Cloth*. Set up for the kind of cloth you are simulating.
 You can choose one of the presets to have a starting point.
 
 As you can see, the heavier the fabric,
@@ -102,7 +103,7 @@ the more stiff it is and the less it stretches and is affected by air.
 
 
 Cloth Panel
-***********
+===========
 
 Presets
    Contains a number of preset cloth examples, and allows you to add your own.
@@ -112,7 +113,7 @@ Quality
 
 
 Material
-========
+--------
 
 Mass
    The mass of the cloth material.
@@ -123,7 +124,7 @@ Bending
 
 
 Damping
-=======
+-------
 
 Spring
    Damping of cloth velocity. Higher = more smooth, less jiggling.
@@ -132,7 +133,7 @@ Air
 
 
 Pinning
-=======
+-------
 
 .. figure:: /images/Clothscreeny2.jpg
    :width: 200px
@@ -146,7 +147,7 @@ There are several ways of doing this including using the Weight Paint tool to pa
 (see the :doc:`Weight paint </modeling/meshes/weight_paint>` section of the manual).
 
 Once you have a vertex group set, things are pretty straightforward; all you have to do is
-press the :guilabel:`Pinning of cloth` button in the :guilabel:`Cloth` panel and select which
+press the *Pinning of cloth* button in the *Cloth* panel and select which
 vertex group you want to use, and the stiffness you want it at.
 
 Stiffness
@@ -171,27 +172,27 @@ Stiffness
 
 
 Collisions
-**********
+==========
 
 In most cases, a piece of cloth does not just hang there in 3D space,
 it collides with other objects in the environment. To ensure proper simulation,
 there are several items that have to be set up and working together:
 
-- The :guilabel:`Cloth` object must be told to participate in :guilabel:`Collision` s.
+- The *Cloth* object must be told to participate in *Collision* s.
 - Optionally (but recommended) tell the cloth to collide with itself.
-- Other objects must be visible to the :guilabel:`Cloth` object *via* shared layers.
+- Other objects must be visible to the *Cloth* object *via* shared layers.
 - The other objects must be mesh objects.
 - The other objects may move or be themselves deformed by other objects (like an armature or shape key).
 - The other mesh objects must be told to deflect the cloth object.
 - The blend file must be saved in a directory so that simulation results can be saved.
-- You then :guilabel:`Bake` the simulation. The simulator computes the shape of the cloth for a frame range.
+- You then *Bake* the simulation. The simulator computes the shape of the cloth for a frame range.
 - You can then edit the simulation results, or make adjustments to the cloth mesh, at specific frames.
 - You can make adjustments to the environment or deforming objects,
   and then re-run the cloth simulation from the current frame forward.
 
 
 Collision Settings
-==================
+------------------
 
 .. figure:: /images/Cloth_collisionpanel.jpg
    :width: 200px
@@ -200,12 +201,11 @@ Collision Settings
    Cloth Collisions panel.
 
 
-Now you must tell the :guilabel:`Cloth` object that you want it to participate in collisions.
-For the cloth object, locate the :guilabel:`Cloth Collision` panel, shown to the right:
+Now you must tell the *Cloth* object that you want it to participate in collisions.
+For the cloth object, locate the *Cloth Collision* panel, shown to the right:
 
 Enable Collisions
-   :kbd:`Lmb` click this to tell the cloth object that it needs to move out of the way.
-
+   :kbd:`LMB` click this to tell the cloth object that it needs to move out of the way.
 Quality
    A general setting for how fine and good a simulation you wish.
    Higher numbers take more time but ensure less tears and penetrations through the cloth.
@@ -222,7 +222,7 @@ Friction
 
 
 Self-collisions
----------------
+^^^^^^^^^^^^^^^
 
 Real cloth cannot permeate itself, so you normally want the cloth to self-collide.
 
@@ -232,11 +232,11 @@ Enable Self Collisions
    but a close-up of a cape or blouse on a character should have this enabled.
 Quality
    For higher self-collision quality just increase the
-   :guilabel:`Quality` and more self collision layers can be solved.
+   *Quality* and more self collision layers can be solved.
    Just keep in mind that you need to have at least the same
-   :guilabel:`Collision Quality` value as the :guilabel:`Quality` value.
+   *Collision Quality* value as the *Quality* value.
 Distance
-   If you encounter problems, you could also change the :guilabel:`Min Distance` value for the self-collisions.
+   If you encounter problems, you could also change the *Min Distance* value for the self-collisions.
    The best value is 0.75; for fast things you better take 1.0. The value 0.5 is quite risky
    (most likely many penetrations) but also gives some speedup.
 
@@ -245,7 +245,7 @@ Regression blend file:
 
 
 Shared Layers
-=============
+-------------
 
 Suppose you have two objects: a pair of Pants on layers 2 and 3,
 and your Character mesh on layers 1 and 2.
@@ -257,25 +257,25 @@ simulations only interact with objects on a shared layer. In this example,
 both objects share layer 2.
 
 To view/change an object's layers,
-:kbd:`Rmb` click to select the object in :guilabel:`Object` mode in the 3D view.
+:kbd:`RMB` click to select the object in *Object* mode in the 3D view.
 :kbd:`M` to bring up the "Move Layers" popup,
 which shows you all the layers that the object is on. To put the object on a single layer,
-:kbd:`Lmb` click the layer button. To put the object on multiple layers,
-:kbd:`shift-Lmb` the layer buttons. To remove an object from a selected layer,
-simply :kbd:`shift-Lmb` the layer button again to toggle it.
+:kbd:`LMB` click the layer button. To put the object on multiple layers,
+:kbd:`Shift-LMB` the layer buttons. To remove an object from a selected layer,
+simply :kbd:`Shift-LMB` the layer button again to toggle it.
 
 
 Mesh Objects Collide
-====================
+--------------------
 
 If your colliding object is not a mesh object, such as a NURBS surface, or text object,
 you must convert it to a mesh object. To do so, select the object in object mode,
-and in the 3D View header, select :guilabel:`Object` → :guilabel:`Convert Object Type`
-(:kbd:`alt-C`), and select :guilabel:`Mesh` from the popup menu.
+and in the 3D View header, select *Object* → *Convert Object Type*
+(:kbd:`Alt-C`), and select *Mesh* from the popup menu.
 
 
 Cloth - Object collisions
-=========================
+-------------------------
 
 .. figure:: /images/Manual-Panel-Collision.jpg
    :width: 200px
@@ -289,24 +289,24 @@ the object must be enabled as an object that collides with the cloth object.
 To enable Cloth - Object collisions, you have to enable deflections on the collision object
 (not on the cloth object).
 
-In the :guilabel:`Buttons` window, :guilabel:`Object` context,
-:guilabel:`Physics` sub-context, locate the :guilabel:`Collision` panel shown to the right. It
+In the *Buttons* window, *Object* context,
+*Physics* sub-context, locate the *Collision* panel shown to the right. It
 is also important to note that this collision panel is used to tell all simulations that this
 object is to participate in colliding/deflecting other objects on a shared layer (particles,
 soft bodies, and cloth).
 
 
-.. note:: Beware
+.. warning::
 
-   There are three different :guilabel:`Collision` panels, all found in the :guilabel:`Physics` sub-context.
-   The first (by default), a tab beside the :guilabel:`Fields` panel, is the one needed here. The second panel,
-   a tab in the :guilabel:`Soft Body` group, concern softbodies (and so has nothing to do with cloth).
-   And we have already seen the last one, by default a tab beside the :guilabel:`Cloth` panel.
+   There are three different *Collision* panels, all found in the *Physics* sub-context.
+   The first (by default), a tab beside the *Fields* panel, is the one needed here. The second panel,
+   a tab in the *Soft Body* group, concern softbodies (and so has nothing to do with cloth).
+   And we have already seen the last one, by default a tab beside the *Cloth* panel.
 
 
 
 Mesh Object Modifier Stack
-==========================
+--------------------------
 
 .. figure:: /images/Manual-Simulation-Cloth-ColliderStack.jpg
    :width: 200px
@@ -318,20 +318,20 @@ Mesh Object Modifier Stack
 The object's shape deforms the cloth,
 so the cloth simulation must know the "true" shape of that mesh object at that frame.
 This true shape is the basis shape as modified by shape keys or armatures. Therefore,
-the :guilabel:`Collision` modifier must be **after** any of those.
-The image to the right shows the :guilabel:`Modifiers` panel for the Character mesh object
+the *Collision* modifier must be **after** any of those.
+The image to the right shows the *Modifiers* panel for the Character mesh object
 (not the cloth object).
 
 
 Cloth Cache
-***********
+===========
 
 Cache settings for cloth are the same as with other dynamic systems.
 See :doc:`Particle Cache </physics/particles/cache_and_bake>` for details.
 
 
 Bake Collision
-==============
+--------------
 
 .. figure:: /images/Manual-Simulation-Cloth-CollisionBake.jpg
    :width: 200px
@@ -343,11 +343,11 @@ Bake Collision
 After you have set up the deflection mesh for the frame range you intend to run the simulation
 (including animating that mesh *via* armatures),
 you can now tell the cloth simulation to compute (and avoid) collisions.
-Select the cloth object and in the :guilabel:`Object` context,
-:guilabel:`Physics` sub-context, set the :guilabel:`Start` and :guilabel:`End` settings for
-the simulation frames you wish to compute, and click the :guilabel:`Bake` button.
+Select the cloth object and in the *Object* context,
+*Physics* sub-context, set the *Start* and *End* settings for
+the simulation frames you wish to compute, and click the *Bake* button.
 
-You cannot change :guilabel:`Start` or :guilabel:`End` without clearing the bake simulation.
+You cannot change *Start* or *End* without clearing the bake simulation.
 When the simulation has finished, you will notice you have the option to free the bake,
 edit the bake and re-bake:
 
@@ -357,15 +357,15 @@ and it will probably clip through the box pretty badly as in the picture on the 
 
 
 Editing the cached simulation
-=============================
+-----------------------------
 
 The cache contains the shape of the mesh at each frame. You can edit the cached simulation,
-after you've baked the simulation and pressed the :guilabel:`Bake Editing` button.
-Just go to the frame you want to fix and :kbd:`Tab` into :guilabel:`Edit mode`.
+after you've baked the simulation and pressed the *Bake Editing* button.
+Just go to the frame you want to fix and :kbd:`Tab` into *Edit mode*.
 There you can move your vertices using all of Blender's mesh shaping tools. When you exit,
 the shape of the mesh will be recorded for that frame of the animation.
 If you want Blender to resume the simulation using the new shape going forward,
-:kbd:`Lmb` click '\ :guilabel:`Rebake from next Frame` and play the animation.
+:kbd:`LMB` click '\ *Rebake from next Frame* and play the animation.
 Blender will then pick up with that shape and resume the simulation.
 
 Edit the mesh to correct minor tears and places where the colliding object has punctured the
@@ -375,91 +375,91 @@ If you add, delete, extrude, or remove vertices in the mesh, Blender will take t
 the starting shape of the mesh back to the *first frame* of the animation,
 replacing the original shape you started with,
 up to the frame you were on when you edited the mesh. Therefore,
-if you change the content of a mesh, when you :kbd:`Tab` out of :guilabel:`Edit mode`,
+if you change the content of a mesh, when you :kbd:`Tab` out of *Edit mode*,
 you should unprotect and clear the cache ..    Comment: <!--''From next frame'' ???--> . so that Blender will
 make a consistent simulation.
 
 
 Troubleshooting
-***************
+===============
 
 If you encounter some problems with collision detection, there are two ways to fix them:
 
 
-- The fastest solution is to increase the :guilabel:`Min Distance` setting under the :guilabel:`Cloth Collision` panel.
+- The fastest solution is to increase the *Min Distance* setting under the *Cloth Collision* panel.
   This will be the fastest way to fix the clipping; however, it will be less accurate and won't look as good.
   Using this method tends to make it look like the cloth is resting on air, and gives it a very rounded look.
-- A second method is to increase the :guilabel:`Quality` (in the first :guilabel:`Cloth` panel).
+- A second method is to increase the *Quality* (in the first *Cloth* panel).
   This results in smaller steps for the simulator and
   therefore to a higher probability that fast-moving collisions get caught.
-  You can also increase the :guilabel:`Collision Quality` to perform more iterations to get collisions solved.
-- If none of the methods help, you can easily edit the cached/baked result in :guilabel:`Edit mode` afterwards.
+  You can also increase the *Collision Quality* to perform more iterations to get collisions solved.
+- If none of the methods help, you can easily edit the cached/baked result in *Edit mode* afterwards.
 - My Cloth is torn by the deforming mesh - he "Hulks Out": Increase its structural stiffness
-  (:guilabel:`StructStiff` setting, :guilabel:`Cloth` panel), very high, like 1000.
+  (*StructStiff* setting, *Cloth* panel), very high, like 1000.
 
 
-.. note:: :guilabel:`Subsurf` modifier
+.. note:: *Subsurf* modifier
 
    A bake/cache is done for every subsurf level so please use **the equal** subsurf level for render and preview.
 
 
 Examples
-********
+========
 
 To start with cloth, the first thing you need, of course, is some fabric. So,
 let's delete the default cube and add a plane. I scaled mine up along the Y axis,
 but you don't have to do this. In order to get some good floppy and flexible fabric,
 you'll need to subdivide it several times. I did it 8 times for this example.
-So :kbd:`Tab` into :guilabel:`Edit mode`,
-and press :kbd:`W` → :guilabel:`Subdivide multi`, and set it to 8.
+So :kbd:`Tab` into *Edit mode*,
+and press :kbd:`W` → *Subdivide multi*, and set it to 8.
 
-Now, we'll make this cloth by going to the :guilabel:`Object` context
-(:kbd:`f7`) → :guilabel:`Physics` sub-context.
-Scroll down until you see the :guilabel:`Cloth` panel, and press the :guilabel:`Cloth` button.
+Now, we'll make this cloth by going to the *Object* context
+(:kbd:`F7`) → *Physics* sub-context.
+Scroll down until you see the *Cloth* panel, and press the *Cloth* button.
 Now, a lot of settings will appear, most of which we'll ignore for now.
 
 That's all you need to do to set your cloth up for animating,
-but if you hit :kbd:`alt-A`, your lovely fabric will just drop very un-spectacularly.
+but if you hit :kbd:`Alt-A`, your lovely fabric will just drop very un-spectacularly.
 That's what we'll cover in the next two sections about pinning and colliding.
 
 
 Using Simulation to Shape/Sculpt a Mesh
-=======================================
+---------------------------------------
 
-You can :guilabel:`Apply` the :guilabel:`Cloth` modifier at any point to freeze the mesh in
+You can *Apply* the *Cloth* modifier at any point to freeze the mesh in
 position at that frame. You can then re-enable the cloth,
 setting the start and end frames from which to run the simulation forward.
 
 Another example of aging is a flag.
 Define the flag as a simple grid shape and pin the edge against the flagpole.
 Simulate for 50 frames or so, and the flag will drop to its "rest" position.
-Apply the :guilabel:`Cloth` modifier.
+Apply the *Cloth* modifier.
 If you want the flag to flap or otherwise move in the scene,
 re-enable it for the frame range when it is in camera view.
 
 
 Smoothing of Cloth
-==================
+------------------
 
 Now, if you followed this from the previous section,
 your cloth is probably looking a little blocky. In order to make it look nice and smooth like
-the picture you need to apply a :guilabel:`Smooth` and/or :guilabel:`Subsurf` modifier in the
-:guilabel:`Modifiers` panel under the :guilabel:`Editing` context (:kbd:`f9`). Then,
-in the same context, find the :guilabel:`Links and Materials` panel
-(the same one you used for vertex groups) and press :guilabel:`Set Smooth`.
+the picture you need to apply a *Smooth* and/or *Subsurf* modifier in the
+*Modifiers* panel under the *Editing* context (:kbd:`F9`). Then,
+in the same context, find the *Links and Materials* panel
+(the same one you used for vertex groups) and press *Set Smooth*.
 
-Now, if you hit :kbd:`alt-A`, things are starting to look pretty nice, don't you think?
+Now, if you hit :kbd:`Alt-A`, things are starting to look pretty nice, don't you think?
 
 
 Cloth on armature
-=================
+-----------------
 
 Cloth deformed by armature and also respecting an additional collision object:
 `Regression blend file <http://wiki.blender.org/index.php/Media:Cloth-regression-armature.blend>`__.
 
 
 Cloth with animated vertex groups
-=================================
+---------------------------------
 
 Cloth with animated pinned vertices:
 `Regression blend file <http://wiki.blender.org/index.php/Media:Cloth_anim_vertex.blend>`__.
@@ -468,7 +468,7 @@ but still having the vertex not pinned will not work (e.g. from goal = 0 to goal
 
 
 Cloth with Dynamic Paint
-========================
+------------------------
 
 Cloth with Dynamic Paint using animated vertex groups:
 `Regression blend file <http://wiki.blender.org/index.php/Media:Cloth_dynamic_paint.blend>`__.
@@ -477,7 +477,7 @@ UNSUPPORTED: Starting with a goal of 0 and increasing it, but still having the v
 
 
 Using Cloth for Softbodies
-==========================
+--------------------------
 
 .. figure:: /images/Cloth-Sb1.jpg
    :width: 200px
@@ -488,15 +488,15 @@ Using Cloth for Softbodies
 
 Cloth can also be used to simulate softbodies.
 It's for sure not its main purpose but it works nonetheless.
-The example image uses standard :guilabel:`Rubber` material, no fancy settings,
-just :kbd:`alt-A`.
+The example image uses standard *Rubber* material, no fancy settings,
+just :kbd:`Alt-A`.
 
 Blend file for the example image:
 `Using Cloth for softbodies <http://wiki.blender.org/index.php/Media:Cloth-sb1.blend>`__.
 
 
 Cloth with Wind
-===============
+---------------
 
 .. figure:: /images/Cloth-flag2.jpg
    :width: 200px

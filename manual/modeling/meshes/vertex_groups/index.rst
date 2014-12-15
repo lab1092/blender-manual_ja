@@ -1,6 +1,7 @@
 
-Vertex Groups
-*************
+################
+  Vertex Groups
+################
 
 .. toctree::
 

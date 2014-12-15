@@ -1,4 +1,5 @@
 
+************
 Introduction
 ************
 
@@ -76,11 +77,11 @@ Generation does not apply the modifier to allow further changing the settings.
 Generated objects are automatically named based on the level they are generated for.
 Below are some settings for the operator.
 
- :guilabel:`Count`
+ *Count*
    The number of levels desired after generation. This operator creates Count - 1 new objects.
- :guilabel:`Target Size`
+ *Target Size*
    The ratio setting for the decimate modifier on the last level of detail. The ratio settings for the other levels is determined by linear interpolation.
- :guilabel:`Package into Group`
+ *Package into Group*
    With this setting enabled the operator performs some extra tasks to make the asset ready for easy linking into a new file. The base object and all of its levels of detail are placed into a group based on the base object's name. Levels other than the base are hidden for both the viewport and rendering. This simplifies the appearance of the system and does not affect the appearance of the base object. Finally, all levels are parented to the base object to remove clutter from the outliner.
 
 

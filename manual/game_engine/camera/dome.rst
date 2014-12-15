@@ -1,4 +1,5 @@
 
+***********
 Dome Camera
 ***********
 
@@ -10,7 +11,7 @@ Truncated domes (front and rear), Planetariums and domes with spherical mirrors.
 The Dome camera uses a multipass texture algorithm as developed by Paul Bourke and was
 implemented by Dalai Felinto with sponsorship  from **SAT -** Society for Arts and
 Technology within the **SAT** **Metalab**
-`immersion research program <http://paulbourke.net/miscellaneous/domemirror/BlenderiDome/>`_,
+`immersion research program <http://paulbourke.net/miscellaneous/domemirror/BlenderiDome/>`__,
 that involves rendering the scene 4 times and placing the subsequent images
 onto a mesh designed especially such that the result, when viewed with an
 orthographic camera, is a fisheye projection.
@@ -144,7 +145,7 @@ are the norm for flat screen displays. Examples include geometry correction for 
 displays and some new methods of projecting into planetarium domes or upright domes intended
 for VR.
 
-For more information on the mesh format see `Paul Bourke's article <http://paulbourke.net/dataformats/meshwarp/>`_.
+For more information on the mesh format see `Paul Bourke's article <http://paulbourke.net/dataformats/meshwarp/>`__.
 
 
 .. figure:: /images/Dev-GameEngine-Dome-Warped.jpg

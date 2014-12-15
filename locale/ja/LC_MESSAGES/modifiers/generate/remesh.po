@@ -11,132 +11,227 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/modifiers/generate/remesh.rst:3
+#: ../../manual/modifiers/generate/remesh.rst:4
 msgid "Remesh Modifier"
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:5
-msgid ""
-"The Remesh modifier is a tool for generating new mesh topology based on an "
-"input surface. The output follows the surface curvature of the input, but "
-"its topology contains only quads."
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:15
+#: ../../manual/modifiers/generate/remesh.rst:80
 msgid "Usage"
 msgstr "使用法"
 
-#: ../../manual/modifiers/generate/remesh.rst:17
-msgid ""
-"In the modifier panel, add a Remesh modifier. (This modifier is only "
-"available for meshes.) The input mesh should have some thickness to it; if "
-"the input is completely flat, add a solify modifier above the remesh "
-"modifier."
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:23
+#: ../../manual/modifiers/generate/remesh.rst:40
 msgid "Mode"
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:25
+#: ../../manual/modifiers/generate/remesh.rst:18
 msgid ""
 "There are three basic modes available in the remesh modifier: Blocks, Smooth"
 " and Sharp."
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:32
+#: ../../manual/modifiers/generate/remesh.rst:25
 msgid ""
 "This example shows a cone with each of the different remesh modes. From left"
 " to right: original cone, Blocks, Smooth, and Sharp"
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:36
-msgid ""
-"Note that the output topology is almost identical between the three modes; "
-"what changes is the smoothing. In Blocks mode, there is no smoothing at all."
-" The Smooth and Sharp modes generate similar output in places where the mesh"
-" is already smooth, but Sharp mode preserves sharp details better. In this "
-"example, the circular bottom of the cone and the top point of the cone are "
-"accurately reproduced in Sharp mode."
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:44
-msgid "Octree Depth and Scale"
-msgstr ""
-
 #: ../../manual/modifiers/generate/remesh.rst:46
-msgid ""
-"The Octree Depth sets the resolution of the output. Low values will generate"
-" larger faces relative the input, higher values generate a denser output. "
-"The result can be tweaked further by setting the Scale; lower values "
-"effectively decrease the output resolution."
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:57
 msgid "Input mesh, and the low to high resolution output meshes"
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:61
-msgid "Disconnected Pieces"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:63
-msgid ""
-"To filter out small disconnected pieces of the output, enabled Remove "
-"Disconnected and set the threshold to control how small a disconnected "
-"component must be to be removed."
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:71
+#: ../../manual/modifiers/generate/remesh.rst:74
 msgid ""
 "The input mesh (left) is fairly noisy, so the initial output of the remesh "
 "modifier (center) contains small disconnected pieces. Enabling Remove "
 "Disconnected Pieces (right) deletes those faces."
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:77
+#: ../../manual/modifiers/generate/remesh.rst:58
 msgid "Sharpness"
 msgstr ""
 
-#: ../../manual/modifiers/generate/remesh.rst:79
-msgid ""
-"In Sharp mode, set the Sharpness value to control how closely the output "
-"follows sharp edges in the input (use lower values to filter out noise)."
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:85
-msgid "Demo Videos"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:87
-msgid ""
-"FIXME(Tag Unsupported:div; <div style=\"text-align: center !important;\"> "
-"<youtube width=\"640\" height=\"360\">TvNHiHdrjUw</youtube>"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:91
-msgid "<youtube width=\"640\" height=\"360\">Mh-gUnS2c0Y</youtube>"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:93
-msgid "<youtube width=\"640\" height=\"360\">dker8gRuww4</youtube>"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:95
-msgid "<youtube width=\"640\" height=\"360\">5njU1nIyC6I</youtube>"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:97
-msgid "<vimeo width=\"640\" height=\"360\" >21096739</vimeo>"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:99
-msgid "<vimeo width=\"640\" height=\"360\" >21330126</vimeo> </div> )"
-msgstr ""
-
-#: ../../manual/modifiers/generate/remesh.rst:108
+#: ../../manual/modifiers/generate/remesh.rst:94
 msgid "Remesh modifier applied to text to improve topology"
 msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:6
+msgid ""
+"The Remesh modifier is a tool for generating new mesh topology. The output "
+"follows the surface curvature of the input, but its topology contains only "
+"quads."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:15
+msgid "Options"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:29
+msgid ""
+"The output topology is almost identical between the three modes; what "
+"changes is the smoothing."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:32
+msgid "Blocks"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:33
+msgid "There is no smoothing at all."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:34
+msgid "Smooth"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:35
+msgid "Output a smooth surface."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:40
+msgid "Sharp"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:37
+msgid ""
+"Similar to *Smooth*, but preserves sharp edges and corners. In the above "
+"image, the circular bottom of the cone and the top point of the cone are "
+"more accurately reproduced in Sharp mode."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:50
+msgid "Octree Depth"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:50
+msgid ""
+"The Octree Depth sets the resolution of the output. Low values will generate"
+" larger faces relative to the input, higher values will generate a denser "
+"output."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:54
+msgid "Scale"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:53
+msgid ""
+"The result can be tweaked further by setting the Scale; lower values "
+"effectively decrease the output resolution."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:57
+msgid ""
+"Shown when using the *Sharp Mode* - Higher values produce edges more similar"
+" to the input, while lower values filter out noise."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:61
+msgid "Smooth Shading"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:61
+msgid ""
+"Output faces with smooth shading rather than flat shading. The smooth/flat "
+"shading of the input faces is not preserved."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:77
+msgid "Remove Disconnected Pieces"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:64
+msgid "Filter out small disconnected pieces of the output."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:68
+msgid "Threshold"
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:67
+msgid ""
+"Use this to control how small a disconnected component must be to be "
+"removed."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:82
+msgid ""
+"In the modifier panel, add a Remesh modifier. The input mesh should have "
+"some thickness to it; if the input is completely flat, add a :doc:`solidify "
+"</modifiers/generate/solidify>` modifier above the remesh modifier."
+msgstr ""
+
+#: ../../manual/modifiers/generate/remesh.rst:88
+msgid "Examples"
+msgstr ""
+
+#~ msgid ""
+#~ "The Remesh modifier is a tool for generating new mesh topology based on an "
+#~ "input surface. The output follows the surface curvature of the input, but "
+#~ "its topology contains only quads."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the modifier panel, add a Remesh modifier. (This modifier is only "
+#~ "available for meshes.) The input mesh should have some thickness to it; if "
+#~ "the input is completely flat, add a solify modifier above the remesh "
+#~ "modifier."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that the output topology is almost identical between the three modes; "
+#~ "what changes is the smoothing. In Blocks mode, there is no smoothing at all."
+#~ " The Smooth and Sharp modes generate similar output in places where the mesh"
+#~ " is already smooth, but Sharp mode preserves sharp details better. In this "
+#~ "example, the circular bottom of the cone and the top point of the cone are "
+#~ "accurately reproduced in Sharp mode."
+#~ msgstr ""
+
+#~ msgid "Octree Depth and Scale"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Octree Depth sets the resolution of the output. Low values will generate"
+#~ " larger faces relative the input, higher values generate a denser output. "
+#~ "The result can be tweaked further by setting the Scale; lower values "
+#~ "effectively decrease the output resolution."
+#~ msgstr ""
+
+#~ msgid "Disconnected Pieces"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To filter out small disconnected pieces of the output, enabled Remove "
+#~ "Disconnected and set the threshold to control how small a disconnected "
+#~ "component must be to be removed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In Sharp mode, set the Sharpness value to control how closely the output "
+#~ "follows sharp edges in the input (use lower values to filter out noise)."
+#~ msgstr ""
+
+#~ msgid "Demo Videos"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:div; <div style=\"text-align: center !important;\"> "
+#~ "<youtube width=\"640\" height=\"360\">TvNHiHdrjUw</youtube>"
+#~ msgstr ""
+
+#~ msgid "<youtube width=\"640\" height=\"360\">Mh-gUnS2c0Y</youtube>"
+#~ msgstr ""
+
+#~ msgid "<youtube width=\"640\" height=\"360\">dker8gRuww4</youtube>"
+#~ msgstr ""
+
+#~ msgid "<youtube width=\"640\" height=\"360\">5njU1nIyC6I</youtube>"
+#~ msgstr ""
+
+#~ msgid "<vimeo width=\"640\" height=\"360\" >21096739</vimeo>"
+#~ msgstr ""
+
+#~ msgid "<vimeo width=\"640\" height=\"360\" >21330126</vimeo> </div> )"
+#~ msgstr ""
 
 #~ msgid "Description"
 #~ msgstr ""

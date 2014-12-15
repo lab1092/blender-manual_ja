@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|split=X|text=need to separate generic information from moving, erase join. like 2.4. Need also to explain objects classes (curves, mesh, etc) and possible conversions from and to (greylica)}} .
 
 
+***********
 Object Mode
 ***********
 
@@ -59,7 +60,7 @@ Types of Objects
    Object Mode button.
 
 
-Each object can be moved, rotated and scaled in :guilabel:`Object Mode` (see picture).
+Each object can be moved, rotated and scaled in *Object Mode* (see picture).
 However, not all of these transformations have an effect on all objects. For example,
 scaling a force field will not increase its effect.
 
@@ -70,16 +71,16 @@ scaling a force field will not increase its effect.
 
 
 For making other changes to the geometry of editable objects,
-you should use :guilabel:`Edit mode` (see picture).
+you should use *Edit mode* (see picture).
 
 
-Once you've added a basic object, you remain in :guilabel:`Object Mode`.
+Once you've added a basic object, you remain in *Object Mode*.
 In earlier versions of Blender,
-you were automatically switched into :guilabel:`Edit mode` if the Object was a Mesh,
+you were automatically switched into *Edit mode* if the Object was a Mesh,
 a Curve or a Surface.
 
-You can switch between :guilabel:`Object Mode` and :guilabel:`Edit Mode` by pressing
-:kbd:`TAB`.
+You can switch between *Object Mode* and *Edit Mode* by pressing
+:kbd:`Tab`.
 
 The object's wireframe should now appear orange.
 This means that the object is now selected and active (see picture *Selected object*).
@@ -102,7 +103,7 @@ Moving Object Centers
 =====================
 
 Object Centers can be moved to different positions through
-:guilabel:`3D View window → Transform → Origin`  (press :kbd:`T` to open panel):
+*3D View window → Transform → Origin*  (press :kbd:`T` to open panel):
 
 Geometry to Origin
    Move model to origin and this way origin of the object will also be at the center of the object.
@@ -120,8 +121,8 @@ Erase Objects
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` or :guilabel:`Object` mode
-   | Menu:     :guilabel:`Object` → :guilabel:`Delete`
+   | Mode:     *Edit* or *Object* mode
+   | Menu:     *Object* → *Delete*
    | Hotkey:   :kbd:`X` or :kbd:`DEL`
 
 
@@ -134,14 +135,14 @@ Join Objects
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Menu:     :guilabel:`Object` → :guilabel:`Join Objects`
-   | Hotkey:   :kbd:`ctrl-J`
+   | Mode:     *Object* mode
+   | Menu:     *Object* → *Join Objects*
+   | Hotkey:   :kbd:`Ctrl-J`
 
 
 Joins all selected objects to one single object. Must be of the same type.
 Origin point is obtained from the previously *active* object.
-Performing a join is equivalent to adding new objects while in :guilabel:`Edit mode`.
+Performing a join is equivalent to adding new objects while in *Edit mode*.
 The non-active objects are deleted. Only the active object remains.
 This only works with editable objects, like meshes and curves.
 

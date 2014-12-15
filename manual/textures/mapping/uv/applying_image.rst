@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|}} .
 
 
+*****************
 Applying Textures
 *****************
 
@@ -16,7 +17,7 @@ Exporting UV Layout Image
 =========================
 
 As a way of communicating to an artist who is painting your UV Texture for you,
-Blender has a tool called :guilabel:`Save UV Face Layout`
+Blender has a tool called *Save UV Face Layout*
 (located in the UV/Image Editor Window, UVs→Save UV Face Layout)
 that saves an image as a Targa (.tga), EPS, or an SVG format for the object you have selected.
 
@@ -86,7 +87,7 @@ To render an image however, you must
 - create a Material for the object, and
 - tell Blender to use the UV Textures on faces when rendering.
 
-To create a Material, you have to click :guilabel:`Add New` Material in the Shading context.
+To create a Material, you have to click *Add New* Material in the Shading context.
 
 There are two ways to tell Blender to use the UV Texture when rendering:
 the Proper way and the Quick Way:
@@ -118,7 +119,7 @@ Full details of using Image textures are on the :doc:`Image Textures </textures/
    and you will even see it in your 3D View in textured viewport mode. However, when you render,
    you will just get a default gray if the object does not have a Material assigned.
    You will get a black if you do not load an image. If you do not create a texture that uses the image,
-   or enable :guilabel:`Face Texture`, your object will render according to the procedural material settings.
+   or enable *Face Texture*, your object will render according to the procedural material settings.
 
 
 
@@ -131,10 +132,10 @@ Face Textures
 
 
 An alternate way is to set up a Face Textures Material as shown. To do so,
-with the buttons window displayed, press :kbd:`f5` to display the Shader Buttons.
-In the Buttons window, Material settings, click :guilabel:`ADD NEW` material.
+with the buttons window displayed, press :kbd:`F5` to display the Shader Buttons.
+In the Buttons window, Material settings, click *ADD NEW* material.
 
-On the Options panel, enable :guilabel:`Face Textures`. This way is quick,
+On the Options panel, enable *Face Textures*. This way is quick,
 but bypasses the normal rendering system for fast results,
 but results which do not respect transparency and proper shading.
 
@@ -147,19 +148,19 @@ Loading and Saving Images
 
 In the UV editor, you can assign certain faces certain textures. To do so,
 first you need an image to work with.
-In the :guilabel:`Image Menu` you can open an image file with the :guilabel:`File Browser`.
+In the *Image Menu* you can open an image file with the *File Browser*.
 If you have images in the file already, that you want to use,
-click the :guilabel:`Browse` button in the :guilabel:`Header`,
-or make a new texture by clicking the :guilabel:`New` button.
+click the *Browse* button in the *Header*,
+or make a new texture by clicking the *New* button.
 
 In a team environment, or if you are using an external paint program to edit the image while
 the .blend file is active, and the file is updated and re-saved, use the UV/Image Editor to
-:guilabel:`Image→Reload` it and see the latest and greatest in Blender. Also,
+*Image→Reload* it and see the latest and greatest in Blender. Also,
 use Reload if you have mapped more faces to an image,
 and the 3D View will be updated with the latest image mapping back to faces.
 
 If you move the image file, Blender may not be able to find it,
-and you will have to :guilabel:`Image→Replace` it.
+and you will have to *Image→Replace* it.
 Use this option to map a UV layout to a different image altogether.
 
 Replacing the active Image
@@ -167,7 +168,7 @@ Replacing the active Image
 
 Recall that each face gets coordinates and a link to an image.
 To map a face to a different image, simply select that face (or faces) and use the UV/Image
-Editor window Image}} menu to :guilabel:`Replace` the current image with an existing file
+Editor window Image}} menu to *Replace* the current image with an existing file
 (such as a JPG or PNG file).
 
 
@@ -181,9 +182,8 @@ New Images
    The new Image dialogue
 
 
-When you select :guilabel:`New Image` you are presented with several options. This
-:guilabel:`Generated` image can also be modified afterward in the :guilabel:`Properties
-Panel`:
+When you select *New Image* you are presented with several options. This
+*Generated* image can also be modified afterward in the *Properties Panel*:
 
 Image Name
    Set the name if the generated image
@@ -242,17 +242,17 @@ Image Settings
 --------------
 
 When an image has been loaded or created in the UV editor,
-an additional section appears in the :guilabel:`Properties Panel`.
+an additional section appears in the *Properties Panel*.
 The first row of buttons allow you to:
 
-- :guilabel:`Browse` for an image
+- Browse for an image
 - Change the image name
-- Set as :guilabel:`Fake User`
-- Create a :guilabel:`New Image`
-- :guilabel:`Open` an image
-- :guilabel:`Unlink Datablock`
+- Set as *Fake User*
+- Create a *New Image*
+- *Open* an image
+- *Unlink Datablock*
 
-Select the image type in the :guilabel:`Source` menu. Each has different options:
+Select the image type in the *Source* menu. Each has different options:
 
 Generated
    Generates a new image:
@@ -270,7 +270,7 @@ File
    Use for loading image files:
 
    Fields
-      Use if image is made of fields. You can set it to use :guilabel:`Upper First` or Lower First
+      Use if image is made of fields. You can set it to use *Upper First* or Lower First
    Premultiply
       Converts RGB from key alpha to premultiplied alpha.
 
@@ -293,10 +293,10 @@ Saving Images
 -------------
 
 Images can be saved to external files if they were created or edited in Blender with tools in
-the :guilabel:`Image` menu. If images are already files, use the :guilabel:`Save` command
-(:kbd:`Alt-S`). You can also :guilabel:`Save As` (:kbd:`f3`)
+the *Image* menu. If images are already files, use the *Save* command
+(:kbd:`Alt-S`). You can also *Save As* (:kbd:`F3`)
 if the image was generated or you want to save as a different name.
-Using :guilabel:`Save as Copy`, (:kbd:`f3`) will save the file to a specified name,
+Using *Save as Copy*, (:kbd:`F3`) will save the file to a specified name,
 but will keep the old one open in the Image editor.
 
 Modifying your Image Texture
@@ -306,17 +306,20 @@ To modify your new Texture, you can:
 
 
 - :doc:`Render Bake </render/workflows/bake>` an image based on how the mesh looks
+
   - The Render Bake feature provides several tools to replace the current image
     based on a render of :doc:`Vertex Paint </materials/vertex_paint>` colors,
     Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.
 - Paint using :doc:`Texture Paint </textures/painting>`.
+
   - Use the UV/Image Editor menu *Image* → *New*. Then start painting your mesh with
 - Use external software to create an image
+
   - Using your favorite image painting program, you could use an exported UV layout to create a texture.
     Then save your changes, and back in Blender, use the Image→Open menu command to load it as your UV image
     for the mesh in Face Select Mode for the desired (and active) UV Texture layer.
-    Using the :guilabel:`Edit Externally` tool in the :guilabel:`Image` menu, Blender will open an image editor,
-    as specified in the :guilabel:`User Preferences` and load in the image to be edited.
+    Using the *Edit Externally* tool in the *Image* menu, Blender will open an image editor,
+    as specified in the *User Preferences* and load in the image to be edited.
 - Use the "projection painting" feature of recent versions of Blender
 - Use the Bake uV-Textures to Vertex Colors addon to create an image from vertex colors
 - Some combination of the above.
@@ -335,8 +338,8 @@ copying other image files over it, and you can use external editing programs to 
 The advantage of packing is that your whole project is kept in the .blend file,
 and that you only have to manage one file.
 
-You can invert the colors of an image by selecting the :guilabel:`Invert` menu.
-in the :guilabel:`Image` menu
+You can invert the colors of an image by selecting the *Invert* menu.
+in the *Image* menu
 
 
 Packing Images inside the Blend file
@@ -348,8 +351,8 @@ If those files later change, the updates will not be automatically re-packed;
 the old version of the image is what will be used. To update,
 you will have to re-pack or reload.
 
-To pack an image, select :guilabel:`Pack Image` from the :guilabel:`Image` menu. To Unpack,
-select this option again and select :guilabel:`Remove Pack`.
+To pack an image, select *Pack Image* from the *Image* menu. To Unpack,
+select this option again and select *Remove Pack*.
 
 The File→Append function automatically goes into .
 blend files and shows you the image textures packed in it.

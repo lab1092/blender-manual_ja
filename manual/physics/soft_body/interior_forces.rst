@@ -1,4 +1,5 @@
 
+***************
 Interior Forces
 ***************
 
@@ -31,16 +32,16 @@ but would change your mesh topology drastically.
 
 Luckily, Blender allows us to define additional *virtual* connections.
 On one hand we can define virtual connections between the diagonal edges of a quad face
-(:guilabel:`Stiff Quads`, *Image 1b*), on the other hand we can define virtual connections
+(*Stiff Quads*, *Image 1b*), on the other hand we can define virtual connections
 between a vertex and any vertices connected to it's neighbours
-(:guilabel:`Bending Stiffness`). In other words, the amount of bend that is allowed between a
+(*Bending Stiffness*). In other words, the amount of bend that is allowed between a
 vertex and any other vertex that is separated by two edge connections.
 
 
 Edges Settings
 **************
 
-The characteristics of edges are set with the :guilabel:`Soft Body Edge` properties.
+The characteristics of edges are set with the *Soft Body Edge* properties.
 
 Use Edges
    Allow the edges in a Mesh Object to act like springs.
@@ -55,7 +56,7 @@ Push
    How much the Softbody resist being scrunched together,
    like a compression spring. Low values for fabric, high values for inflated objects and stiff material.
 Damp
-   The friction for edge springs. High values (max of 50) dampen the :guilabel:`Push` / :guilabel:`Pull` effect and calm down the cloth.
+   The friction for edge springs. High values (max of 50) dampen the *Push* / *Pull* effect and calm down the cloth.
 Plastic
    Permanent deformation of the object after a collision. The vertices take a new position without applying the modifier.
 Bending
@@ -84,7 +85,7 @@ To show the effect of the different edge settings we will use two cubes (blue: o
 +--------------------------------------------------------+--------------------------------------------------------+--------------------------------------------------------+
 
 
-In (*Image 3*), the default settings are used (without :guilabel:`Stiff Quads`).
+In (*Image 3*), the default settings are used (without *Stiff Quads*).
 The "quad only" cube will collapse completely, the cube composed of tris keeps it's shape,
 though it will deform temporarily because of the forces created during collision.
 
@@ -98,7 +99,7 @@ though it will deform temporarily because of the forces created during collision
 +-----------------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+
 
 
-In (*Image 4*), :guilabel:`Stiff Quads` is activated (for both cubes).
+In (*Image 4*), *Stiff Quads* is activated (for both cubes).
 Both cubes keep their shape, there is no difference for the red cube,
 because it has no quads anyway.
 
@@ -113,10 +114,10 @@ because it has no quads anyway.
 +----------------------------------------------------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+
 
 
-The second method to stop an object from collapsing is to change it's :guilabel:`Bending
-Stiffness`. This includes the diagonal edges (Damping also applies to these connections).
+The second method to stop an object from collapsing is to change it's *Bending Stiffness*.
+This includes the diagonal edges (Damping also applies to these connections).
 
-In (*Image 5*), :guilabel:`Be` is activated with a strength setting of 1.
+In (*Image 5*), *Be* is activated with a strength setting of 1.
 Now both cubes are more rigid.
 
 
@@ -130,9 +131,9 @@ Now both cubes are more rigid.
 
 
 Bending stiffness can also be used if you want to make a subdivided plane more plank like.
-Without :guilabel:`Be` the faces can freely rotate against each other like hinges
+Without *Be* the faces can freely rotate against each other like hinges
 (*Image 6b*).
-There would be no change in the simulation if you activated :guilabel:`Stiff Quads`,
+There would be no change in the simulation if you activated *Stiff Quads*,
 because the faces are not deformed at all in this example.
 
 Bending stiffness on the other hand prevents the plane from being - well - bent.

@@ -1,4 +1,5 @@
 
+*************************
 Limit Location Constraint
 *************************
 
@@ -41,12 +42,12 @@ Options
 
 
 Minimum X, Minimum Y, Minimum Z
-   These buttons enable the lower boundary for the location of the owner's center along, respectively, the X, Y and Z axes of the chosen :guilabel:`Space`.
+   These buttons enable the lower boundary for the location of the owner's center along, respectively, the X, Y and Z axes of the chosen *Space*.
    The numeric field below them controls the value of their limit.
    Note that if a min value is higher than its corresponding max value, the constraint behaves as if it had the same value as the max one.
 
 Maximum X, Maximum Y, Maximum Z
-   These buttons enable the upper boundary for the location of the owner's center along, respectively, the X, Y and Z axes of the chosen :guilabel:`Space`.
+   These buttons enable the upper boundary for the location of the owner's center along, respectively, the X, Y and Z axes of the chosen *Space*.
    Same options as above.
 
 For Transform

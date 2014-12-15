@@ -1,3 +1,5 @@
+
+***********************
 Installing the Binaries
 ***********************
 
@@ -23,10 +25,10 @@ Hardware Support
 
 Blender supports 64-bit hardware platforms, removing the 4GB addressable memory limit.
 
-Blender also supports multi-threading, a :guilabel:`Threads` setting is provided in the performance
+Blender also supports multi-threading, a *Threads* setting is provided in the performance
 section of the render options to indicate how many cores to use in parallel when rendering.
-The :guilabel:`Auto-detect` setting will utilize all the cores available on your system, while
-the :guilabel:`Fixed` setting allows the user to manually specify the number of cores to be
+The *Auto-detect* setting will utilize all the cores available on your system, while
+the *Fixed* setting allows the user to manually specify the number of cores to be
 used when rendering.
 
 Blender supports a wide variety of pen-based tablets on all major operating systems.

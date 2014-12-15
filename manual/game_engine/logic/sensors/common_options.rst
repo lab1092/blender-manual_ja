@@ -1,4 +1,5 @@
 
+*********************
 Sensor Common Options
 *********************
 
@@ -53,7 +54,7 @@ The following parameters specifies how the sensor triggers connected controllers
 Freq
    Despite it's name "Frequency", this parameter sets the delay between repeated triggers, measured in frames (also known as logic ticks). The default value is 0 and it means no delay. It is only used at least one of the level triggering parameters are enabled.
 
-   Raising the value of :guilabel:`freq` is a good way for saving performance costs by avoiding to execute controllers or activate actuators more often than necessary.
+   Raising the value of *freq* is a good way for saving performance costs by avoiding to execute controllers or activate actuators more often than necessary.
 
    Examples: (Assuming the default frame rate with a frequency of 60 Hz (60 frames per second)).
 

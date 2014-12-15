@@ -1,4 +1,5 @@
 
+***************************
 Procedural textures: Marble
 ***************************
 
@@ -20,7 +21,7 @@ Options
 =======
 
 Soft / Sharp / Sharper
-   Three presets for soft to more clearly defined :guilabel:`Marble`
+   Three presets for soft to more clearly defined *Marble*
 Sin / Saw / Tri
    Shape of wave to produce bands
 Soft / Hard
@@ -28,7 +29,7 @@ Soft / Hard
 Size
    The dimensions of the noise table
 Depth
-   The depth of the :guilabel:`Marble` calculation. A higher value results in greater calculation time, but also in finer details.
+   The depth of the *Marble* calculation. A higher value results in greater calculation time, but also in finer details.
 Turbulence
    The turbulence of the sine bands.
 

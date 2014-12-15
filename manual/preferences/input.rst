@@ -1,3 +1,5 @@
+
+*****
 Input
 *****
 
@@ -13,9 +15,9 @@ well as define your own keymap.
 Managing presets
 ================
 
-Blender lets you define multiple :guilabel:`Preset` input configurations.
+Blender lets you define multiple *Preset* input configurations.
 Instead of deleting the default keymap to create yours,
-you can just add new :guilabel:`Presets` for both the mouse and keyboard. Mouse options can be
+you can just add new *Presets* for both the mouse and keyboard. Mouse options can be
 found on the left hand side of the window and keyboard options to the right in the above
 picture.
 
@@ -26,9 +28,9 @@ Adding and deleting presets
 .. figure:: /images/Manual-Interface-Configuration-Input-AddDeletePreset.jpg
 
 Before changing anything in the default configuration,
-click on the "plus" symbol shown in the picture to add a new :guilabel:`Preset`. Blender will
-ask you to name your new preset after which you can select the :guilabel:`Preset` from the
-list to edit it. If you want to delete your :guilabel:`Preset`,
+click on the "plus" symbol shown in the picture to add a new *Preset*. Blender will
+ask you to name your new preset after which you can select the *Preset* from the
+list to edit it. If you want to delete your *Preset*,
 select it from the list and then click the "minus" symbol.
 
 
@@ -38,8 +40,8 @@ Selecting presets
 You can change the preset you are using by doing one of the following:
 
 
-- Selecting the configuration from the :guilabel:`Interaction` menu of the splash screen at startup or by selecting :menuselection:`Help --> Splash Screen`.
-- Selecting the configuration from the :guilabel:`User Preferences Input` window.
+- Selecting the configuration from the *Interaction* menu of the splash screen at startup or by selecting :menuselection:`Help --> Splash Screen`.
+- Selecting the configuration from the *User Preferences Input* window.
 
 
 .. note::
@@ -55,13 +57,13 @@ Setting presets to default
    :figwidth: 307px
 
 
-Once you've configured your mouse and keyboard :guilabel:`Presets`,
+Once you've configured your mouse and keyboard *Presets*,
 you can make this the default configuration by:
 
 
-- Opening the :guilabel:`User Preferences Input` editor and select your presets from the preset list or,
+- Opening the *User Preferences Input* editor and select your presets from the preset list or,
 - Selecting your preset configuration from the splash screen.
-- Saving your configuration using the :guilabel:`Save As Default` option from a :guilabel:`User Preferences` window or by pressing :kbd:`ctrl-u`.
+- Saving your configuration using the *Save As Default* option from a *User Preferences* window or by pressing :kbd:`Ctrl-U`.
 
 
 Export/Import key configuration
@@ -69,9 +71,9 @@ Export/Import key configuration
 
 In some cases, you may need to save your configuration in an external file (e.g.
 if you need to install a new system or share your keymap configuration with the community).
-Simply :kbd:`lmb` :guilabel:`Export Key Configuration` on the :guilabel:`Input` tab
+Simply :kbd:`LMB` *Export Key Configuration* on the *Input* tab
 header and a file browser will open so that you can choose where to store the configuration.
-The :guilabel:`Import Key Configuration` button installs a keymap configuration that is on
+The *Import Key Configuration* button installs a keymap configuration that is on
 your computer but not in Blender.
 
 
@@ -82,7 +84,7 @@ Emulate 3 Button Mouse
    It is possible to use Blender without a 3 button mouse (such as a two-button mouse,
    Apple single-button Mouse, or laptop).
    This functionality can be emulated with key/mousebutton combos.
-   This option is only available if :guilabel:`Select With` is set to :guilabel:`Right`.
+   This option is only available if *Select With* is set to *Right*.
    :doc:`Read more about emulating a 3 button mouse » </interface/keyboard_and_mouse#mouse_button_emulation>`
 Continuous Grab
    Allows moving the mouse outside of the view (for translation, rotation, scale for example).
@@ -105,28 +107,28 @@ Numpad emulation
 The Numpad keys are used quite often in Blender and are not the same keys as the regular
 number keys. If you have a keyboard without a Numpad (e.g. on a laptop),
 you can tell Blender to treat the standard number keys as Numpad keys.
-Just check :guilabel:`Emulate Numpad`.
+Just check *Emulate Numpad*.
 
 
 View manipulation
 =================
 
 Orbit Style
-   Select how Blender works when you rotate the 3D view (by default :kbd:`MMB`). Two styles are available. If you come from Maya or Cinema 4D, you will prefer :guilabel:`Turntable`.
+   Select how Blender works when you rotate the 3D view (by default :kbd:`MMB`). Two styles are available. If you come from Maya or Cinema 4D, you will prefer *Turntable*.
 Zoom Style
    Choose your preferred style of zooming in and out with :kbd:`Ctrl-MMB`
       Scale
-         :guilabel:`Scale` zooming depends on where you first click in the view. To zoom out, hold :kbd:`ctrl-MMB` while dragging from the edge of the screen towards the center. To zoom in, hold :kbd:`ctrl-MMB` while dragging from the center of the screen towards the edge.
+         *Scale* zooming depends on where you first click in the view. To zoom out, hold :kbd:`Ctrl-MMB` while dragging from the edge of the screen towards the center. To zoom in, hold :kbd:`Ctrl-MMB` while dragging from the center of the screen towards the edge.
       Continue
-         The :guilabel:`Continue` zooming option allows you to control the speed (and not the value) of zooming by moving away from the initial click-point with :kbd:`Ctrl-MMB`. Moving up from the initial click-point or to the right will zoom out, moving down or to the left will zoom in. The further away you move, the faster the zoom movement will be. The directions can be altered by the :guilabel:`Vertical` and :guilabel:`Horizontal` radio buttons and the :guilabel:`Invert Zoom Direction` option.
+         The *Continue* zooming option allows you to control the speed (and not the value) of zooming by moving away from the initial click-point with :kbd:`Ctrl-MMB`. Moving up from the initial click-point or to the right will zoom out, moving down or to the left will zoom in. The further away you move, the faster the zoom movement will be. The directions can be altered by the *Vertical* and *Horizontal* radio buttons and the *Invert Zoom Direction* option.
       Dolly
-         :guilabel:`Dolly` zooming works similarly to :guilabel:`Continue` zooming except that zoom speed is constant.
+         *Dolly* zooming works similarly to *Continue* zooming except that zoom speed is constant.
       Vertical
          Moving up zooms out and moving down zooms in.
       Horizontal
          Moving left zooms in and moving right zooms out.
 Invert Zoom Direction
-   Inverts the Zoom direction for :guilabel:`Dolly` and :guilabel:`Continue` zooming.
+   Inverts the Zoom direction for *Dolly* and *Continue* zooming.
 Invert Wheel Zoom Direction
    Inverts the direction of the mouse wheel zoom.
 NDOF device
@@ -154,5 +156,5 @@ The Keymap editor lets you change the default Hotkeys. You can change keymaps fo
 - Change hotkeys as you want. Just click on the shortcut input and enter the new shortcut.
 
 If you want to restore the default settings for a keymap,
-just click on the :guilabel:`Restore` button at the top right of this keymap.
+just click on the *Restore* button at the top right of this keymap.
 

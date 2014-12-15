@@ -1,8 +1,8 @@
 .. _logic-index:
 
-#########
+########
   Logic
-#########
+########
 
 .. toctree::
    :maxdepth: 1

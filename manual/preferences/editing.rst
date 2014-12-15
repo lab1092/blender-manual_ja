@@ -1,6 +1,7 @@
 
+*******
 Editing
-#######
+*******
 
 These preferences control how several tools will interact with your input.
 
@@ -22,7 +23,7 @@ To understand this option properly, you need to understand how Blender works wit
 Almost everything in Blender is organized in a hierarchy of Datablocks.
 A Datablock can be thought of as containers for certain pieces of information. For example,
 the Object Datablock contains information about the Object's location while the Object Data
-(:guilabel:`ObData`)  datablock contains information about the mesh.
+(*ObData*)  datablock contains information about the mesh.
 
 
 A material may be linked in two different ways:
@@ -63,7 +64,7 @@ Step
 Memory Limit
    Maximum memory usage in Mb (0 is unlimited).
 
-:doc:`Read more about Undo and Redo options » </vitals/undo_and_redo>`
+:doc:`Read more about Undo and Redo options » </basics/undo_and_redo>`
 
 
 Grease Pencil
@@ -114,7 +115,7 @@ Transform
 =========
 
 Release confirm
-   Dragging :kbd:`lmb` on an object will move it. To confirm this (and other) transforms, a :kbd:`lmb` is necessary by default. When this option is activated, the release of :kbd:`lmb` acts as confirmation of the transform.
+   Dragging :kbd:`LMB` on an object will move it. To confirm this (and other) transforms, a :kbd:`LMB` is necessary by default. When this option is activated, the release of :kbd:`LMB` acts as confirmation of the transform.
 
 
 Sculpt Overlay Color

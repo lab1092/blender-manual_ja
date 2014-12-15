@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X|partial=X}} .
 
 
+****************
 Managing UV Maps
 ****************
 
@@ -21,8 +22,8 @@ Workflow
 ========
 
 - :kbd:`RMB` Select the target mesh (to which you want to copy the UV Map)
-- :kbd:`shift` select the source mesh (that contains the intact UV map)
-- :menuselection:`Object menu --> Make Links... --> Transfer UV Layouts` (Shortcut: :kbd:`Ctrl-l` ...)
+- :kbd:`Shift` select the source mesh (that contains the intact UV map)
+- :menuselection:`Object menu --> Make Links... --> Transfer UV Layouts` (Shortcut: :kbd:`Ctrl-L` ...)
 
 The target Mesh will now have a UV map that matches the original mesh.
 
@@ -40,7 +41,7 @@ Multiple UV Maps
 You are not limited to one UV Map per mesh.
 You can have multiple UV maps for parts of the mesh by creating new UV Textures.
 The first UV Texture is created for you when you select a face in UV Face Select mode. You can
-manually create more UV Textures by clicking the :guilabel:`New` button next to "UV Texture"
+manually create more UV Textures by clicking the *New* button next to "UV Texture"
 on the Mesh panel in the Buttons Window, Editing Context)
 and unwrapping a different part of the mesh. Those faces will then go with that UV Texture,
 while the previously unwrapped faces will still go with the previous UV Texture.
@@ -74,13 +75,13 @@ UV Textures List
 The Mesh panel (shown to the right) lists the UV Texture maps created for this mesh,
 and allows you to create New ones as placeholders for future unwrapping operations.
 
-Click the :guilabel:`+` button to add a new UV texture,
-and the :guilabel:`-` to delete an existing one}}.
+Click the *+* button to add a new UV texture,
+and the *-* to delete an existing one}}.
 Deleting a UV Map for the mesh destroys all work done in all unwrapping associated the mesh.
 Click with care. You've been warned.
 
 Each map has a selector button. Click the camera icon to enable that UV texture for rendering.
-You can change the name by selecting one and changing the text in the :guilabel:`Name` box.
+You can change the name by selecting one and changing the text in the *Name* box.
 The selected map is displayed in the UV/Image Editor window.
 The example shows a few UV maps created for a character, and the map for Clothes is selected.
 

@@ -1,4 +1,5 @@
 
+*****************
 Newtonian Physics
 *****************
 
@@ -44,15 +45,27 @@ particles. The following guidelines will help to choose a proper integrator,
 according to the behavior aimed at by the animator.
 
 
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+:guilabel:`Euler`   |Also known as "Forward Euler". Simplest integrator. Very fast but also with less exact results. If no dampening is used, particles get more and more energy over time. For example, bouncing particles will bounce higher and higher each time. Should not be confused with "Backward Euler" (not implemented) which has the opposite feature, energies decrease over time, even with no dampening. Use this integrator for short simulations or simulations with a lot of dampening where speedy calculations is more important than accuracy.+
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+:guilabel:`Varlet`  |Very fast and stable integrator, energy is conserved over time with very little numerical dissipation.                                                                                                                                                                                                                                                                                                                                                                                                                                         +
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+:guilabel:`Midpoint`|Also known as "2nd order Runge-Kutta". Slower than Euler but much more stable. If the acceleration is constant (no drag for example), it is energy conservative. It should be noted that in example of the bouncing particles, the particles might bounce higher than they started once in a while, but this is not a trend. This integrator is a generally good integrator for use in most cases.                                                                                                                                             +
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+:guilabel:`RK4`     |Short for "4th order Runge-Kutta". Similar to Midpoint but slower and in most cases more accurate. It is energy conservative even if the acceleration is not constant. Only needed in complex simulations where Midpoint is found not to be accurate enough.                                                                                                                                                                                                                                                                                   +
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Euler
+   Also known as "Forward Euler". Simplest integrator.
+   Very fast but also with less exact results.
+   If no dampening is used, particles get more and more energy over time.
+   For example, bouncing particles will bounce higher and higher each time.
+   Should not be confused with "Backward Euler" (not implemented) which has the opposite feature,
+   energies decrease over time, even with no dampening.
+   Use this integrator for short simulations or simulations with a lot of
+   dampening where speedy calculations is more important than accuracy.
+Varlet
+   Very fast and stable integrator, energy is conserved over time with very little numerical dissipation.                                                                                                                                                                                                                                                                                                                                                                                                                                         +
+Midpoint
+   Also known as "2nd order Runge-Kutta". Slower than Euler but much more stable.
+   If the acceleration is constant (no drag for example), it is energy conservative.
+   It should be noted that in example of the bouncing particles,
+   the particles might bounce higher than they started once in a while, but this is not a trend.
+   This integrator is a generally good integrator for use in most cases.                                                                                                                                             +
+RK4
+   Short for "4th order Runge-Kutta". Similar to Midpoint but slower and in most cases more accurate.
+   It is energy conservative even if the acceleration is not constant.
+   Only needed in complex simulations where Midpoint is found not to be accurate enough.                                                                                                                                                                                                                                                                                   +
 
 
 Timestep

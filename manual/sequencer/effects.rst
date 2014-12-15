@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+*****************
 Sequencer Effects
 *****************
 
@@ -99,19 +100,22 @@ Multiply
    Multiply Effect.
 
 
-The :guilabel:`Multiply` effect multiplies two colours.
+The *Multiply* effect multiplies two colours.
 Blender uses values between **0.0** and **1.0** for the colours,
 he doesn't have to normalise this operation, the multiplication of two terms between **0.0**
 and **1.0** always gives a result between **0.0** and **1.0**
-(with the 'traditional' representation with three bytes - like RGB(**124**, **255**,
-**56**) -, the multiplications give far too high results - like RGB(**7316**, **46410**,
-**1848**) -, that have to be 'brought back', normalised - just by dividing them by
+(with the 'traditional' representation with three bytes - like RGB(**124**, **255**, **56**) -,
+the multiplications give far too high results - like RGB(**7316**, **46410**, **1848**) -,
+that have to be 'brought back', normalised - just by dividing them by **256** ! - to 'go back' to range of **0** to **255** ...).
 **256** ! - to 'go back' to range of **0** to **255** ...).
 
 This effect has two main usages:
 
 With a mask
-   A mask is a B&W picture witch, after multiplication with a 'normal' image, only show this one in the white areas of the mask (everything else is black). The opening title sequence to James Bond movies, where the camera is looking down the barrel of a gun at James, is a good example of this effect.
+   A mask is a B&W picture witch, after multiplication with a 'normal' image,
+   only show this one in the white areas of the mask (everything else is black).
+   The opening title sequence to James Bond movies,
+   where the camera is looking down the barrel of a gun at James, is a good example of this effect.
 
 With uniform colors
    Multiplying a color with a 'normal' image allows you to soften some hues of this one
@@ -126,7 +130,9 @@ With uniform colors
 
 .. note::
 
-   This effect reduces the global luminosity of the picture (the result will always be smaller than the smallest operand). If one of the image is all white, the result is the other picture; if one of the image is all black, the result is all black!
+   This effect reduces the global luminosity of the picture (the result will always be smaller than the smallest operand).
+   If one of the image is all white, the result is the other picture;
+   if one of the image is all black, the result is all black!
 
 
 Alpha Over, Under, and Over Drop
@@ -146,20 +152,20 @@ the areas of the image where there isn't anything solid are transparent;
 they have an alpha value of 0. If you use a movie strip, that movie has an alpha value of 1
 (completely opaque).
 
-So, you can use the :guilabel:`Alpha Over` / :guilabel:`Alpha Under` effect to composite the CGI
+So, you can use the *Alpha Over* / *Alpha Under* effect to composite the CGI
 Scene on top of your movie.
 The result is your model doing whatever as if it was part of the movie.
 The Factor curve controls how much the foreground is mixed over the background,
 fading in the foreground on top of the background. The colors of transparent foreground image
 areas is ignored and does not change the color of the background.
 
-Select two strips (:kbd:`shift-Rmb`):
+Select two strips (:kbd:`Shift-RMB`):
 
-- With :guilabel:`Alpha Over`, the strips are layered up in the order selected; the first strip selected is the background, and the second one goes *over* the first one selected. The :guilabel:`Fac` tor controls *the transparency of the foreground*, i.e. a :guilabel:`Fac` of **0.0** will only show the background, and a :guilabel:`Fac` of **1.0** will completely override the background with the foreground (except in the transparent areas of this one, of course!)
-- With :guilabel:`Alpha Under`, this is the contrary: the first strip selected is the foreground, and the second one, the background. Moreover, the :guilabel:`Fac` tor controls *the transparency of the background*, i.e. a :guilabel:`Fac` of **0.0** will only show the foreground (the background is completely transparent), and a :guilabel:`Fac` of **1.0** will give the same results as with :guilabel:`Alpha Over`.
+- With *Alpha Over*, the strips are layered up in the order selected; the first strip selected is the background, and the second one goes *over* the first one selected. The *Fac* tor controls *the transparency of the foreground*, i.e. a *Fac* of **0.0** will only show the background, and a *Fac* of **1.0** will completely override the background with the foreground (except in the transparent areas of this one, of course!)
+- With *Alpha Under*, this is the contrary: the first strip selected is the foreground, and the second one, the background. Moreover, the *Fac* tor controls *the transparency of the background*, i.e. a *Fac* of **0.0** will only show the foreground (the background is completely transparent), and a *Fac* of **1.0** will give the same results as with *Alpha Over*.
 
 
-- :guilabel:`Alpha Over Drop` is between the two others: as with :guilabel:`Alpha Under`, the first strip selected will be the foreground, but as with :guilabel:`Alpha Over`, the :guilabel:`Fac` tor controls the transparency of this foreground.
+- *Alpha Over Drop* is between the two others: as with *Alpha Under*, the first strip selected will be the foreground, but as with *Alpha Over*, the *Fac* tor controls the transparency of this foreground.
 
 The example shows layering of AlphaOver effects. The very bottom channel is red,
 and an arrow is on top of that. Those two are AlphaOver to Channel 3.
@@ -167,9 +173,10 @@ My favorite toucan is Channel 4,
 and Channel 5 alphaovers the toucan on top of the composited red arrow.
 The last effect added is tied to Channel 0 which will be rendered.
 
-..    Comment: <!--Not (more) true, I think!
-   {{Note|Alpha Channel Needed for AlphaOver|The foreground strip must have an alpha channel, such as Scene or a .PNG image sequence, for AlphaOver to work properly; .Avi and .Mov files do not have an alpha channel so they can only be used as a background.}}
-   --> .
+..    Comment: Not (more) true, I think!
+      Alpha Channel Needed for AlphaOver|The foreground strip must have an alpha channel,
+      such as Scene or a .PNG image sequence, for AlphaOver to work properly; .Avi and .Mov
+      files do not have an alpha channel so they can only be used as a background.
 
 By clicking the PreMult Alpha button in the properties panel of the foreground strip,
 the Alpha values of the two strips are not multiplied or added together.
@@ -188,7 +195,6 @@ Creating a Sine wave could have the effect of the foreground fading in and out.
 
 
 Wipe
-
 ----
 
 
@@ -212,11 +218,8 @@ duration of the wipe is the intersection of the two source strips and can not be
 adjust the start and end of the wipe you must adjust the temporal bounds of the source strips
 in a way that alters their intersection.
 
-Note: some older plugins contain similar functionality.
-
 
 Glow
-
 ----
 
 
@@ -232,12 +235,12 @@ Glow
 
 
 This effect makes parts of an image glow brighter by working on the luminance channel of an
-image. The :guilabel:`Glow` is the superposition of the base image and a modified version,
-where some areas (brighter than the :guilabel:`Threshold:`) are blurred.
-With the :guilabel:`Glow` strip properties, you control this :guilabel:`Threshold:`,
-the maximum luminosity that can be added (:guilabel:`Clamp:`),
-a :guilabel:`Boost factor:` for it, the size of the blur (:guilabel:`Blur distance:`),
-and its :guilabel:`Quality:`. The :guilabel:`Only boost` button allows you to only show/use
+image. The *Glow* is the superposition of the base image and a modified version,
+where some areas (brighter than the *Threshold:*) are blurred.
+With the *Glow* strip properties, you control this *Threshold:*,
+the maximum luminosity that can be added (*Clamp:*),
+a *Boost factor:* for it, the size of the blur (*Blur distance:*),
+and its *Quality:*. The *Only boost* button allows you to only show/use
 the 'modified' version of the image, without the base one. To "animate" the glow effect,
 mix it with the base image using the Gamma Cross effect,
 crossing from the base image to the glowing one.
@@ -248,31 +251,30 @@ Transform
 
 .. figure:: /images/Manual-VSE-Transform_ex.gif
 
-(Note: Transform does not work in Blender 2.49)
 Transform is a swiss-army knife of image manipulation. It scales, shifts,
 and rotates the images within a strip.
 The example to the right shows what can be done with a single image.
 To make a smooth transition to the final effect,
-enable the :guilabel:`Frame locked` button and define a curve in the Ipo Window
+enable the *Frame locked* button and define a curve in the Ipo Window
 (Sequence mode).
 
 
 .. figure:: /images/Manual-VSE-Transform_prop.jpg
 
-With the :guilabel:`Transform` strip selected,
+With the *Transform* strip selected,
 uses the properties panel to adjust the settings of this effect:
 
 (x,y)Scale (Start,End):
-   To adjust the scale (size). :guilabel:`xScale Start` defines the start width,
-   :guilabel:`xScale End` the end width, :guilabel:`yScale Start` the start height,
-   and :guilabel:`yScale End` the end height.
+   To adjust the scale (size). *xScale Start* defines the start width,
+   *xScale End* the end width, *yScale Start* the start height,
+   and *yScale End* the end height.
    The values higher than **1.0** will scale up the picture,
    while values lower than **1.0** will scale it down.
 (x,y) (Start,End):
    To adjust the position (shifting).
-   :guilabel:`x Start` defines the horizontal start position, :guilabel:`x End`,
+   *x Start* defines the horizontal start position, *x End*,
    the end one; positive values shift the image to the right, negative values, to the left.
-   :guilabel:`y Start` defines the vertical start position, :guilabel:`y End`,
+   *y Start* defines the vertical start position, *y End*,
    the end one; positive values shift the picture to the top, negative values, to the bottom.
 rot (Start,End):
    The rotation is in degrees (**360** for a full turn) and is counter-clockwise.
@@ -409,5 +411,4 @@ Just add an adjustment layer on top and activate the color balance.
 
 Or: you can stack a primary color correction and several secondary color correction on top of
 each other (probably using the new mask input for area selection).
-
 

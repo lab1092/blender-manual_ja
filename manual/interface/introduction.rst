@@ -1,6 +1,7 @@
 ..    TODO/Review: {{review}} .
 
 
+***********************************
 Starting Blender for the first time
 ***********************************
 
@@ -11,7 +12,7 @@ Starting Blender for the first time
 If you are familiar with Blender 2.4x or other 3D software such as Maya, 3ds Max or XSI,
 you will immediately notice that Blender is quite different from what you are used to seeing.
 However you will soon see similarities with your previous software,
-like a :guilabel:`3D Viewport`, an :guilabel:`Outliner` and a :guilabel:`Timeline`.
+like a *3D Viewport*, an *Outliner* and a *Timeline*.
 If this is the first time you have used any 3D software, you may be a little lost.
 Fortunately there's really only one rule when you want to learn 3D with Blender:
 don't be afraid to explore and experiment!
@@ -23,13 +24,13 @@ The left side shows you some useful links like the
 `release log <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/changelog_258/>`__
 of the version you are using (what's new in this version), the wiki manual (what you're reading now) and the
 `official Blender website <http://www.blender.org>`__.
-These links are also accessible from the :guilabel:`Help` menu.
+These links are also accessible from the *Help* menu.
 
 The right side lists recent blender files (.blend) you have saved.
 If you're running Blender for the first time, this part will be empty.
 This list is also available in :menuselection:`File --> Open Recent`.
 The interaction menu lets you choose a keymap preset
-(by default, :guilabel:`Blender` or :guilabel:`Maya`) are available.
+(by default, *Blender* or *Maya*) are available.
 
 To start using Blender, you have three options:
 
@@ -44,7 +45,7 @@ Save your work regularly
 Blender does not warn you of any unsaved data when you exit the program,
 so remember to save often!  If you do close Blender without saving your last actions,
 all is not lost.
-Just open Blender again and click on :guilabel:`Recover Last Session` in the Splash Screen.
+Just open Blender again and click on *Recover Last Session* in the Splash Screen.
 You also have this option in the main menu via :menuselection:`File --> Recover Last Session`.
 
 

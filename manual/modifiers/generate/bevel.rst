@@ -1,4 +1,5 @@
 
+**************
 Bevel Modifier
 **************
 
@@ -30,7 +31,7 @@ Options
 
 
 Width
-   The size of the bevel affect. See :guilabel:`Width Method` below.
+   The size of the bevel affect. See *Width Method* below.
 
 
    .. figure:: /images/Manual_-_Bevel_Modifier_-_3_Beveled_Cubes.jpg
@@ -43,7 +44,7 @@ Width
 Segments
    The number of edge loops added along the bevel's face.
 Profile
-   The shape of the bevel, from concave to convex - has no effect if :guilabel:`Segments` is less than ``2``.
+   The shape of the bevel, from concave to convex - has no effect if *Segments* is less than ``2``.
 Material
    The index of the material slot to use for the bevel.
    When set to ``-1``, the material of the nearest original face will be used.
@@ -83,7 +84,7 @@ Limit Method
 .. TODO someone who understands these should write them in plain English, for now just copied the tool-tips.
 
 Width Method
-   Used to control how the :guilabel:`Width` is measured.
+   Used to control how the *Width* is measured.
 
    Offset
       Amount is offset of new edges from original.

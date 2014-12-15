@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review|}} .
 
+**************
 Mirror Editing
 **************
 
@@ -10,11 +11,11 @@ X-Mirror
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Panel:    :menuselection:`Mesh Options --> X-mirror`
 
 
-The :guilabel:`X-mirror` option of the :guilabel:`Mesh Options` panel allows you edit both
+The *X-mirror* option of the *Mesh Options* panel allows you edit both
 "sides" of your mesh in a single action. When you transform an element (vertex, edge or face),
 if there is its *exact X-mirrored counterpart* (in local space),
 it will be transformed accordingly, *through a symmetry along the local X axis*.
@@ -23,37 +24,37 @@ it will be transformed accordingly, *through a symmetry along the local X axis*.
 Topology Mirror
 ===============
 
-The :guilabel:`Topology Mirror` option is available in the :guilabel:`3D View Editor >
-Toolshelf Region > Mesh Options Panel` whilst in :guilabel:`Edit Mode`
+The *Topology Mirror* option is available in the
+:menuselection:`3D View Editor --> Toolshelf Region --> Mesh Options Panel` whilst in *Edit Mode*
 
-For :guilabel:`Topology Mirror` to work the :guilabel:`X Mirror` option must be enabled.
+For *Topology Mirror* to work the *X Mirror* option must be enabled.
 
-When using the :guilabel:`X Mirror` option to work on mirrored Mesh Geometry the vertices that
+When using the *X Mirror* option to work on mirrored Mesh Geometry the vertices that
 are mirrored must be perfectly placed.  If they are not exactly positioned in their mirror
-locations then :guilabel:`X Mirror` will not treat those vertices as mirrored.  This can be
+locations then *X Mirror* will not treat those vertices as mirrored.  This can be
 annoying because often the out of position vertices are only very slightly out of position.
 
-:guilabel:`Topology Mirror` tries to solve this problem by determining which vertices are mirrored vertices not only by using their positions but also by looking at how those vertices are related to others in the Mesh Geometry.  It looks at the overall Mesh Geometry topology to determine if particular vertices will be treated as mirrored.  The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when :guilabel:`X Mirror` and :guilabel:`Topology Mirror` are both active.
+*Topology Mirror* tries to solve this problem by determining which vertices are mirrored vertices not only by using their positions but also by looking at how those vertices are related to others in the Mesh Geometry.  It looks at the overall Mesh Geometry topology to determine if particular vertices will be treated as mirrored.  The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when *X Mirror* and *Topology Mirror* are both active.
 
-Note that :guilabel:`Topology Mirror` functionality will work more reliably on Mesh Geometry
+Note that *Topology Mirror* functionality will work more reliably on Mesh Geometry
 which is more detailed.  If you use very simple Mesh Geometry such as a Cube or UV Sphere for
-example the :guilabel:`Topology Mirror` option will often not work.
+example the *Topology Mirror* option will often not work.
 
-For an example of how to use :guilabel:`Topology Mirror` open up a new Blender scene,
+For an example of how to use *Topology Mirror* open up a new Blender scene,
 then delete Blender's default cube and add a Monkey Object to the 3D Viewport.
 
-Press the TAB Key to put the Monkey Object into :guilabel:`Edit Mode`.
+Press the TAB Key to put the Monkey Object into *Edit Mode*.
 
-With the :guilabel:`X Mirror` option disabled move one of the Monkey Object's vertices
+With the *X Mirror* option disabled move one of the Monkey Object's vertices
 slightly.
 
-Then Turn :guilabel:`X Mirror` option on again but leave :guilabel:`Topology Mirror` disabled
+Then Turn *X Mirror* option on again but leave *Topology Mirror* disabled
 
-If you now move that vertice again :guilabel:`X Mirror` will not work and the mirrored
+If you now move that vertice again *X Mirror* will not work and the mirrored
 vertices will not be altered.
 
-If you then enable :guilabel:`Topology Mirror` and move the same vertices again,
-then :guilabel:`X Mirror` should still mirror the other vertice,
+If you then enable *Topology Mirror* and move the same vertices again,
+then *X Mirror* should still mirror the other vertice,
 even though they are not perfectly positioned.
 
 
@@ -69,11 +70,11 @@ Snap to Symmetry
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh  --> Snap to Symmetry`
 
 
-The :guilabel:`Snap to Symmetry` tool works on meshes which are mostly symmetrical but have
+The *Snap to Symmetry* tool works on meshes which are mostly symmetrical but have
 vertices which have been moved enough that Blender does not detect then as mirrored
 (when x-mirror option is enable for example).
 
@@ -114,12 +115,12 @@ Symmetrize Mesh
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh  --> Symmetrize`
 
 
-The :guilabel:`Symmetrize` tool is a quick way to make a mesh symmetrical.
-:guilabel:`Symmetrize` works by cutting the mesh at the pivot point of the object,
+The *Symmetrize* tool is a quick way to make a mesh symmetrical.
+*Symmetrize* works by cutting the mesh at the pivot point of the object,
 and mirroring over the geometry in the specified axis, and merges the two halves together
 (if they are connected)
 

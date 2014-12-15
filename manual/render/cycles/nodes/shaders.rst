@@ -1,5 +1,6 @@
 .. _shaders:
 
+************
 Shader Nodes
 ************
 
@@ -62,9 +63,9 @@ Glossy
 Glossy reflection with microfacet distribution, used for materials such as metal or mirrors.
 
 Distribution
-   Microfacet distribution to use. :guilabel:`Sharp` results in perfectly sharp reflections like a mirror,
-   while :guilabel:`Beckmann`,
-   :guilabel:`GGX` and :guilabel:`Ashikhmin-Shirley` can use the :guilabel:`Roughness` input for blurry reflections.
+   Microfacet distribution to use. *Sharp* results in perfectly sharp reflections like a mirror,
+   while *Beckmann*,
+   *GGX* and *Ashikhmin-Shirley* can use the *Roughness* input for blurry reflections.
 Color input
    Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 Roughness input
@@ -94,9 +95,9 @@ The tangents used for shading are derived from the active UV map. If no UV map i
 they are automatically generated using a sphere mapping based on the mesh bounding box.
 
 Distribution
-   Microfacet distribution to use. :guilabel:`Sharp` results in perfectly sharp reflections like a mirror,
-   while :guilabel:`Beckmann`,
-   :guilabel:`GGX` and :guilabel:`Ashikhmin-Shirley` can use the :guilabel:`Roughness` input for blurry reflections.
+   Microfacet distribution to use. *Sharp* results in perfectly sharp reflections like a mirror,
+   while *Beckmann*,
+   *GGX* and *Ashikhmin-Shirley* can use the *Roughness* input for blurry reflections.
 Color input
    Color of the surface, or physically speaking, the probability that light is reflected for each wavelength.
 Roughness input
@@ -186,8 +187,8 @@ it helps to combine this with a transparent shader for shadows;
 for :ref:`more details see here <render-cycles-reducing_noise-glass_and_transp_shadows>`
 
 Distribution
-   Microfacet distribution to use. :guilabel:`Sharp` results in perfectly sharp refractions like clear glass,
-   while :guilabel:`Beckmann` and :guilabel:`GGX` can use the :guilabel:`Roughness` input for rough glass.
+   Microfacet distribution to use. *Sharp* results in perfectly sharp refractions like clear glass,
+   while *Beckmann* and *GGX* can use the *Roughness* input for rough glass.
 Color input
    Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength.
 Roughness input
@@ -222,8 +223,8 @@ but rather mixed with a glossy node using a fresnel factor.
 Otherwise it will give quite dark results at the edges for glossy refraction.
 
 Distribution
-   Microfacet distribution to use. :guilabel:`Sharp` results in perfectly sharp refractions,
-   while :guilabel:`Beckmann` and :guilabel:`GGX` can use the :guilabel:`Roughness` input for blurry refractions.
+   Microfacet distribution to use. *Sharp* results in perfectly sharp refractions,
+   while *Beckmann* and *GGX* can use the *Roughness* input for blurry refractions.
 Color input
    Color of the surface, or physically speaking, the probability that light is refracted for each wavelength.
 Roughness input
@@ -406,10 +407,10 @@ Mix and Add
 ===========
 
 Mix or add shaders together. Mixing can be used for material layering,
-where the :guilabel:`Fac` input may, for example, be connected to a Blend Weight node.
+where the *Fac* input may, for example, be connected to a Blend Weight node.
 
 Shader inputs
-   Shaders to mix, such that incoming rays hit either with the specified probability in the :guilabel:`Fac` socket.
+   Shaders to mix, such that incoming rays hit either with the specified probability in the *Fac* socket.
 Fac input
    Blend weight to use for mixing two shaders;
    at zero it uses the first shader entirely and at one the second shader.

@@ -2,8 +2,9 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
-Depth Of Field (DOF) Explained
-******************************
+**************
+Depth Of Field
+**************
 
 Real world camera lenses and your eyeball transmit light through a lens (cornea)
 that bends the light, and an iris that limits the amount of light,
@@ -43,10 +44,10 @@ The more that an object is out of its depth
 (the perfect value for this depth is called *focal plane*), the blurrier it is. In fact, the
 depth of field is the range on both sides of the focal plane in which the blurriness of the
 objects is considered to be low enough to be imperceptible. In Blender, this distance is
-called the :guilabel:`Dof Dist` or "Depth of Field Distance" and is set in the
-:guilabel:`Editing` context (:kbd:`f9`) for the camera. Alternatively,
+called the *Dof Dist* or "Depth of Field Distance" and is set in the
+*Editing* context (:kbd:`F9`) for the camera. Alternatively,
 you can have the camera automatically stay focused on an object,
-by entering the name of the object in the :guilabel:`Dof Ob` field.
+by entering the name of the object in the *Dof Ob* field.
 
 
 Field of View and Lens Size
@@ -55,7 +56,7 @@ Field of View and Lens Size
 The field of view varies by the size of the lens. With cameras, a 35mm lens is kind of a
 standard size because the picture it takes mimics the size of the picture seen by the eye and
 pictures can be taken rather close. In Blender,
-use the :guilabel:`Camera` settings to change the size of the lens (35mm is the default).
+use the *Camera* settings to change the size of the lens (35mm is the default).
 A longer lens taking a picture farther away has the same field of view, but has a different
 perspective of the view that many directors love because it "condenses" the scene and smooths
 a sweep, since it is farther away from the action:

@@ -1,4 +1,5 @@
 
+*****
 Alpha
 *****
 
@@ -36,12 +37,12 @@ Along Stroke
    Line Style Alpha's Along Stroke modifier
 
 
-The :guilabel:`Along Stroke` modifier alters the base alpha with a new one from either a
+The *Along Stroke* modifier alters the base alpha with a new one from either a
 linear progression or a custom curve, mapped along each stroke's length. In other words,
 it applies the selected progression along each stroke.
 
 Mapping
-   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the :guilabel:`Invert` option),
+   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the *Invert* option),
    or a custom mapping curve.
 
 
@@ -55,18 +56,18 @@ Distance from Camera
    Line Style Alpha's Distance From Camera modifier
 
 
-The :guilabel:`Distance from Camera` modifier alters the base alpha with a new one from either
+The *Distance from Camera* modifier alters the base alpha with a new one from either
 a linear progression or a custom curve, using the distance to the active camera as parameter.
 
 Mapping
-   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the :guilabel:`Invert` option),
+   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the *Invert* option),
    or a custom mapping curve.
 
 Range Min and Range Max
    The limits of the mapping from "distance to camera" to "alpha in mapping".
-   If the current point of the stroke is at :guilabel:`Range Min` or less from the active camera,
+   If the current point of the stroke is at *Range Min* or less from the active camera,
    it will take the start alpha of the mapping, and conversely,
-   if it is at :guilabel:`Range Max` or more from the camera, it will take the end alpha of the mapping.
+   if it is at *Range Max* or more from the camera, it will take the end alpha of the mapping.
    These values are in the current scene's units, not in pixels!
 
 Fill Range by Selection
@@ -83,21 +84,21 @@ Distance from Object
    Line Style Alpha's Distance From Object modifier
 
 
-The :guilabel:`Distance from Object` modifier alters the base alpha with a new one from either
+The *Distance from Object* modifier alters the base alpha with a new one from either
 a linear progression or a custom curve, using the distance to a given object as parameter.
 
 Target
    The object to measure distance from.
 
 Mapping
-   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the :guilabel:`Invert` option),
+   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the *Invert* option),
    or a custom mapping curve.
 
 Range Min and Range Max
    The limits of the mapping from "distance to object" to "alpha in mapping".
-   If the current point of the stroke is at :guilabel:`Range Min` or less from the target,
+   If the current point of the stroke is at *Range Min* or less from the target,
    it will take the start alpha of the mapping, and conversely,
-   if it is at :guilabel:`Range Max` or more from the target, it will take the end alpha of the mapping.
+   if it is at *Range Max* or more from the target, it will take the end alpha of the mapping.
    These values are in the current scene's units, not in pixels!
 
 Fill Range by Selection
@@ -114,16 +115,16 @@ Material
    Line Style Alpha's Material modifier
 
 
-The :guilabel:`Material` modifier alters the base alpha with a new one taken from the current
+The *Material* modifier alters the base alpha with a new one taken from the current
 material under the stroke.
 
 You can use various properties of the materials, among which some are multi-components (i.e.
 give RGB results). In that case, the mean value will be used.
 
 Mapping
-   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the :guilabel:`Invert` option),
+   Either a linear progression (from **0.0** to **1.0**, which may be inverted with the *Invert* option),
    or a custom mapping curve. Note the linear non-inverted option is equivalent to "do nothing",
    as original values from materials are already in the [0.0, 1.0] range...
 
-If used with the :guilabel:`Split by Material` option in the :guilabel:`Stroke` tab,
+If used with the *Split by Material* option in the *Stroke* tab,
 the result will not be blurred between materials along the strokes.

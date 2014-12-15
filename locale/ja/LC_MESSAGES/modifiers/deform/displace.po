@@ -11,126 +11,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/modifiers/deform/displace.rst:3
+#: ../../manual/modifiers/deform/displace.rst:4
 msgid "Displace Modifier"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:5
-msgid ""
-"The :guilabel:`Displace` modifier displaces vertices in a mesh based on the "
-"intensity of a texture. Either procedural or image textures can be used. The"
-" displacement can be along a particular local axis, along the vertex normal,"
-" or the separate RGB components of the texture can be used to displace "
-"vertices in the local X, Y and Z directions simultaneously."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:13
+#: ../../manual/modifiers/deform/displace.rst:14
 msgid "Options"
 msgstr "オプション"
 
-#: ../../manual/modifiers/deform/displace.rst:17
+#: ../../manual/modifiers/deform/displace.rst:18
 msgid "Displace modifier"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:22
+#: ../../manual/modifiers/deform/displace.rst:23
 msgid "Texture"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:21
-msgid ""
-"The name of the texture from which the displacement for each vertex is "
-"derived. If this field is empty, the modifier defaults to 1.0 (white)."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:26
+#: ../../manual/modifiers/deform/displace.rst:85
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:25
-msgid ""
-"The name of a vertex group which is used to control the influence of the "
-"modifier. If :guilabel:`VGroup` is empty, the modifier affects all vertices "
-"equally."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:32
+#: ../../manual/modifiers/deform/displace.rst:94
 msgid "Midlevel"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:29
-msgid ""
-"The texture value which will be treated as no displacement by the modifier. "
-"Texture values below this value will result in negative displacement along "
-"the selected direction, while texture values above this value will result in"
-" positive displacement. This is achieved by the equation ``(displacement) = "
-"(texture value) - Midlevel``. Recall that color/luminosity values are "
-"typically between ``0.0`` and ``1.0`` in Blender, and not between ``0`` and "
-"``255``."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:42
+#: ../../manual/modifiers/deform/displace.rst:36
 msgid "Direction"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:35
+#: ../../manual/modifiers/deform/displace.rst:26
 msgid ""
 "The direction along which to displace the vertices. Can be one of the "
 "following:"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:38
-msgid ":guilabel:`X` - displace along local X axis."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:39
-msgid ":guilabel:`Y` - displace along local Y axis."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:40
-msgid ":guilabel:`Z` - displace along local Z axis."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:41
-msgid ""
-":guilabel:`RGB → XYZ` - displace along local XYZ axes individually using the"
-" RGB components of the texture."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:42
-msgid ":guilabel:`Normal` - displace along vertex normal."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:57
+#: ../../manual/modifiers/deform/displace.rst:81
 msgid "Texture Coordinates"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:45
+#: ../../manual/modifiers/deform/displace.rst:39
 msgid ""
 "The texture coordinate system to use when retrieving values from the texture"
 " for each vertex. Can be one of the following:"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:49
-msgid ":guilabel:`UV` - take texture coordinates from face UV coordinates."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:57
-msgid "UV Layer"
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:57
-msgid "The UV coordinate layer from which to take texture coordinates."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:53
-msgid ""
-"If the object has no UV coordinates, it uses the :guilabel:`Local` "
-"coordinate system. If this field is blank, but there is an UV coordinate "
-"layer available (e.g. just after adding the first UV layer to the mesh), it "
-"will be overwritten with the currently active UV layer."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:61
+#: ../../manual/modifiers/deform/displace.rst:56
 msgid ""
 "Since UV coordinates are specified per face, the UV texture coordinate "
 "system currently determines the UV coordinate for each vertex from the first"
@@ -139,65 +64,255 @@ msgid ""
 "coordinates."
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:67
-msgid ""
-":guilabel:`Object` - take the texture coordinates from another object's "
-"coordinate system (specified by the :guilabel:`Object` field)."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:77
+#: ../../manual/modifiers/deform/displace.rst:74
+#: ../../manual/modifiers/deform/displace.rst:74
 msgid "Object"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:70
-msgid ""
-"The object from which to take texture coordinates. Moving the object will "
-"therefore alter the coordinates of the texture mapping. Take note that "
-"moving the original object will **also** result in a texture coordinate "
-"update.  As such, if you need to maintain a displacement coordinate system "
-"while moving the object to which the displacement is set, you will also have"
-" to move the related object at the same rate and direction."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:76
-msgid ""
-"If this field is blank, the :guilabel:`Local` coordinate system is used."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:79
-msgid ""
-":guilabel:`Global` - take the texture coordinates from the global coordinate"
-" system."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:82
-msgid ""
-":guilabel:`Local` - take the texture coordinates from the object's local "
-"coordinate system."
-msgstr ""
-
-#: ../../manual/modifiers/deform/displace.rst:89
+#: ../../manual/modifiers/deform/displace.rst:101
 msgid "Strength"
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:85
+#: ../../manual/modifiers/deform/displace.rst:6
 msgid ""
-"The strength of the displacement. After offsetting by the "
-":guilabel:`Midlevel` value, the displacement will be multiplied by the "
-":guilabel:`Strength` value to give the final vertex offset. This is achieved"
-" by the equation ``(vertex_offset) = (displacement) × Strength``. A negative"
-" strength can be used to invert the effect of the modifier."
+"The Displace modifier displaces vertices in a mesh based on the intensity of"
+" a texture. Either procedural or image textures can be used. The "
+"displacement can be along a particular local axis, along the vertex normal, "
+"or the separate RGB components of the texture can be used to displace "
+"vertices in the local X, Y and Z directions simultaneously (sometimes "
+"referred to as *Vector Displacement*)."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:22
+msgid ""
+"The name of the texture from which the displacement for each vertex is "
+"derived. If this field is empty, the modifier defaults to ``1.0`` (white)."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:29
+msgid "X, Y, Z"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:30
+msgid "Displace along a local axis."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:31
+msgid "Normal"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:32
+msgid "Displace along vertex normal."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:36
+msgid "RGB to XYZ"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:34
+msgid ""
+"Displace along local XYZ axes individually using the RGB components of the "
+"texture (Red values displaced along the X-axis, Green along the Y, Blue "
+"along the Z). This is sometimes referred to as *Vector Displacement*."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:60
+msgid "UV"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:44
+msgid "Take texture coordinates from face UV coordinates."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:52
+msgid "UV Map"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:47
+msgid ""
+"The UV coordinate layer from which to take texture coordinates. If the "
+"object has no UV coordinates, it uses the *Local* coordinate system. If this"
+" field is blank, but there is a UV coordinate layer available (e.g. just "
+"after adding the first UV layer to the mesh), it will be overwritten with "
+"the currently active UV layer."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:63
+msgid ""
+"Take the texture coordinates from another object's coordinate system "
+"(specified by the *Object* field)."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:66
+msgid ""
+"The object from which to take texture coordinates. Moving the object will "
+"therefore alter the coordinates of the texture mapping."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:69
+msgid ""
+"Take note that moving the original object will **also** result in a texture "
+"coordinate update. As such, if you need to maintain a displacement "
+"coordinate system while moving the modified object, consider parenting the "
+"coordinate object to the modified object."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:73
+msgid "If this field is blank, the *Local* coordinate system is used."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:78
+msgid "Global"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:77
+msgid "Take the texture coordinates from the global coordinate system."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:81
+msgid "Local"
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:81
+msgid ""
+"Take the texture coordinates from the object's local coordinate system."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:84
+msgid ""
+"The name of a vertex group which is used to control the influence of the "
+"modifier. If left empty, the modifier affects all vertices equally."
+msgstr ""
+
+#: ../../manual/modifiers/deform/displace.rst:88
+msgid ""
+"The texture value which will be treated as no displacement by the modifier. "
+"Texture values below this value will result in negative displacement along "
+"the selected direction, while texture values above this value will result in"
+" positive displacement."
 msgstr ""
 
 #: ../../manual/modifiers/deform/displace.rst:92
-msgid "See also"
+msgid ""
+"This is achieved by the equation ``displacement = texture_value - "
+"Midlevel``. Recall that color/luminosity values are typically between "
+"``0.0`` and ``1.0`` in Blender, and not between ``0`` and ``255``."
 msgstr ""
 
-#: ../../manual/modifiers/deform/displace.rst:94
+#: ../../manual/modifiers/deform/displace.rst:97
 msgid ""
-"Blender artists post: `Displace modifier tutorial "
-"<http://blenderartists.org/forum/showthread.php?t=77026>`__ (September 2006)"
+"The strength of the displacement. After offsetting by the *Midlevel* value, "
+"the displacement will be multiplied by the *Strength* value to give the "
+"final vertex offset. This is achieved by the equation ``vertex_offset = "
+"displacement * Strength``. A negative strength can be used to invert the "
+"effect of the modifier."
 msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Displace` modifier displaces vertices in a mesh based on the "
+#~ "intensity of a texture. Either procedural or image textures can be used. The"
+#~ " displacement can be along a particular local axis, along the vertex normal,"
+#~ " or the separate RGB components of the texture can be used to displace "
+#~ "vertices in the local X, Y and Z directions simultaneously."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The name of the texture from which the displacement for each vertex is "
+#~ "derived. If this field is empty, the modifier defaults to 1.0 (white)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The name of a vertex group which is used to control the influence of the "
+#~ "modifier. If :guilabel:`VGroup` is empty, the modifier affects all vertices "
+#~ "equally."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The texture value which will be treated as no displacement by the modifier. "
+#~ "Texture values below this value will result in negative displacement along "
+#~ "the selected direction, while texture values above this value will result in"
+#~ " positive displacement. This is achieved by the equation ``(displacement) = "
+#~ "(texture value) - Midlevel``. Recall that color/luminosity values are "
+#~ "typically between ``0.0`` and ``1.0`` in Blender, and not between ``0`` and "
+#~ "``255``."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`X` - displace along local X axis."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Y` - displace along local Y axis."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Z` - displace along local Z axis."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`RGB → XYZ` - displace along local XYZ axes individually using the"
+#~ " RGB components of the texture."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Normal` - displace along vertex normal."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`UV` - take texture coordinates from face UV coordinates."
+#~ msgstr ""
+
+#~ msgid "UV Layer"
+#~ msgstr ""
+
+#~ msgid "The UV coordinate layer from which to take texture coordinates."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the object has no UV coordinates, it uses the :guilabel:`Local` "
+#~ "coordinate system. If this field is blank, but there is an UV coordinate "
+#~ "layer available (e.g. just after adding the first UV layer to the mesh), it "
+#~ "will be overwritten with the currently active UV layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Object` - take the texture coordinates from another object's "
+#~ "coordinate system (specified by the :guilabel:`Object` field)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The object from which to take texture coordinates. Moving the object will "
+#~ "therefore alter the coordinates of the texture mapping. Take note that "
+#~ "moving the original object will **also** result in a texture coordinate "
+#~ "update.  As such, if you need to maintain a displacement coordinate system "
+#~ "while moving the object to which the displacement is set, you will also have"
+#~ " to move the related object at the same rate and direction."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If this field is blank, the :guilabel:`Local` coordinate system is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Global` - take the texture coordinates from the global coordinate"
+#~ " system."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Local` - take the texture coordinates from the object's local "
+#~ "coordinate system."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The strength of the displacement. After offsetting by the "
+#~ ":guilabel:`Midlevel` value, the displacement will be multiplied by the "
+#~ ":guilabel:`Strength` value to give the final vertex offset. This is achieved"
+#~ " by the equation ``(vertex_offset) = (displacement) × Strength``. A negative"
+#~ " strength can be used to invert the effect of the modifier."
+#~ msgstr ""
+
+#~ msgid "See also"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Blender artists post: `Displace modifier tutorial "
+#~ "<http://blenderartists.org/forum/showthread.php?t=77026>`__ (September 2006)"
+#~ msgstr ""
 
 #~ msgid "Description"
 #~ msgstr ""

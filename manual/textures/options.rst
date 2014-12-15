@@ -1,4 +1,5 @@
 
+***********************
 Textures common options
 ***********************
 
@@ -15,8 +16,8 @@ Textures Stack
    Textures Stack
 
 
-The list below these buttons represents the :guilabel:`Stack` of textures that we can manage.
-It can have up to eighteen :guilabel:`Texture Slots`:
+The list below these buttons represents the *Stack* of textures that we can manage.
+It can have up to eighteen *Texture Slots*:
 
 
 - Tick or untick a texture to enable/disable it.
@@ -48,10 +49,10 @@ Name
    A name field where the name of the material can be changed.
 
 Number of users
-   If the active texture is used by another material, a :guilabel:`2` button appears that can be used to make a single-user copy of the active texture.  Use this button to quickly create a new texture based on an existing texture.
+   If the active texture is used by another material, a *2* button appears that can be used to make a single-user copy of the active texture.  Use this button to quickly create a new texture based on an existing texture.
 
 Fake
-   The :guilabel:`F` button assigns the active texture to a "Fake" material, so that the texture is saved with the file even if it has no "real" users.
+   The *F* button assigns the active texture to a "Fake" material, so that the texture is saved with the file even if it has no "real" users.
 
 Add
    Replaces the texture of the active slot with a new texture.
@@ -114,11 +115,11 @@ Colors
    Colors panel
 
 
-The :guilabel:`Ramp` button activates a color ramp which allows you to remap the colors of a texture to new ones. See :doc:`Ramps </materials/properties/ramps>` for information on using ramps.
+The *Ramp* button activates a color ramp which allows you to remap the colors of a texture to new ones. See :doc:`Ramps </materials/properties/ramps>` for information on using ramps.
 
-The color of a texture can be modified with the :guilabel:`Brightness`, :guilabel:`Contrast`,
-and  :guilabel:`Saturation` buttons. All textures with RGB-Values — including
-:guilabel:`Images` and  :guilabel:`Environment Maps` — may be modified with the RGB
+The color of a texture can be modified with the *Brightness*, *Contrast*,
+and  *Saturation* buttons. All textures with RGB-Values — including
+*Images* and  *Environment Maps* — may be modified with the RGB
 sliders.
 
 R,  G,  B

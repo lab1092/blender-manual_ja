@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X|text=missing Ambient Color, Exposure and Range }} .
 
 
+****************
 World Background
 ****************
 
@@ -10,7 +11,7 @@ Description
 
 The world buttons let you set up the shading of your scene in general.
 It can provide ambient color, and special effects such as mist,
-but a very common use of a :guilabel:`World` is to shade a background color.
+but a very common use of a *World* is to shade a background color.
 
 
 .. note:: Background Image in Render
@@ -39,7 +40,7 @@ Options
   The RGB color at the zenith (overhead)
 
 
-How these colors are interpreted depends on which kind of :guilabel:`Sky` is chosen.
+How these colors are interpreted depends on which kind of *Sky* is chosen.
 
 - **None Enabled**
   If none of these three buttons is checked, your background will just be plain flat color (using the horizon one).
@@ -73,8 +74,8 @@ or which it maps to a virtual space around the scene.
    Texture Coordinates popup menu
 
 
-The World textures are accessible in the texture menu (just select :guilabel:`World` first,
-then :guilabel:`Texture`.  They are used much like the Materials textures,
+The World textures are accessible in the texture menu (just select *World* first,
+then *Texture*.  They are used much like the Materials textures,
 except for a couple of differences. The textures can be mapped according to:
 
 - **View**
@@ -82,7 +83,7 @@ except for a couple of differences. The textures can be mapped according to:
 - **Global**
   Uses global coordinates
 - **AngMap**
-  Used to wrap a standard hemisphere angular map around the scene in a dome. This can be used for image based lighting with :guilabel:`Ambient Occlusion` set to sky color. You'll generally need a high dynamic range image (HDRI) angular map. (It will look like a weird spherical image).
+  Used to wrap a standard hemisphere angular map around the scene in a dome. This can be used for image based lighting with *Ambient Occlusion* set to sky color. You'll generally need a high dynamic range image (HDRI) angular map. (It will look like a weird spherical image).
 - **Sphere**
   Sphere mapping, similar to that of materials
 - **Tube**

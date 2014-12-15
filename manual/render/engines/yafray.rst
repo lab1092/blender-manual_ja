@@ -1,4 +1,8 @@
 
+*******
+Yafaray
+*******
+
 Blender produces all the information needed to render a scene.
 While it has its own internal rendering engine,
 you can export or link to external renderers for image computation.

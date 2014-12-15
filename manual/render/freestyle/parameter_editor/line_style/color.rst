@@ -1,4 +1,5 @@
 
+*****
 Color
 *****
 
@@ -36,7 +37,7 @@ Along Stroke
    Line Style Color's Along Stroke modifier
 
 
-The :guilabel:`Along Stroke` modifier alters the base color with a new one from a given color
+The *Along Stroke* modifier alters the base color with a new one from a given color
 ramp mapped along each stroke's length. In other words,
 it applies a color ramp along each stroke.
 
@@ -53,14 +54,14 @@ Distance from Camera
    Line Style  Color's Distance From Camera modifier
 
 
-The :guilabel:`Distance from Camera` color modifier alters the base color with a new one from
+The *Distance from Camera* color modifier alters the base color with a new one from
 a given color ramp, using the distance to the active camera as the parameter.
 
 Range Min and Range Max
    The limits of the mapping from "distance to camera" to "color in ramp".
-   If the current point of the stroke is at :guilabel:`Range Min` or less from the active camera,
+   If the current point of the stroke is at *Range Min* or less from the active camera,
    it will take the start color of the ramp, and conversely,
-   if it is at :guilabel:`Range Max` or more from the camera, it will take the end color of the ramp.
+   if it is at *Range Max* or more from the camera, it will take the end color of the ramp.
    These values are in the current scene's units, not in pixels!
 
 Fill Range by Selection
@@ -79,7 +80,7 @@ Distance from Object
    Line Style Color's Distance From Object modifiers
 
 
-The :guilabel:`Distance from Object` color modifier alters the base color with a new one from
+The *Distance from Object* color modifier alters the base color with a new one from
 a given color ramp, using the distance to a given object as the parameter.
 
 Target
@@ -87,9 +88,9 @@ Target
 
 Range Min and Range Max
    The limits of the mapping from "distance to object" to "color in ramp".
-   If the current point of the stroke is at :guilabel:`Range Min` or less from the target,
+   If the current point of the stroke is at *Range Min* or less from the target,
    it will take the start color of the ramp, and conversely,
-   if it is at :guilabel:`Range Max` or more from the target, it will take the end color of the ramp.
+   if it is at *Range Max* or more from the target, it will take the end color of the ramp.
    These values are in the current scene's units, not in pixels!
 
 Fill Range by Selection
@@ -108,14 +109,14 @@ Material
    Line Style Color's Material modifiers
 
 
-The :guilabel:`Material` color modifier alters the base color with a new one taken from the
+The *Material* color modifier alters the base color with a new one taken from the
 current material under the stroke.
 
 You can use various properties of the materials, among which many are mono-component (i.e.
 give B&W results). In this case,
 an optional color ramp can be used to map these grayscale values to colored ones.
 
-If used with the :guilabel:`Split by Material` option in the :guilabel:`Stroke` tab,
+If used with the *Split by Material* option in the *Stroke* tab,
 the result will not be blurred between materials along the strokes.
 
 

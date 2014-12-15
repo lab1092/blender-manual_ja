@@ -1,4 +1,5 @@
 
+****************
 Collision sensor
 ****************
 
@@ -9,7 +10,7 @@ Collision sensor
    Collision sensor
 
 
-A :guilabel:`Collision` sensor works like a :guilabel:`Touch` sensor but can also filter by
+A *Collision* sensor works like a *Touch* sensor but can also filter by
 property or material. Only objects with the property/material with that name will generate a
 positive pulse upon collision. Leave blank for collision with any object.
 
@@ -26,6 +27,6 @@ Special Options:
 
 .. note:: Note about soft bodies
 
-   The :guilabel:`Collision` sensor can not detect collisions with soft bodies. This is a limitation in Bullet, the physics library used by the Game Engine.
+   The *Collision* sensor can not detect collisions with soft bodies. This is a limitation in Bullet, the physics library used by the Game Engine.
 
 

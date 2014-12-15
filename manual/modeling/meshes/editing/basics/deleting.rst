@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im = examples}} .
 
 
+********************
 Deleting and Merging
 ********************
 
@@ -64,7 +65,7 @@ The face split option limits dissolve to only use the corners of the faces conne
 Convert Triangles to Quads
 ==========================
 
-:guilabel:`Tris to Quads` :kbd:`alt-J`
+*Tris to Quads* :kbd:`Alt-J`
 This takes adjacent tris and removes the shared edge to create a quad.
 This tool can be performed on a selection of multiple triangles.
 
@@ -78,7 +79,7 @@ Unsubdivide
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Edges --> Unsubdivide`
    | Hotkey:   :menuselection:`[Ctrl][E] --> Unsubdivide`
 
@@ -101,9 +102,9 @@ Merging Vertices
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`, :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
-   | Hotkey:   :kbd:`alt-M`
+   | Hotkey:   :kbd:`Alt-M`
 
 
 This tool allows you to merge all selected vertices into an unique one, deleting all others.
@@ -111,10 +112,10 @@ You can choose the location of the surviving vertex in the menu this tool pops u
 executing:
 
 At First
-   Only available in :guilabel:`Vertex` select mode, it will place the remaining vertex at the location of the first one selected.
+   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the first one selected.
 
 At Last
-   Only available in :guilabel:`Vertex` select mode, it will place the remaining vertex at the location of the last one selected (the active one).
+   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the last one selected (the active one).
 
 At Center
    Available in all select modes, it will place the remaining vertex at the center of the selection.
@@ -135,14 +136,14 @@ AutoMerge Editing
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Mesh --> AutoMerge Editing`
 
 
-The :guilabel:`Mesh` menu as a related toggle option: :guilabel:`AutoMerge Editing`.
+The *Mesh* menu as a related toggle option: *AutoMerge Editing*.
 When enabled,
-as soon as a vertex moves closer to another one than the :guilabel:`Limit` setting
-(:guilabel:`Mesh Tools` panel, see below), they are automatically merged.
+as soon as a vertex moves closer to another one than the *Limit* setting
+(*Mesh Tools* panel, see below), they are automatically merged.
 
 
 Remove Doubles
@@ -151,8 +152,8 @@ Remove Doubles
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Editing` context → :guilabel:`Mesh Tools`
+   | Mode:     *Edit* mode
+   | Panel:    *Editing* context → *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`, :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
 

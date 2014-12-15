@@ -1,6 +1,7 @@
 ..    TODO/Review: {{review}} .
 
 
+*****************
 The Window System
 *****************
 
@@ -69,7 +70,7 @@ The Info Window is found at the top of the Default Scene and has the following c
 - **Menu options** :  The dark blue shaded area provides access to the main menu options.
 
 
-- **Current Screen (default is Default)** : The green shaded area allows you to select different :doc:`Screens </interface/screens>`. By default, Blender comes with several pre-configured :guilabel:`Screen` s for you to choose from.  If you need custom screen layouts, you can create and name them.
+- **Current Screen (default is Default)** : The green shaded area allows you to select different :doc:`Screens </interface/screens>`. By default, Blender comes with several pre-configured *Screen* s for you to choose from.  If you need custom screen layouts, you can create and name them.
 
 
 - **Current Scene** : The yellow shaded area allows you to select different :doc:`Scenes </interface/scenes>`. Having multiple Scenes allows you to work with separate virtual environments, with completely separate data, or with objects and/or mesh data linked between them. (In some 3D packages, each file contains one scene, while in Blender, one .blend file may contain several scenes.)
@@ -94,15 +95,15 @@ The Info Window is found at the top of the Default Scene and has the following c
    :figwidth: 50px
 
 
-- **3D Transform Manipulator** : Is a visual aid in transforming objects (grab/move, rotate and scale).  Objects can also be transformed using the keyboard shortcuts: (:kbd:`G` / :kbd:`R` / :kbd:`S`); :kbd:`ctrl-Space` will toggle the manipulator visibility.
+- **3D Transform Manipulator** : Is a visual aid in transforming objects (grab/move, rotate and scale).  Objects can also be transformed using the keyboard shortcuts: (:kbd:`G` / :kbd:`R` / :kbd:`S`); :kbd:`Ctrl-Space` will toggle the manipulator visibility.
 
 
-- **Cube Mesh** : By default, a new installation of Blender will always start with a Cube :guilabel:`Mesh` sitting in the center of Global 3D space (in the picture above, it has been moved).  After a while, you will most likely want to change the "Default" settings; this is done by :doc:`configuring Blender </preferences>` as you would want it on startup and then saving it as the "Default" using :kbd:`ctrl-U` (:guilabel:`Save Default Settings`).
+- **Cube Mesh** : By default, a new installation of Blender will always start with a Cube *Mesh* sitting in the center of Global 3D space (in the picture above, it has been moved).  After a while, you will most likely want to change the "Default" settings; this is done by :doc:`configuring Blender </preferences>` as you would want it on startup and then saving it as the "Default" using :kbd:`Ctrl-U` (*Save Default Settings*).
 
 
 .. figure:: /images/Icon-library_3D-Window_light-lamp.jpg
 
-- **Light (of type Lamp)** : By default, a new installation of Blender will always start with a :guilabel:`Light` source positioned somewhere close to the center of Global 3D space.
+- **Light (of type Lamp)** : By default, a new installation of Blender will always start with a *Light* source positioned somewhere close to the center of Global 3D space.
 
 
 .. figure:: /images/Icon-library_3D-Window_camera.jpg
@@ -110,7 +111,7 @@ The Info Window is found at the top of the Default Scene and has the following c
    :figwidth: 50px
 
 
-- **Camera** : By default, a new installation of Blender will always start with a :guilabel:`Camera` positioned somewhere close to the center of Global 3D space and facing it.
+- **Camera** : By default, a new installation of Blender will always start with a *Camera* positioned somewhere close to the center of Global 3D space and facing it.
 
 
 3D Window Header
@@ -131,12 +132,12 @@ Read more about :doc:`Blender headers » </interface/window_system/headers>`
 
 .. figure:: /images/Icon-library_3D-Window_Editor-type.jpg
 
-- **Window/Editor Type Selector** : Allows you to change the :doc:`type of Window </interface/window_types>`. This option can be found in every window header.  For example, if you want to see the :guilabel:`Outliner` window you would click and select it.
+- **Window/Editor Type Selector** : Allows you to change the :doc:`type of Window </interface/window_types>`. This option can be found in every window header.  For example, if you want to see the *Outliner* window you would click and select it.
 
 
 .. figure:: /images/Icon-library_3D-Window_3D-transform-manipulator-options.jpg
 
-- **3D Transform manipulator options** : Access to the :doc:`manipulator </3d_interaction/transform_control/manipulators>` widget is also possible by clicking the coordinate system icon on the toolbar.  The translation/rotation/scale manipulators can be displayed by clicking each of the three icons to the right of the coordinate system icon.  :kbd:`shift-lmb` -clicking an icon will add/remove each manipulator's visibility.
+- **3D Transform manipulator options** : Access to the :doc:`manipulator </3d_interaction/transform_control/manipulators>` widget is also possible by clicking the coordinate system icon on the toolbar.  The translation/rotation/scale manipulators can be displayed by clicking each of the three icons to the right of the coordinate system icon.  :kbd:`Shift-LMB` -clicking an icon will add/remove each manipulator's visibility.
 
 
 .. figure:: /images/Icon-library_3D-Window_header-viewport-shading.jpg
@@ -190,5 +191,5 @@ Timeline Window
    Timeline Window Header
 
 
-This window gives a timeline, through which you can scrub with the :kbd:`lmb`.
+This window gives a timeline, through which you can scrub with the :kbd:`LMB`.
 

@@ -1,4 +1,5 @@
 
+********
 Line Set
 ********
 
@@ -39,7 +40,7 @@ QI Range
    QI stands for *Quantitative Invisibility*. Lines occluded by a number of surfaces in the given range are rendered.
 
 Start and End
-   Only with :guilabel:`QI Range`, min/max number of occluding surfaces for a line to be rendered.
+   Only with *QI Range*, min/max number of occluding surfaces for a line to be rendered.
 
 
 .. figure:: /images/Manual-2.6-Render-Freestyle-QI_Range.jpg
@@ -56,15 +57,15 @@ Selection by Edge Types
 Edge types are basic algorithms for the selection of lines from geometry. When using the
 parameter editor you have to choose at least one edge type in order to get a render output,
 but several edge types can be combined in one line set.
-Edge types can also be excluded from calculation by pressing the :guilabel:`X` next to them.
+Edge types can also be excluded from calculation by pressing the *X* next to them.
 
 Silhouette
    Draws silhouettes around your closed objects; it is often good for organic objects (like Suzanne & Sphere),
    and bad for sharp edges, like a box. It can't render open mesh objects like open cylinders and flat planes.
-   The output is affected by the :guilabel:`Kr Derivative Epsilon` viewmap setting.
+   The output is affected by the *Kr Derivative Epsilon* viewmap setting.
 
 Crease
-   Shows only edges whose adjacent faces form an angle greater than the defined viewmap's :guilabel:`Crease Angle`.
+   Shows only edges whose adjacent faces form an angle greater than the defined viewmap's *Crease Angle*.
 
 
 .. figure:: /images/Manual-2.6-Render-Freestyle-CreaseConcept.jpg
@@ -100,7 +101,7 @@ External Contour
 
 Suggestive Contour
    Draws some lines which would form the contour of the mesh if the viewport was shifted.
-   Depends on your viewmap settings for :guilabel:`Kr Derivative Epsilon` and :guilabel:`Sphere Radius`
+   Depends on your viewmap settings for *Kr Derivative Epsilon* and *Sphere Radius*
    (further information: `File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf
    <http://wiki.blender.org/index.php/File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf>`__).
 
@@ -108,7 +109,7 @@ Material Boundary
    Draws lines where two materials meet on the same object. Must be activated in the viewmap settings.
 
 Ridge & Valley
-   Draws ridges and valleys. Depends on your :guilabel:`Sphere Radius` viewmap settings.
+   Draws ridges and valleys. Depends on your *Sphere Radius* viewmap settings.
 
 
 Edge Marks
@@ -126,13 +127,13 @@ Edge Marks
 
 In edit mode you can mark "Freestyle Edges" in the same manner you can mark "Seams" for UV
 unwrapping or "Sharp" for edge split.
-These marked edges are available to render when you select :guilabel:`Edge Mark`.
+These marked edges are available to render when you select *Edge Mark*.
 
 This is done as follows:
 
-- Select your mesh and tab into :guilabel:`Edit` mode.
+- Select your mesh and tab into *Edit* mode.
 - Select the edges you want to be marked.
-- Press :kbd:`crtl-E` and select :guilabel:`Mark Freestyle Edge`.
+- Press :kbd:`Ctrl-E` and select *Mark Freestyle Edge*.
 
 Edge marks are useful when you want to draw lines along particular mesh edges.
 The examples below explain the use of edge marks.
@@ -144,7 +145,7 @@ The examples below explain the use of edge marks.
 +-------------------------------------------------------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
 
 
-The image on the left shows a sphere in :guilabel:`Edit` mode.
+The image on the left shows a sphere in *Edit* mode.
 The green lines are the edge marks. On the right you see a render without edge marks enabled.
 
 With edge marks enabled, the previously-marked lines are always rendered.
@@ -158,7 +159,7 @@ What are edge marks good for?
 
 What are edge marks not good for?
 
-- Round outer edges (use instead :guilabel:`Contour` / :guilabel:`External Contour` / :guilabel:`Silhouette`).
+- Round outer edges (use instead *Contour* / *External Contour* / *Silhouette*).
 
 
 Selection by Face Marks
@@ -171,9 +172,9 @@ Selection by Face Marks
 
 To set a face mark:
 
-- Select a mesh and tab into :guilabel:`Edit` mode.
+- Select a mesh and tab into *Edit* mode.
 - Select the faces you want to be marked.
-- Press :kbd:`ctrl-F` and select :guilabel:`Mark Freestyle Face`.
+- Press :kbd:`Ctrl-F` and select *Mark Freestyle Face*.
 
 Face marks are useful for removing lines from certain areas of a mesh.
 

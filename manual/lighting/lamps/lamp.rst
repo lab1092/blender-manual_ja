@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=examples}} .
 
 
+**********
 Point Lamp
 **********
 
@@ -12,14 +13,14 @@ Point Lamp
    Point lamp
 
 
-The :guilabel:`Point` lamp is an omni-directional point of light, that is,
+The *Point* lamp is an omni-directional point of light, that is,
 a point radiating the same amount of light in all directions. It's visualized by a plain,
 circled dot. Being a point light source, the direction of the light hitting an object's
 surface is determined by the line joining the lamp and the point on the surface of the object
 itself.
 
 Light intensity/energy decays based on (among other variables)
-distance from the :guilabel:`Point` lamp to the object. In other words,
+distance from the *Point* lamp to the object. In other words,
 surfaces that are further away are rendered darker.
 
 
@@ -33,7 +34,7 @@ Negative, This Layer Only, Specular, and  Diffuse
    These settings control what the lamp affects, as described in :doc:`What Light Affects </lighting/lights/what_light_affects>`.
 
 Falloff and Sphere
-   These settings control how the light of the :guilabel:`Lamp` decays with distance. See :doc:`Light Attenuation </lighting/lights/light_attenuation>` for details.
+   These settings control how the light of the *Lamp* decays with distance. See :doc:`Light Attenuation </lighting/lights/light_attenuation>` for details.
 
 
 Shadows
@@ -53,7 +54,7 @@ Shadows
    Point lamp with ray shadows and Adaptive QMC sample generator enabled
 
 
-The :guilabel:`Point` light source can only cast ray-traced shadows. It shares with other lamp types the common shadow options described in :doc:`Shadow Properties </lighting/shadows/properties>`.
+The *Point* light source can only cast ray-traced shadows. It shares with other lamp types the common shadow options described in :doc:`Shadow Properties </lighting/shadows/properties>`.
 
 The ray-traced shadows settings of this lamp are shared with other lamps, and are described :doc:`Raytraced Properties </lighting/shadows/raytraced_properties>`.
 

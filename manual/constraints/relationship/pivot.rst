@@ -7,13 +7,14 @@
    }} .
 
 
+****************
 Pivot Constraint
 ****************
 
 Description
 ===========
 
-The :guilabel:`Pivot` constraint allows the owner to rotate around a target object.
+The *Pivot* constraint allows the owner to rotate around a target object.
 
 It was originally intended for foot rigs.
 
@@ -32,11 +33,11 @@ Target
    The object to be used as a pivot point
 
    Bone
-      When :guilabel:`Target` is an armature, a new field for a bone is displayed.
+      When *Target* is an armature, a new field for a bone is displayed.
    Head/Tail
       When using a bone target, you can choose where along this bone the target point lies.
    Vertex Group
-      When :guilabel:`Target` is a mesh, a new field is display where a vertex group can be selected.
+      When *Target* is a mesh, a new field is display where a vertex group can be selected.
 
 Pivot Offset
    Offset of pivot from target

@@ -1,4 +1,5 @@
 
+***********************
 Lamps Raytraced Shadows
 ***********************
 
@@ -16,35 +17,35 @@ even though using most of these options, have some specifics described in its
 :doc:`own ray-traced shadows page </lighting/lamps/area/raytraced_shadows>`.
 
 Ray Shadow
-   The :guilabel:`Ray Shadow` button enables the light source to generate ray-traced shadows.
-   When the :guilabel:`Ray Shadow` button is selected, another set of options is made available, those options being:
+   The *Ray Shadow* button enables the light source to generate ray-traced shadows.
+   When the *Ray Shadow* button is selected, another set of options is made available, those options being:
 Shadow sample generator type
    Method for generating shadow samples: Adaptive QMC is fastest, Constant QMC is less noisy but slower.
    This allows you to choose which algorithm is to be used to generate the samples that will serve to compute the ray-traced shadows (for now, mainly two variants of Quasi-Monte Carlo, see
    FIXME(TODO: Internal Link; [[#What is Quasi-Monte Carlo?|below]])):
 
    Constant QMC
-      The :guilabel:`Constant QMC` method is used to calculate shadow values in a very uniform, evenly distributed way. This method results in very good calculation of shadow value but it is not as fast as using the :guilabel:`Adaptive QMC` method; however, :guilabel:`Constant QMC` is more accurate.
+      The *Constant QMC* method is used to calculate shadow values in a very uniform, evenly distributed way. This method results in very good calculation of shadow value but it is not as fast as using the *Adaptive QMC* method; however, *Constant QMC* is more accurate.
    Adaptive QMC
-      The :guilabel:`Adaptive QMC` method is used to calculate shadow values in a slightly less uniform and distributed way. This method results in good calculation of shadow value but not as good as :guilabel:`Constant QMC`. The advantage of using :guilabel:`Adaptive QMC` is that it is in general much quicker while being not much worse than :guilabel:`Constant QMC` in terms of overall results.
+      The *Adaptive QMC* method is used to calculate shadow values in a slightly less uniform and distributed way. This method results in good calculation of shadow value but not as good as *Constant QMC*. The advantage of using *Adaptive QMC* is that it is in general much quicker while being not much worse than *Constant QMC* in terms of overall results.
 
 Samples
    Number of extra samples taken (samples x samples).
-   This slider sets the maximum number of samples that both :guilabel:`Constant QMC` and :guilabel:`Adaptive QMC`
+   This slider sets the maximum number of samples that both *Constant QMC* and *Adaptive QMC*
    will use to do their shadow calculations.
    The maximum value is ``16`` - the real number of samples is actually the square of it,
    so setting a sample value of ``3`` really means ``3``:sup:`2` ``=`` ``9`` samples will be taken.
 Soft Size
    Light size for ray shadow sampling.
    This slider determines the size of the fuzzy/diffuse/penumbra area around the edge of a shadow.
-   :guilabel:`Soft Size` only determines the width of the soft shadow size, not how graded and smooth the shadow is.
+   *Soft Size* only determines the width of the soft shadow size, not how graded and smooth the shadow is.
    If you want a wide shadow which is also soft and finely graded,
-   you must also set the number of samples in the :guilabel:`Samples` field higher than ``1``;
+   you must also set the number of samples in the *Samples* field higher than ``1``;
    otherwise this field has no visible effect and the shadows generated will not have a soft edge.
-   The maximum value for :guilabel:`Soft Size` is ``100.0``.
+   The maximum value for *Soft Size* is ``100.0``.
 
 
-   Below is a table of renders with different :guilabel:`Soft Size` and :guilabel:`Samples` settings showing the effect of various values on the softness of shadow edges:
+   Below is a table of renders with different *Soft Size* and *Samples* settings showing the effect of various values on the softness of shadow edges:
 
    +------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
    +.. figure:: /images/Manual_-_Light_-_Ray_Shadow_-_Soft_Size_1_-_Samples_2_-_Cube.jpg|.. figure:: /images/Manual_-_Light_-_Ray_Shadow_-_Soft_Size_1_-_Samples_4_-_Cube.jpg|.. figure:: /images/Manual_-_Light_-_Ray_Shadow_-_Soft_Size_1_-_Samples_6_-_Cube.jpg+
@@ -76,10 +77,10 @@ Soft Size
 
 Threshold
    Threshold for Adaptive Sampling.
-   This field is used with the :guilabel:`Adaptive QMC` shadow calculation method.
-   The value is used to determine if the :guilabel:`Adaptive QMC` shadow sample
+   This field is used with the *Adaptive QMC* shadow calculation method.
+   The value is used to determine if the *Adaptive QMC* shadow sample
    calculation can be skipped based on a threshold of how shadowed an area is already.
-   The maximum :guilabel:`Threshold` value is ``1.0``.
+   The maximum *Threshold* value is ``1.0``.
 
 
 What is Quasi-Monte Carlo?

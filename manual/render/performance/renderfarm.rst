@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+***********************
 Distributed Render Farm
 ***********************
 
@@ -36,7 +37,7 @@ Collaborative Rendering
 =======================
 
 Third, you can do WAN rendering,
-which is where you email or fileshare or Verse-share the .blend file (with packed data!)
+which is where you email or fileshare the ``.blend`` file (with packed data!)
 across the Internet, and use anyone's PC to perform some of the rendering.
 They would in turn email you the finished frames as they are done.
 If you have reliable friends, this is a way for you to work together.

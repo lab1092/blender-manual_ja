@@ -1,4 +1,5 @@
 
+***********
 Color Ramps
 ***********
 
@@ -6,14 +7,14 @@ Color Ramps
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Context :guilabel:`Shading` → sub-context :guilabel:`Material` → :guilabel:`Ramps`
+   | Panel:    Context *Shading* → sub-context *Material* → *Ramps*
 
 
 In many real life situations — like skin or metals —
 the color of diffuse and specular reflections can differ slightly,
 based on the amount of energy a surface receives or on the light angle of incidence. The
-:guilabel:`Ramp Shader` options in Blender allow you to set a range of colors for a
-:guilabel:`Material`, and define how the range will vary over a surface,
+*Ramp Shader* options in Blender allow you to set a range of colors for a
+*Material*, and define how the range will vary over a surface,
 and how it blends with the 'actual color'
 (typically from a material or as output of a texture).
 
@@ -27,7 +28,7 @@ This is often used for materials like some types of metallic car paint that chan
 on viewing angle.
 
 Since texture calculations in Blender happen before shading,
-the :guilabel:`Ramp Shader` can completely replace texture or material color. But by use of
+the *Ramp Shader* can completely replace texture or material color. But by use of
 the mixing options and Alpha values it is possible to create an additional layer of shading in
 Blender materials.
 
@@ -40,17 +41,17 @@ Options
    Ramps Panel
 
 
-In Blender 2.5, the separate :guilabel:`Ramp` panels for the :guilabel:`Diffuse` shader and the :guilabel:`Specular` shader respectively can be toggled on and off using the
+In Blender 2.5, the separate *Ramp* panels for the *Diffuse* shader and the *Specular* shader respectively can be toggled on and off using the
 
 .. figure:: /images/Manual-2.5-Material-RampsButton.jpg
 
  button.
 
-By default the Ramp panel opens with two colors; the first stop (:guilabel:`0`)
-is black and transparent (Alpha=0) and the second stop (:guilabel:`1`) is white and opaque
+By default the Ramp panel opens with two colors; the first stop (*0*)
+is black and transparent (Alpha=0) and the second stop (*1*) is white and opaque
 (Alpha=1).
 
-The position of the color stop markers can be altered by either (1) dragging the stop marker in the colorband or (2) by changing the :guilabel:`Pos` value in the
+The position of the color stop markers can be altered by either (1) dragging the stop marker in the colorband or (2) by changing the *Pos* value in the
 
 .. figure:: /images/Manual-2.5-Material-Ramps-StopPos.jpg
 
@@ -72,11 +73,11 @@ Input
    The input menu contains the following options for defining the gradient:
 
    Shader
-      The value as delivered by the material's shader (:guilabel:`Lambert`, :guilabel:`CookTorr`) defines the color.  Here the amount of light doesn't matter for color, only the direction of the light.
+      The value as delivered by the material's shader (*Lambert*, *CookTorr*) defines the color.  Here the amount of light doesn't matter for color, only the direction of the light.
    Energy
-      As :guilabel:`Shader`, now also lamp energy, color, and distance are taken into account.  This makes the material change color when more light shines on it.
+      As *Shader*, now also lamp energy, color, and distance are taken into account.  This makes the material change color when more light shines on it.
    Normal
-      The surface normal, relative to the camera, is used for the :guilabel:`Ramp Shader`.  This is possible with a texture as well, but added for convenience.
+      The surface normal, relative to the camera, is used for the *Ramp Shader*.  This is possible with a texture as well, but added for convenience.
    Result
       While all three previous options work per lamp, this option only works after shading calculations.  This allows full control over the entire shading, including 'Toon' style results.  Using alpha values here is most useful for tweaking a finishing touch to a material.
 
@@ -87,11 +88,11 @@ Input
 
 
 Blend
-   A list of the various :doc:`blending modes </materials/nodes/types/color>` available for blending the ramp shader with the color from :guilabel:`Input`.
+   A list of the various :doc:`blending modes </materials/nodes/types/color>` available for blending the ramp shader with the color from *Input*.
 
 
 Factor
-   This slider denotes the overall factor of the ramp shader with the color from :guilabel:`Input`.
+   This slider denotes the overall factor of the ramp shader with the color from *Input*.
 
 
 Colorbands
@@ -101,7 +102,7 @@ Colorbands
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Context :guilabel:`Shading` → sub-context :guilabel:`Material` → :guilabel:`Ramps`
+   | Panel:    Context *Shading* → sub-context *Material* → *Ramps*
 
 
 A colorband can contain a gradient through a sequence of many colors (with alpha),
@@ -114,7 +115,7 @@ Options
 ^^^^^^^
 
 Add
-   Add a new mark to the center of the colorband with the default color (neutral gray).  New marks can also be added by :kbd:`ctrl-lmb` clicking in the colorband itself, which will add the mark at the position of the click with the same color that already exists underneath the mouse pointer.
+   Add a new mark to the center of the colorband with the default color (neutral gray).  New marks can also be added by :kbd:`Ctrl-LMB` clicking in the colorband itself, which will add the mark at the position of the click with the same color that already exists underneath the mouse pointer.
 Delete
    Remove the currently selected mark from the colorband.
 F
@@ -124,10 +125,10 @@ F
 
 .. figure:: /images/Manual-2.5-Material-Ramps-MarkerSelectSlider.jpg
 
- slider, (2) by clicking on the number being displayed and entering a number of a color mark, or (3) by :kbd:`lmb` clicking a marker in the colorband.
+ slider, (2) by clicking on the number being displayed and entering a number of a color mark, or (3) by :kbd:`LMB` clicking a marker in the colorband.
 
 Pos
-   The position of the active color mark in the colorband (range 0.0–1.0).  The position of the color marks can also be changed by :kbd:`lmb` dragging them in the colorband.
+   The position of the active color mark in the colorband (range 0.0–1.0).  The position of the color marks can also be changed by :kbd:`LMB` dragging them in the colorband.
 
 
 .. note:: Reordering colors
@@ -135,9 +136,9 @@ Pos
    If the position of the color marks are reordered, they will be automatically renumbered so that they always start with **0** from the left and increment to the right.
 
 
-The :guilabel:`Colorswatch` right of the :guilabel:`Position` slider displays the color of the
-active mark.  :kbd:`lmb` click it to display a color picker in which values for color
-(:guilabel:`RGB`) and transparency (:guilabel:`Alpha`) can be set.
+The *Colorswatch* right of the *Position* slider displays the color of the
+active mark.  :kbd:`LMB` click it to display a color picker in which values for color
+(*RGB*) and transparency (*Alpha*) can be set.
 
 
 .. figure:: /images/Manual-2.5-Material-Ramps-InterpolationMenu.jpg

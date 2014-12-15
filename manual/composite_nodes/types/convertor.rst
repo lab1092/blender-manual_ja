@@ -1,4 +1,5 @@
 
+*************************
 Composite Convertor Nodes
 *************************
 
@@ -65,7 +66,7 @@ The example map below shows how to use the Color Ramp node to do this:
 
 
 In the map above, a black and white swirl image, which is lacking an alpha channel,
-is fed into the ColorRamp node as a :guilabel:`Fac` tor. (Technically,
+is fed into the ColorRamp node as a *Fac* tor. (Technically,
 we should have converted the image to a value using the RGB-to-BW node, buy hey,
 this works just as well since we are using a BW image as input.)
 
@@ -116,11 +117,11 @@ This node adds an alpha channel to a picture. Some image formats, such as JPEG,
 do not support an alpha channel. In order to overlay a JPEG image on top of a background,
 you must add an alpha channel to it using this node.
 
-The :guilabel:`Image` input socket is optional. If an input image is not supplied,
-the base color shown in the swatch will be used. To change the color, :kbd:`Lmb` click
+The *Image* input socket is optional. If an input image is not supplied,
+the base color shown in the swatch will be used. To change the color, :kbd:`LMB` click
 the swatch and use the color-picker control to choose or specify a color you want.
 
-The amount of :guilabel:`Alpha` (1.00 being totally opaque and 0.00 being totally transparent)
+The amount of *Alpha* (1.00 being totally opaque and 0.00 being totally transparent)
 can be set for the whole picture using the input field. Additionally,
 the Alpha factor can be set by feeding its socket.
 
@@ -155,7 +156,7 @@ The Set Alpha node does not need an input image; instead the flat (shadeless) bl
 The Set Alpha Node uses the input factor and color to create a black image that has an alpha
 set which goes from 0.00 to 1.00 over 60 frames, or completely transparent to completely opaque.
 Think of alpha as a multiplier for how vivid you can see that pixel.
-These two images are combined by our trusty AlphaOver node completely (a :guilabel:`Fac` tor of 1.00)
+These two images are combined by our trusty AlphaOver node completely (a *Fac* tor of 1.00)
 to produce the composite image. The SetAlpha node will thus, depending on the frame being rendered,
 produce a black image that has some degree of transparency.
 Set up and Animate, and you have an image sequence that fades to black over a 2-second period.
@@ -184,7 +185,7 @@ In the above example, a Time curve provides the Alpha value to the input socket.
 The current RenderLayer, which has the title in view, provides the image. As before,
 the trusty AlphaOver node mixes (using the alpha values)
 the background swirl and the alphaed title to produce the composite image.
-Notice the :guilabel:`ConvertPre` -Multiply button is NOT enabled; this produces a composite
+Notice the *ConvertPre* -Multiply button is NOT enabled; this produces a composite
 where the title lets the background image show through where even the background image is
 transparent, allowing you to layer images on top of one another.
 
@@ -199,9 +200,9 @@ In the example above, notice how the blue tinge of the render input colors the s
 You can use the Set Alpha node's color swatch with this kind of node map to add a consistent color to a BW image.
 
 In the example map to the right,
-use the :guilabel:`Alpha` value of the SetAlpha node to give a desired degree of colorization.
+use the *Alpha* value of the SetAlpha node to give a desired degree of colorization.
 Thread the input image and the Set Alpha node into an AlphaOver node to colorize any black and
-white image in this manner. Note the :guilabel:`ConvertPre` -Multiply button is enabled,
+white image in this manner. Note the *ConvertPre* -Multiply button is enabled,
 which tells the AlphaOver node not to multiply the alpha values of the two images together.
 
 
@@ -631,9 +632,11 @@ then splits each channel out to its own output so that they can be manipulated i
 - Cb: Chrominance Blue, 0=Blue, 1=Yellow
 - Cr: Chrominance Red, 0=Red, 1=Yellow
 
-Note: If running these channels through a ColorRamp to adjust value,
-use the Cardinal scale for accurate representation.
-Using the Exponential scale on the luminance channel gives high-contrast effect.
+.. note::
+
+   If running these channels through a ColorRamp to adjust value,
+   use the Cardinal scale for accurate representation.
+   Using the Exponential scale on the luminance channel gives high-contrast effect.
 
 
 .. figure:: /images/Manual-Compositing_Nodes-Combine_YCbCrA.jpg

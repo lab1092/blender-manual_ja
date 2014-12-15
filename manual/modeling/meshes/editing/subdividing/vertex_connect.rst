@@ -2,13 +2,14 @@
 ..    TODO/Review: {{review|}} .
 
 
+**************
 Vertex Connect
 **************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     Mesh → Vertices → Connect
    | Hotkey:   :kbd:`J`
 

@@ -1,10 +1,11 @@
 
+**************
 Window Headers
 **************
 
 All windows have a header (the strip with a lighter gray background containing icon buttons).
 We will also refer to the header as the window *ToolBar*.  The header may be at the top
-(as with the :guilabel:`Properties Window`) or the bottom (as with the :guilabel:`3D Window`)
+(as with the *Properties Window*) or the bottom (as with the *3D Window*)
 of a window's area. The picture below shows the header of the 3D window:
 
 
@@ -57,13 +58,13 @@ and if the header is at the bottom the item text will read "Flip to Top".
 
 .. tip:: Theme colors
 
-   Blender allows for most of its interface color settings to be changed to suit the needs of the user.  If you find that the colors you see on screen do not match those mentioned in the Manual then it could be that your default theme has been altered.  Creating a new theme or selecting/altering a pre-existing one can be done by selecting the :doc:`User Preferences </preferences>` window and clicking on the :guilabel:`Themes` tab of the window.
+   Blender allows for most of its interface color settings to be changed to suit the needs of the user.  If you find that the colors you see on screen do not match those mentioned in the Manual then it could be that your default theme has been altered.  Creating a new theme or selecting/altering a pre-existing one can be done by selecting the :doc:`User Preferences </preferences>` window and clicking on the *Themes* tab of the window.
 
 
 Window type button
 ==================
 
-:kbd:`lmb` clicking on the first icon at the left end of a header allows selection of one of the 16 different window types. Every window frame in Blender may contain any type of window. So if you want 3D views everywhere, just go ahead and change them all.
+:kbd:`LMB` clicking on the first icon at the left end of a header allows selection of one of the 16 different window types. Every window frame in Blender may contain any type of window. So if you want 3D views everywhere, just go ahead and change them all.
 
 
 Menus and buttons
@@ -79,7 +80,7 @@ Menus allow you to directly access many features and commands,
 so just look through them to see what's there.
 All Menu entries show the relevant shortcut keys, if any.
 
-Menus and buttons will change with :guilabel:`Window Type` and the selected object and mode.
+Menus and buttons will change with *Window Type* and the selected object and mode.
 They only show the actions that can be performed.
 
 

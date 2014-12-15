@@ -1,28 +1,25 @@
-
-..    TODO/Review: {{review|}} .
-
-
+*************
 Cast Modifier
 *************
 
 This modifier shifts the shape of a mesh, curve,
 surface or lattice to any of a few pre-defined shapes (sphere, cylinder, cuboid).
 
-It is equivalent to the :guilabel:`To Sphere` tool in :guilabel:`Edit Mode`
-(:menuselection:`Mesh --> Transform --> To Sphere` or :kbd:`Alt+Shift+S`)
+It is equivalent to the *To Sphere* tool in *Edit Mode*
+(:menuselection:`Mesh --> Transform --> To Sphere` or :kbd:`Alt-Shift-S`)
 and what other programs call "Spherify" or "Spherize", but, as written above, it is not limited to casting to a sphere.
 
 
 .. tip::
 
-   The :doc:`Smooth modifier </modifiers/deform/smooth>` is a good companion to :guilabel:`Cast`,
+   The :doc:`Smooth modifier </modifiers/deform/smooth>` is a good companion to *Cast*,
    since the cast shape sometimes needs smoothing to look nicer or even to fix shading artifacts.
 
 
 .. note::
 
    For performance reasons, this modifier only works with local coordinates.
-   If the modified object looks wrong, you may need to apply its rotation (:kbd:`Ctrl A`),
+   If the modified object looks wrong, you may need to apply its rotation (:kbd:`Ctrl-A`),
    especially when casting to a cylinder.
 
 
@@ -35,11 +32,11 @@ Options
 
 
 Cast Type
-   Menu to choose cast type (target shape): :guilabel:`Sphere`, :guilabel:`Cylinder` or :guilabel:`Cuboid`.
+   Menu to choose cast type (target shape): *Sphere*, *Cylinder* or *Cuboid*.
 
 X, Y, Z
    Toggle buttons to enable/disable the modifier in the X, Y, Z axes directions
-   (X and Y only for :guilabel:`Cylinder` cast type).
+   (X and Y only for *Cylinder* cast type).
 
 Factor
    The factor to control blending between original and cast vertex positions.
@@ -55,7 +52,7 @@ Size
    it is defined by the initial shape and the control object, if any.
 
 From radius
-   If activated, calculate :guilabel:`Size` from :guilabel:`Radius`, for smoother results.
+   If activated, calculate *Size* from *Radius*, for smoother results.
 
 Vertex Group
    A vertex group name, to restrict the effect to the vertices in it only.

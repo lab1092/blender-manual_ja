@@ -1,6 +1,7 @@
 ..    TODO/Review: {{review}} .
 
 
+************
 Window Types
 ************
 
@@ -10,21 +11,21 @@ Window Types
    The Window Type selection menu.
 
 
-The :guilabel:`Blender` interface is divided up into many rectangular :guilabel:`Window
-Frames`. Each :guilabel:`Window Frame` may contain different types of information,
-depending upon the :guilabel:`Window Type`.
+The *Blender* interface is divided up into many rectangular *Window Frames*.
+Each *Window Frame* may contain different types of information,
+depending upon the *Window Type*.
 
-Each :guilabel:`Window Frame` operates independently of the others,
-and you can have the same :guilabel:`Window Type` in many frames. For example, you may have
-several :guilabel:`3D windows` open but each looking at the :guilabel:`Scene` from a different
-perspective. You can split and merge and resize :guilabel:`Window Frames` to suit whatever you
-are working on. You can also arrange some :guilabel:`Window Frames` to display without a
-:guilabel:`Header` to save screen space.
+Each *Window Frame* operates independently of the others,
+and you can have the same *Window Type* in many frames. For example, you may have
+several *3D windows* open but each looking at the *Scene* from a different
+perspective. You can split and merge and resize *Window Frames* to suit whatever you
+are working on. You can also arrange some *Window Frames* to display without a
+*Header* to save screen space.
 
 :doc:`Read more about arranging frames » </interface/window_system/arranging_frames>`
 
 
-:guilabel:`Window Types` are broken up by functionality:
+*Window Types* are broken up by functionality:
 
 
 - :doc:`The 3D View </3d_interaction/navigating/introduction>` - Show a graphical view of your scene.
@@ -39,11 +40,11 @@ are working on. You can also arrange some :guilabel:`Window Frames` to display w
 - :doc:`The Logic Editor </game_engine/logic>` - Edit game logic.
 - :doc:`The Properties Editor </interface/window_types/properties>` - Show several attributes of the currently selected object.
 - :doc:`The Outliner </data_system/the_outliner>` - Find and organize your objects.
-- :doc:`User Preferences </preferences>` - Customize :guilabel:`Blender` to your work style and computer.
+- :doc:`User Preferences </preferences>` - Customize *Blender* to your work style and computer.
 - :ref:`The Info Window <the-info-window-main-menu>` - Provides information and options for managing files, windows and engines.
 - :doc:`The File Browser </data_system/files/open>` - Organize, load and save files (most times invoked automatically, when needed).
-- :doc:`The Console </extensions/python/console>` - Directly use python in :guilabel:`Blender`.
+- :doc:`The Console </extensions/python/console>` - Directly use python in *Blender*.
 
-You can select the :guilabel:`Window Type` by clicking the :guilabel:`Window Header's`
-*leftmost* button. A pop-up menu displays showing the available :guilabel:`Window Types`.
+You can select the *Window Type* by clicking the *Window Header's*
+*leftmost* button. A pop-up menu displays showing the available *Window Types*.
 

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X|im=needs images}} .
 
 
+****************
 Color Management
 ****************
 
@@ -38,7 +39,7 @@ so we have to take care to do the right conversion into and out of this linear c
 Scene Settings
 ==============
 
-These settings are found in the scene tab, under the :guilabel:`Color Management` panel.
+These settings are found in the scene tab, under the *Color Management* panel.
 
 Display
 -------
@@ -55,8 +56,6 @@ Device
    or when writing out image files intended to be displayed on another device. Rec709 is commonly used for HDTVs,
    while XYZ and DCI-P3 are common for digital projectors.
    Color management can be disabled by setting the device to None.
-
-
 
 .. figure:: /images/Blender2.64_color_mgt_display.jpg
 
@@ -75,7 +74,6 @@ as if they have been printed on real film.
 Another common use case is when you want to inspect renders,
 to see details in dark shadows or bright highlights, or identify render errors.
 Such settings would be only used temporarily and not get used for final renders.
-
 
 .. figure:: /images/Blender2.64_color_mgt_settings.jpg
 
@@ -174,7 +172,6 @@ with these two settings:
 View as Render
    Display the image datablock (not only renders) with view transform, exposure, gamma, RGB curves applied.
    Useful for viewing rendered frames in linear OpenEXR files the same as when rendering them directly.
-
 Save as Render
    Option in the image save operator to apply the view transform, exposure, gamma, RGB curves.
    This is useful for saving linear OpenEXR to e.g. PNG or JPEG files in display space.
@@ -183,7 +180,7 @@ Save as Render
 World Settings
 ==============
 
-Settings in the :guilabel:`World` panel give you two additional controls for exposure,
+Settings in the *World* panel give you two additional controls for exposure,
 however, these bake the exposure effects into the rendered image,
 as opposed the techniques explained on this page,
 which affect the color space of rendered images.
@@ -208,11 +205,14 @@ one. More information about how to set up such a workflow can be found on the
 
 We currently use the following color space roles:
 
-
-- *scene_linear* : color space used for rendering, compositing, and storing all float precision images in memory.
-- *default_sequencer* : default color space for sequencer, *scene_linear* if not specified
-- *default_byte* : default color space for byte precision images and files, *texture_paint* if not specified.
-- *default_float* : default color space for float precision images and files, *scene_linear* if not specified.
+scene_linear
+   color space used for rendering, compositing, and storing all float precision images in memory.
+default_sequencer
+   default color space for sequencer, *scene_linear* if not specified
+default_byte
+   default color space for byte precision images and files, *texture_paint* if not specified.
+default_float
+   default color space for float precision images and files, *scene_linear* if not specified.
 
 The standard Blender configuration also includes some support for
 `ACES <http://www.oscars.org/science-technology/council/projects/aces.html>`__

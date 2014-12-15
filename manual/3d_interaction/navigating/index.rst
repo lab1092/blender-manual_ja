@@ -1,6 +1,7 @@
 
-Navigating
-**********
+#############
+  Navigating
+#############
 
 .. toctree::
    :maxdepth: 2

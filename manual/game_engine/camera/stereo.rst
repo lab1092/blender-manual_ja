@@ -1,4 +1,5 @@
 
+*************
 Stereo Camera
 *************
 
@@ -15,7 +16,7 @@ for more information on different stereoscopic viewing methods.
 Stereo Settings
 ===============
 
-:guilabel:`Stereo Mode`
+*Stereo Mode*
 
 .. figure:: /images/Manual-GameEngine-Stereo-Panel.jpg
 

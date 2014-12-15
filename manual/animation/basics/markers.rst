@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+*******
 Markers
 *******
 
@@ -105,15 +106,15 @@ Creating Markers
 
    | Mode:     all modes
    | Menu:     :menuselection:`Marker --> Add Marker` (:menuselection:`Frame --> Add Marker` in a timeline)
-   | Hotkey:   :kbd:`M` (:kbd:`ctrl-alt-M` in a VSE)
+   | Hotkey:   :kbd:`M` (:kbd:`Ctrl-Alt-M` in a VSE)
 
 
 The simplest way to add a marker is to move to the frame where you would like it to appear,
-and press :kbd:`M` (or :kbd:`ctrl-alt-M` in a video sequence editor).
+and press :kbd:`M` (or :kbd:`Ctrl-Alt-M` in a video sequence editor).
 
-Alternatively, you can press :kbd:`alt-A`
+Alternatively, you can press :kbd:`Alt-A`
 (or the "playback" button of the *Timeline* window) to make the animation play,
-and then hit :kbd:`M` (or :kbd:`ctrl-alt-M` in VSE) at the appropriate points.
+and then hit :kbd:`M` (or :kbd:`Ctrl-Alt-M` in VSE) at the appropriate points.
 This can be especially useful to mark the beats in some music.
 
 
@@ -124,16 +125,16 @@ Selecting Markers
    :class: refbox
 
    | Mode:     all modes
-   | Hotkey:   :kbd:`rmb`, :kbd:`shift-rmb`, :kbd:`A` / :kbd:`ctrl-A`, :kbd:`B` / :kbd:`ctrl-B`
+   | Hotkey:   :kbd:`RMB`, :kbd:`Shift-RMB`, :kbd:`A` / :kbd:`Ctrl-A`, :kbd:`B` / :kbd:`Ctrl-B`
 
 
-Click :kbd:`rmb` on the marker's triangle to select it. Use :kbd:`shift-rmb` to
+Click :kbd:`RMB` on the marker's triangle to select it. Use :kbd:`Shift-RMB` to
 (de)select multiple markers.
 
 In the Ipo Curve Editor, Action Editor, NLA Editor and Video Sequence Editor windows,
-you can also (de)select all markers with :kbd:`ctrl-A`,
-and border-select them with :kbd:`ctrl-B` (as usual, :kbd:`lmb` to select,
-:kbd:`rmb` to deselect).
+you can also (de)select all markers with :kbd:`Ctrl-A`,
+and border-select them with :kbd:`Ctrl-B` (as usual, :kbd:`LMB` to select,
+:kbd:`RMB` to deselect).
 The corresponding options are found in the Select menu of these windows.
 
 In the Timeline and Audio windows, you can (de)select all markers with :kbd:`A` ,
@@ -148,11 +149,11 @@ Naming Markers
 
    | Mode:     all modes
    | Menu:     :menuselection:`Marker --> (Re)Name Marker` ( :menuselection:`Frame --> Name Marker` in a timeline)
-   | Hotkey:   :kbd:`ctrl-M`
+   | Hotkey:   :kbd:`Ctrl-M`
 
 
 Having dozens of markers scattered throughout your scene's time won't help you much unless you
-know what they stand for. You can name a marker by selecting it, pressing :kbd:`ctrl-M`,
+know what they stand for. You can name a marker by selecting it, pressing :kbd:`Ctrl-M`,
 typing the name, and pressing the OK button.
 
 
@@ -164,15 +165,15 @@ Moving Markers
 
    | Mode:     all modes
    | Menu:     :menuselection:`Marker --> Grab/Move Marker` ( :menuselection:`Frame --> Grab/Move Marker` in a timeline)
-   | Hotkey:   :kbd:`ctrl-G` ( :kbd:`G` in a timeline or audio)
+   | Hotkey:   :kbd:`Ctrl-G` ( :kbd:`G` in a timeline or audio)
 
 
-Once you have one or more markers selected, hit :kbd:`ctrl-G`
+Once you have one or more markers selected, hit :kbd:`Ctrl-G`
 (or :kbd:`G` in Timeline or Audio windows) to move them,
-and confirm the move with :kbd:`lmb` or :kbd:`enter` (as usual,
-cancel the move with :kbd:`rmb`, or :kbd:`Esc`).
+and confirm the move with :kbd:`LMB` or :kbd:`Enter` (as usual,
+cancel the move with :kbd:`RMB`, or :kbd:`Esc`).
 
-By default, you grab the markers in one-frame steps, but if you hold :kbd:`ctrl`, the
+By default, you grab the markers in one-frame steps, but if you hold :kbd:`Ctrl`, the
 markers will move in steps corresponding to one second - so if you have set your scene to
 **25 fps**, the markers will move in twenty-five-frames steps.
 
@@ -185,11 +186,11 @@ Duplicating Markers
 
    | Mode:     all modes
    | Menu:     :menuselection:`Marker --> Duplicate Marker` ( :menuselection:`Frame --> Duplicate Marker` in a timeline)
-   | Hotkey:   :kbd:`ctrl-shift-D` ( :kbd:`shift-D` in a timeline or audio)
+   | Hotkey:   :kbd:`Ctrl-Shift-D` ( :kbd:`Shift-D` in a timeline or audio)
 
 
-You can duplicate the selected markers by hitting :kbd:`ctrl-shift-D`
-(or :kbd:`shift-D` in a Timeline or Audio window). Once duplicated,
+You can duplicate the selected markers by hitting :kbd:`Ctrl-Shift-D`
+(or :kbd:`Shift-D` in a Timeline or Audio window). Once duplicated,
 the new ones are automatically placed in grab mode, so you can move them where
 (or rather when) you want.
 
@@ -206,9 +207,9 @@ Deleting Markers
 
    | Mode:     all modes
    | Menu:    :menuselection:`Marker --> Delete Marker` ( :menuselection:`Frame --> Delete Marker` in a timeline)
-   | Hotkey:   :kbd:`shift-X` ( :kbd:`X` in a timeline or audio)
+   | Hotkey:   :kbd:`Shift-X` ( :kbd:`X` in a timeline or audio)
 
 
-To delete the selected marker(s) simply press :kbd:`shift-X`
+To delete the selected marker(s) simply press :kbd:`Shift-X`
 (or :kbd:`X` in a Timeline or Audio'' window),
-and confirm the pop-up message with :kbd:`lmb`.
+and confirm the pop-up message with :kbd:`LMB`.

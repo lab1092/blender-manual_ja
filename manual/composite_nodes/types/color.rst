@@ -1,10 +1,8 @@
-
-..    TODO/Review: {{review|text=The Gamma Node explanation is a mess
-   |copy=X}} .
-
-
+*********************
 Composite Color Nodes
 *********************
+
+..    TODO/Review: {{review|text=The Gamma Node explanation is a mess |copy=X}} .
 
 These nodes play with the colors in the image. They adjust the image's color intensity,
 adjust contrast and intensity, and, most importantly, mix two images together by color,
@@ -21,13 +19,13 @@ RGB Curves Node
 
 For each color component channel (RGB) or the composite (C),
 this node allows you to define a bezier curve that varies the input (across the bottom,
-or x-axis) to produce an output value (the y-axis). By default,
-it is a straight line with a constant slope, so that .5 along the x-axis results in a .
-5 y-axis output.
+or x-axis) to produce an output value (the y-axis).
+By default, it is a straight line with a constant slope,
+so that ``0.5`` along the x-axis results in a ``0.5`` y-axis output.
 Click and drag along the curve to create a control point and to change the curve's shape.
-Use the :guilabel:`X` to delete the selected (white) point.
+Use the *X* to delete the selected (white) point.
 
-Clicking on each :guilabel:`C R G B` component displays the curve for that channel.
+Clicking on each *C R G B* component displays the curve for that channel.
 For example, making the composite curve flatter
 (by clicking and dragging the left-hand point of the curve up)
 means that a little amount of color will result in a lot more color (a higher Y value).
@@ -40,13 +38,13 @@ Here are some common curves you can use to achieve desired effects:
 
 .. figure:: /images/Manual-Compositing-Common_RGB_Node_Uses.jpg
 
-   A) Lighten B) Negative C) Decrease Contrast D) Posterize
+   Identifiers: A) Lighten B) Negative C) Decrease Contrast D) Posterize
 
 
 Options
 -------
 
-Fac:
+Fac
    How much the node should factor in its settings and affect the output.
 Black Level
    Defines the input color that is mapped to black. Default is black, which does not change the image.
@@ -149,44 +147,9 @@ The way the output image is produced is selected in the drop-down menu. The size
 (output resolution) of the image produced by the mix node is the size of the base image.
 The alpha and Z channels are mixed as well.
 
-Not one, not two, but count 'em, *sixteen* mixing choices include:
+.. seealso::
 
-Mix
-   The background pixel is covered by the foreground using alpha values.
-Add
-   The pixels are added together. *Fac* controls how much of the second socket to add in. Gives a bright result.
-   The "opposite" to :guilabel:`Subtract` mode.
-Subtract
-   Pixels are subtracted from one another. Gives a dark result.
-   The "opposite" to :guilabel:`Add` mode.
-Multiply
-   Returns a darker result than either pixel in most cases (except if one of them equals white=1). Completely white layers do not change the background at all. Completely black layers give a black result.
-   The "opposite" to :guilabel:`Screen` mode.
-Screen
-   Both pixel values are inverted, multiplied by each other, then the result is inverted again. This returns a brighter result than both input pixels in most cases (except if one of them equals 0). Completely black layers do not change the background at all (and vice versa); completely white layers give a white result.
-   The "opposite" of :guilabel:`Multiply` mode.
-Overlay
-   A combination of :guilabel:`Screen` and :guilabel:`Multiply` mode, depending on the base color.
-Divide
-   The background pixel (top socket) is divided by the second one: if this one is white (= 1.0), the first one isn't changed; the darker the second one, the brighter is the result (division by 0.5 - median gray - is same as multiplication by 2.0); if the second is black (= 0.0, zero-division is impossible!), Blender doesn't modify the background pixel.
-Difference
-   Both pixels are subtracted from one another, and the absolute value is taken. So the result shows the distance between both parameters, black stands for equal colors, white for opposite colors (one is black, the other white). The result looks a bit strange in many cases. This mode can be used to invert parts of the base image, and to compare two images (results in black if they are equal).
-Darken
-   Both pixels are compared to each other, and the smaller one is taken. Completely white layers do not change the background at all, and completely black layers give a black result.
-Lighten
-   Both parameters are compared to each other, and the larger one is taken. Completely black layers do not change the image at all and white layers give a white result.
-Dodge
-   Brightens the one socket by the gradient in the other socket. Results in lighter areas of the image where the gradient is whiter. Use the Fac to control how much the gradient affects the other socket.
-Burn
-   Darkens one socket based on the gradient fed to the other socket. Results in darker images, since the image is *burned* onto the paper, er ... image (showing my age).
-Color
-   Adds a color to a pixel, tinting the overall whole with the color. Use this to increase the tint of an image.
-Value
-   The RGB values of both pixels are converted to HSV values. The values of both pixels are blended, and the hue and saturation of the base image is combined with the blended value and converted back to RGB.
-Saturation
-   The RGB values of both pixels are converted to HSV values.  The saturation of both pixels are blended, and the hue and value of the base image is combined with the blended saturation and converted back to RGB.
-Hue
-   The RGB values of both pixels are converted to HSV values.  The hue of both pixels are blended, and the value and saturation of the base image is combined with the blended hue and converted back to RGB.
+   :term:`Color Blend Modes` for details on each blending mode.
 
 .. note:: Color Channels
 
@@ -194,7 +157,7 @@ Hue
 
 
 Alpha
-   Click the :guilabel:`Alpha` button to make the mix node use the Alpha (transparency) values of the second (bottom)
+   Click the *Alpha* button to make the mix node use the Alpha (transparency) values of the second (bottom)
    node. If enabled, the resulting image will have an Alpha channel that reflects both images' channels. Otherwise,
    (when not enabled, light green)
    the output image will mix the colors by considering what effect the Alpha channel has of the base
@@ -202,7 +165,7 @@ Alpha
 
 
 Fac
-   The amount of mixing of the bottom socket is selected by the Factor input field (:guilabel:`Fac:`). A factor of zero does not use the bottom socket, whereas a value of 1.0 makes full use. In Mix mode, 50:50 (0.50) is an even mix between the two, but in Add mode, .50 means that only half of the second socket's influence will be applied.
+   The amount of mixing of the bottom socket is selected by the Factor input field (*Fac:*). A factor of zero does not use the bottom socket, whereas a value of 1.0 makes full use. In Mix mode, 50:50 (0.50) is an even mix between the two, but in Add mode, .50 means that only half of the second socket's influence will be applied.
 
 
 Examples
@@ -392,7 +355,7 @@ Hue and Saturation work together.
    but the saturation slider can deepen or lighten the intensity of that color.
 Gray & White are neutral hues.
    A gray image, where the RGB values are equal, has no hue. Therefore,
-   this node can only affect it with the :guilabel:`Val` slider. This applies for all shades of gray,
+   this node can only affect it with the *Val* slider. This applies for all shades of gray,
    from black to white; wherever the values are equal.
 Changing the effect over time.
    The Hue and Saturation values are set in the node by the slider,
@@ -495,7 +458,7 @@ This handy node inverts the colors in the input image, producing a negative.
 
 
 Options
-^^^^^^^
+-------
 
 Factor
    Controls the amount of influence the node exerts on the output image
@@ -521,7 +484,7 @@ Connect the Background image to the top input, and the foreground image to the l
 Where the foreground image pixels have an alpha greater than 0 (namely, have some visibility),
 the background image will be overlaid.
 
-Use the :guilabel:`Factor` slider to 'merge' the two pictures.
+Use the *Factor* slider to 'merge' the two pictures.
 A factor less than 1.00 will make the foreground more transparent,
 allowing the background to bleed through.
 
@@ -625,7 +588,7 @@ the alpha map will automatically be anti-aliased to smooth out any artifacts.
 
 However, you can obtain this by making an AlphaOver of two Z-Combine, one normal,
 the other having inverted (reversed?) Z-values as inputs, obtained using for each of them a
-:guilabel:`MapValue` node with a :guilabel:`Size` field set to -1.0:
+*MapValue* node with a *Size* field set to -1.0:
 
 
 .. figure:: /images/Manual-Node-ZCombine_ex_alpha.jpg
@@ -704,19 +667,25 @@ Color Balance
 The Color Balance node can adjust the color and values of an image using two different
 correction formulas.
 
-The :guilabel:`Lift, Gammma, Gain` formula uses :guilabel:`Lift`, :guilabel:`Gamma`, and
-:guilabel:`Gain` calculations to adjust an image.\ :guilabel:`Lift` increases the value of dark
-colors, :guilabel:`Gamma` will adjust midtones, and :guilabel:`Gain` adjusts highlights.
+The *Lift, Gammma, Gain* formula uses *Lift*, *Gamma*, and
+*Gain* calculations to adjust an image.\ *Lift* increases the value of dark
+colors, *Gamma* will adjust midtones, and *Gain* adjusts highlights.
 
-The :guilabel:`Offset, Power, Slope` formula uses :guilabel:`Offset`, :guilabel:`Power`,
-and :guilabel:`Slope`: ``out = (i*s+o)^p``
+The *Offset, Power, Slope* formula uses *Offset*, *Power*,
+and *Slope*: ``out = (i * s + o) ^ p``
 
 where:
-- :guilabel:`out` = the color graded pixel code value
-- :guilabel:`i` = the input pixel code value (0=black, 1=white)
-- :guilabel:`s` = slope (any number 0 or greater, nominal value is 1.0)
-- :guilabel:`o` = offset (any number, nominal value is 0)
-- :guilabel:`p` = power (any number greater than 0, nominal value is 1.0)
+
+``out``
+   The color graded pixel code value.
+``i``
+   The input pixel code value (0=black, 1=white).
+``s``
+   Slope (any number 0 or greater, nominal value is 1.0).
+``o``
+   Offset (any number, nominal value is 0).
+``p``
+   Power (any number greater than 0, nominal value is 1.0).
 
 Factor
    Controls the amount of influence the node exerts on the output image

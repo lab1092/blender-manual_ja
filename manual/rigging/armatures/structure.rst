@@ -1,4 +1,5 @@
 
+******************
 Armature Structure
 ******************
 
@@ -51,7 +52,7 @@ and the last bone of a chain is the *tip bone*
 
 Chains of bones are a particularly important topic in :doc:`posing </rigging/posing>`
 (especially with the standard *forward kinematics* versus "automatic" *inverse kinematics* posing techniques).
-You create/edit them in :guilabel:`Edit` mode, but except in case of connected bones,
+You create/edit them in *Edit* mode, but except in case of connected bones,
 their relationships have no effect on bone transformations in this mode
 (i.e. transforming a parent bone won't affect its children).
 
@@ -70,13 +71,13 @@ but let us have a quick look at this important feature.
    The Armature Bones panel with two bones selected, and their Child of settings highlighted.
 
 
-The easiest way to manage bones relationships is to use the :guilabel:`Relations` panel
-:guilabel:`Bone` context:
+The easiest way to manage bones relationships is to use the *Relations* panel
+*Bone* context:
 
 - First, :doc:`select </rigging/armatures/selecting>` the bones you want to edit (selection order does not matter here).
-- To *parent* a bone to another one, select the name of this parent in its drop-down :guilabel:`Parent` list.
-- To *unparent* a bone, just select the void entry in the same :guilabel:`Parent` list.
-- To *connect* a bone to its parent, enable its small :guilabel:`Con` button.
-- To *unconnect* a bone, disable its :guilabel:`Con` button.
+- To *parent* a bone to another one, select the name of this parent in its drop-down *Parent* list.
+- To *unparent* a bone, just select the void entry in the same *Parent* list.
+- To *connect* a bone to its parent, enable its small *Con* button.
+- To *unconnect* a bone, disable its *Con* button.
 
 

@@ -1,4 +1,5 @@
 
+************
 Introduction
 ************
 
@@ -50,7 +51,7 @@ Only after the above global influences have been considered,
 do you start adding light from lamps in your scene.
 The main things under your control are the:
 
-- Type of light used (:guilabel:`Sun`, :guilabel:`Spot`, :guilabel:`Lamp`, :guilabel:`Hemi`, etc.).
+- Type of light used (*Sun*, *Spot*, *Lamp*, *Hemi*, etc.).
 - Color of the light.
 - Position of the light and its direction.
 - Settings for the light, including energy and falloff.
@@ -88,12 +89,12 @@ Overriding Materials to Reset Lighting
 
 If you have started down the road of assigning materials,
 and are now fiddling with the lighting, we suggest that you create a default,
-generic gray material--no :guilabel:`Vertex Color`, no :guilabel:`Face Texture`,
-no :guilabel:`Shadeless`, just plain old middle gray with RGB of (``0.8``, ``0.8``, ``0.8``).
+generic gray material--no *Vertex Color*, no *Face Texture*,
+no *Shadeless*, just plain old middle gray with RGB of (``0.8``, ``0.8``, ``0.8``).
 Name this ``Gray``.
 
-Next go to the :guilabel:`Render` context. In the :guilabel:`Render Layers` panel,
-select your new "\ ``Gray`` " material in the :guilabel:`Material` field.
+Next go to the *Render* context. In the *Render Layers* panel,
+select your new "\ ``Gray`` " material in the *Material* field.
 This will override any materials you may have set, and render everything with this color.
 Using this material, you can now go about adjusting the lighting.
 Just empty this field to get back to your original materials.

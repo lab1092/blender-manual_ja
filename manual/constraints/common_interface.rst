@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=examples|im=examples}} .
 
 
+****************************
 Constraints Common Interface
 ****************************
 
@@ -21,7 +22,7 @@ that is split into three parts:
 
 - The header, gathering most common settings.
 - The constraint's specific settings.
-- The influence and animation controls (the :guilabel:`Rigid Body Joint` constraints have no influence setting).
+- The influence and animation controls (the *Rigid Body Joint* constraints have no influence setting).
 
 
 Constraints Header
@@ -49,7 +50,7 @@ The name field
    when just added, they are in "red state", as Blender cannot guess which object or bone to use as target.
    This can also happen when you choose an invalid set of settings,
    e.g. with a :doc:`Track To constraint </constraints/tracking/track_to>`
-   of which the :guilabel:`To` and :guilabel:`Up` vectors are both set to the same axis.
+   of which the *To* and *Up* vectors are both set to the same axis.
    As noted above, constraints in "red state" are ignored during the stack evaluation.
 
 The "up"/"down" buttons
@@ -77,22 +78,22 @@ The target
 ----------
 
 Most constraints need another "target" object or bone to "guide" them.
-You select which by selecting its name in the :guilabel:`Target` field.
+You select which by selecting its name in the *Target* field.
 Except for a few cases, you can use any type of object (camera, mesh, empty...);
 its object origin will be the target point.
 
-When you type in the :guilabel:`OB` field a mesh or lattice name,
-a second :guilabel:`Vertex Group` field appears just below. If you leave it empty,
+When you type in the *OB* field a mesh or lattice name,
+a second *Vertex Group* field appears just below. If you leave it empty,
 the mesh or lattice will be used as a standard object target. But if you enter in this
-:guilabel:`Vertex Group` field the name of one of the mesh's or lattice's vertex groups,
+*Vertex Group* field the name of one of the mesh's or lattice's vertex groups,
 then the constraint will use the median point of this vertex group as target.
 
-Similarly, if you type in the :guilabel:`OB` field an armature name,
-a second :guilabel:`Bone` field appears just below.
+Similarly, if you type in the *OB* field an armature name,
+a second *Bone* field appears just below.
 If you enter in it the name of one of the armature's bones,
 then the constraint will use this bone's *root* as target.
 In some constraints, when you use a bone as target,
-another :guilabel:`Head/Tail` numeric field will also appear,
+another *Head/Tail* numeric field will also appear,
 that allows you to select where along the bone the target point will lay, from root
 (**0.0**) to tip (**1.0**) (remember that currently, in Blender UI,
 bones' roots are called "heads", and bones' tips, "tails"...).
@@ -120,9 +121,9 @@ Local With Parent (bones only)
 
 Pose Space (bones only)
    The bone properties are evaluated in the armature object local space
-   (i.e. independently from the armature transformations in :guilabel:`Object` mode).
+   (i.e. independently from the armature transformations in *Object* mode).
    Hence, if the armature object has null transformations,
-   :guilabel:`Pose Space` will have the same effect as :guilabel:`World Space`.
+   *Pose Space* will have the same effect as *World Space*.
 
 Local (Without Parent) Space (objects only)
    The object properties are evaluated in its own local space,
@@ -137,7 +138,7 @@ Understanding the Constraint Space effects is not really easy
 (unless you are a geometry genius...).
 The best thing to do is to experiment with their different combinations, using e.g.
 two empties (as they materialize clearly their axes),
-and a :guilabel:`Copy Rotation` constraint
+and a *Copy Rotation* constraint
 (as rotations are the most demonstrative transformations,
 to visualize the various spaces specificities...).
 
@@ -152,7 +153,7 @@ Influence
    Influence
 
 
-At the bottom of nearly all constraints, you have the :guilabel:`Influence` slider,
+At the bottom of nearly all constraints, you have the *Influence* slider,
 which controls the influence of the constraint on its owner. As you might expect,
 **0.0** means that the constraint has no effect, and **1.
 0** means that the constraint has full effect. Using in-between values,

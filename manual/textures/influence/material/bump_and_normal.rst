@@ -1,11 +1,12 @@
 
+********************
 Bump and Normal Maps
 ********************
 
 Description
 -----------
 
-:guilabel:`Normal Maps` and :guilabel:`Bump Maps` both serve the same purpose:
+*Normal Maps* and *Bump Maps* both serve the same purpose:
 they simulate the impression of a detailed 3D surface,
 by modifying the shading as if the surface had lots of small angles, rather than being completely flat.
 Because it's just modifying the shading of each pixel,
@@ -13,9 +14,9 @@ this will not cast any shadows and will not obstruct other objects. If the camer
 you will notice that the surface is not really shaped.
 
 
-Both :guilabel:`Bump Maps` and :guilabel:`Normal Maps` work by modifying the normal angle
+Both *Bump Maps* and *Normal Maps* work by modifying the normal angle
 (the direction pointing perpendicular from a face), which influences how a pixel is shaded.
-Although the terms :guilabel:`Normal Map` and :guilabel:`Bump Map` are often used
+Although the terms *Normal Map* and *Bump Map* are often used
 synonymously, there are certain differences.
 
 Bump maps
@@ -76,8 +77,8 @@ Mapping is the process of applying a texture to the low-poly mesh.
 Consult the :doc:`Textures Mapping section</textures/mapping>`
 for more information on applying a texture to a mesh's material.Special considerations for Bump and Normal Maps is:
 
-- When using a Bump map, map the texture to :guilabel:`Normal` and enable :guilabel:`No RGB`.
-- When using a Normal map, map the texture to :guilabel:`Normal`.
+- When using a Bump map, map the texture to *Normal* and enable *No RGB*.
+- When using a Normal map, map the texture to *Normal*.
 
 The coordinate systems of the two objects must match. For example, if you bake using a UV map of the high-poly model,
 you must UV map the low poly model and line up its UV coordinates to match the outline of the high-poly image

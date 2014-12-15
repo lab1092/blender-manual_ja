@@ -4,6 +4,7 @@
    Please don't edit 2.6 manual "Material" pages until further notice.  (sculptorjim, 01/01/2013)
 
 
+***********************
 Types of Material Nodes
 ***********************
 

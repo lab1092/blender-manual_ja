@@ -2,13 +2,14 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+*************************
 Linked Libraries Overview
 *************************
 
 Blender is able to "reach in" to other .blend files and pull in whatever you want.
 In this way, Blender supports reuse of your Blender data. For example,
 if you have a library .blend file that has a really neat material used in it, you can,
-from your current .blend file, :guilabel:`Append` that material into your current .blend file.
+from your current .blend file, *Append* that material into your current .blend file.
 This saves you from manually re-creating all the different settings.
 
 
@@ -19,22 +20,22 @@ General Procedure
    :class: refbox
 
    | Mode:     All Modes
-   | Menu:     :guilabel:`File` → :guilabel:`Append or Link`
-   | Hotkey:   :kbd:`shift-F1`
+   | Menu:     *File* → *Append or Link*
+   | Hotkey:   :kbd:`Shift-F1`
 
 
-The main menu in Blender is located in the :guilabel:`Info` window
+The main menu in Blender is located in the *Info* window
 (by default the header located at the top of your screen). From that menu,
-all you have to do is use :guilabel:`File` → :guilabel:`Append or Link`,
-or press :kbd:`shift-F1` in your active window.
-The active window will change to a :guilabel:`File Browser`
-(the :guilabel:`Window type` icon looks like a manila folder) selector window. Use this window
+all you have to do is use *File* → *Append or Link*,
+or press :kbd:`Shift-F1` in your active window.
+The active window will change to a *File Browser*
+(the *Window type* icon looks like a manila folder) selector window. Use this window
 to navigate your hard drive and network-mapped drives through folders and subfolders to find
 the .blend file that has the object you want to reuse. When you click on a .blend file
 (indicated by the orange square box next to its name),
 Blender will go into that file and show you the list of datablock types within it:
-:guilabel:`Scenes`, :guilabel:`Objects`, :guilabel:`Materials`, :guilabel:`Textures`,
-:guilabel:`Meshes`, etc.
+*Scenes*, *Objects*, *Materials*, *Textures*,
+*Meshes*, etc.
 Clicking on any one of them will display the specific instances of that type.
 
 
@@ -59,37 +60,37 @@ Appending library objects into your current project
 The following procedure appends an object with all its linked data, such as mesh data,
 materials, textures, ..., to the current .blend file.
 
-- Select :guilabel:`File` → :guilabel:`Append or Link`.
+- Select *File* → *Append or Link*.
 - Locate and select the file that contains the object you want to append (often a "library" file).
-- Navigate to the :guilabel:`Object` section of the file.
-- Select one object from the list using :kbd:`lmb`, multiple objects via :kbd:`rmb`, and/or a range of objects by dragging :kbd:`rmb`.
+- Navigate to the *Object* section of the file.
+- Select one object from the list using :kbd:`LMB`, multiple objects via :kbd:`RMB`, and/or a range of objects by dragging :kbd:`RMB`.
 - Repeat the above for each kind of object you wish to append or link. Parents and armatures (all modifier objects) must be selected separately.
-- Set desired options that are shown in the header (:guilabel:`At Cursor`, :guilabel:`Active Layer`, ...).
-- :kbd:`lmb` on :guilabel:`Load Library` or press :kbd:`Enter` or :kbd:`mmb` directly on the data to append.
+- Set desired options that are shown in the header (*At Cursor*, *Active Layer*, ...).
+- :kbd:`LMB` on *Load Library* or press :kbd:`Enter` or :kbd:`MMB` directly on the data to append.
 
 Of course, you can append or link many other things besides objects:
-all the :guilabel:`ObData` - cameras, curves, groups, lamps, materials, meshes,
+all the *ObData* - cameras, curves, groups, lamps, materials, meshes,
 etc. - and even **an entire scene** ... Note that there is a **big** difference between
 adding the object and the object data, such as mesh.
-If you append a :guilabel:`Mesh` datablock,
+If you append a *Mesh* datablock,
 you are only bringing in the data about that particular instance of mesh,
 and not an actual object instance of the mesh that you can see.
 
-In the :guilabel:`File Browser` window header, use :guilabel:`Append`
+In the *File Browser* window header, use *Append*
 (button enabled by default)
 if you want to make a local independent copy of the object inside your file.
-Select :guilabel:`Link` if you want a dynamic link made to the source file;
+Select *Link* if you want a dynamic link made to the source file;
 if anyone changes the object in the source file,
 your current file will be updated the next time you open it.
 
-Click :guilabel:`Load Library` to append or link the object into your current .blend file.
+Click *Load Library* to append or link the object into your current .blend file.
 
-Some more loading option buttons (in the :guilabel:`File Browser` header) include:
+Some more loading option buttons (in the *File Browser* header) include:
 
 AutoSel
    When an object is loaded, it is not active or selected; it just plops into your .blend file. Often,
    right after loading, you will want to do something with it, like scale it or move it.
-   Enable this button and the imported object will be selected, just as if you magically :kbd:`rmb` -clicked on it.
+   Enable this button and the imported object will be selected, just as if you magically :kbd:`RMB` -clicked on it.
    This button saves the step of finding the object and selecting it.
 Active Layer
    Blender has 20 layers to divide up a large scene, and each object resides on some layer(s). By default,
@@ -102,10 +103,10 @@ At Cursor
 
 .. tip:: Finding What was Loaded
 
-   If the loaded object is not visible, consider using :guilabel:`At Cursor` or :guilabel:`AutoSel`.
-   If you use :guilabel:`AutoSel`, remember there are Snap tools to put your cursor on the object
-   (:kbd:`shift-S-4` (:guilabel:`Cursor ? Selection`)), and Center your view on it (:kbd:`C`
-   (:guilabel:`View`?? :guilabel:`Align View`?? :guilabel:`Center View to Cursor`)).
+   If the loaded object is not visible, consider using *At Cursor* or *AutoSel*.
+   If you use *AutoSel*, remember there are Snap tools to put your cursor on the object
+   (:kbd:`Shift-S-4` (*Cursor ? Selection*)), and Center your view on it (:kbd:`C`
+   (*View*?? *Align View*?? *Center View to Cursor*)).
    Note that these tools do not work if the object is on an unselected layer,
    since objects on unselected layers are invisible.
 
@@ -121,7 +122,7 @@ Hopefully you named this mesh something reasonable, like, oh, I don't know, ``Wh
 The wheel may be colored and thus have some materials assigned to it (like rubber and chrome).
 
 Once you navigate to the file, select the "\ ``Wheel`` "
-(in the :guilabel:`Object` s datablocks) and it will be imported into your current file.
+(in the *Object* s datablocks) and it will be imported into your current file.
 You can import a copy of it, or merely link to it.
 
 
@@ -151,9 +152,9 @@ FIXME(TODO: Internal Link;
    When Appending or Linking certain resources such as mesh data,
    it may not be instantly visible in the 3D Viewport.
    This is because the data has been loaded into Blender but has not been assigned to an object,
-   which would allow it to be seen. You can verify this by looking in the :guilabel:`Outliner`
-   window and switching it to :guilabel:`OOPS Schematic` view
-   (you may need to have the :guilabel:`Displays Scene datablock` button selected in its header).
+   which would allow it to be seen. You can verify this by looking in the *Outliner*
+   window and switching it to *OOPS Schematic* view
+   (you may need to have the *Displays Scene datablock* button selected in its header).
    In the OOPS Schematic picture you can see that "\ ``Wheel`` " is not linked to any
    object.
 
@@ -162,7 +163,7 @@ FIXME(TODO: Internal Link;
 
    To allow the newly loaded ``Wheel`` mesh to be assigned to an object,
    either select a currently visible object or create a new object (such as a cube), then go to
-   the :guilabel:`Link and Materials` panel and select the ``Wheel`` mesh from the mesh
+   the *Link and Materials* panel and select the ``Wheel`` mesh from the mesh
    drop down panel, at that point you should see it, because it has been assigned to an object.
 
 
@@ -189,10 +190,13 @@ you can import common materials, like glass, chrome, wood and bananas. This feat
 as it often means you don't have to be fiddling with all the little buttons and sliders just to re-create a material.
 I call out the Banana material because it is a great example of using simple procedural materials with a ColorRamp,
 and a procedural texture, to give a very realistic look. When you navigate to the file,
-and select :guilabel:`Material` s,
+and select *Material* s,
 the browser will show you a sphere sample of that material to help you visualize the texture that goes with the name.
-For more information on using the :guilabel:`Image Browser`,
-see `the release notes <http://wiki.blender.org/index.php/Dev:Ref/Release Notes/Vitals/File operations>`_
+For more information on using the *Image Browser*,
+
+.. TODO Link to manual below
+
+see `the release notes <http://wiki.blender.org/index.php/Dev:Ref/Release Notes/Vitals/File operations>`__
 
 
 .. note:: Blender Extension: Library
@@ -211,18 +215,13 @@ Reusing Node Layouts
 
 To reuse noodles (node layouts), open the original (source)
 file and create a Group for the set of nodes that you think you want to reuse.
-When you want to import that node group into your current file, :kbd:`lmb` on
-:guilabel:`File` → :guilabel:`Append` or :kbd:`lmb` on :guilabel:`File` →
-:guilabel:`Link` from the :guilabel:`Info` window header (or press :kbd:`F1` for
-:guilabel:`Append` or :kbd:`ctrl-alt-O` for :guilabel:`Link`), and navigate to the file.
-When you dive into the file, there will be a :guilabel:`NodeTree` option.
-:kbd:`lmb` on it and the list of node groups in that file will be listed.
-:kbd:`lmb` on the one you want and then :kbd:`lmb` .
-
-
-.. note:: `Verse <http://verse.blender.org>`_
-
-   Verse is an amazing OpenSource collaboration tool that integrates with Blender. Verse enables multiple people to work on, link, and share objects and modifications in Blender files in real time.
+When you want to import that node group into your current file, :kbd:`LMB` on
+*File* → *Append* or :kbd:`LMB` on *File* →
+*Link* from the *Info* window header (or press :kbd:`F1` for
+*Append* or :kbd:`Ctrl-Alt-O` for *Link*), and navigate to the file.
+When you dive into the file, there will be a *NodeTree* option.
+:kbd:`LMB` on it and the list of node groups in that file will be listed.
+:kbd:`LMB` on the one you want and then :kbd:`LMB` .
 
 
 Proxy Objects
@@ -250,19 +249,19 @@ which means that only the library files can define what's allowed to change loca
 
 For poses, you can control this by indicating bone layers as being restricted.
 A restricted layer is shown with a black dot in it.
-Use :kbd:`ctrl-lmb` on a button to restrict or unrestrict that layer.
+Use :kbd:`Ctrl-LMB` on a button to restrict or unrestrict that layer.
 
 
 .. admonition:: Reference
    :class: refbox
 
    | Mode:     Object Mode
-   | Hotkey:   :kbd:`ctrl-alt-P`
+   | Hotkey:   :kbd:`Ctrl-Alt-P`
 
 
 To make a proxy object for yourself, establish a link to the source object as described above.
-With that linked copy selected (:kbd:`rmb`) and in view (you can see it in the 3D View),
-press :kbd:`ctrl-alt-P` and confirm the :guilabel:`Make Proxy` dialog.
+With that linked copy selected (:kbd:`RMB`) and in view (you can see it in the 3D View),
+press :kbd:`Ctrl-Alt-P` and confirm the *Make Proxy* dialog.
 The object will be named with the original name plus a "\ ``_proxy`` " suffix.
 You may now move and modify the proxy. When selected, it will look like a local object
 (outlined in orange).

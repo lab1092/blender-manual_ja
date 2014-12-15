@@ -1,4 +1,5 @@
 
+***********************
 Vertex Weight Modifiers
 ***********************
 
@@ -40,7 +41,8 @@ Global Influence
    to/from vertex group is not prevented by setting this value to ``0.0``.
 
 Vertex Group Mask
-   An additional vertex group, the weights of which will be multiplied with the global influence value for each vertex.
+   An additional vertex group, the weights of which will be
+   multiplied with the global influence value for each vertex.
    If a vertex is not in the masking vertex group, its weight will be not be affected.
 
 Texture
@@ -76,19 +78,19 @@ Texture
 
       .. note::
 
-         All of the channels above are gamma corrected, except for :guilabel:`Intensity`.
+         All of the channels above are gamma corrected, except for *Intensity*.
 
    Object
-      The object to be used as reference for :guilabel:`Object` mapping.
+      The object to be used as reference for *Object* mapping.
 
    UV Layer
-      The UV layer to be used for :guilabel:`UV` mapping.
+      The UV layer to be used for *UV* mapping.
 
 
 Viewing Modified Weights
 ------------------------
 
-You can view the modified weights in :guilabel:`Weight Paint` mode. This also implies that
+You can view the modified weights in *Weight Paint* mode. This also implies that
 you'll have to disable the Vertex Weight modifiers if you want to see the original weights of
 the vertex group you are editing.
 
@@ -137,10 +139,10 @@ Falloff Type
       Creates binary weights (``0.0`` or ``1.0``), with ``0.5`` as cutting value.
 
 Group Add
-   Adds vertices with a final weight over :guilabel:`Add Threshold` to the vertex group.
+   Adds vertices with a final weight over *Add Threshold* to the vertex group.
 
 Group Remove
-   Removes vertices with a final weight below :guilabel:`Remove Threshold` from the vertex group.
+   Removes vertices with a final weight below *Remove Threshold* from the vertex group.
 
 
 Vertex Weight Mix Modifier
@@ -206,7 +208,7 @@ Mix Set
 
    .. warning::
 
-      When using :guilabel:`All vertices`, :guilabel:`Vertices from group B` or :guilabel:`Vertices from one group`,
+      When using *All vertices*, *Vertices from group B* or *Vertices from one group*,
       vertices might be added to the affected vertex group.
 
 
@@ -240,8 +242,8 @@ Proximity mode
    Geometry Distance
       Use the distance between each vertex and the target object, or its geometry.
 
-The :guilabel:`Geometry Distance` mode has three additional options, :guilabel:`Vertex`, :guilabel:`Edge` and
-:guilabel:`Face`. If you enable more than one of them, the shortest distance will be used. If the target object has no
+The *Geometry Distance* mode has three additional options, *Vertex*, *Edge* and
+*Face*. If you enable more than one of them, the shortest distance will be used. If the target object has no
 geometry (e.g. an empty or camera), it will use the location of the object itself.
 
 Vertex
@@ -259,7 +261,7 @@ Falloff Type
 
 .. tip::
 
-   :guilabel:`Lowest` can be set above :guilabel:`Highest` to reverse the mapping.
+   *Lowest* can be set above *Highest* to reverse the mapping.
 
 
 Examples
@@ -269,32 +271,32 @@ Using Distance from a Target Object
 -----------------------------------
 
 As a first example,
-let's dynamically control a :guilabel:`Wave` modifier with a modified vertex group.
+let's dynamically control a *Wave* modifier with a modified vertex group.
 
-Add a :guilabel:`Grid` mesh, with many vertices (e.g. a **100×100** vertices),
-and ``10`` BU side-length. Switch to :guilabel:`Edit` mode (:kbd:`tab`),
-and in the :guilabel:`Object Data` properties, :guilabel:`Vertex Groups` panel,
+Add a *Grid* mesh, with many vertices (e.g. a **100×100** vertices),
+and ``10`` BU side-length. Switch to *Edit* mode (:kbd:`Tab`),
+and in the *Object Data* properties, *Vertex Groups* panel,
 add a vertex group. Assign to it all your mesh's vertices (with e.g. a ``1.0`` weight).
-Go back to :guilabel:`Object` mode.
+Go back to *Object* mode.
 
-Then, go to the :guilabel:`Modifiers` properties,
-and add a :guilabel:`Vertex Weight Proximity` modifier.
-Set the mode to :guilabel:`Object Distance`. Select your vertex group,
+Then, go to the *Modifiers* properties,
+and add a *Vertex Weight Proximity* modifier.
+Set the mode to *Object Distance*. Select your vertex group,
 and the target object you want (here I used the lamp).
 
 You will likely have to adjust the linear mapping of the weights produced by the
-:guilabel:`Vertex Weight Proximity` modifier. To do so, edit :guilabel:`Lowest Dist` and
-:guilabel:`Highest Dist` so that the first corresponds to the distance between your target
+*Vertex Weight Proximity* modifier. To do so, edit *Lowest Dist* and
+*Highest Dist* so that the first corresponds to the distance between your target
 object and the vertices you want to have lowest weight,
 and similarly with the second and highest weight...
 
-Now add a :guilabel:`Wave` modifier, set it to your liking,
+Now add a *Wave* modifier, set it to your liking,
 and use the same vertex group to control it.
 
 Animate your target object, making it move over the grid. As you can see, the waves are only
-visible around the reference object! Note that you can insert a :guilabel:`Vertex Weight Edit`
-modifier before the :guilabel:`Wave` one,
-and use its :guilabel:`Custom Curve` mapping to get larger/narrower "wave influence's slopes".
+visible around the reference object! Note that you can insert a *Vertex Weight Edit*
+modifier before the *Wave* one,
+and use its *Custom Curve* mapping to get larger/narrower "wave influence's slopes".
 
 .. vimeo:: 30187079
 
@@ -304,18 +306,18 @@ and use its :guilabel:`Custom Curve` mapping to get larger/narrower "wave influe
 Using Distance from a Target Object's Geometry
 ----------------------------------------------
 
-We're going to illustrate this with a :guilabel:`Displace` modifier.
+We're going to illustrate this with a *Displace* modifier.
 
-Add a **10×10** BU **100×100** vertices grid, and in :guilabel:`Edit` mode,
+Add a **10×10** BU **100×100** vertices grid, and in *Edit* mode,
 add to it a vertex group containing all of its vertices, as above.
-You can even further sub-divide it with a first :guilabel:`Subsurf` modifier.
+You can even further sub-divide it with a first *Subsurf* modifier.
 
 Now add a curve circle, and place it ``0.25`` BU above the grid. Scale it up a bit (e.g.
 ``4.0``).
 
-Back to the grid object, add to it a :guilabel:`Vertex Weight Proximity` modifier,
-in :guilabel:`Geometry Distance` mode. Enable :guilabel:`Edge`
-(if you use :guilabel:`Vertex` only, and your curve has a low U definition,
+Back to the grid object, add to it a *Vertex Weight Proximity* modifier,
+in *Geometry Distance* mode. Enable *Edge*
+(if you use *Vertex* only, and your curve has a low U definition,
 you would get wavy patterns, see (*Wavy patterns*)).
 
 
@@ -330,23 +332,23 @@ you would get wavy patterns, see (*Wavy patterns*)).
 +---------------------------------------------------------------+--------------------------------------------------------------------------+
 
 
-Set the :guilabel:`Lowest Dist` to ``0.2``, and the :guilabel:`Highest Dist` to ``2.0``,
+Set the *Lowest Dist* to ``0.2``, and the *Highest Dist* to ``2.0``,
 to map back the computed distances into the regular weight range.
 
-Add a third :guilabel:`Displace` modifier and affect it the texture you like. Now,
+Add a third *Displace* modifier and affect it the texture you like. Now,
 we want the vertices of the grid nearest to the curve circle to remain undisplaced.
 As they will get weights near zero,
-this means that you have to set the :guilabel:`Midlevel` of the displace to ``0.0``.
+this means that you have to set the *Midlevel* of the displace to ``0.0``.
 Make it use our affected vertex group,
 and that's it! Your nice mountains just shrink to a flat plane near the curve circle.
 
 As in the previous example,
-you can insert a :guilabel:`Vertex Weight Edit` modifier before the :guilabel:`Displace` one,
-and play with the :guilabel:`Custom Curve` mapping to get a larger/narrower "valley"...
+you can insert a *Vertex Weight Edit* modifier before the *Displace* one,
+and play with the *Custom Curve* mapping to get a larger/narrower "valley"...
 
 
 +----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
-+:guilabel:`Curve Map` **variations.**                                                                                                                                                           +
++*Curve Map* **variations.**                                                                                                                                                           +
 +----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
 +.. figure:: /images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg+
 +   :width: 200px                                                |   :width: 200px                                               |   :width: 200px                                               +
@@ -363,9 +365,9 @@ and play with the :guilabel:`Custom Curve` mapping to get a larger/narrower "val
    Vertices with a computed weight below 0.1 removed from the vertex group.
 
 
-You can also add a fifth :guilabel:`Mask` modifier,
-and enable :guilabel:`Vertex Weight Edit` 's :guilabel:`Group Remove` option,
-with a :guilabel:`Remove Threshold` of ``0.1``, to see the bottom of your valley disappear.
+You can also add a fifth *Mask* modifier,
+and enable *Vertex Weight Edit* 's *Group Remove* option,
+with a *Remove Threshold* of ``0.1``, to see the bottom of your valley disappear.
 
 .. vimeo:: 30188564
 
@@ -376,27 +378,27 @@ Using a Texture and the Mapping Curve
 -------------------------------------
 
 Here we are going to create a sort of strange alien wave (yes,
-another example with the :guilabel:`Wave` modifier... but it's a highly visual one;
+another example with the *Wave* modifier... but it's a highly visual one;
 it's easy to see the vertex group effects on it...).
 
 So as above, add a **100×100** grid. This time, add a vertex group,
 but without assigning any vertex to it - we'll do this dynamically.
 
-Add a first :guilabel:`Vertex Weight Mix` modifier,
-set the :guilabel:`Vertex Group A` field with a :guilabel:`Default Weight A` of ``0.0``,
-and set :guilabel:`Default Weight B` to ``1.0``.
-Leave the :guilabel:`Mix Mode` to :guilabel:`Replace weights`,
-and select :guilabel:`All vertices` as :guilabel:`Mix Set`. This way,
+Add a first *Vertex Weight Mix* modifier,
+set the *Vertex Group A* field with a *Default Weight A* of ``0.0``,
+and set *Default Weight B* to ``1.0``.
+Leave the *Mix Mode* to *Replace weights*,
+and select *All vertices* as *Mix Set*. This way,
 all vertices are affected. As none are in the affected vertex group,
 they all have a default weight of ``0.0``, which is replaced by the second default weight
 (``1.0``). And all those vertices are also added to the affected vertex group.
 
-Now, select or create a masking texture - here I chose a default :guilabel:`Magic` one.
+Now, select or create a masking texture - here I chose a default *Magic* one.
 The values of this texture will control how much of the "second weight" (``1.0``)
 replaces the "first weight" (``0.0``)... In other words, they are taken as weight values!
 
 You can then select which texture coordinates and channel to use.
-Leave the mapping to the default :guilabel:`Local` option, and play with the various channels...
+Leave the mapping to the default *Local* option, and play with the various channels...
 
 
 +--------------------------------------------------------------+--------------------------------------------------------+---------------------------------------------------------------+
@@ -410,12 +412,12 @@ Leave the mapping to the default :guilabel:`Local` option, and play with the var
 +--------------------------------------------------------------+--------------------------------------------------------+---------------------------------------------------------------+
 
 
-Don't forget to add a :guilabel:`Wave` modifier, and select your vertex group in it!
+Don't forget to add a *Wave* modifier, and select your vertex group in it!
 
 You can use the weights created this way directly,
 but if you want to play with the curve mapping,
-you must add the famous :guilabel:`Vertex Weight Edit` modifier,
-and enable its :guilabel:`Custom Curve` mapping.
+you must add the famous *Vertex Weight Edit* modifier,
+and enable its *Custom Curve* mapping.
 
 By default, it's a one-to-one linear mapping - in other words,
 it does nothing! Change it to something like in (*A customized mapping curve*),

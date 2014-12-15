@@ -1,16 +1,20 @@
 
+************
 Meta Objects
 ************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` or :guilabel:`Edit` modes
+   | Mode:     *Object* or *Edit* modes
    | Menu:     :menuselection:`Add --> Meta`
-   | Hotkey:   :kbd:`shift-A`
+   | Hotkey:   :kbd:`Shift-A`
 
 
-:guilabel:`Meta` objects are *implicit surfaces*, meaning that they are *not* *explicitly* defined by vertices (as meshes are) or control points (as surfaces are): they exist *procedurally*. Meta objects are literally mathematical formulas that are calculated on-the-fly by Blender.
+Meta objects are *implicit surfaces*,
+meaning that they are *not* *explicitly* defined by vertices (as meshes are)
+or control points (as surfaces are): they exist *procedurally*.
+Meta objects are literally mathematical formulas that are calculated on-the-fly by Blender.
 
 A very distinct visual characteristic of metas is that they are fluid *mercurial*,
 or *clay-like* forms that have a "rounded" shape. Furthermore,
@@ -22,14 +26,14 @@ If they subsequently move away from one another, they restore their original sha
 Each of these is defined by its own underlying
 FIXME(TODO: Internal Link;
 [[#Technical Details|mathematical structure]]
-), and you can at any time switch between them using the :guilabel:`Active Element` panel.
+), and you can at any time switch between them using the *Active Element* panel.
 
-Typically :guilabel:`Meta` objects are used for special effects or as a basis for modeling.
+Typically *Meta* objects are used for special effects or as a basis for modeling.
 For example, you could use a collection of metas to form the initial shape of your model and
 then convert it to another object type (well, only meshes are available...)
 for further modeling. Meta objects are also very efficient for ray-tracing.
 
-Note that :guilabel:`Meta` objects have a slightly different behavior in :guilabel:`Object` mode, as detailed
+Note that *Meta* objects have a slightly different behavior in *Object* mode, as detailed
 FIXME(TODO: Internal Link;
 [[#"Object" Mode|below]]
 ).
@@ -41,20 +45,23 @@ Primitives
 There are five predefined meta "primitives" (or configurations)
 available in the :menuselection:`Add --> Meta` sub-menu:
 
-- :guilabel:`Meta Ball` adds a meta with a point underlying structure.
-- :guilabel:`Meta Tube` adds a meta with a line segment underlying structure.
-- :guilabel:`Meta Plane` adds a meta with a planar underlying structure.
-- :guilabel:`Meta Ellipsoid` adds a meta with an ellipsoidal underlying structure.
-- :guilabel:`Meta Cube` adds a meta with a volumetric cubic underlying structure.
+Meta Ball
+   adds a meta with a point underlying structure.
+Meta Tube
+   adds a meta with a line segment underlying structure.
+Meta Plane
+   adds a meta with a planar underlying structure.
+Meta Ellipsoid
+   adds a meta with an ellipsoidal underlying structure.
+Meta Cube
+   adds a meta with a volumetric cubic underlying structure.
 
 
 Visualization
 *************
 
-In :guilabel:`Object` mode, the calculated mesh is shown, along with a black "selection ring" (becoming pink when selected). To learn more about metas in :guilabel:`Object` mode, see
-FIXME(TODO: Internal Link;
-[[#"Object" Mode|below]]
-).
+In Object mode, the calculated mesh is shown, along with a black "selection ring" (becoming pink when selected).
+To learn more about metas in Object mode, see FIXME(TODO: Internal Link; [[#"Object" Mode|below]]).
 
 
 .. figure:: /images/MetaInfluenceAndSelection.jpg
@@ -64,19 +71,19 @@ FIXME(TODO: Internal Link;
    Meta Ball example.
 
 
-In :guilabel:`Edit` mode (:guilabel:`Meta Ball` *example*), a meta is drawn as a mesh (either shaded or as black wireframe, but without any vertex of course), with two colored circles: a red one for selection (pink when selected), and a green one for a direct control of the meta's stiffness (see
+In *Edit* mode (*Meta Ball* *example*), a meta is drawn as a mesh (either shaded or as black wireframe, but without any vertex of course), with two colored circles: a red one for selection (pink when selected), and a green one for a direct control of the meta's stiffness (see
 FIXME(TODO: Internal Link;
 [[#Stiffness|below]]
-) - light green when active). Note that except for the :guilabel:`Scale` (:kbd:`S`) transformation, having the green circle highlighted is equivalent to having the red one.
+) - light green when active). Note that except for the *Scale* (:kbd:`S`) transformation, having the green circle highlighted is equivalent to having the red one.
 
 
 Meta Ball Options
 *****************
 
 All Meta objects in a scene interact with each other.
-The settings in the :guilabel:`MetaBall` section apply to all meta objects.
-In :guilabel:`Edit` mode,
-the :guilabel:`Active Element` panel appears for editing individual meta elements.
+The settings in the *MetaBall* section apply to all meta objects.
+In *Edit* mode,
+the *Active Element* panel appears for editing individual meta elements.
 
 
 +------------------------------------------------+----------------------------------------------+
@@ -91,7 +98,7 @@ the :guilabel:`Active Element` panel appears for editing individual meta element
 Resolution
 ==========
 
-The :guilabel:`Resolution` controls the resolution of the resultant mesh as generated by the
+The *Resolution* controls the resolution of the resultant mesh as generated by the
 
 Meta
    object.
@@ -101,12 +108,12 @@ Render
    The rendered resolution of the generated mesh. The range is from **0.05** (finest) to **1.0** (coarsest).
 
 
-One way to see the underlying mathematical structure is to lower the :guilabel:`Resolution`,
-increase the :guilabel:`Threshold` and set the :guilabel:`Stiffness` (see below)
-a fraction above the :guilabel:`Threshold`. (*Underlying structure*) is a (*Meta cube*)
+One way to see the underlying mathematical structure is to lower the *Resolution*,
+increase the *Threshold* and set the *Stiffness* (see below)
+a fraction above the *Threshold*. (*Underlying structure*) is a (*Meta cube*)
 with the above mentioned configuration applied as follows:
-:guilabel:`Resolution` of **0.410**,
-:guilabel:`Threshold` of **5.0** and :guilabel:`Stiffness` a fraction above at **5.01**.
+*Resolution* of **0.410**,
+*Threshold* of **5.0** and *Stiffness* a fraction above at **5.01**.
 
 
 .. figure:: /images/MetaUnderlyingStructure.jpg
@@ -124,20 +131,20 @@ Threshold (Influence)
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` or :guilabel:`Edit` modes
-   | Panel:    :guilabel:`MetaBall` (:guilabel:`Editing` context, :kbd:`F9`)
+   | Mode:     *Object* or *Edit* modes
+   | Panel:    *MetaBall* (*Editing* context, :kbd:`F9`)
 
 
-:guilabel:`Threshold` defines how much a meta's surface "influences" other metas. It controls the *field level* at which the surface is computed. The setting is global to a
+*Threshold* defines how much a meta's surface "influences" other metas. It controls the *field level* at which the surface is computed. The setting is global to a
 FIXME(TODO: Internal Link;
 [[#Grouping|group]]
-) of :guilabel:`Meta` objects. As the threshold increases, the influence that each meta has on each other increases.
+) of *Meta* objects. As the threshold increases, the influence that each meta has on each other increases.
 
 There are two types of influence: **positive** or **negative**. The type can be toggled on
-the :guilabel:`Active Element` panel while in :guilabel:`Edit` mode,
-using the :guilabel:`Negative` button.
+the *Active Element* panel while in *Edit* mode,
+using the *Negative* button.
 You could think of **positive** as attraction and **negative** as repulsion of meshes.
-A negative meta will push away or repel the meshes of positive :guilabel:`Meta` objects.
+A negative meta will push away or repel the meshes of positive *Meta* objects.
 
 
 .. figure:: /images/MetaIntersection.jpg
@@ -160,12 +167,16 @@ Update
 ======
 
 While transforming metas (grab/move, scale, etc.), you have four "modes" of visualization,
-located in the :guilabel:`Update` buttons group of the :guilabel:`MetaBall` panel:
+located in the *Update* buttons group of the *MetaBall* panel:
 
-- :guilabel:`Always` - fully draw the meta during transformations.
-- :guilabel:`Half Res` - During transformations, draw the meta at half its :guilabel:`Wiresize` resolution.
-- :guilabel:`Fast` - Do not show meta mesh during transformations.
-- :guilabel:`Never` - Never show meta mesh (not a very recommended option, as the meta is only visible at render time!).
+Always
+   fully draw the meta during transformations.
+Half Res
+   During transformations, draw the meta at half its *Wiresize* resolution.
+Fast
+   Do not show meta mesh during transformations.
+Never
+   Never show meta mesh (not a very recommended option, as the meta is only visible at render time!).
 
 This should help you if you experience difficulties (metas are quite compute-intensive...),
 but with modern computers, this shouldn't happen, unless you use many metas,
@@ -188,7 +199,7 @@ whose directing structure is a point, generates an isotropic (i.e.
 identical in all directions) field around it and the surfaces at constant field value are
 spheres centered at the directing point.
 
-:guilabel:`Meta` objects are nothing more than mathematical formulae that perform logical operations on one another
+*Meta* objects are nothing more than mathematical formulae that perform logical operations on one another
 (AND, OR), and that can be added and subtracted from each other.
 This method is also called **Constructive Solid Geometry** (CSG).
 Because of its mathematical nature, CSG uses little memory, but requires lots of processing power to compute.
@@ -200,35 +211,36 @@ Underlying Structure
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`MetaBall tools` (:guilabel:`Editing` context, :kbd:`F9`), :guilabel:`Transform Properties`
+   | Mode:     *Edit* mode
+   | Panel:    *MetaBall tools* (*Editing* context, :kbd:`F9`), *Transform Properties*
 
 
 Blender has five types of metas, each determined by its underlying (or directing) structure.
-In :guilabel:`Edit` mode, you can change this structure,
-either using the relevant buttons in the :guilabel:`MetaBall tools` panel,
-or the drop-down list in the :guilabel:`Transform Properties` panel (:kbd:`N`).
+In *Edit* mode, you can change this structure,
+either using the relevant buttons in the *MetaBall tools* panel,
+or the drop-down list in the *Transform Properties* panel (:kbd:`N`).
 Depending on the structure, you might have additional parameters,
-located in both :guilabel:`Transform Properties` and :guilabel:`MetaBall tools` panels.
+located in both *Transform Properties* and *MetaBall tools* panels.
 
 Ball (point, zero-dimensional structure)
    This is the simplest meta, without any additional setting. As it is just a point,
    it generates an isotropic field, yielding a spherical surface
-   (this is why it is called :guilabel:`Meta Ball` or :guilabel:`Ball` in Blender).
+   (this is why it is called *Meta Ball* or *Ball* in Blender).
 
 Tube (straight line, uni-dimensional structure)
    This is a meta which surface is generated by the field produced by a straight line of a given length.
    This gives a cylindrical surface, with rounded closed ends. It has one additional parameter:
 
-   - :guilabel:`dx`: The length of the line (and hence of the tube - defaults to **1.0**).
+   dx
+      The length of the line (and hence of the tube - defaults to **1.0**).
 
 Plane (rectangular plane, bi-dimensional structure)
    This is a meta which surface is generated by the field produced by a rectangular plane.
    This gives a parallelepipedal surface, with a fixed thickness,
    and rounded borders. It has two additional parameters:
 
-   - :guilabel:`dx`: The length of the rectangle (defaults to **1.0**).
-   - :guilabel:`dy`: The width of the rectangle (defaults to **1.0**).
+   dx, dy
+      The length, width of the rectangle (defaults to **1.0**).
 
    Note that by default, the plane is a square.
 
@@ -236,20 +248,18 @@ Elipsoid (ellipsoidal volume, tri-dimensional structure)
    This is a meta which surface is generated by the field produced by an ellipsoidal volume.
    This gives an ellipsoidal surface. It has three additional parameters:
 
-   - :guilabel:`dx`: The length of the ellipsoid (defaults to **1.0**).
-   - :guilabel:`dy`: The width of the ellipsoid (defaults to **1.0**).
-   - :guilabel:`dz`: The height of the ellipsoid (defaults to **1.0**).
+   dx, dy, dz
+      The length, width, height of the ellipsoid (defaults to **1.0**).
 
-   Note that by default, the volume is a sphere, producing a spherical meta, as the :guilabel:`Ball` option...
+   Note that by default, the volume is a sphere, producing a spherical meta, as the *Ball* option...
 
 Cube (parallelepipedal volume, tri-dimensional structure)
    This is a meta which surface is generated by the field produced by a parallelepipedal volume.
    This gives a parallelepipedal surface, with rounded edges.
    As you might have guessed, it has three additional parameters:
 
-   - :guilabel:`dx`: The length of the parallelepiped (defaults to **1.0**).
-   - :guilabel:`dy`: The width of the parallelepiped (defaults to **1.0**).
-   - :guilabel:`dz`: The height of the parallelepiped (defaults to **1.0**).
+   dx, dy, dz
+      The length, width, height of the parallelepiped (defaults to **1.0**).
 
    Note that by default, the volume is a cube.
 

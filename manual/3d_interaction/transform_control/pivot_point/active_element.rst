@@ -5,17 +5,17 @@ Active Element as Pivot
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode` and :guilabel:`Edit mode`
+   | Mode:     *Object mode* and *Edit mode*
    | Menu:     Select from the following icon in the 3D window header
 
    .. figure:: /images/Icon-library_3D-Window_header-pivot-point.jpg
-   | Hotkey:   :kbd:`alt-.`
+   | Hotkey:   :kbd:`Alt-.`
 
 
 The *active* element can be an Object, vertex, edge or a face. The active element is the
-last one to be selected and will be shown in a lighter orange color when in :guilabel:`Object
-mode` and white when in :guilabel:`Edit mode`.
-With :guilabel:`Active element as Pivot` set to active,
+last one to be selected and will be shown in a lighter orange color when in *Object mode*
+and white when in *Edit mode*.
+With *Active element as Pivot* set to active,
 all transformations will occur relative to the active element.
 
 :doc:`Read more about selecting different pivot points » </3d_interaction/transform_control/pivot_point>`
@@ -31,7 +31,7 @@ all transformations will occur relative to the active element.
 In Object mode
 ==============
 
-When in :guilabel:`Object mode`,
+When in *Object mode*,
 rotation and scaling happen around the active Object's center.
 This is shown by the figure to the below where the active Object (the cube)
 remains in the same location (note its position relative to the 3D cursor)
@@ -48,7 +48,7 @@ while the other Objects rotate and scale in relation to the active element.
 In Edit mode
 ============
 
-Using the active element as a pivot point in :guilabel:`Edit mode` may seem complex but all
+Using the active element as a pivot point in *Edit mode* may seem complex but all
 the possible transformations follow a few rules:
 
 

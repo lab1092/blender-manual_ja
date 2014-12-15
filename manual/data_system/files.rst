@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|}} .
 
 
+***************
 File operations
 ***************
 
@@ -28,9 +29,9 @@ New
    Saves a copy of the current file.
 :doc:`User Preferences </preferences>`
    Opens the user preferences dialogue.
-:doc:`Save User Settings </vitals/default_scene>`
+:doc:`Save User Settings </basics/default_scene>`
    Saves the current scene and preferences to startup.blend.
-:doc:`Load Factory Settings </vitals/default_scene>`
+:doc:`Load Factory Settings </basics/default_scene>`
    Restore the default scene to the factory settings.
 :doc:`Link or Append </data_system/linked_libraries>`
    You don't have to load a complete file, you can load in only selected parts from another file if you wish.

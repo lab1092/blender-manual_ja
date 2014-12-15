@@ -1,4 +1,5 @@
 
+*****************
 Displacement Maps
 *****************
 
@@ -16,19 +17,19 @@ and do everything that changes in real geometry can do, but, on the other hand, 
 Options
 -------
 
-In the :doc:`Influence panel </textures/influence/material>`, the strength of the displacement is controlled by the :guilabel:`Displace` and :guilabel:`Normal` sliders.
+In the :doc:`Influence panel </textures/influence/material>`, the strength of the displacement is controlled by the *Displace* and *Normal* sliders.
 
-- If a texture provides only normal information (e.g. :guilabel:`Stucci`),
+- If a texture provides only normal information (e.g. *Stucci*),
   vertices move according to the texture's normal data.
-  The normal displacement is controlled by the :guilabel:`Normal` slider.
-- If a texture provides only intensity information (e.g. :guilabel:`Magic`, derived from color),
+  The normal displacement is controlled by the *Normal* slider.
+- If a texture provides only intensity information (e.g. *Magic*, derived from color),
   vertices move along the directions of their normals (a vertex has no normal itself,
   it's the resulting vector of the adjacent faces). White pixels move outward in the direction of the normal,
   black pixels move in the opposite direction.
-  The amount of displacement is controlled with the :guilabel:`Displace` slider.
+  The amount of displacement is controlled with the *Displace* slider.
 
 The two modes are not exclusive. Many texture types provide both information
-(:guilabel:`Clouds`, :guilabel:`Wood`, :guilabel:`Marble`, :guilabel:`Image`).
+(*Clouds*, *Wood*, *Marble*, *Image*).
 The amount of each type can be mixed using the respective sliders.
 Intensity displacement gives a smoother, more continuous surface,
 since the vertices are displaced only outward.
@@ -39,7 +40,7 @@ The depth of the displacement is scaled with an object's scale,
 but not with the relative size of the data.
 This means if you double the size of an object in object mode,
 the depth of the displacement is also doubled, so the relative displacement appears the same.
-If you scale inside :guilabel:`Edit Mode`, the displacement depth is not changed,
+If you scale inside *Edit Mode*, the displacement depth is not changed,
 and thus the relative depth appears smaller.
 
 
@@ -56,7 +57,7 @@ control the render face size:
 
 :doc:`Subdivision Surface </modifiers/generate/subsurf>` **Meshes**
    Rendered face size is controlled with render subsurf level. Displacement really likes smooth normals.
-Manually ( :guilabel:`Edit Mode` ) :doc:`subdivided </modeling/meshes/advanced_tools#subdivide>` meshes
+Manually ( *Edit Mode* ) :doc:`subdivided </modeling/meshes/advanced_tools#subdivide>` meshes
    Control render faces with number of subdivides.
    (This can be combined with the above methods.) Displaces exactly the same Simple Subsurf,
    but slows editing down because of the OpenGL overhead of drawing the extra faces.
@@ -68,11 +69,11 @@ The following are available, but currently don't work well.
 It is recommended that you convert these to meshes before rendering.
 
 Open :doc:`NURBS Surfaces </modeling/surfaces>`
-   Control render faces with U/V :guilabel:`Surface Resolution`. Higher numbers give more faces. (Note normal errors).
+   Control render faces with U/V *Surface Resolution*. Higher numbers give more faces. (Note normal errors).
 Closed NURBS Surfaces
-   Control with :guilabel:`Surface Resolution` controls. (Note the normal errors, and how implicit seam shows).
+   Control with *Surface Resolution* controls. (Note the normal errors, and how implicit seam shows).
 :doc:`Curves </modeling/curves>` **and** :doc:`Text </modeling/texts>`
-   Control with :guilabel:`Surface Resolution` controls. Higher gives more render faces. (Note that the large flat surfaces have few render faces to displace).
+   Control with *Surface Resolution* controls. Higher gives more render faces. (Note that the large flat surfaces have few render faces to displace).
 
 
 .. note:: Displace Modifier

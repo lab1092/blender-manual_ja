@@ -1,14 +1,15 @@
 
+***************************
 Shrink/Fatten Along Normals
 ***************************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Mesh Tools` (:guilabel:`Editing` context)
+   | Mode:     *Edit* mode
+   | Panel:    *Mesh Tools* (*Editing* context)
    | Menu:     :menuselection:`Mesh --> Transform --> Shrink/Fatten Along Normals`
-   | Hotkey:   :kbd:`alt-S`
+   | Hotkey:   :kbd:`Alt-S`
 
 
 This tool translates selected vertices/edges/faces along their own normal

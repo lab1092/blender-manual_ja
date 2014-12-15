@@ -12,7 +12,7 @@ Description
    Axis locking
 
 
-:doc:`Transformations (translation/scale/rotation) </3d_interaction/transformations>` in :guilabel:`Object` and :guilabel:`Edit` mode, as well as extrusion in :guilabel:`Edit` mode) can be locked to particular axis relative to the current :doc:`transform orientation </3d_interaction/transform_control/transform_orientations>`. By locking a transformation to a particular axis you are restricting transformations to a single dimension.
+:doc:`Transformations (translation/scale/rotation) </3d_interaction/transformations>` in *Object* and *Edit* mode, as well as extrusion in *Edit* mode) can be locked to particular axis relative to the current :doc:`transform orientation </3d_interaction/transform_control/transform_orientations>`. By locking a transformation to a particular axis you are restricting transformations to a single dimension.
 
 
 Usage
@@ -39,7 +39,7 @@ Axis locking
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes (translate, rotate, scale, extrude)
+   | Mode:     *Object* and *Edit* modes (translate, rotate, scale, extrude)
    | Hotkey:   :kbd:`X`, :kbd:`Y`, :kbd:`Z` or :kbd:`MMB` after moving the mouse in the desired direction.
 
 
@@ -55,8 +55,8 @@ Plane locking
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes (translate, scale)
-   | Hotkey:   :kbd:`shift-X`, :kbd:`shift-Y`, :kbd:`shift-Z` or :kbd:`shift-MMB` after moving the mouse in the desired direction.
+   | Mode:     *Object* and *Edit* modes (translate, scale)
+   | Hotkey:   :kbd:`Shift-X`, :kbd:`Shift-Y`, :kbd:`Shift-Z` or :kbd:`Shift-MMB` after moving the mouse in the desired direction.
 
 
 .. figure:: /images/3D_interaction-Transform_Control-Axis_locking-plane-locking.jpg
@@ -73,7 +73,7 @@ Plane locking only affects translation and scaling.
 
 Note that for rotation, both axis and plane locking have the same effect because a rotation is
 always constrained around one axis.
-:guilabel:`Trackball` type rotations :kbd:`R-R` cannot be locked at all.
+*Trackball* type rotations :kbd:`R-R` cannot be locked at all.
 
 
 Axis locking modes
@@ -86,25 +86,25 @@ Axis locking modes
    Axis locking modes
 
 
-A single key press constrains movement to the corresponding :guilabel:`Global` axis. A second
+A single key press constrains movement to the corresponding *Global* axis. A second
 key press of the *same* key constrains movement to the current transform orientation
-selection (except if it is set to :guilabel:`Global`,
-in which case the :guilabel:`Local` orientation is used). Finally,
+selection (except if it is set to *Global*,
+in which case the *Local* orientation is used). Finally,
 a third key press of the same key removes constraints.
 
-For example, if the current transform orientation is set to :guilabel:`Normal`,
+For example, if the current transform orientation is set to *Normal*,
 pressing :kbd:`G` to start translation, followed by :kbd:`Z` will lock translation
-in the Z direction relative to the :guilabel:`Global` orientation, pressing :kbd:`Z`
-again will lock translation to the Z axis relative to the :guilabel:`Normal` orientation.
+in the Z direction relative to the *Global* orientation, pressing :kbd:`Z`
+again will lock translation to the Z axis relative to the *Normal* orientation.
 Pressing :kbd:`Z` again will remove all constraints.
-The current mode will be displayed in the left hand side of the :guilabel:`3D window header`.
+The current mode will be displayed in the left hand side of the *3D window header*.
 
 
 ----
 
 As can be seen in the *Axis locking modes* image,
 the direction of the transform also takes into account the selection. Sections A and B show Z
-axis locking in :guilabel:`Global` and :guilabel:`Normal` orientations respectively.
+axis locking in *Global* and *Normal* orientations respectively.
 C and D show the same situation with face selection,
 E and F with edge selection and G and H with vertex selection.
 

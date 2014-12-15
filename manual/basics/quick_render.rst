@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review}} .
 
+***************
 Quick Rendering
 ***************
 
@@ -14,8 +15,8 @@ and compositing.
 - There are two main types of rendering engines built inside Blender, one for
   *Full render*, and other for *OpenGL render*. This page shows you basic
   information about rendering Images. For a deeper understanding about the
-  *Full Render* Engine built inside Blender, called :guilabel:`Blender
-  Internal`, consult the section about :doc:`Rendering with Blender Internal
+  *Full Render* Engine built inside Blender, called *Blender Internal*,
+  consult the section about :doc:`Rendering with Blender Internal
   </render/introduction>`.
 - There is also a section in this wiki manual dedicated to the new :doc:`Cycles
   </render/cycles/index>` Render Engine, built into Blender since Version 2.61.
@@ -37,13 +38,13 @@ Rendering an image using ''Full Render'' - Blender Internal
    Header of the Info Window
 
 
-To start a *Full render* using :guilabel:`Blender Internal` you can use any of the following
+To start a *Full render* using *Blender Internal* you can use any of the following
 options:
 
 - Press :kbd:`F12`
-- Go to :menuselection:`Properties Window --> Render context --> Render panel` and press the :guilabel:`Image` button
-- Go to :menuselection:`Render --> Render Image` from the header of the :guilabel:`Info Window` (see: *Header of the Info Window*)
-- Using Blender Search: press :kbd:`Space`, type Render and click on :guilabel:`Render`.
+- Go to :menuselection:`Properties Window --> Render context --> Render panel` and press the *Image* button
+- Go to :menuselection:`Render --> Render Image` from the header of the *Info Window* (see: *Header of the Info Window*)
+- Using Blender Search: press :kbd:`Space`, type Render and click on *Render*.
 
 To abort or quit the render, press :kbd:`Esc`.
 
@@ -70,8 +71,8 @@ To start an *OpenGL render* you can use any of the following options:
 
 
 - Click on *OpenGL Render Active Viewport*, in the header of the 3D Window, using the small button showing a *Camera* (together with a small image showing a *slate*) in the header of the 3D View
-- Go to :menuselection:`Render --> OpenGL Render Image` from the header of the :guilabel:`Info Window` (see: *Header of the Info Window* Image)
-- Using Blender Search: press :kbd:`Space`, type *Render* and click on :guilabel:`OpenGL Render`.
+- Go to :menuselection:`Render --> OpenGL Render Image` from the header of the *Info Window* (see: *Header of the Info Window* Image)
+- Using Blender Search: press :kbd:`Space`, type *Render* and click on *OpenGL Render*.
 
 To abort or quit the render, press :kbd:`Esc`.
 
@@ -85,7 +86,7 @@ Adjusting the resolution
    Dimensions panel
 
 
-The :guilabel:`Dimensions panel` of the :guilabel:`Render context` allows you to change the
+The *Dimensions panel* of the *Render context* allows you to change the
 resolution.
 The default installation of Blender is set initially  to **50%** of **1920 x 1080**,
 resulting in a **960** x **540** Image. (Highlighted in yellow,
@@ -106,7 +107,7 @@ Output format and output file
 You can also choose an output format and the output location for your rendered image or animation.
 By default they are saved in a temporary folder (/tmp), using an absolute path.
 You can set up your file paths using instructions in the :doc:`File setup chapter </preferences/file>`;
-however you can change this to a different folder by clicking the folder icon in the :guilabel:`Output panel`.
+however you can change this to a different folder by clicking the folder icon in the *Output panel*.
 You can also choose the type of image or movie format for your work from the Menu Button.
 
 
@@ -120,7 +121,7 @@ Saving your image
 
 
 Blender does not save your image automatically. To save your image, you can either press
-:kbd:`F3` or click :guilabel:`Save As Image` from the :guilabel:`Image` menu of the
+:kbd:`F3` or click *Save As Image* from the *Image* menu of the
 UV/Image editor window's header. This action will open the Blender Internal File Browser,
 and then you can search for folders to place your Render.
 
@@ -132,7 +133,7 @@ Rendering an animation using ''Full Render'' - Blender Internal
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Ctrl`:kbd:`F12`
+   | Hotkey:   :kbd:`Ctrl-F12`
 
 
 .. figure:: /images/Manual-Starting-Vital-dimensions-panel.jpg
@@ -141,23 +142,28 @@ Rendering an animation using ''Full Render'' - Blender Internal
    Dimensions panel
 
 
-Rendering an animation is simple; the :guilabel:`Frame Range` (Highlighted in red,
+Rendering an animation is simple; the *Frame Range* (Highlighted in red,
 in Dimensions Panel Image)
 in the Output Panel is used to define the **number of frames** your animation will render.
-The **time** is defined by the *Frames Per Second*, defined in the :guilabel:`Frame Rate`
+The **time** is defined by the *Frames Per Second*, defined in the *Frame Rate*
 (Highlighted in blue, in Dimensions Panel Image) drop-down list.
 The default is set to **24 FPS** and **250** frames.
 
 A quick example to understand those numbers:
 
-- The Panel shows that the animation will start at frame **1** and end at frame **250**, and the FPS setting is set to **24**, so, the standard Blender installation will give you approximately **10** (ten) seconds of animation (250 / 24 = 10.41 sec).
+- The Panel shows that the animation will start at frame **1** and end at frame **250**,
+  and the FPS setting is set to **24**, so,
+  the standard Blender installation will give you approximately **10** (ten)
+  seconds of animation (250 / 24 = 10.41 sec).
 
-To render an animation using *Full Render* with the :guilabel:`Blender Internal` Engine,
+To render an animation using *Full Render* with the *Blender Internal* Engine,
 you can use any of the following options:
 
-- Press :kbd:`Ctrl`:kbd:`F12`
-- Go to :menuselection:`Properties Window --> Render context --> Render panel` and press the :guilabel:`Animation` button or
-- Go to :menuselection:`Render --> Render animation` from the header of the :guilabel:`Info Window`  (see: *Header of the Info Window* Image)
+- Press :kbd:`Ctrl-F12`
+- Go to :menuselection:`Properties Window --> Render context --> Render panel`
+  and press the *Animation* button or
+- Go to :menuselection:`Render --> Render animation` from the header of the *Info Window*
+  (see: *Header of the Info Window* Image)
 
 To abort or quit rendering the animation, press :kbd:`Esc`.
 
@@ -178,7 +184,7 @@ To Render an animation using *OpenGL Render*, you can use any of the following o
 .. figure:: /images/Manual-Vitals-Starting-Small-OpenGL-Render-buttons.jpg
 
 - Click on the small button showing a *slate* (together with a small image showing a *camera*) in the header of the 3D View
-- Go to :menuselection:`Render --> OpenGL Render animation` from the header of the :guilabel:`Info Window`  (see: *Header of the Info Window* Image)
+- Go to :menuselection:`Render --> OpenGL Render animation` from the header of the *Info Window*  (see: *Header of the Info Window* Image)
 
 To abort or quit rendering the animation, press :kbd:`Esc`.
 
@@ -209,11 +215,11 @@ Blender has an option to only show Objects in the Scene that will be rendered.
 
 To access this option, put your Mouse in a 3D View (focusing on it),
 use shortcut :kbd:`N` or click in the **+** sign in the upper right side,
-to show the :guilabel:`Transform` Panel. Rolling through the options,
-you will find the :guilabel:`Display` tab,
+to show the *Transform* Panel. Rolling through the options,
+you will find the *Display* tab,
 whose options are for controlling how Objects are displayed in the 3D View.
 
-Just enable the :guilabel:`Only Render` option - now,
+Just enable the *Only Render* option - now,
 only Objects that will be rendered will be shown (see Fig: Transform Panel - Display Tab).
 This option also works when generating Images using OpenGL Render.
 Note that all of the other options for selective displaying will be disabled.

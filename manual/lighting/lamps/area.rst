@@ -1,11 +1,10 @@
-
 ..    TODO/Review: {{review|im=examples}} .
 
-
+*********
 Area Lamp
 *********
 
-The :guilabel:`Area` lamp simulates light originating from a surface (or surface-like)
+The *Area* lamp simulates light originating from a surface (or surface-like)
 emitter. For example, a TV screen, your supermarket's neon lamps, a window,
 or a cloudy sky are just a few types of area lamp. The area lamp produces shadows with soft
 borders by sampling a lamp along a grid the size of which is defined by the user.
@@ -23,17 +22,20 @@ Lamp options
 ============
 
 Distance, Energy and Color
-   These settings are common to most types of lamps, and are described in :doc:`Light Properties </lighting/lights/light_properties>`.
+   These settings are common to most types of lamps,
+   and are described in :doc:`Light Properties </lighting/lights/light_properties>`.
 
-   Note that the :guilabel:`Distance` setting is much more sensitive and important for :guilabel:`Area` lamps than for others; usually any objects within the range of :guilabel:`Distance` will be blown out and overexposed. For best results, set the :guilabel:`Distance` to just below the distance to the object that you want to illuminate.
-
+   Note that the *Distance* setting is much more sensitive and important for *Area* lamps than for others;
+   usually any objects within the range of *Distance* will be blown out and overexposed.
+   For best results, set the *Distance* to just below the distance to the object that you want to illuminate.
 Gamma
    Amount to gamma correct the brightness of illumination. Higher values give more contrast and shorter falloff.
 
-   The :guilabel:`Area` lamp doesn't have light falloff settings. It uses an "inverse quadratic" attenuation law. The only way to control its falloff is to use the :guilabel:`Distance` and/or :guilabel:`Gamma` settings.
-
+   The *Area* lamp doesn't have light falloff settings. It uses an "inverse quadratic" attenuation law.
+   The only way to control its falloff is to use the *Distance* and/or *Gamma* settings.
 This Layer Only, Negative, Specular and Diffuse
-   These settings control what the lamp affects, as described in :doc:`What Light Affects </lighting/lights/what_light_affects>`.
+   These settings control what the lamp affects,
+   as described in :doc:`What Light Affects </lighting/lights/what_light_affects>`.
 
 
 Shadows
@@ -41,25 +43,27 @@ Shadows
 
 Area light ray-traced shadows are described here: :doc:`Raytraced Shadows </lighting/lamps/area/raytraced_shadows>`.
 
-When an :guilabel:`Area` light source is selected,
-the :guilabel:`Shadow` panel has the following default layout:
+When an *Area* light source is selected,
+the *Shadow* panel has the following default layout:
 
 
-+---------------------------------------------------------------------------+--------------------------------------------------------------+
-+.. figure:: /images/25-Manual-Lighting-Lamps-Area-AdapQMC.jpg              |.. figure:: /images/25-Manual-Lighting-Lamps-Area-ContJitt.jpg+
-+   :width: 300px                                                           |   :width: 300px                                              +
-+   :figwidth: 300px                                                        |   :figwidth: 300px                                           +
-+                                                                           |                                                              +
-+   Adaptive QMC settings                                                   |   Constant Jittered settings                                 +
-+---------------------------------------------------------------------------+--------------------------------------------------------------+
-+The :guilabel:`Shadow` panel when :guilabel:`Area` light source is selected                                                               +
-+---------------------------------------------------------------------------+--------------------------------------------------------------+
+.. list-table::
+   The *Shadow* panel when *Area* light source is selected.
+
+   * - .. figure:: /images/25-Manual-Lighting-Lamps-Area-AdapQMC.jpg
+          :width: 300px
+          :figwidth: 300px
+     - .. figure:: /images/25-Manual-Lighting-Lamps-Area-ContJitt.jpg
+          :width: 300px
+          :figwidth: 300px
+   * - Adaptive QMC settings
+     - Constant Jittered settings
 
 
 Area Shape
 ==========
 
-The shape of the area light can be set to :guilabel:`Square` or :guilabel:`Rectangle`.
+The shape of the area light can be set to *Square* or *Rectangle*.
 
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Area-Square.jpg
@@ -79,16 +83,14 @@ The shape of the area light can be set to :guilabel:`Square` or :guilabel:`Recta
 Square / Rectangular
    Emit light from either a square or a rectangular area
 Size / Size X / Size Y
-   Dimensions for the :guilabel:`Square` or :guilabel:`Rectangle`
+   Dimensions for the *Square* or *Rectangle*
 
 
 .. note:: Shape Tips
 
-   Choosing the appropriate shape for your :guilabel:`Area` light will enhance the believability of your scene.
+   Choosing the appropriate shape for your *Area* light will enhance the believability of your scene.
    For example, you may have an indoor scene and would like to simulate light entering through a window.
-   You could place a :guilabel:`Rectangular` area lamp in a window (vertical) or from neons (horizontal)
-   with proper ratios for :guilabel:`Size X` and :guilabel:`Size Y`. For the simulation of the light emitted by a
-   TV screen a vertical :guilabel:`Square` area lamp would be better in most cases.
-
-
+   You could place a *Rectangular* area lamp in a window (vertical) or from neons (horizontal)
+   with proper ratios for *Size X* and *Size Y*. For the simulation of the light emitted by a
+   TV screen a vertical *Square* area lamp would be better in most cases.
 

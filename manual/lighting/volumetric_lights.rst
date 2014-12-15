@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X}} .
 
 
+*******************
 Volumetric Lighting
 *******************
 
@@ -13,7 +14,7 @@ A classic example is the search light with a visible halo/shaft of light being e
 as the search light sweeps around.
 
 By default Blender does not model this aspect of light.
-For example when Blender lights something with a :guilabel:`Spot` light, you see the objects
+For example when Blender lights something with a *Spot* light, you see the objects
 and area on the floor lit but not the shaft/halo of light coming from the spotlight as it
 progresses to its target and would get scattered on the way.
 
@@ -25,7 +26,7 @@ but by default is not activated.
 
 The only lamp able to create volumetric effects is the :doc:`Spot lamp </lighting/lamps/spot/halos>`
 (even thought you might consider some of the :doc:`"Sky & Atmosphere" effects </lighting/lamps/sun/sky_and_atmosphere>`
-of the :guilabel:`Sun` lamp as volumetric as well).
+of the *Sun* lamp as volumetric as well).
 
 
 Example

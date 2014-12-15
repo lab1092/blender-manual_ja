@@ -1,12 +1,13 @@
 
+*************
 Editing Bones
 *************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
-   | Hotkey:   :kbd:`tab`
+   | Mode:     *Edit mode*
+   | Hotkey:   :kbd:`Tab`
 
 
 You'll learn here how to
@@ -21,7 +22,7 @@ FIXME(TODO: Internal Link;
 ) bones. We will also see how to
 FIXME(TODO: Internal Link;
 [[#Locking Bones|prevent any bone transformation]]
-) in :guilabel:`Edit` mode, and the option that features an
+) in *Edit* mode, and the option that features an
 FIXME(TODO: Internal Link;
 [[#X-Axis Mirror Editing|automatic mirroring]]
 ) of editing actions along the X axis.
@@ -32,9 +33,9 @@ Adding Bones
 
 To add bones to your armature, you have more or less the same options as when editing meshes:
 
-- :guilabel:`Add` menu,
+- *Add* menu,
 - extrusion,
-- :kbd:`ctrl-lmb` clicks,
+- :kbd:`Ctrl-LMB` clicks,
 - fill between joints,
 - duplication.
 
@@ -45,12 +46,12 @@ Add Menu
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
-   | Hotkey:   :kbd:`shift-A`
+   | Mode:     *Edit mode*
+   | Hotkey:   :kbd:`Shift-A`
 
 
 In the 3D view,
-:kbd:`shift-A`:menuselection:`popup --> Bone` to add a new bone to your armature.
+:kbd:`Shift-A`:menuselection:`popup --> Bone` to add a new bone to your armature.
 
 This bone will be:
 
@@ -66,9 +67,9 @@ Extrusion
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Armature --> Extrude`
-   | Hotkey:   :kbd:`E`, :kbd:`shift-E`
+   | Hotkey:   :kbd:`E`, :kbd:`Shift-E`
 
 
 When you press the :kbd:`E` key, for each selected tip
@@ -87,7 +88,10 @@ so you can place them to your liking. See (*Extrusion example*).
 +---------------------+-------------------------------------------------------------------+-------------------------------------------------------+
 
 
-You also can use the rotating/scaling extrusions, as explained for meshes :doc:`here </modeling/meshes/tools/add_divide#extrusion>`, by hitting respectively :kbd:`E-R` and :kbd:`E-S` - as well as "\ :doc:`locked </3d_interaction/transform_control/axis_locking>` " extrusion along a global or local axis.
+You also can use the rotating/scaling extrusions,
+as explained for meshes :doc:`here </modeling/meshes/tools/add_divide#extrusion>`,
+by hitting respectively :kbd:`E-R` and :kbd:`E-S` -
+as well as :doc:`locked </3d_interaction/transform_control/axis_locking>` extrusion along a global or local axis.
 
 
 +--------------------------------------------------------------+--------------------------------------------------------------+
@@ -104,25 +108,29 @@ You also can use the rotating/scaling extrusions, as explained for meshes :doc:`
 +   The two mirror-extruded bones.                                                                                            +
 +--------------------------------------------------------------+--------------------------------------------------------------+
 
-Bones have an extra "mirror extruding" tool, called by hitting :kbd:`shift-E`. By default, it behaves exactly like the standard extrusion. But once you have enabled the X-Axis mirror editing option (see
-FIXME(TODO: Internal Link;
-[[#X-Axis Mirror Editing|below]]
-)), each extruded tip will produce *two new bones*, having the same name except for a leading "_L/_R" code (for left/right, see the :doc:`next page </rigging/armatures/editing/properties#naming_conventions>`). The "_L" bone behaves like the single one produced by the default extrusion - you can grab/rotate/scale it exactly the same way. The "_R" bone is its mirror counterpart (along the armature's local X axis), see (*Mirror extrusion example*).
+Bones have an extra "mirror extruding" tool, called by hitting :kbd:`Shift-E`.
+By default, it behaves exactly like the standard extrusion.
+But once you have enabled the X-Axis mirror editing option (see
+FIXME(TODO: Internal Link; [[#X-Axis Mirror Editing|below]])),
+each extruded tip will produce *two new bones*, having the same name except for a leading "_L/_R" code
+(for left/right, see the :doc:`next page </rigging/armatures/editing/properties#naming_conventions>`).
+The "_L" bone behaves like the single one produced by the default extrusion -
+you can grab/rotate/scale it exactly the same way.
+The "_R" bone is its mirror counterpart (along the armature's local X axis), see (*Mirror extrusion example*).
 
 
-FIXME(Template Unsupported: Template:Warning/Important;
-{{Template:Warning/Important}}
-)
-Note that exactly as in mesh editing,
-if you press :kbd:`esc` right after you have pressed :kbd:`E`,
-the extruded bones will be there but their length will be zero,
-so very likely this will give you some headaches. If you realize the problem immediately,
-you can undo by pressing :kbd:`ctrl-Z`.
+.. warning::
 
-In case you're wondering, you cannot just press :kbd:`X` to solve this as you would in mesh editing, because extrusion selects the newly created tips, and as explained below the delete command ignores bones' ends. To get rid of these extruded bones without undoing, you would have to move the tips, then select the bones and
-FIXME(TODO: Internal Link;
-[[#Deleting Bones|delete]]
-) them.
+   Note that exactly as in mesh editing,
+   if you press :kbd:`Esc` right after you have pressed :kbd:`E`,
+   the extruded bones will be there but their length will be zero,
+   so very likely this will give you some headaches. If you realize the problem immediately,
+   you can undo by pressing :kbd:`Ctrl-Z`.
+
+In case you're wondering, you cannot just press :kbd:`X` to solve this as you would in mesh editing,
+because extrusion selects the newly created tips, and as explained below the delete command ignores bones' ends.
+To get rid of these extruded bones without undoing, you would have to move the tips,
+then select the bones and FIXME(TODO: Internal Link; [[#Deleting Bones|delete]]) them.
 
 
 Mouse Clicks
@@ -131,15 +139,15 @@ Mouse Clicks
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
-   | Hotkey:   :kbd:`ctrl-lmb`
+   | Mode:     *Edit mode*
+   | Hotkey:   :kbd:`Ctrl-LMB`
 
 
-If at least one bone is selected, :kbd:`ctrl-lmb` -clicking adds a new bone.
+If at least one bone is selected, :kbd:`Ctrl-LMB` -clicking adds a new bone.
 
 About the new bone's tip:
 
-- after you :kbd:`ctrl-lmb` -clicked it becomes the active element in the armature,
+- after you :kbd:`Ctrl-LMB` -clicked it becomes the active element in the armature,
 - it appears to be right where you clicked, but...
 - ...(as in mesh editing) it will be on the plane parallel to the view and passing through the 3D cursor.
 
@@ -156,7 +164,8 @@ The position of the root and the parenting of the new bone depends on the active
 If the active element is a **bone**
 
 - the new bone's root is placed on the active bone's tip
-- the new bone is parented and connected to the active bone (check the outliner in *Ctrl-clicking when the active element is a bone*).
+- the new bone is parented and connected to the active bone
+  (check the outliner in *Ctrl-clicking when the active element is a bone*).
 
 
 .. figure:: /images/ManRiggingMouseClickTail.jpg
@@ -169,7 +178,8 @@ If the active element is a **bone**
 If the active element is a **tip** :
 
 - the new bone's root is placed on the active tip
-- the new bone is parented and connected to the bone owning the active tip (check the outliner in *Ctrl-clicking when the active element is a tip*).
+- the new bone is parented and connected to the bone owning the active tip
+  (check the outliner in *Ctrl-clicking when the active element is a tip*).
 
 
 .. figure:: /images/ManRiggingMouseClickHead.jpg
@@ -182,7 +192,8 @@ If the active element is a **tip** :
 If the active element is a **disconnected root** :
 
 - the new bone's root is placed on the active root
-- the new bone is **NOT** parented to the bone owning the active root (check the outliner in *Ctrl-clicking when the active element is a disconnected root*).
+- the new bone is **NOT** parented to the bone owning the active root
+  (check the outliner in *Ctrl-clicking when the active element is a disconnected root*).
 
 And hence the new bone will **not** be connected to any bone.
 
@@ -197,7 +208,8 @@ And hence the new bone will **not** be connected to any bone.
 If the active element is a **connected root** :
 
 - the new bone's root is placed on the active root
-- the new bone **IS** parented and connected to the parent of the bone owning the active root (check the outliner in *Ctrl-clicking when the active element is a connected root*).
+- the new bone **IS** parented and connected to the parent of the bone owning the active root
+  (check the outliner in *Ctrl-clicking when the active element is a connected root*).
 
 This should be obvious because if the active element is a connected root then the active
 element is also the tip of the parent bone, so it is the same as the second case.
@@ -214,7 +226,7 @@ Fill between joints
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Armature --> Fill Between Joints`
    | Hotkey:   :kbd:`F`
 
@@ -300,18 +312,17 @@ Duplication
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Armature --> Duplicate`
-   | Hotkey:   :kbd:`shift-D`
+   | Hotkey:   :kbd:`Shift-D`
 
 
-FIXME(Template Unsupported: Template:Warning/Important;
-{{Template:Warning/Important}}
-)
-This tool works on selected bones; selected ends are ignored.
+.. note::
+
+   This tool works on selected bones; selected ends are ignored.
 
 
-As in mesh editing, by pressing :kbd:`shift-D`:
+As in mesh editing, by pressing :kbd:`Shift-D`:
 
 - the selected bones will be duplicated,
 - the duplicates become the selected elements and they are placed in grab mode, so you can move them wherever you like.
@@ -348,15 +359,13 @@ Standard deletion
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Armature --> Delete`
    | Hotkey:   :kbd:`X`
 
+.. note::
 
-FIXME(Template Unsupported: Template:Warning/Important;
-{{Template:Warning/Important}}
-)
-This tool works on selected bones: selected ends are ignored.
+   This tool works on selected bones: selected ends are ignored.
 
 
 To delete a bone, you can:
@@ -384,16 +393,16 @@ Merge
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Armature --> Merge`
-   | Hotkey:   :kbd:`alt-M`
+   | Hotkey:   :kbd:`Alt-M`
 
 
 You can merge together several selected bones, *as long as they form a chain*.
 Each sub-chain formed by the selected bones will give one bone,
 whose root will be the root of the root bone, and whose tip will be the tip of the tip bone.
 
-Confirm by clicking on :guilabel:`Within Chains` in the :guilabel:`Merge Selected Bones`
+Confirm by clicking on *Within Chains* in the *Merge Selected Bones*
 pop-up.
 
 If another (non-selected) chain origins from inside of the merged chain of bones,
@@ -428,7 +437,7 @@ Subdividing Bones
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit mode`
+   | Mode:     *Edit mode*
    | Menu:     :menuselection:`Armature --> Subdivide`, :menuselection:`Armature --> Subdivide Multi`
    | Hotkey:   :kbd:`W-1`, :kbd:`W-2`
 
@@ -463,13 +472,13 @@ if you set ``n`` cuts, you'll get ``n+1`` bones for each selected bone.
 Locking Bones
 =============
 
-You can prevent a bone from being transformed in :guilabel:`Edit mode` in several ways:
+You can prevent a bone from being transformed in *Edit mode* in several ways:
 
-- The active bone can be locked clicking on :guilabel:`Lock`
-  in the :guilabel:`Transform Properties` panel (:kbd:`N` in a 3D view);
-- all bones can be locked clicking on the :guilabel:`Lock` button
-  of their sub-panels in the :guilabel:`Armature Bones` panel;
-- press :kbd:`shift-W`:menuselection:`popup --> Toggle Settings --> Locked`
+- The active bone can be locked clicking on *Lock*
+  in the *Transform Properties* panel (:kbd:`N` in a 3D view);
+- all bones can be locked clicking on the *Lock* button
+  of their sub-panels in the *Armature Bones* panel;
+- press :kbd:`Shift-W`:menuselection:`popup --> Toggle Settings --> Locked`
 - select :menuselection:`Armature --> Bone Settings --> Toggle a Setting`).
 
 *If the root of a locked bone is connected to the tip of an unlocked bone,
@@ -481,8 +490,8 @@ you only really lock its tip. With unconnected bones, the locking is effective o
 X-Axis Mirror Editing
 =====================
 
-Another very useful tool is the :guilabel:`X-Axis Mirror` editing option
-(:guilabel:`Tool panel` > :guilabel:`Armature Options`, while Armature is selected in :guilabel:`Edit Mode`),
+Another very useful tool is the *X-Axis Mirror* editing option
+(*Tool panel* > *Armature Options*, while Armature is selected in *Edit Mode*),
 working a bit like the same :doc:`mesh editing tool </modeling/meshes/tools/transform_deform#mirror_editing>`.
 When you have pairs of bones of the same name with just a different "side suffix"
 (e.g. ``.R`` / ``.L``, or ``_right`` / ``_left`` ...), once this option is enabled,
@@ -497,8 +506,8 @@ Separating Bones in a new Armature
 ==================================
 
 You can, as with meshes, separate the selected bones in a new armature object
-(:menuselection:`Armature --> Separate`, :kbd:`ctrl-alt-P`) - and of course,
-in :guilabel:`Object` mode, you can join all selected armatures in one
-(:menuselection:`Object --> Join Objects`, :kbd:`ctrl-J`).
+(:menuselection:`Armature --> Separate`, :kbd:`Ctrl-Alt-P`) - and of course,
+in *Object* mode, you can join all selected armatures in one
+(:menuselection:`Object --> Join Objects`, :kbd:`Ctrl-J`).
 
 

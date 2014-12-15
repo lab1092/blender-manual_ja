@@ -2,13 +2,14 @@
 ..    TODO/Review: {{review|}} .
 
 
+**************
 Make Edge/Face
 **************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     Mesh → Faces → Make Face/Edge
    | Hotkey:   :kbd:`F`
 

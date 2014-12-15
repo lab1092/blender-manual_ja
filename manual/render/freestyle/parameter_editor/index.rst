@@ -1,6 +1,7 @@
 
-Parameter Editor
-****************
+###################
+  Parameter Editor
+###################
 
 .. toctree::
 

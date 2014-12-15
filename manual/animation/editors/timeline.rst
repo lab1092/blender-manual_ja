@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=Some parts need to be updated, wiki notes have been added below.}} .
 
 
+************
 The Timeline
 ************
 
@@ -42,14 +43,14 @@ Time Cursor
 The *Time Cursor* is the green line, its used to set and display the current time frame.
 
 The *Time Cursor* can be set or moved to a new position by pressing or holding
-:kbd:`lmb` in the Timeline window.
+:kbd:`LMB` in the Timeline window.
 
 The current frame or second can be displayed on the *Time Cursor*,
 check the View menu for settings.
 
-The *Time Cursor* can be moved in steps by pressing :kbd:`Arrow Left` or
-:kbd:`Arrow Right`, or in steps of 10 frames by pressing :kbd:`Shift-Arrow up` or
-:kbd:`Shift-Arrow Down`.
+The *Time Cursor* can be moved in steps by pressing :kbd:`Left` or
+:kbd:`Right`, or in steps of 10 frames by pressing :kbd:`Shift-Up` or
+:kbd:`Shift-Down`.
 
 
 Keyframes
@@ -100,10 +101,10 @@ The main *Timeline* area displays the animation frames over time.
    Timeline Main Area
 
 
-The *Timeline* can be panned by holding :kbd:`mmb`,
+The *Timeline* can be panned by holding :kbd:`MMB`,
 then dragging the area left or right.
 
-You can zoom the *Timeline* by using :kbd:`ctrl-mmb`, the mouse :kbd:`wheel`,
+You can zoom the *Timeline* by using :kbd:`Ctrl-MMB`, the mouse :kbd:`Wheel`,
 or pressing the :kbd:`-` and :kbd:`+` keys on the numpad.
 
 By default, the *Playback/Rendering Range* (Frame Start 1 to Frame End 200)
@@ -122,7 +123,7 @@ View Menu
 The *View Menu* controls what you see, and what it looks like.
 
 Toggle Full Screen
-   Maximize or minimize the *Timeline* window. :kbd:`ctrl-Arrow Up` or :kbd:`ctrl-Arrow Down`
+   Maximize or minimize the *Timeline* window. :kbd:`Ctrl-Up` or :kbd:`Ctrl-Down`
 
 Duplicate Area into New Window
    This creates a new OS window, and sets the editor window to the *Timeline*.
@@ -153,7 +154,7 @@ Show Frame Number Indicator
    This will draw the current frame or seconds on the *Time Cursor*.
 
 View All
-   Maximize the *Timeline* area based on the Animation Range. :kbd:`home`
+   Maximize the *Timeline* area based on the Animation Range. :kbd:`Home`
 
 Show Seconds
    Show time in seconds for the *Timeline* and the *Time Cursor* based on the FPS. :kbd:`Ctrl-T`
@@ -286,27 +287,27 @@ The Timeline header controls.
 
 
    Jump to start
-      This sets the cursor to the start of frame range. :kbd:`shift-ctrl-Arrow Down` or :kbd:`shift-Arrow Left`
+      This sets the cursor to the start of frame range. :kbd:`Shift-Ctrl-Down` or :kbd:`Shift-Left`
 
    Jump to previous keyframe
-      This sets the cursor to the previous keyframe. :kbd:`Arrow Down`
+      This sets the cursor to the previous keyframe. :kbd:`Down`
 
    Rewind
-      This plays the animation sequence in reverse. :kbd:`shift-alt-A`
+      This plays the animation sequence in reverse. :kbd:`Shift-Alt-A`
       When playing the play buttons switch to a pause button.
 
    Play
-      This plays the animation sequence. :kbd:`alt-A`
+      This plays the animation sequence. :kbd:`Alt-A`
       When playing the play buttons switch to a pause button.
 
    Jump to next keyframe
-      This sets the cursor to the next keyframe. :kbd:`Arrow Up`
+      This sets the cursor to the next keyframe. :kbd:`Up`
 
    Jump to end
-      This sets the cursor to the end of frame range. :kbd:`shift-ctrl-Arrow Up` or :kbd:`shift-Arrow Right`
+      This sets the cursor to the end of frame range. :kbd:`Shift-Ctrl-Up` or :kbd:`Shift-Right`
 
    Pause
-      This stops the animation. :kbd:`alt-A`
+      This stops the animation. :kbd:`Alt-A`
 
 
 '''IV''' Synchronize Playback

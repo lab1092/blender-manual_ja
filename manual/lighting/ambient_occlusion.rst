@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|}} .
 
 
+*****************
 Ambient Occlusion
 *****************
 
@@ -25,8 +26,8 @@ it's not simulating light bouncing around or going through things.
 That's why AO still works when you don't have any lights in the scene,
 and it's why just switching on AO alone is a very bad way of "lighting" a scene.
 
-You must have ray tracing enabled as a :guilabel:`Render` panel option in the
-:guilabel:`Shading` section for this to work.
+You must have ray tracing enabled as a *Render* panel option in the
+*Shading* section for this to work.
 
 You must have an ambient light color set as you desire. By default, the ambient light color
 (world) is black, simulating midnight in the basement during a power outage.
@@ -57,20 +58,20 @@ Multiply
 
 .. note::
 
-   If :guilabel:`Multiply` is chosen, there must be other light sources; otherwise the scene will be pitch black.
+   If *Multiply* is chosen, there must be other light sources; otherwise the scene will be pitch black.
    In the other two cases the scene is lit even if no explicit light is present, just from the AO effect.
    Although many people like to use AO alone as a quick shortcut to light a scene,
    the results it gives will be muted and flat, like an overcast day. In most cases,
    it is best to light a scene properly with Blender's standard lamps, then use AO on top of that,
-   set to "\ :guilabel:`Multiply` ", for the additional details and contact shadows.
+   set to "\ *Multiply* ", for the additional details and contact shadows.
 
 
 
-The :guilabel:`Gather` panel contains settings for the ambient occlusion quality.
+The *Gather* panel contains settings for the ambient occlusion quality.
 Note that these settings also apply to Environment Lighting and Indirect Lighting.
 
 Ambient occlusion has two main methods of calculation:
-:guilabel:`Raytrace` and :guilabel:`Approximate`.
+*Raytrace* and *Approximate*.
 
 
 Gather
@@ -84,22 +85,22 @@ Raytrace
    The Amb Occ panel, Raytrace method.
 
 
-The :guilabel:`Raytrace` method gives the more accurate, but also the more noisy results.
+The *Raytrace* method gives the more accurate, but also the more noisy results.
 You can get a nearly noiseless image, but at the cost of render time... It is the only option if
 you want to use the colors of your sky's texture.
 
 Attenuation
-   Length of rays defines how far away other faces may be and still have an occlusion effect. The longer this distance, the greater impact that far-away geometry will have on the occlusion effect. A high :guilabel:`Distance` value also means that the renderer has to search a greater area for geometry that occludes, so render time can be optimized by making this distance as short as possible for the visual effect that you want.
+   Length of rays defines how far away other faces may be and still have an occlusion effect. The longer this distance, the greater impact that far-away geometry will have on the occlusion effect. A high *Distance* value also means that the renderer has to search a greater area for geometry that occludes, so render time can be optimized by making this distance as short as possible for the visual effect that you want.
 
 
-:guilabel:`Sampling`
+*Sampling*
 
    Samples
       The number of rays used to detect if an object is occluded.
       Higher numbers of samples give smoother and more accurate results, at the expense of slower render times.
       The default value of ``5`` is usually good for previews.
       The actual number of rays shot out is the square of this number (i.e.
-      :guilabel:`Samples` at ``5`` means ``25`` rays). Rays are shot at the hemisphere according to a random pattern
+      *Samples* at ``5`` means ``25`` rays). Rays are shot at the hemisphere according to a random pattern
       (determined by the sample methods described above); this causes differences in the occlusion pattern of
       neighboring pixels unless the number of shot rays is big enough to produce good statistical data.
 
@@ -125,7 +126,7 @@ Attenuation
       Threshold
          The limit below which the sample is considered fully occluded ("black") or un-occluded ("white"), and skipped.
       Adapt to Speed
-         A factor to reduce AO sampling on fast-moving pixels. As it uses the :guilabel:`Vec` render pass, that must also be enabled (see :doc:`render passes page </render/post_process/passes>`).
+         A factor to reduce AO sampling on fast-moving pixels. As it uses the *Vec* render pass, that must also be enabled (see :doc:`render passes page </render/post_process/passes>`).
 
 
 .. note:: About QMC
@@ -145,10 +146,10 @@ Attenuation
          The bias setting allows you to control how smooth "smooth" faces will appear in AO rendering.
          Since AO occurs on the original faceted mesh,
          it is possible that the AO light makes faces visible even on objects with "smooth" on.
-         This is due to the way AO rays are shot, and can be controlled with the :guilabel:`Bias` slider.
+         This is due to the way AO rays are shot, and can be controlled with the *Bias* slider.
          Note that while it might even happen with QMC sampling methods,
-         it is much more visible with the :guilabel:`Constant Jittered` one - and anyway,
-         you have no :guilabel:`Bias` option for QMC.
+         it is much more visible with the *Constant Jittered* one - and anyway,
+         you have no *Bias* option for QMC.
 
 
 
@@ -169,8 +170,8 @@ Approximate
    The Amb Occ panel, Approximate method.
 
 
-The :guilabel:`Approximate` method gives a much smoother result for the same amount of render
-time, but as its name states, it is only an approximation of the :guilabel:`Raytrace` method,
+The *Approximate* method gives a much smoother result for the same amount of render
+time, but as its name states, it is only an approximation of the *Raytrace* method,
 which implies it might produce some artifacts - and it cannot use the sky's texture as the
 base color
 
@@ -193,10 +194,10 @@ Common Settings
 ---------------
 
 Falloff
-   When activated, the distance to the occluding objects will influence the "depth" of the shadow. This means that the further away the occluding geometry is, the lighter its "shadow" will be. This effect only occurs when the :guilabel:`Strength` factor is higher than ``0.0``. It mimics  light dispersion in the atmosphere...
+   When activated, the distance to the occluding objects will influence the "depth" of the shadow. This means that the further away the occluding geometry is, the lighter its "shadow" will be. This effect only occurs when the *Strength* factor is higher than ``0.0``. It mimics  light dispersion in the atmosphere...
 
    Strength
-      Controls the attenuation of the shadows enabled with :guilabel:`Use Falloff`. Higher values give a shorter shadow, as it falls off more quickly (corresponding to a more foggy/dusty atmosphere). Ranges from ``0.0`` (default, no falloff) to ``10.0``.
+      Controls the attenuation of the shadows enabled with *Use Falloff*. Higher values give a shorter shadow, as it falls off more quickly (corresponding to a more foggy/dusty atmosphere). Ranges from ``0.0`` (default, no falloff) to ``10.0``.
 
 
 Technical Details
@@ -216,6 +217,6 @@ The ratio between "shadow" and "light" rays defines how bright a given pixel is.
 Hints
 =====
 
-Ambient occlusion is a ray-tracing technique (at least with the :guilabel:`Raytrace` method), so it tends to be slow. Furthermore, performance severely depends on octree size, see the :doc:`rendering chapter </render>` for more information.
+Ambient occlusion is a ray-tracing technique (at least with the *Raytrace* method), so it tends to be slow. Furthermore, performance severely depends on octree size, see the :doc:`rendering chapter </render>` for more information.
 
 

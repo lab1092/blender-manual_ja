@@ -1,4 +1,5 @@
 
+****************
 Actuator Editing
 ****************
 
@@ -35,26 +36,26 @@ necessary ones are visible and easier to reach. Both these can be controlled ind
 **Actuators**
 
 +--------------------------+----------------------------------------------------+
-+:guilabel:`Show Objects`  |Expands all objects.                                +
++*Show Objects*  |Expands all objects.                                +
 +--------------------------+----------------------------------------------------+
-+:guilabel:`Hide Objects`  |Collapses all objects to just a bar with their name.+
++*Hide Objects*  |Collapses all objects to just a bar with their name.+
 +--------------------------+----------------------------------------------------+
-+:guilabel:`Show Actuators`|Expands all actuators.                              +
++*Show Actuators*|Expands all actuators.                              +
 +--------------------------+----------------------------------------------------+
-+:guilabel:`Hide Actuators`|Collapses all actuators to bars with their names.   +
++*Hide Actuators*|Collapses all actuators to bars with their names.   +
 +--------------------------+----------------------------------------------------+
 
 
 It is also possible to filter which actuators are viewed using the four heading buttons:
 
 +-----------------+----------------------------------------------------------------------+
-+:guilabel:`Sel`  |Shows all actuators for selected objects.                             +
++*Sel*  |Shows all actuators for selected objects.                             +
 +-----------------+----------------------------------------------------------------------+
-+:guilabel:`Act`  |Shows only  actuators belonging to the active object.                 +
++*Act*  |Shows only  actuators belonging to the active object.                 +
 +-----------------+----------------------------------------------------------------------+
-+:guilabel:`Link` |Shows actuators which have a link to a controller.                    +
++*Link* |Shows actuators which have a link to a controller.                    +
 +-----------------+----------------------------------------------------------------------+
-+:guilabel:`State`|Only actuators connected to a controller with active states are shown.+
++*State*|Only actuators connected to a controller with active states are shown.+
 +-----------------+----------------------------------------------------------------------+
 
 

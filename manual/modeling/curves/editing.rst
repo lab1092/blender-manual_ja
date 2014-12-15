@@ -1,4 +1,5 @@
 
+*************
 Curve Editing
 *************
 
@@ -23,7 +24,7 @@ Display Options
 
 
 When in Edit mode, the Properties Shelf (:kbd:`N`) contains options in the
-:guilabel:`Curve Display` panel for how curves are displayed in the 3D viewport.
+*Curve Display* panel for how curves are displayed in the 3D viewport.
 
 Handles
    Toggles the display of Bezier handles while in edit mode. This does not affect the appearance of the curve itself.
@@ -36,17 +37,17 @@ Normal Size
 Hiding Elements
 ---------------
 
-When in :guilabel:`Edit` mode, you can hide and reveal elements from the display.
+When in *Edit* mode, you can hide and reveal elements from the display.
 This can be useful in complex models with many elements on the Screen.
 
 Hide Selected elements
    Use :kbd:`H`, or the :menuselection:`Curve --> Show/Hide --> Hide Selected` menu option from the 3D window header.
 
 Show Hidden elements
-   Use :kbd:`alt-H`, or the :menuselection:`Curve --> Show/Hide --> Show Hidden` menu option from the 3D window header.
+   Use :kbd:`Alt-H`, or the :menuselection:`Curve --> Show/Hide --> Show Hidden` menu option from the 3D window header.
 
 Hide Unselected elements
-   Use :kbd:`shift-H`, or the :menuselection:`Curve --> Show/Hide --> Hide Unselected` menu option from the 3D window header.
+   Use :kbd:`Shift-H`, or the :menuselection:`Curve --> Show/Hide --> Hide Unselected` menu option from the 3D window header.
 
 
 ----
@@ -58,12 +59,12 @@ Basic Curve Editing (translation, rotation, scale)
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Transform --> Grab/Move, Rotate, Scale, ...`
    | Hotkey:   :kbd:`G` / :kbd:`R` / :kbd:`S`
 
 
-Like other elements in Blender, Curve control points can be grabbed/moved (:kbd:`G`), rotated (:kbd:`R`) or scaled (:kbd:`S`) as described in the :doc:`Basic Transformations </3d_interaction/transformations/basics>` section. When in :guilabel:`Edit` mode, :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>` is also available for transformation actions.
+Like other elements in Blender, Curve control points can be grabbed/moved (:kbd:`G`), rotated (:kbd:`R`) or scaled (:kbd:`S`) as described in the :doc:`Basic Transformations </3d_interaction/transformations/basics>` section. When in *Edit* mode, :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>` is also available for transformation actions.
 
 
 Snapping
@@ -72,8 +73,8 @@ Snapping
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Curve Tools` (:guilabel:`Editing` context)
+   | Mode:     *Edit* mode
+   | Panel:    *Curve Tools* (*Editing* context)
 
 
 :doc:`Mesh snapping </modeling/meshes/snapping>` also works with curve components. Both control points and their handles will be affected by snapping, except for within itself (other components of the active curve). Snapping works with 2D curves but points will be constrained to the local XY axes.
@@ -85,11 +86,11 @@ Deforming Tools
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Transform`
 
 
-The :guilabel:`To Sphere`, :guilabel:`Shear`, :guilabel:`Wrap` and :guilabel:`Push/Pull` transform tools are described in the :doc:`Transformations </3d_interaction/transformations>` sections. The two other tools, :guilabel:`Tilt` and :guilabel:`Shrink/Fatten Radius` are related to :doc:`Curve Extrusion </modeling/curves/editing/advanced>`.
+The *To Sphere*, *Shear*, *Wrap* and *Push/Pull* transform tools are described in the :doc:`Transformations </3d_interaction/transformations>` sections. The two other tools, *Tilt* and *Shrink/Fatten Radius* are related to :doc:`Curve Extrusion </modeling/curves/editing/advanced>`.
 
 
 Smoothing
@@ -98,7 +99,7 @@ Smoothing
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Hotkey:   :menuselection:`[W][] --> smooth`
 
 
@@ -113,12 +114,12 @@ Mirror
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Mirror`
-   | Hotkey:   :kbd:`ctrl-M`
+   | Hotkey:   :kbd:`Ctrl-M`
 
 
-The :guilabel:`Mirror` tool is also available, behaving exactly as with :doc:`mesh vertices </modeling/meshes/editing/deforming/mirror>`,
+The *Mirror* tool is also available, behaving exactly as with :doc:`mesh vertices </modeling/meshes/editing/deforming/mirror>`,
 
 
 ----
@@ -130,13 +131,13 @@ Set Bézier Handle Type
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Panel:    :menuselection:`Curve Tools --> Handles`
    | Menu:     :menuselection:`Curve --> Control Points --> Set Handle Type`
    | Hotkey:   :kbd:`V`
 
 
-Handle types are a property of :doc:`Bézier curves. </modeling/curves>` and can be used to alter features of the curve. For example, switching to :guilabel:`Vector handles` can be used to create curves with sharp corners. Read the :doc:`Bézier curves </modeling/curves>` page for more details.
+Handle types are a property of :doc:`Bézier curves. </modeling/curves>` and can be used to alter features of the curve. For example, switching to *Vector handles* can be used to create curves with sharp corners. Read the :doc:`Bézier curves </modeling/curves>` page for more details.
 
 
 Extending Curves
@@ -145,26 +146,26 @@ Extending Curves
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Extrude`
-   | Hotkey:   :kbd:`ctrl-lmb` or :kbd:`E`
+   | Hotkey:   :kbd:`Ctrl-LMB` or :kbd:`E`
 
 
 Once a curve is created you can add new segments (in fact,
 new control points defining new segments), either by extruding,
-or placing new handles with :kbd:`ctrl-lmb` clicks.
+or placing new handles with :kbd:`Ctrl-LMB` clicks.
 Each new segment is added to one end of the curve.
 A new segment will only be added if a single vertex, or handle,
 at one end of the curve is selected. If two or more control points are selected,
 a new Bézier closed curve is started.
 
-Unlike mesh editing, you cannot create a new curve inside the edited object by :kbd:`ctrl-lmb` -clicking without any control points selected. to do so, you can cut an existing curve in two parts (by
+Unlike mesh editing, you cannot create a new curve inside the edited object by :kbd:`Ctrl-LMB` -clicking without any control points selected. to do so, you can cut an existing curve in two parts (by
 FIXME(TODO: Internal Link;
 [[#Deleting Elements|deleting a segment]]
 )),
 FIXME(TODO: Internal Link;
 [[#Duplication|copying]]
-) an existing one (:kbd:`shift-D`), or add a new one through the menu.
+) an existing one (:kbd:`Shift-D`), or add a new one through the menu.
 
 
 Subdivision
@@ -173,16 +174,16 @@ Subdivision
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Curve Tools` (:guilabel:`Editing` context)
+   | Mode:     *Edit* mode
+   | Panel:    *Curve Tools* (*Editing* context)
    | Menu:     :menuselection:`Curve --> Segments --> Subdivide`
-   | Hotkey:   :kbd:`w`
+   | Hotkey:   :kbd:`W`
 
 
 Curve subdivision simply subdivides all selected segments by adding one or more control points
 between the selected segments. To control the number of cuts,
 press :kbd:`W` to make a single subdivision.
-Then press :kbd:`F6` to bring up the :guilabel:`Number of Cuts` menu.
+Then press :kbd:`F6` to bring up the *Number of Cuts* menu.
 
 
 Duplication
@@ -191,14 +192,14 @@ Duplication
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Duplicate`
-   | Hotkey:   :kbd:`shift-D`
+   | Hotkey:   :kbd:`Shift-D`
 
 
 This command duplicates the selected control points,
 along with the curve segments implicitly selected (if any).
-The copy is selected and placed in :guilabel:`Grab` mode, so you can move it to another place.
+The copy is selected and placed in *Grab* mode, so you can move it to another place.
 
 
 Joining Curve Segments
@@ -207,7 +208,7 @@ Joining Curve Segments
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Make Segment`
    | Hotkey:   :kbd:`F`
 
@@ -235,7 +236,7 @@ Separating Curves
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Separate`
    | Hotkey:   :kbd:`P`
 
@@ -252,12 +253,12 @@ Deleting Elements
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Delete...`
    | Hotkey:   :kbd:`X` or :kbd:`Del`
 
 
-The :guilabel:`Erase` pop-up menu of curves offers you three options:
+The *Erase* pop-up menu of curves offers you three options:
 
 
 Selected
@@ -286,7 +287,7 @@ Opening and Closing a Curve
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Toggle Cyclic`
    | Hotkey:   :kbd:`Alt-C`
 
@@ -295,7 +296,7 @@ This toggles between an open curve and closed curve (Cyclic).
 Only curves with at least one selected control point will be closed/open.
 The shape of the closing segment is based on the start and end handles for Bézier curves,
 and as usual on adjacent control points for NURBS.
-The only time a handle is adjusted after closing is if the handle is an :guilabel:`Auto` one.
+The only time a handle is adjusted after closing is if the handle is an *Auto* one.
 (*Open curve*) and (*Closed curve*) is the same Bézier curve open and closed.
 
 This action only works on the original starting control-point or the last control-point added.
@@ -318,7 +319,7 @@ Switch Direction
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> Segments --> Switch Direction`, :menuselection:`Specials --> Switch Direction`
    | Hotkey:   :menuselection:`[W] --> [pad2]`
 
@@ -340,8 +341,8 @@ Converting Curve Type
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Curve Tools»Set Spline type`
+   | Mode:     *Edit* mode
+   | Panel:    *Curve Tools»Set Spline type*
 
 
 .. figure:: /images/Editing_Curves_set-spline-type.jpg
@@ -353,7 +354,7 @@ Converting Curve Type
 
 You can convert splines in a curve object between Bézier, NURBS, and Poly curves.
 Press :kbd:`T` to bring up the Toolshelf.
-Clicking on the :guilabel:`Set Spline Type` button will allow you to select the Spline type
+Clicking on the *Set Spline Type* button will allow you to select the Spline type
 (Poly, Bézier or NURBS).
 
 Note, this is not a "smart" conversion, i.e. Blender does not try to keep the same shape,
@@ -368,14 +369,14 @@ Convert Curve to Mesh
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
+   | Mode:     *Object* mode
    | Menu:     :menuselection:`Object --> Convert to`
-   | Hotkey:   :kbd:`alt-c`
+   | Hotkey:   :kbd:`Alt-C`
 
 
 There is also an "external" conversion, from curve to mesh,
-that only works in :guilabel:`Object` mode.
-It transforms a :guilabel:`Curve` object in a :guilabel:`Mesh` one,
+that only works in *Object* mode.
+It transforms a *Curve* object in a *Mesh* one,
 using the curve resolution to create edges and vertices.
 Note that it also keeps the faces and volumes created by closed and extruded curves.
 
@@ -386,9 +387,9 @@ Convert Mesh to Curve
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
+   | Mode:     *Object* mode
    | Menu:     :menuselection:`Object --> Convert to`
-   | Hotkey:   :kbd:`alt-c`
+   | Hotkey:   :kbd:`Alt-C`
 
 
 Mesh objects that consist of a series of connected vertices can be converted into curve
@@ -402,14 +403,14 @@ Curve Parenting
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Hotkey:   :kbd:`Ctrl-P`
 
 
-You can make other selected objects :doc:`children </modeling/objects/groups_and_parenting#parenting_objects>` of one or three control points :kbd:`ctrl-P`, as with mesh objects.
+You can make other selected objects :doc:`children </modeling/objects/groups_and_parenting#parenting_objects>` of one or three control points :kbd:`Ctrl-P`, as with mesh objects.
 
 Select either 1 or 3 control points,
-then :kbd:`Ctrl-rmb` another object and use :kbd:`Ctrl-P` to make a vertex parent.
+then :kbd:`Ctrl-RMB` another object and use :kbd:`Ctrl-P` to make a vertex parent.
 
 
 Hooks
@@ -418,7 +419,7 @@ Hooks
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`Curve --> control points --> hooks`
    | Hotkey:   :kbd:`Ctrl-H`
 
@@ -432,7 +433,7 @@ Set Goal Weight
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
+   | Mode:     *Edit* mode
    | Menu:     :menuselection:`W --> Set Goal Weight`
 
 

@@ -1,6 +1,7 @@
 
-Camera
-******
+#########
+  Camera
+#########
 
 .. toctree::
    :maxdepth: 2

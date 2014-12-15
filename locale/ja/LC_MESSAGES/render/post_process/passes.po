@@ -11,22 +11,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/render/post_process/passes.rst:6
+#: ../../manual/render/post_process/passes.rst:7
 msgid "Render Passes"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:8
+#: ../../manual/render/post_process/passes.rst:9
 msgid ""
 "Render Passes are necessary because of the different things the Blender "
 "Render Engine must calculate to give you the final image. In each 'pass' the"
 " engine calculates different interactions between objects."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:14
+#: ../../manual/render/post_process/passes.rst:15
 msgid "Render Passes In Detail"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:16
+#: ../../manual/render/post_process/passes.rst:17
 msgid ""
 "Everything you see in a render must be calculated for the final image. All "
 "interactions between objects in your scene, lighting, cameras, background "
@@ -34,24 +34,24 @@ msgid ""
 " passes for different reasons, such as calculating shadows."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:22
+#: ../../manual/render/post_process/passes.rst:23
 msgid ""
 "In a render, every pixel has been calculated several times to make sure it "
 "will show the right color for the right part of the image. Various things "
 "that are calculated in a standard render include:"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:27
+#: ../../manual/render/post_process/passes.rst:28
 msgid "*Where are* **shadows** *cast?*"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:28
+#: ../../manual/render/post_process/passes.rst:29
 msgid ""
 "*How is* **ambient** *light in the environment blocked (* **occluded** *) by"
 " objects in the scene?*"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:29
+#: ../../manual/render/post_process/passes.rst:30
 msgid ""
 "*How is light* **reflected** *off mirrored surfaces?* Like shadows, lines "
 "are calculated, except this time they come from the camera and bounce off "
@@ -59,78 +59,78 @@ msgid ""
 "calculates that this is what the camera should see."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:32
+#: ../../manual/render/post_process/passes.rst:33
 msgid ""
 "*How is light bent (* **refracted** *) as is passes through transparent "
 "objects?*"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:33
+#: ../../manual/render/post_process/passes.rst:34
 msgid ""
 "Does it go straight through? Does it bend? If so, at what depth in the "
 "object?"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:34
+#: ../../manual/render/post_process/passes.rst:35
 msgid ""
 "*What designated* **objects** *are in the scene, and what is their outline?*"
 " Should the object appear blurred, or should it appear in sharp focus?"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:36
+#: ../../manual/render/post_process/passes.rst:37
 msgid "*How fast is something moving (* **velocity** *)?*"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:37
+#: ../../manual/render/post_process/passes.rst:38
 msgid ""
 "Should it appear blurred given our frame rate or is it slow enough to still "
 "be focused on properly?"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:38
+#: ../../manual/render/post_process/passes.rst:39
 msgid ""
 "*How far away from the camera are objects' surfaces (* **Z-depth** *)?*"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:39
+#: ../../manual/render/post_process/passes.rst:40
 msgid ""
 "Can the object's surfaces be seen at all, or are they being blocked by "
 "another object's geometry?"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:40
+#: ../../manual/render/post_process/passes.rst:41
 msgid "*Does an object have a* **normal** *vector (bumpmap)?*"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:41
+#: ../../manual/render/post_process/passes.rst:42
 msgid ""
 "Do shadows and apparent geometry need to be calculated for any objects?"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:42
+#: ../../manual/render/post_process/passes.rst:43
 msgid ""
 "*Is there any* **specularity** *?* Are objects with textures such as metal "
 "shiny at all?"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:45
+#: ../../manual/render/post_process/passes.rst:46
 msgid "Renderer Rewrite"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:47
+#: ../../manual/render/post_process/passes.rst:48
 msgid ""
 "Starting with Blender 2.42, the render engine was rewritten. See "
 ":doc:`Unified Renderer </render/index>` if you are using an old version of "
 "Blender."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:51
+#: ../../manual/render/post_process/passes.rst:52
 msgid ""
 "The answer to each of the above questions is an image or map, as shown "
 "below:"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:59
+#: ../../manual/render/post_process/passes.rst:60
 msgid ""
 "Each Render Pass puts out an image or a map.  For the purposes of this "
 "example, a Render Layer was defined to produce all possible outputs.  When a"
@@ -140,14 +140,14 @@ msgid ""
 "side of the node."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:65
+#: ../../manual/render/post_process/passes.rst:66
 msgid ""
 "Render Passes that produce Images can be directly viewed in a viewer, or, if"
 " they are the only pass that is rendered, saved as the render image. If the "
 "pass is enabled, it can be saved in a multilayer OpenEXR format."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:69
+#: ../../manual/render/post_process/passes.rst:70
 msgid ""
 "If the Render Pass output is not an image but is a map, it needs to be "
 "translated into something that we can see. For example, the Z-depth map is "
@@ -161,11 +161,11 @@ msgid ""
 "original before saving."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:81
+#: ../../manual/render/post_process/passes.rst:82
 msgid "Selecting Render Passes"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:85
+#: ../../manual/render/post_process/passes.rst:86
 msgid ""
 "Render Passes are the various distinct outputs that the renderer is able to "
 "generate. All of the following render outputs are normally combined into a "
@@ -175,7 +175,7 @@ msgid ""
 "in the Combined output.)"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:91
+#: ../../manual/render/post_process/passes.rst:92
 msgid ""
 "Some of these outputs must be enabled and used within your scene (and not "
 "just selected in the Render Layer panel) in order to show anything. For "
@@ -187,18 +187,18 @@ msgid ""
 " be blank, even if you select it here."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:100
+#: ../../manual/render/post_process/passes.rst:101
 msgid ""
 "To save time and disk space, you have to tell Blender each of the passes to "
 "render in the Render Layers panel (which we first introduced on :doc:`the "
 "previous page </render/post_process/layers>`):"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:107
+#: ../../manual/render/post_process/passes.rst:108
 msgid "Combined"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:105
+#: ../../manual/render/post_process/passes.rst:106
 msgid ""
 "This renders everything in the image, even if it's not necessary. (\"The "
 "whole enchilada,\" so to speak.) This is all the options below, blended into"
@@ -206,178 +206,178 @@ msgid ""
 "omitted from this pass, as indicated with the camera button."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:110
+#: ../../manual/render/post_process/passes.rst:111
 msgid "Z"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:110
+#: ../../manual/render/post_process/passes.rst:111
 msgid ""
 "The Z-depth map; how far away each pixel is from the camera. Used for Depth-"
 "Of-Field (DOF). The depth map is inverse linear *(1/distance)* from the "
 "camera clip start."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:112
+#: ../../manual/render/post_process/passes.rst:113
 msgid "Vector"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:113
+#: ../../manual/render/post_process/passes.rst:114
 msgid "The direction and speed things are moving. Used with Vector Blur."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:115
+#: ../../manual/render/post_process/passes.rst:116
 msgid "Normal"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:115
+#: ../../manual/render/post_process/passes.rst:116
 msgid ""
 "Calculates lighting and apparent geometry for a bumpmap (an image which is "
 "used to fake detail on an object) or for changing the apparent direction of "
 "light falling on an object."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:117
+#: ../../manual/render/post_process/passes.rst:118
 msgid "UV"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:118
+#: ../../manual/render/post_process/passes.rst:119
 msgid "Allows texturing after rendering. See UV node."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:119
+#: ../../manual/render/post_process/passes.rst:120
 msgid "Mist"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:120
+#: ../../manual/render/post_process/passes.rst:121
 msgid "Deliver Mist factor pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:121
+#: ../../manual/render/post_process/passes.rst:122
 msgid "Object Index"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:122
+#: ../../manual/render/post_process/passes.rst:123
 msgid "Masks selected objects. See MaskObj node."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:123
+#: ../../manual/render/post_process/passes.rst:124
 msgid "Color"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:124
+#: ../../manual/render/post_process/passes.rst:125
 msgid "The color of materials without shading."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:125
+#: ../../manual/render/post_process/passes.rst:126
 msgid "Diffuse"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:126
+#: ../../manual/render/post_process/passes.rst:127
 msgid "The diffuse shading of materials."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:127
+#: ../../manual/render/post_process/passes.rst:128
 msgid "Specular"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:128
+#: ../../manual/render/post_process/passes.rst:129
 msgid "Specular highlights."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:130
+#: ../../manual/render/post_process/passes.rst:131
 msgid "Shadow"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:130
+#: ../../manual/render/post_process/passes.rst:131
 msgid ""
 "Shadows cast. Make sure shadows are cast by your lights (positive or "
 "negative), and received by materials. To use this pass, mix multiply it with"
 " the Diffuse pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:132
+#: ../../manual/render/post_process/passes.rst:133
 msgid "Emit"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:133
+#: ../../manual/render/post_process/passes.rst:134
 msgid "Emission pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:134
+#: ../../manual/render/post_process/passes.rst:135
 msgid "AO"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:135
+#: ../../manual/render/post_process/passes.rst:136
 msgid ""
 "Ambient Occlusion. Make sure it's turned on in your environment and that "
 "RayTracing is enabled."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:136
+#: ../../manual/render/post_process/passes.rst:137
 msgid "Environment"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:137
+#: ../../manual/render/post_process/passes.rst:138
 msgid "Environment lighting."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:138
+#: ../../manual/render/post_process/passes.rst:139
 msgid "Indirect"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:139
+#: ../../manual/render/post_process/passes.rst:140
 msgid "Indirect lighting pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:141
+#: ../../manual/render/post_process/passes.rst:142
 msgid "Reflection"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:141
+#: ../../manual/render/post_process/passes.rst:142
 msgid ""
 "Reflection off mirrors and other reflective surfaces (highly waxed white "
 "floors, for example). Mix Add this pass to Diffuse to use it."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:145
+#: ../../manual/render/post_process/passes.rst:146
 msgid "Refraction"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:144
+#: ../../manual/render/post_process/passes.rst:145
 msgid ""
 "Refraction of colors through transparent meshes. Mix Add this pass to the "
 "Diffuse pass to use it."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:147
+#: ../../manual/render/post_process/passes.rst:148
 msgid ""
 "When you enable a pass, the appropriate socket on the Render Layers node "
 "shows up like magic, and can be used as shown in the example above."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:152
+#: ../../manual/render/post_process/passes.rst:153
 msgid "Excluding Render Passes"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:154
+#: ../../manual/render/post_process/passes.rst:155
 msgid ""
 "As we said, the **Combined** output is an amalgam of several outputs which "
 "are *also* available separately.  When you select one of these outputs, they"
 " will be provided separately *and also* included in the Combined pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:158
+#: ../../manual/render/post_process/passes.rst:159
 msgid ""
 "When you enable the Camera icon that is beside several of the pass options, "
 "the particular pass will be excluded from the combined pass. They will be "
 "made available separately *but not* included in the combined pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:164
+#: ../../manual/render/post_process/passes.rst:165
 msgid "Using Render Passes"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:166
+#: ../../manual/render/post_process/passes.rst:167
 msgid ""
 "The primary purpose of Render Passes is to enable you to process the various"
 " outputs in different ways, by constructing networks of render nodes. You "
@@ -386,37 +386,37 @@ msgid ""
 " We'll show you a few examples of this in just a moment."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:173
+#: ../../manual/render/post_process/passes.rst:174
 msgid ""
 "Quite a bit of information about the typical uses for some of the passes is "
 "discussed elsewhere:"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:176
+#: ../../manual/render/post_process/passes.rst:177
 msgid "Image: Since this is the main product, all of Blender uses it."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:177
+#: ../../manual/render/post_process/passes.rst:178
 msgid "Alpha: See the *AlphaOver* node and all of the *Matte* nodes."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:178
+#: ../../manual/render/post_process/passes.rst:179
 msgid "Z: See the *Defocus* node."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:179
+#: ../../manual/render/post_process/passes.rst:180
 msgid "Vec: See the *Vector Blur* node."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:180
+#: ../../manual/render/post_process/passes.rst:181
 msgid "Normal: See the *Normal* node."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:184
+#: ../../manual/render/post_process/passes.rst:185
 msgid "Recoloring Shadows"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:191
+#: ../../manual/render/post_process/passes.rst:192
 msgid ""
 "Let's run the Shadow buffer through a colorization noodle, then recombine "
 "it; all your shadows will be artificially colored. Lots of threads in this "
@@ -431,7 +431,7 @@ msgid ""
 "and floor."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:203
+#: ../../manual/render/post_process/passes.rst:204
 msgid ""
 "The output channels of the Render Layer node are determined by which buttons"
 " we selected when defining our Render Layer. The top two viewers show you "
@@ -441,7 +441,7 @@ msgid ""
 "image."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:210
+#: ../../manual/render/post_process/passes.rst:211
 msgid ""
 "We then take the shadow through an RGB Curve, which is set to magnify just "
 "the Blue by 75%; so a gray shadow of (R:40, G:40, B:40) becomes (R:40, G:40,"
@@ -449,25 +449,25 @@ msgid ""
 "we have two options: AlphaOver and Mix. For either option:"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:215
+#: ../../manual/render/post_process/passes.rst:216
 msgid "Use the Shadow map as a Factor."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:216
+#: ../../manual/render/post_process/passes.rst:217
 msgid "Feed the Blue Shadow to the Top Socket."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:217
+#: ../../manual/render/post_process/passes.rst:218
 msgid "Feed the core or base image to the Bottom Socket."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:219
+#: ../../manual/render/post_process/passes.rst:220
 msgid ""
 "The resulting image is the same in either case; a blue shadow. Note that "
 "Suzanne's reflection is not blue; there's a different Render Pass for that."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:222
+#: ../../manual/render/post_process/passes.rst:223
 msgid ""
 "You could just as easily swap in another image entirely; for example, the "
 "shadow map from another render layer. You can even take an image from "
@@ -477,11 +477,11 @@ msgid ""
 "of Darth Vader.)"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:231
+#: ../../manual/render/post_process/passes.rst:232
 msgid "Compositing Ambient Occlusion"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:238
+#: ../../manual/render/post_process/passes.rst:239
 msgid ""
 "AO is a geometry-based dirt shader, making corners darker. It is separately "
 "enabled in the World settings and computed as a separate pass. When enabled,"
@@ -494,48 +494,48 @@ msgid ""
 "the Color and Diffuse pass as well."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:248
+#: ../../manual/render/post_process/passes.rst:249
 msgid "To configure your noodle, consider the example image above."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:251
+#: ../../manual/render/post_process/passes.rst:252
 msgid ""
 "First, depending on the AO mode do one of the following: If AO mode is Add: "
 "directly use the AO pass. If AO mode is Sub: Calculate AO - 1, or if AO mode"
 " is  Both: Calculate 2*AO - 1."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:253
+#: ../../manual/render/post_process/passes.rst:254
 msgid "Multiply the output of Step 1 with the AO energy level."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:254
+#: ../../manual/render/post_process/passes.rst:255
 msgid ""
 "Multiply the output of Step 2 with the material's ambience value. If you "
 "have materials which receive different ambience light levels (0.5 is the "
 "default), one would have to create an ambience map based on Object ID."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:257
+#: ../../manual/render/post_process/passes.rst:258
 msgid "Multiply the output of Step 3 with the color pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:258
+#: ../../manual/render/post_process/passes.rst:259
 msgid "Add the output of Step 4 to the diffuse pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:260
+#: ../../manual/render/post_process/passes.rst:261
 msgid ""
 "If shadows, colored ambient light, specularity, reflections, and/or "
 "refractions are involved they have to be added to the diffuse pass before "
 "adding the converted AO pass."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:265
+#: ../../manual/render/post_process/passes.rst:266
 msgid "Vector Blurring Shadows"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:272
+#: ../../manual/render/post_process/passes.rst:273
 msgid ""
 "When using Vector Blur instead of Motion Blur, objects in motion are "
 "blurred, but objects at rest (with respect to the camera) are not blurred. "
@@ -546,7 +546,7 @@ msgid ""
 "look realistic."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:280
+#: ../../manual/render/post_process/passes.rst:281
 msgid ""
 "Therefore, we need to separate out the diffuse and shadow passes from the "
 "floor by creating a \"Floor\" render layer. That render layer has Diffuse "
@@ -559,11 +559,11 @@ msgid ""
 "realistic-looking image."
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:290
+#: ../../manual/render/post_process/passes.rst:291
 msgid "Conclusion"
 msgstr ""
 
-#: ../../manual/render/post_process/passes.rst:292
+#: ../../manual/render/post_process/passes.rst:293
 msgid ""
 "Render Passes can be manipulated to give you almost complete control over "
 "your final image. Causing objects to cast shadows that aren't really their "

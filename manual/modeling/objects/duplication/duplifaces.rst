@@ -1,15 +1,16 @@
 
+**********
 DupliFaces
 **********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Object` → :guilabel:`Duplication`
+   | Mode:     *Object* mode
+   | Panel:    *Object* → *Duplication*
 
 
-:guilabel:`Duplication Faces` or :guilabel:`DupliFaces` is the capability to replicate an object on each face of a parent object. One of the best ways to explain this is through an example illustration.
+*Duplication Faces* or *DupliFaces* is the capability to replicate an object on each face of a parent object. One of the best ways to explain this is through an example illustration.
 
 
 .. note:: Example .blend file
@@ -26,7 +27,7 @@ Basic usage
 
 
 In this example we will use a UV sphere with an extruded "north pole" as our base object and
-cube as our parent mesh.  To parent the sphere to the cube, in :guilabel:`Object mode`,
+cube as our parent mesh.  To parent the sphere to the cube, in *Object mode*,
 first :kbd:`RMB` select the sphere, then :kbd:`Shift-RMB` select the cube
 (order is very important here), and finally :kbd:`Ctrl-P` to parent.
 
@@ -36,13 +37,13 @@ first :kbd:`RMB` select the sphere, then :kbd:`Shift-RMB` select the cube
    Duplication Faces applied to the cube
 
 
-Next, in the :guilabel:`Object` context's :guilabel:`Duplication` panel,
-enable :guilabel:`Faces`.  The sphere is duplicated one for each face of the cube.
+Next, in the *Object* context's *Duplication* panel,
+enable *Faces*.  The sphere is duplicated one for each face of the cube.
 
 
 .. note:: Inherited properties
 
-   The location, orientation, and scale of the duplicated child(ren) matches that of the faces of the parent.  So, if several objects are parented to the cube, they will all be duplicated once for each face on the cube.  If the cube is subdivided (in :guilabel:`Edit Mode` :kbd:`W`), every child will be duplicated for each face on the cube.
+   The location, orientation, and scale of the duplicated child(ren) matches that of the faces of the parent.  So, if several objects are parented to the cube, they will all be duplicated once for each face on the cube.  If the cube is subdivided (in *Edit Mode* :kbd:`W`), every child will be duplicated for each face on the cube.
 
 
 Both the parent object and original are displayed as editable "templates" in 3D view,
@@ -62,7 +63,7 @@ Scale
    Top face of cube scaled down
 
 
-By enabling :guilabel:`Scale` for the parent object,
+By enabling *Scale* for the parent object,
 the scale of the child objects will be adapted to the size of each face in the parent object.
 
 Thus, by rescaling the face of the parent object,

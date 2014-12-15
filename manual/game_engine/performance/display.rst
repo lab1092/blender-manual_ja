@@ -1,8 +1,9 @@
 
+*******
 Display
 *******
 
-The :guilabel:`Display` tab at the :guilabel:`Render` context of the :guilabel:`Properties`
+The *Display* tab at the *Render* context of the *Properties*
 Window, let the game developer specify the maximum frame rate of the animations shown during
 the game execution, whether to see informations like framerate and profile, debug properties,
 physics geometry visualization, warnings,

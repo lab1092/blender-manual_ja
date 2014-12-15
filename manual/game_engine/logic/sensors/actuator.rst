@@ -1,4 +1,5 @@
 
+***************
 Actuator sensor
 ***************
 
@@ -11,7 +12,7 @@ Actuator sensor
 
 The Actuator sensor detects when a particular actuator receives an activation pulse.
 
-The :guilabel:`Actuator` sensor sends a TRUE pulse when the specified actuator is activated.
+The *Actuator* sensor sends a TRUE pulse when the specified actuator is activated.
 
 The sensor also sends a FALSE pulse when the specified actuator  is deactivated.
 

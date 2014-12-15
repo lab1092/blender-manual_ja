@@ -2,10 +2,11 @@
 ..    TODO/Review: {{review|}} .
 
 
+*************************
 Selecting Mesh Components
 *************************
 
-There are many ways to select elements, and it depends on what :guilabel:`Mesh Select Mode`
+There are many ways to select elements, and it depends on what *Mesh Select Mode*
 you are in as to what selection tools are available.
 First we will go through these modes and after that a look is taken at basic selection tools.
 
@@ -23,11 +24,11 @@ Select Mode Header Widgets
    Edit mode selection buttons
 
 
-In :guilabel:`Edit mode` there are three different selection modes.
+In *Edit mode* there are three different selection modes.
 You can enter the different modes by selecting one of the three buttons in the toolbar.
 
 Using the buttons you can also use more than one selection mode at a time by
-:kbd:`shift-lmb` clicking the buttons.
+:kbd:`Shift-LMB` clicking the buttons.
 
 Vertices
    Selected vertices are drawn in orange, unselected vertices in black, and the active or last selected vertex in white.
@@ -39,14 +40,14 @@ Faces
    In this mode the faces are drawn with a selection point in the middle which is used for selecting a face. Selected faces and their selection point are drawn in orange, unselected faces are drawn in black, and the active or last selected face is highlighted in white.
 
 Almost all modification tools are available in all three mesh selection modes.
-So you can :guilabel:`Rotate`, :guilabel:`Scale`, :guilabel:`Extrude`, etc. in all modes. Of
+So you can *Rotate*, *Scale*, *Extrude*, etc. in all modes. Of
 course rotating and scaling a *single* vertex will not do anything useful without setting
 the pivot point to another location, so some tools are more or less applicable in some modes.
 
 
 .. note::
 
-   The three selection mode buttons are only visible in :guilabel:`Edit mode`.
+   The three selection mode buttons are only visible in *Edit mode*.
    The colors of selected, unselected and active geometry depend entirely on the current theme.
    Black, orange and white are from the default theme.
 
@@ -57,8 +58,8 @@ Select Mode Pop-up
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Hotkey:   :kbd:`ctrl-tab`
+   | Mode:     *Edit* mode
+   | Hotkey:   :kbd:`Ctrl-Tab`
 
 
 .. figure:: /images/25-Manual-Modeling-Meshes-Selection-mode.jpg
@@ -71,36 +72,36 @@ Select Mode Pop-up
 You can also choose a selection mode with the pop-up menu
 
 :menuselection:`Select Mode --> Vertices`
-   Press :kbd:`ctrl-tab` and select :guilabel:`Vertices` from the pop-up menu, or press :kbd:`ctrl-tab`:kbd:`1`.
+   Press :kbd:`Ctrl-Tab` and select *Vertices* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`1`.
 
 :menuselection:`Select Mode --> Edges`
-   Press :kbd:`ctrl-tab` and select :guilabel:`Edges` from the pop-up menu, or press :kbd:`ctrl-tab`:kbd:`2`.
+   Press :kbd:`Ctrl-Tab` and select *Edges* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`2`.
 
 :menuselection:`Select Mode --> Faces`
-   Press :kbd:`ctrl-tab` and select :guilabel:`Faces` from the pop-up menu, or press :kbd:`ctrl-tab`:kbd:`3`.
+   Press :kbd:`Ctrl-Tab` and select *Faces* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`3`.
 
 
 Switching select mode
 ---------------------
 
 When switching modes in an "ascendant" way (i.e. from simpler to more complex), from
-:guilabel:`Vertices` to :guilabel:`Edges` and from :guilabel:`Edges` to :guilabel:`Faces`,
+*Vertices* to *Edges* and from *Edges* to *Faces*,
 the selected parts will still be selected if they form a complete element in the new mode.
 
 For example, if all four edges in a face are selected,
-switching from :guilabel:`Edges` mode to :guilabel:`Faces` mode will keep the face selected.
+switching from *Edges* mode to *Faces* mode will keep the face selected.
 All selected parts that do not form a complete set in the new mode will be unselected.
 
 Hence, switching in a "descendant" way (i.e. from more complex to simpler),
 all elements defining the "high-level" element (like a face) will be selected
 (the four vertices or edges of a quadrangle, for example).
 
-By holding :kbd:`ctrl` when selecting a higher selection mode,
+By holding :kbd:`Ctrl` when selecting a higher selection mode,
 all elements touching the current selection will be added,
 even if the selection does not form a complete higher element.
 
-See (:guilabel:`Vertices` *mode example*), (:guilabel:`Edges` *mode example*),
-(:guilabel:`Faces` *mode example*) and (*Mixed mode example*)
+See (*Vertices* *mode example*), (*Edges* *mode example*),
+(*Faces* *mode example*) and (*Mixed mode example*)
 for examples of the different modes.
 
 
@@ -128,13 +129,13 @@ Circle Select
 
 (De)select All :kbd:`A`
    Select all or none of the mesh components.
-Invert Selection :kbd:`ctrl-I`
+Invert Selection :kbd:`Ctrl-I`
    Selects all geometry that are not selected, and deselect currently selected components.
 Select Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
 Checker Deselect
    Deselect alternating faces, to create a checker like pattern.
-:guilabel:`Select Sharp Edges`
+*Select Sharp Edges*
 
    This option will select all edges that are between two faces forming an angle less than a given value,
    which is asked you *via* a small pop-up dialog.
@@ -160,16 +161,16 @@ Loose
 Similar
    Select geometry based on how similar certain properties are to it.
 
-More :kbd:`ctrl-num+`
+More :kbd:`Ctrl-Numpad+`
    Propagates selection by adding geometry that are adjacent to selected elements.
-Less :kbd:`ctrl-num-`
+Less :kbd:`Ctrl-Numpad-`
    Deselects geometry that form the bounds of the current selection
 
 Mirror
    Select mesh items at the mirrored location.
 Pick Linked :kbd:`L`
    Selects all geometry connected to the geometry under the cursor.
-Linked :kbd:`ctrl-L`
+Linked :kbd:`Ctrl-L`
    Selects all geometry that are connected to the current selection.
 
 Vertex Path

@@ -1,4 +1,5 @@
 
+*******
 Shadows
 *******
 
@@ -27,7 +28,7 @@ Ambient occlusion really isn't a shadow based on light *per se*, but based on ge
 However, it does mimic an effect where light is prevented from fully and uniformly
 illuminating an object, so it is mentioned here. Also,
 it is important to mention ambient lighting,
-since increasing :guilabel:`Ambient` decreases the effect of a shadow.
+since increasing *Ambient* decreases the effect of a shadow.
 
 You can use a combination of ray-traced and buffer shadows to achieve different results.
 Even within ray-traced shadows,
@@ -40,13 +41,13 @@ where multiple things have to be set up in different areas to get results:
 
 - The lamp has to cast shadows (ability and direction).
 - An opaque object has to block light on its way (position and layer).
-- Another object's material has to receive shadows (:guilabel:`Shadow` and :guilabel:`Receive Transparent` enabled).
-- The render engine has to calculate shadows (:guilabel:`Shadow` for buffered shadows, :guilabel:`Shadow` and :guilabel:`Ray` for ray-traced shadows).
+- Another object's material has to receive shadows (*Shadow* and *Receive Transparent* enabled).
+- The render engine has to calculate shadows (*Shadow* for buffered shadows, *Shadow* and *Ray* for ray-traced shadows).
 
-For example, the simple :guilabel:`Lamp`, :guilabel:`Area`,
-and :guilabel:`Sun` light has the ability to cast ray shadows, but not buffer shadows.
-The :guilabel:`Spot` light can cast both, whereas the :guilabel:`Hemi` light does not cast any.
-If a :guilabel:`Sun` lamp is pointing sideways, it will not cast a shadow from a sphere above a plane onto the plane,
+For example, the simple *Lamp*, *Area*,
+and *Sun* light has the ability to cast ray shadows, but not buffer shadows.
+The *Spot* light can cast both, whereas the *Hemi* light does not cast any.
+If a *Sun* lamp is pointing sideways, it will not cast a shadow from a sphere above a plane onto the plane,
 since the light is not traveling that way. All lamps able to cast shadows share some common options,
 described :doc:`here </lighting/shadows/properties>`.
 
@@ -69,7 +70,7 @@ Lamps: Ray-traced Shadows
 
 Ray-traced shadows produce very precise shadows with very low memory use,
 but at the cost of processing time.
-This type of shadowing is available to all lamp types except :guilabel:`Hemi`.
+This type of shadowing is available to all lamp types except *Hemi*.
 
 As opposed to
 FIXME(Link Type Unsupported: #lamps;
@@ -77,9 +78,9 @@ FIXME(Link Type Unsupported: #lamps;
 ), ray-traced shadows are obtained by casting rays from a regular light source, uniformly and in all directions. The ray-tracer then records which pixel of the final image is hit by a ray light, and which is not. Those that are not are obviously obscured by a shadow.
 
 Each light casts rays in a different way. For example,
-a :guilabel:`Spot` light casts rays uniformly in all directions within a cone.
-The :guilabel:`Sun` light casts rays from a infinitely distant point,
-with all rays parallel to the direction of the :guilabel:`Sun` light.
+a *Spot* light casts rays uniformly in all directions within a cone.
+The *Sun* light casts rays from a infinitely distant point,
+with all rays parallel to the direction of the *Sun* light.
 
 For each additional light added to the scene, with ray-tracing enabled,
 the rendering time increases. Ray-traced shadows require more computation than buffered
@@ -87,9 +88,9 @@ shadows but produce sharp shadow borders with very little memory resource usage.
 
 To enable ray-traced shadows, three actions are required:
 
-- Enable :guilabel:`Shadows` globally in the :guilabel:`Render` menu's :guilabel:`Shading` panel.
-- Enable :guilabel:`Ray tracing` globally from the same panel.
-- Enable ray-traced shadows for the light using the :guilabel:`Ray Shadow` button in the :guilabel:`Light` menu's :guilabel:`Shadow` panel. This panel varies depending on the type of light.
+- Enable *Shadows* globally in the *Render* menu's *Shading* panel.
+- Enable *Ray tracing* globally from the same panel.
+- Enable ray-traced shadows for the light using the *Ray Shadow* button in the *Light* menu's *Shadow* panel. This panel varies depending on the type of light.
    - All lamps able to cast ray-traced shadows share some common options, described in :doc:`Ray-traced Properties </lighting/shadows/raytraced_properties>`.
 
 Ray-traced shadows can be cast by the following types of lamp:
@@ -117,7 +118,7 @@ Lamps: Buffered Shadows
    Cast Buffer Shadows enabled for a material
 
 
-:guilabel:`Buffered` shadows provide fast-rendered shadows at the expense of precision and/or quality. Buffered shadows also require more memory resources as compared to ray tracing. Using buffered shadows depends on your requirements. If you are rendering animations or can't wait hours to render a complex scene with soft shadows, buffer shadows are a good choice.
+*Buffered* shadows provide fast-rendered shadows at the expense of precision and/or quality. Buffered shadows also require more memory resources as compared to ray tracing. Using buffered shadows depends on your requirements. If you are rendering animations or can't wait hours to render a complex scene with soft shadows, buffer shadows are a good choice.
 
 For a scanline renderer - and Blender's built-in engine *is*, among other things,
 a scanline renderer - shadows can be computed using a *shadow buffer*.
@@ -128,9 +129,9 @@ is then considered to be in shadow. The shadow buffer stores this image data.
 
 To enable buffered shadows these actions are required:
 
-- Enable shadows globally from the :guilabel:`Scene` menu's :guilabel:`Gather` panel by selecting :guilabel:`Approximate`.
-- Enable shadows for the light using the :guilabel:`Buffer Shadow` button in the :guilabel:`Lamp` menu's :guilabel:`Shadow` panel.
-- Make sure the :guilabel:`Cast Buffer Shadows` options is enabled in each :guilabel:`Material` 's :guilabel:`Shadow` panel.
+- Enable shadows globally from the *Scene* menu's *Gather* panel by selecting *Approximate*.
+- Enable shadows for the light using the *Buffer Shadow* button in the *Lamp* menu's *Shadow* panel.
+- Make sure the *Cast Buffer Shadows* options is enabled in each *Material* 's *Shadow* panel.
 
 
 - The :doc:`Spot lamp </lighting/lamps/spot/buffered_shadows>` is the only lamp able to cast buffered shadows.

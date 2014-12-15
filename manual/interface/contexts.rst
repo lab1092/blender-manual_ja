@@ -1,8 +1,9 @@
 
+********
 Contexts
 ********
 
-The :guilabel:`Properties (or Buttons) Window` shows several :guilabel:`Contexts`,
+The *Properties (or Buttons) Window* shows several *Contexts*,
 which can be chosen via the icon row in the header (see *Context button example*).
 
 
@@ -39,7 +40,7 @@ show up. The order of these buttons follows a hierarchy which is detailed below:
 
 - |Btn_Modifiers-25| :doc:`Modifiers </modifiers>`: Operations that can non-destructively affect Objects by changing how they are rendered and displayed without altering their geometry (e.g. mirror and smoothing).
 
-- |Btn_ObjectData-25| :guilabel:`Object Data`: Contains all Object specific data (color of a lamp, focal length of a camera, vertex groups etc). The icon differs with the type of Object (the one shown here is for a mesh object).
+- |Btn_ObjectData-25| *Object Data*: Contains all Object specific data (color of a lamp, focal length of a camera, vertex groups etc). The icon differs with the type of Object (the one shown here is for a mesh object).
 
 - |Btn_Material-25| :doc:`Materials </materials>`: Information about a surface (color, specularity, transparency, etc).
 

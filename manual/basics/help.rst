@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review}} .
 
+***********
 Help system
 ***********
 
@@ -16,7 +17,7 @@ Blender has a range of built-in and web-based Help options.
 
 The built in help options include:
 
-- A Menu with all of the Help Options including the Web based ones. Some of them are also present in the :guilabel:`Splash Screen`.
+- A Menu with all of the Help Options including the Web based ones. Some of them are also present in the *Splash Screen*.
 
 Other new features like:
 
@@ -40,9 +41,9 @@ General Web-based Help Options
 
 - :doc:`This is a link for the Official Blender Manual </contents>`, in *Wiki* format, which you are now reading.
 - `Release Log <http://www.blender.org/development/release-logs/>`__ - The release notes on the Web for the current Blender version.
-- `Blender Website <http://www.blender.org/>`__ - The :guilabel:`blender.org` home page.
+- `Blender Website <http://www.blender.org/>`__ - The *blender.org* home page.
 - `Blender e-Shop <http://www.blender3d.org/e-shop/>`__ - The Blender e-Store, where you can buy Training DVD's, books, t-shirts and other products.
-- `Developer Community <http://www.blender.org/community/get-involved/>`__ - The :guilabel:`blender.org` "Get Involved" page. This is the launch page for Blender software development, bug tracking, patches and scripts, education and training, documentation development and functionality research.
+- `Developer Community <http://www.blender.org/community/get-involved/>`__ - The *blender.org* "Get Involved" page. This is the launch page for Blender software development, bug tracking, patches and scripts, education and training, documentation development and functionality research.
 - `User Community <http://www.blender.org/community/user-community/>`__ - Lists of many different support venues here.
 - `Report a Bug <http://projects.blender.org/tracker/?atid=498&group_id=9&func=browse>`__ - The Blender Bug Tracker page.
 
@@ -59,12 +60,12 @@ Programming Options
 
 Access from :menuselection:`Help --> Operator Cheat Sheet`
 
-Creates the ``OperatorList.txt`` file, which you can access in the :guilabel:`Text Editor`.
+Creates the ``OperatorList.txt`` file, which you can access in the *Text Editor*.
 You can also use Blender Search to generate the file. The text will list the available Python operators.
 
-While Blender is generating this list, the :guilabel:`Info Window` will change,
+While Blender is generating this list, the *Info Window* will change,
 showing a message for the operation (See Fig: Info Window - Operator Cheat Sheet ).
-To read the Text, switch to the Blender :guilabel:`Text Editor` Window,
+To read the Text, switch to the Blender *Text Editor* Window,
 using the :doc:`Window type Selector </interface/window_types>`, and then,
 clicking on the button *Browse Text to be Linked* of the Text Editor, your text block will be shown in the Editor.
 The file will be in your list of Text-block, named as ``OperatorsList.txt``,
@@ -81,10 +82,10 @@ Diagnostics Options
 
 Access :menuselection:`Help --> System Info`
 
-Creates a ``system-info.txt`` text block, which you can access  in the Blender :guilabel:`Text Editor`.
+Creates a ``system-info.txt`` text block, which you can access  in the Blender *Text Editor*.
 The text lists various key properties of your system and Blender, which can be useful in diagnosing problems.
 
-To read the Text, switch to the Blender :guilabel:`Text Editor` Window,
+To read the Text, switch to the Blender *Text Editor* Window,
 using the :doc:`Window type Selector </interface/window_types>`, and then,
 clicking on the button *Browse Text to be Linked* of the Text Editor, your text block will be shown in the Editor.
 The ``system-info.txt`` will be in your list of Text-blocks.
@@ -111,13 +112,13 @@ OpenGL
    Info Window - Info.txt
 
 
-- :guilabel:`Toggle System Console` - Reveals the command window that contains Blender's :guilabel:`stdout` messages. Can be very useful for figuring out how the UI works, or what is going wrong if you encounter a problem. Even more information is available here, if you invoke Blender as :guilabel:`blender -d`. This menu item only shows up on Windows.
-  - In all Operating Systems, to see this information, simply run :guilabel:`blender` from the command-line.
-  - On Linux, if you ran Blender from the GUI, you can see the output in :guilabel:`~/.xsession-errors`
+- *Toggle System Console* - Reveals the command window that contains Blender's *stdout* messages. Can be very useful for figuring out how the UI works, or what is going wrong if you encounter a problem. Even more information is available here, if you invoke Blender as *blender -d*. This menu item only shows up on Windows.
+  - In all Operating Systems, to see this information, simply run *blender* from the command-line.
+  - On Linux, if you ran Blender from the GUI, you can see the output in *~/.xsession-errors*
   - On Mac OS X, you can open Console.app (in the Utilities folder in Applications) and check the Log there.
 
 
-- :guilabel:`Info Window Log` - This is not exactly a Help menu, but it is related. If you mouseover the line between the Info window and the 3D then click and drag the Info window down a bit, you can see the stream of Python calls that the UI is making when you work. This can be useful in creating scripts.
+- *Info Window Log* - This is not exactly a Help menu, but it is related. If you mouseover the line between the Info window and the 3D then click and drag the Info window down a bit, you can see the stream of Python calls that the UI is making when you work. This can be useful in creating scripts.
 
 
 .. figure:: /images/Manual-Vitals-Help_Info_Log.jpg
@@ -128,10 +129,12 @@ OpenGL
 Legacy Version Support
 ======================
 
-- :guilabel:`FCurve/Driver fix` - Sometimes, when you load .blend's made from older versions of Blender (2.56 and previous), the Function Curves and Shapekey Drivers will not function correctly due to updates in the animation system. Selecting this option updates the FCurve/Driver data paths.
-
-
-- :guilabel:`TexFace to Material Convert` - Convert old Texface settings into material. It may create new materials if needed.
+FCurve/Driver fix
+   Sometimes, when you load .blend's made from older versions of Blender (2.56 and previous),
+   the Function Curves and Shapekey Drivers will not function correctly due to updates in the animation system.
+   Selecting this option updates the FCurve/Driver data paths.
+TexFace to Material Convert
+   Convert old Texface settings into material. It may create new materials if needed.
 
 
 Splash Screen
@@ -145,8 +148,8 @@ For example, in our Splash Screen, you can see the version **2.66.0** and the re
 This can be useful to give to support personnel when diagnosing a problem.
 
 There are some Internet Based Help options that are also present in the Blender
-:guilabel:`Splash Screen`.
-They are presented as the same links you will find at the :guilabel:`Help` Menu.
+*Splash Screen*.
+They are presented as the same links you will find at the *Help* Menu.
 
 
 .. figure:: /images/(Doc_26x_Manual_Vitals_Help)_(Splash_Screen_2.66)_(GBV266FN).jpg
@@ -158,7 +161,7 @@ Other Help Options
 ******************
 
 Here we explain the two new features added for Blender,
-:guilabel:`Blender Search` and the recoded :guilabel:`Tooltips`.
+*Blender Search* and the recoded *Tooltips*.
 
 
 Blender Search
@@ -168,7 +171,7 @@ Blender Search
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`space`
+   | Hotkey:   :kbd:`Space`
 
 
 .. figure:: /images/Manual-Vitals-Help-Search-Keyword-Render.jpg
@@ -176,18 +179,18 @@ Blender Search
    Blender Search - Render
 
 
-The Blender Search feature, called :guilabel:`Blender Search`,
+The Blender Search feature, called *Blender Search*,
 is a new functionality added by the Blender recode
 (from 2.4x series to 2.5x series and so on).
 The Internal name of the feature is *Operator Search*.
-When you hit :kbd:`space` from your keyboard,
+When you hit :kbd:`Space` from your keyboard,
 Blender will present you with a small Pop Up Window,
 no matter which Blender Window your Mouse pointer is located
-(except the :guilabel:`Text Editor` Window and :guilabel:`Python console`),
+(except the *Text Editor* Window and *Python console*),
 and a field for you to type in.
 Just type what you need and Blender will present you a list of available options.
 You can click on the appropriate function for you, or search through them using your keyboard,
-type :kbd:`enter` to accept, or :kbd:`esc` to leave.
+type :kbd:`Enter` to accept, or :kbd:`Esc` to leave.
 Clicking outside of the Blender Search Window or taking the Mouse pointer away,
 will also leave Blender Search.
 
@@ -198,7 +201,7 @@ the small Pop Up Window for the Blender Search will stay blank.
 
 
 - How it works:
-  - Every Blender Internal Operator can use a defined name, some of them are predefined names for the user. For example, the :guilabel:`Render` command is a named Python call, the appropriate Operator is  ``Python: bpy.ops.render.render()`` , but for the user, it is called Render. All of those *user* names that were previously attributed for Python operators can searched for using :guilabel:`Blender Search`.
+  - Every Blender Internal Operator can use a defined name, some of them are predefined names for the user. For example, the *Render* command is a named Python call, the appropriate Operator is  ``Python: bpy.ops.render.render()`` , but for the user, it is called Render. All of those *user* names that were previously attributed for Python operators can searched for using *Blender Search*.
 
 
 Tooltips
@@ -209,7 +212,7 @@ Tooltips
    The Mouse pointer was  Stopped for a while over the Render Engines List in the Info Window. The normal Tooltip  is in white and the Python operator is displayed in grey
 
 
-The :guilabel:`Tooltips` in Blender were completely recoded,
+The *Tooltips* in Blender were completely recoded,
 and every time you hover your Mouse over a Button, a Command,
 Numeric Fields or things that are related to Operators, staying for a while,
 it will show you not only the normal Tooltip, but also the specific related operator.

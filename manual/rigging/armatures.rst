@@ -4,6 +4,7 @@
    }} .
 
 
+*********
 Armatures
 *********
 
@@ -21,12 +22,12 @@ In order to see what we're talking about, let's try to add the default armature 
 Open a default scene, then:
 
 - delete all objects in the scene
-- make sure the cursor is in the world origin with :kbd:`shift-C`
-- press :kbd:`pad1` to see the world in Front view
+- make sure the cursor is in the world origin with :kbd:`Shift-C`
+- press :kbd:`Numpad1` to see the world in Front view
 - then, either:
   - in the Main Menu, Go to Add > Armature > Single Bone
-  - -or- in the 3D view, add an armature with :kbd:`shift-A` :menuselection:`popup --> Armature --> Single Bone`
-- press :kbd:`Del NumPad` to see the armature at maximum zoom
+  - -or- in the 3D view, add an armature with :kbd:`Shift-A` :menuselection:`popup --> Armature --> Single Bone`
+- press :kbd:`Del Numpad` to see the armature at maximum zoom
 
 
 .. figure:: /images/ManRiggingDefaultArmature2.5.jpg
@@ -43,18 +44,18 @@ The armature object
 As you can see, an armature is like any other object type in Blender:
 
 - It has a center, a position, a rotation and a scale factor.
-- It has an ObData datablock, that can be edited in :guilabel:`Edit mode`.
+- It has an ObData datablock, that can be edited in *Edit mode*.
 - It can be linked to other scenes, and the same armature data can be reused on multiple objects.
-- All animation you do in :guilabel:`Object mode` is only working on the whole object, not the armature's bones (use the :guilabel:`Pose mode` to do this).
+- All animation you do in *Object mode* is only working on the whole object, not the armature's bones (use the *Pose mode* to do this).
 
 As armatures are designed to be posed, either for a static or animated scene,
 they have a specific state, called "rest position". This is the armature's default "shape",
-the default position/rotation/scale of its bones, as set in :guilabel:`Edit mode`.
+the default position/rotation/scale of its bones, as set in *Edit mode*.
 
-In :guilabel:`Edit mode`, you will always see your armature in rest position,
-whereas in :guilabel:`Object` and :guilabel:`Pose mode`,
+In *Edit mode*, you will always see your armature in rest position,
+whereas in *Object* and *Pose mode*,
 you usually get the current "pose" of the armature
-(unless you enable the :guilabel:`Rest Position` button of the :guilabel:`Armature` panel).
+(unless you enable the *Rest Position* button of the *Armature* panel).
 
 
 Armature chapter overview

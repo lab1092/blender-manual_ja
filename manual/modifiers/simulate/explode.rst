@@ -1,50 +1,27 @@
 
-..    TODO/Review: {{review|im= add images}} .
-
-
+****************
 Explode Modifier
 ****************
 
-The Explode Modifier is used to alter the mesh geometry (by moving/rotating its faces)
-in a way that (roughly)
-tracks underlying emitted particles that makes it look as if the mesh is being exploded
+The Explode Modifier is used to alter the mesh geometry by moving/rotating its faces in a way that roughly
+tracks particles particles emitted by that object, making it look as if the mesh is being exploded
 (broken apart and pushed outward).
 
-For the Explode Modifier to have a visible effect on the underlying mesh it has to be applied
-to a mesh which has a particle system on it,
-in other words it has to be a mesh which outputs particles.
-This is because the particle system on the mesh is what controls how a mesh will be exploded,
-and therefore without the particle system the mesh wont appear to alter.  Also both the number
-of emitted particles and number of faces determine how granular the Explode Modifier will be.
-With default settings the more faces and particles the more detailed the mesh exploding will
-be, because there are more faces and particles to affect detachment/movement of faces.
+For the Explode Modifier to have a visible effect, there needs to be particle system on it.
+The particle system on the mesh is what controls how the mesh will be exploded,
+and therefore without the particle system the mesh wont appear to alter.
 
-Here is a link to an Ogg Theora Movie showing a cube with a particle system and Explode
-Modifier applied:
+Both the number of emitted particles and number of faces determine how granular the Explode Modifier will be.
+More faces and more particles will mean more individual pieces.
 
+Here is a `demo video <http://wiki.blender.org/index.php/Media:Manual - Explode Modifier - Exploding Cube - 2.5.ogg>`__
+showing a cube with a particle system and Explode Modifier.
+(`Blend file <http://wiki.blender.org/index.php/Media:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__)
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+`File:Manual - Explode Modifier - Exploding Cube - 2.5.ogg <http://wiki.blender.org/index.php/Media:Manual - Explode Modifier - Exploding Cube - 2.5.ogg>`__+
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. note::
 
-
-Here is a link to the original Blender file which has an Exploding cube setup, just free the
-particle cache by pressing the Free Bake button in the bake panel and then press the Animate
-button to see the animation:
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+`File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend <http://wiki.blender.org/index.php/Media:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__+
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-Stacking Order Importance
-=========================
-
-This modifier is highly affected by its position within the modifier stacking order.  If it is
-applied before a Particle System modifier it will not be affected by particles and therefore
-appear to do nothing.  The Particle System Modifier must appear before the Explode Modifier
-because the Particle System Modifier has the information needed to drive the Explode Modifier.
+   The Explode modifier must come after the Particle System Modifier
+   because the Particle System Modifier has the information needed to drive the Explode Modifier.
 
 
 Options
@@ -56,7 +33,12 @@ Options
 
 
 Vertex group
-   If a mesh that has an Explode Modifier on it also has vertex groups assigned to it then this field will allow the selection of one of those vertex groups.  This will indicate to the Explode Modifier that it should take into account the weight values assigned to areas of the selected vertex group.
+   Vertices in this group may not be affected by the Explode Modifier.
+   Vertices with full weight are not affected at all,
+   while vertices with less weight have a higher chance of being affected.
+
+   Vertices with no weight will be treated like those which do not belong to the group at all and explode normally.
+
 Protect
    Clean vertex group edges. Depending on the weights assigned to that vertex group;
    either completely protect those faces from being affected by the Explode Modifier

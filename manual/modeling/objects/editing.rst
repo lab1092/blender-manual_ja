@@ -2,10 +2,11 @@
 ..    TODO/Review: {{review|partial=X|text=need more info about Editing function, not all are in this page}} .
 
 
+************
 Introduction
 ************
 
-In this section will be described tools for editing objects in :guilabel:`Object Mode`.
+In this section will be described tools for editing objects in *Object Mode*.
 
 Information about some additional possibilities are described in :doc:`Manipulation in 3D </3d_interaction/transform_control>`.
 
@@ -18,9 +19,9 @@ Object Mode
    Object Mode button
 
 
-By default new files opens with enabled :guilabel:`Object Mode`.
-To enable it you may in :guilabel:`3D View window → Header` click :guilabel:`Object Mode
-button` (see picture :guilabel:`Object Mode button`)
+By default new files opens with enabled *Object Mode*.
+To enable it you may in *3D View window → Header* click *Object Mode button*
+(see picture *Object Mode button*)
 
 All edition tools works only with selected objects. See :doc:`Selecting Objects </modeling/objects/selecting>` for more information.
 
@@ -49,7 +50,7 @@ Add
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     :guilabel:`Main` → :guilabel:`Add`
+   | Menu:     *Main* → *Add*
    | Hotkey:   :kbd:`Shift-A`
 
 
@@ -104,7 +105,7 @@ Join
 
 Joining makes one single object from all selected objects. Objects must be of the same type.
 Origin point is obtained from the previously *active* object.
-Performing a join is equivalent to adding new objects while in :guilabel:`Edit mode`.
+Performing a join is equivalent to adding new objects while in *Edit mode*.
 The non-active objects are deleted (their meshes were taken by active object).
 Only the active object remains. This only works with editable objects,
 containing meshes and curves.
@@ -117,7 +118,7 @@ Delete
    :class: refbox
 
    | Menu:     *Object → Delete... → Delete*
-   | Hotkey:   :kbd:`X`, :kbd:`D` or :kbd:`Delete`, :kbd:`D`
+   | Hotkey:   :kbd:`X`, :kbd:`D` or :kbd:`Del`, :kbd:`D`
 
 
 Deletion erases selected objects.
@@ -141,7 +142,7 @@ Translate
 
 
 Translation means changing location of objects. This changes X,
-Y and/or Z coordinates of object's :guilabel:`Origin point` relative to center of coordinates.
+Y and/or Z coordinates of object's *Origin point* relative to center of coordinates.
 
 
 Rotate

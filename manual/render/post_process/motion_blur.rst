@@ -1,4 +1,5 @@
 
+***********
 Motion Blur
 ***********
 
@@ -101,7 +102,7 @@ The scale beneath the cube helps in appreciating the movement of 1 Blender unit.
 
 
 *Image 3* on the other hand shows the rendering of frame 1 when Motion Blur is set and 8 'intermediate' frames are
-computed. :guilabel:`Shutter` is set to 0.5; this means that the 8 'intermediate' frames are computed on a 0.
+computed. *Shutter* is set to 0.5; this means that the 8 'intermediate' frames are computed on a 0.
 5 frame period starting from frame 1. This is very evident since the whole 'blurriness' of the cube occurs half a
 unit before and half a unit after the main cube body.
 

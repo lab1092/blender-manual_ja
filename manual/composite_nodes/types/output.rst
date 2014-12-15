@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+**********************
 Composite Output Nodes
 **********************
 
@@ -23,25 +24,25 @@ Viewer
    Viewer node
 
 
-The :guilabel:`Viewer` node is a temporary, in-process viewer.
+The *Viewer* node is a temporary, in-process viewer.
 Plug it in wherever you would like to see an image or value-map in your node-tree.
 
-:kbd:`Lmb` click on the image to update it, if it wasn't done automatically. You can use as many of these as you would like. It is possible to automatically plug a Viewer node to any other node by pressing :kbd:`Shift-ctrl-Lmb` on it.
+:kbd:`LMB` click on the image to update it, if it wasn't done automatically. You can use as many of these as you would like. It is possible to automatically plug a Viewer node to any other node by pressing :kbd:`Shift-Ctrl-LMB` on it.
 
 
 Using the UV/Image Editor Window
 --------------------------------
 
-The :guilabel:`Viewer` node allows results to be displayed in the UV/Image Editor.
-The image is facilitated by selecting the :guilabel:`IM:Viewer Node` on the window's header.
+The *Viewer* node allows results to be displayed in the UV/Image Editor.
+The image is facilitated by selecting the *IM:Viewer Node* on the window's header.
 The UV/Image Editor will display the image from the currently selected viewer node.
 
 To save the image being viewed,
-use the :guilabel:`Image→Save As` menu to save the image in a file.
+use the *Image→Save As* menu to save the image in a file.
 
 The UV/Image Editor also has three additional options in its header to view Images with or
 without Alpha, or to view the Alpha or Z itself.
-Holding :kbd:`Lmb` in the Image display allows you to sample the values.
+Holding :kbd:`LMB` in the Image display allows you to sample the values.
 
 
 Composite
@@ -53,7 +54,7 @@ Composite
 
 
 The Composite node is where the actual output from the compositor is connected to the
-renderer. Connecting a node to the :guilabel:`Composite` node will output the result of that
+renderer. Connecting a node to the *Composite* node will output the result of that
 node's full tree to the Renderer; leaving this node unconnected will result in a blank image.
 This node is updated after each render, but also if you change things in your node-tree
 (provided at least one finished input node is connected).
@@ -61,7 +62,7 @@ This node is updated after each render, but also if you change things in your no
 You can connect three channels: the actual RGBA image, the Alpha image, and the Z (depth)
 image.
 You should only have one Composite node in your map so that only one final image is rendered
-when the :guilabel:`Compositing` button is pressed on the Render Options Post-Processing
+when the *Compositing* button is pressed on the Render Options Post-Processing
 panel. Otherwise, unpredictable results may occur.
 
 
@@ -69,18 +70,18 @@ Saving your Composite Image
 ---------------------------
 
 The RENDER button renders a single frame or image.
-Save your image using :kbd:`f3` or the :guilabel:`File→Save Image` menu.
+Save your image using :kbd:`F3` or the *File→Save Image* menu.
 The image will be saved using the image format settings on the Render panel.
 
 To save a sequence of images, for example,
 if you input a movie clip or used a Time node with each frame in its own file,
-use the :guilabel:`ANIM` button and its settings. If you might want to later overlay them,
+use the *ANIM* button and its settings. If you might want to later overlay them,
 be sure to use an image format that supports an Alpha channel (such as PNG).
 If you might want to later arrange them front to back or create a depth of field effect,
 use a format that supports a Z-depth channel (such as EXR).
 
 To save a composition as a movie clip (all frames in a single file),
-use an AVI or Quicktime format, and use the :guilabel:`ANIM` button and its settings.
+use an AVI or Quicktime format, and use the *ANIM* button and its settings.
 
 
 SplitViewer Node
@@ -91,7 +92,7 @@ SplitViewer Node
    SplitViewer node
 
 
-The :guilabel:`SplitViewer` node takes two images and displays one half of each on each side
+The *SplitViewer* node takes two images and displays one half of each on each side
 (top socket on the right half, bottom socket input on the left).
 Use this node for making side-by-side comparisons of two renderings/images,
 perhaps from different renderlayers or from different scenes.
@@ -136,9 +137,9 @@ Levels Node
 
 The Levels Node takes an image as an input,
 and can output a 1D value based on the levels of an image.
-It can read the input's :guilabel:`Combined RGB`, :guilabel:`Red`, :guilabel:`Green`,
-:guilabel:`Blue`, or :guilabel:`Luminance` channels.
+It can read the input's *Combined RGB*, *Red*, *Green*,
+*Blue*, or *Luminance* channels.
 
-It can output a :guilabel:`Mean` value, or average of values,
-or a :guilabel:`Standard deviation`, which measures the diversity of values.
+It can output a *Mean* value, or average of values,
+or a *Standard deviation*, which measures the diversity of values.
 

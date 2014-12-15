@@ -2,18 +2,19 @@
 ..    TODO/Review: {{review|}} .
 
 
+**********
 Knife Tool
 **********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Mesh Tools` (:guilabel:`Editing` context, :kbd:`F9`)
-   | Hotkey:   :kbd:`K` or :kbd:`shift-K`
+   | Mode:     *Edit* mode
+   | Panel:    *Mesh Tools* (*Editing* context, :kbd:`F9`)
+   | Hotkey:   :kbd:`K` or :kbd:`Shift-K`
 
 
-The :guilabel:`Knife Tool` has been improved for Blender 2.6.
+The *Knife Tool* has been improved for Blender 2.6.
 It subdivides edges and faces intersected by a user-drawn "knife" line.
 The tool is now fully interactive, and snaps to edges, cut lines, and vertices,
 and can create multiple cuts on an edge.
@@ -22,19 +23,19 @@ For example, if you wish to cut a hole in the front of a sphere,
 you select only the front edges, and then draw a line over the selected edges with the mouse.
 The tool is interactive, and works on primary edges,
 selected either implicitly by selecting all,
-or explicitly by box-selecting or :kbd:`shift-rmb` -clicking a few edges.
+or explicitly by box-selecting or :kbd:`Shift-RMB` -clicking a few edges.
 
-Use :kbd:`shift-K` or the Select tool in the tool panel to force the knife tool to work
+Use :kbd:`Shift-K` or the Select tool in the tool panel to force the knife tool to work
 only on a selection and in cut-through mode (see below).
 
 
 Usage
 =====
 
-When you press :kbd:`K` (or :kbd:`shift-K`), the Knife tool becomes active.
+When you press :kbd:`K` (or :kbd:`Shift-K`), the Knife tool becomes active.
 
 Drawing the cut line
-   When using :guilabel:`Knife Subdivide`, the cursor changes to an icon of a scalpel and the header changes to display options for the tool. You can draw connected straight lines by clicking :kbd:`lmb`.
+   When using *Knife Subdivide*, the cursor changes to an icon of a scalpel and the header changes to display options for the tool. You can draw connected straight lines by clicking :kbd:`LMB`.
 
 
 .. figure:: /images/Knife1.jpg
@@ -108,10 +109,10 @@ Cut through :kbd:`Z`
 Confirming and selection
 ========================
 
-Pressing :kbd:`Esc` or :kbd:`rmb` at any time cancels the tool,
-and pressing :kbd:`enter` confirms the cut, with the following options:
+Pressing :kbd:`Esc` or :kbd:`RMB` at any time cancels the tool,
+and pressing :kbd:`Enter` confirms the cut, with the following options:
 
-:kbd:`enter` will leave selected every edge except the new edges created from the cut.
+:kbd:`Enter` will leave selected every edge except the new edges created from the cut.
 
 
 Limitations

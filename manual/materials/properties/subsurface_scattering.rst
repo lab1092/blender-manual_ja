@@ -1,4 +1,5 @@
 
+*********************
 Subsurface Scattering
 *********************
 
@@ -8,6 +9,7 @@ Subsurface Scattering
    |[[Image:Blender3D Chihuahua Marmor.jpg|thumb|300px|'''Image 1b:''' And the same without SSS.]]
    }}
    --> .
+
 Many organic and inorganic materials are not totally opaque right at the surface,
 so light does not just bounce off the top surface. Instead,
 some light also penetrates the skin surface deeply, and scatters around inside,
@@ -30,8 +32,16 @@ and that one can use a different approach.
 
 Blender calculates SSS in two steps:
 
-- At first the irradiance, or brightness, of the surface is calculated, from the front side of the object as well as from its back side. This is pretty much the same as in a normal render. Ambient Occlusion, Radiosity, the type of diffuse Shader, the light color, etc. are taken into account.
-- In the second step, the final image is rendered, but now the SSS shader replaces the diffuse shader. Instead of the lamps, the calculated lightmap is used. The brightness of a surface point is the calculated "Average" of the brightness of its surrounding points. Depending on your settings the whole surface may be taken into account, and it's a bit more complicated than simply calculating the average, but don't bother too much with the math behind it.
+- At first the irradiance, or brightness, of the surface is calculated,
+  from the front side of the object as well as from its back side.
+  This is pretty much the same as in a normal render.
+  Ambient Occlusion, Radiosity, the type of diffuse Shader, the light color, etc. are taken into account.
+- In the second step, the final image is rendered, but now the SSS shader replaces the diffuse shader.
+  Instead of the lamps, the calculated lightmap is used.
+  The brightness of a surface point is the calculated "Average" of the brightness of its surrounding points.
+  Depending on your settings the whole surface may be taken into account,
+  and it's a bit more complicated than simply calculating the average,
+  but don't bother too much with the math behind it.
 
 Instead let's see what SSS does to a distinct light point.
 
@@ -62,7 +72,12 @@ its light is evenly distributed over the whole object.
 
 .. note:: Note about scatter radius
 
-   Because of the way this scattering is calculated, when using large radius values, you will notice fringing artifacts that appear as the complementary color to the predominant color of the scattering. Above, you see in the last image a bluish band in the illuminated area. This is an unfortunate limitation. A way to lessen this effect is use multiple passes with different scatter radii, and average them.
+   Because of the way this scattering is calculated, when using large radius values,
+   you will notice fringing artifacts that appear as the complementary
+   color to the predominant color of the scattering.
+   Above, you see in the last image a bluish band in the illuminated area.
+   This is an unfortunate limitation.
+   A way to lessen this effect is use multiple passes with different scatter radii, and average them.
 
 
 Enabling Subsurface Scattering
@@ -73,10 +88,16 @@ Enabling Subsurface Scattering
    Image 4: The SSS Panel. SSS is already enabled.
 
 
-- Enable SSS by clicking on the :guilabel:`Subsurface Scattering` button.
-- Accessible at the top are various presets.  Add new or remove old presets by clicking the :guilabel:`+` and :guilabel:`-` buttons.  When you select a preset, the :guilabel:`Radius` values, the :guilabel:`RGB Radius` and the :guilabel:`IOR` are set for you.  The remaining options are not set (because they are mostly dependent on the size of your object).
+- Enable SSS by clicking on the *Subsurface Scattering* button.
+- Accessible at the top are various presets.
+  Add new or remove old presets by clicking the *+* and *-* buttons.
+  When you select a preset,
+  the *Radius* values, the *RGB Radius* and the *IOR* are set for you.
+  The remaining options are not set (because they are mostly dependent on the size of your object).
 
-*SubSurface Scattering* doesn't need ray tracing. But since it is dependent on the incident light and shadows, you need proper shadow calculation (which may need ray tracing).
+*SubSurface Scattering* doesn't need ray tracing.
+But since it is dependent on the incident light and shadows,
+[you need proper shadow calculation (which may need ray tracing).
 
 
 Options
@@ -85,7 +106,7 @@ Options
 The numeric sliders control how the light is scattered:
 
 IOR
-   The :guilabel:`Index Of Refraction` value determines the falloff of incident light.
+   The *Index Of Refraction* value determines the falloff of incident light.
    Higher values means that light falls off faster.
    The effect is quite subtle and changes the distribution function only a little bit.
    By the examination of many different materials, values of **1.3** to **1.5**
@@ -94,7 +115,7 @@ IOR
 
 Scale
    The scale of your object, in Blender units, across which you want the scattering effect to take place.
-   Scale :guilabel:`1.0` means **1** Blender unit equals **1** millimeter,
+   Scale *1.0* means **1** Blender unit equals **1** millimeter,
    scale **0.001** means **1** Blender unit equals **1** meter.
    If you want to work out what scale value to use in your scene,
    just use the formula: (size in blender units)/(real world size in millimeters)=scale.
@@ -109,7 +130,10 @@ Scale
 
 Scattering Color (Albedo)
    Albedo is the probability that light will survive a scattering event.
-   If you think of scattering as a filter, this is the height of the filter. It is multiplied by the surface color. In practice, this is unintuitive. It should be the same as the surface color, however changing this value has unintuitive results on the scattering effect:
+   If you think of scattering as a filter, this is the height of the filter.
+   It is multiplied by the surface color. In practice, this is unintuitive.
+   It should be the same as the surface color,
+   however changing this value has unintuitive results on the scattering effect:
 
    The darker the color the more light is scattered. A value of 1 will produce no scattering effect.
 
@@ -117,12 +141,19 @@ Scattering Color (Albedo)
    Therefore the darker areas will appear in red and blue.
    You can compensate the different scattering by setting a larger radius for the color.
 RGB Radius
-   This is not in fact the radius of the subsurface scattering, but the average path length between scattering events.  As the light travels through the object it bounces around then emerges from the surface at some other point. This value corresponds to the average length the light travels between each bounce.  The longer the path length is, the further the light is allowed to scatter.
-   This is the main source of a material's perceived "scatter color." A material like skin will have a higher red radius than green and blue. Subsurface scattering is the diffusion of light beneath the surface. You control how far the light spreads to achieve a specific result.
+   This is not in fact the radius of the subsurface scattering, but the average path length between scattering events.
+   As the light travels through the object it bounces around then emerges from the surface at some other point.
+   This value corresponds to the average length the light travels between each bounce.
+   The longer the path length is, the further the light is allowed to scatter.
+   This is the main source of a material's perceived "scatter color."
+   A material like skin will have a higher red radius than green and blue.
+   Subsurface scattering is the diffusion of light beneath the surface.
+   You control how far the light spreads to achieve a specific result.
 
 Blend :
    Color
-      This controls how much the R, G, B option modulates the diffuse color and textures. Note that even with this option set to **0.0**, the R, G, B option still influences the scattering behavior.
+      This controls how much the R, G, B option modulates the diffuse color and textures.
+      Note that even with this option set to **0.0**, the R, G, B option still influences the scattering behavior.
    Texture
       How much the surface texture is blurred along with the shading.
 Scattering Weight :
@@ -156,7 +187,7 @@ See the external links for more information:
 - Set the SSS color on a value of your choice, normally the predominant color of the object. If you want to use different radii for the colors, don't make it too dark.
 - Set the scale factor. If you want to see much translucency you need small objects or large scale values.
 - Set the radius values.
-- Adjust the brightness with the :guilabel:`Front` and :guilabel:`Back` values.
+- Adjust the brightness with the *Front* and *Back* values.
 
 
 =A more intuitive approach

@@ -1,4 +1,5 @@
 
+*************
 Opening Files
 *************
 
@@ -33,29 +34,29 @@ textures, and even all your user interface window settings.
 Using the File Browser and Folder Navigation
 ============================================
 
-To load a Blender file from disk, press :kbd:`F1`. The :guilabel:`File Browser` window,
+To load a Blender file from disk, press :kbd:`F1`. The *File Browser* window,
 as shown above, will open.
 
 The upper text box displays the current directory path,
 and the lower text box contains the selected filename. :kbd:`P`
-(or the :guilabel:`P` button) moves you up to the parent directory.
+(or the *P* button) moves you up to the parent directory.
 
 The + and - buttons allow you to cycle through numbered files by increasing or decreasing the
 number at the end of the file name.
 
 Click on a folder to go inside of it,
-or click on a file then press the :guilabel:`Open Blender File` to open it
+or click on a file then press the *Open Blender File* to open it
 
-Clicking :guilabel:`Cancel` will close the file browser window and return to the program.
+Clicking *Cancel* will close the file browser window and return to the program.
 
 
 Side Panel
 ==========
 
 The panel on the left displays different ways to find files and several options.
-To load a file, select it with :kbd:`lmb` and then press :kbd:`enter`,
-or click the :guilabel:`Open File` button.
-A file can also be loaded by simply clicking :kbd:`mmb` over its name.
+To load a file, select it with :kbd:`LMB` and then press :kbd:`Enter`,
+or click the *Open File* button.
+A file can also be loaded by simply clicking :kbd:`MMB` over its name.
 
 
 System
@@ -70,16 +71,16 @@ Bookmarks
 
 These are folders that you want to be able to access often without having to navigate to them
 in the file browser. To add a directory to the bookmark menu, navigate to that folder,
-then click the :guilabel:`Add` button.
-To remove a folder from the list, simply click the :guilabel:`X` icon nexto to it.
+then click the *Add* button.
+To remove a folder from the list, simply click the *X* icon nexto to it.
 
 
 Recent
 ------
 
 This is a list of recently accessed folders. You can control how many folders appear in this
-list by going to the :guilabel:`File` tab of the user :guilabel:`Preferences`,
-in the box labeled :guilabel:`Recent Files`.
+list by going to the *File* tab of the user *Preferences*,
+in the box labeled *Recent Files*.
 
 
 Open Options
@@ -88,7 +89,7 @@ Open Options
 Inside each .blend file, Blender saves the user interface - the screen layouts. By default,
 this saved UI is loaded, overriding any user defaults or current screen layouts that you have.
 If you want to work on the blend file using your current defaults, start a fresh Blender,
-then open the file browser (:kbd:`F1`). Turn off the :guilabel:`Load UI` button,
+then open the file browser (:kbd:`F1`). Turn off the *Load UI* button,
 and then open the file.
 
 
@@ -99,48 +100,48 @@ The Header contains several tools for navigation files.
 The four arrow icons allow you to:
 
 
-- :guilabel:`Move to previous folder`
-- :guilabel:`Move to next folder`
-- :guilabel:`Move up to parent directory`
-- :guilabel:`Refresh current folder`
+- *Move to previous folder*
+- *Move to next folder*
+- *Move up to parent directory*
+- *Refresh current folder*
 
-Create a new folder inside the current one by clicking the :guilabel:`Create New Directory`
+Create a new folder inside the current one by clicking the *Create New Directory*
 icon.
 
 The other icons allow you to control what files are visible and how they are displayed.
 You can:
 
 
-- :guilabel:`Display files as a short list`
-- :guilabel:`Display files as a detailed list`
-- :guilabel:`Display files as thumbnails`
+- *Display files as a short list*
+- *Display files as a detailed list*
+- *Display files as thumbnails*
 
 You can sort files:
 
 
-- :guilabel:`Alphabetically`
-- :guilabel:`By file type`
-- :guilabel:`By Date of last edit`
-- :guilabel:`By file size`
+- *Alphabetically*
+- *By file type*
+- *By Date of last edit*
+- *By file size*
 
-Filtering controls which file types are shown. Click the :guilabel:`Enable Filtering` icon,
+Filtering controls which file types are shown. Click the *Enable Filtering* icon,
 and toggle which types are shown:
 
 
-- :guilabel:`Folders`
-- :guilabel:`Blend files`
-- :guilabel:`Images`
-- :guilabel:`Movie files`
-- :guilabel:`Scripts`
-- :guilabel:`Font files`
-- :guilabel:`Music files`
-- :guilabel:`Text files`
+- *Folders*
+- *Blend files*
+- *Images*
+- *Movie files*
+- *Scripts*
+- *Font files*
+- *Music files*
+- *Text files*
 
 
 Other File Open Options
 =======================
 
-From the :guilabel:`File` menu, you can also open files with the following tools:
+From the *File* menu, you can also open files with the following tools:
 
 Open Recent
    Lists recently used files. Click on one to load it in.

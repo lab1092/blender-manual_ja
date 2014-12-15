@@ -1,3 +1,5 @@
+
+********************
 Generic Instructions
 ********************
 
@@ -68,8 +70,8 @@ Configuration
 Alt+Mouse Conflict
 ------------------
 
-Many Linux distributions default to :kbd:`Alt+LMB` for moving
-windows. Since Blender uses :kbd:`Alt+Click` it's normally easier to disable this feature or change
+Many Linux distributions default to :kbd:`Alt-LMB` for moving windows.
+Since Blender uses :kbd:`Alt-Click` it's normally easier to disable this feature or change
 the key used by the window manager to Super (Windows Key)
 
 - Ubuntu 11.04: Settings > Window Manger Tweak > Accessibility > Change Window Key to Super

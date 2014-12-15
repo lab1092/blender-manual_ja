@@ -1,4 +1,5 @@
 
+***************************
 Procedural textures: Clouds
 ***************************
 
@@ -16,7 +17,7 @@ user to select which algorithm is used to generate the texture.
 Often used for
    Clouds, Fire, Smoke. Well-suited to be used as a Bump map, giving an overall irregularity to the material.
 Result(s)
-   :guilabel:`Greyscale` (default) or RGB :guilabel:`Color`
+   *Greyscale* (default) or RGB *Color*
 
 
 Options
@@ -27,11 +28,11 @@ Greyscale
 Color
    The noise gives an RGB value
 Noise
-   :guilabel:`Soft` or :guilabel:`Hard`, changes contrast and sharpness
+   *Soft* or *Hard*, changes contrast and sharpness
 Size
    The dimension of the Noise table
 Depth
-   The depth of the :guilabel:`Clouds` calculation. A higher number results in a long calculation time, but also in finer details.
+   The depth of the *Clouds* calculation. A higher number results in a long calculation time, but also in finer details.
 
 
 Technical Details

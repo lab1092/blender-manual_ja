@@ -27,12 +27,12 @@ press :kbd:`G` and then type a number. By default and with no other key presses,
 movement will occur along the X-axis. To confirm the movement,
 press :kbd:`Enter` or :kbd:`LMB`. To cancel the movement,
 press :kbd:`Esc` or :kbd:`RMB`. If you mistype the value,
-press :kbd:`Backspace` to cancel the current entry and retype a new value.
+press :kbd:`BackSpace` to cancel the current entry and retype a new value.
 
 To enter numeric values for multiple axes,
-use the :kbd:`TAB` key after entering a value for the axis. e.g. To move an Object, one
-(1) Blender unit on all three axes press: :kbd:`G`, :kbd:`1`, :kbd:`TAB`,
-:kbd:`1`, :kbd:`TAB`, :kbd:`1`.
+use the :kbd:`Tab` key after entering a value for the axis. e.g. To move an Object, one
+(1) Blender unit on all three axes press: :kbd:`G`, :kbd:`1`, :kbd:`Tab`,
+:kbd:`1`, :kbd:`Tab`, :kbd:`1`.
 This will move the element one unit along the X-axis,
 followed by the Y-axis and then the Z-axis.
 
@@ -41,8 +41,8 @@ To do so, press :kbd:`G` followed by :kbd:`X`,
 :kbd:`Y` or :kbd:`Z` to indicate the axis. Then type in the transform amount using
 :kbd:`0` -\ :kbd:`9` followed by :kbd:`Enter` to confirm.
 Pressing :kbd:`X`, :kbd:`Y` or :kbd:`Z` will initially constrain movement to
-the :guilabel:`Global` axis. Pressing :kbd:`X`, :kbd:`Y` or :kbd:`Z` again
-will constrain movement to the orientation set in the :guilabel:`Transform Orientation`
+the *Global* axis. Pressing :kbd:`X`, :kbd:`Y` or :kbd:`Z` again
+will constrain movement to the orientation set in the *Transform Orientation*
 setting of the 3D window header.
 
 :doc:`Read more about Transform Orientations » </3d_interaction/transform_control/transform_orientations>`
@@ -84,7 +84,7 @@ Numeric input via the Properties shelf
 
 
 It is also possible to enter numeric values for each transformation using the
-:guilabel:`Transform` panel found on the Properties shelf (:kbd:`N`). The
-:guilabel:`Transform` panel can also be used to prevent transformations along particular axes
+*Transform* panel found on the Properties shelf (:kbd:`N`). The
+*Transform* panel can also be used to prevent transformations along particular axes
 by clicking the lock icon.
 

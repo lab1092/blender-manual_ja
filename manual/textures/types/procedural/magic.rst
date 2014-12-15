@@ -1,4 +1,5 @@
 
+**************************
 Procedural textures: Magic
 **************************
 
@@ -10,7 +11,7 @@ Procedural textures: Magic
 
 
 Often used for
-   Not frequently used. It can be used for "Thin Film Interference", if you set :guilabel:`Mapping` to :guilabel:`Reflection` and use a relatively high :guilabel:`Turbulence`.
+   Not frequently used. It can be used for "Thin Film Interference", if you set *Mapping* to *Reflection* and use a relatively high *Turbulence*.
 Result(s)
    RGB color. The RGB components are generated independently with a sine formula.
 

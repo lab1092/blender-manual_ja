@@ -8,7 +8,7 @@ Pivot Point selector
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object mode` and :guilabel:`Edit mode`
+   | Mode:     *Object mode* and *Edit mode*
    | Menu:     Droplist in the header of the 3D view
 
 
@@ -18,10 +18,10 @@ Pivot Point selector
 
 
 The pivot point is the point in space around which all rotations,
-scalings and mirror transformations are centered. You can choose one of five :guilabel:`Pivot
-Points` from a drop-down list in the header of any 3D area, as seen here in
+scalings and mirror transformations are centered. You can choose one of five *Pivot Points*
+from a drop-down list in the header of any 3D area, as seen here in
 (*Pivot Point modes*).
-The pages linked below describe each :guilabel:`Pivot Point` mode in more detail.
+The pages linked below describe each *Pivot Point* mode in more detail.
 
 
 - :doc:`Active element </3d_interaction/transform_control/pivot_point/active_element>`

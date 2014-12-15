@@ -1,5 +1,6 @@
 
 
+******
 Editor
 ******
 
@@ -34,7 +35,7 @@ additional settings appear in the Header and the Properties Panel:
 
 
 Backdrop Channels
-   Set the image to be displayed with :guilabel:`Color`, :guilabel:`Color and Alpha`, or just :guilabel:`Alpha`.
+   Set the image to be displayed with *Color*, *Color and Alpha*, or just *Alpha*.
 
 
 .. figure:: /images/26-Manual-Compositing-Node-Header-Zoom-Offset.jpg
@@ -45,7 +46,7 @@ Backdrop Channels
 Zoom
    Sets how big the backdrop image is.
 Offset
-   Change the screen space position of the backdrop, or click the :guilabel:`Move` button, or shortcut :kbd:`Alt-mmb` to manually move it.
+   Change the screen space position of the backdrop, or click the *Move* button, or shortcut :kbd:`Alt-MMB` to manually move it.
 
 
 Auto Render

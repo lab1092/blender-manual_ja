@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review|partial=X|fixes= rename page?}} .
 
+************
 Text Editing
 ************
 
@@ -10,8 +11,8 @@ Text Boxes
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` or :guilabel:`Edit` modes
-   | Panel:    :guilabel:`Font` (:guilabel:`Editing` context, :kbd:`F9`)
+   | Mode:     *Object* or *Edit* modes
+   | Panel:    *Font* (*Editing* context, :kbd:`F9`)
 
 
 .. figure:: /images/2.5_Manual-Part-II-Text-Frame-UpperPanel-Area.jpg
@@ -31,14 +32,14 @@ If the last frame is reached, text overflows out of it.
 Text frames are very similar to the concept of *frames* from a desktop publishing
 application, like Scribus. You use frames to control the placement and flow of text.
 
-Frames are controlled in the :guilabel:`Text Boxes` panel.
+Frames are controlled in the *Text Boxes* panel.
 
 
 Frame size
 ----------
 
 By default the first frame for a new text object, and any additional frames,
-has a size of **zero** for both :guilabel:`Width` and :guilabel:`Height`,
+has a size of **zero** for both *Width* and *Height*,
 which means the frame is initially not visible.
 
 Frames with a width of **0.0** are ignored completely during text flow
@@ -46,7 +47,7 @@ Frames with a width of **0.0** are ignored completely during text flow
 (no flowing to the next text frame).
 
 In order for the frame to become visible,
-the frame's :guilabel:`Width` must be greater than **0.0**.
+the frame's *Width* must be greater than **0.0**.
 
 
 .. note::
@@ -67,12 +68,12 @@ the frame's :guilabel:`Width` must be greater than **0.0**.
 Adding/Deleting a Frame
 -----------------------
 
-To add a frame click the :kbd:`Add Textbox` button on the :guilabel:`Text Boxes` panel.
+To add a frame click the :kbd:`Add Textbox` button on the *Text Boxes* panel.
 A new frame is inserted just after (in text flow order) the current one, with its attributes
-(position and size). Be sure to modify the offset for the new frame in the :guilabel:`X`
-and/or :guilabel:`Y` fields. Just an :guilabel:`X` modification will create a new column.
+(position and size). Be sure to modify the offset for the new frame in the *X*
+and/or *Y* fields. Just an *X* modification will create a new column.
 
-To delete the current frame, click the :kbd:`Delete` button.
+To delete the current frame, click the :kbd:`Del` button.
 Any text in higher frames will be re-flowed downward into lower frames.
 
 
@@ -89,7 +90,7 @@ Example: Text Flow
 With two or more frames you can organize text to a finer degree. For example,
 create a text object and enter "\ ``Blender is super duper`` ".
 This text object has a frame;
-it just isn't visible because its :guilabel:`Width` is **0.0**.
+it just isn't visible because its *Width* is **0.0**.
 
 
 Set the width to **5.0**.
@@ -120,8 +121,8 @@ Example: Multiple columns
 
 
 To create two columns of text just create a text object and adjust the initial frame's
-:guilabel:`Width` and :guilabel:`Height` to your requirements, then insert a new frame.
-The new frame will have the same size as the initial frame. Set the :guilabel:`X` position to
+*Width* and *Height* to your requirements, then insert a new frame.
+The new frame will have the same size as the initial frame. Set the *X* position to
 something greater or less than the width of the initial frame; see (*Text 5*).
 
 
@@ -131,11 +132,11 @@ Assigning Materials
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Link and Materials` (:guilabel:`Editing` context, :kbd:`F9`)
+   | Mode:     *Edit* mode
+   | Panel:    *Link and Materials* (*Editing* context, :kbd:`F9`)
 
 
-Each character can have a different :guilabel:`Material index` in order to have different
+Each character can have a different *Material index* in order to have different
 materials on different characters.
 
 You can assign indices either as you type, or after by selecting blocks of text and clicking
@@ -151,6 +152,6 @@ on the :kbd:`Assign` button in the Materials panel.
 
 For example, to create (*Red Green Blue*)
 you would need to create three separate materials and three separate material indices. Each
-word would be assigned a :guilabel:`Material index` by selecting the characters for each word
+word would be assigned a *Material index* by selecting the characters for each word
 and clicking the :kbd:`Assign` button. (*Red Green Blue*)
-is still one single :guilabel:`Text` object.
+is still one single *Text* object.

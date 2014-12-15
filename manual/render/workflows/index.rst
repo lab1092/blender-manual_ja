@@ -1,7 +1,8 @@
 .. _render-workflows:
 
-Workflows
-*********
+############
+  Workflows
+############
 
 .. toctree::
    :maxdepth: 2

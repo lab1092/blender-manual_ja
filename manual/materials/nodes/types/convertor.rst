@@ -1,4 +1,5 @@
 
+************************
 Material Convertor Nodes
 ************************
 
@@ -97,7 +98,7 @@ Colorband
 
 .. figure:: /images/26-Material-Convertor-Node-ColorRamp-Pospoint-Buticon.jpg
 
-   :guilabel:`Pos`.  The position of the active color mark in the colorband (range 0.0–1.0).  The position of the color marks can also be changed by :kbd:`lmb` dragging them in the colorband.
+   *Pos*.  The position of the active color mark in the colorband (range 0.0–1.0).  The position of the color marks can also be changed by :kbd:`LMB` dragging them in the colorband.
 
 
 .. figure:: /images/26-Manual-Material-Convertor-Node-ColorSwatch.jpg
@@ -105,7 +106,7 @@ Colorband
    Color swatch to color selection for a mark
 
 
-Color :guilabel:`Selector`
+Color *Selector*
    Allows set color and alpha values for each marker.
 
 

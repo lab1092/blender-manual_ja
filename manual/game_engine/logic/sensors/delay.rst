@@ -1,4 +1,5 @@
 
+************
 Delay sensor
 ************
 
@@ -9,7 +10,7 @@ Delay sensor
    Delay sensor
 
 
-The :guilabel:`Delay` sensor is designed for delaying reactions a number of logic ticks.
+The *Delay* sensor is designed for delaying reactions a number of logic ticks.
 This is useful if an other action has to be done first or to time events.
 
 See :doc:`Sensor Common Options </game_engine/logic/sensors/common_options>` for common options.

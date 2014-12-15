@@ -1,4 +1,5 @@
 
+*************************
 Vertices, Edges and Faces
 *************************
 
@@ -17,19 +18,19 @@ Vertices
 
 
 A vertex is primarily a single point or position in 3D space.
-It is usually invisible in rendering and in :guilabel:`Object mode`.
+It is usually invisible in rendering and in *Object mode*.
 Don't mistake the center point of an object for a vertex. It looks similar,
 but it's bigger and you can't select it. (*Vertex example*)
 shows the center point labeled as "\ ``A`` ".
 "\ ``B`` " and "\ ``C`` " are vertices.
 
-A simple way to create a new vertex is to click :kbd:`ctrl-lmb` in :guilabel:`Edit
-mode`.  Of course, as a computer screen is two-dimensional,
+A simple way to create a new vertex is to click :kbd:`Ctrl-LMB` in *Edit mode*.
+Of course, as a computer screen is two-dimensional,
 Blender can't determine all three vertex coordinates from a single mouse click,
 so the new vertex is placed at the depth of the 3D cursor.  Using the method described above,
 any vertices selected previously are automatically connected to the new ones by an edge.
-In the image above, the vertex labeled :guilabel:`C` is a new vertex added to the cube with a
-new edge added between in :guilabel:`B` and :guilabel:`C`.
+In the image above, the vertex labeled *C* is a new vertex added to the cube with a
+new edge added between in *B* and *C*.
 
 
 Edges
@@ -62,7 +63,7 @@ That's why you can't see any diagonal in its wireframe model,
 because they would divide each square face into two triangles.
 
 While you could build a cube with triangular faces,
-it would just look more confusing in :guilabel:`Edit mode`.
+it would just look more confusing in *Edit mode*.
 An area between three or four vertices, outlined by edges, doesn't have to be a face.
 If this area does not contain a face,
 it will simply be transparent or non-existent in the rendered image. To create a face,
@@ -77,7 +78,7 @@ Loops
    Edge and Face Loops
 
 
-:guilabel:`Edge` and :guilabel:`Face Loops` are sets of faces or edges that form continuous "loops" as shown in
+*Edge* and *Face Loops* are sets of faces or edges that form continuous "loops" as shown in
 (*Edge and Face Loops*). The top row (``1`` -\ ``4``) shows a solid view,
 the bottom row (``5`` -\ ``8``) a wireframe view of the same loops.
 

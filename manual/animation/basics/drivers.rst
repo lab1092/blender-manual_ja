@@ -1,4 +1,5 @@
 
+*******
 Drivers
 *******
 
@@ -196,8 +197,8 @@ Transform Driver
 This examples shows you how setup a transform driver.
 First make sure you are in the Front Ortho view. :kbd:`Numpad5`, :kbd:`Numpad1`.
 
-(1) In object mode, select then duplicate the default **Cube**. :kbd:`Shift+D`. Move **Cube.001** to a new location.
-(2) With **Cube.001** selected, add a single driver to the **Rotation Y** property.
+(1) In object mode, select then duplicate the default ``Cube``. :kbd:`Shift-D`. Move ``Cube.001`` to a new location.
+(2) With ``Cube.001`` selected, add a single driver to the **Rotation Y** property.
 (3) Open the *Graph Editor*, set the *Mode* to *Drivers*.
 (4) *Show Only Selected* is useful disabled for drivers, marked green in the picture.
 (5) In the channels region, select the **Y Euler Rotation** property.
@@ -212,7 +213,7 @@ First make sure you are in the Front Ortho view. :kbd:`Numpad5`, :kbd:`Numpad1`.
 
 .. figure:: /images/animation_drivers_transform.jpg
 
-When finished, **Cube.001** should rotate on the Y axis when moving **Cube** left of right.
+When finished, ``Cube.001`` should rotate on the Y axis when moving ``Cube`` left of right.
 
 
 Examples
@@ -251,7 +252,7 @@ Y Location Expr
       ``(cos( ) * 4)`` : This returns the cosine of (frame/8), then multiplies by 4 for a bigger circle.
       ``0 +`` : is used to control the Y Location offset of the orbit.
 
-**frame** is the same as bpy.context.scene.frame_current.
+``frame`` is the same as bpy.context.scene.frame_current.
 
 
 Driver Namespace
@@ -263,24 +264,24 @@ These can be displayed via the python console.
 ::
 
    >>> bpy.app.driver_namespace['
-   __builtins__']
-   __doc__']
-   __loader__']
-   __name__']
-   __package__']
-   acos']
-   acosh']
-   asin']
-   asinh']
-   atan']
-   atan2']
-   atanh']
-   bpy']
-   ceil']
-   copysign']
-   cos']
-   cosh']
-   ..
+                                 __builtins__']
+                                 __doc__']
+                                 __loader__']
+                                 __name__']
+                                 __package__']
+                                 acos']
+                                 acosh']
+                                 asin']
+                                 asinh']
+                                 atan']
+                                 atan2']
+                                 atanh']
+                                 bpy']
+                                 ceil']
+                                 copysign']
+                                 cos']
+                                 cosh']
+                                 ..
 
 
 This script will add a function to the driver namespace,

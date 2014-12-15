@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|copy=X}} .
 
 
+**********************
 Composite Vector Nodes
 **********************
 
@@ -57,9 +58,14 @@ Map Value Node
 Map Value node is used to scale, offset and clamp values
 (value refers to each vector in the set). The formula for how this node works is:
 
-- :guilabel:`Offs` will add a number to the input value
-- :guilabel:`Size` will scale (multiply) that value by a number
-- By clicking :guilabel:`Min/Max` you can set the minimum and maximum numbers to clamp (cut off) the value too. Min and Max must be individually enabled by :kbd:`Lmb` clicking on the label for them to clamp. :kbd:`shift-Lmb` on the value to change it.
+Offs
+   will add a number to the input value
+Size
+   will scale (multiply) that value by a number
+Min/Max
+   you can set the minimum and maximum numbers to clamp (cut off) the value too.
+   Min and Max must be individually enabled by :kbd:`LMB` clicking on the label for them to clamp.
+   :kbd:`Shift-LMB` on the value to change it.
 
 
    - If Min is enabled and the value is less than Min, set the ouput value to Min

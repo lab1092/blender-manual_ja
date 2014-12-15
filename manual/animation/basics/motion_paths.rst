@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|}} .
 
 
+**********************
 Keyframe Visualization
 **********************
 
@@ -26,8 +27,8 @@ Motion Paths
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Object`
+   | Mode:     *Object* mode
+   | Panel:    *Object*
 
 
 This feature allows you to visualize the animation of objects by displaying their position
@@ -48,13 +49,13 @@ over a series of frames.
    Motion paths panel
 
 
-Before we look at its options (all regrouped in the same :guilabel:`Visualisations` panel,
-in the :guilabel:`Editing` context, let's first see how to display/hide these paths. You have
+Before we look at its options (all regrouped in the same *Visualisations* panel,
+in the *Editing* context, let's first see how to display/hide these paths. You have
 to do it manually - and you have to first select the objects you want to show/hide the motion
 paths. Then,
 
-- To show the paths (or update them, if needed), click on the :guilabel:`Calculate Path` button.
-- To hide the paths, click on the :guilabel:`Clear Paths` button
+- To show the paths (or update them, if needed), click on the *Calculate Path* button.
+- To hide the paths, click on the *Clear Paths* button
 
 Remember: only selected object and their paths are affected by these actions!
 
@@ -92,14 +93,14 @@ Display Range
    Start/End
       Starting and Ending frame of range of paths to display/calculate (not for 'Around Current Frame' Onion-skinning method)
    Step
-      This is the same thing as the :guilabel:`GStep` for ghosts - it allows you the only materialize on the path one frame each *n* ones. Mostly useful when you enable the frame number display (see below), to avoid cluttering the 3D views.
+      This is the same thing as the *GStep* for ghosts - it allows you the only materialize on the path one frame each *n* ones. Mostly useful when you enable the frame number display (see below), to avoid cluttering the 3D views.
 
 Frame Numbers
    When enabled, a small number appears next to each frame dot on the path, which is of course the number of the corresponding frame...
 Keyframes
    When enabled, big yellow square dots are drawn on motion paths, materializing the keyframes of their bones (i.e. only the paths of keyed bones at a given frame get a yellow dot at this frame).
 Keyframe Numbers
-   When enabled, you'll see the numbers of the displayed keyframes - so this option is obviously only valid when :guilabel:`Show Keys` is enabled.
+   When enabled, you'll see the numbers of the displayed keyframes - so this option is obviously only valid when *Show Keys* is enabled.
 
 Cache
    From / To

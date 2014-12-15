@@ -1,4 +1,5 @@
 
+**************
 Lamps Textures
 **************
 
@@ -23,16 +24,16 @@ Options
 
 The lamp textures settings are grouped into two panels. Here we will only talk about the few things that differ from object material textures; see the :doc:`Materials </materials>` and :doc:`Textures </textures>` chapters for details about the standard options.
 
-The texture-specific and the :guilabel:`Mapping` panels remain the same. However, you'll note
-there are much fewer :guilabel:`Mapping` options - you can only choose between
-:guilabel:`Global`,
-:guilabel:`View` or another :guilabel:`Object` 's texture :guilabel:`coordinates`
+The texture-specific and the *Mapping* panels remain the same. However, you'll note
+there are much fewer *Mapping* options - you can only choose between
+*Global*,
+*View* or another *Object* 's texture *coordinates*
 (since a lamp has no texture coordinates by itself), and you can scale or offset the texture.
 
-The :guilabel:`Mapping` panel is also a subset of its regular material's counterpart.
+The *Mapping* panel is also a subset of its regular material's counterpart.
 You can only map a lamp texture to its regular,
-basic :guilabel:`Color` and/or to its :guilabel:`Shadow` color. As you can only affect colors,
-and a lamp has no texture coordinates on its own, the :guilabel:`Diffuse`,
-:guilabel:`Specular`, :guilabel:`Shading`, and :guilabel:`Geometry` options have disappeared.
+basic *Color* and/or to its *Shadow* color. As you can only affect colors,
+and a lamp has no texture coordinates on its own, the *Diffuse*,
+*Specular*, *Shading*, and *Geometry* options have disappeared.
 
 

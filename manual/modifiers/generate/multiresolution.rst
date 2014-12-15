@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|im=needs examples}} .
 
 
+************************
 Multiresolution Modifier
 ************************
 
@@ -12,8 +13,9 @@ Multiresolution Modifier
    Multires modifier
 
 
-The :guilabel:`Multiresolution` modifier gives the ability to subdivide a mesh to different
-levels depending on whether you are viewing it from the 3D View, Sculpt Mode or in a render.
+The Multiresolution modifier (often shortened to *Multires*) gives you the ability to subdivide a mesh similarly
+to the :doc:`Subsurf </modifiers/generate/subsurf>` modifier, but also allows you to edit the new subdivision levels
+in sculpt mode.
 
 .. note::
 
@@ -32,29 +34,33 @@ Catmull-Clark / Simple
       Maintains the current shape, and simply subdivides edges.
    Catmull-Clark
       Creates a smooth surface, usually smaller than the original, using the standard
-      `Catmull-Clark <http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`_
+      `Catmull-Clark <http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__
       subdivision surface algorithm.
 
 Preview
-   Set the level of subdivisions to use in the 3D View.
+   Set the level of subdivisions to show in the 3D View.
 Sculpt
-   Set the number of subdivisions to use in :guilabel:`Sculpt Mode`.
+   Set the number of subdivisions to use in Sculpt Mode.
 Render
-   Set the number of subdivisions to use when rendering.
+   Set the number of subdivisions to show when rendering.
 
 Subdivide
-   Add a higher level of subdivision.
+   Add another level of subdivision.
 Delete Higher
    Deletes all subdivision levels that are higher than the current one.
 Reshape
    Copies vertex coordinates from another mesh.
-   To use, select a different mesh with matching topology and vertex coordinates,
-   then :kbd:`Shift` select the mesh and click :guilabel:`Reshape`. The mesh will take the shape of the other one.
+   To use, first select a different mesh object with matching topology and vertex indexes,
+   then :kbd:`Shift` select the object you wish to copy vertex coordinates to and click *Reshape*.
 Apply Base
-   Modifies the mesh to match the form of the subdivided mesh.
+   Modifies the original unsubdivided mesh to match the form of the subdivided mesh.
 
+Subdivide UVs
+   When enabled, the UV maps will also be subdivided.
+   (i.e. Blender will add "virtual" coordinates for all sub-faces created by this modifier).
 Optimal Display
-   Skips the drawing of edges added from subdivision.
+   When drawing the wireframe of this object, the wires of the new subdivided edges will be skipped
+   (only draws the edges of the original geometry).
 
 Save External
    Saves displacements to an external .btx file.

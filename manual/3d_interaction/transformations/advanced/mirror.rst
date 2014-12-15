@@ -5,9 +5,9 @@ Mirror
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` and :guilabel:`Edit` modes
+   | Mode:     *Object* and *Edit* modes
    | Menu:     :menuselection:`Object/Mesh --> Mirror`
-   | Hotkey:   :kbd:`ctrl-M`
+   | Hotkey:   :kbd:`Ctrl-M`
 
 
 Description
@@ -19,10 +19,10 @@ Description
 
 
 Mirroring an Object or Mesh selection will create a reversed version of the selection. The
-position of the mirrored version of the selection is determined by the :guilabel:`Pivot
-Point.` A common use of mirroring is to model half an object, duplicate it and then use the
+position of the mirrored version of the selection is determined by the *Pivot Point.*
+A common use of mirroring is to model half an object, duplicate it and then use the
 mirror transform to create a reversed version to complete the model.
-Note that mirrored duplicates can also be created with a :guilabel:`Mirror modifier.`
+Note that mirrored duplicates can also be created with a *Mirror modifier.*
 
 
 :doc:`Read more about the Pivot Point » </3d_interaction/transform_control/pivot_point>`
@@ -36,10 +36,10 @@ Usage
 To mirror a selection along a particular global axis press:
 
 
-:kbd:`ctrl-M`, followed by :kbd:`x`, :kbd:`y` or :kbd:`z`.
+:kbd:`Ctrl-M`, followed by :kbd:`X`, :kbd:`Y` or :kbd:`Z`.
 
 
-The image :guilabel:`Mirroring a selection` shows the results of this action after a mesh
+The image *Mirroring a selection* shows the results of this action after a mesh
 element has been duplicated.
 
 
@@ -47,13 +47,13 @@ element has been duplicated.
 
 In Mesh mode, you can mirror the selection on the currently selected Transform Orientation by
 pressing the appropriate axis key a second time. For example,
-if the Transform Orientation is set to :guilabel:`Normal`, pressing:
+if the Transform Orientation is set to *Normal*, pressing:
 
 
-:kbd:`ctrl-m`, followed by :kbd:`x` and then :kbd:`x` again
+:kbd:`Ctrl-M`, followed by :kbd:`X` and then :kbd:`X` again
 
 
-will mirror the selection along the X-axis of the :guilabel:`Normal Orientation.`
+will mirror the selection along the X-axis of the *Normal Orientation.*
 
 :doc:`Read more about Transform Orientations » </3d_interaction/transform_control/transform_orientations>`
 
@@ -65,6 +65,6 @@ will mirror the selection along the X-axis of the :guilabel:`Normal Orientation.
 
 ----
 
-You can alternatively hold the :kbd:`mmb` to interactively mirror the object by moving
+You can alternatively hold the :kbd:`MMB` to interactively mirror the object by moving
 the mouse in the direction of the mirror axis.
 

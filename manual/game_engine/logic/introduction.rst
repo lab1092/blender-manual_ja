@@ -1,6 +1,7 @@
 
-Logic, Properties and States
-****************************
+************
+Introduction
+************
 
 Game Logic is the default scripting layer in the game engine.
 Each GameObject in the game may store a collection of logical components (Logic Bricks)

@@ -1,4 +1,5 @@
 
+**************
 Video Textures
 **************
 
@@ -38,7 +39,7 @@ Source
 More about loading source file for video texture see :doc:`here </textures/types/image#settings>`.
 
 Fields
-   Work with field images. Video frames consist of two different images (fields) that are merged.  This option ensures that when :guilabel:`Fields` are rendered, the correct field of the image is used in the correct field of the rendering.
+   Work with field images. Video frames consist of two different images (fields) that are merged.  This option ensures that when *Fields* are rendered, the correct field of the image is used in the correct field of the rendering.
 
    Upper First
       Order of video fields - upper field first.
@@ -62,7 +63,7 @@ Auto Refresh
 Cyclic
    When the video ends, it will loop around the to the start and begin playing again.
 
-For :guilabel:`Movie` source:
+For *Movie* source:
 
 Use Alpha
    Use the alpha channel information from the image or make image fully opaque

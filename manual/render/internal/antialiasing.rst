@@ -1,4 +1,5 @@
 
+*************
 Anti-Aliasing
 *************
 
@@ -14,7 +15,7 @@ each pixel is 'oversampled', by rendering it as if it were 5 pixels or more,
 and assigning an 'average' color to the rendered pixel.
 
 The buttons to control Anti-Aliasing, or OverSampling (OSA),
-are below the rendering button in the :guilabel:`Render` Panel (*Render Panel.*).
+are below the rendering button in the *Render* Panel (*Render Panel.*).
 
 
 Options
@@ -63,24 +64,28 @@ into account that some samples are very close to the edge of a pixel,
 and therefore could influence the color of the neighbor pixel(s) as well.
 
 Filter menu: Set The filter type to use to 'average' the samples:
-| :guilabel:`Box`
-| The original filter used in Blender, relatively low quality. For the Box Filter, you can see that only the samples within the pixel itself are added to the pixel's color. For the other filters, the formula ensures that a certain amount of the sample color gets distributed over the other pixels as well.
 
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Box`               |A low-quality box-shaped curve (see above)                                  +
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Tent`              |A simplistic filter that gives sharp results                                +
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Quadratic`         |A Quadratic curve                                                           +
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Cubic`             |A Cubic curve                                                               +
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Gauss`             |Gaussian distribution, the most blurry                                      +
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Catmull-Rom`       |Catmull-Rom filter, gives the most sharpening                               +
-+------------------------------+----------------------------------------------------------------------------+
-+:guilabel:`Mitchell-Netravali`|Mitchell-Netravali, a good all-around filter that gives reasonable sharpness+
-+------------------------------+----------------------------------------------------------------------------+
+Box
+   A low-quality box-shaped curve
+
+   .. note::
+
+      This filter is relatively low quality.
+      you can see that only the samples within the pixel itself are added to the pixel's color.
+      For the other filters,
+      the formula ensures that a certain amount of the sample color gets distributed over the other pixels as well.
+Tent
+   A simplistic filter that gives sharp results
+Quadratic
+   A Quadratic curve
+Cubic
+   A Cubic curve
+Gauss
+   Gaussian distribution, the most blurry
+Catmull-Rom
+   Catmull-Rom filter, gives the most sharpening
+Mitchell-Netravali
+   a good all-around filter that gives reasonable sharpness
 
 
 +----------------------------------------------------------+------------------------------------------------------------+--------------------------------------------------------------------+-------------------------------------------------------+

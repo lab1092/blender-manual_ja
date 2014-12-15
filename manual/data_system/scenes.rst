@@ -4,6 +4,7 @@
    |fixes=Link to wikipedia for general information on how to structure movies and pictures and rewriting of the page to fit it's topic.
    }} .
 
+**************************
 Scene Management Structure
 **************************
 
@@ -60,5 +61,5 @@ This timeline allows for cutting out 700 frames, picking the best 1800 frames
 .. note:: Multiple Cameras
 
    You can have multiple cameras in a scene, used for different shots,
-   and select which one is active when rendering the shot. Press :kbd:`ctrl-0`
+   and select which one is active when rendering the shot. Press :kbd:`Ctrl-0`
    to switch to the camera you wish to use at a point in time.

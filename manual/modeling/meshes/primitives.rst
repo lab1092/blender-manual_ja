@@ -2,15 +2,16 @@
 ..    TODO/Review: {{review|}} .
 
 
+***************
 Mesh Primitives
 ***************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
+   | Mode:     *Object* mode
    | Menu:     :menuselection:`Add --> Mesh`
-   | Hotkey:   :kbd:`shift-A`
+   | Hotkey:   :kbd:`Shift-A`
 
 
 A common object type used in a 3D scene is a mesh.
@@ -27,15 +28,15 @@ Blender comes with a number of "primitive" mesh shapes that you can start modeli
 Options included in more than one primitive are:
 
 Radius
-   Sets the starting size for :guilabel:`Circle`, :guilabel:`Cylinder`, :guilabel:`Cone`, :guilabel:`UVSphere` and :guilabel:`IcoSphere`.
+   Sets the starting size for *Circle*, *Cylinder*, *Cone*, *UVSphere* and *IcoSphere*.
 
 Depth
-   Sets the starting length for :guilabel:`Cylinder` and :guilabel:`Cone`.
+   Sets the starting length for *Cylinder* and *Cone*.
 
 
 .. note:: Note about planar primitives
 
-   You can make a planar mesh three-dimensional by moving one or more of the vertices out of its plane (applies to :guilabel:`Plane`, :guilabel:`Circle` and :guilabel:`Grid`).  A simple circle is actually often used as a starting point to create even the most complex of meshes.
+   You can make a planar mesh three-dimensional by moving one or more of the vertices out of its plane (applies to *Plane*, *Circle* and *Grid*).  A simple circle is actually often used as a starting point to create even the most complex of meshes.
 
 
 Plane
@@ -59,7 +60,7 @@ Circle
 ======
 
 A standard circle is comprised of *n* vertices. The number of vertices and radius can be
-specified in the context panel in the :guilabel:`Tool Shelf` which appears when the circle is
+specified in the context panel in the *Tool Shelf* which appears when the circle is
 created.
 
 Vertices
@@ -83,7 +84,7 @@ UV Sphere
 =========
 
 A standard UV sphere is made out of *n* segments and *m* rings. The level of detail and
-radius can be specified in the context panel in the :guilabel:`Tool Shelf` which appears when
+radius can be specified in the context panel in the *Tool Shelf* which appears when
 the UV sphere is created.
 Increasing the number of segments and rings makes the surface of the UV sphere smoother.
 
@@ -102,7 +103,7 @@ Icosphere
 =========
 
 An icosphere is a polyhedra sphere made up of triangles. The number of subdivisions and radius
-can be specified in the context panel in the :guilabel:`Tool Shelf` after the Icosphere is
+can be specified in the context panel in the *Tool Shelf* after the Icosphere is
 created.  Icospheres are normally used to achieve a more isotropical and economical layout of
 vertices than a UV sphere.
 
@@ -122,7 +123,7 @@ Cylinder
 ========
 
 A standard cylinder is made out of *n* vertices. The number of vertices in the circular
-cross-section can be specified in the context panel in the :guilabel:`Tool Shelf` that appears
+cross-section can be specified in the context panel in the *Tool Shelf* that appears
 when the object is created; the higher the number of vertices,
 the smoother the circular cross-section becomes.
 Objects that can be created out of cylinders include handles or rods.
@@ -143,7 +144,7 @@ Cone
 
 A standard cone is made out of *n* vertices. The number of vertices in the circular base,
 dimensions and option to close the base of the cone can be specified in the context panel in
-the :guilabel:`Tool Shelf` that appears when the object is created;
+the *Tool Shelf* that appears when the object is created;
 the higher the number of vertices, the smoother the circular base becomes.
 Objects that can be created out of cones include spikes or pointed hats.
 
@@ -164,10 +165,10 @@ Torus
 =====
 
 A doughnut-shaped primitive created by rotating a circle around an axis.
-The overall dimensions are defined by the :guilabel:`Major` and :guilabel:`Minor Radius`.
+The overall dimensions are defined by the *Major* and *Minor Radius*.
 The number of vertices (in segments) can be different for the circles and is specified in the
-context panel in the :guilabel:`Tool Shelf` with both radii
-(:guilabel:`Major Segments` and :guilabel:`Minor Segments`).
+context panel in the *Tool Shelf* with both radii
+(*Major Segments* and *Minor Segments*).
 
 Major Radius
    Radius from the origin to the center of the cross sections
@@ -182,22 +183,22 @@ Use Int+Ext Controls
    Change the way the torus is defined:
 
 Exterior Radius
-   When :guilabel:`Use Int+Ext Controls` is active, if viewed along the major axis, this is the radius from the center to the outer edge.
+   When *Use Int+Ext Controls* is active, if viewed along the major axis, this is the radius from the center to the outer edge.
 Interior Radius
-   When :guilabel:`Use Int+Ext Controls` is active, if viewed along the major axis, this is the radius of the hole in the center.
+   When *Use Int+Ext Controls* is active, if viewed along the major axis, this is the radius of the hole in the center.
 
 
 Grid
 ====
 
 A standard grid is made out of *n* by *m* vertices. The resolution of the x-axis and
-y-axis can be specified in the context panel in the :guilabel:`Tool Shelf` which appears when
+y-axis can be specified in the context panel in the *Tool Shelf* which appears when
 the object is created; the higher the resolution, the more vertices are created.
 Example objects that can be created out of grids include landscapes
-(with the proportional editing tool or :guilabel:`Displace` modifier)
+(with the proportional editing tool or *Displace* modifier)
 and other organic surfaces. You can also obtain a grid when you create a plane and then use a
-subdivide modifier in :guilabel:`Edit mode`.  However,
-there is a :guilabel:`Landscape` add-on available in the :guilabel:`User Preferences`.
+subdivide modifier in *Edit mode*.  However,
+there is a *Landscape* add-on available in the *User Preferences*.
 
 X Subdivisions
    The number of spans in the x  direction. Minimum of 3, creating two face loops.
@@ -211,7 +212,7 @@ Monkey
 ======
 
 This is a gift from old NaN to the community and is seen as a programmer's joke or "Easter
-Egg". It creates a monkey's head once you press the :guilabel:`Monkey` button.
+Egg". It creates a monkey's head once you press the *Monkey* button.
 The Monkey's name is "Suzanne" and is Blender's mascot.
 Suzanne is very useful as a standard test mesh,
 much like the `Utah Tea Pot <http://en.wikipedia.org/wiki/Utah_teapot>`__
@@ -230,16 +231,16 @@ Add-ons
 
 In addition to the basic geometric primitives, Blender has a constantly increasing number of
 script generated meshes to offer as pre-installed add-ons.  These become available when
-enabled in the :guilabel:`User Preferences` ' :guilabel:`Add-ons` section
-(filter by :guilabel:`Add Mesh`).  Only a few are mentioned here:
+enabled in the *User Preferences* ' *Add-ons* section
+(filter by *Add Mesh*).  Only a few are mentioned here:
 
 `Landscape <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/ANT Landscape>`__
-   Adds a landscape primitive.  Many parameters and filters appear in the :guilabel:`Tool Shelf`.
+   Adds a landscape primitive.  Many parameters and filters appear in the *Tool Shelf*.
 
 `Pipe Joints <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/Add Pipe Joints>`__
-   Adds one of five different pipe joint primitives.  Radius, angle, and other parameters can be changed in the :guilabel:`Tool Shelf`.
+   Adds one of five different pipe joint primitives.  Radius, angle, and other parameters can be changed in the *Tool Shelf*.
 
 `Gears <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/Add Gear>`__
-   Adds a gear or a `worm <http://en.wikipedia.org/wiki/Worm_drive>`__ with many parameters to control the shape in the :guilabel:`Tool Shelf`.
+   Adds a gear or a `worm <http://en.wikipedia.org/wiki/Worm_drive>`__ with many parameters to control the shape in the *Tool Shelf*.
 
 

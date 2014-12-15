@@ -1,4 +1,5 @@
 
+*************
 Mask Modifier
 *************
 
@@ -20,7 +21,7 @@ Mode
          Vertex Group
 
 
-      When the :guilabel:`Vertex Group` option is selected,
+      When the *Vertex Group* option is selected,
       all vertices belonging to the chosen Vertex Group will be visible,
       and all vertices which do not belong to that group will be hidden.
 
@@ -38,14 +39,14 @@ Mode
 
 Inverse
    Normally, vertices belonging to the selected Vertex Group (or group associated with the active pose-bone)
-   will be shown. The :guilabel:`Invert` toggle allows you to reverse this behavior, instead showing all vertices
+   will be shown. The *Invert* toggle allows you to reverse this behavior, instead showing all vertices
    which do not belong to the Vertex Group, and hiding those that do.
 
 .. warning::
 
    The Mask modifier only takes into account whether a vertex is part of the group or not,
    the weight is not taken into account.
-   
+
    Thus, a vertex with a weight of ``0.0`` will be treated the same as a vertex with a weight of ``1.0``,
    because even though it has no weight it is still a member of that group.
 

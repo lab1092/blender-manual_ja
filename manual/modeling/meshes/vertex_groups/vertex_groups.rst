@@ -1,4 +1,5 @@
 
+*************
 Vertex Groups
 *************
 
@@ -11,9 +12,9 @@ Vertex Groups
 Vertex Groups are mainly used to tag the vertices belonging
 to parts of a Mesh Object or :term:`Lattice`. Think of the legs of a chair or
 the hinges of a door, or hands, arms, limbs, head, feet, etc. of a character.
-In addition you can assign different :guilabel:`weight values`
+In addition you can assign different *weight values*
 (in the range [ 0.0, 1.0 ] ) to the vertices within a Vertex Group.
-Hence Vertex Groups are sometimes also named :guilabel:`Weight Groups`.
+Hence Vertex Groups are sometimes also named *Weight Groups*.
 
 Vertex Groups are most commonly used for Armatures
 (See also :doc:`Skinning Mesh Objects </rigging/skinning/obdata>`).
@@ -43,7 +44,7 @@ Skinning an armature
    define an armature which consists of a bunch of bones.
    Vertex Groups are used to associate parts of the Mesh
    to Bones of the Armature, where you can specify an influence
-   :guilabel:`weight` in the range [0.0 ... 1.0] for each vertex
+   *weight* in the range [0.0 ... 1.0] for each vertex
    in the Vertex Group.
 
 Working with Modifiers
@@ -64,7 +65,7 @@ Cull out and duplicate parts of a mesh
    of a base and a stud (the bump to connect the bricks together).
    To create a four-stud block, you would want to be able to
    easily select the stud vertices, and, still in
-   :guilabel:`Edit mode`, duplicate them and position them
+   *Edit mode*, duplicate them and position them
    where you want them.
 
 
@@ -78,12 +79,12 @@ Creating Vertex Groups
    Empty Vertex Group Panel
 
 
-Vertex Groups are maintained within the :guilabel:`Object Data Properties` window (1),
-and there in the :guilabel:`Vertex Groups` panel.
+Vertex Groups are maintained within the *Object Data Properties* window (1),
+and there in the *Vertex Groups* panel.
 As long as no Vertex groups are defined (the default for new Mesh Objects),
 the Panel is empty (2).
 
-You create a vertex group by :kbd:`lmb` :guilabel:`+` on the right Panel
+You create a vertex group by :kbd:`LMB` *+* on the right Panel
 border (3). Initially the group is named *Group*
 (or *Group.nnn* when the name already exists) and gets displayed in the Panel (2)
 (see next image).
@@ -102,7 +103,7 @@ vertex Groups panel. There you find 3 clickable elements:
 
 
 Group Name
-   The Groupname can be changed by :kbd:`lmb-x2` on the name itself.
+   The Groupname can be changed by :kbd:`LMB-x2` on the name itself.
    Then you can edit the name as you like.
 
 Plus Icon
@@ -112,15 +113,15 @@ Plus Icon
 
 Drag Handle
    If you have a large number of vertex groups and you want to see more
-   then a few Groups, you can  :kbd:`lmb` on the small drag handle to tear
+   then a few Groups, you can  :kbd:`LMB` on the small drag handle to tear
    the vertex groups list larger or smaller.
 
 Active Group
    When a Vertex Group is created,
-   then it is also automatically marked as the :guilabel:`Active Group`.
+   then it is also automatically marked as the *Active Group*.
    This is indicated by setting the background of the panel entry
    to a light blue color. If you have two or more groups in the list,
-   then you can change the active group by :kbd:`lmb` on the
+   then you can change the active group by :kbd:`LMB` on the
    corresponding entry in the Vertex Group panel.
 
 
@@ -134,8 +135,8 @@ Deleting vertex Groups
    Delete a Vertex Group
 
 You delete a Vertex Group by first making it the active group
-(select it in the panel) and then :kbd:`lmb`
-the :guilabel:`-` button at the right Panel border.
+(select it in the panel) and then :kbd:`LMB`
+the *-* button at the right Panel border.
 
 Deleting a Vertex Group only deletes the vertex assignments to the Group.
 The vertices themselves are not deleted.
@@ -174,8 +175,8 @@ Working with Content of Vertex Groups
    Vertex Group Panel in Edit Mode
 
 
-When you switch either to :guilabel:`Edit-Mode`
-or to :guilabel:`Weight-Paint` Vertex
+When you switch either to *Edit-Mode*
+or to *Weight-Paint* Vertex
 Selection Mode, then the Vertex Group panel expands and displays 2 more rows:
 
 The first row contains 4 buttons for maintaining the Assign- and
@@ -208,9 +209,9 @@ Assigning verts to a Group
 You add vertices to a group as follows:
 
 - Select the group from the group list, thus make it the Active Group (1).
-- From the 3D Viewport select :kbd:`shift-rmb` all vertices that you want to add to the group.
+- From the 3D Viewport select :kbd:`Shift-RMB` all vertices that you want to add to the group.
 - Set the weight value that shall be assigned to all selected verts (2).
-- :kbd:`lmb` the :guilabel:`Assign` button to assign the selected verts to the active group using the given weight (3).
+- :kbd:`LMB` the *Assign* button to assign the selected verts to the active group using the given weight (3).
 
 Note that weight Assignment is not available for locked Vertex Groups.
 The Assign button is grayed out in that case.
@@ -218,7 +219,7 @@ The Assign button is grayed out in that case.
 
 .. note:: Assign is additive
 
-   The :guilabel:`Assign` button only adds the currently
+   The *Assign* button only adds the currently
    selected vertices to the active group. Vertices already
    assigned to the group are not removed from the group.
 
@@ -230,7 +231,7 @@ Checking assignments
 
 To be sure the selected verts really have been added to the Vertex Group,
 you can try the deselect button. If the verts do not get deselected,
-then you probably forgot to hit the :guilabel:`Assign` button.
+then you probably forgot to hit the *Assign* button.
 But you can do that safely now.
 But remind:
 All selected verts get the weight assigned as displayed in the "Weight:" input field!
@@ -242,8 +243,8 @@ Removing assignments from a Group
 You remove vertices from a group as follows:
 
 - Select the group from the group list (make it the active group).
-- :kbd:`shift-rmb` all vertices that you want to remove from the group.
-- :kbd:`lmb` click the :guilabel:`Remove` button.
+- :kbd:`Shift-RMB` all vertices that you want to remove from the group.
+- :kbd:`LMB` click the *Remove* button.
 
 Note that Removing weight Assignments is not available for locked Vertex Groups.
 The Remove button is grayed out in that case.
@@ -256,8 +257,8 @@ You can quickly select all assigned vertices of a group:
 
 - (optionally) press :kbd:`A` once or twice to unselect all vertices.
 - Select the group from the group list (make it the active group).
-- When you now :kbd:`lmb` click the :guilabel:`Select` button, then the vertices assigned to the active group will be selected and highlighted in the 3D Viewport.
-- When you :kbd:`lmb` click the :guilabel:`Deselect` button instead, then the vertices assigned to the active group will be deselected in the 3D Viewport.
+- When you now :kbd:`LMB` click the *Select* button, then the vertices assigned to the active group will be selected and highlighted in the 3D Viewport.
+- When you :kbd:`LMB` click the *Deselect* button instead, then the vertices assigned to the active group will be deselected in the 3D Viewport.
 
 
 .. note:: Selecting/Deselecting is additive
@@ -321,7 +322,7 @@ Vertex Group Management
 Vertex Groups provide a more complex set of functions
 inside a Pull down menu. This menu is accessible
 from the Vertex Group Panel by clicking on the
-dark gray :guilabel:`arrow down` icon on the right panel border.
+dark gray *arrow down* icon on the right panel border.
 
 The following functions of the Pulldown Menu operate on the assigned vertices:
 

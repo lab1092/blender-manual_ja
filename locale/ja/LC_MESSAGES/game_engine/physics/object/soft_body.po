@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:3
+#: ../../manual/game_engine/physics/object/soft_body.rst:4
 msgid "Soft Body Physics Object Type"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:5
+#: ../../manual/game_engine/physics/object/soft_body.rst:6
 msgid ""
 "The most advanced type of object in the :doc:`Game Engine </game_engine>`. "
 "Also, it is the most finicky. If you are used to the fun experimentation "
@@ -25,211 +25,73 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:7
+#: ../../manual/game_engine/physics/object/soft_body.rst:8
 msgid ""
 "Your setup will involve making sure you have sufficient geometry in the Soft"
 " Body's mesh to support the deformation, as well as tweaking the options."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:10
+#: ../../manual/game_engine/physics/object/soft_body.rst:11
 msgid ""
 "In the example game demo, :doc:`Frijoles </ls/frijoles>`, the Soft Body type"
 " is represented by the decorative checkered flag at the top of the level."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:12
+#: ../../manual/game_engine/physics/object/soft_body.rst:13
 msgid ""
 "For more documentation, see the :doc:`Top BGE Physics page "
 "</game_engine/physics>`."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:16
+#: ../../manual/game_engine/physics/object/soft_body.rst:17
 msgid "Options"
 msgstr "オプション"
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:18
+#: ../../manual/game_engine/physics/object/soft_body.rst:19
 msgid ""
 "FIXME(Template Unsupported: "
 "Doc:2.6/Manual/Game_Engine/Physics/CommonOptions; "
 "{{Doc:2.6/Manual/Game_Engine/Physics/CommonOptions}} )"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:22
+#: ../../manual/game_engine/physics/object/soft_body.rst:23
 msgid ""
 "FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/MassOption; "
 "{{Doc:2.6/Manual/Game_Engine/Physics/MassOption}} )"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:27
-msgid ""
-":guilabel:`Shape Match` - Upon starting the Game Engine this will record the"
-" starting shape of the mesh as the \"lowest energy\" state. This means that "
-"the edges will have tension whenever they are flexed to some other form. "
-"This is set to on by default, and in this configuration turns the object "
-"into more of a thin sheet of metal rather than a cloth. - Demo: `BGE-"
-"Physics-Objects-SoftBodies_ShapeMatchAndLinearStiffness.blend "
-"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
-"SoftBodies_ShapeMatchAndLinearStiffness.blend>`__ - Default: On. - Code "
-"effect: When on, it will call `btSoftBody::setPose(false,true) "
-"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l00626>`__"
-" - Python property: ``obj.game.soft_body.use_shape_match`` - Suboption: "
-":guilabel:`Threshold` - `Linearly scales the pose match "
-"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l01566>`__"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:33
-msgid ""
-"A threshold of 1.0 makes it behave like :guilabel:`Shape Match` on with a "
-":guilabel:`Linear Stiffness` of 1.0."
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:34
-msgid ""
-"A threshold of 0.0 makes it behave like :guilabel:`Shape Match` off with a "
-":guilabel:`Linear Stiffness` of 0.0."
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:35
-#: ../../manual/game_engine/physics/object/soft_body.rst:56
+#: ../../manual/game_engine/physics/object/soft_body.rst:37
 msgid "Range: 0-1."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:36
+#: ../../manual/game_engine/physics/object/soft_body.rst:38
 msgid "Default: 0.5."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:37
+#: ../../manual/game_engine/physics/object/soft_body.rst:39
 msgid ""
 "Code effect: Sets `btSoftBody::Config::kMT "
 "<http://www.continuousphysics.com/Bullet/BulletFull/structbtSoftBody_1_1Config.html#a8e9d39cceaf15fd8697b2f8831b2fee1>`__."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:38
+#: ../../manual/game_engine/physics/object/soft_body.rst:40
 msgid "Python property: ``obj.game.soft_body.shape_threshold``"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:39
-msgid ""
-":guilabel:`Welding` - <span style=\"color: #E7007A\">[Note: Seems to not be "
-"hooked up. Blender will tell Bullet to weld any time you enable Soft Body. "
-"Look at `BL_BlenderDataConversion.cpp <https://svn.blender.org/svnroot/bf-"
-"blender/trunk/blender/source/gameengine/Converter/BL_BlenderDataConversion.cpp>`__"
-" where ``objprop.m_soft_welding`` is hard-coded to 0.0f]"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:40
-msgid ""
-":guilabel:`Position Iteration` - Increase the accuracy at a linearly-"
-"increasing expense of time. The effect is visible especially with Soft "
-"Bodies that fall on sharp corners, though this can slow down even very "
-"simple scenes. - Demo: A situation where only the max setting of 10 works "
-"correctly: `BGE-Physics-Objects-SoftBodies_PositionIterations.blend "
-"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
-"SoftBodies_PositionIterations.blend>`__. - Range: 0-10. - Default: 2. - Code"
-" effect: Represents the number of times `this loop "
-"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l01627>`__"
-" is run. - Python property: ``obj.game.soft_body.location_iterations``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:46
-msgid ""
-":guilabel:`Linear Stiffness` - Linear stiffness of the soft body links. This"
-" is most evident when you have :guilabel:`Shape Match` off, but it is also "
-"evident with it on. - Demo: `BGE-Physics-Objects-"
-"SoftBodies_ShapeMatchAndLinearStiffness.blend "
-"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
-"SoftBodies_ShapeMatchAndLinearStiffness.blend>`__ - Range: 0-1. - Default: "
-"0.5. - Python property: ``obj.game.soft_body.linear_stiffness``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:51
-msgid ":guilabel:`Friction` - Dynamic friction coefficient."
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:53
-msgid ""
-"FIXME(Tag Unsupported:span; <span style=\"color: #E7007A\">TODO: "
-"Learn/demo/explain.</span>)"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:55
-msgid ""
-"Code effect: Sets `btSoftBody::Config::kMT "
-"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBodyInternals_8h.html>`__,"
-" which, for Soft Bodies, defines the minimum friction versus the Material "
-"Friction (which in turn defaults to 0.5)."
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:57
-msgid "Default: 0.2."
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:58
-msgid "Python property: ``obj.game.soft_body.dynamic_friction``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:59
-msgid ""
-":guilabel:`Margin` - Small value makes the algorithm unstable. FIXME(Tag "
-"Unsupported:span; <span style=\"color: #E7007A\">TODO: "
-"Learn/demo/explain.</span>) - Range: 0.01-1. - Default: 0.01. - Python "
-"property: ``obj.game.soft_body.collision_margin``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:64
-msgid ""
-":guilabel:`Bending Constraint` - Enable Bending Constraints FIXME(Tag "
-"Unsupported:span; <span style=\"color: #E7007A\">TODO: "
-"Learn/demo/explain.</span>) - Default: On. - Python property: "
-"``obj.game.soft_body.use_bending_constraints``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:68
-msgid ""
-":guilabel:`Cluster Collision` - Affects Collision sensors as well as "
-"physics. - Demo: `BGE-Physics-Objects-"
-"SoftBodies_ClusterRigidToSoftBody.blend "
-"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
-"SoftBodies_ClusterRigidToSoftBody.blend>`__ for a demonstration of the "
-"effect on the :doc:`Collision Sensor "
-"</game_engine/logic/sensors/collision>`. There you will observe the \"Rigid "
-"to Soft Body\" off, then on with Iterations of 1, 64, and 128. The Off and "
-"Iterations: 1 cases do not register collisions, and the other two do (though"
-" they send their poor Cubes flying into space). - Demo of badness: `Manual-"
-"BGE-Physics-SoftBody_BadClusterCollisions.blend "
-"<http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-"
-"SoftBody_BadClusterCollisions.blend>`__ - four different ways of making "
-"misconfigured Soft Body objects. - Suboption: :guilabel:`Rigid to Soft Body`"
-" - Enable cluster collisions between Rigid and Soft Bodies."
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:72
+#: ../../manual/game_engine/physics/object/soft_body.rst:75
+#: ../../manual/game_engine/physics/object/soft_body.rst:79
 msgid "Default: Off."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:73
+#: ../../manual/game_engine/physics/object/soft_body.rst:76
 msgid "Python property: ``obj.game.soft_body.use_cluster_rigid_to_softbody``"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:74
-msgid ""
-"Suboption: :guilabel:`Soft to Soft Body` - Enable cluster collisions among "
-"Soft Bodies. - Default: Off. - Python property: "
-"``obj.game.soft_body.use_cluster_soft_to_softbody``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:77
-msgid ""
-"Suboption: :guilabel:`Iterations` - Number of cluster iterations. - Range: "
-"1-128. - Default: 64. - Python property: "
-"``obj.game.soft_body.cluster_iterations``"
-msgstr ""
-
-#: ../../manual/game_engine/physics/object/soft_body.rst:84
+#: ../../manual/game_engine/physics/object/soft_body.rst:89
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:86
+#: ../../manual/game_engine/physics/object/soft_body.rst:91
 msgid ""
 "A very important configurable in the case of Soft Body interactions is "
 ":doc:`World properties </game_engine/physics/world>` :menuselection:`--> "
@@ -245,56 +107,311 @@ msgid ""
 " step level."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:92
+#: ../../manual/game_engine/physics/object/soft_body.rst:97
 msgid ""
 "Surprisingly, the more vertices you have in your hit object, the less likely"
 " the Soft Body is to react with it. If you try letting it hit a Plane, it "
 "might stop, but a subdivided Grid might fail."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:96
+#: ../../manual/game_engine/physics/object/soft_body.rst:101
 msgid "Sensors"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:98
+#: ../../manual/game_engine/physics/object/soft_body.rst:103
 msgid ""
 "Soft bodies do not work with the Collision, Touch, Near, and Radar logic "
 "brick sensors."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:102
+#: ../../manual/game_engine/physics/object/soft_body.rst:107
 msgid "Goal Weights"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:104
+#: ../../manual/game_engine/physics/object/soft_body.rst:109
 msgid ""
 "TODO: "
 "http://www.blender.org/documentation/blender_python_api_2_62_release/bpy.ops.curve.html#bpy.ops.curve.spline_weight_set"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:109
+#: ../../manual/game_engine/physics/object/soft_body.rst:114
 msgid "Force Fields"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:111
+#: ../../manual/game_engine/physics/object/soft_body.rst:116
 msgid ""
 "A common practice within the non-BGE Cloth simulator is to employ "
 ":doc:`Force Fields </physics/force_fields>` to animate the cloth."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:113
+#: ../../manual/game_engine/physics/object/soft_body.rst:118
 msgid ""
 "These do not work in the BGE, so you will have to figure out a way to use "
 "Python (or perhaps plain Logic Bricks) to apply forces to the Soft Body "
 "objects."
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:118
+#: ../../manual/game_engine/physics/object/soft_body.rst:123
 msgid "All Types"
 msgstr ""
 
-#: ../../manual/game_engine/physics/object/soft_body.rst:120
+#: ../../manual/game_engine/physics/object/soft_body.rst:125
 msgid ""
 "FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/AllTypes; "
 "{{Doc:2.6/Manual/Game_Engine/Physics/AllTypes}} )"
 msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:28
+msgid ""
+"*Shape Match* - Upon starting the Game Engine this will record the starting "
+"shape of the mesh as the \"lowest energy\" state. This means that the edges "
+"will have tension whenever they are flexed to some other form. This is set "
+"to on by default, and in this configuration turns the object into more of a "
+"thin sheet of metal rather than a cloth. - Demo: `BGE-Physics-Objects-"
+"SoftBodies_ShapeMatchAndLinearStiffness.blend "
+"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+"SoftBodies_ShapeMatchAndLinearStiffness.blend>`__ - Default: On. - Code "
+"effect: When on, it will call `btSoftBody::setPose(false,true) "
+"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l00626>`__"
+" - Python property: ``obj.game.soft_body.use_shape_match`` - Suboption: "
+"*Threshold* - `Linearly scales the pose match "
+"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l01566>`__"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:35
+msgid ""
+"A threshold of 1.0 makes it behave like *Shape Match* on with a *Linear "
+"Stiffness* of 1.0."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:36
+msgid ""
+"A threshold of 0.0 makes it behave like *Shape Match* off with a *Linear "
+"Stiffness* of 0.0."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:41
+msgid ""
+"*Welding* Seems to not be hooked up. Blender will tell Bullet to weld any "
+"time you enable Soft Body. Look at `BL_BlenderDataConversion.cpp "
+"<https://svn.blender.org/svnroot/bf-"
+"blender/trunk/blender/source/gameengine/Converter/BL_BlenderDataConversion.cpp>`__"
+" where ``objprop.m_soft_welding`` is hard-coded to 0.0f]"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:44
+msgid ""
+"*Position Iteration* - Increase the accuracy at a linearly-increasing "
+"expense of time. The effect is visible especially with Soft Bodies that fall"
+" on sharp corners, though this can slow down even very simple scenes. - "
+"Demo: A situation where only the max setting of 10 works correctly: `BGE-"
+"Physics-Objects-SoftBodies_PositionIterations.blend "
+"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+"SoftBodies_PositionIterations.blend>`__. - Range: 0-10. - Default: 2. - Code"
+" effect: Represents the number of times `this loop "
+"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l01627>`__"
+" is run. - Python property: ``obj.game.soft_body.location_iterations``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:50
+msgid ""
+"*Linear Stiffness* - Linear stiffness of the soft body links. This is most "
+"evident when you have *Shape Match* off, but it is also evident with it on. "
+"- Demo: `BGE-Physics-Objects-SoftBodies_ShapeMatchAndLinearStiffness.blend "
+"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+"SoftBodies_ShapeMatchAndLinearStiffness.blend>`__ - Range: 0-1. - Default: "
+"0.5. - Python property: ``obj.game.soft_body.linear_stiffness``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:55
+msgid ""
+"*Friction* - Dynamic friction coefficient. FIXME(Tag Unsupported:span; <span"
+" style=\"color: #E7007A\">TODO: Learn/demo/explain.</span>) - Code effect: "
+"Sets `btSoftBody::Config::kMT "
+"<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBodyInternals_8h.html>`__,"
+" which, for Soft Bodies, defines the minimum friction versus the Material "
+"Friction (which in turn defaults to 0.5). - Range: 0-1. - Default: 0.2. - "
+"Python property: ``obj.game.soft_body.dynamic_friction``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:61
+msgid ""
+"*Margin* - Small value makes the algorithm unstable. FIXME(Tag "
+"Unsupported:span; <span style=\"color: #E7007A\">TODO: "
+"Learn/demo/explain.</span>) - Range: 0.01-1. - Default: 0.01. - Python "
+"property: ``obj.game.soft_body.collision_margin``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:66
+msgid ""
+"*Bending Constraint* - Enable Bending Constraints FIXME(Tag "
+"Unsupported:span; <span style=\"color: #E7007A\">TODO: "
+"Learn/demo/explain.</span>) - Default: On. - Python property: "
+"``obj.game.soft_body.use_bending_constraints``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:70
+msgid ""
+"*Cluster Collision* - Affects Collision sensors as well as physics. - Demo: "
+"`BGE-Physics-Objects-SoftBodies_ClusterRigidToSoftBody.blend "
+"<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+"SoftBodies_ClusterRigidToSoftBody.blend>`__ for a demonstration of the "
+"effect on the :doc:`Collision Sensor "
+"</game_engine/logic/sensors/collision>`. There you will observe the \"Rigid "
+"to Soft Body\" off, then on with Iterations of 1, 64, and 128. The Off and "
+"Iterations: 1 cases do not register collisions, and the other two do (though"
+" they send their poor Cubes flying into space). - Demo of badness: `Manual-"
+"BGE-Physics-SoftBody_BadClusterCollisions.blend "
+"<http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-"
+"SoftBody_BadClusterCollisions.blend>`__ - four different ways of making "
+"misconfigured Soft Body objects. - Suboption: *Rigid to Soft Body* - Enable "
+"cluster collisions between Rigid and Soft Bodies."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:77
+msgid ""
+"Suboption: *Soft to Soft Body* - Enable cluster collisions among Soft "
+"Bodies."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:80
+msgid "Python property: ``obj.game.soft_body.use_cluster_soft_to_softbody``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:81
+msgid "Suboption: *Iterations* - Number of cluster iterations."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:83
+msgid "Range: 1-128."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:84
+msgid "Default: 64."
+msgstr ""
+
+#: ../../manual/game_engine/physics/object/soft_body.rst:85
+msgid "Python property: ``obj.game.soft_body.cluster_iterations``"
+msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Shape Match` - Upon starting the Game Engine this will record the"
+#~ " starting shape of the mesh as the \"lowest energy\" state. This means that "
+#~ "the edges will have tension whenever they are flexed to some other form. "
+#~ "This is set to on by default, and in this configuration turns the object "
+#~ "into more of a thin sheet of metal rather than a cloth. - Demo: `BGE-"
+#~ "Physics-Objects-SoftBodies_ShapeMatchAndLinearStiffness.blend "
+#~ "<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+#~ "SoftBodies_ShapeMatchAndLinearStiffness.blend>`__ - Default: On. - Code "
+#~ "effect: When on, it will call `btSoftBody::setPose(false,true) "
+#~ "<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l00626>`__"
+#~ " - Python property: ``obj.game.soft_body.use_shape_match`` - Suboption: "
+#~ ":guilabel:`Threshold` - `Linearly scales the pose match "
+#~ "<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l01566>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A threshold of 1.0 makes it behave like :guilabel:`Shape Match` on with a "
+#~ ":guilabel:`Linear Stiffness` of 1.0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A threshold of 0.0 makes it behave like :guilabel:`Shape Match` off with a "
+#~ ":guilabel:`Linear Stiffness` of 0.0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Welding` - <span style=\"color: #E7007A\">[Note: Seems to not be "
+#~ "hooked up. Blender will tell Bullet to weld any time you enable Soft Body. "
+#~ "Look at `BL_BlenderDataConversion.cpp <https://svn.blender.org/svnroot/bf-"
+#~ "blender/trunk/blender/source/gameengine/Converter/BL_BlenderDataConversion.cpp>`__"
+#~ " where ``objprop.m_soft_welding`` is hard-coded to 0.0f]"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Position Iteration` - Increase the accuracy at a linearly-"
+#~ "increasing expense of time. The effect is visible especially with Soft "
+#~ "Bodies that fall on sharp corners, though this can slow down even very "
+#~ "simple scenes. - Demo: A situation where only the max setting of 10 works "
+#~ "correctly: `BGE-Physics-Objects-SoftBodies_PositionIterations.blend "
+#~ "<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+#~ "SoftBodies_PositionIterations.blend>`__. - Range: 0-10. - Default: 2. - Code"
+#~ " effect: Represents the number of times `this loop "
+#~ "<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l01627>`__"
+#~ " is run. - Python property: ``obj.game.soft_body.location_iterations``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Linear Stiffness` - Linear stiffness of the soft body links. This"
+#~ " is most evident when you have :guilabel:`Shape Match` off, but it is also "
+#~ "evident with it on. - Demo: `BGE-Physics-Objects-"
+#~ "SoftBodies_ShapeMatchAndLinearStiffness.blend "
+#~ "<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+#~ "SoftBodies_ShapeMatchAndLinearStiffness.blend>`__ - Range: 0-1. - Default: "
+#~ "0.5. - Python property: ``obj.game.soft_body.linear_stiffness``"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Friction` - Dynamic friction coefficient."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:span; <span style=\"color: #E7007A\">TODO: "
+#~ "Learn/demo/explain.</span>)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Code effect: Sets `btSoftBody::Config::kMT "
+#~ "<http://www.continuousphysics.com/Bullet/BulletFull/btSoftBodyInternals_8h.html>`__,"
+#~ " which, for Soft Bodies, defines the minimum friction versus the Material "
+#~ "Friction (which in turn defaults to 0.5)."
+#~ msgstr ""
+
+#~ msgid "Default: 0.2."
+#~ msgstr ""
+
+#~ msgid "Python property: ``obj.game.soft_body.dynamic_friction``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Margin` - Small value makes the algorithm unstable. FIXME(Tag "
+#~ "Unsupported:span; <span style=\"color: #E7007A\">TODO: "
+#~ "Learn/demo/explain.</span>) - Range: 0.01-1. - Default: 0.01. - Python "
+#~ "property: ``obj.game.soft_body.collision_margin``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Bending Constraint` - Enable Bending Constraints FIXME(Tag "
+#~ "Unsupported:span; <span style=\"color: #E7007A\">TODO: "
+#~ "Learn/demo/explain.</span>) - Default: On. - Python property: "
+#~ "``obj.game.soft_body.use_bending_constraints``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Cluster Collision` - Affects Collision sensors as well as "
+#~ "physics. - Demo: `BGE-Physics-Objects-"
+#~ "SoftBodies_ClusterRigidToSoftBody.blend "
+#~ "<http://wiki.blender.org/index.php/Media:BGE-Physics-Objects-"
+#~ "SoftBodies_ClusterRigidToSoftBody.blend>`__ for a demonstration of the "
+#~ "effect on the :doc:`Collision Sensor "
+#~ "</game_engine/logic/sensors/collision>`. There you will observe the \"Rigid "
+#~ "to Soft Body\" off, then on with Iterations of 1, 64, and 128. The Off and "
+#~ "Iterations: 1 cases do not register collisions, and the other two do (though"
+#~ " they send their poor Cubes flying into space). - Demo of badness: `Manual-"
+#~ "BGE-Physics-SoftBody_BadClusterCollisions.blend "
+#~ "<http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-"
+#~ "SoftBody_BadClusterCollisions.blend>`__ - four different ways of making "
+#~ "misconfigured Soft Body objects. - Suboption: :guilabel:`Rigid to Soft Body`"
+#~ " - Enable cluster collisions between Rigid and Soft Bodies."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Suboption: :guilabel:`Soft to Soft Body` - Enable cluster collisions among "
+#~ "Soft Bodies. - Default: Off. - Python property: "
+#~ "``obj.game.soft_body.use_cluster_soft_to_softbody``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Suboption: :guilabel:`Iterations` - Number of cluster iterations. - Range: "
+#~ "1-128. - Default: 64. - Python property: "
+#~ "``obj.game.soft_body.cluster_iterations``"
+#~ msgstr ""

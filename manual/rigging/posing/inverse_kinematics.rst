@@ -1,4 +1,5 @@
 
+******************
 Inverse Kinematics
 ******************
 
@@ -23,9 +24,9 @@ Automatic IK is a tool for quick posing, it can be enabled in the tool shelf in 
 when in pose mode. When the Auto IK option is enabled, translating a bone will activate
 inverse kinematic and rotate bones higher up to follow the selected bone. By default,
 the length of the IK chain is as long as there are parent bones,
-and this length can be modified with :kbd:`Shift`  :kbd:`pgup`,
-:kbd:`Shift`  :kbd:`pgdown`, or :kbd:`Shift`  :kbd:`wheelup`,
-:kbd:`Shift`  :kbd:`wheeldown`.
+and this length can be modified with :kbd:`Shift`  :kbd:`PageUp`,
+:kbd:`Shift`  :kbd:`PageDown`, or :kbd:`Shift`  :kbd:`WheelUp`,
+:kbd:`Shift`  :kbd:`WheelDown`.
 
 This is a more limited feature than using an IK constraint, which can be configured,
 but it can be useful for quick posing.
@@ -58,7 +59,7 @@ Most the time people will use the *Standard* IK solver.
 There is some documentation for the *iTaSC* "instantaneous Task Specification using
 Constraints" IK solver here.
 
-`Robot IK Solver <http://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`_
+`Robot IK Solver <http://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`__
 
 
 Bone IK Panel
@@ -90,7 +91,7 @@ Arm Rig Example
 
 This arm uses two bones to overcome the twist problem for the forearm.
 IK locking is used to stop the forearm from bending,
-but the forearm can still be twisted manually by pressing :kbd:`r-y-y` in *Pose Mode*,
+but the forearm can still be twisted manually by pressing :kbd:`R-Y-Y` in *Pose Mode*,
 or by using other constraints.
 
 

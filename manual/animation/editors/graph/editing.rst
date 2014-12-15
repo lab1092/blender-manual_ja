@@ -1,11 +1,12 @@
 
+**********************
 Graph Editor - Editing
 **********************
 
 Tools and menus for the :doc:`F-Curves </animation/editors/graph/fcurves>` in the *Graph Editor*.
 
 By default, when new channels are added, the *Graph Editor* sets them to *Edit Mode*.
-Selected channels can be locked by pressing :kbd:`tab`.
+Selected channels can be locked by pressing :kbd:`Tab`.
 
 
 Basic Tools
@@ -275,16 +276,16 @@ Only Selected Keyframe handles
 Show Seconds
    Show timing in seconds not frames.
 
-Set Preview Range, Clear Preview Range (:kbd:`ctrl-P`, :kbd:`alt-P`)
-   These entries allow you to define/clear a temporary preview range to use for the :kbd:`alt-A` realtime playback (this is the same thing as the :guilabel:`Pr` option of the :doc:`Timeline window header </animation/timeline#header_controls>`).
+Set Preview Range, Clear Preview Range (:kbd:`Ctrl-P`, :kbd:`Alt-P`)
+   These entries allow you to define/clear a temporary preview range to use for the :kbd:`Alt-A` realtime playback (this is the same thing as the *Pr* option of the :doc:`Timeline window header </animation/timeline#header_controls>`).
 
-Auto-Set Preview Range :kbd:`Ctrl-alt-P`
+Auto-Set Preview Range :kbd:`Ctrl-Alt-P`
    Automatically set Preview Range based on range of keyframes.
 
 View All :kbd:`Home`
    Reset viewable area to show full keyframe range.
 
-View Selected :kbd:`pad-.`
+View Selected :kbd:`Numpad-.`
    Reset viewable area to show selected keyframe range.
 
 
@@ -324,10 +325,10 @@ Before Current Frame :kbd:`[`
 After Current Frame :kbd:`]`
    Select all keys after the current frame.
 
-Select More :kbd:`ctrl-pad+`
+Select More :kbd:`Ctrl-Numpad+`
    Grow keyframe selection along Fcurve.
 
-Select Less :kbd:`ctrl-pad-`
+Select Less :kbd:`Ctrl-Numpad-`
    Shrink keyframe selection along Fcurve.
 
 Select Linked :kbd:`L`
@@ -343,7 +344,7 @@ Marker Menu
 
 *Duplicate Marker to Scene*
 
-*Delete Marker* :kbd:`X` or :kbd:`Delete`
+*Delete Marker* :kbd:`X` or :kbd:`Del`
    Note, make sure no channels are selected.
 
 *Rename Marker* :kbd:`Ctrl-M`
@@ -358,7 +359,7 @@ Marker Menu
 Channel Menu
 ^^^^^^^^^^^^
 
-*Delete Channels* :kbd:`X` or :kbd:`Delete`
+*Delete Channels* :kbd:`X` or :kbd:`Del`
 
 *Group Channels* :kbd:`Ctrl-G`
 
@@ -433,7 +434,7 @@ Jump to Keyframes :kbd:`Ctrl-G`
 
 Duplicate :kbd:`Shift-D`
 
-Delete Keyframes :kbd:`X` or :kbd:`Delete`
+Delete Keyframes :kbd:`X` or :kbd:`Del`
 
 Handle Type :kbd:`V`
    *Free*

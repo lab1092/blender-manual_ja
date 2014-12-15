@@ -1,6 +1,10 @@
 
+*****
+Nodes
+*****
+
 Introduction
-************
+============
 
 In addition to creating materials as just described using all the settings on all the
 materials panels,
@@ -50,13 +54,13 @@ FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Concepts; {{Doc:2.6/Referenc
 
 
 Accessing The Node Editor
-*************************
+=========================
 
 First lets enter the :doc:`node editor </materials/nodes/editor>` and make sure that the node editor has the material node button (the sphere icon) pressed, not the composite or texture node buttons.
 
 
 Enabling Node Materials in the Material Buttons
-===============================================
+-----------------------------------------------
 
 +------------------------------------------------------------+-------------------------------------------------------------------+
 +.. figure:: /images/25-Manual-Materials-Nodes-StartPanel.jpg|.. figure:: /images/25-Manual-Materials-Nodes-DefaultStart-Node.jpg+
@@ -77,14 +81,14 @@ tree. Most of the panels we normally find in the material menu are now gone.
    Accessing the Compositing screen
 
 
-If you switch to the :guilabel:`Compositing` screen
-(:kbd:`Ctrl-left` if you are on the default screen)
-you'll find a :guilabel:`Node Editor` on the top half of the screen.
+If you switch to the *Compositing* screen
+(:kbd:`Ctrl-Left` if you are on the default screen)
+you'll find a *Node Editor* on the top half of the screen.
 When you enabled material nodes,
 a material node and an output node were automatically added to the node editor.
 
 You can also split the 3D view in the default screen in two and change one into a
-:guilabel:`Node Editor`.
+*Node Editor*.
 
 
 +-------------------------------------------------------------------+----------------------------------------------------------+
@@ -98,12 +102,12 @@ It is important to note that you can add a new material
 add an already created material or append a material from another blender file,
 and also use the material that you used to create the node tree.
 
-Here, we added a new material in the :guilabel:`Node editor` (*Material.001*),
+Here, we added a new material in the *Node editor* (*Material.001*),
 and as we did, we can access the properties of this material in the material's menu.
 
 
 External Links
-**************
+==============
 
 - `Blender Material Nodes <http://www.blender.org/development/release-logs/blender-242/blender-material-nodes/>`__ - Changelog for the Blender version that introduced material nodes.
 

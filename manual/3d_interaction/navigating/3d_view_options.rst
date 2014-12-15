@@ -1,4 +1,5 @@
 
+*************
 View Settings
 *************
 
@@ -9,7 +10,7 @@ View Shading
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Z` / :kbd:`shift-Z` / :kbd:`alt-Z` / :kbd:`shift-alt-Z` / :kbd:`D`
+   | Hotkey:   :kbd:`Z` / :kbd:`Shift-Z` / :kbd:`Alt-Z` / :kbd:`Shift-Alt-Z` / :kbd:`D`
 
 
 Description
@@ -35,8 +36,8 @@ Shaded
 
 Solid
    This is the default drawing mode where surfaces are drawn as solid colors, with built-in OpenGL lighting.
-   This draw mode is not dependent on scene light sources and can be configured in the :guilabel:`Solid OpenGL lights`
-   group of controls from the :guilabel:`System & OpenGL` tab of the :guilabel:`User Preferences` window.
+   This draw mode is not dependent on scene light sources and can be configured in the *Solid OpenGL lights*
+   group of controls from the *System & OpenGL* tab of the *User Preferences* window.
 
    :doc:`Read more about System Configuration » </preferences/system>`
 
@@ -49,20 +50,20 @@ Bounding Box
 
 You can switch between these draw modes by:
 
-- Using the :guilabel:`Draw type` drop-down list in the 3D views' header (see *A 3D view's draw mode button*).
-- Pressing :kbd:`D` to pop-up the :guilabel:`Draw mode` menu.
+- Using the *Draw type* drop-down list in the 3D views' header (see *A 3D view's draw mode button*).
+- Pressing :kbd:`D` to pop-up the *Draw mode* menu.
 - Using the :kbd:`Z` -based shortcuts as detailed below:
 
 +-------------------------------------+-------------------------------------------------------------------------+
 +**Draw modes and Z-based shortcuts.**                                                                          +
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`Z`                             |Switches between :guilabel:`Wireframe` and :guilabel:`Solid` draw modes. +
++:kbd:`Z`                             |Switches between *Wireframe* and *Solid* draw modes. +
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`shift-Z`                       |Switches between :guilabel:`Wireframe` and :guilabel:`Shaded` draw modes.+
++:kbd:`Shift-Z`                       |Switches between *Wireframe* and *Shaded* draw modes.+
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`alt-Z`                         |Switches between :guilabel:`Solid` and :guilabel:`Textured` draw modes.  +
++:kbd:`Alt-Z`                         |Switches between *Solid* and *Textured* draw modes.  +
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`shift-alt-Z`                   |Switches to the :kbd:`Textured` draw mode.                               +
++:kbd:`Shift-Alt-Z`                   |Switches to the :kbd:`Textured` draw mode.                               +
 +-------------------------------------+-------------------------------------------------------------------------+
 
 
@@ -73,7 +74,7 @@ View Properties Panel
    :class: refbox
 
    | Mode:     All modes
-   | Panel:    :guilabel:`View Properties`
+   | Panel:    *View Properties*
    | Menu:     :menuselection:`View --> View Properties...`
 
 
@@ -81,7 +82,7 @@ Description
 -----------
 
 In addition to the header controls described above,
-the :guilabel:`View Properties` panel lets you set other settings regarding the 3D view.
+the *View Properties* panel lets you set other settings regarding the 3D view.
 You show it with the :menuselection:`View --> View Properties...` menu entry.
 
 
@@ -93,10 +94,10 @@ Lens
    Control the focal length of the 3d view camera in millimeters, unlike a :doc:`rendering camera </render/camera>`
 
 Lock to Object
-   By entering the name of an object in the :guilabel:`Object` field, you lock your view to this object, i.e.
-   it will always be at the center of the view (the only exception is the active camera view, :kbd:`pad0`).
+   By entering the name of an object in the *Object* field, you lock your view to this object, i.e.
+   it will always be at the center of the view (the only exception is the active camera view, :kbd:`Numpad0`).
    If the locked object is an armature,
-   you can further center the view on one of its bones by entering its name in the :guilabel:`Bone` field.
+   you can further center the view on one of its bones by entering its name in the *Bone* field.
 
 Lock to Cursor
    Lock the center of the view to the position of the 3D cursor
@@ -157,14 +158,14 @@ Only Render
    Displays only items that will be rendered.
 Outline Selected
    If disabled, the pink outline around your selected objects in
-   :guilabel:`Solid` / :guilabel:`Shaded` / :guilabel:`Textured` draw types will no longer be displayed.
+   *Solid* / *Shaded* / *Textured* draw types will no longer be displayed.
 All Object Origins
    If enabled, the center dot of objects will always be visible, even for non-selected ones
    (by default, unselected centers might be hidden by geometry in solid/shaded/textured shadings).
 Relationship Lines
    Controls whether the dashed parenting, constraining, hooking, etc., lines are drawn.
 All Edges
-   When wire overlay is enabled in the :guilabel:`Object` context,
+   When wire overlay is enabled in the *Object* context,
    this options forces all of the wireframe to be displayed in the viewport.
 Grid Floor
    If disabled, you have no grid in other views than the orthographic top/front/side ones.
@@ -193,7 +194,7 @@ Background Image
    :class: refbox
 
    | Mode:     All modes
-   | Panel:    :guilabel:`Background Image`
+   | Panel:    *Background Image*
    | Menu:     :menuselection:`View --> Properties...`
 
 
@@ -209,7 +210,7 @@ or animation (when using a video as background), etc.
 
    - They are specific to their window (i.e. you can have different backgrounds for each of your 3D views, e.g.
      top/front/side images for relevant views...).
-   - *They are only available for* :guilabel:`Top` *,* :guilabel:`Side` *and* :guilabel:`Front`
+   - *They are only available for* *Top* *,* *Side* *and* *Front*
      *(and their complementary versions) orthographic views!*
      The picture remains the same when you switch between these six views.
    - Their size is related to the window's zooming factor (i.e. they grow big when you zoom in, etc.).
@@ -224,14 +225,14 @@ Settings
    The Background Image panel.
 
 
-Blender manages this feature through the :guilabel:`Background Image` menu on the view
+Blender manages this feature through the *Background Image* menu on the view
 properties panel (:kbd:`N`). The option box at the top of this panel toggles the
-:guilabel:`Background Image` feature on/off. By default, there is only space for one image.
+*Background Image* feature on/off. By default, there is only space for one image.
 The settings can be accessed by :kbd:`LMB` the white triangle.
 
 Once enabled, you can add an image by selecting an existing datablock, or loading a new image.
-The :guilabel:`Axis` menu defines which views the image will appear in.
-Additional images can be added by :kbd:`LMB` the :guilabel:`Add Image` button.
+The *Axis* menu defines which views the image will appear in.
+Additional images can be added by :kbd:`LMB` the *Add Image* button.
 When the image is loaded, the following settings become available.
 
 Source
@@ -285,7 +286,7 @@ Size
    This is a scalar value so that width and height of the background image are each multiplied by the value to
    determine the size at which the background image is displayed.
    If one wishes to change the proportions of the image, it must be done in an impage processing program,
-   such as GIMP.:guilabel:`X Offset`, :guilabel:`Y Offset`
+   such as GIMP.*X Offset*, *Y Offset*
 
    The horizontal and vertical offset of the background image in the view (by default, it is centered on the origin),
    in Blender units.

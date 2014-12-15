@@ -1,11 +1,12 @@
 
+*******************
 Track To Constraint
 *******************
 
 Description
 ===========
 
-The :guilabel:`Track To` constraint applies rotations to its owner,
+The *Track To* constraint applies rotations to its owner,
 so that it always points a given "To" axis towards its target,
 with another "Up" axis permanently maintained as much aligned with the global Z axis
 (by default) as possible. This tracking is similar to the "billboard tracking" in 3D
@@ -41,21 +42,21 @@ Targets
    This constraint uses one target, and is not functional (red state) when it has none.
 
    Bone
-      When :guilabel:`Target` is an armature, a new field for a bone is displayed.
+      When *Target* is an armature, a new field for a bone is displayed.
    Head/Tail
       When using a bone target, you can choose where along this bone the target point lies.
    Vertex Group
-      When :guilabel:`Target` is a mesh, a new field is display where a vertex group can be selected.
+      When *Target* is a mesh, a new field is display where a vertex group can be selected.
 
 To
-   The tracking local axis (:guilabel:`Y` by default), i.e. the owner's axis to point at the target.
+   The tracking local axis (*Y* by default), i.e. the owner's axis to point at the target.
    The negative options force the relevant axis to point away from the target.
 Up
-   The "upward-most" local axis (:guilabel:`Z` by default), i.e. the owner's axis to be aligned (as much as possible)
-   with the global Z axis (or target Z axis, when the :guilabel:`Target` button is enabled).
+   The "upward-most" local axis (*Z* by default), i.e. the owner's axis to be aligned (as much as possible)
+   with the global Z axis (or target Z axis, when the *Target* button is enabled).
 Target Z
-   By default, the owner's :guilabel:`Up` axis is (as much as possible) aligned with the global Z axis,
-   during the tracking rotations. When this button is enabled, the :guilabel:`Up` axis will be (as much as possible)
+   By default, the owner's *Up* axis is (as much as possible) aligned with the global Z axis,
+   during the tracking rotations. When this button is enabled, the *Up* axis will be (as much as possible)
    aligned with the target's local Z axis?
 
 Space
@@ -64,6 +65,6 @@ Space
 
  .. warning::
 
-	If you choose the same axis for :guilabel:`To` and :guilabel:`Up`, the
+	If you choose the same axis for *To* and *Up*, the
 	constraint will not be functional anymore (red state).
 

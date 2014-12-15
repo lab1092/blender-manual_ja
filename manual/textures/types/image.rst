@@ -1,16 +1,17 @@
 
+**************
 Image Textures
 **************
 
-The term :guilabel:`Image Texture` simply means that a graphic image — a pixel grid
+The term *Image Texture* simply means that a graphic image — a pixel grid
 composed of R, G, B,
 and sometimes Alpha values — is used as the input source to the texture.
 As with other types of textures, this information can be used in a number of ways,
 not only as a simple "decal".
 
-When the Texture Type :guilabel:`Image or Movie` is selected, three new panels present
+When the Texture Type *Image or Movie* is selected, three new panels present
 themselves allowing us to control most aspects of how image textures are applied:
-:guilabel:`Image`, :guilabel:`Image Sampling`, and :guilabel:`Image Mapping`.
+*Image*, *Image Sampling*, and *Image Mapping*.
 
 
 About Image Based Texturing
@@ -70,13 +71,15 @@ Workflow
 
 The process consists of the following steps.
 
-- Create the Mesh. :doc:`Unwrap </textures/mapping/uv/unwrapping>` it into one or more :doc:`UV Layouts </textures/mapping/uv/layout_management>`.
+- Create the Mesh. :doc:`Unwrap </textures/mapping/uv/unwrapping>` it into one or more
+  :doc:`UV Layouts </textures/mapping/uv/layout_management>`.
 - Create one or more Materials for the Mesh.
 - Create one or more images for each UV Layout and aspect of the texture. Either
   - paint directly on the mesh using Texture Paint in the 3D window,
   - load and/or edit an image in the UV Editor window, or
   - Bake the existing materials into an image for the UV Editor window.
-- Apply those images as UV Textures to the mesh to affect one or more aspects of the mesh. This is done by using one or more of the numerous Map To options. For example,
+- Apply those images as UV Textures to the mesh to affect one or more aspects of the mesh.
+  This is done by using one or more of the numerous Map To options. For example,
   - map to Color to affect the diffuse coloring of the mesh,
   - map to Nor to affect the normal direction to give the surface a bumpy or creased look, or
   - map to Spec (specularity) to make certain areas look shiny and oily.
@@ -90,19 +93,26 @@ To use an image as the color and alpha (transparency) of the texture, you can cr
 in an external paint program and tell the UV/Image Editor to Open that file as the texture,
 or you can create a New image and save it as the texture.
 
-If you want to start off by creating an image using an external paint program, you will want to save an outline of your UV faces by using the :guilabel:`Save UV Face Layout` tool located in the UVs menu. This is discussed :doc:`here </textures/mapping/uv/applying_image#saving_an_outline_of_your_uv_layout>`.
+If you want to start off by creating an image using an external paint program,
+you will want to save an outline of your UV faces by using the *Save UV Face Layout* tool located in the UVs menu.
+This is discussed :doc:`here </textures/mapping/uv/applying_image#saving_an_outline_of_your_uv_layout>`.
 
 
 Creating an Image Texture
 -------------------------
 
-To create an image within Blender, you have to first create a :doc:`New Blank </textures/mapping/uv/applying_image>` Image with a uniform color or test grid. After that, you can color the image using the:
+To create an image within Blender,
+you have to first create a :doc:`New Blank </textures/mapping/uv/applying_image>`
+Image with a uniform color or test grid.
+After that, you can color the image using the:
 
 
 - Vertex colors as the basis for an image
 - Render Bake image based on how the mesh looks in the scene
 
-After you have created your image, you can modify it using Blender's built-in :doc:`Texture Paint </textures/painting>` or any external image painting program.
+After you have created your image,
+you can modify it using Blender's built-in :doc:`Texture Paint </textures/painting>`
+or any external image painting program.
 
 
 .. note:: See Texture in 3D View but does not Render
@@ -110,9 +120,8 @@ After you have created your image, you can modify it using Blender's built-in :d
    You may be able to see the texture in Textured display mode in the 3D View;
    this is all that is required to have textures show up in Blender's Game Engine. Rendering, however,
    requires a material.
-   You must have a :guilabel:`Face Textures` material assigned to the mesh for it to render using the UV Texture.
-   In the Material settings, ADD NEW material to a selected object and enable :guilabel:`Face Textures`.
-
+   You must have a *Face Textures* material assigned to the mesh for it to render using the UV Texture.
+   In the Material settings, ADD NEW material to a selected object and enable *Face Textures*.
 
 
 Examples
@@ -192,8 +201,8 @@ so they amount of Col affects is turned down to 60% in the second layer (the ble
 Normally, we think of image textures affecting the color of a mesh. Realism and
 photo-realistic rendering is a combination of many different ways that light interacts with
 the surface of the mesh. The image texture can be Mapped To not only color,
-but also :guilabel:`Normal` (bumpiness)
-or :guilabel:`Reflection` or any of the other attributes specified in the Map To panel.
+but also *Normal* (bumpiness)
+or *Reflection* or any of the other attributes specified in the Map To panel.
 
 If you paint a grey-scale image (laid out according to the UV Layout)
 with white where the skin is oily and shiny, and dark where it is not,
@@ -228,7 +237,9 @@ Scene lighting is a white light off to the right.
 From this information and the User Manual thus far,
 you should now be able to recreate this image.
 
-You can also assign :doc:`multiple materials </materials/multiple_materials>` to the mesh based on which faces you want to be procedural and which you want to be texture-mapped. Just don't UV map the faces you want to be procedural.
+You can also assign :doc:`multiple materials </materials/multiple_materials>`
+to the mesh based on which faces you want to be procedural and which you want to be texture-mapped.
+Just don't UV map the faces you want to be procedural.
 
 You can use UV Textures and VertexPaint (:kbd:`V` in the 3D View window) simultaneously,
 if both are enabled in the Material settings.
@@ -267,8 +278,8 @@ Using Alpha Transparency
    Alpha UV Textures
 
 
-Alpha 0.0 (transparent) areas of a UV Image render as black. Unlike a procedural texture,
-they do not make the base material transparent,
+Alpha 0.0 (transparent) areas of a UV Image render as black.
+Unlike a procedural texture, they do not make the base material transparent,
 since UV Textures do not operate on the base procedural material.
 The UV texture overrides any procedural color underneath.
 Procedural Textures are applied on top of UV Textures,
@@ -290,12 +301,13 @@ Transparent areas of the UV Image show as black.
 
 The top right ball has had a pink vertex color applied to the vertical band of faces
 (in the 3D View window, select the faces in UV Paint mode, switch to Vertex Paint mode,
-pick a pink color, and :guilabel:`Paint→Set Vertex Colors`).
+pick a pink color, and *Paint→Set Vertex Colors*).
 The finger is mapped to the middle vertical band of faces,
 and VCol and Face Textures are enabled.
-The texture is mapped to Alpha black and multiplies the base material alpha value which is 1.
-0. Thus, white areas of the texture are 1.0, and 1.0 times 1.0 is 1.0 (last time I checked,
-at least), so that area is opaque and shows. Black areas of the procedural texture, 0.0,
+The texture is mapped to Alpha black and multiplies the base material alpha value which is ``1.0``.
+Thus, white areas of the texture are ``1.0``, and ``1.0`` times ``1.0`` is ``1.0``
+(last time I checked, at least),
+so that area is opaque and shows. Black areas of the procedural texture, ``0.0``,
 multiply the base material to be transparent. As you can see, the unmapped faces
 (left and right sides of the ball) show the vertex paint (none, which is gray)
 and the painted ones show pink, and the middle stripe that is both painted and mapped change
@@ -320,11 +332,19 @@ allowing the underlying UV Texture to show through.
 
 To overlay multiple UV images, you have several options:
 
-- Create multiple UV Textures which map the same, and then use different images (with Alpha) and blender will overlay them automatically.
-- Use the :doc:`Composite Nodes </composite_nodes>` to combine the two images via the AlphaOver node, creating and saving the composite image. Open that composited image as the UV Texture.
-- Use an external paint program to alpha overlay the images and save the file, and load it as the face's UV Texture
-- Define two objects, one just inside the other. The inner object would have the base image, and the outer image the overlaid image with a material alpha less than one (1.0).
-- Use the :doc:`Material nodes </materials/nodes>` to combine the two images via the AlphaOver or Mix node, thus creating a third noded material that you use as the material for the face. Using this approach, you will not have to UV map; simply assign the material to the face using the Multiple Materials
+- Create multiple UV Textures which map the same,
+  and then use different images (with Alpha) and blender will overlay them automatically.
+- Use the :doc:`Composite Nodes </composite_nodes>` to combine the two images via the AlphaOver node,
+  creating and saving the composite image. Open that composited image as the UV Texture.
+- Use an external paint program to alpha overlay the images and save the file,
+  and load it as the face's UV Texture
+- Define two objects, one just inside the other.
+  The inner object would have the base image,
+  and the outer image the overlaid image with a material alpha less than one (1.0).
+- Use the :doc:`Material nodes </materials/nodes>` to combine the two images via the AlphaOver or Mix node,
+  thus creating a third noded material that you use as the material for the face.
+  Using this approach, you will not have to UV map;
+  simply assign the material to the face using the Multiple Materials
 
 
 UV Textures vs. Procedural Textures
@@ -338,28 +358,33 @@ you can have different images for each texture channel; one for color, one for a
 one for normals, one for specularity, one for reflectivity, *etc.* Procedural textures,
 like Clouds, are INCREDIBLY simple and useful for adding realism and details to an image.
 
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+**UV Texture**                                                     |**Procedural Texture**                                                                                                                                                  +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Image maps to precise coordinates on the selected faces of the mesh|Pattern is generated dynamically, and is mapped to the entire mesh (or portion covered by that material)                                                                +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+The Image maps once to a range of mesh faces specifically selected |Maps once to all the faces to which that material is assigned; either the whole mesh or a portion                                                                       +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Image is mapped once to faces.                                     |Size XYZ in the MapInput allows tiling the texture many times across faces. Number of times depends on size of mesh                                                     +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Affect the color and the alpha of the object.                      |Can also affect normals (bumpiness), reflectivity, emit, displacement, and a dozen other aspects of the mesh's appearance; can even warp or stencil subsequent textures.+
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Can have many for a mesh                                           |Can be layered, up to 10 textures can be applied, layering on one another. Many mix methods for mixing multiple channels together.                                      +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Any Image type (still, video, rendered). Preset test grid available|Many different presents: clouds, wood grain, marble, noise, and even magic.                                                                                             +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Provides the UV layout for animated textures                       |Noise is the only animated procedural texture                                                                                                                           +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+Takes very limited graphics memory                                 |Uses no or little memory; instead uses CPU compute power                                                                                                                +
-+-------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-So, in a sense,
-a single UV texture for a mesh is simpler but more limited than using multiple textures
+.. list-table::
+
+   * - **UV Texture**
+     - **Procedural Texture**
+   * - Image maps to precise coordinates on the selected faces of the mesh
+     - Pattern is generated dynamically, and is mapped to the entire mesh (or portion covered by that material)
+   * - The Image maps once to a range of mesh faces specifically selected
+     - Maps once to all the faces to which that material is assigned; either the whole mesh or a portion
+   * - Image is mapped once to faces.
+     - Size XYZ in the MapInput allows tiling the texture many times across faces.
+       Number of times depends on size of mesh
+   * - Affect the color and the alpha of the object.
+     - Can also affect normals (bumpiness), reflectivity, emit, displacement,
+       and a dozen other aspects of the mesh's appearance; can even warp or stencil subsequent textures.
+   * - Can have many for a mesh
+     - Can be layered, up to 10 textures can be applied, layering on one another.
+       Many mix methods for mixing multiple channels together.
+   * - Any Image type (still, video, rendered). Preset test grid available
+     - Many different presents: clouds, wood grain, marble, noise, and even magic.
+   * - Provides the UV layout for animated textures
+     - Noise is the only animated procedural texture
+   * - Takes very limited graphics memory
+     - Uses no or little memory; instead uses CPU compute power
+
+
+So, in a sense, a single UV texture for a mesh is simpler but more limited than using multiple textures
 (mapped to UV coordinates), because they do one specific thing very well:
 adding image details to a range of faces of a mesh. They work together if the procedural
 texture maps to the UV coordinates specified in your layout. As discussed earlier, you can map
@@ -369,6 +394,7 @@ Input panel.
 
 Settings
 ********
+
 
 Image
 =====
@@ -380,7 +406,7 @@ Image
    Image panel
 
 
-In the :guilabel:`Image Sampling` panel we tell Blender which source file to use.
+In the *Image Sampling* panel we tell Blender which source file to use.
 Image or Movie Datablock:
 
    Browse
@@ -389,7 +415,7 @@ Image or Movie Datablock:
       Internal name of image
    F
       Create a fake user for the image texture
-   +
+   \+
       Replace active texture with a new one
    Folder
       Browse for an image on your computer
@@ -452,9 +478,9 @@ Use Alpha
 
 Fields
    Work with field images.  Video frames consist of two different images (fields) that are merged.
-   This option ensures that when :guilabel:`Fields` are rendered,
+   This option ensures that when *Fields* are rendered,
    the correct field of the image is used in the correct field of the rendering.
-   :guilabel:`MIP Mapping` cannot be combined with :guilabel:`Fields`.
+   *MIP Mapping* cannot be combined with *Fields*.
 
    Upper First
       Order of video fields - upper field first.
@@ -469,8 +495,8 @@ Fields
    Image panel for Generated source of Image texture
 
 
-For :guilabel:`Generated` source there are the specific options:
-:guilabel:`X` and :guilabel:`Y` size
+For *Generated* source there are the specific options:
+*X* and *Y* size
 
    Width and height of image to be generated.
 
@@ -493,18 +519,20 @@ About specific options for **movie** and **image sequence** source see :doc:`her
 Image Sampling
 ==============
 
-In the :guilabel:`Image Sampling` panel we can control how the information is retrieved from
-the image.
+In the *Image Sampling* panel we can control how the information is retrieved from the image.
 
 
-+----------------------------------------------------+---------------------------------------------------------+
-+.. figure:: /images/Manual-PartIV-Bahnhofstrasse.jpg|.. figure:: /images/Manual-PartIV-Map_To_Eingabewerte.jpg+
-+   :width: 120px                                    |   :width: 100px                                         +
-+   :figwidth: 120px                                 |   :figwidth: 100px                                      +
-+----------------------------------------------------+---------------------------------------------------------+
-+Left: Background image                                                                                        +
-+Right: Foreground image                                                                                       +
-+----------------------------------------------------+---------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-PartIV-Bahnhofstrasse.jpg
+          :width: 120px
+          :figwidth: 120px
+     - .. figure:: /images/Manual-PartIV-Map_To_Eingabewerte.jpg
+          :width: 100px
+          :figwidth: 100px
+   * - Background image
+     - Foreground image
+
 
 The two images presented here are used to demonstrate the different image options.
 The *background image* is an ordinary JPG-file,
@@ -513,24 +541,34 @@ The vertical bar on the right side of the foreground image is an Alpha blend,
 the horizontal bar has 50% alpha.
 
 
-+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
-+.. figure:: /images/Manual-PartIV-UseAlpha.jpg                                                 |.. figure:: /images/Manual-PartIV-CalcAlpha.jpg+
-+   :width: 150px                                                                               |   :width: 150px                               +
-+   :figwidth: 150px                                                                            |   :figwidth: 150px                            +
-+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
-+Left: Foreground image with :guilabel:`Use` alpha. The alpha values of the pixels are evaluated                                                +
-+Right: Foreground image with :guilabel:`Calculate` alpha                                                                                       +
-+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-PartIV-UseAlpha.jpg
+          :width: 150px
+          :figwidth: 150px
+     - .. figure:: /images/Manual-PartIV-CalcAlpha.jpg
+          :width: 150px
+          :figwidth: 150px
+   * - Foreground image with *Use* alpha. The alpha values of the pixels are evaluated
+     - Foreground image with *Calculate* alpha
+
 
 Alpha
    Options related to transparency
 
    Use
-      Works with PNG and TGA files since they can save transparency information (Foreground Image with UseAlpha). Where the alpha value in the image is less than 1.0, the object will be partially transparent and stuff behind it will show.
+      Works with PNG and TGA files since they can save transparency information (Foreground Image with UseAlpha).
+      Where the alpha value in the image is less than 1.0,
+      the object will be partially transparent and stuff behind it will show.
    Calculate
-      Calculate an alpha based on the RGB values of the Image. Black (0,0,0) is transparent, white (1,1,1) opaque. Enable this option if the image texture is a mask. Note that mask images can use shades of gray that translate to semi-transparency, like ghosts, flames, and smoke/fog.
+      Calculate an alpha based on the RGB values of the Image.
+      Black (0,0,0) is transparent, white (1,1,1) opaque.
+      Enable this option if the image texture is a mask.
+      Note that mask images can use shades of gray that translate to semi-transparency,
+      like ghosts, flames, and smoke/fog.
    Invert
-      Reverses the alpha value. Use this option if the mask image has white where you want it transparent and vice-versa.
+      Reverses the alpha value.
+      Use this option if the mask image has white where you want it transparent and vice-versa.
 
 Flip X/Y Axis
    Rotates the image 90 degrees counterclockwise when rendered.
@@ -551,10 +589,10 @@ Normal Map
 
 
    Normal Map Space:
-      :guilabel:`Tangent`:
-      :guilabel:`Object`:
-      :guilabel:`World`:
-      :guilabel:`Camera`:
+      *Tangent*:
+      *Object*:
+      *World*:
+      *Camera*:
 
 Derivative Map
    Use red and green as derivative values.
@@ -570,45 +608,66 @@ MIP Map
 
 
    MIP Map Gaussian filter
-      Used in conjunction with MIP Map, it enables the MIP Map to be made smaller based on color similarities.  In the game engine, you want your textures, especially your MIP Map textures, to be as small as possible to increase rendering speed and frame rate.
+      Used in conjunction with MIP Map, it enables the MIP Map to be made smaller based on color similarities.
+      In the game engine, you want your textures, especially your MIP Map textures,
+      to be as small as possible to increase rendering speed and frame rate.
 
 
-+-----------------------------------------------------------------+----------------------------------------------------------------+
-+.. figure:: /images/Manual-PartIV-ImageTextur-Linien.jpg         |.. figure:: /images/Manual-PartIV_ImageTexturInterPol-Linien.jpg+
-+   :width: 160px                                                 |   :width: 160px                                                +
-+   :figwidth: 160px                                              |   :figwidth: 160px                                             +
-+-----------------------------------------------------------------+----------------------------------------------------------------+
-+Enlarged Image texture without and with :guilabel:`Interpolation`                                                                 +
-+-----------------------------------------------------------------+----------------------------------------------------------------+
+.. list-table::
+   Enlarged Image texture without and with *Interpolation*
+
+   * - .. figure:: /images/Manual-PartIV-ImageTextur-Linien.jpg
+          :width: 160px
+          :figwidth: 160px
+     - .. figure:: /images/Manual-PartIV_ImageTexturInterPol-Linien.jpg
+          :width: 160px
+          :figwidth: 160px
+
+
 
 Interpolation
    This option interpolates the pixels of an image.
-   This becomes visible when you enlarge the picture. By default, this option is on.  Turn this option OFF to keep the individual pixels visible and if they are correctly anti-aliased.  This last feature is useful for regular patterns, such as lines and tiles; they remain 'sharp' even when enlarged considerably.  When you enlarge this 10x10 pixel Image
+   This becomes visible when you enlarge the picture. By default, this option is on.
+   Turn this option OFF to keep the individual pixels visible and if they are correctly anti-aliased.
+   This last feature is useful for regular patterns, such as lines and tiles;
+   they remain 'sharp' even when enlarged considerably.
+   When you enlarge this 10x10 pixel Image
 
 .. figure:: /images/Manual-PartIV-Linien.jpg
 
-the difference with and without :guilabel:`Interpolation` is clearly visible.
+the difference with and without *Interpolation* is clearly visible.
 Turn this image off if you are using digital photos to preserve crispness.
 
 Filter
-   The filter size used in rendering, and also by the options :guilabel:`MipMap` and :guilabel:`Interpolation`. If you notice gray lines or outlines around the textured object, particularly where the image is transparent, turn this value down from 1.0 to 0.1 or so.
+   The filter size used in rendering, and also by the options *MipMap* and *Interpolation*.
+   If you notice gray lines or outlines around the textured object, particularly where the image is transparent,
+   turn this value down from 1.0 to 0.1 or so.
 
    Texture Filter Type
-      Texture filter to use for image sampling.  Just like a *pixel* represents a *pic* ture *el* ement, a *texel* represents a *tex* ture *el* ement.  When a texture (2D texture space) is mapped onto a 3D model (3D model space), different algorithms can be used to compute a value for each pixel based on samplings from several texels.
+      Texture filter to use for image sampling.
+      Just like a *pixel* represents a *pic* ture *el* ement, a *texel* represents a *tex* ture *el* ement.
+      When a texture (2D texture space) is mapped onto a 3D model (3D model space),
+      different algorithms can be used to compute a value for each pixel based on samplings from several texels.
 
       Box
          A fast and simple nearest-neighbor interpolation known as Monte Carlo integration
       EWA
-         **E** lliptical **W** eighted **A** verage — one of the most efficient direct convolution algorithms developed by Paul Heckbert and Ned Greene in the 1980s.  For each texel, EWA samples, weights, and accumulates texels within an elliptical footprint and then divides the result by the sum of the weights.
+         **E** lliptical **W** eighted **A** verage — one of the most efficient direct
+         convolution algorithms developed by Paul Heckbert and Ned Greene in the 1980s.
+         For each texel, EWA samples, weights, and accumulates texels within an elliptical
+         footprint and then divides the result by the sum of the weights.
 
          Eccentricity
             Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower
       FELINE
-         FELINE (**F** ast **E** lliptical **Line** s), uses several isotropic probes at several points along a line in texture space to produce an anisotropic filter to reduce aliasing artifacts without considerably increasing rendering time.
+         FELINE (**F** ast **E** lliptical **Line** s),
+         uses several isotropic probes at several points along a line in texture space to produce an anisotropic
+         filter to reduce aliasing artifacts without considerably increasing rendering time.
 
          Probes
             Number of probes to use.  An integer between 1 and 256.
-            Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999) `Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping <http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf>`__, WRL
+            Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999)
+            `Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping <http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf>`__, WRL
       Area
          Area filter to use for image sampling
 
@@ -631,7 +690,7 @@ Image Mapping
    Image Mapping panel
 
 
-In the :guilabel:`Image Mapping` panel,
+In the *Image Mapping* panel,
 we can control how the image is mapped or projected onto the 3D model.
 
 Extension:
@@ -639,26 +698,32 @@ Extension:
    Extend
       Outside the image the colors of the edges are extended
    Clip
-      Clip to image size and set exterior pixels as transparent.  Outside the image, an alpha value of 0.0 is returned. This allows you to 'paste' a small logo on a large object.
+      Clip to image size and set exterior pixels as transparent.
+      Outside the image, an alpha value of 0.0 is returned.
+      This allows you to 'paste' a small logo on a large object.
    Clip Cube
-      Clips to cubic-shaped area around the images and sets exterior pixels as transparent.  The same as Clip, but now the 'Z' coordinate is calculated as well.  An alpha value of 0.0 is returned outside a cube-shaped area around the image.
+      Clips to cubic-shaped area around the images and sets exterior pixels as transparent.
+      The same as Clip, but now the 'Z' coordinate is calculated as well.
+      An alpha value of 0.0 is returned outside a cube-shaped area around the image.
    Repeat
       The image is repeated horizontally and vertically
 
       Repeat
          X/Y repetition multiplier
-
       Mirror
-         Mirror on X/Y axes.  This buttons allow you to map the texture as a mirror, or automatic flip of the image, in the corresponding X and/or Y direction.
+         Mirror on X/Y axes. This buttons allow you to map the texture as a mirror, or automatic flip of the image,
+         in the corresponding X and/or Y direction.
    Checker
-      Checkerboards quickly made. You can use the option :guilabel:`size` on the :guilabel:`Mapping` panel as well to create the desired number of checkers.
+      Checkerboards quickly made.
+      You can use the option *size* on the *Mapping* panel as well to create the desired number of checkers.
 
       Even / Odd
          Set even/odd tiles
-
       Distance
          Governs the distance between the checkers in parts of the texture size
 
 Crop Minimum / Crop Maximum
-   The offset and the size of the texture in relation to the texture space. Pixels outside this space are ignored. Use these to crop, or choose a portion of a larger image to use as the texture.
+   The offset and the size of the texture in relation to the texture space.
+   Pixels outside this space are ignored.
+   Use these to crop, or choose a portion of a larger image to use as the texture.
 

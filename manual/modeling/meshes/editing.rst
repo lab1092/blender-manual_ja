@@ -1,20 +1,21 @@
 
+************
 Mesh Editing
 ************
 
 Blender provides a variety of tools for editing meshes.
-These are available through the :guilabel:`Mesh Tools` palette,
+These are available through the *Mesh Tools* palette,
 the Mesh menu in the 3d view header, and context menus in the 3d view,
 as well as individual shortcut keys.
 
-Note that all the "transform precision/snap" keys (:kbd:`ctrl` and/or :kbd:`shift`)
+Note that all the "transform precision/snap" keys (:kbd:`Ctrl` and/or :kbd:`Shift`)
 work also for all these advanced operations... However, most of them do not have
 :doc:`axis locking </3d_interaction/transform_control/axis_locking>` possibilities,
 and some of them do not take into account :doc:`pivot point </3d_interaction/transform_control/pivot_point>`
 and/or :doc:`transform orientation </3d_interaction/transform_control/transform_orientations>` either.
 
-These transform tools are available in the :guilabel:`Transform` section of the
-:guilabel:`Mesh` menu in the menu bar.
+These transform tools are available in the *Transform* section of the
+*Mesh* menu in the menu bar.
 Note that some of these can also be used on other editable objects, like curves, surfaces,
 and lattices.
 
@@ -69,19 +70,19 @@ Accessing Mesh Tools
 Mesh Tools Palette
 ------------------
 
-When you select a mesh and :kbd:`tab` into edit mode,
-the :guilabel:`Tool Shelf` changes from :guilabel:`Object Tools` to :guilabel:`Mesh Tools`.
+When you select a mesh and :kbd:`Tab` into edit mode,
+the *Tool Shelf* changes from *Object Tools* to *Mesh Tools*.
 These are only some of the mesh editing tools.
 
 
 Menus
 -----
 
-The :guilabel:`Mesh` is located in the Header bar.
+The *Mesh* is located in the Header bar.
 Some of the menus can be accessed with shortcuts:
-:kbd:`ctrl-F` brings up the Face tool menu
-:kbd:`ctrl-E` brings up the Edge tool menu
-:kbd:`ctrl-V` brings up the Vertex tool menu
+:kbd:`Ctrl-F` brings up the Face tool menu
+:kbd:`Ctrl-E` brings up the Edge tool menu
+:kbd:`Ctrl-V` brings up the Vertex tool menu
 
 ..    Comment: <!--
    ==Normals==

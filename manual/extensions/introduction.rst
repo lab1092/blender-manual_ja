@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review}} .
 
 
+*****************
 Extending Blender
 *****************
 
@@ -43,14 +44,14 @@ File location
 
 All scripts are loaded from the ``scripts`` folder of the :doc:`local, system and user paths </introduction/installing_blender/directorylayout>`.
 
-You can setup an addittional search path for scripts in :doc:`User preferences </preferences/file#file_paths>` (:guilabel:`User Preferences` → :guilabel:`File Paths`).
+You can setup an addittional search path for scripts in :doc:`User preferences </preferences/file#file_paths>` (*User Preferences* → *File Paths*).
 
 
 Installation
 ------------
 
-Addons are conveniently installed through Blender in the :guilabel:`User Preferences` →
-:guilabel:`Addons` window. Click the :guilabel:`Install from File...` button and select the
+Addons are conveniently installed through Blender in the *User Preferences* →
+*Addons* window. Click the *Install from File...* button and select the
 ``.py`` or ``.zip`` file.
 
 To manually install scripts or addons place them in the ``addons``,

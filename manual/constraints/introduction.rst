@@ -2,8 +2,9 @@
 ..    TODO/Review: {{review|text= motion tracking constraints}} .
 
 
-Constraints
-***********
+************
+Introduction
+************
 
 Constraints are a way of connecting *transform properties* (position, rotation and scale) between objects.
 Constraints are in a way the object counterpart of the :doc:`modifiers </modifiers>`,
@@ -25,14 +26,14 @@ in global space), or relatively to other objects.
 Also note that constraints internally work using 4x4 transformation matrices only.
 When you use settings for specific rotation or scaling constraining,
 this information is being derived from the matrix only,
-not from settings in a :guilabel:`Bone` or :guilabel:`Object`. Especially for combining
+not from settings in a *Bone* or *Object*. Especially for combining
 rotations with non-uniform or negative scaling this can lead to unpredictable behavior.
 
 
 Constraining bones
 ------------------
 
-Finally, there is a great rigging feature in Blender: in :guilabel:`Pose` mode,
+Finally, there is a great rigging feature in Blender: in *Pose* mode,
 each bone of an armature behaves a bit like a standard object, and, as such,
 can be constrained. Most constraints work well with both objects and bones,
 but there are a few exceptions which are noted in the relevant constraints pages.

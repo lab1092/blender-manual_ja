@@ -1,4 +1,5 @@
 
+***************
 Selecting Faces
 ***************
 
@@ -8,7 +9,7 @@ Selecting Faces
 
 To select parts of a mesh face-wise, you have to switch to Face Select Mode.
 Do this by clicking the button shown above, or press :kbd:`Ctrl-Tab` to spawn a menu.
-The selection works as usual with :kbd:`rmb` ; to add/remove to an existing selection, additionally press :kbd:`Shift`
+The selection works as usual with :kbd:`RMB` ; to add/remove to an existing selection, additionally press :kbd:`Shift`
 
 
 Face Loops
@@ -18,14 +19,14 @@ Face Loops
    :class: refbox
 
    | Mode:     Edit Mode (Mesh)
-   | Hotkey:   :kbd:`alt-rmb` - or :kbd:`shift-alt-rmb` for modifying existing selection
+   | Hotkey:   :kbd:`Alt-RMB` - or :kbd:`Shift-Alt-RMB` for modifying existing selection
 
 
 Face Loops are pretty much the same as Edge Rings. If you want to select a Face Loop,
 there is no menu entry that works based on a selected face. Using :menuselection:`Select --> Edge Ring`
 would select a "cross" with the prior selected face as the middle.
 If you want to avoid switching to Edge Select Mode to select a Face Loop,
-use the :kbd:`alt-rmb` shortcut.
+use the :kbd:`Alt-RMB` shortcut.
 
 
 .. figure:: /images/face-mode_different-loop-selections.jpg
@@ -44,8 +45,8 @@ use the :kbd:`alt-rmb` shortcut.
 - Select the face, the :menuselection:`Select --> Edge Loop`.
   As in the example above, Blender pretends to be in Edge Select Mode and takes the four edges of the selected face
   as base for the selection operation.
-- This selection was created by :kbd:`alt-rmb` on the left edge of the center face,
-  followed by twice :kbd:`shift-alt-rmb` on the top edge of the center face. Two times,
+- This selection was created by :kbd:`Alt-RMB` on the left edge of the center face,
+  followed by twice :kbd:`Shift-Alt-RMB` on the top edge of the center face. Two times,
   because the first click will remove the selected face loop (in this case, just the original selected face),
   while the second click will add the whole vertical running loop to the selection, creating the cross.
 

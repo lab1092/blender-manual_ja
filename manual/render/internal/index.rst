@@ -1,7 +1,8 @@
 .. _render-internal:
 
-Internal
-********
+###########
+  Internal
+###########
 
 .. toctree::
    :maxdepth: 2

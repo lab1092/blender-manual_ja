@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:3
+#: ../../manual/materials/properties/subsurface_scattering.rst:4
 msgid "Subsurface Scattering"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:11
+#: ../../manual/materials/properties/subsurface_scattering.rst:13
 msgid ""
 "Many organic and inorganic materials are not totally opaque right at the "
 "surface, so light does not just bounce off the top surface. Instead, some "
@@ -26,29 +26,29 @@ msgid ""
 "photo-realism really cannot be achieved without it."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:19
+#: ../../manual/materials/properties/subsurface_scattering.rst:21
 msgid ""
 "It is important to understand that subsurface scattering and diffuse are one"
 " and the same. The difference is in how far light can diffuse beneath the "
 "surface before it is absorbed or transmitted back out."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:25
+#: ../../manual/materials/properties/subsurface_scattering.rst:27
 msgid "How it works"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:27
+#: ../../manual/materials/properties/subsurface_scattering.rst:29
 msgid ""
 "Actually calculating the light path beneath the surface of an object is not "
 "practical. But it has been shown that it is not necessary to do this, and "
 "that one can use a different approach."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:31
+#: ../../manual/materials/properties/subsurface_scattering.rst:33
 msgid "Blender calculates SSS in two steps:"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:33
+#: ../../manual/materials/properties/subsurface_scattering.rst:35
 msgid ""
 "At first the irradiance, or brightness, of the surface is calculated, from "
 "the front side of the object as well as from its back side. This is pretty "
@@ -56,7 +56,7 @@ msgid ""
 "of diffuse Shader, the light color, etc. are taken into account."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:34
+#: ../../manual/materials/properties/subsurface_scattering.rst:39
 msgid ""
 "In the second step, the final image is rendered, but now the SSS shader "
 "replaces the diffuse shader. Instead of the lamps, the calculated lightmap "
@@ -67,27 +67,27 @@ msgid ""
 " behind it."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:36
+#: ../../manual/materials/properties/subsurface_scattering.rst:46
 msgid "Instead let's see what SSS does to a distinct light point."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:44
+#: ../../manual/materials/properties/subsurface_scattering.rst:54
 msgid "Image 3a: No SSS."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:44
+#: ../../manual/materials/properties/subsurface_scattering.rst:54
 msgid "Image 3b: Small SSS radius."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:50
+#: ../../manual/materials/properties/subsurface_scattering.rst:60
 msgid "Image 3c: SSS radius enlarged."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:50
+#: ../../manual/materials/properties/subsurface_scattering.rst:60
 msgid "Image 3d: SSS with very large red radius value."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:54
+#: ../../manual/materials/properties/subsurface_scattering.rst:64
 msgid ""
 "If you turn on SSS, the light is distributed over a larger area. The size of"
 " this area depends on the radius values. Instead of distributing all colors "
@@ -95,17 +95,17 @@ msgid ""
 " RGB colors."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:59
+#: ../../manual/materials/properties/subsurface_scattering.rst:69
 msgid ""
 "If you use a very large radius value for a color, its light is evenly "
 "distributed over the whole object."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:63
+#: ../../manual/materials/properties/subsurface_scattering.rst:73
 msgid "Note about scatter radius"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:65
+#: ../../manual/materials/properties/subsurface_scattering.rst:75
 msgid ""
 "Because of the way this scattering is calculated, when using large radius "
 "values, you will notice fringing artifacts that appear as the complementary "
@@ -115,81 +115,39 @@ msgid ""
 "different scatter radii, and average them."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:69
+#: ../../manual/materials/properties/subsurface_scattering.rst:84
 msgid "Enabling Subsurface Scattering"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:73
+#: ../../manual/materials/properties/subsurface_scattering.rst:88
 msgid "Image 4: The SSS Panel. SSS is already enabled."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:76
-msgid ""
-"Enable SSS by clicking on the :guilabel:`Subsurface Scattering` button."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:77
-msgid ""
-"Accessible at the top are various presets.  Add new or remove old presets by"
-" clicking the :guilabel:`+` and :guilabel:`-` buttons.  When you select a "
-"preset, the :guilabel:`Radius` values, the :guilabel:`RGB Radius` and the "
-":guilabel:`IOR` are set for you.  The remaining options are not set (because"
-" they are mostly dependent on the size of your object)."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:79
-msgid ""
-"*SubSurface Scattering* doesn't need ray tracing. But since it is dependent "
-"on the incident light and shadows, you need proper shadow calculation (which"
-" may need ray tracing)."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:83
+#: ../../manual/materials/properties/subsurface_scattering.rst:104
 msgid "Options"
 msgstr "オプション"
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:85
+#: ../../manual/materials/properties/subsurface_scattering.rst:106
 msgid "The numeric sliders control how the light is scattered:"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:93
+#: ../../manual/materials/properties/subsurface_scattering.rst:114
 msgid "IOR"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:88
-msgid ""
-"The :guilabel:`Index Of Refraction` value determines the falloff of incident"
-" light. Higher values means that light falls off faster. The effect is quite"
-" subtle and changes the distribution function only a little bit. By the "
-"examination of many different materials, values of **1.3** to **1.5** have "
-"been found to work well for most materials.  If you know the exact material "
-"you are trying to simulate, see :doc:`our IOR table "
-"</materials/properties/raytraced_transparency#ior_values_for_common_materials>`."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:101
+#: ../../manual/materials/properties/subsurface_scattering.rst:122
 msgid "Scale"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:96
-msgid ""
-"The scale of your object, in Blender units, across which you want the "
-"scattering effect to take place. Scale :guilabel:`1.0` means **1** Blender "
-"unit equals **1** millimeter, scale **0.001** means **1** Blender unit "
-"equals **1** meter. If you want to work out what scale value to use in your "
-"scene, just use the formula: (size in blender units)/(real world size in "
-"millimeters)=scale."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:107
+#: ../../manual/materials/properties/subsurface_scattering.rst:128
 msgid "The SSS Color Swatch"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:117
+#: ../../manual/materials/properties/subsurface_scattering.rst:141
 msgid "Scattering Color (Albedo)"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:111
+#: ../../manual/materials/properties/subsurface_scattering.rst:132
 msgid ""
 "Albedo is the probability that light will survive a scattering event. If you"
 " think of scattering as a filter, this is the height of the filter. It is "
@@ -198,13 +156,13 @@ msgid ""
 "unintuitive results on the scattering effect:"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:114
+#: ../../manual/materials/properties/subsurface_scattering.rst:138
 msgid ""
 "The darker the color the more light is scattered. A value of 1 will produce "
 "no scattering effect."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:116
+#: ../../manual/materials/properties/subsurface_scattering.rst:140
 msgid ""
 "So if you set it to green, the lit areas of the object will appear as green,"
 " and green is scattered only a little. Therefore the darker areas will "
@@ -212,198 +170,291 @@ msgid ""
 "setting a larger radius for the color."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:121
+#: ../../manual/materials/properties/subsurface_scattering.rst:151
 msgid "RGB Radius"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:120
-msgid ""
-"This is not in fact the radius of the subsurface scattering, but the average"
-" path length between scattering events.  As the light travels through the "
-"object it bounces around then emerges from the surface at some other point. "
-"This value corresponds to the average length the light travels between each "
-"bounce.  The longer the path length is, the further the light is allowed to "
-"scatter. This is the main source of a material's perceived \"scatter "
-"color.\" A material like skin will have a higher red radius than green and "
-"blue. Subsurface scattering is the diffusion of light beneath the surface. "
-"You control how far the light spreads to achieve a specific result."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:126
+#: ../../manual/materials/properties/subsurface_scattering.rst:157
 msgid "Blend :"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:124
+#: ../../manual/materials/properties/subsurface_scattering.rst:155
 msgid "Color"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:125
+#: ../../manual/materials/properties/subsurface_scattering.rst:155
 msgid ""
 "This controls how much the R, G, B option modulates the diffuse color and "
 "textures. Note that even with this option set to **0.0**, the R, G, B option"
 " still influences the scattering behavior."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:126
+#: ../../manual/materials/properties/subsurface_scattering.rst:157
 msgid "Texture"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:127
+#: ../../manual/materials/properties/subsurface_scattering.rst:158
 msgid "How much the surface texture is blurred along with the shading."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:135
+#: ../../manual/materials/properties/subsurface_scattering.rst:166
 msgid "Scattering Weight :"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:130
+#: ../../manual/materials/properties/subsurface_scattering.rst:161
 msgid "Front"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:130
+#: ../../manual/materials/properties/subsurface_scattering.rst:161
 msgid ""
 "Factor to increase or decrease the front scattering. When light enters "
 "through the front of the object, how much is absorbed or added? (Normally "
 "**1.0** or **100%**)."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:135
+#: ../../manual/materials/properties/subsurface_scattering.rst:166
 msgid "Back"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:133
+#: ../../manual/materials/properties/subsurface_scattering.rst:164
 msgid ""
 "Factor to increase or decrease the back scattering. Light hitting an object "
 "from behind can go all the way through the object and come out on the front "
 "of the object. This happens mostly on thin objects, like hands and ears."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:144
+#: ../../manual/materials/properties/subsurface_scattering.rst:175
 msgid "Error"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:138
+#: ../../manual/materials/properties/subsurface_scattering.rst:169
 msgid ""
 "This parameter controls how precisely the algorithm samples the surrounding "
 "points. Leaving it at **0.05** should give images without artifacts. It can "
 "be set higher to speed up rendering, potentially with errors."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:142
+#: ../../manual/materials/properties/subsurface_scattering.rst:173
 msgid ""
 "Setting it at **1.0** is a good way to quickly get a preview of the look, "
 "with errors."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:147
+#: ../../manual/materials/properties/subsurface_scattering.rst:178
 msgid "Developing your own SSS material"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:150
+#: ../../manual/materials/properties/subsurface_scattering.rst:181
 msgid "The Traditional Approach"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:152
+#: ../../manual/materials/properties/subsurface_scattering.rst:183
 msgid ""
 "A more common but less intuitive approach is to use \"layering\". This is a "
 "simplified version of the layering approach. See the external links for more"
 " information:"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:156
+#: ../../manual/materials/properties/subsurface_scattering.rst:187
 msgid ""
 "Set the SSS color on a value of your choice, normally the predominant color "
 "of the object. If you want to use different radii for the colors, don't make"
 " it too dark."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:157
+#: ../../manual/materials/properties/subsurface_scattering.rst:188
 msgid ""
 "Set the scale factor. If you want to see much translucency you need small "
 "objects or large scale values."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:158
+#: ../../manual/materials/properties/subsurface_scattering.rst:189
 msgid "Set the radius values."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:159
-msgid ""
-"Adjust the brightness with the :guilabel:`Front` and :guilabel:`Back` "
-"values."
-msgstr ""
-
-#: ../../manual/materials/properties/subsurface_scattering.rst:163
+#: ../../manual/materials/properties/subsurface_scattering.rst:194
 msgid "=A more intuitive approach"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:165
+#: ../../manual/materials/properties/subsurface_scattering.rst:196
 msgid "Set the Scattering color to .5"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:166
+#: ../../manual/materials/properties/subsurface_scattering.rst:197
 msgid "Set the Front weight to 2."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:167
+#: ../../manual/materials/properties/subsurface_scattering.rst:198
 msgid ""
 "Set the scale factor based on the size of your object relative to the scene."
 " If you want to see much translucency you need small objects or large scale "
 "values."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:168
+#: ../../manual/materials/properties/subsurface_scattering.rst:199
 msgid "Set the radius values appropriately."
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:172
+#: ../../manual/materials/properties/subsurface_scattering.rst:203
 msgid "Examples"
 msgstr "例"
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:175
+#: ../../manual/materials/properties/subsurface_scattering.rst:206
 msgid "Skin"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:182
+#: ../../manual/materials/properties/subsurface_scattering.rst:213
 msgid "1"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:182
+#: ../../manual/materials/properties/subsurface_scattering.rst:213
 msgid "2"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:182
+#: ../../manual/materials/properties/subsurface_scattering.rst:213
 msgid "3"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:182
+#: ../../manual/materials/properties/subsurface_scattering.rst:213
 msgid "4"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:182
+#: ../../manual/materials/properties/subsurface_scattering.rst:213
 msgid "5"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:184
+#: ../../manual/materials/properties/subsurface_scattering.rst:215
 msgid ""
 "Increasing SSS scale (`.blend <http://wiki.blender.org/index.php/:File:MH-"
 "SSS-head-001.blend>`__)"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:189
+#: ../../manual/materials/properties/subsurface_scattering.rst:220
 msgid "See also"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:191
+#: ../../manual/materials/properties/subsurface_scattering.rst:222
 msgid ""
 "`Development Release Log: Subsurface Scattering "
 "<http://www.blender.org/development/release-logs/blender-244/subsurface-"
 "scattering/>`__"
 msgstr ""
 
-#: ../../manual/materials/properties/subsurface_scattering.rst:192
+#: ../../manual/materials/properties/subsurface_scattering.rst:223
 msgid ""
 "`Ben Simonds: Three Layer SSS in Blender Demystified "
 "<http://bensimonds.com/2010/05/31/three-layer-sss-in-blender-"
 "demystified/>`__"
 msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:91
+msgid "Enable SSS by clicking on the *Subsurface Scattering* button."
+msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:92
+msgid ""
+"Accessible at the top are various presets. Add new or remove old presets by "
+"clicking the *+* and *-* buttons. When you select a preset, the *Radius* "
+"values, the *RGB Radius* and the *IOR* are set for you. The remaining "
+"options are not set (because they are mostly dependent on the size of your "
+"object)."
+msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:98
+msgid ""
+"*SubSurface Scattering* doesn't need ray tracing. But since it is dependent "
+"on the incident light and shadows, [you need proper shadow calculation "
+"(which may need ray tracing)."
+msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:109
+msgid ""
+"The *Index Of Refraction* value determines the falloff of incident light. "
+"Higher values means that light falls off faster. The effect is quite subtle "
+"and changes the distribution function only a little bit. By the examination "
+"of many different materials, values of **1.3** to **1.5** have been found to"
+" work well for most materials.  If you know the exact material you are "
+"trying to simulate, see :doc:`our IOR table "
+"</materials/properties/raytraced_transparency#ior_values_for_common_materials>`."
+msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:117
+msgid ""
+"The scale of your object, in Blender units, across which you want the "
+"scattering effect to take place. Scale *1.0* means **1** Blender unit equals"
+" **1** millimeter, scale **0.001** means **1** Blender unit equals **1** "
+"meter. If you want to work out what scale value to use in your scene, just "
+"use the formula: (size in blender units)/(real world size in "
+"millimeters)=scale."
+msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:144
+msgid ""
+"This is not in fact the radius of the subsurface scattering, but the average"
+" path length between scattering events. As the light travels through the "
+"object it bounces around then emerges from the surface at some other point. "
+"This value corresponds to the average length the light travels between each "
+"bounce. The longer the path length is, the further the light is allowed to "
+"scatter. This is the main source of a material's perceived \"scatter "
+"color.\" A material like skin will have a higher red radius than green and "
+"blue. Subsurface scattering is the diffusion of light beneath the surface. "
+"You control how far the light spreads to achieve a specific result."
+msgstr ""
+
+#: ../../manual/materials/properties/subsurface_scattering.rst:190
+msgid "Adjust the brightness with the *Front* and *Back* values."
+msgstr ""
+
+#~ msgid ""
+#~ "Enable SSS by clicking on the :guilabel:`Subsurface Scattering` button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Accessible at the top are various presets.  Add new or remove old presets by"
+#~ " clicking the :guilabel:`+` and :guilabel:`-` buttons.  When you select a "
+#~ "preset, the :guilabel:`Radius` values, the :guilabel:`RGB Radius` and the "
+#~ ":guilabel:`IOR` are set for you.  The remaining options are not set (because"
+#~ " they are mostly dependent on the size of your object)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*SubSurface Scattering* doesn't need ray tracing. But since it is dependent "
+#~ "on the incident light and shadows, you need proper shadow calculation (which"
+#~ " may need ray tracing)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Index Of Refraction` value determines the falloff of incident"
+#~ " light. Higher values means that light falls off faster. The effect is quite"
+#~ " subtle and changes the distribution function only a little bit. By the "
+#~ "examination of many different materials, values of **1.3** to **1.5** have "
+#~ "been found to work well for most materials.  If you know the exact material "
+#~ "you are trying to simulate, see :doc:`our IOR table "
+#~ "</materials/properties/raytraced_transparency#ior_values_for_common_materials>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The scale of your object, in Blender units, across which you want the "
+#~ "scattering effect to take place. Scale :guilabel:`1.0` means **1** Blender "
+#~ "unit equals **1** millimeter, scale **0.001** means **1** Blender unit "
+#~ "equals **1** meter. If you want to work out what scale value to use in your "
+#~ "scene, just use the formula: (size in blender units)/(real world size in "
+#~ "millimeters)=scale."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is not in fact the radius of the subsurface scattering, but the average"
+#~ " path length between scattering events.  As the light travels through the "
+#~ "object it bounces around then emerges from the surface at some other point. "
+#~ "This value corresponds to the average length the light travels between each "
+#~ "bounce.  The longer the path length is, the further the light is allowed to "
+#~ "scatter. This is the main source of a material's perceived \"scatter "
+#~ "color.\" A material like skin will have a higher red radius than green and "
+#~ "blue. Subsurface scattering is the diffusion of light beneath the surface. "
+#~ "You control how far the light spreads to achieve a specific result."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Adjust the brightness with the :guilabel:`Front` and :guilabel:`Back` "
+#~ "values."
+#~ msgstr ""

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text= move direction of time?}} .
 
 
+********
 F-Curves
 ********
 
@@ -82,7 +83,7 @@ Constant
 
 
 Linear
-   This simple interpolation creates a straight segment between each neighbor keyframes, giving a broken line. It can be useful when using only two keyframes and the :guilabel:`Extrapolation` extend mode, to easily get an infinite straight line (i.e. a linear curve).
+   This simple interpolation creates a straight segment between each neighbor keyframes, giving a broken line. It can be useful when using only two keyframes and the *Extrapolation* extend mode, to easily get an infinite straight line (i.e. a linear curve).
 
 
 .. figure:: /images/Doc26-fcurve-linear.jpg

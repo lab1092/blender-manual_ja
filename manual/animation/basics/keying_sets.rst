@@ -1,4 +1,5 @@
 
+***********
 Keying Sets
 ***********
 
@@ -31,7 +32,7 @@ This panel is used to add, select, manage *Absolute Keying Sets*.
 
 
 Keying Set Name
-   The active Keying Set is highlighted in blue, :kbd:`lmb-x2` to rename.
+   The active Keying Set is highlighted in blue, :kbd:`LMB-x2` to rename.
 
 `+`
    Add new (Empty) keying set to the active Scene.
@@ -121,7 +122,7 @@ Adding Properties
 
 Some ways to add properties to keying sets.
 
-:kbd:`rmb` the property in the *User Interface*, then select *Add Single to Keying Set* or *Add All to Keying Set*. This will add the properties to the active keying set, or to a new keying set if none exist.
+:kbd:`RMB` the property in the *User Interface*, then select *Add Single to Keying Set* or *Add All to Keying Set*. This will add the properties to the active keying set, or to a new keying set if none exist.
 
 Hover the mouse over the properties, then press :kbd:`K`,
 to add *Add All to Keying Set*.

@@ -2,10 +2,11 @@
 ..    TODO/Review: {{review|text=Options reviewed for v2.70; Video is for old version}} .
 
 
+************
 Introduction
 ************
 
-A :guilabel:`Camera` is an object that provides a means of rendering images from Blender.
+A *Camera* is an object that provides a means of rendering images from Blender.
 It defines which portions of a scene is visible at render time.
 Scenes can have multiples cameras, but *must* contain, at minimum,
 one camera in order to generate any images.
@@ -17,12 +18,12 @@ Add a new camera
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
+   | Mode:     *Object* mode
    | Menu:     :menuselection:`Add --> Camera`
-   | Hotkey:   :kbd:`shift-A` to add new.
+   | Hotkey:   :kbd:`Shift-A` to add new.
 
 
-In :guilabel:`Object` mode simply press :kbd:`shift-A` and in the popup menu,
+In *Object* mode simply press :kbd:`Shift-A` and in the popup menu,
 choose :menuselection:`Add --> Camera`.
 
 
@@ -32,8 +33,8 @@ Change active camera
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Hotkey:   :kbd:`ctrl-pad0`
+   | Mode:     *Object* mode
+   | Hotkey:   :kbd:`Ctrl-Numpad0`
 
 
 .. figure:: /images/Manual-CameraView-ActiveCamera.jpg
@@ -44,8 +45,8 @@ Change active camera
 
 
 The *active* camera is the camera that is currently being used for rendering and camera view
-(:kbd:`pad0`).
-Select the camera you would like to make active and press :kbd:`ctrl-pad0` (by doing so,
+(:kbd:`Numpad0`).
+Select the camera you would like to make active and press :kbd:`Ctrl-Numpad0` (by doing so,
 you also switch the view to camera view). In order to render,
 each scene **must** have a camera.
 
@@ -65,12 +66,12 @@ Camera Settings
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Camera`
+   | Mode:     *Object* mode
+   | Panel:    *Camera*
 
 
 Cameras are invisible in renders, so they don't have any material or texture settings.
-However, they do have :guilabel:`Object` and :guilabel:`Editing` setting panels available
+However, they do have *Object* and *Editing* setting panels available
 which are displayed when a camera is the selected (active!) object.
 
 `Camera Lens panel. <http://wiki.blender.org/index.php/File:Manual-CameraPanel-2.57>`__
@@ -81,14 +82,14 @@ Lens
 
 
 Perspective / Orthographic / Panoramic
-   Select what projection type to use. :guilabel:`Perspective` is the default and makes objects further away
-   appear smaller while :guilabel:`Orthographic` maintains the exact measures of objects. A
-   :guilabel:`Perspective` projection is more similar to what an image obtained with a real camera would look like
-   while an :guilabel:`Orthographic` projection is a more technical view, best for blueprints,
+   Select what projection type to use. *Perspective* is the default and makes objects further away
+   appear smaller while *Orthographic* maintains the exact measures of objects. A
+   *Perspective* projection is more similar to what an image obtained with a real camera would look like
+   while an *Orthographic* projection is a more technical view, best for blueprints,
    but worst to convey distances between objects.
    To configure these projections,
    see :doc:`this page </render/camera/perspective>`on vanishing points and isometric view.
-   :guilabel:`Panoramic` renders the scene with a cylindrical projection.
+   *Panoramic* renders the scene with a cylindrical projection.
 
    .. figure:: /images/Manual-CameraView-Camera.jpg
       :width: 200px
@@ -98,26 +99,26 @@ Perspective / Orthographic / Panoramic
 
 Focal Length
    Available in Perspective and Panoramic camera types, represents the lens focal length,
-   represented in degrees or millimeters. When :guilabel:`Orthographic` mode is selected,
-   the :guilabel:`Focal Length` setting changes to the :guilabel:`Orthographic Scale` setting.
+   represented in degrees or millimeters. When *Orthographic* mode is selected,
+   the *Focal Length* setting changes to the *Orthographic Scale* setting.
    This setting determines the size of the camera's visible area.
 Shift X/Y
    Shifts the camera viewport. Note that most of the time,
    this setting should not be used to adjust the camera position,
-   as the :guilabel:`Shift` setting is relative to the actual camera position, which will not be changed.
+   as the *Shift* setting is relative to the actual camera position, which will not be changed.
 Clipping Start/End
    Sets the clipping limits. Only objects within the limits are rendered.
-   If :guilabel:`Limits` in the :guilabel:`Display` panel is enabled,
+   If *Limits* in the *Display* panel is enabled,
    the clip bounds will be visible as two yellow connected dots on the camera line of sight.
 
 
    .. note::
 
-      The :guilabel:`3D View` window contains settings similar to the camera,
-      such as :guilabel:`Orthographic` / :guilabel:`Perspective` and :guilabel:`Clip Start` / :guilabel:`Clip End`.
+      The *3D View* window contains settings similar to the camera,
+      such as *Orthographic* / *Perspective* and *Clip Start* / *Clip End*.
       These settings have no effect on the camera rendering,
-      and only change the view settings when *not* in :guilabel:`Camera` view.
-      These settings are accessed through the :menuselection:`View` menu of the :guilabel:`3D View`.
+      and only change the view settings when *not* in *Camera* view.
+      These settings are accessed through the :menuselection:`View` menu of the *3D View*.
 
       See the :doc:`3D view options page </3d_interaction/navigating/3d_view_options#view_properties_panel>`
       for more details.
@@ -135,8 +136,8 @@ Camera Presets
 
    ToDo
 
-- :guilabel:`Camera Presets`
-- :guilabel:`Sensor`
+- *Camera Presets*
+- *Sensor*
 
 
 Depth of Field
@@ -154,7 +155,7 @@ Depth of Field Object
    the linked object will determine the focal point. Linking an object will deactivate the distance parameter.
 Distance
    Distance to the focal point. It is shown as a yellow cross on the camera line of sight.
-   :guilabel:`Limits` must be enabled to see the cross.
+   *Limits* must be enabled to see the cross.
    It is used in combination with the :doc:`Defocus Compositing Node </composite_nodes/types/filter#defocus>`.
 
 
@@ -173,7 +174,7 @@ Limits
 Mist
    Toggles viewing of the mist limits on and off.
    The limits are shown as two connected white dots on the camera line of sight.
-   The mist limits and other options are set in the :guilabel:`World` panel,
+   The mist limits and other options are set in the *World* panel,
    in the :doc:`Mist section </world/mist>`.
 
 
@@ -196,13 +197,13 @@ Size
    and is only a cosmetic setting.
    The camera icon can also be scaled using the standard Scale :kbd:`S` transform key.
 Passepartout, Alpha
-   This mode darkens the area outside of the camera's field of view, based on the :guilabel:`Alpha` setting.
+   This mode darkens the area outside of the camera's field of view, based on the *Alpha* setting.
 
 
 Composition Guides
 ==================
 
-:guilabel:`Composition Guides` are available from the drop-down menu, which can help when framing a shot.
+*Composition Guides* are available from the drop-down menu, which can help when framing a shot.
 There are 8 types of guides available:
 
 
@@ -244,8 +245,8 @@ Move active camera to view
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Hotkey:   :kbd:`ctrl-alt-pad0`
+   | Mode:     *Object* mode
+   | Hotkey:   :kbd:`Ctrl-Alt-Numpad0`
 
 
 This feature allows you to position and orient the active camera to match your current
@@ -253,14 +254,14 @@ viewport.
 
 Select a camera and then move around in the 3D view to a desired position and direction for
 your camera (so that you're seeing what you want the camera to see). Now press
-:kbd:`ctrl-alt-pad0` and your selected camera positions itself to match the view,
+:kbd:`Ctrl-Alt-Numpad0` and your selected camera positions itself to match the view,
 and switches to camera view.
 
 
 Camera View Positioning
 =======================
 
-By enabling :guilabel:`Lock Camera to View` in the View menu of the View Properties panel,
+By enabling *Lock Camera to View* in the View menu of the View Properties panel,
 while in camera view, you can navigate the 3d viewport as usual,
 while remaining in camera view. Controls are exactly the same as when normally moving in 3d.
 
@@ -270,9 +271,9 @@ Roll, Pan, Dolly, and Track
 
 To perform these camera moves, the camera must first be *selected*,
 so that it becomes the active object (while viewing through it,
-you can :kbd:`rmb` -click on the solid rectangular edges to select it).
+you can :kbd:`RMB` -click on the solid rectangular edges to select it).
 The following actions also assume that you are in camera view
-(:kbd:`pad0`)! Having done so, you can now manipulate the camera using the same commands
+(:kbd:`Numpad0`)! Having done so, you can now manipulate the camera using the same commands
 that are used to manipulate any object:
 
 Roll
@@ -286,7 +287,7 @@ Horizontal Pan or Yaw
    This corresponds to a rotation around the camera's local Y axis... Yes, that's it, press :kbd:`R`,
    and then :kbd:`Y` twice!
 Dolly
-   To dolly the camera, press :kbd:`G` then :kbd:`mmb` (or  :kbd:`Z` twice).
+   To dolly the camera, press :kbd:`G` then :kbd:`MMB` (or  :kbd:`Z` twice).
 Sideways Tracking
    Press :kbd:`G` and move the mouse
    (you can use  :kbd:`X` twice or :kbd:`Y` to get pure-horizontal or pure-vertical sideways tracking).
@@ -295,7 +296,7 @@ Sideways Tracking
 Aiming the camera in Flymode
 ============================
 
-When you are in :guilabel:`Camera` view,
+When you are in *Camera* view,
 the :doc:`fly mode </3d_interaction/navigating#fly_mode>` actually moves your active camera...
 
 .. youtube:: bTRrHNn-d4w

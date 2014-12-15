@@ -1,4 +1,5 @@
 
+********************
 Blender Game Physics
 ********************
 
@@ -68,14 +69,14 @@ Constraints
 ===========
 
 It is imperative to understand that the Blender Constraints generally don't work inside the BGE.
-This means interesting effects such as :guilabel:`Copy Rotation` are unavailable directly.
+This means interesting effects such as *Copy Rotation* are unavailable directly.
 
 Your options include:
 
 - :doc:`Parenting </modeling/objects/groups_and_parenting>` - But not Vertex Parenting.
 - :doc:`Rigid Body Joint </constraints/relationship/rigid_body_joint>` - This is the one Constraint that you can set up through the UI that works in the BGE. It has several options, and can be very powerful - see ITS page for a detailed description and demo .blend. Don't forget that you can loop through objects using ``bpy`` instead of clicking thousands of times to set up chains of these Constraints.
 - Rigid Body Joints on the Fly - You can add/remove them after the BGE starts by using ``bge.constraints.createConstraint()``. This can be good either to simply automate their setup, or to truly make them dynamic. A simple demo can be viewed in: `BGE-Physics-DynamicallyCreateConstraint.blend <http://wiki.blender.org/index.php/Media:BGE-Physics-DynamicallyCreateConstraint.blend>`__
-- `Python Controllers </game_engine/logic/controllers/python>`__ - As always, in the BGE, you can get the most power when you drop into Python and start toying with the settings directly. For instance, the :guilabel:`Copy Rotation` mentioned above is not hard -- All you have to do is something to the effect of ``own.worldOrientation = bge.logic.getCurrentScene().objects['TheTargetObject'].worldOrientation``
+- `Python Controllers </game_engine/logic/controllers/python>`__ - As always, in the BGE, you can get the most power when you drop into Python and start toying with the settings directly. For instance, the *Copy Rotation* mentioned above is not hard -- All you have to do is something to the effect of ``own.worldOrientation = bge.logic.getCurrentScene().objects['TheTargetObject'].worldOrientation``
 
 
 Visualizing Physics
@@ -85,15 +86,15 @@ Visualizing Physics
 
 Go to :menuselection:`Game --> Show Physics Visualization` to show lines representing various attributes
 of the Bullet representation of your objects.
-Note that these might be easier to see when you turn on Wireframe Mode (:kbd:`z`)
-before you press :kbd:`p`.
+Note that these might be easier to see when you turn on Wireframe Mode (:kbd:`Z`)
+before you press :kbd:`P`.
 Also note that you can see how the Bullet triangulation is working
 (it busts all your Quads to Tris at run-time, but the BGE meshes are still quads at run-time).
 
 
 - **RGB/XYZ Widget** - Representing the object's Local Orientation and Origin.
 - **Green** - "sleeping meshes" that are not moving, saving calculations until an external event "wakes" it.
-- **White** - White lines represent active bounding meshes at are undergoing physics calulations, untill such calculations are so small that the object is put to rest. This is how you can see the effects of the :guilabel:`Collision Bounds`.
+- **White** - White lines represent active bounding meshes at are undergoing physics calulations, untill such calculations are so small that the object is put to rest. This is how you can see the effects of the *Collision Bounds*.
   - **Thick, or Many White Lines** - A compound collision mesh/meshes.
 - **Violet** - Bounding meshes for Soft bodies.
 - **Red** - The Bounding Box, the outer boundary of object. It is always aligned with global X Y and Z, and is used to optimize calculations. Also represents meshes that have been forced into "no sleep" status.
@@ -183,7 +184,7 @@ This still leaves us with the problem mentioned in the previous paragraph.
 When you deform a display mesh, it does not update the corresponding physics mesh. You can view this evidently when you
 FIXME(TODO: Internal Link;
 [[#Visualizing_Physics|Enable Physics Visualization]]
-) - the collision bounds will remain exactly as when they began. To fix this, you must call ``own.reinstancePhysicsMesh()`` in some form. Currently this only works on :guilabel:`Triangle Mesh` bounds, not :guilabel:`Convex Hull`. We have prepared a demonstration file in `Manual-BGE-Physics-DancingSticks.blend <http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-DancingSticks.blend>`__. Note that we had to increase the :menuselection:`World --> Physics --> Physics Steps --> Substeps` to make the collisions work well. The more basic case is the case the Shapekeyed Action, which you can see in the back area of the scene. Since it is the only object involved, you can call ``reinstancePhysicsMesh()`` unadorned, and it will do the right thing.
+) - the collision bounds will remain exactly as when they began. To fix this, you must call ``own.reinstancePhysicsMesh()`` in some form. Currently this only works on *Triangle Mesh* bounds, not *Convex Hull*. We have prepared a demonstration file in `Manual-BGE-Physics-DancingSticks.blend <http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-DancingSticks.blend>`__. Note that we had to increase the :menuselection:`World --> Physics --> Physics Steps --> Substeps` to make the collisions work well. The more basic case is the case the Shapekeyed Action, which you can see in the back area of the scene. Since it is the only object involved, you can call ``reinstancePhysicsMesh()`` unadorned, and it will do the right thing.
 
 The more complicated case is the :menuselection:`Collision Mesh --> Armature --> Display Mesh` cluster,
 which you can see in the front of the scene.
@@ -226,14 +227,13 @@ Reading the Blender and Bullet Source Files
 -------------------------------------------
 
 This might sound intimidating, even if you know C/C++, but it can be very informative.
-You can see how Blender sets up the objects to pass to Bullet, add ``printf
-()`` s in places,
+You can see how Blender sets up the objects to pass to Bullet, add ``printf()`` s in places,
 or otherwise experiment and ``svn revert`` to get back to normalcy.
 
 Here is an example of the trail to get to the bottom of the handling of the options.
 We will observe the handling of the ``use_shape_match`` property, as an example.
 
-- Start by getting `The Blender Source Tree <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_
+- Start by getting `The Blender Source Tree <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`__
 
 - If you search it for ``use_shape_match`` (e.g., by ``grep -r use_shape_match .``), this will lead you to `blender/source/blender/makesrna/intern/rna_object_force.c <https://svn.blender.org/svnroot/bf-blender/trunk/blender/source/blender/makesrna/intern/rna_object_force.c>`__, which says:
 
@@ -264,7 +264,7 @@ We will observe the handling of the ``use_shape_match`` property, as an example.
 
 
 - Here is the first bit of logic. It inverts the arguments to ``setPose`` depending on the value. Now then, since ``psb`` is of type ``btSoftBody``, we have officially launched into Bullet territory. You have a couple options:
-  - If you go to the `Bullet API Navigator <http://www.continuousphysics.com/Bullet/BulletFull>`__ and expand the :guilabel:`Class List` menu, you can :kbd:`Ctrl-f` for the ``btSoftBody`` class, and follow the link to the `btSoftBody Class Reference <http://www.continuousphysics.com/Bullet/BulletFull/classbtSoftBody.html>`__ Page. There you will see very sparse written documentation, but it will, at least, link you to a syntax-highlighted `line <http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l00626>`__ where the method is implemented.
+  - If you go to the `Bullet API Navigator <http://www.continuousphysics.com/Bullet/BulletFull>`__ and expand the *Class List* menu, you can :kbd:`Ctrl-F` for the ``btSoftBody`` class, and follow the link to the `btSoftBody Class Reference <http://www.continuousphysics.com/Bullet/BulletFull/classbtSoftBody.html>`__ Page. There you will see very sparse written documentation, but it will, at least, link you to a syntax-highlighted `line <http://www.continuousphysics.com/Bullet/BulletFull/btSoftBody_8cpp_source.html#l00626>`__ where the method is implemented.
   - Get the Bullet Source with: ``svn checkout http://bullet.googlecode.com/svn/trunk/ bullet-read-only`` and probably run something like ``ctags -r .`` from that tree every now and then to build the ``tags`` file. Now you can dig further. Something like ``vim -t setPose`` will lead you to the implementation in `src/BulletSoftBody/btSoftBody.cpp <http://bullet.googlecode.com/svn/trunk/src/BulletSoftBody/btSoftBody.cpp>`__ (which is the same code as can be found through the Bullet API Navigator in the previous step).
 - Through either approach, we find that the mysterious ``bool`` s above are for ``btSoftBody::setPose(bool bvolume,bool bframe)``, which are immediately assigned to ``m_pose.m_bvolume`` and ``m_pose.m_bframe``, respectively.
   - Subsequently searching for ``m_bvolume`` doesn't show much use in this file, other than the assignment and initialization. We could follow the trail deeper to the `btSoftBody::Pose Struct Reference <http://www.continuousphysics.com/Bullet/BulletFull/structbtSoftBody_1_1Pose.html>`__ docs, but for now let's try:
@@ -291,8 +291,8 @@ Keep in mind that the result of this method is a recording, no longer a simulati
 
 All you have to do to achieve this effect is go to the Info Editor
 (the bar at the top of the window) :menuselection:`Game --> Record Animation`,
-and it will lock away your keyframes for use in :guilabel:`Blender Render` mode.
-You can go back to the 3D view and hit :kbd:`Alt-a` to play it back,
+and it will lock away your keyframes for use in *Blender Render* mode.
+You can go back to the 3D view and hit :kbd:`Alt-A` to play it back,
 or :kbd:`Ctrl-F12` to render it out as an animation.
 
 Note that you can also use Game Logic Bricks and scripting. Everything will be recorded.
@@ -305,8 +305,8 @@ Keyframe Clean-up
 
    Resulting recorded animation
 
-:guilabel:`Record Animation` keys redundant data (data that was did not change relative to the last frame).
-Pressing :kbd:`o` while in the :guilabel:`DopeSheet` will remove all superfluous keyframes.
+*Record Animation* keys redundant data (data that was did not change relative to the last frame).
+Pressing :kbd:`O` while in the *DopeSheet* will remove all superfluous keyframes.
 Unwanted channels can also be removed.
 
 

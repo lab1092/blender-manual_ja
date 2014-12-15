@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review}} .
 
 
+*******************
 Blender Screenshots
 *******************
 
@@ -9,7 +10,7 @@ Blender Screenshots
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`ctrl-F3`
+   | Hotkey:   :kbd:`Ctrl-F3`
 
 
 .. figure:: /images/Manual-Vitals-Screenshot-Small-Save-Full-Screen.jpg
@@ -17,11 +18,11 @@ Blender Screenshots
    Save Screenshot Option
 
 
-:kbd:`ctrl-F3` will take a screenshot of your Blender window and then open the Blender :guilabel:`File Browser` window,
+:kbd:`Ctrl-F3` will take a screenshot of your Blender window and then open the Blender *File Browser* window,
 allowing you to specify the name and location of the screenshot.
 In the example image at the right, the PNG format will be the output of the screenshot taken
 (settings are the same as the ones available to save render results).
-When the Blender :guilabel:`File Browser` window opens for you, at the left, there is a tab
+When the Blender *File Browser* window opens for you, at the left, there is a tab
 called *Save Screenshot* where you can find format settings and a checkbox with the option
 *Full Screen*.
 
@@ -39,7 +40,7 @@ called *Save Screenshot* where you can find format settings and a checkbox with 
    Sometimes, the operating System you are using is designed to use some
    Shortcuts that the default Blender installation also uses for its functions.
    In this case, you can use the search functionality present in Blender.
-   (See Fig: Search Functionality). Hit :kbd:`space` and type :guilabel:`Screenshot`, in the Search Popup.
+   (See Fig: Search Functionality). Hit :kbd:`Space` and type *Screenshot*, in the Search Popup.
 
 
 Operating System Screenshots
@@ -58,13 +59,13 @@ Press :kbd:`Alt-Print Screen` to capture the active program window to the clipbo
 Mac OSX Screenshots
 -------------------
 
-Press :kbd:`cmd-shift-3` to capture the screen to a file on the desktop.
+Press :kbd:`Cmd-Shift-3` to capture the screen to a file on the desktop.
 
-Press :kbd:`ctrl-cmd-shift-3` to capture the screen to the clipboard.
+Press :kbd:`Ctrl-Cmd-Shift-3` to capture the screen to the clipboard.
 
-Press :kbd:`cmd-shift-4` to capture an area of the screen to a file on the desktop.
+Press :kbd:`Cmd-Shift-4` to capture an area of the screen to a file on the desktop.
 
-Press :kbd:`ctrl-cmd-shift-4` to capture an area of the screen to the clipboard.
+Press :kbd:`Ctrl-Cmd-Shift-4` to capture an area of the screen to the clipboard.
 
 
 GNU/Linux Screenshots

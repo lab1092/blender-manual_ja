@@ -1,4 +1,5 @@
 
+************************
 Moving Objects on a Path
 ************************
 
@@ -13,23 +14,30 @@ movement, and make your object(s) follow it.
 Blender features you two different constraints to make an object follow a path,
 which have different ways to determine/animate the position of their owner along their path.
 
-In Blender, any :doc:`curve object </modeling/curves>` can become a path. A curve becomes a path when its :guilabel:`Path Animation` button is enabled in the :guilabel:`Curve` data panel, but you don't even have to bother about this: once a curve is selected as target for a "path" constraint, it automatically is enabled.
+In Blender, any :doc:`curve object </modeling/curves>` can become a path.
+A curve becomes a path when its *Path Animation* button is enabled in the *Curve* data panel,
+but you don't even have to bother about this: once a curve is selected as target for a "path" constraint,
+it automatically is enabled.
 
 You can also directly add a "path" from the :menuselection:`Add --> Curve --> Path` menu entry (in a 3D view).
 This will insert in your scene a *three-dimensional* NURBS curve.
 This is an important point: by default, Blender's curve are 2 dimensional, i.e.
 are laid on a plane, which is often not the desired behavior of a path.
-To turn a standard curve three-dimensional, enable its :guilabel:`3D` button,
-in the same :guilabel:`Curve and Surface` editing panel.
+To turn a standard curve three-dimensional, enable its *3D* button,
+in the same *Curve and Surface* editing panel.
 
 One last curve property that is important for a path is its *direction*, which is,
 for three-dimensional ones, materialized by its small arrows.
 You can switch it with the :menuselection:`Curve --> Segments --> Switch Direction` menu entry
-(or :kbd:`W-pad2`).
+(or :kbd:`W`, :kbd:`2`).
 
 For more on editing path/curves, see the :doc:`modeling chapter </modeling/curves>`.
 
-{{Note|Shapes on Curves|If you would rather like to have your object's *shape* follow a path (like e.g. a sheet of paper inside a printer), you should use the :doc:`Curve Modifier </modifiers/deform/curve>`
+.. note::
+   Shapes on Curves
+
+   If you would rather like to have your object's *shape* follow a path (like e.g. a sheet of paper inside a printer),
+   you should use the :doc:`Curve Modifier </modifiers/deform/curve>`
 
 
 Parenting Method
@@ -40,10 +48,10 @@ They used a different method (deprecated, but still available), based on parenti
 
 To use this method, select the object that will follow the path,
 then :kbd:`Shift` select the curve,
-and use :kbd:`ctrl-P` to bring up the parenting menu. Choose :guilabel:`Follow Path`.
+and use :kbd:`Ctrl-P` to bring up the parenting menu. Choose *Follow Path*.
 The object will now be animated along the path.
 
-The settings for the path animation are in the :guilabel:`Path Animation` panel of the Curve
+The settings for the path animation are in the *Path Animation* panel of the Curve
 properties panel.
 
 Frames
@@ -55,21 +63,21 @@ Follow
 Radius
    Causes the curve path child to be scaled by the set curve radius. See :doc:`Curve Extruding </modeling/curves/editing/advanced>`
 Offset Children
-   Causes the animation to be offset by the curve path child's time offset value, which can be found in its :guilabel:`Animation Hacks` section of the :guilabel:`Object Panel`.
+   Causes the animation to be offset by the curve path child's time offset value, which can be found in its *Animation Hacks* section of the *Object Panel*.
 
 
 The Follow Path Constraint
 ==========================
 
-The :guilabel:`Follow Path` constraint implements the most "classical" technique. By default,
+The *Follow Path* constraint implements the most "classical" technique. By default,
 the owner object will walk the whole path only once, starting at frame one,
-and over ``100`` frames. You can set a different starting frame in the :guilabel:`Offset`
+and over ``100`` frames. You can set a different starting frame in the *Offset*
 field of the constraint panel, and change the length (in frames)
-of the path using its :guilabel:`Frames` property (:guilabel:`Curve and Surface` panel).
+of the path using its *Frames* property (*Curve and Surface* panel).
 
 But you can have a much more precise control over your object's movement along its path by
-keyframing or defining a :guilabel:`Speed` animation curve for the path's :guilabel:`Evaluation
-Time` attribute. This curve maps the current frame to a position along the path,
+keyframing or defining a *Speed* animation curve for the path's *Evaluation Time* attribute.
+This curve maps the current frame to a position along the path,
 from ``0.0`` (start point) to ``1.0`` (end point).
 
 For more details and examples, see the :doc:`Follow Path constraint page </constraints/relationship/follow_path>`.
@@ -78,7 +86,7 @@ For more details and examples, see the :doc:`Follow Path constraint page </const
 The Clamp To Constraint
 =======================
 
-Another method of keeping objects on a path is to use the :guilabel:`Clamp To` constraint,
+Another method of keeping objects on a path is to use the *Clamp To* constraint,
 which implements a more advanced technique.
 To determine where along the path should lay its owner,
 its uses the *location of this owner* along a given axis.

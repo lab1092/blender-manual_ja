@@ -1,17 +1,18 @@
 
+********
 Children
 ********
 
-:guilabel:`Children` are :guilabel:`Hair` and :guilabel:`Keyed` particles assigned subparticles. They make it possible to work primarily with a relatively low amount of Parent particles, for whom the physics are calculated. The children are then aligned to their parents. Without recalculating the physics the number and visualization of the children can be changed.
+*Children* are *Hair* and *Keyed* particles assigned subparticles. They make it possible to work primarily with a relatively low amount of Parent particles, for whom the physics are calculated. The children are then aligned to their parents. Without recalculating the physics the number and visualization of the children can be changed.
 
-- Children can be emitted from particles or from faces (with some different options). Emission from :guilabel:`Faces` has some advantages, especially the distribution is more even on each face (which makes it better suitable for fur and the like). However, children from particles follow their parents better, e.g. if you have a softbody animation and don't want the hair to penetrate the emitting mesh. But see also our manual page about :doc:`Hair </physics/particles/hair>`.
-- If you turn on children the parents are no longer rendered (which makes sense because the shape of the children may be quite different from that of their parents). If you want to see the parents additionally turn on the :guilabel:`Parents` button in the :guilabel:`Visualization` panel.
+- Children can be emitted from particles or from faces (with some different options). Emission from *Faces* has some advantages, especially the distribution is more even on each face (which makes it better suitable for fur and the like). However, children from particles follow their parents better, e.g. if you have a softbody animation and don't want the hair to penetrate the emitting mesh. But see also our manual page about :doc:`Hair </physics/particles/hair>`.
+- If you turn on children the parents are no longer rendered (which makes sense because the shape of the children may be quite different from that of their parents). If you want to see the parents additionally turn on the *Parents* button in the *Visualization* panel.
 - Children carry the same material as their parents and are colored according to the exact place from where they are emitted (so all children may have different color or other attributes).
 
 The possible options depend from the type of particle system,
 and if you work with *Children from faces* or *Children from particles*.
 We don't show every possible combination,
-only the settings for a :guilabel:`Hair` particle system.
+only the settings for a *Hair* particle system.
 
 
 Settings
@@ -29,7 +30,7 @@ Render
 
 For Simple Mode
    Size
-      Only for :guilabel:`Emitter`. A multiplier for children size.
+      Only for *Emitter*. A multiplier for children size.
    Random
       Random variation to the size of child particles.
 
@@ -53,7 +54,7 @@ Effects
 Clump
    Clumping. The children may meet at their tip (1.0) or start together at their root (-1.0).
 Shape
-   Form of :guilabel:`Clump`. Either inverse parabolic (0.99) or exponentially (-0.99).
+   Form of *Clump*. Either inverse parabolic (0.99) or exponentially (-0.99).
 Length
    Length of child paths
 Threshold
@@ -86,8 +87,8 @@ Kink
    Image 3: Child particles with Kink. From left to right: Curl / Radial / Wave / Braid / Roll.
 
 
-With :guilabel:`Kink` you can rotate the children around the parent. See above picture
-(*Image 3*) for the different types of :guilabel:`Kink`.
+With *Kink* you can rotate the children around the parent. See above picture
+(*Image 3*) for the different types of *Kink*.
 
 Curl
    Children grow in a spiral around the parent hairs.

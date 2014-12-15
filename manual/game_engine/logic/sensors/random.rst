@@ -1,4 +1,5 @@
 
+*************
 Random sensor
 *************
 
@@ -9,14 +10,14 @@ Random sensor
    Random sensor
 
 
-The :guilabel:`Random` sensor generates random pulses.
+The *Random* sensor generates random pulses.
 
 
 See :doc:`Sensor Common Options </game_engine/logic/sensors/common_options>` for common options.
 
 Special Options:
 
-:guilabel:`Seed`
+*Seed*
 This field to enter the initial seed for the random number algorithm. (Range 0-1000).
 
 

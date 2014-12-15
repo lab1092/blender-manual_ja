@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|text=add more examples of possible effects (also some vid) and move the how-to-activate explanation in a new page}} .
 
 
+*************
 Dynamic Paint
 *************
 

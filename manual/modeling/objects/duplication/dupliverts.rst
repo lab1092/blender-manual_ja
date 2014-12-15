@@ -1,17 +1,18 @@
 
+**********
 DupliVerts
 **********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode
-   | Panel:    :guilabel:`Object` → :guilabel:`Duplication`
+   | Mode:     *Object* mode
+   | Panel:    *Object* → *Duplication*
 
 
-:guilabel:`Duplication Vertices` or :guilabel:`DupliVerts` is the duplication of a base object at the location of the vertices of a mesh. In other words, when using :guilabel:`DupliVerts` on a mesh, an instance of the base object is placed on every vertex of the mesh.
+*Duplication Vertices* or *DupliVerts* is the duplication of a base object at the location of the vertices of a mesh. In other words, when using *DupliVerts* on a mesh, an instance of the base object is placed on every vertex of the mesh.
 
-There are actually two approaches to modeling using :guilabel:`DupliVerts`.
+There are actually two approaches to modeling using *DupliVerts*.
 They can be used as an arranging tool,
 allowing us to model geometrical arrangements of objects (e.g. the columns of a Greek temple,
 the trees in a garden, an army of robot soldiers, the desks in a classroom).
@@ -49,15 +50,15 @@ our parent mesh.
    Dupliverted monkeys
 
 
-First, in :guilabel:`Object mode`,
+First, in *Object mode*,
 select the base object and :kbd:`Shift-RMB` to add the circle to the selection
 (order is very important here),
 and  :kbd:`Ctrl-P` to parent the base object to the circle.  Now,
 the circle is the parent of the monkey; if you move the circle, the monkey will follow it.
 
 
-With only the circle selected, enable :guilabel:`Duplication vertices` in the
-:guilabel:`Object` panel→ :guilabel:`Duplication` → :guilabel:`Verts`.
+With only the circle selected, enable *Duplication vertices* in the
+*Object* panel→ *Duplication* → *Verts*.
 A monkey head should be placed at every vertex of the circle.
 
 The original monkey head at the center and the parent mesh are still shown in the 3D view but
@@ -87,13 +88,13 @@ Orientation
    Orientation enabled, orientation +Y
 
 
-The orientation of the base objects can be controlled by enabling :guilabel:`Rotation` in the
-:guilabel:`Duplication` panel.
+The orientation of the base objects can be controlled by enabling *Rotation* in the
+*Duplication* panel.
 This will rotate all base objects according to the vertex normals of the parent mesh.
 
 
 To change the orientation of the duplicated objects, select the base object and in the
-:guilabel:`Object` → :guilabel:`Relations extras` panel change the :guilabel:`Tracking Axes`.
+*Object* → *Relations extras* panel change the *Tracking Axes*.
 
 Output of various orientations:
 
@@ -115,8 +116,8 @@ Output of various orientations:
 
 .. note::
 
-   The axes of an object can be made visible in the :guilabel:`Object` → :guilabel:`Display` panel.
-   To display the vertex normals of the parent mesh, tab into edit mode and enable this function in :guilabel:`Properties` (:kbd:`N`)→ :guilabel:`Display` panel where you can also resize the displayed normals as necessary.
+   The axes of an object can be made visible in the *Object* → *Display* panel.
+   To display the vertex normals of the parent mesh, tab into edit mode and enable this function in *Properties* (:kbd:`N`)→ *Display* panel where you can also resize the displayed normals as necessary.
 
 
 DupliVerts as a Modeling Tool
@@ -125,7 +126,7 @@ DupliVerts as a Modeling Tool
 Very interesting models can be made using DupliVerts and a standard primitive.
 In this example, a simple tentacle was made by extruding a cube a couple of times.
 The tentacle object was then parented to an icosphere.
-With dupli :guilabel:`Rotation` enabled for the parent mesh (the icosphere),
+With dupli *Rotation* enabled for the parent mesh (the icosphere),
 the orientation of the base object (the tentacle)
 was adapted to the vertex normals of the parent mesh
 
@@ -149,10 +150,10 @@ was adapted to the vertex normals of the parent mesh
 
 As in the previous example, the shape and proportions of the arrangement can now be tweaked.
 
-To turn all duplicates into real objects, simply select the icosphere and :guilabel:`Object` →
-:guilabel:`Apply` → :guilabel:`Make Duplicates Real` (:kbd:`Ctrl-Shift-A`).
+To turn all duplicates into real objects, simply select the icosphere and *Object* →
+*Apply* → *Make Duplicates Real* (:kbd:`Ctrl-Shift-A`).
 To make the icosphere and the tentacle a single object,
-make sure they are all selected and go to :guilabel:`Object` → :guilabel:`Join`
+make sure they are all selected and go to *Object* → *Join*
 (:kbd:`Ctrl-J`).
 
 

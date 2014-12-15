@@ -1,12 +1,13 @@
 
+****************
 Fluid Simulation
 ****************
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Object` mode / :guilabel:`Edit mode` (Mesh)
-   | Panel:    :guilabel:`Physics` sub-context → :guilabel:`Fluid`
+   | Mode:     *Object* mode / *Edit mode* (Mesh)
+   | Panel:    *Physics* sub-context → *Fluid*
 
 
 Description
@@ -19,7 +20,7 @@ box-shaped region to simulate the fluid in (the so called "simulation domain").
 The global simulation parameters (such as viscosity and gravity)
 can be set for this domain object.
 
-Using the :guilabel:`BAKE` button,
+Using the *BAKE* button,
 the geometry and settings are exported to the simulator and the fluid simulation is performed,
 generating a surface mesh together with a preview for each animation frame,
 and saving them to hard disk. Then the appropriate fluid surface for the current frame is

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X|text=Need example & img}} .
 
 
+*********
 Spline IK
 *********
 
@@ -71,9 +72,13 @@ axes of each bone in the chain.
 The available modes are:
 
 
-- :guilabel:`None` - this option keeps the X and Z scaling factors as 1.0
-- :guilabel:`Volume Preserve` - the X and Z scaling factors are taken as the inverse of the Y scaling factor (length of the bone), maintaining the 'volume' of the bone
-- :guilabel:`Bone Original` - this options just uses the X and Z scaling factors the bone would have after being evaluated in the standard way
+None
+   this option keeps the X and Z scaling factors as ``1.0``
+Volume Preserve
+   the X and Z scaling factors are taken as the inverse of the Y scaling factor (length of the bone),
+   maintaining the 'volume' of the bone
+Bone Original
+   this options just uses the X and Z scaling factors the bone would have after being evaluated in the standard way.
 
 In addition to these modes, there is an option, 'Use Curve Radius'.
 When this option is enabled, the average radius of the radii of the points on the curve where

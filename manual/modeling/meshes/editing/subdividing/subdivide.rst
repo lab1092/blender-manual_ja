@@ -2,14 +2,15 @@
 ..    TODO/Review: {{review|}} .
 
 
+*********
 Subdivide
 *********
 
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     :guilabel:`Edit` mode
-   | Panel:    :guilabel:`Mesh Tools` (:guilabel:`Editing` context)
+   | Mode:     *Edit* mode
+   | Panel:    *Mesh Tools* (*Editing* context)
    | Menu:     :menuselection:`Mesh --> Edges --> Subdivide`, :menuselection:`Specials --> Subdivide/Subdivide Smooth`
    | Hotkey:   :menuselection:`[W] --> [pad1]/[pad2]`
 
@@ -22,7 +23,7 @@ following a few rules, depending on the settings:
 - When only one edge of a face is selected (Tri mode), triangles are subdivided into two triangles, and quads, into three triangles.
 - When two edges of a face are selected:
   - If the face is a triangle, a new edge is created between the two new vertices, subdividing the triangle in a triangle and a quad.
-  - If the face is a quad, and the edges are neighbors, we have **three** possible behaviors, depending on the setting of :guilabel:`Corner Cut Type` (the drop-down menu next to the :guilabel:`Subdivide` button, in :guilabel:`Mesh Tools` panel) See below for details.
+  - If the face is a quad, and the edges are neighbors, we have **three** possible behaviors, depending on the setting of *Corner Cut Type* (the drop-down menu next to the *Subdivide* button, in *Mesh Tools* panel) See below for details.
   - If the face is a quad, and the edges are opposite, the quad is just subdivided in two quads by the edge linking the two new vertices.
 - When three edges of a face are selected:
   - If the face is a triangle, this means the whole face is selected - it is then sub-divided in four smaller triangles.
@@ -33,7 +34,7 @@ following a few rules, depending on the settings:
 Options
 =======
 
-These options are available in the :guilabel:`Tool Panel` after running the tool;
+These options are available in the *Tool Panel* after running the tool;
 
 Number of Cuts
    Specifies the number of cuts per edge to make. By default this is 1, cutting edges in half. A value of 2 will cut it into thirds, and so on.
@@ -116,8 +117,8 @@ Random Seed
 Examples
 ========
 
-Below are several examples illustrating the various possibilities of the :guilabel:`Subdivide`
-and :guilabel:`Subdivide Multi` tools. Note the selection after subdivision.
+Below are several examples illustrating the various possibilities of the *Subdivide*
+and *Subdivide Multi* tools. Note the selection after subdivision.
 
 
 .. figure:: /images/Doc26-subdivide-before.jpg

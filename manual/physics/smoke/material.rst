@@ -1,5 +1,6 @@
 ..    TODO/Review: {{review}} .
 
+**************
 Smoke Material
 **************
 
@@ -17,7 +18,7 @@ Simulating the smoke is easy, however rendering it is not.
 
 
 Rendering at this point will result in just the big cube (Image, :kbd:`F12`)
-or in a crash (Animation, :kbd:`ctrl-F12`).
+or in a crash (Animation, :kbd:`Ctrl-F12`).
 
 The material must be a volumetric material with a Density of 0, and a high Density Scale.
 

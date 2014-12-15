@@ -1,4 +1,5 @@
 
+******
 Camera
 ******
 
@@ -15,7 +16,7 @@ which have special relevance to game technology.
 When you start the Game Engine, the initial camera view is taken from the latest 3D View.
 This may be either a selected camera object  or the default camera (see below).
 Thus to start the game with a particular camera,
-you must select the camera and press :kbd:`pad0` before starting the Game Engine.
+you must select the camera and press :kbd:`Numpad0` before starting the Game Engine.
 
 
 .. tip:: To avoid camera distortion
@@ -43,7 +44,7 @@ Parent Camera to Object
 =======================
 
 The camera will follow the object. First select the camera and then select the object.
-Next :kbd:`ctrl-P` → :guilabel:`Make Parent`.
+Next :kbd:`Ctrl-P` → *Make Parent*.
 
 Note that if your object has any rotations then the camera will also have those rotations.
 To avoid this use "Parent to Vertex" (see below).
@@ -53,12 +54,12 @@ Parent to Vertex
 ================
 
 The easiest way to accomplish this is to select your object and :kbd:`Tab` to
-:guilabel:`Edit mode`.
-Now select the vertex and :kbd:`Tab` back to :guilabel:`Object` mode.
+*Edit mode*.
+Now select the vertex and :kbd:`Tab` back to *Object* mode.
 
 Next, without any objects selected, select the camera and, holding the :kbd:`Shift` key,
-select the object. :kbd:`Tab` into :guilabel:`Edit mode`,
-and :kbd:`ctrl-P` and choose :guilabel:`Make vertex parent`.
+select the object. :kbd:`Tab` into *Edit mode*,
+and :kbd:`Ctrl-P` and choose *Make vertex parent*.
 
 Now the camera will follow the object and it will maintain its rotation,
 while the object rotates.
@@ -70,9 +71,9 @@ Object as a Camera
 Any object may also become a camera with whatever properties are set for the object.
 
 To make an object the camera,
-in :guilabel:`Object` mode select the object and press :kbd:`ctrl-pad0` on the numpad.
+in *Object* mode select the object and press :kbd:`Ctrl-Numpad0` on the numpad.
 
-To reverse it, just select the camera and :kbd:`ctrl-pad0` again.
+To reverse it, just select the camera and :kbd:`Ctrl-Numpad0` again.
 
 
 Camera Lens Shift

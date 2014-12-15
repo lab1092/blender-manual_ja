@@ -1,6 +1,7 @@
 
-Materials
-*********
+############
+  Materials
+############
 
 .. toctree::
    :maxdepth: 2

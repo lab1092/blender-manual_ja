@@ -1,4 +1,5 @@
 
+************
 Pose Library
 ************
 
@@ -18,20 +19,20 @@ Pose Library Panel
    Properties > Armature > Pose Library.
 
 
-1. Browse *Action / Pose Library* to be linked.
+#. Browse *Action / Pose Library* to be linked.
 
-2. Name of the *Pose Library*.
+#. Name of the *Pose Library*.
 
-3. Set Fake User.
+#. Set Fake User.
    This will make blender save the *Pose Library* for if it has no users.
 
-4. Add new *Pose Library* to the active object.
+#. Add new *Pose Library* to the active object.
 
-5. Remove the *Pose Library* from the active object.
+#. Remove the *Pose Library* from the active object.
 
-6. A list of *Poses* for the active *Pose Library*.
+#. A list of *Poses* for the active *Pose Library*.
 
-7. Add Pose.
+#. Add Pose.
 
    Add New.
       Add a new *Pose* to the active *Pose Library* with the currect pose of the armature.
@@ -44,11 +45,11 @@ Pose Library Panel
    Replace Existing.
       Replace an existing *Pose* in the active *Pose Library* with the currect pose of the armature.
 
-8. Remove the active *Pose* from the *Pose Library*.
+#. Remove the active *Pose* from the *Pose Library*.
 
-9. Apply the active *Pose* to the selected *Pose Bones*.
+#. Apply the active *Pose* to the selected *Pose Bones*.
 
-10. Sanitize Action. Make *Action* suitable for use as a *Pose Library*.
+#. Sanitize Action. Make *Action* suitable for use as a *Pose Library*.
    This is used to convert an *Action* to a *Pose Library*.
    A *Pose* is added to the *Pose Library* for each frame with keyframes.
 

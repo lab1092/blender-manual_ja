@@ -1,4 +1,5 @@
 
+************
 Transparency
 ************
 
@@ -95,7 +96,7 @@ If the object is transparent, then the ray continues its path through it to the 
 and so on, until a non-transparent object is finally encountered which gives the whole chain
 of rays its color. Eventually,
 the first transparent object inherits the colors of its background,
-proportional to its :guilabel:`Alpha` value
+proportional to its *Alpha* value
 (and the Alpha value of each transparent Material hit in between).
 
 But while the ray travels through the transparent object,
@@ -111,7 +112,7 @@ this is all because of the Index of Refraction of glass.
 
    - enable ray tracing in your Render settings.  This is done in the Render context  → Shading Panel. Ray tracing is enabled by default.
    - set your Alpha value to something other than 1.0.
-   - in order for the background material to receive light passing through your transparent object, :guilabel:`Receive Transparent` must be turned on for that material in the Material → Shadow panel.
+   - in order for the background material to receive light passing through your transparent object, *Receive Transparent* must be turned on for that material in the Material → Shadow panel.
 
 
 Options
@@ -138,10 +139,10 @@ Limit
    This is used to control the threshold after which the filter color starts to come into play.
 Depth
    Sets the maximum number of transparent surfaces a single ray can travel through. There is no typical value.
-   Transparent objects outside the :guilabel:`Depth` range will be rendered pitch black if viewed through the
-   transparent object that the :guilabel:`Depth` is set for.  In other words,
+   Transparent objects outside the *Depth* range will be rendered pitch black if viewed through the
+   transparent object that the *Depth* is set for.  In other words,
    if you notice black areas on the surface of a transparent object,
-   the solution is probably to increase its :guilabel:`Depth` value
+   the solution is probably to increase its *Depth* value
    (this is a common issue with ray tracing transparent objects).
    You may also need to turn on transparent shadows on the background object.
 
@@ -192,8 +193,8 @@ Note the specular highlight in the F4 glass tile
 (which is facing midway between the light and the camera); the Fresnel effect can be seen in
 row C and column 6 where the faces are turned away from the camera.
 
-The amount of Fresnel effect can be controlled by either increasing the :guilabel:`Blend`
-value or decreasing the :guilabel:`Alpha` value.
+The amount of Fresnel effect can be controlled by either increasing the *Blend*
+value or decreasing the *Alpha* value.
 
 
 Depth
@@ -206,7 +207,7 @@ Depth
    A simple scene with three glasses on a surface, and three lamps.  Depth was set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min, and 11 min respectively. (Download `.blend <http://wiki.blender.org/index.php/:File:Manual25-Material-3GlassesExample.blend>`__.)
 
 
-Increasing :guilabel:`Depth` also considerably increases render time.
+Increasing *Depth* also considerably increases render time.
 Each time a light ray passes through a surface,
 the ray-tracing algorithm is called recursively.  In the example above,
 each side of each glass has an exterior and an interior surface.
@@ -217,7 +218,7 @@ or mirrored off the surface in various directions.
 This results in multiple rays needing to be calculated for each point
 (often referred to as a **tree of rays** [http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.
 html]). In each of the rendered images above there are 640×400=256 000 pixels.
-By increasing :guilabel:`Depth`, at least one tree of rays is added to each pixel.
+By increasing *Depth*, at least one tree of rays is added to each pixel.
 
 Be kind to your computer. Carefully placing objects in a scene to avoid overlapping
 transparent objects is often an interesting alternative.
@@ -255,14 +256,14 @@ the more transparent an object is, the lighter its shadow will be.
 
 In Blender, transparent shadows are set on the materials that receive the shadows from the
 transparent object.
-This is enabled and disabled with the :guilabel:`Receive Transparent` button,
-in the :guilabel:`Material` context → :guilabel:`Shadow` panel. The shadow's brightness is
-dependent on the :guilabel:`Alpha` value of the shadow casting material.
+This is enabled and disabled with the *Receive Transparent* button,
+in the *Material* context → *Shadow* panel. The shadow's brightness is
+dependent on the *Alpha* value of the shadow casting material.
 
-Alternatives to transparent ray-traced shadows can be found in the :guilabel:`World` context,
-namely the :guilabel:`Ambient Occlusion`, :guilabel:`Environment Lighting`,
-and :guilabel:`Gather` panels.  Alternatively, a texture can be used to control the
-:guilabel:`Intensity` value of the shadow-receiving material.
+Alternatives to transparent ray-traced shadows can be found in the *World* context,
+namely the *Ambient Occlusion*, *Environment Lighting*,
+and *Gather* panels.  Alternatively, a texture can be used to control the
+*Intensity* value of the shadow-receiving material.
 
 
 IOR values for Common Materials

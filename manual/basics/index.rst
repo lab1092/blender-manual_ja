@@ -1,7 +1,7 @@
-.. _vitals-index:
+.. _basics-index:
 
 #########
-  Vitals
+  Basics
 #########
 
 .. toctree::

@@ -2,6 +2,7 @@
 ..    TODO/Review: {{review|partial=X|im=examples}} .
 
 
+*********************
 Point Density Texture
 *********************
 

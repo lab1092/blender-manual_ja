@@ -1,6 +1,7 @@
 
-Controllers
-***********
+************
+Introduction
+************
 
 The controllers are the bricks that collect data sent by the sensors,
 and also specify the state for which they operate.

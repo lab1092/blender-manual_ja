@@ -1,6 +1,7 @@
 ..    TODO/Review: {{review|im=need the settings panel image}} .
 
 
+*****************
 Smoke Flow object
 *****************
 
@@ -9,7 +10,7 @@ Create a Flow Object
 
 Once you have defined the volume that will contain smoke,
 we'll add an object from which the smoke will be emitted. Add another cube and make sure it's
-inside the domain cube :kbd:`shift-A`:menuselection:`popup --> Mesh --> Cube`;
+inside the domain cube :kbd:`Shift-A`:menuselection:`popup --> Mesh --> Cube`;
 3D view must be selected).
 
 While in edit mode go to physics and add smoke to the small cube, too. This time chose Flow.
@@ -34,7 +35,7 @@ Now go back to the physics tab and chose the particle system in the smoke sectio
 should be a list with just one system to chose from that is called 'ParticleSystem' since we
 did not change the name.
 Now you can scrub through the timeline to see  smoke coming from the cube.
-Another way to preview the smoke is starting the animation by :kbd:`alt-A`
+Another way to preview the smoke is starting the animation by :kbd:`Alt-A`
 (stop it the same way).
 
 

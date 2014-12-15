@@ -1,11 +1,12 @@
 
+**********
 Shape Keys
 **********
 
 Introduction
 ============
 
-:guilabel:`Shape Keys` are used on Objects like :guilabel:`Mesh`, :guilabel:`Curve`, :guilabel:`Surface`, :guilabel:`Lattice`.
+*Shape Keys* are used on Objects like *Mesh*, *Curve*, *Surface*, *Lattice*.
 They are used to deform the object vertices into a new shape.
 
 
@@ -35,7 +36,7 @@ Shape Keys Panel
    :class: refbox
 
    | Mode:     All modes
-   | Panel:    :guilabel:`Properties`, :guilabel:`Object Data`, :guilabel:`Shape Keys`
+   | Panel:    *Properties*, *Object Data*, *Shape Keys*
 
 
 .. figure:: /images/Doc_Shape_Keys3.jpg
@@ -79,12 +80,12 @@ Specials
       Select two objects, the Shape is copied to the active object.
 
    Mirror Shape Key
-      If your mesh is nice and symmetrical, in :guilabel:`Object` Mode, you can mirror the shape keys on the X axis.
+      If your mesh is nice and symmetrical, in *Object* Mode, you can mirror the shape keys on the X axis.
       This wont work unless the mesh vertices are perfectly symmetrical.
-      Use the :menuselection:`Mesh --> Symmetrize` function in :guilabel:`Edit` Mode.
+      Use the :menuselection:`Mesh --> Symmetrize` function in *Edit* Mode.
 
    Mirror Shape Key (Topology)
-      This is the same as :guilabel:`Mirror Shape Key` though it detects the mirrored vertices based on the topology of the mesh.
+      This is the same as *Mirror Shape Key* though it detects the mirrored vertices based on the topology of the mesh.
       The mesh vertices dont have to be perfectly symmetrical for this one to work.
 
    New Shape From Mix
@@ -206,7 +207,7 @@ This example shows you how to make a cube mesh transform in to a sphere.
 - In *Object Mode* add two shape keys via the *Shape Key Panel*.
 -    *Basis* is the rest shape. *Key 1* will be the new shape.
 - With *Key 1* selected, switch to *Edit Mode*.
-- Press :kbd:`Shift-Alt-S` *To Sphere*, move the mouse right, then :kbd:`lmb`.
+- Press :kbd:`Shift-Alt-S` *To Sphere*, move the mouse right, then :kbd:`LMB`.
 - Switch to *Object Mode*.
 - Set the *Value* for *Key 1* to see the transformation between the shape keys.
 
@@ -232,7 +233,7 @@ Workflow For Absolute Shape Keys
 
 
 - Select the top face.
-- Extrude up :kbd:`e` :kbd:`1` :kbd:`LMB`.
+- Extrude up :kbd:`E` :kbd:`1` :kbd:`LMB`.
 
 
 .. figure:: /images/Doc_Absolute_SK_Workflow_3.jpg
@@ -241,7 +242,7 @@ Workflow For Absolute Shape Keys
 
 
 - Select a side face on the top half. (the one at x=1 if possible)
-- Extrude out :kbd:`e` :kbd:`1` :kbd:`LMB`.
+- Extrude out :kbd:`E` :kbd:`1` :kbd:`LMB`.
 - Switch back to Object Mode.
 
 
@@ -262,7 +263,7 @@ Workflow For Absolute Shape Keys
 
 
 - Select shape key Key 2 to edit the third shape key.
-- Select the extruded side face and :kbd:`g` :kbd:`z` :kbd:`1` :kbd:`LMB`
+- Select the extruded side face and :kbd:`G` :kbd:`Z` :kbd:`1` :kbd:`LMB`
 
 
 .. figure:: /images/Doc_Absolute_SK_Workflow_6.jpg
@@ -271,7 +272,7 @@ Workflow For Absolute Shape Keys
 
 
 - Select shape key Basis to edit the first shape key.
-- Select the extruded size face and :kbd:`s` :kbd:`0`:kbd:`.`:kbd:`5` :kbd:`LMB`, then :kbd:`g` :kbd:`x` :kbd:`-`:kbd:`1` :kbd:`LMB`.
+- Select the extruded size face and :kbd:`S` :kbd:`0`:kbd:`.`:kbd:`5` :kbd:`LMB`, then :kbd:`G` :kbd:`X` :kbd:`-`:kbd:`1` :kbd:`LMB`.
 
 
 - Switch to Object Mode.

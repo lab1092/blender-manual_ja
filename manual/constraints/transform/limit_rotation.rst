@@ -1,4 +1,5 @@
 
+*************************
 Limit Rotation Constraint
 *************************
 
@@ -12,7 +13,7 @@ through lower and upper bounds.
 It is interesting to note that even though the constraint limits the visual and rendered
 rotations of its owner, its owner's data block still allows (by default)
 the object or bone to have rotation values outside the minimum and maximum ranges.
-This can be seen in the :guilabel:`Transform Properties` panel (:kbd:`N`).
+This can be seen in the *Transform Properties* panel (:kbd:`N`).
 When an owner is rotated and attempted to be rotated outside the limit boundaries,
 it will be constrained to those boundaries visually and when rendered, but internally,
 its rotation values will still be changed beyond the limits. If the constraint is removed,
@@ -20,12 +21,12 @@ its ex-owner will seem to jump to its internally specified rotation.
 
 Similarly, if its owner has an internal rotation that is beyond the limit, rotating it back
 into the limit area will appear to do nothing until the internal rotation values are back
-within the limit threshold (unless you enabled the :guilabel:`For Transform` option,
+within the limit threshold (unless you enabled the *For Transform* option,
 see below).
 
 Setting equal the min and max values of an axis,
 locks the owner's rotation around that axis... Although this is possible,
-using the :guilabel:`Transformation Properties` axis locking feature is probably easier.
+using the *Transformation Properties* axis locking feature is probably easier.
 
 This transform does not constrain the bone if it is manipulated by the IK solver.
 For constraining the rotation of a bone for IK purposes,
@@ -44,8 +45,8 @@ Options
 
 Limit X, LimitY, LimitZ
    These buttons enable the rotation limit around respectively the X, Y and Z axes of the owner,
-   in the chosen :guilabel:`Space`.
-   The :guilabel:`Min` and :guilabel:`Max` numeric fields to their right control the value of their lower and upper
+   in the chosen *Space*.
+   The *Min* and *Max* numeric fields to their right control the value of their lower and upper
    boundaries, respectively.
 
    Note that:
@@ -54,7 +55,7 @@ Limit X, LimitY, LimitZ
    - Unlike the :doc:`Limit Location constraint </constraints/transform/limit_location>`, you cannot enable separately lower or upper limits...
 
 For Transform
-   We saw that by default, even though visually constrained, the owner can still have rotations out of bounds (as shown by the :guilabel:`Transform Properties` panel). Well, when you enable this button, this is no more possible - the owner transform properties are also limited by the constraint.
+   We saw that by default, even though visually constrained, the owner can still have rotations out of bounds (as shown by the *Transform Properties* panel). Well, when you enable this button, this is no more possible - the owner transform properties are also limited by the constraint.
    Note however that the constraint does not directly modifies the rotation values: you have to rotate one way or the other its owner, for this to take effect...
 
 Convert

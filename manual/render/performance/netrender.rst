@@ -1,12 +1,12 @@
 
+***********
 Description
-===========
+***********
 
 Network renderer from inside Blender
 
 
-Goals
------
+Goals:
 
 - Transparency
 - Flexibility
