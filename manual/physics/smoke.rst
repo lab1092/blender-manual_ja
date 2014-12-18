@@ -8,8 +8,9 @@ Smoke Simulation
 Development notes
 =================
 
-Blender's new smoke simulation is based on the paper '[http://www.cs.cornell.edu/~tedkim/wturb
-Wavelet Turbulence for Fluid Simulation]' and associated sample code.
+Blender's new smoke simulation is based on the paper
+`Wavelet Turbulence for Fluid Simulation <http://www.cs.cornell.edu/~tedkim/wturb>`__
+and associated sample code.
 
 It has been implemented in Blender by Daniel Genrich and Miika Hamalainen.
 
@@ -36,9 +37,12 @@ The smoke simulation is similar to the Fluid simulation:
 a Domain and Flow object is required to do a smoke simulation:
 
 
-- set as the simulation :doc:`Domain </physics/smoke/domain>` an object that defines the bounds of the simulation volume,
-- set as the :doc:`Flow object </physics/smoke/flow_object>` an object which determines where the smoke will be produced from,
-- set :doc:`Collision objects </physics/smoke/collisions>`, to make the smoke interact with objects in the scene.
+- set as the simulation :doc:`Domain </physics/smoke/domain>`
+  an object that defines the bounds of the simulation volume,
+- set as the :doc:`Flow object </physics/smoke/flow_object>`
+  an object which determines where the smoke will be produced from,
+- set :doc:`Collision objects </physics/smoke/collisions>`,
+  to make the smoke interact with objects in the scene.
 - assign a :doc:`Material </physics/smoke/material>` to the smoke
 - save the project
 - :doc:`bake </physics/smoke/baking>` the simulation

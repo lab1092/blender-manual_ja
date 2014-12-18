@@ -359,4 +359,4 @@ blend files and shows you the image textures packed in it.
 The public domain Blender Texture CD is also a great resource,
 and there are many other sources of public domain (and licensed) textures. All textures on the
 Elephants Dream CD are liberally licensed under
-[http://creativecommons.org/licenses/by/2.5/CC-BY 2.5].
+`CC-BY 2.5 <http://creativecommons.org/licenses/by/2.5/>`__.

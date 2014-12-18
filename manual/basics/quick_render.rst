@@ -16,10 +16,9 @@ and compositing.
   *Full render*, and other for *OpenGL render*. This page shows you basic
   information about rendering Images. For a deeper understanding about the
   *Full Render* Engine built inside Blender, called *Blender Internal*,
-  consult the section about :doc:`Rendering with Blender Internal
-  </render/introduction>`.
-- There is also a section in this wiki manual dedicated to the new :doc:`Cycles
-  </render/cycles/index>` Render Engine, built into Blender since Version 2.61.
+  consult the section about :doc:`Rendering with Blender Internal </render/introduction>`.
+- There is also a section in this wiki manual dedicated to the new
+  :doc:`Cycles </render/cycles/index>` Render Engine, built into Blender since Version 2.61.
 
 
 Rendering an image using ''Full Render'' - Blender Internal

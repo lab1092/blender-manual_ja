@@ -12,7 +12,10 @@ Description
    Axis locking
 
 
-:doc:`Transformations (translation/scale/rotation) </3d_interaction/transformations>` in *Object* and *Edit* mode, as well as extrusion in *Edit* mode) can be locked to particular axis relative to the current :doc:`transform orientation </3d_interaction/transform_control/transform_orientations>`. By locking a transformation to a particular axis you are restricting transformations to a single dimension.
+:doc:`Transformations (translation/scale/rotation) </3d_interaction/transformations>` in *Object* and *Edit* mode,
+as well as extrusion in *Edit* mode) can be locked to particular axis relative to the current
+:doc:`transform orientation </3d_interaction/transform_control/transform_orientations>`.
+By locking a transformation to a particular axis you are restricting transformations to a single dimension.
 
 
 Usage
@@ -56,7 +59,8 @@ Plane locking
    :class: refbox
 
    | Mode:     *Object* and *Edit* modes (translate, scale)
-   | Hotkey:   :kbd:`Shift-X`, :kbd:`Shift-Y`, :kbd:`Shift-Z` or :kbd:`Shift-MMB` after moving the mouse in the desired direction.
+   | Hotkey:   :kbd:`Shift-X`, :kbd:`Shift-Y`, :kbd:`Shift-Z` or :kbd:`Shift-MMB`
+   | after moving the mouse in the desired direction.
 
 
 .. figure:: /images/3D_interaction-Transform_Control-Axis_locking-plane-locking.jpg

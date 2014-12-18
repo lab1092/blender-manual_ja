@@ -35,10 +35,14 @@ Here are common steps for using the ruler.
 - Click on the middle to measure angles.
 - Press Enter to store the ruler for later use or Esc to cancel.
 
-**Note:**
+.. note::
 
-- Editing operations can be used while the ruler is running, however tools like the knife can't be used at the same time.
-- Unit settings and scale from the scene are used for displaying dimensions.
+   Editing operations can be used while the ruler is running,
+   however tools like the knife can't be used at the same time.
+
+.. note::
+
+   Unit settings and scale from the scene are used for displaying dimensions.
 
 
 Shortcuts

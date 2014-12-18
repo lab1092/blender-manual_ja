@@ -88,8 +88,8 @@ to enhance the resolution without actually computing it. This allows animators t
 resolution simulation quickly and later add details without changing the overall fluid motion.
 
 Various methods for this are available, including the default: Wavelet, which is an
-implementation of '[http://graphics.ethz.ch/research/physics/wavelet turb.php|Wavelet
-Turbulence for Fluid Simulation]'
+implementation of
+`Turbulence for Fluid Simulation <https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__.
 
 Resolution/Divisions
    Enhance the resolution of smoke by this factor using noise.

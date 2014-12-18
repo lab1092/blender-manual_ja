@@ -55,8 +55,8 @@ Getting Started
 By default, meshes are not created with UVs. First you must map the faces, then
 you can :doc:`edit them </textures/mapping/uv/layout_editing>`. The process of
 unwrapping your model is done within Edit Mode in the 3D View window. This
-process creates one or more UV Islands in the :doc:`UV/Image Editor window
-</textures/mapping/uv_image_editor>`.
+process creates one or more UV Islands in the
+:doc:`UV/Image Editor window </textures/mapping/uv_image_editor>`.
 
 To begin, choose the *UV Editing* :doc:`screen layout </interface/screens>`
 from the selection list at the top of your screen in the User Preferences

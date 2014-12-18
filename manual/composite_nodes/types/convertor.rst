@@ -125,11 +125,13 @@ The amount of *Alpha* (1.00 being totally opaque and 0.00 being totally transpar
 can be set for the whole picture using the input field. Additionally,
 the Alpha factor can be set by feeding its socket.
 
-*Note* that this is not, and is not intended to be,
-a general-purpose solution to the problem of compositing an image that doesn't contain Alpha information.
-You might wish to use "Chroma Keying" or "Difference Keying" (as discussed elsewhere) if you can.
-This node is most often used (with a suitable input being provided by means of the socket)
-in those troublesome cases when you *can't,* for some reason, use those techniques directly.
+.. note::
+
+   This is not, and is not intended to be,
+   a general-purpose solution to the problem of compositing an image that doesn't contain Alpha information.
+   You might wish to use "Chroma Keying" or "Difference Keying" (as discussed elsewhere) if you can.
+   This node is most often used (with a suitable input being provided by means of the socket)
+   in those troublesome cases when you *can't,* for some reason, use those techniques directly.
 
 
 Using SetAlpha to Fade to Black

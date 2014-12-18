@@ -99,8 +99,8 @@ that allows you to select where along the bone the target point will lay, from r
 bones' roots are called "heads", and bones' tips, "tails"...).
 
 
-The Constraint Space ({{Literal|Space}})
-----------------------------------------
+The Constraint Space (Space)
+----------------------------
 
 For many constraints you can choose in which space it is evaluated/applied.
 In the Space drop-down lists, the right side one is the space that the owner is evaluated in

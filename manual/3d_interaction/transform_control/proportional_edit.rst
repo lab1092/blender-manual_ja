@@ -13,7 +13,8 @@ it is very useful when you need to smoothly deform the surface of a dense mesh.
 
 .. note:: Sculpting
 
-   Blender also has :doc:`Sculpt Mode </modeling/meshes/editing/sculpt_mode>` that contains brushes and tools for proportionally editing a mesh without seeing the individual vertices.
+   Blender also has :doc:`Sculpt Mode </modeling/meshes/editing/sculpt_mode>`
+   that contains brushes and tools for proportionally editing a mesh without seeing the individual vertices.
 
 
 Object mode
@@ -26,6 +27,7 @@ Object mode
    | Menu:     Via the icon in the header indicated by the yellow square in the below image.
 
    .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-proportional-edit-header-icon.jpg
+
    | Hotkey:   :kbd:`O`
 
 
@@ -53,6 +55,7 @@ Edit mode
 
 
    .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-proportional-edit-header-icon-edit-mode.jpg
+
    | Hotkey:   :kbd:`O` / :kbd:`Alt-O` / :kbd:`Shift-O`
 
 
@@ -128,7 +131,9 @@ Connected (:kbd:`Alt-O`)
 
 
 Falloff
-   While you are editing, you can change the curve profile used by either using the :menuselection:`Mesh --> Proportional Falloff` submenu, using the toolbar icon (*Falloff menu*), or by pressing :kbd:`Shift-O` to toggle between the various options.
+   While you are editing, you can change the curve profile used by either using the
+   :menuselection:`Mesh --> Proportional Falloff` submenu, using the toolbar icon (*Falloff menu*),
+   or by pressing :kbd:`Shift-O` to toggle between the various options.
 
 
 +-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+

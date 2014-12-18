@@ -53,9 +53,8 @@ Let's make a simple example:
    Edit Curve.
 
 
-- While in Edit Mode, move the control points of the curve as shown in (*Edit Curve*), then exit Edit Mode (:kbd:`Tab`).
-
-
+- While in Edit Mode, move the control points of the curve as shown in (*Edit Curve*),
+  then exit Edit Mode (:kbd:`Tab`).
 - Select the Monkey (:kbd:`RMB`) in *Object mode*
 - Assign the curve to the modifier, as shown below. The Monkey should be positioned on the curve:
 

@@ -216,8 +216,7 @@ Light rays thus have to pass through four surfaces for each glass.
 But not only that, at every point on a surface, some of the light can be reflected,
 or mirrored off the surface in various directions.
 This results in multiple rays needing to be calculated for each point
-(often referred to as a **tree of rays** [http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.
-html]). In each of the rendered images above there are 640×400=256 000 pixels.
+(often referred to as a `tree of rays <http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.html>`__). In each of the rendered images above there are 640×400=256 000 pixels.
 By increasing *Depth*, at least one tree of rays is added to each pixel.
 
 Be kind to your computer. Carefully placing objects in a scene to avoid overlapping

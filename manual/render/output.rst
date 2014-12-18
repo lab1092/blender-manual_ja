@@ -38,8 +38,7 @@ Border
    instead of rendering a black region around it.
 
 Frame Range
-   Set the *Start* and *End* frames for :doc:`Rendering Animations
-   </render/workflows/animations>`.
+   Set the *Start* and *End* frames for :doc:`Rendering Animations </render/workflows/animations>`.
    *Step* controls the number of frames to advance by for each frame in the timeline.
 
 Frame Rate

@@ -8,7 +8,7 @@ In this guide Microsoft Windows 8.1 is used.
 Installing git on your computer
 ===============================
 
-- Download git installation package for Windows from here: http://git-scm.com/download/win
+- Download git installation package for Windows from `here <http://git-scm.com/download/win>`__
 
    *In this guide version 1.9.4 is used.*
 

@@ -165,11 +165,15 @@ Here are some common curves you can use to achieve desired effects:
 
 
 .. figure:: /images/26-Manual-Material-Color-Node-Curves-Uses.jpg
-
    :width: 900px
    :figwidth: 900px
 
-   A) Lighten B) Negative C) Decrease Contrast D) Posterize
+   See:
+
+   A) Lighten
+   B) Negative
+   C) Decrease Contrast
+   D) Posterize
 
 
 Invert

@@ -281,6 +281,7 @@ Export & Import
   Only euler rotations, which is the default option for Objects, can be exported for now.
   For armature bone animations euler and quaternion rotation types are supported.
 - Import and export of animations for the following parameters are supported:-
+
   - Light
   - Camera
   - Material Effects
@@ -288,10 +289,11 @@ Export & Import
 - Animations of Armatures with skin deforming bones.
 - Animations of Armatures in Object mode.
 - Fully rigified Armature animations. For export of rigified Armature animations
+
   - Select Bake Action. ( press space in 3d view and Type Bake Action )
-  - If you have only the deform bones selected check "only selected".
-    This will give smaller dae. Otherwise uncheck "Only Selected".
-  - Check "Clear Constraints".
+  - If you have only the deform bones selected check *Only Selected*.
+    This will give smaller dae. Otherwise uncheck *Only Selected*.
+  - Enable *Clear Constraints*.
   - Bake Action.
   - Select the mesh and the deform bones. Then export to COLLADA while checking only selected option.
     (Selecting only the Mesh and bones is not strictly necessary.

@@ -5,16 +5,9 @@
 ##############
 
 .. toctree::
+   :maxdepth: 2
 
-   files.rst
-   files/open.rst
-   files/save.rst
-   files/import.rst
-   files/import/collada.rst
-   files/export.rst
-   files/formats.rst
-   files/formats/openexr.rst
-   files/formats/dpx,_cineon,_hdr.rst
+   files/index.rst
    data_system.rst
    datablocks.rst
    scenes.rst

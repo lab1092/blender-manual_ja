@@ -85,17 +85,16 @@ Auto Smooth
    | Panel:    *Properties* (*Object Data* context)
 
 
-+-------------------------------------------------------------------+
-+.. figure:: /images/25-manual-meshsmooth-example-04rrautosmooth.jpg+
-+   :width: 180px                                                   +
-+   :figwidth: 180px                                                +
-+-------------------------------------------------------------------+
-+.. figure:: /images/25-manual-meshsmooth-autosmooth.jpg            +
-+   :width: 180px                                                   +
-+   :figwidth: 180px                                                +
-+-------------------------------------------------------------------+
-+Example mesh with *Auto Smooth* enabled                  +
-+-------------------------------------------------------------------+
+.. list-table::
+   Example mesh with *Auto Smooth* enabled
+
+   * - .. figure:: /images/25-manual-meshsmooth-example-04rrautosmooth.jpg
+          :width: 180px
+          :figwidth: 180px
+     - .. figure:: /images/25-manual-meshsmooth-autosmooth.jpg
+          :width: 180px
+          :figwidth: 180px
+
 
 It can be difficult to create certain combinations of smooth and solid faces using the above
 techniques alone. Though there are workarounds

@@ -9,6 +9,7 @@ Individual Origins as Pivot
    | Menu:     Select from the following icon in the 3D window header
 
    .. figure:: /images/Icon-library_3D-Window_header-pivot-point.jpg
+
    | Hotkey:   :kbd:`Ctrl-.`
 
 
@@ -36,8 +37,11 @@ the orange rectangle in the image has its Origin located on the far left of the 
 Now let's examine *Rotation around the individual origins*.
 
 
-- The blue rectangle has its Origin located in the center of the mesh, while the orange rectangle has its Origin located on the left hand side.
-- When the Pivot Point is set to *Individual Origins*, the center of each Object (indicated by the red arrow) remains in place while the Object rotates around it in the path shown by the black arrow.
+- The blue rectangle has its Origin located in the center of the mesh,
+  while the orange rectangle has its Origin located on the left hand side.
+- When the Pivot Point is set to *Individual Origins*,
+  the center of each Object (indicated by the red arrow)
+  remains in place while the Object rotates around it in the path shown by the black arrow.
 
 
 In Edit mode

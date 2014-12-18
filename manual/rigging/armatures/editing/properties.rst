@@ -63,19 +63,19 @@ As you control only one value (the radius), there is no axis locking here. And a
 you scale at the same time the radius of the parent's tip and of the children's roots.
 
 
-+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
++----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 +**Scaling of a bone in** *Octahedron* **and** *Envelope* **visualizations.**|.. figure:: /images/ManRiggingBoneSelectExEditModeWholeBone.jpg                                     |.. figure:: /images/ManRiggingBoneScalingExEditModeOctahedron.jpg+
-+                                                                                                |   :width: 300px                                                                                    |   :width: 300px                                                 +
-+                                                                                                |   :figwidth: 300px                                                                                 |   :figwidth: 300px                                              +
-+                                                                                                |                                                                                                    |                                                                 +
-+                                                                                                |   A single selected bone...                                                                        |   ...Scaled in Octahedron visualization.                        +
-+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-+.. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope1.jpg                                |.. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope2.jpg                                                                                                      +
-+   :width: 300px                                                                                |   :width: 300px                                                                                                                                                      +
-+   :figwidth: 300px                                                                             |   :figwidth: 300px                                                                                                                                                   +
-+                                                                                                |                                                                                                                                                                      +
-+   A single selected bone...                                                                    |   ...Scaled in Envelope visualization - its length remains the same, but its ends' radius are bigger.                                                                +
-+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
++                                                                            |   :width: 300px                                                                                    |   :width: 300px                                                 +
++                                                                            |   :figwidth: 300px                                                                                 |   :figwidth: 300px                                              +
++                                                                            |                                                                                                    |                                                                 +
++                                                                            |   A single selected bone...                                                                        |   ...Scaled in Octahedron visualization.                        +
++----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
++.. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope1.jpg            |.. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope2.jpg                                                                                                      +
++   :width: 300px                                                            |   :width: 300px                                                                                                                                                      +
++   :figwidth: 300px                                                         |   :figwidth: 300px                                                                                                                                                   +
++                                                                            |                                                                                                                                                                      +
++   A single selected bone...                                                |   ...Scaled in Envelope visualization - its length remains the same, but its ends' radius are bigger.                                                                +
++----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 
 
 Note that when you resize a bone (either by directly scaling it,
@@ -284,13 +284,13 @@ These values are proportional to the default length, which of course automatical
 angle with previous/next bones in the chain, and so on.
 
 
-+--------------------------------------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------+
++------------------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------+
 +**Bone** *In* / *Out* **settings example, with a materialized Bézier curve.** |.. figure:: /images/ManRiggingBBoneInOutEx1.jpg                 |.. figure:: /images/ManRiggingBBoneInOutEx2.jpg+
-+                                                                                                  |   :width: 300px                                                |   :width: 300px                               +
-+                                                                                                  |   :figwidth: 300px                                             |   :figwidth: 300px                            +
-+                                                                                                  |                                                                |                                               +
-+                                                                                                  |   Look at Bone.004: it has the default In and Out values (1.0).|   Bone.004 with In at 2.0, and Out at 0.0.    +
-+--------------------------------------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------+
++                                                                              |   :width: 300px                                                |   :width: 300px                               +
++                                                                              |   :figwidth: 300px                                             |   :figwidth: 300px                            +
++                                                                              |                                                                |                                               +
++                                                                              |   Look at Bone.004: it has the default In and Out values (1.0).|   Bone.004 with In at 2.0, and Out at 0.0.    +
++------------------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------+
 
 
 Chain Editing

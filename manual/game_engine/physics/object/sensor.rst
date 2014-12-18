@@ -36,21 +36,28 @@ they can provide advanced collision control to this object.
 The type of collision capability depends on the shape:
 
 - box, sphere, cylinder, cone, convex hull provide volume detection.
-- triangle mesh provides surface detection but you can give some volume to the surface by increasing the margin in the Advanced Settings panel. The margin applies on both sides of the surface.
+- triangle mesh provides surface detection but you can give some volume to
+  the surface by increasing the margin in the Advanced Settings panel.
+  The margin applies on both sides of the surface.
 
 Performance tip:
 
-- Sensor objects perform better than Near and Radar: they do less synchronizations because of the Scenegraph optimizations and they can have multiple collision sensors on them (with different property filtering for example).
+- Sensor objects perform better than Near and Radar:
+  they do less synchronizations because of the Scenegraph optimizations and they can
+  have multiple collision sensors on them (with different property filtering for example).
 - Always prefer simple shape (box, sphere) to complex shape whenever possible.
 - Always use broadphase filtering (avoid collision sensor with empty propery/material)
-- Use collision sensor only when you need them. When no collision sensor is active on the sensor object, it is removed from the simulation and consume no CPU.
+- Use collision sensor only when you need them.
+  When no collision sensor is active on the sensor object,
+  it is removed from the simulation and consume no CPU.
 
 Known limitations:
 
 - When running Blender in debug mode, you will see one warning line of the console:
 
- "warning btCollisionDispatcher::needsCollision: static-static collision!"
-In release mode this message is not printed.
+  ::
+     warning btCollisionDispatcher::needsCollision: static-static collision!"
+     In release mode this message is not printed.
 
 - Collision margin has no effect on sphere, cone and cylinder shape.
 

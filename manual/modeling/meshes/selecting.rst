@@ -31,13 +31,16 @@ Using the buttons you can also use more than one selection mode at a time by
 :kbd:`Shift-LMB` clicking the buttons.
 
 Vertices
-   Selected vertices are drawn in orange, unselected vertices in black, and the active or last selected vertex in white.
-
+   Selected vertices are drawn in orange, unselected vertices in black,
+   and the active or last selected vertex in white.
 Edges
-   In this mode the vertices are not drawn. Instead the selected edges are drawn in orange, unselected edges black, and the active or last selected edge in white.
-
+   In this mode the vertices are not drawn.
+   Instead the selected edges are drawn in orange,
+   unselected edges black, and the active or last selected edge in white.
 Faces
-   In this mode the faces are drawn with a selection point in the middle which is used for selecting a face. Selected faces and their selection point are drawn in orange, unselected faces are drawn in black, and the active or last selected face is highlighted in white.
+   In this mode the faces are drawn with a selection point in the middle which is used for selecting a face.
+   Selected faces and their selection point are drawn in orange,
+   unselected faces are drawn in black, and the active or last selected face is highlighted in white.
 
 Almost all modification tools are available in all three mesh selection modes.
 So you can *Rotate*, *Scale*, *Extrude*, etc. in all modes. Of
@@ -73,10 +76,8 @@ You can also choose a selection mode with the pop-up menu
 
 :menuselection:`Select Mode --> Vertices`
    Press :kbd:`Ctrl-Tab` and select *Vertices* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`1`.
-
 :menuselection:`Select Mode --> Edges`
    Press :kbd:`Ctrl-Tab` and select *Edges* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`2`.
-
 :menuselection:`Select Mode --> Faces`
    Press :kbd:`Ctrl-Tab` and select *Faces* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`3`.
 
@@ -126,7 +127,6 @@ Border Select
    Enables a rectangular region for selection
 Circle Select
    Enables a circular shaped region for selection
-
 (De)select All :kbd:`A`
    Select all or none of the mesh components.
 Invert Selection :kbd:`Ctrl-I`
@@ -135,44 +135,37 @@ Select Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
 Checker Deselect
    Deselect alternating faces, to create a checker like pattern.
-*Select Sharp Edges*
-
+Select Sharp Edges
    This option will select all edges that are between two faces forming an angle less than a given value,
    which is asked you *via* a small pop-up dialog.
    The lower is this angle limit, the sharper will be the selected edges.
    At ``180``, **all** "manifold" (see below) edges will be selected.
-
 Linked Flat Faces (:kbd:`Ctrl-Shift-Alt-F`)
-   Select connected faces based on a threshold of the angle between them. This is useful for selecting faces that are planar.
+   Select connected faces based on a threshold of the angle between them.
+   This is useful for selecting faces that are planar.
 Interior Faces
    Select faces where all edges have more than 2 faces.
-
 Side of Active
    Selects all data on the mesh in a single axis
-
 Select Faces by Sides
    Selects all faces that have a specified number of edges.
-
 Select Non Manifold (:kbd:`Ctrl-Shift-Alt-M`)
-   Selects vertices that are not completely bound by geometry, including border edges, floating edges, and orphan vertices. Only available in Vertex mode.
-
+   Selects vertices that are not completely bound by geometry,
+   including border edges, floating edges, and orphan vertices. Only available in Vertex mode.
 Loose
    Select all vertices or edges that do not form part of a face.
 Similar
    Select geometry based on how similar certain properties are to it.
-
 More :kbd:`Ctrl-Numpad+`
    Propagates selection by adding geometry that are adjacent to selected elements.
 Less :kbd:`Ctrl-Numpad-`
    Deselects geometry that form the bounds of the current selection
-
 Mirror
    Select mesh items at the mirrored location.
 Pick Linked :kbd:`L`
    Selects all geometry connected to the geometry under the cursor.
 Linked :kbd:`Ctrl-L`
    Selects all geometry that are connected to the current selection.
-
 Vertex Path
    Selects a vertex path between two selected vertices
 Edge Loop
@@ -183,5 +176,4 @@ Loop Inner-Region
    Converts a closed selection of edges to the region of faces it encloses
 Boundary Loop
    Converts a selection of faces to the ring of edges enclosing it
-
 

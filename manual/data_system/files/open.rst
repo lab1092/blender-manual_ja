@@ -138,6 +138,8 @@ and toggle which types are shown:
 - *Text files*
 
 
+.. _other-file-open-options:
+
 Other File Open Options
 =======================
 

@@ -73,10 +73,22 @@
          If blend color is more than 50% bright, base color is brightened by the blend color values,
          otherwise it is darkened by the blend color values.
 
-      See wikipedia's `Blend Modes <http://en.wikipedia.org/wiki/Blend_modes>`__ article for more information.
+      See Wikipedia's `Blend Modes <http://en.wikipedia.org/wiki/Blend_modes>`__ article for more information.
 
    Lattice
       TODO
+
+   Particle Terminology
+      Children/Child Particle
+         A particle type that is generated and placed in relation to other normal particles that already exist.
+         Children particles are generally much quicker to calculate.
+      Unborn Particle
+         A particle which has not yet been displayed/emitted (but will be on a later frame).
+      Alive Particle
+         A particle which has been emitted, is being displayed and has not yet died.
+      Dead Particle
+         A particle which has been displayed/emitted and has reached its
+         end of life length is considered *dead*.
 
    Vertex
       a point in 3D space

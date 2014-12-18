@@ -9,6 +9,7 @@ Median Point as Pivot
    | Menu:     Select from the following icon in the 3D window header
 
    .. figure:: /images/Icon-library_3D-Window_header-pivot-point.jpg
+
    | Hotkey:   :kbd:`Ctrl-,`
 
 

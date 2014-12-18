@@ -38,9 +38,7 @@ Direct+Indirect Lighting:
    Direct+Indirect Lighting Render
 
 
-FIXME(TODO: Internal Link;
-[[http://web.archive.org/web/20050204031559/http://rastermon.com/GI1.htm Images courtesy]]
-)
+Images courtesy of `rastermon.com <http://web.archive.org/web/20050204031559/http://rastermon.com/GI1.htm>`__
 
 
 Inderect Lighting only works with Approximate gather method.

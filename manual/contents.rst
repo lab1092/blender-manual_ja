@@ -49,7 +49,8 @@ Sections
 Get Involved
 ************
 
-This manual is maintained largely by volunteers. If you would like to help us write this manual, check out these pages:
+This manual is maintained largely by volunteers.
+If you would like to help us write this manual, check out these pages:
 
 `Blender Documentation Project <http://www.blender.org/documentation/>`_
    Main documentation page on blender.org.

@@ -28,7 +28,8 @@ Random Seed
    The random seed is an offset to the random transformation. A different seed will produce a new result.
 
 Transform Delta
-   Randomize Delta Transform values instead of regular transform. See :doc:`Delta Transforms </3d_interaction/transform_control/transform_properties#delta_transform>`.
+   Randomize Delta Transform values instead of regular transform.
+   See :doc:`Delta Transforms </3d_interaction/transform_control/transform_properties#delta_transform>`.
 
 Randomize Location
    Randomize Location vales

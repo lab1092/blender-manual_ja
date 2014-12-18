@@ -8,25 +8,31 @@ Curves
    Bird logo made from Bezier curves.
 
 
-Curves and :doc:`Surfaces </modeling/surfaces>` are particular types of Blender Objects. They are expressed by mathematical functions rather than a series of points. Blender offers both
-FIXME(TODO: Internal Link;
-[[#Beziers|Bezier]]
-) curves and
-FIXME(TODO: Internal Link;
-[[#NURBS|NURBS]]
-) curves and surfaces. NURBS stands for "Non-Uniform Rational B-Splines". Both Bezier curves and NURBS curves and surfaces are defined in terms of a set of "control points" (or "control vertices") which define a "control polygon".
+Curves and :doc:`Surfaces </modeling/surfaces>` are particular types of Blender Objects.
+They are expressed by mathematical functions rather than a series of points. Blender offers both
+FIXME(TODO: Internal Link; [[#Beziers|Bezier]]) curves and FIXME(TODO: Internal Link; [[#NURBS|NURBS]])
+curves and surfaces. NURBS stands for "Non-Uniform Rational B-Splines".
+Both Bezier curves and NURBS curves and surfaces are defined in terms of a set of "control points"
+(or "control vertices") which define a "control polygon".
 
 The main advantage to using curves instead of polygonal meshes is that curves are defined by
 less data and so can produce excellent results using less memory and storage space at modeling
 time. However, this procedural approach to surfaces can increase demands at render time.
 
-Certain modeling techniques, such as :doc:`extruding a profile along a path </modeling/curves/editing/advanced#curve_extrusion>`, are possible only using curves. On the other hand, when using curves, vertex-level control is more difficult and if fine control is necessary, :doc:`mesh editing </modeling/meshes/editing>` may be a better modeling option.
+Certain modeling techniques, such as
+:doc:`extruding a profile along a path </modeling/curves/editing/advanced#curve_extrusion>`,
+are possible only using curves.  On the other hand, when using curves,
+vertex-level control is more difficult and if fine control is necessary,
+:doc:`mesh editing </modeling/meshes/editing>` may be a better modeling option.
 
-Bezier curves are the most commonly used curves for designing letters or logos. They are also widely used in animation, both as :doc:`paths </animation/techs/object/path>` for objects to move along and as :doc:`F-curves </animation/editors/graph/fcurves>` to change the properties of objects as a function of time.
+Bezier curves are the most commonly used curves for designing letters or logos.
+They are also widely used in animation, both as :doc:`paths </animation/techs/object/path>`
+for objects to move along and as :doc:`F-curves </animation/editors/graph/fcurves>`
+to change the properties of objects as a function of time.
 
 
 Tutorials
----------
+=========
 
 :doc:`Create the bird logo with Bezier Curves » </ls/modeling/curves/bézier>`
 
@@ -53,7 +59,8 @@ NURBS Curve
 NURBS Circle
    Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).
 Path
-   Adds a NURBS open 3D curve made of five aligned control points, with *Endpoint* knots and the *CurvePath* setting enabled.
+   Adds a NURBS open 3D curve made of five aligned control points,
+   with *Endpoint* knots and the *CurvePath* setting enabled.
 
 
 Bezier Curves
@@ -79,7 +86,8 @@ A Bezier curve can be edited by moving the locations of the Control Points and H
 
 - Add a Curve by :kbd:`Shift-A` to bring up the *Add* menu, followed by :menuselection:`Curve --> Bezier`.
 - Press :kbd:`Tab` to enter *Edit mode*.
-- Select one of the Control Points and move it around. Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
+- Select one of the Control Points and move it around.
+  Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
 - Now select one of the Handles and move it around. Notice how this changes the curvature of the curve.
 
 To add more Control Points
@@ -106,7 +114,8 @@ Automatic :kbd:`V-A`
 
    .. figure:: /images/Modeling_Curves_automatic-handles.jpg
 Vector :kbd:`V-V`
-   Both parts of a handle always point to the previous handle or the next handle which allows you to create curves or sections thereof made of straight lines or with sharp corners.
+   Both parts of a handle always point to the previous handle or the next handle which allows
+   you to create curves or sections thereof made of straight lines or with sharp corners.
    Vector handles convert to *Free* handles when moved.
 
    .. figure:: /images/Modeling_Curves_vector-handles.jpg
@@ -164,7 +173,10 @@ Resolution
 
 
 Twisting
-   A 3D Curve has Control Points that are not located on the Curve's local XY plane. This gives the Curve a twist which can affect the Curve normals. You can alter how the twist of the Curve is calculated by choosing from *Minimum, Tangent* and *Z-Up* options from the drop-down menu.
+   A 3D Curve has Control Points that are not located on the Curve's local XY plane.
+   This gives the Curve a twist which can affect the Curve normals.
+   You can alter how the twist of the Curve is calculated by choosing from *Minimum,
+   Tangent* and *Z-Up* options from the drop-down menu.
 
 
 .. figure:: /images/Modeling_Curves_shape-twist.jpg
@@ -173,7 +185,10 @@ Twisting
 
 
 Fill
-   Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling). When set to *Half* (the default) the Curve is displayed as half a cylinder. The *Fill Deformed* option allows you to indicate whether the Curve should be filled before or after (default) applying any Shape Keys or Modifiers.
+   Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling).
+   When set to *Half* (the default) the Curve is displayed as half a cylinder.
+   The *Fill Deformed* option allows you to indicate whether the Curve should be filled before or after
+   (default) applying any Shape Keys or Modifiers.
 
 
 .. figure:: /images/Modeling_Curves_shape-fill.jpg
@@ -182,7 +197,9 @@ Fill
 
 
 Path/Curve-Deform
-   These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property. The *Radius, Stretch* and *Bounds Clamp* options control how Objects use the Curve and are dealt with in more detail in the appropriate links below.
+   These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property.
+   The *Radius, Stretch* and *Bounds Clamp* options control how Objects use the
+   Curve and are dealt with in more detail in the appropriate links below.
 
 :doc:`Read more about Basic Curve Editing » </modeling/curves/editing>`
 :doc:`Read more about Paths » </animation/techs/object/path>`
@@ -222,7 +239,11 @@ Bevel
 
 
 Taper Object
-   Tapering a Curve causes it to get thinner towards one end. You can also alter the proportions of the Taper throughout the tapered object by moving/scaling/rotating the Control Points of the Taper Object. The Taper Object can only be another Curve. Editing the Handles and Control Points of the Taper Object will cause the original Object to change shape.
+   Tapering a Curve causes it to get thinner towards one end.
+   You can also alter the proportions of the Taper throughout the tapered object
+   by moving/scaling/rotating the Control Points of the Taper Object.
+   The Taper Object can only be another Curve.
+   Editing the Handles and Control Points of the Taper Object will cause the original Object to change shape.
 
 
 .. figure:: /images/Modeling_Curves_geometry-taper.jpg
@@ -231,7 +252,11 @@ Taper Object
 
 
 Bevel Object
-   Beveling a Bezier Curve with a Bezier Curve as the Bevel Object generally gives it the appearance of a plane, while using a Bezier Circle as the Bevel Object will give it the appearance of a cylinder. The Bevel Object can only be another Curve. Editing the Handles and Control Points of the Bevel Object will cause the original Object to change shape. Given the options available, it is best to experiment and see the results of this operation.
+   Beveling a Bezier Curve with a Bezier Curve as the Bevel Object generally gives it the appearance of a plane,
+   while using a Bezier Circle as the Bevel Object will give it the appearance of a cylinder.
+   The Bevel Object can only be another Curve.
+   Editing the Handles and Control Points of the Bevel Object will cause the original Object to change shape.
+   Given the options available, it is best to experiment and see the results of this operation.
 
 
 .. figure:: /images/Modeling_Curves_geometry-bevel.jpg
@@ -262,7 +287,8 @@ Start Bevel Factor and End Bevel Factor
 
 .. figure:: /images/Modeling_Curves_geometry-bevel-start-end-factor.jpg
 
-   A Curve with no Bevel factor applied (left), with a 50% Start Bevel Factor (middle) and with a 25% End Bevel Factor (right).
+   A Curve with no Bevel factor applied (left),
+   with a 50% Start Bevel Factor (middle) and with a 25% End Bevel Factor (right).
 
 
 :doc:`Read more about Advanced Curve Editing » </modeling/curves/editing/advanced>`
@@ -295,7 +321,8 @@ Interpolation
    Tilt
       Alters how the tilt of a segment is calculated.
    Radius
-      Alters how the radius of a Beveled Curve is calculated. The effects are easier to see after Shrinking/Fattening a control point :kbd:`Alt-S`.
+      Alters how the radius of a Beveled Curve is calculated.
+      The effects are easier to see after Shrinking/Fattening a control point :kbd:`Alt-S`.
    Smooth
       Smooths the normals of the Curve
 
@@ -322,8 +349,10 @@ A NURBS Curve is edited by moving the location of the Control Points.
 
 - Place a Curve by :kbd:`Shift-A` to bring up the Add menu, followed by :menuselection:`Curve --> NURBS curve`.
 - Press :kbd:`Tab` to enter *Edit mode*.
-- Select one of the Control Points and move it around. Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
-- If you want to add additional Control Points, select both of them, press :kbd:`W` and select *Subdivide*. Press :kbd:`F6` immediately after to determine how many subdivisions to make.
+- Select one of the Control Points and move it around.
+  Use :kbd:`LMB` to confirm the new location of the Control Point, or use :kbd:`RMB` to cancel.
+- If you want to add additional Control Points, select both of them, press :kbd:`W` and select *Subdivide*.
+  Press :kbd:`F6` immediately after to determine how many subdivisions to make.
 
 
 Active Spline
@@ -363,7 +392,10 @@ Endpoint
 
 
 Order
-   The order of the NURBS curve determines the area of influence of the control points over the curve. Higher order values means that a single control point has a greater influence over a greater relative proportion of the curve. The valid range of *Order* values is 2-6 depending on the number of control points present in the curve.
+   The order of the NURBS curve determines the area of influence of the control points over the curve.
+   Higher order values means that a single control point has a greater
+   influence over a greater relative proportion of the curve.
+   The valid range of *Order* values is 2-6 depending on the number of control points present in the curve.
 
 
 .. figure:: /images/Modeling_Curves_nurbs-order.jpg
@@ -377,7 +409,8 @@ Path
 ====
 
 
-As mentioned above, Curves are often used as :doc:`paths </animation/techs/object/path>`. Any curve can be used as a Path if the *Path Animation* option is selected.
+As mentioned above, Curves are often used as :doc:`paths </animation/techs/object/path>`.
+Any curve can be used as a Path if the *Path Animation* option is selected.
 
 The Path option available from the *Add Curve* menu is identical to a 3D NURBS
 curve, except that you do not have access to the *Active Spline* panel.

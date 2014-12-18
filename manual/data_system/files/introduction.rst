@@ -14,12 +14,12 @@ New
    Clears the current scene and loads startup.blend
 :doc:`Open </data_system/files/open>`
    Open a blend file
-:doc:`Open Recent </data_system/files/open#other_file_open_options>`
+:ref:`Open Recent <other-file-open-options>`
    Displays a list of recently saved .blend files to open
-:doc:`Recover last session </data_system/files/open#other_file_open_options>`
+:ref:`Recover last session <other-file-open-options>`
    This will load the quit.blend file Blender automatically saves just before exiting.
    So this option enables you to recover your last work session, e.g. if you closed Blender by accident
-:doc:`Recover Auto Save </data_system/files/open#other_file_open_options>`
+:ref:`Recover Auto Save <other-file-open-options>`
    This will open an automatically saved file to recover it.
 :doc:`Save </data_system/files/save>`
    Save the current blend file.
@@ -27,8 +27,8 @@ New
    Opens file browser to specify file name and location of save.
 :doc:`Save Copy </data_system/files/save>`
    Saves a copy of the current file.
-:doc:`User Preferences </preferences>`
-   Opens the user preferences dialogue.
+:doc:`User Preferences </preferences/introduction>`
+   Opens the user preferences dialog.
 :doc:`Save User Settings </basics/default_scene>`
    Saves the current scene and preferences to startup.blend.
 :doc:`Load Factory Settings </basics/default_scene>`
@@ -53,6 +53,6 @@ New
       Make all paths to external files absolute
    Report Missing Files
       Report all missing external files
-   Find Missing Fils
+   Find Missing Files
       Try to find missing external files
 

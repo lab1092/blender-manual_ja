@@ -57,11 +57,11 @@ You can switch between these draw modes by:
 +-------------------------------------+-------------------------------------------------------------------------+
 +**Draw modes and Z-based shortcuts.**                                                                          +
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`Z`                             |Switches between *Wireframe* and *Solid* draw modes. +
++:kbd:`Z`                             |Switches between *Wireframe* and *Solid* draw modes.                     +
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`Shift-Z`                       |Switches between *Wireframe* and *Shaded* draw modes.+
++:kbd:`Shift-Z`                       |Switches between *Wireframe* and *Shaded* draw modes.                    +
 +-------------------------------------+-------------------------------------------------------------------------+
-+:kbd:`Alt-Z`                         |Switches between *Solid* and *Textured* draw modes.  +
++:kbd:`Alt-Z`                         |Switches between *Solid* and *Textured* draw modes.                      +
 +-------------------------------------+-------------------------------------------------------------------------+
 +:kbd:`Shift-Alt-Z`                   |Switches to the :kbd:`Textured` draw mode.                               +
 +-------------------------------------+-------------------------------------------------------------------------+

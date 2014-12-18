@@ -1,5 +1,8 @@
 
-..    TODO/Review: {{review|Need to change and explain the behavior of the transform orientation. It is toggled between the chosen orientation and the global orientation when transformations are made by shortcuts}} .
+..
+   TODO/Review: {{review|Need to change and explain the behavior of the transform orientation.
+   It is toggled between the chosen orientation and the
+   global orientation when transformations are made by shortcuts}} .
 
 
 Transform Orientations
@@ -45,7 +48,8 @@ Our Demo Cube
 
 .. figure:: /images/Orientations-BasicSetup.jpg
 
-   To demonstrate the various behaviors, we add some colors to the default cube, rotate it -15º along its local z- and x-axes, and we scale its "y" face down.
+   To demonstrate the various behaviors, we add some colors to the default cube,
+   rotate it -15º along its local z- and x-axes, and we scale its "y" face down.
 
 
 Please note two things:
@@ -55,7 +59,8 @@ Please note two things:
   selection, which represents the current Transform Orientation.
 
   - If you click on one of the axes of the Manipulator with :kbd:`LMB`,
-    it will allow you to constrain movement to only this direction. An example of a keyboard equivalent is :kbd:`G-Z-Z`.
+    it will allow you to constrain movement to only this direction.
+    An example of a keyboard equivalent is :kbd:`G-Z-Z`.
   - If you :kbd:`Shift-LMB` click,
     it will lock the axis you clicked on and allow you to move in the plane of the two remaining axes.
     The keyboard analogue is :kbd:`G-Shift-Z-Shift-Z-`.
@@ -149,7 +154,8 @@ XYZ Euler
    the last axis applied will be the one for which the Manipulator stays fixed.
    So, for *YZX Euler*, the x-axis of the Manipulator will be the same as the global x-axis.
 Axis Angle
-   The x, y, and z coordinates define a point relative to the object origin through which an imaginary "skewer" passes.
+   The x, y, and z coordinates define a point relative to the object origin
+   through which an imaginary "skewer" passes.
    The w value is the rotation of this skewer. Here, the Manipulator's z-axis stays aligned with this skewer.
 Quaternion
    Though Quaternion rotation is very different from the Euler and Axis Angle rotation modes,

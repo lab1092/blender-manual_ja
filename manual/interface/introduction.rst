@@ -9,8 +9,8 @@ Starting Blender for the first time
    :align: right
    :scale: 50%
 
-If you are familiar with Blender 2.4x or other 3D software such as Maya, 3ds Max or XSI,
-you will immediately notice that Blender is quite different from what you are used to seeing.
+If you are familiar with other 3D software you will immediately
+notice that Blender is quite different from what you are used to seeing.
 However you will soon see similarities with your previous software,
 like a *3D Viewport*, an *Outliner* and a *Timeline*.
 If this is the first time you have used any 3D software, you may be a little lost.

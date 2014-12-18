@@ -348,7 +348,7 @@ and play with the *Custom Curve* mapping to get a larger/narrower "valley"...
 
 
 +----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
-+*Curve Map* **variations.**                                                                                                                                                           +
++*Curve Map* **variations.**                                                                                                                                                                     +
 +----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
 +.. figure:: /images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg+
 +   :width: 200px                                                |   :width: 200px                                               |   :width: 200px                                               +

@@ -71,14 +71,17 @@ horizontal axis.
 
 .. tip:: Shear transform magnitude
 
-   The magnitude of the *Shear* transform applied to the selected elements is directly proportional to the distance from the horizontal axis. i.e. the further from the axis, the greater the movement.
+   The magnitude of the *Shear* transform applied to the selected elements is
+   directly proportional to the distance from the horizontal axis.
+   i.e. the further from the axis, the greater the movement.
 
 
 .. figure:: /images/3D_interaction-Transformations-Advanced-Shear_objects.jpg
    :width: 640px
    :figwidth: 640px
 
-   The effects of a Shear transform on Objects with different Pivot Points. See the text below for additional information.
+   The effects of a Shear transform on Objects with different Pivot Points.
+   See the text below for additional information.
 
 
 The three frames of the image above show the effects of shearing on the selected Objects when

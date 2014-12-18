@@ -48,7 +48,8 @@ The shape of the curve can be manipulated to vary the output over time in differ
 
 
    Extend Extrapolated
-      Causes the curve to extrapolate before the first point and after the last point, based on the shape of the curve.
+      Causes the curve to extrapolate before the first point and after the last point,
+      based on the shape of the curve.
 
 
 .. figure:: /images/Doc26-textureNodes-time-extendExtrapolate.jpg

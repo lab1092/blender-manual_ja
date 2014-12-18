@@ -17,8 +17,10 @@ To do this, type the following command in a terminal window and reboot when it's
 
 ``sudo yum -y update``
 
-Note: You will be asked to enter your root password, don't worry if you don't actually see
-anything on the screen when you type since your password is not echoed to the screen for security reasons.
+.. note::
+
+   You will be asked to enter your root password, don't worry if you don't actually see
+   anything on the screen when you type since your password is not echoed to the screen for security reasons.
 
 By default, Fedora is missing the SDL library, which is required by Blender.
 To install this, type the following command in the terminal window (after updating with the previous command):

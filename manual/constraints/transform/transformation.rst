@@ -46,13 +46,13 @@ Extrapolate
    Let's illustrate that with two graphs (*The* *Extrapolate* *principles*). In these pictures, the input range (in abscissa) is set to [\ **1.0**, **4.0** ], and its corresponding output range (in ordinate), to [\ **1.0**, **2.0** ]. The yellow curve represents the mapping between input and output.
 
 
-+-----------------------------------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
++-------------------------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 +**The** *Extrapolate* **principles.**|.. figure:: /images/ManConstraintsTransformationExtrapolatePrinciple1.jpg          |.. figure:: /images/ManConstraintsTransformationExtrapolatePrinciple2.jpg                    +
-+                                               |   :width: 300px                                                                   |   :width: 300px                                                                             +
-+                                               |   :figwidth: 300px                                                                |   :figwidth: 300px                                                                          +
-+                                               |                                                                                   |                                                                                             +
-+                                               |   Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] range.|   Extrapolate enabled: the output values are "free" to proportionally follow the input ones.+
-+-----------------------------------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
++                                     |   :width: 300px                                                                   |   :width: 300px                                                                             +
++                                     |   :figwidth: 300px                                                                |   :figwidth: 300px                                                                          +
++                                     |                                                                                   |                                                                                             +
++                                     |   Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] range.|   Extrapolate enabled: the output values are "free" to proportionally follow the input ones.+
++-------------------------------------+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 
 
  .. warning::

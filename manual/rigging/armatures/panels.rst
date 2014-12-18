@@ -21,8 +21,8 @@ in *Properties* window, *Object data* context:
    The Object data property in the Properties window.
 
 
-{{Literal|Skeleton}} panel (all modes)
-======================================
+Skeleton panel (all modes)
+==========================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtSkeletonPanel.jpg
    :width: 250px
@@ -34,8 +34,8 @@ in *Properties* window, *Object data* context:
    In this panel you can arrange sets of bones into different layers for easier manipulation.
 
 
-{{Literal|Display}} panel (all modes)
-=====================================
+Display panel (all modes)
+=========================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtDisplayPanel.jpg
    :width: 250px
@@ -49,8 +49,8 @@ in *Properties* window, *Object data* context:
    There are several other options available which we will cover later on.
 
 
-{{Literal|Bone groups}} panel (pose mode)
-=========================================
+Bone groups panel (pose mode)
+=============================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtBonesGroupsPanel.jpg
    :width: 250px
@@ -62,8 +62,8 @@ in *Properties* window, *Object data* context:
    Lets you assign sets of bones into groups for easy manipulation and management.
 
 
-{{Literal|Pose Library}} panel ({{Literal|Pose}} mode)
-======================================================
+Pose Library panel (Pose mode)
+==============================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtPoseLibraryPanel.jpg
    :width: 250px
@@ -75,8 +75,8 @@ in *Properties* window, *Object data* context:
    Allows you to save different settings (location, rotation, scale) for selected bones for later use.
 
 
-{{Literal|Ghost}} panel (all modes)
-===================================
+Ghost panel (all modes)
+=======================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtGhostPanel.jpg
    :width: 250px
@@ -88,8 +88,8 @@ in *Properties* window, *Object data* context:
    Allows you to see a set of different consecutive poses, very useful when animating.
 
 
-{{Literal|iTaSC parameters}} panel (all modes)
-==============================================
+iTaSC parameters panel (all modes)
+==================================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtiTaSCparametersPanel.jpg
    :width: 250px
@@ -101,8 +101,8 @@ in *Properties* window, *Object data* context:
    Defines the type of IK solver used in your animation.
 
 
-{{Literal|Motion Paths}} panel ({{Literal|Pose}} mode)
-======================================================
+Motion Paths panel (Pose mode)
+==============================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtMotionPathsPanel.jpg
    :width: 250px
@@ -114,8 +114,8 @@ in *Properties* window, *Object data* context:
    In this panel you can enable visualization of the motion path your skeleton leaves when animated.
 
 
-{{Literal|Custom Properties}} panel (all modes)
-===============================================
+Custom Properties panel (all modes)
+===================================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtCustomPropertiesPanel.jpg
    :width: 250px
@@ -148,8 +148,8 @@ in *Properties* window, *Bone* context:
    The Bone context.
 
 
-{{Literal|Relations}} panel (edit mode)
-=======================================
+Relations panel (edit mode)
+===========================
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg
    :width: 250px
@@ -161,8 +161,8 @@ in *Properties* window, *Bone* context:
    In this panel you can arrange sets of bones in different layers for easier manipulation.
 
 
-{{Literal|Display}} panel (object mode)
-=======================================
+Display panel (object mode)
+===========================
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg
    :width: 250px
@@ -174,8 +174,8 @@ in *Properties* window, *Bone* context:
    Display panel lets you customize the look of your bones taking the shape of a another existing object.
 
 
-{{Literal|Deform}} panel (all modes)
-====================================
+Deform panel (all modes)
+========================
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtDeformPanel.jpg
    :width: 250px
@@ -186,13 +186,16 @@ in *Properties* window, *Bone* context:
 
    In this panel you can set basic properties of the bones.
 
-   Turning the Deform option on and off, includes the active bone in the Automatic Weight Calculation when the Mesh is Parented to the Armature using the Armature Deform with the "With Automatic Weights" option.
+   Turning the Deform option on and off,
+   includes the active bone in the Automatic Weight Calculation when the Mesh is
+   Parented to the Armature using the Armature Deform with the "With Automatic Weights" option.
 
-   Also it's worth noting that by turning off a bone's deform option, makes it not influence the mesh at all, overriding any weights that it might have been assigned before; It mutes its influence.
+   Also it's worth noting that by turning off a bone's deform option, makes it not influence the mesh at all,
+   overriding any weights that it might have been assigned before; It mutes its influence.
 
 
-{{Literal|Custom Properties}} panel (all modes)
-===============================================
+Custom Properties panel (all modes)
+===================================
 
 .. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtCustomPropertiesPanel.jpg
    :width: 250px
@@ -204,8 +207,8 @@ in *Properties* window, *Bone* context:
    Panel for defining custom properties, this is used when scripting.
 
 
-{{Literal|Transform}} panel (edit and pose mode)
-================================================
+Transform panel (edit and pose mode)
+====================================
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtTransformPanel.jpg
    :width: 250px
@@ -226,8 +229,8 @@ in *Properties* window, *Bone* context:
    The Transform panel(pose mode).
 
 
-{{Literal|Transform Locks}} panel (pose mode)
-=============================================
+Transform Locks panel (pose mode)
+=================================
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtTranformLocksPanel.jpg
    :width: 250px
@@ -235,12 +238,12 @@ in *Properties* window, *Bone* context:
 
    The Transform Locks panel.
 
+   This panel appears only in pose mode and allows you to restrict position,
+   rotation and scale by axis on each bone in the armature.
 
-   This panel appears only in pose mode and allows you to restrict position, rotation and scale by axis on each bone in the armature.
 
-
-{{Literal|Inverse Kinematics}} panel (pose mode)
-================================================
+Inverse Kinematics panel (pose mode)
+====================================
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtInverseKinematicsPanel.jpg
    :width: 250px

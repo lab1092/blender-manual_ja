@@ -131,7 +131,9 @@ Context menu
    - *Unlink* - To unlink a datablock from its "owner" (e.g., a material from its mesh).
    - *Make Local* - To create a "local" duplicate of this datablock.
 
-   **Note:** some datablock types will not have a context menu at all!
+   .. note::
+
+      Some datablock types will not have a context menu at all!
 
 
 Deleting a datablock

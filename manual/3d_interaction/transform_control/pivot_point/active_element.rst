@@ -9,6 +9,7 @@ Active Element as Pivot
    | Menu:     Select from the following icon in the 3D window header
 
    .. figure:: /images/Icon-library_3D-Window_header-pivot-point.jpg
+
    | Hotkey:   :kbd:`Alt-.`
 
 
@@ -25,7 +26,9 @@ all transformations will occur relative to the active element.
    :width: 640px
    :figwidth: 640px
 
-   Display of active elements in Object mode is shown on the left of the image where the active element (cube) is a lighter orange. Active elements for vertices, edges and faces in Edit mode are displayed in white and are shown on the right.
+   Display of active elements in Object mode is shown on the left of the
+   image where the active element (cube) is a lighter orange.
+   Active elements for vertices, edges and faces in Edit mode are displayed in white and are shown on the right.
 
 
 In Object mode
@@ -53,7 +56,9 @@ the possible transformations follow a few rules:
 
 
 - The pivot point is always at the median of the active element(s).
-- The transformations occur by transformation of the **vertices** of the selected element(s). If an unselected element shares one or more vertices with a selected element then the unselected one will get some degree of transformation also.
+- The transformations occur by transformation of the **vertices** of the selected element(s).
+  If an unselected element shares one or more vertices with a selected element
+  then the unselected one will get some degree of transformation also.
 
 Let's examine the following examples: in each case we will see that the two rules apply.
 
@@ -79,7 +84,8 @@ Let's review each case:
 - *Faces* have their pivot point where their selection dot appears, which is where the median of their vertices is.
 - *Edges* have their pivot point on their middle since this is always where the median of an edge is.
 - :doc:`Fgons </modeling/meshes/mesh_structures#fgons>` behave the same as faces.
-- A single *Vertex* has no dimensions at all so it can't show any transformation (except translation, which is not affected by the pivot point).
+- A single *Vertex* has no dimensions at all so it can't show any transformation
+  (except translation, which is not affected by the pivot point).
 
 
 Multiple selection
@@ -101,6 +107,7 @@ the selected elements have been rotated.
 - For *Faces* the transformation occurs around the selection dot of the active face.
 - *Edges* also keep the same behavior with their pivot point at their median.
 - *Fgons* behave exactly like faces.
-- There is a case for *Vertices* this time: the active Vertex is where the pivot point resides. All other vertices are transformed relative to it.
+- There is a case for *Vertices* this time: the active Vertex is where the pivot point resides.
+  All other vertices are transformed relative to it.
 
 

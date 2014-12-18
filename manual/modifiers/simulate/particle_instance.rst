@@ -20,28 +20,6 @@ otherwise the *ParticleInstance* modifier will appear to do nothing.
    The one on the right is associated with cube shown by using a ParticleInstance modifier on the cube.
 
 
-Here is a brief explanation of the various terms and definition used in relation to particles
-and the *ParticleInstance* modifier:
-
-Particle system
-   An object (mesh) which has the ability to emit/generate particles activated on it.
-Normal particle
-   A particle that is not a children/child generated particle type.
-Children/child particle
-   A particle type that is generated and placed with relation to other normal particles that already exist.
-   Children particles are generally much quicker to calculate.
-Unborn particle
-   A particle which has not yet been displayed/emitted because it is not its time to be emitted/displayed.
-   One of the reasons a particle can be in unborn state is that it is before the frame at which it is to be emitted.
-Alive particle
-   A particle which has been displayed/emitted and has not yet reached its dead state.
-   One of the reasons a particle can be in an alive state is that it
-   has been alive for less frames than its life length.
-Dead particle
-   A particle which has been displayed/emitted and has reached its
-   end of life length and at that point it enters the dead state.
-
-
 Options
 =======
 
@@ -254,5 +232,6 @@ See Also
 ========
 
 - :doc:`Particles </physics/particles>`
+- :term:`Particle Terminology`
 
 

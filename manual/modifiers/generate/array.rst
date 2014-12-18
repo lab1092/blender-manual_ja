@@ -83,27 +83,27 @@ First Last
    If enabled **and** *Merge* is enabled, vertices in the first copy will be merged with vertices
    in the last copy (this is useful for circular objects).
 
-   +-------------------------------------------------------------------+-----------------------------------------------------------+
-   +.. figure:: /images/Dev-ArrayModifier-FirstLastDiscontinuity01.jpg |.. figure:: /images/Dev-ArrayModifier-FirstLastMerge01.jpg +
-   +-------------------------------------------------------------------+-----------------------------------------------------------+
-   + | Subsurf discontinuity caused by                                 | | Subsurf discontinuity eliminated                        +
-   + | not merging vertices between first                              | | by merging vertices between first                       +
-   + | and last copies (*First Last* off).                   | | and last copies (*First Last* on).            +
-   +-------------------------------------------------------------------+-----------------------------------------------------------+
-   +*First Last* merge example.                                                                                          +
-   +-------------------------------------------------------------------+-----------------------------------------------------------+
+   .. list-table::
+      *First Last* merge example.
+
+      * - .. figure:: /images/Dev-ArrayModifier-FirstLastDiscontinuity01.jpg
+        - .. figure:: /images/Dev-ArrayModifier-FirstLastMerge01.jpg
+      * - | Subsurf discontinuity caused by
+          | not merging vertices between first
+          | and last copies (*First Last* off).
+        - | Subsurf discontinuity eliminated
+          | by merging vertices between first
+          | and last copies (*First Last* on).
 
 
 Distance
    Controls the merge distance for *Merge*.
-
 Start cap
    The mesh object to be used as a start cap.
    A single copy of this object will be placed at the "beginning" of the array - in fact,
    as if it was in position ``-1``, i.e. one "array step" before the first "regular" array copy.
    Of course, if *Merge* is activated,
    and the *Start cap* is near enough to the first copy, they will be merged.
-
 End cap
    The mesh object to be used as an end cap.
    A single copy of this object will be placed at the "end" of the array - in fact,
@@ -202,6 +202,7 @@ Fig 03
    The segment in the foreground is the base mesh for the tentacle; the tentacle is capped by two
    specially-modeled objects deformed by the same Curve object as the main part of the tentacle.
    `Sample blend file <http://wiki.blender.org/index.php/Media:Manual-Modifier-Array-Tentacle01.blend>`__
+
 
 Tutorials
 =========

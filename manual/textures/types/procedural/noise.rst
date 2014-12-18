@@ -16,7 +16,8 @@ This gives a different result every time, for every frame, for every pixel.
 There are no options for this noise
 
 Often used for
-   White noise in an animation. This is not well suited if you don't want an animation. For material displacement or bump, use clouds instead.
+   White noise in an animation. This is not well suited if you don't want an animation.
+   For material displacement or bump, use clouds instead.
 Result(s)
    Intensity
 

@@ -5,13 +5,11 @@
 ############
 
 .. toctree::
+   :maxdepth: 1
 
    introduction.rst
    keyboard_and_mouse.rst
-   window_system.rst
-   window_system/arranging_frames.rst
-   window_system/headers.rst
-   window_system/console_window.rst
+   window_system/index.rst
    window_types.rst
    screens.rst
    scenes.rst

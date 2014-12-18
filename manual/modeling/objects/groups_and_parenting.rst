@@ -735,6 +735,8 @@ The nearest vertices will be used from each object which is typically what you w
    :width: 800px
    :figwidth: 800px
 
+   See:
+
    A) The small cubes can each be automatically parented to a triad of nearby vertices on the icosphere using the "Vertex (Triangle)" in the set parent context menu.
    B) Reshaping the object in edit mode then means each of the cubes follows their vertex triad parent separately.
    C) Re-scaling the parent icosphere in object mode means the child cubes are also rescaled as expected.

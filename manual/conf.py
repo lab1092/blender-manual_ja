@@ -44,7 +44,7 @@ source_suffix = '.rst'
 
 # The master toctree document.
 if 0:
-    exclude_patterns = []
+    exclude_patterns = ["contents_quicky.rst"]
     master_doc = 'contents'
 else:
     # Call quicky_index_gen.from_chapters()

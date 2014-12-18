@@ -50,7 +50,8 @@ to multiply it by a given constant (0.1), and to assign it directly to weights.
 Radii get the same value scaled by the *Radius Fac* factor (e.g.
 with a **10.0** factor, a stroke width of **3** will give radii of **3.0** ...).
 
-*Normalize Weight* (enabled by default) will scale weights value so that they tightly fit into the ``[0.0, 1.0]`` range.
+*Normalize Weight* (enabled by default)
+will scale weights value so that they tightly fit into the ``[0.0, 1.0]`` range.
 
 All this means that with a pressure tablet,
 you can directly control the radius and weight of the created curve, which can affect e.g.
@@ -95,9 +96,12 @@ Timing Mode
    Linear
       The path animation will be a linear one.
    Original
-      The path animation will reflect to original timing, including for the "gaps" (i.e. time between strokes drawing).
+      The path animation will reflect to original timing, including for the "gaps"
+      (i.e. time between strokes drawing).
    Custom Gaps
-      The path animation will reflect to original timing, but the "gaps" will get custom values. This is especially useful if you have very large pauses between some of your strokes, and would rather like to have "reasonable" ones!
+      The path animation will reflect to original timing, but the "gaps" will get custom values.
+      This is especially useful if you have very large pauses between some of your strokes,
+      and would rather like to have "reasonable" ones!
 
 Frame Range
    The "length" of the created path animation, in frames. In other words, the highest value of *Evaluation Time*.
@@ -109,16 +113,22 @@ Realtime
    When enabled, the path animation will last exactly the same duration it took you do draw the strokes.
 
 End Frame
-   When *Realtime* is disabled, this defines the end frame of the path animation. This means that the drawing timing will be scaled up or down to fit into the specified range.
+   When *Realtime* is disabled, this defines the end frame of the path animation.
+   This means that the drawing timing will be scaled up or down to fit into the specified range.
 
 Gap Duration
-   *Custom Gaps* only. The average duration (in frames) of each gap between actual strokes. Please note that the value entered here will only be exact if *Realtime* is enabled, else it will be scaled, exactly as the actual strokes' timing is!
+   *Custom Gaps* only. The average duration (in frames) of each gap between actual strokes.
+   Please note that the value entered here will only be exact if *Realtime* is enabled,
+   else it will be scaled, exactly as the actual strokes' timing is!
 
 Gap Randomness
-   Only when *Gap Duration* is non-null. The number of frames actual gap duration can vary of. This allows the creation of gaps having an average well defined duration, yet keeping some random variations to avoid an "always the same" effect.
+   Only when *Gap Duration* is non-null.  The number of frames actual gap duration can vary of.
+   This allows the creation of gaps having an average well defined duration,
+   yet keeping some random variations to avoid an "always the same" effect.
 
 Random Seed
-   The seed fed to the random generator managing gaps duration variations. Change it to get another set of gaps duration in the path animation.
+   The seed fed to the random generator managing gaps duration variations.
+   Change it to get another set of gaps duration in the path animation.
 
 
 Example

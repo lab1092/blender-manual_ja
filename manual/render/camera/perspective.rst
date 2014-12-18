@@ -259,8 +259,8 @@ of orthographic render very often used in drafting and third-person computer gam
 
 In Isometric renders,
 you want your depth lines and your horizontal lines to be at 30 degrees off horizontal,
-and your vertical lines to be, well, vertical. Some [http://en.wikipedia.
-org/wiki/Isometric_projection complicated vector calculus in Wikipedia]
+and your vertical lines to be, well, vertical.
+Some `complicated vector calculus in Wikipedia <http://en.wikipedia.org/wiki/Isometric_projection>`__
 gives us a convenient shortcut. To get Isometric Renders:
 
 

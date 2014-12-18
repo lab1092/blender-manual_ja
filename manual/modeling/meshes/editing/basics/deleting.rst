@@ -35,10 +35,13 @@ Dissolve
 ========
 
 Dissolve operations are also accessed from the delete menu. Instead of removing the geometry,
-which may leave holes that you have to fill in again, dissolve will remove the geometry and fill in the surrounding geometry.
+which may leave holes that you have to fill in again,
+dissolve will remove the geometry and fill in the surrounding geometry.
 
 Dissolve
-   Removes selected geometry, but keeps surface closed, effectively turning the selection into a single n-gon. Dissolve works slightly different based on if you have edges, faces or vertices selected. You can add detail where you need it, or quickly remove it where you don't.
+   Removes selected geometry, but keeps surface closed, effectively turning the selection into a single n-gon.
+   Dissolve works slightly different based on if you have edges, faces or vertices selected.
+   You can add detail where you need it, or quickly remove it where you don't.
 Limited Dissolve
    Limited Dissolve reduces detail on planar faces and linear edges with an adjustable angle threshold.
 
@@ -52,7 +55,7 @@ Limited Dissolve
 
    Face Split - dissolve option.
       When dissolving vertices into surrounding faces, you can often end up with very large, uneven ngons.
-The face split option limits dissolve to only use the corners of the faces connected to the vertex.
+      The face split option limits dissolve to only use the corners of the faces connected to the vertex.
 
 
 .. figure:: /images/Bmesh_dissolve_face_split.jpg
@@ -112,19 +115,21 @@ You can choose the location of the surviving vertex in the menu this tool pops u
 executing:
 
 At First
-   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the first one selected.
-
+   Only available in *Vertex* select mode,
+   it will place the remaining vertex at the location of the first one selected.
 At Last
-   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the last one selected (the active one).
-
+   Only available in *Vertex* select mode,
+   it will place the remaining vertex at the location of the last one selected (the active one).
 At Center
    Available in all select modes, it will place the remaining vertex at the center of the selection.
-
 At Cursor
    Available in all select modes, it will place the remaining vertex at the 3D Cursor.
-
 Collapse
-   This is a special option, as it might let "live" more than one vertex. In fact, you will have as many remaining vertices as you had "islands" of selection (i.e. groups of linked selected vertices). The remaining vertices will be positioned at the center of their respective "islands". It is also available *via* the :menuselection:`Mesh --> Edges --> Collapse` menu option...
+   This is a special option, as it might let "live" more than one vertex.
+   In fact, you will have as many remaining vertices as you had "islands" of selection
+   (i.e. groups of linked selected vertices).
+   The remaining vertices will be positioned at the center of their respective "islands".
+   It is also available *via* the :menuselection:`Mesh --> Edges --> Collapse` menu option...
 
 Merging vertices of course also deletes some edges and faces. But Blender will do everything
 it can to preserve edges and faces only partly involved in the reunion.
@@ -158,11 +163,13 @@ Remove Doubles
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
 
 
-Remove Doubles is a useful tool to simplify a mesh by merging vertices that are closer than a specified distance to each other. An alternate way to simplify a mesh is to use the :doc:`Decimate modifier </modifiers/generate/decimate>`.
+Remove Doubles is a useful tool to simplify a mesh by merging
+vertices that are closer than a specified distance to each other.
+An alternate way to simplify a mesh is to use the :doc:`Decimate modifier </modifiers/generate/decimate>`.
 
 Merge Distance
    Sets the distance threshold for merging vertices, in Blender units.
 Unselected
-   Allows vertices in a selection to be merged with unselected vertices. When disabled, selected vertices will only be merged with other selected ones.
-
+   Allows vertices in a selection to be merged with unselected vertices.
+   When disabled, selected vertices will only be merged with other selected ones.
 

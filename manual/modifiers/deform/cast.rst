@@ -7,7 +7,8 @@ surface or lattice to any of a few pre-defined shapes (sphere, cylinder, cuboid)
 
 It is equivalent to the *To Sphere* tool in *Edit Mode*
 (:menuselection:`Mesh --> Transform --> To Sphere` or :kbd:`Alt-Shift-S`)
-and what other programs call "Spherify" or "Spherize", but, as written above, it is not limited to casting to a sphere.
+and what other programs call "Spherify" or "Spherize", but, as written above,
+it is not limited to casting to a sphere.
 
 
 .. tip::

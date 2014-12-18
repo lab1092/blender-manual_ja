@@ -72,10 +72,9 @@ The integration of the fluid simulator was done as a Google Summer-of-Code proje
 information about the solver can be found at
 `www.ntoken.com <http://graphics.ethz.ch/~thuereyn/ntoken3/Publications.html>`__.
 These Animations were created with the solver before its integration into blender:
-[http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050731_sgposter.avi
-Adaptive Grids],
-[http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050607_tr1rtlbm.
-avi Interactive Animations]. Thanks to Chris Want for organizing the Blender-SoC projects, and
+`Adaptive Grids <http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050731_sgposter.avi>`__,
+`Interactive Animations <http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050607_tr1rtlbm.avi>`__.
+Thanks to Chris Want for organizing the Blender-SoC projects, and
 to Jonathan Merrit for mentoring this one! And of course thanks to Google for starting the
 whole thing... SoC progress updates were posted here:
 `SoC-Blenderfluid-Blog at PlanetSoC <http://www.planetsoc.com/blog/51>`__.

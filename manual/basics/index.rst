@@ -5,6 +5,7 @@
 #########
 
 .. toctree::
+   :maxdepth: 2
 
    quick_render.rst
    undo_and_redo.rst

@@ -112,6 +112,7 @@ These options are located in the *Object* menu.
 ..    Comment: <!--
    [[Image:Manual-Part-II-ObjectMode-Duplicate-Anim-Settings-Panel.png|frame|right|{{Literal|Anim settings}} panel.]]
    --> .
+
 :doc:`Verts </modeling/objects/duplication/dupliverts>` :This creates an instance of all children of this object on each vertex (for mesh objects only).
 
 :doc:`Faces </modeling/objects/duplication/duplifaces>` :This creates an instance of all children of this object on each face (for mesh objects only).

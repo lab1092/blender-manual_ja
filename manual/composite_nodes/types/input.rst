@@ -683,7 +683,13 @@ the following time controls are made:
 
 .. figure:: /images/Manual-Compositing-Time.jpg
 
-   A) No Effect B) Slow Down C) Freeze D) Accelerate E) Reverse
+   See:
+
+   A) No Effect
+   B) Slow Down
+   C) Freeze
+   D) Accelerate
+   E) Reverse
 
 
 Common uses for this include a

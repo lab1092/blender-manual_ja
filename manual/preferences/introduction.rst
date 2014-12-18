@@ -3,6 +3,7 @@
 Introduction
 ************
 
+
 This chapter explains how to change Blender's default configuration with the *User Preferences* editor.
 
 The Blender *User Preferences* editor contains many of the settings that you can
@@ -10,7 +11,7 @@ change to control the way Blender behaves each time you open the application.
 
 
 Open User Preferences
-*********************
+=====================
 
 To open a Blender *User Preferences* editor
 go to :menuselection:`File --> User Preferences` or press :kbd:`Ctrl-Alt-U`.

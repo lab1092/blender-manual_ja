@@ -163,7 +163,6 @@ Other Help Options
 Here we explain the two new features added for Blender,
 *Blender Search* and the recoded *Tooltips*.
 
-
 Blender Search
 ==============
 

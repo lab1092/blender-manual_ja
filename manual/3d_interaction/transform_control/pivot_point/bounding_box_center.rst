@@ -9,6 +9,7 @@ Bounding Box Center as Pivot
    | Menu:     Select from the following icon in the 3D window header
 
    .. figure:: /images/Icon-library_3D-Window_header-pivot-point.jpg
+
    | Hotkey:   :kbd:`,`
 
 
@@ -44,7 +45,10 @@ the pivot point is calculated based on the Bounding Box of all the selected Obje
 
 .. figure:: /images/3D_interaction-Transform_Control-Pivot_Point-Bounding_Box_Center-object-rotation.jpg
 
-   The grid of four images on the left (ABCD) shows the results of Object rotation when the pivot point is set to Bounding Box. The image to the right (E) shows the location of the Bounding Box pivot point when multiple Objects are selected. The pivot point is shown by a yellow circle.
+   The grid of four images on the left (ABCD) shows the results of Object rotation
+   when the pivot point is set to Bounding Box.
+   The image to the right (E) shows the location of the Bounding Box pivot point when multiple Objects are selected.
+   The pivot point is shown by a yellow circle.
 
 
 In Edit mode
@@ -57,6 +61,7 @@ only the center of the selected vertices.
 
 .. figure:: /images/3D_interaction-Transform_Control-Pivot_Point-Bounding_Box_Center-edit-mode-rotation.jpg
 
-   The effects of rotation in different mesh selection modes when the bounding box is set as the pivot point. The pivot point is shown by a yellow circle.
+   The effects of rotation in different mesh selection modes when the bounding box is set as the pivot point.
+   The pivot point is shown by a yellow circle.
 
 

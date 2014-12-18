@@ -45,7 +45,8 @@ camera view.
 
 .. note:: Anti-Aliasing and blur options with borders
 
-   Note that when Render Borders are activated, Full Sampling Anti-Aliasing will be disabled while Sampled Motion Blur will become available.
+   Note that when Render Borders are activated,
+   Full Sampling Anti-Aliasing will be disabled while Sampled Motion Blur will become available.
 
    :doc:`Read more about Anti-Aliasing » </render/options/antialiasing>`
    :doc:`Read more about Motion Blur » </render/post_process/motion_blur>`

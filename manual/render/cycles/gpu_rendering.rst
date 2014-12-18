@@ -115,14 +115,14 @@ We do intend to add a system to support scenes bigger than GPU memory,
 but this will not be added soon.
 
 
-Can I use multiple {{abbr|GPU|Graphics processing unit}}s for rendering?
-------------------------------------------------------------------------
+Can I use multiple GPU|Graphics processing units for rendering?
+---------------------------------------------------------------
 
 Yes, go to User Preferences > System > Compute Device Panel, and configure it as you desire.
 
 
-Would multiple {{abbr|GPU|Graphics processing unit}}s increase available memory?
---------------------------------------------------------------------------------
+Would multiple GPU|Graphics processing units increase available memory?
+-----------------------------------------------------------------------
 
 No, each GPU can only access its own memory.
 

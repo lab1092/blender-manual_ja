@@ -53,7 +53,10 @@ by comparing movement from different frames.
 Usage Notes:
 
 - Onion-skinning is enabled per layer by clicking on the *Onion Skin* button in the grease pencil properties panel.
-- The *Frames* field, directly under the *Onion Skin* button, controls how many frames will be drawn. When *Frames* is **0**, only the drawing on either side of the current frame will be visible. Otherwise, this field specifies the maximum number of frames on either side of the current frame that will result in a neighboring drawing.
+- The *Frames* field, directly under the *Onion Skin* button, controls how many frames will be drawn.
+  When *Frames* is **0**, only the drawing on either side of the current frame will be visible.
+  Otherwise, this field specifies the maximum number of frames on either side of the
+  current frame that will result in a neighboring drawing.
 
 
 Adjusting Timing of Sketches
@@ -64,8 +67,11 @@ editing of the timings of the drawings.
 This is especially useful for animators blocking out shots,
 where the ability to re-time blocking is one of the main purposes of the whole exercise.
 
-- In an *Dope Sheet* window, change the mode selector (found beside the menus) to *Grease Pencil* (by default, it should be set to *DopeSheet*).
-- At this point, the *DopeSheet* should now display a few "channels" with some "keyframes" on them. These "channels" are the layers, and the "keyframes" are the frames at which the layer has a sketch defined. They can be manipulated like any other data in the *DopeSheet* can be.
+- In an *Dope Sheet* window, change the mode selector (found beside the menus) to *Grease Pencil*
+  (by default, it should be set to *DopeSheet*).
+- At this point, the *DopeSheet* should now display a few "channels" with some "keyframes" on them.
+  These "channels" are the layers, and the "keyframes" are the frames at which the layer has a sketch defined.
+  They can be manipulated like any other data in the *DopeSheet* can be.
 
 
 .. figure:: /images/DopeSheetGreasePencil.jpg

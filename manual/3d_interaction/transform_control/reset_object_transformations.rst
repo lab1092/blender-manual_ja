@@ -29,16 +29,20 @@ Clear Options
 
 
 Clear Location :kbd:`Alt-G`
-   Clear (reset) the location of the selection. This will move the selection back to the coordinates 0,0,0.
+   Clear (reset) the location of the selection.
+   This will move the selection back to the coordinates 0,0,0.
 
 Clear Scale :kbd:`Alt-S`
-   Clear (reset) the scale of the selection. This will resize the selection back to the size it was when created.
+   Clear (reset) the scale of the selection.
+   This will resize the selection back to the size it was when created.
 
 Clear Rotation :kbd:`Alt-R`
-   Clear (reset) the rotation of the selection. This will set the rotation of the selection to 0 degrees in each plane.
+   Clear (reset) the rotation of the selection.
+   This will set the rotation of the selection to 0 degrees in each plane.
 
 Clear Origin :kbd:`Alt-O`
-   Clear (reset) the origin of the Child objects. This will cause Child objects to move to the coordinates of the parent.
+   Clear (reset) the origin of the Child objects.
+   This will cause Child objects to move to the coordinates of the parent.
 
 
 Apply Object transformations
@@ -72,19 +76,28 @@ Apply Options
 
 
 Apply Location :kbd:`Ctrl-A`
-   Apply (set) the location of the selection. This will make Blender consider the current location to be equivalent to 0 in each plane i.e. the selection will not move, the current location will be considered to be the "default location". The Object Center will be set to actual 0,0,0 (where the coloured axis lines intersect in each view).
+   Apply (set) the location of the selection.
+   This will make Blender consider the current location to be equivalent to 0 in each plane
+   i.e. the selection will not move, the current location will be considered to be the "default location".
+   The Object Center will be set to actual 0,0,0 (where the coloured axis lines intersect in each view).
 
 Apply Rotation :kbd:`Ctrl-A`
-   Apply (set) the rotation of the selection. This will make Blender consider the current rotation to be equivalent to 0 degrees in each plane i.e. the selection will not rotated, the current rotation will be considered to be the "default rotation".
+   Apply (set) the rotation of the selection.
+   This will make Blender consider the current rotation to be equivalent to 0 degrees in each plane
+   i.e. the selection will not rotated, the current rotation will be considered to be the "default rotation".
 
 Apply Scale :kbd:`Ctrl-A`
-   Apply (set) the scale of the selection. This will make Blender consider the current scale to be equivalent to 0 in each plane i.e. the selection will not scaled, the current scale will be considered to be the "default scale".
+   Apply (set) the scale of the selection.
+   This will make Blender consider the current scale to be equivalent to 0 in each plane
+   i.e. the selection will not scaled, the current scale will be considered to be the "default scale".
 
 Apply Rotation and Scale :kbd:`Ctrl-A`
    Apply (set) the rotation and scale of the selection. Do the above two applications simultaneously.
 
 Apply Visual Transform :kbd:`Ctrl-A`
-   Apply (set) the result of a constraint and apply this back to the Object's location, rotation and scale. See the following post for more detailed discussion: `Apply visual transform <http://projects.blender.org/tracker/index.php?func=detail&group_id=9&atid=498&aid=24616>`__.
+   Apply (set) the result of a constraint and apply this back to the Object's location, rotation and scale.
+   See the following post for more detailed discussion:
+   `Apply visual transform <http://projects.blender.org/tracker/index.php?func=detail&group_id=9&atid=498&aid=24616>`__.
 
 Make Duplicate Real :kbd:`Shift-Ctrl-A`
    Make any duplicates attached to this Object real so that they can be edited.

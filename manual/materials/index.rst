@@ -34,6 +34,7 @@
    nodes/types/color.rst
    nodes/types/vector.rst
    nodes/types/convertor.rst
+   options.rst
    special_effects/vertex_paint.rst
    special_effects/wire.rst
    special_effects/volume.rst

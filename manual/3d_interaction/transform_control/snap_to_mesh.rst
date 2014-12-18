@@ -75,7 +75,11 @@ Snap Element
 
 
 Volume
-   Snaps to regions within the volume of the first Object found below the mouse cursor. Unlike the other options, this one controls the depth (i.e. Z-coordinates in current view space) of the transformed element. By toggling the button that appears to the right of the snap target menu (see below), target objects will be considered as a whole when determining the volume center.
+   Snaps to regions within the volume of the first Object found below the mouse cursor.
+   Unlike the other options, this one controls the depth
+   (i.e. Z-coordinates in current view space) of the transformed element.
+   By toggling the button that appears to the right of the snap target menu (see below),
+   target objects will be considered as a whole when determining the volume center.
 Face
    Snap to the surfaces of faces in mesh objects. Useful for retopologizing.
 Edge

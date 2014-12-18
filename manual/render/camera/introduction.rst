@@ -88,7 +88,7 @@ Perspective / Orthographic / Panoramic
    while an *Orthographic* projection is a more technical view, best for blueprints,
    but worst to convey distances between objects.
    To configure these projections,
-   see :doc:`this page </render/camera/perspective>`on vanishing points and isometric view.
+   see :doc:`this page </render/camera/perspective>` on vanishing points and isometric view.
    *Panoramic* renders the scene with a cylindrical projection.
 
    .. figure:: /images/Manual-CameraView-Camera.jpg

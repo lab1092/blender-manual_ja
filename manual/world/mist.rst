@@ -83,6 +83,6 @@ In this example (`.blend <http://wiki.blender.org/index.php/:File:25-Manual-Worl
 the *Mist* *Height* options has been limited to create smoke covering the floor.
 
 
-This simple scene was inspired by [http://stefan-morrell.cgsociety.org/gallery/536375/ Stefan
-Morell's *Arc Sci-Fi Corridor* ].
+This simple scene was inspired by
+`Stefan Morell's Arc Sci-Fi Corridor <http://stefan-morrell.cgsociety.org/gallery/536375/>`__.
 

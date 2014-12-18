@@ -61,9 +61,9 @@ without having to update the script nodes in all files.
 Writing Shaders
 ^^^^^^^^^^^^^^^
 
-For more details on how to write shaders,
-see the [https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-languagespec.
-pdf OSL specification]. Here is a simple example:
+For more details on how to write shaders, see the
+`OSL specification <https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-languagespec.pdf>`__.
+Here is a simple example:
 
 
 FIXME(Tag Unsupported:span;

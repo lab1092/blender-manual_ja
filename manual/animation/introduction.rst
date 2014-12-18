@@ -71,8 +71,7 @@ Drivers
    :doc:`Drivers </animation/editors/graph/drivers>`
    :doc:`Driven Shape Keys </animation/driven_shape_keys>`
 
-The [http://wiki.blender.org/index.php/Doc:Tutorials/Animation/BSoD/Character_Animation BSoD
-Introduction to Character Animation tutorial]
+The `Introduction to Character Animation tutorial <http://wiki.blender.org/index.php/Doc:Tutorials/Animation/BSoD/Character_Animation BSoD>`__
 is a good starting point for learning character animation.
 Even if you never used Blender before.
 

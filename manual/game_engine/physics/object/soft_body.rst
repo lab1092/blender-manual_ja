@@ -74,10 +74,12 @@ FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/MassOption;
 
     - Default: Off.
     - Python property: ``obj.game.soft_body.use_cluster_rigid_to_softbody``
+
   - Suboption: *Soft to Soft Body* - Enable cluster collisions among Soft Bodies.
 
     - Default: Off.
     - Python property: ``obj.game.soft_body.use_cluster_soft_to_softbody``
+
   - Suboption: *Iterations* - Number of cluster iterations.
 
     - Range: 1-128.

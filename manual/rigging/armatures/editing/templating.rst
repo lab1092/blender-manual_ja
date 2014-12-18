@@ -92,7 +92,7 @@ OK now let us see some important ground rules:
 +                                                                                         |                                                                                   +
 +   With current edited armature as template.                                             |   With another armature as template.                                              +
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-+The *Bone Sketching* panel with *Template* conversion method enabled.                                                                                    +
++The *Bone Sketching* panel with *Template* conversion method enabled.                                                                                                        +
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
 Now, let us see the settings of this conversion method:
@@ -149,7 +149,7 @@ Think of them as A(ngle of bones), L(ength of bones) and D(efinition of stroke).
 +                                                                                                                                                                              |                                                                 |                                                                 |                                                                 +
 +   A: 1.0; L: 1.0; D: 1.0.                                                                                                                                                    |   A: 1.0; L: 0.0; D: 0.0.                                       |   A: 0.0; L: 1.0; D: 0.0.                                       |   A: 0.0; L: 0.0; D: 1.0.                                       +
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+
-+Examples of *Template* conversions for various influence weights values, with one stroke quite similar to the template chain's shape, and one stroke very different.                                                                                                                                                                                                      +
++Examples of *Template* conversions for various influence weights values, with one stroke quite similar to the template chain's shape, and one stroke very different.                                                                                                                                                                                                                +
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------------+
 
 
