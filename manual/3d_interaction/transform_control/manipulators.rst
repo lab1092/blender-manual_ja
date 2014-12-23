@@ -66,7 +66,7 @@ Manipulator controls
 
 :doc:`Read more about constraining transformations » </3d_interaction/transform_control/precision>`
 :doc:`Read more about axis locking » </3d_interaction/transform_control/axis_locking>`
-:doc:`Read more about trackball rotation » </3d_interaction/transformations/basics/rotate>`
+:doc:`Read more about trackball rotation » </basics/transformations/rotate>`
 
 
 Manipulator Preferences

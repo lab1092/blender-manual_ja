@@ -85,7 +85,8 @@ Specials
       Use the :menuselection:`Mesh --> Symmetrize` function in *Edit* Mode.
 
    Mirror Shape Key (Topology)
-      This is the same as *Mirror Shape Key* though it detects the mirrored vertices based on the topology of the mesh.
+      This is the same as *Mirror Shape Key* though it detects
+      the mirrored vertices based on the topology of the mesh.
       The mesh vertices dont have to be perfectly symmetrical for this one to work.
 
    New Shape From Mix
@@ -272,7 +273,8 @@ Workflow For Absolute Shape Keys
 
 
 - Select shape key Basis to edit the first shape key.
-- Select the extruded size face and :kbd:`S` :kbd:`0`:kbd:`.`:kbd:`5` :kbd:`LMB`, then :kbd:`G` :kbd:`X` :kbd:`-`:kbd:`1` :kbd:`LMB`.
+- Select the extruded size face and
+  :kbd:`S` :kbd:`0`:kbd:`.`:kbd:`5` :kbd:`LMB`, then :kbd:`G` :kbd:`X` :kbd:`-`:kbd:`1` :kbd:`LMB`.
 
 
 - Switch to Object Mode.
@@ -355,4 +357,4 @@ See Also
 - :doc:`2.4 Editing Shape Keys </animation/techs/shape/shape_keys/editing>`
 - :doc:`2.4 Animating Shape Keys </animation/techs/shape/shape_keys/animating>`
 - :doc:`2.4 Shape Keys Examples </animation/techs/shape/shape_keys/examples>`
-- `Addon: Corrective Shape Key <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Animation/Corrective_Shape_Key>`__
+- `Add-on: Corrective Shape Key <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Animation/Corrective_Shape_Key>`__

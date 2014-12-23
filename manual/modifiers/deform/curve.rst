@@ -79,14 +79,14 @@ Let's make a simple example:
    If you press :kbd:`MMB` while moving the Monkey you will constrain the movement to one axis only.
 
 
-.. figure:: /images/Manual-Part-II-curvesDeform_exampleMonkeyOnCurve2-2.65.gif
+.. figure:: /images/2.5_Manual-Part-II-curvesDeform_exampleMonkeyOnCurve2.jpg
    :width: 250px
    :figwidth: 250px
 
    Monkey deformations.
 
 
-- In the image to the right you can see the Monkey at different positions along the curve.
+- In the image above you can see the Monkey at different positions along the curve.
   To get a cleaner view over the deformation, a :doc:`Subsurf </modifiers/generate/subsurf>` modifier with
   two subdivision levels was applied, and :doc:`smooth </modeling/meshes/smoothing>` shading was used.
 

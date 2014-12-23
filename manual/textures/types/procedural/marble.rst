@@ -29,7 +29,8 @@ Soft / Hard
 Size
    The dimensions of the noise table
 Depth
-   The depth of the *Marble* calculation. A higher value results in greater calculation time, but also in finer details.
+   The depth of the *Marble* calculation.
+   A higher value results in greater calculation time, but also in finer details.
 Turbulence
    The turbulence of the sine bands.
 

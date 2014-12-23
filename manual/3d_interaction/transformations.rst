@@ -25,9 +25,9 @@ links provide a more detailed explanation of the more available transformation o
 Basic transformations
 =====================
 
-- :doc:`Grab/Move </3d_interaction/transformations/basics/grab>`: move a selection.
-- :doc:`Rotate </3d_interaction/transformations/basics/rotate>`: rotate a selection.
-- :doc:`Scale </3d_interaction/transformations/basics/scale>`: change the size of a selection.
+- :doc:`Grab/Move </basics/transformations/grab>`: move a selection.
+- :doc:`Rotate </basics/transformations/rotate>`: rotate a selection.
+- :doc:`Scale </basics/transformations/scale>`: change the size of a selection.
 
 
 Advanced Transformations

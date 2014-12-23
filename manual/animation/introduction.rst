@@ -9,67 +9,64 @@ Objects can be animated in many ways:
 Moving as a whole object
    Changing their position, orientation or size in time;
 Deforming them
-   animating their vertices or control points;
-Character Animation via Armature
-   animated to deform by the movement of bones inside the mesh, a very complex and flexible interaction that makes character-shaped objects appear to walk and jump.
+   Animating their vertices or control points;
+Inherited animation
+   Causing the object to move based on the movement of another object (e.g. its parent, hook, armature, etc...).
 
 In this chapter we will cover the first two,
 but the basics given here are actually vital for understanding the following chapters as well.
 
-Three methods are normally used in animation software to make a 3D object move:
-
-Key frames
-   Complete positions are saved for units of time (frames). An animation is created by interpolating an object fluidly through the frames. The advantage of this method is that it allows you to work with clearly visualized units. The animator can work from one position to the next and can change previously created positions, or move them in time.
-Animation Curves
-   Curves are interpolated from keyframes, and can be drawn for each XYZ component for location, rotation, and size, as well as any other attribute in Blender. These form the graphs for the movement, with time set out horizontally and the value set out vertically. The advantage of this method is that it gives you precise control over the results of the movement.
-Path
-   A curve is drawn in 3D space, and the Object is constrained to follow it according to a given time function of the position along the path.
-
-The first two systems in Blender are completely integrated in a single one, the :doc:`F-Curve system </animation/fcurves>`.
-
-In Blender 2.5x, everything can now be animated. Previously,
-only certain datablock had the ability to be keyframed. Now users have the ability to animate
-nearly any type of data that can be changed to multiple values.
+Animation is typically achieved with the use of :doc:`/animation/basics/key_frames`.
 
 
 Chapters
 ========
 
 General Principles and Tools
-   :doc:`Keyframes </animation/keyframes>`
-   :doc:`Animation Editors </animation/editors>`
-   :doc:`Using The Timeline </animation/timeline>`
-   :doc:`Markers </animation/markers>`
+----------------------------
+
+- :doc:`Key frames </animation/basics/key_frames>`
+- :doc:`Animation Editors </animation/editors/index>`
+- :doc:`Using The Timeline </animation/editors/timeline>`
+- :doc:`Markers </animation/basics/markers>`
 
 The Graph Editor
+----------------
 
-FIXME(TODO: Internal Link; [[User:Tnboma/Doc:2.5/Manual/Animation/Graph Editor|Using the Graph Editor]])
-   :doc:`F-Curves </animation/fcurves>`
-   :doc:`Editing Curves </animation/editors/graph/fcurves>`
-   :doc:`F-Curve Modifiers </animation/editors/fmodifiers>`
+- :doc:`Using the Graph Editor </animation/editors/graph/editing>`
+- :doc:`F-Curves </animation/editors/graph/fcurves>`
+- :doc:`Editing Curves </animation/editors/graph/fcurves>`
+- :doc:`F-Curve Modifiers </animation/editors/graph/fmodifiers>`
 
 The Action Editor
-   :doc:`Actions </animation/actions>`
-   :doc:`Creating Actions </animation/creating_actions>`
+-----------------
+
+- :doc:`Actions </animation/basics/actions>`
+- :doc:`Creating Actions </animation/creating_actions>`
 
 Animation Techniques
-   :doc:`Constraints </animation/techs/object/constraint>`
-   :doc:`Moving objects on a Path </animation/techs/object/path>`
-   :doc:`Changing Object Layers </animation/layer_animation>`
-   :doc:`Game Engine Physics Recording </physics/using_ge>`
+--------------------
+
+- :doc:`Constraints </animation/techs/object/constraint>`
+- :doc:`Moving objects on a Path </animation/techs/object/path>`
+- :doc:`Changing Object Layers </animation/layer_animation>`
+- :doc:`Game Engine Physics Recording </physics/using_ge>`
 
 Animating Deformation
-   :doc:`Methods of deformation </animation/basic/deformation>`
-   :doc:`Shape Keys </animation/techs/shape/shape_keys>`
-   :doc:`Deforming by a Lattice </animation/basic/deformation/lattice>`
-   :doc:`Deforming with Hooks </modifiers/deform/hooks>`
-   See also :doc:`Hooks </modifiers/deform/hooks>` -
-   Uses a modifier as a way to change the shape of a mesh. Sorta like sticking a fish hook in a mesh and pulling.
-   Uses the principles discussed in Shape Keys.
+---------------------
+
+- :doc:`Methods of deformation </animation/basic/deformation>`
+- :doc:`Shape Keys </animation/techs/shape/shape_keys>`
+- :doc:`Deforming by a Lattice </animation/basic/deformation/lattice>`
+- :doc:`Deforming with Hooks </modifiers/deform/hooks>`
+  
+See also :doc:`Hook Modifier </modifiers/deform/hooks>`
 
 Drivers
-   :doc:`Drivers </animation/editors/graph/drivers>`
-   :doc:`Driven Shape Keys </animation/driven_shape_keys>`
+-------
+
+- :doc:`Drivers </animation/basics/drivers>`
+- :doc:`Driven Shape Keys </animation/driven_shape_keys>`
 
 The `Introduction to Character Animation tutorial <http://wiki.blender.org/index.php/Doc:Tutorials/Animation/BSoD/Character_Animation BSoD>`__
 is a good starting point for learning character animation.
@@ -89,7 +86,7 @@ Animation Basics
    Markers are used to mark key points/events within an animation.
 :doc:`Motion Paths </animation/basics/motion_paths>`
    Motion Paths are used to visualize an animation.
-:doc:`Shape Keys </animation/basics/shape_keys>`
+:doc:`Shape Keys </animation/techs/shape/shape_keys>`
    Shape Keys are used to deform objects into new shapes.
 
 
@@ -110,14 +107,14 @@ Animation Editors
 Categories
 ----------
 
-:doc:`Modifiers </modifiers_and_deformation>`
+:doc:`Modifiers </modifiers/introduction>`
    Modifiers are automatic operations that affect an object in a non-destructive way.
    With modifiers, you can perform many effects automatically that would otherwise be tedious to do manually.
-:doc:`Rigging </rigging>`
+:doc:`Rigging </rigging/introduction>`
    Rigging.
-:doc:`Constraints </constraints>`
+:doc:`Constraints </constraints/introduction>`
    Constraints are a way of connecting transform properties (position, rotation and scale) between objects.
-:doc:`Physical Simulation </physical_simulation>`
+:doc:`Physical Simulation </physics/introduction>`
    This category covers various advanced Blender effects, often used to simulate real physical phenomena.
    There is the Particle System for things like hair, grass, smoke, flocks.
    Soft Bodies are useful for everything that tends to bend, deform, in reaction to forces like gravity or wind.
@@ -125,10 +122,11 @@ Categories
    Rigid Bodies can simulate dynamic objects that are fairly rigid.
    Fluids, which include liquids and gasses, can be simulated, including Smoke.
    Force Fields can modify the behavior of simulations.
-:doc:`Motion Tracking </motion_tracking>`
-   Motion tracking is a new technique available in Blender. It is still under development, and currently supports basic operations for 2D motion tracking, 3D motion tracking, and camera solution.
+:doc:`Motion Tracking </motion_tracking/index>`
+   Motion tracking is a new technique available in Blender. It is still under development,
+   and currently supports basic operations for 2D motion tracking, 3D motion tracking, and camera solution.
 `Animation Scripts <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts#Animation_Scripts>`__
-   Addon scripts for animation.
+   Add-on scripts for animation.
 `Rigging Scipts <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts#Rigging_Scripts>`__
-   Addon scripts for rigging.
+   Add-on scripts for rigging.
 

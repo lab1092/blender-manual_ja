@@ -39,7 +39,8 @@ Pose Library Panel
 
    Add New (Current Frame).
       *Add New* and *Replace Existing* automatically allocate a *Pose* to an *Action* frame.
-      *Add New (Currect Frame)* will add a *Pose* to the *Pose Library* based on the currect frame of the *Time Cursor*.
+      *Add New (Currect Frame)*
+      will add a *Pose* to the *Pose Library* based on the current frame of the *Time Cursor*.
       Its not a well supported feature.
 
    Replace Existing.

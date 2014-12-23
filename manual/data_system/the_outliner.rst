@@ -113,7 +113,8 @@ Toggle pre-selection of a group of datablocks
    - :kbd:`RMB` and drag or :kbd:`LMB` and drag,
 
    all *outside* the name/icon area. Those pre-selected have their line in a lighter color.
-   You then can (de)select them with a :kbd:`RMB` *on* the name/icon area, which brings on a context menu (see bellow).
+   You then can (de)select them with a :kbd:`RMB` *on* the name/icon area,
+   which brings on a context menu (see bellow).
 
 
 .. figure:: /images/Manual-2-56-PartIII-Outliner-Object-Operation.jpg

@@ -13,7 +13,10 @@ Blender will add those new faces for you,
 but you may need to do additional mapping or editing. In this fashion,
 you can use the UV Texture image to guide additional geometry changes.
 
-This section covers techniques for Mapping Uvs. The next sections cover :doc:`Editing UVs </textures/mapping/uv/layout_editing>`, followed by methods of :doc:`Managing UV Layouts </textures/mapping/uv/layout_management>`, and :doc:`Applying Images to UVs </textures/mapping/uv/applying_image>`.
+This section covers techniques for Mapping Uvs.
+The next sections cover :doc:`Editing UVs </textures/mapping/uv/layout_editing>`,
+followed by methods of :doc:`Managing UV Layouts </textures/mapping/uv/layout_management>`,
+and :doc:`Applying Images to UVs </textures/mapping/uv/applying_image>`.
 
 
 About UVs
@@ -140,7 +143,8 @@ Basic Mapping
 *************
 
 Based on the fundamental geometry of the object, and how it is being viewed,
-the *Mesh→UV Unwrap→Cube, Cylinder, and Sphere* UV Calculations attempt to unfold the faces for you as an initial best fit.
+the *Mesh→UV Unwrap→Cube, Cylinder,
+and Sphere* UV Calculations attempt to unfold the faces for you as an initial best fit.
 Here, the view from the 3D window is especially important.
 Also, the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel)
 should be set (in Blender units) to encompass the object.
@@ -281,7 +285,8 @@ as opposed to 2d texturing, where it is difficult to match the edges of differen
 
 The workflow is the following:
 
-- Create seams. A seam is marked in Edit mode by selecting edges to make the seam and then issuing the command to Mark Seam.
+- Create seams.
+  A seam is marked in Edit mode by selecting edges to make the seam and then issuing the command to Mark Seam.
 - Unwrap
 - Adjust seams and repeat
 - Manually adjust UVs. See the next section on Editing UVs.
@@ -372,7 +377,8 @@ They can be selected in the tool setting in the tool panel in the 3D View.
 Angle Based
    This method gives a good 2d representation of a mesh.
 Conformal
-   Uses LSCM (Least Squared Conformal Mapping). This usually gives a less accurate UV mapping than Angle Based, but works better for simpler objects.
+   Uses LSCM (Least Squared Conformal Mapping). This usually gives a less accurate UV mapping than Angle Based,
+   but works better for simpler objects.
 
 Fill Holes
    Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.
@@ -385,7 +391,10 @@ Use Subsurf Modifier
 Margin
    Space between UV islands
 
-**This point is crucial to understanding mapping** later on: a face's UV image texture only has to use *part* of the image, not the *whole* image. Also, portions of the same image can be shared by multiple faces. A face can be mapped to less and less of the total image.
+**This point is crucial to understanding mapping** later on:
+a face's UV image texture only has to use *part* of the image, not the *whole* image.
+Also, portions of the same image can be shared by multiple faces.
+A face can be mapped to less and less of the total image.
 
 
 Smart UV Project

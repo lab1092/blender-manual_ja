@@ -58,12 +58,14 @@ is available in both *Edit mode* and *Object* mode.
 
 .. note::
 
-   What is selected using both these tools is affected by the *Limit Selection to visible* feature (available under the 3D viewport) in *Solid Viewport Shading Mode*.
+   What is selected using both these tools is affected by the *Limit Selection to visible* feature
+   (available under the 3D viewport) in *Solid Viewport Shading Mode*.
 
    For example,
 
    - in solid shading mode and face selection mode, all faces *within* the selection area will be selected;
-   - whilst in the wireframe shading mode and face selection mode, only faces whose handle are within the selection area will be selected.
+   - whilst in the wireframe shading mode and face selection mode,
+     only faces whose handle are within the selection area will be selected.
 
 
 Rectangular region (Border select)
@@ -90,7 +92,9 @@ by releasing :kbd:`LMB` the selection is complete; see (*Complete*).
 
 .. note::
 
-   Border select adds to the previous selection, so in order to select only the contents of the rectangle, deselect all with :kbd:`A` first. In addition, you can use :kbd:`MMB` while you draw the border to deselect all objects within the rectangle.
+   Border select adds to the previous selection,
+   so in order to select only the contents of the rectangle, deselect all with :kbd:`A` first.
+   In addition, you can use :kbd:`MMB` while you draw the border to deselect all objects within the rectangle.
 
 
 Circular region
@@ -117,7 +121,9 @@ or the :kbd:`Wheel`.
 +Circle Region Select                                                                                                                                   +
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+
 
-(*Circle Region Select*) is an example of selecting edges while in *Edge Select Mode*. As soon as an edge intersects the circle the edge becomes selected. The tool is interactive such that edges are selected while the circle region is being dragged with the :kbd:`LMB`.
+(*Circle Region Select*) is an example of selecting edges while in *Edge Select Mode*.
+As soon as an edge intersects the circle the edge becomes selected.
+The tool is interactive such that edges are selected while the circle region is being dragged with the :kbd:`LMB`.
 
 If you want to deselect elements,
 either hold :kbd:`MMB` or :kbd:`Alt-LMB` and begin clicking or dragging again.
@@ -132,9 +138,13 @@ To exit from this tool, click :kbd:`RMB`, or hit the :kbd:`Esc` key.
 Lasso region
 ------------
 
-*Lasso* select is similar to *Border* select in that you select objects based on a region, except *Lasso* is a hand-drawn region that generally forms a circular/round-shaped form; kind of like a lasso.
+*Lasso* select is similar to *Border* select in that you select objects based on a region,
+except *Lasso* is a hand-drawn region that generally forms a circular/round-shaped form; kind of like a lasso.
 
-*Lasso* is available in either *Edit Mode* or *Object Mode*. To activate the tool use the :kbd:`Ctrl-LMB` while dragging. The one difference between *Lasso* and *Border* select is that in *Object mode*, *Lasso* only selects objects where the lasso region intersects the objects' center.
+*Lasso* is available in either *Edit Mode* or *Object Mode*.
+To activate the tool use the :kbd:`Ctrl-LMB` while dragging.
+The one difference between *Lasso* and *Border* select is that in *Object mode*,
+*Lasso* only selects objects where the lasso region intersects the objects' center.
 
 To deselect, use :kbd:`Ctrl-Shift-LMB` while dragging.
 

@@ -62,7 +62,10 @@ the frame's *Width* must be greater than **0.0**.
    Frame width.
 
 
-(*Frame width*) is a text object with a width of **5.0**. And because the frame width is greater than **0.0** it is now visible and is drawn in the active theme color as a dashed rectangle. The text has overflowed because the text has reached the end of the last frame, the default frame.
+(*Frame width*) is a text object with a width of ``5.0``.
+And because the frame width is greater than ``0.0``
+it is now visible and is drawn in the active theme color as a dashed rectangle.
+The text has overflowed because the text has reached the end of the last frame, the default frame.
 
 
 Adding/Deleting a Frame

@@ -37,15 +37,19 @@ Examples
    :width: 620px
    :figwidth: 620px
 
-   The mesh Cone.006 of object Cone.002 is being edited.  The mesh's Unique datablock ID name is highlighted in the Outliner.
+   The mesh ``Cone.006`` of object ``Cone.002`` is being edited.
+   The mesh's Unique datablock ID name is highlighted in the Outliner.
 
 
 The cone in the middle has been (1) link duplicated to the left and (2)
 duplicated to the right.
 
-- The duplicated right cone is being edited, the original cone in the middle remains unchanged.  The mesh data has been copied, not linked.
-- Likewise, if the right cone is edited in object mode, the original cone remains unchanged.  The new object's transform properties or datablock is a copy, not linked.
-- When the right cone was duplicated, it inherited the material of the middle cone.  The material properties were linked, not copied.
+- The duplicated right cone is being edited, the original cone in the middle remains unchanged.
+  The mesh data has been copied, not linked.
+- Likewise, if the right cone is edited in object mode, the original cone remains unchanged.
+  The new object's transform properties or datablock is a copy, not linked.
+- When the right cone was duplicated, it inherited the material of the middle cone.
+  The material properties were linked, not copied.
 
 See above if you want separate copies of the datablocks normally linked.
 
@@ -80,14 +84,19 @@ Examples
    :width: 620px
    :figwidth: 620px
 
-   The object Cone.001 was linked duplicated.  Though both these cones are separate objects with unique names, the single mesh named Cone, highlighted in the Outliner, is shared by both.
+   The object ``Cone.001`` was linked duplicated.
+   Though both these cones are separate objects with unique names,
+   the single mesh named Cone, highlighted in the Outliner, is shared by both.
 
 
 The left cone is a *Linked Duplicate* of the middle cone (using :kbd:`Alt-D`).
 
-- As a vertex is moved in *Edit mode* in one object, the same vertex is moved in the original cone as well.  The mesh data are links, not copies.
-- In contrast, if one of these two cones is rotated or rescaled in object mode, the other remains unchanged.  The transform properties are copied, not linked.
-- As in the previous example, the newly created cone has inherited the material of the original cone.  The material properties are linked, not copied.
+- As a vertex is moved in *Edit mode* in one object, the same vertex is moved in the original cone as well.
+  The mesh data are links, not copies.
+- In contrast, if one of these two cones is rotated or rescaled in object mode, the other remains unchanged.
+  The transform properties are copied, not linked.
+- As in the previous example, the newly created cone has inherited the material of the original cone.
+  The material properties are linked, not copied.
 
 A common table has a top and four legs. Model one leg,
 and then make linked duplicates three times for each of the remaining legs.
@@ -113,13 +122,21 @@ These options are located in the *Object* menu.
    [[Image:Manual-Part-II-ObjectMode-Duplicate-Anim-Settings-Panel.png|frame|right|{{Literal|Anim settings}} panel.]]
    --> .
 
-:doc:`Verts </modeling/objects/duplication/dupliverts>` :This creates an instance of all children of this object on each vertex (for mesh objects only).
+:doc:`Verts </modeling/objects/duplication/dupliverts>`
+:This creates an instance of all children of this object on each vertex (for mesh objects only).
 
-:doc:`Faces </modeling/objects/duplication/duplifaces>` :This creates an instance of all children of this object on each face (for mesh objects only).
+:doc:`Faces </modeling/objects/duplication/duplifaces>`
+:This creates an instance of all children of this object on each face (for mesh objects only).
 
-:doc:`Group </modeling/objects/duplication/dupligroup>` :This creates an instance of the group with the transformation of the object. Group duplicators can be animated using actions, or can get a :doc:`Proxy </data_system/linked_libraries#proxy_objects>`.
+:doc:`Group </modeling/objects/duplication/dupligroup>`
+:This creates an instance of the group with the transformation of the object.
+Group duplicators can be animated using actions,
+or can get a :doc:`Proxy </data_system/linked_libraries#proxy_objects>`.
 
-:doc:`Frames </modeling/objects/duplication/dupliframes>` :For animated objects, this creates an instance on every frame. As you'll see on this topic's subpage, this is also a *very* powerful technique for arranging objects and for modeling them.
+:doc:`Frames </modeling/objects/duplication/dupliframes>`
+:For animated objects, this creates an instance on every frame.
+As you'll see on this topic's subpage,
+this is also a *very* powerful technique for arranging objects and for modeling them.
 
 
 Linked Library Duplication

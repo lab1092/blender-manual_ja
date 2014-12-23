@@ -17,7 +17,9 @@ Examples
    Settings for the curve
 
 
-:kbd:`Shift-A` to add a *Bezier Circle* and scale it up.  In the *Curve* menu under *Path Animation* enable *Follow* and set *Frames* to something more reasonable than 100 (say 16).
+:kbd:`Shift-A` to add a *Bezier Circle* and scale it up.
+In the *Curve* menu under *Path Animation* enable *Follow*
+and set *Frames* to something more reasonable than 100 (say 16).
 
 
 .. figure:: /images/25-Manual-Modeling-Dupliframes-example02.jpg
@@ -33,7 +35,8 @@ Add a *Monkey*.  In the *Object* menu under *Duplication* enable
 
 .. note:: Speed
 
-   The *Speed* option is used when the parent-child relationship is set to *Follow Path* (see below).  In this example, the monkey will then travel along the circle over 16 frames.
+   The *Speed* option is used when the parent-child relationship is set to *Follow Path* (see below).
+   In this example, the monkey will then travel along the circle over 16 frames.
 
 
 .. figure:: /images/25-Manual-Modeling-Dupliframes-example03.jpg
@@ -73,7 +76,8 @@ All monkeys are now real objects, but still linked copies.  To change this,
 
    There are many alternatives to Dupliframes.  Which tool to use depends on context.
 
-   - To use a small curve as a profile and a larger curve as a path, simply use the former as a *Bevel Object* to the latter.
+   - To use a small curve as a profile and a larger curve as a path,
+     simply use the former as a *Bevel Object* to the latter.
    - To arrange objects along a curve, combining an *Array Modifier* and a *Curve Modifier* is often useful.
    - Dupliverts can be used to arrange objects, for example, along a circle or across a subdivided plane.
 

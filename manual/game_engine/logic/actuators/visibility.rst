@@ -22,7 +22,8 @@ Visible
 Occlusion
    Toggle checkbox to toggle occlusion. Must be initialised from the Physics tab.
 Children
-   Toggle checkbox to toggle recursive setting - will set visibility / occlusion state to all child objects, children of children (recursively)
+   Toggle checkbox to toggle recursive setting -
+   will set visibility / occlusion state to all child objects, children of children (recursively)
 
 
 Usage Notes
@@ -31,5 +32,4 @@ Usage Notes
 Using the visiblity actuator will save on Rasterizer usage, however not Physics,
 and so is limited in terms of Level of Detail (LOD). For LOD look at replace mesh,
 but be aware that the logic required can negate the effect of the LOD.
-
 

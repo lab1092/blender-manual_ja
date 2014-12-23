@@ -34,14 +34,10 @@ Adding a new Scene
 
    Add Scene menu
 
+.. |addview-button| image:: /images/Manual-Part-I-Interface-Screens-AddView-Button25.jpg
 
-You can add a new scene by clicking
-
-.. figure:: /images/Manual-Part-I-Interface-Screens-AddView-Button25.jpg
-   :align: center
-
- in the Scene selector option. When you create a new scene,
- you can choose between five options to control its contents (*Add Scene menu*).
+You can add a new scene by clicking the *Add view* button (|addview-button|) in the Scene selector option.
+When you create a new scene, you can choose between five options to control its contents. 
 
 To choose between these options,
 you need to clearly understand the difference between "Objects" and "Object Data".

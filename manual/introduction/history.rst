@@ -186,24 +186,24 @@ Blender 2.5 - The Recode!
   3D audio and video, bug fixes, and the UI internationalization.
 - `2.61 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.61>`__ - December 2011:
   The Cycles renderer was added in trunk, the camera tracker was added, dynamic paint for modifying textures
-  with mesh contact/approximation, the Ocean Sim modifier to simulate ocean and foam, new addons, bug fixes,
+  with mesh contact/approximation, the Ocean Sim modifier to simulate ocean and foam, new add-ons, bug fixes,
   and more extensions added for the Python API.
 - `2.62 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.62>`__ - February 2012:
   The `Carve <http://carve-csg.com/>`__ library was added to improve boolean operations, support for
   object tracking was added, the Remesh modifier was added, many improvements in the GE, matrices and
-  vectors in the Python API were improved, new addons, and many bug fixes.
+  vectors in the Python API were improved, new add-ons, and many bug fixes.
 - `2.63 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.63>`__ - April 2012:
   Bmesh was merged to trunk with full support for n-sided polygons, sculpt hiding, a panoramic camera
   for Cycles, mirror ball environment textures and float precision textures, render layer mask layers,
   ambient occlusion and viewport display of background images and render layers, new import and export
-  addons were added, and 150 bug fixes.
+  add-ons were added, and 150 bug fixes.
 - `2.64 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.64>`__  - October 2012:
   Mask editor, improved motion tracker, OpenColorIO, Cycles improvements, sequencer improvements,
   better mesh tools (Inset and Bevel were improved), new keying nodes, sculpt masking, Collada improvements,
   new skin modifier, new compositing nodes backend, and many bugs were fixed.
 - `2.65 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.65>`__ - December 2012:
   Fire and smoke improvements, anisotropic shader for Cycles, modifier improvements, bevel tool now includes rounding,
-  new addons, and over 200 bug fixes.
+  new add-ons, and over 200 bug fixes.
 - `2.66 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.66>`__ - February 2013:
   Dynamic topology, rigid body simulation, improvements in UI and usability (including retina display
   support), Cycles now supports hair, the bevel tool now supports individual vertex bevelling,
@@ -213,7 +213,7 @@ Blender 2.5 - The Recode!
 - `2.67 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.67>`__ - May 2013:
   Freestyle was added, paint system improvements, subsurface scattering for Cycles, Ceres library in the
   motion tracker, new custom python nodes, new mesh modeling tools, better support for UTF8 text and
-  improvements in text editors, new addons for 3D printing, over 260 bug fixes.
+  improvements in text editors, new add-ons for 3D printing, over 260 bug fixes.
 - `2.68 <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.68>`__ - July 2013:
   New and improved modeling tools, three new Cycles nodes, big improvements in the motion tracker,
   Python scripts and drivers are disabled by default when loading files for security reasons, and over 280 bug fixes.

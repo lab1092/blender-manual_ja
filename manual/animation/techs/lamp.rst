@@ -6,7 +6,8 @@
 Animating Lamps Properties
 **************************
 
-As of Blender 2.5, :doc:`Everything is animatable </introduction/whats_new_in_this_series#animation_system>`. Read more about keyframes :doc:`Here </animation/keyframes>`.
+As of Blender 2.5, :doc:`Everything is animatable </introduction/whats_new_in_this_series#animation_system>`.
+Read more about keyframes :doc:`Here </animation/keyframes>`.
 
 
 Example
@@ -14,7 +15,10 @@ Example
 
 Let's illustrate this with a flying torch deep in a cave.
 
-We won't detail the cave and torch creation - the first one is an deformed icosphere with *Subsurf* and :doc:`Displace modifiers </modifiers/deform/displace>`, and the second one, a cylinder scaled and subdivided several times in its length, with a :doc:`particle system </physics/particles>` to materialize its fire.
+We won't detail the cave and torch creation - the first one is an deformed icosphere with *Subsurf* and
+:doc:`Displace modifiers </modifiers/deform/displace>`,
+and the second one, a cylinder scaled and subdivided several times in its length, with a
+:doc:`particle system </physics/particles>` to materialize its fire.
 
 The torch will be the only light source of the scene. Add four *Lamp* lamps,
 all using the same lamp datablock. Place them around the tip of the torch,

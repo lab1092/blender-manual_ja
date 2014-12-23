@@ -1,0 +1,3255 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-23 09:57+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/constraints/common_interface.rst:7
+msgid "Constraints Common Interface"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:13
+msgid "The three parts of a constraint interface"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:16
+msgid ""
+"As with :doc:`modifiers </modifiers>`, an object (or bone, see the "
+":doc:`rigging chapter </rigging>` for details) can use several constraints "
+"at once. Hence, these constraints are organized in a stack which controls "
+"their order of evaluation (from top to bottom)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:20
+msgid ""
+"All constraints share a common basic interface, packed up in a sort of sub-"
+"panel, that is split into three parts:"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:23
+msgid "The header, gathering most common settings."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:24
+msgid "The constraint's specific settings."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:25
+msgid ""
+"The influence and animation controls (the *Rigid Body Joint* constraints "
+"have no influence setting)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:29
+msgid "Constraints Header"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:35
+msgid "A constraint header"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:38
+msgid ""
+"The header of a constraint \"sub-panel\" is the same for all. From left to "
+"right, you have:"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:41
+msgid "A small arrow"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:41
+msgid "This control allows you to show/hide the constraint's settings."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:44
+msgid "The constraint type"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:44
+msgid "This is just static text showing you what this constraint is..."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:54
+msgid "The name field"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:47
+msgid ""
+"Here you can give your constraint a more meaningful name than the default "
+"one. This control has another *important* purpose: it turns red when the "
+"constraint is not functional (as in *A constraint header*). As most "
+"constraints need a second \"target\" object to work (see below), when just "
+"added, they are in \"red state\", as Blender cannot guess which object or "
+"bone to use as target. This can also happen when you choose an invalid set "
+"of settings, e.g. with a :doc:`Track To constraint "
+"</constraints/tracking/track_to>` of which the *To* and *Up* vectors are "
+"both set to the same axis. As noted above, constraints in \"red state\" are "
+"ignored during the stack evaluation."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:57
+msgid "The \"up\"/\"down\" buttons"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:57
+msgid ""
+"As seen above, these allow you to move a constraint up/down in the stack."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:61
+msgid "The \"X\" control"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:60
+msgid ""
+"As seen above, this will delete (remove from the stack) the constraint."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:64
+msgid "Constraints Settings"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:70
+msgid ""
+"The central part of a constraint's subpanel contains the constraint's "
+"settings, the target, and constraint space"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:73
+msgid ""
+"The constraints settings area is of course specific to each constraint type."
+" However, there are two points that are common to many constraints, so we "
+"will detail them here."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:78
+msgid "The target"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:80
+msgid ""
+"Most constraints need another \"target\" object or bone to \"guide\" them. "
+"You select which by selecting its name in the *Target* field. Except for a "
+"few cases, you can use any type of object (camera, mesh, empty...); its "
+"object origin will be the target point."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:85
+msgid ""
+"When you type in the *OB* field a mesh or lattice name, a second *Vertex "
+"Group* field appears just below. If you leave it empty, the mesh or lattice "
+"will be used as a standard object target. But if you enter in this *Vertex "
+"Group* field the name of one of the mesh's or lattice's vertex groups, then "
+"the constraint will use the median point of this vertex group as target."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:91
+msgid ""
+"Similarly, if you type in the *OB* field an armature name, a second *Bone* "
+"field appears just below. If you enter in it the name of one of the "
+"armature's bones, then the constraint will use this bone's *root* as target."
+" In some constraints, when you use a bone as target, another *Head/Tail* "
+"numeric field will also appear, that allows you to select where along the "
+"bone the target point will lay, from root (**0.0**) to tip (**1.0**) "
+"(remember that currently, in Blender UI, bones' roots are called \"heads\", "
+"and bones' tips, \"tails\"...)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:103
+msgid "The Constraint Space (Space)"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:105
+msgid ""
+"For many constraints you can choose in which space it is evaluated/applied. "
+"In the Space drop-down lists, the right side one is the space that the owner"
+" is evaluated in (Owner Space). When such a constraint uses a target, you "
+"can also choose in which space the target is evaluated (Target Space). The "
+"Target Space drop-down list is on the left side. Both lists have the same "
+"options, depending on whether the element (owner or target) is a regular "
+"object, or a bone:"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:115
+msgid "Local Space"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:113
+msgid ""
+"The object's properties are evaluated in its own local space, i.e. based on "
+"its rest position (without taking into account its parents transformations "
+"in its chain, or its armature object's transformation)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:120
+msgid "Local With Parent (bones only)"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:118
+msgid ""
+"The bone properties are evaluated in its own local space, *including* the "
+"transformations due to a possible parent relationship (i.e. due to the "
+"chain's transformations above the bone)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:126
+msgid "Pose Space (bones only)"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:123
+msgid ""
+"The bone properties are evaluated in the armature object local space (i.e. "
+"independently from the armature transformations in *Object* mode). Hence, if"
+" the armature object has null transformations, *Pose Space* will have the "
+"same effect as *World Space*."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:130
+msgid "Local (Without Parent) Space (objects only)"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:129
+msgid ""
+"The object properties are evaluated in its own local space, *without* the "
+"transformations due to a possible parent relationship."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:135
+msgid "World Space (default setting)"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:133
+msgid ""
+"Here the object's or bone's properties are evaluated in the global "
+"coordinate system. This is the easiest to understand and most natural "
+"behavior, as it always uses the \"visual\" transform properties (i.e. as you"
+" see them in the 3D views)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:137
+msgid ""
+"Understanding the Constraint Space effects is not really easy (unless you "
+"are a geometry genius...). The best thing to do is to experiment with their "
+"different combinations, using e.g. two empties (as they materialize clearly "
+"their axes), and a *Copy Rotation* constraint (as rotations are the most "
+"demonstrative transformations, to visualize the various spaces "
+"specificities...)."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:147
+#: ../../manual/constraints/common_interface.rst:153
+msgid "Influence"
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:156
+msgid ""
+"At the bottom of nearly all constraints, you have the *Influence* slider, "
+"which controls the influence of the constraint on its owner. As you might "
+"expect, **0.0** means that the constraint has no effect, and **1. 0** means "
+"that the constraint has full effect. Using in-between values, you can have "
+"several constraints all working together on the same owner's properties. "
+"Note that if a constraint has a full influence on a given property, all "
+"other constraints above in the stack working on that same property will have"
+" no effect at all."
+msgstr ""
+
+#: ../../manual/constraints/common_interface.rst:164
+msgid ""
+"But the best thing with influence is that you can animate it with an Fcurve "
+"- see :doc:`the constraints page of the animation chapter "
+"</animation/techs/object/constraint>` for more details about this."
+msgstr ""
+
+#: ../../manual/constraints/index.rst:5
+msgid "Constraints"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:9
+msgid ""
+"Constraints are a way of connecting *transform properties* (position, "
+"rotation and scale) between objects. Constraints are in a way the object "
+"counterpart of the :doc:`modifiers </modifiers>`, which work on the object "
+"*data* (i.e. meshes, curves, etc.)."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:13
+msgid ""
+"All constraints share a basic :doc:`common interface "
+"</constraints/common_interface>`, again with many similarities with the "
+"modifiers' one."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:18
+msgid "Use of Constraints"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:20
+msgid ""
+"Even though constraints might be very useful in static scenes (as they can "
+"help to automatically position/rotate/scale objects), they were first "
+"designed for animation, as they allow you to limit/control the freedom of an"
+" object, either in absolute (i.e. in global space), or relatively to other "
+"objects."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:26
+msgid ""
+"Also note that constraints internally work using 4x4 transformation matrices"
+" only. When you use settings for specific rotation or scaling constraining, "
+"this information is being derived from the matrix only, not from settings in"
+" a *Bone* or *Object*. Especially for combining rotations with non-uniform "
+"or negative scaling this can lead to unpredictable behavior."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:34
+msgid "Constraining bones"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:36
+msgid ""
+"Finally, there is a great rigging feature in Blender: in *Pose* mode, each "
+"bone of an armature behaves a bit like a standard object, and, as such, can "
+"be constrained. Most constraints work well with both objects and bones, but "
+"there are a few exceptions which are noted in the relevant constraints "
+"pages."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:41
+msgid "To learn more:"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:43
+msgid ""
+"Read about using constraints in object animation in the :doc:`Animation "
+"chapter </animation>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:44
+msgid ""
+"Read about using constraints in rigging in the :doc:`Armatures "
+"</rigging/posing>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:48
+msgid "Available Constraints"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:52
+msgid "The Constraint Menu"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:55
+msgid ""
+"There are several types of constraints. We can classify them into four "
+"families:"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:58
+msgid ":doc:`Motion Tracking </constraints#motion_tracking>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:59
+msgid ":doc:`Transform </constraints#transform_constraints>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:60
+msgid ":doc:`Tracking </constraints#tracking_constraints>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:61
+msgid ":doc:`Relationship </constraints#relationship_constraints>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:64
+msgid ""
+"There are constraints that works with their *owner* object and others that "
+"need a second object (the *target*) to work, sometimes of a specific type "
+"(e.g. a curve). In this case targeted constraints are shown as a dark blue "
+"dashed line drawn in the 3D view between the owner and target objects."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:71
+msgid "Motion Tracking"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:73
+msgid "Camera Solver"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:74
+msgid "Object Solver"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:75
+msgid "Follow Track"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:79
+msgid "Transform Constraints"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:81
+msgid ""
+"These constraints directly control/limit the transform properties of its "
+"owner, either absolutely or relatively in terms of its target properties."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:85
+msgid ":doc:`Copy Location </constraints/transform/copy_location>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:86
+msgid ""
+"Copies the location of the target (with an optional offset) to the owner, so"
+" that both move together."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:87
+msgid ":doc:`Copy Rotation </constraints/transform/copy_rotation>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:88
+msgid ""
+"Copies the rotation of the target (with an optional offset) to the owner, so"
+" that both rotate together."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:89
+msgid ":doc:`Copy Scale </constraints/transform/copy_scale>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:90
+msgid ""
+"Copies the scale of the target (with an optional offset) to the owner, so "
+"that both scale together."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:91
+msgid ":doc:`Copy Transforms </constraints/transform/copy_transforms>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:92
+msgid ""
+"Copies the transforms of the target to the owner, so that both transform "
+"together."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:93
+msgid ":doc:`Limit Distance </constraints/transform/limit_distance>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:94
+msgid ""
+"Limits the position of the owner, so that it is nearer/further/exactly at "
+"the specified distance from the target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:95
+msgid ":doc:`Limit Location </constraints/transform/limit_location>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:96
+msgid "Limits the owner's location inside a given range."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:97
+msgid ":doc:`Limit Rotation </constraints/transform/limit_rotation>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:98
+msgid "Limits the owner's rotation inside a given range."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:99
+msgid ":doc:`Limit Scale </constraints/transform/limit_scale>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:100
+msgid "Limits the owner's scale inside a given range."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:101
+msgid ":doc:`Transformation </constraints/transform/transformation>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:102
+msgid ""
+"Uses a property of the target (location, rotation or scale), to control a "
+"property (the same or a different one) of the owner."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:105
+msgid ":doc:`Maintain Volume </constraints/transform/maintain_volume>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:104
+msgid "Maintains the volume of a bone or an object."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:108
+msgid "Tracking Constraints"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:110
+msgid ""
+"These constraints try, in various ways, to adjust their owner's properties "
+"so that it \"points at\" or \"follows\" the target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:113
+msgid ":doc:`Clamp To </constraints/tracking/clamp_to>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:114
+msgid "Clamps the owner to a given curve target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:115
+msgid ":doc:`Damped Track </constraints/tracking/damped_track>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:116
+msgid "Constrains one local axis of the owner to always point towards Target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:117
+msgid ":doc:`Inverse Kinematics </constraints/tracking/ik_solver>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:118
+msgid ""
+"Bones only. Creates a chain of bones controlled by the target, using inverse"
+" kinematics."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:119
+msgid ":doc:`Locked Track </constraints/tracking/locked_track>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:120
+msgid ""
+"The owner is tracked to the given target, but with a given axis' orientation"
+" locked."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:121
+msgid ":doc:`Spline IK </constraints/tracking/spline_ik>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:122
+msgid "Aligns a chain of bones along a curve."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:123
+msgid ":doc:`Stretch To </constraints/tracking/stretch_to>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:124
+msgid "Stretch the owner to the given target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:127
+msgid ":doc:`Track To </constraints/tracking/track_to>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:126
+msgid "The owner is tracked to the given target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:130
+msgid "Relationship Constraints"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:132
+msgid "These are \"misc\" constraints."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:135
+msgid ":doc:`Action </constraints/relationship/action>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:136
+msgid "The owner executes an action, controlled by the target (driver)."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:137
+msgid ":doc:`Child Of </constraints/relationship/child_of>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:138
+msgid ""
+"Allows a selective application of the effects of parenting to another "
+"object."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:139
+msgid ":doc:`Floor </constraints/relationship/floor>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:140
+msgid ""
+"Uses the target's position (and optionally rotation) to define a \"wall\" or"
+" \"floor\" that the owner won't be able to cross."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:141
+msgid ":doc:`Follow Path </constraints/relationship/follow_path>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:142
+msgid "The owner moves along the curve target."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:143
+msgid ":doc:`Pivot </constraints/relationship/pivot>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:144
+msgid "Allows the owner to rotate around a target object."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:145
+msgid ":doc:`Rigid Body Joint </constraints/relationship/rigid_body_joint>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:146
+msgid ""
+"Creates a rigid joint (like a hinge) between the owner and the \"target\" "
+"(child object)."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:147
+msgid ":doc:`Script </constraints/relationship/script>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:148
+msgid "Uses a Python script as constraint."
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:152
+msgid ":doc:`Shrinkwrap </constraints/relationship/shrinkwrap>`"
+msgstr ""
+
+#: ../../manual/constraints/introduction.rst:150
+msgid ""
+"Limits the location of the owner at *the surface* (among other options) of "
+"the target."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:7
+msgid "Action Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:9
+msgid ""
+"The *Action* constraint is powerful. It allows you control an :doc:`Action "
+"</animation/editors/dopesheet/action>` using the transformations of another "
+"object."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:11
+msgid ""
+"The underlying idea of the *Action* constraint is very similar to the one "
+"behind the :doc:`Drivers </animation/editors/graph/drivers>`, except that "
+"the former uses a whole action (i.e. a bunch a Fcurves of the same type), "
+"while the latter controls a single Fcurve of their \"owner\"..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:13
+msgid ""
+"Note that even if the constraint accepts the *Mesh* action type, only the "
+"*Object*, *Pose* and *Constraint* types are really working, as constraints "
+"can only affect objects' or bones' transform properties, and not meshes' "
+"shapes... . Also note that only the object transformation (location, "
+"rotation, scale) is affected by the action, if the action contains keyframes"
+" for other properties they are ignored, as constraints do not influence "
+"those."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:22
+msgid ""
+"As an example, let's assume you have defined an *Object* action (it can be "
+"assigned to any object, or even no object at all), and have mapped it on "
+"your owner through an *Action* constraint, so that moving the target in the "
+"``[0.0, 2.0]`` range along its X axis maps the action content on the owner "
+"in the ``[0, 100]`` frame range. This will mean that when the target's X "
+"property is **0.0**, the owner will be as if in frame **0** of the linked "
+"action; with the target's X property at **1.0**, the owner will be as if in "
+"frame **50** of the linked action, etc."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:34
+#: ../../manual/constraints/relationship/child_of.rst:29
+#: ../../manual/constraints/relationship/floor.rst:21
+#: ../../manual/constraints/relationship/follow_path.rst:54
+#: ../../manual/constraints/relationship/pivot.rst:23
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:34
+#: ../../manual/constraints/relationship/shrinkwrap.rst:19
+#: ../../manual/constraints/tracking/clamp_to.rst:47
+#: ../../manual/constraints/tracking/damped_track.rst:15
+#: ../../manual/constraints/tracking/ik_solver.rst:17
+#: ../../manual/constraints/tracking/locked_track.rst:51
+#: ../../manual/constraints/tracking/spline_ik.rst:27
+#: ../../manual/constraints/tracking/stretch_to.rst:27
+#: ../../manual/constraints/tracking/track_to.rst:34
+#: ../../manual/constraints/transform/copy_location.rst:21
+#: ../../manual/constraints/transform/copy_rotation.rst:10
+#: ../../manual/constraints/transform/copy_scale.rst:22
+#: ../../manual/constraints/transform/copy_transforms.rst:14
+#: ../../manual/constraints/transform/limit_distance.rst:26
+#: ../../manual/constraints/transform/limit_location.rst:35
+#: ../../manual/constraints/transform/limit_rotation.rst:37
+#: ../../manual/constraints/transform/limit_scale.rst:44
+#: ../../manual/constraints/transform/transformation.rst:24
+msgid "Options"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:40
+msgid "Action panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:44
+#: ../../manual/constraints/relationship/child_of.rst:39
+#: ../../manual/constraints/relationship/follow_path.rst:65
+#: ../../manual/constraints/relationship/pivot.rst:40
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:44
+#: ../../manual/constraints/relationship/shrinkwrap.rst:29
+#: ../../manual/constraints/tracking/clamp_to.rst:60
+#: ../../manual/constraints/tracking/ik_solver.rst:26
+#: ../../manual/constraints/tracking/ik_solver.rst:46
+#: ../../manual/constraints/tracking/locked_track.rst:61
+#: ../../manual/constraints/tracking/spline_ik.rst:36
+#: ../../manual/constraints/transform/copy_location.rst:42
+#: ../../manual/constraints/transform/copy_rotation.rst:31
+#: ../../manual/constraints/transform/copy_scale.rst:44
+#: ../../manual/constraints/transform/copy_transforms.rst:34
+#: ../../manual/constraints/transform/limit_distance.rst:44
+#: ../../manual/constraints/transform/transformation.rst:42
+msgid "Target"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:44
+#: ../../manual/constraints/relationship/floor.rst:31
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:44
+#: ../../manual/constraints/tracking/damped_track.rst:25
+#: ../../manual/constraints/tracking/locked_track.rst:61
+#: ../../manual/constraints/tracking/stretch_to.rst:37
+#: ../../manual/constraints/tracking/stretch_to.rst:51
+#: ../../manual/constraints/tracking/track_to.rst:42
+#: ../../manual/constraints/transform/copy_location.rst:31
+#: ../../manual/constraints/transform/copy_rotation.rst:20
+#: ../../manual/constraints/transform/copy_scale.rst:32
+#: ../../manual/constraints/transform/copy_transforms.rst:24
+#: ../../manual/constraints/transform/limit_distance.rst:36
+#: ../../manual/constraints/transform/transformation.rst:34
+msgid ""
+"This constraint uses one target, and is not functional (red state) when it "
+"has none."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:47
+msgid "Bone:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:47
+msgid ""
+"When target is an armature object, use this field to select the target bone."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:50
+msgid "Transform Channel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:50
+msgid ""
+"This drop-down list controls which transform property (location, rotation or"
+" scale along/around one of its axes) from the target to use as \"action "
+"driver\"."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:53
+msgid "Target Space"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:53
+msgid ""
+"This constraint allows you to choose in which space to evaluate its target's"
+" transform properties."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:62
+msgid "To Action"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:56
+msgid "Select the name of the action you want to use."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:60
+msgid ""
+"Even though it might not be in red state (UI refresh problems...), this "
+"constraint is obviously not functional when this field does not contain a "
+"valid action."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:65
+msgid "Object Action"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:65
+msgid ""
+"**Bones only**, when enabled, this option will make the constrained bone use"
+" the \"object\" part of the linked action, instead of the \"same-named "
+"pose\" part. This allows you to apply the action of an object to a bone."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:76
+msgid "Target Range Min / Max"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:68
+msgid ""
+"The lower and upper bounds of the driving transform property value. By "
+"default, both values are set to **0.0**"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:73
+msgid "Unfortunately, here again we find the constraints limitations:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:75
+msgid ""
+"When using a rotation property as \"driver\", these values are \"mapped "
+"back\" to the ``[-180.0- , 180.0- [`` range."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:76
+msgid ""
+"When using a scale property as \"driver\", these values are limited to null "
+"or positive values."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:84
+msgid "Action Range Start / End"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:79
+msgid "The starting and ending frames of the action to be mapped. Note that:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:82
+msgid "These values must be strictly positive."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:83
+msgid ""
+"By default, both values are set to **0**, which disables the mapping (i.e. "
+"the owner just gets the properties defined at frame **0** of the linked "
+"action...)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:87
+msgid "Notes"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:89
+msgid ""
+"When the linked action affects some location properties, the owner's "
+"existing location is added to the result of evaluating this constraint "
+"(exactly as when the *Offset* button of the :doc:`Copy Location constraint "
+"</constraints/transform/copy_location>` is enabled...)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:90
+msgid ""
+"When the linked action affects some scale properties, the owner's existing "
+"scale is multiplied with the result of evaluating this constraint."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:91
+msgid ""
+"When the linked action affects some rotation properties, the owner's "
+"existing rotation is overridden by the result of evaluating this constraint."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:92
+msgid ""
+"Unlike usual, you can have a *Start* value higher than the *End* one, or a "
+"*Min* one higher than a *Max* one: this will reverse the mapping of the "
+"action (i.e. it will be \"played\" reversed...), unless you have both sets "
+"reversed, obviously!"
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:93
+msgid ""
+"When using a *Constraint* action, it is the constraint *channel's names* "
+"that are used to determine to which constraints of the owner apply the "
+"action. E.g. if you have a constraint channel named \"trackto_empt1\", its "
+"keyed *Influence* and/or *Head/Tail* values (the only ones you can key) will"
+" be mapped to the ones of the owner's constraint named \"trackto_empt1\"."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:94
+msgid ""
+"Similarly, when using a *Pose* action (which is obviously only meaningful "
+"and working when constraining a bone!), it is the bone's name that is used "
+"to determine which bone *channel's names* from the action to use (e.g. if "
+"the constrained bone is named \"arm\", it will use and only use the action's"
+" bone channel named \"arm\"...). Unfortunately, using a *Pose* action on a "
+"whole armature object (to affect all the keyed bones in the action at once) "
+"won't work..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/action.rst:95
+msgid ""
+"Note also that you can use the :doc:`pose library feature "
+"</rigging/posing/pose_library>` to create/edit a *Pose* action datablock... "
+"just remember that in this situation, there's one pose per frame!"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:7
+msgid "Child Of Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:9
+msgid ""
+"*Child Of* is the constraint version of the standard parent/children "
+"relationship between objects (the one established through the :kbd:`Ctrl-P` "
+"shortcut, in the 3D views)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:11
+msgid ""
+"Parenting with a constraint has several advantages and enhancements, "
+"compared to the traditional method:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:14
+msgid ""
+"You can have several different parents for the same object (weighting their "
+"respective influence with the *Influence* slider)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:15
+msgid ""
+"As with any constraint, you can key (i.e. animate) its Influence setting. "
+"This allows the object which has a Child Of constraint upon it to change "
+"over time which target object will be considered the parent, and therefore "
+"have influence over the Child Of constrained object."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:20
+msgid ""
+"Don't confuse this \"basic\" object parenting with the one that defines the "
+":doc:`chains of bones </rigging/armatures/structure#chains_of_bones>` inside"
+" of an armature. This constraint is used to parent an object to a bone (the "
+"so-called \"\\ :doc:`object skinning </rigging/skinning/objects>` \"), or "
+"even bones to bones. But don't try to use it to define chains of bones."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:35
+msgid "Child Of panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:39
+msgid ""
+"The target object that this object will act as a child of. This constraint "
+"uses one target, and is not functional (red state) when it has none.  If "
+"*Target* is an armature or a mesh, a new name field appears where a name of "
+"a *Bone* or a *Vertex Group* can be selected."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:41
+msgid "Location X, Y, Z"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:42
+msgid ""
+"Each of these buttons will make the parent affect or not affect the location"
+" along the corresponding axis."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:43
+msgid "Rotation X, Y, Z"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:44
+msgid ""
+"Each of these buttons will make the parent affect or not affect the rotation"
+" around the corresponding axis."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:46
+msgid "Scale X, Y, Z"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:46
+msgid ""
+"Each of these buttons will make the parent affect or not affect the scale "
+"along the corresponding axis."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:49
+msgid "Set Inverse"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:49
+msgid ""
+"By default, when you parent your owner to your target, the target becomes "
+"the origin of the owner's space. This means that the location, rotation and "
+"scale of the owner are offset by the same properties of the target. In other"
+" words, the owner is transformed when you parent it to your target. This "
+"might not be desired! So, if you want to restore your owner to its before-"
+"parenting state, click on the *Set Inverse* button."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:53
+msgid "Clear Inverse"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:52
+msgid ""
+"This button reverses (cancels) the effects of the above one, restoring the "
+"owner/child to its default state regarding its target/parent."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:55
+msgid "Tips"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:60
+msgid ""
+"When creating a new parent relationship using this constraint, it is usually"
+" necessary to click on the *Set Inverse* button after assigning the parent. "
+"As noted above, this cancels out any unwanted transform from the parent, so "
+"that the owner returns to the location/rotation/scale it was in before the "
+"constraint was applied. Note that you should apply *Set Inverse* with all "
+"other constraints disabled (their *Influence* set to **0.0**) for a "
+"particular *Child Of* constraint, and before transforming the target/parent "
+"(see example below)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:69
+msgid ""
+"About the toggle buttons that control which target's (i.e. parent's) "
+"individual transform properties affect the owner, it is usually best to "
+"leave them all enabled, or to disable all three of the given Location, "
+"Rotation or Scale transforms."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:76
+msgid "Technical Note"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:78
+msgid ""
+"If you use this constraint with all channels on, it will use a straight "
+"matrix multiplication for the parent relationship, not decomposing the "
+"parent matrix into loc/rot/size. This ensures any transformation correctly "
+"gets applied, also for combinations of rotated and non-uniform scaled "
+"parents."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:86
+msgid "Examples"
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:92
+msgid ""
+"**1. No constraint** Note the position of ``Owner`` empty - ``1.0`` BU along"
+" X and Y axes."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:92
+msgid ""
+"**2.** *Child Of* **just added** Here you can see that ``Owner`` empty is "
+"now **1.0 BU** away from ``Target_1`` empty along X and Y axes."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:98
+msgid ""
+"**3. Offset set** *Set Inverse* has been clicked, and ``Owner`` is back to "
+"its original position."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:98
+msgid ""
+"**4. Target/parent transformed** ``Target_1`` has been translated in the XY "
+"plane, rotated around the Z axis, and scaled along its *local* X axis."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:104
+msgid ""
+"**5. Offset cleared** *Clear Inverse* has been clicked - ``Owner`` is fully "
+"again controlled by ``Target_1``."
+msgstr ""
+
+#: ../../manual/constraints/relationship/child_of.rst:104
+msgid ""
+"**6. Offset set again** *Set Offset* has been clicked again. As you can see,"
+" it *does not gives the same result as in (* Target/parent transformed\\ "
+"*)*. As noted above, use *Set Inverse* only once, before transforming your "
+"target/parent."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:6
+msgid "Floor Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:9
+#: ../../manual/constraints/relationship/pivot.rst:15
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:13
+#: ../../manual/constraints/tracking/track_to.rst:7
+#: ../../manual/constraints/transform/copy_location.rst:7
+#: ../../manual/constraints/transform/copy_scale.rst:7
+#: ../../manual/constraints/transform/copy_transforms.rst:7
+#: ../../manual/constraints/transform/limit_distance.rst:7
+#: ../../manual/constraints/transform/limit_location.rst:7
+#: ../../manual/constraints/transform/limit_rotation.rst:7
+#: ../../manual/constraints/transform/limit_scale.rst:7
+#: ../../manual/constraints/transform/maintain_volume.rst:7
+msgid "Description"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:11
+msgid ""
+"The *Floor* constraint allows you to use its target position (and optionally"
+" rotation) to specify a plane with a \"forbidden side\", where the owner "
+"cannot go. This plane can have any orientation you like. In other words, it "
+"creates a floor (or a ceiling, or a wall)! Note that it is only capable of "
+"simulating entirely flat planes, even if you use the *Vertex Group* option. "
+"It cannot be used for uneven floors or walls."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:27
+msgid "Floor panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:36
+#: ../../manual/constraints/tracking/track_to.rst:49
+msgid "Targets"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:33
+#: ../../manual/constraints/relationship/pivot.rst:35
+#: ../../manual/constraints/tracking/damped_track.rst:39
+#: ../../manual/constraints/tracking/ik_solver.rst:28
+#: ../../manual/constraints/tracking/stretch_to.rst:54
+#: ../../manual/constraints/tracking/track_to.rst:44
+#: ../../manual/constraints/transform/copy_location.rst:38
+#: ../../manual/constraints/transform/copy_rotation.rst:27
+#: ../../manual/constraints/transform/copy_scale.rst:40
+#: ../../manual/constraints/transform/copy_transforms.rst:31
+#: ../../manual/constraints/transform/limit_distance.rst:41
+#: ../../manual/constraints/transform/transformation.rst:39
+msgid "Bone"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:34
+#: ../../manual/constraints/relationship/pivot.rst:36
+#: ../../manual/constraints/tracking/stretch_to.rst:54
+#: ../../manual/constraints/tracking/track_to.rst:45
+msgid "When *Target* is an armature, a new field for a bone is displayed."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:36
+#: ../../manual/constraints/relationship/pivot.rst:40
+#: ../../manual/constraints/tracking/damped_track.rst:29
+#: ../../manual/constraints/tracking/stretch_to.rst:41
+#: ../../manual/constraints/tracking/track_to.rst:49
+#: ../../manual/constraints/transform/copy_location.rst:42
+#: ../../manual/constraints/transform/copy_rotation.rst:31
+#: ../../manual/constraints/transform/copy_scale.rst:44
+#: ../../manual/constraints/transform/copy_transforms.rst:34
+#: ../../manual/constraints/transform/limit_distance.rst:44
+#: ../../manual/constraints/transform/transformation.rst:42
+msgid "Vertex Group"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:36
+#: ../../manual/constraints/relationship/pivot.rst:40
+#: ../../manual/constraints/tracking/stretch_to.rst:40
+#: ../../manual/constraints/tracking/track_to.rst:49
+msgid ""
+"When *Target* is a mesh, a new field is display where a vertex group can be "
+"selected."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:39
+msgid "Sticky"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:39
+msgid ""
+"This button makes the owner immovable when touching the \"floor\" plane (it "
+"cannot slide around on the surface of the plane any more). This is fantastic"
+" for making walk and run animations!"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:42
+msgid "Use Rotation"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:42
+msgid ""
+"This button forces the constraint to take the target's rotation into "
+"account. This allows you to have a \"floor\" plane of any orientation you "
+"like, not just the global XY, XZ and YZ ones..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:45
+#: ../../manual/constraints/relationship/follow_path.rst:71
+#: ../../manual/constraints/transform/copy_location.rst:52
+#: ../../manual/constraints/transform/copy_rotation.rst:41
+#: ../../manual/constraints/transform/copy_scale.rst:52
+msgid "Offset"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:45
+msgid ""
+"This numeric field allows you to offset the \"floor\" plane from the "
+"target's center, by the given number of Blender Units. Use it e.g. to "
+"account for the distance from a foot bone to the surface of the foot's mesh."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:50
+msgid "Max / Min"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:48
+msgid ""
+"This set of (mutually exclusive) buttons controls which plane will be the "
+"\"floor\". The buttons' names correspond indeed to the *normal* to this "
+"plane (e.g. enabling *Z* means \"XY plane\", etc.) By default, these normals"
+" are aligned with the *global* axes. However, if you enable *Use Rotation* "
+"(see above), they will be aligned with the *local target's axes*. As the "
+"constraint does not only define an uncrossable plane, but also a side of it "
+"which is forbidden to the owner, you can choose which side by enabling "
+"either the positive or negative normal axis... E.g, by default (*Z*), the "
+"owner is stuck in the positive Z coordinates."
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:56
+#: ../../manual/constraints/tracking/track_to.rst:71
+#: ../../manual/constraints/transform/copy_location.rst:57
+#: ../../manual/constraints/transform/copy_rotation.rst:47
+#: ../../manual/constraints/transform/copy_scale.rst:57
+#: ../../manual/constraints/transform/copy_transforms.rst:39
+#: ../../manual/constraints/transform/maintain_volume.rst:29
+#: ../../manual/constraints/transform/transformation.rst:93
+msgid "Space"
+msgstr ""
+
+#: ../../manual/constraints/relationship/floor.rst:53
+#: ../../manual/constraints/tracking/track_to.rst:63
+#: ../../manual/constraints/transform/copy_location.rst:55
+#: ../../manual/constraints/transform/copy_rotation.rst:44
+#: ../../manual/constraints/transform/copy_scale.rst:55
+#: ../../manual/constraints/transform/copy_transforms.rst:37
+#: ../../manual/constraints/transform/transformation.rst:90
+msgid ""
+"This constraint allows you to choose in which space to evaluate its owner's "
+"and target's transform properties."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:6
+msgid "Follow Path Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:8
+msgid ""
+"The *Follow Path* constraint places its owner onto a *curve* target object, "
+"and makes it move along this curve (or path). It can also affect its owner's"
+" rotation to follow the curve's bends, when the *Follow Curve* option is "
+"enabled."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:13
+msgid "The owner is always evaluated in the global (world) space:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:15
+msgid ""
+"Its location (as shown in the *Transform Properties* panel, :kbd:`N`) is "
+"used as an offset from its normal position on the path. E.g. if you have an "
+"owner with the ``(1.0, 1.0, 0.0)`` location, it will be one BU away from its"
+" normal position on the curve, along the X and Y axis. Hence, if you want "
+"your owner *on* its target path, clear its location (:kbd:`Alt-G`)!"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:16
+msgid ""
+"This location offset is also proportionally affected by the *scale of the "
+"target curve*. Taking the same ``(1.0, 1.0, 0.0)`` offset as above, if the "
+"curve has a scale of ``(2.0, 1.0, 1.0)``, the owner will be offset *two* BU "
+"along the X axis (and one along the Y one)..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:17
+msgid ""
+"When the *Curve Follow* option is enabled, its rotation is also offset to "
+"the one given by the curve (i.e. if you want the Y axis of your object to be"
+" aligned with the curve's direction, it must be in rest, non-constrained "
+"state, aligned with the global Y axis). Here again, clearing your owner's "
+"rotation (:kbd:`Alt-R`) might be useful..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:19
+msgid ""
+"The movement of the owner along the target curve/path may be controlled in "
+"two different ways:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:21
+msgid ""
+"The most simple is to define the number of frames of the movement, in the "
+"Path Animation panel of the Object Data context, via the numeric field "
+"Frames, and its start frame via the constraint's Offset option (by default, "
+"start frame: 1 [= offset of 0)], duration: 100)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:25
+msgid ""
+"The second way, much more precise and powerful, is to define a *Evaluation "
+"Time* interpolation curve for the *Target* path (in the *Graph Editor*.  See"
+" the :doc:`animation chapter </animation>` to learn more about Fcurves."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:26
+msgid ""
+"If you don't want your owner to move along the path, you can give to the "
+"target curve a flat *Speed* FCurve (its value will control the position of "
+"the owner along the path)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:28
+msgid ""
+"*Follow Path* is another constraint that works well with the :doc:`Locked "
+"Track one </constraints/tracking/locked_track>`. One example is a flying "
+"camera on a path. To control the camera's roll angle, you can use a *Locked "
+"Track* and a target object to specify the up direction, as the camera flies "
+"along the path."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:31
+msgid "*Follow Path* and *Clamp To*"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:33
+msgid ""
+"Do not confuse these two constraints. Both of them constraint the location "
+"of their owner along a curve, but *Follow Path* is an \"animation-only\" "
+"constraint, inasmuch that the position of the owner along the curve is "
+"determined by the time (i.e. current frame), whereas the :doc:`Clamp To "
+"</constraints/tracking/clamp_to>` *constraint* determines the position of "
+"its owner along the curve using one of its location properties' values."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:43
+msgid ""
+"Note that you also need to keyframe Evaluation Time for the Path. Select the"
+" path, go to the path properties, set the overall frame to the first frame "
+"of the path (e.g. frame 1), set the value of Evaluation time to the first "
+"frame of the path (e.g. 1), right click on Evaluation time, select create "
+"keyframe, set the overall frame to the last frame of the path (e.g. frame "
+"100), set the value of Evaluation time to the last frame of the path (e.g. "
+"100), right click on Evaluation time, select create keyframe. ..    Comment:"
+" <!-- from http://overshoot.tv/node/1123 paragraph needs cleanup but this "
+"definitely needs to be in the documentation --> ."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:60
+msgid "Follow Path panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:64
+msgid ""
+"This constraint uses one target, which *must be a curve object*, and is not "
+"functional (red state) when it has none."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:67
+msgid "Curve Radius"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:68
+msgid ""
+"Objects scale by the curve radius. See :doc:`Curve Editing "
+"</modeling/curves/editing/advanced>`"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:69
+msgid "Fixed Position"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:70
+msgid ""
+"Object will stay locked to a single point somewhere along the length of the "
+"curve regardless of time"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:72
+msgid ""
+"The number of frames to offset from the \"animation\" defined by the path "
+"(by default, from frame **1**)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:87
+msgid "Follow Curve"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:74
+msgid ""
+"If this option is not activated, the owner's rotation isn't modified by the "
+"curve; otherwise, it's affected depending on the following options:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:78
+msgid "Forward"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:78
+msgid ""
+"The axis of the object that has to be aligned with the forward direction of "
+"the path (i.e. tangent to the curve at the owner's position)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:87
+#: ../../manual/constraints/tracking/track_to.rst:55
+msgid "Up"
+msgstr ""
+
+#: ../../manual/constraints/relationship/follow_path.rst:81
+msgid ""
+"The axis of the object that has to be aligned (as much as possible) with the"
+" world Z axis. In fact, with this option activated, the behavior of the "
+"owner shares some properties with the one caused by a :doc:`Locked Track "
+"constraint </constraints/tracking/locked_track>`, with the path as \"axle\","
+" and the world Z axis as \"magnet\"."
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:12
+msgid "Pivot Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:17
+msgid ""
+"The *Pivot* constraint allows the owner to rotate around a target object."
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:19
+msgid "It was originally intended for foot rigs."
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:29
+msgid "Pivot panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:33
+msgid "The object to be used as a pivot point"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:37
+#: ../../manual/constraints/tracking/damped_track.rst:42
+#: ../../manual/constraints/tracking/stretch_to.rst:57
+#: ../../manual/constraints/tracking/track_to.rst:46
+#: ../../manual/constraints/transform/copy_location.rst:38
+#: ../../manual/constraints/transform/copy_rotation.rst:27
+#: ../../manual/constraints/transform/copy_scale.rst:40
+#: ../../manual/constraints/transform/copy_transforms.rst:31
+#: ../../manual/constraints/transform/limit_distance.rst:41
+#: ../../manual/constraints/transform/transformation.rst:39
+msgid "Head/Tail"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:38
+#: ../../manual/constraints/tracking/track_to.rst:47
+msgid ""
+"When using a bone target, you can choose where along this bone the target "
+"point lies."
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:42
+msgid "Pivot Offset"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:43
+msgid "Offset of pivot from target"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:46
+msgid "Pivot When"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:45
+msgid "Always, Z Rot, Y Rot..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:49
+msgid "Example"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:55
+#: ../../manual/constraints/tracking/spline_ik.rst:61
+#: ../../manual/constraints/transform/maintain_volume.rst:32
+msgid "See also"
+msgstr ""
+
+#: ../../manual/constraints/relationship/pivot.rst:57
+msgid ""
+"`Blender Artists Forum: Head-Tail pivot Constrain proposal (with Video and "
+".blend) <http://blenderartists.org/forum/showthread.php?t=186169&page=1>`__,"
+" the thread where the constraint was first proposed"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:10
+msgid "Rigid Body Joint Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:15
+msgid ""
+"The *Rigid Body Joint* constraint is very special. Basically, it is used by "
+"the physical part of the Blender Game Engine to simulate a joint between its"
+" owner and its target. It offers four joint types: hinge type, ball-and-"
+"socket type, cone-twist, and generic six-DoF (degrees of freedom) type."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:20
+msgid ""
+"The joint point and axes are defined and fixed relative to the owner. The "
+"target moves as if it were stuck to the center point of a stick, the other "
+"end of the stick rotating around the joint/pivot point..."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:24
+msgid ""
+"This constraint is of no use in most \"standard\" static or animated "
+"projects. However, you can use its results outside of the BGE, through the "
+":menuselection:`Game --> Record Animation` menu entry (from the main menu of"
+" the *User Preferences* window, see :doc:`Rigid Bodies </physics/using_ge>` "
+"for more info on this topic)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:30
+msgid ""
+"For a demo file that shows some of the different types, see: `BGE-Physics-"
+"RigidBodyJoints.blend <http://wiki.blender.org/index.php/Media:BGE-Physics-"
+"RigidBodyJoints.blend>`__."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:40
+msgid "Rigid Body Joint panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:64
+msgid "Joint Type:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:47
+msgid "Ball"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:48
+msgid ""
+"works like an ideal ball-and-socket joint, i.e. allows rotations around all "
+"axes like a shoulder joint."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:52
+msgid "Hinge"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:50
+msgid ""
+"works in one plane, like an elbow: the owner and target can only rotate "
+"around the X axis of the pivot (joint point)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:52
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:57
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:64
+msgid "Limits"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:53
+msgid "Angular limits for the X axis"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:57
+msgid "Cone Twist"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:55
+msgid ""
+"similar to *Ball*, this is a point-to-point joint with limits added for the "
+"cone and twist axis"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:58
+msgid "Angular limits"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:64
+msgid "Generic 6DOF"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:60
+msgid ""
+"works like the *Ball* option, but the target is no longer constrained at a "
+"fixed distance from the pivot point, by default (hence the six degrees of "
+"freedom: rotation and translation around/along the three axes). In fact, "
+"there is no longer a joint by default, with this option, but it enables "
+"additional settings which allow you to restrict some of these DoF:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:64
+msgid ""
+"Linear and angular limits for a given axis (of the pivot) in Blender Units "
+"and degrees respectively."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:70
+msgid "Child Object"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:67
+msgid ""
+"normally, leave this blank. You can reset it to blank by right clicking and "
+"selecting Reset to Default Value. Comment: <!-- Is this right? 2.4 just had "
+"a 'to object'. Now we have a 'target' and a 'child object'. These are not "
+"documented. It seems that we recreate the behaviour of 2.4 by leaving the "
+"child object blank. The target seems to be the 2.4 'to object'. What is the "
+"child object? Please explain: m.e --> ."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:73
+msgid "Linked Collision"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:73
+msgid ""
+"When enabled, this will disable the collision detection between the owner "
+"and the target (in the physical engine of the BGE)."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:76
+msgid "Display Pivot"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:76
+msgid ""
+"When enabled, this will draw the pivot of the joint in the 3D views. Most "
+"useful, especially with the *Generic 6DOF* joint type!"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:79
+msgid "Pivot"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:79
+msgid ""
+"These three numeric fields allow you to relocate the pivot point, *in the "
+"owner's space*."
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:85
+msgid "Axis"
+msgstr ""
+
+#: ../../manual/constraints/relationship/rigid_body_joint.rst:82
+msgid ""
+"These three numeric fields allow you to rotate the pivot point, *in the "
+"owner's space*."
+msgstr ""
+
+#: ../../manual/constraints/relationship/script.rst:7
+msgid "Script Constraints"
+msgstr ""
+
+#: ../../manual/constraints/relationship/script.rst:9
+msgid "This feature is not supported in Blender 2.6"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:7
+msgid "Shrinkwrap Constraint"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:9
+msgid ""
+"The *Shrinkwrap* constraint is the \"object counterpart\" of the "
+":doc:`Shrinkwrap modifier </modifiers/deform/shrinkwrap>`. It moves the "
+"owner origin and therefore the owner object's location to the surface of its"
+" target."
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:11
+msgid ""
+"This implies that the target *must* have a surface. In fact, the constraint "
+"is even more selective, as it can only use meshes as targets. Hence, the "
+"*Shrinkwrap* option is only shown in the *Add Constraint to Active Object* "
+"menu, :kbd:`Ctrl-Alt-C`, (or its bone's equivalent), when the selected "
+"inactive object is a mesh."
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:25
+msgid "Shrinkwrap panel"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:29
+msgid ""
+"This constraint uses one target, which *must be a mesh object*, and is not "
+"functional (red state) when it has none."
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:34
+#: ../../manual/constraints/transform/limit_distance.rst:46
+msgid "Distance"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:32
+msgid ""
+"This numeric field controls the offset of the owner from the shrunk computed"
+" position on the target's surface. Positive values place the owner "
+"\"outside\" of the target, and negative ones, \"inside\" the target. This "
+"offset is applied along the straight line defined by the original (i.e. "
+"before constraint) position of the owner, and the computed one on the "
+"target's surface."
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:50
+msgid "Shrinkwrap Type"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:37
+msgid ""
+"This drop-down list allows you to select which method to use to compute the "
+"point on the target's surface to which to translate the owner's center. You "
+"have three options:"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:39
+msgid "Nearest Surface Point"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:40
+msgid ""
+"The chosen target's surface's point will be the nearest one to the original "
+"owner's location. This is the default and most commonly useful option."
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:44
+msgid "Projection"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:42
+msgid ""
+"The target's surface's point is determined by projecting the owner's center "
+"along a given axis. This axis is controlled by the three *X*, *Y* and *Z* "
+"toggle buttons that show up when you select this type. This mean the "
+"projection axis can only be aligned with one of the global axes, median to "
+"both of them (XY, XZ or YZ), or to the three ones (XYZ). When the projection"
+" of the owner's center along the selected direction does not hit the "
+"target's surface, the owner's location is left unchanged."
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:50
+msgid "Nearest Vertex"
+msgstr ""
+
+#: ../../manual/constraints/relationship/shrinkwrap.rst:47
+msgid ""
+"This method is very similar to the *Nearest Surface Point* one, except that "
+"the owner's possible shrink locations are limited to the target's vertices."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:6
+msgid "The Constraints Stack"
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:12
+msgid "A constraint stack example"
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:15
+msgid ""
+"Constraints are evaluated from top to bottom of the constraint stack, shown "
+"in the *Constraints* panel."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:19
+msgid ""
+"In (*A constraint stack example*), first the location of the lamp is copied "
+"to the owner object."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:20
+msgid "The copy rotation constraint is ignored (red name, see below)."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:21
+msgid ""
+"So the next constraint evaluated is the *Child Of* one, which is currently "
+"reduced."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:22
+msgid ""
+"Finally, the size of our cube is bounded by the *Limit Scale* last "
+"constraint."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:24
+msgid ""
+"So here, the size of the cube is first controlled by the target of the "
+"*Child Of* constraint, within the limits allowed by the next *Limit Scale* "
+"constraint... As with modifiers, order is crucial!"
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:26
+msgid ""
+"You can move a constraint up and down the stack by using the small up/down "
+"arrow buttons that are drawn in its header, to the right of the constraint "
+"name. These buttons are only visible when needed, i.e. the top constraint "
+"has only the \"down\" button, the bottom constraint, only the \"up\" one - "
+"and when there is only one constraint in the stack, both buttons are hidden."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:35
+msgid "Adding/Removing a Constraint"
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:37
+msgid ""
+"To add a constraint, you can, in the *Constraints* panel, click on the... "
+"*Add Constraint* button! A menu shows up, listing all available constraints "
+"for the current active object (or bone in *Pose* mode (in which case the "
+"constraint will show up in the bone constraints menu). The new constraint is"
+" *always* added at the bottom of the stack."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:44
+msgid "You can also, in a 3D view, either:"
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:46
+msgid ""
+"Select only the future owner, hit :kbd:`Ctrl-Shift-C`, and in the *Add "
+"Constraint to New Empty Object* menu that pops up, select the constraint you"
+" want to add. If the chosen constraint needs it, a new *Empty* object will "
+"be automatically added as target, positioned at the owner's center, and with"
+" null rotation."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:47
+msgid ""
+"Select first the future target, and then the future owner, hit :kbd:`Ctrl-"
+"Shift-C`, and in the *Add Constraint to Active Object* (or *Add Constraint "
+"to Active Bone*) menu that pops up, select the constraint you want to add. "
+"If the chosen constraint needs it, the other selected object/bone will be "
+"used as target."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:49
+msgid ""
+"Note that these pop-up menus do not display all the available constraints."
+msgstr ""
+
+#: ../../manual/constraints/the_stack.rst:51
+msgid ""
+"To remove a constraint, click on the \"X\" button of the header of the "
+"constraint you want to delete, in the *Constraints* panel. You can also "
+"remove all constraints from the selected object(s), using the "
+":menuselection:`Object --> Constraints --> Clear Object Constraints` (or "
+":menuselection:`Pose --> Constraints --> Clear Pose Constraints...` or hit "
+":kbd:`Ctrl-Alt-C`)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:7
+msgid "Clamp To Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:9
+msgid ""
+"The *Clamp To* constraint clamps an object to a curve. The *Clamp To* "
+"constraint is very similar to the :doc:`Follow Path "
+"</constraints/relationship/follow_path>` constraint, but instead of using "
+"the evaluation time of the target curve, *Clamp To* will get the actual "
+"location properties of its owner (those shown in the *Transform Properties* "
+"panel, :kbd:`N`), and judge where to put it by \"mapping\" this location "
+"along the target curve."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:16
+msgid ""
+"One benefit is that when you are working with *Clamp To*, it is easier to "
+"see what your owner will be doing; since you are working in the 3D view, it "
+"will just be a lot more precise than sliding keys around on a time Ipo and "
+"playing the animation over and over."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:21
+msgid ""
+"A downside is that unlike in the :doc:`Follow Path constraint "
+"</constraints/relationship/follow_path>`, *Clamp To* doesn't have any option"
+" to track your owner's rotation (pitch, roll, yaw) to the banking of the "
+"targeted curve, but you don't always need rotation on, so in cases like this"
+" it's usually a lot handier to fire up a *Clamp To*, and get the bits of "
+"rotation you do need some other way."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:27
+msgid ""
+"The mapping from the object's original position to its position on the curve"
+" is not perfect, but uses the following simplified algorithm (note, I am not"
+" the original code author so this may not be 100% accurate):"
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:32
+msgid ""
+"A \"main axis\" is chosen, either by the user, or as the longest axis of the"
+" curve's bounding box (the default)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:33
+msgid ""
+"The position of the object is compared to the bounding box of the curve in "
+"the direction of the main axis. So for example if X is the main axis, and "
+"the object is aligned with the curve bounding box's left side, the result is"
+" 0; if it is aligned with the right side, the result is 1."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:36
+msgid ""
+"If the cyclic option is unchecked, this value is clamped in the range 0-1."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:37
+msgid ""
+"This number is used as the curve time, to find the final position along the "
+"curve that the object is clamped to."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:39
+msgid ""
+"This algorithm does not produce exactly the desired result because curve "
+"time does not map exactly to the main axis position. For example an object "
+"directly in the centre of a curve will be clamped to a curve time of 0.5 "
+"regardless of the shape of the curve, because it is halfway along the "
+"curve's bounding box. However the 0.5 curve time position can actually be "
+"anywhere within the bounding box!"
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:53
+msgid "Clamp To panel"
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:57
+msgid ""
+"The Target: field indicates which curve object the Clamp To constraint will "
+"track along. The Target: field must be a curve object type. If this field is"
+" not filled in then it will be highlighted in red indicating that this "
+"constraint does not have all the information it needs to carry out its task "
+"and will therefore be ignored on the constraint stack."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:70
+msgid "Main Axis"
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:63
+msgid ""
+"This button group controls which global axis (X, Y or Z) is the main "
+"direction of the path. When clamping the object to the target curve, it will"
+" not be moved significantly on this axis. It may move a small amount on that"
+" axis because of the inexact way this constraint functions."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:67
+msgid ""
+"For example if you are animating a rocket launch, it will be the Z axis "
+"because the main direction of the launch path is up. The default *Auto* "
+"option chooses the axis which the curve is longest in (or X if they are "
+"equal). This is usually the best option."
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:77
+msgid "Cyclic"
+msgstr ""
+
+#: ../../manual/constraints/tracking/clamp_to.rst:73
+msgid ""
+"By default, once the object has reached one end of its target curve, it will"
+" be constrained there. When the *Cyclic* option is enabled, as soon as it "
+"reaches one end of the curve, it is instantaneously moved to its other end. "
+"This is of course primarily designed for closed curves (circles & co), as "
+"this allows your owner to go around it over and over."
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:7
+msgid "Damped Track Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:9
+msgid ""
+"The *Damped Track* constraint constrains one local axis of the owner to "
+"always point towards *Target*. In another 3D software you can find it with "
+"the name \"Look at\" constraint."
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:21
+msgid "Damped Track panel"
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:29
+#: ../../manual/constraints/tracking/stretch_to.rst:41
+msgid "Target (Mesh Object Type)"
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:28
+#: ../../manual/constraints/transform/copy_location.rst:41
+#: ../../manual/constraints/transform/copy_rotation.rst:30
+#: ../../manual/constraints/transform/copy_scale.rst:43
+#: ../../manual/constraints/transform/copy_transforms.rst:34
+#: ../../manual/constraints/transform/limit_distance.rst:44
+#: ../../manual/constraints/transform/transformation.rst:42
+msgid ""
+"If *Target* is a *Mesh*, a new field is displayed offering the optional "
+"choice to set a *Vertex Group* as target."
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:35
+msgid "Damped Track for Bones"
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:42
+msgid "Target (Armature Object Type):"
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:40
+#: ../../manual/constraints/transform/copy_location.rst:34
+#: ../../manual/constraints/transform/copy_rotation.rst:23
+#: ../../manual/constraints/transform/copy_scale.rst:36
+#: ../../manual/constraints/transform/copy_transforms.rst:27
+#: ../../manual/constraints/transform/limit_distance.rst:39
+#: ../../manual/constraints/transform/transformation.rst:37
+msgid ""
+"If *Target* is an *Armature*, a new field is displayed offering the optional"
+" choice to set an individual bone as *Target*."
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:42
+msgid ""
+"If *Target* is an *Armature*, a new field is displayed offering the optional"
+" choice to set whether the Head or Tail of a Bone will be pointed at by the "
+"*Target*.  It is a slider value field which can have a value between 0 and "
+"1.  A value of 0 will point the Target at the Head/Root of a Bone while a "
+"value of 1 will point the Target at the Tail/Tip of a Bone."
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:48
+#: ../../manual/constraints/tracking/locked_track.rst:64
+#: ../../manual/constraints/tracking/track_to.rst:52
+msgid "To"
+msgstr ""
+
+#: ../../manual/constraints/tracking/damped_track.rst:45
+msgid ""
+"Once the owner object has had a Damped Track constraint applied to it, you "
+"must then choose which axis of the object you want to point at the Target "
+"object.  You can choose between 6 axis directions (-X, -Y, -Z, X, Y, Z).  "
+"The negative axis direction cause the object to point away from the Target "
+"object along the selected axis direction."
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:6
+msgid "IK Solver Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:8
+msgid ""
+"The *Inverse Kinematics* constraint implements the *inverse kinematics* "
+"armature posing technique. Hence, it is only available for bones. To quickly"
+" create an IK constraint with a target, select a bone in pose mode, and "
+"press :kbd:`Shift` :kbd:`I`."
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:13
+msgid ""
+"This constraint is fully documented in the :doc:`inverse kinematics page "
+"</rigging/posing/inverse_kinematics>` of the rigging chapter."
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:23
+msgid "Inverse Kinematics panel"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:27
+msgid "Must be an armature"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:29
+msgid "A bone in the armature"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:30
+msgid "Pole Target"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:31
+msgid "Object for pole rotation"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:32
+msgid "Iterations"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:33
+msgid "Maximum number of solving iterations"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:39
+#: ../../manual/constraints/tracking/spline_ik.rst:39
+msgid "Chain Length"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:35
+msgid ""
+"How many bones are included in the IK effect. Set to 0 to include all bones"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:37
+msgid "Use Tail"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:38
+msgid "Include bone's tail as last element in chain"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:39
+msgid "Stretch"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:40
+msgid "Enable IK stretching"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:44
+msgid "Weight:"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:42
+msgid "Position"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:43
+msgid "For Tree-IK: Weight of position control for this target"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:44
+#: ../../manual/constraints/tracking/ik_solver.rst:52
+msgid "Rotation"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:45
+msgid "Chain follow rotation of target"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:47
+msgid "Disable for targetless IK"
+msgstr ""
+
+#: ../../manual/constraints/tracking/ik_solver.rst:49
+msgid "Chain follows rotation of target"
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:9
+msgid "Locked Track Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:11
+msgid ""
+"The *Locked Track* constraint is a bit tricky to explain, both graphically "
+"and textually. Basically, it is a :doc:`Track To constraint "
+"</constraints/tracking/track_to>`, but with a locked axis, i.e. an axis that"
+" cannot rotate (change its orientation). Hence, the owner can only track its"
+" target by rotating around this axis, and unless the target is in the plane "
+"perpendicular to the locked axis, and crossing the owner, this owner cannot "
+"really point at its target."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:18
+msgid ""
+"Let's take the best real world equivalent: a compass. It can rotate to point"
+" in the general direction of its target (the magnetic North, or a neighbor "
+"magnet), but it can't point *directly at it*, because it spins like a wheel "
+"on an axle. If a compass is sitting on a table and there is a magnet "
+"directly above it, the compass can't point to it. If we move the magnet more"
+" to one side of the compass, it still can't point *at* the target, but it "
+"can point in the general direction of the target, and still obey its "
+"restrictions of the axle."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:28
+msgid ""
+"When using a *Locked Track* constraint, you can think of the target as a "
+"magnet, and the owner as a compass. The *Lock* axis will function as the "
+"axle around which the owner spins, and the *To* axis will function as the "
+"compass' needle. Which axis does what is up to you!"
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:34
+msgid ""
+"If you have trouble understanding the buttons of this constraint, read the "
+"tool-tips, they are pretty good. If you don't know where your object's axes "
+"are, turn on the *Axis* button in the *Object* menu's *Draw* panel. Or, if "
+"you're working with bones, turn on the *Axes* button in the *Armature* "
+"menu's *Display* panel."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:40
+msgid ""
+"This constraint was designed to work cooperatively with the *Track To* "
+"constraint. If you set the axes buttons right for these two constraints, "
+"*Track To* can be used to point the axle at a primary target, and *Locked "
+"Track* can spin the owner around that axle to a secondary target."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:45
+msgid "This constraints also works very well for 2D billboarding."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:47
+msgid ""
+"This is all related to the topic discussed at length in the :doc:`2.49 BSoD "
+"tracking tutorial </ls/animation/armatures/bsod/tracking>`."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:57
+msgid "Locked track panel"
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:64
+#: ../../manual/constraints/tracking/track_to.rst:52
+msgid ""
+"The tracking local axis (*Y* by default), i.e. the owner's axis to point at "
+"the target. The negative options force the relevant axis to point away from "
+"the target."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:76
+msgid "Lock"
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:67
+msgid ""
+"The locked local axis (*Z* by default), i.e. the owner's axis which cannot "
+"be re-oriented to track the target."
+msgstr ""
+
+#: ../../manual/constraints/tracking/locked_track.rst:72
+msgid ""
+"If you choose the same axis for *To* and *Lock*, the constraint will no "
+"longer be functional (red state)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:9
+msgid "Spline IK Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:11
+msgid ""
+"The *Spline IK* constraint aligns a chain of bones along a curve. By "
+"leveraging the ease and flexibility of achieving aesthetically pleasing "
+"shapes offered by curves and the predictability and well-integrated control "
+"offered by bones, *Spline IK* is an invaluable tool in the riggers' toolbox."
+" It is particularly well suited for rigging flexible body parts such as "
+"tails, tentacles, and spines, as well as inorganic items such as ropes."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:18
+msgid ""
+"To set up *Spline IK*, it is necessary to have a chain of connected bones "
+"and a curve to constrain these bones to."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:21
+msgid ""
+"With the last bone in the chain selected, add a *Spline IK* constraint from "
+"the *Bone Constraints* tab in the *Properties Editor*."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:22
+msgid ""
+"Set the 'Chain Length' setting to the number of bones in the chain (starting"
+" from and including the selected bone) that should be influenced by the "
+"curve."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:23
+msgid "Finally, set *Target* to the curve that should control the curve."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:33
+msgid "Spline IK panel"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:37
+msgid "The target curve"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:44
+msgid "Spline Fitting:"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:40
+msgid "How many bones are included in the chain"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:41
+msgid "Even Division"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:42
+msgid "Ignore the relative length of the bones when fitting to the curve"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:44
+msgid "Chain Offset"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:44
+msgid "Offset the entire chain relative to the root joint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:58
+msgid "Chain Scaling:"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:47
+msgid "Y stretch"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:48
+msgid "Stretch the Y axis of the bones to fit the curve"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:54
+msgid "XZ Scale Mode:"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:50
+msgid "None"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:51
+msgid "Don't scale the X and X axes (default)"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:52
+msgid "Bone Original"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:53
+msgid "Use the original scaling of the bones"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:54
+msgid "Volume Preservation"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:55
+msgid "Scale of the X and Z axes is the inverse of the Y scale"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:58
+msgid "Use Curve Radius"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:57
+msgid ""
+"Average radius of the endpoints is used to tweak the X and Z scaling of the "
+"bones, on top of the X and Z scale mode"
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:63
+msgid ""
+"This subject is seen in depth in the :doc:`Rigging/Posing section "
+"</rigging/posing/inverse_kinematics/spline_ik>`."
+msgstr ""
+
+#: ../../manual/constraints/tracking/spline_ik.rst:66
+msgid ""
+"`Blender.org 2.56 Release Log for Spline IK "
+"<http://www.blender.org/development/release-logs/blender-256-beta/spline-"
+"ik/>`__"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:7
+msgid "Stretch To Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:9
+msgid ""
+"The *Stretch To* constraint causes its owner to rotate and scale its Y axis "
+"towards its target. So it has the same tracking behavior as the :doc:`Track "
+"To constraint </constraints/tracking/track_to>`. However, it assumes that "
+"the Y axis will be the tracking and stretching axis, and doesn't give you "
+"the option of using a different one."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:14
+msgid ""
+"It also optionally has some raw volumetric features, so the owner can squash"
+" down as the target moves closer, or thin out as the target moves farther "
+"away. Note however that it is not the real volume of the owner which is thus"
+" preserved, but rather the virtual one defined by its scale values. Hence, "
+"this feature works even with non-volumetric objects, like empties, 2D meshes"
+" or surfaces, and curves."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:22
+msgid ""
+"With bones, the \"volumetric\" variation scales them along their own local "
+"axes (remember that the local Y axis of a bone is aligned with it, from root"
+" to tip)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:33
+msgid "Stretch To panel for a Mesh Object"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:47
+msgid "Stretch To panel for a Armature Object"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:57
+msgid "Target (Armature Object Type)"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:57
+msgid ""
+"When using a Bone *Target*, you can choose where along this bone the target "
+"point lies."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:65
+msgid "Rest Length"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:60
+msgid ""
+"This numeric field sets the rest distance between the owner and its target, "
+"i.e. the distance at which there is no deformation (stretching) of the "
+"owner."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:65
+msgid "Reset"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:64
+msgid ""
+"When clicked, this small button will recalculate the *Rest Length* value, so"
+" that it corresponds to the actual distance between the owner and its target"
+" (i.e. the distance before this constraint is applied)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:69
+msgid "Volume Variation"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:68
+msgid ""
+"This numeric field controls the amount of \"volume\" variation "
+"proportionally to the stretching amount. Note that the **0.0** value is not "
+"allowed, if you want to disable the volume feature, use the *None* button "
+"(see below)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:73
+#: ../../manual/constraints/transform/maintain_volume.rst:25
+msgid "Volume"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:72
+msgid ""
+"These buttons control which of the X and/or Z axes should be affected "
+"(scaled up/down) to preserve the virtual volume while stretching along the Y"
+" axis. If you enable the *NONE* button, the volumetric features are "
+"disabled."
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:81
+msgid "Plane"
+msgstr ""
+
+#: ../../manual/constraints/tracking/stretch_to.rst:76
+msgid ""
+"These buttons are equivalent to the *Up* ones of the :doc:`Track To "
+"constraint </constraints/tracking/track_to>`: they control which of the X or"
+" Z axes should be maintained (as much as possible) aligned with the global Z"
+" axis, while tracking the target with the Y axis."
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:4
+msgid "Track To Constraint"
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:9
+msgid ""
+"The *Track To* constraint applies rotations to its owner, so that it always "
+"points a given \"To\" axis towards its target, with another \"Up\" axis "
+"permanently maintained as much aligned with the global Z axis (by default) "
+"as possible. This tracking is similar to the \"billboard tracking\" in 3D "
+"(see note below)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:15
+msgid ""
+"This is the preferred tracking constraint, as it has a more easily "
+"controlled constraining mechanism."
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:18
+msgid ""
+"This constraint shares a close relationship to the :doc:`Inverse Kinematics "
+"constraint </constraints/tracking/ik_solver>` in some ways. It is very "
+"important in rig design, and you should be sure to read and understand the "
+":doc:`2.49 BSoD tracking tutorial </ls/animation/armatures/bsod/tracking>`, "
+"as it centers around the use of both of these constraints."
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:24
+msgid "Billboard tracking"
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:26
+msgid ""
+"The term \"billboard\" has a specific meaning in real-time CG programming "
+"(i.e. video games!), where it is used for plane objects always facing the "
+"camera (they are indeed \"trackers\", the camera being their \"target\"). "
+"Their main usage is as support for tree or mist textures: if they were not "
+"permanently facing the camera, you would often see your trees squeezing to "
+"nothing, or your mist turning into a millefeuille paste, which would be "
+"funny but not so credible."
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:38
+msgid "Track To panel"
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:55
+msgid ""
+"The \"upward-most\" local axis (*Z* by default), i.e. the owner's axis to be"
+" aligned (as much as possible) with the global Z axis (or target Z axis, "
+"when the *Target* button is enabled)."
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:60
+msgid "Target Z"
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:58
+msgid ""
+"By default, the owner's *Up* axis is (as much as possible) aligned with the "
+"global Z axis, during the tracking rotations. When this button is enabled, "
+"the *Up* axis will be (as much as possible) aligned with the target's local "
+"Z axis?"
+msgstr ""
+
+#: ../../manual/constraints/tracking/track_to.rst:68
+msgid ""
+"If you choose the same axis for *To* and *Up*, the constraint will not be "
+"functional anymore (red state)."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:4
+msgid "Copy Location Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:9
+msgid ""
+"The *Copy Location* constraint forces its owner to have the same location as"
+" its target."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:15
+#: ../../manual/constraints/transform/limit_distance.rst:20
+msgid ""
+"Note that if you use such a constraint on a *connected* bone, it will have "
+"no effect, as it is the parent's tip which controls the position of your "
+"owner bone's root."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:27
+msgid "Copy Location panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:38
+#: ../../manual/constraints/transform/copy_rotation.rst:27
+#: ../../manual/constraints/transform/copy_scale.rst:40
+#: ../../manual/constraints/transform/copy_transforms.rst:31
+#: ../../manual/constraints/transform/limit_distance.rst:42
+#: ../../manual/constraints/transform/transformation.rst:40
+msgid ""
+"If a *Bone* is set as *Target*, a new field is displayed offering the "
+"optional choice of where along this bone the target point lies."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:48
+#: ../../manual/constraints/transform/copy_rotation.rst:37
+#: ../../manual/constraints/transform/copy_scale.rst:48
+msgid "X, Y, Z"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:45
+msgid ""
+"These buttons control which axes (i.e. coordinates) are constrained - by "
+"default, all three ones are."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:48
+#: ../../manual/constraints/transform/copy_rotation.rst:37
+msgid "Invert"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:48
+msgid "The *Invert* buttons invert their respective preceding coordinates."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_location.rst:51
+msgid ""
+"When enabled, this control allows the owner to be translated (using its "
+"current transform properties), relative to its target's position."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_rotation.rst:4
+msgid "Copy Rotation Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_rotation.rst:6
+msgid ""
+"The *Copy Rotation* constraint forces its owner to match the rotation of its"
+" target."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_rotation.rst:16
+msgid "Copy Rotation panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_rotation.rst:34
+msgid ""
+"These buttons control which axes are constrained - by default, all three are"
+" on."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_rotation.rst:37
+msgid "The *Invert* buttons invert their respective rotation values."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_rotation.rst:40
+msgid ""
+"When enabled, this control allows the owner to be rotated (using its current"
+" transform properties), relative to its target's orientation."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_scale.rst:4
+msgid "Copy Scale Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_scale.rst:9
+msgid ""
+"The *Copy Scale* constraint forces its owner to have the same scale as its "
+"target."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_scale.rst:14
+msgid ""
+"Here we talk of **scale**, not of **size**! Indeed, you can have two "
+"objects, one much bigger than the other, and yet both of them have the same "
+"scale. This is also true with bones: in *Pose* mode, they all have a unitary"
+" scale when they are in rest position, represented by their visible length."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_scale.rst:28
+msgid "Copy Scale panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_scale.rst:47
+msgid ""
+"These buttons control along which axes the scale is constrained - by "
+"default, it is enabled along all three."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_scale.rst:51
+msgid ""
+"When enabled, this control allows the owner to be scaled (using its current "
+"transform properties), relatively to its target's scale."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_transforms.rst:4
+msgid "Copy Transforms Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_transforms.rst:9
+msgid ""
+"The *Copy Transforms* constraint forces its owner to have the same "
+"transforms as its target."
+msgstr ""
+
+#: ../../manual/constraints/transform/copy_transforms.rst:20
+msgid "Copy Transforms panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:4
+msgid "Limit Distance Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:9
+msgid ""
+"The *Limit Distance* constraint forces its owner to stay either further "
+"from, nearer to, or exactly at a given distance from its target. In other "
+"words, the owner's location is constrained either outside, inside, or at the"
+" surface of a sphere centered on its target."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:14
+msgid ""
+"When you specify a (new) target, the *Distance* value is automatically set "
+"to correspond to the distance between the owner and this target."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:32
+msgid "Limit Distance panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:47
+msgid ""
+"This numeric field sets the limit distance, i.e. the radius of the "
+"constraining sphere."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:49
+msgid "Reset Distance"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:49
+msgid ""
+"When clicked, this small button will reset the *Distance* value, so that it "
+"corresponds to the actual distance between the owner and its target (i.e. "
+"the distance before this constraint is applied)."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:62
+msgid "Clamp Region"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:52
+msgid ""
+"The *Limit Mode* drop-down menu allows you to choose how to use the sphere "
+"defined by the *Distance* setting and target's center:"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:54
+msgid "Inside (default)"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:55
+msgid "The owner is constrained *inside* the sphere."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:56
+msgid "Outside"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:57
+msgid "The owner is constrained *outside* the sphere."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:62
+msgid "Surface"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_distance.rst:59
+msgid "The owner is constrained *on the surface* of the sphere."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:4
+msgid "Limit Location Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:9
+msgid ""
+"An object or *unconnected* bone can be moved around the scene along the X, Y"
+" and Z axes. This constraint restricts the amount of allowed translations "
+"along each axis, through lower and upper bounds."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:13
+msgid ""
+"The limits for an object are calculated from its center, and the limits of a"
+" bone, from its root."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:16
+msgid ""
+"It is interesting to note that even though the constraint limits the visual "
+"and rendered location of its owner, its owner's data block still allows (by "
+"default) the object or bone to have coordinates outside the minimum and "
+"maximum ranges. This can be seen in its *Transform Properties* panel "
+"(:kbd:`N`). When an owner is grabbed and attempted to be moved outside the "
+"limit boundaries, it will be constrained to those boundaries visually and "
+"when rendered, but internally, its coordinates will still be changed beyond "
+"the limits. If the constraint is removed, its ex-owner will seem to jump to "
+"its internally specified location."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:25
+msgid ""
+"Similarly, if its owner has an internal location that is beyond the limits, "
+"dragging it back into the limit area will appear to do nothing until the "
+"internal coordinates are back within the limit threshold (unless you enabled"
+" the *For Transform* option, see below)."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:29
+msgid ""
+"Setting equal the min and max values of an axis, locks the owner's movement "
+"along that axis... Although this is possible, using the *Transformation "
+"Properties* axis locking feature is probably easier!"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:41
+msgid "Limit Location panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:47
+msgid "Minimum X, Minimum Y, Minimum Z"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:45
+msgid ""
+"These buttons enable the lower boundary for the location of the owner's "
+"center along, respectively, the X, Y and Z axes of the chosen *Space*. The "
+"numeric field below them controls the value of their limit. Note that if a "
+"min value is higher than its corresponding max value, the constraint behaves"
+" as if it had the same value as the max one."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:51
+msgid "Maximum X, Maximum Y, Maximum Z"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:50
+msgid ""
+"These buttons enable the upper boundary for the location of the owner's "
+"center along, respectively, the X, Y and Z axes of the chosen *Space*. Same "
+"options as above."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:55
+#: ../../manual/constraints/transform/limit_rotation.rst:65
+#: ../../manual/constraints/transform/limit_scale.rst:69
+msgid "For Transform"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:54
+msgid ""
+"We saw that by default, even though visually constrained, the owner can "
+"still have coordinates out of bounds (as shown by the *Transform Properties*"
+" panel). Well, when you enable this button, this is no longer possible - the"
+" owner's transform properties are also limited by the constraint. Note "
+"however that the constraint does not directly modify the coordinates: you "
+"have to grab its owner one way or another for this to take effect..."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:61
+#: ../../manual/constraints/transform/limit_rotation.rst:71
+#: ../../manual/constraints/transform/limit_scale.rst:75
+msgid "Convert"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_location.rst:58
+#: ../../manual/constraints/transform/limit_scale.rst:72
+#: ../../manual/constraints/transform/maintain_volume.rst:28
+msgid ""
+"This constraint allows you to choose in which space to evaluate its owner's "
+"transform properties."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:4
+msgid "Limit Rotation Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:9
+msgid ""
+"An object or bone can be rotated around the X, Y and Z axes. This constraint"
+" restricts the amount of allowed rotations around each axis, through lower "
+"and upper bounds."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:13
+msgid ""
+"It is interesting to note that even though the constraint limits the visual "
+"and rendered rotations of its owner, its owner's data block still allows (by"
+" default) the object or bone to have rotation values outside the minimum and"
+" maximum ranges. This can be seen in the *Transform Properties* panel "
+"(:kbd:`N`). When an owner is rotated and attempted to be rotated outside the"
+" limit boundaries, it will be constrained to those boundaries visually and "
+"when rendered, but internally, its rotation values will still be changed "
+"beyond the limits. If the constraint is removed, its ex-owner will seem to "
+"jump to its internally specified rotation."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:22
+msgid ""
+"Similarly, if its owner has an internal rotation that is beyond the limit, "
+"rotating it back into the limit area will appear to do nothing until the "
+"internal rotation values are back within the limit threshold (unless you "
+"enabled the *For Transform* option, see below)."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:27
+msgid ""
+"Setting equal the min and max values of an axis, locks the owner's rotation "
+"around that axis... Although this is possible, using the *Transformation "
+"Properties* axis locking feature is probably easier."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:31
+msgid ""
+"This transform does not constrain the bone if it is manipulated by the IK "
+"solver. For constraining the rotation of a bone for IK purposes, see the "
+"\"Inverse Kinematics\" section of Bone properties."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:43
+msgid "Limit Rotation panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:57
+msgid "Limit X, LimitY, LimitZ"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:47
+msgid ""
+"These buttons enable the rotation limit around respectively the X, Y and Z "
+"axes of the owner, in the chosen *Space*. The *Min* and *Max* numeric fields"
+" to their right control the value of their lower and upper boundaries, "
+"respectively."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:52
+#: ../../manual/constraints/transform/transformation.rst:60
+msgid "Note that:"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:54
+msgid ""
+"If a min value is higher than its corresponding max value, the constraint "
+"behaves as if it had the same value as the max one."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:56
+msgid ""
+"Unlike the :doc:`Limit Location constraint "
+"</constraints/transform/limit_location>`, you cannot enable separately lower"
+" or upper limits..."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:60
+msgid ""
+"We saw that by default, even though visually constrained, the owner can "
+"still have rotations out of bounds (as shown by the *Transform Properties* "
+"panel). Well, when you enable this button, this is no more possible - the "
+"owner transform properties are also limited by the constraint. Note however "
+"that the constraint does not directly modifies the rotation values: you have"
+" to rotate one way or the other its owner, for this to take effect..."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_rotation.rst:68
+msgid ""
+"This constraint allows you to chose in which space evaluate its owner's "
+"transform properties."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:4
+msgid "Limit Scale Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:9
+msgid ""
+"An object or bone can be scaled along the X, Y and Z axes. This constraint "
+"restricts the amount of allowed scalings along each axis, through lower and "
+"upper bounds."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:16
+msgid ""
+"This constraint does not tolerate negative scale values (those you might use"
+" to mirror an object...): when you add it to an object or bone, even if no "
+"axis limit is enabled, nor the *For Transform* button, as soon as you scale "
+"your object, all negative scale values are instantaneously inverted to "
+"positive ones... And the boundary settings can only take strictly positive "
+"values."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:23
+msgid ""
+"It is interesting to note that even though the constraint limits the visual "
+"and rendered scale of its owner, its owner's data block still allows (by "
+"default) the object or bone to have scale values outside the minimum and "
+"maximum ranges (as long as they remain positive!). This can be seen in its "
+"*Transform Properties* panel (:kbd:`N`). When an owner is scaled and "
+"attempted to be moved outside the limit boundaries, it will be constrained "
+"to those boundaries visually and when rendered, but internally, its "
+"coordinates will still be changed beyond the limits. If the constraint is "
+"removed, its ex-owner will seem to jump to its internally-specified scale."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:33
+msgid ""
+"Similarly, if its owner has an internal scale that is beyond the limits, "
+"scaling it back into the limit area will appear to do nothing until the "
+"internal scale values are back within the limit threshold (unless you "
+"enabled the *For Transform* option, see below - or your owner has some "
+"negative scale values)."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:38
+msgid ""
+"Setting equal the min and max values of an axis locks the owner's scaling "
+"along that axis. Although this is possible, using the *Transformation "
+"Properties* axis locking feature is probably easier."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:50
+msgid "Limit Scale panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:60
+msgid "Minimum / Maximum X, Y, Z"
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:54
+msgid ""
+"These buttons enable the lower boundary for the scale of the owner along "
+"respectively the X, Y and Z axes of the chosen *Space*. The *Min* and *Max* "
+"numeric fields to their right control the value of their lower and upper "
+"boundaries, respectively. Note that if a min value is higher than its "
+"corresponding max value, the constraint behaves as if it had the same value "
+"as the max one."
+msgstr ""
+
+#: ../../manual/constraints/transform/limit_scale.rst:63
+msgid ""
+"We saw that by default, even though visually constrained, and except for the"
+" negative values, the owner can still have scales out of bounds (as shown by"
+" the *Transform Properties* panel). Well, when you enable this button, this "
+"is no longer possible - the owner transform properties are also limited by "
+"the constraint. Note however that the constraint does not directly modify "
+"the scale values: you have to scale its owner one way or another for this to"
+" take effect."
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:4
+msgid "Maintain Volume Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:9
+msgid ""
+"The *Maintain Volume* constraint limits the volume of a mesh or a bone to a "
+"given ratio of its original volume."
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:14
+msgid "Option"
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:20
+msgid "Maintain Volume panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:23
+msgid "Free X / Y / Z"
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:24
+msgid "The free-scaling axis of the object."
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:26
+msgid "The bone's rest volume.  Default is ``1.0``."
+msgstr ""
+
+#: ../../manual/constraints/transform/maintain_volume.rst:34
+msgid ""
+"`Harkyman on the development of the Maintain Volume constraint "
+"<http://www.harkyman.com/2010/03/16/maintaining-bone-volume-a-new-"
+"constraint/>`__, March 2010"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:6
+msgid "Transformation Constraint"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:8
+msgid ""
+"This constraint is more complex and versatile than the other \"transform\" "
+"constraints. It allows you to map one type of transform properties (i.e. "
+"location, rotation or scale) of the target, to the same or another type of "
+"transform properties of the owner, within a given range of values (which "
+"might be different for each target and owner property). You can also switch "
+"between axes, and use the range values not as limits, but rather as "
+"\"markers\" to define a mapping between input (target) and output (owner) "
+"values."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:15
+msgid ""
+"So, e.g. you can use the position of the target along the X axis to control "
+"the rotation of the owner around the Z axis, stating that **1 BU** along the"
+" target X axis corresponds to"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:18
+msgid ""
+"``10`` around the owner Z axis. Typical uses for this include gears (see "
+"note below),"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:20
+msgid "and rotation based on location setups."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:30
+msgid "Transformation panel"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:47
+msgid "Extrapolate"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:45
+msgid ""
+"By default, the *min* and *max* values bound the input and output values; "
+"all values outside these ranges are clipped to them. When you enable this "
+"button, the *min* and *max* values are no longer strict limits, but rather "
+"\"markers\" defining a proportional (linear) mapping between input and "
+"corresponding output values. Let's illustrate that with two graphs (*The* "
+"*Extrapolate* *principles*). In these pictures, the input range (in "
+"abscissa) is set to [\\ **1.0**, **4.0** ], and its corresponding output "
+"range (in ordinate), to [\\ **1.0**, **2.0** ]. The yellow curve represents "
+"the mapping between input and output."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:50
+msgid "**The** *Extrapolate* **principles.**"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:54
+msgid ""
+"Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] "
+"range."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:54
+msgid ""
+"Extrapolate enabled: the output values are \"free\" to proportionally follow"
+" the input ones."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:62
+msgid ""
+"When mapping transform properties to location (i.e. `Loc`, `Destination` "
+"button is enabled), the owner's existing location is added to the result of "
+"evaluating this constraint (exactly like when the *Offset* button of the "
+":doc:`Copy Location constraint </constraints/transform/copy_location>` is "
+"enabled...)."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:66
+msgid ""
+"Conversely, when mapping transform properties to rotation or scale, the "
+"owner's existing rotation or scale is overridden by the result of evaluating"
+" this constraint."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:68
+msgid ""
+"When using the rotation transform properties of the target as input, "
+"whatever the real values are, the constraint will always \"take them back\" "
+"into the ``-180, 180`` range (e.g. if the target has a rotation of ``420`` "
+"around its X axis, the values used as X input by the constraint will be "
+"``((420 + 180) modulo 360) - 180 = 60- ...)``. This is why this constraint "
+"is not really suited for gears!"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:73
+msgid ""
+"Similarly, when using the scale transform properties of the target as input,"
+" whatever the real values are, the constraint will always take their "
+"absolute values (i.e. invert negative ones)."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:75
+msgid ""
+"When a *min* value is higher than its corresponding *max* one, both are "
+"considered equal to the *max* one. This implies you cannot create "
+"\"reversed\" mappings..."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:80
+msgid "Source"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:79
+msgid ""
+"It contains the input (from target) settings. The three *Loc*, *Rot* and "
+"*Scale* toggle buttons, mutually exclusive, allow you to select which type "
+"of property to use. The *X:*, *Y:* and *Z:* *min* and *max* numeric fields "
+"control the lower and upper bounds of the input value range, independently "
+"for each axis. Note that if a min value is higher than its corresponding max"
+" value, the constraint behaves as if it had the same value as the max one."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:87
+msgid "Destination"
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:83
+msgid "It contains the output (to owner) settings."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:85
+msgid ""
+"The three *Loc*, *Rot* and *Scale* toggle buttons, mutually exclusive, allow"
+" you to select which type of property to control."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:86
+msgid ""
+"The three *Axis Mapping* drop-down lists allow you to select which input "
+"axis to map to, respectively (from top to bottom), the X, Y and Z output "
+"(owner) axes."
+msgstr ""
+
+#: ../../manual/constraints/transform/transformation.rst:87
+msgid ""
+"The *min* and *max* numeric fields control the lower and upper bounds of the"
+" output value range, independently for each mapped axis. Note that if a min "
+"value is higher than its corresponding max value, the constraint behaves as "
+"if it had the same value as the max one."
+msgstr ""

@@ -13,7 +13,9 @@ Make Edge/Face
    | Hotkey:   :kbd:`F`
 
 
-It will create an edge or some faces, depending on your selection. We have already discussed this tool in the :doc:`editing basics page </modeling/meshes/editing/basics#edge_and_face_creation>`.
+It will create an edge or some faces, depending on your selection.
+We have already discussed this tool in the
+:doc:`editing basics page </modeling/meshes/editing/basics#edge_and_face_creation>`.
 
 
 Set Edge Attributes
@@ -34,7 +36,9 @@ Mark Seam and Clear Seam
    | Hotkey:   :kbd:`Ctrl-E-Numpad1` and :kbd:`Ctrl-E-Numpad2`
 
 
-Seams are a way to create separations, "islands", in UV maps. See the :doc:`UVTexturing section </textures/mapping/uv>` for more details. These commands set or unset this flag for selected edges.
+Seams are a way to create separations, "islands", in UV maps.
+See the :doc:`UVTexturing section </textures/mapping/uv>` for more details.
+These commands set or unset this flag for selected edges.
 
 
 Mark Sharp and Clear Sharp
@@ -48,7 +52,9 @@ Mark Sharp and Clear Sharp
    | Hotkey:   :kbd:`Ctrl-E-Numpad1` and :kbd:`Ctrl-E-Numpad2`
 
 
-The *Sharp* flag is used by the :doc:`EdgeSplit modifier </modifiers/generate/edge_split>`, which is part of the smoothing technics. As seams, it is a property of edges, and these commands set or unset it for selected ones.
+The *Sharp* flag is used by the :doc:`EdgeSplit modifier </modifiers/generate/edge_split>`,
+which is part of the smoothing technics.
+As seams, it is a property of edges, and these commands set or unset it for selected ones.
 
 
 Adjust Bevel Weight
@@ -62,7 +68,11 @@ Adjust Bevel Weight
    | Hotkey:   :kbd:`Ctrl-Shift-E`
 
 
-This edge property (a value between **0.0** and **1.0**) is used by the :doc:`Bevel modifier </modifiers/generate/bevel>` to control the bevel intensity of the edges. This command enters an interactive mode (a bit like transform tools), where by moving the mouse (or typing a value with the keyboard) you can set the (average) bevel weight of selected edges.
+This edge property (a value between **0.0** and **1.0**)
+is used by the :doc:`Bevel modifier </modifiers/generate/bevel>` to control the bevel intensity of the edges.
+This command enters an interactive mode (a bit like transform tools),
+where by moving the mouse (or typing a value with the keyboard)
+you can set the (average) bevel weight of selected edges.
 
 
 Crease SubSurf
@@ -98,12 +108,14 @@ Edge Slide
 Slides one or more edges across adjacent faces with a few restrictions involving the selection
 of edges (i.e. the selection must make sense, see below.)
 
-Even:kbd:`E`
-   Forces the edge loop to match the shape of the adjacent edge loop. You can flip to the opposite vertex using :kbd:`F`. Use :kbd:`Alt-Wheel` to change the control edge.
+Even :kbd:`E`
+   Forces the edge loop to match the shape of the adjacent edge loop.
+   You can flip to the opposite vertex using :kbd:`F`. Use :kbd:`Alt-Wheel` to change the control edge.
 Flip :kbd:`F`
    When Even mode is active, this flips between the two adjacent edge loops the active edge loop will match
 
-:kbd:`LMB` confirms the tool, and :kbd:`RMB` or :kbd:`Esc` cancels.
+:kbd:`LMB`
+   confirms the tool, and :kbd:`RMB` or :kbd:`Esc` cancels.
 
 This tool has a factor,
 which is displayed in the 3D View footer and in the *Tool Shelf*
@@ -143,7 +155,8 @@ between their original position and the adjacent edge loop, regardless of the ed
 Even mode
 ---------
 
-*Even* mode keeps the shape of the selected edge loop the same as one of the edge loops adjacent to it, rather than sliding a percentage along each perpendicular edge.
+*Even* mode keeps the shape of the selected edge loop the same as one of the edge loops adjacent to it,
+rather than sliding a percentage along each perpendicular edge.
 
 In *Even* mode, the tool shows the position along the length of the currently selected edge
 which is marked in yellow, from the vertex that as an enlarged red marker.
@@ -180,13 +193,18 @@ There are restrictions on the type of edge selections that can be operated upon.
 Invalid selections are:
 
 Loop crosses itself
-   This means that the tool could not find any suitable faces that were adjacent to the selected edge(s). (*Loop crosses*) is an example that shows this by selecting two edges that share the same face. A face cannot be adjacent to itself.
-
+   This means that the tool could not find any suitable faces that were adjacent to the selected edge(s).
+   (*Loop crosses*) is an example that shows this by selecting two edges that share the same face.
+   A face cannot be adjacent to itself.
 Multiple edge loops
-   The selected edges are not in the same edge loop, which means they don't have a common edge. You can minimize this error by always selecting edges end to end or in a "Chain". If you select multiple edges just make sure they are connected. This will decrease the possibility of getting looping errors.
-
+   The selected edges are not in the same edge loop, which means they don't have a common edge.
+   You can minimize this error by always selecting edges end to end or in a "Chain".
+   If you select multiple edges just make sure they are connected.
+   This will decrease the possibility of getting looping errors.
 Border Edge
-   When a single edge was selected in a single sided object. An edge loop can not be found because there is only one face. Remember, edge loops are loops that span two or more faces.
+   When a single edge was selected in a single sided object.
+   An edge loop can not be found because there is only one face.
+   Remember, edge loops are loops that span two or more faces.
 
 A general rule of thumb is that if multiple edges are selected they should be connected end to
 end such that they form a continuous chain. This is *literally* a general rule because you
@@ -246,12 +264,17 @@ Delete Edge Loop
    | Hotkey:   :menuselection:`[X]/[Del] --> [g]`
 
 
-*Delete Edge Loop* allows you to delete a selected edge loop if it is between two other edge loops. This will create one face-loop where two previously existed.
+*Delete Edge Loop* allows you to delete a selected edge loop if it is between two other edge loops.
+This will create one face-loop where two previously existed.
 
 
 .. note::
 
-   The *Edge Loop* option is very different to the *Edges* option, even if you use it on edges that look like an edge loop. Deleting an edge loop merges the surrounding faces together to preserve the surface of the mesh. By deleting a chain of edges, the edges are removed, deleting the surrounding faces as well. This will leave holes in the mesh where the faces once were.
+   The *Edge Loop* option is very different to the *Edges* option,
+   even if you use it on edges that look like an edge loop.
+   Deleting an edge loop merges the surrounding faces together to preserve the surface of the mesh.
+   By deleting a chain of edges, the edges are removed, deleting the surrounding faces as well.
+   This will leave holes in the mesh where the faces once were.
 
 
 Example
@@ -318,7 +341,9 @@ Edge Split
    | Hotkey:   :menuselection:`[Ctrl][E] --> Edge Split`
 
 
-*Edge split* is similar to the rip tool. When two or more touching interior edges, or a border edge is selected when using *Edge split*, a hole will be created, and the selected edges are duplicated to form the border of the hole
+*Edge split* is similar to the rip tool. When two or more touching interior edges,
+or a border edge is selected when using *Edge split*,
+a hole will be created, and the selected edges are duplicated to form the border of the hole
 
 
 .. figure:: /images/EdgeSplit1.jpg

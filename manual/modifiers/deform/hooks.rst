@@ -29,7 +29,8 @@ Object
 
 Falloff
    If not zero, the *falloff* is the distance where the influence of a hook goes to zero.
-   It uses a smooth interpolation, comparable to the :doc:`proportional editing tool </3d_interaction/transform_control/proportional_edit>`.
+   It uses a smooth interpolation, comparable to the
+   :doc:`proportional editing tool </3d_interaction/transform_control/proportional_edit>`.
 
 Force
    Since multiple hooks can work on the same vertices, you can weight the influence of a hook this way.
@@ -57,7 +58,8 @@ Hints
 =====
 
 - The hook modifier stores vertex indices from the original mesh to determine what to effect;
-  this means that modifiers that generate geometry, like subsurf, should always be applied **after** the hook modifier;
+  this means that modifiers that generate geometry,
+  like subsurf, should always be applied **after** the hook modifier;
   otherwise the generated geometry will be left out of the hook's influence.
 
 

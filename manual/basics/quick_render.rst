@@ -42,7 +42,8 @@ options:
 
 - Press :kbd:`F12`
 - Go to :menuselection:`Properties Window --> Render context --> Render panel` and press the *Image* button
-- Go to :menuselection:`Render --> Render Image` from the header of the *Info Window* (see: *Header of the Info Window*)
+- Go to :menuselection:`Render --> Render Image` from the header of the *Info Window*
+  (see: *Header of the Info Window*)
 - Using Blender Search: press :kbd:`Space`, type Render and click on *Render*.
 
 To abort or quit the render, press :kbd:`Esc`.
@@ -69,8 +70,11 @@ To start an *OpenGL render* you can use any of the following options:
    Search functionality
 
 
-- Click on *OpenGL Render Active Viewport*, in the header of the 3D Window, using the small button showing a *Camera* (together with a small image showing a *slate*) in the header of the 3D View
-- Go to :menuselection:`Render --> OpenGL Render Image` from the header of the *Info Window* (see: *Header of the Info Window* Image)
+- Click on *OpenGL Render Active Viewport*, in the header of the 3D Window,
+  using the small button showing a *Camera* (together with a small image showing a *slate*)
+  in the header of the 3D View
+- Go to :menuselection:`Render --> OpenGL Render Image` from the header of the *Info Window*
+  (see: *Header of the Info Window* Image)
 - Using Blender Search: press :kbd:`Space`, type *Render* and click on *OpenGL Render*.
 
 To abort or quit the render, press :kbd:`Esc`.
@@ -182,8 +186,10 @@ To Render an animation using *OpenGL Render*, you can use any of the following o
 
 .. figure:: /images/Manual-Vitals-Starting-Small-OpenGL-Render-buttons.jpg
 
-- Click on the small button showing a *slate* (together with a small image showing a *camera*) in the header of the 3D View
-- Go to :menuselection:`Render --> OpenGL Render animation` from the header of the *Info Window*  (see: *Header of the Info Window* Image)
+- Click on the small button showing a *slate*
+  (together with a small image showing a *camera*) in the header of the 3D View
+- Go to :menuselection:`Render --> OpenGL Render animation` from the header of the *Info Window*
+  (see: *Header of the Info Window* Image)
 
 To abort or quit rendering the animation, press :kbd:`Esc`.
 

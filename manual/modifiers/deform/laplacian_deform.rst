@@ -32,8 +32,10 @@ Options
 
 Repeat
    Repetitions iteratively improve the solution found.
-   The objective is to find the rotation of the differential coordinates preserving the best possible geometric detail.
-   Details are retained better if more repetitions are used, however it will take longer to calculate.
+   The objective is to find the rotation of the differential
+   coordinates preserving the best possible geometric detail.
+   Details are retained better if more repetitions are used,
+   however it will take longer to calculate.
 
    +------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+
    +.. figure:: /images/Apinzonf_Deform_Cactus_09.jpg     |.. figure:: /images/Apinzonf_Deform_Cactus_repeat_1.jpg|.. figure:: /images/Apinzonf_Deform_Cactus_repeat_2.jpg|.. figure:: /images/Apinzonf_Deform_Cactus_repeat_5.jpg+

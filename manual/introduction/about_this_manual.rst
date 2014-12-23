@@ -26,7 +26,7 @@ Audience
 ========
 
 This manual is written for a very broad audience,
-to answer questions like, :doc:`"How do I rotate the default cube?" </3d_interaction/transformations/basics/rotate>`
+to answer questions like, :doc:`"How do I rotate the default cube?" </basics/transformations/rotate>`
 all the way to :doc:`"How does Blender handle color management?" <render/post_process/cm_and_exposure>`.
 
 This manual is a worldwide collaborative effort using time donated to the cause.

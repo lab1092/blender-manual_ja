@@ -44,7 +44,8 @@ Details of the filters are given in the descriptive text below.
 Motion Blur
 ===========
 
-*Motion Blur* is a *2D Filter* that needs previous rendering information to produce motion effect on objects. Below you can see *Motion Blur* filter in Blender window, along with its logic bricks:
+*Motion Blur* is a *2D Filter* that needs previous rendering information to produce motion effect on objects.
+Below you can see *Motion Blur* filter in Blender window, along with its logic bricks:
 
 
 .. figure:: /images/Motionblur_render-full.jpg
@@ -95,7 +96,9 @@ so your hardware must support shaders.
    2D Filters: Sobel.
 
 
-*Blur*, *Sharpen*, *Dilation*, *Erosion*, *Laplacian*, *Sobel*, *Prewitt*, *Gray Scale*, *Sepia* and *Invert* are built-in filters. These filters can be set to be available in some passes.
+*Blur*, *Sharpen*, *Dilation*, *Erosion*, *Laplacian*, *Sobel*, *Prewitt*, *Gray Scale*, *Sepia* and *Invert*
+are built-in filters.
+These filters can be set to be available in some passes.
 
 To use a filter you should:
 

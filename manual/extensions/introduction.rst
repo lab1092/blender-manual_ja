@@ -6,34 +6,41 @@
 Extending Blender
 *****************
 
-Unlike many programs you may be familiar with, Blender is not monolithic and static. You can extend its functionality with :doc:`Python scripting </extensions/python>` without having to modify the source and recompile.
+Unlike many programs you may be familiar with, Blender is not monolithic and static.
+You can extend its functionality with :doc:`Python scripting </extensions/python>`
+without having to modify the source and recompile
 
 
-Addons
-======
+Add-ons
+=======
 
-Addons are scripts you can enable to gain extra functionality within Blender,
+Add-ons are scripts you can enable to gain extra functionality within Blender,
 they can be enabled from the user preferences.
 
 Outside of the Blender executable,
-there are literally hundreds of addons written by many people:
+there are literally hundreds of add-ons written by many people:
 
 
-- Officially supported addons are bundled with Blender.
-- Other **Testing** addons are included in development builds but not official releases, many of them work reliably and are very useful but are not ensured to be stable for release.
+- Officially supported add-ons are bundled with Blender.
+- Other **Testing** add-ons are included in development builds but not official releases,
+  many of them work reliably and are very useful but are not ensured to be stable for release.
 
-An Overview of all addons is available in this wiki in the `Scripts Catalog <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts>`__ and in the `Extensions tracker <https://projects.blender.org/projects/bf-extensions/>`__.
+An Overview of all add-ons is available in this wiki in the
+`Scripts Catalog <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts>`__
+and in the `Extensions tracker <https://projects.blender.org/projects/bf-extensions/>`__.
 
 
 Scripts
 =======
 
-Apart from addons there are also scripts you can use to extend Blenders functionality:
+Apart from add-ons there are also scripts you can use to extend Blenders functionality:
 
 - Modules: Utility libraries for import into other scripts.
 - Presets: Settings for Blender's tools and key configurations.
-- Startup: These files are imported when starting Blender. They define most of Blender's UI, as well as some additional core operators.
-- Custom scripts: In contrast to addons they are typically intended for one-time execution via the :doc:`text editor </extensions/python/text_editor>`
+- Startup: These files are imported when starting Blender.
+  They define most of Blender's UI, as well as some additional core operators.
+- Custom scripts: In contrast to add-ons they are typically intended for one-time execution via the
+  :doc:`text editor </extensions/python/text_editor>`
 
 
 Saving your own scripts
@@ -50,11 +57,11 @@ You can setup an addittional search path for scripts in :doc:`User preferences <
 Installation
 ------------
 
-Addons are conveniently installed through Blender in the *User Preferences* →
-*Addons* window. Click the *Install from File...* button and select the
+Add-ons are conveniently installed through Blender in the *User Preferences* →
+*Add-ons* window. Click the *Install from File...* button and select the
 ``.py`` or ``.zip`` file.
 
-To manually install scripts or addons place them in the ``addons``,
+To manually install scripts or add-ons place them in the ``add-ons``,
 ``modules``,
 ``presets`` or ``startup`` directory according to their type.
 See the description above.

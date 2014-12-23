@@ -148,18 +148,21 @@ This is a typical recipe for fireflies.
 
 
 To reduce this problem, the
-FIXME(TODO: Internal Link;
-[[../Nodes/More/#Light_Falloff|Light Falloff node]]
-) has a **Smooth factor, that can be used to reduce the maximum intensity** a light can contribute to nearby surfaces. The images above show default falloff and smooth value 1.0.
+FIXME(TODO: Internal Link; [[../Nodes/More/#Light_Falloff|Light Falloff node]]) has a **Smooth factor,
+that can be used to reduce the maximum intensity** a light can contribute to nearby surfaces.
+The images above show default falloff and smooth value 1.0.
 
 
 Sample as Lamp
 --------------
 
 Materials with emission shaders can be configured to be
-FIXME(TODO: Internal Link;
-[[../Integrator#Material_Settings|Sampled as a Lamp]]
-). This means that they will get rays sent directly towards them, rather than ending up there based on rays randomly bouncing around. For very bright mesh light sources, this can reduce noise significantly. However when the emission is not particularly bright, this will take  samples away from other brighter light sources for which it is important to find them this way.
+FIXME(TODO: Internal Link; [[../Integrator#Material_Settings|Sampled as a Lamp]]).
+This means that they will get rays sent directly towards them,
+rather than ending up there based on rays randomly bouncing around.
+For very bright mesh light sources, this can reduce noise significantly.
+However when the emission is not particularly bright,
+this will take  samples away from other brighter light sources for which it is important to find them this way.
 
 The optimal setting here is difficult to guess; it may be a matter of trial and error,
 but often it is clear that a somewhat glowing object may be only contributing light locally,

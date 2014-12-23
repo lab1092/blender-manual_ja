@@ -10,7 +10,8 @@ DupliFaces
    | Panel:    *Object* → *Duplication*
 
 
-*Duplication Faces* or *DupliFaces* is the capability to replicate an object on each face of a parent object. One of the best ways to explain this is through an example illustration.
+*Duplication Faces* or *DupliFaces* is the capability to replicate an object on each face of a parent object.
+One of the best ways to explain this is through an example illustration.
 
 
 .. note:: Example .blend file
@@ -43,7 +44,9 @@ enable *Faces*.  The sphere is duplicated one for each face of the cube.
 
 .. note:: Inherited properties
 
-   The location, orientation, and scale of the duplicated child(ren) matches that of the faces of the parent.  So, if several objects are parented to the cube, they will all be duplicated once for each face on the cube.  If the cube is subdivided (in *Edit Mode* :kbd:`W`), every child will be duplicated for each face on the cube.
+   The location, orientation, and scale of the duplicated child(ren) matches that of the faces of the parent.
+   So, if several objects are parented to the cube, they will all be duplicated once for each face on the cube.
+   If the cube is subdivided (in *Edit Mode* :kbd:`W`), every child will be duplicated for each face on the cube.
 
 
 Both the parent object and original are displayed as editable "templates" in 3D view,

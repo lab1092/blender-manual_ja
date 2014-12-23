@@ -25,10 +25,10 @@ The *Type* menu lets you change the shape of the meta object, as explained above
 Stiffness
 =========
 
-Together with *Threshold*, *Stiffness* controls the influencing range. While the threshold is common to all metas in the same object (or even the same
-FIXME(TODO: Internal Link;
-[[#Object Family|object family]]
-)), the stiffness is specific to each meta.
+Together with *Threshold*, *Stiffness* controls the influencing range.
+While the threshold is common to all metas in the same object (or even the same
+FIXME(TODO: Internal Link; [[#Object Family|object family]])),
+the stiffness is specific to each meta.
 
 Scaling the inner green circle changes the *Stiffness* value.
 Stiffness defines how much the meta object is filled.
@@ -142,7 +142,8 @@ To convert the meta, press :kbd:`Alt-C` in *Object* mode, and select *mesh*
 Object Families
 ***************
 
-*Meta* objects have different behavior in *Object* mode than other object types - they can be "regrouped" into so-called "families".
+*Meta* objects have different behavior in *Object* mode than other object types -
+they can be "regrouped" into so-called "families".
 
 A "family" is a way to regroup several meta objects,
 producing something very similar to having several metas inside the same object.
@@ -177,7 +178,13 @@ it is as if the other metas were "included" or joined into the base one).
 Examples
 ========
 
-(*Meta ball base*) shows the *base* meta labeled "\ ``B`` ". The other two *Meta* objects are *children*. Children's selection rings are always black, while the group's mesh is orange. Because the metas are grouped, they form a unified mesh which can always be selected by selecting the mesh of any meta in the group. For example, in the example (*Meta ball base*), only the lower sphere (the parent) has been selected, and you see that both the parent's mesh *and* all of the children's meshes are now highlighted.
+(*Meta ball base*) shows the *base* meta labeled ``B``.
+The other two *Meta* objects are *children*. Children's selection rings are always black,
+while the group's mesh is orange.
+Because the metas are grouped,
+they form a unified mesh which can always be selected by selecting the mesh of any meta in the group.
+For example, in the example (*Meta ball base*), only the lower sphere (the parent) has been selected,
+and you see that both the parent's mesh *and* all of the children's meshes are now highlighted.
 
 
 .. figure:: /images/2.5_Manual-Part-II-MetaObject-Base-Scale-Ex.jpg

@@ -32,7 +32,8 @@ Noise
 Size
    The dimension of the Noise table
 Depth
-   The depth of the *Clouds* calculation. A higher number results in a long calculation time, but also in finer details.
+   The depth of the *Clouds* calculation.
+   A higher number results in a long calculation time, but also in finer details.
 
 
 Technical Details

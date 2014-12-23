@@ -29,14 +29,15 @@ Options included in more than one primitive are:
 
 Radius
    Sets the starting size for *Circle*, *Cylinder*, *Cone*, *UVSphere* and *IcoSphere*.
-
 Depth
    Sets the starting length for *Cylinder* and *Cone*.
 
 
 .. note:: Note about planar primitives
 
-   You can make a planar mesh three-dimensional by moving one or more of the vertices out of its plane (applies to *Plane*, *Circle* and *Grid*).  A simple circle is actually often used as a starting point to create even the most complex of meshes.
+   You can make a planar mesh three-dimensional by moving one or more of the vertices out of its plane
+   (applies to *Plane*, *Circle* and *Grid*).
+   A simple circle is actually often used as a starting point to create even the most complex of meshes.
 
 
 Plane
@@ -136,7 +137,9 @@ Depth
    Sets the height of the cylinder.
 
 Cap Fill Type
-   Similar to circle (see above). When set to none, the created object will be a tube. Objects that can be created out of tubes include pipes or drinking glasses (the basic difference between a cylinder and a tube is that the former has closed ends).
+   Similar to circle (see above). When set to none, the created object will be a tube.
+   Objects that can be created out of tubes include pipes or drinking glasses
+   (the basic difference between a cylinder and a tube is that the former has closed ends).
 
 
 Cone
@@ -175,17 +178,21 @@ Major Radius
 Minor Radius
    Radius of the torus's cross section
 Major Segments
-   Number of segments for the main ring of the torus. If you think of a torus as a "spin" operation around an axis, this is how many steps in the spin.
+   Number of segments for the main ring of the torus.
+   If you think of a torus as a "spin" operation around an axis, this is how many steps in the spin.
 Minor segments
-   Number of segments for the minor ring of the torus. This is the number of vertices of each circular segment.
+   Number of segments for the minor ring of the torus.
+   This is the number of vertices of each circular segment.
 
 Use Int+Ext Controls
    Change the way the torus is defined:
 
 Exterior Radius
-   When *Use Int+Ext Controls* is active, if viewed along the major axis, this is the radius from the center to the outer edge.
+   When *Use Int+Ext Controls* is active, if viewed along the major axis,
+   this is the radius from the center to the outer edge.
 Interior Radius
-   When *Use Int+Ext Controls* is active, if viewed along the major axis, this is the radius of the hole in the center.
+   When *Use Int+Ext Controls* is active, if viewed along the major axis,
+   this is the radius of the hole in the center.
 
 
 Grid
@@ -238,9 +245,11 @@ enabled in the *User Preferences* ' *Add-ons* section
    Adds a landscape primitive.  Many parameters and filters appear in the *Tool Shelf*.
 
 `Pipe Joints <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/Add Pipe Joints>`__
-   Adds one of five different pipe joint primitives.  Radius, angle, and other parameters can be changed in the *Tool Shelf*.
+   Adds one of five different pipe joint primitives.
+   Radius, angle, and other parameters can be changed in the *Tool Shelf*.
 
 `Gears <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/Add Gear>`__
-   Adds a gear or a `worm <http://en.wikipedia.org/wiki/Worm_drive>`__ with many parameters to control the shape in the *Tool Shelf*.
+   Adds a gear or a `worm <http://en.wikipedia.org/wiki/Worm_drive>`__
+   with many parameters to control the shape in the *Tool Shelf*.
 
 

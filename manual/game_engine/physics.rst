@@ -34,7 +34,7 @@ Object Physics
 Physics Type
 ============
 
-.. figure:: /images/Manual-BGE-Physics-PhysicsType.jpg
+.. figure:: /images/Manual-BGE-Physics-PhysicsType.png
 
 :doc:`No Collision </game_engine/physics/object/no_collision>`
    Is not affected by the simulation nor affects other objects.
@@ -206,7 +206,7 @@ Ragdolls
 
 A third option is to create your items out of many sub-objects, connected together with Rigid Body Joints or similar.
 This can be quite a bit more work, but the results can be much more like a realistic response to collisions.
-For an Addon that can help you out in the process, check out the
+For an Add-on that can help you out in the process, check out the
 `Blender Ragdoll Implementation Kit <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Game_Engine/BRIK_ragdolls>`__.
 
 
@@ -282,8 +282,13 @@ Beyond gaming, sometimes you wish to render a complex scene that involves collis
 multiple forces, friction between multiple bodies,
 and air drag or even a simple setup that is just easier to achieve using the realtime physics.
 
-Blender provides a way to ''bake'' or ''record'' a physics simulation into keyframes allowing it then to be played as an action either for animation or games.
-Keep in mind that the result of this method is a recording, no longer a simulation. This means that the result is completely deterministic (the same everytime it is run) and unable to interact with new objects that are added to the physics simulation after it was recorded. This may, or not, be desired according to the situation.
+Blender provides a way to ''bake'' or ''record'' a physics simulation into keyframes
+allowing it then to be played as an action either for animation or games.
+Keep in mind that the result of this method is a recording, no longer a simulation.
+This means that the result is completely deterministic
+(the same everytime it is run) and unable to interact with
+new objects that are added to the physics simulation after it was recorded.
+This may, or not, be desired according to the situation.
 
 .. figure:: /images/Manual-BGE-Physics-RecordAnimation.jpg
 

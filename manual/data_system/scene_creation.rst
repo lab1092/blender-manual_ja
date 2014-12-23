@@ -82,7 +82,8 @@ Empty
    Create a completely empty scene.
 
 Link Objects
-   All objects are linked to the new scene. The layer and selection flags of the objects can be configured differently for each scene.
+   All objects are linked to the new scene.
+   The layer and selection flags of the objects can be configured differently for each scene.
 
 Link ObData
    Duplicates objects only. ObData linked to the objects, e.g. mesh and curve, are not duplicated.

@@ -34,10 +34,14 @@ The alpha and Z channels (for compositing nodes) are mixed as well.
 
 
 Clamp
-   Clamps the result of the mix operation between 0 and 1. Some of the mix types can produce reults above 1 even if the inputs are both between 0 and 1, such as Add.
+   Clamps the result of the mix operation between 0 and 1.
+   Some of the mix types can produce reults above 1 even if the inputs are both between 0 and 1, such as Add.
 
 Factor
-   The amount of mixing of the bottom socket is selected by the Factor input field (Fac:). A factor of zero does not use the bottom socket, whereas a value of 1.0 makes full use. In Mix mode, 50:50 (0.50) is an even mix between the two, but in Add mode, 0.50 means that only half of the second socket's influence will be applied.
+   The amount of mixing of the bottom socket is selected by the Factor input field (Fac:).
+   A factor of zero does not use the bottom socket, whereas a value of 1.0 makes full use.
+   In Mix mode, 50:50 (0.50) is an even mix between the two,
+   but in Add mode, 0.50 means that only half of the second socket's influence will be applied.
 
 
 RGB Curves

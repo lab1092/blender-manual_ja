@@ -8,7 +8,8 @@ Introduction
 
 In this section will be described tools for editing objects in *Object Mode*.
 
-Information about some additional possibilities are described in :doc:`Manipulation in 3D </3d_interaction/transform_control>`.
+Information about some additional possibilities are described in
+:doc:`Manipulation in 3D </3d_interaction/transform_control>`.
 
 
 Object Mode
@@ -23,7 +24,8 @@ By default new files opens with enabled *Object Mode*.
 To enable it you may in *3D View window → Header* click *Object Mode button*
 (see picture *Object Mode button*)
 
-All edition tools works only with selected objects. See :doc:`Selecting Objects </modeling/objects/selecting>` for more information.
+All edition tools works only with selected objects.
+See :doc:`Selecting Objects </modeling/objects/selecting>` for more information.
 
 
 All commands described below can be found in *Object* menu and/or in *Object tools* panel
@@ -56,19 +58,33 @@ Add
 
 We may add one of those primitives:
 
-- **Mesh** : Plane, Cube, Circle, UV Sphere, Icosphere, Cylinder, Cone, Grid, Monkey, Torus.
-- **Curve** : Bezier, Circle, NURBS Curve, NURBS Circle, Path.
-- **Surface** : NURBS Curve, NURBS Circle, NURBS Surface, NURBS Cylinder, NURBS Sphere, NURBS Torus.
-- **Metaball** : Ball, Capsule, Plane, Ellipsoid, Cube.
-- **Text**.
-- **Armature** : Single Bone.
-- **Lattice**.
-- **Empty** : Plane Axis, Arrows, Single Arrow, Circle, Cube, Sphere, Cone, Image.
-- **Speaker**.
-- **Camera**.
-- **Lamp** : Point, Sun, Spot, Hemi, Area.
-- **Force Field** : Force, Wind, Vortex, Magnetic, Harmonic, Charge, Lennard-Jones, Texture, Curve Guide, Boid, Turbulence, Drag, Smoke Flow.
-- **Group Instance** : (user defined groups of objects).
+Mesh
+   Plane, Cube, Circle, UV Sphere, Icosphere, Cylinder, Cone, Grid, Monkey, Torus.
+Curve
+   Bezier, Circle, NURBS Curve, NURBS Circle, Path.
+Surface
+   NURBS Curve, NURBS Circle, NURBS Surface, NURBS Cylinder, NURBS Sphere, NURBS Torus.
+Metaball
+   Ball, Capsule, Plane, Ellipsoid, Cube.
+Text
+   TODO
+Armature
+   Single Bone.
+Lattice
+   TODO
+Empty
+   Plane Axis, Arrows, Single Arrow, Circle, Cube, Sphere, Cone, Image.
+Speaker
+   TODO
+Camera
+   TODO
+Lamp
+   Point, Sun, Spot, Hemi, Area.
+Force Field
+   Force, Wind, Vortex, Magnetic, Harmonic, Charge, Lennard-Jones, Texture,
+   Curve Guide, Boid, Turbulence, Drag, Smoke Flow.
+Group Instance
+   (user defined groups of objects).
 
 
 Duplicate
@@ -88,7 +104,9 @@ Duplicate
    | Hotkey:   :kbd:`Alt-D`
 
 
-Duplication makes exact copy of objects. May be linkage of some attributes depending on specific tool. See :doc:`Duplication </modeling/objects/duplication>` for more information.
+Duplication makes exact copy of objects.
+May be linkage of some attributes depending on specific tool.
+See :doc:`Duplication </modeling/objects/duplication>` for more information.
 
 
 Join

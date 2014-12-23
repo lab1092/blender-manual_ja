@@ -54,22 +54,6 @@ def strip_trailing_space(fn, data_src):
     return data_dst
 
 
-def warn_long_lines(fn, data_src):
-    """
-    Complain about long lines
-    """
-    lines = data_src.split("\n")
-    limit = 118
-
-    for i, l in enumerate(lines):
-        if len(l) > limit:
-            print("%s:%d: long line %d" % (fn, i + 1, len(l)))
-
-        l = l.rstrip()
-
-    return None
-
-
 def edit_directive_body(fn, data_src):
     """
     Replaces
@@ -139,8 +123,25 @@ def edit_directive_body(fn, data_src):
     return data_dst
 
 
+def find_and_replace(fn, data_src):
+    """
+    Simply finds and replaces text
+    """
+    to_find    = "replace this text"
+    to_replace = "with this text"
+
+    lines = data_src.split("\n")
+
+    for i, l in enumerate(lines):
+        if to_find in l:
+            lines[i] = l.replace(to_find, to_replace)
+            #print ("Replaced:", l, "\n    With:", lines[i], "\n")
+
+    data_dst = "\n".join(lines)
+    return data_dst
+
 # define the operation to call
-operation = strip_trailing_space
+operation = find_and_replace
 
 
 if __name__ == "__main__":

@@ -37,5 +37,6 @@ Technical Details
 Generation
    Bands are generated based on a sine formula. You can also add a degree of turbulence with the Noise formula.
 Coordinates
-   As the band is based on a sine formula, the texture repeats itself every pi units rather than every 1.0 units.  To correct this, scale the texture by a value of pi for the dimension you wish.
+   As the band is based on a sine formula, the texture repeats itself every pi units rather than every 1.0 units.
+   To correct this, scale the texture by a value of pi for the dimension you wish.
 

@@ -26,7 +26,6 @@ Sections
    interface/index.rst
    User Preferences <preferences/index.rst>
    data_system/index.rst
-   3D Interaction <3d_interaction/index.rst>
    Modeling <modeling/index.rst>
    Modifiers <modifiers/index.rst>
    Physics <physics/index.rst>
@@ -40,9 +39,11 @@ Sections
    Rendering </render/index.rst>
    Compositing <composite_nodes/index.rst>
    Video Sequence Editor <sequencer/index.rst>
+   Grease Pencil <grease_pencil/index.rst>
    Game Engine <game_engine/index.rst>
    motion_tracking/index.rst
    Extending Blender <extensions/index.rst>
+   Troubleshooting <troubleshooting/index.rst>
    glossary/index.rst
 
 

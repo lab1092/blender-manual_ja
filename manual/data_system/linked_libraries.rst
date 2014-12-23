@@ -63,8 +63,10 @@ materials, textures, ..., to the current .blend file.
 - Select *File* → *Append or Link*.
 - Locate and select the file that contains the object you want to append (often a "library" file).
 - Navigate to the *Object* section of the file.
-- Select one object from the list using :kbd:`LMB`, multiple objects via :kbd:`RMB`, and/or a range of objects by dragging :kbd:`RMB`.
-- Repeat the above for each kind of object you wish to append or link. Parents and armatures (all modifier objects) must be selected separately.
+- Select one object from the list using :kbd:`LMB`, multiple objects via :kbd:`RMB`,
+  and/or a range of objects by dragging :kbd:`RMB`.
+- Repeat the above for each kind of object you wish to append or link.
+  Parents and armatures (all modifier objects) must be selected separately.
 - Set desired options that are shown in the header (*At Cursor*, *Active Layer*, ...).
 - :kbd:`LMB` on *Load Library* or press :kbd:`Enter` or :kbd:`MMB` directly on the data to append.
 
@@ -128,7 +130,8 @@ You can import a copy of it, or merely link to it.
 
 .. tip:: Linking
 
-   If you link to it, and later modify it in the source file, it will be shown "as-is" (modified) in your current file the next time you open it up.
+   If you link to it, and later modify it in the source file,
+   it will be shown "as-is" (modified) in your current file the next time you open it up.
 
 
 Other artists have released their models to the public domain,
@@ -139,10 +142,8 @@ your PC/server will save you from ever having to reinvent the wheel.
 When selected, linked objects are outlined in Cyan.
 Normal selected objects are outlined in pink.
 
-Notice that you cannot move a linked object! It resides at the same position it has in the source file. To move/scale/rotate the object, turn it into a
-FIXME(TODO: Internal Link;
-[[#Proxy Objects|proxy]]
-).
+Notice that you cannot move a linked object! It resides at the same position it has in the source file.
+To move/scale/rotate the object, turn it into a FIXME(TODO: Internal Link; [[#Proxy Objects|proxy]]).
 
 
 .. tip:: Using Appended/Linked Mesh Data

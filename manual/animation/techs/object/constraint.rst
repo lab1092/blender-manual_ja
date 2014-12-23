@@ -71,7 +71,9 @@ the technique described above:
 Note that the this "solar" system is not realistic at all (wrong scale,
 the "earth" is rotating in the wrong direction around the "sun", ...).
 
-You can download the  the .blend file (`download here <http://wiki.blender.org/index.php/File:ManAnimationTechsUsingConstraintsExSolarSys.blend>`__) used to create this animation.
+You can download the ``.blend`` file
+(`download here <http://wiki.blender.org/index.php/File:ManAnimationTechsUsingConstraintsExSolarSys.blend>`__)
+used to create this animation.
 
 
 Animating Constraints Influence
@@ -80,17 +82,13 @@ Animating Constraints Influence
 More "classically",
 you can also animate a few properties of each constraint using animation curves.
 
-You only have two animation curves (see also
-FIXME(TODO: Internal Link;
-[[user:Tnboma/Doc:2.5/Manual/Animation/Graph Editor|this page]]
-)):
+You only have two animation curves (see also: :doc:`/animation/editors/graph`):
 
-- You can animate the *Influence* of a constraint. For example, in the
-
-FIXME(TODO: Internal Link;
-[[#Example|"solar system" example above]]
-), I used it to first stick the camera to the "moon", then to the "earth", and finally to nothing, using two *Copy Location* constraints with *Offset* set, and their *Influence* cross-fading together...
-
-- More anecdotal, you can also, for some constraints using an armature's bone as target, animate where along this bone (between root and tip) lays the real target point (``0.0`` means "full-root", and ``1.0``, "full-tip").
-
+- You can animate the *Influence* of a constraint.
+  For example, in the `Example`_ above, I used it to first stick the camera to the "moon", then to the "earth",
+  and finally to nothing, using two *Copy Location* constraints with *Offset* set,
+  and their *Influence* cross-fading together...
+- More anecdotal, you can also, for some constraints using an armature's bone as target,
+  animate where along this bone (between root and tip) lays the real target point
+  (``0.0`` means "full-root", and ``1.0``, "full-tip").
 

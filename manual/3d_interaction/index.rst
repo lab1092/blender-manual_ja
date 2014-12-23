@@ -9,11 +9,6 @@
    introduction.rst
    navigating/index.rst
    transformations.rst
-   transformations/basics.rst
-   transformations/basics/grab.rst
-   transformations/basics/rotate.rst
-   transformations/basics/scale.rst
-   transformations/basics/gestures.rst
    transformations/advanced/mirror.rst
    transformations/advanced/to_sphere.rst
    transformations/advanced/shear.rst
@@ -37,8 +32,3 @@
    transform_control/snap.rst
    transform_control/snap_to_mesh.rst
    transform_control/proportional_edit.rst
-   sketching.rst
-   sketching/drawing.rst
-   sketching/layers_and_animation.rst
-   sketching/converting_to_geometry.rst
-   sketching/ruler_and_protractor.rst

@@ -8,7 +8,8 @@ Retopologizing
 
 .. note::
 
-   In Blender 2.5, the Retopo tool has been replaced by improved mesh snapping functionality. This page will change as retopology tools are updated in newer versions of Blender
+   In Blender 2.5, the Retopo tool has been replaced by improved mesh snapping functionality.
+   This page will change as retopology tools are updated in newer versions of Blender
 
 
 Retopology is a common part of modeling workflows. Often times,
@@ -32,6 +33,8 @@ See :doc:`Snapping </3d_interaction/transform_control/snap_to_mesh>`
 Shrinkwrap Modifier
 ===================
 
-The :doc:`Shrinkwrap Modifier </modifiers/deform/shrinkwrap>` is useful in conjunction with face snapping. If edits to the new mesh have been made with snapping disabled, the shrinkwrap modifier will allow you to stick the new mesh to the old mesh, as if you were shrinkwrapping it.
+The :doc:`Shrinkwrap Modifier </modifiers/deform/shrinkwrap>` is useful in conjunction with face snapping.
+If edits to the new mesh have been made with snapping disabled,
+the shrinkwrap modifier will allow you to stick the new mesh to the old mesh, as if you were shrinkwrapping it.
 
 

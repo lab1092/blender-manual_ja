@@ -31,7 +31,8 @@ and anyone working for Blender development in general can be found here.
 
 The User Community, centered around the independent `BlenderArtists <http://www.BlenderArtists.org/>`__ site.
 Here Blender artists, game-makers and fans gather to show their creations, get feedback,
-ask for and offer help to get a better insight into Blender's functionality. Blender tutorials can be found here as well.
+ask for and offer help to get a better insight into Blender's functionality.
+Blender tutorials can be found here as well.
 
 ----
 

@@ -82,7 +82,8 @@ Texture Coordinates
    Global
       Global coordinates.
    Object
-      Adds an additional field just below, to type in the name of the object from which to get the texture coordinates.
+      Adds an additional field just below,
+      to type in the name of the object from which to get the texture coordinates.
    UV
       Adds an extra *UV Layer* property, to select the UV layer to be used.
 

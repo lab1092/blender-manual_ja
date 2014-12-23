@@ -37,19 +37,27 @@ Border Select ; :kbd:`B`
    Use the box lasso to select UV coordinates.
 
 Select/Deselect All ; :kbd:`A`
-   Selects or de-selects all UV coordinates. When initially unwrapping, you will want to select All UVs to rotate, scale, and move them around.
+   Selects or de-selects all UV coordinates.
+   When initially unwrapping, you will want to select All UVs to rotate, scale, and move them around.
 
 Linked UVs:kbd:`Ctrl-L`
-   This menu item selects all UVs that are part of the same UV map. Recall that a map is made for every submesh and seamed part of the mesh, and is analogous to a piece of cloth. Selecting *Linked UVs* works similarly to the command in 3D View. It will select all UVs that are 'connected' to currently selected UVs.
+   This menu item selects all UVs that are part of the same UV map.
+   Recall that a map is made for every submesh and seamed part of the mesh, and is analogous to a piece of cloth.
+   Selecting *Linked UVs* works similarly to the command in 3D View.
+   It will select all UVs that are 'connected' to currently selected UVs.
 
 Pinned UVs ; :kbd:`Shift-P`
-   You can pin UVs so they don't move between multiple unwrap operations. This menu item selects them all. See Pinning
+   You can pin UVs so they don't move between multiple unwrap operations.
+   This menu item selects them all. See Pinning
 
 Border Select Pinned ; :kbd:`Shift-B`
    Use the box lasso to select only pinned UV coordinates.
 
 Unlink Selection ; :kbd:`Alt-L`
-   Cuts apart the selected UVs from the map. Only those UVs which belong to fully selected faces remain selected following this command. As the name implies, this is particularly useful to unlink faces and move them elsewhere. The hotkey is analogous to the mesh Separate command.
+   Cuts apart the selected UVs from the map.
+   Only those UVs which belong to fully selected faces remain selected following this command.
+   As the name implies, this is particularly useful to unlink faces and move them elsewhere.
+   The hotkey is analogous to the mesh Separate command.
 
 
 Selection Modes
@@ -86,9 +94,11 @@ and the following selection modes are available:
    Shared Vertex
       Selects UVs that share a mesh vertex, even if they are in different UV locations.
    Shared Location
-      Selects UVs that are in the same UV location and share a mesh vertex. This mode is default and works best in most cases.
+      Selects UVs that are in the same UV location and share a mesh vertex.
+      This mode is default and works best in most cases.
    Disabled
-      Disables Sticky Selection. When you move a UV in this mode, each face owns its own UVs, allowing them to be separated.
+      Disables Sticky Selection.
+      When you move a UV in this mode, each face owns its own UVs, allowing them to be separated.
 
 When *Sync Selection* is **On** the following can be selected:
 
@@ -96,7 +106,9 @@ When *Sync Selection* is **On** the following can be selected:
 - *Edge*
 - *Face*
 
-   In this Mode, selection behaves differently. When selecting UVs or Edges, it behave like *Shared Vertex* mode above. When selecting Faces, it behaves as in *Disabled Stick Selection* above.
+   In this Mode, selection behaves differently.
+   When selecting UVs or Edges, it behave like *Shared Vertex* mode above.
+   When selecting Faces, it behaves as in *Disabled Stick Selection* above.
 
 
 Transforming UVs
@@ -143,13 +155,16 @@ The Pivot Point can be changed to:
 Proportional Editing
 ====================
 
-Proportional Editing is available in UV editing. The controls are the same as in the 3D view. See :doc:`Proportional Editing in 3D </3d_interaction/transform_control/proportional_edit>` for full reference.
+Proportional Editing is available in UV editing. The controls are the same as in the 3D view.
+See :doc:`Proportional Editing in 3D </3d_interaction/transform_control/proportional_edit>` for full reference.
 
 
 Snapping
 ========
 
-Snapping in UV is also similar to :doc:`Snapping in 3D </3d_interaction/transform_control/snap>`, but only snapping to UVs works, however, the *Snap to Pixels* option in the *UVs Menu* will force the UVs to snap to the pixels of an image if loaded.
+Snapping in UV is also similar to :doc:`Snapping in 3D </3d_interaction/transform_control/snap>`,
+but only snapping to UVs works, however,
+the *Snap to Pixels* option in the *UVs Menu* will force the UVs to snap to the pixels of an image if loaded.
 
 Additional tools can be found in the *UVs Menu* under the *Snap* Submenu:
 
@@ -166,7 +181,8 @@ Weld and Align
 
 the *Weld* tool, :kbd:`W-1` will move selected UVs to their average position
 
-*Align*, :kbd:`W-2`,\ :kbd:`W-3`, and :kbd:`W-4` will line up selected UVs on the X axis, Y axis, or automatically chosen axis.
+*Align*, :kbd:`W-2`,\ :kbd:`W-3`, and :kbd:`W-4`
+will line up selected UVs on the X axis, Y axis, or automatically chosen axis.
 
 
 Mirror
@@ -182,7 +198,9 @@ or hold the :kbd:`MMB` and drag in the mirror direction.
 Stitch
 ======
 
-*Stitch*, :kbd:`V`, will join selected UVs that share Vertices. You set the tool to limit stitching by distance in the Tool Settings, by activating *Use Limit* and adjusting the *Limit Distance*
+*Stitch*, :kbd:`V`, will join selected UVs that share Vertices.
+You set the tool to limit stitching by distance in the Tool Settings,
+by activating *Use Limit* and adjusting the *Limit Distance*
 
 
 Minimize Stretch
@@ -216,7 +234,8 @@ or the shortcut :kbd:`P`.
 You can *Unpin a UV* with the shorctut :kbd:`Alt-P`
 
 Pinning is most effective when using the Unwrap method of UV mapping, for organic objects.
-An example is when you are modeling a symmetrical object using the :doc:`Mirror Modifier </modifiers/generate/mirror>`.
+An example is when you are modeling a symmetrical object using the
+:doc:`Mirror Modifier </modifiers/generate/mirror>`.
 Some of the UVs on the mirror axis may be shared across the mirrored counterparts.
 You could pin the UVs that correspond to the midline, then align them on the X axis,
 and they will stay in that location.

@@ -33,7 +33,10 @@ and then you will see the overall structure of a file: *Action*,
 *Armature*, *Brush*, *Camera*, *Curve*,
 *Group*, and so on (including *Object* s).
 
-:kbd:`LMB` selecting any datablock type, *Mesh*, for example, will give you a listing of the meshes used in the file, along with how many users there are for each one. For example, if you had a car mesh, and used that car mesh for six cars in a parking lot scene, the *Mesh* listing would show the Car and then the number 6.
+:kbd:`LMB` selecting any datablock type, *Mesh*, for example,
+will give you a listing of the meshes used in the file, along with how many users there are for each one.
+For example, if you had a car mesh, and used that car mesh for six cars in a parking lot scene,
+the *Mesh* listing would show the Car and then the number 6.
 
 
 .. admonition:: Reference
@@ -43,7 +46,12 @@ and then you will see the overall structure of a file: *Action*,
    | Hotkey:   :kbd:`F` - Fake User
 
 
-:kbd:`RMB` selecting certain kinds of datablocks (*Material* s, *Image* s, *Texture* s...) and pressing :kbd:`F` will assign a "fake user" to those datablocks. With a fake user in place, Blender will keep those datablocks in the file, even if they have no "real user". Datablocks without a user, real or fake, are not saved in the .blend file. Pressing :kbd:`F` again toggles the fake user assignment. Performing this action is the same as clicking the *F* button next to material/image/... names.
+:kbd:`RMB` selecting certain kinds of datablocks
+(*Material* s, *Image* s, *Texture* s...) and pressing :kbd:`F` will assign a "fake user" to those datablocks.
+With a fake user in place, Blender will keep those datablocks in the file, even if they have no "real user".
+Datablocks without a user, real or fake, are not saved in the ``.blend`` file.
+Pressing :kbd:`F` again toggles the fake user assignment.
+Performing this action is the same as clicking the *F* button next to material/image/... names.
 
 
 Outliner and OOPS Schematic

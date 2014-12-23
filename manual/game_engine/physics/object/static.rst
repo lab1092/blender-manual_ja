@@ -3,7 +3,10 @@
 Static Physics Object Type
 **************************
 
-Static objects in the :doc:`Blender Game Engine </game_engine>` do not automatically react to physics, including gravity and collisions. Even if hit by the force of a speeding 18-wheeler truck, it will remain unresponsive in terms of location, rotation, or deformation.
+Static objects in the :doc:`Blender Game Engine </game_engine>` do not automatically react to physics,
+including gravity and collisions.
+Even if hit by the force of a speeding 18-wheeler truck,
+it will remain unresponsive in terms of location, rotation, or deformation.
 
 It will, however, give collision reactions. Objects will bounce off of Static Objects,
 and rotational inertia will transfer to objects capable of rotating (that is,
@@ -14,9 +17,9 @@ Note that none of this prevents you from transforming the Static Objects with
 The visual objects will correctly move and their physics representation will update in the engine as well.
 
 Another important note is that the default
-FIXME(TODO: Internal Link;
-[[#Collision_Bounds|Collision Bounds]]
-) is a Triangle Mesh, meaning it is higher in computational requirements but also in detail. This in turn means the "Radius" option has no effect by default.
+FIXME(TODO: Internal Link; [[#Collision_Bounds|Collision Bounds]])
+is a Triangle Mesh, meaning it is higher in computational requirements but also in detail.
+This in turn means the "Radius" option has no effect by default.
 
 In the example game demo, :doc:`Frijoles </ls/frijoles>`,
 the Static type is represented by the "Arena" object that holds all the moving bits.

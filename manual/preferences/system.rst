@@ -201,7 +201,8 @@ Sequencer/Clip Editor
 
 Prefetch Frames
    Number of frames to render ahead during playback.
-   Useful when the chosen video codec cannot sustain screen frame rates correctly using direct rendering from the disk to video.
+   Useful when the chosen video codec cannot sustain screen frame rates
+   correctly using direct rendering from the disk to video.
    duting video playbacks or editing operations.
    Minimum: **0** , Maximum: **500** , Default: **0** (No prefecth)
 

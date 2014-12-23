@@ -37,7 +37,7 @@ There are four basic views for the Dopesheet.These all view different contexts o
 :doc:`Shape Key Editor </animation/editors/dopesheet/shapekey>`
    *ShapeKey Editor* is dedicated to the *Shape* Ipo datablocks. It uses/edits the same action datablock as the previous mode. It seems to be an old and useless thing, as the *Action Editor* mode handles *Shape* channels very well, and this mode adds nothing...
 :doc:`Grease Pencil </animation/editors/dopesheet/greasepencil>`
-   *Grease Pencil* is dedicated to the :doc:`grease pencil tool's </3d_interaction/sketching/layers_and_animation>` keyframes - for each grease pencil layer, you have a strip along which you can grab its keys, and hence easily re-time your animated sketches. As it is just another way to see and edit the grease pencil data, this mode uses no datablock (and hence has nothing to do with actions...). Note that you'll have as much top-level grease pencil channels as you have sketched windows (3D views, *UV/Image Editor*, etc.)
+   *Grease Pencil* is dedicated to the :doc:`grease pencil tool's </grease_pencil/layers_and_animation>` keyframes - for each grease pencil layer, you have a strip along which you can grab its keys, and hence easily re-time your animated sketches. As it is just another way to see and edit the grease pencil data, this mode uses no datablock (and hence has nothing to do with actions...). Note that you'll have as much top-level grease pencil channels as you have sketched windows (3D views, *UV/Image Editor*, etc.)
 
 
 Interface
@@ -81,7 +81,7 @@ The left "list-tree"
    Finally, you can have another column with value-sliders,
    allowing you to change the value of current keyframes, or to add new ones.
    These are obviously only available for low-level channels (i.e. individual FCurve ).
-   See FIXME(TODO: Internal Link; [[#View Menu|below]] ) for how to show these sliders.
+   See `View Menu`_ below for how to show these sliders.
 
 
 View Menu

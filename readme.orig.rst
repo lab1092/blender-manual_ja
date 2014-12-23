@@ -163,6 +163,11 @@ Linking to a title in the same file.
 
 .. code-block:: rst
 
+   Titles are Targets
+   ==================
+
+   Body text.
+
    Implicit references, like `Titles are Targets`_
 
 

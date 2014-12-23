@@ -321,7 +321,7 @@ To modify your new Texture, you can:
     Using the *Edit Externally* tool in the *Image* menu, Blender will open an image editor,
     as specified in the *User Preferences* and load in the image to be edited.
 - Use the "projection painting" feature of recent versions of Blender
-- Use the Bake uV-Textures to Vertex Colors addon to create an image from vertex colors
+- Use the Bake uV-Textures to Vertex Colors add-on to create an image from vertex colors
 - Some combination of the above.
 
 The first three options, (UV Painter, Render Bake, and Texture Baker)

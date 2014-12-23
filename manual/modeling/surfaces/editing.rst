@@ -6,9 +6,13 @@
 Surface Selection
 *****************
 
-Surface selection in *Edit* mode is very similar to :doc:`NURBS curve selection </modeling/curves/editing>`. The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting>`, so you can select a simple control point with a :kbd:`LMB` -click, add to current selection with :kbd:`Shift-LMB` -clicks, :kbd:`B` order-select, and so on.
+Surface selection in *Edit* mode is very similar to :doc:`NURBS curve selection </modeling/curves/editing>`.
+The basic tools are the same as with :doc:`meshes </modeling/meshes/selecting>`,
+so you can select a simple control point with a :kbd:`LMB` -click,
+add to current selection with :kbd:`Shift-LMB` -clicks, :kbd:`B` order-select, and so on.
 
-:kbd:`L` (or :kbd:`Ctrl-L`) will add to the selection the mouse cursor's nearest control point, and all the linked ones, i.e. all points belonging to the same surface.
+:kbd:`L` (or :kbd:`Ctrl-L`) will add to the selection the mouse cursor's nearest control point,
+and all the linked ones, i.e. all points belonging to the same surface.
 
 
 Select Menu
@@ -16,7 +20,9 @@ Select Menu
 
 The *Select* menu (3D view headers) is even simpler than for curves...
 
-   All these options have the same meaning and behavior as in :doc:`Object mode </modeling/objects/selecting>` (and the specificities of *Border Select* in *Edit* mode have already been discussed :doc:`here </modeling/meshes/selecting>`).
+   All these options have the same meaning and behavior as in :doc:`Object mode </modeling/objects/selecting>`
+   (and the specificities of *Border Select* in *Edit* mode have already been discussed
+   :doc:`here </modeling/meshes/selecting>`).
 
 
 .. figure:: /images/NurbsSelectMenu.jpg
@@ -35,7 +41,9 @@ Every Nth
    | Hotkey:   None
 
 
-This is the same option as for :doc:`curve selection </modeling/curves/editing#every_nth>`. However, the behavior of the *N* ("selection step") parameter in the 2D of a NURBS surface "cage" seems quite difficult to understand...
+This is the same option as for :doc:`curve selection </modeling/curves/editing#every_nth>`.
+However, the behavior of the *N*
+("selection step") parameter in the 2D of a NURBS surface "cage" seems quite difficult to understand...
 
 
 Control Point Row
@@ -68,7 +76,8 @@ More and Less
    | Hotkey:   :kbd:`Ctrl-Numpad+` / :kbd:`Ctrl-Numpad-`
 
 
-These two options are complementary and very similar to :doc:`those for meshes </modeling/meshes/selecting>`. Their purpose, based on current selected control points, is to reduce or enlarge this selection.
+These two options are complementary and very similar to :doc:`those for meshes </modeling/meshes/selecting>`.
+Their purpose, based on current selected control points, is to reduce or enlarge this selection.
 
 The algorithm is the same as with meshes:
 
@@ -80,8 +89,11 @@ Less
 
 This implies two points:
 
-- First, when **all** control points of a surface are selected, nothing will happen (as for *Less*, all linked points are always selected, and of course, *More* can't add any). Conversely, the same goes when no control point is selected.
-- Second, these tools will never "go outside" of a surface (they will never "jump" to another surface in the same object).
+- First, when **all** control points of a surface are selected, nothing will happen
+  (as for *Less*, all linked points are always selected, and of course, *More* can't add any).
+  Conversely, the same goes when no control point is selected.
+- Second, these tools will never "go outside" of a surface
+  (they will never "jump" to another surface in the same object).
 
 
 Surface Editing
@@ -103,9 +115,12 @@ Basic Surface Editing (translation, rotation, scale)
    | Hotkey:   :kbd:`G` / :kbd:`R` / :kbd:`S`
 
 
-Once you have a selection of one or more control points, you can grab/move (:kbd:`G`), rotate (:kbd:`R`) or scale (:kbd:`S`) them, like many other things in Blender, as described in the :doc:`Manipulation in 3D Space </3d_interaction/transformations/basics>` section.
+Once you have a selection of one or more control points,
+you can grab/move (:kbd:`G`), rotate (:kbd:`R`) or scale (:kbd:`S`) them, like many other things in Blender,
+as described in the :doc:`Manipulation in 3D Space </basics/transformations/introduction>` section.
 
-You also have in *Edit* mode an extra option when using these basic manipulations: the :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>`.
+You also have in *Edit* mode an extra option when using these basic manipulations: the
+:doc:`proportional editing </3d_interaction/transform_control/proportional_edit>`.
 
 
 Advanced Transform Tools
@@ -118,7 +133,9 @@ Advanced Transform Tools
    | Menu:     :menuselection:`Surface --> Transform`
 
 
-The *To Sphere*, *Shear*, *Wrap* and *Push/Pull* transform tools are described in the :doc:`Mesh Editing </modeling/meshes/tools#advanced_transform_tools>` chapter. Surfaces have no specific transform tools.
+The *To Sphere*, *Shear*, *Wrap* and *Push/Pull* transform tools are described in the
+:doc:`Mesh Editing </modeling/meshes/tools#advanced_transform_tools>` chapter.
+Surfaces have no specific transform tools.
 
 
 NURBS Control Points Settings
@@ -161,16 +178,20 @@ ready to drag the new extruded surface to its destination.
 
 There are two things very important to understand:
 
-- Surfaces are **2D** objects - so you can't extrude anything *inside* a surface (e.g. "inner" row); it wouldn't make any sense!
-- The control "grid" *must remain "squarish"*, which means that you can only extrude a whole row, not parts of rows here and there...
+- Surfaces are **2D** objects - so you can't extrude anything *inside* a surface
+  (e.g. "inner" row); it wouldn't make any sense!
+- The control "grid" *must remain "squarish"*,
+  which means that you can only extrude a whole row, not parts of rows here and there...
 
 To summarize, the *Extrude* tool will only work when one and only one whole border
 row is selected - otherwise nothing happens.
 
-As for curves, you cannot create a new surface in your object out of nowhere, by just :kbd:`Ctrl-LMB` -clicking with nothing selected. However, unlike for curves, there is no "cut" option allowing you to separate a surface into several parts, so you only can create a new surface by
-FIXME(TODO: Internal Link;
-[[#Duplication|copying]]
-) an existing one (:kbd:`Shift-D`), or adding a new one (*Add* menu...).
+As for curves, you cannot create a new surface in your object out of nowhere,
+by just :kbd:`Ctrl-LMB` -clicking with nothing selected.
+However, unlike for curves, there is no "cut" option allowing you to separate a surface into several parts,
+so you only can create a new surface by
+FIXME(TODO: Internal Link; [[#Duplication|copying]]) an existing one
+(:kbd:`Shift-D`), or adding a new one (*Add* menu...).
 
 
 Examples
@@ -220,17 +241,22 @@ Opening or Closing a Surface
    | Hotkey:   :kbd:`C`
 
 
-As in :doc:`curves </modeling/curves/editing#opening_and_closing_a_curve>`, surfaces can be closed (cyclic) or open. However, as surfaces are 2D, you can control this property independently along the U and V axes.
+As in :doc:`curves </modeling/curves/editing#opening_and_closing_a_curve>`,
+surfaces can be closed (cyclic) or open. However, as surfaces are 2D,
+you can control this property independently along the U and V axes.
 
-To toggle the cyclic property of a surface along one axis, use :kbd:`C` and choose either *cyclic U* or *cyclic V* from the :doc:`Toggle pop-up menu </modeling/surfaces>`. The corresponding surface's outer edges will join together to form a "closed" surface.
+To toggle the cyclic property of a surface along one axis,
+use :kbd:`C` and choose either *cyclic U* or *cyclic V* from the :doc:`Toggle pop-up menu </modeling/surfaces>`.
+The corresponding surface's outer edges will join together to form a "closed" surface.
 
 
 .. note:: Inner and Outer
 
-   Surfaces have an "inner" and "outer" face, the first being black whereas the latter is correctly shaded - there does not seem to be any "double sided" shading option for surfaces...). When you close a surface in one or two directions, you might get an entirely black object! In this case, just
-   FIXME(TODO: Internal Link;
-   [[#Switch Direction|switch the "direction"]]
-   ) of your surface...
+   Surfaces have an "inner" and "outer" face,
+   the first being black whereas the latter is correctly shaded -
+   there does not seem to be any "double sided" shading option for surfaces...).
+   When you close a surface in one or two directions, you might get an entirely black object! In this case,
+   just FIXME(TODO: Internal Link; [[#Switch Direction|switch the "direction"]]) of your surface...
 
 
 Duplication
@@ -251,8 +277,11 @@ However, with surfaces there are some selections that can't be duplicated,
 in which case they will just be placed in *Grab* mode... In fact,
 only selections forming *a single valid sub-grid* are copyable; let's see this in practice:
 
-- You can copy a single control point. From it, you will be able to "extrude" a "surface curve" along the U axis, and then extrude this unique U-row along the V axis to create a real new surface.
-- You can copy a single continuous part of a row (or a whole row, of course). This will give you a new **U-row**, even if you selected (part of) a V-row!
+- You can copy a single control point.
+  From it, you will be able to "extrude" a "surface curve" along the U axis,
+  and then extrude this unique U-row along the V axis to create a real new surface.
+- You can copy a single continuous part of a row (or a whole row, of course).
+  This will give you a new **U-row**, even if you selected (part of) a V-row!
 - You can copy a single whole sub-grid.
 
 Note that trying to duplicate several valid "sub-grids" (even being single points)
@@ -273,12 +302,17 @@ Deleting Elements
 The *Erase* pop-up menu of surfaces offers you two options:
 
 Selected
-   This will delete the selected rows, *without* breaking the surface (i.e. the adjacent rows will be directly linked, joined, once the intermediary ones are deleted). The selection must abide by the following rules:
+   This will delete the selected rows, *without* breaking the surface
+   (i.e. the adjacent rows will be directly linked, joined, once the intermediary ones are deleted).
+   The selection must abide by the following rules:
 
    - Whole rows, and only whole rows must be selected.
    - Only rows along the same axis must be selected (i.e. you can't delete both U- and V-rows at the same time).
 
-   Also remember that NURBS order cannot be higher than its number of control points in a given axis, so it might decrease when you delete some control points... Of course, when only one row remains, the surface becomes a "surface curve"; when only one point remains, there is no more visible surface; and when all points are deleted, the surface itself is deleted.
+   Also remember that NURBS order cannot be higher than its number of control points in a given axis,
+   so it might decrease when you delete some control points...
+   Of course, when only one row remains, the surface becomes a "surface curve"; when only one point remains,
+   there is no more visible surface; and when all points are deleted, the surface itself is deleted.
 
 All
    As with meshes or curves, this deletes everything in the object!
@@ -287,16 +321,17 @@ All
 Example
 -------
 
-+---------------------------------------------+
-+.. figure:: /images/NurbsDeletingSegments.jpg+
-+   :width: 600px                             +
-+   :figwidth: 600px                          +
-+                                             +
-+   Before and after                          +
-+---------------------------------------------+
+.. figure:: /images/NurbsDeletingSegments.jpg
+   :width: 600px
+   :figwidth: 600px
+
+   Before and after
 
 
-In (*Before*) a row of control points has been selected by initially selecting the control point labeled "\ ``A`` " and using :kbd:`Shift-R` to select the remaining control points. Then, using the :doc:`Erase menu </ce/menus/erase#edit_mode>` (:kbd:`X`), the *selected* row of control points is erased, resulting in (*After*).
+In (*Before*) a row of control points has been selected by initially selecting the control point labeled ``A``
+and using :kbd:`Shift-R` to select the remaining control points.
+Then, using the :doc:`Erase menu </ce/menus/erase#edit_mode>` (:kbd:`X`),
+the *selected* row of control points is erased, resulting in (*After*).
 
 
 Joining or Merging Surfaces
@@ -310,10 +345,12 @@ Joining or Merging Surfaces
    | Hotkey:   :kbd:`F`
 
 
-Just like :doc:`curves </modeling/curves/editing#joining_or_merging_curves>`, merging two surfaces requires that a single edge, a border row of control points, from two separate surfaces are selected. This means that the surfaces must be part of the same object. For example, you can't join two surfaces while in *Object* mode - but you can of course, as with any objects of the same type,
-FIXME(TODO: Internal Link;
-[[#Joining Objects|join two or more {{Literal|Surface}} objects]]
-) into one object (:kbd:`Ctrl-J`) - they just won't be "linked" or merged in a single one... Yes, it's a bit confusing!
+Just like :doc:`curves </modeling/curves/editing#joining_or_merging_curves>`,
+merging two surfaces requires that a single edge, a border row of control points,
+from two separate surfaces are selected. This means that the surfaces must be part of the same object. For example,
+you can't join two surfaces while in *Object* mode - but you can of course, as with any objects of the same type,
+FIXME(TODO: Internal Link; [[#Joining Objects|join two or more {{Literal|Surface}} objects]])
+into one object (:kbd:`Ctrl-J`) - they just won't be "linked" or merged in a single one... Yes, it's a bit confusing!
 
 This command is equivalent to creating edges or :kbd:`F` aces for meshes
 (hence its shortcut), and so it only works in *Edit* mode.
@@ -328,13 +365,17 @@ So to avoid problems, you should always only select border rows with the same nu
 points... Note that you can join a border U-row of one surface with a border V-row of another
 one, Blender will automatically "invert" the axis of one surface for them to match correctly.
 
-NURBS surface curves are often used to create objects like hulls, as they define cross sections all along the object, and you just have to "skin" them as described above to get a nice, smooth and harmonious shape. See :doc:`this tutorial </ls/modeling/surfaces/skinning>` for a detailed workflow.
+NURBS surface curves are often used to create objects like hulls,
+as they define cross sections all along the object,
+and you just have to "skin" them as described above to get a nice, smooth and harmonious shape.
+See :doc:`this tutorial </ls/modeling/surfaces/skinning>` for a detailed workflow.
 
 
 Examples
 --------
 
-(*Joining ready*) is an example of two NURBS surface curves, **not** NURBS curves, in *Edit* mode, ready to be joined. (*Joining complete*) is the result of joining the two curves.
+(*Joining ready*) is an example of two NURBS surface curves, **not** NURBS curves, in *Edit* mode, ready to be joined.
+(*Joining complete*) is the result of joining the two curves.
 
 
 +---------------------------------+
@@ -364,7 +405,8 @@ using either the *Subdivide* entry in the *Specials* menu
 you will subdivide once all *completely selected grids* by subdividing each "quad" into four
 smaller ones.
 
-If you apply it to a 1D surface (a "surface curve"), this tool works exactly as with :doc:`curves </modeling/curves/editing#subdivision>`.
+If you apply it to a 1D surface (a "surface curve"),
+this tool works exactly as with :doc:`curves </modeling/curves/editing#subdivision>`.
 
 
 Spin
@@ -378,7 +420,8 @@ Spin
    | Panel:    *Curve Tools1* (*Editing* context, :kbd:`F9`)
 
 
-This tool is a bit similar to its :doc:`mesh counterpart </modeling/meshes/tools#spin>` - but with less control and options (in fact, there's none!).
+This tool is a bit similar to its :doc:`mesh counterpart </modeling/meshes/tools#spin>` -
+but with less control and options (in fact, there's none!).
 
 It only works on selected "surfaces" made of *one U-row* (and not with one V-row),
 so-called "surface curves", by "extruding" this "cross section" in a square pattern,
@@ -414,7 +457,9 @@ Other Specials Options
    | Hotkey:   :kbd:`W`
 
 
-The *Specials* menu contains exactly the same additional options as for :doc:`curves </modeling/curves/editing#other_specials_options>` - but I suppose *Set Radius* and *Smooth Radius* have nothing to do here...
+The *Specials* menu contains exactly the same additional options as for
+:doc:`curves </modeling/curves/editing#other_specials_options>` -
+but I suppose *Set Radius* and *Smooth Radius* have nothing to do here...
 
 
 Conversion

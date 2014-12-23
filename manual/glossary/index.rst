@@ -90,6 +90,13 @@
          A particle which has been displayed/emitted and has reached its
          end of life length is considered *dead*.
 
+   VBO
+      Vertex Buffer Object, a term used for uploading geomatry to the graphics cards memory for improved performance.
+
+      See Wikipedia's `Vertex Buffer Object <http://en.wikipedia.org/wiki/Vertex_Buffer_Object>`__
+      article for more information.
+
+
    Vertex
       a point in 3D space
       A point is defined by its 3 axis coordinates x,y,z.

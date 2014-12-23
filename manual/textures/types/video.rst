@@ -53,7 +53,8 @@ Frames
 Start
    Global starting frame of the sequence/movie
 Offset
-   Offset the number of the frame to use in the animation. What frame number inside the movie/sequence to start grabbing.
+   Offset the number of the frame to use in the animation.
+   What frame number inside the movie/sequence to start grabbing.
 
 Match Movie Length
    This button set image's user's length to the one of selected movie/sequence.

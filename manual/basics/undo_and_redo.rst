@@ -130,7 +130,8 @@ the contents of the Pop-Up Window are different, because of your context (Edit M
 
 .. tip:: Operations using Redo Last
 
-   Some operations produce particularly useful results if you tweak their parameters with the :kbd:`F6` Menu. Take, for example, adding a Circle. If you reduce the Vertex count to 3, you get a perfect equilateral triangle.
+   Some operations produce particularly useful results if you tweak their parameters with the :kbd:`F6` Menu.
+   Take, for example, adding a Circle. If you reduce the Vertex count to 3, you get a perfect equilateral triangle.
 
 
 Undo History

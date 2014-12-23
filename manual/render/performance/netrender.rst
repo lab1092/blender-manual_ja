@@ -15,7 +15,7 @@ Goals:
 Instructions
 ============
 
-As of version 2.6, network rendering needs to be enabled under User Preferences → Addons.
+As of version 2.6, network rendering needs to be enabled under User Preferences → Add-ons.
 
 
 GUI
@@ -91,7 +91,7 @@ Command Line
   - *blender -b slave.blend --addons netrender -a -noaudio -nojoystick*
 - Master and Slaves can be stopped with Ctrl-C (it is recommended to stop the Slaves before the Master).
 
-The option *--addons netrender* ensures that the network render addon is loaded.
+The option *--addons netrender* ensures that the network render add-on is loaded.
 The options *-noaudio -nojoystick* are optional.
 They're only there to prevent some warnings.
 
@@ -128,17 +128,37 @@ Master
    Master settings
 
 
-- Network Settings
-  - **Start Service** : Starts the Master Server.
-  - **Path** : Where the Master will save job files, results, logs and others. It will create a new directory there of the form *master_<pid>* where *<pid>* is the process ID of the Master server. In the root of the folder, a file named "blender_master.data" will be saved to enable resuming a master later.
-  - **Server Address** : Address of the network interface that the Master will listen on. *[default]* means listen on all available network interfaces.
-  - **Port** : Port that the Master will listen on.
-  - **SSL** : Use SSL (https) for connections with slaves and clients. When that option is enabled, two new fields become visible to specify the SSL certificate and key. You can use a self-signed certificate or a certificate provided by a third party like comodo, or verisign. In that case if there is a chain of trust you can put it in the same file as the certificate but the certificate must be put first. The certificate, the chain of trust and key must be provided as PEM files.
-  - **Open Master Monitor** : Open a browser to the Web-based Master monitor. Enabled when the Master is running.
-- Master Settings
-  - **Broadcast** : Broadcast the Master's Address and Port on its local network (every 10s).
-  - **Force Dependency Upload** : Forces clients to upload dependency files to the master, instead of using existing local files even if they match client files.
-  - **Clear on exit** : Remove the directory created in *Path* when the Master is stopped. Turning on this option prevents resuming a master later if the process is stopped for any reason.
+Network Settings
+   Start Service
+      Starts the Master Server.
+   Path
+      Where the Master will save job files, results, logs and others.
+      It will create a new directory there of the form ``master_<pid>``
+      where ``<pid>`` is the process ID of the Master server.
+      In the root of the folder, a file named "blender_master.data" will be saved to enable resuming a master later.
+   Server Address
+      Address of the network interface that the Master will listen on.
+      ``[default]`` means listen on all available network interfaces.
+   Port
+      Port that the Master will listen on.
+   SSL
+      Use SSL (https) for connections with slaves and clients.
+      When that option is enabled, two new fields become visible to specify the SSL certificate and key.
+      You can use a self-signed certificate or a certificate provided by a third party like comodo, or verisign.
+      In that case if there is a chain of trust you can put it in the same file as the
+      certificate but the certificate must be put first.
+      The certificate, the chain of trust and key must be provided as PEM files.
+   Open Master Monitor
+      Open a browser to the Web-based Master monitor. Enabled when the Master is running.
+Master Settings
+   Broadcast
+      Broadcast the Master's Address and Port on its local network (every 10s).
+   Force Dependency Upload
+      Forces clients to upload dependency files to the master,
+      instead of using existing local files even if they match client files.
+   Clear on exit
+      Remove the directory created in *Path* when the Master is stopped.
+      Turning on this option prevents resuming a master later if the process is stopped for any reason.
 
 
 Slave
@@ -149,19 +169,34 @@ Slave
    Slave settings
 
 
-- Network Settings
-  - **Start Service** : Start the Slave node.
-  - **Path** : Where the Slave will save job files, results and logs. It will create a new directory there of the form *slave_<id>* where *<id>* is the Slave ID assigned by the Master server.
-  - **Server Address** : Address on which the Master listens.
-  - **Port** : Port on which the Master listens
-  - **Refresh** : Listen to the Master's broadcast to determine its Address and Port (can take up to 20s).
-  - **Open Master Monitor** : Open a browser to the Web-based Master monitor. Enabled when the Master's address is valid.
-- Slave Settings
-  - **Tags** : Semi-colon separated list of tags assigned to the slave. A slave will only be assigned a job if it has at least all of that job's tags.
-  - **Clear on exit** : Remove the directory created in *Path* when the Slave is stopped.
-  - **Generate thumbnails** : Create thumbnails of the render result on the Slave (they are otherwise created on demand by the Master).
-  - **Output render log on console** : Also output logs from the rendering subprocess to the standard output and not just to render log sent to the master.
-  - **Threads** : How many threads the Slave should use for rendering.
+Network Settings
+   Start Service
+      Start the Slave node.
+   Path
+      Where the Slave will save job files, results and logs.
+      It will create a new directory there of the form ``slave_<id>`` where ``<id>``
+      is the Slave ID assigned by the Master server.
+   Server Address
+      Address on which the Master listens.
+   Port
+      Port on which the Master listens
+   Refresh
+      Listen to the Master's broadcast to determine its Address and Port (can take up to 20s).
+   Open Master Monitor
+      Open a browser to the Web-based Master monitor. Enabled when the Master's address is valid.
+Slave Settings
+   Tags
+      Semi-colon separated list of tags assigned to the slave.
+      A slave will only be assigned a job if it has at least all of that job's tags.
+   Clear on exit
+      Remove the directory created in *Path* when the Slave is stopped.
+   Generate thumbnails
+      Create thumbnails of the render result on the Slave (they are otherwise created on demand by the Master).
+   Output render log on console
+      Also output logs from the rendering subprocess to the
+      standard output and not just to render log sent to the master.
+   Threads
+      How many threads the Slave should use for rendering.
 
 
 Client
@@ -177,38 +212,72 @@ Client
    Slaves and Jobs lists
 
 
-- Network Settings
-  - **Path** : Where the Client will save its temporary render result file.
-  - **Server Address** : Address on which the Master listens.
-  - **Port** : Port on which the Master listens.
-  - **SSL** : Use SSL (https) to communicate with the Master.
-  - **Refresh** : Listen to the Master's broadcast to determine its Address and Port (can take up to 20s).
-  - **Open Master Monitor** : Open a browser to the Web-based Master monitor. Enabled when the Master's address is valid.
-- Job Settings
-  - **Animation on network** : Sends the current file as a job to the Master and waits for results (other than the rendering taking place elsewhere, this works like a normal Render Animation).
-  - **Send job** : Sends the current file as a job to the Master. The returned job ID becomes the *current job ID*.
-  - **Bake on network** : Sends a baking job with all modifiers using a point cache or particle systems in the scene,
-  - **Send current frame job** : Sends the current file as a job to the Master with the current frame to be rendered only. The returned job ID becomes the *current job ID*.
-  - **Name** : Name of the job. *[default]* uses the name of the blend file.
-  - **Category** : Category of the job, *Optional*. Jobs on the Master are also balanced by Categories.
-  - **Tags** : Semi-colon separated list of tags assigned to the job. A job will only be assigned to a slave if its tag list contains all of the job's own tags.
-  - **Engine** : Render engine to use for rendering this job.
-  - **Priority** : Priority of the job. The Priority level is a multiplier that makes the Master count the job as if it were X jobs (i.e.: balancing between a priority 1 and a priority 2 job will make them take 33% and 66% of the workload respectively).
-  - **Chunks** : How many frames are dispatched to a Slave as part of a chunk of a job.
-  - **Save Before Job** : Forces the current file to be saved to disk before being dispatched as a job.
-- Slaves Status
-  - **List** : List of all Slaves connected to the Master.
-  - **Refresh** : Refresh the Slaves information from the Master
-  - **Remove** : Move the selected Slave to the Blacklist.
-- Slaves Blacklist
-  - **List** : List of all Blacklisted Slaves.
-  - **Remove** : Remove the selected Slave from the Blacklist.
-- Jobs
-  - **List** : List of all jobs on the Master.
-  - **Refresh** : Refresh the jobs information from the Master.
-  - **Remove** : Remove a job from the Master.
-  - **Remove All** : Remove all jobs from the Master.
-  - **Get Results** : Get all available frames from the selected job. Results are downloaded as multilayer EXR into the current output directory.
+Network Settings
+   Path
+     Where the Client will save its temporary render result file.
+   Server Address
+      Address on which the Master listens.
+   Port
+      Port on which the Master listens.
+   SSL
+      Use SSL (https) to communicate with the Master.
+   Refresh
+      Listen to the Master's broadcast to determine its Address and Port (can take up to 20s).
+   Open Master Monitor
+      Open a browser to the Web-based Master monitor. Enabled when the Master's address is valid.
+Job Settings
+   Animation on network
+      Sends the current file as a job to the Master and waits for results
+      (other than the rendering taking place elsewhere, this works like a normal Render Animation).
+   Send job
+      Sends the current file as a job to the Master. The returned job ID becomes the *current job ID*.
+   Bake on network
+      Sends a baking job with all modifiers using a point cache or particle systems in the scene,
+   Send current frame job
+      Sends the current file as a job to the Master with the current frame to be rendered only.
+      The returned job ID becomes the *current job ID*.
+   Name
+      Name of the job. *[default]* uses the name of the blend file.
+   Category
+      Category of the job, *Optional*. Jobs on the Master are also balanced by Categories.
+   Tags
+      Semi-colon separated list of tags assigned to the job.
+      A job will only be assigned to a slave if its tag list contains all of the job's own tags.
+   Engine
+      Render engine to use for rendering this job.
+   Priority
+      Priority of the job.
+      The Priority level is a multiplier that makes the Master count the job as if it were X jobs
+      (i.e.: balancing between a priority 1 and a priority 2 job
+      will make them take 33% and 66% of the workload respectively).
+   Chunks
+      How many frames are dispatched to a Slave as part of a chunk of a job.
+   Save Before Job
+      Forces the current file to be saved to disk before being dispatched as a job.
+Slaves Status
+   List
+      List of all Slaves connected to the Master.
+   Refresh
+      Refresh the Slaves information from the Master
+   Remove
+      Move the selected Slave to the Blacklist.
+Slaves Blacklist
+   List
+      List of all Blacklisted Slaves.
+   Remove
+      Remove the selected Slave from the Blacklist.
+Jobs
+   List
+      List of all jobs on the Master.
+   Refresh
+      Refresh the jobs information from the Master.
+   Remove
+      Remove a job from the Master.
+   Remove All
+      Remove all jobs from the Master.
+   Get Results
+      Get all available frames from the selected job.
+      Results are downloaded as multilayer EXR into the current output directory.
 
 
 Physics Baking Jobs
@@ -258,9 +327,16 @@ Adding new ones is relatively easy and will be done when requested.
 After selecting a VCS, you have to specify three system-specific settings:
 
 
-  - **Revision** : string used to identify a specific version. (svn: revision, git: commit hash).
-  - **Remote path** : remote path where the files can be downloaded from (svn: server url, git: remote repository path from which the slaves can checkout). All job files must be in that folder or one of its subfolders.
-  - **Working copy** : working copy root folder. Where the remote files will be downloaded. This is kept between jobs to prevent download of the same file more than once and will only change when jobs require a new revision of specific files from the version control system.
+Revision
+   string used to identify a specific version. (svn: revision, git: commit hash).
+Remote path
+   remote path where the files can be downloaded from
+   (svn: server url, git: remote repository path from which the slaves can checkout).
+   All job files must be in that folder or one of its subfolders.
+Working copy
+   working copy root folder. Where the remote files will be downloaded.
+   This is kept between jobs to prevent download of the same file more than once
+   and will only change when jobs require a new revision of specific files from the version control system.
 
 The Refresh button will try to guess those settings to the best of its knowledge.
 

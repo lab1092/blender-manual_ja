@@ -33,8 +33,11 @@ To setup Spline IK,
 it is necessary to have a chain of connected bones and a curve to constrain these bones to.
 
 
-- With the last bone in the chain selected, add a '\ :doc:`Spline IK </constraints/tracking/spline_ik>` ' Constraint from the Bone Constraints tab in the Properties Editor.
-- Set the 'Chain Length' setting to the number of bones in the chain (starting from and including the selected bone) that should be influenced by the curve.
+- With the last bone in the chain selected,
+  add a :doc:`Spline IK </constraints/tracking/spline_ik>`
+  Constraint from the Bone Constraints tab in the Properties Editor.
+- Set the 'Chain Length' setting to the number of bones in the chain
+  (starting from and including the selected bone) that should be influenced by the curve.
 - Finally, set the 'Target' field to the curve that should control the curve.
 
 Congratulations, the bone chain is now controlled by the curve.
@@ -90,8 +93,22 @@ to be tweaked as necessary for artistic control.
 Tips for Nice Setups
 ********************
 
-- For optimal deformations, it is recommended that the bones are roughly the same length, and that they are not too long, to facilitate a better fit to the curve. Also, bones should ideally be created in a way that follows the shape of the curve in its 'rest pose' shape, to minimise the problems in areas where the curve has sharp bends which may be especially noticeable when stretching is disabled.
-- For control of the curve, it is recommended that hooks (in particular, Bone Hooks, which are new in 2.5) are used to control the control-verts of the curve, with one hook per control-vert. In general, only a few control-verts should be needed for the curve (i.e. 1 for every 3-5 bones offers decent control).
-- The type of curve used does not really matter, as long as a path can be extracted from it that could also be used by the Follow Path Constraint. This really depends on the level of control required from the hooks.
-- When setting up the rigs, it is currently necessary to have the control bones (for controlling the curve) in a separate armature to those used for deforming the meshes (i.e. the deform rig containing the Spline IK chains). This is to avoid creating pseudo "Dependency Cycles", since Blender's Dependency Graph can only resolve the dependencies the control bones, curves, and Spline IK'ed bones on an object by object basis.
+- For optimal deformations, it is recommended that the bones are roughly the same length,
+  and that they are not too long, to facilitate a better fit to the curve.
+  Also, bones should ideally be created in a way that follows the shape of the curve in its 'rest pose' shape,
+  to minimise the problems in areas where the curve has sharp bends
+  which may be especially noticeable when stretching is disabled.
+- For control of the curve, it is recommended that hooks (in particular, Bone Hooks, which are new in 2.5)
+  are used to control the control-verts of the curve, with one hook per control-vert.
+  In general, only a few control-verts should be needed for the curve
+  (i.e. 1 for every 3-5 bones offers decent control).
+- The type of curve used does not really matter,
+  as long as a path can be extracted from it that could also be used by the Follow Path Constraint.
+  This really depends on the level of control required from the hooks.
+- When setting up the rigs, it is currently necessary to have the control bones
+  (for controlling the curve) in a separate armature to those used for deforming the meshes
+  (i.e. the deform rig containing the Spline IK chains).
+  This is to avoid creating pseudo "Dependency Cycles",
+  since Blender's Dependency Graph can only resolve the dependencies the control bones,
+  curves, and Spline IK'ed bones on an object by object basis.
 

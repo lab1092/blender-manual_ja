@@ -28,7 +28,7 @@ An Add-On is considered installed when it is located in the ``..
 /scripts/addons`` folder (where .. is the path to your Blender configuration folder).
 Simply moving the Add-On into that folder is enough.
 
-Addons can be python scripts **.py** or **.zip** files (containing **.py** scripts).
+Add-ons can be python scripts **.py** or **.zip** files (containing **.py** scripts).
 
 
 File locations
@@ -46,13 +46,13 @@ Note that the ``AppData`` folder in Windows 7 and the ``.
 config`` folder in Linux is hidden. The location may also be different depending on your
 choices for setting up your operating system and Blender.
 
-You can also create a personnal folder containing new addons and configure your files path in
+You can also create a personnal folder containing new add-ons and configure your files path in
 the *File* panel of the *User Preferences*.
 To create a personnal script folder:
 
 - Create an empty folder (i.e. 'script_addon_2-6x')
 - Add one folder named 'addons'. It has to named like this for Blender to recognize it.
-- Put your new addons in this 'addons' folder.
+- Put your new add-ons in this 'addons' folder.
 - open the *File* panel of the *User Preferences*.
 - Fill the *Scripts* entry with the path to your script folder (i.e. 'script_addon_2-6x').
 

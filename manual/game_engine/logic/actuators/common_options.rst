@@ -18,7 +18,8 @@ Triangle button
 Actuator type menu
    Specifies the type of the sensor.
 Actuator name
-   The name of the actuator. This can be selected by the user. It is used to access actuators with python; it needs to be unique among the selected objects.
+   The name of the actuator. This can be selected by the user.
+   It is used to access actuators with python; it needs to be unique among the selected objects.
 :kbd:`X` **Button**
    Deletes the actuator.
 

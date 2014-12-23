@@ -215,19 +215,23 @@ Immediate Children
 Parent
    Selects the parent of this object if it has one.
 Siblings
-   Select objects that have the same parent as the active object. This can also be used to select all root level objects (objects with no parents).
+   Select objects that have the same parent as the active object.
+   This can also be used to select all root level objects (objects with no parents).
 Type
    Select objects that are the same type as the active one.
 Layer
    Objects that have at least one shared layer.
 Group
-   Objects that are part of a group (rendered green with the default theme) will be selected if they are in one of the groups that the active object is in.
+   Objects that are part of a group (rendered green with the default theme)
+   will be selected if they are in one of the groups that the active object is in.
 Object Hooks
    Every hook that belongs to the active object.
 Pass
-   Select objects assigned to the same render pass. Render passes are set in *Properties* → *Object* → *Relations* and can be used in the *Node Compositor* (*Add* → *Convertor* → *ID Mask*.)
+   Select objects assigned to the same render pass.
+   Render passes are set in *Properties* → *Object* → *Relations* and can be used in the *Node Compositor* (*Add* → *Convertor* → *ID Mask*.)
 Color
-   Select objects with same *Object Color*.  Object colors are set in *Properties* → *Object* → *Display* → *Object Color*.)
+   Select objects with same *Object Color*.
+   Object colors are set in *Properties* → *Object* → *Display* → *Object Color*.)
 Properties
    Select objects with same *Game Engine* *Properties*.
 Keying Set
@@ -315,7 +319,8 @@ one go.
 Options
 -------
 
-*Select All by Type* in *Object* mode offers an option for every type of object that can be described by the *ObData* datablock.
+*Select All by Type* in *Object* mode offers an option for every type
+of object that can be described by the *ObData* datablock.
 
 Just take your pick.
 

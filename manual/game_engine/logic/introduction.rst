@@ -17,7 +17,8 @@ The main part of game logic can be set up through a graphical interface the
 Logic is set up as blocks (or "bricks") which represent preprogrammed functions;
 these can be tweaked and combined to create the game/application. There are three types of logic brick:
 :doc:`Sensors </game_engine/logic/sensors/introduction>`,
-:doc:`Controllers </game_engine/logic/controllers/introduction>` and :doc:`Actuators </game_engine/logic/actuators/introduction>`.
+:doc:`Controllers </game_engine/logic/controllers/introduction>` and
+:doc:`Actuators </game_engine/logic/actuators/introduction>`.
 Sensors are primitive event listeners, which are triggered by specific events, such as a collision,
 a key press or mouse movement. Controllers carry out logic operations on sensor output,
 and trigger connected actuators when their operating conditions are met.
@@ -28,7 +29,12 @@ Actuators interact with the simulation directly, and are the only components in 
 Properties
 ==========
 
-:doc:`Properties </game_engine/logic/properties>` are like variables in other programming languages. They are used to save and access data values either for the whole game (eg. scores), or for particular objects/players (e.g. names). However, in the Blender Game Engine, a property is associated with an object. Properties can be of different types, and are set up in a special area of the :doc:`Logic Editor </game_engine/logic/editor>`.
+:doc:`Properties </game_engine/logic/properties>` are like variables in other programming languages.
+They are used to save and access data values either for the whole game (eg. scores),
+or for particular objects/players (e.g. names).
+However, in the Blender Game Engine, a property is associated with an object.
+Properties can be of different types,
+and are set up in a special area of the :doc:`Logic Editor </game_engine/logic/editor>`.
 
 
 States

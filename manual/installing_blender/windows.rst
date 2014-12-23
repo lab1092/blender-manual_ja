@@ -101,7 +101,7 @@ If you want to run Blender off a USB key so that you can use it wherever you go,
 download the .zip version and extract it to a USB key. You may want to avoid storing animation
 output or other temporary files on the USB key as frequent drive writes may shorten its life.
 
-To keep all configuration files and installed addons on the USB key,
+To keep all configuration files and installed add-ons on the USB key,
 create a folder named *config* in the unzipped Blender folder. Now all configuration files
 will be read from and written to the USB key rather than the computer you're running Blender
 on.

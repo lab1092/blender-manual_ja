@@ -103,7 +103,8 @@ so it gives you no information about root and tip, nor bone size or roll angle.
 B-Bone bone
 -----------
 
-This visualization shows the curves of "smooth" multi-segmented bones; see the :doc:`bone page </rigging/armatures/bones#bones_rigidity>` for details.
+This visualization shows the curves of "smooth" multi-segmented bones;
+see the :doc:`bone page </rigging/armatures/bones#bones_rigidity>` for details.
 
 
 .. figure:: /images/ManRiggingEnvelopeEx3DViewPoseMode.jpg
@@ -116,7 +117,8 @@ This visualization shows the curves of "smooth" multi-segmented bones; see the :
 Envelope bone
 -------------
 
-This visualization materializes the bone deformation influence. More on this in the :doc:`bone page </rigging/armatures/bones#bones_influence>`.
+This visualization materializes the bone deformation influence.
+More on this in the :doc:`bone page </rigging/armatures/bones#bones_influence>`.
 
 
 Attributes
@@ -124,22 +126,19 @@ Attributes
 
 Names
    When enabled, the name of each bone is drawn.
-
 Colors
    This is only relevant for *Pose* mode, and is described in detail :doc:`there </rigging/posing/visualization>`.
-
-
 Axes
    When enabled, the (local) axes of each bone are drawn (only relevant for *Edit* and *Pose* modes).
-
 X-Ray
-   When enabled, the bones of the armature will always be drawn on top of the solid objects (meshes, surfaces, ...) - i.e. they will always be visible and selectable (this is the same option as the one found in the *Display* panel of the *Object data* context. Very useful when not in *Wireframe* mode.
-
+   When enabled, the bones of the armature will always be drawn on top of the solid objects
+   (meshes, surfaces, ...) - i.e. they will always be visible and selectable
+   (this is the same option as the one found in the *Display* panel of the *Object data* context.
+   Very useful when not in *Wireframe* mode.
 Shapes
    When enabled, the default standard bone shape is replaced,
    in *Object* and *Pose* modes,
    by the shape of a chosen object (see FIXME(TODO: Internal Link; [[#Shaped Bones|below]]) for details).
-
 Delay Refresh
    When enabled, the bone doesn't deform its children when manipulating the bone in pose mode.
 
@@ -170,7 +169,8 @@ Attributes
 ----------
 
 Wireframe
-   When enabled, bone is displayed in wireframe mode regardles of the viewport drawing mode. Useful for non-obstructive custom bone chains.
+   When enabled, bone is displayed in wireframe mode regardles of the viewport drawing mode.
+   Useful for non-obstructive custom bone chains.
 
 Hide
    Bone is not visible when not in *Edit mode*.
@@ -186,7 +186,8 @@ To assign a custom shape to a bone, you have to:
 
 - Switch to *Pose* mode (:kbd:`Ctrl-Tab`).
 - Select the relevant bone (:kbd:`RMB` click on it).
-- Go to the *Display* panel *Custom Shape* field and select the 3D object previously created in the scene; in this example we are using a cube and a cone. Tou can optionally set the *At* field to another bone.
+- Go to the *Display* panel *Custom Shape* field and select the 3D object previously created in the scene;
+  in this example we are using a cube and a cone. Tou can optionally set the *At* field to another bone.
 
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtDisplayPanel2.jpg
@@ -214,10 +215,15 @@ To assign a custom shape to a bone, you have to:
 Note that:
 
 - These shapes will never be rendered - like any bone, they are only visible in 3D views.
-- Even if any type of object seems to be accepted by the *OB* field (meshes, curves, even metas...), only meshes really work - all other types just make the bone invisible; nothing is drawn...
-- The center of the shape object will be at the *root of the bone* (see the :doc:`bone page </rigging/armatures/bones>` for root/tip).
-- The object properties of the shape are ignored (i.e. if you make a parallelepiped out of a cube by modifying its dimensions in *Object* mode, you'll still have a cube shaped bone...).
-- The "along bone" axis is the Y one, and the shape object is always scaled so that one Blender Unit stretches along the whole bone length.
+- Even if any type of object seems to be accepted by the *OB* field (meshes, curves, even metas...),
+  only meshes really work - all other types just make the bone invisible; nothing is drawn...
+- The center of the shape object will be at the *root of the bone*
+  (see the :doc:`bone page </rigging/armatures/bones>` for root/tip).
+- The object properties of the shape are ignored
+  (i.e. if you make a parallelepiped out of a cube by modifying its dimensions in *Object* mode,
+  you'll still have a cube shaped bone...).
+- The "along bone" axis is the Y one,
+  and the shape object is always scaled so that one Blender Unit stretches along the whole bone length.
 - If you need to remove the custom shape of the bone, just right click in the *Custom Shape* field and select *Reset to default value* in the popup menu.
 
 So to summarize all this, you should use meshes as shape objects,

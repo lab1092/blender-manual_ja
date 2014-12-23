@@ -105,7 +105,8 @@ image above is an example of how a point on a 3D object might be mapped onto a 2
 The UV Editor
 *************
 
-About fuctionalities for mapping UV see :doc:`UV/Image Editor </textures/mapping/uv_image_editor>` section for details.
+About fuctionalities for mapping UV see
+:doc:`UV/Image Editor </textures/mapping/uv_image_editor>` section for details.
 
 
 Advantages of UVs
@@ -142,6 +143,7 @@ created in applications like the Gimp, Photoshop, or your favorite painting appl
 
 .. note:: Games
 
-   UV mapping is also essential in the Blender game engine, or any other game. It is the de facto standard for applying textures to models; almost any model you find in a game is UV mapped.
+   UV mapping is also essential in the Blender game engine, or any other game.
+   It is the de facto standard for applying textures to models; almost any model you find in a game is UV mapped.
 
 

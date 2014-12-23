@@ -24,7 +24,8 @@ Vertex Group
    An optional vertex group that will be affected by the deforming mesh cage.
    Vertices not in this group will not be deformed.
 Invert
-   Inverts the influence of the vertex group defined in the previous setting (reverses the weight values of this group).
+   Inverts the influence of the vertex group defined in the previous setting
+   (reverses the weight values of this group).
 Bind
    Links the current vertex positions of both the modified geometry and the deformer *Object* chosen together.
    An unbound Mesh Deform modifier has no effect - it must be bound so that altering the shape of the deform mesh cage

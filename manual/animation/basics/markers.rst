@@ -17,12 +17,7 @@ Markers can be created and edited in all of the following editors
 (including their different modes):
 
 
-- The
-
-FIXME(TODO: Internal Link;
-[[User:Tnboma/Doc:2.5/Manual/Animation/Graph Editor|Graph Editor window]]
-).
-
+- The :doc:`Graph Editor Window </animation/editors/graph>`.
 - The :doc:`Action Editor window </animation/actions>`.
 - The :doc:`The Dope Sheet </animation/dope_sheet>`.
 - The :doc:`NLA Editor window </animation/editors/nla>`.

@@ -55,7 +55,7 @@ for where. This folder structure has to mirror the structure of the scripts fold
 the installation directory of Blender:
 
 - scripts
-- addons
+- add-ons
 - modules
 - presets
 - camera

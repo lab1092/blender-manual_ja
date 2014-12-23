@@ -93,7 +93,9 @@ Copying and Linking Object Datablocks
 
 Full copy
    :kbd:`Shift-D` is used to make normal copy of the selected objects.
-   The object and some of it's child datablocks will really be duplicated, the other children are just linked; you can define the attributes to be duplicated in *User Preferences* → *Edit Methods*, button group *Duplicate with object:*.
+   The object and some of it's child datablocks will really be duplicated, the other children are just linked;
+   you can define the attributes to be duplicated in
+   *User Preferences* → *Edit Methods*, button group *Duplicate with object:*.
 
 Linked copy
    :kbd:`Alt-D` makes a linked copy.

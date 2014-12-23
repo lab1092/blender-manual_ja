@@ -21,7 +21,8 @@ Options
 Thickness
    The depth or size of the wireframes.
 Offset
-   A value between ``-1`` and ``1`` to change whether the wireframes are generated inside or outside the original mesh.
+   A value between ``-1`` and ``1`` to change whether the wireframes are
+   generated inside or outside the original mesh.
    Set to zero, *Offset* will center the wireframes around the original edges.
 Vertex Group
    Restrict the modifier to only this vertex group.

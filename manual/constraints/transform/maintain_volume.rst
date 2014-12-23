@@ -31,6 +31,7 @@ Space
 See also
 ========
 
-- `Harkyman on the development of the Maintain Volume constraint <http://www.harkyman.com/2010/03/16/maintaining-bone-volume-a-new-constraint/>`__, March 2010
+- `Harkyman on the development of the Maintain Volume constraint <http://www.harkyman.com/2010/03/16/maintaining-bone-volume-a-new-constraint/>`__,
+  March 2010
 
 

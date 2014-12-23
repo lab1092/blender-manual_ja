@@ -10,7 +10,9 @@ DupliVerts
    | Panel:    *Object* → *Duplication*
 
 
-*Duplication Vertices* or *DupliVerts* is the duplication of a base object at the location of the vertices of a mesh. In other words, when using *DupliVerts* on a mesh, an instance of the base object is placed on every vertex of the mesh.
+*Duplication Vertices* or *DupliVerts* is the duplication of a base object at the location of the vertices of a mesh.
+In other words, when using *DupliVerts* on a mesh,
+an instance of the base object is placed on every vertex of the mesh.
 
 There are actually two approaches to modeling using *DupliVerts*.
 They can be used as an arranging tool,
@@ -24,7 +26,11 @@ the petals in a flower).
 
 .. note:: Download example .blend file
 
-   You can download a file with the examples described on this page.  In `this .blend <http://wiki.blender.org/index.php/:File:Manual-2.5-DupliVerts-Examples.blend>`__, the first example, a monkey parented to a circle is on layer 1; while a tentacle parented to an icosphere is on layer 2.  The files was made using Blender 2.55.1 (r33567).
+   You can download a file with the examples described on this page.
+   In `this .blend <http://wiki.blender.org/index.php/:File:Manual-2.5-DupliVerts-Examples.blend>`__,
+   the first example, a monkey parented to a circle is on layer 1;
+   while a tentacle parented to an icosphere is on layer 2.
+   The files was made using Blender 2.55.1 (r33567).
 
 
 DupliVerts as an Arranging Tool
@@ -117,7 +123,9 @@ Output of various orientations:
 .. note::
 
    The axes of an object can be made visible in the *Object* → *Display* panel.
-   To display the vertex normals of the parent mesh, tab into edit mode and enable this function in *Properties* (:kbd:`N`)→ *Display* panel where you can also resize the displayed normals as necessary.
+   To display the vertex normals of the parent mesh,
+   tab into edit mode and enable this function in *Properties* (:kbd:`N`)→ *Display*
+   panel where you can also resize the displayed normals as necessary.
 
 
 DupliVerts as a Modeling Tool

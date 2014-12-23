@@ -6,7 +6,11 @@
 Skinning to Shapes
 ******************
 
-We saw in the :doc:`previous page </rigging/skinning/objects>` how to link (parent) whole objects to armature bones - a way to control the transform properties of this object via a rig. However, armatures are much more powerful: they can deform the *shape* of an object (i.e. affect its ObData datablock - its vertices or control points...).
+We saw in the :doc:`previous page </rigging/skinning/objects>`
+how to link (parent) whole objects to armature bones -
+a way to control the transform properties of this object via a rig.
+However, armatures are much more powerful:
+they can deform the *shape* of an object (i.e. affect its ObData datablock - its vertices or control points...).
 
 In this case, the child object is parented (skinned) to the whole armature,
 so that each of its bones controls a part of the "skin" object's geometry.
@@ -19,13 +23,17 @@ Bones can affect the object's shape in two ways:
 
 FIXME(TODO: Internal Link;
 [[#Envelopes|"envelopes" process]]
-) is available for all type of skinnable objects - it uses the "proximity" and "influence" of the bones to determine which part of the object they can deform.
+) is available for all type of skinnable objects -
+it uses the "proximity" and "influence" of the bones to determine which part of the object they can deform.
 
 - The
 
 FIXME(TODO: Internal Link;
 [[#Vertex Groups|"vertex groups" method]]
-) is (obviously) reserved to meshes and lattices - one bone only affect the vertices in the :doc:`group </modeling/meshes/vertex_groups>` having the same name, using vertices' :doc:`weights </modeling/meshes/weight_paint>` as influence value. A much more precise method, but also generally longer to set up.
+) is (obviously) reserved to meshes and lattices - one bone only affect the vertices in the
+:doc:`group </modeling/meshes/vertex_groups>` having the same name,
+using vertices' :doc:`weights </modeling/meshes/weight_paint>` as influence value.
+A much more precise method, but also generally longer to set up.
 
 Both methods have some
 FIXME(TODO: Internal Link;
@@ -118,8 +126,10 @@ groups methods:*
 Preserve Volume (Armature modifier)
    This affects the way geometry is deformed, especially at bones' joints, when rotating them.
 
-   Without *Preserve Volume*, rotations at joints tend to scale down the neighboring geometry, up to nearly zero at ``180d`` from rest position.
-   With* *Preserve Volume*, the geometry is no longer scaled down, but there is a "gap", a discontinuity when reaching* ``180d`` from rest position.
+   Without *Preserve Volume*, rotations at joints tend to scale down the neighboring geometry,
+   up to nearly zero at ``180d`` from rest position.
+   With* *Preserve Volume*, the geometry is no longer scaled down, but there is a "gap",
+   a discontinuity when reaching* ``180d`` from rest position.
 
 +-------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------------------------+---------------------------------------------------------------------+
 +* **Example of** *Quaternion* **option effects.** *                |.. figure:: /images/ManRiggingSkinningQuaternionOptExInitState.jpg  |.. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg|.. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg+
@@ -155,7 +165,8 @@ The bones also have some deforming options in their sub-panels
 that you can therefore define independently for each of them*
 
 Deform
-   By disabling this setting (enabled by default), you can completely prevent a bone from deforming the geometry of the skin object.
+   By disabling this setting (enabled by default),
+   you can completely prevent a bone from deforming the geometry of the skin object.
 
 
 Envelope

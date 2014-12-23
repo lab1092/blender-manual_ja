@@ -335,42 +335,22 @@ relationships between your shape keys.
 
 .. figure:: /images/Driver_For_Multiple_Shape_Keys_Key1.jpg
 
-   Key1 must handle conflicting values from the two
-
-
-FIXME(TODO: Internal Link;
-[[bones]]
-)
+   Key1 must handle conflicting values from the two bones
 
 
 .. figure:: /images/Driver_For_Multiple_Shape_Keys_Key2A.jpg
 
-   Key2A has different generator coefficients so it
-
-
-FIXME(TODO: Internal Link;
-[[is activated in a different range of the bone's position.]]
-)
+   Key2A has different generator coefficients so it is activated in a different range of the bone's position.
 
 
 .. figure:: /images/Driver_For_Multiple_Shape_Keys_Key2B.jpg
 
-   Key2B is the same as Key2A,
-
-
-FIXME(TODO: Internal Link;
-[[but is controlled by the second bone.]]
-)
+   Key2B is the same as Key2A, but is controlled by the second bone.
 
 
 .. figure:: /images/Driver_For_Multiple_Shape_Keys_Retracted.jpg
 
-   when both bones are low,
-
-
-FIXME(TODO: Internal Link;
-[[Key2B and Key2A are deactivated and Key1 is at low influence.]]
-)
+   when both bones are low, Key2B and Key2A are deactivated and Key1 is at low influence.
 
 
 .. figure:: /images/Driver_For_Multiple_Shape_Keys_Extended.jpg

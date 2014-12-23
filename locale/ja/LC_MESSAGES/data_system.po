@@ -1,0 +1,3411 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-23 09:57+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/data_system/data_system.rst:13
+msgid "Overview"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:15
+msgid ""
+"Each .blend file contains a database. This database contains all scenes, "
+"objects, meshes, textures, etc. that are in the file. A file can contain "
+"multiple scenes and each scene can contain multiple objects. Objects can "
+"contain multiple materials which can contain many textures. It is also "
+"possible to create links between different objects."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:22
+#: ../../manual/data_system/data_system.rst:42
+#: ../../manual/data_system/files/formats.rst:83
+#: ../../manual/data_system/files/open.rst:6
+#: ../../manual/data_system/files/save.rst:6
+#: ../../manual/data_system/linked_libraries.rst:19
+#: ../../manual/data_system/linked_libraries.rst:256
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:29
+msgid ""
+"To access the database, press :kbd:`Shift-F4` and the window will change to "
+"a *Data Select Browser* window, which lists the Objects in your .blend file."
+" To go up a level, click the breadcrumbs (``..``) and then you will see the "
+"overall structure of a file: *Action*, *Armature*, *Brush*, *Camera*, "
+"*Curve*, *Group*, and so on (including *Object* s)."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:36
+msgid ""
+":kbd:`LMB` selecting any datablock type, *Mesh*, for example, will give you "
+"a listing of the meshes used in the file, along with how many users there "
+"are for each one. For example, if you had a car mesh, and used that car mesh"
+" for six cars in a parking lot scene, the *Mesh* listing would show the Car "
+"and then the number 6."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:49
+msgid ""
+":kbd:`RMB` selecting certain kinds of datablocks (*Material* s, *Image* s, "
+"*Texture* s...) and pressing :kbd:`F` will assign a \"fake user\" to those "
+"datablocks. With a fake user in place, Blender will keep those datablocks in"
+" the file, even if they have no \"real user\". Datablocks without a user, "
+"real or fake, are not saved in the ``.blend`` file. Pressing :kbd:`F` again "
+"toggles the fake user assignment. Performing this action is the same as "
+"clicking the *F* button next to material/image/... names."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:58
+msgid "Outliner and OOPS Schematic"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:60
+msgid ""
+"You can easily inspect the contents of your file by using the *Outliner* "
+"window. This window displays the Blender data system (:doc:`fully documented"
+" here </data_system/the_outliner>`). This window offers two views of the "
+"database. The *Outliner* view allows you to do simple operations on the "
+"objects. These operations include selecting, renaming, deleting and linking."
+" The *OOPS Schematic* (Object-Oriented Programming System) view allows you "
+"to easily see how datablocks are linked. You can filter the view by using "
+"buttons found in the header."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:70
+msgid "Users (Sharing)"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:72
+msgid ""
+"Many datablocks can be shared among other datablocks - re-use is encouraged."
+" For example, suppose you have a material for one object, named \"\\ "
+"``Glossy`` \". You can select a second object, for example, one that does "
+"not have a material yet. Instead of clicking *ADD NEW* for the material, "
+"click the little up-down arrow next to the *ADD NEW*, which brings up a list"
+" of existing materials. Select \"\\ ``Glossy`` \". Now, these two objects "
+"share the same material. You will notice a \"2\" next to the name of the "
+"material, indicating that there are two users (the two objects) for this "
+"material. Other common examples include:"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:82
+msgid "Sharing textures among materials."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:83
+msgid "Sharing meshes between objects (\"clones\")."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:84
+msgid ""
+"Sharing Ipo curves between objects, for example to make all the lights dim "
+"together."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:88
+msgid "Fake User"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:90
+msgid ""
+"Remember that Blender does not save datablocks that are not linked to "
+"anything in the *current* file.  If you're building a \".blend\" file to "
+"serve as a library of things that you intend to link-to from *other* files, "
+"you'll need to make sure that they don't accidentally get deleted from the "
+"current (the library) file.  Do this by giving the datablocks a \"fake user,"
+" \" by hitting the *F* button next to the name of the datablock. This "
+"prevents the user count from ever becoming zero:  therefore, the datablock "
+"will not be deleted. (Blender does not keep track of how many other files "
+"link to this one.)"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:102
+msgid "Copying and Linking Objects Between Scenes"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:104
+msgid ""
+"Sometimes you may want to link or copy objects between scenes. This is "
+"possible by first selecting objects you want to link or copy and then using "
+"the *Make Links* and *Make Single User* items found in *Object* menu in the "
+"3D viewport header. Use *Make Links* to make links between scenes. To make a"
+" plain copy, you first make a link and then use *Make Single User* to make a"
+" stand-alone copy of the object in your current scene. Further information "
+"on working with scenes can be found :doc:`here "
+"</data_system/scene_creation>`."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:113
+msgid "Appending or Linking Across Files"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:115
+msgid ""
+"The content of one .blend file is easily accessed and put into your current "
+"file by using the *File* ? *Append* function (accessed at any time by "
+":kbd:`Shift-F1`). To find out more about how to copy or link objects across "
+".blend files, :doc:`click here </data_system/linked_libraries>`."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:122
+#: ../../manual/data_system/linked_libraries.rst:229
+msgid "Proxy Objects"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:124
+msgid ""
+":doc:`Proxy objects </data_system/linked_libraries>` allow you to make "
+"(parts of) linked data local. For example, this allows an animator to make a"
+" local \"copy\" of the handler bones of a character, without having the "
+"actual rig duplicated. This is especially useful for character animation "
+"setups, where you want the entire character to be loaded from an external "
+"library, but still permit the animator to work with poses and actions. "
+"Another example: you can have a modeler working on the shape (mesh) of a car"
+" and another painter working on the materials for that car. The painter "
+"cannot alter the shape of the car, but can start working with color schemes "
+"for the car. Updates made to the shape of the car are applied automatically "
+"to the painter's proxy."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:136
+msgid "Pack and Unpack Data"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:138
+msgid ""
+"Blender has the ability to encapsulate (incorporate) various kinds of data "
+"within the .blend file that is normally saved outside of the . blend file. "
+"For example, an image texture that is an external ``.jpg`` file can be put "
+"\"inside\" the .blend file via *File* → *External Data* → *Pack into .blend "
+"file*. When the .blend file is saved, a copy of that ``.jpg`` file is put "
+"inside the .blend file. The .blend file can then be copied or emailed "
+"anywhere, and the image texture moves with it."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:146
+msgid ""
+"You know that an image texture is packed because you will see a little "
+"\"Christmas present gift box\" displayed in the header."
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:151
+msgid "Unpack Data"
+msgstr ""
+
+#: ../../manual/data_system/data_system.rst:153
+msgid ""
+"When you have received a packed file, you can *File* → *External Data* → "
+"*Unpack into Files...* . You will be presented with the option to create the"
+" original directory structure or put the file in the ``//`` (directory where"
+" the .blend file is). Use \"original locations\" if you will be modifying "
+"the textures and re-packing and exchanging .blend files, so that when you "
+"send it back and the originator unpacks, his copies of the textures will be "
+"updated."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:7
+msgid "Datablocks"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:9
+msgid ""
+"The base unit for any blender project is the datablock. Examples of "
+"datablocks include: meshes, objects, materials and textures. Be it a simple "
+"sphere floating over a plane, or a full featured film, a project is defined "
+"by the datablocks it contains, the properties set for those datablocks, and "
+"the way the datablocks link to each other. Datablocks can reside within as "
+"many .blend files as needed for good project organization."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:20
+msgid "Datablocks view"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:23
+msgid "Types of Datablocks:"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:25
+msgid "RNA"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:26
+msgid "Filename"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:27
+msgid "File Has Unsaved Changes"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:28
+msgid "File is Saved"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:29
+msgid "Cameras"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:30
+msgid "Scenes"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:31
+msgid "Objects"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:32
+msgid "Materials"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:33
+msgid "Node Groups"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:34
+msgid "Meshes"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:35
+msgid "Lamps"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:36
+#: ../../manual/data_system/the_outliner.rst:250
+msgid "Libraries"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:37
+msgid "Screens"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:38
+msgid "Window Managers"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:39
+msgid "Images"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:40
+msgid "Lattices"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:41
+msgid "Curves"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:42
+msgid "Metaballs"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:43
+msgid "Vector Fonts"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:44
+msgid "Textures"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:45
+msgid "Brushes"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:46
+msgid "Worlds"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:47
+#: ../../manual/data_system/the_outliner.rst:248
+msgid "Groups"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:48
+msgid "Shape Keys"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:49
+msgid "Scripts"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:50
+msgid "Texts"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:51
+msgid "Speakers"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:52
+msgid "Sounds"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:53
+msgid "Armatures"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:54
+msgid "Actions"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:55
+msgid "Particles"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:56
+msgid "Grease Pencil"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:57
+msgid "Movie Clips"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:58
+msgid "Masks"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:62
+msgid "Copying and Linking Datablocks"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:64
+msgid "It is possible to copy or link any type of datablock."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:67
+msgid ""
+"To copy a *Scene* datablock, use *Scene* list found in the header of *User "
+"Preferences* window. The list is to the right of the menus and window "
+"workspace list. Select *ADD NEW* to make a copy of the current scene. Select"
+" *Full Copy* from the list that opened to make a copy. The current scene "
+"will be **fully** copied to the new scene."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:74
+msgid ""
+"Instead of copying **everything**, you can link datablocks by selecting "
+"*Link Objects*, to use the same *Object* datablocks linked into the two "
+"scenes, or *Link ObData*, to create separated objects sharing the same "
+"*ObData* datablocks (meshes, curves, materials, etc.). Note that if you "
+"select *Link Objects*, in fact you copy nearly nothing, as *Object* "
+"datablocks are parent of all *ObData* datablocks: nearly all modifications "
+"(object location, mesh geometry, ...) in a scene will be reflected in the "
+"other ones linked this way as well. As for *Link ObData*, it creates a "
+"\"real\" copy of the objects, but not of their child datalocks: the "
+"locations, scales and rotations of the objects will be specific to a scene, "
+"but neither their forms nor their materials, textures, ..., will be (as "
+"defined by *ObData* datablocks)."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:92
+msgid "Copying and Linking Object Datablocks"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:98
+msgid "Full copy"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:95
+msgid ""
+":kbd:`Shift-D` is used to make normal copy of the selected objects. The "
+"object and some of it's child datablocks will really be duplicated, the "
+"other children are just linked; you can define the attributes to be "
+"duplicated in *User Preferences* → *Edit Methods*, button group *Duplicate "
+"with object:*."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:103
+msgid "Linked copy"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:101
+msgid ""
+":kbd:`Alt-D` makes a linked copy. All datablocks but the object one are "
+"linked."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:106
+msgid "Copying and Linking other Datablocks"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:108
+msgid ""
+"When an *ObData* datablock is used (linked) by more than one object, a small"
+" button with its number of linked objects (users) shows up next to its name,"
+" in its settings window (*Editing* context for meshes, curves, cameras, ...,"
+" *Shading* context, *Material* sub-context for materials, etc.). If you "
+"click on it, you create a copy of this datablock for the current object."
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:116
+msgid "Unlinked Datablocks"
+msgstr ""
+
+#: ../../manual/data_system/datablocks.rst:118
+msgid ""
+"A datablock can become unlinked. For example a material datablock will be "
+"unlinked if the object it was linked to is deleted. If a datablock is "
+"unlinked, by default it will be deleted from the . blend file when Blender "
+"is closed. To keep an unlinked datablock in a .blend file, click the \"F\" "
+"button to the right of the object's name in the Objects and Links panel."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:7
+msgid "Exporting Files"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:9
+msgid ""
+"Its not always that you will have to work on a project using one software. "
+"Basically, you might start off in Blender, but you will want to switch to "
+"another software and continue from there."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:13
+msgid ""
+"That is possible as Blender allows *Exporting* to other formats. Blender "
+"2.65 currently supports exporting to 8 formats, including COLLADA."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:16
+msgid ""
+"These are important so that you can share you files with others who are not "
+"Blender users, such as those using Autodesk® 3DS Max®."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:21
+#: ../../manual/data_system/files/import.rst:13
+msgid "Collada (.dae)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:23
+#: ../../manual/data_system/files/import.rst:15
+msgid ":doc:`See Here </data_system/files/import/collada>`"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:26
+#: ../../manual/data_system/files/import.rst:19
+msgid "Motion Capture (.bvh)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:28
+msgid "only available for :doc:`import </data_system/files/import>`"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:31
+#: ../../manual/data_system/files/import.rst:44
+msgid "Stanford (.ply)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:33
+#: ../../manual/data_system/files/import.rst:46
+msgid ""
+"`See Here <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts"
+"/Import-Export/Stanford_PLY>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:35
+#: ../../manual/data_system/files/import/collada.rst:42
+msgid "Apply Modifiers"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:36
+msgid "Bakes down the modifier stack by applying them."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:37
+msgid "UV's"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:38
+msgid "Exports active uv layer's coordinates of the geometry."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:39
+msgid "Normal"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:40
+msgid "Exports the geometry normal data for smooth and hard edges."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:43
+msgid "Vertex Colors"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:42
+msgid "Exports the active vertex color layer"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:46
+#: ../../manual/data_system/files/import.rst:50
+msgid "Stl (.stl)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:48
+#: ../../manual/data_system/files/import.rst:52
+msgid ""
+"`See Here <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts"
+"/Import-Export/STL>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:52
+msgid "Ascii"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:51
+msgid "Saves the file in ASCII file format."
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:55
+msgid "Autodesk® 3DS Max® (.3ds)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:57
+#: ../../manual/data_system/files/import.rst:58
+msgid ""
+"`See Here <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts"
+"/Import-Export/3DS_MAX_Scene_Interchange>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:59
+#: ../../manual/data_system/files/import/collada.rst:57
+msgid "Selection Only"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:60
+msgid "Export selected objects only"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:61
+#: ../../manual/data_system/files/import.rst:31
+#: ../../manual/data_system/files/import.rst:66
+msgid "Forward"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:62
+#: ../../manual/data_system/files/import.rst:32
+#: ../../manual/data_system/files/import.rst:67
+msgid "Specify the forward axis"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:65
+#: ../../manual/data_system/files/import.rst:35
+#: ../../manual/data_system/files/import.rst:69
+msgid "Up"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:64
+#: ../../manual/data_system/files/import.rst:34
+#: ../../manual/data_system/files/import.rst:69
+msgid "Specify the up axis"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:68
+msgid "Autodesk® FBX (.fbx)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:70
+#: ../../manual/data_system/files/import.rst:74
+msgid ""
+"`See Here <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts"
+"/Import-Export/Autodesk_FBX>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:73
+#: ../../manual/data_system/files/import.rst:77
+msgid "Wavefront (.obj)"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:75
+#: ../../manual/data_system/files/import.rst:79
+msgid ""
+"`See Here <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts"
+"/Import-Export/Wavefront_OBJ>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/export.rst:78
+#: ../../manual/data_system/files/import.rst:82
+msgid "X3D Extensible 3D (.x3d)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:4
+msgid "Supported Formats"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:7
+msgid "Image Formats"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:9
+msgid ""
+"This is the list of image file formats supported internally by Blender:"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:13
+msgid "High Dynamic Range Graphics"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:15
+msgid ""
+"Blender's image input/output system transparently support regular 32 bits "
+"graphics (4 x 8 bits) or floating point images storing 128 bits per pixel (4"
+" x 32 bits)."
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:18
+msgid ""
+"On reading High Dynamic Range Images (`HDRI "
+"<http://http://en.wikipedia.org/wiki/HDRI>`__), even when they're for "
+"example 3 x 10 bits, the pixels are always converted internally to RGBA "
+"float values. Optionally, like while displaying the image in the UV Image "
+"editor, this then gets converted to regular 32 bits for faster display."
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:24
+msgid ""
+"When an image has float colors, all imaging functions in Blender default to "
+"use that. This includes the Video Sequence Editor, texture mapping, "
+"background images, and the Compositor."
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:28
+msgid ""
+"For hints how to manipulate or view HDR images, please check the Curves UI "
+"page."
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:31
+msgid ":doc:`OpenEXR (Multilayer) </data_system/files/formats/openexr>`"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:32
+msgid ""
+":doc:`DPX, Cineon and Radiance HDR "
+"</data_system/files/formats/dpx,_cineon,_hdr>`"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:36
+msgid "Others Formats"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:38
+msgid "Here's a list of other supported image formats:"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:40
+msgid "BMP"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:41
+msgid "DDS"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:42
+msgid "SGI IRIS (old!)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:43
+msgid "PNG"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:44
+msgid "JPEG"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:45
+msgid "JPEG 2000"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:46
+msgid "Targa"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:47
+msgid "Targa Raw (uncompressed Targa)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:48
+msgid "TIFF"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:52
+msgid "Movie Formats"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:54
+msgid "AVI (Windows)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:55
+msgid "AVI JPEG"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:56
+msgid "AVI Raw"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:57
+msgid "Frame Server"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:58
+msgid "H.264"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:59
+msgid "MPEG"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:60
+msgid "Ogg Theora"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:61
+msgid "QuickTime"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:62
+msgid "Xvid"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:66
+msgid "Color Modes"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:68
+msgid "BW, Images get saved in 8 bits grayscale (only PNG, JPEG, TGA, TIF)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:69
+msgid "RGB, Images are saved with RGB (color)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:70
+msgid "RGBA, Images are saved with RGB and Alpha data (if supported)"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:74
+msgid "Color Depths"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:76
+msgid "8 bit color channels"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:77
+msgid "12 bit color channels"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:78
+msgid "16 bit color channels"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:79
+msgid "32 bit color channels"
+msgstr ""
+
+#: ../../manual/data_system/files/formats.rst:85
+msgid ""
+"`Formats "
+"<http://projects.blender.org/scm/viewvc.php/trunk/blender/source/blender/makesrna/intern/rna_scene.c?view=markup&root"
+"=bf-blender>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:4
+msgid "DPX and Cineon"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:6
+msgid ""
+"Cineon is Kodak's standard for film scanning, 10 bits/channel and "
+"logarithmic. DPX has been derived from Cineon as the ANSI/SMPTE industry "
+"standard. DPX supports 16 bits color/channel, linear as well as logarithmic."
+" DPX is currently a widely adopted standard used in the film "
+"hardware/software industry."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:11
+msgid ""
+"DPX as well as Cineon only stores and converts the \"visible\" color range "
+"of values between 0.0 and 1.0 (as result of rendering or composite). No "
+"alpha is written."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:14
+msgid ""
+"The code has been gratefully copied from CinePaint. According to CinePaint's"
+" main developer Robin Rowe the DPX code defaults to logarithmic colorspace. "
+"We cannot find yet how to disable this, but it seems to read/write fine "
+"without visible loss."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:18
+msgid ""
+"Blender DPX files (entire Elephants Dream movie) have been succesfully "
+"imported in a Quantel IQ HD/2K finishing/grading set without problems, so "
+"for now we assume it's compliant for professional usage."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:24
+msgid "Radiance HDR"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:26
+msgid ""
+"Radiance is a suite of tools for lighting simulation originally written by "
+"Greg Ward. Since Radiance had the first (and for a long time the only) HDR "
+"image format, this format is supported by many other software packages."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/dpx,_cineon,_hdr.rst:30
+msgid ""
+"Radiance (.hdr) files store colors still in 8 bits per component, but with "
+"an additional (shared) 8 bits exponent value, making it 32 bits per pixel. "
+"Only RGB can be stored in these files."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:4
+msgid "OpenEXR"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:6
+msgid ""
+"`ILM's OpenEXR <http://www.openexr.com>`__ has become a software industry "
+"standard for HDR image files, especially because of its flexible and "
+"expandable structure."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:9
+msgid ""
+"OpenEXR files can store values in the entire floating point space, positive "
+"as well as negative numbers."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:12
+msgid ""
+"Apart from reading all OpenEXR file types, with RGBA and optional Z saved, "
+"Blender supports OpenEXR in two ways:"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:18
+msgid "FIXME(TODO: Internal Link; [[#Render Output|Render Output]] )"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:24
+msgid ""
+"FIXME(TODO: Internal Link; [[#Multi-layer, Multi-pass, tile-based files"
+"|Multi-layer, Multi-pass, tile-based files]] )"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:30
+msgid "Render Output"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:32
+msgid "Available options for OpenEXR render output are:"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:36
+msgid "Half"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:35
+msgid ""
+"Saves images in a custom 16 bits per channel floating point format. This "
+"reduces the actual \"bit depth\" to 10 bits, with a 5 bits power value and 1"
+" bit sign."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:41
+msgid "Zbuf"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:39
+msgid ""
+"Save the depth information. In Blender this now is written in floats too, "
+"denoting the exact distance from the camera in \"Blender unit\" values."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:45
+msgid "Preview"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:44
+msgid ""
+"On rendering animations (or single frames via command line), Blender saves "
+"the same image also as a JPEG, for quick preview or download."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:47
+msgid ""
+"**Compression** (this button is below the Image menu button, default set to "
+"\"None\")"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:50
+msgid "PIZ, lossless wavelet compression. Compresses images with grain well."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:51
+msgid "ZIP, standard lossless compression using zlib"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:52
+msgid ""
+"RLE, runlength encoded, lossless, works well when scanlines have same "
+"values."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:53
+msgid ""
+"PXR24. lossy algorithm from Pixar, converting 32 bits floats to 24 bits "
+"floats."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:57
+msgid "Multi-layer, Multi-pass, tile-based files"
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:59
+msgid ""
+"An OpenEXR file can hold unlimited layers and passes, stored hierarchically."
+" This feature now is in use for the \"Save Buffers\" render option. This "
+"option doesn't allocate the entire final Render Result before render (which "
+"can have many layers and passes), but saves for each tile the intermediate "
+"result to a single OpenEXR file in the default Blender 'temp' directory."
+msgstr ""
+
+#: ../../manual/data_system/files/formats/openexr.rst:65
+msgid ""
+"When rendering is finished, after all render data has been freed, this then "
+"is read back entirely in memory."
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:7
+msgid "Importing Files"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:9
+msgid "Blender allows you to import other file formats"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:21
+msgid "Target"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:22
+msgid "Import an Object or Armature."
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:23
+msgid "Scale"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:24
+msgid "Scale the BVH by this value"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:25
+msgid "Start Frame"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:26
+msgid "Starting frame for the animation"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:27
+msgid "Loop"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:28
+msgid "Loop the animation playback"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:29
+msgid "Rotation"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:30
+msgid "Rotation conversion. Uses either Quaternion or Euler"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:38
+msgid "Scalable Vector Graphics"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:40
+msgid "Imports a vector graphic as a curve object"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:56
+msgid "3d studio (.3ds)"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:60
+msgid "Size Constraint"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:61
+msgid ""
+"Scale the model by 10 until it reaches the size constraint (0 to disable)"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:62
+msgid "Image Search"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:63
+msgid "Search sub directories for any associated images."
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:64
+msgid "Apply Transform"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:65
+msgid "Workaround for object transformations importing incorrectly"
+msgstr ""
+
+#: ../../manual/data_system/files/import.rst:72
+msgid "Autodesk FBX (.fbx)"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:4
+msgid "COLLADA Import and Export"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:8
+msgid ""
+"The Collada module has been implemented as a flexible tool for exporting and"
+" importing . dae files. We have taken care to provide a set of parameters "
+"which should make it possible to export/import Collada files from/to a "
+"variety of tools. But please be aware that we are not yet finished with the "
+"Collada module. So it may well be possible that your particular usage "
+"scenario is not yet supported."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:16
+msgid "The Collada Exporter"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:19
+msgid "Operator Presets"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:21
+msgid ""
+"We have added 2 Operator Presets (see top of option panel) for Second Life "
+"users:"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:23
+msgid "**Second Life Static**"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:25
+msgid "is good for exporting static meshes."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:27
+msgid "**Second Life Rigged**"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:29
+msgid "is good for exporting the SL default character."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:31
+msgid "Special Notes for Second Life users:"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:33
+msgid ""
+"Please use the Operator presets. All other export settings will not work for"
+" Second Life."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:34
+msgid ""
+"The character orientation needs to be such that the character looks towards "
+"positive X."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:35
+msgid "Scale&Rotation must be applied before export!"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:39
+msgid "Export Data Options"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:44
+msgid ""
+"All active Modifiers will be applied in a non destructive mode. That is, the"
+" modifiers will be applied to copies of the meshes. Thus you no longer need "
+"to apply your modifiers before exporting. That is now done automatically in "
+"the background."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:50
+msgid "Preview/Render mode"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:52
+msgid ""
+"Some Modifiers provide a Preview mode and a Render mode with different mesh "
+"settings. We now support both modes when applying the modifiers."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:59
+msgid ""
+"When selection only is enabled, then only the selected objects will be "
+"exported. Otherwise the entire scene is exported with all visible and all "
+"invisible objects."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:64
+msgid "Include Children"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:66
+msgid ""
+"When this option is enabled then all children of the selected objects will "
+"also be exported regardless of their selection state."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:70
+#: ../../manual/data_system/files/import/collada.rst:84
+#: ../../manual/data_system/the_outliner.rst:263
+msgid "Example"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:72
+msgid ""
+"You now can select only(!) an armature, then in the exporter enable "
+"\"include children\" then all rigged meshes attached to the armature will "
+"also be exported."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:78
+msgid "Include Armatures"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:80
+msgid ""
+"When this option is enabled, then all armatures related to the selected "
+"objects will also be exported regardless of their selection state."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:86
+msgid ""
+"You now can just select your objects, then in the exporter enable \"include "
+"armatures\" then the armature data is also exported."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:91
+msgid "Include Shape keys"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:93
+msgid "Shape keys"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:95
+msgid ""
+"This option also includes the application of Shape keys! So now you can "
+"export your meshes with the current shape key configuration baked in."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:100
+msgid "Texture Options"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:103
+msgid "Only Active UV layer"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:105
+msgid ""
+"When your mesh contains multiple UV layers, then Blender exports all layers "
+"by default. This option allows you to only export the active UV layers."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:110
+msgid "Include Textures"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:112
+msgid "Blender supports 2 ways to texturise your objects."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:115
+msgid "By using directly assigned surface textures"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:116
+msgid "By using material based image textures"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:118
+msgid ""
+"While the material based image textures offer much more flexibility, using "
+"surface textures can be done very quickly without need to first render "
+"textures. Until now blender did only export material based image textures. "
+"The new option allows to directly export render results."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:124
+msgid "Texture export needs materials"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:126
+msgid ""
+"For using surface textures, you will still have to create a material for "
+"each texture face. Then all you need to do is assign your images to the "
+"correct faces of your mesh. And finally when your object looks as you "
+"expect, just export it with \"Include UV Textures\". See also the \"Copy\" "
+"option below."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:132
+msgid "Copy"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:134
+msgid ""
+"When you export images either material based image textures or surface "
+"textures, then we create absolute file references in the export file."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:137
+msgid ""
+"But if the \"Copy\" option is enabled, we will create copies of the images "
+"instead and place the copies besides the export file. In that case the file "
+"references are made relative."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:143
+msgid "Armature Options"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:146
+msgid "Deform Bones Only"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:148
+msgid ""
+"When this option is enabled, then the exporter strips all non deformiung "
+"bones from the exported armatures. This option is useful when your armatures"
+" contain control bones which are not actually part of the charater skeleton."
+" For example you can now export the Avastar rig with this option enabled. "
+"The resulting exported rig is compatible to Second life. But please note the"
+" restrictions further down."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:157
+msgid "Export for Second Life"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:159
+msgid ""
+"This option is very special. In fact some issues with bone orientation are "
+"calculated differently when this option is enabled. This is only relevant "
+"for rigged meshes. I hope that this option will eventually be replaced by "
+"something more meaningful (and still compatible to Second Life)    Hint: "
+"This option is only important when you want to export rigged meshes. For "
+"static meshes it just does nothing at all."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:168
+msgid "Collada Options"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:171
+msgid "Triangulate"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:173
+msgid ""
+"The Mesh con be triangulated on the Fly. The triangulation is based on the "
+"same function which is used in the User interface for triangulating the "
+"current selection of faces. For full control over the triangulation you can "
+"do this manually before exporting. However this option allows to do the "
+"triangulation only for the exported data. The mesh itself is not affected."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:181
+msgid "Use Object Instances"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:183
+msgid ""
+"In Blender you can reuse the same mesh for multiple Objects. This is named "
+"\"object instanciation\". When you enable this option, then Blender will "
+"propagate object instantiation to the Collada file."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:189
+msgid "Transformation Type"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:191
+msgid ""
+"Collada supports 2 types of Transformation matrix specifications. Either as "
+"<Matrix> or as a set of transformation decompositions (for Translate, Rotate"
+" and Scale). Note that the exporter will not strictly follow this option "
+"setting, but will rather take it as a hint to use the option if ever "
+"possible. This is so because some of the exported data types hae specific "
+"rules about how the transformation matrix has to be exported. This is "
+"ongoing development and we may provide a less ambiguous method in the "
+"future."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:201
+msgid "Sort by Object Name"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:203
+msgid ""
+"The export order of data is bound to internal object order and it can not be"
+" influenced in a reliable way. this option ensures that the Geometry nodes "
+"and the Object nodes are both exported in alphabetical order."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:209
+msgid "The Collada Importer"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:211
+msgid ""
+"The Collada Importer is mostly driven by the imported Data. We only have "
+"added one option for controlling the Import units:"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:215
+msgid "Import Units"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:217
+msgid ""
+"If not enabled the imported data will be rescaled according to the currently"
+" used unit system. We assume that the Blender unit is 1 meter. if this "
+"option is enabled, then Blender will adjust itself to the unit system as "
+"provided by the Collada file."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:223
+msgid "Technical details"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:226
+msgid "Mesh"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:230
+#: ../../manual/data_system/files/import/collada.rst:252
+msgid "Import"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:232
+msgid "Supported geometry types are"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:234
+msgid "tris (not tested)"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:235
+msgid "polylist"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:236
+msgid "polygons"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:237
+msgid "ngons"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:238
+msgid "trifans (not tested)"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:239
+msgid "lines"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:243
+#: ../../manual/data_system/files/import/collada.rst:261
+#: ../../manual/data_system/files/import/collada.rst:272
+msgid "Export"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:245
+msgid "Mesh data is exported as <polylist>, <lines> and <vertices>."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:249
+#: ../../manual/data_system/files/import/collada.rst:289
+msgid "Light"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:254
+msgid ""
+"Blender does a best effort on importing lights from a .dae. If a Blender "
+"profile is detected for lights, all values from these will be used instead. "
+"This ensures 100% reimport from a Blender exported .dae. <extra> support has"
+" been added in Blender 2.57."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:263
+msgid ""
+"A Blender profile for lights has been added through the <extra> tag. The "
+"entire Lamp struct from Blender will be exported through this profile, with "
+"the exception of Light curve falloff ."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:269
+msgid "Material & Effect"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:274
+msgid ""
+"Since Blender 2.57 some changes to export of effects have been made. Most "
+"notably < lambert> is exported if and only if specularity is 0."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:279
+msgid "Animation"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:282
+msgid "Export & Import"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:284
+msgid ""
+"Support for Object(Mesh, Camera, Light) transform Animations. Only euler "
+"rotations, which is the default option for Objects, can be exported for now."
+" For armature bone animations euler and quaternion rotation types are "
+"supported."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:287
+msgid ""
+"Import and export of animations for the following parameters are supported:-"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:290
+msgid "Camera"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:291
+msgid "Material Effects"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:292
+msgid "Non Skin controlling armature bone animation."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:293
+msgid "Animations of Armatures with skin deforming bones."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:294
+msgid "Animations of Armatures in Object mode."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:295
+msgid ""
+"Fully rigified Armature animations. For export of rigified Armature "
+"animations"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:297
+msgid "Select Bake Action. ( press space in 3d view and Type Bake Action )"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:298
+msgid ""
+"If you have only the deform bones selected check *Only Selected*. This will "
+"give smaller dae. Otherwise uncheck *Only Selected*."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:300
+msgid "Enable *Clear Constraints*."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:301
+msgid "Bake Action."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:302
+msgid ""
+"Select the mesh and the deform bones. Then export to COLLADA while checking "
+"only selected option. (Selecting only the Mesh and bones is not strictly "
+"necessary. Selecting and export only selected will give smaller dae.)"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:305
+msgid "`Demonstration <http://www.youtube.com/watch?v=GTlmmd13J1w>`__"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:309
+msgid "Nodes"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:311
+msgid ""
+"On import parent transformations for <instance_node>s is properly propagated"
+" to child node instances. Blender materials are exported with the following "
+"mapping:"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:314
+msgid "phong"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:315
+msgid "blinn"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:316
+msgid "lambert"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:318
+msgid ""
+"For bone nodes which are leaf nodes in the armature tree, or if a bone has "
+"more than one children a blender profile for tip with an <extra> tag, is "
+"added for those joint nodes. To correctly derive the bone→tail location on "
+"re-import."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:324
+msgid "Important things to remember"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:326
+msgid "object and datablock names are constrained to 21 characters (bytes)."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:327
+msgid "uv layer names are constrained to 32 characters (bytes)."
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:328
+msgid "only armature animation on mesh, single skin controller"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:329
+msgid "no support for modifiers yet"
+msgstr ""
+
+#: ../../manual/data_system/files/import/collada.rst:331
+msgid ""
+"When importing a .dae that has <instance_node>s on exporting this "
+"information is essentially lost and these nodes will be <node>s."
+msgstr ""
+
+#: ../../manual/data_system/files/index.rst:5
+msgid "Files"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:7
+msgid "File operations"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:11
+msgid "The options to manage files are:"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:13
+msgid "New"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:14
+msgid "Clears the current scene and loads startup.blend"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:15
+msgid ":doc:`Open </data_system/files/open>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:16
+msgid "Open a blend file"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:17
+msgid ":ref:`Open Recent <other-file-open-options>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:18
+msgid "Displays a list of recently saved .blend files to open"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:20
+msgid ":ref:`Recover last session <other-file-open-options>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:20
+msgid ""
+"This will load the quit.blend file Blender automatically saves just before "
+"exiting. So this option enables you to recover your last work session, e.g. "
+"if you closed Blender by accident"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:22
+msgid ":ref:`Recover Auto Save <other-file-open-options>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:23
+#: ../../manual/data_system/files/open.rst:154
+msgid "This will open an automatically saved file to recover it."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:24
+msgid ":doc:`Save </data_system/files/save>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:25
+msgid "Save the current blend file."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:26
+msgid ":doc:`Save As </data_system/files/save>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:27
+msgid "Opens file browser to specify file name and location of save."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:28
+msgid ":doc:`Save Copy </data_system/files/save>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:29
+msgid "Saves a copy of the current file."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:30
+msgid ":doc:`User Preferences </preferences/introduction>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:31
+msgid "Opens the user preferences dialog."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:32
+msgid ":doc:`Save User Settings </basics/default_scene>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:33
+msgid "Saves the current scene and preferences to startup.blend."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:34
+msgid ":doc:`Load Factory Settings </basics/default_scene>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:35
+msgid "Restore the default scene to the factory settings."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:36
+msgid ":doc:`Link or Append </data_system/linked_libraries>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:37
+msgid ""
+"You don't have to load a complete file, you can load in only selected parts "
+"from another file if you wish."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:38
+msgid ""
+":doc:`Import </data_system/files/import>`, (:doc:`COLLADA "
+"</data_system/files/import/collada>`)"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:39
+msgid ""
+"Blender can use information stored in a variety of other format files which "
+"are created by other graphics programs."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:42
+msgid ":doc:`Export </data_system/files/export>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:41
+msgid ""
+"Normally you save your work in a .blend file, but you can export some or all"
+" of your work to a format that can be processed by other graphics programs."
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:44
+msgid ":doc:`External Data </data_system#pack_and_unpack_data>`"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:46
+msgid "Pack into .blend"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:47
+msgid "Pack all used external files into the .blend"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:48
+msgid "Unpack into Files"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:49
+msgid "Unpack all files packed into this .blend to external ones"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:50
+msgid "Make all paths Relative"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:51
+msgid "Make all paths to external files relative to current .blend"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:52
+msgid "Make all paths Absolute"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:53
+msgid "Make all paths to external files absolute"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:54
+msgid "Report Missing Files"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:55
+msgid "Report all missing external files"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:59
+msgid "Find Missing Files"
+msgstr ""
+
+#: ../../manual/data_system/files/introduction.rst:57
+msgid "Try to find missing external files"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:4
+msgid "Opening Files"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:15
+#: ../../manual/data_system/files/save.rst:15
+#: ../../manual/data_system/the_outliner.rst:7
+msgid "Description"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:17
+msgid ""
+"Blender uses the ``.blend`` file format to save nearly everything: objects, "
+"scenes, textures, and even all your user interface window settings."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:23
+msgid ""
+"Blender expects that you know what you are doing! When you load a file, you "
+"are **not** asked to save unsaved changes to the scene you were previously "
+"working on, completing the file load dialog is regarded as being enough "
+"confirmation that you didn't do this by accident."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:28
+msgid "**Make sure that you save your files.**"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:35
+msgid "Using the File Browser and Folder Navigation"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:37
+msgid ""
+"To load a Blender file from disk, press :kbd:`F1`. The *File Browser* "
+"window, as shown above, will open."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:40
+msgid ""
+"The upper text box displays the current directory path, and the lower text "
+"box contains the selected filename. :kbd:`P` (or the *P* button) moves you "
+"up to the parent directory."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:44
+msgid ""
+"The + and - buttons allow you to cycle through numbered files by increasing "
+"or decreasing the number at the end of the file name."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:47
+msgid ""
+"Click on a folder to go inside of it, or click on a file then press the "
+"*Open Blender File* to open it"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:50
+msgid ""
+"Clicking *Cancel* will close the file browser window and return to the "
+"program."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:54
+msgid "Side Panel"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:56
+msgid ""
+"The panel on the left displays different ways to find files and several "
+"options. To load a file, select it with :kbd:`LMB` and then press "
+":kbd:`Enter`, or click the *Open File* button. A file can also be loaded by "
+"simply clicking :kbd:`MMB` over its name."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:63
+msgid "System"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:65
+msgid ""
+"The system menu contains a list of drives that are available to navigate "
+"through to find files. Click on one to jump to that drive."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:70
+msgid "Bookmarks"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:72
+msgid ""
+"These are folders that you want to be able to access often without having to"
+" navigate to them in the file browser. To add a directory to the bookmark "
+"menu, navigate to that folder, then click the *Add* button. To remove a "
+"folder from the list, simply click the *X* icon nexto to it."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:79
+msgid "Recent"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:81
+msgid ""
+"This is a list of recently accessed folders. You can control how many "
+"folders appear in this list by going to the *File* tab of the user "
+"*Preferences*, in the box labeled *Recent Files*."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:87
+msgid "Open Options"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:89
+msgid ""
+"Inside each .blend file, Blender saves the user interface - the screen "
+"layouts. By default, this saved UI is loaded, overriding any user defaults "
+"or current screen layouts that you have. If you want to work on the blend "
+"file using your current defaults, start a fresh Blender, then open the file "
+"browser (:kbd:`F1`). Turn off the *Load UI* button, and then open the file."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:97
+msgid "The Header Panel"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:99
+msgid ""
+"The Header contains several tools for navigation files. The four arrow icons"
+" allow you to:"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:103
+msgid "*Move to previous folder*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:104
+msgid "*Move to next folder*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:105
+msgid "*Move up to parent directory*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:106
+msgid "*Refresh current folder*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:108
+msgid ""
+"Create a new folder inside the current one by clicking the *Create New "
+"Directory* icon."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:111
+msgid ""
+"The other icons allow you to control what files are visible and how they are"
+" displayed. You can:"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:115
+msgid "*Display files as a short list*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:116
+msgid "*Display files as a detailed list*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:117
+msgid "*Display files as thumbnails*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:119
+msgid "You can sort files:"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:122
+msgid "*Alphabetically*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:123
+msgid "*By file type*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:124
+msgid "*By Date of last edit*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:125
+msgid "*By file size*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:127
+msgid ""
+"Filtering controls which file types are shown. Click the *Enable Filtering* "
+"icon, and toggle which types are shown:"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:131
+msgid "*Folders*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:132
+msgid "*Blend files*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:133
+msgid "*Images*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:134
+msgid "*Movie files*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:135
+msgid "*Scripts*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:136
+msgid "*Font files*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:137
+msgid "*Music files*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:138
+msgid "*Text files*"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:144
+msgid "Other File Open Options"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:146
+msgid ""
+"From the *File* menu, you can also open files with the following tools:"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:148
+msgid "Open Recent"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:149
+msgid "Lists recently used files. Click on one to load it in."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:151
+msgid "Recover Last Session"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:151
+msgid ""
+"This will load the ``quit.blend`` file Blender automatically saves just "
+"before exiting. So this option enables you to recover your last work "
+"session, e.g. if you closed Blender by accident..."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:155
+msgid "Recover Auto Save"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:158
+msgid "Security"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:160
+msgid ""
+"Blender is aimed at production level use and relies heavily on Python, a "
+"powerful scripting language. Python can be used in Blender to create new "
+"tools, importers and exporters, and also to drive animation rigs. With "
+"Python scripting there are endless possibilities in what you can create with"
+" Blender."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:165
+msgid ""
+"Part of Python's power comes from having full access to your system, however"
+" this power can also be misused in the wrong hands. It's possible (but not "
+"terribly likely) for dishonest people to distribute . blend files containing"
+" scripts that may damage your system. These scripts can be attached as part "
+"of animation rigs, so that they will be run when such a .blend file is "
+"opened."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:175
+msgid ""
+"Always be very careful when downloading .blend files and tools from un-"
+"trustworthy sources!"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:180
+msgid "Protection"
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:184
+msgid ""
+"To protect against malicious .blend files, it's possible to prevent any "
+"embedded scripts from running when you open a .blend file. This will mean "
+"that custom tools or rigs using Python features will not work, but this "
+"won't be a problem for .blend files that don't use these (such as material "
+"libraries), and will at least give you a chance to better evaluate what "
+"risks might be inside."
+msgstr ""
+
+#: ../../manual/data_system/files/open.rst:191
+msgid ""
+"By default, Blender will trust all files and run scripts automatically. If "
+"you don't trust the file, and want protection, you can disable 'Trusted "
+"source' in the File→Open dialog in the properties section on the bottom "
+"left. Un-trusted files will disable embedded Python scripts after opening "
+"the file."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:4
+msgid "Saving Files"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:17
+msgid ""
+"Saving files is like loading files. When you press :kbd:`F2`, *File Browser*"
+" window will open. The window appears the same as when opening files, except"
+" for a few options in the side panel. For descriptions and usage of the file"
+" browser functions, see the page on :doc:`Opening files "
+"</data_system/files/open>`."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:26
+msgid "Saving"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:28
+msgid ""
+"Click the lower edit box to enter a filename. If it doesn't end with \"\\ "
+"``.blend`` \", the extension is automatically appended. Then press "
+":kbd:`Enter` or click the *Save File* button to save the file."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:32
+msgid ""
+"When saving via menu or pressing :kbd:`F2`, :kbd:`Ctrl-Shift-S` or :kbd"
+":`Ctrl-Alt-S`, if a file with the same given name already exists, the edit "
+"box will turn red as a warning, if you press Enter or the Save button, it "
+"will automatically save over the existing file with the same name. So, think"
+" twice before you continue saving."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:39
+msgid ""
+"By default, when pressing :kbd:`Ctrl-S` or :kbd:`Ctrl-W`, it will pop-up a "
+"message for you to confirm your saving, which aims to avoid the "
+"\"accidental\" saving operation, which may not be what you want. (e.g. say, "
+"you want to press Ctrl A when operating, but the Ctrl S is pressed, then you"
+" can just move your mouse cursor out of the pop-up, the accidental saving "
+"operation will be canceled.)"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:46
+msgid ""
+"Depending on the number of :doc:`Save Versions "
+"</basics/undo_and_redo#save_and_auto_save>` you have set, all existing files"
+" with the same name will be rotated to a ``.blend`` *n* file extension, "
+"where *n* is ``1``, ``2``,``3``, etc. So, if you were working on "
+"``MyWork.blend``, and saved it, the existing ``MyWork.blend`` is renamed to "
+"``MyWork.blend1``, and a new ``MyWork.blend`` is saved. This way, you have "
+"hot backups of old saved versions that you can open if you need to massively"
+" undo changes."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:54
+msgid "Save Options"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:56
+msgid "The save options appear at the bottom of the side panel."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:60
+msgid "Compress File"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:62
+msgid "Enable this option to squash large files, this removes dead space."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:66
+msgid "Remap Relative"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:68
+msgid "This option remaps relative paths when saving a file in a new location"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:72
+msgid "Save Copy"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:74
+msgid ""
+"This option saves a copy of the actual working state, but does not make the "
+"saved file active."
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:78
+msgid "Tip for Save Increments"
+msgstr ""
+
+#: ../../manual/data_system/files/save.rst:80
+msgid ""
+"The save dialog contains a little feature to help you to create multiple "
+"versions of your work: pressing :kbd:`Numpad+` or :kbd:`Numpad-` increments "
+"or decrements a number at the end of the file name. To simply save over the "
+"currently loaded file and skip the save dialog, press :kbd:`Ctrl-W` instead "
+"of :kbd:`F2` and just confirm at the prompt."
+msgstr ""
+
+#: ../../manual/data_system/index.rst:5
+msgid "Data System"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:7
+msgid "Linked Libraries Overview"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:9
+msgid ""
+"Blender is able to \"reach in\" to other .blend files and pull in whatever "
+"you want. In this way, Blender supports reuse of your Blender data. For "
+"example, if you have a library .blend file that has a really neat material "
+"used in it, you can, from your current .blend file, *Append* that material "
+"into your current .blend file. This saves you from manually re-creating all "
+"the different settings."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:17
+msgid "General Procedure"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:27
+msgid ""
+"The main menu in Blender is located in the *Info* window (by default the "
+"header located at the top of your screen). From that menu, all you have to "
+"do is use *File* → *Append or Link*, or press :kbd:`Shift-F1` in your active"
+" window. The active window will change to a *File Browser* (the *Window "
+"type* icon looks like a manila folder) selector window. Use this window to "
+"navigate your hard drive and network-mapped drives through folders and "
+"subfolders to find the .blend file that has the object you want to reuse. "
+"When you click on a .blend file (indicated by the orange square box next to "
+"its name), Blender will go into that file and show you the list of datablock"
+" types within it: *Scenes*, *Objects*, *Materials*, *Textures*, *Meshes*, "
+"etc. Clicking on any one of them will display the specific instances of that"
+" type."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:43
+msgid "Folder and File Organization"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:45
+msgid ""
+"We suggest creating a folder called ``/lib`` or ``/library``. Under that "
+"library, create a set of folders for each kind of thing you might want to "
+"access and re-use later on, such as ``materials``, ``textures`` and "
+"``meshes``. Create subfolders under each of those as your library grows. For"
+" example, under the ``meshes`` folder, you might want to create folders for "
+"``people``, ``spaceships``, ``furniture``, ``buildings``, etc. Then, when "
+"you have a .blend file that contains a chair mesh, for example, all you have"
+" to do is copy that file into the ``furniture`` folder."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:58
+msgid "Appending library objects into your current project"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:60
+msgid ""
+"The following procedure appends an object with all its linked data, such as "
+"mesh data, materials, textures, ..., to the current .blend file."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:63
+msgid "Select *File* → *Append or Link*."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:64
+msgid ""
+"Locate and select the file that contains the object you want to append "
+"(often a \"library\" file)."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:65
+msgid "Navigate to the *Object* section of the file."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:66
+msgid ""
+"Select one object from the list using :kbd:`LMB`, multiple objects via "
+":kbd:`RMB`, and/or a range of objects by dragging :kbd:`RMB`."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:68
+msgid ""
+"Repeat the above for each kind of object you wish to append or link. Parents"
+" and armatures (all modifier objects) must be selected separately."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:70
+msgid ""
+"Set desired options that are shown in the header (*At Cursor*, *Active "
+"Layer*, ...)."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:71
+msgid ""
+":kbd:`LMB` on *Load Library* or press :kbd:`Enter` or :kbd:`MMB` directly on"
+" the data to append."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:73
+msgid ""
+"Of course, you can append or link many other things besides objects: all the"
+" *ObData* - cameras, curves, groups, lamps, materials, meshes, etc. - and "
+"even **an entire scene** ... Note that there is a **big** difference between"
+" adding the object and the object data, such as mesh. If you append a *Mesh*"
+" datablock, you are only bringing in the data about that particular instance"
+" of mesh, and not an actual object instance of the mesh that you can see."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:81
+msgid ""
+"In the *File Browser* window header, use *Append* (button enabled by "
+"default) if you want to make a local independent copy of the object inside "
+"your file. Select *Link* if you want a dynamic link made to the source file;"
+" if anyone changes the object in the source file, your current file will be "
+"updated the next time you open it."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:88
+msgid ""
+"Click *Load Library* to append or link the object into your current .blend "
+"file."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:90
+msgid ""
+"Some more loading option buttons (in the *File Browser* header) include:"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:95
+msgid "AutoSel"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:93
+msgid ""
+"When an object is loaded, it is not active or selected; it just plops into "
+"your .blend file. Often, right after loading, you will want to do something "
+"with it, like scale it or move it. Enable this button and the imported "
+"object will be selected, just as if you magically :kbd:`RMB` -clicked on it."
+" This button saves the step of finding the object and selecting it."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:99
+msgid "Active Layer"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:98
+msgid ""
+"Blender has 20 layers to divide up a large scene, and each object resides on"
+" some layer(s). By default, an object is loaded into your file directly into"
+" the layer(s) it resides on in the source file. To only load the object to "
+"the current active layer that you are working on, enable this button."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:104
+msgid "At Cursor"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:102
+msgid ""
+"By default, an object is loaded into your file at the location it is at in "
+"the source file. To reposition the object to your cursor when it loads, "
+"enable this button."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:106
+msgid "Finding What was Loaded"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:108
+msgid ""
+"If the loaded object is not visible, consider using *At Cursor* or "
+"*AutoSel*. If you use *AutoSel*, remember there are Snap tools to put your "
+"cursor on the object (:kbd:`Shift-S-4` (*Cursor ? Selection*)), and Center "
+"your view on it (:kbd:`C` (*View*?? *Align View*?? *Center View to "
+"Cursor*)). Note that these tools do not work if the object is on an "
+"unselected layer, since objects on unselected layers are invisible."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:118
+msgid "Reusing Objects (Meshes, Curves, Cameras, Lights, ...)"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:120
+msgid ""
+"Let's suppose you created a wheel in one. blend file and want to reuse it "
+"for your current project. The physical model of the wheel would be a mesh, "
+"and probably comprised of a tire and rim. Hopefully you named this mesh "
+"something reasonable, like, oh, I don't know, ``Wheel``. The wheel may be "
+"colored and thus have some materials assigned to it (like rubber and "
+"chrome)."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:126
+msgid ""
+"Once you navigate to the file, select the \"\\ ``Wheel`` \" (in the *Object*"
+" s datablocks) and it will be imported into your current file. You can "
+"import a copy of it, or merely link to it."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:131
+msgid "Linking"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:133
+msgid ""
+"If you link to it, and later modify it in the source file, it will be shown "
+"\"as-is\" (modified) in your current file the next time you open it up."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:137
+msgid ""
+"Other artists have released their models to the public domain, and friends "
+"may share models simply by posting or emailing their .blend files to each "
+"other. Keeping these files, as well as your past projects, in a ``Download``"
+" directory on your PC/server will save you from ever having to reinvent the "
+"wheel."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:142
+msgid ""
+"When selected, linked objects are outlined in Cyan. Normal selected objects "
+"are outlined in pink."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:145
+msgid ""
+"Notice that you cannot move a linked object! It resides at the same position"
+" it has in the source file. To move/scale/rotate the object, turn it into a "
+"FIXME(TODO: Internal Link; [[#Proxy Objects|proxy]])."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:149
+msgid "Using Appended/Linked Mesh Data"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:153
+msgid ""
+"When Appending or Linking certain resources such as mesh data, it may not be"
+" instantly visible in the 3D Viewport. This is because the data has been "
+"loaded into Blender but has not been assigned to an object, which would "
+"allow it to be seen. You can verify this by looking in the *Outliner* window"
+" and switching it to *OOPS Schematic* view (you may need to have the "
+"*Displays Scene datablock* button selected in its header). In the OOPS "
+"Schematic picture you can see that \"\\ ``Wheel`` \" is not linked to any "
+"object."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:165
+msgid ""
+"To allow the newly loaded ``Wheel`` mesh to be assigned to an object, either"
+" select a currently visible object or create a new object (such as a cube), "
+"then go to the *Link and Materials* panel and select the ``Wheel`` mesh from"
+" the mesh drop down panel, at that point you should see it, because it has "
+"been assigned to an object."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:171
+msgid ""
+"If instead of Appending/Linking to a mesh you instead load the object into "
+"Blender, it should be instantly displayed in the 3D Viewport without having "
+"to associate an object with the mesh (as it is already done!)."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:177
+msgid "Reusing Material/Texture Settings"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:183
+msgid "Material preview in Image Browser."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:186
+msgid ""
+"Some materials, like glass or chrome, can be very tricky to get \"just "
+"right\". The `Blender Foundation <http://www.blender.org/blenderorg/blender-"
+"foundation>`__ has released, for example, a `Materials CD "
+"<http://www.blender.org/download/resources/#c2511>`__, which is available "
+"for free to download from their site. Using the .blend files on that CD, you"
+" can import common materials, like glass, chrome, wood and bananas. This "
+"feature saves you a lot of time, as it often means you don't have to be "
+"fiddling with all the little buttons and sliders just to re-create a "
+"material. I call out the Banana material because it is a great example of "
+"using simple procedural materials with a ColorRamp, and a procedural "
+"texture, to give a very realistic look. When you navigate to the file, and "
+"select *Material* s, the browser will show you a sphere sample of that "
+"material to help you visualize the texture that goes with the name. For more"
+" information on using the *Image Browser*,"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:200
+msgid ""
+"see `the release notes <http://wiki.blender.org/index.php/Dev:Ref/Release "
+"Notes/Vitals/File operations>`__"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:203
+msgid "Blender Extension: Library"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:205
+msgid ""
+"There is also a fantastic Python script called `Blender Library "
+"<http://wiki.blender.org/index.php/Extensions:2.4/Py/Scripts/Manual/System/Blend"
+" library>`__ that over-arches all of your files and allows you to construct "
+"a master library. This script displays a preview and helps you organize your"
+" Blender work. Highly recommended; search `www.blendernation.com "
+"<http://www.BlenderNation.com>`__ for \"Blender Library\", it is also stored"
+" on the `Blender Wiki Scripts section "
+"<http://wiki.blender.org/index.php/Extensions:2.4/Py/Scripts/Manual/System/Blend"
+" library>`__."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:215
+msgid "Reusing Node Layouts"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:217
+msgid ""
+"To reuse noodles (node layouts), open the original (source) file and create "
+"a Group for the set of nodes that you think you want to reuse. When you want"
+" to import that node group into your current file, :kbd:`LMB` on *File* → "
+"*Append* or :kbd:`LMB` on *File* → *Link* from the *Info* window header (or "
+"press :kbd:`F1` for *Append* or :kbd:`Ctrl-Alt-O` for *Link*), and navigate "
+"to the file. When you dive into the file, there will be a *NodeTree* option."
+" :kbd:`LMB` on it and the list of node groups in that file will be listed. "
+":kbd:`LMB` on the one you want and then :kbd:`LMB` ."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:231
+msgid ""
+"A proxy is a legal stand-in or substitute for the real thing. In Blender, "
+"when you make a linked copy (described above), you cannot edit the object; "
+"all you have is a link to it. You cannot add to it or change it, because its"
+" source is in another file that is not open."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:236
+msgid ""
+"When working in a team environment, you may want more flexibility. For "
+"example, if modeling a car, you may have one person working on the shape of "
+"the car (its mesh), but another working on available color schemes (its "
+"materials). In this case, you want to grant the painter a Proxy of the "
+"object and allow him/her to modify the material settings. More commonly, you"
+" will have a character being animated by a team of animators; they can "
+"define poses, but cannot change the character's colors or armature, only use"
+" what is defined by the master rigger."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:244
+msgid ""
+"The important aspect of a proxy object is that it allows you to edit data "
+"locally, but also allows specific data to be kept restricted. Data that's "
+"defined as restricted will always be restored from the library (typically on"
+" file reading or undo/redo steps). This restriction is defined in the "
+"referenced library itself, which means that only the library files can "
+"define what's allowed to change locally."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:251
+msgid ""
+"For poses, you can control this by indicating bone layers as being "
+"restricted. A restricted layer is shown with a black dot in it. Use :kbd"
+":`Ctrl-LMB` on a button to restrict or unrestrict that layer."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:263
+msgid ""
+"To make a proxy object for yourself, establish a link to the source object "
+"as described above. With that linked copy selected (:kbd:`RMB`) and in view "
+"(you can see it in the 3D View), press :kbd:`Ctrl-Alt-P` and confirm the "
+"*Make Proxy* dialog. The object will be named with the original name plus a "
+"\"\\ ``_proxy`` \" suffix. You may now move and modify the proxy. When "
+"selected, it will look like a local object (outlined in orange)."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:270
+msgid ""
+"You can then edit unrestricted data. For most objects, this includes the "
+"location and rotation. You can also animate the object's location using Ipo "
+"curves. For mesh objects, the shape of the mesh is restricted, so you cannot"
+" define shape keys. When you reload your file, Blender will refresh your "
+"file with any changes made to the original restricted data, but will not "
+"reset your changes (unless the owner has)."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:280
+msgid "Armatures and Multiple instances"
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:282
+msgid ""
+"Development of this feature is a work in progress; in Blender 2.43 and CVS "
+"(as of 29 April 2007), a proxy object controls *all instances of a group*. "
+"It is not yet possible to have one proxy per group instance. In particular, "
+"it is not yet possible to have one proxy armature per group instance.  One "
+"partially effective remedy to use file append rather than file link for "
+"multiple instance duplication. File append will not be updated with update "
+"to the origination file."
+msgstr ""
+
+#: ../../manual/data_system/linked_libraries.rst:289
+msgid ""
+"If you are using a POSIX compliant file system, you can work around the one "
+"proxy object per group limitation with the cheap hack documented at `Linked "
+"Lib Animation Madness <http://freefactory.org/posts/linked-lib-animation-"
+"madness>`__."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:7
+msgid "Current Screen Layout and Scene"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:9
+msgid ""
+"Scenes are a way to organize your work. Scenes can share objects, but can, "
+"for example, differ from one another in their rendered resolution or their "
+"camera view. The current window layout and scene are shown in the *Info* "
+"window header, usually displayed at the top of your screen:"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:19
+msgid ""
+"Info window header. A) Window type icon, B) Menu, C) Screen Layouts, D) "
+"Scenes, E) Renderer Options F) Version of Blender currently running (click "
+"the Blender icon to the left to show splash screen)."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:25
+msgid "Loading the UI with \"File\" → \"Open\""
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:27
+msgid ""
+"Inside each .blend file, Blender saves the user interface layout - the "
+"arrangement of screen layouts when the file is saved. By default, this saved"
+" UI is loaded, over-riding any user defaults or the current screen layout. "
+"However, you can work on a blend file using your current UI settings by "
+"ignoring the UI settings saved in the file. This is done by restarting "
+"Blender or resetting it with (*File* → *New*, or :kbd:`Ctrl-X`), and opening"
+" the file browser with (*File* → *Open...*, or :kbd:`F1`). Turn off the "
+"*Load UI* button in the file browser header, and then open the file. This "
+"way, Blender will not disturb your current screen layout when it loads the "
+"new file."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:40
+msgid "Working with Scenes"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:42
+msgid ""
+"Select a scene to work on by clicking the up-down arrow next to the scene "
+"name. Scenes and the objects they contain are generally specific to the "
+"project you are working on. However, they too can be saved in their current "
+"state to be re-used by pressing :kbd:`Ctrl-U`. They will then appear the "
+"next time Blender starts or when the user selects *File* → *New* "
+"(:kbd:`Ctrl-X`)."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:49
+msgid ""
+"Blender comes with one default scene, which contains a camera, a lamp, and a"
+" box."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:53
+msgid "Adding a Scene"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:55
+msgid ""
+"You can make a full copy of the current scene, start over with a blank "
+"slate, or create a scene that has links back to the current scene; objects "
+"will show up in the new scene, but will actually exist in the old one. Use "
+"this linking feature when, for example, the original scene contains the set,"
+" and the new scene is to contain the actors or props."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:62
+msgid "Starting Over"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:64
+msgid ""
+"If you start with a new scene, be sure to add a camera and lights first!"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:67
+msgid ""
+"Scenes are listed alphabetically in the drop-down list. If you want them to "
+"appear in a different order, start them with a numerical ordinal, like \"\\ "
+"``1-`` \". The internal reference for a scene is the three-letter "
+"abbreviation \"SCE\"."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:72
+msgid ""
+"To add a scene, click on the scene list button, and select *Add New*. While "
+"you are adding a new scene, you have these options:"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:78
+msgid "Add scene popup menu."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:82
+msgid "Empty"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:82
+msgid "Create a completely empty scene."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:86
+msgid "Link Objects"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:85
+msgid ""
+"All objects are linked to the new scene. The layer and selection flags of "
+"the objects can be configured differently for each scene."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:89
+msgid "Link ObData"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:89
+msgid ""
+"Duplicates objects only. ObData linked to the objects, e.g. mesh and curve, "
+"are not duplicated."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:92
+msgid "Full Copy"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:92
+msgid "Everything is duplicated."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:94
+msgid ""
+"Usually, for your first scene, you make a full copy of the default. "
+"Alternatively, you can just start with the default, and start editing the "
+"cube that is usually hanging around waiting for you to do creative things."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:100
+msgid "Naming a Scene"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:102
+msgid ""
+"By :kbd:`Shift-LMB` -clicking on the scene name (usually \"\\ ``Scene.001`` "
+"\"), you can change the name of the scene. For example, \"\\ "
+"``BoyMeetsGirl`` \" is usually the first of three acts."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:106
+msgid ""
+"You then proceed to model the props and objects in the scene using the "
+"*2-Model* window layout."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:111
+msgid "Linking to a Scene"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:113
+msgid ""
+"You can, at any moment, link any object from one scene to another. Just open"
+" the scene where these objects are, use :kbd:`Ctrl-L` → *To Scene...*, and "
+"choose the scene where you want your objects to appear. Those will be linked"
+" to the original objects; to make them single user (independent, "
+"unlinked...) in a given scene go to that scene, select them and use "
+":kbd:`U`. You will be presented with a few options that allow you to free up"
+" the datablocks (Object, Material, Texture...) that you want."
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:124
+msgid "Removing a scene from the file"
+msgstr ""
+
+#: ../../manual/data_system/scene_creation.rst:126
+msgid "You can delete the current scene by clicking the *X* next to the name."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:11
+msgid "Scene Management Structure"
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:13
+msgid ""
+"Scene management and library appending/linking is based on Blender's "
+":doc:`Library and Data System </data_system>`, so it is a good idea to read "
+"that manual page first if you're not familiar with the basics of that "
+"system."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:17
+msgid ""
+"Blender can be used to create something as simple as a single scene or "
+"image, or scaled up to an entire movie. A movie is usually comprised of "
+"three acts:"
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:20
+msgid "Introduction-Conflict."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:21
+msgid "Rising Tension."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:22
+msgid "Climax-Resolution."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:24
+msgid ""
+"Each act contains a few scenes, settings where the action happens. Each "
+"scene is shot on a set, stage or location. Each is set with props and "
+"backdrops. The scene is a set of action sequences where the actors act "
+"(hopefully convincingly). Each sequence, or shot, usually lasts a few "
+"seconds."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:30
+msgid "Sequence shot"
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:32
+msgid ""
+"Sometimes, a single shot lasts several minutes: its a \"sequence shot\", "
+"which might even be a complete scene on its own. Technique hard to master if"
+" you don't want your audience to fall asleep!"
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:37
+msgid ""
+"A single Blender file is organized and set up to be able to contain an "
+"entire movie. Each . blend file can contain multiple scenes. A scene is a "
+"bunch of objects, organized into layers. As you progress through the "
+"creative process, you use a set of window :doc:`screen layouts "
+"</data_system/scene_creation>` specifically designed to help you work "
+"efficiently through the creative process: model the objects and create the "
+"props, clothe the actors and dress the set (assign materials), define the "
+"action (animation), render the video, and produce the movie. You can tailor "
+"these screen layouts, and create custom layouts, to match your working "
+"preferences."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:48
+msgid "Planning Your Timeline"
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:50
+msgid ""
+"Shots within a scene are accomplished by moving a camera and/or actors "
+"through the scene for a few seconds. Time in Blender is measured in frames "
+"by default (even though you can change to seconds too if you wish), and "
+"typical video has 25 or 30 frames per second (fps), and film is 24 fps. For "
+"a five-second shot then, you allocate up to 150 frames for that shot (30 fps"
+" × 5 seconds). Giving yourself some wiggle-room, shot 2 would start at frame"
+" 250 and go from there. A one-minute movie set in a single scene for North "
+"America video broadcast (NTSC standard) would have a timeline that goes up "
+"to 1800 final frames, and may be laid out over the course of 2500 frames. "
+"This timeline allows for cutting out 700 frames, picking the best 1800 "
+"frames (30 fps × 60 seconds = 1800 frames) less transition time."
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:63
+msgid "Multiple Cameras"
+msgstr ""
+
+#: ../../manual/data_system/scenes.rst:65
+msgid ""
+"You can have multiple cameras in a scene, used for different shots, and "
+"select which one is active when rendering the shot. Press :kbd:`Ctrl-0` to "
+"switch to the camera you wish to use at a point in time."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:4
+msgid "Outliner window"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:9
+msgid ""
+"The *Outliner* window is used for easily navigating a complex scene. The "
+"Outliner gives you a 2D representation of your complicated 3D world. Use it "
+"to find things in your scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:13
+msgid ""
+"For example, suppose you sneeze while moving an object; your mouse flies off"
+" your desk (gesundheit!) and the object is hurled somewhere off screen into "
+"space. Simply use the outliner to find it; select it, and move back to your "
+"3D window to snap it back to your cursor (:kbd:`Shift-S` *→ Selection → "
+"Cursor*)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:19
+msgid ""
+"Another more practical example is to evaluate the impact of a change on "
+"related :doc:`datablocks </data_system/datablocks>`. Suppose you are looking"
+" at your ``TableTop`` object, and it doesn't look right, the ``Wood`` "
+"material doesn't look right; you want it to look more like mahogany. Since "
+"the same material can be used by many meshes, you're not sure how many "
+"things will change color when you change the material. Using the *Outliner*,"
+" you could find that material and trace the links that it has to every mesh "
+"in your scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:29
+msgid "Outliner view"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:33
+msgid "The Outliner window."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:36
+msgid ""
+"The *Outliner* is a kind of list that organizes things related to each "
+"other. In the outliner, you can:"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:39
+msgid "View the data in the scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:40
+msgid "Select and deselect objects in the scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:41
+msgid "Hide or show an object in the scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:42
+msgid ""
+"Enable or disable selection (to make an object \"unselectable\" in the 3D "
+"Views)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:43
+msgid "Enable or disable the rendering of an object."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:44
+msgid "Delete objects from the scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:45
+msgid ""
+"Unlink data (equivalent to pressing the *X* button next to the name of a "
+"datablock)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:46
+msgid "Easily select which render layer to render."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:47
+msgid ""
+"Easily select which render pass to render (for example, you can choose to "
+"render just the *Specular* pass)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:51
+msgid "Selecting the outliner window type"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:55
+msgid "Change a window type to the Outliner."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:58
+msgid ""
+"Choose a window and :kbd:`LMB` on its current *Window type* button (left-"
+"most icon in its header), and :kbd:`LMB` on *Outliner*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:63
+msgid "Using the Outliner"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:65
+msgid ""
+"Each row in the *Outliner* shows a datablock. You can click the plus-sign to"
+" the left of a name to expand the current datablock and see what other "
+"datablocks it contains. If the row is already expanded, the icon to the left"
+" will be a minus-sign. Clicking the minus-sign will collapse subordinate "
+"objects beneath the row."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:70
+msgid ""
+"You can select datablocks in the *Outliner*, but this won't necessarily "
+"select the datablock in the scene. To select the datablock in the scene, you"
+" have to activate it."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:76
+msgid "Selecting and activating"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:78
+msgid ""
+"Single selection doesn't require any pre-selection: just work directly with "
+":kbd:`LMB` (and/or :kbd:`RMB` - contextual menu, see below) *inside* the "
+"name/icon area."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:81
+msgid ""
+"When you select an object in the list this way, it is selected and becomes "
+"the active object in all other 3D Views. Use this feature to find objects in"
+" your 3D View, select them in the *Outliner*, then zoom to them with "
+":kbd:`Numpad.` or if you don't have a numpad, snap and center your cursor on"
+" them via :kbd:`Shift-S` *→ Cursor → Selection*, and then :kbd:`C`."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:91
+msgid "Click [lmb] on the mesh data of the cube to activate Edit mode."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:100
+msgid "Activating a datablock"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:95
+msgid ""
+"*Activate* the datablock with :kbd:`LMB` on the *icon* of the datablock. "
+"Activating the datablock will automatically switch to the relevant mode. For"
+" example, activating the mesh data of the cube will select the cube and "
+"enter *Edit mode* while activating the object data of the cube will select "
+"the cube and enter *Object mode* (see right)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:104
+msgid "Toggling pre-selection of a datablock."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:118
+msgid "Toggle pre-selection of a group of datablocks"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:108
+msgid ""
+"Useful when you want to select/deselect a whole bunch of datablocks. For "
+"this you must prepare the selection using, to your liking:"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:111
+msgid ":kbd:`RMB` or :kbd:`LMB`,"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:112
+msgid ":kbd:`Shift-RMB` or :kbd:`Shift-LMB`,"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:113
+msgid ":kbd:`RMB` and drag or :kbd:`LMB` and drag,"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:115
+msgid ""
+"all *outside* the name/icon area. Those pre-selected have their line in a "
+"lighter color. You then can (de)select them with a :kbd:`RMB` *on* the "
+"name/icon area, which brings on a context menu (see bellow)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:122
+msgid "Context menu for the Cube object."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:138
+msgid "Context menu"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:126
+msgid ""
+"Show the context menu for a datablock with :kbd:`RMB` on the icon or name. "
+"Depending on the type of the pre-selected datablock(s), you will have all or"
+" part of the following options:"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:129
+msgid "*Select*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:130
+msgid "*Deselect*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:131
+msgid "*Delete*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:132
+msgid ""
+"*Unlink* - To unlink a datablock from its \"owner\" (e.g., a material from "
+"its mesh)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:133
+msgid "*Make Local* - To create a \"local\" duplicate of this datablock."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:137
+msgid "Some datablock types will not have a context menu at all!"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:141
+msgid "Deleting a datablock"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:141
+msgid "Use :kbd:`X` to delete the selected datablock(s)."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:144
+msgid "Expanding one level"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:144
+msgid "Use :kbd:`Numpad+` to expand one level down in the tree-list."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:147
+msgid "Collapsing one level"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:147
+msgid "Use :kbd:`Numpad-` to collapse one level up in the tree-list."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:151
+msgid "Expanding/collapsing everything"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:150
+msgid "Use :kbd:`A` to expand/collapse all levels of the tree-list."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:154
+msgid "Toggling object-level restrictions"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:156
+msgid ""
+"The three following options, in the right side of the *Outliner* window, are"
+" only available for objects:"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:159
+msgid "**Visibility**"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:164
+msgid "Restrict visibility"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:167
+msgid ""
+"Toggle visibility by clicking the \"eye\" icon for the object on the right-"
+"hand side of the *Outliner*. Useful for complex scenes when you don't want "
+"to assign the object to another layer. This will only work on visible layers"
+" - an object on an invisible layer will still be invisible regardless of "
+"what the *Outliner* says. :kbd:`V` will toggle this property for any objects"
+" that are pre-selected in the *Outliner*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:174
+msgid "**Selectability**"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:179
+msgid "Restrict selection"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:182
+msgid ""
+"Toggle selectability by clicking the \"arrow\" icon. This is useful for if "
+"you have placed something in the scene and don't want to accidentally select"
+" it when working on something else. :kbd:`S` will toggle this property for "
+"any objects that are pre-selected in the *Outliner*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:188
+msgid "**Rendering**"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:193
+msgid "Restrict renderability"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:195
+msgid ""
+"Toggle rendering by clicking the \"camera\" icon. This will still keep the "
+"object visible in the scene, but it will be ignored by the renderer. "
+":kbd:`R` will toggle this property for any objects that are pre-selected in "
+"the *Outliner*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:201
+msgid "Searching"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:203
+msgid ""
+"You can search the file for datablocks, either by using the *Search* menu in"
+" the header of the *Outliner*, or by using one of the following hotkeys:"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:207
+msgid ":kbd:`F` - *Find*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:208
+msgid ":kbd:`Ctrl-F` - *Find (case sensitive)*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:209
+msgid ":kbd:`Alt-F` - *Find complete*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:210
+msgid ":kbd:`Ctrl-Alt-F` - *Find complete (case sensitive)*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:211
+msgid ":kbd:`Shift-F` - *Find again*."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:213
+msgid "Matching datablocks will be automatically selected."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:217
+msgid "Filtering the display"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:221
+msgid "Outliner Display dropdown."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:224
+msgid ""
+"The window header has a field to let you select what the outliner should "
+"show in the outline. By default, the outliner shows *All Scenes*. You can "
+"select to show only the current scene, datablocks that have been selected, "
+"objects that are on currently selected layers, etc. These selects are to "
+"help you *narrow the list* of objects so that you can find things quickly "
+"and easily."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:230
+msgid "All Scenes"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:231
+msgid ""
+"Shows *everything* the outliner can display (in all scenes, all layers, "
+"etc.)"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:232
+msgid "Current Scene"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:233
+msgid "Shows everything in the current scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:235
+msgid "Visible Layers"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:235
+msgid ""
+"Shows everything on the visible (currently selected) layers in the current "
+"scene. Use the"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:237
+msgid ""
+"FIXME(TODO: Internal Link; [[Doc:Doc:2.5/Manual/3D "
+"interaction/Navigating/Layers|layers buttons]] ) to make objects on a layer "
+"visible in the 3D window."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:242
+msgid "Selected"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:242
+msgid ""
+"Lists only the object(s) currently selected in the 3D window. You can select"
+" multiple objects by :kbd:`Shift-RMB` -clicking."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:244
+msgid "Active"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:245
+msgid "Lists only the active (often last selected) object."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:246
+msgid "Same Types"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:247
+msgid ""
+"Lists only those objects in the current scene that are of the same types as "
+"those selected in the 3d window."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:249
+msgid ""
+"Lists only :doc:`Groups </modeling/objects/groups_and_parenting>` and their "
+"members."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:251
+#: ../../manual/data_system/the_outliner.rst:253
+#: ../../manual/data_system/the_outliner.rst:255
+#: ../../manual/data_system/the_outliner.rst:257
+#: ../../manual/data_system/the_outliner.rst:259
+msgid "TODO"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:252
+msgid "Sequence"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:254
+msgid "Data Blocks"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:256
+msgid "User Preferences"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:260
+msgid "Key Maps"
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:267
+msgid "The Outliner window in list mode."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:270
+msgid ""
+"The outline example shows that the .blend file has three scenes: \"\\ "
+"``Ratchet in Middle`` \", \"\\ ``Ratchet on Outside`` \", and \"\\ ``Ratchet"
+" Out White`` \". By clicking on the little plus-sign to the left of the "
+"name, the outline is expanded one level. This was done for the \"\\ "
+"``Ratchet in Middle`` \" scene. As you can see, this scene has some \"\\ "
+"``World`` \" material settings, a \"\\ ``Camera`` \", an \"\\ ``Empty`` \", "
+"a \"\\ ``HandleFixed`` \" object... All objects that were added to the "
+"scene."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:280
+msgid ""
+"By clicking the plus-sign next to \"\\ ``ratchetgear``, we can see that it "
+"has some motion described by the \"\\ ``Animation`` \" entry; that it was "
+"based on a \"\\ ``Circle`` \" mesh, and that it is the parent of \"\\ "
+"``HandleFixed.002`` \", which is in turn the parent of \"\\ ``Plane.003`` "
+"\", and so on."
+msgstr ""
+
+#: ../../manual/data_system/the_outliner.rst:287
+msgid ""
+"The neat thing is: if you select any of these datablocks here, they will be "
+"selected in the 3D window as well, as far as this is possible. Pressing "
+":kbd:`Numpad.` with your mouse cursor in any 3D Window will center and align"
+" the view to that object. Very handy. Also, pressing :kbd:`X` will delete "
+"it, as well as all the other hotkeys that operate on the currently selected "
+"object."
+msgstr ""

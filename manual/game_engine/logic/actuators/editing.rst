@@ -78,6 +78,8 @@ At the head of each displayed object sensor list, two entries appear:
 Name
    The name of the object.
 Add
-   When clicked, a menu appears with the available actuator types. Selecting an entry adds a new actuator to the object. See :doc:`Actuators </game_engine/logic/actuators/overview>` for list of available actuator types.
+   When clicked, a menu appears with the available actuator types.
+   Selecting an entry adds a new actuator to the object.
+   See :doc:`Actuators </game_engine/logic/actuators/overview>` for list of available actuator types.
 
 

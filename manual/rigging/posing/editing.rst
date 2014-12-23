@@ -132,7 +132,11 @@ In-Betweens
 There are several tools for editing poses in an animation.
 
 Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`Alt-E`)
-   Relax pose is somewhat related to the above topic - but it is only useful with keyframed bones (see the :doc:`animation chapter </animation>`). When you edit such a bone (and hence take it "away" from its "keyed position"), using this command will progressively "bring it back" to its "keyed position", with smaller and smaller steps as it comes near it.
+   Relax pose is somewhat related to the above topic - but it is only useful with keyframed bones
+   (see the :doc:`animation chapter </animation>`).
+   When you edit such a bone (and hence take it "away" from its "keyed position"),
+   using this command will progressively "bring it back" to its "keyed position",
+   with smaller and smaller steps as it comes near it.
 
 Push Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`Ctrl-E`)
    Push pose exaggerates the current pose.
@@ -141,7 +145,10 @@ Breakdowner (:menuselection:`Pose --> In-Betweens --> Pose Breakdowner` or :kbd:
    Creates a suitable breakdown pose on the current frame
 
 
-There are also in *Pose* mode a bunch of armature-specific editing options/tools, like :doc:`auto-bones naming </rigging/armatures/editing/properties#naming_bones>`, :doc:`properties switching/enabling/disabling </rigging/armatures/editing/properties#properties>`, etc., that we already described in the armature editing pages - follow the links above...
+There are also in *Pose* mode a bunch of armature-specific editing options/tools,
+like :doc:`auto-bones naming </rigging/armatures/editing/properties#naming_bones>`,
+:doc:`properties switching/enabling/disabling </rigging/armatures/editing/properties#properties>`, etc.,
+that we already described in the armature editing pages - follow the links above...
 
 
 Copy/Paste Pose
@@ -173,11 +180,17 @@ directly using the three "copy/paste" buttons found at the right part of the 3D 
 
 Here are important points:
 
-- This tool works at the Blender session level, which means you can use it across armatures, scenes, and even files. However, the pose buffer is not saved, so you lose it when you close Blender.
+- This tool works at the Blender session level, which means you can use it across armatures, scenes, and even files.
+  However, the pose buffer is not saved, so you lose it when you close Blender.
 - There is only one pose buffer.
 - Only the selected bones are taken into account during copying (i.e. you copy only selected bones' pose).
-- During pasting, on the other hand, bone selection has no importance. The copied pose is applied on a per-name basis (i.e. if you had a "\ ``forearm`` " bone selected when you copied the pose, the "\ ``forearm`` " bone of the current posed armature will get its pose when you paste it - and if there is no such named bone, nothing will happen...).
-- What is copied and pasted is in fact the position/rotation/scale of each bone, in its own space. This means that the resulting pasted pose might be very different from the originally copied one, depending on:
+- During pasting, on the other hand, bone selection has no importance.
+  The copied pose is applied on a per-name basis
+  (i.e. if you had a "\ ``forearm`` " bone selected when you copied the pose,
+  the "\ ``forearm`` " bone of the current posed armature will get its pose when you paste it -
+  and if there is no such named bone, nothing will happen...).
+- What is copied and pasted is in fact the position/rotation/scale of each bone, in its own space.
+  This means that the resulting pasted pose might be very different from the originally copied one, depending on:
   - The rest position of the bones, and
   - The current pose of their parents.
 
@@ -246,8 +259,8 @@ using their sub-panels in the *Armature Bones* panel:
 
 
 Inherit Rotation
-   When disabled, this will "break" the rotation relationship to the bone's parent. This means that the child will keep its rotation in the armature object space when its parent is rotated.
-
+   When disabled, this will "break" the rotation relationship to the bone's parent.
+   This means that the child will keep its rotation in the armature object space when its parent is rotated.
 Inherit Scale
    When disabled, this will "break" the scale relationship to the bone's parent.
 

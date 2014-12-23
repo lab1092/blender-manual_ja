@@ -17,13 +17,16 @@ Blender has a range of built-in and web-based Help options.
 
 The built in help options include:
 
-- A Menu with all of the Help Options including the Web based ones. Some of them are also present in the *Splash Screen*.
+- A Menu with all of the Help Options including the Web based ones.
+  Some of them are also present in the *Splash Screen*.
 
 Other new features like:
 
 
 - The Blender Search (new feature).
-- Tooltips showing also the internal Python Operators (new feature), when the user hovers the Mouse over a Button, a Menu, Numeric Field or any Blender function that has a named Python Operator.
+- Tooltips showing also the internal Python Operators (new feature),
+  when the user hovers the Mouse over a Button, a Menu,
+  Numeric Field or any Blender function that has a named Python Operator.
 
 
 General Web-based Help Options
@@ -31,7 +34,9 @@ General Web-based Help Options
 
 .. tip:: Browser and Internet Connection
 
-   Some forms of Help start up your web browser and access the Blender Foundation's web servers. In order to do this, you must have configured a default web browser for your Operating System, and have a connection to the Internet.
+   Some forms of Help start up your web browser and access the Blender Foundation's web servers.
+   In order to do this, you must have configured a default web browser for your Operating System,
+   and have a connection to the Internet.
 
 
 .. figure:: /images/Manual-Vitals-Help_Menu_2.61.jpg
@@ -39,13 +44,21 @@ General Web-based Help Options
    Help menu
 
 
-- :doc:`This is a link for the Official Blender Manual </contents>`, in *Wiki* format, which you are now reading.
-- `Release Log <http://www.blender.org/development/release-logs/>`__ - The release notes on the Web for the current Blender version.
-- `Blender Website <http://www.blender.org/>`__ - The *blender.org* home page.
-- `Blender e-Shop <http://www.blender3d.org/e-shop/>`__ - The Blender e-Store, where you can buy Training DVD's, books, t-shirts and other products.
-- `Developer Community <http://www.blender.org/community/get-involved/>`__ - The *blender.org* "Get Involved" page. This is the launch page for Blender software development, bug tracking, patches and scripts, education and training, documentation development and functionality research.
-- `User Community <http://www.blender.org/community/user-community/>`__ - Lists of many different support venues here.
-- `Report a Bug <http://projects.blender.org/tracker/?atid=498&group_id=9&func=browse>`__ - The Blender Bug Tracker page.
+- :doc:`This is a link for the Official Blender Manual </contents>`,
+  in *Wiki* format, which you are now reading.
+- `Release Log <http://www.blender.org/development/release-logs/>`__ -
+  The release notes on the Web for the current Blender version.
+- `Blender Website <http://www.blender.org/>`__ -
+  The *blender.org* home page.
+- `Blender e-Shop <http://www.blender3d.org/e-shop/>`__ -
+  The Blender e-Store, where you can buy Training DVD's, books, t-shirts and other products.
+- `Developer Community <http://www.blender.org/community/get-involved/>`__ -
+  The *blender.org* "Get Involved" page. This is the launch page for Blender software development,
+  bug tracking, patches and scripts, education and training, documentation development and functionality research.
+- `User Community <http://www.blender.org/community/user-community/>`__ -
+  Lists of many different support venues here.
+- `Report a Bug <http://projects.blender.org/tracker/?atid=498&group_id=9&func=browse>`__
+  - The Blender Bug Tracker page.
 
 **Important:** in order to Report a Bug, you must register at the website.
 
@@ -112,13 +125,20 @@ OpenGL
    Info Window - Info.txt
 
 
-- *Toggle System Console* - Reveals the command window that contains Blender's *stdout* messages. Can be very useful for figuring out how the UI works, or what is going wrong if you encounter a problem. Even more information is available here, if you invoke Blender as *blender -d*. This menu item only shows up on Windows.
+- *Toggle System Console* - Reveals the command window that contains Blender's *stdout* messages.
+  Can be very useful for figuring out how the UI works, or what is going wrong if you encounter a problem.
+  Even more information is available here, if you invoke Blender as *blender -d*.
+  This menu item only shows up on Windows.
+
   - In all Operating Systems, to see this information, simply run *blender* from the command-line.
   - On Linux, if you ran Blender from the GUI, you can see the output in *~/.xsession-errors*
   - On Mac OS X, you can open Console.app (in the Utilities folder in Applications) and check the Log there.
 
 
-- *Info Window Log* - This is not exactly a Help menu, but it is related. If you mouseover the line between the Info window and the 3D then click and drag the Info window down a bit, you can see the stream of Python calls that the UI is making when you work. This can be useful in creating scripts.
+- *Info Window Log* - This is not exactly a Help menu, but it is related.
+  If you mouseover the line between the Info window and the 3D then click and drag the Info window down a bit,
+  you can see the stream of Python calls that the UI is making when you work.
+  This can be useful in creating scripts.
 
 
 .. figure:: /images/Manual-Vitals-Help_Info_Log.jpg
@@ -200,7 +220,11 @@ the small Pop Up Window for the Blender Search will stay blank.
 
 
 - How it works:
-  - Every Blender Internal Operator can use a defined name, some of them are predefined names for the user. For example, the *Render* command is a named Python call, the appropriate Operator is  ``Python: bpy.ops.render.render()`` , but for the user, it is called Render. All of those *user* names that were previously attributed for Python operators can searched for using *Blender Search*.
+  - Every Blender Internal Operator can use a defined name, some of them are predefined names for the user.
+    For example, the *Render* command is a named Python call,
+    the appropriate Operator is  ``Python: bpy.ops.render.render()`` , but for the user, it is called Render.
+    All of those *user* names that were previously attributed for
+    Python operators can searched for using *Blender Search*.
 
 
 Tooltips
@@ -208,7 +232,8 @@ Tooltips
 
 .. figure:: /images/Manual-Vitals-Help-Tooltip-Render-Engine.jpg
 
-   The Mouse pointer was  Stopped for a while over the Render Engines List in the Info Window. The normal Tooltip  is in white and the Python operator is displayed in grey
+   The Mouse pointer was  Stopped for a while over the Render Engines List in the Info Window.
+   The normal Tooltip  is in white and the Python operator is displayed in grey
 
 
 The *Tooltips* in Blender were completely recoded,

@@ -120,14 +120,14 @@ for example.
    Search order: ``LOCAL, USER, SYSTEM``.
 
 ``./scripts/addons/*.py``
-   Python addons which may be enabled in the user preferences, includes import/export format support,
+   Python add-ons which may be enabled in the user preferences, includes import/export format support,
    render engine integration and many handy utilities.
 
 ``./scripts/addons/modules/*.py``
-   Modules for addons to use (added to Python's sys.path).
+   Modules for add-ons to use (added to Python's sys.path).
 
 ``./scripts/addons_contrib/*.py``
-   Another addons directory which is used for community maintained addons (must be manually created).
+   Another add-ons directory which is used for community maintained add-ons (must be manually created).
 
 ``./scripts/addons_contrib/modules/*.py``
    Modules for addons_contrib to use (added to Python's sys.path).
@@ -158,7 +158,7 @@ User Scripts Path
 The user preferences script path provides a way to set your own directory which is used for
 scripts as well as the user scripts path. Be sure to create subfolders within this directory
 which match the structure of Blenders scripts directory, startup/, addons/, modules/ etc.
-because copying scripts directly into this folder will not load them on startup or as addons.
+because copying scripts directly into this folder will not load them on startup or as add-ons.
 
 
 Environment Variables

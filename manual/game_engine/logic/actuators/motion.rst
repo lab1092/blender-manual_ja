@@ -22,7 +22,10 @@ Servo Control
 
 .. tip:: Object collisions
 
-   Simple motion can cause an object to go through another object since it never passes the any of the coordinates between the start and end. This can be avoided using Servo Control, which is activated when the Physics setting for the object(s) is set to Dynamic/Rigid Body/Soft Body.
+   Simple motion can cause an object to go through another object since it never
+   passes the any of the coordinates between the start and end.
+   This can be avoided using Servo Control,
+   which is activated when the Physics setting for the object(s) is set to Dynamic/Rigid Body/Soft Body.
 
 
 Simple Motion
@@ -39,7 +42,8 @@ Loc
    The object jumps the number of blender units entered, in each of the three axes,each time a pulse is received.
 
 Rot
-   The object rotates by the specified amount, in each of the three axes, each time a pulse is received. One revolution is represented by the value 7.2 (i.e. 0.02 for one degree).
+   The object rotates by the specified amount, in each of the three axes, each time a pulse is received.
+   One revolution is represented by the value 7.2 (i.e. 0.02 for one degree).
 
 L
    Coordinates specified are Global (gray) or Local (White).
@@ -47,7 +51,8 @@ L
 
 .. tip:: Servo Control
 
-   To make Servo Control work, it is necessary to turn on Dynamic in the Physics window, and to make the object an Actor.
+   To make Servo Control work,
+   it is necessary to turn on Dynamic in the Physics window, and to make the object an Actor.
 
 
 Servo Control
@@ -66,7 +71,8 @@ in order to achieve a given speed. Uses the Proportional - Integral - Derivative
 equations of motion *See Ref.*.
 
 Reference Ob
-   Specifies the object which the actuator owner uses as a reference for movement, for moving platforms for example. If empty it will use world reference.
+   Specifies the object which the actuator owner uses as a reference for movement, for moving platforms for example.
+   If empty it will use world reference.
 
 Linear V
    The target linear velocity, in each of the three axes, which the object will try and achieve.
@@ -75,10 +81,12 @@ L
    Coordinates specified are Global (gray) or Local (White).
 
 X, Y, Z
-   Sets maximum and minimum limits for the force applied to the object. If disabled (i.e. X,Y or Z buttons are gray) the force applied is unlimited.
+   Sets maximum and minimum limits for the force applied to the object.
+   If disabled (i.e. X,Y or Z buttons are gray) the force applied is unlimited.
 
 Proportional Coefficient
-   Set the Proportional Coefficient. This controls the reaction  to differences between the actual and target linear velocity.
+   Set the Proportional Coefficient.
+   This controls the reaction  to differences between the actual and target linear velocity.
 
 Integral Coefficient
    Set the Integral Coefficient. This controls the reaction  to the sum of errors so far in this move.

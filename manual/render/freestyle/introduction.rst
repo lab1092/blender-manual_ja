@@ -67,7 +67,8 @@ The Big Picture
 - A viewmap can have multiple line sets.
 - A line set controls which line types and selections will be rendered, from lines based on your scene.
 - Each line set uses one line style (which can be shared between multiple line sets).
-- A line style tells Freestyle how to render the linked line sets in terms of color, alpha, thickness and other aspects.
+- A line style tells Freestyle how to render the linked line sets in terms of color, alpha,
+  thickness and other aspects.
 
 
 .. figure:: /images/FreeStyle_Block_Diagram.jpg

@@ -21,6 +21,7 @@ def from_chapters():
 
     quicky_chapters = [c for c in os.environ.get('QUICKY_CHAPTERS', "").strip(":").split(":") if c]
     if not quicky_chapters:
+        exclude_patterns.append("contents_quicky.rst")
         return master_doc, exclude_patterns
 
     master_doc = "contents_quicky"

@@ -57,13 +57,17 @@ properties panel.
 Frames
    Defines the number of frames it takes for the object to travel the path.
 Evaluation Time
-   Defines current frame of the animation. By default it is linked to the global frame number, but could be keyframed to give more control over the path animation.
+   Defines current frame of the animation.
+   By default it is linked to the global frame number,
+   but could be keyframed to give more control over the path animation.
 Follow
    Causes the curve path children to rotate along the curvature of the path.
 Radius
-   Causes the curve path child to be scaled by the set curve radius. See :doc:`Curve Extruding </modeling/curves/editing/advanced>`
+   Causes the curve path child to be scaled by the set curve radius.
+   See :doc:`Curve Extruding </modeling/curves/editing/advanced>`
 Offset Children
-   Causes the animation to be offset by the curve path child's time offset value, which can be found in its *Animation Hacks* section of the *Object Panel*.
+   Causes the animation to be offset by the curve path child's time offset value,
+   which can be found in its *Animation Hacks* section of the *Object Panel*.
 
 
 The Follow Path Constraint

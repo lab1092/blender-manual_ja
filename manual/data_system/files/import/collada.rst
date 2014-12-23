@@ -49,7 +49,8 @@ That is now done automatically in the background.
 
 .. note:: Preview/Render mode
 
-   Some Modifiers provide a Preview mode and a Render mode with different mesh settings. We now support both modes when applying the modifiers.
+   Some Modifiers provide a Preview mode and a Render mode with different mesh settings.
+   We now support both modes when applying the modifiers.
 
 
 Selection Only
@@ -69,7 +70,8 @@ regardless of their selection state.
 .. note:: Example
 
    You now can select only(!) an armature,
-   then in the exporter enable "include children" then all rigged meshes attached to the armature will also be exported.
+   then in the exporter enable "include children"
+   then all rigged meshes attached to the armature will also be exported.
 
 
 Include Armatures
@@ -81,7 +83,8 @@ exported regardless of their selection state.
 
 .. note:: Example
 
-   You now can just select your objects, then in the exporter enable "include armatures" then the armature data is also exported.
+   You now can just select your objects,
+   then in the exporter enable "include armatures" then the armature data is also exported.
 
 
 Include Shape keys
@@ -89,7 +92,8 @@ Include Shape keys
 
 .. note:: Shape keys
 
-   This option also includes the application of Shape keys! So now you can export your meshes with the current shape key configuration baked in.
+   This option also includes the application of Shape keys!
+   So now you can export your meshes with the current shape key configuration baked in.
 
 
 Texture Options

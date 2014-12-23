@@ -1,7 +1,7 @@
 
-#################
-  Render Engines
-#################
+#############################
+  Alternative Render Engines
+#############################
 
 .. TODO (overview/intro text)
 

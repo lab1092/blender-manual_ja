@@ -1,0 +1,4848 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-23 09:57+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/lighting/ambient_light.rst:7
+msgid "Environment Lighting"
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:9
+msgid "Environment light provides light coming from all directions."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:11
+msgid ""
+"Light is calculated with a ray-traced method which is the same as that used "
+"by Ambient Occlusion. The difference is that Environment lighting takes into"
+" account the \"ambient\" parameter of the material shading settings, which "
+"indicates the amount of ambient light/color that that material receives."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:21
+msgid "Environment Lighting panel."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:24
+msgid ""
+"Also, you can choose the environment color source (white, sky color, sky "
+"texture) and the light energy."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:27
+#: ../../manual/lighting/lights/light_properties.rst:54
+msgid "Energy"
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:28
+msgid "Defines the strength of environment light."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:30
+msgid "Environment Color"
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:30
+msgid "Defines where the color of the environment light comes from."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:32
+msgid "Using both settings simultaneously produces better global lighting."
+msgstr ""
+
+#: ../../manual/lighting/ambient_light.rst:34
+msgid ""
+"It's good for mimicking the sky in outdoor lighting. Environment lighting "
+"can be fairly noisy at times."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:7
+msgid "Ambient Occlusion"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:9
+msgid ""
+"Ambient Occlusion is a sophisticated ray-tracing calculation which simulates"
+" soft global illumination shadows by faking darkness perceived in corners "
+"and at mesh intersections, creases, and cracks, where ambient light is "
+"occluded, or blocked."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:13
+msgid ""
+"There is no such thing as AO in real life; AO is a specific not-physically-"
+"accurate (but generally nice-looking) rendering trick. It basically samples "
+"a hemisphere around each point on the face, sees what proportion of that "
+"hemisphere is occluded by other geometry, and shades the pixel accordingly."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:19
+msgid ""
+"It's got nothing to do with light at all; it's purely a rendering trick that"
+" tends to look nice because generally in real life surfaces that are close "
+"together (like small cracks) will be darker than surfaces that don't have "
+"anything in front of them, because of shadows, dirt, etc."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:24
+msgid ""
+"The AO process, though, approximates this result; it's not simulating light "
+"bouncing around or going through things. That's why AO still works when you "
+"don't have any lights in the scene, and it's why just switching on AO alone "
+"is a very bad way of \"lighting\" a scene."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:29
+msgid ""
+"You must have ray tracing enabled as a *Render* panel option in the "
+"*Shading* section for this to work."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:32
+msgid ""
+"You must have an ambient light color set as you desire. By default, the "
+"ambient light color (world) is black, simulating midnight in the basement "
+"during a power outage. Applying that color as ambient will actually darken "
+"all colors. A good outdoor mid-day color is RGB (``0.9``, ``0.9``, ``0.8``) "
+"which is a whitish yellow sunny kind of color on a bright-but-not-harshly-"
+"bright day."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:40
+#: ../../manual/lighting/exposure.rst:34
+#: ../../manual/lighting/indirect_lighting.rst:55
+#: ../../manual/lighting/lamps/hemi.rst:29
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:64
+#: ../../manual/lighting/lights/textures.rst:23
+msgid "Options"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:44
+msgid "The World panel with ambient color sliders highlighted."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:48
+#: ../../manual/lighting/indirect_lighting.rst:60
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:98
+msgid "Factor"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:48
+msgid "The strength of the AO effect, a multiplier for addition."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:50
+msgid ""
+"Ambient Occlusion is composited during the render. Two blending modes are "
+"available:"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:53
+msgid "Add"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:53
+msgid ""
+"The pixel receives light according to the number of non-obstructed rays. The"
+" scene is lighter. This simulates global illumination."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:57
+msgid "Multiply"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:56
+msgid ""
+"Ambient occlusion is multiplied over the shading, making things darker."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:61
+msgid ""
+"If *Multiply* is chosen, there must be other light sources; otherwise the "
+"scene will be pitch black. In the other two cases the scene is lit even if "
+"no explicit light is present, just from the AO effect. Although many people "
+"like to use AO alone as a quick shortcut to light a scene, the results it "
+"gives will be muted and flat, like an overcast day. In most cases, it is "
+"best to light a scene properly with Blender's standard lamps, then use AO on"
+" top of that, set to \"\\ *Multiply* \", for the additional details and "
+"contact shadows."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:70
+msgid ""
+"The *Gather* panel contains settings for the ambient occlusion quality. Note"
+" that these settings also apply to Environment Lighting and Indirect "
+"Lighting."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:73
+msgid ""
+"Ambient occlusion has two main methods of calculation: *Raytrace* and "
+"*Approximate*."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:78
+msgid "Gather"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:81
+msgid "Raytrace"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:85
+msgid "The Amb Occ panel, Raytrace method."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:88
+msgid ""
+"The *Raytrace* method gives the more accurate, but also the more noisy "
+"results. You can get a nearly noiseless image, but at the cost of render "
+"time... It is the only option if you want to use the colors of your sky's "
+"texture."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:94
+msgid "Attenuation"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:93
+msgid ""
+"Length of rays defines how far away other faces may be and still have an "
+"occlusion effect. The longer this distance, the greater impact that far-away"
+" geometry will have on the occlusion effect. A high *Distance* value also "
+"means that the renderer has to search a greater area for geometry that "
+"occludes, so render time can be optimized by making this distance as short "
+"as possible for the visual effect that you want."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:96
+msgid "*Sampling*"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:106
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:24
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:118
+#: ../../manual/lighting/shadows/raytraced_properties.rst:36
+msgid "Samples"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:99
+msgid ""
+"The number of rays used to detect if an object is occluded. Higher numbers "
+"of samples give smoother and more accurate results, at the expense of slower"
+" render times. The default value of ``5`` is usually good for previews. The "
+"actual number of rays shot out is the square of this number (i.e. *Samples* "
+"at ``5`` means ``25`` rays). Rays are shot at the hemisphere according to a "
+"random pattern (determined by the sample methods described above); this "
+"causes differences in the occlusion pattern of neighboring pixels unless the"
+" number of shot rays is big enough to produce good statistical data."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:113
+msgid "Ambient Occlusion with 3 Samples."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:113
+msgid "Ambient Occlusion with 6 Samples."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:113
+msgid "Ambient Occlusion with 12 Samples."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:117
+msgid "You have the three standard sampling options:"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:121
+#: ../../manual/lighting/shadows/raytraced_properties.rst:27
+msgid "Constant QMC"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:121
+msgid ""
+"The base Quasi-Monte Carlo, gives evenly and randomly distributed rays."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:130
+#: ../../manual/lighting/shadows/raytraced_properties.rst:30
+msgid "Adaptive QMC"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:124
+msgid ""
+"An improved version of QMC, that tries to determine when the sample rate can"
+" be lowered or the sample skipped, based on its two settings:"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:126
+#: ../../manual/lighting/shadows/raytraced_properties.rst:84
+msgid "Threshold"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:127
+msgid ""
+"The limit below which the sample is considered fully occluded (\"black\") or"
+" un-occluded (\"white\"), and skipped."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:130
+msgid "Adapt to Speed"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:129
+msgid ""
+"A factor to reduce AO sampling on fast-moving pixels. As it uses the *Vec* "
+"render pass, that must also be enabled (see :doc:`render passes page "
+"</render/post_process/passes>`)."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:132
+msgid "About QMC"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:134
+msgid ""
+"See also the :doc:`raytraced shadows page "
+"</lighting/shadows/raytraced_properties#what_is_quasi-monte_carlo?>` for "
+"more info about the  Quasi-Monte Carlo sampling method."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:151
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:58
+msgid "Constant Jittered"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:138
+msgid "The historical sample method, more prone to \"bias\" artifacts..."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:151
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:181
+msgid "Bias"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:141
+msgid ""
+"The angle (in radians) the hemisphere will be made narrower (i.e. the "
+"hemisphere will no longer be a real hemisphere: its section will no longer "
+"be a semicircle, but an arc of a circle of \"\\ *pi* ``- Bias`` \" radians)."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:146
+msgid ""
+"The bias setting allows you to control how smooth \"smooth\" faces will "
+"appear in AO rendering. Since AO occurs on the original faceted mesh, it is "
+"possible that the AO light makes faces visible even on objects with "
+"\"smooth\" on. This is due to the way AO rays are shot, and can be "
+"controlled with the *Bias* slider. Note that while it might even happen with"
+" QMC sampling methods, it is much more visible with the *Constant Jittered* "
+"one - and anyway, you have no *Bias* option for QMC."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:161
+msgid ""
+"24×24 UV Sphere with Bias: 0.05 (default). Note the facets on the sphere's "
+"surface even though it is set to smooth."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:161
+msgid "Raising the Bias to 0.15 removes the faceted artifacts."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:166
+#: ../../manual/lighting/indirect_lighting.rst:70
+msgid "Approximate"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:170
+msgid "The Amb Occ panel, Approximate method."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:173
+#: ../../manual/lighting/indirect_lighting.rst:77
+msgid ""
+"The *Approximate* method gives a much smoother result for the same amount of"
+" render time, but as its name states, it is only an approximation of the "
+"*Raytrace* method, which implies it might produce some artifacts - and it "
+"cannot use the sky's texture as the base color"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:178
+#: ../../manual/lighting/indirect_lighting.rst:82
+msgid ""
+"This method seems to tend to \"over-occlude\" the results. You have two "
+"complementary options to reduce this problem:"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:181
+#: ../../manual/lighting/indirect_lighting.rst:85
+msgid "Passes"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:182
+#: ../../manual/lighting/indirect_lighting.rst:86
+msgid ""
+"Set the number of pre-processing passes, between ``0`` (no pre-processing) "
+"to ``10``. Keeping the pre-processing passes high will increase render time "
+"but will also clear some artifacts and over-occlusions."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:184
+#: ../../manual/lighting/indirect_lighting.rst:88
+msgid "Error"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:184
+#: ../../manual/lighting/indirect_lighting.rst:88
+msgid ""
+"This is the tolerance factor for approximation error (i.e. the max allowed "
+"difference between approximated result and fully computed result). The "
+"lower, the slower the render, but the more accurate the results... Ranges "
+"between ``0.0`` and ``10.0``, defaults to ``0.250``."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:187
+#: ../../manual/lighting/indirect_lighting.rst:91
+msgid "Pixel Cache"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:187
+#: ../../manual/lighting/indirect_lighting.rst:91
+msgid ""
+"When enabled, it will keep values of computed pixels to interpolate it with "
+"its neighbors. This further speeds up the render, generally without visible "
+"loss in quality..."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:191
+#: ../../manual/lighting/indirect_lighting.rst:97
+msgid "Correction"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:190
+#: ../../manual/lighting/indirect_lighting.rst:94
+msgid ""
+"A correction factor to reduce over-occlusion. Ranges between ``0.0`` (no "
+"correction) to ``1.0``."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:194
+msgid "Common Settings"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:201
+msgid "Falloff"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:197
+msgid ""
+"When activated, the distance to the occluding objects will influence the "
+"\"depth\" of the shadow. This means that the further away the occluding "
+"geometry is, the lighter its \"shadow\" will be. This effect only occurs "
+"when the *Strength* factor is higher than ``0.0``. It mimics  light "
+"dispersion in the atmosphere..."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:201
+msgid "Strength"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:200
+msgid ""
+"Controls the attenuation of the shadows enabled with *Use Falloff*. Higher "
+"values give a shorter shadow, as it falls off more quickly (corresponding to"
+" a more foggy/dusty atmosphere). Ranges from ``0.0`` (default, no falloff) "
+"to ``10.0``."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:204
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:61
+msgid "Technical Details"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:206
+msgid ""
+"Ambient occlusion is calculated by casting rays from each visible point, and"
+" by counting how many of them actually reach the sky, and how many, on the "
+"other hand, are obstructed by objects."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:210
+msgid ""
+"The amount of light on the point is then proportional to the number of rays "
+"which have \"escaped\" and have reached the sky. This is done by firing a "
+"hemisphere of shadow rays around. If a ray hits another face (it is "
+"occluded) then that ray is considered \"shadow\", otherwise it is considered"
+" \"light\". The ratio between \"shadow\" and \"light\" rays defines how "
+"bright a given pixel is."
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:218
+#: ../../manual/lighting/exposure.rst:84
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:86
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:210
+#: ../../manual/lighting/lights/light_attenuation.rst:454
+msgid "Hints"
+msgstr ""
+
+#: ../../manual/lighting/ambient_occlusion.rst:220
+msgid ""
+"Ambient occlusion is a ray-tracing technique (at least with the *Raytrace* "
+"method), so it tends to be slow. Furthermore, performance severely depends "
+"on octree size, see the :doc:`rendering chapter </render>` for more "
+"information."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:7
+msgid "Exposure and Range"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:9
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:17
+#: ../../manual/lighting/lights/light_attenuation.rst:7
+msgid "Description"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:19
+msgid ""
+"*Exposure* and *Range* are similar to the \"Color Curves\" tool in Gimp or "
+"Photoshop."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:21
+msgid ""
+"These controls affect the rendered image, and the results are baked into the"
+" render. For information on achieving similar affects with render controls, "
+"see :doc:`Color Management and Exposure "
+"</render/post_process/cm_and_exposure>`."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:25
+msgid ""
+"Previously Blender clipped color directly with \"\\ ``1.0`` \" (or 255) when"
+" it exceeded the possible RGB space. This caused ugly banding and overblown "
+"highlights when light overflowed (*An overexposed teapot*)."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:30
+msgid ""
+"Using an exponential correction formula, this now can be nicely corrected."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:38
+msgid "Exposure and Range sliders."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:42
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:106
+msgid "Exposure"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:42
+msgid ""
+"The exponential curvature, with ``0.0`` being linear, and ``1.0`` being "
+"curved."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:45
+msgid "Range"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:45
+msgid ""
+"The range of input colors that are mapped to visible colors ``(0.0 - 1.0)``."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:47
+msgid ""
+"So without *Exposure* we will get a linear correction of all color values:"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:51
+msgid "Range` > ``1.0``"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:50
+msgid ""
+"the picture will become darker; with *Range* = ``2.0``, a color value of "
+"``1.0`` (the brightest by default) will be clipped to ``0.5`` (half bright) "
+"(*Range* *:* ``2.0``)."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:57
+msgid "Range` < ``1.0``"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:54
+msgid ""
+"the picture will become brighter; with *Range* = ``0.5``, a color value of "
+"``0.5`` (half bright by default) will be clipped to ``1.0`` (the brightest) "
+"(*Range* *:* ``0.5``)."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:60
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:155
+#: ../../manual/lighting/lights/light_attenuation.rst:330
+msgid "Examples"
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:62
+msgid ""
+"With a linear correction every color value will get changed, which is "
+"probably not what we want. *Exposure* brightens the darker pixels, so that "
+"the darker parts of the image won't be changed at all (*Range* : ``2.0``, "
+"*Exposure* : ``0.3``)."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:73
+msgid "An overexposed teapot."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:73
+msgid "Range: 2.0."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:79
+msgid "Range: 0.5."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:79
+msgid "Range: 2.0, Exposure: 0.3."
+msgstr ""
+
+#: ../../manual/lighting/exposure.rst:86
+msgid ""
+"Try to find the best *Range* value, so that overexposed parts are barely not"
+" too bright. Now turn up the *Exposure* value until the overall brightness "
+"of the image is satisfying. This is especially useful with area lamps."
+msgstr ""
+
+#: ../../manual/lighting/index.rst:5
+msgid "Lighting"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:4
+msgid "Indirect Lighting"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:6
+msgid ""
+"*Inderect Lighting* adds inderect light bouncing of surrounding objects. "
+"It's modes the light that is reflected from other surfaces to the current "
+"surface. Is more comprehensive, more physically correct, and produces more "
+"realistic images. It is also more computationally expensive. Take a look at "
+"the following examples of a scene lit with Direct Lighting and both "
+"Direct+Indirect Lighting:"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:17
+msgid "Direct Lighting Schematic."
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:24
+msgid "Direct Lighting Render"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:31
+msgid "Direct+Indirect Lighting Schematic"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:38
+msgid "Direct+Indirect Lighting Render"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:41
+msgid ""
+"Images courtesy of `rastermon.com "
+"<http://web.archive.org/web/20050204031559/http://rastermon.com/GI1.htm>`__"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:44
+msgid "Inderect Lighting only works with Approximate gather method."
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:51
+msgid "Inderect Lighting parameters."
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:57
+msgid "The *Inderect Lighting* panel contains two options:"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:60
+msgid "Defines how much surrounding objects contribute to light."
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:63
+msgid "Bounces"
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:63
+msgid "Number of inderect deffuse light bounces."
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:65
+msgid ""
+"The *Gather* panel contains settings for the inderect lighting quality. Note"
+" that these settings also apply to Environment Lighting and Ambient "
+"Occlusion."
+msgstr ""
+
+#: ../../manual/lighting/indirect_lighting.rst:74
+msgid "The Inderect Lighting panel, Approximate method."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:4
+msgid "Introduction"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:6
+msgid ""
+"Lighting is a very important topic in rendering, standing equal to modeling,"
+" materials and textures. The most accurately modeled and textured scene will"
+" yield poor results without a proper lighting scheme, while a simple model "
+"can become very realistic if skillfully lit."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:13
+msgid "Viewing Restrictions"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:15
+msgid "The color of an object and the lighting of your scene is affected by:"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:17
+msgid ""
+"Your ability to see different colors (partial color blindness is common)."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:18
+msgid ""
+"The medium in which you are viewing the image (e.g. an LCD panel versus "
+"printed glossy paper)."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:19
+msgid ""
+"The quality of the image (e.g. a JPEG at ``0.4`` compression versus "
+"``1.0``)."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:20
+msgid ""
+"The environment in which you are viewing the image (e.g. a CRT monitor with "
+"glare versus in a dark room, or in a sunshiny blue room)."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:21
+msgid ""
+"Your brain's perception of the color and intensity relative to those objects"
+" around it and the world background color, which can be changed using color "
+"manipulation techniques  using Blender :doc:`Composite Nodes "
+"</composite_nodes/introduction>`."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:25
+msgid "Global Influences"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:27
+msgid "In Blender, the elements under your control which affect lighting are:"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:29
+msgid "The color of the world :doc:`ambient light </lighting/ambient_light>`."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:30
+msgid ""
+"The use of :doc:`Ambient Occlusion </lighting/ambient_occlusion>` as a way "
+"to cast that ambient light onto the object."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:31
+msgid ""
+"The degree to which the ambient light colors the :doc:`material "
+"</materials>` of the object."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:32
+msgid ""
+"The use of :doc:`Indirect lighting </lighting/indirect_lighting>`, where the"
+" color of one object radiates onto another."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:33
+msgid ""
+"The render engine used (Blender Internal versus :doc:`Yafray "
+"</render/yafray>`)."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:34
+msgid "The :doc:`lamps </lighting/lamps>` in your scene."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:36
+msgid ""
+"The physics of light bouncing around in the real world is simulated by "
+"Ambient Occlusion (a world setting), buffer shadows (which approximate "
+"shadows being cast by objects), ray tracing (which traces the path of "
+"photons from a light source). Also, within Blender you can use "
+":doc:`Indirect lighting </lighting/indirect_lighting>`. Ray tracing, ambient"
+" occlusion, and indirect lighting are computer-intensive processes. Blender "
+"can perform much faster rendering with its internal scan line renderer, "
+"which is a very good scan line renderer indeed. This kind of rendering "
+"engine is much faster since it does not try to simulate the real behavior of"
+" light, assuming many simplifying hypotheses."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:48
+msgid "Lighting Settings"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:50
+msgid ""
+"Only after the above global influences have been considered, do you start "
+"adding light from lamps in your scene. The main things under your control "
+"are the:"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:54
+msgid "Type of light used (*Sun*, *Spot*, *Lamp*, *Hemi*, etc.)."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:55
+msgid "Color of the light."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:56
+msgid "Position of the light and its direction."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:57
+msgid "Settings for the light, including energy and falloff."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:59
+msgid ""
+"Then you are back to how that material's :doc:`shader "
+"</materials/properties/diffuse_shaders>` reacts to the light."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:61
+msgid ""
+"This chapter attempts to address the above, including how lights can work "
+"together in rigs to light your scene. In this chapter we will analyze the "
+"different type of lights in Blender and their behavior; we will discuss "
+"their strong and weak points. We also describe many lighting rigs, including"
+" the ever-popular three-point light method."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:69
+msgid "Lighting in the Workflow"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:71
+msgid ""
+"In this user manual we have placed Lighting before Materials; you should set"
+" up your lighting before assigning materials to your meshes. Since the "
+"material shaders react to light, without proper lighting, the material "
+"shaders will not look right, and you will end up fighting the shader, when "
+"it is really the bad lighting that is causing you grief. All of the example "
+"images in this section do not use any material setting at all on the ball, "
+"cube or background."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:81
+msgid "Overriding Materials to Reset Lighting"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:87
+msgid "Material field in the Render Layers panel"
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:90
+msgid ""
+"If you have started down the road of assigning materials, and are now "
+"fiddling with the lighting, we suggest that you create a default, generic "
+"gray material--no *Vertex Color*, no *Face Texture*, no *Shadeless*, just "
+"plain old middle gray with RGB of (``0.8``, ``0.8``, ``0.8``). Name this "
+"``Gray``."
+msgstr ""
+
+#: ../../manual/lighting/introduction.rst:96
+msgid ""
+"Next go to the *Render* context. In the *Render Layers* panel, select your "
+"new \"\\ ``Gray`` \" material in the *Material* field. This will override "
+"any materials you may have set, and render everything with this color. Using"
+" this material, you can now go about adjusting the lighting. Just empty this"
+" field to get back to your original materials."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:4
+msgid "Lamps"
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:6
+msgid ""
+"Blender comes equipped with five different lamp types, each with its own "
+"unique strengths and limitations. Here are the available lamps:"
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:9
+msgid ""
+":doc:`Point </lighting/lamps/lamp>` is an omni-directional point light "
+"source, similar to a light bulb."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:10
+msgid ""
+":doc:`Spot </lighting/lamps/spot>` is a directional point light source, "
+"similar to ... a spot."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:11
+msgid ""
+":doc:`Area </lighting/lamps/area>` is a source simulating an area which is "
+"producing light, as windows, neons, TV screens."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:12
+msgid ""
+":doc:`Hemi </lighting/lamps/hemi>` simulates a very wide and far away light "
+"source, like the sky."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:13
+msgid ""
+":doc:`Sun </lighting/lamps/sun>` simulates a very far away and punctual "
+"light source, like the sun."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:20
+msgid ""
+"Visual height and shadow markers of two points lamps.  Ray Shadow is enabled"
+" on the left lamp."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:23
+msgid ""
+"You can add new lamps to a scene using the *Add* menu in the top header, or "
+"with (:menuselection:`[Shift][A] --> Add --> Lamp`)."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:26
+msgid ""
+"Once added, a lamp's position is indicated in the 3D View by a solid dot in "
+"a circle, but most types also feature dashed wire-frames that help describe "
+"their orientation and properties. While each type is represented "
+"differently, there are some visual indicators common to all of them:"
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:32 ../../manual/lighting/lamps/area.rst:42
+#: ../../manual/lighting/lamps/lamp.rst:41
+#: ../../manual/lighting/lamps/spot.rst:47 ../../manual/lighting/shadows.rst:4
+msgid "Shadows"
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:32
+msgid ""
+"If shadows are enabled, an additional dashed circle is drawn around the "
+"solid circle. This makes it easier to quickly determine if a lamp has "
+"shadows enabled."
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:38
+msgid "Vertical Height Marker"
+msgstr ""
+
+#: ../../manual/lighting/lamps.rst:35
+msgid ""
+"This is a dim gray line, which helps locate the lamp's position relative to "
+"the global X-Y plane."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:5
+msgid "Area Lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:7
+msgid ""
+"The *Area* lamp simulates light originating from a surface (or surface-like)"
+" emitter. For example, a TV screen, your supermarket's neon lamps, a window,"
+" or a cloudy sky are just a few types of area lamp. The area lamp produces "
+"shadows with soft borders by sampling a lamp along a grid the size of which "
+"is defined by the user. This is in direct contrast to point-like artificial "
+"lights which produce sharp borders."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:18
+msgid "Commons Options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:22
+#: ../../manual/lighting/lamps/spot.rst:23
+#: ../../manual/lighting/lamps/sun.rst:26
+msgid "Lamp options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:29
+#: ../../manual/lighting/lamps/lamp.rst:31
+#: ../../manual/lighting/lamps/spot.rst:32
+msgid "Distance, Energy and Color"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:25
+#: ../../manual/lighting/lamps/hemi.rst:39
+#: ../../manual/lighting/lamps/lamp.rst:31
+#: ../../manual/lighting/lamps/spot.rst:33
+#: ../../manual/lighting/lamps/sun.rst:29
+msgid ""
+"These settings are common to most types of lamps, and are described in "
+":doc:`Light Properties </lighting/lights/light_properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:28
+msgid ""
+"Note that the *Distance* setting is much more sensitive and important for "
+"*Area* lamps than for others; usually any objects within the range of "
+"*Distance* will be blown out and overexposed. For best results, set the "
+"*Distance* to just below the distance to the object that you want to "
+"illuminate."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:34
+msgid "Gamma"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:32
+msgid ""
+"Amount to gamma correct the brightness of illumination. Higher values give "
+"more contrast and shorter falloff."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:34
+msgid ""
+"The *Area* lamp doesn't have light falloff settings. It uses an \"inverse "
+"quadratic\" attenuation law. The only way to control its falloff is to use "
+"the *Distance* and/or *Gamma* settings."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:39
+msgid "This Layer Only, Negative, Specular and Diffuse"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:37
+#: ../../manual/lighting/lamps/hemi.rst:42
+#: ../../manual/lighting/lamps/lamp.rst:34
+#: ../../manual/lighting/lamps/spot.rst:35
+#: ../../manual/lighting/lamps/sun.rst:31
+msgid ""
+"These settings control what the lamp affects, as described in :doc:`What "
+"Light Affects </lighting/lights/what_light_affects>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:44
+msgid ""
+"Area light ray-traced shadows are described here: :doc:`Raytraced Shadows "
+"</lighting/lamps/area/raytraced_shadows>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:46
+msgid ""
+"When an *Area* light source is selected, the *Shadow* panel has the "
+"following default layout:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:0
+msgid "The *Shadow* panel when *Area* light source is selected."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:59
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:12
+msgid "Adaptive QMC settings"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:60
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:37
+msgid "Constant Jittered settings"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:64
+msgid "Area Shape"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:66
+msgid "The shape of the area light can be set to *Square* or *Rectangle*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:73
+msgid "Square options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:80
+msgid "Rectangle options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:83
+msgid "Square / Rectangular"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:84
+msgid "Emit light from either a square or a rectangular area"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:87
+msgid "Size / Size X / Size Y"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:86
+msgid "Dimensions for the *Square* or *Rectangle*"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:89
+msgid "Shape Tips"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area.rst:91
+msgid ""
+"Choosing the appropriate shape for your *Area* light will enhance the "
+"believability of your scene. For example, you may have an indoor scene and "
+"would like to simulate light entering through a window. You could place a "
+"*Rectangular* area lamp in a window (vertical) or from neons (horizontal) "
+"with proper ratios for *Size X* and *Size Y*. For the simulation of the "
+"light emitted by a TV screen a vertical *Square* area lamp would be better "
+"in most cases."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:6
+msgid "Area Raytraced Shadows"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:15
+msgid ""
+"The *Area* light source can only cast ray-traced shadows. The ray-traced "
+"shadows settings of this lamp are mostly shared with other lamps, as "
+"described in :doc:`Raytraced Properties "
+"</lighting/shadows/raytraced_properties>`. However, there are some specifics"
+" with this lamp, which are detailed below:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:19
+msgid "Shadow Samples"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:22
+msgid ""
+"This have the same role as with other lamps, but when using a *Rectangle* "
+"*Area* lamp, you have two samples settings: *Samples X* and *Samples Y*, for"
+" the two axes of the area plane. Note also that when using the *Constant "
+"Jittered* sample generator method, this is more or less equivalent to the "
+"number of virtual lamps in the area. With QMC sample generator methods, it "
+"behaves similarly to with *Lamp* or *Spot* lamps."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:27
+msgid "Sample Generator Types"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:31
+msgid "Adaptive QMC;\\ Constant QMC"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:30
+msgid ""
+"These common setting are described in :doc:`Shadow Properties "
+"</lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:41
+msgid ""
+"The *Area* lamp has a third sample generator method, *Constant Jittered*, "
+"which is more like simulating an array of lights. It has the same options as"
+" the old one: *Umbra*, *Dither* and *Jitter*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:43
+msgid ""
+"The following three parameters are only available when using the *Constant "
+"Jittered* sample generator method, and are intended to artificially boost "
+"the \"soft\" shadow effect, with possible loss in quality:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:46
+msgid "Umbra"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:46
+msgid ""
+"Emphasizes the intensity of shadows in the area fully within the shadow "
+"rays. The light transition between fully shadowed areas and fully lit areas "
+"changes more quickly (i.e. a sharp shadow gradient). You need *Samples* "
+"values equal to or greater than ``2`` to see any influence of this button."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:54
+msgid "Dither"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:49
+msgid ""
+"Applies a sampling over the borders of the shadows, similar to the way anti-"
+"aliasing is applied by the *OSA* button on the borders of an object. It "
+"artificially softens the borders of shadows; when *Samples* is set very low,"
+" you can expect poor results, so *Dither* is better used with medium "
+"*Samples* values. It is not useful at all with high *Samples* values, as the"
+" borders will already appear soft."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:58
+msgid "Jitter"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:57
+msgid ""
+"Adds noise to break up the edges of solid shadow samples, offsetting them "
+"from each other in a pseudo-random way. Once again, this option is not very "
+"useful when you use high *Samples* values where the drawback is that noise "
+"generates quite visible graininess."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:67
+msgid "Principles behind the Area light"
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:70
+msgid ""
+"The (*Principles behind the* *Area* *light*) picture helps to understand how"
+" the soft shadows are simulated."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:73
+msgid ""
+"``(a)`` is the *Area* light as defined in Blender. If its shape is *Square*,"
+" then the softness of the shadow is defined by the number of light *Samples*"
+" in each direction of the shape. For example, ``(b)`` illustrates the "
+"equivalent case of an *Area* light (*Square* shape), with *Samples* set at "
+"``3`` on the *Shadow and Spot* panel."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:75
+msgid ""
+"The *Area* lamp is then considered as a grid with a resolution of three in "
+"each direction, and with a light \"dupliverted\" at each node for a total of"
+" nine lights."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:78
+msgid ""
+"In case ``(a)``, the energy (``E``) is ``E/1``, and in case ``(b)``, the "
+"energy of each individual pseudo-light is equal to ``E/ (Nbr of lights)``. "
+"Each pseudo-light produces a faint shadow (proportional to its energy), and "
+"the overlay of the shadows produces the soft shadow (it is darker where the "
+"individual shadows overlap, and lighter everywhere else)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:88
+msgid ""
+"You will note that changing the *Size* parameter of your area lamp doesn't "
+"affect the lighting intensity of your scene. On the other hand, rescaling "
+"the lamp using the :kbd:`S` in the 3D View could dramatically increase or "
+"decrease the lighting intensity of the scene. This behavior has been coded "
+"this way so that you can fine tune all your light settings and then decide "
+"to scale up (or down) the whole scene without suffering from a drastic "
+"change in the lighting intensity. If you only want to change the dimensions "
+"of your *Area* lamp, without messing with its lighting intensity, you are "
+"strongly encouraged to use the *Size* button(s) instead."
+msgstr ""
+
+#: ../../manual/lighting/lamps/area/raytraced_shadows.rst:98
+msgid ""
+"If your computer isn't very fast, when using the *Constant Jittered* sample "
+"generator method, you could find it useful to set a low *Samples* value "
+"(like ``2``) and activate *Umbra*, *Dither*, and/or *Jitter* in order to "
+"simulate slightly softer shadows. However, these results will never be "
+"better than the same lighting with high *Samples* values."
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:4
+msgid "Hemi Lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:10
+msgid "Hemi light conceptual scheme"
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:13
+msgid ""
+"The *Hemi* lamp provides light from the direction of a 180- hemisphere,"
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:15
+msgid ""
+"designed to simulate the light coming from a heavily clouded or otherwise "
+"uniform sky. In other words, it is a light which is shed, uniformly, by a "
+"glowing dome surrounding the scene."
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:19
+msgid ""
+"Similar to the *Sun* lamp, the *Hemi* 's location is unimportant, while its "
+"orientation is key."
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:22
+msgid ""
+"The *Hemi* lamp is represented with four arcs, visualizing the orientation "
+"of the hemispherical dome, and a dashed line representing the direction in "
+"which the maximum energy is radiated, the inside of the hemisphere."
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:35
+msgid "Hemi lamp's panel"
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:39
+#: ../../manual/lighting/lamps/sun.rst:28
+msgid "Energy and Color"
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:42
+msgid "Layer, Negative,\\ Specular, and Diffuse"
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:44
+msgid ""
+"The *Hemi* lamp has no light falloff settings: it always uses a constant "
+"attenuation (i.e. no attenuation)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/hemi.rst:47
+msgid ""
+"Since this lamp is the only lamp which cannot cast any shadow, the *Shadow* "
+"panel is absent."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:7
+msgid "Point Lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:13
+msgid "Point lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:16
+msgid ""
+"The *Point* lamp is an omni-directional point of light, that is, a point "
+"radiating the same amount of light in all directions. It's visualized by a "
+"plain, circled dot. Being a point light source, the direction of the light "
+"hitting an object's surface is determined by the line joining the lamp and "
+"the point on the surface of the object itself."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:22
+msgid ""
+"Light intensity/energy decays based on (among other variables) distance from"
+" the *Point* lamp to the object. In other words, surfaces that are further "
+"away are rendered darker."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:28
+msgid "Lamp Options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:34
+msgid "Negative, This Layer Only, Specular, and  Diffuse"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:38
+msgid "Falloff and Sphere"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:37
+msgid ""
+"These settings control how the light of the *Lamp* decays with distance. See"
+" :doc:`Light Attenuation </lighting/lights/light_attenuation>` for details."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:47
+msgid "Without ray shadows"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:54
+msgid "Point lamp with ray shadows and Adaptive QMC sample generator enabled"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:57
+msgid ""
+"The *Point* light source can only cast ray-traced shadows. It shares with "
+"other lamp types the common shadow options described in :doc:`Shadow "
+"Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp.rst:59
+msgid ""
+"The ray-traced shadows settings of this lamp are shared with other lamps, "
+"and are described :doc:`Raytraced Properties "
+"</lighting/shadows/raytraced_properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp/raytraced_shadows.rst:7
+#: ../../manual/lighting/lamps/spot/raytraced_shadows.rst:7
+#: ../../manual/lighting/lamps/sun/raytraced_shadows.rst:7
+msgid "Raytraced Shadows"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp/raytraced_shadows.rst:13
+#: ../../manual/lighting/lamps/spot/raytraced_shadows.rst:13
+#: ../../manual/lighting/lamps/sun.rst:57
+#: ../../manual/lighting/lamps/sun/raytraced_shadows.rst:13
+msgid "Shadow panel"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp/raytraced_shadows.rst:16
+msgid ""
+"The *Point* light source can only cast raytraced shadows. It shares with "
+"other lamp types the same common shadowing options, described in "
+":doc:`Shadows Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lamp/raytraced_shadows.rst:18
+#: ../../manual/lighting/lamps/spot/raytraced_shadows.rst:20
+#: ../../manual/lighting/lamps/sun/raytraced_shadows.rst:18
+msgid ""
+"The raytraced shadows settings of this lamp are shared with other ones, and "
+"are described in :doc:`Raytraced Properties "
+"</lighting/shadows/raytraced_properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:4
+msgid "Lighting Rigs"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:6
+msgid ""
+"A rig is a standard setup and combination of objects; there can be lighting "
+"rigs, or armature rigs, etc. A rig provides a basic setup and allows you to "
+"start from a known point and go from there. Different rigs are used for "
+"different purposes and emulate different conditions; the rig you start with "
+"depends on what you want to convey in your scene. Lighting can be very "
+"confusing, and the defaults do not give good results. Further, very small "
+"changes can have a dramatic effect on the mood and colors. At major studios,"
+" lighting is an entire step and specialty. Well, let's get out of the "
+"darkness of confusion and let me en\\ *light* en you."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:16
+msgid ""
+"In all the lighting rigs, the default camera is always positioned nearly "
+"``15`` degrees off dead-on, about **25 BU** (Blender Units) back and **9 "
+"BU** to the side of the subject, at eye level, and uses a long lens "
+"(**80mm**). Up close, a **35mm** lens will distort the image. A long lens "
+"takes in more of the scene. A dead-on camera angle is too dramatic and "
+"frames too wide a scene to take in. So now you know; next time you go to a "
+"play, sit off-center and you won't miss the action happening on the "
+"sidelines and will have a greater appreciation for the depth of the set. "
+"Anyway, enough about camera angles; this is about lighting."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:28
+msgid "Environment or Ambient Only"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:34
+msgid "Environment (Ambient) lighting only."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:37
+msgid ""
+"In the *World* context, there is a panel *Environment Lighting*, where you "
+"enable environment or ambient lighting of your scene. Ambient light is the "
+"scattered light that comes from sunlight being reflected off every surface "
+"it hits, hitting your object, and traveling to camera."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:47
+msgid "Ambient occlusion."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:50
+msgid ""
+"Ambient light illuminates, in a perfectly balanced, shadeless way, without "
+"casting shadows. You can vary the intensity of the ambient light across your"
+" scene via :doc:`ambient occlusion </lighting/ambient_occlusion>`. The "
+"ambient color is a sunny white."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:56
+msgid "Single Rig"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:62
+msgid "Standard Spot light rig."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:65
+msgid ""
+"The sole, or key, spot light rig provides a dramatic, showy, yet effective "
+"illumination of one object or a few objects close together. It is a single "
+"*Spot* light, usually with a hard edge. Halos are enabled in this render to "
+"remind you of a smoky nightclub scene. It is placed above and directly in "
+"front of the subject; in this case **10 BU** in front and **10 BU** high, "
+"just like a stage, it shines down at about a ``40`` degrees angle. We use "
+"quadratic attenuation."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:73
+msgid ""
+"You can make the spot wider by increasing *Size Spot Shape* and softening "
+"the edge by increasing *Blend Spot Shape*, and parent it to the main actor, "
+"so that the spot follows him as he moves around. Objects close to the main "
+"actor will naturally be more lit and your viewer will pay attention to them."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:78
+msgid ""
+"Moving this spot directly overhead and pointing down gives the interrogation"
+" effect. At the opposite end of the show-off emotional spectrum is one soft "
+"candlelight (*Point* lamp, short falloff *Distance*, yellow light) placed "
+"really up close to the subject, dramatizing the fearful \"lost in the "
+"darkness\" effect."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:83
+msgid ""
+"Somewhere in the macabre spectrum is a hard spot on the floor shining "
+"upward. For fun, grab a flashlight, head into the bathroom and close the "
+"door. Turn out the light and hold the flashlight under your chin, pointing "
+"up. Look in the mirror and turn it on. Ghoulies! Don't blame me for "
+"nightmares, and I hope you get the point: lighting, **even with a single "
+"light, varying the intensity, location and direction, changes everything** "
+"in a scene."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:90
+msgid ""
+"Use this rig, with *Environment Lighting* light (and props receiving and "
+"being lit by ambient light in their material settings) for scenes that "
+"feature one main actor or a product being spotlighted. Do not use this rig "
+"for big open spaces or to show all aspects of a model."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:97
+msgid "Two-Point Rig"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:103
+msgid "Standard two-point light rig."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:106
+msgid ""
+"The two-point lighting rig provides a balanced illumination of an object. "
+"Shown to the right are the views of the standard two-point lighting rig. It "
+"is called the two-point because there are two points of light. The standard "
+"two-point lighting rig provides a balanced illumination of untextured "
+"objects hanging out there in 3D space. This rig is used in real studios for "
+"lighting a product, especially a glossy one."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:112
+msgid ""
+"Both lights are almost the same but do different things. Both emulate very "
+"wide, soft light by being *Hemi*. In real life, these lights bounce light "
+"off the inside of a silver umbrella."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:116
+msgid ""
+"Notice how we use low *Energy* to bring out the dimensionality of the "
+"sphere; I can't stress that enough. Hard, bright lights actually flatten it "
+"and make you squint. Soft lights allow your eye to focus. We disable "
+"specular for right *Hemi*, so we don't get that shiny forehead or nose."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:121
+msgid ""
+"The lamp on the left however, lets it be known that it is there by enabling "
+"specular; specular flare is that bright spot that is off center above "
+"midline on the sphere."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:124
+msgid ""
+"Use this rig to give even illumination of a scene, where there is no main "
+"focus. The *Hemi* 's will light up background objects and props, so "
+"*Environment Lighting* is not that important. At the opposite end of the "
+"lighting spectrum, two narrow *Spot* lights at higher power with a hard edge"
+" gives a \"This is the Police, come out with your hands up\" kind of look, "
+"as if the subject is caught in the crossfire."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:133
+msgid "Three-Point Rigs"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:135
+msgid ""
+"The standard three-point lighting rig is the most common illumination of "
+"objects and scenes bar none. If you want to show off your model, use this "
+"rig. As you can see, the untextured unmaterialized sphere seems to come out "
+"at you. There are multiple thesis on this rig, and you will use one of two:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:140
+msgid ""
+"Studio - used in a real studio to film in front of a green screen or "
+"backdrop. Use this rig when you are rendering your CG objects to alpha into "
+"the scene so that the lighting on the actors *and* your CG objects is the "
+"same."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:141
+msgid ""
+"Standard - used in real life to light actors on a set, and gives some "
+"backlighting to highlight the sides of actors, making them stand out more "
+"and giving them depth."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:145
+msgid "Studio rig"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:151
+msgid "Studio three-point light rig."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:154
+msgid ""
+"Shown to the right are the \"Studio\" top, front, and side views of the "
+"standard three-point lighting rig. It changes the dynamics of the scene, by "
+"making a brighter \"key\" light give some highlights to the object, while "
+"two side \"fill\" lights soften the shadows created by the key light."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:159
+msgid ""
+"In the studio, use this rig to film a talking head (actor) in front of a "
+"green screen, or with multiple people, keeping the key light on the main "
+"actor. This rig is also used to light products from all angles, and the side"
+" fill lights light up the props."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:164
+msgid ""
+"The key light is the *Area* light placed slightly above and to the left of "
+"the camera. It allows the specular to come out. It is about **30 BU** back "
+"from the subject, and travels with the camera. A little specular shine lets "
+"you know there's a light there, and that you're not looking at a ghost. In "
+"real life, it is a spot with baffles, or blinders, that limit the area of "
+"the light."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:170
+msgid ""
+"The two sidelights are reduced to only fill; each of them are *Hemi* lights "
+"placed **20 BU** to the side and **5 BU** in front of the subject, at ground"
+" level. They don't cause a spotshine on the surface by disabling specular, "
+"and at ground level, light under the chin or any horizontal surfaces, "
+"countering the shadows caused by the key light."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:176
+msgid ""
+"Use this rig to give balanced soft lighting that also highlights your main "
+"actor or object. It combines the best of both the single rig and the two-"
+"point rig, providing balanced illumination and frontal highlights. For a "
+"wide scene, you may have to pull the sidelights back to be more positioned "
+"like the two-point rig."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:183
+msgid "Standard Rig"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:189
+msgid "Standard three-point light rig."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:192
+msgid ""
+"Without a curtain in back of your main subject, you have depth to work with."
+" The left fill light has been moved behind the subject (so it is now called "
+"a backlight) and is just off-camera, while the right side fill light remains"
+" the same. The keylight gives you specular reflection so you can play with "
+"specularity and hardness in your object's material settings. The key light "
+"gives that \"in-the-spotlight\" feel, highlighting the subject, while the "
+"backlight gives a crisp edge to the subject against the background. This "
+"helps them stand out."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:200
+msgid ""
+"In this rig, the key light is a fairly bright spot light. Use a slighter "
+"tinge of yellow because the light is so bright; it is the only light for "
+"that side. The other sidelight has been moved in back and raised to eye "
+"(camera) level. You need to cut the energy of the backlight in half, or when"
+" it is added to the remaining sidelight, it will light up the side too much "
+"and call too much attention to itself. You can vary the angle and height of "
+"the backlight to mimic a sun lighting up the objects."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:209
+msgid ""
+"Use this rig in normal 3D animations to light the main actor. Use this rig "
+"especially if you have transparent objects (like glass) so that there is "
+"plenty of light to shine through them to the camera. The tricky part here is"
+" balancing the intensities of the lights so that no one light competes with "
+"or overpowers the others, while making sure all three work together as a "
+"team."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:217
+msgid "Four-point Rig"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:223
+msgid "Four-point light rig."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:226
+msgid ""
+"The four-point lighting rig provides a better simulation of outside "
+"lighting, by adding a *Sun* lamp ``30`` Blender Units above, ``10`` to the "
+"side, and **15 BU** behind the subject. This sunlight provides backlighting "
+"and fills the top of the subject; even producing an intentional glare on the"
+" top of their head, telling you there is a sun up there. Notice it is "
+"colored yellow, which balances out the blue sidelights."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:234
+msgid ""
+"Changing the key light to a *Spot*, select *Inverse Square*, disable "
+"*Specular* and pure white light combines with and softens the top sun flare "
+"while illuminating the face, resulting in a bright sunshine effect. Two "
+"lights above means sharper shadows as well, so you might want to adjust the "
+"side fill lights. In this picture, they are still *Hemi*, disable "
+"*Specular*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:241
+msgid ""
+"Use this rig when the camera will be filming from behind the characters, "
+"looking over their shoulder or whatnot, because the sun provides the "
+"backlight there. Also use this rig when you have transparent objects, so "
+"there is light to come through the objects to the camera."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:246
+msgid ""
+"Another spot for the fill light is shining up onto the main actor's face, "
+"illuminating the underside of his chin and neck. This gets rid of a "
+"sometimes ugly shadow under the chin, which if not corrected, can make the "
+"actor look fat or like they have a double chin; otherwise distracting. It "
+"evens out the lighting of the face."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:254
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:256
+msgid ""
+"If you run into a problem with your render, where there are really bright "
+"areas, or really dark ones, or strange shadows, or lines on your objects, "
+"here is what I suggest you do:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:261
+msgid ""
+"First, try deactivating all materials (create a default, gray one, and enter"
+" its name in the *Mat* field, *Layer* panel, *Render Layers* context - to "
+"get back all your normal materials, just erase this text field!). See if you"
+" get those problems with just grayness objects. If you don't have the "
+"problem anymore, that should tell you that you've got a materials-"
+"interacting-with-light problem. Check the material settings, especially "
+"ambient, reflection and all those little buttons and sliders in the "
+"*Material* context . You can set some lights to affect only certain "
+"materials, so if there's an issue with only a few objects being really "
+"bright, start with those."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:270
+msgid ""
+"Then start \"killing\" lights (e.g. moving them to an unused layer); regress"
+" all the way back to one light, make sure it's smooth, then add them in one "
+"by one. As they add together, reduce power in the tested ones so they merge "
+"cleanly, or consider not adding it at all, or, especially, reduce the energy"
+" of the lamp you just introduced."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:274
+msgid ""
+"You can also set lights to only light objects on a layer, so again, if some "
+"of the gray spheres have weirdness, check for that as well. Again, you may "
+"have done some of this accidentally, so sometimes deleting the light and re-"
+"adding it with defaults helps you reset to a known-good situation."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:277
+msgid ""
+"Negative lights can be very tricky, and make your model blotchy, so pay "
+"special attention to your use of those special lights. Shadow-only lights "
+"can throw off the look of the scene as well. Overly textured lights can make"
+" your scene have random weird colors. Don't go too far off a slight tinge of"
+" blue or yellow or shades of white, or your material may show blue in the "
+"*Material* context but render green, and you will be very confused."
+msgstr ""
+
+#: ../../manual/lighting/lamps/lighting_rigs.rst:283
+msgid ""
+"Look at your environment settings *World* context: *Horizon*, *Zenith*, and "
+"*Environment Lighting*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:7
+msgid "Spot Lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:9
+msgid ""
+"A *Spot* lamp emits a cone-shaped beam of light from the tip of the cone, in"
+" a given direction."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:12
+msgid ""
+"The *Spot* light is the most complex of the light objects and indeed, for a "
+"long time, among the most used thanks to the fact that it was the only one "
+"able to cast shadows. Nowadays, with a ray tracer integrated into Blender's "
+"internal render engine, all lamps can cast shadows (except *Hemi*). Even so,"
+" *Spot* lamps' shadow buffers are much faster to render than ray-traced "
+"shadows, especially when blurred/softened, and spot lamps also provide other"
+" functionality such as \"volumetric\" halos."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:29
+msgid "Common Lamp options of a Spot"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:34
+msgid "This Layer Only, Negative, Diffuse and Specular"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:44
+msgid "Light Falloff and Sphere"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:37
+msgid ""
+"These settings control how the light of the *Spot* decays with distance. See"
+" :doc:`Light Attenuation </lighting/lights/light_attenuation>` for details."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:43
+msgid ""
+"Changing the Spot options also changes the appearance of the spotlight as "
+"displayed in the 3D View"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:53
+msgid "Shadow panel set to Ray Shadow"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:56
+msgid ""
+"Spotlights can use either ray-traced shadows or buffered shadows. Either of "
+"the two can provide various extra options. Ray-traced shadows are generally "
+"more accurate, with extra capabilities such as transparent shadows, although"
+" they are quite slower to render."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:62
+msgid "No Shadow"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:62
+msgid ""
+"Choose this to turn shadows off for this spot lamp. This can be useful to "
+"add some discreet directed light to a scene."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:70
+msgid "Buffer Shadow"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:65
+msgid ""
+"*Buffered Shadows* are also known as depth map shadows. Shadows are created "
+"by calculating differences in the distance from the light to scene objects. "
+"See :doc:`Buffered Shadows </lighting/lamps/spot/buffered_shadows>` for full"
+" details on using this feature. Buffered shadows are more complex to set up "
+"and involve more faking, but the speed of rendering is a definite advantage."
+" Nevertheless, it shares with other lamp types common shadow options "
+"described in :doc:`Shadows Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:75
+#: ../../manual/lighting/shadows/raytraced_properties.rst:20
+msgid "Ray Shadow"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:73
+#: ../../manual/lighting/lamps/sun.rst:62
+msgid ""
+"The ray-traced shadows settings of this lamp are shared with other lamps, "
+"and are described in :doc:`Raytraced Properties "
+"</lighting/shadows/raytraced_properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:78
+msgid "Spot Shape"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:80
+msgid "*Size*"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:82
+msgid ""
+"The size of the outer cone of a *Spot*, which largely controls the circular "
+"area a *Spot* light covers. This slider in fact controls the angle at the "
+"top of the lighting cone, and can be between ``1.0- `` and ``180.0``."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:93
+msgid "Changing the spot *Size* option"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:116
+msgid "Blend"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:98
+msgid ""
+"The *Blend* slider controls the inner cone of the *Spot*. The *Blend* value "
+"can be between ``0.0`` and ``1.0``. The value is proportional and represents"
+" that amount of space that the inner cone should occupy inside the outer "
+"cone (*Size*)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:100
+msgid ""
+"The inner cone boundary line indicates the point at which light from the "
+"*Spot* will start to blur/soften; before this point its light will mostly be"
+" full strength. The larger the value of *Blend* the more blurred/soft the "
+"edges of the spotlight will be, and the smaller the inner cone's circular "
+"area will be (as it starts to blur/soften earlier)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:102
+msgid ""
+"To make the *Spot* have a sharper falloff rate and therefore less "
+"blurred/soft edges, decrease the value of *Blend*. Setting *Blend* to "
+"``0.0`` results in very sharp spotlight edges, without any transition "
+"between light and shadow."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:104
+msgid ""
+"The falloff rate of the *Spot* lamp light is a ratio between the *Blend* and"
+" *Size* values; the larger the circular gap between the two, the more "
+"gradual the light fades between *Blend* and *Size*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:106
+msgid ""
+"*Blend* and *Size* only control the *Spot* light cone's aperture and "
+"softness (\"radial\" falloff); they do not control the shadow's softness as "
+"shown below."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:113
+msgid ""
+"Render showing the soft edge spotlighted area and the sharp/hard object "
+"shadow"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:116
+msgid ""
+"Notice in the picture above that the object's shadow is sharp as a result of"
+" the ray tracing, whereas the spotlight edges are soft. If you want other "
+"items to cast soft shadows within the *Spot* area, you will need to alter "
+"other shadow settings."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:118
+msgid "Square"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:119
+msgid ""
+"The *Square* button makes a *Spot* light cast a square light area, rather "
+"than the default circular one."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:120
+msgid "Show Cone"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:121
+msgid ""
+"Draw a transparent cone in 3D view to visualize which objects are contained "
+"in it."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:126
+#: ../../manual/lighting/lamps/spot/halos.rst:19
+msgid "Halo"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot.rst:123
+msgid ""
+"Adds a volumetric effects to the spot lamp.  See :doc:`Spot Halos "
+"</lighting/lamps/spot/halos>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:7
+msgid "Spot Buffered Shadows"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:13
+#: ../../manual/lighting/shadows.rst:111
+msgid "Buffer Shadow enabled for a Spot lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:16
+msgid ""
+"Spotlights can use either :doc:`Raytraced Shadows "
+"</lighting/lamps/spot#raytraced_shadows>` or buffered shadows. Either of the"
+" two can provide various extra options."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:18
+msgid ""
+"Raytraced shadows are generally more accurate, with extra capabilities such "
+"as transparent shadows, although they are quite slower to render."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:21
+msgid ""
+"Buffered shadows are more complex to set up and involve more faking, but the"
+" speed of rendering is a definite advantage. Nevertheless, it shares with "
+"other lamp types common shadows options described in :doc:`Shadows "
+"Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:25
+msgid "Shadow Buffer Types"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:27
+msgid ""
+"When the *Buffer Shadow* button is activated, the currently selected *Spot* "
+"light generates shadows, using a \"shadow buffer\" rather than using "
+"raytracing, and various extra options and buttons appear in the *Shadow* "
+"panel."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:32
+msgid "Buffer Type"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:33
+msgid ""
+"There more than one way to generate buffered shadows. The shadow buffer "
+"generation type controls which generator to use."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:38
+msgid "There are four shadow generation types, those being:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:35
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:60
+msgid "Classical"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:36
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:67
+msgid "Classic-Halfway"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:37
+msgid "Irregular"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:38
+msgid "Deep"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:40
+msgid ""
+"For more information on the different shadow generation methods see these "
+"links:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:42
+msgid ""
+"`Development Release Logs 2.43: Irregular Shadow Buffer "
+"<http://www.blender.org/development/release-logs/blender-243/irregular-"
+"shadow-buffer/>`__"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:43
+msgid ""
+"`Blender Nation: Blender Gets Irregular Shadow Buffers "
+"<http://www.blendernation.com/2006/10/15/blender-gets-irregular-shadow-"
+"buffers/>`__"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:44
+msgid ""
+"`Development Release Logs 2.43: Shadow Buffer Halfway Average "
+"<http://www.blender.org/development/release-logs/blender-243/shadow-buffer-"
+"halfway-average/>`__"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:48
+msgid "\"Classical\" and \"Classic-Halfway\""
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:54
+msgid "Buffer Shadowset to Classic-Halfway"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:58
+msgid ""
+"A shadow generation which used to be the Blender default and unique method "
+"for generation of buffered shadows. It used an older way of generating "
+"buffered shadows, but it could have some problems with accuracy of the "
+"generated shadows and can be very sensitive to the resolution of the shadow "
+"buffer (*Shadow Buffer* →\\ *Size*), different *Bias* values, and all the "
+"self-shadowing issues that brings up."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:60
+msgid ""
+"The *Classical* method of generating shadows is obsolete and is really only "
+"still present to allow for backward compatibility with older versions of "
+"Blender.  In most other cases you will want to use *Classic-Halfway* "
+"instead."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:63
+msgid ""
+"This shadow buffer type is an improved shadow buffering method and is the "
+"default option selected in Blender. It works by taking an averaged reading "
+"of the first and second nearest Z depth values allowing the *Bias* value to "
+"be lowered and yet not suffer as much from self-shadowing issues."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:65
+msgid ""
+"Not having to increase *Bias* values helps with shadow accuracy, because "
+"large *Bias* values can mean small faces can lose their shadows, as well as "
+"preventing shadows being overly offset from the larger *Bias* value."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:67
+msgid ""
+"*Classic-Halfway* doesn't work very well when faces overlap, and biasing "
+"problems can happen."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:69
+msgid "Here are now the options specific to these generation methods:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:82
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:127
+msgid "Size"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:72
+msgid ""
+"The *Size* numeric field can have a value from ``512`` to ``10240``. *Size* "
+"represents the resolution used to create a shadow map. This shadow map is "
+"then used to determine where shadows lay within a scene."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:74
+msgid ""
+"As an example, if you have a *Size* with a value of ``1024``, you are "
+"indicating that the shadow data will be written to a buffer which will have "
+"a square resolution of **1024×1024** pixels/samples from the selected "
+"spotlight."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:76
+msgid ""
+"The higher the value of *Size*, the higher resolution and accuracy of the "
+"resultant shadows, assuming all other properties of the light and scene are "
+"the same, although more memory and processing time would be used. The "
+"reverse is also true - if the *Size* value is lowered, the resultant shadows"
+" can be of lower quality, but would use less memory and take less processing"
+" time to calculate."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:78
+msgid ""
+"As well as the *Size* value affecting the quality of generated shadows, "
+"another property of *Spot* lamps that affects the quality of their buffered "
+"shadows is the angle of the spotlights lighted area (given in the *Spot "
+"Shape* panel's *Size* field)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:80
+msgid ""
+"As the spot shape *Size* value is increased, the quality of the cast shadows"
+" degrades. This happens because when the *Spot* lighted area is made larger "
+"(by increasing spot shape *Size*), the shadow buffer area has to be "
+"stretched and scaled to fit the size of the new lighted area."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:82
+msgid ""
+"The *Size* resolution is not altered to compensate for the change in size of"
+" the spotlight, so the quality of the shadows degrades. If you want to keep "
+"the generated shadows the same quality, as you increase the spot shape "
+"*Size* value, you also need to increase the buffer *Size* value."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:84
+msgid "The above basically boils down to"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:86
+msgid ""
+"If you have a spotlight that is large you will need to have a larger buffer "
+"*Size* to keep the shadows good quality. The reverse is true also - the "
+"quality of the generated shadows will usually improve (up to a point) as the"
+" *Spot* lamp covers a smaller area."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:111
+msgid "Filter Type"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:90
+msgid ""
+"The *Box*, *Tent*, and *Gauss* filter types control what filtering algorithm"
+" to use to anti-alias the buffered shadows."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:92
+msgid ""
+"They are closely related to the *Samples* numeric field, as when this "
+"setting is set to ``1``, shadow filtering is disabled, so none of these "
+"buttons will have any effect what soever."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:101
+msgid "Box"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:95
+msgid ""
+"The buffered shadows will be anti-aliased using the \"box\" filtering "
+"method. This is the original filter used in Blender. It is relatively low "
+"quality and is used for low resolution renders, as it produces very sharp "
+"anti-aliasing. When this filter is used, it only takes into account "
+"oversampling data which falls within a single pixel, and doesn't take into "
+"account surrounding pixel samples. It is often useful for images which have "
+"sharply angled elements and horizontal/vertical lines."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:105
+msgid "Tent"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:104
+msgid ""
+"The buffered shadows will be anti-aliased using the \"tent\" filtering "
+"method. It is a simple filter that gives sharp results, an excellent general"
+" purpose filtering method. This filter also takes into account the sample "
+"values of neighboring pixels when calculating its final filtering value."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:109
+msgid "Gauss"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:108
+msgid ""
+"The buffered shadows will be anti-aliased using the \"Gaussian\" filtering "
+"method. It produces a very soft/blurry anti-aliasing. As result, this filter"
+" is excellent with high resolution renders."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:111
+msgid ""
+"The :doc:`Anti-Aliasing page </render/options/antialiasing>` in the Render "
+"chapter will give more information on the various filtering/distribution "
+"methods and their uses."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:114
+msgid ""
+"The *Samples* numeric field can have a value between ``1`` and ``16``. It "
+"controls the number of samples taken per pixel when calculating shadow maps."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:116
+msgid ""
+"The higher this value, the more filtered, smoothed and anti-aliased the "
+"shadows cast by the current lamp will be, but the longer they will take to "
+"calculate and the more memory they will use. The anti-aliasing method used "
+"is determined by having one of the *Box*, *Tent* or *Gauss* buttons "
+"activated (see above)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:118
+msgid ""
+"Having a *Samples* value of ``1`` is similar to turning off anti-aliasing "
+"for buffered shadows."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:121
+msgid "Soft"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:121
+msgid ""
+"The *Soft* numeric field can have a value between ``1.0`` and ``100.0``. It "
+"indicates how wide an area is sampled when doing anti-aliasing on buffered "
+"shadows. The larger the *Soft* value, the more graduated/soft the area that "
+"is anti-aliased/softened on the edge of generated shadows."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:133
+msgid "Sample Buffers"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:124
+msgid ""
+"The *Sample Buffers* setting can be set to values ``1``, ``4`` or ``9``, and"
+" represents the number of shadow buffers that will be used when doing anti-"
+"aliasing on buffered shadows."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:126
+msgid ""
+"This option is used in special cases, like very small objects which move and"
+" need to generate really small shadows (such as strands). It appears that "
+"normally, pixel width shadows don't anti-alias properly, and that increasing"
+" *Buffer Size* doesn't help much."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:128
+msgid ""
+"So this option allows you to have a sort of extra sample pass, done above "
+"the regular one (the one controlled by the *Box* / *Tent* / *Gauss*, "
+"*Samples* and *Soft* settings)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:130
+msgid "The default ``1`` value will disable this option."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:132
+msgid ""
+"Higher values will produce a smoother anti-aliasing - but be careful: using "
+"a *Sample Buffers* of ``4`` will require four times as much memory and "
+"process time, and so on, as Blender will have to compute that number of "
+"sample buffers."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:136
+msgid "\"Irregular\""
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:142
+msgid "Buffer Shadow set to Irregular"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:145
+msgid ""
+"*Irregular* shadow method is used to generate sharp/hard shadows that are "
+"placed as accurately as raytraced shadows. This method offers very good "
+"performance because it can be done as a multi-threaded process."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:147
+msgid ""
+"This method supports transparent shadows. To do so, you will first need to "
+"setup the shadow setting for the object which will receive the transparent "
+"shadow. (*Material* → *Shadow* → *Cat Buffer Shadows* and *Buffer Bias*)"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:153
+msgid "Deep generation method"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:159
+msgid "Buffer Shadow set to Deep"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:164
+msgid ""
+"Deep Shadow buffer supports transparency and better filtering , at the cost "
+"of more memory usage and processing time"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:163
+msgid "*Compress*: Deep shadow map compression treshold"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:167
+msgid "Common options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:169
+msgid ""
+"The following settings are common to all buffered shadow generation method."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:172
+msgid ""
+"The *Bias* numeric field can have a value between ``0.001`` and ``5.0``. "
+"*Bias* is used to add a slight offset distance between an object and the "
+"shadows cast by it. This is sometimes required because of inaccuracies in "
+"the calculation which determines weather an area of an object is in shadow "
+"or not."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:174
+msgid ""
+"Making the *Bias* value smaller results in the distance between the object "
+"and its shadow being smaller. If the *Bias* value is too small, an object "
+"can get artifacts, which can appear as lines and interference patterns on "
+"objects. This problem is usually called \"self shadowing\", and can usually "
+"be fixed by increasing the *Bias* value, which exists for that purpose!"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:176
+msgid ""
+"Other methods for correcting self shadowing include increasing the size of "
+"the *Shadow Buffer Size* or using a different buffer shadow calculation "
+"method such as *Classic-Halfway* or *Irregular*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:178
+msgid ""
+"Self shadowing interference tends to affect curved surfaces more than flat "
+"ones, meaning that if your scene has a lot of curved surfaces it may be "
+"necessary to increase the *Bias* value or *Shadow Buffer Size* value."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:180
+msgid ""
+"Having overly large *Bias* values not only places shadows further away from "
+"their casting objects, but can also cause objects that are very small to not"
+" cast any shadow at all. At that point altering *Bias*, *Shadow Buffer Size*"
+" or *Spot Size* values, among other things, may be required to fix the "
+"problem."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:183
+msgid "Finer Bias tuning"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:185
+msgid ""
+"You can now refine the *Bias* value independently for each :doc:`Material "
+"</materials>`, using the *Bias* slider (*Material* menu, *Shadow* panel). "
+"This value is a factor by which the *Bias* value of each *Spot* buffered "
+"shadows lamp is multiplied, each time its light hits an object using this "
+"material. The ``0.0`` and ``1.0`` values are equivalent - they do not alter "
+"the lamp's *Bias* original value."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:201
+msgid "Clip Start & Clip End"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:189
+msgid ""
+"When a *Spot* light with buffered shadows is added to a scene, an extra line"
+" appears on the *Spot* 3D view representation."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:191
+msgid ""
+"The start point of the line represents *Clip Start* 's value and the end of "
+"the line represents *Clip End* 's value. *Clip Start* can have a value "
+"between ``0.1`` and ``1000.0``, and *Clip End*, between ``1.0`` and "
+"``5000.0``. Both values are represented in Blender Units."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:193
+msgid ""
+"*Clip Start* indicates the point after which buffered shadows can be present"
+" within the *Spot* light area. Any shadow which could be present before this"
+" point is ignored and no shadow will be generated."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:195
+msgid ""
+"*Clip End* indicates the point after which buffered shadows will not be "
+"generated within the *Spot* light area. Any shadow which could be present "
+"after this point is ignored and no shadow will be generated."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:197
+msgid ""
+"The area between *Clip Start* and *Clip End* will be capable of having "
+"buffered shadows generated."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:199
+msgid ""
+"Altering the *Clip Start* and *Clip End* values helps in controlling where "
+"shadows can be generated. Altering the range between *Clip Start* and *Clip "
+"End* can help speed up rendering, save memory and make the resultant shadows"
+" more accurate."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:201
+msgid ""
+"When using a *Spot* lamp with buffered shadows, to maintain or increase "
+"quality of generated shadows, it is helpful to adjust the *Clip Start* and "
+"*Clip End* such that their values closely bound around the areas which they "
+"want to have shadows generated at. Minimizing the range between *Clip Start*"
+" and *Clip End*, minimizes the area shadows are computed in and therefore "
+"helps increase shadow quality in the more restricted area."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:207
+msgid "Autoclip Start & Autoclip End"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:204
+msgid ""
+"As well as manually setting *Clip Start* and *Clip End* fields to control "
+"when buffered shadows start and end, it is also possible to have Blender "
+"pick the best value independently for each *Clip Start* and *Clip End* "
+"field."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:206
+msgid ""
+"Blender does this by looking at where the visible vertices are when viewed "
+"from the *Spot* lamp position."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/buffered_shadows.rst:212
+msgid ""
+"Any object in Blender can act as a camera in the 3D view. Hence you can "
+"select the *Spot* light and switch to a view from its perspective by "
+"pressing :kbd:`Ctrl-Numpad0`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:7
+msgid "Spot Volumetric Effects"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:13
+msgid "Spot lamps's Halo options"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:16
+msgid ""
+"*Spot* lights also can produce \"volumetric\" effects. See :doc:`Volumetric "
+"Light </lighting/volumetric_lights>` for more information about what it "
+"means."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:19
+msgid ""
+"The *Halo* button allows a *Spot* lamp to have a volumetric effect applied "
+"to it. This button must be active if the volumetric effect is to be visible."
+" Note that if you are using buffered shadows, you have extra options "
+"described in the :doc:`Spot Buffered Shadows "
+"</lighting/lamps/spot/buffered_shadows>` page."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:21
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:143
+msgid "Intensity"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:22
+msgid ""
+"The *Intensity* slider controls how intense/dense the volumetric effect is "
+"that is generated from the light source. The lower the value of the "
+"*Intensity* slider, the less visible the volumetric effect is, while higher "
+"*Intensity* values give a much more noticeable and dense volumetric effect."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:26
+msgid "Step"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:24
+msgid ""
+"This field can have a value between ``0`` and ``12``. It is used to "
+"determine whether this *Spot* will cast volumetric shadows, and what quality"
+" those volumetric shadows will have. If *Step* is set to a value of ``0``, "
+"then no volumetric shadow will be generated. Unlike most other controls, as "
+"the *Step* value increases, the quality of volumetric shadows decreases (but"
+" take less time to render), and *vice versa*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:28
+msgid "*Step* values"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:30
+msgid ""
+"A value of ``8`` for *Halo Step* is usually a good compromise between speed "
+"and accuracy."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:33
+msgid ""
+"Blender only simulates volumetric lighting in *Spot* lamps when using its "
+"internal renderer. This can lead to some strange results for certain "
+"combinations of settings for the light's *Energy* and the halo's "
+"*Intensity*. For example, having a *Spot* light with null or very low light "
+"*Energy* settings but a very high halo *Intensity* setting can result in a "
+"dark/black halo, which would not happen in the real world. Just be aware of "
+"this possibility when using halos with the internal renderer."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:39
+msgid ""
+"The halo effect can be greatly enhanced when using buffered shadows: when "
+"the halo's *Step* is not null, they can create \"volumetric shadows\". See "
+"the page about *Spot* :doc:`Buffered Shadows "
+"</lighting/lamps/spot/buffered_shadows>` for more information."
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:43
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:47
+#: ../../manual/lighting/shadows/properties.rst:37
+msgid "See Also"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:45
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:50
+#: ../../manual/lighting/shadows/properties.rst:39
+msgid ":doc:`Shadows </lighting/shadows>`"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:46
+msgid ":doc:`Spot Lamp </lighting/lamps/spot>`"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/halos.rst:47
+msgid ":doc:`Spot Buffered Shadows </lighting/lamps/spot/buffered_shadows>`"
+msgstr ""
+
+#: ../../manual/lighting/lamps/spot/raytraced_shadows.rst:16
+msgid ""
+"The *Spot* light source can only cast raytraced shadows. It shares with "
+"other lamp types the same common shadowing options, described in "
+":doc:`Shadows Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:7
+msgid "Sun Lamp"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:9
+msgid ""
+"A *Sun* lamp provides light of constant intensity emitted in a single "
+"direction. A *Sun* lamp can be very handy for a uniform clear daylight open-"
+"space illumination. In the 3D view, the *Sun* light is represented by an "
+"encircled black dot with rays emitting from it, plus a dashed line "
+"indicating the direction of the light."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:15
+msgid ""
+"This direction can be changed by rotating the *Sun* lamp, like any other "
+"object, but because the light is emitted in a constant direction, the "
+"location of a *Sun* lamp does not affect the rendered result (unless you use"
+" the :doc:`\"sky & atmosphere\" option "
+"</lighting/lamps/sun/sky_and_atmosphere>`)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:22
+msgid "Sun lamp panel"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:31
+msgid "Negative,  This Layer Only, Specular, and Diffuse"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:33
+msgid ""
+"The *Sun* lamp has no light falloff settings: it always uses a constant "
+"attenuation (i.e. no attenuation!)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:38
+msgid "Sky & Atmosphere"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:44
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:16
+msgid "Sky & Atmosphere panel"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:47
+msgid ""
+"Various settings for the appearance of the sun in the sky, and the "
+"atmosphere through which it shines, are available. For details, see "
+":doc:`Sky and Atmosphere </lighting/lamps/sun/sky_and_atmosphere>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:51
+msgid "Shadow"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun.rst:60
+msgid ""
+"The *Sun* light source can only cast ray-traced shadows. It shares with "
+"other lamp types the same common shadowing options, described in "
+":doc:`Shadows Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/raytraced_shadows.rst:16
+msgid ""
+"The *Sun* light source can only cast raytraced shadows. It shares with other"
+" lamp types the same common shadowing options, described in :doc:`Shadows "
+"Properties </lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:10
+msgid "Sun: Sky & Atmosphere"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:19
+msgid ""
+"This panel allows you to enable an effect that simulates various properties "
+"of real sky and atmosphere: the scattering of sunlight as it crosses the "
+"kilometers of air overhead. For example, when the Sun is high, the sky is "
+"blue (and the horizon, somewhat whitish). When the Sun is near the horizon, "
+"the sky is dark blue/purple, and the horizon turns orange. The dispersion of"
+" the atmosphere is also more visible when it is a bit foggy: the farther "
+"away an object is, the more \"faded\" in light gray it is... Go out into the"
+" countryside on a nice hot day, and you will see."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:28
+msgid ""
+"To enable this effect, you have to use a *Sun* light source. If, as usual, "
+"the *position* of the lamp has no importance, its *rotation* is crucial: it "
+"determines which hour it is. As a starting point, you should reset rotation "
+"of your *Sun* (with :kbd:`Alt-R`, or typing ``0`` in each of the three "
+"*Rotation* fields *X* / *Y* / *Z* in the *Transform Properties* panel - "
+":kbd:`N`). This way, you'll have a nice mid-day sun (in the tropics)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:36
+msgid ""
+"Now, there are two important angles for the *Sky/Atmosphere* effect: the "
+"\"incidence\" angle (between the light direction and the X-Y plane), which "
+"determines the \"hour\" of the day (as you might expect, the default "
+"rotation - straight down - is \"mid-day\", a light pointing straight up is "
+"\"midnight\", and so on...). And the rotation around the Z axis determines "
+"the position of the sun around the camera."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:48
+msgid "The dashed \"light line\" of the Sun lamp crossing the camera focal point."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:51
+msgid ""
+"In fact, to have a good idea of where the sun is in your world, relative to "
+"the camera in your 3D view, you should always try to have the dashed \"light"
+" line\" of the lamp crossing the center of the camera (its \"focal\" point),"
+" as shown in (*The dashed \"light line\" of the* *Sun* *lamp crossing the "
+"camera focal point*). This way, in camera view (:kbd:`Numpad0`, center "
+"window in the example picture), you will see where the \"virtual\" sun "
+"created by this effect will be."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:58
+msgid ""
+"It is important to understand that the *position* of the sun has no "
+"importance for the effect: only its *orientation* is relevant. The position "
+"just might help you in your scene design."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:66
+msgid "*Sun & Sky Presets*:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:68
+msgid "Classic"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:69
+msgid "Desert"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:70
+msgid "Mountain"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:74
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:78
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:200
+msgid "Sky"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:77
+msgid ""
+"This button enables the sky settings: it will create a \"sky\", with a "
+"\"sun\" if visible, and mix it with the background as defined in *World* "
+"settings."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:86
+msgid "Turbidity"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:81
+msgid ""
+"This is a general parameter that affects sun view, sky and atmosphere; it's "
+"an atmosphere parameter where low values describe clear sky, and high values"
+" shows more foggy sky. In general, low values give a clear, deep blue sky, "
+"with \"little\" sun; high values give a more reddish sky, with a big halo "
+"around the sun. Note that this parameter is one which can really modify the "
+"\"intensity\" of the sun lighting. See examples below."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:88
+msgid "Here are its specific controls:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:90
+msgid "Blending"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:92
+msgid ""
+"The first drop-down list shows you a menu of various mix methods. The one "
+"selected will be used to blend the sky and sun with the background defined "
+"in the *World* settings. The mixing methods are the same as described e.g. "
+"in the :doc:`Mix Compositing Node </composite_nodes/types/color#mix_node>` "
+"page."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:98
+msgid ""
+"Controls how much the sky and sun effect is applied to the World background."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:108
+msgid "Color space"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:101
+msgid ""
+"These buttons allows you to select which color space the effect uses, with "
+"the following choices:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:103
+msgid "CIE"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:104
+msgid "REC709"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:105
+msgid "SMPTE"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:108
+msgid ""
+"This numeric field allows you to modify the exposure of the rendered Sky and"
+" Sun (``0.0`` for no correction)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:118
+msgid "Horizon"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:113
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:122
+msgid "Brightness"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:112
+msgid ""
+"Controls brightness of colors at the horizon. Its value should be in the "
+"range ``0.0`` to ``10.0``; values near zero means no horizontal brightness, "
+"and large values for this parameter increase horizon brightness. See "
+"examples below."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:118
+msgid "Spread"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:116
+msgid ""
+"Controls spread of light at the horizon. Its value should be in the range "
+"``0.0`` to ``10.0``; values low in the range result in less spread of light "
+"at horizon, and values high in the range result in horizon light spread in "
+"through all the sky."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:132
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:141
+msgid "Sun"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:122
+msgid ""
+"Controls the sun brightness. Its value should be in the range ``0.0`` to "
+"``10.0``; with low values the sky has no sun and with high values the sky "
+"only has sun."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:125
+msgid ""
+"Controls the size of sun. Its values should be in the range ``0.0`` to "
+"``10.0``, but note that low values result in large sun size, and high values"
+" result in small sun size. Note that the overall brightness of the sun "
+"remains constant (set by *Brightness*), so the larger the sun (the smaller "
+"*Size*), the more it \"vanishes\" in the sky, and *vice versa*."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:132
+msgid "Back Light"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:130
+msgid ""
+"For \"Back Scatter Light\", result on sun's color, high values result in "
+"more light around the sun. Its values range is ``-1.0`` to ``1.0``. Negative"
+" values result in less light around sun."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:135
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:138
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:288
+msgid "Atmosphere"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:138
+msgid ""
+"This button enables the atmosphere settings. It will not modify the "
+"background, but it tries to simulate the effects of an atmosphere: "
+"scattering of the sunlight in the atmosphere, its attenuation, ..."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:142
+msgid ""
+"Sets sun intensity. Its values are in range ``0.0`` to ``10.0``. High values"
+" result in  bluer light on far objects."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:143
+#: ../../manual/lighting/lights/light_attenuation.rst:333
+#: ../../manual/lighting/lights/light_properties.rst:50
+msgid "Distance"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:144
+msgid ""
+"This factor is used to convert Blender units into an understandable unit for"
+" atmosphere effect, it starts from ``0`` and high values result in more "
+"yellow light in the scene."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:152
+msgid "Scattering"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:146
+msgid "Inscattering"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:147
+msgid ""
+"This factor can be used to decrease the effect of light inscattered into "
+"atmosphere between the camera and objects in the scene. This value should be"
+" ``1.0`` but can be changed to create some nice, but not realistic, images."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:152
+msgid "Extinction"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:149
+msgid ""
+"This factor can be use to decrease the effect of extinction light from "
+"objects in the scene. Like *Inscattering* factor, this parameter should be "
+"``1.0`` but you can change it; low values result in less light extinction. "
+"Its value is in the range ``0.0`` to ``1.0``."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:157
+msgid ""
+"First, let's see what happens when we modify the orientation of the sun:"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:165
+msgid "With sun right overhead (mid-day)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:165
+msgid "With sun deep \"under the Earth\" (midnight)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:171
+msgid "Sun slightly above the horizon (start of twilight)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:171
+msgid "Sun slightly below the horizon (end of twilight)."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:173
+msgid ""
+"Variations in *Sun* orientation, *Sun Size* to ``5.0``, all other settings "
+"to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:175
+msgid ""
+"`The 2.4 .blend file of these examples "
+"<http://wiki.blender.org/index.php/Media:Manual-Lighting-Lamps-Sun-"
+"SkyAtmosphere-Examples-SunOrientation.blend>`__."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:179
+msgid ""
+"And now, the effects of various settings (examples created with `this 2.4 "
+".blend file <http://wiki.blender.org/index.php/Media:Manual-Lighting-Lamps-"
+"Sun-SkyAtmosphere-Examples-Settings.blend>`__):"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:187
+msgid "Turbidity: 2.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:187
+msgid "Turbidity: 2.3."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:193
+msgid "Turbidity: 5.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:193
+msgid "Turbidity: 10.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:195
+msgid "Variations in *Turbidity* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:207
+msgid "Horizon Brightness: 0.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:207
+msgid "Horizon Brightness: 0.85."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:213
+msgid "Horizon Brightness: 1.04."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:213
+msgid "Horizon Brightness: 1.13."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:215
+msgid ""
+"Variations in *Horizon Brightness* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:224
+msgid "Horizon Spread: 0.7."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:224
+msgid "Horizon Spread: 1.2."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:230
+msgid "Horizon Spread: 2.2."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:230
+msgid "Horizon Spread: 5.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:232
+msgid ""
+"Variations in *Horizon Spread* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:241
+msgid "Sun Brightness: 0.2."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:241
+msgid "Sun Brightness: 0.5."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:247
+msgid "Sun Brightness: 0.75."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:247
+msgid "Sun Brightness: 1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:249
+msgid ""
+"Variations in *Sun Brightness* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:258
+msgid "Sun Size: 2.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:258
+msgid "Sun Size: 4.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:264
+msgid "Sun Size: 7.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:264
+msgid "Sun Size: 10.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:266
+msgid "Variations in *Sun Size* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:275
+msgid "Back Light: -1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:275
+msgid "Back Light: -0.33."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:281
+msgid "Back Light: 0.33."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:281
+msgid "Back Light: 1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:283
+msgid ""
+"Variations in *Back Light* parameter, *Sun Bright* to ``2.5``, all other "
+"settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:290
+msgid ""
+"For all renders below, *Hor.Bright* is set to ``0.2``, and *Sun Bright* to "
+"``2.0``."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:299
+msgid "Sun Intensity: 1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:299
+msgid "Sun Intensity: 3.33."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:305
+msgid "Sun Intensity: 6.66."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:305
+msgid "Sun Intensity: 10.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:307
+msgid ""
+"Variations in *Sun Intensity* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:316
+msgid "Inscattering: 0.1."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:316
+msgid "Inscattering: 0.33."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:322
+msgid "Inscattering: 0.66."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:322
+msgid "Inscattering: 1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:324
+msgid "Variations in *Inscattering* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:333
+msgid "Extinction: 0.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:333
+msgid "Extinction: 0.33."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:339
+msgid "Extinction: 0.66."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:339
+msgid "Extinction: 1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:341
+msgid "Variations in *Extinction* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:350
+msgid "Distance: 1.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:350
+msgid "Distance: 2.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:356
+msgid "Distance: 3.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:356
+msgid "Distance: 4.0."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:358
+msgid "Variations in *Distance* parameter, all other settings to default."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:363
+msgid "Hints and limitations"
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:365
+msgid ""
+"To always have the *Sun* pointing at the camera center, you can use a "
+":doc:`TrackTo constraint </constraints/tracking/track_to>` on the sun "
+"object, with the camera as target, and *-Z* as the \"To\" axis (use either "
+"*X* or *Y* as \"Up\" axis). This way, to modify height/position of the sun "
+"in the rendered picture, you just have to move it; orientation is "
+"automatically handled by the constraint. Of course, if your camera itself is"
+" moving, you should also add e.g. a :doc:`Copy Location constraint "
+"</constraints/transform/copy_location>` to your *Sun* lamp, with the camera "
+"as target - and the *Offset* option activated... This way, the sun light "
+"won't change as the camera moves around."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:376
+msgid ""
+"If you use the default *Add* mixing type, you should use a very dark-blue "
+"world color, to get correct \"nights\"..."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:379
+msgid ""
+"This effect works quite well with a *Hemi* lamp, or some ambient occlusion, "
+"to fill in the *Sun* shadows."
+msgstr ""
+
+#: ../../manual/lighting/lamps/sun/sky_and_atmosphere.rst:382
+msgid ""
+"Atmosphere shading currently works incorrectly in reflections and "
+"refractions and is only supported for solid shaded surfaces. This will be "
+"addressed in a later release."
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:4
+msgid "Lights"
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:6
+msgid ""
+"As previously stated, there are multiple types of lighting in Blender, like "
+"indirect light or ambient light. However, one of the most used are "
+"\"lights\", or \"lamps\". In this section, we will discuss general info and "
+"settings for these lights (you will find more lamp-specific details in the "
+":doc:`Lamps </lighting/lamps>` section):"
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:9
+msgid ""
+":doc:`Light Properties </lighting/lights/light_properties>` - settings "
+"common to all lamps."
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:10
+msgid ":doc:`Light Attenuation </lighting/lights/light_attenuation>`."
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:11
+msgid ""
+":doc:`Textures </lighting/lights/textures>` - how to apply texture(s) to "
+"lamps."
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:12
+msgid ":doc:`What Light Affects </lighting/lights/what_light_affects>`."
+msgstr ""
+
+#: ../../manual/lighting/lights.rst:13
+msgid ""
+":doc:`Lights In Other Contexts </lighting/lights/lights_in_other_contexts>` "
+"- lamp-related setting in other contexts."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:4
+msgid "Light Attenuation"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:13
+msgid "Lamp panel, falloff options highlighted"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:16
+msgid ""
+"There are two main controls for light falloff for *Point* and *Spot* lamps."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:18
+msgid "The lamp *Falloff* type drop-down list, and"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:19
+msgid "The *Sphere* button."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:23
+msgid "Falloff types"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:26
+msgid "Lin/Quad Weighted"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:32
+msgid "Lamp panel with Lin/Quad Weighted Falloff options highlighted"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:35
+msgid ""
+"When this setting is chosen, two sliders are shown, *Linear* and "
+"*Quadratic*, which control respectively the \"linearness\" and "
+"\"quadraticness\" of the falloff curve."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:39
+msgid ""
+"This lamp falloff type is in effect allowing the mixing of the two light "
+"attenuation profiles (linear and quadratic attenuation types)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:44
+msgid "Linear"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:46
+msgid ""
+"This slider input field can have a value between ``0.0`` and ``1.0``. A "
+"value of ``1.0`` in the *Linear* field and ``0.0`` in the *Quadratic* field "
+"in effect means that the light from this source is completely linear. This "
+"means that at the number of Blender Units distance specified in the "
+"*Distance* field, this light source's intensity will be half the value it "
+"was originally."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:53
+msgid ""
+"When the *Quadratic* slider is set to ``0.0``, the formula for working out "
+"the attenuation at a particular range for full linear attenuation is:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:56
+msgid "``I = E × (D / (D + L × r))``"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:58
+#: ../../manual/lighting/lights/light_attenuation.rst:98
+#: ../../manual/lighting/lights/light_attenuation.rst:115
+msgid "Where"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:60
+#: ../../manual/lighting/lights/light_attenuation.rst:100
+#: ../../manual/lighting/lights/light_attenuation.rst:117
+msgid "``I`` is the calculated Intensity of light."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:61
+#: ../../manual/lighting/lights/light_attenuation.rst:101
+#: ../../manual/lighting/lights/light_attenuation.rst:118
+msgid "``E`` is the current *Energy* slider setting."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:62
+#: ../../manual/lighting/lights/light_attenuation.rst:102
+#: ../../manual/lighting/lights/light_attenuation.rst:119
+#: ../../manual/lighting/lights/light_attenuation.rst:313
+msgid "``D`` is the current setting of the *Dist* field."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:63
+#: ../../manual/lighting/lights/light_attenuation.rst:120
+msgid "``L`` is the current setting of the *Linear* slider."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:64
+#: ../../manual/lighting/lights/light_attenuation.rst:104
+#: ../../manual/lighting/lights/light_attenuation.rst:122
+#: ../../manual/lighting/lights/light_attenuation.rst:314
+msgid ""
+"``r`` is the distance from the lamp where the light intensity gets measured."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:68
+msgid "Quadratic"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:74
+msgid "Lamp with Lin/Quad Weighted falloff default settings"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:77
+msgid ""
+"This slider input field can have a value between ``0.0`` and ``1.0``. A "
+"value of ``1.0`` in the *Quadratic* field and ``0.0`` in the *Linear* field "
+"means that the light from this source is completely quadratic."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:81
+msgid ""
+"Quadratic attenuation type lighting is considered a more accurate "
+"representation of how light attenuates (in the real world). In fact, fully "
+"quadratic attenuation is selected by default for *Lin/Quad Weighted* lamp "
+"fallout (see *Lamp with* *Lin/Quad Weighted* *falloff default settings*)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:86
+msgid ""
+"Here again, the light intensity is half when it reaches the *Distance* value"
+" from the lamp. Comparing the quadratic falloff to the linear falloff, the "
+"intensity decays much slower at distances lower than the set *Distance*, but"
+" it attenuates much quicker after *Distance* is reached."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:93
+msgid ""
+"When the *Linear* slider is set to ``0.0``, the formula for working out the "
+"attenuation at a particular range for full quadratic attenuation is:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:96
+msgid "``I = E × (D``:sup:`2` ``/ (D``:sup:`2` ``+ Q × r``:sup:`2` ``))``"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:103
+#: ../../manual/lighting/lights/light_attenuation.rst:121
+msgid "``Q`` is the current setting of the *Quad* slider."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:108
+msgid "Mixing \"Linear\" and \"Quad\""
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:110
+msgid ""
+"If both the *Linear* and *Quad* slider fields have values greater than "
+"``0.0``, then the formula used to calculate the light attenuation profile "
+"changes to this:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:113
+msgid ""
+"``I = E × (D / (D + L × r)) × (D``:sup:`2` ``/ (D``:sup:`2` ``+ Q × "
+"r``:sup:`2` ``))``"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:126
+msgid "Zeroing both \"Linear\" and \"Quad\""
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:128
+msgid ""
+"If both the *Linear* and *Quadratic* sliders have ``0.0`` as their values, "
+"the light intensity will not attenuate with distance. This does not mean "
+"that the light will not get darker—it will, but only because the energy the "
+"light has is spread out over a wider and wider distance. The total amount of"
+" energy in the spread-out light will remain the same, though. The light "
+"angle also affects the amount of light you see. It is in fact the behavior "
+"of light in the deep space vacuum."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:136
+msgid ""
+"If what you want is a light source that doesn't attenuate and gives the same"
+" amount of light intensity to each area it hits, you need a light with "
+"properties like the *Constant* lamp *Falloff* type."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:140
+msgid ""
+"Also, when the *Linear* and *Quad* sliders are both ``0.0`` values the "
+"*Distance* field ceases to have any influence on the light attenuation, as "
+"shown by the equation above."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:146
+msgid "Graphical Summary"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:148
+msgid ""
+"Below is a graph summarizing the lin/quad attenuation type, showing "
+"attenuation with or without the *Sphere* option (described later)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:158
+msgid "Custom Curve"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:160
+msgid "The *Custom Curve* lamp *Falloff* type is very flexible."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:162
+msgid ""
+"Most other lamp falloff types work by having their light intensity start at "
+"its maximum (when nearest to the light source) and then with some "
+"predetermined pattern decrease their light intensity when the distance from "
+"the light source increases."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:166
+msgid ""
+"When using the *Custom Curve* Lamp Falloff type, a new panel is created "
+"called *Falloff Curve*. This *Falloff Curve* profile graph allows the user "
+"to alter how intense light is at a particular point along a light's "
+"attenuation profile (i.e. at a specific distance from the light source)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:171
+msgid ""
+"The *Falloff Curve* profile graph has two axes, the ``Distance`` axis and "
+"the ``Intensity`` axis."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:174
+msgid "Distance axis"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:175
+msgid ""
+"It represents the position at a particular point along a light source's "
+"attenuation path. The far left is at the position of the light source and "
+"the far right is the place where the light source's influence would normally"
+" be completely attenuated. I say \"normally would\" because the *Falloff "
+"Curve* can be altered to do the exact opposite if required."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:177
+msgid "Intensity axis"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:177
+msgid ""
+"It represents the intensity at a particular point along a light source's "
+"attenuation path. Higher intensity is represented by being higher up the "
+"intensity axis, while lower intensity light is represented by being lower "
+"down on the intensity axis."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:179
+msgid ""
+"Altering the *Falloff Curve* profile graph is easy. Just :kbd:`LMB` click on"
+" a part of the graph you want to alter and drag it where you want it to be. "
+"If when you click you are over or near one of the tiny black square handles,"
+" it will turn white, indicating that this  handle is now selected, and you "
+"will be able to drag it to a new position. If when you click on the graph "
+"you are not near a handle, one will be created at the point that you "
+"clicked, which you can then drag where you wish. You can also create handles"
+" at specific parts of the graph, clicking with :kbd:`LMB` while holding "
+":kbd:`Ctrl` key; it will create a new handle at the point you have clicked."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:190
+msgid ""
+"In the example below (the default for the *Falloff Curve* Profile Graph), "
+"the graph shows that the intensity of the light starts off at its maximum "
+"(when near the light), and linearly attenuates as it moves to the right "
+"(further away from the light source)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:201
+msgid "Default Falloff Curve panel graph."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:201
+msgid ""
+"Render showing the Custom Curve lamp falloff type effect with default "
+"settings."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:205
+msgid ""
+"If you want to have a light attenuation profile that gets more intense as it"
+" moves away from the light source, you could alter the graph as below:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:214
+msgid "Falloff Curve for reversed attenuation."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:214
+msgid "Falloff Curve for reversed attenuation rendered."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:218
+msgid ""
+"You are obviously not just limited to simple changes such as reversing the "
+"attenuation profile, you can have almost any profile you desire."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:221
+msgid ""
+"Here is another example of a different *Falloff Curve* profile graph, along "
+"with its resultant render output:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:230
+msgid "Oscillating attenuation profile."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:230
+msgid ""
+"Render showing the effects of a \"wavelet\" profile graph on the light "
+"attenuation."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:235
+#: ../../manual/lighting/lights/light_attenuation.rst:375
+msgid "Inverse Square"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:241
+msgid ""
+"Render showing the Inverse Square lamp falloff type effect with default "
+"settings."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:244
+msgid ""
+"This lamp falloff type attenuates its intensity according to inverse square "
+"law, scaled by the *Distance* value. Inverse square is a sharper, realistic "
+"decay, useful for lighting such as desk lamps and street lights. This is "
+"similar to the old *Quad* option (and consequently, to the new *Lin/Quad "
+"Weighted* option with *Linear* to ``0.0`` and *Quad* to ``1.0``), with "
+"slight changes."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:253
+msgid "Inverse Linear"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:259
+msgid ""
+"Render showing the Inverse Linear lamp falloff type effect with default "
+"settings."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:262
+msgid ""
+"This lamp falloff type attenuates its intensity linearly, scaled by the "
+"*Dist* value. This is the default setting, behaving the same as the default "
+"in previous Blender versions without *Quad* switched on, and consequently, "
+"like the new *Lin/Quad Weighted* option with *Linear* to ``1.0`` and *Quad* "
+"to ``0.0``. This isn't physically accurate, but can be easier to light with."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:271
+msgid "Constant"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:277
+msgid ""
+"Render showing the Constant lamp falloff type effect with default settings."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:280
+msgid ""
+"This lamp falloff type does not attenuate its intensity with distance. This "
+"is useful for distant light sources like the sun or sky, which are so far "
+"away that their falloff isn't noticeable. *Sun* and *Hemi* lamps always have"
+" constant falloff."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:287
+#: ../../manual/lighting/lights/light_attenuation.rst:411
+msgid "Sphere"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:293
+msgid ""
+"Screenshot of the 3D view window, showing the Sphere light clipping circle."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:296
+msgid ""
+"The *Sphere* option restricts the light illumination range of a *Lamp* or "
+"*Spot* lamp, so that it will completely stop illuminating an area once it "
+"reaches the number of Blender Units away from the Lamp, as specified in the "
+"*Dist* field."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:300
+msgid ""
+"When the *Sphere* option is active, a dotted sphere will appear around the "
+"light source, indicating the demarcation point at which this light intensity"
+" will be null."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:305
+msgid ""
+"The *Sphere* option adds a term to the chosen attenuation law, whatever it "
+"is:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:307
+msgid "``I' = I × (D - r) / D`` *if* ``r < D; 0`` *otherwise*"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:309
+msgid "Where:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:311
+msgid ""
+"``I'`` is the required Intensity of light (with the *Sphere* option "
+"activated)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:312
+msgid ""
+"``I`` is the intensity of light calculated by the chosen attenuation law "
+"(without the *Sphere* option)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:316
+msgid ""
+"See the graphic at the end of the description of the *Lin/Quad Weighted* "
+"attenuation option."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:325
+msgid ""
+"Render showing the light attenuation of a Constant falloff light type with "
+"the Sphere option active."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:325
+msgid ""
+"Render showing the light attenuation of a Constant falloff light type with "
+"the Sphere option deactivated."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:335
+msgid ""
+"In this example, the *Lamp* has been set pretty close to the group of "
+"planes. This causes the light to affect the front, middle and rear planes "
+"more dramatically. Looking at (*Various* *Dist* *ance settings*), you can "
+"see that as the *Dist* is increased, more and more objects become "
+"progressively brighter."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:345
+msgid "Distance: 10."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:345
+msgid "Distance: 100."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:345
+msgid "Distance: 1000."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:347
+msgid "Various *Distance* settings (shadows disabled)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:351
+msgid ""
+"The *Distance* parameter is controlling where the light is falling - at a "
+"linear rate by default - to half its original value from the light's origin."
+" As you increase or decrease this value, you are changing where this half "
+"falloff occurs. You could think of *Distance* as the surface of a sphere and"
+" the surface is where the light's intensity has fallen to half its strength "
+"in all directions. Note that the light's intensity continues to fall even "
+"after *Distance*. *Distance* just specifies the distance where half of the "
+"light's energy has weakened."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:359
+msgid ""
+"Notice in (*Distance* *:* ``1000``) that the farthest objects are very "
+"bright. This is because the falloff has been extended far into the distance,"
+" which means the light is very strong when it hits the last few objects. It "
+"is not until ``1000`` units that the light's intensity has fallen to half of"
+" its original intensity."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:364
+msgid ""
+"Contrast this with (*Distance* *:* ``10``), where the falloff occurs so soon"
+" that the farther objects are barely lit. The light's intensity has fallen "
+"by a half by time it even reaches the tenth object."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:368
+msgid ""
+"You may be wondering why the first few planes appear to be dimmer? This is "
+"because the surface angle between the light and the object's surface normal "
+"is getting close to oblique. That is the nature of a *Lamp* light object. By"
+" moving the light infinitely far away you would begin to approach the "
+"characteristics of the *Sun* lamp type."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:377
+msgid ""
+"*Inverse Square* makes the light's intensity falloff with a non-linear rate,"
+" or specifically, a quadratic rate. The characteristic feature of using "
+"*Inverse Square* is that the light's intensity begins to fall off very "
+"slowly but then starts falling off very rapidly. We can see this in the "
+"(*Inverse Square* *selected*) images."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:383
+msgid "Inverse Square with 10."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:383
+msgid "Inverse Square with 100."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:383
+msgid "Inverse Square with 1000."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:385
+msgid "*Inverse Square* selected (with the specified distances)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:389
+msgid ""
+"With *Inverse Square* selected, the *Distance* field specifies where the "
+"light begins to fall off faster, roughly speaking; see the light attenuation"
+" FIXME(TODO: Internal Link; [[#Falloff types|description]] ) for more info."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:394
+msgid ""
+"In (*Inverse Square* *with* ``10``), the light's intensity has fallen so "
+"quickly that the last few objects aren't even lit."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:397
+msgid ""
+"Both (*Inverse Square* *with* ``100``) and (*Inverse Square* *with* "
+"``1000``) appear to be almost identical and that is because the *Distance* "
+"is set beyond the farthest object's distance which is at about **40 BU** "
+"out. Hence, all the objects get almost the full intensity of the light."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:402
+msgid ""
+"As above, the first few objects are dimmer than farther objects because they"
+" are very close to the light. Remember, the brightness of an object's "
+"surface is also based on the angle between the surface normal of an object "
+"and the ray of light coming from the lamp."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:406
+msgid ""
+"This means there are at least two things that are controlling the surface's "
+"brightness: intensity and the angle between the light source and the "
+"surface's normal."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:415
+msgid "Clipping Sphere."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:418
+msgid ""
+"*Sphere* indicates that the light's intensity is null at the *Distance* "
+"distance and beyond, regardless of the chosen light's falloff. In (*Clipping"
+" Sphere*) you can see a side view example of the setup with *Sphere* enabled"
+" and a distance of ``10``."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:420
+msgid "Any objects beyond the sphere receive no light from the lamp."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:422
+msgid ""
+"The *Distance* field is now specifying both where the light's rays become "
+"null, and the intensity's ratio falloff setting. Note that there is no "
+"abrupt transition at the sphere: the light attenuation is progressive (for "
+"more details, see the descriptions of the FIXME(TODO: Internal Link; "
+"[[#Sphere|{{Literal|Sphere}} options]] ) and FIXME(TODO: Internal Link; "
+"[[#Falloff types|light attenuations]] ) above)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:434
+msgid "Sphere with 10."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:434
+msgid "Sphere with 20."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:434
+msgid "Sphere with 40."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:436
+msgid ""
+"*Sphere* enabled with the specified distances, *Inverse Linear* light "
+"falloff."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:440
+msgid ""
+"In (*Sphere* *with* ``10``), the clipping sphere's radius is ``10`` units, "
+"which means the light's intensity is also being controlled by ``10`` units "
+"of distance. With a linear attenuation, the light's intensity has fallen "
+"very low even before it gets to the first object."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:445
+msgid ""
+"In (*Sphere* *with* ``20``), the clipping sphere's radius is now **20 BU** "
+"and some light is reaching the middle objects."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:448
+msgid ""
+"In (*Sphere* *with* ``40``), the clipping sphere's radius is now ``40`` "
+"units, which is beyond the last object. However, the light doesn't make it "
+"to the last few objects because the intensity has fallen to nearly ``0``."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_attenuation.rst:456
+msgid ""
+"If a *Lamp* light is set to not cast shadows, it illuminates through walls "
+"and the like. If you want to achieve some nice effects like a fire, or a "
+"candle-lit room interior seen from outside a window, the *Sphere* option is "
+"a must. By carefully working on the *Distance* value you can make your warm "
+"firelight shed only within the room, while illuminating outside with a cool "
+"moonlight, the latter achieved with a *Sun* or *Hemi* light or both."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:7
+msgid "Lights Common Options"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:13
+msgid "Lamp Properties panels"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:16
+msgid ""
+"There are five types of lamps in Blender.  They share all or some of the "
+"options listed here:"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:19
+msgid "Object Data"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:21
+msgid "Browse Light Object Data"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:22
+msgid "Click to view all lights in the current scene."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:23
+msgid "Name"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:24
+msgid ""
+"The name of the currently selected light object data.  Edit to change the "
+"name."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:25
+msgid "Number of Users"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:26
+msgid "The number of light objects sharing the light object data."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:29
+msgid "F"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:28
+msgid "Create a fake user for this object data."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:32
+msgid "Preview"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:34
+msgid "A quick preview of the light settings."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:37
+msgid "Lamp"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:43
+msgid ""
+"The *Dist* field indicates the number of Blender Units (BU) at which the "
+"intensity of the current light source will be half of its intensity. Objects"
+" less than the number of BU away from the lamp will get more light, while "
+"objects further away will receive less light. Certain settings and lamp "
+"falloff types affect how the *Distance* field is interpreted, meaning that "
+"it will not always react the same; see the page about :doc:`light falloff "
+"</lighting/lights/light_attenuation>`."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:52
+msgid ""
+"The *Sun* and *Hemi* Lamps are another class of Lamps which uses a constant "
+"falloff. Those lamps don't have a *Dist* field, and are often called \"Base "
+"Lighting Lamps\"."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:55
+msgid ""
+"The intensity of the light source's illumination (from ``0.0`` to ``10.0``)."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:56
+msgid "Color"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:57
+msgid "The color of the light source's illumination. Opens a color swatch."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:58
+#: ../../manual/lighting/lights/what_light_affects.rst:17
+msgid "Negative"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:59
+msgid "Let the lamp cast negative light."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:60
+#: ../../manual/lighting/lights/what_light_affects.rst:20
+#: ../../manual/lighting/shadows/properties.rst:15
+msgid "This Layer Only"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:61
+msgid "The Lamp only illuminates objects on the same layer the lamp is on."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:62
+#: ../../manual/lighting/lights/what_light_affects.rst:29
+msgid "Specular"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:63
+msgid "The Lamp creates specular highlights."
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:68
+#: ../../manual/lighting/lights/what_light_affects.rst:23
+msgid "Diffuse"
+msgstr ""
+
+#: ../../manual/lighting/lights/light_properties.rst:65
+msgid "The Lamp does diffuse shading."
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:4
+msgid "Lamps Related Settings"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:6
+msgid ""
+"Here are some options closely related to light sources, without being lamps "
+"settings."
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:10
+msgid "Lighting Groups"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:13
+msgid "Materials"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:19
+msgid "Light Group options for Materials"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:22
+msgid ""
+"By default, materials are lit by all lamps in all visible layers, but a "
+"material (and thus all objects using that material) can be limited to a "
+"single group of lamps. This sort of control can be incredibly useful, "
+"especially in scenes with complex lighting setups. To enable this, navigate "
+"to the *Material* menu's *Options* panel and select a group of lamps in the "
+"*Light Group* field. Note that a :doc:`light group "
+"</modeling/objects/groups_and_parenting>` must be created first."
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:29
+msgid ""
+"If the *Exclusive* button is enabled, lights in the specified group will "
+"*only* affect objects with this material."
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:34
+msgid "Render Layers"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:40
+msgid "Light Group options for Render Layers"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:43
+msgid ""
+"There's a similar control located in the *Layer panel* of the context "
+":doc:`Render Layers </render/post_process/layers>`. If a light group name is"
+" selected in this *Light* field, the scene will be lit exclusively by lamps "
+"in the specified group."
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:49
+msgid ":doc:`Lamps Introduction </lighting/lamps>`"
+msgstr ""
+
+#: ../../manual/lighting/lights/lights_in_other_contexts.rst:51
+msgid ":doc:`Materials Introduction </materials>`"
+msgstr ""
+
+#: ../../manual/lighting/lights/textures.rst:4
+msgid "Lamps Textures"
+msgstr ""
+
+#: ../../manual/lighting/lights/textures.rst:10
+msgid "Lamp Texture panels"
+msgstr ""
+
+#: ../../manual/lighting/lights/textures.rst:13
+msgid ""
+"When a new lamp is added, it produces light in a uniform, flat color. While "
+"this might be sufficient in simple renderings, more sophisticated effects "
+"can be accomplished through the use of :doc:`textures </textures>`. Subtle "
+"textures can add visual nuance to a lamp, while hard textures can be used to"
+" simulate more pronounced effects, such as a disco ball, dappled sunlight "
+"breaking through treetops, or even a projector. These textures are assigned "
+"to one of ten channels, and behave exactly like material textures, except "
+"that they affect a lamp's color and intensity, rather than a material's "
+"surface characteristics."
+msgstr ""
+
+#: ../../manual/lighting/lights/textures.rst:25
+msgid ""
+"The lamp textures settings are grouped into two panels. Here we will only "
+"talk about the few things that differ from object material textures; see the"
+" :doc:`Materials </materials>` and :doc:`Textures </textures>` chapters for "
+"details about the standard options."
+msgstr ""
+
+#: ../../manual/lighting/lights/textures.rst:27
+msgid ""
+"The texture-specific and the *Mapping* panels remain the same. However, "
+"you'll note there are much fewer *Mapping* options - you can only choose "
+"between *Global*, *View* or another *Object* 's texture *coordinates* (since"
+" a lamp has no texture coordinates by itself), and you can scale or offset "
+"the texture."
+msgstr ""
+
+#: ../../manual/lighting/lights/textures.rst:33
+msgid ""
+"The *Mapping* panel is also a subset of its regular material's counterpart. "
+"You can only map a lamp texture to its regular, basic *Color* and/or to its "
+"*Shadow* color. As you can only affect colors, and a lamp has no texture "
+"coordinates on its own, the *Diffuse*, *Specular*, *Shading*, and *Geometry*"
+" options have disappeared."
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:4
+msgid "What the Light Affects"
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:10
+msgid "Lamp panel with the light affecting options highlighted"
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:13
+msgid ""
+"Every lamp has a set of switches that control which objects receive its "
+"light, and how it interacts with materials."
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:17
+msgid ""
+"The light produced by the lamp is **subtracted** from the one \"available\" "
+"on the surfaces it hits, which darkens these surfaces instead of brightening"
+" them."
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:20
+msgid "Causes the lamp to only light objects on the same layer."
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:23
+msgid ""
+"Prevents the lamp from producing :doc:`diffuse light "
+"</materials/properties/diffuse_shaders>` (it doesn't really \"light\" "
+"things)."
+msgstr ""
+
+#: ../../manual/lighting/lights/what_light_affects.rst:26
+msgid ""
+"Prevents the lamp from producing :doc:`specular highlights "
+"</materials/properties/specular_shaders>`."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:6
+msgid ""
+"Light wouldn't even exist without its counterpart: shadows. Shadows are a "
+"darkening of a portion of an object because light is being partially or "
+"totally blocked from illuminating the object. They add contrast and volume "
+"to a scene; there is nearly no place in the real world without shadows, so "
+"to get realistic renders, you will need them. Blender supports the following"
+" kinds of shadows:"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:14
+msgid ""
+"FIXME(Link Type Unsupported: #lamps; [[#Lamps: Ray-traced Shadows|Ray-traced"
+" lamp shadows]] )"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:20
+msgid ""
+"FIXME(Link Type Unsupported: #lamps; [[#Lamps: Buffered Shadows|Buffered "
+"lamp shadows]] )"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:24
+msgid ":doc:`Ambient occlusion </lighting/ambient_occlusion>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:25
+msgid ":doc:`Indirect lighting </lighting/indirect_lighting>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:27
+msgid ""
+"Ambient occlusion really isn't a shadow based on light *per se*, but based "
+"on geometry. However, it does mimic an effect where light is prevented from "
+"fully and uniformly illuminating an object, so it is mentioned here. Also, "
+"it is important to mention ambient lighting, since increasing *Ambient* "
+"decreases the effect of a shadow."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:33
+msgid ""
+"You can use a combination of ray-traced and buffer shadows to achieve "
+"different results. Even within ray-traced shadows, different lamps cast "
+"different patterns and intensities of shadow. Depending on how you arrange "
+"your lamps, one lamp may wipe out or override the shadow cast by another "
+"lamp."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:39
+msgid ""
+"Shadows is one of those trifectas in Blender, where multiple things have to "
+"be set up in different areas to get results:"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:42
+msgid "The lamp has to cast shadows (ability and direction)."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:43
+msgid "An opaque object has to block light on its way (position and layer)."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:44
+msgid ""
+"Another object's material has to receive shadows (*Shadow* and *Receive "
+"Transparent* enabled)."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:45
+msgid ""
+"The render engine has to calculate shadows (*Shadow* for buffered shadows, "
+"*Shadow* and *Ray* for ray-traced shadows)."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:47
+msgid ""
+"For example, the simple *Lamp*, *Area*, and *Sun* light has the ability to "
+"cast ray shadows, but not buffer shadows. The *Spot* light can cast both, "
+"whereas the *Hemi* light does not cast any. If a *Sun* lamp is pointing "
+"sideways, it will not cast a shadow from a sphere above a plane onto the "
+"plane, since the light is not traveling that way. All lamps able to cast "
+"shadows share some common options, described :doc:`here "
+"</lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:54
+msgid ""
+"Just to give you more shadow options (and further confuse the issue), lamps "
+"and materials can be set to respectively **only** cast and receive shadows, "
+"and not light the diffuse/specular aspects of the object. Also, render "
+"layers can turn on/off the shadow pass, and their output may or may not "
+"contain shadow information..."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:62
+msgid "Lamps: Ray-traced Shadows"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:68
+msgid "Ray Shadow enabled for a lamp"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:71
+msgid ""
+"Ray-traced shadows produce very precise shadows with very low memory use, "
+"but at the cost of processing time. This type of shadowing is available to "
+"all lamp types except *Hemi*."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:75
+msgid ""
+"As opposed to FIXME(Link Type Unsupported: #lamps; [[#Lamps: Buffered "
+"Shadows|buffered shadows]] ), ray-traced shadows are obtained by casting "
+"rays from a regular light source, uniformly and in all directions. The ray-"
+"tracer then records which pixel of the final image is hit by a ray light, "
+"and which is not. Those that are not are obviously obscured by a shadow."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:80
+msgid ""
+"Each light casts rays in a different way. For example, a *Spot* light casts "
+"rays uniformly in all directions within a cone. The *Sun* light casts rays "
+"from a infinitely distant point, with all rays parallel to the direction of "
+"the *Sun* light."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:85
+msgid ""
+"For each additional light added to the scene, with ray-tracing enabled, the "
+"rendering time increases. Ray-traced shadows require more computation than "
+"buffered shadows but produce sharp shadow borders with very little memory "
+"resource usage."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:89
+msgid "To enable ray-traced shadows, three actions are required:"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:91
+msgid "Enable *Shadows* globally in the *Render* menu's *Shading* panel."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:92
+msgid "Enable *Ray tracing* globally from the same panel."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:94
+msgid ""
+"Enable ray-traced shadows for the light using the *Ray Shadow* button in the"
+" *Light* menu's *Shadow* panel. This panel varies depending on the type of "
+"light."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:94
+msgid ""
+"All lamps able to cast ray-traced shadows share some common options, "
+"described in :doc:`Ray-traced Properties "
+"</lighting/shadows/raytraced_properties>`."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:96
+msgid "Ray-traced shadows can be cast by the following types of lamp:"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:98
+msgid ":doc:`Point lamp </lighting/lamps/lamp>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:99
+msgid ":doc:`Spot lamp </lighting/lamps/spot>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:100
+msgid ":doc:`Area lamp </lighting/lamps/area>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:101
+msgid ":doc:`Sun lamp </lighting/lamps/sun>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:105
+msgid "Lamps: Buffered Shadows"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:118
+msgid "Cast Buffer Shadows enabled for a material"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:121
+msgid ""
+"*Buffered* shadows provide fast-rendered shadows at the expense of precision"
+" and/or quality. Buffered shadows also require more memory resources as "
+"compared to ray tracing. Using buffered shadows depends on your "
+"requirements. If you are rendering animations or can't wait hours to render "
+"a complex scene with soft shadows, buffer shadows are a good choice."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:123
+msgid ""
+"For a scanline renderer - and Blender's built-in engine *is*, among other "
+"things, a scanline renderer - shadows can be computed using a *shadow "
+"buffer*. This implies that an \"image\", as seen from the spot lamp's point "
+"of view, is \"rendered\" and that the distance - in the image - for each "
+"point from the spot light is saved. Any point in the \"rendered\" image that"
+" is farther away than any of those points in the spot light's image is then "
+"considered to be in shadow. The shadow buffer stores this image data."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:130
+msgid "To enable buffered shadows these actions are required:"
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:132
+msgid ""
+"Enable shadows globally from the *Scene* menu's *Gather* panel by selecting "
+"*Approximate*."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:133
+msgid ""
+"Enable shadows for the light using the *Buffer Shadow* button in the *Lamp* "
+"menu's *Shadow* panel."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:134
+msgid ""
+"Make sure the *Cast Buffer Shadows* options is enabled in each *Material* 's"
+" *Shadow* panel."
+msgstr ""
+
+#: ../../manual/lighting/shadows.rst:137
+msgid ""
+"The :doc:`Spot lamp </lighting/lamps/spot/buffered_shadows>` is the only "
+"lamp able to cast buffered shadows."
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:4
+msgid "Common Shadowing Lamps Options"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:10
+msgid "Common shadowing options for lamps"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:13
+msgid ""
+"All lamps able to cast shadows (:doc:`Lamp </lighting/lamps/lamp>`, "
+":doc:`Spot </lighting/lamps/spot>`, :doc:`Area </lighting/lamps/area>` and "
+":doc:`Sun </lighting/lamps/sun>`) share some options, described below:"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:16
+msgid ""
+"When this option is enabled, only the objects on the same layer as the light"
+" source will cast shadows."
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:19
+msgid "Only Shadow"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:18
+msgid ""
+"The light source will not illuminate an object but will generate the shadows"
+" that would normally appear. This feature is often used to control how and "
+"where shadows fall by having a light which illuminates but has no shadow, "
+"combined with a second light which doesn't illuminate but has *Only Shadow* "
+"enabled, allowing the user to control shadow placement by moving the "
+"\"Shadow Only\" light around."
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:23
+msgid "Shadow color"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:22
+msgid ""
+"This color picker control allows you to choose the color of your cast "
+"shadows (black by default). The images below were all rendered with a white "
+"light and the shadow color was selected independently."
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:30
+msgid "Red colored shadow example"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:30
+msgid "Green colored shadow example"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:30
+msgid "Blue colored shadow example"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:33
+msgid ""
+"Although you can select a pure white color for a shadow color, it appears to"
+" make a shadow disappear."
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:40
+msgid ""
+":doc:`Common Raytraced Options </lighting/shadows/raytraced_properties>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:41
+msgid ":doc:`Lamp Light Raytraced Shadows </lighting/lamps/lamp>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:42
+msgid ":doc:`Spot Light Raytraced Shadows </lighting/lamps/spot>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:43
+msgid ":doc:`Area Light Raytraced Shadows </lighting/lamps/area>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:44
+msgid ":doc:`Sun Light Raytraced Shadows </lighting/lamps/sun>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows/properties.rst:45
+msgid ""
+":doc:`Spot Light Buffered Shadows </lighting/lamps/spot/buffered_shadows>`"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:4
+msgid "Lamps Raytraced Shadows"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:10
+msgid "Ray shadowing options for lamps"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:13
+msgid ""
+"Most lamp types (:doc:`Lamp </lighting/lamps/lamp>`, :doc:`Spot "
+"</lighting/lamps/spot>` and :doc:`Sun </lighting/lamps/sun>`) share the same"
+" options for the ray-traced shadows generation, which are described below. "
+"Note that the :doc:`Area </lighting/lamps/area>` lamp, even though using "
+"most of these options, have some specifics described in its :doc:`own ray-"
+"traced shadows page </lighting/lamps/area/raytraced_shadows>`."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:20
+msgid ""
+"The *Ray Shadow* button enables the light source to generate ray-traced "
+"shadows. When the *Ray Shadow* button is selected, another set of options is"
+" made available, those options being:"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:30
+msgid "Shadow sample generator type"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:23
+msgid ""
+"Method for generating shadow samples: Adaptive QMC is fastest, Constant QMC "
+"is less noisy but slower. This allows you to choose which algorithm is to be"
+" used to generate the samples that will serve to compute the ray-traced "
+"shadows (for now, mainly two variants of Quasi-Monte Carlo, see FIXME(TODO: "
+"Internal Link; [[#What is Quasi-Monte Carlo?|below]])):"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:28
+msgid ""
+"The *Constant QMC* method is used to calculate shadow values in a very "
+"uniform, evenly distributed way. This method results in very good "
+"calculation of shadow value but it is not as fast as using the *Adaptive "
+"QMC* method; however, *Constant QMC* is more accurate."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:30
+msgid ""
+"The *Adaptive QMC* method is used to calculate shadow values in a slightly "
+"less uniform and distributed way. This method results in good calculation of"
+" shadow value but not as good as *Constant QMC*. The advantage of using "
+"*Adaptive QMC* is that it is in general much quicker while being not much "
+"worse than *Constant QMC* in terms of overall results."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:33
+msgid ""
+"Number of extra samples taken (samples x samples). This slider sets the "
+"maximum number of samples that both *Constant QMC* and *Adaptive QMC* will "
+"use to do their shadow calculations. The maximum value is ``16`` - the real "
+"number of samples is actually the square of it, so setting a sample value of"
+" ``3`` really means ``3``:sup:`2` ``=`` ``9`` samples will be taken."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:76
+msgid "Soft Size"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:39
+msgid ""
+"Light size for ray shadow sampling. This slider determines the size of the "
+"fuzzy/diffuse/penumbra area around the edge of a shadow. *Soft Size* only "
+"determines the width of the soft shadow size, not how graded and smooth the "
+"shadow is. If you want a wide shadow which is also soft and finely graded, "
+"you must also set the number of samples in the *Samples* field higher than "
+"``1``; otherwise this field has no visible effect and the shadows generated "
+"will not have a soft edge. The maximum value for *Soft Size* is ``100.0``."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:48
+msgid ""
+"Below is a table of renders with different *Soft Size* and *Samples* "
+"settings showing the effect of various values on the softness of shadow "
+"edges:"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:55
+msgid "Soft Size: 1.0, Samples: 2."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:55
+msgid "Soft Size: 1.0, Samples: 4."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:55
+msgid "Soft Size: 1.0, Samples: 6."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:61
+msgid "Soft Size: 2.0, Samples: 2."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:61
+msgid "Soft Size: 2.0, Samples: 4."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:61
+msgid "Soft Size: 2.0, Samples: 6."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:67
+msgid "Soft Size: 3.0, Samples: 2."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:67
+msgid "Soft Size: 3.0, Samples: 4."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:67
+msgid "Soft Size: 3.0, Samples: 6."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:70
+msgid ""
+"Below is an animated version of the above table of images showing the "
+"effects:"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:74
+msgid ""
+"Animated version renders with different Soft Size and Samples settings "
+"showing the effect of various values on the softness of shadow edges."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:79
+msgid ""
+"Threshold for Adaptive Sampling. This field is used with the *Adaptive QMC* "
+"shadow calculation method. The value is used to determine if the *Adaptive "
+"QMC* shadow sample calculation can be skipped based on a threshold of how "
+"shadowed an area is already. The maximum *Threshold* value is ``1.0``."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:87
+msgid "What is Quasi-Monte Carlo?"
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:89
+msgid ""
+"The Monte Carlo method is a method of taking a series of samples/readings of"
+" values (any kind of values, such as light values, color values, reflective "
+"states) in or around an area at random, so as to determine the correct "
+"actions to take in certain calculations which usually require multiple "
+"sample values to determine overall accuracy of those calculations. The Monte"
+" Carlo method tries to be as random as possible; this can often cause areas "
+"that are being sampled to have large irregular gaps in them (places that are"
+" not sampled/read). This in turn can cause problems for certain calculations"
+" (such as shadow calculation)."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:98
+msgid "The solution to this was the Quasi-Monte Carlo method."
+msgstr ""
+
+#: ../../manual/lighting/shadows/raytraced_properties.rst:100
+msgid ""
+"The Quasi-Monte Carlo method is also random, but tries to make sure that the"
+" samples/readings it takes are also better distributed (leaving less "
+"irregular gaps in its sample areas) and more evenly spread across an area. "
+"This has the advantage of sometimes leading to more accurate calculations "
+"based on samples/reading."
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:7
+msgid "Volumetric Lighting"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:11
+msgid ""
+"According to Wikipedia, `volumetric lighting "
+"<http://en.wikipedia.org/wiki/Volumetric_lighting>`__"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:10
+msgid ""
+"« *is a technique used in 3D computer graphics to add lighting effects to a "
+"rendered scene. It allows the viewer to see beams of light shining through "
+"the environment; seeing sunbeams streaming through an open window is an "
+"example of volumetric lighting, also known as God rays. The term seems to "
+"have been introduced from cinematography and is now widely applied to 3D "
+"modeling and rendering especially in the field of 3D gaming.* *In volumetric"
+" lighting, the light cone emitted by a light source is modeled as a "
+"transparent object and considered as a container of a \"volume\": as a "
+"result, light has the capability to give the effect of passing through an "
+"actual three dimensional medium (such as fog, dust, smoke, or steam) that is"
+" inside its volume, just like in the real world.* »"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:13
+msgid ""
+"A classic example is the search light with a visible halo/shaft of light "
+"being emitted from it as the search light sweeps around."
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:16
+msgid ""
+"By default Blender does not model this aspect of light. For example when "
+"Blender lights something with a *Spot* light, you see the objects and area "
+"on the floor lit but not the shaft/halo of light coming from the spotlight "
+"as it progresses to its target and would get scattered on the way."
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:21
+msgid ""
+"The halo/shaft of light is caused in the real world by light being scattered"
+" by particles in the air, some of which get diverted into your eye and that "
+"you perceive as a halo/shaft of light. The scattering of light from a source"
+" can be simulated in Blender using various options, but by default is not "
+"activated."
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:27
+msgid ""
+"The only lamp able to create volumetric effects is the :doc:`Spot lamp "
+"</lighting/lamps/spot/halos>` (even thought you might consider some of the "
+":doc:`\"Sky & Atmosphere\" effects </lighting/lamps/sun/sky_and_atmosphere>`"
+" of the *Sun* lamp as volumetric as well)."
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:33
+msgid "Example"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:35
+msgid ""
+"`Blend file of spotlight animation. "
+"<http://wiki.blender.org/index.php/Media:Manual - Shadow and Spot - "
+"Spotlight Animation.blend>`__"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:42
+msgid "See also"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:44
+msgid ":doc:`Mist </world/mist>`"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:45
+msgid ":doc:`Smoke </physics/smoke>`"
+msgstr ""
+
+#: ../../manual/lighting/volumetric_lights.rst:46
+msgid ":doc:`Volumetric Materials </materials/volumetric>`"
+msgstr ""

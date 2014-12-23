@@ -521,8 +521,8 @@ Useful Links
 - `Carve Developement Home <https://code.google.com/p/carve/>`__ - GPLv2 C++ source at Google Code
 - `Carve library <http://carve-csg.com/>`__ - Homepage for the Carve Library project.
 - `Sculpt Tools <https://github.com/MadMinstrel/blender-sculpt-tools>`__  -
-  Link for a Blender Addon - This addon uses another approach to use the Boolean operations,
+  Link for a Blender Add-on - This add-on uses another approach to use the Boolean operations,
   when you select two or more objects, the active one becomes the modified mesh and all the others becomes a target.
-  This addon will add the Boolean modifier and apply it to the meshes automatically.
+  This add-on will add the Boolean modifier and apply it to the meshes automatically.
 
 

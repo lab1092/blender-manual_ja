@@ -20,7 +20,8 @@ Options
 =======
 
 Type
-   This procedural texture has five noise types on which the resulting pattern can be based and they are selectable from a dropdown menu at the top of the tab. The five types are:
+   This procedural texture has five noise types on which the resulting pattern can be based
+   and they are selectable from a dropdown menu at the top of the tab. The five types are:
 
    - Hetero Terrain
    - fBm
@@ -28,7 +29,8 @@ Type
    - Ridged Multifractal
    - Multifractal
 
-   These noise types determine the manner in which Blender layers successive copies of the same pattern on top of each other at varying contrasts and scales.
+   These noise types determine the manner in which Blender layers successive copies of the same
+   pattern on top of each other at varying contrasts and scales.
 
 
 Examples with Basis : Voronoi F1 - Dimension : 0.5 - Lacunarity : 0.15 - Octave: 2.0

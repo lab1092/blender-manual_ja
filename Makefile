@@ -7,6 +7,7 @@ CHAPTERS:=$(notdir $(sort $(CHAPTERS_FULL:%/=%)))
 QUICKY_CHAPTERS=$(filter $(MAKECMDGOALS),$(CHAPTERS))
 
 $(CHAPTERS): all
+
 all:
 	# './' (input), './html/en/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
@@ -26,7 +27,6 @@ gettext:
 	sphinx-build -b gettext ./manual ./locale/pot
 	@echo "pot files are updated. "
 	@echo "next you can update the po files. "
-
 
 pdf:
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
@@ -52,4 +52,3 @@ help:
 
 	@$(foreach ch,$(CHAPTERS),echo "- "$(ch);)
 	
-

@@ -1,10 +1,7 @@
 
-..    TODO/Review: {{review|fixes= proposed merge with [[Doc:2.6/Manual/3D_interaction/Sketching/Drawing|Drawing]]}} .
-
-
-******************
-Viewport Sketching
-******************
+************
+Introduction
+************
 
 The *Grease Pencil* is a tool that allows you to draw sketches and annotations in
 the 3D view and UV/Image editor windows using freehand strokes. It is a tool that can be
@@ -35,7 +32,7 @@ Grease Pencil can also be useful in a number of scenarios, including but not lim
 
 The next few pages explain how to use this tool:
 
-- :doc:`Drawing sketches </3d_interaction/sketching/drawing>`.
-- :doc:`Layers and Animation </3d_interaction/sketching/layers_and_animation>`.
-- :doc:`Converting sketches to geometry </3d_interaction/sketching/converting_to_geometry>`.
+- :doc:`Drawing sketches </grease_pencil/drawing>`.
+- :doc:`Layers and Animation </grease_pencil/layers_and_animation>`.
+- :doc:`Converting sketches to geometry </grease_pencil/converting_to_geometry>`.
 

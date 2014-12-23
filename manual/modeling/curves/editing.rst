@@ -64,7 +64,7 @@ Basic Curve Editing (translation, rotation, scale)
    | Hotkey:   :kbd:`G` / :kbd:`R` / :kbd:`S`
 
 
-Like other elements in Blender, Curve control points can be grabbed/moved (:kbd:`G`), rotated (:kbd:`R`) or scaled (:kbd:`S`) as described in the :doc:`Basic Transformations </3d_interaction/transformations/basics>` section. When in *Edit* mode, :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>` is also available for transformation actions.
+Like other elements in Blender, Curve control points can be grabbed/moved (:kbd:`G`), rotated (:kbd:`R`) or scaled (:kbd:`S`) as described in the :doc:`Basic Transformations </basics/transformations/introduction>` section. When in *Edit* mode, :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>` is also available for transformation actions.
 
 
 Snapping

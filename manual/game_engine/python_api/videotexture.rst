@@ -99,7 +99,12 @@ Find material
    matID = VideoTexture.materialID(obj, 'IMvideo.png')
 
 
-``VideoTexture.materialID()`` is a handy function to retrieve the object material that is using ``video.png`` as texture. This method will work with Blender material and UV texture. In case of UV texture, it grabs the internal material corresponding to the faces that are assigned to this texture. In case of Blender material, it grabs the material that has an image texture channel matching the name as first channel.
+``VideoTexture.materialID()``
+is a handy function to retrieve the object material that is using ``video.png`` as texture.
+This method will work with Blender material and UV texture.
+In case of UV texture, it grabs the internal material corresponding to the faces that are assigned to this texture.
+In case of Blender material,
+it grabs the material that has an image texture channel matching the name as first channel.
 
 The "\ ``IM`` " prefix indicates that we're searching for a texture name but we can also
 search for a material by giving the "\ ``MA`` " prefix. For example,
@@ -113,7 +118,8 @@ if we want to find the material called ``VideoMat`` on this object, the code bec
 Create texture
 --------------
 
-``VideoTexture.Texture`` is the class that creates the ``Texture`` object that loads the dynamic texture on the GPU. The constructor takes one mandatory and three optional arguments:
+``VideoTexture.Texture`` is the class that creates the ``Texture`` object that loads the dynamic texture on the GPU.
+The constructor takes one mandatory and three optional arguments:
 
 ``gameObj``
    The game object.
@@ -127,7 +133,9 @@ Create texture
 
 ``textureObj``
    Reference to another ``Texture`` object of which we want to reuse the texture.
-   If we use this argument, we should not create any source on this texture and there is no need to refresh it either: the other ``Texture`` object will provide the texture for both materials/textures.
+   If we use this argument,
+   we should not create any source on this texture and there is no need to refresh it either:
+   the other ``Texture`` object will provide the texture for both materials/textures.
 
 ::
 
@@ -225,7 +233,10 @@ The ``VideoFFmpeg`` source has several attributes to control the movie playback:
 ``scale``
    (*bool*).
    Set to True to activate fast nearest neighbour scaling algorithm.
-   Texture width and height must be a power of 2. If the video picture size is not a power of 2, rescaling is required. By default ``VideoTexture`` uses the precise but slow ``gluScaleImage()`` function. Best is to rescale the video offline so that no scaling is necessary at runtime!
+   Texture width and height must be a power of 2.
+   If the video picture size is not a power of 2, rescaling is required.
+   By default ``VideoTexture`` uses the precise but slow ``gluScaleImage()`` function.
+   Best is to rescale the video offline so that no scaling is necessary at runtime!
 
 ``flip``
    (*bool*).
@@ -234,7 +245,9 @@ The ``VideoFFmpeg`` source has several attributes to control the movie playback:
 
 ``filter``
    Set additional filter on the video before sending to GPU.
-   Assign to one of ``VideoTexture`` filter object. By default the image is send unchanged to the GPU. If an alpha channel is present in the video, it is automatically loaded and sent to the GPU as well.
+   Assign to one of ``VideoTexture`` filter object.
+   By default the image is send unchanged to the GPU.
+   If an alpha channel is present in the video, it is automatically loaded and sent to the GPU as well.
 
 We will simply set the ``scale`` attribute to True because the ``gluScaleImage
 ()`` is really too slow for real time video.

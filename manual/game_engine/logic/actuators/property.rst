@@ -23,7 +23,9 @@ Special Options:
 Assign
    the *Property* target property will become equal to the set *Value* once the actuator is activated
 Add
-   adds *Value* to the value of the property *Property* once the actuator is activated (enter a negative value to decrease). For *Bool*, a value other than 0 (also negative) is counted as True.
+   adds *Value* to the value of the property *Property* once the actuator is activated
+   (enter a negative value to decrease).
+   For *Bool*, a value other than 0 (also negative) is counted as True.
 Copy
    copies a property from another object to a property of the actuator owner once the actuator is activated.
 Toggle
