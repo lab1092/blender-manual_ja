@@ -49,9 +49,11 @@ Saving your own scripts
 File location
 -------------
 
-All scripts are loaded from the ``scripts`` folder of the :doc:`local, system and user paths </introduction/installing_blender/directorylayout>`.
+All scripts are loaded from the ``scripts`` folder of the
+:doc:`local, system and user paths </introduction/installing_blender/directorylayout>`.
 
-You can setup an addittional search path for scripts in :doc:`User preferences </preferences/file#file_paths>` (*User Preferences* → *File Paths*).
+You can setup an addittional search path for scripts in
+:doc:`User preferences </preferences/file#file_paths>` (*User Preferences* → *File Paths*).
 
 
 Installation

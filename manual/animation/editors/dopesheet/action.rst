@@ -72,9 +72,9 @@ Delete (:kbd:`X`)
 
  .. warning::
 
-	The :kbd:`X` shortcut is area-dependent: if you use it in the left list
-	part, it'll delete the selected channels, whereas if you use it in the main
-	area, it'll delete the selected keyframes...
+   The :kbd:`X` shortcut is area-dependent: if you use it in the left list
+   part, it'll delete the selected channels, whereas if you use it in the main
+   area, it'll delete the selected keyframes...
 
 :menuselection:`Settings --> Toogle/Enable/Disable a Setting` (:kbd:`Shift-W` / :kbd:`Ctrl-Shift-W` / :kbd:`Alt-W`)
    Enable/disable a channel's setting (selected in the menu that pops-up) - currently, "lock" and/or "mute" only.

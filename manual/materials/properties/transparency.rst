@@ -110,9 +110,11 @@ this is all because of the Index of Refraction of glass.
 
    To get ray-traced transparency, you need to:
 
-   - enable ray tracing in your Render settings.  This is done in the Render context  → Shading Panel. Ray tracing is enabled by default.
+   - enable ray tracing in your Render settings.
+     This is done in the Render context  → Shading Panel. Ray tracing is enabled by default.
    - set your Alpha value to something other than 1.0.
-   - in order for the background material to receive light passing through your transparent object, *Receive Transparent* must be turned on for that material in the Material → Shadow panel.
+   - in order for the background material to receive light passing through your transparent object,
+     *Receive Transparent* must be turned on for that material in the Material → Shadow panel.
 
 
 Options
@@ -131,7 +133,9 @@ IOR
    FIXME(TODO: Internal Link; [[#IOR values for Common Materials|IOR values for Common Materials]]) below.
 Filter
    Amount of filtering for transparent ray trace. The higher this value,
-   the more the base color of the material will show. The material will still be transparent but it will start to take on the color of the material. Disabled (0.0) by default.
+   the more the base color of the material will show.
+   The material will still be transparent but it will start to take on the color of the material.
+   Disabled (0.0) by default.
 Falloff
    How fast light is absorbed as it passes through the material. Gives 'depth' and 'thickness' to glass.
 Limit
@@ -152,7 +156,8 @@ Gloss
    Amount
       The clarity of the refraction. Set this to something lower than zero to get a blurry refraction.
    Threshold
-      Threshold for adaptive sampling. If a sample contributes less than this amount (as a percentage), sampling is stopped.
+      Threshold for adaptive sampling.
+      If a sample contributes less than this amount (as a percentage), sampling is stopped.
    Samples
       Number of cone samples averaged for blurry refraction.
 
@@ -165,10 +170,14 @@ Index of Refraction
 
 .. figure:: /images/Manual-2.5-Material-RaytracedTransp-IOR-Examples.jpg
 
-   Influence of the IOR of an Object on the distortion of the background: spheres of Water, Glass and Diamond (top to bottom).
+   Influence of the IOR of an Object on the distortion of the background:
+   spheres of Water, Glass and Diamond (top to bottom).
 
 
-(*Influence of the IOR of an Object on the distortion of the background: spheres of Water, Glass  and Diamond (top to bottom).*). There are different values for typical materials: Air is **1.000** (no refraction), Alcohol is **1.329**, Glass is **1.517**, Plastic is **1.460**, Water is **1.333** and Diamond is **2.417**.
+(*Influence of the IOR of an Object on the distortion of the background:
+spheres of Water, Glass  and Diamond (top to bottom).*).
+There are different values for typical materials: Air is **1.000** (no refraction),
+Alcohol is **1.329**, Glass is **1.517**, Plastic is **1.460**, Water is **1.333** and Diamond is **2.417**.
 
 
 Fresnel
@@ -204,7 +213,9 @@ Depth
    :width: 640px
    :figwidth: 640px
 
-   A simple scene with three glasses on a surface, and three lamps.  Depth was set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min, and 11 min respectively. (Download `.blend <http://wiki.blender.org/index.php/:File:Manual25-Material-3GlassesExample.blend>`__.)
+   A simple scene with three glasses on a surface, and three lamps.
+   Depth was set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min, and 11 min respectively.
+   (Download `.blend <http://wiki.blender.org/index.php/:File:Manual25-Material-3GlassesExample.blend>`__.)
 
 
 Increasing *Depth* also considerably increases render time.
@@ -216,7 +227,8 @@ Light rays thus have to pass through four surfaces for each glass.
 But not only that, at every point on a surface, some of the light can be reflected,
 or mirrored off the surface in various directions.
 This results in multiple rays needing to be calculated for each point
-(often referred to as a `tree of rays <http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.html>`__). In each of the rendered images above there are 640×400=256 000 pixels.
+(often referred to as a `tree of rays <http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.html>`__).
+In each of the rendered images above there are 640×400=256 000 pixels.
 By increasing *Depth*, at least one tree of rays is added to each pixel.
 
 Be kind to your computer. Carefully placing objects in a scene to avoid overlapping

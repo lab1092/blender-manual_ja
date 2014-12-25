@@ -21,9 +21,9 @@ You set the current mode in the *Mode* drop-down list of *3D View* header
 
  .. warning::
 
-	You can only select objects in *Object* mode. In all others, the
-	current object selection is "locked" (except, to some extent, with an
-	armature's *Pose* mode).
+   You can only select objects in *Object* mode. In all others, the
+   current object selection is "locked" (except, to some extent, with an
+   armature's *Pose* mode).
 
 Modes might affect many things in Blender:
 

@@ -232,7 +232,7 @@ Solidify
    | Hotkey:   :menuselection:`[ctrl][F] --> Solidify`
 
 
-This takes a selection of faces and solidifies them by extruding them uniformly to give volume to a non-manifold surface. This is also available as a :doc:`Modifier </modifiers/generate/solidify>`. After using the tool, you can set the offset distance in the Tool Palette.
+This takes a selection of faces and solidifies them by extruding them uniformly to give volume to a :term:`non-manifold` surface. This is also available as a :doc:`Modifier </modifiers/generate/solidify>`. After using the tool, you can set the offset distance in the Tool Palette.
 
 Thickness
    Amount to offset the newly created surface. Positive values offset the surface inward relative to the normals. Negative values offset outward.

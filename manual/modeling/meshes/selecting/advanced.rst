@@ -11,21 +11,39 @@ Mirror
    Select mesh items at the mirrored location.
 Linked :kbd:`Ctrl-L`
    Selects all components that are connected to the current selection.
-Select Random
+Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
 Checker Deselect
    Deselect alternating faces, to create a checker like pattern.
 Select Every N Number of Vertices
    Selects vertices that are multiples of N.
-Select Sharp Edges
+Sharp Edges
    This option will select all edges that are between two faces forming an angle less than a given value,
    which is asked you *via* a small pop-up dialog.
    The lower is this angle limit, the sharper will be the selected edges.
-   At ``180``, **all** "manifold" (see below) edges will be selected.
+   At ``180``, **all** :term:`manifold` edges will be selected.
 Linked Flat Faces (:kbd:`Ctrl-Shift-Alt-F`)
-   Select connected faces based on a threshold of the angle between them. This is useful for selecting faces that are planar.
-Select Non Manifold (:kbd:`Ctrl-Shift-Alt-M`)
-   Selects vertices that are not completely bound by geometry, including border edges, floating edges, and orphan vertices. Only available in Vertex and Edge mode.
+   Select connected faces based on a threshold of the angle between them.
+   This is useful for selecting faces that are planar.
+Non Manifold (:kbd:`Ctrl-Shift-Alt-M`)
+   Selects the :term:`non-manifold` geometry of a mesh.
+   This entry is available when editing a mesh, in Vertex and Edge selection modes only.
+   The *redo* panel provides several selection options:
+
+   Extend
+      Lets you extend the current selection.
+   Wire
+      Selects all the edges that don't belong to any face.
+   Boundaries
+      Selects edges in boundaries and holes.
+   Multiple Faces
+      Selects edges that belong to 3 or more faces.
+   Non Contiguous
+      Selects edges that belong to exactly 2 faces with opposite normals.
+   Vertices
+      Selects vertices that belong to *wire* and *multiple face* edges, isolated vertices,
+      and vertices that belong to non adjoining faces.
+
 Interior Faces
    Select faces where all edges have more than 2 faces.
 Side of Active

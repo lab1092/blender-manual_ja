@@ -3,12 +3,16 @@
 Shadows
 *******
 
-The shadows that appear in a scene are affected by a combination of the layout of objects, the shape of the objects,  the materials of the objects, and the lighting. In Blender, the Display Mode (Single Texture, Multitexture,or GLSL) also affects the appearance of shadows. See :doc:`/lighting/shadows` for a more complete description of this subject.
+The shadows that appear in a scene are affected by a combination of the layout of objects,
+the shape of the objects,  the materials of the objects, and the lighting.
+In Blender, the Display Mode (Single Texture, Multitexture,or GLSL) also affects the appearance of shadows.
+See :doc:`/lighting/shadows` for a more complete description of this subject.
 
 
 .. tip:: Shadows in 3D mode
 
-   To see shadows in 3D (textured) mode, you must have switched to GLSL mode before making any materials.   In MultiTexture mode, shadows only appear in the rendered image: none of these can be seen in the preview image.
+   To see shadows in 3D (textured) mode, you must have switched to GLSL mode before making any materials.
+   In MultiTexture mode, shadows only appear in the rendered image: none of these can be seen in the preview image.
 
 
 .. figure:: /images/Doc_2.6_Materials_Properties_Shadow.jpg
@@ -46,7 +50,8 @@ Receive
    Allows this material to receive full-intensity shadows (Fig. 3).
 
 Receive Transparent
-   Allows this material to receive shadows whose intensity is modified by the transparency and color of the shadow-casting object (Fig. 4).
+   Allows this material to receive shadows whose intensity is modified by the transparency
+   and color of the shadow-casting object (Fig. 4).
 
 
 .. figure:: /images/Doc_2.6_Materials_Properties_Shadow3.jpg
@@ -72,7 +77,8 @@ Casting Alpha
    ??
 
 Shadows Only
-   Material appears transparent except for where it receives shadows from other objects, and  also it retains its own transparency (Fig. 6). Note the faint image of the partly-transparent post.
+   Material appears transparent except for where it receives shadows from other objects,
+   and  also it retains its own transparency (Fig. 6). Note the faint image of the partly-transparent post.
 
 Shadow and Distance
    ???
@@ -91,7 +97,10 @@ Shadow and Distance
 Buffered Shadow Options
 -----------------------
 
-In addition to the shadow options described above, there are further material properties which control buffered shadow features. See section on :doc:`Spot Buffered Shadows </lighting/lamps/spot/buffered_shadows>` for further discussion of these techniques.
+In addition to the shadow options described above,
+there are further material properties which control buffered shadow features.
+See section on :doc:`Spot Buffered Shadows </lighting/lamps/spot/buffered_shadows>`
+for further discussion of these techniques.
 
 Cast Buffer Shadow
    Casts shadows from shadow buffer lamps.

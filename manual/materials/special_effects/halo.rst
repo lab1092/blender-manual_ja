@@ -33,7 +33,10 @@ Options
 To enable *Halos*,
 press the *Halo* button in the *Material* menu's top panel.
 
-As you will see in the 3D View, the mesh faces are no longer rendered. Instead just the vertex is rendered, since that is where each halo will originate. Halos can be hard to find in a crowded scene, so name it well for easy location in :doc:`the outliner </data_system/the_outliner>`.
+As you will see in the 3D View, the mesh faces are no longer rendered.
+Instead just the vertex is rendered, since that is where each halo will originate.
+Halos can be hard to find in a crowded scene, so name it well for easy location in
+:doc:`the outliner </data_system/the_outliner>`.
 
 In the properties window, where we normally find the *Diffuse*,
 *Specular*, and *Shading* panels,
@@ -48,7 +51,8 @@ Alpha
 Color Swatch
    The color of the halo itself
 Seed
-   If non-zero, randomizes the ring dimension and line location. To use, give any (integer) number to start the random-number generator.
+   If non-zero, randomizes the ring dimension and line location.
+   To use, give any (integer) number to start the random-number generator.
 
 Size
    Sets the dimension of the halo
@@ -62,8 +66,9 @@ Hardness
 
 
 Add
-   The *Add* slider determine how much the halo colors are 'added to', rather than mixed with, the colors of the objects behind and together with other halos. By increasing Add, the Halo will appear to light up objects that move behind it or through the Halo field.
-
+   The *Add* slider determine how much the halo colors are 'added to',
+   rather than mixed with, the colors of the objects behind and together with other halos.
+   By increasing Add, the Halo will appear to light up objects that move behind it or through the Halo field.
 Texture
    Gives halo a texture. By default,
    textures are applied to objects with Object coordinates and reflects on the halos by affecting their color,
@@ -72,7 +77,6 @@ Texture
    and hence to have it with varying colors or transparencies; this will map the whole texture to *every* halo.
    This technique proves very useful when you want to create a realistic rain effect using particle systems,
    or similar.
-
 Vertex Normal
    Use the vertex normal to specify the dimension of the halo
 Extreme Alpha
@@ -206,10 +210,12 @@ Dotmatrix display
 Let's use a halo material to create a dotmatrix display.
 
 
-- To begin, add a grid with the dimensions 32x16. Then add a camera and adjust your scene so that you have a nice view of the billboard.
-
-
-- Use a 2D image program to create some red text on a black background, using a simple and bold font (if you are a lazy lizard [I hope this not offensive, I just like how it sounds!], you can just save the picture below on your hard drive...). *Dot matrix image texture.* shows an image 512 pixels wide by 64 pixels high, with some black space at both sides.
+- To begin, add a grid with the dimensions 32x16.
+  Then add a camera and adjust your scene so that you have a nice view of the billboard.
+- Use a 2D image program to create some red text on a black background,
+  using a simple and bold font (if you are a lazy lizard [I hope this not offensive, I just like how it sounds!],
+  you can just save the picture below on your hard drive...).
+  *Dot matrix image texture.* shows an image 512 pixels wide by 64 pixels high, with some black space at both sides.
 
 
 
@@ -218,16 +224,17 @@ Let's use a halo material to create a dotmatrix display.
    Dot matrix image texture.
 
 
-- Add a material for the billboard, and set it to the type *Halo*. Set the *HaloSize* to 0.06 and when you render the scene you should see a grid of white spots.
-
-
-- Add a Texture, then change to the Texture Buttons and make it an image texture. When you load your picture and render again you should see some red tinted dots in the grid.
-
-
-- Return to the Material Buttons and adjust the *sizeX* parameter to about 0.5 then render again; the text should now be centered on the Billboard.
-
-
-- To remove the white dots, adjust the material color to a dark red and render. You should now have only red dots, but the billboard is still too dark. To fix this enter EditMode for the board and copy all vertices using the :kbd:`Shift-D` shortcut (take care not to move them!). Then adjust the brightness with the *Add* value in the MaterialButtons.
+- Add a material for the billboard, and set it to the type *Halo*.
+  Set the *HaloSize* to 0.06 and when you render the scene you should see a grid of white spots.
+- Add a Texture, then change to the Texture Buttons and make it an image texture.
+  When you load your picture and render again you should see some red tinted dots in the grid.
+- Return to the Material Buttons and adjust the *sizeX* parameter to about 0.5 then render again;
+  the text should now be centered on the Billboard.
+- To remove the white dots, adjust the material color to a dark red and render.
+  You should now have only red dots, but the billboard is still too dark.
+  To fix this enter EditMode for the board and copy all vertices using the :kbd:`Shift-D` shortcut
+  (take care not to move them!).
+  Then adjust the brightness with the *Add* value in the MaterialButtons.
 
 
 
@@ -245,6 +252,7 @@ or they will overlap. (*Dot Matrix display*).
 
 .. note:: Note about material indices
 
-   Halo materials only work when applied using the first material index. Any material(s) in a subsequent material index will not be rendered.
+   Halo materials only work when applied using the first material index.
+   Any material(s) in a subsequent material index will not be rendered.
 
 

@@ -219,12 +219,14 @@ your search keywords will refine your search and if no named operator can be fou
 the small Pop Up Window for the Blender Search will stay blank.
 
 
-- How it works:
-  - Every Blender Internal Operator can use a defined name, some of them are predefined names for the user.
-    For example, the *Render* command is a named Python call,
-    the appropriate Operator is  ``Python: bpy.ops.render.render()`` , but for the user, it is called Render.
-    All of those *user* names that were previously attributed for
-    Python operators can searched for using *Blender Search*.
+.. admonition:: How it works
+   :class: refbox
+
+   Every Blender Internal Operator can use a defined name, some of them are predefined names for the user.
+   For example, the *Render* command is a named Python call,
+   the appropriate Operator is  ``Python: bpy.ops.render.render()`` , but for the user, it is called Render.
+   All of those *user* names that were previously attributed for
+   Python operators can searched for using *Blender Search*.
 
 
 Tooltips

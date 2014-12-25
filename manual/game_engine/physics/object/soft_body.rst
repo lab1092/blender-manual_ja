@@ -67,6 +67,7 @@ FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/MassOption;
   - Python property: ``obj.game.soft_body.linear_stiffness``
 - *Friction* - Dynamic friction coefficient.
   FIXME(Tag Unsupported:span; <span style="color: #E7007A">TODO: Learn/demo/explain.</span>)
+
   - Code effect: Sets `btSoftBody::Config::kMT <http://www.continuousphysics.com/Bullet/BulletFull/btSoftBodyInternals_8h.html>`__,
     which, for Soft Bodies, defines the minimum friction versus the Material Friction (which in turn defaults to 0.5).
   - Range: 0-1.

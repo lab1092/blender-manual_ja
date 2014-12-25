@@ -81,7 +81,7 @@ Light may be scattered, absorbed, or emitted at any point in the volume.
 Mesh Topology
 """""""""""""
 
-Meshes used for volume render should be closed and manifold.
+Meshes used for volume render should be closed and :term:`manifold`.
 That means that there should be no holes in the mesh. Each edge must be connected to exactly 2
 faces such that there are no holes or T-shaped faces where 3 or more faces are connected to an
 edge.

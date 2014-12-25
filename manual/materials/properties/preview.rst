@@ -25,15 +25,20 @@ Options
 Flat XY plane
    Useful for previewing textures and materials of flat objects, like walls, paper and such.
 Sphere
-   Useful for previewing textures and materials of sphere-like objects, but also to design metals and other reflective/transparent materials, thanks to the checkered background.
+   Useful for previewing textures and materials of sphere-like objects,
+   but also to design metals and other reflective/transparent materials, thanks to the checkered background.
 Cube
-   Useful for previewing textures and materials of cube-like objects, but also to design procedural textures. Features a checkered background.
+   Useful for previewing textures and materials of cube-like objects, but also to design procedural textures.
+   Features a checkered background.
 Monkey
-   Useful for previewing textures and materials of organic or complex non-primitive shapes. Features a checkered background.
+   Useful for previewing textures and materials of organic or complex non-primitive shapes.
+   Features a checkered background.
 Hair strands
-   Useful for previewing textures and materials of strand-like objects, like grass, fur, feathers and hair. Features a checkered background.
+   Useful for previewing textures and materials of strand-like objects, like grass, fur, feathers and hair.
+   Features a checkered background.
 Large Sphere with Sky
-   Useful for previewing textures and materials of sphere-like objects, but also to design metals and other reflective materials, thanks to the gradient Sky background.
+   Useful for previewing textures and materials of sphere-like objects,
+   but also to design metals and other reflective materials, thanks to the gradient Sky background.
 
 Preview uses OSA (oversampling). Whatever the preview option, it will make use of OSA
 (oversampling) in order to provide better quality.

@@ -75,7 +75,7 @@ Only Rim
 
 .. note::
 
-   *Fill Rim* and *Only Rim* only make a difference on non-manifold objects,
+   *Fill Rim* and *Only Rim* only make a difference on :term:`non-manifold` objects,
    since the "rims" are generated from the borders of the original geometry.
 
 Material Index Offset

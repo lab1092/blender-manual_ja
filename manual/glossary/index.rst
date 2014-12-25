@@ -75,6 +75,25 @@
 
       See Wikipedia's `Blend Modes <http://en.wikipedia.org/wiki/Blend_modes>`__ article for more information.
 
+   Manifold
+      Manifold meshes, called also *water tight* meshes,
+      define a **closed non-self-intersecting volume** (see also :term:`non-manifold`).
+
+   Non-Manifold
+      Non-Manifold meshes essentially define geometry which cannot exist in the real world.
+      This kind of geometry is not suitable for several types of operations,
+      specially those where knowing the volume (inside/outside) of the object is important
+      (refraction, fluids, booleans, or 3D printing, to name a few).
+      There are several types of non-manifold geometry:
+
+      - Borders and holes (edges with only a single connected face), as faces have no thickness.
+      - Edges and vertices not belonging to any face (wire).
+      - Edges connected to 3 or more faces (interior faces).
+      - Vertices belonging to faces that are not adjoining (e.g. 2 cones sharing the vertex at the apex).
+
+      Use :menuselection:`3D View --> Select --> Non Manifold`
+      to select these types of non-manifold geometry in a mesh.
+
    Lattice
       TODO
 

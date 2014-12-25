@@ -94,7 +94,7 @@ Grid
       Add a random offset to grid locations.
 
 
-.. tip:: Your mesh must be watertight to emit particles from the volume.
+.. tip:: Your mesh must be :term:`manifold` to emit particles from the volume.
 
    Some modifiers like *Edge Split* break up the surface,
    in which case volume emission will not work correctly!

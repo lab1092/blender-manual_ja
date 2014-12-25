@@ -159,7 +159,8 @@ Blend :
 Scattering Weight :
    Front
       Factor to increase or decrease the front scattering.
-      When light enters through the front of the object, how much is absorbed or added? (Normally **1.0** or **100%**).
+      When light enters through the front of the object, how much is absorbed or added?
+      (Normally **1.0** or **100%**).
    Back
       Factor to increase or decrease the back scattering. Light hitting an object from behind can go all the way
       through the object and come out on the front of the object. This happens mostly on thin objects,
@@ -184,7 +185,8 @@ A more common but less intuitive approach is to use "layering".
 This is a simplified version of the layering approach.
 See the external links for more information:
 
-- Set the SSS color on a value of your choice, normally the predominant color of the object. If you want to use different radii for the colors, don't make it too dark.
+- Set the SSS color on a value of your choice, normally the predominant color of the object.
+  If you want to use different radii for the colors, don't make it too dark.
 - Set the scale factor. If you want to see much translucency you need small objects or large scale values.
 - Set the radius values.
 - Adjust the brightness with the *Front* and *Back* values.
@@ -195,7 +197,8 @@ See the external links for more information:
 
 - Set the Scattering color to .5
 - Set the Front weight to 2.
-- Set the scale factor based on the size of your object relative to the scene. If you want to see much translucency you need small objects or large scale values.
+- Set the scale factor based on the size of your object relative to the scene.
+  If you want to see much translucency you need small objects or large scale values.
 - Set the radius values appropriately.
 
 

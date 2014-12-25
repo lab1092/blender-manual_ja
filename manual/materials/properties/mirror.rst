@@ -87,7 +87,8 @@ Fade to
 
 .. figure:: /images/Manual-2.5-Material-RayMirror-example.jpg
 
-   Suzanne in the Fun House (`.blend <http://wiki.blender.org/index.php/:File:Manual-2.5-Material-MonkeyMirror.blend>`__)
+   Suzanne in the Fun House
+   (`.blend <http://wiki.blender.org/index.php/:File:Manual-2.5-Material-MonkeyMirror.blend>`__)
 
 
 Gloss

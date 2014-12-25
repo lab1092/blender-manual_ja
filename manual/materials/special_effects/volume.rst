@@ -36,7 +36,7 @@ The light bounces around off the various molecules, being scattered or absorbed,
 until some light passes through the volume and reaches the camera.
 In order for that volume to be visible, the renderer must figure out how much material the
 light has passed through and how it has acted and reacted within that volume,
-the volume object needs to contain a 3D region of space, for example a watertight closed mesh,
+the volume object needs to contain a 3D region of space, for example a :term:`manifold` closed mesh,
 such as a cube, not just a flat surface like a plane. To get an image,
 the renderer has to step through that region, and see how much 'stuff' is there (density)
 in order to see how light is absorbed or scattered or whatever. This can be a time consuming
@@ -71,7 +71,8 @@ thick smoke.
 Density
    The base density of the material - other density from textures is added on top
 Density Scale
-   A global multiplier to increase or decrease the apparent density. This can be useful for getting consistent results across different scene scales.
+   A global multiplier to increase or decrease the apparent density.
+   This can be useful for getting consistent results across different scene scales.
 
 
 Shading
@@ -94,8 +95,11 @@ light beams as they travel though a volume and are scattered towards the eye.
 
 
 Scattering
-   The amount of light that is scattered out of the volume. The more light that is scattered out of the volume, the less it will penetrate through the rest of the volume. Raising this parameter can have the effect of making the volume seem denser, as the light is scattered out quickly at the 'surface' of the volume, leaving the areas internal to the volume darker, as the light doesn't reach it.
-
+   The amount of light that is scattered out of the volume.
+   The more light that is scattered out of the volume, the less it will penetrate through the rest of the volume.
+   Raising this parameter can have the effect of making the volume seem denser,
+   as the light is scattered out quickly at the 'surface' of the volume,
+   leaving the areas internal to the volume darker, as the light doesn't reach it.
 
 Note in the examples below, the less light that is scattered out of the volume,
 the more easily it penetrates throughout the volume and to the shadow.
@@ -127,7 +131,8 @@ Back-scattering means that light is scattered more towards the incoming light di
 forward-scattering means it's scattered along the same direction as the light is travelling.
 
 Asymmetry
-   Asymmetry controls the range between back-scattering (-1.0) and forward-scattering (1.0). The default value of 0.0 gives Isotropic scattering (even in all directions).
+   Asymmetry controls the range between back-scattering (-1.0) and forward-scattering (1.0).
+   The default value of 0.0 gives Isotropic scattering (even in all directions).
 
 
 Transmission
@@ -310,9 +315,12 @@ Step Calculation Method
       Constant method of calculating the step.
 
 Step Size
-   Distance between subsequent volume depth samples. Step Sizes determine how noisy the volume is. Higher values result in lower render times and higher noise.
+   Distance between subsequent volume depth samples.
+   Step Sizes determine how noisy the volume is.
+   Higher values result in lower render times and higher noise.
 Depth Cutoff
-   Stop ray marching early if transmission drops below this luminance - higher values give speedups in dense volumes at the expense of accuracy.
+   Stop ray marching early if transmission drops below this luminance -
+   higher values give speedups in dense volumes at the expense of accuracy.
 
 
 Options
@@ -339,7 +347,9 @@ Exclusive
 Examples
 ********
 
-<these are sandbox edits to the whole shading intro section of the wiki, which groups materials and textures, and gives us an entree into Volumetric shading. Note qualification of Mesh object. Need to investigate shading of other object types...>
+<these are sandbox edits to the whole shading intro section of the wiki,
+which groups materials and textures, and gives us an entree into Volumetric shading.
+Note qualification of Mesh object. Need to investigate shading of other object types...>
 
 Shading is the process and the code which enables an object to be seen in the final render
 output. Blender has four methods to shade a mesh object:

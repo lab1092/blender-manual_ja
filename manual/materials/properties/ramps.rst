@@ -41,7 +41,8 @@ Options
    Ramps Panel
 
 
-In Blender 2.5, the separate *Ramp* panels for the *Diffuse* shader and the *Specular* shader respectively can be toggled on and off using the
+In Blender 2.5, the separate *Ramp* panels for the *Diffuse* shader and the
+*Specular* shader respectively can be toggled on and off using the
 
 .. figure:: /images/Manual-2.5-Material-RampsButton.jpg
 
@@ -51,7 +52,8 @@ By default the Ramp panel opens with two colors; the first stop (*0*)
 is black and transparent (Alpha=0) and the second stop (*1*) is white and opaque
 (Alpha=1).
 
-The position of the color stop markers can be altered by either (1) dragging the stop marker in the colorband or (2) by changing the *Pos* value in the
+The position of the color stop markers can be altered by either
+(1) dragging the stop marker in the colorband or (2) by changing the *Pos* value in the
 
 .. figure:: /images/Manual-2.5-Material-Ramps-StopPos.jpg
 
@@ -73,13 +75,18 @@ Input
    The input menu contains the following options for defining the gradient:
 
    Shader
-      The value as delivered by the material's shader (*Lambert*, *CookTorr*) defines the color.  Here the amount of light doesn't matter for color, only the direction of the light.
+      The value as delivered by the material's shader (*Lambert*, *CookTorr*) defines the color.
+      Here the amount of light doesn't matter for color, only the direction of the light.
    Energy
-      As *Shader*, now also lamp energy, color, and distance are taken into account.  This makes the material change color when more light shines on it.
+      As *Shader*, now also lamp energy, color, and distance are taken into account.
+      This makes the material change color when more light shines on it.
    Normal
-      The surface normal, relative to the camera, is used for the *Ramp Shader*.  This is possible with a texture as well, but added for convenience.
+      The surface normal, relative to the camera, is used for the *Ramp Shader*.
+      This is possible with a texture as well, but added for convenience.
    Result
-      While all three previous options work per lamp, this option only works after shading calculations.  This allows full control over the entire shading, including 'Toon' style results.  Using alpha values here is most useful for tweaking a finishing touch to a material.
+      While all three previous options work per lamp, this option only works after shading calculations.
+      This allows full control over the entire shading, including 'Toon' style results.
+      Using alpha values here is most useful for tweaking a finishing touch to a material.
 
 
 .. figure:: /images/Manual-2.5-Material-Ramps-BlendMenu.jpg
@@ -115,20 +122,28 @@ Options
 ^^^^^^^
 
 Add
-   Add a new mark to the center of the colorband with the default color (neutral gray).  New marks can also be added by :kbd:`Ctrl-LMB` clicking in the colorband itself, which will add the mark at the position of the click with the same color that already exists underneath the mouse pointer.
+   Add a new mark to the center of the colorband with the default color (neutral gray).
+   New marks can also be added by :kbd:`Ctrl-LMB` clicking in the colorband itself,
+   which will add the mark at the position of the click with the same color
+   that already exists underneath the mouse pointer.
 Delete
    Remove the currently selected mark from the colorband.
 F
    Flip the colorband.
 0
-   The number of the active mark.  The values for this mark are those being displayed, and in the colorband, the active mark is displayed as a dashed line.  Another marker can be selected (1) using the arrows in the
+   The number of the active mark.
+   The values for this mark are those being displayed,
+   and in the colorband, the active mark is displayed as a dashed line.
+   Another marker can be selected (1) using the arrows in the
 
 .. figure:: /images/Manual-2.5-Material-Ramps-MarkerSelectSlider.jpg
 
- slider, (2) by clicking on the number being displayed and entering a number of a color mark, or (3) by :kbd:`LMB` clicking a marker in the colorband.
+ slider, (2) by clicking on the number being displayed and entering a number of a color mark,
+ or (3) by :kbd:`LMB` clicking a marker in the colorband.
 
 Pos
-   The position of the active color mark in the colorband (range 0.0–1.0).  The position of the color marks can also be changed by :kbd:`LMB` dragging them in the colorband.
+   The position of the active color mark in the colorband (range 0.0–1.0).
+   The position of the color marks can also be changed by :kbd:`LMB` dragging them in the colorband.
 
 
 .. note:: Reordering colors

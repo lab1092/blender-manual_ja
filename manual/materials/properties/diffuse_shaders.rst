@@ -21,12 +21,15 @@ Common Options
 ==============
 
 All diffuse shaders have the following options:
- **Color**
+
+Color
    Select the base *diffuse color* of the material.
- **Intensity**
-   The shader's brightness, or more accurately, the amount of incident light energy that is actually diffusely reflected towards the camera.
+Intensity
+   The shader's brightness, or more accurately,
+   the amount of incident light energy that is actually diffusely reflected towards the camera.
 Ramp
-   Allows you to set a range of colors for the *Material*, and define how the range will vary over a surface. See :doc:`Color Ramps </materials/properties/ramps>` for details.
+   Allows you to set a range of colors for the *Material*, and define how the range will vary over a surface.
+   See :doc:`Color Ramps </materials/properties/ramps>` for details.
 
 
 Technical Details
@@ -47,7 +50,8 @@ If most of the light striking a surface is reflected diffusely, the surface will
 
 .. tip:: Shader Names
 
-   Some shaders' names may sound odd - they are traditionally named after the people who first introduced the models on which they are based.
+   Some shaders' names may sound odd -
+   they are traditionally named after the people who first introduced the models on which they are based.
 
 
 Lambert
@@ -71,7 +75,9 @@ This is Blender's default diffuse shader, and is a good general all-around workh
 materials showing low levels of specular reflection.
 
 `Johann Heinrich Lambert <http://en.wikipedia.org/wiki/Johann_Heinrich_Lambert>`__ (1728-1777)
-   was a Swiss mathematician, physicist and astronomer who published works on the reflection of light, most notably the `Beer-Lambert Law <http://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law>`__ which formulates the law of light absorption.
+   was a Swiss mathematician, physicist and astronomer who published works on the reflection of light,
+   most notably the `Beer-Lambert Law <http://en.wikipedia.org/wiki/Beer%E2%80%93Lambert_law>`__
+   which formulates the law of light absorption.
 
 This shader has only the default option, determining how much of available light is reflected.
 Default is 0.8, to allow other objects to be brighter.

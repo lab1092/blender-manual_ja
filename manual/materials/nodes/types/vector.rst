@@ -94,7 +94,8 @@ Inputs
 ------
 
 Vector
-   The input vector (3D-direction in relation to the camera) of some the coordinates' mapping. The value can be provided by another node or set manually.
+   The input vector (3D-direction in relation to the camera) of some the coordinates' mapping.
+   The value can be provided by another node or set manually.
 
 
 Outputs
@@ -172,9 +173,11 @@ Inputs
 ------
 
 Fac:
-   Factor. The degree of node's influence in node tree. The value can be provided by another node or set manually.
+   Factor. The degree of node's influence in node tree.
+   The value can be provided by another node or set manually.
 Vector
-   The input vector (3D-direction in relation to the camera). The value can be provided by another node or set manually.
+   The input vector (3D-direction in relation to the camera).
+   The value can be provided by another node or set manually.
 
 
 Outputs

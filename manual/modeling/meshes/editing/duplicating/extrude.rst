@@ -85,7 +85,7 @@ Extrude Edges and Vertices Only
 
 
 If vertices are selected while doing an extrude, but they do not form an edge or face,
-they will extrude as expected, forming a non-manifold edge. Similarly,
+they will extrude as expected, forming a :term:`non-manifold` edge. Similarly,
 if edges are selected that do not form a face, they will extrude to form a face.
 
 

@@ -57,9 +57,9 @@ To Action
 
  .. warning::
 
-	Even though it might not be in red state (UI refresh problems...), this
-	constraint is obviously not functional when this field does not contain a
-	valid action.
+   Even though it might not be in red state (UI refresh problems...), this
+   constraint is obviously not functional when this field does not contain a
+   valid action.
 
 Object Action
    **Bones only**, when enabled, this option will make the constrained bone use the "object" part of the linked action, instead of the "same-named pose" part. This allows you to apply the action of an object to a bone.

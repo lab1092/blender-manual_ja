@@ -135,5 +135,6 @@ Simplify Stroke
 Additional Notes For Tablet Users
 ---------------------------------
 
-- The thickness of a stroke at a particular point is affected by the pressure used when drawing that part of the stroke.
+- The thickness of a stroke at a particular point is affected
+  by the pressure used when drawing that part of the stroke.
 - The "eraser" end of the stylus can be used to erase strokes.

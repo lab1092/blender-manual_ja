@@ -139,7 +139,7 @@ Select Sharp Edges
    This option will select all edges that are between two faces forming an angle less than a given value,
    which is asked you *via* a small pop-up dialog.
    The lower is this angle limit, the sharper will be the selected edges.
-   At ``180``, **all** "manifold" (see below) edges will be selected.
+   At ``180``, **all** :term:`manifold` edges will be selected.
 Linked Flat Faces (:kbd:`Ctrl-Shift-Alt-F`)
    Select connected faces based on a threshold of the angle between them.
    This is useful for selecting faces that are planar.
@@ -149,9 +149,8 @@ Side of Active
    Selects all data on the mesh in a single axis
 Select Faces by Sides
    Selects all faces that have a specified number of edges.
-Select Non Manifold (:kbd:`Ctrl-Shift-Alt-M`)
-   Selects vertices that are not completely bound by geometry,
-   including border edges, floating edges, and orphan vertices. Only available in Vertex mode.
+Non Manifold (:kbd:`Ctrl-Shift-Alt-M`)
+   Selects :term:`non-manifold` geometry. See :doc:`Mesh Advanced Selection </modeling/meshes/selecting/advanced>`.
 Loose
    Select all vertices or edges that do not form part of a face.
 Similar

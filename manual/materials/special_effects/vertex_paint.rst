@@ -12,7 +12,9 @@ the colour of the vertex is modified according to the rules of the 'brush'. The 
 visible planes and edges attached to the vertex are then modified with a gradient to the color
 of the other connected vertices. (Note that the color of non-visible faces are not modified).
 
-Vertex colors can be painted by first going into Edit Mode, then switching to *Vertex Paint Mode*; however, it will not show up in the render unless you check "Vertex Color Paint" in the Materials  `Options <http://wiki.blender.org/index.php/User:Sculptorjim/Materials/Properties/Options>`__ Panel.
+Vertex colors can be painted by first going into Edit Mode, then switching to *Vertex Paint Mode*;
+however, it will not show up in the render unless you check "Vertex Color Paint" in the Materials 
+`Options <http://wiki.blender.org/index.php/User:Sculptorjim/Materials/Properties/Options>`__ Panel.
 
 
 .. figure:: /images/Doc_2.6_Materials_VertexPaint0.jpg
@@ -43,7 +45,8 @@ Brush
 =====
 
 Brush Datablock
-   The image, name panel and color selector at the top allows you to select brush presets, rename brushes, as well as add custom brushes, and delete them.
+   The image, name panel and color selector at the top allows you to select brush presets,
+   rename brushes, as well as add custom brushes, and delete them.
 Radius
    Set the radius of the brush
 Strength
@@ -58,9 +61,11 @@ Strength
 **Blend** menu
 
    Mix
-      Mixes RGB values. When set to a strength of 1.0, it will cover the underlying "paint".
+      Mixes RGB values.
+      When set to a strength of 1.0, it will cover the underlying "paint".
    Add
-      Adds RGB values. Will eventually turn the entire object white as RGB values accumulate to 1.0-1.0-1.0: Pure White.
+      Adds RGB values.
+      Will eventually turn the entire object white as RGB values accumulate to 1.0-1.0-1.0: Pure White.
    Subtract
       Subtracts RGB values. Usually results in Black.
    Multiply
@@ -108,7 +113,9 @@ Brush Mapping Mode
       Random applying of texture.
 
 Angle
-   This is the rotation angle of the texture brush. It can be changed interactively via :kbd:`Ctrl-F` in the 3D view. While in the interactive rotation you can enter a value numerically as well. Can be set to:
+   This is the rotation angle of the texture brush.
+   It can be changed interactively via :kbd:`Ctrl-F` in the 3D view.
+   While in the interactive rotation you can enter a value numerically as well. Can be set to:
 
    User
       Directly input the angle value.
@@ -140,7 +147,8 @@ Stroke Method
       Creates brush stroke as a series of dots, whose spacing is determined by the *Spacing* setting.
 
       Spacing
-         Represents the percentage of the brush diameter. Limit brush application to the distance specified by spacing.
+         Represents the percentage of the brush diameter.
+         Limit brush application to the distance specified by spacing.
    Dots
       Apply paint on each mouse move step
    Jitter

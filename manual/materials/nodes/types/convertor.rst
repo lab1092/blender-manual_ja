@@ -14,7 +14,10 @@ ColorRamp Node
    ColorRamp node
 
 
-The ColorRamp Node is used for mapping values to colors with the use of a gradient. It works exactly the same way as a :doc:`Colorband for textures and materials </materials/properties/ramps>`, using the Factor value as a slider or index to the color ramp shown, and outputting a color value and an alpha value from the output sockets.
+The ColorRamp Node is used for mapping values to colors with the use of a gradient.
+It works exactly the same way as a :doc:`Colorband for textures and materials </materials/properties/ramps>`,
+using the Factor value as a slider or index to the color ramp shown,
+and outputting a color value and an alpha value from the output sockets.
 
 By default,
 the ColorRamp is added to the node map with two colors at opposite ends of the spectrum.
@@ -88,7 +91,8 @@ Interpolation
 
 
 Colorband
-   Contain a gradient through a sequence of many colors (with alpha), each color acting across a certain position in the spectrum.
+   Contain a gradient through a sequence of many colors (with alpha),
+   each color acting across a certain position in the spectrum.
 
 
 .. figure:: /images/26-Material-Convertor-Node-ColorRamp-Numberpoint-Buticon.jpg
@@ -98,7 +102,8 @@ Colorband
 
 .. figure:: /images/26-Material-Convertor-Node-ColorRamp-Pospoint-Buticon.jpg
 
-   *Pos*.  The position of the active color mark in the colorband (range 0.0–1.0).  The position of the color marks can also be changed by :kbd:`LMB` dragging them in the colorband.
+   *Pos*.  The position of the active color mark in the colorband (range 0.0–1.0).
+   The position of the color marks can also be changed by :kbd:`LMB` dragging them in the colorband.
 
 
 .. figure:: /images/26-Manual-Material-Convertor-Node-ColorSwatch.jpg
@@ -260,9 +265,12 @@ Operation
    Average
       Averaging input 1 and 2.
    Dot Product
-      Algebraic operation that takes two equal-length sequences of vectors 1 and 2 and returns a single number. Result - scalar.
+      Algebraic operation that takes two equal-length sequences of vectors 1 and 2 and returns a single number.
+      Result - scalar.
    Cross Product
-      Geometric binary operation on two vectors 1 and 2 in three-dimensional space. It results in a vector which is perpendicular to both and therefore normal to the plane containing them. Result - vector.
+      Geometric binary operation on two vectors 1 and 2 in three-dimensional space.
+      It results in a vector which is perpendicular to both and therefore normal to the plane containing them.
+      Result - vector.
    Normalize
       Normalizing input 1 and 2.
 
@@ -288,9 +296,12 @@ Inputs
 Value
    Any numeric value. The value can be provided by another node or set manually.
 Width
-   Determines the curve between sharp S-shaped (width = 1) and stretched (Width = 0.1). Negative values reverse the course. The value can be provided by another node or set manually.
+   Determines the curve between sharp S-shaped (width = 1) and stretched (Width = 0.1).
+   Negative values reverse the course. The value can be provided by another node or set manually.
 Center
-   The center of the output value range. This input value is replaced by the output value of 0.5. The value can be provided by another node or set manually.
+   The center of the output value range.
+   This input value is replaced by the output value of 0.5.
+   The value can be provided by another node or set manually.
 
 
 Outputs
@@ -392,11 +403,16 @@ Outputs
 -------
 
 H
-   Value of the hue color channel, separated out by the node (in some way, choose a «color» of the rainbow).
+   Value of the hue color channel,
+   separated out by the node (in some way, choose a «color» of the rainbow).
 S
-   Value of the saturation color channel, separated out by the node (the *quantity* of hue in the color (from desaturate - shade of gray - to saturate - brighter colors)).
+   Value of the saturation color channel,
+   separated out by the node (the *quantity* of hue in the color
+   (from desaturate - shade of gray - to saturate - brighter colors)).
 V
-   Value of the value color channel, separated out by the node (the **luminosity** of the color (from 'no light' - black - to 'full light' - 'full' color, or white if Saturation is 0.0)).
+   Value of the value color channel,
+   separated out by the node (the **luminosity** of the color
+   (from 'no light' - black - to 'full light' - 'full' color, or white if Saturation is 0.0)).
 
 
 Combine HSV Node
