@@ -11,7 +11,8 @@ Subdivide
 
    | Mode:     *Edit* mode
    | Panel:    *Mesh Tools* (*Editing* context)
-   | Menu:     :menuselection:`Mesh --> Edges --> Subdivide`, :menuselection:`Specials --> Subdivide/Subdivide Smooth`
+   | Menu:     :menuselection:`Mesh --> Edges --> Subdivide`,
+     :menuselection:`Specials --> Subdivide/Subdivide Smooth`
    | Hotkey:   :menuselection:`[W] --> [pad1]/[pad2]`
 
 
@@ -20,14 +21,24 @@ adding necessary vertices, and subdividing accordingly the faces involved,
 following a few rules, depending on the settings:
 
 
-- When only one edge of a face is selected (Tri mode), triangles are subdivided into two triangles, and quads, into three triangles.
+- When only one edge of a face is selected (Tri mode),
+  triangles are subdivided into two triangles, and quads, into three triangles.
 - When two edges of a face are selected:
-  - If the face is a triangle, a new edge is created between the two new vertices, subdividing the triangle in a triangle and a quad.
-  - If the face is a quad, and the edges are neighbors, we have **three** possible behaviors, depending on the setting of *Corner Cut Type* (the drop-down menu next to the *Subdivide* button, in *Mesh Tools* panel) See below for details.
-  - If the face is a quad, and the edges are opposite, the quad is just subdivided in two quads by the edge linking the two new vertices.
+
+  - If the face is a triangle, a new edge is created between the two new vertices,
+    subdividing the triangle in a triangle and a quad.
+  - If the face is a quad, and the edges are neighbors, we have **three** possible behaviors,
+    depending on the setting of *Corner Cut Type* (the drop-down menu next to the *Subdivide* button,
+    in *Mesh Tools* panel) See below for details.
+  - If the face is a quad, and the edges are opposite,
+    the quad is just subdivided in two quads by the edge linking the two new vertices.
+
 - When three edges of a face are selected:
-  - If the face is a triangle, this means the whole face is selected - it is then sub-divided in four smaller triangles.
-  - If the face is a quad, first the two opposite edges are subdivided as described above. Then, the "middle" edge is subdivided, affecting its new "sub-quad" as described above for only one edge.
+
+  - If the face is a triangle, this means the whole face is selected -
+    it is then sub-divided in four smaller triangles.
+  - If the face is a quad, first the two opposite edges are subdivided as described above.
+    Then, the "middle" edge is subdivided, affecting its new "sub-quad" as described above for only one edge.
 - When four edges of a face (a quad) are selected, the face is subdivided into four smaller quads.
 
 
@@ -37,18 +48,31 @@ Options
 These options are available in the *Tool Panel* after running the tool;
 
 Number of Cuts
-   Specifies the number of cuts per edge to make. By default this is 1, cutting edges in half. A value of 2 will cut it into thirds, and so on.
-
+   Specifies the number of cuts per edge to make.
+   By default this is 1, cutting edges in half. A value of 2 will cut it into thirds, and so on.
 Smoothness
-   Displaces subdivisions to maintain approximate curvature, The effect is similar to the way the subdivision modifier might deform the mesh.
+   Displaces subdivisions to maintain approximate curvature,
+   The effect is similar to the way the subdivision modifier might deform the mesh.
 
-+-----------------------------------------------------+---------------------------------------------------+----------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-smooth-before.jpg|.. figure:: /images/Doc26-subdivide-smooth-none.jpg|.. figure:: /images/Doc26-subdivide-smooth-after.jpg+
-+   :width: 200px                                     |   :width: 200px                                   |   :width: 200px                                    +
-+   :figwidth: 200px                                  |   :figwidth: 200px                                |   :figwidth: 200px                                 +
-+                                                     |                                                   |                                                    +
-+   Mesh before subdividing                           |   Subdivided with no smoothing                    |   Subdivided with smoothing of 1                   +
-+-----------------------------------------------------+---------------------------------------------------+----------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-smooth-before.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Mesh before subdividing
+
+     - .. figure:: /images/Doc26-subdivide-smooth-none.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Subdivided with no smoothing
+
+     - .. figure:: /images/Doc26-subdivide-smooth-after.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Subdivided with smoothing of 1
 
 
 Quad/Tri Mode
@@ -58,11 +82,13 @@ Corner Cut Type
    This drop-down menu controls the way quads with only two adjacent selected edges are subdivided
 
    Fan
-      the quad is sub-divided in a fan of four triangles, the common vertex being the one opposite to the selected edges.
+      the quad is sub-divided in a fan of four triangles,
+      the common vertex being the one opposite to the selected edges.
    Innervert
       (i.e. "inner vertex"), The selected edges are sub-divided,
       then an edge is created between the two new vertices, creating a small triangle.
-      This edge is also sub-divided, and the "inner vertex" thus created is linked by another edge to the one opposite
+      This edge is also sub-divided,
+      and the "inner vertex" thus created is linked by another edge to the one opposite
       to the original selected edges. All this results in a quad sub-divided in a triangle and two quad.
    Path
       First an edge is created between the two opposite ends of the selected edges,
@@ -71,25 +97,49 @@ Corner Cut Type
       Currently non functioning...
 
 
-+---------------------------------------------------------+--------------------------------------------------------------+---------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-twoEdgesQuad-fan2.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesQuad-innervert.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesQuad-path.jpg+
-+   :width: 200px                                         |   :width: 200px                                              |   :width: 200px                                         +
-+   :figwidth: 200px                                      |   :figwidth: 200px                                           |   :figwidth: 200px                                      +
-+                                                         |                                                              |                                                         +
-+   Fan cut type                                          |   Innervert cut type                                         |   Path cut type                                         +
-+---------------------------------------------------------+--------------------------------------------------------------+---------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-fan2.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Fan cut type
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-innervert.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Innervert cut type
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-path.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Path cut type
 
 
 Fractal
    Displaces the vertices in random directions after the mesh is subdivided
 
-+------------------------------------------------------+----------------------------------------------------+------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-fractal-before.jpg|.. figure:: /images/Doc26-subdivide-fractal-none.jpg|.. figure:: /images/Doc26-subdivide-fractal-after1.jpg+
-+   :width: 200px                                      |   :width: 200px                                    |   :width: 200px                                      +
-+   :figwidth: 200px                                   |   :figwidth: 200px                                 |   :figwidth: 200px                                   +
-+                                                      |                                                    |                                                      +
-+   Plane before subdivision                           |   Regular subdivision                              |   Same mesh with fractal added                       +
-+------------------------------------------------------+----------------------------------------------------+------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-fractal-before.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Plane before subdivision
+
+     - .. figure:: /images/Doc26-subdivide-fractal-none.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Regular subdivision
+
+     - .. figure:: /images/Doc26-subdivide-fractal-after1.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Same mesh with fractal added
 
 
 Along Normal
@@ -131,112 +181,164 @@ and *Subdivide Multi* tools. Note the selection after subdivision.
 One Edge
 --------
 
-+-----------------------------------------------+---------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-oneEdge.jpg|.. figure:: /images/Doc26-subdivide-oneEdge-tri.jpg+
-+   :width: 250px                               |   :width: 250px                                   +
-+   :figwidth: 250px                            |   :figwidth: 250px                                +
-+                                               |                                                   +
-+   One Edges                                   |   Quad/Tri Mode                                   +
-+-----------------------------------------------+---------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-oneEdge.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          One Edges
+
+     - .. figure:: /images/Doc26-subdivide-oneEdge-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Two Tri Edges
 -------------
 
-+---------------------------------------------------+-------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-twoEdgesTri.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesTri-tri.jpg+
-+   :width: 250px                                   |   :width: 250px                                       +
-+   :figwidth: 250px                                |   :figwidth: 250px                                    +
-+                                                   |                                                       +
-+                                                   |   Quad/Tri Mode                                       +
-+---------------------------------------------------+-------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-twoEdgesTri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesTri-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Two Opposite Quad Edges
 -----------------------
 
-+--------------------------------------------------------+------------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-twoEdgesOpposite.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesOpposite-tri.jpg+
-+   :width: 250px                                        |   :width: 250px                                            +
-+   :figwidth: 250px                                     |   :figwidth: 250px                                         +
-+                                                        |                                                            +
-+                                                        |   Quad/Tri Mode                                            +
-+--------------------------------------------------------+------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-twoEdgesOpposite.jpg
+          :width: 250px
+          :figwidth: 250px
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesOpposite-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Two Adjacent Quad Edges
 -----------------------
 
-+---------------------------------------------------------+--------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-twoEdgesQuad-fan2.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesQuad-fan.jpg+
-+   :width: 250px                                         |   :width: 250px                                        +
-+   :figwidth: 250px                                      |   :figwidth: 250px                                     +
-+                                                         |                                                        +
-+   Fan cut type                                          |   Quad/Tri Mode                                        +
-+---------------------------------------------------------+--------------------------------------------------------+
+.. list-table::
 
-+--------------------------------------------------------------+------------------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-twoEdgesQuad-innervert.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesQuad-innervert-tri.jpg+
-+   :width: 250px                                              |   :width: 250px                                                  +
-+   :figwidth: 250px                                           |   :figwidth: 250px                                               +
-+                                                              |                                                                  +
-+   Innervert cut type                                         |   Quad/Tri Mode                                                  +
-+--------------------------------------------------------------+------------------------------------------------------------------+
+   * - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-fan2.jpg
+          :width: 250px
+          :figwidth: 250px
 
-+---------------------------------------------------------+-------------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-twoEdgesQuad-path.jpg|.. figure:: /images/Doc26-subdivide-twoEdgesQuad-path-tri.jpg+
-+   :width: 250px                                         |   :width: 250px                                             +
-+   :figwidth: 250px                                      |   :figwidth: 250px                                          +
-+                                                         |                                                             +
-+   Path cut type                                         |   Quad/Tri Mode                                             +
-+---------------------------------------------------------+-------------------------------------------------------------+
+          Fan cut type
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-fan.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
+
+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-innervert.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Innervert cut type
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-innervert-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
+
+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-path.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Path cut type
+
+     - .. figure:: /images/Doc26-subdivide-twoEdgesQuad-path-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Three Edges
 -----------
 
-+--------------------------------------------------+------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-threeEdges.jpg|.. figure:: /images/Doc26-subdivide-threeEdges-tri.jpg+
-+   :width: 250px                                  |   :width: 250px                                      +
-+   :figwidth: 250px                               |   :figwidth: 250px                                   +
-+                                                  |                                                      +
-+                                                  |   Quad/Tri Mode                                      +
-+--------------------------------------------------+------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-threeEdges.jpg
+          :width: 250px
+          :figwidth: 250px
+
+     - .. figure:: /images/Doc26-subdivide-threeEdges-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Tri
 ---
 
-+-----------------------------------------------------+---------------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-threeEdgesTri.jpg|.. figure:: /images/Doc26-subdivide-threeEdgesTri-tri.jpg+
-+   :width: 250px                                     |   :width: 250px                                         +
-+   :figwidth: 250px                                  |   :figwidth: 250px                                      +
-+                                                     |                                                         +
-+                                                     |   Quad/Tri Mode                                         +
-+-----------------------------------------------------+---------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-threeEdgesTri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+     - .. figure:: /images/Doc26-subdivide-threeEdgesTri-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Quad/Four Edges
 ---------------
 
-+-------------------------------------------------+-----------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-fourEdges.jpg|.. figure:: /images/Doc26-subdivide-fourEdges-tri.jpg+
-+   :width: 250px                                 |   :width: 250px                                     +
-+   :figwidth: 250px                              |   :figwidth: 250px                                  +
-+                                                 |                                                     +
-+                                                 |   Quad/Tri Mode                                     +
-+-------------------------------------------------+-----------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-fourEdges.jpg
+          :width: 250px
+          :figwidth: 250px
+
+     - .. figure:: /images/Doc26-subdivide-fourEdges-tri.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad/Tri Mode
 
 
 Multicut
 --------
 
-+-------------------------------------------------+--------------------------------------------------+
-+.. figure:: /images/Doc26-subdivide-tri-multi.jpg|.. figure:: /images/Doc26-subdivide-quad-multi.jpg+
-+   :width: 250px                                 |   :width: 250px                                  +
-+   :figwidth: 250px                              |   :figwidth: 250px                               +
-+                                                 |                                                  +
-+   Tri with two cuts                             |   Quad with two cuts                             +
-+-------------------------------------------------+--------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-subdivide-tri-multi.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Tri with two cuts
+
+     - .. figure:: /images/Doc26-subdivide-quad-multi.jpg
+          :width: 250px
+          :figwidth: 250px
+
+          Quad with two cuts
 
 

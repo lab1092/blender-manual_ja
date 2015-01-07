@@ -19,7 +19,9 @@ Settings
 
 .. note:: Modifiers on Level of Detail Objects
 
-   Any level of detail objects that have a modifier do not display correctly in the game engine. You will need to apply any modifiers for level of detail objects to appear correctly. A fix for this is being looked into.
+   Any level of detail objects that have a modifier do not display correctly in the game engine.
+   You will need to apply any modifiers for level of detail objects to appear correctly.
+   A fix for this is being looked into.
 
 
 .. figure:: /images/Manual-Level-of-Detail-Panel.jpg
@@ -38,9 +40,11 @@ Object
 Distance
    The distance at which this level of detail becomes visible.
 Use Mesh
-   When this option is enabled, the mesh from the level of detail object is used until a lower level of detail overrides it.
+   When this option is enabled,
+   the mesh from the level of detail object is used until a lower level of detail overrides it.
 Use Material
-   When this option is enabled, the material from the level of detail object is used until a lower level of detail overrides it.
+   When this option is enabled,
+   the material from the level of detail object is used until a lower level of detail overrides it.
 
 
 Tools
@@ -77,12 +81,18 @@ Generation does not apply the modifier to allow further changing the settings.
 Generated objects are automatically named based on the level they are generated for.
 Below are some settings for the operator.
 
- *Count*
+Count
    The number of levels desired after generation. This operator creates Count - 1 new objects.
- *Target Size*
-   The ratio setting for the decimate modifier on the last level of detail. The ratio settings for the other levels is determined by linear interpolation.
- *Package into Group*
-   With this setting enabled the operator performs some extra tasks to make the asset ready for easy linking into a new file. The base object and all of its levels of detail are placed into a group based on the base object's name. Levels other than the base are hidden for both the viewport and rendering. This simplifies the appearance of the system and does not affect the appearance of the base object. Finally, all levels are parented to the base object to remove clutter from the outliner.
+Target Size
+   The ratio setting for the decimate modifier on the last level of detail.
+   The ratio settings for the other levels is determined by linear interpolation.
+Package into Group
+   With this setting enabled the operator performs some extra tasks
+   to make the asset ready for easy linking into a new file.
+   The base object and all of its levels of detail are placed into a group based on the base object's name.
+   Levels other than the base are hidden for both the viewport and rendering.
+   This simplifies the appearance of the system and does not affect the appearance of the base object.
+   Finally, all levels are parented to the base object to remove clutter from the outliner.
 
 
 Clear All

@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review
-   |text=This page is not in good shape. Redundant to the introduction page and the how to's should be in the tutorial section.
+   |text=This page is not in good shape.
+         Redundant to the introduction page and the how to's should be in the tutorial section.
    }} .
 
 
@@ -17,7 +18,8 @@ Your first armature
 
 In order to see what we're talking about, let's try to add the default armature in Blender.
 
-(Note that armature editing details are explained in the :doc:`armatures editing section </rigging/armatures/editing>`).
+(Note that armature editing details are explained in the
+:doc:`armatures editing section </rigging/armatures/editing>`).
 
 Open a default scene, then:
 
@@ -46,7 +48,8 @@ As you can see, an armature is like any other object type in Blender:
 - It has a center, a position, a rotation and a scale factor.
 - It has an ObData datablock, that can be edited in *Edit mode*.
 - It can be linked to other scenes, and the same armature data can be reused on multiple objects.
-- All animation you do in *Object mode* is only working on the whole object, not the armature's bones (use the *Pose mode* to do this).
+- All animation you do in *Object mode* is only working on the whole object,
+  not the armature's bones (use the *Pose mode* to do this).
 
 As armatures are designed to be posed, either for a static or animated scene,
 they have a specific state, called "rest position". This is the armature's default "shape",

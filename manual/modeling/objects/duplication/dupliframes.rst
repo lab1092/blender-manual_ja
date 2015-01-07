@@ -29,7 +29,7 @@ and set *Frames* to something more reasonable than 100 (say 16).
    Settings for the object
 
 
-Add a *Monkey*.  In the *Object* menu under *Duplication* enable
+Add a *Monkey*. In the *Object* menu under *Duplication* enable
 *Frames* and disable *Speed*.
 
 
@@ -61,20 +61,20 @@ Select the monkey and :kbd:`Alt-O` to reset its origin.
 You can now change the orientation of the monkey by either rotating it
 (either in *Edit mode* or *Object mode*)
 or by changing the *Tracking Axes* under *Animation Hacks*
-(with the monkey selected).  The arrangement of monkeys can, of course,
+(with the monkey selected). The arrangement of monkeys can, of course,
 be further enhanced by editing the curve.
 
 
 To transform all monkeys into real objects,
 first :kbd:`Ctrl-Shift-A` to *Make Duplicates Real*.
-All monkeys are now real objects, but still linked copies.  To change this,
+All monkeys are now real objects, but still linked copies. To change this,
 *Object* →\ *Make Single User* →\ *Object&Data* then choose
 *All*.
 
 
 .. note::
 
-   There are many alternatives to Dupliframes.  Which tool to use depends on context.
+   There are many alternatives to Dupliframes. Which tool to use depends on context.
 
    - To use a small curve as a profile and a larger curve as a path,
      simply use the former as a *Bevel Object* to the latter.

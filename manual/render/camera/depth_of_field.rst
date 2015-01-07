@@ -62,13 +62,25 @@ perspective of the view that many directors love because it "condenses" the scen
 a sweep, since it is farther away from the action:
 
 
-+----------------------------------------------------+-----------------------------------------------------------+------------------------------------------------------------------------------+
-+.. figure:: /images/Manual-Compositing-DOF-35x10.jpg|.. figure:: /images/Manual-Compositing-DOF-210x60.jpg      |.. figure:: /images/Manual-Dof_210mm_50.jpg                                   +
-+   :width: 200px                                    |   :width: 200px                                           |   :width: 200px                                                              +
-+   :figwidth: 200px                                 |   :figwidth: 200px                                        |   :figwidth: 200px                                                           +
-+                                                    |                                                           |                                                                              +
-+   35mm lens from 10 units away.                    |   210mm lens from 60 units away at same location/rotation.|   210mm at 50 units; repositioned to frame the view similar to the 35mm shot.+
-+----------------------------------------------------+-----------------------------------------------------------+------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Compositing-DOF-35x10.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          35mm lens from 10 units away.
+
+     - .. figure:: /images/Manual-Compositing-DOF-210x60.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          210mm lens from 60 units away at same location/rotation.
+
+     - .. figure:: /images/Manual-Dof_210mm_50.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          210mm at 50 units; repositioned to frame the view similar to the 35mm shot.
 
 
 Zooming in Blender

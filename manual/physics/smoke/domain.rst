@@ -21,7 +21,9 @@ the default cube bigger by hitting :kbd:`S` and dragging the mouse.
 
 .. note:: Don't edit the domain's vertices!
 
-   If you want a bigger domain, scale the object. Changing it in edit mode will lead to your smoke appearing more than once during rendering, like a repeating texture.
+   If you want a bigger domain, scale the object.
+   Changing it in edit mode will lead to your smoke appearing more than once during rendering,
+   like a repeating texture.
 
 
 Make sure you're in object mode and go to the physics tab.
@@ -29,13 +31,25 @@ Add smoke and chose the radio button labeled 'Domain'. For now that's all,
 we will return to the new settings that popped up later on.
 
 
-+-----------------------------------+---------------------------------+------------------------------------+
-+.. figure:: /images/Physics_tab.jpg|.. figure:: /images/Add_smoke.jpg|.. figure:: /images/Radio_domain.jpg+
-+   :width: 200px                   |   :width: 200px                 |   :width: 200px                    +
-+   :figwidth: 200px                |   :figwidth: 200px              |   :figwidth: 200px                 +
-+                                   |                                 |                                    +
-+   The physics tab might be hidden |   Add smoke                     |   Chose domain for the cube        +
-+-----------------------------------+---------------------------------+------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Physics_tab.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The physics tab might be hidden
+
+     - .. figure:: /images/Add_smoke.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Add smoke
+
+     - .. figure:: /images/Radio_domain.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Chose domain for the cube
 
 
 .. figure:: /images/2011-06-27_1605.jpg
@@ -49,7 +63,8 @@ Generic options
 ===============
 
 Resolution
-   How detailed the smoke is. A resolution of 32 will bake in a few seconds, while a resolution of 100 can take up to a half hour on most PC's.
+   How detailed the smoke is. A resolution of 32 will bake in a few seconds,
+   while a resolution of 100 can take up to a half hour on most PC's.
 Time Scale
    Affects how fast the simulation plays.
 
@@ -89,7 +104,8 @@ resolution simulation quickly and later add details without changing the overall
 
 Various methods for this are available, including the default: Wavelet, which is an
 implementation of
-`Turbulence for Fluid Simulation <https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__.
+`Turbulence for Fluid Simulation
+<https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__.
 
 Resolution/Divisions
    Enhance the resolution of smoke by this factor using noise.

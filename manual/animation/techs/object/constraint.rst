@@ -3,9 +3,9 @@
 Using Constraints in Animation
 ******************************
 
-:doc:`Constraints </constraints>` are a way to control an object's properties (its location/rotation/scale),
-using either plain static values (like the :doc:`"limit" ones </constraints/transform/limit_location>`),
-or (an)other object(s), called "targets" (like e.g. the :doc:`"copy" ones </constraints/transform/copy_location>`).
+:doc:`Constraints </rigging/constraints>` are a way to control an object's properties (its location/rotation/scale),
+using either plain static values (like the :doc:`"limit" ones </rigging/constraints/transform/limit_location>`),
+or (an)other object(s), called "targets" (like e.g. the :doc:`"copy" ones </rigging/constraints/transform/copy_location>`).
 
 Even though these constraints might be useful in static projects,
 their main usage is obviously in animation.
@@ -24,13 +24,13 @@ these targets can then control the constraint's owner's properties, and hence,
 animating the targets will indirectly animate the owner.
 
 This indirect "constraint" animation can be very simple,
-like for example with the :doc:`Copy Location constraint </constraints/transform/copy_location>`,
+like for example with the :doc:`Copy Location constraint </rigging/constraints/transform/copy_location>`,
 where the owner object will simply copy the location of its target (with an optional constant offset).
 But you can also have very complex behaviors,
-like when using the :doc:`Action constraint </constraints/relationship/action>`,
+like when using the :doc:`Action constraint </rigging/constraints/relationship/action>`,
 which is a sort of :doc:`Animation Driver </animation/editors/graph/drivers>` for actions!
 
-We should also mention the classical :doc:`Child Of constraint </constraints/relationship/child_of>`,
+We should also mention the classical :doc:`Child Of constraint </rigging/constraints/relationship/child_of>`,
 which creates parent/child relationship.
 These relationships indeed imply indirect animation (as transforming the parent affects by default all its children).
 But the *Child Of* constraint is also very important, as it allows you to parent your objects to bones,

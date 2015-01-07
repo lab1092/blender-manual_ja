@@ -1,5 +1,7 @@
 
-..    TODO/Review: {{review|partial=X|im=some screenshots are correct, but taken from the 2.4|fixes=[[User:Fade/Doc:2.6/Manual/Modeling/Curves/Editing/Advanced|WIP fix here]]}} .
+..    TODO Review:
+      review|partial=X|im=some screenshots are correct,
+      but taken from the 2.4|fixes=[[User:Fade/Doc:2.6/Manual/Modeling/Curves/Editing/Advanced|WIP fix here]]}} .
 
 
 ********
@@ -9,7 +11,11 @@ Advanced
 Curve Deform
 ============
 
-*Curve Deform* provides a simple but efficient method of defining a deformation on a mesh. By parenting a mesh object to a curve, you can deform the mesh up or down the curve by moving the mesh along, or orthogonal to, the dominant axis. This is a most useful tool to make an object follow a complex path, like e.g. a sheet of paper inside a printer, a film inside a camera, the water of a canal...
+*Curve Deform* provides a simple but efficient method of defining a deformation on a mesh.
+By parenting a mesh object to a curve, you can deform the mesh up or down the curve by moving the mesh along,
+or orthogonal to, the dominant axis.
+This is a most useful tool to make an object follow a complex path,
+like e.g. a sheet of paper inside a printer, a film inside a camera, the water of a canal...
 
 The *Curve Deform* works on a (global) dominant axis, X, Y, or Z.
 This means that when you move your mesh in the dominant direction,
@@ -20,9 +26,9 @@ beyond the curve endings the object will continue to deform based on the directi
 the curve endings.
 
 If the "curve path" is *3D*, the *Tilt* value of its control points will be used (see the
-FIXME(TODO: Internal Link;
-[[#Extrusion|Extrusion]]
-) section above) to twist the "curved" object around it. Unfortunately, the other *Radius* property is not used (it would have been possible, for example, to make it control the size of the "curved" object...).
+`Extrusion`_ section above) to twist the "curved" object around it.
+Unfortunately, the other *Radius* property is not used (it would have been possible, for example,
+to make it control the size of the "curved" object...).
 
 
 .. tip::
@@ -33,7 +39,11 @@ FIXME(TODO: Internal Link;
 
 .. note:: Use modifiers!
 
-   The *Curve Deform* relationship is now also a modifier, called :doc:`Curve </modifiers/deform/curve>`. The *Curve* modifier function acts the same as its counterpart, except that when the modifier is used, the "dominant axis" is set inside its properties - and the *Track X* / *Y* / *Z* buttons no longer have an effect on it. And you have some goodies, like the possibility, if "curving" a mesh, to only curve one of its vertex groups...
+   The *Curve Deform* relationship is now also a modifier, called :doc:`Curve </modifiers/deform/curve>`.
+   The *Curve* modifier function acts the same as its counterpart,
+   except that when the modifier is used, the "dominant axis" is set inside its properties -
+   and the *Track X* / *Y* / *Z* buttons no longer have an effect on it.
+   And you have some goodies, like the possibility, if "curving" a mesh, to only curve one of its vertex groups...
 
 
 Interface
@@ -88,7 +98,8 @@ Let's make a simple example:
    Add a Monkey!
 
 
-- Remove default cube object from scene and add a Monkey (:menuselection:`[shift][A] --> Add --> Mesh --> Monkey`, *Add a Monkey!*)!
+- Remove default cube object from scene and add a Monkey
+  (:menuselection:`[shift][A] --> Add --> Mesh --> Monkey`, *Add a Monkey!*)!
 - Press :kbd:`Tab` to exit *Edit* mode.
 
 
@@ -105,7 +116,8 @@ Let's make a simple example:
    Edit Curve.
 
 
-- While in *Edit* mode, move the control points of the curve as shown in (*Edit Curve*), then exit *Edit* mode (:kbd:`Tab`).
+- While in *Edit* mode, move the control points of the curve as shown in (*Edit Curve*),
+  then exit *Edit* mode (:kbd:`Tab`).
 
 
 .. figure:: /images/2.5_Manual-Part-II-curvesDeform_exampleMonkeyOnCurve1.jpg
@@ -114,15 +126,19 @@ Let's make a simple example:
 
 
 - Now, you can use the new, modern, modifier way of "curving" the Monkey:
+
   - Select the Monkey (:kbd:`RMB`).
   - In the *Editing* context (:kbd:`F9`), *Modifiers* panel, add a *Curve* modifier.
-  - Type the name of the curve (should be "\ ``Curve`` ") in the *Ob* field of the modifier, and optionally change the dominant axis to *Y*.
+  - Type the name of the curve (should be "\ ``Curve`` ") in the *Ob* field of the modifier,
+    and optionally change the dominant axis to *Y*.
 - Or you can choose the old, deprecated method (note that it creates a "virtual" modifier...):
+
   - Select the Monkey (:kbd:`RMB`), and then shift select the curve (:kbd:`Shift-RMB`).
   - Press :kbd:`Ctrl-P` to open up the *Make Parent* menu.
   - Select *Curve Deform* (*Make Parent* *menu*).
 - The Monkey should be positioned on the curve, as in (*Monkey on a Curve*).
-- Now if you select the Monkey (:kbd:`RMB`), and move it (:kbd:`G`), in the Y-direction (the dominant axis by default), the monkey will deform nicely along the curve.
+- Now if you select the Monkey (:kbd:`RMB`), and move it (:kbd:`G`),
+  in the Y-direction (the dominant axis by default), the monkey will deform nicely along the curve.
 
 
 .. tip::
@@ -131,7 +147,9 @@ Let's make a simple example:
    while moving the Monkey you will constrain the movement to one axis only.
 
 
-- In (*Monkey deformations*), you can see the Monkey at different positions along the curve. To get a cleaner view over the deformation I have activated *SubSurf* with *Subdiv* to **2**, and *Set Smooth* on the Monkey mesh (:kbd:`F9` to get *Editing* context).
+- In (*Monkey deformations*), you can see the Monkey at different positions along the curve.
+  To get a cleaner view over the deformation I have activated *SubSurf* with *Subdiv* to **2**,
+  and *Set Smooth* on the Monkey mesh (:kbd:`F9` to get *Editing* context).
 
 
 .. tip::
@@ -183,9 +201,15 @@ Width
    It has the same effect with extruded "bevel" objects...
 
 Tilt
-   This setting - unfortunately, you can never see its value anywhere in Blender - controls the "twisting angle" around the curve for each point - so it is only relevant with 3D curves!
-   You set it using the *Tilt* transform tool (:kbd:`T`, or :menuselection:`Curve --> Transform --> Tilt`), and you can reset it to its default value (i.e. perpendicular to the original curve plane) with :kbd:`Alt-T` (or :menuselection:`Curve --> Control Points --> Clear Tilt`).
-   With NURBS, the tilt is always smoothly interpolated. However, with Bézier, you can choose the interpolation algorithm to use in the *Tilt Interpolation* drop-down list of the *Curve Tools* panel (you will find the classical *Linear*, *Cardinal*, *B Spline* and *Ease* options...).
+   This setting - unfortunately, you can never see its value anywhere in Blender -
+   controls the "twisting angle" around the curve for each point - so it is only relevant with 3D curves!
+   You set it using the *Tilt* transform tool (:kbd:`T`, or :menuselection:`Curve --> Transform --> Tilt`),
+   and you can reset it to its default value (i.e. perpendicular to the original curve plane)
+   with :kbd:`Alt-T` (or :menuselection:`Curve --> Control Points --> Clear Tilt`).
+   With NURBS, the tilt is always smoothly interpolated.
+   However, with Bézier, you can choose the interpolation algorithm to use in the *Tilt Interpolation*
+   drop-down list of the *Curve Tools* panel (you will find the classical *Linear*,
+   *Cardinal*, *B Spline* and *Ease* options...).
 
 
 Simple Extrusion
@@ -239,7 +263,6 @@ Closed 2D Curve
    It will make the ribbon twist around the curve ? to create a M?bius strip, for example!
 
 
-
 Advanced Extrusion
 ~~~~~~~~~~~~~~~~~~
 
@@ -275,8 +298,10 @@ using *the local Y axis* for width control. Note also that:
 
 - The taper is applied independently to all curves of the extruded object.
 - Only the first curve in a *TaperOb* is evaluated, even if you have several separated segments.
-- The scaling starts at the first control-point on the left and moves along the curve to the last control-point on the right.
-- Negative scaling, (negative local Y on the taper curve) is possible as well. However, rendering artifacts may appear.
+- The scaling starts at the first control-point on the left
+  and moves along the curve to the last control-point on the right.
+- Negative scaling, (negative local Y on the taper curve) is possible as well.
+  However, rendering artifacts may appear.
 - It scales the width of normal extrusions based on evaluating the taper curve,
   which means sharp corners on the taper curve will not be easily visible.
   You'll have to heavily level up the resolution (*DefResolU*) of the base curve.
@@ -306,18 +331,23 @@ We now have a pipe.
 Add a third curve while in *Object* mode and call it "\ ``TaperCurve`` ".
 Adjust the left control-point by raising it up about 5 units.
 
-Now return to the *Editing* :doc:`context </interface/contexts>`,
+Now return to the *Editing* :doc:`context </getting_started/basics/interface/contexts>`,
 and edit the first curve's *TaperOb* field in
 :doc:`Curve and Surface </ce/panels/editing/curves/curve_and_surface>` panel to reference the new taper curve
 which we called "\ ``TaperCurve`` ". When you hit enter the taper curve is applied immediately,
 with the results shown in (*Taper extruded curve*).
 
 
-+-------------------------------------------------------------+-------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part-II-Curves-Simple-Taper-Ex.jpg|.. figure:: /images/Manual-Part-II-Curves-Simple-Taper-Ex-Solid.jpg+
-+                                                             |                                                                   +
-+   Taper extruded curve.                                     |   Taper solid mode.                                               +
-+-------------------------------------------------------------+-------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part-II-Curves-Simple-Taper-Ex.jpg
+
+          Taper extruded curve.
+
+     - .. figure:: /images/Manual-Part-II-Curves-Simple-Taper-Ex-Solid.jpg
+
+          Taper solid mode.
+
 
 You can see the **taper curve** being applied to the **extruded object**.
 Notice how the pipe's volume shrinks to nothing as the taper curve goes from left to right.

@@ -47,11 +47,19 @@ and the bright spot the lamp casts on the nearby wall. These hotspots are 100x b
 other parts of the image and will contribute significantly to the lighting of this pixel.
 
 
-+------------------------------------------------------+--------------------------------------------+----------------------------------------------------+
-+.. figure:: /images/Cycles_noise_fisheye_reference.jpg|.. figure:: /images/Cycles_noise_fisheye.jpg|.. figure:: /images/Cycles_noise_fisheye_hotspot.jpg+
-+   :width: 180px                                      |   :width: 180px                            |   :width: 180px                                    +
-+   :figwidth: 180px                                   |   :figwidth: 180px                         |   :figwidth: 180px                                 +
-+------------------------------------------------------+--------------------------------------------+----------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_fisheye_reference.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_fisheye.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_fisheye_hotspot.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
 The lamp is a known light source, so it will not be too hard to find, but the glossy highlight
@@ -68,11 +76,19 @@ but often it's close enough when viewed through a diffuse or soft glossy reflect
 Below is an example of using Filter Glossy and Smooth Light Falloff.
 
 
-+-----------------------------------------------------------+-------------------------------------------------+---------------------------------------------------------+
-+.. figure:: /images/Cycles_noise_fisheye_blur_reference.jpg|.. figure:: /images/Cycles_noise_fisheye_blur.jpg|.. figure:: /images/Cycles_noise_fisheye_blur_hotspot.jpg+
-+   :width: 180px                                           |   :width: 180px                                 |   :width: 180px                                         +
-+   :figwidth: 180px                                        |   :figwidth: 180px                              |   :figwidth: 180px                                      +
-+-----------------------------------------------------------+-------------------------------------------------+---------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_fisheye_blur_reference.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_fisheye_blur.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_fisheye_blur_hotspot.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
 Bounces
@@ -86,11 +102,19 @@ while glossy surfaces need a few more,
 and transmission shaders such as glass usually need the most.
 
 
-+--------------------------------------------+--------------------------------------------+--------------------------------------------+
-+.. figure:: /images/Cycles_noise_0bounce.jpg|.. figure:: /images/Cycles_noise_2bounce.jpg|.. figure:: /images/Cycles_noise_4bounce.jpg+
-+   :width: 180px                            |   :width: 180px                            |   :width: 180px                            +
-+   :figwidth: 180px                         |   :figwidth: 180px                         |   :figwidth: 180px                         +
-+--------------------------------------------+--------------------------------------------+--------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_0bounce.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_2bounce.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_4bounce.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
 Also important is to **use shader colors that do not have components of value 1.0** or
@@ -113,11 +137,19 @@ option to disable glossy behind a diffuse reflection entirely.
 Many render engines will typically disable caustics by default.
 
 
-+----------------------------------------------+------------------------------------------------+--------------------------------------------------+
-+.. figure:: /images/Cycles_noise_reference.jpg|.. figure:: /images/Cycles_noise_no_caustics.jpg|.. figure:: /images/Cycles_noise_filter_glossy.jpg+
-+   :width: 180px                              |   :width: 180px                                |   :width: 180px                                  +
-+   :figwidth: 180px                           |   :figwidth: 180px                             |   :figwidth: 180px                               +
-+----------------------------------------------+------------------------------------------------+--------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_reference.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_no_caustics.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_filter_glossy.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
 However using No Caustics will result in missing light,
@@ -140,15 +172,18 @@ small but extremely bright spot is low and so happens only rarely.
 This is a typical recipe for fireflies.
 
 
-+-------------------------------------------------+-------------------------------------------------+
-+.. figure:: /images/Cycles_noise_falloff_hard.jpg|.. figure:: /images/Cycles_noise_falloff_soft.jpg+
-+   :width: 180px                                 |   :width: 180px                                 +
-+   :figwidth: 180px                              |   :figwidth: 180px                              +
-+-------------------------------------------------+-------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_falloff_hard.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_falloff_soft.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
-To reduce this problem, the
-FIXME(TODO: Internal Link; [[../Nodes/More/#Light_Falloff|Light Falloff node]]) has a **Smooth factor,
+To reduce this problem, the :ref:`render-cycles-nodes-more-light_falloff` node has a **Smooth factor,
 that can be used to reduce the maximum intensity** a light can contribute to nearby surfaces.
 The images above show default falloff and smooth value 1.0.
 
@@ -156,13 +191,13 @@ The images above show default falloff and smooth value 1.0.
 Sample as Lamp
 --------------
 
-Materials with emission shaders can be configured to be
-FIXME(TODO: Internal Link; [[../Integrator#Material_Settings|Sampled as a Lamp]]).
+Materials with emission shaders can be configured to be **sampled as lamp**
+(:ref:`render-cycles-integrator-material_settings`).
 This means that they will get rays sent directly towards them,
 rather than ending up there based on rays randomly bouncing around.
 For very bright mesh light sources, this can reduce noise significantly.
 However when the emission is not particularly bright,
-this will take  samples away from other brighter light sources for which it is important to find them this way.
+this will take samples away from other brighter light sources for which it is important to find them this way.
 
 The optimal setting here is difficult to guess; it may be a matter of trial and error,
 but often it is clear that a somewhat glowing object may be only contributing light locally,
@@ -171,17 +206,18 @@ Here is an example where the emissive spheres contribute little to the lighting,
 and the image renders with slightly less noise by disabling Sample as Lamp on them.
 
 
-+------------------------------------------------+---------------------------------------------------+
-+.. figure:: /images/Cycles_noise_sample_lamp.jpg|.. figure:: /images/Cycles_noise_no_sample_lamp.jpg+
-+   :width: 180px                                |   :width: 180px                                   +
-+   :figwidth: 180px                             |   :figwidth: 180px                                +
-+------------------------------------------------+---------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_sample_lamp.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_no_sample_lamp.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
-The world background also has a
-FIXME(TODO: Internal Link;
-[[../Integrator#World_Settings|Sample as Lamp]]
-) option.
+The world background also has a *Sample as Lamp* (:ref:`render-cycles-integrator-world_settings`) option.
 This is mostly useful for environment maps that have small bright spots in them, rather than being smooth.
 This option will then, in a preprocess, determine the bright spots, and send light rays directly towards them. Again,
 enabling this option may take samples away from more important light sources if it is not needed.
@@ -206,11 +242,15 @@ The Light Path node is used to determine when to use which of the two shaders.
    :figwidth: 516px
 
 
-+----------------------------------------------------------+------------------------------------------------+
-+.. figure:: /images/Cycles_noise_glass_too_much_shadow.jpg|.. figure:: /images/Cycles_noise_glass_trick.jpg+
-+   :width: 180px                                          |   :width: 180px                                +
-+   :figwidth: 180px                                       |   :figwidth: 180px                             +
-+----------------------------------------------------------+------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_glass_too_much_shadow.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_glass_trick.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
 Above we can see the node setup used for the glass transparency trick;
@@ -234,11 +274,15 @@ The two renders below have the same render time,
 with the second render using a mesh light positioned in the window.
 
 
-+----------------------------------------------------+-------------------------------------------------+
-+.. figure:: /images/Cycles_noise_window_no_trick.jpg|.. figure:: /images/Cycles_noise_window_trick.jpg+
-+   :width: 180px                                    |   :width: 180px                                 +
-+   :figwidth: 180px                                 |   :figwidth: 180px                              +
-+----------------------------------------------------+-------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_window_no_trick.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_window_trick.jpg
+          :width: 180px
+          :figwidth: 180px
 
 
 Clamp Fireflies
@@ -246,16 +290,19 @@ Clamp Fireflies
 
 Ideally with all the previous tricks, fireflies would be eliminated, but they could still happen. For that,
 **the intensity that any individual light ray sample will contribute to a pixel can be clamped**
-to a maximum value with the integrator
-FIXME(TODO: Internal Link;
-[[../Integrator#Tricks|Clamp setting]]).
+to a maximum value with the integrator :ref:`Clamp setting <render-cycles-integrator-clamp_samples>`.
 If set too low this can cause missing highlights in the image,
 which might be useful to preserve for camera effects such as bloom or glare.
 
 
-+--------------------------------------------+----------------------------------------------+
-+.. figure:: /images/Cycles_noise_noclamp.jpg|.. figure:: /images/Cycles_noise_clamp_4.0.jpg+
-+   :width: 180px                            |   :width: 180px                              +
-+   :figwidth: 180px                         |   :figwidth: 180px                           +
-+--------------------------------------------+----------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_noise_noclamp.jpg
+          :width: 180px
+          :figwidth: 180px
+
+     - .. figure:: /images/Cycles_noise_clamp_4.0.jpg
+          :width: 180px
+          :figwidth: 180px
+
 

@@ -122,7 +122,8 @@ Adding Properties
 
 Some ways to add properties to keying sets.
 
-:kbd:`RMB` the property in the *User Interface*, then select *Add Single to Keying Set* or *Add All to Keying Set*. This will add the properties to the active keying set, or to a new keying set if none exist.
+:kbd:`RMB` the property in the *User Interface*, then select *Add Single to Keying Set* or *Add All to Keying Set*.
+This will add the properties to the active keying set, or to a new keying set if none exist.
 
 Hover the mouse over the properties, then press :kbd:`K`,
 to add *Add All to Keying Set*.

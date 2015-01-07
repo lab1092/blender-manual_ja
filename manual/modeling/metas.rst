@@ -23,20 +23,15 @@ They "blend" or "merge", as water droplets do, especially in zero-g (which, by t
 them very handy for modeling streams of water when you don't want to do a fluid simulation).
 If they subsequently move away from one another, they restore their original shape.
 
-Each of these is defined by its own underlying
-FIXME(TODO: Internal Link;
-[[#Technical Details|mathematical structure]]
-), and you can at any time switch between them using the *Active Element* panel.
+Each of these is defined by its own underlying mathematical structure
+(`Technical Details`_), and you can at any time switch between them using the *Active Element* panel.
 
 Typically *Meta* objects are used for special effects or as a basis for modeling.
 For example, you could use a collection of metas to form the initial shape of your model and
 then convert it to another object type (well, only meshes are available...)
 for further modeling. Meta objects are also very efficient for ray-tracing.
 
-Note that *Meta* objects have a slightly different behavior in *Object* mode, as detailed
-FIXME(TODO: Internal Link;
-[[#"Object" Mode|below]]
-).
+Note that *Meta* objects have a slightly different behavior in *Object* mode.
 
 
 Primitives
@@ -61,7 +56,6 @@ Visualization
 *************
 
 In Object mode, the calculated mesh is shown, along with a black "selection ring" (becoming pink when selected).
-To learn more about metas in Object mode, see FIXME(TODO: Internal Link; [[#"Object" Mode|below]]).
 
 
 .. figure:: /images/MetaInfluenceAndSelection.jpg
@@ -71,10 +65,11 @@ To learn more about metas in Object mode, see FIXME(TODO: Internal Link; [[#"Obj
    Meta Ball example.
 
 
-In *Edit* mode (*Meta Ball* *example*), a meta is drawn as a mesh (either shaded or as black wireframe, but without any vertex of course), with two colored circles: a red one for selection (pink when selected), and a green one for a direct control of the meta's stiffness (see
-FIXME(TODO: Internal Link;
-[[#Stiffness|below]]
-) - light green when active). Note that except for the *Scale* (:kbd:`S`) transformation, having the green circle highlighted is equivalent to having the red one.
+In *Edit* mode (*Meta Ball* *example*), a meta is drawn as a mesh (either shaded or as black wireframe,
+but without any vertex of course), with two colored circles: a red one for selection (pink when selected),
+and a green one for a direct control of the meta's stiffness (see `Stiffness`_ - light green when active).
+Note that except for the *Scale* (:kbd:`S`) transformation,
+having the green circle highlighted is equivalent to having the red one.
 
 
 Meta Ball Options
@@ -86,13 +81,19 @@ In *Edit* mode,
 the *Active Element* panel appears for editing individual meta elements.
 
 
-+------------------------------------------------+----------------------------------------------+
-+.. figure:: /images/MetaPropertiesObjectMode.jpg|.. figure:: /images/MetaPropertiesEditMode.jpg+
-+   :width: 300px                                |   :width: 300px                              +
-+   :figwidth: 300px                             |   :figwidth: 300px                           +
-+                                                |                                              +
-+   global meta properties.                      |   individual meta properties.                +
-+------------------------------------------------+----------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/MetaPropertiesObjectMode.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          global meta properties.
+
+     - .. figure:: /images/MetaPropertiesEditMode.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          individual meta properties.
 
 
 Resolution
@@ -135,10 +136,10 @@ Threshold (Influence)
    | Panel:    *MetaBall* (*Editing* context, :kbd:`F9`)
 
 
-*Threshold* defines how much a meta's surface "influences" other metas. It controls the *field level* at which the surface is computed. The setting is global to a
-FIXME(TODO: Internal Link;
-[[#Grouping|group]]
-) of *Meta* objects. As the threshold increases, the influence that each meta has on each other increases.
+*Threshold* defines how much a meta's surface "influences" other metas.
+It controls the *field level* at which the surface is computed.
+The setting is global to a group (`Grouping`_) of *Meta* objects.
+As the threshold increases, the influence that each meta has on each other increases.
 
 There are two types of influence: **positive** or **negative**. The type can be toggled on
 the *Active Element* panel while in *Edit* mode,

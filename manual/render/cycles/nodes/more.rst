@@ -346,6 +346,7 @@ Ray Depth output
 Transparent Depth output
    Returns the number of transparent surfaces passed through.
 
+.. _render-cycles-nodes-more-light_falloff:
 
 Light Falloff
 =============

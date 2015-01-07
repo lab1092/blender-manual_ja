@@ -79,7 +79,7 @@ Apply Location :kbd:`Ctrl-A`
    Apply (set) the location of the selection.
    This will make Blender consider the current location to be equivalent to 0 in each plane
    i.e. the selection will not move, the current location will be considered to be the "default location".
-   The Object Center will be set to actual 0,0,0 (where the coloured axis lines intersect in each view).
+   The Object Center will be set to actual 0,0,0 (where the colored axis lines intersect in each view).
 
 Apply Rotation :kbd:`Ctrl-A`
    Apply (set) the rotation of the selection.
@@ -97,7 +97,8 @@ Apply Rotation and Scale :kbd:`Ctrl-A`
 Apply Visual Transform :kbd:`Ctrl-A`
    Apply (set) the result of a constraint and apply this back to the Object's location, rotation and scale.
    See the following post for more detailed discussion:
-   `Apply visual transform <http://projects.blender.org/tracker/index.php?func=detail&group_id=9&atid=498&aid=24616>`__.
+   `Apply visual transform
+   <http://projects.blender.org/tracker/index.php?func=detail&group_id=9&atid=498&aid=24616>`__.
 
 Make Duplicate Real :kbd:`Shift-Ctrl-A`
    Make any duplicates attached to this Object real so that they can be edited.

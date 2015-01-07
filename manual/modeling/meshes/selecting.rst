@@ -106,15 +106,23 @@ See (*Vertices* *mode example*), (*Edges* *mode example*),
 for examples of the different modes.
 
 
-+-----------------------------------------------------------------+---------------------------------------------------------------+
-+.. figure:: /images/Manual-Part-II-EditModeVerticeModeExample.jpg|.. figure:: /images/Manual-Part-II-EditModeEdgeModeExample.jpg +
-+                                                                 |                                                               +
-+   Vertices mode example.                                        |   Edges mode example.                                         +
-+-----------------------------------------------------------------+---------------------------------------------------------------+
-+.. figure:: /images/Manual-Part-II-EditModeFaceModeExample.jpg   |.. figure:: /images/Manual-Part-II-EditModeMixedModeExample.jpg+
-+                                                                 |                                                               +
-+   Faces mode example.                                           |   Mixed mode example.                                         +
-+-----------------------------------------------------------------+---------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part-II-EditModeVerticeModeExample.jpg
+
+          Vertices mode example.
+
+     - .. figure:: /images/Manual-Part-II-EditModeEdgeModeExample.jpg
+
+          Edges mode example.
+
+   * - .. figure:: /images/Manual-Part-II-EditModeFaceModeExample.jpg
+
+          Faces mode example.
+
+     - .. figure:: /images/Manual-Part-II-EditModeMixedModeExample.jpg
+
+          Mixed mode example.
 
 
 Selection Tools

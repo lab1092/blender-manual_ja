@@ -58,14 +58,18 @@ Push
 Damp
    The friction for edge springs. High values (max of 50) dampen the *Push* / *Pull* effect and calm down the cloth.
 Plastic
-   Permanent deformation of the object after a collision. The vertices take a new position without applying the modifier.
+   Permanent deformation of the object after a collision.
+   The vertices take a new position without applying the modifier.
 Bending
-   This option creates virtual connections between a vertex and the vertices connected to it's neighbors. This includes diagonal edges. Damping also applies to these connections.
+   This option creates virtual connections between a vertex and the vertices connected to it's neighbors.
+   This includes diagonal edges. Damping also applies to these connections.
 Length
-   The edges can shrink or been blown up. This value is given in percent, 0 disables this function. 100% means no change, the body keeps 100% of his size.
+   The edges can shrink or been blown up. This value is given in percent,
+   0 disables this function. 100% means no change, the body keeps 100% of his size.
 
 Stiff Quads
-   For quad faces, the diagonal edges are used as springs. This stops quad faces to collapse completely on collisions (what they would do otherwise).
+   For quad faces, the diagonal edges are used as springs.
+   This stops quad faces to collapse completely on collisions (what they would do otherwise).
 Shear
    Stiffness of the virtual springs created for quad faces.
 
@@ -73,16 +77,30 @@ Shear
 Preventing Collapse
 ===================
 
-To show the effect of the different edge settings we will use two cubes (blue: only quads, red: only tris) and let them fall without any goal onto a plane (how to set up collision is shown on the page :doc:`Collisions </physics/soft_body/collisions>`).
+To show the effect of the different edge settings we will use two cubes
+(blue: only quads, red: only tris) and let them fall without any goal onto a plane
+(how to set up collision is shown on the page :doc:`Collisions </physics/soft_body/collisions>`).
 
 
-+--------------------------------------------------------+--------------------------------------------------------+--------------------------------------------------------+
-+.. figure:: /images/Blender3D_QuadVSTri-SB-0001-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-SB-0036-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-SB-0401-2.49.jpg+
-+   :width: 200px                                        |   :width: 200px                                        |   :width: 200px                                        +
-+   :figwidth: 200px                                     |   :figwidth: 200px                                     |   :figwidth: 200px                                     +
-+                                                        |                                                        |                                                        +
-+   Image 3a: Frame 1 without Stiff Quads.               |   Image 3b: Frame 36.                                  |   Image 3c: Frame 401.                                 +
-+--------------------------------------------------------+--------------------------------------------------------+--------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender3D_QuadVSTri-SB-0001-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 3a: Frame 1 without Stiff Quads.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-SB-0036-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 3b: Frame 36.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-SB-0401-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 3c: Frame 401.
 
 
 In (*Image 3*), the default settings are used (without *Stiff Quads*).
@@ -90,13 +108,25 @@ The "quad only" cube will collapse completely, the cube composed of tris keeps i
 though it will deform temporarily because of the forces created during collision.
 
 
-+-----------------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+
-+.. figure:: /images/Blender3D_QuadVSTri-SB-SQ-0001-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-SB-SQ-0036-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-SB-SQ-0401-2.49.jpg+
-+   :width: 200px                                           |   :width: 200px                                           |   :width: 200px                                           +
-+   :figwidth: 200px                                        |   :figwidth: 200px                                        |   :figwidth: 200px                                        +
-+                                                           |                                                           |                                                           +
-+   Image 4a: Frame 1 with Stiff Quads.                     |   Image 4b: Frame 36.                                     |   Image 4c: Frame 401.                                    +
-+-----------------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender3D_QuadVSTri-SB-SQ-0001-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 4a: Frame 1 with Stiff Quads.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-SB-SQ-0036-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 4b: Frame 36.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-SB-SQ-0401-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 4c: Frame 401.
 
 
 In (*Image 4*), *Stiff Quads* is activated (for both cubes).
@@ -104,14 +134,26 @@ Both cubes keep their shape, there is no difference for the red cube,
 because it has no quads anyway.
 
 
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+
-+.. figure:: /images/Blender3D_QuadVSTri-SB-BS-0001-2.49.jpg                                   |.. figure:: /images/Blender3D_QuadVSTri-SB-BS-0036-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-SB-BS-0401-2.49.jpg+
-+   :width: 200px                                                                              |   :width: 200px                                           |   :width: 200px                                           +
-+   :figwidth: 200px                                                                           |   :figwidth: 200px                                        |   :figwidth: 200px                                        +
-+                                                                                              |                                                           |                                                           +
-+   Image 5a: Frame 1 with Bending Stiffness.                                                  |   Image 5b: Frame 36.                                     |   Image 5c: Frame 401.                                    +
-+   `Blend file <http://wiki.blender.org/index.php/Media:Blender3D Quads-BE-Stiffness.blend>`__|                                                           |                                                           +
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender3D_QuadVSTri-SB-BS-0001-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 5a: Frame 1 with Bending Stiffness.
+          `Blend file <http://wiki.blender.org/index.php/Media:Blender3D Quads-BE-Stiffness.blend>`__
+
+     - .. figure:: /images/Blender3D_QuadVSTri-SB-BS-0036-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 5b: Frame 36.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-SB-BS-0401-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 5c: Frame 401.
 
 
 The second method to stop an object from collapsing is to change it's *Bending Stiffness*.
@@ -121,13 +163,25 @@ In (*Image 5*), *Be* is activated with a strength setting of 1.
 Now both cubes are more rigid.
 
 
-+------------------------------------------------------------+------------------------------------------------------------+-----------------------------------------------------------------+
-+.. figure:: /images/Blender3D_QuadVSTri-Bending-001-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-Bending-101-2.49.jpg|.. figure:: /images/Blender3D_QuadVSTri-Bending-high-101-2.49.jpg+
-+   :width: 200px                                            |   :width: 200px                                            |   :width: 200px                                                 +
-+   :figwidth: 200px                                         |   :figwidth: 200px                                         |   :figwidth: 200px                                              +
-+                                                            |                                                            |                                                                 +
-+   Image 6a: Two planes going to collide.                   |   Image 6b: No bending stiffness, Frame 101.               |   Image 6c: High bending stiffness (10), Frame 101.             +
-+------------------------------------------------------------+------------------------------------------------------------+-----------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender3D_QuadVSTri-Bending-001-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 6a: Two planes going to collide.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-Bending-101-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 6b: No bending stiffness, Frame 101.
+
+     - .. figure:: /images/Blender3D_QuadVSTri-Bending-high-101-2.49.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Image 6c: High bending stiffness (10), Frame 101.
 
 
 Bending stiffness can also be used if you want to make a subdivided plane more plank like.

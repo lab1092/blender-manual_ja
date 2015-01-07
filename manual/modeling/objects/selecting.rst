@@ -24,9 +24,13 @@ Blender distinguishes between two different states of selection:
    Unselected object in black, selected object in orange, and active object in yellow
 
 
-- In *Object mode* the last (de)selected item is called the "Active Object" and is outlined in yellow (the others are orange). There is exactly one active object at any time (even when nothing is selected).
+- In *Object mode* the last (de)selected item is called the "Active Object"
+  and is outlined in yellow (the others are orange).
+  There is exactly one active object at any time (even when nothing is selected).
 
-   Many actions in Blender use the active object as a reference (for example linking operations). If you already have a selection and need to make a different object the active one, simply re-select it with :kbd:`Shift-RMB`.
+  Many actions in Blender use the active object as a reference (for example linking operations).
+  If you already have a selection and need to make a different object the active one,
+  simply re-select it with :kbd:`Shift-RMB`.
 
 - All other selected objects are just selected. You can select any number of objects.
 
@@ -85,7 +89,10 @@ Example
    Border selecting in three steps
 
 
-*Border Select* has been activated in the first image and is indicated by showing a dotted cross-hair cursor. In the second image, the *selection region* is being chosen by drawing a rectangle with the :kbd:`LMB`. The rectangle is only covering two cubes. Finally, in the third image, the selection is completed by releasing :kbd:`LMB`.
+*Border Select* has been activated in the first image and is indicated by showing a dotted cross-hair cursor.
+In the second image, the *selection region* is being chosen by drawing a rectangle with the :kbd:`LMB`.
+The rectangle is only covering two cubes.
+Finally, in the third image, the selection is completed by releasing :kbd:`LMB`.
 
 Notice in the third image, the bright color of left-most selected cube.
 This means it is the "active object",
@@ -95,7 +102,8 @@ the last selected object prior to using the *Border Select* tool.
 Hints
 =====
 
-*Border Select* adds to the previous selection, so in order to select only the contents of the rectangle, deselect all with :kbd:`A` first.
+*Border Select* adds to the previous selection, so in order to select only the contents of the rectangle,
+deselect all with :kbd:`A` first.
 
 
 Lasso Select
@@ -153,18 +161,25 @@ Description
    Main selection menu
 
 
-*Circle Select* is used by moving with dotted circle through objects with :kbd:`LMB`. You can select any object by touching of circle area.
+*Circle Select* is used by moving with dotted circle through objects with :kbd:`LMB`.
+You can select any object by touching of circle area.
 It is possible to dynamically change the diameter of circle by scrolling :kbd:`MMB` as
 seen in pictures below. Deselection is under the same principle - :kbd:`MMB`.
 To cancel the selection use :kbd:`RMB` or key :kbd:`Esc`,
 
-+----------------------------------------------------------+----------------------------------------------------------+
-+.. figure:: /images/26-Manual-Object-Selection-Circle1.jpg|.. figure:: /images/26-Manual-Object-Selection-Circle2.jpg+
-+   :width: 300px                                          |   :width: 320px                                          +
-+   :figwidth: 300px                                       |   :figwidth: 320px                                       +
-+                                                          |                                                          +
-+   Circle selection                                       |   ...with huge circle                                    +
-+----------------------------------------------------------+----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/26-Manual-Object-Selection-Circle1.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Circle selection
+
+     - .. figure:: /images/26-Manual-Object-Selection-Circle2.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          ...with huge circle
 
 
 Menu Selection
@@ -228,7 +243,8 @@ Object Hooks
    Every hook that belongs to the active object.
 Pass
    Select objects assigned to the same render pass.
-   Render passes are set in *Properties* → *Object* → *Relations* and can be used in the *Node Compositor* (*Add* → *Convertor* → *ID Mask*.)
+   Render passes are set in *Properties* → *Object* → *Relations* and can be used in the *Node Compositor*
+   (*Add* → *Convertor* → *ID Mask*.)
 Color
    Select objects with same *Object Color*.
    Object colors are set in *Properties* → *Object* → *Display* → *Object Color*.)
@@ -348,7 +364,9 @@ Layers are another means to regroup your objects to suit your purpose.
 
 This option allows the selection of every single object that belongs to a given layer,
 visible or not, in one single command.
-..    Comment: <!--Not implemented yet?: This selection is added to anything that was already selected at that moment. --> .
+
+.. Comment: <!--Not implemented yet?:
+   This selection is added to anything that was already selected at that moment. --> .
 
 
 Options

@@ -90,20 +90,25 @@ Edge Selection Mode:
    Face Angles
       Selects all edges that are between two faces forming a similar angle, as with those already selected.
    Crease
-      Selects all edges that have a similar *Crease* value as those already selected. The *Crease* value is a setting used by the :doc:`Subsurf Modifier </modifiers/generate/subsurf>`.
+      Selects all edges that have a similar *Crease* value as those already selected.
+      The *Crease* value is a setting used by the :doc:`Subsurf Modifier </modifiers/generate/subsurf>`.
    Bevel
       Selects all edges that have the same *Bevel Weight* as those already selected.
    Seam
-      Selects all edges that have the same *Seam* state as those already selected. *Seam* is a true/false setting used in :doc:`UV-texturing </textures/mapping/uv>`.
+      Selects all edges that have the same *Seam* state as those already selected.
+      *Seam* is a true/false setting used in :doc:`UV-texturing </render/blender_render/textures/mapping/uv>`.
    Sharpness
-      Selects all edges that have the same *Sharp* state as those already selected. *Sharp* is a true/false setting (a flag) used by the :doc:`EdgeSplit Modifier </modifiers/generate/edge_split>`.
+      Selects all edges that have the same *Sharp* state as those already selected.
+      *Sharp* is a true/false setting (a flag) used by the
+      :doc:`EdgeSplit Modifier </modifiers/generate/edge_split>`.
 
 
 Face Selection Mode:
    Material
       Selects all faces that use the same material as those already selected.
    Image
-      Selects all faces that use the same UV-texture as those already selected (see :doc:`UV-texturing </textures/mapping/uv>` pages).
+      Selects all faces that use the same UV-texture as those already selected
+      (see :doc:`UV-texturing </render/blender_render/textures/mapping/uv>` pages).
    Area
       Selects all faces that have a similar area as those already selected.
    Polygon Sides
@@ -111,7 +116,8 @@ Face Selection Mode:
    Perimeter
       Selects all faces that have a similar perimeter as those already selected.
    Normal
-      Selects all faces that have a similar normal as those selected. This is a way to select faces that have the same orientation (angle).
+      Selects all faces that have a similar normal as those selected.
+      This is a way to select faces that have the same orientation (angle).
    Co-planar
       Selects all faces that are (nearly) in the same plane as those selected.
 
@@ -145,7 +151,8 @@ or the *Edge Loop Select* option of the *Edge Specials* menu
 
 .. note:: *Vertex* mode
 
-   In *Vertex* select mode, you can also select edge loops, by using the same hotkeys, *and clicking on the edges* (not on the vertices).
+   In *Vertex* select mode, you can also select edge loops, by using the same hotkeys,
+   *and clicking on the edges* (not on the vertices).
 
 
 .. figure:: /images/Broken-Manual-Part-II-EdgeF.jpg
@@ -211,7 +218,9 @@ Edge Ring
    | Hotkey:   :kbd:`Ctrl-Alt-RMB` or :kbd:`Ctrl-E` → :menuselection:`Select --> Edge Ring`
 
 
-In *Edge* select mode, holding :kbd:`Ctrl-Alt` while selecting an edge selects a sequence of edges that are not connected, but on opposite sides to each other continuing along a :doc:`face loop </modeling/meshes/mesh_structures>`.
+In *Edge* select mode, holding :kbd:`Ctrl-Alt`
+while selecting an edge selects a sequence of edges that are not connected,
+but on opposite sides to each other continuing along a :doc:`face loop </modeling/meshes/mesh_structures>`.
 
 As with edge loops, you can also select edge rings based on current selection,
 using either :menuselection:`Select --> Edge Ring`,
@@ -221,7 +230,8 @@ or the *Edge Ring Select* option of the *Edge Specials* menu
 
 .. note:: *Vertex* mode
 
-   In *Vertex* select mode, you can use the same hotkeys when *clicking on the edges* (not on the vertices), but this will directly select the corresponding face loop...
+   In *Vertex* select mode, you can use the same hotkeys when *clicking on the edges* (not on the vertices),
+   but this will directly select the corresponding face loop...
 
 
 .. figure:: /images/Manual-Part-II-EdgeFace-LoopingEdge-Algors-Select.jpg
@@ -263,11 +273,15 @@ Loop Inner-Region
    :class: refbox
 
    | Mode:     *Edit* mode → *Edge* select mode
-   | Menu:     :menuselection:`Select --> Select Loop Inner-Region` or :menuselection:`Mesh --> Edges --> Select Loop Inner-Region`
+   | Menu:     :menuselection:`Select --> Select Loop Inner-Region` or
+     :menuselection:`Mesh --> Edges --> Select Loop Inner-Region`
    | Hotkey:   :kbd:`Ctrl-E` → :menuselection:`Select Loop Inner-Region`
 
 
-*Select Loop Inner-Region* selects all edges that are inside a closed loop of edges. While it is possible to use this operator in  *Vertex* and *Face* selection modes, results may be unexpected. Note that if the selected loop of edges is not closed, then all connected edges on the mesh will be considered inside the loop.
+*Select Loop Inner-Region* selects all edges that are inside a closed loop of edges.
+While it is possible to use this operator in *Vertex* and *Face* selection modes, results may be unexpected.
+Note that if the selected loop of edges is not closed,
+then all connected edges on the mesh will be considered inside the loop.
 
 
 .. figure:: /images/Mesh.loop.select1.jpg
@@ -298,11 +312,14 @@ Boundary Loop
    :class: refbox
 
    | Mode:     *Edit* mode → *Edge* select mode
-   | Menu:     :menuselection:`Select --> Select Boundary Loop` or :menuselection:`Mesh --> Edges --> Select Boundary Loop`
+   | Menu:     :menuselection:`Select --> Select Boundary Loop` or
+     :menuselection:`Mesh --> Edges --> Select Boundary Loop`
    | Hotkey:   :kbd:`Ctrl-E` → :menuselection:`Select Boundary Loop`
 
 
-*Select Boundary Loop* is the "logical inverse" of *Select Loop Inner-Region*, based on all regions currently selected, it selects only the edges at the border of these regions. It can operate in any select mode, but will always switch to *Edge* select mode when run.
+*Select Boundary Loop* is the "logical inverse" of *Select Loop Inner-Region*,
+based on all regions currently selected, it selects only the edges at the border of these regions.
+It can operate in any select mode, but will always switch to *Edge* select mode when run.
 
 All this is much more simple to illustrates with examples:
 

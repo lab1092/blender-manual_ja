@@ -323,7 +323,7 @@ Spatial Noise
 
 The *Spatial Noise* modifier adds some spatial noise to the stroke.
 
-TODO: definition of "spatial  noise"!
+TODO: definition of "spatial noise"!
 
 Amplitude
    How much the noise distorts the stroke.

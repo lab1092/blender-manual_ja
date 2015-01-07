@@ -7,7 +7,9 @@ Selecting Edges
 
    Buttons for the selection modes
 
-Edges can be selected in much the same way as vertices and faces - by right-clicking them while Edge Select Mode is activated. Pressing :kbd:`Shift` while clicking will add/subtract to the existing selection.
+Edges can be selected in much the same way as vertices and faces -
+by right-clicking them while Edge Select Mode is activated.
+Pressing :kbd:`Shift` while clicking will add/subtract to the existing selection.
 
 
 Edge Loops
@@ -27,7 +29,9 @@ and then going to :menuselection:`Select --> Edge Loop`. The shortcut :kbd:`Alt-
 More powerful, because you can add/remove loops from an existing selection if you press
 :kbd:`Shift` too.
 
-Note, that if you want to select a loop while being in vertex select mode, you still have to perform the shortcut on an edge - while you, for just selecting vertices, would rightclick on a vertex.
+Note, that if you want to select a loop while being in vertex select mode,
+you still have to perform the shortcut on an edge - while you,
+for just selecting vertices, would rightclick on a vertex.
 
 
 .. figure:: /images/Select_edge_loop_example.jpg
@@ -37,7 +41,8 @@ Note, that if you want to select a loop while being in vertex select mode, you s
 
 .. note:: :kbd:`Alt` on Linux
 
-   :kbd:`Alt` is on some Linux distros caught by the windows manager. If you see the above shortcut not working, make sure that blender can properly recognize the usage of :kbd:`Alt`.
+   :kbd:`Alt` is on some Linux distros caught by the windows manager.
+   If you see the above shortcut not working, make sure that blender can properly recognize the usage of :kbd:`Alt`.
 
 
 Edge Rings

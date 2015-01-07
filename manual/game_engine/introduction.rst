@@ -27,11 +27,11 @@ press 'P' to play in preview mode in the embedded player
 use cases and sample games
 
 Blender has its own built in Game Engine that allows you to create interactive 3D applications
-or simulations. The major difference between Game Engine and the conventional Blender  system
-is  in the rendering process. In the normal Blender engine,
-images and animations are built off-line - once rendered they cannot be modified.  Conversely,
-the Blender Game Engine renders scenes continuously in real-time,
-and incorporates facilities for  user interaction during the rendering process.
+or simulations. The major difference between Game Engine and the conventional Blender system
+is in the rendering process. In the normal Blender engine,
+images and animations are built off-line - once rendered they cannot be modified.
+Conversely, the Blender Game Engine renders scenes continuously in real-time,
+and incorporates facilities for user interaction during the rendering process.
 
 
 .. figure:: /images/BGE_Introduction_ScreenShot.jpg
@@ -50,12 +50,13 @@ which is comprised of a seriers of specialised components called "Logic Bricks".
 The :doc:`Logic Editor </game_engine/logic/editor>` provides deep interaction with the simulation,
 and its functionality can be extended through Python scripting.
 It is designed to abstract the complex engine features into a simple user interface,
-which does not require experience with Programming. An overview of the :doc:`Logic Editor </game_engine/logic/editor>`
+which does not require experience with Programming.
+An overview of the :doc:`Logic Editor </game_engine/logic/editor>`
 can be found in the :doc:`Game Logic Screen Layout </game_engine/screen_layout>`
 
 
 The Game Engine is closely integrated with the existing code base of Blender, which permits
-quick transitions between the traditional modelling featureset and game-specific functionality
+quick transitions between the traditional modeling featureset and game-specific functionality
 provided by the program. In this sense,
 the Game Engine can be efficiently used in all areas of game design,
 from prototyping to final release.

@@ -31,7 +31,8 @@ Here are common steps for using the ruler.
 
 - Activate the Ruler from the toolshelf.
 - Click and drag in the viewport to define the initial start/end point for the ruler.
-- Orbit the view and click on either end of the ruler to re-position it. Holding :kbd:`Ctrl` enables snap to elements.
+- Orbit the view and click on either end of the ruler to re-position it.
+  Holding :kbd:`Ctrl` enables snap to elements.
 - Click on the middle to measure angles.
 - Press Enter to store the ruler for later use or Esc to cancel.
 

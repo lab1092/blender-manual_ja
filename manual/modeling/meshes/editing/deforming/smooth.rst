@@ -60,10 +60,15 @@ mesh shape. Laplacian smooth exists as a mesh operation and as a non-destructive
 
 .. note::
 
-   The :doc:`Smooth modifier </modifiers/deform/smooth>`, which can be limited to a *Vertex Group*, is a non-destructive alternative to the smooth tool.
+   The :doc:`Smooth modifier </modifiers/deform/smooth>`, which can be limited to a *Vertex Group*,
+   is a non-destructive alternative to the smooth tool.
 
 
 .. note:: Real Smoothing versus Shading Smoothing
 
-   Do not mistake this tool with the shading smoothing options described at :doc:`this page </modeling/meshes/smoothing>`, they do not work the same! This tool modifies the mesh itself, to reduce its sharpness, whereas *Set Smooth* / *AutoSmooth* and co. only control the way the mesh is shaded, creating an *illusion* of softness - but without modifying the mesh at all...
+   Do not mistake this tool with the shading smoothing options described at
+   :doc:`this page </modeling/meshes/smoothing>`, they do not work the same!
+   This tool modifies the mesh itself, to reduce its sharpness, whereas *Set Smooth* / *AutoSmooth* and co.
+   only control the way the mesh is shaded,
+   creating an *illusion* of softness - but without modifying the mesh at all...
 

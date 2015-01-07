@@ -61,11 +61,15 @@ Mesh Volume
    This the default option. Brush affects all surface point inside the mesh volume.
 
 
-+----------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-+.. figure:: /images/DynamicPaint-Guide-Brush_Proximity.jpg            |.. figure:: /images/Manual-DynamicPaint-Brush-Proximity-Project.jpg                +
-+                                                                      |                                                                                   +
-+   Brush Source - Proximity. Brush affects all canvas pixels around it|   "Project" setting enabled. See how brush only affects canvas in normal direction+
-+----------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/DynamicPaint-Guide-Brush_Proximity.jpg
+
+          Brush Source - Proximity. Brush affects all canvas pixels around it
+
+     - .. figure:: /images/Manual-DynamicPaint-Brush-Proximity-Project.jpg
+
+          "Project" setting enabled. See how brush only affects canvas in normal direction
 
 
 Proximity
@@ -79,15 +83,23 @@ Project
    Basically this can be considered as "direction aligned" proximity.
 
 
-+----------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+.. figure:: /images/DynamicPaint-Guide-Brush_Volume_Proximity.jpg           |.. figure:: /images/DynamicPaint-Guide-Brush_Volume_Proximity_Inner.jpg  +
-+                                                                            |                                                                         +
-+   "Volume + Proximity" brush with no additional settings                   |   Inner Proximity. Proximity falloff is now visible inside the volume   +
-+----------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+.. figure:: /images/Manual-DynamicPaint-Brush-Negate-Volume.jpg             |.. figure:: /images/Manual-DynamicPaint-Brush-Negate-Volume-And-Inner.jpg+
-+                                                                            |                                                                         +
-+   Negate Volume. Inner side of the volume has become completely transparent|   Inner Proximity and Negate Volume enabled together                    +
-+----------------------------------------------------------------------------+-------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/DynamicPaint-Guide-Brush_Volume_Proximity.jpg
+
+          "Volume + Proximity" brush with no additional settings
+
+     - .. figure:: /images/DynamicPaint-Guide-Brush_Volume_Proximity_Inner.jpg
+
+          Inner Proximity. Proximity falloff is now visible inside the volume
+
+   * - .. figure:: /images/Manual-DynamicPaint-Brush-Negate-Volume.jpg
+
+          Negate Volume. Inner side of the volume has become completely transparent
+
+     - .. figure:: /images/Manual-DynamicPaint-Brush-Negate-Volume-And-Inner.jpg
+
+          Inner Proximity and Negate Volume enabled together
 
 
 Mesh Volume + Proximity

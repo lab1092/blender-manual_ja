@@ -17,7 +17,7 @@ only the faces defined by these vertices will be affected.
 
 In general, you will only select one type of element at a time, depending on the "select mode" you are using.
 However, you can successively add different elements to a same selection, switching between these select modes
-(see FIXME(TODO: Internal Link; [[#Selected elements after switching select mode|below]])
+(see `Selected elements after switching select mode`_
 for what is selected after switching select mode), or even use a "combined" select mode, also described below.
 
 
@@ -48,11 +48,11 @@ In *Edit* mode there are three different select modes for meshes; see
 
 :menuselection:`Select Mode --> Vertices`
    Press :kbd:`Ctrl-Tab` and select *Vertices* from the popup menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad1`.
-   The selected vertices are drawn in yellow and unselected vertices are drawn in a pink colour.
+   The selected vertices are drawn in yellow and unselected vertices are drawn in a pink color.
 :menuselection:`Select Mode --> Edges`
    Press :kbd:`Ctrl-Tab` and select *Edges* from the popup menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad2`.
    In this mode the vertices are not drawn.
-   Instead the selected edges are drawn in yellow and unselected edges are drawn in a black colour.
+   Instead the selected edges are drawn in yellow and unselected edges are drawn in a black color.
 :menuselection:`Select Mode --> Faces`
    Press :kbd:`Ctrl-Tab` and select *Faces* from the popup menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad3`.
    In this mode the faces are drawn with a selection point in the middle which is used for selecting a face.
@@ -111,18 +111,29 @@ See (*Vertices* *mode example*), (*Edges* *mode example*),
 for examples of the different modes.
 
 
-+---------------------------------------------------------------------+-------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part-II-EditModeVerticeModeExample_2.5.jpg|.. figure:: /images/Manual-Part-II-EditModeEdgeModeExample_2.5.jpg +
-+   :width: 300px                                                     |   :width: 300px                                                   +
-+   :figwidth: 300px                                                  |   :figwidth: 300px                                                +
-+                                                                     |                                                                   +
-+   none Vertices mode example.                                       |   Edges mode example.                                             +
-+---------------------------------------------------------------------+-------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part-II-EditModeFaceModeExample_2.5.jpg   |.. figure:: /images/Manual-Part-II-EditModeMixedModeExample_2.5.jpg+
-+   :width: 300px                                                     |   :width: 300px                                                   +
-+   :figwidth: 300px                                                  |   :figwidth: 300px                                                +
-+                                                                     |                                                                   +
-+   Faces mode example.                                               |   Mixed mode example.                                             +
-+---------------------------------------------------------------------+-------------------------------------------------------------------+
+.. list-table::
 
+   * - .. figure:: /images/Manual-Part-II-EditModeVerticeModeExample_2.5.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          none Vertices mode example.
+
+     - .. figure:: /images/Manual-Part-II-EditModeEdgeModeExample_2.5.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Edges mode example.
+
+   * - .. figure:: /images/Manual-Part-II-EditModeFaceModeExample_2.5.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Faces mode example.
+
+     - .. figure:: /images/Manual-Part-II-EditModeMixedModeExample_2.5.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Mixed mode example.
 

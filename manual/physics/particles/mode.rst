@@ -3,7 +3,10 @@
 Particle Mode
 *************
 
-Using *Particle Mode* you can edit the key-points (key-frames) and paths of *Baked* :doc:`Hair </physics/particles/hair>`, :doc:`Particle </physics/particles>`, :doc:`Cloth </physics/cloth>`, and :doc:`Soft Body </physics/soft_body>` simulations. (You can also edit and style hair before baking).
+Using *Particle Mode* you can edit the key-points (key-frames)
+and paths of *Baked* :doc:`Hair </physics/particles/hair>`, :doc:`Particle
+</physics/particles>`, :doc:`Cloth </physics/cloth>`, and :doc:`Soft Body </physics/soft_body>` simulations.
+(You can also edit and style hair before baking).
 
 Since working in particle mode is pretty easy and very similar to working with vertices in the
 3D window, we will show how to set up a particle system and then give a reference of the
@@ -17,18 +20,23 @@ Ways to use Particle Mode
 
 .. tip:: Only Frames Baked to Memory are Editable!
 
-   If you cannot edit the particles, check that you are not baking to a :doc:`Disk Cache </physics/particles/cache_and_bake>`.
+   If you cannot edit the particles, check that you are not baking to a
+   :doc:`Disk Cache </physics/particles/cache_and_bake>`.
 
 
 **Setup for Hair Particles**
 
-- Create a *Hair* particle system - With your object selected, click the *Particle System* icon in the Properties panel.  Create a new particle system by clicking the *Plus*.
-- Give it an initial velocity in the *Normal* direction (first check the *Advanced* box, then modify the *Velocity* sub-panel), or adjust the *Hair Length*.
-- Create a simulation - Place the camera at a good position (:menuselection:`popup --> View --> Cameras --> Active Camera` ... or
+- Create a *Hair* particle system - With your object selected,
+  click the *Particle System* icon in the Properties panel. Create a new particle system by clicking the *Plus*.
+- Give it an initial velocity in the *Normal* direction (first check the *Advanced* box,
+  then modify the *Velocity* sub-panel), or adjust the *Hair Length*.
+- Create a simulation - Place the camera at a good position
+  (:menuselection:`popup --> View --> Cameras --> Active Camera` ... or
 
 FIXME(Template Unsupported: Shortcut/Keypress;
 {{Shortcut/Keypress|pad0}}
-)). Check the *Hair Dynamics* box.  Select :menuselection:`popup --> Render --> Render OpenGL Animation` in *Render Engine* mode.
+)). Check the *Hair Dynamics* box.
+Select :menuselection:`popup --> Render --> Render OpenGL Animation` in *Render Engine* mode.
 
 
 .. figure:: /images/Blender2.6_particle_mode.jpg
@@ -52,7 +60,10 @@ FIXME(Template Unsupported: Shortcut/Keypress;
 
  **Bake the Simulation**
 
-- Once you are happy with the general simulation, :doc:`bake </physics/particles/cache_and_bake>` the simulation from object mode. The simulation must be baked to enable editing. (remember to bake to memory, a disk cache will not be editable in *Particle Mode*)
+- Once you are happy with the general simulation,
+  :doc:`bake </physics/particles/cache_and_bake>` the simulation from object mode.
+  The simulation must be baked to enable editing. (remember to bake to memory,
+  a disk cache will not be editable in *Particle Mode*)
 
 **Edit the Simulation**
 
@@ -114,8 +125,10 @@ Moving keypoints or particles
 
 - To move selected keypoints press :kbd:`G`, or use one of the various other methods to grab vertices.
 - To move a particle root you have to turn off *Keep* *Root* in the *Tool Bar*.
-- You can do many of the things like with vertices, including scaling, rotating and removing (complete particles or single keys).
-- You may not duplicate or extrude keys or particles, but you can subdivide particles which adds new keypoints (:kbd:`W` → *Subdivide* / :kbd:`Numpad2`).
+- You can do many of the things like with vertices, including scaling,
+  rotating and removing (complete particles or single keys).
+- You may not duplicate or extrude keys or particles,
+  but you can subdivide particles which adds new keypoints (:kbd:`W` → *Subdivide* / :kbd:`Numpad2`).
 - Alternatively you can rekey a particle (:kbd:`W` → *Rekey* / :kbd:`Numpad1`) and choose the number of keys.
 
 How smoothly the hair and particle paths are displayed depends on the *Path Steps*

@@ -37,7 +37,8 @@ Boundary type
    :width: 610px
    :figwidth: 610px
 
-   Example of the different boundary types for a drop falling onto the slanted wall. From left to right: no-slip, part-slip 0.3, part-slip 0.7 and free-slip.
+   Example of the different boundary types for a drop falling onto the slanted wall.
+   From left to right: no-slip, part-slip 0.3, part-slip 0.7 and free-slip.
 
 
 FIXME(Template Unsupported: Doc:2.6/Manual/Physics/Fluid/animated_mesh_export;
@@ -52,7 +53,7 @@ PartSlip Amount
 
    Blender supports now moving obstacles.
 
-   In the past, a  moving obstacle was automatically treated as no slip (sticky),
+   In the past, a moving obstacle was automatically treated as no slip (sticky),
    so if you wanted to splash off of a moving object,
    you had to put a transparent plane in the spot where the fluid will hit the moving object,
    exactly aligned and shaped as the object, to fake the splash. This is not needed anymore.

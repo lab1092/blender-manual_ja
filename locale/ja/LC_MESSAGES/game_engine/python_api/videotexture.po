@@ -338,7 +338,7 @@ msgid ""
 "playback:"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:223
+#: ../../manual/game_engine/python_api/videotexture.rst:224
 msgid "``range``"
 msgstr ""
 
@@ -348,27 +348,27 @@ msgid ""
 "expressed in seconds from beginning. By default the entire video."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:227
+#: ../../manual/game_engine/python_api/videotexture.rst:228
 msgid "``repeat``"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:226
+#: ../../manual/game_engine/python_api/videotexture.rst:227
 msgid "(*integer*). Number of video replay, -1 for infinite."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:231
+#: ../../manual/game_engine/python_api/videotexture.rst:232
 msgid "``framerate``"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:230
+#: ../../manual/game_engine/python_api/videotexture.rst:231
 msgid "(*float*). Relative frame rate, <1.0 for slow, >1.0 for fast."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:239
+#: ../../manual/game_engine/python_api/videotexture.rst:240
 msgid "``scale``"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:234
+#: ../../manual/game_engine/python_api/videotexture.rst:235
 msgid ""
 "(*bool*). Set to True to activate fast nearest neighbour scaling algorithm. "
 "Texture width and height must be a power of 2. If the video picture size is "
@@ -377,22 +377,22 @@ msgid ""
 "video offline so that no scaling is necessary at runtime!"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:244
+#: ../../manual/game_engine/python_api/videotexture.rst:245
 msgid "``flip``"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:242
+#: ../../manual/game_engine/python_api/videotexture.rst:243
 msgid ""
 "(*bool*). Set to True if the image must be vertically flipped. FFmpeg always"
 " delivers the image upside down, so this attribute is set to True by "
 "default."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:250
+#: ../../manual/game_engine/python_api/videotexture.rst:251
 msgid "``filter``"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:247
+#: ../../manual/game_engine/python_api/videotexture.rst:248
 msgid ""
 "Set additional filter on the video before sending to GPU. Assign to one of "
 "``VideoTexture`` filter object. By default the image is send unchanged to "
@@ -400,29 +400,29 @@ msgid ""
 "loaded and sent to the GPU as well."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:252
+#: ../../manual/game_engine/python_api/videotexture.rst:253
 msgid ""
 "We will simply set the ``scale`` attribute to True because the "
 "``gluScaleImage ()`` is really too slow for real time video. In case the "
 "video dimensions are already a power of 2, it has no effect. ::"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:262
+#: ../../manual/game_engine/python_api/videotexture.rst:263
 msgid "Play the video"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:264
+#: ../../manual/game_engine/python_api/videotexture.rst:265
 msgid "We are now ready to play the video: ::"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:271
+#: ../../manual/game_engine/python_api/videotexture.rst:272
 msgid ""
 "Video playback is not a background process: it happens only when we refresh "
 "the texture. So we must have another script that runs on every frame and "
 "calls the ``refresh ()`` method of the ``Texture`` object: ::"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:281
+#: ../../manual/game_engine/python_api/videotexture.rst:282
 msgid ""
 "If the video source is stopped, ``refresh()`` has no effect. The argument of"
 " ``refresh ()`` is a flag that indicates if the texture should be "
@@ -430,22 +430,22 @@ msgid ""
 "set it to True."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:288
+#: ../../manual/game_engine/python_api/videotexture.rst:289
 msgid "Checking video status"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:290
+#: ../../manual/game_engine/python_api/videotexture.rst:291
 msgid ""
 "Video source classes (such as VideoFFMpeg) have an attribute ``status``. If "
 "video is playing, its value is 2, if it's stopped, it's 3. So in our "
 "example: ::"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:300
+#: ../../manual/game_engine/python_api/videotexture.rst:301
 msgid "Advanced work flow"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:302
+#: ../../manual/game_engine/python_api/videotexture.rst:303
 msgid ""
 "True argument in ``Texture.refresh()`` method simply invalidates the image "
 "buffer after sending it to the GPU so that on next frame, a new image will "
@@ -454,43 +454,43 @@ msgid ""
 "()`` method of the source directly."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:308
+#: ../../manual/game_engine/python_api/videotexture.rst:309
 msgid "Here are some possible advanced work flow:"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:310
+#: ../../manual/game_engine/python_api/videotexture.rst:311
 msgid "Use the image buffer in python (doesn't effect the Texture):"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:323
+#: ../../manual/game_engine/python_api/videotexture.rst:324
 msgid "Load image from source for python processing wihtout download to GPU:"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:324
+#: ../../manual/game_engine/python_api/videotexture.rst:325
 msgid "note that we don't even call refresh on the Texture"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:325
+#: ../../manual/game_engine/python_api/videotexture.rst:326
 msgid "we could also just create a source object without a Texture object"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:335
+#: ../../manual/game_engine/python_api/videotexture.rst:336
 msgid ""
 "If you have more than 1 material on the mesh and you want to modify a "
 "texture of one particular material, get its ID"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:343
+#: ../../manual/game_engine/python_api/videotexture.rst:345
 msgid ""
 "GLSL material can have more than 1 texture channel, identify the texture by "
 "the texture slot where it is defined, here 2 ::"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:352
+#: ../../manual/game_engine/python_api/videotexture.rst:354
 msgid "Advanced demos"
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:354
+#: ../../manual/game_engine/python_api/videotexture.rst:356
 msgid ""
 "Here is a `demo "
 "<http://www.graphicall.org/ftp/ben2610/VideoTextureDemo2video.blend>`__ that"
@@ -500,7 +500,7 @@ msgid ""
 "demo."
 msgstr ""
 
-#: ../../manual/game_engine/python_api/videotexture.rst:359
+#: ../../manual/game_engine/python_api/videotexture.rst:361
 msgid ""
 "Here is a `demo "
 "<http://www.graphicall.org/ftp/ben2610/VideoTextureDemo2videoMix.blend>`__ "

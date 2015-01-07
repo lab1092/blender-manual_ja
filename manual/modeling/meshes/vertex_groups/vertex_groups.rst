@@ -113,7 +113,7 @@ Plus Icon
 
 Drag Handle
    If you have a large number of vertex groups and you want to see more
-   then a few Groups, you can  :kbd:`LMB` on the small drag handle to tear
+   then a few Groups, you can :kbd:`LMB` on the small drag handle to tear
    the vertex groups list larger or smaller.
 
 Active Group
@@ -160,7 +160,7 @@ And you can change it with the weight paint brushes, etc.
 
 When you click on the icon,
 it changes to a closed lock icon and all vertex group modifications get disabled.
-You  can only rename or delete the group, and unlock it again.
+You can only rename or delete the group, and unlock it again.
 No other operations are allowed on locked Vertex Groups,
 thus all corresponding function buttons become disabled for locked Vertex Groups.
 
@@ -257,8 +257,10 @@ You can quickly select all assigned vertices of a group:
 
 - (optionally) press :kbd:`A` once or twice to unselect all vertices.
 - Select the group from the group list (make it the active group).
-- When you now :kbd:`LMB` click the *Select* button, then the vertices assigned to the active group will be selected and highlighted in the 3D Viewport.
-- When you :kbd:`LMB` click the *Deselect* button instead, then the vertices assigned to the active group will be deselected in the 3D Viewport.
+- When you now :kbd:`LMB` click the *Select* button,
+  then the vertices assigned to the active group will be selected and highlighted in the 3D Viewport.
+- When you :kbd:`LMB` click the *Deselect* button instead,
+  then the vertices assigned to the active group will be deselected in the 3D Viewport.
 
 
 .. note:: Selecting/Deselecting is additive
@@ -332,7 +334,8 @@ Sort Vertex Groups:
 Copy Vertex Group:
    Add a Copy of the active Vertex Group as a new Group.
    The new group will be named like the original group with "_copy" appended at the end of its name.
-   And it will contain associations to exactly the same verts with the exact same weights as in the source vertex group.
+   And it will contain associations to exactly the same verts
+   with the exact same weights as in the source vertex group.
 
 Copy Vertex Groups to Linked:
    Copy Vertex Groups of this Mesh to all linked Objects which use the same mesh data (all users of the data).

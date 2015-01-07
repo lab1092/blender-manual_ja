@@ -68,7 +68,7 @@ Min 2D Angle and Max 2D Angle
 
 D1 / G1 / D2 / G2 / D3 / G3
    Splits the chains using the given dashed pattern ("D" stands for "dash", "G" stands for "gap"; see also
-   FIXME(TODO: Internal Link; [[#Dashed Line|below]])).
+   `Dashed Line`_).
 
 
 Selection

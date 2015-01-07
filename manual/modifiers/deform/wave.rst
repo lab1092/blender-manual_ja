@@ -3,14 +3,26 @@
 Wave Modifier
 *************
 
-+------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------------------------+
-+.. figure:: /images/25-Manual-Modifiers-Wave-example-Circular.jpg |.. figure:: /images/25-Manual-Modifiers-Wave-example-Linear.jpg |.. figure:: /images/25-Manual-Modifiers-Wave-example-normals.jpg |
-+   :width: 180px                                                  |   :width: 180px                                                |   :width: 180px                                                 |
-+   :figwidth: 180px                                               |   :figwidth: 180px                                             |   :figwidth: 180px                                              |
-+------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------------------------+
-+ Circular wave front                                              | Linear wave front                                              | | Motion enabled for X,                                         |
-+                                                                  |                                                                | | Normals enabled for Y                                         |
-+------------------------------------------------------------------+----------------------------------------------------------------+-----------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/25-Manual-Modifiers-Wave-example-Circular.jpg
+          :width: 180px
+          :figwidth: 180px
+
+          Circular wave front
+
+     - .. figure:: /images/25-Manual-Modifiers-Wave-example-Linear.jpg
+          :width: 180px
+          :figwidth: 180px
+
+          Linear wave front
+
+     - .. figure:: /images/25-Manual-Modifiers-Wave-example-normals.jpg
+          :width: 180px
+          :figwidth: 180px
+
+          Motion enabled for X,
+          Normals enabled for Y.
 
 
 The Wave modifier adds a ripple-like motion to an object's geometry.

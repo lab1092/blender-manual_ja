@@ -19,26 +19,16 @@ This type of skinning is available for meshes, lattices, curves, surfaces, and t
 
 Bones can affect the object's shape in two ways:
 
-- The
-
-FIXME(TODO: Internal Link;
-[[#Envelopes|"envelopes" process]]
-) is available for all type of skinnable objects -
-it uses the "proximity" and "influence" of the bones to determine which part of the object they can deform.
-
-- The
-
-FIXME(TODO: Internal Link;
-[[#Vertex Groups|"vertex groups" method]]
-) is (obviously) reserved to meshes and lattices - one bone only affect the vertices in the
-:doc:`group </modeling/meshes/vertex_groups>` having the same name,
-using vertices' :doc:`weights </modeling/meshes/weight_paint>` as influence value.
-A much more precise method, but also generally longer to set up.
+- The `Envelopes`_ process is available for all type of skinnable objects -
+  it uses the "proximity" and "influence" of the bones to determine which part of the object they can deform.
+- The `Vertex Groups`_ method is (obviously) reserved to meshes and lattices -
+  one bone only affect the vertices in the
+  :doc:`group </modeling/meshes/vertex_groups>` having the same name,
+  using vertices' :doc:`weights </modeling/meshes/weight_paint>` as influence value.
+  A much more precise method, but also generally longer to set up.
 
 Both methods have some
-FIXME(TODO: Internal Link;
-[[#Common Options|common options]]
-), and can be mixed together.
+`Common Options`_, and can be mixed together.
 
 
 Parenting to Whole Armatures
@@ -93,7 +83,7 @@ And so, of course, adding an* :doc:`Armature modifier </modifiers/deform/armatur
 to an object is the second, new skinning method (which also works for curves/surfaces/texts...).
 Follow the above link to read more about this modifier's specific options.
 Note that there is a way with new *Armature* modifiers to automatically create vertex groups and weight them;
-see the FIXME(TODO: Internal Link; [[#Vertex Groups|vertex groups method]]) description below.
+see the `Vertex Groups`_ description below.
 
 
  .. warning::
@@ -105,7 +95,7 @@ see the FIXME(TODO: Internal Link; [[#Vertex Groups|vertex groups method]]) desc
     see :doc:`their description </modifiers/deform/armature#options>` for more details),
     and only one "virtual old parenting" one, which will always be at the top of the stack.
 
-Note finally that for settings that are  present in both the armature's *Armature*
+Note finally that for settings that are present in both the armature's *Armature*
 *panel and in the objects'* *Armature* modifier panel (namely,
 *Vertex Groups* */* *VertGroups* *,* *Envelopes*,
 *Quaternion* *and* *B-Bone Rest*),
@@ -131,23 +121,51 @@ Preserve Volume (Armature modifier)
    With* *Preserve Volume*, the geometry is no longer scaled down, but there is a "gap",
    a discontinuity when reaching* ``180d`` from rest position.
 
-+-------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------------------------+---------------------------------------------------------------------+
-+* **Example of** *Quaternion* **option effects.** *                |.. figure:: /images/ManRiggingSkinningQuaternionOptExInitState.jpg  |.. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg|.. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg+
-+                                                                   |   :width: 200px                                                    |   :width: 200px                                                     |   :width: 200px                                                     +
-+                                                                   |   :figwidth: 200px                                                 |   :figwidth: 200px                                                  |   :figwidth: 200px                                                  +
-+                                                                   |                                                                    |                                                                     |                                                                     +
-+                                                                   |   Initial state.                                                   |                                                                     |                                                                     +
-+                                                                   |                                                                    |   100- rotation, Preserve Volume disabled.                          |   180- rotation, Preserve Volume disabled.                          +
-+-------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------------------------+---------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg|.. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg|.. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg                                                                       +
-+   :width: 200px                                                   |   :width: 200px                                                    |   :width: 200px                                                                                                                           +
-+   :figwidth: 200px                                                |   :figwidth: 200px                                                 |   :figwidth: 200px                                                                                                                        +
-+                                                                   |                                                                    |                                                                                                                                           +
-+                                                                   |                                                                    |                                                                                                                                           +
-+   100- rotation, Preserve Volume enabled.                         |   179.9- rotation, Preserve Volume enabled.                        |   180.1- rotation, Preserve Volume enabled.                                                                                               +
-+-------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------------------------+---------------------------------------------------------------------+
-+Note that the IcoSphere is deformed using the envelopes method.                                                                                                                                                                                                                     +
-+-------------------------------------------------------------------+--------------------------------------------------------------------+---------------------------------------------------------------------+---------------------------------------------------------------------+
+.. list-table::
+   Example of *Quaternion* option effects.
+
+   * - .. figure:: /images/ManRiggingSkinningQuaternionOptExInitState.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Initial state.
+
+     - .. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          100- rotation, Preserve Volume disabled.
+
+     - .. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          180- rotation, Preserve Volume disabled.
+
+   * - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          100- rotation, Preserve Volume enabled.
+
+     - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          179.9- rotation, Preserve Volume enabled.
+
+     - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          180.1- rotation, Preserve Volume enabled.
+
+
+   * - Note that the IcoSphere is deformed using the envelopes method.
+
+     -
+
+     -
 
 
 Bone Deform Options
@@ -260,26 +278,40 @@ methods as available when doing an "old-parenting" to armature (:kbd:`Ctrl-P`):
 To automatically weight multiple bones, you can simply
 
 - :kbd:`Ctrl-Tab` out of Weight Paint Mode
-- Select the Armature. It should be in Pose mode.  If it isn't, go  :kbd:`Ctrl-Tab`
+- Select the Armature. It should be in Pose mode. If it isn't, go :kbd:`Ctrl-Tab`
 - Select multiple bones :kbd:`Shift-LMB` or hit 'a' (maybe twice).
 - Select Mesh again
 - If not in weight paint already, toggle back into :kbd:`Ctrl-Tab`
 - Use the :kbd:`W` menu to automatic weight. This will weight all the bones you selected in Pose Mode.
 
 
-+--------------------------------------------------------------+-----------------------------------------------------------------------+----------------------------------------------------------------------+
-+** **Example of vertex groups skinning method.** **           |.. figure:: /images/ManRiggingSkinningVertexGroupsExArmWeights.jpg     |.. figure:: /images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg+
-+                                                              |   :width: 150px                                                       |   :width: 150px                                                      +
-+                                                              |   :figwidth: 150px                                                    |   :figwidth: 150px                                                   +
-+                                                              |                                                                       |                                                                      +
-+                                                              |   The weights of the arm vertex group.                                |   The weights of the forearm vertex group.                           +
-+--------------------------------------------------------------+-----------------------------------------------------------------------+----------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSkinningVertexGroupsExResult.jpg|.. figure:: /images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg                                                                       +
-+   :width: 150px                                              |   :width: 150px                                                                                                                              +
-+   :figwidth: 150px                                           |   :figwidth: 150px                                                                                                                           +
-+                                                              |                                                                                                                                              +
-+   The result when posing the armature.                       |   The same pose, but using envelopes method rather that vertex groups.                                                                       +
-+--------------------------------------------------------------+-----------------------------------------------------------------------+----------------------------------------------------------------------+
+.. list-table::
+   Example of vertex groups skinning method.
+
+   * - .. figure:: /images/ManRiggingSkinningVertexGroupsExArmWeights.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          The weights of the arm vertex group.
+
+     - .. figure:: /images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          The weights of the forearm vertex group.
+
+   * - .. figure:: /images/ManRiggingSkinningVertexGroupsExResult.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          The result when posing the armature.
+
+     - .. figure:: /images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          The same pose, but using envelopes method rather that vertex groups.
+
 
 Obviously, the same vertex can belong to several groups,
 and hence be affected by several bones,

@@ -184,7 +184,6 @@ are only available for objects:
    :kbd:`S` will toggle this property for any objects that are pre-selected in the *Outliner*.
 
 
-
 **Rendering**
 
 
@@ -232,11 +231,9 @@ All Scenes
 Current Scene
    Shows everything in the current scene.
 Visible Layers
-   Shows everything on the visible (currently selected) layers in the current scene. Use the
-
-FIXME(TODO: Internal Link;
-[[Doc:Doc:2.5/Manual/3D interaction/Navigating/Layers|layers buttons]]
-) to make objects on a layer visible in the 3D window.
+   Shows everything on the visible (currently selected) layers in the current scene.
+   Use the :doc:`layer </getting_started/basics/navigating/layers>` buttons
+   to make objects on a layer visible in the 3D window.
 
 Selected
    Lists only the object(s) currently selected in the 3D window.

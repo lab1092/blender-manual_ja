@@ -28,7 +28,7 @@ Delete (:kbd:`X` or :kbd:`Del`)
    Edge Collapse
       Collapses edges into single vertices. This can be used to remove a loop of faces.
    Edge Loop
-      Deletes an edge loop.  If the current selection is not an edge loop, this operation does nothing.
+      Deletes an edge loop. If the current selection is not an edge loop, this operation does nothing.
 
 
 Dissolve
@@ -106,7 +106,8 @@ Merging Vertices
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`, :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`,
+     :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
    | Hotkey:   :kbd:`Alt-M`
 
 
@@ -159,7 +160,8 @@ Remove Doubles
 
    | Mode:     *Edit* mode
    | Panel:    *Editing* context → *Mesh Tools*
-   | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`, :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
+     :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
 
 

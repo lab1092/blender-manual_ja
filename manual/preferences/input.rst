@@ -40,13 +40,15 @@ Selecting presets
 You can change the preset you are using by doing one of the following:
 
 
-- Selecting the configuration from the *Interaction* menu of the splash screen at startup or by selecting :menuselection:`Help --> Splash Screen`.
+- Selecting the configuration from the *Interaction* menu of the splash screen at startup or by selecting
+  :menuselection:`Help --> Splash Screen`.
 - Selecting the configuration from the *User Preferences Input* window.
 
 
 .. note::
 
-   Note that either of the above options will only change the preset for the current file. If you select :menuselection:`File --> New` or :menuselection:`File --> Open`, the default preset will be re-loaded.
+   Note that either of the above options will only change the preset for the current file. If you select
+   :menuselection:`File --> New` or :menuselection:`File --> Open`, the default preset will be re-loaded.
 
 
 Setting presets to default
@@ -63,7 +65,8 @@ you can make this the default configuration by:
 
 - Opening the *User Preferences Input* editor and select your presets from the preset list or,
 - Selecting your preset configuration from the splash screen.
-- Saving your configuration using the *Save As Default* option from a *User Preferences* window or by pressing :kbd:`Ctrl-U`.
+- Saving your configuration using the *Save As Default* option from a *User Preferences* window or by pressing
+  :kbd:`Ctrl-U`.
 
 
 Export/Import key configuration
@@ -85,7 +88,7 @@ Emulate 3 Button Mouse
    Apple single-button Mouse, or laptop).
    This functionality can be emulated with key/mousebutton combos.
    This option is only available if *Select With* is set to *Right*.
-   :doc:`Read more about emulating a 3 button mouse » </interface/keyboard_and_mouse#mouse_button_emulation>`
+   :doc:`Read more about emulating a 3 button mouse » </getting_started/basics/interface/keyboard_and_mouse#mouse_button_emulation>`
 Continuous Grab
    Allows moving the mouse outside of the view (for translation, rotation, scale for example).
 Drag Threshold
@@ -98,7 +101,8 @@ Double Click
 
 .. note::
 
-   If you're using a graphic tablet instead of mouse, and pressure doesn't work properly, try to place the mouse pointer to Blender window and then unplug/replug your graphic tablet. This might help.
+   If you're using a graphic tablet instead of mouse, and pressure doesn't work properly,
+   try to place the mouse pointer to Blender window and then unplug/replug your graphic tablet. This might help.
 
 
 Numpad emulation
@@ -114,13 +118,22 @@ View manipulation
 =================
 
 Orbit Style
-   Select how Blender works when you rotate the 3D view (by default :kbd:`MMB`). Two styles are available. If you come from Maya or Cinema 4D, you will prefer *Turntable*.
+   Select how Blender works when you rotate the 3D view (by default :kbd:`MMB`).
+   Two styles are available. If you come from Maya or Cinema 4D, you will prefer *Turntable*.
 Zoom Style
    Choose your preferred style of zooming in and out with :kbd:`Ctrl-MMB`
       Scale
-         *Scale* zooming depends on where you first click in the view. To zoom out, hold :kbd:`Ctrl-MMB` while dragging from the edge of the screen towards the center. To zoom in, hold :kbd:`Ctrl-MMB` while dragging from the center of the screen towards the edge.
+         *Scale* zooming depends on where you first click in the view.
+         To zoom out, hold :kbd:`Ctrl-MMB` while dragging from the edge of the screen towards the center.
+         To zoom in, hold :kbd:`Ctrl-MMB` while dragging from the center of the screen towards the edge.
       Continue
-         The *Continue* zooming option allows you to control the speed (and not the value) of zooming by moving away from the initial click-point with :kbd:`Ctrl-MMB`. Moving up from the initial click-point or to the right will zoom out, moving down or to the left will zoom in. The further away you move, the faster the zoom movement will be. The directions can be altered by the *Vertical* and *Horizontal* radio buttons and the *Invert Zoom Direction* option.
+         The *Continue* zooming option allows you to control the speed
+         (and not the value) of zooming by moving away from the initial click-point with :kbd:`Ctrl-MMB`.
+         Moving up from the initial click-point or to the right will zoom out,
+         moving down or to the left will zoom in. The further away you move,
+         the faster the zoom movement will be.
+         The directions can be altered by the *Vertical* and *Horizontal* radio buttons and the
+         *Invert Zoom Direction* option.
       Dolly
          *Dolly* zooming works similarly to *Continue* zooming except that zoom speed is constant.
       Vertical
@@ -148,11 +161,14 @@ The Keymap editor lets you change the default Hotkeys. You can change keymaps fo
 
 - Select the keymap you want to change and click on the white arrows to open up the keymap tree.
 - Select which Input will control the function
+
   - Keyboard: Only hotkey or combo hotkey (:kbd:`E` or :kbd:`Shift-E`).
   - Mouse: Left/middle/right click. Can be combined with :kbd:`Alt`, :kbd:`Shift`, :kbd:`Ctrl`, :kbd:`Cmd`.
   - Tweak: Click and drag. Can also be combined with the 4 previous keys.
   - Text input: Use this function by entering a text
-  - Timer: Used to control actions based on a time period. e.g. By default, Animation Step uses Timer 0, Smooth view uses Timer 1.
+  - Timer: Used to control actions based on a time period.
+    e.g. By default, Animation Step uses Timer 0, Smooth view uses Timer 1.
+
 - Change hotkeys as you want. Just click on the shortcut input and enter the new shortcut.
 
 If you want to restore the default settings for a keymap,

@@ -39,11 +39,23 @@ To show that the distribution is equalized over multiple pixels, the neighbor pi
 Note that each pixel has an identical pattern.
 
 
-+-----------------------------------------------------+-----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+
-+.. figure:: /images/Manual-oversampling-pattern-5.jpg|.. figure:: /images/Manual-oversampling-pattern-8.jpg|.. figure:: /images/Manual-oversampling-pattern-11.jpg|.. figure:: /images/Manual-oversampling-pattern-16.jpg+
-+                                                     |                                                     |                                                      |                                                      +
-+   5 samples                                         |   8 samples                                         |   11 samples                                         |   16 samples                                         +
-+-----------------------------------------------------+-----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-oversampling-pattern-5.jpg
+
+          5 samples
+
+     - .. figure:: /images/Manual-oversampling-pattern-8.jpg
+
+          8 samples
+
+     - .. figure:: /images/Manual-oversampling-pattern-11.jpg
+
+          11 samples
+
+     - .. figure:: /images/Manual-oversampling-pattern-16.jpg
+
+          16 samples
 
 
 Full Sample
@@ -88,15 +100,37 @@ Mitchell-Netravali
    a good all-around filter that gives reasonable sharpness
 
 
-+----------------------------------------------------------+------------------------------------------------------------+--------------------------------------------------------------------+-------------------------------------------------------+
-+.. figure:: /images/Manual-oversampling-graph-box.jpg     |.. figure:: /images/Manual-oversampling-graph-tent.jpg      |.. figure:: /images/Manual-oversampling-graph-quadratic.jpg         |.. figure:: /images/Manual-oversampling-graph-cubic.jpg+
-+                                                          |                                                            |                                                                    |                                                       +
-+   Box                                                    |   Tent                                                     |   Quadratic                                                        |   Cubic                                               +
-+----------------------------------------------------------+------------------------------------------------------------+--------------------------------------------------------------------+-------------------------------------------------------+
-+.. figure:: /images/Manual-oversampling-graph-gaussian.jpg|.. figure:: /images/Manual-oversampling-graph-catmullrom.jpg|.. figure:: /images/Manual-oversampling-graph-mitchell-netravali.jpg                                                        +
-+                                                          |                                                            |                                                                                                                            +
-+   Gaussian                                               |   Catmull-Rom                                              |   Mitchell-Netravali                                                                                                       +
-+----------------------------------------------------------+------------------------------------------------------------+--------------------------------------------------------------------+-------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-oversampling-graph-box.jpg
+
+          Box
+
+     - .. figure:: /images/Manual-oversampling-graph-tent.jpg
+
+          Tent
+
+     - .. figure:: /images/Manual-oversampling-graph-quadratic.jpg
+
+          Quadratic
+
+     - .. figure:: /images/Manual-oversampling-graph-cubic.jpg
+
+          Cubic
+
+   * - .. figure:: /images/Manual-oversampling-graph-gaussian.jpg
+
+          Gaussian
+
+     - .. figure:: /images/Manual-oversampling-graph-catmullrom.jpg
+
+          Catmull-Rom
+
+     - .. figure:: /images/Manual-oversampling-graph-mitchell-netravali.jpg
+
+          Mitchell-Netravali
+
+     -
 
 
 Filter Size

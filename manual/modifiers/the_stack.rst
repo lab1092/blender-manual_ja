@@ -12,11 +12,15 @@ For example, the image below shows :doc:`SubSurf </modifiers/generate/subsurf>` 
 :doc:`Mirror </modifiers/generate/mirror>` modifiers that have switched places.
 
 
-+---------------------------------------------------------------+---------------------------------------------------------------+
-+.. figure:: /images/25-Manual-Modifiers-stackorder-example2.jpg|.. figure:: /images/25-Manual-Modifiers-stackorder-examp1e1.jpg+
-+   :width: 300px                                               |   :width: 300px                                               +
-+   :figwidth: 300px                                            |   :figwidth: 300px                                            +
-+---------------------------------------------------------------+---------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/25-Manual-Modifiers-stackorder-example2.jpg
+          :width: 300px
+          :figwidth: 300px
+
+     - .. figure:: /images/25-Manual-Modifiers-stackorder-examp1e1.jpg
+          :width: 300px
+          :figwidth: 300px
 
 
 On the left, the *Mirror* modifier is the last item in the stack and

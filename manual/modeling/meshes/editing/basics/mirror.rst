@@ -30,14 +30,18 @@ The *Topology Mirror* option is available in the
 For *Topology Mirror* to work the *X Mirror* option must be enabled.
 
 When using the *X Mirror* option to work on mirrored Mesh Geometry the vertices that
-are mirrored must be perfectly placed.  If they are not exactly positioned in their mirror
-locations then *X Mirror* will not treat those vertices as mirrored.  This can be
+are mirrored must be perfectly placed. If they are not exactly positioned in their mirror
+locations then *X Mirror* will not treat those vertices as mirrored. This can be
 annoying because often the out of position vertices are only very slightly out of position.
 
-*Topology Mirror* tries to solve this problem by determining which vertices are mirrored vertices not only by using their positions but also by looking at how those vertices are related to others in the Mesh Geometry.  It looks at the overall Mesh Geometry topology to determine if particular vertices will be treated as mirrored.  The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when *X Mirror* and *Topology Mirror* are both active.
+*Topology Mirror* tries to solve this problem by determining which vertices are mirrored vertices not only by
+using their positions but also by looking at how those vertices are related to others in the Mesh Geometry.
+It looks at the overall Mesh Geometry topology to determine if particular vertices will be treated as mirrored.
+The effect of this is that mirrored vertices can be non-symetrical and yet still be treated as mirrored when
+*X Mirror* and *Topology Mirror* are both active.
 
 Note that *Topology Mirror* functionality will work more reliably on Mesh Geometry
-which is more detailed.  If you use very simple Mesh Geometry such as a Cube or UV Sphere for
+which is more detailed. If you use very simple Mesh Geometry such as a Cube or UV Sphere for
 example the *Topology Mirror* option will often not work.
 
 For an example of how to use *Topology Mirror* open up a new Blender scene,
@@ -61,7 +65,9 @@ even though they are not perfectly positioned.
 Mirror Modifier
 ===============
 
-The conditions for X-mirror to work are quite strict, which can make it difficult to use. To have an exact mirrored version of a (half) mesh, its easier and simpler to use the :doc:`Mirror modifier </modifiers/generate/mirror>`
+The conditions for X-mirror to work are quite strict, which can make it difficult to use.
+To have an exact mirrored version of a (half) mesh,
+its easier and simpler to use the :doc:`Mirror modifier </modifiers/generate/mirror>`
 
 
 Snap to Symmetry
@@ -71,7 +77,7 @@ Snap to Symmetry
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh  --> Snap to Symmetry`
+   | Menu:     :menuselection:`Mesh --> Snap to Symmetry`
 
 
 The *Snap to Symmetry* tool works on meshes which are mostly symmetrical but have
@@ -83,14 +89,12 @@ imported from other applications are asymmetrical enough that mirror fails too.
 
 
 Direction
-   Specify the axis and direction to snap. Can be any of the 3 axes, and either positive to negative, or negative to positive.
-
+   Specify the axis and direction to snap. Can be any of the 3 axes,
+   and either positive to negative, or negative to positive.
 Threshold
    Specify the search radius to use when finding matching vertices.
-
 Factor
    Support for blending mirrored locations from one side to the other (0.5 is an equal mix of both).
-
 Center
    Snap vertices in the center axis to zero.
 
@@ -116,7 +120,7 @@ Symmetrize Mesh
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh  --> Symmetrize`
+   | Menu:     :menuselection:`Mesh --> Symmetrize`
 
 
 The *Symmetrize* tool is a quick way to make a mesh symmetrical.
@@ -125,7 +129,8 @@ and mirroring over the geometry in the specified axis, and merges the two halves
 (if they are connected)
 
 Direction
-   Specify the axis and direction of the effect. Can be any of the 3 axes, and either positive to negative, or negative to positive.
+   Specify the axis and direction of the effect. Can be any of the 3 axes,
+   and either positive to negative, or negative to positive.
 
 
 .. figure:: /images/Symmetrize1.jpg
@@ -145,4 +150,5 @@ Direction
 Mirroring Geometry
 ==================
 
-See :doc:`Mirror </modeling/meshes/editing/deforming/mirror>` for information on mirroring, which allows you to flip geometry across an axis
+See :doc:`Mirror </modeling/meshes/editing/deforming/mirror>` for information on mirroring,
+which allows you to flip geometry across an axis

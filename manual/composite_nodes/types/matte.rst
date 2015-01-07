@@ -1,5 +1,6 @@
 
-..    TODO/Review: {{review|text=needs verification that it's up to date with 2.6|fixes=[[User:bob_holcomb/Doc:2.6/Manual/Composite Nodes/Types/Matte|X]]}} .
+..    TODO/Review: {{review|text=needs verification that it's up to date with 2.6|
+                     fixes=[[User:bob_holcomb/Doc:2.6/Manual/Composite Nodes/Types/Matte|X]]}} .
 
 
 *********************
@@ -42,7 +43,7 @@ Difference Key Node
    Difference Key node
 
 
-The difference key node determines how different each channel is  from the given key in the
+The difference key node determines how different each channel is from the given key in the
 selected color space. If the differences are below a user defined threshold then the pixel is
 considered transparent. Difference matting does not rely on a certain background color, but
 can have less than optimal results if there is a significant amount of background color in the
@@ -51,7 +52,9 @@ foreground object.
 There are two inputs to this node.
 
 - The first is an input *Image* that is to be keyed.
-- The *Key Color* can be input as an RGB value or selected using the color picker by clicking on the *Key Color* box to bring up the color dialog, then clicking on the eye dropper tool and selecting a color.
+- The *Key Color* can be input as an RGB value or selected using the color picker
+  by clicking on the *Key Color* box to bring up the color dialog,
+  then clicking on the eye dropper tool and selecting a color.
 
 The selectable color spaces are *RGB* (default), *HSV*, *YUV*,
 and *YCbCr*.
@@ -63,7 +66,7 @@ Any more unevenness and you risk cutting into the foreground image.
 
 When the *Falloff* value is high, pixels that are close to the *Key Color*
 are more transparent than pixels that are not as close to the *Key Color*
-(but still considered close enough to be keyed).  When the *Falloff* value is low,
+(but still considered close enough to be keyed). When the *Falloff* value is low,
 it does not matter how close the pixel color (*Image*)
 is to the *Key Color*, it is transparent.
 
@@ -77,14 +80,14 @@ Simple Example
    :width: 300px
    :figwidth: 300px
 
-   Using the  Difference Key Node
+   Using the Difference Key Node
 
 
 In the example to the right (click to expand),
 we have a purple cube with yellow marbeling in front of a very unevenly lit green screen.
 We start building our noodle by threading the image to a difference key,
 and using the eyedropper, pick a key color very close to the edge of the cube,
-around where the halo is  at the corner on the left-hand side; a fairly bright green.
+around where the halo is at the corner on the left-hand side; a fairly bright green.
 We thread two viewers from the output sockets so we can see what (if anything)
 the node is doing. We add an AlphaOver node,
 threading the Matte to the **TOP** socket and the image to the **BOTTOM** socket.
@@ -113,7 +116,7 @@ Chaining Example
    :width: 300px
    :figwidth: 300px
 
-   Chaining  Difference Key Nodes
+   Chaining Difference Key Nodes
 
 
 We pay out the wazoo for our highly talented (and egotistical I might add) Mr.
@@ -151,18 +154,18 @@ Control this node using:
 
 Green / Blue buttons
    Basic selection of what color the background is supposed to be.
-
 Cb Slope and Cr Slope (chroma channel) sliders
    Determines how quickly the processed pixel values go from background to foreground, much like falloff.
-
 Cb Pos and Cr Pos sliders
    Determines where the processing transition point for foreground and background is in the respective channel.
-
 Threshold
-   Determines if additional detail is added to the pixel if it is transparent.  This is useful for pulling shadows from an image even if they are in the green screen area.
-
+   Determines if additional detail is added to the pixel if it is transparent.
+   This is useful for pulling shadows from an image even if they are in the green screen area.
 Alpha threshold
-   The setting that determines the tolerance of pixels that should be considered transparent after they have been processed. A low value means that only pixels that are considered totally transparent will be transparent, a high value means that pixels that are mostly transparent will be considered transparent.
+   The setting that determines the tolerance of pixels that
+   should be considered transparent after they have been processed.
+   A low value means that only pixels that are considered totally transparent will be transparent,
+   a high value means that pixels that are mostly transparent will be considered transparent.
 
 The outputs of this node are the *Image* with an alpha channel adjusted for the
 keyed selection and a black and white *Matte* (i.e the alpha mask).
@@ -191,16 +194,18 @@ Luminance Key Node
 
 
 The *Luminance Key* node determines background objects from foreground objects by
-the difference in the luminance (brightness) levels.  For example,
-this is useful when compositing stock footage of explosions (very bright)
+the difference in the luminance (brightness) levels.
+For example, this is useful when compositing stock footage of explosions (very bright)
 which are normally shot against a solid, dark background.
 
 There is one input to this node, the *Image* that is to be keyed.
 
 Control this node using:
 
-- The *High* value selector determines the lowest values that are considered foreground. (which is supposed to be - relatively - light: from this value to 1.0).
-- The *Low* value selector determines the hightes values that are considered to be background objects. (which is supposed to be - relatively - dark: from 0.0 to this value).
+- The *High* value selector determines the lowest values that are considered foreground.
+  (which is supposed to be - relatively - light: from this value to 1.0).
+- The *Low* value selector determines the hightes values that are considered to be background objects.
+  (which is supposed to be - relatively - dark: from 0.0 to this value).
 
 It is possible to have a separation between the two values to allow for a gradient of
 transparency between foreground and background objects.
@@ -278,7 +283,7 @@ Channel Key Node
 
 
 The *Channel Key* node determines background objects from foreground objects by the
-difference in the selected channel's levels.  For example in YUV color space,
+difference in the selected channel's levels. For example in YUV color space,
 this is useful when compositing stock footage of explosions (very bright)
 which are normally shot against a solid, dark background.
 

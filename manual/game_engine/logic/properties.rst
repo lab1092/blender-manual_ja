@@ -12,17 +12,19 @@ Property Types
 
 There are five types of properties:
 
-+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+*Timer*  |Starts at the property value and counts upwards as long as the object exists. It can for example be used if you want to know how long time it takes the player to complete a level.+
-+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+*Float*  |Uses decimal numbers as values, can range from -10000.000 to 10000.000. It is useful for precision values.                                                                         +
-+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+*Integer*|Uses integers (whole numbers) as values, between -10000 and 10000. Useful for counting things such as ammunition, where decimals are unnecessary.                                  +
-+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+*String* |Takes text as value. Can store 128 characters.                                                                                                                                     +
-+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-+*Boolean*|Boolean variable, has two values: true or false. This is useful for things that have only two modes, like a light switch.                                                          +
-+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Timer
+   Starts at the property value and counts upwards as long as the object exists.
+   It can for example be used if you want to know how long time it takes the player to complete a level.
+Float
+   Uses decimal numbers as values, can range from -10000.000 to 10000.000. It is useful for precision values.
+Integer
+   Uses integers (whole numbers) as values, between -10000 and 10000.
+   Useful for counting things such as ammunition, where decimals are unnecessary.
+String
+   Takes text as value. Can store 128 characters.
+Boolean
+   Boolean variable, has two values: true or false.
+   This is useful for things that have only two modes, like a light switch.
 
 
 Using Properties
@@ -32,7 +34,7 @@ When a game is running, values of properties are set, manipulated, and evaluated
 :doc:`Property Sensor </game_engine/logic/sensors/property>` and the
 :doc:`Property Actuator </game_engine/logic/actuators/property>`.
 
-Logic Properties are created and edited using the  panel on the left of the Logic Editor
+Logic Properties are created and edited using the panel on the left of the Logic Editor
 Panel. The top menu provides a list of the available property types.
 
 

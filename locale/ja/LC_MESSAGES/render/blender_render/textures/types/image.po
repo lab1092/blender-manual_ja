@@ -1,0 +1,1386 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-07 20:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/render/blender_render/textures/types/image.rst:4
+msgid "Image Textures"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:6
+msgid ""
+"The term *Image Texture* simply means that a graphic image — a pixel grid "
+"composed of R, G, B, and sometimes Alpha values — is used as the input "
+"source to the texture. As with other types of textures, this information can"
+" be used in a number of ways, not only as a simple \"decal\"."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:12
+msgid ""
+"When the Texture Type *Image or Movie* is selected, three new panels present"
+" themselves allowing us to control most aspects of how image textures are "
+"applied: *Image*, *Image Sampling*, and *Image Mapping*."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:18
+msgid "About Image Based Texturing"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:20
+msgid ""
+"Texture images take up precious memory space, often being loaded into a "
+"special video memory bank that is very fast and very expensive, so it is "
+"often very small. So, keep the images as small as possible. A 64x64 image "
+"takes up only one fourth the memory of a 128x128 image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:25
+msgid ""
+"For photo-realistic rendering of objects in animations, often larger image "
+"textures are used, because the object might be zoomed in on in camera moves."
+" In general, you want to use a texture sized proportionally to the number of"
+" pixels that it will occupy in the final render. Ultimately, you only have a"
+" certain amount of physical RAM to hold an image texture and the model and "
+"to provide work space when rendering your image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:31
+msgid ""
+"For the most efficient memory usage, image textures should be square, with "
+"dimensions as powers of 2, such as 32x32, 64x64, 128x128, 256x256, "
+"1024x1024, 2048x2048, and 4096x4096."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:35
+msgid ""
+"If you can re-use images across different meshes, this greatly reduces "
+"memory requirements. You can re-use images if you map those areas of the "
+"meshes that \"look alike\" to a layout that uses the common image. In the "
+"overview below, the left image is re-used for both the sphere and a portion "
+"of the monkey. The monkey uses two layouts, one which has one UV map of a "
+"few faces, and another that has three maps."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:45
+msgid "How all the parts of UV Texturing work together"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:48
+msgid ""
+"When using file textures, it is very important that you have :doc:`Mapped "
+"the UVs </render/blender_render/textures/mapping/uv/unwrapping>` of the "
+"mesh, and they are laid out appropriately."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:51
+msgid ""
+"You don't have to UV map the *entire* mesh. The sphere above on the left has"
+" some faces mapped, but other faces use procedural materials and textures. "
+"Only use UV Textures for those portions of your mesh where you want very "
+"graphic, precise detail. For example, a model of a vase only needs UV "
+"Texture for the rim where decorative artwork is incorporated. A throw pillow"
+" does not need a different image for the back as the front; in fact many "
+"throw pillows have a fabric (procedural material) back."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:60
+msgid ""
+"As another example, you should UV map both eyes of a head to the same image "
+"(unless you want one bloodshot and the other clear). Mapping both sides of a"
+" face to the same image might not be advisable, because the location of "
+"freckles and skin defects are not symmetrical. You could of course change "
+"the UV map for one side of the face to slightly offset, but it might be "
+"noticeable. Ears are another example where images or section of an images "
+"can be mapped to similar faces."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:70
+msgid "Workflow"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:72
+msgid "The process consists of the following steps."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:74
+msgid ""
+"Create the Mesh. :doc:`Unwrap "
+"</render/blender_render/textures/mapping/uv/unwrapping>` it into one or more"
+" :doc:`UV Layouts "
+"</render/blender_render/textures/mapping/uv/layout_management>`."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:76
+msgid "Create one or more Materials for the Mesh."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:77
+msgid ""
+"Create one or more images for each UV Layout and aspect of the texture. "
+"Either - paint directly on the mesh using Texture Paint in the 3D window, - "
+"load and/or edit an image in the UV Editor window, or - Bake the existing "
+"materials into an image for the UV Editor window."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:81
+msgid ""
+"Apply those images as UV Textures to the mesh to affect one or more aspects "
+"of the mesh. This is done by using one or more of the numerous Map To "
+"options. For example, - map to Color to affect the diffuse coloring of the "
+"mesh, - map to Nor to affect the normal direction to give the surface a "
+"bumpy or creased look, or - map to Spec (specularity) to make certain areas "
+"look shiny and oily."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:86
+msgid "Layer the Textures to create a convincing result."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:90
+msgid "Using Images and Materials"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:92
+msgid ""
+"To use an image as the color and alpha (transparency) of the texture, you "
+"can create an image in an external paint program and tell the UV/Image "
+"Editor to Open that file as the texture, or you can create a New image and "
+"save it as the texture."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:96
+msgid ""
+"If you want to start off by creating an image using an external paint "
+"program, you will want to save an outline of your UV faces by using the "
+"*Save UV Face Layout* tool located in the UVs menu. This is discussed "
+":doc:`here "
+"</render/blender_render/textures/mapping/uv/applying_image#saving_an_outline_of_your_uv_layout>`."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:102
+msgid "Creating an Image Texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:104
+msgid ""
+"To create an image within Blender, you have to first create a :doc:`New "
+"Blank </render/blender_render/textures/mapping/uv/applying_image>` Image "
+"with a uniform color or test grid. After that, you can color the image using"
+" the:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:110
+msgid "Vertex colors as the basis for an image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:111
+msgid "Render Bake image based on how the mesh looks in the scene"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:113
+msgid ""
+"After you have created your image, you can modify it using Blender's built-"
+"in :doc:`Texture Paint </render/blender_render/textures/painting>` or any "
+"external image painting program."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:118
+msgid "See Texture in 3D View but does not Render"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:120
+msgid ""
+"You may be able to see the texture in Textured display mode in the 3D View; "
+"this is all that is required to have textures show up in Blender's Game "
+"Engine. Rendering, however, requires a material. You must have a *Face "
+"Textures* material assigned to the mesh for it to render using the UV "
+"Texture. In the Material settings, ADD NEW material to a selected object and"
+" enable *Face Textures*."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:128
+msgid "Examples"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:130
+msgid ""
+"There may be one UV Layout for the face of a character, and another for "
+"their clothes. Now, to texture the clothes, you need to create an image at "
+"least for the Color of the clothes, and possible a \"bump\" texture to give "
+"the fabric the appearance of some weave by creating a different image for "
+"the Normal of the clothes. Where the fabric is worn, for example at the "
+"elbows and knees, the sheen, or Specularity, of the fabric will vary and you"
+" will want a different image that tells Blender how to vary the Specularity."
+" Where the fabric is folded over or creased, you want another image that "
+"maps Displacement to the mesh to physically deform the mesh. Each of these "
+"are examples of applying an image as a texture to the mesh."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:140
+msgid ""
+"As another example, the face is the subject of many questions and tutorials."
+" In general, you will want to create a Material that has the basic skin "
+"color, appropriate shaders, and sub-surface scattering. Then you will want "
+"to layer on additional UV Textures for:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:144
+msgid "Freckle map for Color and Normal aspects"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:145
+msgid "Subdermal veins and tendons for Displacement"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:146
+msgid "Creases and Wrinkles and skin cell stratification for Normal"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:147
+msgid "Makeup images for Color"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:148
+msgid "Oily maps for Specularity"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:149
+msgid ""
+"For a zombie, Alpha transparency where the flesh has rotted away "
+"*(ewwww....)*"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:150
+msgid "Under chin and inside nostrils that receive less Ambient light"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:151
+msgid "Thin skin is more translucent, so a map is needed for that"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:153
+msgid ""
+"Each image is mapped by using another Texture Channel. Each of these maps "
+"are images which are applied to the different aspects (Color, Normal, "
+"Specularity) of the image. Tileable images can be repeated to give a "
+"smaller, denser pattern by using the Texture controls for repeat or size."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:160
+msgid "Layering UV Textures"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:166
+msgid "Base UV Texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:173
+msgid "Layered UV Texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:176
+msgid ""
+"Great textures are formed by layering images on top of one another. You "
+"start with a base layer, which is the base paint. Each successive layer on "
+"top of that is somewhat transparent to let the bottom layers show through, "
+"but opaque where you want to add on to details."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:181
+msgid ""
+"To avoid massive confusion, all image textures for a mesh usually use the "
+"same UV map. If you do, each image will line up with the one below it, and "
+"they will layer on top of one another like the examples shown to the right. "
+"To do this, just create one UV Texture (map) as described in this section. "
+"Then, create material image textures as described in the procedural "
+"materials section. Instead of mapping to Original Coordinates (OrCo), map to"
+" UV."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:188
+msgid ""
+"Use that map name repeatedly in the Material→Textures→Map Input panel by "
+"selecting UV and typing the name in the text field. In the example to the "
+"right, our UV Texture is called \"Head\" (you may have to expand the image "
+"to see the panel settings). Then, the image texture shown will be mapped "
+"using the UV coordinates. In the \"Base UV Texture\" example to the right, "
+"the face has two textures UV mapped; one for a base color, and another for "
+"spots, blemishes and makeup."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:195
+msgid ""
+"Both textures use the same UV Texture map as their Map Input, and both "
+"affect Color. The Makeup texture is transparent except where there is color,"
+" so that the base color texture shows through. Note that the colors were too"
+" strong on the image, so they amount of Col affects is turned down to 60% in"
+" the second layer (the blemish layer)."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:201
+msgid ""
+"Normally, we think of image textures affecting the color of a mesh. Realism "
+"and photo-realistic rendering is a combination of many different ways that "
+"light interacts with the surface of the mesh. The image texture can be "
+"Mapped To not only color, but also *Normal* (bumpiness) or *Reflection* or "
+"any of the other attributes specified in the Map To panel."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:207
+msgid ""
+"If you paint a grey-scale image (laid out according to the UV Layout) with "
+"white where the skin is oily and shiny, and dark where it is not, you would "
+"map that input image according to the UV Layout, but have it affect "
+"Specularity (not color)."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:212
+msgid ""
+"To make portions of a mesh transparent and thus reveal another mesh surface "
+"underneath, you would paint a grey-scale image with black where you want the"
+" texture transparent, map input to UV, and map it to Alpha (not color). To "
+"make portions of a mesh, like a piece of hot metal, appear to glow, you "
+"would use a grey-scale image mapped to Emit."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:217
+msgid ""
+"Believe it or not, this is only \"the tip of the iceberg!\" If everything "
+"that's been described here just isn't enough for you, the *texture nodes* "
+"feature, introduced in recent versions of Blender, enables you to layer and "
+"combine textures in almost any way you can imagine."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:224
+msgid "Mix and Match Materials"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:228
+msgid ""
+"You can mix and match procedural materials and textures, vertex paint, and "
+"UV textures onto the same mesh."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:231
+msgid ""
+"The image to the right has a world with a red ambient light. The material "
+"has both VCol Paint and Face Textures enabled, and receives half of ambient "
+"light. A weak cloud texture affects color, mixing in a tan color. The right "
+"vertices are vertex painted yellow and the left is unpainted procedural "
+"gray. The UV Texture is a stock arrow image from the public domain texture "
+"CD. Scene lighting is a white light off to the right. From this information "
+"and the User Manual thus far, you should now be able to recreate this image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:240
+msgid ""
+"You can also assign :doc:`multiple materials "
+"</render/blender_render/materials/multiple_materials>` to the mesh based on "
+"which faces you want to be procedural and which you want to be texture-"
+"mapped. Just don't UV map the faces you want to be procedural."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:244
+msgid ""
+"You can use UV Textures and VertexPaint (:kbd:`V` in the 3D View window) "
+"simultaneously, if both are enabled in the Material settings. The vertex "
+"colors are used to modulate the brightness or color of the UV image texture:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:248
+msgid "UV Texture is at the base *(Face Textures)*"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:249
+msgid "Vertex paint affects its colors, then"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:250
+msgid "Procedural textures are laid on top of that,"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:251
+msgid ""
+"Area lights shine on the surface, casting shadows and what not, and finally"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:252
+msgid "Ambient light lights it up."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:259
+msgid "Vertex colors modulate texture."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:262
+msgid ""
+"A UV Layout can only have one image, although you can tile and animate the "
+"image. Since a layout is a bunch of arranged UV Maps, and a UV Map maps many"
+" mesh faces, a face can therefore only have one UV Texture image, and the UV"
+" coordinates for that face must fit entirely on the image. If you want a "
+"face to have multiple images, split the face into parts, and assign each "
+"part its own image. *(Or* you can get fancy with Nodes, but that's another "
+"story ...)"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:272
+msgid "Using Alpha Transparency"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:278
+msgid "Alpha UV Textures"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:281
+msgid ""
+"Alpha 0.0 (transparent) areas of a UV Image render as black. Unlike a "
+"procedural texture, they do not make the base material transparent, since UV"
+" Textures do not operate on the base procedural material. The UV texture "
+"overrides any procedural color underneath. Procedural Textures are applied "
+"on top of UV Textures, so a procedural image texture would override any UV "
+"Texture. Transparent (black) areas of a procedural texture mapped to alpha "
+"operate on top of anything else, making the object transparent in those "
+"places. The only thing that modulates visible parts of a UV Texture are the "
+"Vertex Colors. In the example to the right, the finger image is transparent "
+"at the cuff and top of the finger and is used as a UV Texture. All three "
+"balls have a base material of blue and a marbling texture. The base material"
+" color is not used whenever Face Textures is enabled."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:295
+msgid ""
+"The top left ball has not had any vertex painting, and the finger is mapped "
+"to the middle band, and the texture is mapped to a pink color. As you can "
+"see, the base material has VCol Paint and Face Textures enabled; the base "
+"color blue is not used, but the texture is. With no vertex painting, there "
+"is nothing to modulate the UV Texture colors, so the finger shows as white. "
+"Transparent areas of the UV Image show as black."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:302
+msgid ""
+"The top right ball has had a pink vertex color applied to the vertical band "
+"of faces (in the 3D View window, select the faces in UV Paint mode, switch "
+"to Vertex Paint mode, pick a pink color, and *Paint→Set Vertex Colors*). The"
+" finger is mapped to the middle vertical band of faces, and VCol and Face "
+"Textures are enabled. The texture is mapped to Alpha black and multiplies "
+"the base material alpha value which is ``1.0``. Thus, white areas of the "
+"texture are ``1.0``, and ``1.0`` times ``1.0`` is ``1.0`` (last time I "
+"checked, at least), so that area is opaque and shows. Black areas of the "
+"procedural texture, ``0.0``, multiply the base material to be transparent. "
+"As you can see, the unmapped faces (left and right sides of the ball) show "
+"the vertex paint (none, which is gray) and the painted ones show pink, and "
+"the middle stripe that is both painted and mapped change the white UV "
+"Texture areas to pink. Where the procedural texture says to make the object "
+"transparent, the green background shows through. Transparent areas of the UV"
+" Texture insist on rendering black."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:319
+msgid ""
+"The bottom ball uses multiple materials. Most of the ball (all faces except "
+"the middle band) is a base material that does not have Face Textures (nor "
+"Vertex Color Paint - VCol Paint) enabled. Without it enabled, the base blue "
+"material color shows and the pink color texture is mixed on top. The middle "
+"band is assigned a new material (2 Mat 2) that *does* have vertex paint and "
+"Face Textures enabled. The middle band of faces were vertex painted yellow, "
+"so the white parts of the finger are yellow. Where the pink texture runs "
+"over the UV texture, the mixed color changes to green, since pink and yellow"
+" make a green."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:329
+msgid ""
+"If you want the two images to show through one another, and mix together, "
+"you need to use Alpha. The base material can have an image texture with an "
+"Alpha setting, allowing the underlying UV Texture to show through."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:333
+msgid "To overlay multiple UV images, you have several options:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:335
+msgid ""
+"Create multiple UV Textures which map the same, and then use different "
+"images (with Alpha) and blender will overlay them automatically."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:337
+msgid ""
+"Use the :doc:`Composite Nodes </composite_nodes>` to combine the two images "
+"via the AlphaOver node, creating and saving the composite image. Open that "
+"composited image as the UV Texture."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:339
+msgid ""
+"Use an external paint program to alpha overlay the images and save the file,"
+" and load it as the face's UV Texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:341
+msgid ""
+"Define two objects, one just inside the other. The inner object would have "
+"the base image, and the outer image the overlaid image with a material alpha"
+" less than one (1.0)."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:344
+msgid ""
+"Use the :doc:`Material nodes </render/blender_render/materials/nodes>` to "
+"combine the two images via the AlphaOver or Mix node, thus creating a third "
+"noded material that you use as the material for the face. Using this "
+"approach, you will not have to UV map; simply assign the material to the "
+"face using the Multiple Materials"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:351
+msgid "UV Textures vs. Procedural Textures"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:353
+msgid ""
+"A Material Texture, that has a Map Input of UV, and is an image texture that"
+" is mapped to Color, is equivalent to a UV Texture. It provides much more "
+"flexibility, because it can be sized and offset, and the degree to which it "
+"affects the color of your object can be controlled in the Map To panel. In "
+"addition, you can have different images for each texture channel; one for "
+"color, one for alpha, one for normals, one for specularity, one for "
+"reflectivity, *etc.* Procedural textures, like Clouds, are INCREDIBLY simple"
+" and useful for adding realism and details to an image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:365
+msgid "**UV Texture**"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:366
+msgid "**Procedural Texture**"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:367
+msgid "Image maps to precise coordinates on the selected faces of the mesh"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:368
+msgid ""
+"Pattern is generated dynamically, and is mapped to the entire mesh (or "
+"portion covered by that material)"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:369
+msgid "The Image maps once to a range of mesh faces specifically selected"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:370
+msgid ""
+"Maps once to all the faces to which that material is assigned; either the "
+"whole mesh or a portion"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:371
+msgid "Image is mapped once to faces."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:372
+msgid ""
+"Size XYZ in the MapInput allows tiling the texture many times across faces. "
+"Number of times depends on size of mesh"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:374
+msgid "Affect the color and the alpha of the object."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:375
+msgid ""
+"Can also affect normals (bumpiness), reflectivity, emit, displacement, and a"
+" dozen other aspects of the mesh's appearance; can even warp or stencil "
+"subsequent textures."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:377
+msgid "Can have many for a mesh"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:378
+msgid ""
+"Can be layered, up to 10 textures can be applied, layering on one another. "
+"Many mix methods for mixing multiple channels together."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:380
+msgid "Any Image type (still, video, rendered). Preset test grid available"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:381
+msgid ""
+"Many different presents: clouds, wood grain, marble, noise, and even magic."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:382
+msgid "Provides the UV layout for animated textures"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:383
+msgid "Noise is the only animated procedural texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:384
+msgid "Takes very limited graphics memory"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:385
+msgid "Uses no or little memory; instead uses CPU compute power"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:388
+msgid ""
+"So, in a sense, a single UV texture for a mesh is simpler but more limited "
+"than using multiple textures (mapped to UV coordinates), because they do one"
+" specific thing very well: adding image details to a range of faces of a "
+"mesh. They work together if the procedural texture maps to the UV "
+"coordinates specified in your layout. As discussed earlier, you can map "
+"multiple UV textures to different images using the UV Coordinate mapping "
+"system in the Map Input panel."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:397
+msgid "Settings"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:401
+msgid "Image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:407
+msgid "Image panel"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:410
+msgid ""
+"In the *Image Sampling* panel we tell Blender which source file to use. "
+"Image or Movie Datablock:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:413
+msgid "Browse"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:414
+msgid "Select an image or video among linked to the .blend file"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:415
+msgid "Name field"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:416
+msgid "Internal name of image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:417
+msgid "F"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:418
+msgid "Create a fake user for the image texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:419
+msgid "\\+"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:420
+msgid "Replace active texture with a new one"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:421
+msgid "Folder"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:422
+msgid "Browse for an image on your computer"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:424
+msgid "X"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:424
+msgid "Unlink this image or movie."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:436
+msgid "Source:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:427
+msgid "Where the image come from. What kind of source file to use."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:429
+msgid "Generated"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:430
+msgid "Generated image in Blender."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:431
+msgid "Movie"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:432
+msgid "Movie file."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:433
+msgid "Image Sequence"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:434
+msgid "Multiple image files as a sequence."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:436
+msgid "Single Image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:436
+msgid "Single image file."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:449
+msgid "File for Image or Movie texture:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:439
+msgid "See about supported :doc:`Image </data_system/files/formats>` formats."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:441
+msgid "Pack image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:442
+msgid "Embed image into current .blend file"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:443
+msgid "Path"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:444
+msgid "Path to file"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:446
+msgid "File Browser"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:446
+msgid ""
+"Find a file on your computer. Hold :kbd:`Shift` to open the selected file "
+"and :kbd:`Ctrl` to browse a containing directory."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:449
+msgid "Reload"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:449
+msgid ""
+"Reloads the file. Useful when an image has been rework in an external "
+"application."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:470
+msgid "Input Color Space"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:452
+msgid "Color space of the image or movie on disk"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:454
+msgid "XYZ"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:455
+msgid "XYZ space."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:456
+msgid "VD16"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:457
+msgid "The simple video conversion from a gamma 2.2 sRGB space."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:458
+msgid "sRGB"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:459
+msgid "Standart RGB display space."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:460
+msgid "Raw"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:461
+msgid "Raw space."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:462
+msgid "Non-Color"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:463
+msgid ""
+"Color space used for images which contains non-color data (i.e. normal "
+"maps)."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:464
+msgid "Linear ACES"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:465
+msgid "ACES linear space."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:467
+msgid "Linear"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:467
+msgid "709 (full range). Blender native linear space."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:470
+msgid "View as Render"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:470
+msgid ""
+"Apply render part of display transformation when displaying this image on "
+"the screen."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:478
+msgid "Use Alpha"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:473
+msgid ""
+"Use the alpha channel information from the image or make image fully opaque"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:475
+msgid "Straight"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:476
+msgid "Transparent RGB and alpha pixels are unmodified."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:478
+msgid "Premultiplied"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:478
+msgid ""
+"Transparent RGB pixels of an image are multiplied by the image's alpha "
+"value."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:490
+msgid "Fields"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:481
+msgid ""
+"Work with field images. Video frames consist of two different images "
+"(fields) that are merged. This option ensures that when *Fields* are "
+"rendered, the correct field of the image is used in the correct field of the"
+" rendering. *MIP Mapping* cannot be combined with *Fields*."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:486
+msgid "Upper First"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:487
+msgid "Order of video fields - upper field first."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:490
+msgid "Lower First"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:489
+msgid "Order of video fields - lower field first."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:496
+msgid "Image panel for Generated source of Image texture"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:499
+msgid ""
+"For *Generated* source there are the specific options: *X* and *Y* size"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:502
+msgid "Width and height of image to be generated."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:511
+msgid "Generated Image Type"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:505
+msgid "Which kind of image to be generated"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:507
+msgid "Blank"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:508
+msgid "Generate a blank image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:509
+msgid "UV Grid"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:510
+msgid "Generated grid to test UV mappings."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:511
+msgid "Color Grid"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:512
+msgid "Generated improved UV grid to test UV mappings."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:515
+msgid "Float Buffer"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:514
+msgid "Generate floating point buffer."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:517
+msgid ""
+"About specific options for **movie** and **image sequence** source see "
+":doc:`here </render/blender_render/textures/types/video>`"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:521
+msgid "Image Sampling"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:523
+msgid ""
+"In the *Image Sampling* panel we can control how the information is "
+"retrieved from the image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:534
+msgid "Background image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:535
+msgid "Foreground image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:538
+msgid ""
+"The two images presented here are used to demonstrate the different image "
+"options. The *background image* is an ordinary JPG-file, the *foreground "
+"image* is a PNG-file with various alpha and greyscale values. The vertical "
+"bar on the right side of the foreground image is an Alpha blend, the "
+"horizontal bar has 50% alpha."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:553
+msgid ""
+"Foreground image with *Use* alpha. The alpha values of the pixels are "
+"evaluated"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:554
+msgid "Foreground image with *Calculate* alpha"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:572
+msgid "Alpha"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:558
+msgid "Options related to transparency"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:562
+msgid "Use"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:561
+msgid ""
+"Works with PNG and TGA files since they can save transparency information "
+"(Foreground Image with UseAlpha). Where the alpha value in the image is less"
+" than 1.0, the object will be partially transparent and stuff behind it will"
+" show."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:568
+msgid "Calculate"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:565
+msgid ""
+"Calculate an alpha based on the RGB values of the Image. Black (0,0,0) is "
+"transparent, white (1,1,1) opaque. Enable this option if the image texture "
+"is a mask. Note that mask images can use shades of gray that translate to "
+"semi-transparency, like ghosts, flames, and smoke/fog."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:572
+msgid "Invert"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:571
+msgid ""
+"Reverses the alpha value. Use this option if the mask image has white where "
+"you want it transparent and vice-versa."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:576
+msgid "Flip X/Y Axis"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:575
+msgid "Rotates the image 90 degrees counterclockwise when rendered."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:582
+msgid "Image Sampling panel"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:596
+msgid "Normal Map"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:586
+msgid ""
+"This tells Blender that the image is to be used to create the illusion of a "
+"bumpy surface, with each of the three RGB channels controlling how to fake a"
+" shadow from a surface irregularity. Needs specially prepared input "
+"pictures. See :doc:`Bump and Normal Maps "
+"</render/blender_render/textures/influence/material/bump_and_normal>`."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:596
+msgid "Normal Map Space:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:593
+msgid "*Tangent*: *Object*: *World*: *Camera*:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:599
+msgid "Derivative Map"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:599
+msgid "Use red and green as derivative values."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:615
+msgid "MIP Map"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:602
+msgid ""
+"`MIP Maps <http://en.wikipedia.org/wiki/Mipmap>`__ are pre-calculated, "
+"smaller, filtered Textures for a certain size. A series of pictures is "
+"generated, each half the size of the former one. This optimizes the "
+"filtering process. By default, this option is enabled and speeds up "
+"rendering (especially useful in the game engine). When this option is OFF, "
+"you generally get a sharper image, but this can significantly increase "
+"calculation time if the filter dimension (see below) becomes large. Without "
+"MIP Maps you may get varying pictures from slightly different camera angles,"
+" when the Textures become very small. This would be noticeable in an "
+"animation."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:615
+msgid "MIP Map Gaussian filter"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:612
+msgid ""
+"Used in conjunction with MIP Map, it enables the MIP Map to be made smaller "
+"based on color similarities. In the game engine, you want your textures, "
+"especially your MIP Map textures, to be as small as possible to increase "
+"rendering speed and frame rate."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:0
+msgid "Enlarged Image texture without and with *Interpolation*"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:634
+msgid "Interpolation"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:629
+msgid ""
+"This option interpolates the pixels of an image. This becomes visible when "
+"you enlarge the picture. By default, this option is on. Turn this option OFF"
+" to keep the individual pixels visible and if they are correctly anti-"
+"aliased. This last feature is useful for regular patterns, such as lines and"
+" tiles; they remain 'sharp' even when enlarged considerably. When you "
+"enlarge this 10x10 pixel Image"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:638
+msgid ""
+"the difference with and without *Interpolation* is clearly visible. Turn "
+"this image off if you are using digital photos to preserve crispness."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:683
+msgid "Filter"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:642
+msgid ""
+"The filter size used in rendering, and also by the options *MipMap* and "
+"*Interpolation*. If you notice gray lines or outlines around the textured "
+"object, particularly where the image is transparent, turn this value down "
+"from 1.0 to 0.1 or so."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:677
+msgid "Texture Filter Type"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:647
+msgid ""
+"Texture filter to use for image sampling. Just like a *pixel* represents a "
+"*pic* ture *el* ement, a *texel* represents a *tex* ture *el* ement. When a "
+"texture (2D texture space) is mapped onto a 3D model (3D model space), "
+"different algorithms can be used to compute a value for each pixel based on "
+"samplings from several texels."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:652
+msgid "Box"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:653
+msgid ""
+"A fast and simple nearest-neighbor interpolation known as Monte Carlo "
+"integration"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:660
+msgid "EWA"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:655
+msgid ""
+"**E** lliptical **W** eighted **A** verage — one of the most efficient "
+"direct convolution algorithms developed by Paul Heckbert and Ned Greene in "
+"the 1980s. For each texel, EWA samples, weights, and accumulates texels "
+"within an elliptical footprint and then divides the result by the sum of the"
+" weights."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:660
+#: ../../manual/render/blender_render/textures/types/image.rst:677
+msgid "Eccentricity"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:661
+#: ../../manual/render/blender_render/textures/types/image.rst:677
+msgid ""
+"Maximum Eccentricity. Higher values give less blur at distant/oblique "
+"angles, but is slower"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:671
+msgid "FELINE"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:663
+msgid ""
+"FELINE (**F** ast **E** lliptical **Line** s), uses several isotropic probes"
+" at several points along a line in texture space to produce an anisotropic "
+"filter to reduce aliasing artifacts without considerably increasing "
+"rendering time."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:671
+msgid "Probes"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:668
+msgid ""
+"Number of probes to use. An integer between 1 and 256. Further reading: "
+"McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999) `Simple and Table "
+"Feline: Fast Elliptical Lines for Anisotropic Texture Mapping "
+"<http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf>`__, WRL"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:677
+msgid "Area"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:674
+msgid "Area filter to use for image sampling"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:679
+msgid "Filter Size"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:680
+msgid "The filter size used by MIP Map and Interpolation"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:683
+msgid "Minimum Filter Size"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:682
+msgid "Use Filter Size as a minimal filter value in pixels"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:686
+msgid "Image Mapping"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:692
+msgid "Image Mapping panel"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:695
+msgid ""
+"In the *Image Mapping* panel, we can control how the image is mapped or "
+"projected onto the 3D model."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:698
+msgid "Extension:"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:700
+msgid "Extend"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:701
+msgid "Outside the image the colors of the edges are extended"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:704
+msgid "Clip"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:703
+msgid ""
+"Clip to image size and set exterior pixels as transparent. Outside the "
+"image, an alpha value of 0.0 is returned. This allows you to 'paste' a small"
+" logo on a large object."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:708
+msgid "Clip Cube"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:707
+msgid ""
+"Clips to cubic-shaped area around the images and sets exterior pixels as "
+"transparent. The same as Clip, but now the 'Z' coordinate is calculated as "
+"well. An alpha value of 0.0 is returned outside a cube-shaped area around "
+"the image."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:716
+#: ../../manual/render/blender_render/textures/types/image.rst:713
+msgid "Repeat"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:711
+msgid "The image is repeated horizontally and vertically"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:714
+msgid "X/Y repetition multiplier"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:716
+msgid "Mirror"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:716
+msgid ""
+"Mirror on X/Y axes. This buttons allow you to map the texture as a mirror, "
+"or automatic flip of the image, in the corresponding X and/or Y direction."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:725
+msgid "Checker"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:719
+msgid ""
+"Checkerboards quickly made. You can use the option *size* on the *Mapping* "
+"panel as well to create the desired number of checkers."
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:722
+msgid "Even / Odd"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:723
+msgid "Set even/odd tiles"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:725
+msgid "Distance"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:725
+msgid "Governs the distance between the checkers in parts of the texture size"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:732
+msgid "Crop Minimum / Crop Maximum"
+msgstr ""
+
+#: ../../manual/render/blender_render/textures/types/image.rst:728
+msgid ""
+"The offset and the size of the texture in relation to the texture space. "
+"Pixels outside this space are ignored. Use these to crop, or choose a "
+"portion of a larger image to use as the texture."
+msgstr ""

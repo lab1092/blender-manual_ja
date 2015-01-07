@@ -6,13 +6,25 @@
 Cloth Simulation
 ****************
 
-+--------------------------------------+-------------------------------------------------+--------------------------------------+
-+.. figure:: /images/Cloth-example1.jpg|.. figure:: /images/Cloth-oncarvedwood.jpg       |.. figure:: /images/Cloth-example2.jpg+
-+   :width: 150px                      |   :width: 150px                                 |   :width: 150px                      +
-+   :figwidth: 150px                   |   :figwidth: 150px                              |   :figwidth: 150px                   +
-+                                      |                                                 |                                      +
-+   Cloth example.                     |   Cloth on carved wooden men (made by motorsep).|   Cloth example.                     +
-+--------------------------------------+-------------------------------------------------+--------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cloth-example1.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          Cloth example.
+
+     - .. figure:: /images/Cloth-oncarvedwood.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          Cloth on carved wooden men (made by motorsep).
+
+     - .. figure:: /images/Cloth-example2.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          Cloth example.
 
 
 Cloth simulation is one of the hardest aspects of CG,
@@ -45,7 +57,7 @@ the ultimate shape of the mesh is computed in accordance with the order of the m
 you should smooth the cloth *after* the modifier computes the shape of the cloth.
 
 So you edit the Cloth settings in two places: use the F7 Physics buttons to edit the
-properties of the cloth and use the Modifier stack to  edit the Modifier properties related to
+properties of the cloth and use the Modifier stack to edit the Modifier properties related to
 display and interaction with other modifiers.
 
 You can *Apply* the cloth modifier to freeze, or lock in,
@@ -302,7 +314,6 @@ soft bodies, and cloth).
    The first (by default), a tab beside the *Fields* panel, is the one needed here. The second panel,
    a tab in the *Soft Body* group, concern softbodies (and so has nothing to do with cloth).
    And we have already seen the last one, by default a tab beside the *Cloth* panel.
-
 
 
 Mesh Object Modifier Stack

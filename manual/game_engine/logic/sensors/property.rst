@@ -25,7 +25,7 @@ Special Options:
 
 
 Evaluation Type
-   Specifies how the property  will be evaluated against the value(s).
+   Specifies how the property will be evaluated against the value(s).
 
 Greater Than
    Sends a TRUE pulse when the property value is greater than the *Value* in the sensor.

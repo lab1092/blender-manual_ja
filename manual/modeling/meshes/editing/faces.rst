@@ -25,11 +25,10 @@ Make Edge/Face
 This will create an edge or some faces, depending on your selection.
 It is detailed in the :doc:`Basic Editing page </modeling/meshes/editing/basics#edge_and_face_creation>`.
 
+.. _modeling-meshes-editing-fill:
 
 Fill
-
-----
-
+====
 
 .. admonition:: Reference
    :class: refbox
@@ -92,7 +91,8 @@ Beauty Fill
    | Hotkey:   :kbd:`Alt-Shift-F`
 
 
-*Beautify Fill* works only on selected existing faces. It rearrange selected triangles to obtain more "balanced" ones (i.e. less long thin triangles).
+*Beautify Fill* works only on selected existing faces.
+It rearrange selected triangles to obtain more "balanced" ones (i.e. less long thin triangles).
 
 
 .. figure:: /images/mesh_beauty_fill_before.jpg
@@ -157,7 +157,8 @@ Convert Quads to Triangles
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh --> Faces --> Convert Quads to Triangles` or :menuselection:`Face Specials --> Triangulate`
+   | Menu:     :menuselection:`Mesh --> Faces --> Convert Quads to Triangles` or
+     :menuselection:`Face Specials --> Triangulate`
    | Hotkey:   :kbd:`Ctrl-T`
 
 
@@ -209,16 +210,25 @@ which means some triangles could remain.
 All the menu entries and hotkey use the settings defined in the *Mesh Tools* panel:
 
 Max Angle
-   This values (between **0** and **180**) controls the threshold for this tool to work on adjacent triangles. With a threshold of **0.0**, it will only join adjacent triangles that form a perfect rectangle (i.e. right-angled triangles sharing their hypotenuses). Larger values are required for triangles with a shared edge that is small, relative to the size of the other edges of the triangles.
-
+   This values (between **0** and **180**) controls the threshold for this tool to work on adjacent triangles.
+   With a threshold of **0.0**,
+   it will only join adjacent triangles that form a perfect rectangle
+   (i.e. right-angled triangles sharing their hypotenuses).
+   Larger values are required for triangles with a shared edge that is small,
+   relative to the size of the other edges of the triangles.
 Compare UVs
-   When enabled, it will prevent union of triangles that are not also adjacent in the active UV map. Note that this seems to be the only option working...
+   When enabled, it will prevent union of triangles that are not also adjacent in the active UV map.
+   Note that this seems to be the only option working...
 Compare Vcol
-   When enabled, it will prevent union of triangles that have no matching vertex color. I'm not sure how this option works - or even if it really works...
+   When enabled, it will prevent union of triangles that have no matching vertex color.
+   I'm not sure how this option works - or even if it really works...
 Compare Sharp
-   When enabled, it will prevent union of triangles that share a "sharp" edge. I'm not sure either if this option works, and what is the "sharp" criteria - neither the *Sharp* flag nor the angle between triangles seem to have an influence here...
+   When enabled, it will prevent union of triangles that share a "sharp" edge.
+   I'm not sure either if this option works, and what is the "sharp" criteria - neither the *Sharp*
+   flag nor the angle between triangles seem to have an influence here...
 Compare Materials
-   When enabled, it will prevent union of triangles that do not use the same material index. This option does not seem to work neither...
+   When enabled, it will prevent union of triangles that do not use the same material index.
+   This option does not seem to work neither...
 
 
 Solidify
@@ -232,10 +242,15 @@ Solidify
    | Hotkey:   :menuselection:`[ctrl][F] --> Solidify`
 
 
-This takes a selection of faces and solidifies them by extruding them uniformly to give volume to a :term:`non-manifold` surface. This is also available as a :doc:`Modifier </modifiers/generate/solidify>`. After using the tool, you can set the offset distance in the Tool Palette.
+This takes a selection of faces and solidifies them by extruding them
+uniformly to give volume to a :term:`non-manifold` surface.
+This is also available as a :doc:`Modifier </modifiers/generate/solidify>`.
+After using the tool, you can set the offset distance in the Tool Palette.
 
 Thickness
-   Amount to offset the newly created surface. Positive values offset the surface inward relative to the normals. Negative values offset outward.
+   Amount to offset the newly created surface.
+   Positive values offset the surface inward relative to the normals.
+   Negative values offset outward.
 
 
 .. figure:: /images/Doc26-solidify-before.jpg
@@ -288,7 +303,8 @@ It works on the shared edge between two faces and rotates that edge if the edge 
    After rotating edge
 
 
-See :doc:`Rotate Edge CW / Rotate Edge CCW </modeling/meshes/editing/edges#rotate_edge_cw_/_rotate_edge_ccw>` for more information.
+See :doc:`Rotate Edge CW / Rotate Edge CCW </modeling/meshes/editing/edges#rotate_edge_cw_/_rotate_edge_ccw>`
+for more information.
 
 
 Normals
@@ -322,7 +338,8 @@ Recalculate Normals
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh --> Normals --> Recalculate Outside` and :menuselection:`Mesh --> Normals --> RecalculateInside`
+   | Menu:     :menuselection:`Mesh --> Normals --> Recalculate Outside` and
+     :menuselection:`Mesh --> Normals --> RecalculateInside`
    | Hotkey:   :kbd:`Ctrl-N` and *ctrl*
 
 

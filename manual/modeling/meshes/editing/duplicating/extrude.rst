@@ -30,25 +30,47 @@ When extruding along the face normal,
 limiting movement to the global Z axis requires pressing :kbd:`Z` twice,
 once to disable the face normal Z axis limit, and once to enable the global Z axis limit.
 
-+-------------------------------------------------+------------------------------------------------+------------------------------------------------------+
-+.. figure:: /images/Doc26-extrude-face-before.jpg|.. figure:: /images/Doc26-extrude-face-after.jpg|.. figure:: /images/Doc26-extrude-face-after-zAxiz.jpg+
-+   :width: 200px                                 |   :width: 200px                                |   :width: 200px                                      +
-+   :figwidth: 200px                              |   :figwidth: 200px                             |   :figwidth: 200px                                   +
-+                                                 |                                                |                                                      +
-+   Selected face                                 |   During extrude                               |   Set to Z axis                                      +
-+-------------------------------------------------+------------------------------------------------+------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-extrude-face-before.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Selected face
+
+     - .. figure:: /images/Doc26-extrude-face-after.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          During extrude
+
+     - .. figure:: /images/Doc26-extrude-face-after-zAxiz.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Set to Z axis
 
 
 Although the process is quite intuitive,
 the principles behind *Extrude* are fairly elaborate as discussed below:
 
-- First, the algorithm determines the outside edge-loop of the extrude; that is, which among the selected edges will be changed into faces. By default (see below), the algorithm considers edges belonging to two or more selected faces as internal, and hence not part of the loop.
+- First, the algorithm determines the outside edge-loop of the extrude; that is,
+  which among the selected edges will be changed into faces. By default (see below),
+  the algorithm considers edges belonging to two or more selected faces as internal, and hence not part of the loop.
 - The edges in the edge-loop are then changed into faces.
-- If the edges in the edge-loop belong to only one face in the complete mesh, then all of the selected faces are duplicated and linked to the newly created faces. For example, rectangles will result in parallelepipeds during this stage.
-- In other cases, the selected faces are linked to the newly created faces but not duplicated. This prevents undesired faces from being retained "inside" the resulting mesh. This distinction is extremely important since it ensures the construction of consistently coherent, closed volumes at all times when using *Extrude*.
-- When extruding completely closed volumes (like e.g. a cube with all its six faces), extrusion results merely in a duplication, as the volume is duplicated, without any link to the original one.
-- Edges not belonging to selected faces, which form an "open" edge-loop, are duplicated and a new face is created between the new edge and the original one.
-- Single selected vertices which do not belong to selected edges are duplicated and a new edge is created between the two.
+- If the edges in the edge-loop belong to only one face in the complete mesh,
+  then all of the selected faces are duplicated and linked to the newly created faces. For example,
+  rectangles will result in parallelepipeds during this stage.
+- In other cases, the selected faces are linked to the newly created faces but not duplicated.
+  This prevents undesired faces from being retained "inside" the resulting mesh.
+  This distinction is extremely important since it ensures the construction of consistently coherent,
+  closed volumes at all times when using *Extrude*.
+- When extruding completely closed volumes (like e.g. a cube with all its six faces),
+  extrusion results merely in a duplication, as the volume is duplicated, without any link to the original one.
+- Edges not belonging to selected faces, which form an "open" edge-loop,
+  are duplicated and a new face is created between the new edge and the original one.
+- Single selected vertices which do not belong to selected edges
+  are duplicated and a new edge is created between the two.
 
 
 Extrude Individual
@@ -63,15 +85,30 @@ Extrude Individual
    | Hotkey:   :kbd:`Alt-E`
 
 
-*Extrude Individual* allows you to extrude a selection of multiple faces as individuals, instead of as a region. The faces are extruded along their own normals, rather than their average. This has several consequences: first, "internal" edges (i.e. edges between two selected faces) are no longer deleted (the original faces are).
+*Extrude Individual* allows you to extrude a selection of multiple faces as individuals, instead of as a region.
+The faces are extruded along their own normals, rather than their average.
+This has several consequences: first, "internal" edges
+(i.e. edges between two selected faces) are no longer deleted (the original faces are).
 
-+------------------------------------------------+-------------------------------------------------------+-----------------------------------------------------------+
-+.. figure:: /images/Doc26-extrude-face-multi.jpg|.. figure:: /images/Doc26-extrude-face-multi-region.jpg|.. figure:: /images/Doc26-extrude-face-multi-individual.jpg+
-+   :width: 200px                                |   :width: 200px                                       |   :width: 200px                                           +
-+   :figwidth: 200px                             |   :figwidth: 200px                                    |   :figwidth: 200px                                        +
-+                                                |                                                       |                                                           +
-+   Selection of multiple faces                  |   Extruded using extrude region                       |   Extruded using Extrude Individual                       +
-+------------------------------------------------+-------------------------------------------------------+-----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-extrude-face-multi.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Selection of multiple faces
+
+     - .. figure:: /images/Doc26-extrude-face-multi-region.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Extruded using extrude region
+
+     - .. figure:: /images/Doc26-extrude-face-multi-individual.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Extruded using Extrude Individual
 
 
 Extrude Edges and Vertices Only

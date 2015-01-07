@@ -49,8 +49,8 @@ that you use the correct pixel aspect ratio when rendering to prevent re-samplin
 resulting in lowered image quality.
 
 
-Colour Saturation
-=================
+Color Saturation
+================
 
 Most video tapes and video signals are not based on the RGB model but on the YCrCb model:
 more precisely, the YUV in Europe (PAL), and the YIQ in the USA (NTSC),
@@ -234,7 +234,7 @@ Advanced Encoding
 
 .. figure:: /images/Manual-Render-FFMPEG-Video-2.5+.jpg
 
-If the  *H.264*, *MPEG*, *Ogg Theora*,
+If the *H.264*, *MPEG*, *Ogg Theora*,
 or *Xvid* codecs are chosen, an *Encoding* panel becomes available.
 This has settings for encoding these file types, and other formats using FFmpeg.
 
@@ -252,7 +252,7 @@ Here you choose which video codec you want to use, and compression settings.
 With all of these compression choices, there is a tradeoff between file size,
 compatibility across platforms, and playback quality.
 
-When you view the :doc:`System Console </interface/window_system/console_window>`,
+When you view the :doc:`System Console </getting_started/basics/interface/window_system/console_window>`,
 you can see some of the output of the encoding process.
 You will see even more output if you execute Blender as ``blender -d``.
 
@@ -390,7 +390,7 @@ Audio Codecs
 `MP2 <http://en.wikipedia.org/wiki/MPEG-1_Audio_Layer_II>`__
    A lossy audio compression format defined by ISO/IEC 11172-3.
 `MP3 <http://en.wikipedia.org/wiki/MP3>`__
-   See MP3 in FIXME(TODO: Internal Link; Video Formats|Video Formats]] above.)
+   See MP3 in `Video Formats`_ above.)
 `AC3 <http://en.wikipedia.org/wiki/Dolby_Digital>`__
    Audio Codec 3, an audio compression technology developed by Dolby Laboratories.
 `AAC <http://en.wikipedia.org/wiki/Advanced_Audio_Coding>`__
@@ -447,7 +447,7 @@ throw off what you are trying to accomplish with the post-processing.
 Note that you might not want to render directly to a video format.
 If a problem occurs while rendering, you have to re-render all frames from the beginning.
 If you first render out a set of static images (such as the default PNG, or the higher-quality OpenEXR),
-you can stitch them together with an Image Strip in the :doc:`Video Sequence Editor (VSE) </sequencer/usage>`.
+you can stitch them together with an Image Strip in the :doc:`Video Sequence Editor (VSE) </editors/sequencer/usage>`.
 This way, you can easily:
 
 - Restart the rendering from the place (the frame) where the problem occurred.

@@ -36,7 +36,8 @@ For more on editing path/curves, see the :doc:`modeling chapter </modeling/curve
 .. note::
    Shapes on Curves
 
-   If you would rather like to have your object's *shape* follow a path (like e.g. a sheet of paper inside a printer),
+   If you would rather like to have your object's *shape* follow a path (like e.g.
+   a sheet of paper inside a printer),
    you should use the :doc:`Curve Modifier </modifiers/deform/curve>`
 
 
@@ -84,7 +85,7 @@ keyframing or defining a *Speed* animation curve for the path's *Evaluation Time
 This curve maps the current frame to a position along the path,
 from ``0.0`` (start point) to ``1.0`` (end point).
 
-For more details and examples, see the :doc:`Follow Path constraint page </constraints/relationship/follow_path>`.
+For more details and examples, see the :doc:`Follow Path constraint page </rigging/constraints/relationship/follow_path>`.
 
 
 The Clamp To Constraint
@@ -100,6 +101,6 @@ So to animate the movement of your owner along its target path, you have to anim
 This implies that here, the length of the path have no more any effect - and that by default,
 the object is static somewhere on the path!
 
-For more details and examples, see the :doc:`Clamp To constraint page </constraints/tracking/clamp_to>`.
+For more details and examples, see the :doc:`Clamp To constraint page </rigging/constraints/tracking/clamp_to>`.
 
 

@@ -3,7 +3,7 @@
 Camera Actuator
 ***************
 
-Makes the camera follow or track an  object.
+Makes the camera follow or track an object.
 
 See :doc:`Actuator Common Options </game_engine/logic/actuators/common_options>` for common options.
 

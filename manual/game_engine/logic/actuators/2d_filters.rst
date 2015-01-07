@@ -6,7 +6,6 @@ Filter 2D Actuator
 *2D Filter* s are image filtering actuators, that apply on final render of objects.
 
 
-
 .. figure:: /images/BGE_Actuator_Filter_2D.jpg
    :width: 271px
    :figwidth: 271px

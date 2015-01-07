@@ -84,7 +84,7 @@ Hints
 
 Many modeling tasks involve creating objects that are symmetrical. However, there used to be
 no quick way to model both halves of an object without using one of the workarounds that have
-been discovered by clever Blender artists over the years.  A common technique was to model one
+been discovered by clever Blender artists over the years. A common technique was to model one
 half of an object and use :kbd:`Alt-D` to create a linked duplicate which can then be
 scaled on one axis by ``-1`` to produce a perfect mirror-image copy which updates in real time as you edit.
 

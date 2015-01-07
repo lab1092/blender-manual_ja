@@ -16,23 +16,23 @@ How States Operate
 States are set up and used through controllers: note that only controllers,
 not actuators and sensors, are directly controlled by the state system.
 Each object has a number of states (up to 30; default = 1),
-and can only be in one state at any particular time.  A controller  must always specify the
+and can only be in one state at any particular time. A controller must always specify the
 state for which it will operate - it will only give an output pulse if a)
 its logic conditions are met, and b) the object is currently in the specified State.
 States are set up and edited in the object's Controller settings (for details see below).
 
 .. tip::
 
-   State settings are automatic in simple games.  By default,
-   the number of states for each object is 1, and all controllers are set  to use State 1.  So,
-   if a game  does not need multiple states,  everything will work without explicitly setting
-   states - you do not need to  bother about states at all.
+   State settings are automatic in simple games. By default,
+   the number of states for each object is 1, and all controllers are set to use State 1. So,
+   if a game does not need multiple states, everything will work without explicitly setting
+   states - you do not need to bother about states at all.
 
 
-One of the actuators, the State actuator,  can set or unset the object's State bits,
+One of the actuators, the State actuator, can set or unset the object's State bits,
 and so allow the object's reaction to a sensor signal to depend on its current state. So,
 in the above example,
-the actor  will have a number of  controllers  connected to the "loud bang" sensor,
+the actor will have a number of controllers connected to the "loud bang" sensor,
 for each of the "awake", "asleep" or "dead" states.
 These will operate different actuators depending on the current state of the actor,
 and some of these actuators may switch the actor's state under appropriate conditions.
@@ -51,7 +51,7 @@ Editing States
 States are set up and edited using the Controller (center) column of the Game Logic Panel.
 To see the State panel, click on the State Panel Button shown.
 The panel shows two areas for each of the 30 available states; these show Visible states,
-and Initial states (see below).  Setting up the State system for a game is performed by
+and Initial states (see below). Setting up the State system for a game is performed by
 choosing the appropriate state for each controller in the object's logic.
 
 The display of an object's state logic, and other housekeeping,
@@ -70,7 +70,7 @@ Visible and Initial.
 **Visible States**
 
 In the Visible area, each of the 30 available states is represented by a light-gray square.
-This panel shows what logic is visible for  the logic brick displayed for the object.
+This panel shows what logic is visible for the logic brick displayed for the object.
 At the right is the All button; if clicked, then all the object's logic bricks are displayed
 (this is a toggle), and all State Panel squares are light-gray. Otherwise,
 individual states can be clicked to make their logic visible.

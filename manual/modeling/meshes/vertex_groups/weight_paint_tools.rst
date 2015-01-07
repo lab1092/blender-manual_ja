@@ -113,7 +113,8 @@ Topology Mirror
 
 .. tip:: Mirror to opposite bone
 
-   If you want to create a mirrored weight group for the opposite bone (of a symmetric character), then you can do this:
+   If you want to create a mirrored weight group for the opposite bone (of a symmetric character),
+   then you can do this:
 
    - Delete the target Vertex Group (where the mirrored weights will be placed)
    - Create a copy of the source bone Vertex Group (the group containing the weights which you want to copy)
@@ -302,7 +303,7 @@ And I want to use this edge loop for blending the left side to the right side of
 
 
 - All selected vertices have 2 unselected adjacent verts.
-- The average weight of the unselected verts is (1 + 0) / 2  = 0.5
+- The average weight of the unselected verts is (1 + 0) / 2 = 0.5
 - Thus when the Blend Factor is set to 1.0 then the edge loop turns to
   green and finally does blend the cold side (right) to the hot side (left).
 
@@ -464,7 +465,7 @@ The gradient tool can be accessed from the Toolbar as a key shortcut:
 The following weight paint options are used to control the gradient:
 
 - Weight - The gradient starts at the current selected weight value, blending out to nothing.
-- Strength  - Lower values can be used so the gradient mixes in with the existing weights (just like with the brush).
+- Strength - Lower values can be used so the gradient mixes in with the existing weights (just like with the brush).
 - Curve - The brush falloff curve applies to the gradient too, so you can use this to adjust the blending.
 
 Blends the weights of selected vertices with unselected vertices.

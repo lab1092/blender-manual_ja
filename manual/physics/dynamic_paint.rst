@@ -40,7 +40,9 @@ Modifier itself has two different types:
 
 .. note::
 
-   You can also enable brush and canvas simultaneously. In that case same object's "brush" doesn't influence it's "canvas", but can still interact with other objects in the scene.
+   You can also enable brush and canvas simultaneously.
+   In that case same object's "brush" doesn't influence it's "canvas",
+   but can still interact with other objects in the scene.
 
 
 See also
@@ -49,5 +51,6 @@ See also
 - `A step-by step introduction <http://www.miikahweb.com/en/articles/blender-dynamicpaint-basics>`__
 
 
-- `A detailed guide that covers every setting with images and examples <http://www.miikahweb.com/en/articles/dynamic-paint-guide>`__ (Currently not up-to-date)
+- `A detailed guide that covers every setting with images and examples
+  <http://www.miikahweb.com/en/articles/dynamic-paint-guide>`__ (Currently not up-to-date)
 

@@ -24,12 +24,14 @@ Troubleshooting
 
 
 - **Q.** When I try to make fire, it gives me strange results, or doesn't show up.
-- **A.** Make sure you have a high emmision Value for the Material, and that you have a Smoke Density texture, and that you set the fire texture to Multiply.
+- **A.** Make sure you have a high emmision Value for the Material,
+  and that you have a Smoke Density texture, and that you set the fire texture to Multiply.
 
 
 External links
 ==============
 
-- `In-Depth introduction to smoke and fire in Blender 2.5 covering most of the pitfalls <http://cg.tutsplus.com/series/introduction-to-smoke-simulation-in-blender-2-5/>`__
+- `In-Depth introduction to smoke and fire in Blender 2.5 covering most of the pitfalls
+  <http://cg.tutsplus.com/series/introduction-to-smoke-simulation-in-blender-2-5/>`__
 - `Guide to realistic fire in Blender by MiikaH <http://www.miikahweb.com/en/tutorials/blenderfire>`__
 

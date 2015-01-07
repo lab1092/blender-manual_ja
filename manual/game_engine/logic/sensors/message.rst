@@ -11,7 +11,7 @@ Message Sensor
 
 
 The *Message* sensor can be used to detect either text messages or property values.
-The  sensor sends a positive pulse once an appropriate message is sent from anywhere in the
+The sensor sends a positive pulse once an appropriate message is sent from anywhere in the
 engine. It can be set up to only send a pulse upon a message with a specific subject.
 
 

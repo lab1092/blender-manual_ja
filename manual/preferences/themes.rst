@@ -4,8 +4,7 @@
 Themes
 ******
 
-As has been said previously, Blender is very customizable—some of the settings affect
-interface appearance and colors. These are set under the *Themes* tab.
+The *Themes* tab allows you to customize interface appearance and colors.
 
 
 .. figure:: /images/User-preferences-themes.jpg

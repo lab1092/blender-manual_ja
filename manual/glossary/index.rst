@@ -15,7 +15,8 @@
          The background pixel is covered by the foreground using alpha values.
       Add
          The pixels are added together.
-         Fac controls how much of the second socket to add in. Gives a bright result. The "opposite" to Subtract mode.
+         Fac controls how much of the second socket to add in. Gives a bright result.
+         The "opposite" to Subtract mode.
       Subtract
          The foreground pixel (bottom socket) is subtracted from the background one.
          Gives a dark result. The "opposite" to Add mode.
@@ -40,7 +41,8 @@
          and to compare two images (results in black if they are equal).
       Darken
          Both pixels are compared to each other, the smaller one is taken.
-         Completely white layers do not change the background at all, and completely black layers give a black result.
+         Completely white layers do not change the background at all,
+         and completely black layers give a black result.
       Lighten
          Both parameters are compared to each other, the larger one is taken.
          Completely black layers do not change the image at all and white layers give a white result.
@@ -51,7 +53,8 @@
          Some kind of inverted Screen mode (the multiplication is replaced by a division of the "inverse").
          Results in darker images, since the image is burned onto the paper, er..image (showing my age).
       Color
-         Adds a color to a pixel, tinting the overall whole with the color. Use this to increase the tint of an image.
+         Adds a color to a pixel, tinting the overall whole with the color.
+         Use this to increase the tint of an image.
       Value
          The RGB values of both pixels are converted to HSV values.
          The values of both pixels are blended,
@@ -129,29 +132,56 @@
    Video Presets
       Blender has a number of preset video formats.
 
-      +-----------------------+--------------------+--------------------+--------------+
-      +Preset                 |Resolution (X x Y)  |Aspect Ratio (X x Y)|Frame Rate    +
-      +-----------------------+--------------------+--------------------+--------------+
-      +DVCPRO HD 1080p        |1280x1080           |3:2                 |24 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
-      +DVCPRO HD 720p         |960x720             |4:3                 |24 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
-      +HDTV 1080p             |1920x1080           |1:1                 |24 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
-      +HDTV 720p              |1280x720            |1:1                 |24 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
-      +HDV 1080p              |1440x1080           |4:3                 |23.98 fps     +
-      +-----------------------+--------------------+--------------------+--------------+
-      +HDV NTSC 1080p         |1440x1080           |4:3                 |29.97 fps     +
-      +-----------------------+--------------------+--------------------+--------------+
-      +HDV PAL 1080p          |1440x1080           |4:3                 |25 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
-      +TV NTSC 16:9           |720x480             |40:33               |29.97 fps     +
-      +-----------------------+--------------------+--------------------+--------------+
-      +TV NTSC 4:3            |720x486             |10:11               |29.97 fps     +
-      +-----------------------+--------------------+--------------------+--------------+
-      +TV PAL 16:9            |720x576             |16:11               |25 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
-      +TV PAL 4:3             |720x576             |12:11               |25 fps        +
-      +-----------------------+--------------------+--------------------+--------------+
+      .. list-table::
+         :header-rows: 1
+
+         * - Preset
+           - Resolution (X x Y)
+           - Aspect Ratio (X x Y)
+           - Frame Rate
+         * - DVCPRO HD 1080p
+           - 1280x1080
+           - 3:2
+           - 24 fps
+         * - DVCPRO HD 720p
+           - 960x720
+           - 4:3
+           - 24 fps
+         * - HDTV 1080p
+           - 1920x1080
+           - 1:1
+           - 24 fps
+         * - HDTV 720p
+           - 1280x720
+           - 1:1
+           - 24 fps
+         * - HDV 1080p
+           - 1440x1080
+           - 4:3
+           - 23.98 fps
+         * - HDV NTSC 1080p
+           - 1440x1080
+           - 4:3
+           - 29.97 fps
+         * - HDV PAL 1080p
+           - 1440x1080
+           - 4:3
+           - 25 fps
+         * - TV NTSC 16:9
+           - 720x480
+           - 40:33
+           - 29.97 fps
+         * - TV NTSC 4:3
+           - 720x486
+           - 10:11
+           - 29.97 fps
+         * - TV PAL 16:9
+           - 720x576
+           - 16:11
+           - 25 fps
+         * - TV PAL 4:3
+           - 720x576
+           - 12:11
+           - 25 fps
+
 

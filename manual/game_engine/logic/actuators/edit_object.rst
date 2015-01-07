@@ -83,7 +83,7 @@ Replace Mesh
       name of mesh to replace the current mesh.
    Gfx Button
       replace visible mesh.
-   Phys  Button
+   Phys Button
       replace physics mesh (not compound shapes)
 
 

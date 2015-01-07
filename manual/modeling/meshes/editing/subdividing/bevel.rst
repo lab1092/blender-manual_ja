@@ -76,7 +76,10 @@ Options
 .. figure:: /images/BevelOptions.jpg
 
 Offset
-   You can change the bevel width by moving the mouse towards and away from the object, a bit like with transform tools. As usual, the scaling can be controlled to a finer degree by  holding :kbd:`Shift` to scale in 0.001 steps. :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
+   You can change the bevel width by moving the mouse towards and away from the object,
+   a bit like with transform tools.
+   As usual, the scaling can be controlled to a finer degree by holding :kbd:`Shift` to scale in 0.001 steps.
+   :kbd:`LMB` finalizes the operation, :kbd:`RMB` or :kbd:`Esc` aborts the action.
 
 
 .. figure:: /images/Bevel3.jpg
@@ -87,10 +90,12 @@ Offset
 
 
 Segments
-   The number of segments in the bevel can be defined by scrolling the mouse :kbd:`Wheel` to increase or decrease this value. The greater the number of recursions, the smoother the bevel.
+   The number of segments in the bevel can be defined by scrolling the
+   mouse :kbd:`Wheel` to increase or decrease this value.
+   The greater the number of recursions, the smoother the bevel.
 
-
-   Alternatively, you can manually enter a scaling value while using the tool, or in the Mesh Tool options panel after using the tool.
+   Alternatively, you can manually enter a scaling value while using the tool,
+   or in the Mesh Tool options panel after using the tool.
 
 
 Examples

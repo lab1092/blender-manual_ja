@@ -88,12 +88,12 @@ Fake User
 =========
 
 Remember that Blender does not save datablocks that are not linked to anything in the
-*current* file.  If you're building a ".blend" file to serve as a library of things that you
+*current* file. If you're building a ".blend" file to serve as a library of things that you
 intend to link-to from *other* files,
 you'll need to make sure that they don't accidentally get deleted from the current
-(the library) file.  Do this by giving the datablocks a "fake user,
+(the library) file. Do this by giving the datablocks a "fake user,
 " by hitting the *F* button next to the name of the datablock.
-This prevents the user count from ever becoming zero:  therefore,
+This prevents the user count from ever becoming zero: therefore,
 the datablock will not be deleted.
 (Blender does not keep track of how many other files link to this one.)
 
@@ -136,8 +136,8 @@ Pack and Unpack Data
 ********************
 
 Blender has the ability to encapsulate (incorporate)
-various kinds of data within the .blend file that is normally saved outside of the .
-blend file. For example, an image texture that is an external ``.jpg`` file can be
+various kinds of data within the .blend file that is normally saved outside of the ``.blend`` file.
+For example, an image texture that is an external ``.jpg`` file can be
 put "inside" the .blend file via *File* → *External Data* →
 *Pack into .blend file*. When the .blend file is saved,
 a copy of that ``.jpg`` file is put inside the .blend file.

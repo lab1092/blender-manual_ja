@@ -48,7 +48,8 @@ Vertex Group Mask
 Texture
    An additional texture, the values of which will be multiplied with the global influence value for each vertex.
 
-   This is a standard texture :doc:`datablock </data_system/datablocks>` control. When set, it reveals other settings:
+   This is a standard texture :doc:`datablock </data_system/datablocks>` control.
+   When set, it reveals other settings:
 
    Texture Coordinates
       How the texture is mapped to the mesh.
@@ -321,15 +322,20 @@ in *Geometry Distance* mode. Enable *Edge*
 you would get wavy patterns, see (*Wavy patterns*)).
 
 
-+---------------------------------------------------------------+--------------------------------------------------------------------------+
-+**Wavy patterns.**                                                                                                                        +
-+---------------------------------------------------------------+--------------------------------------------------------------------------+
-+.. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PFWavyWeights.jpg+
-+   :width: 300px                                               |   :width: 300px                                                          +
-+   :figwidth: 300px                                            |   :figwidth: 300px                                                       +
-+                                                               |                                                                          +
-+   Distance from edges.                                        |   Distance from vertices.                                                +
-+---------------------------------------------------------------+--------------------------------------------------------------------------+
+.. list-table::
+   Wavy patterns.
+
+   * - .. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Distance from edges.
+
+     - .. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PFWavyWeights.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Distance from vertices.
 
 
 Set the *Lowest Dist* to ``0.2``, and the *Highest Dist* to ``2.0``,
@@ -347,15 +353,26 @@ you can insert a *Vertex Weight Edit* modifier before the *Displace* one,
 and play with the *Custom Curve* mapping to get a larger/narrower "valley"...
 
 
-+----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
-+*Curve Map* **variations.**                                                                                                                                                                     +
-+----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
-+.. figure:: /images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg|.. figure:: /images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg+
-+   :width: 200px                                                |   :width: 200px                                               |   :width: 200px                                               +
-+   :figwidth: 200px                                             |   :figwidth: 200px                                            |   :figwidth: 200px                                            +
-+                                                                |                                                               |                                                               +
-+   Concave-type mapping curve.                                  |   No mapping curve (linear).                                  |   Convex-type mapping curve.                                  +
-+----------------------------------------------------------------+---------------------------------------------------------------+---------------------------------------------------------------+
+.. list-table::
+   *Curve Map* variations.
+
+   * - .. figure:: /images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Concave-type mapping curve.
+
+     - .. figure:: /images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          No mapping curve (linear).
+
+     - .. figure:: /images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Convex-type mapping curve.
 
 
 .. figure:: /images/ManModifiersWeightVGroupGeometryEXRemVerts.jpg
@@ -401,15 +418,26 @@ You can then select which texture coordinates and channel to use.
 Leave the mapping to the default *Local* option, and play with the various channels...
 
 
-+--------------------------------------------------------------+--------------------------------------------------------+---------------------------------------------------------------+
-+**Texture channel variations.**                                                                                                                                                        +
-+--------------------------------------------------------------+--------------------------------------------------------+---------------------------------------------------------------+
-+.. figure:: /images/ManModifiersWeightVGroupTexExIntensity.jpg|.. figure:: /images/ManModifiersWeightVGroupTexExRed.jpg|.. figure:: /images/ManModifiersWeightVGroupTexExSaturation.jpg+
-+   :width: 200px                                              |   :width: 200px                                        |   :width: 200px                                               +
-+   :figwidth: 200px                                           |   :figwidth: 200px                                     |   :figwidth: 200px                                            +
-+                                                              |                                                        |                                                               +
-+   Using intensity.                                           |   Using Red.                                           |   Using Saturation.                                           +
-+--------------------------------------------------------------+--------------------------------------------------------+---------------------------------------------------------------+
+.. list-table::
+   Texture channel variations.
+
+   * - .. figure:: /images/ManModifiersWeightVGroupTexExIntensity.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Using intensity.
+
+     - .. figure:: /images/ManModifiersWeightVGroupTexExRed.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Using Red.
+
+     - .. figure:: /images/ManModifiersWeightVGroupTexExSaturation.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Using Saturation.
 
 
 Don't forget to add a *Wave* modifier, and select your vertex group in it!
@@ -426,15 +454,27 @@ which maps ``[0.0, 0.5]`` to ``[0.0, 0.25]`` and ``[0.5,
 and above ``0.75`` : this creates great "walls" in the waves...
 
 
-+--------------------------------------------------------------+--------------------------------------------------------+------------------------------------------------------------+
-+**Custom mapping curve.**                                                                                                                                                           +
-+--------------------------------------------------------------+--------------------------------------------------------+------------------------------------------------------------+
-+.. figure:: /images/ManModifiersWeightVGroupTexExCMapCurve.jpg|.. figure:: /images/ManModifiersWeightVGroupTexExRed.jpg|.. figure:: /images/ManModifiersWeightVGroupTexExRedCMap.jpg+
-+   :width: 200px                                              |   :width: 200px                                        |   :width: 200px                                            +
-+   :figwidth: 200px                                           |   :figwidth: 200px                                     |   :figwidth: 200px                                         +
-+                                                              |                                                        |                                                            +
-+   A customized mapping curve.                                |   Custom Mapping disabled.                             |   Custom Mapping enabled.                                  +
-+--------------------------------------------------------------+--------------------------------------------------------+------------------------------------------------------------+
+.. list-table::
+   Custom mapping curve.
+
+   * - .. figure:: /images/ManModifiersWeightVGroupTexExCMapCurve.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          A customized mapping curve.
+
+     - .. figure:: /images/ManModifiersWeightVGroupTexExRed.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Custom Mapping disabled.
+
+     - .. figure:: /images/ManModifiersWeightVGroupTexExRedCMap.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Custom Mapping enabled.
+
 
 .. vimeo:: 30188814
 

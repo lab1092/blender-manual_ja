@@ -19,9 +19,9 @@ Introduction
 The *Screw* Tool is one of the most used tools for generating continuous circular
 profiles in Blender since its ancient versions because the generated profiles are very
 predictable, light to deal with and well connected.
-This tool helps artists  generate clean circular-profile meshes.
+This tool helps artists generate clean circular-profile meshes.
 
-You can see some examples of Meshes generated with the *Screw* tool in  Fig.
+You can see some examples of Meshes generated with the *Screw* tool in Fig.
 1 - Wood Screw tip done with the screw tool and Fig. 2 - Spring done with the screw tool.
 
 
@@ -56,12 +56,20 @@ Usage
 =====
 
 - This tool works only with Meshes.
-- In *Edit Mode*, the button for the *Screw* tool operation is located in the *Mesh Tools* Panel, (shortcut :kbd:`T`) → Add → Screw Button.
-- To use this tool, you need to create at least one open profile or line to be used as a vector for the height, angular vector and to give Blender a direction.
-- The *Screw* function uses two points given by the open line to create an initial vector to calculate the height and basic angle of the translation vector that is added to the "Spin" for each full rotation (see examples below). If the vector is created with only two vertices at the same **X**, **Y** and **Z** location (which won't give Blender a vector value for height), this will create a normal "Spin".
-- Having at least one vector line, you can add other closed support profiles that will follow this vector during the extrusions (See limitations).
-- The direction of the extrusions is calculated by two determinant factors, your point of view in Global Space and the position of your cursor in the 3DView Space using Global coordinates.
-- The profile and the vector must be fully selected in *Edit Mode* before you click the *Screw Button* (See Limitations.)
+- In *Edit Mode*, the button for the *Screw* tool operation is located in the *Mesh Tools* Panel,
+  (shortcut :kbd:`T`) → Add → Screw Button.
+- To use this tool, you need to create at least one open profile or line to be used as a vector for the height,
+  angular vector and to give Blender a direction.
+- The *Screw* function uses two points given by the open line to create an initial vector to calculate the height
+  and basic angle of the translation vector that is added to the "Spin" for each full rotation (see examples below).
+  If the vector is created with only two vertices at the same **X**, **Y** and **Z** location
+  (which won't give Blender a vector value for height), this will create a normal "Spin".
+- Having at least one vector line,
+  you can add other closed support profiles that will follow this vector during the extrusions (See limitations).
+- The direction of the extrusions is calculated by two determinant factors,
+  your point of view in Global Space and the position of your cursor in the 3DView Space using Global coordinates.
+- The profile and the vector must be fully selected in *Edit Mode* before you click the *Screw Button*
+  (See Limitations.)
 - When you have the vector for the open profile and the other closed profiles selected, click the *Screw* Button.
 
 
@@ -144,10 +152,17 @@ If you want to restart the operation from its beginning,
 you can hit :kbd:`Ctrl-Z` at any time in *Edit Mode*.
 
 
-- The basic location of the cursor at the point of view (using Global coordinates) will determine around which axis the selection is extruded and spun at first (See Fig. 6 - Cursor Basic Location - Transform Panel). Blender will copy your cursor location coordinates to the values present in the *Center* values of the *Screw* interactive Panel. Depending on the Global View position, Blender will automatically add a value of **1** to one of the Axis Vectors, giving the profiles a starting direction for the Screw Operation and also giving a direction for the extrusions. (See examples below.)
-
-
-- The position of the 3D cursor will be the starting center of the rotation. Subsequent operations (e.g. pressing the Screw button again), will start from the last selected element. Continuous operations without changing the selection will repeat the operation continuously from the last point.
+- The basic location of the cursor at the point of view (using Global coordinates)
+  will determine around which axis the selection is extruded and spun at first
+  (See Fig. 6 - Cursor Basic Location - Transform Panel).
+  Blender will copy your cursor location coordinates to the
+  values present in the *Center* values of the *Screw* interactive Panel.
+  Depending on the Global View position, Blender will automatically add a value of **1** to one of the Axis Vectors,
+  giving the profiles a starting direction for the Screw Operation and also giving a direction for the extrusions.
+  (See examples below.)
+- The position of the 3D cursor will be the starting center of the rotation.
+  Subsequent operations (e.g. pressing the Screw button again), will start from the last selected element.
+  Continuous operations without changing the selection will repeat the operation continuously from the last point.
 
 
 .. figure:: /images/(Doc_26x_Modeling_Mesh_Screw)_(Cursor_Basic_Location)_(GBAFN).jpg
@@ -186,12 +201,11 @@ Axis
    These values correspond to angular vectors from ``-90`` to ``90`` degrees. Depending on the position where you
    started your cursor location and Object operation in the viewport and its axis positions in Global View space and
    coordinates, Blender will give the proper Axis vector a value of ``1``, giving the angular vector of the profile
-   a starting direction and giving the extrusions a starting direction based on your view.  Blender will let you
+   a starting direction and giving the extrusions a starting direction based on your view. Blender will let you
    adjust your axis angular vectors and you can tweak your object such that you can revert the direction of the screw
    operation (by reverting the angular vector of the height),
    meaning you can revert the clockwise and counterclockwise direction of some operations,
    and also adjust the angular vectors of your profile, bending it accordingly. (See Fig. 7)
-
 
 
 Examples
@@ -207,12 +221,22 @@ The Spring example
 
 - Open Blender and delete the default Cube.
 - Change from perspective to orthographic view using shortcut :kbd:`Numpad-5`.
-- Change your view from *User Ortho* to *Front Ortho*, using the shortcut :kbd:`Numpad-1`. You will see the X (red) and Z (blue) coordinate lines.
-- In case you have moved your cursor by clicking anywhere in the screen, again place your cursor at the Center, using the shortcut :kbd:`Shift-S` choosing *Cursor to Center* or the Transform Panel, placing your cursor at ``(0, 0, 0)`` typing directly into the Cursor 3D Location.
+- Change your view from *User Ortho* to *Front Ortho*, using the shortcut :kbd:`Numpad-1`.
+  You will see the X (red) and Z (blue) coordinate lines.
+- In case you have moved your cursor by clicking anywhere in the screen, again place your cursor at the Center,
+  using the shortcut :kbd:`Shift-S` choosing *Cursor to Center* or the Transform Panel,
+  placing your cursor at ``(0, 0, 0)`` typing directly into the Cursor 3D Location.
 - Add a circle using shortcut :kbd:`Shift-A` and choosing → Mesh → Circle.
 - Rotate this circle using the shortcut :kbd:`R-X` and typing ``90`` and :kbd:`Enter`.
 - Apply the Rotation using :kbd:`Ctrl-A` and choosing *Rotation*
-- Grab and move this circle to the left ``3`` Blender Units  on the ``X`` Axis; you can use the shortcut :kbd:`Ctrl` while grabbing with the mouse using the standard transform widgets (clicking on the red arrow shown with the object and grabbing while using shortcut :kbd:`Ctrl` until the down left info in the 3D View marks ``D. -3.0000 (3.0000) Global`` ), or press the shortcut :kbd:`G-X` and typing ``-3`` and :kbd:`Enter`. You can use the Transform Panel (toggled with the shortcut :kbd:`T` , and type ``-3`` and :kbd:`Enter` in the Location too. (See the Fig. 8 - Circle placed at X -3,0,0).
+- Grab and move this circle to the left ``3`` Blender Units on the ``X`` Axis;
+  you can use the shortcut :kbd:`Ctrl` while grabbing with the mouse using the standard transform widgets
+  (clicking on the red arrow shown with the object and grabbing while using shortcut
+  :kbd:`Ctrl` until the down left info in the 3D View marks ``D. -3.0000 (3.0000) Global`` ),
+  or press the shortcut :kbd:`G-X` and typing ``-3`` and :kbd:`Enter`.
+  You can use the Transform Panel (toggled with the shortcut :kbd:`T` ,
+  and type ``-3`` and :kbd:`Enter` in the Location too.
+  (See the Fig. 8 - Circle placed at X -3,0,0).
 - You will have to scale your circle using the shortcut :kbd:`S` and typing **.5**, then :kbd:`Enter`.
 - Now enter *Edit Mode* using shortcut :kbd:`Tab`.
 - De-select all vertices using the shortcut :kbd:`A`.
@@ -225,13 +249,26 @@ Now we will create a height vector for Blender:
    Fig. 9 - Profile and vector created
 
 
--  Press :kbd:`Ctrl` and Left click :kbd:`LMB` near the circle, in more or less at the light grey line of the square above the circle, and, while still pressing :kbd:`Ctrl`, Left Click :kbd:`LMB`  again in the grey line below the circle. You have created two vertices and an Edge, which Blender will use as the first height and angle vector.
-- Now, in the Transform Panel, in the median, clicking in the Global coordinates, for the **X**, **Y**, and **Z** coordinates, put **(-2, 0, -1)**.
-- Right Click :kbd:`RMB` in the other vertex, and again, type its coordinates for **X**, **Y** and **Z** to **(-2, 0, 1)**. This will create a straight vertical line with 2 Blender units of Height.
-- De-select and select everything again with the shortcut :kbd:`A`. (See Fig. 9 - Profile and vector created)
+- Press :kbd:`Ctrl` and Left click :kbd:`LMB` near the circle,
+  in more or less at the light grey line of the square above the circle,
+  and, while still pressing :kbd:`Ctrl`, Left Click :kbd:`LMB` again in the grey line below the circle.
+  You have created two vertices and an Edge, which Blender will use as the first height and angle vector.
+- Now, in the Transform Panel, in the median, clicking in the Global coordinates,
+  for the **X**, **Y**, and **Z** coordinates, put **(-2, 0, -1)**.
+- Right Click :kbd:`RMB` in the other vertex,
+  and again, type its coordinates for **X**, **Y** and **Z** to **(-2, 0, 1)**.
+  This will create a straight vertical line with 2 Blender units of Height.
+- De-select and select everything again with the shortcut :kbd:`A`.
+  (See Fig. 9 - Profile and vector created)
 - Place again your cursor at the center. (Repeat step 2)
-- At this point, we will save this Blender file to recycle the Spring for another exercise; click with :kbd:`LMB` in *File*, it is placed at the header of the Info Window, (At the top left side), and choose *Save as*. Our suggestion is to name it *Screw Spring Example.blend* and click in *Save as Blender file*. You can also use the shortcut :kbd:`Shift-Ctrl-S` to open the File Browser Window in order to save your Blender file.
-- Click Screw and adjust the Steps and Turns as you like and we have a nice spring, but now here comes the interesting part!
+- At this point, we will save this Blender file to recycle the
+  Spring for another exercise; click with :kbd:`LMB` in *File*,
+  it is placed at the header of the Info Window, (At the top left side), and choose *Save as*.
+  Our suggestion is to name it *Screw Spring Example.blend* and click in *Save as Blender file*.
+  You can also use the shortcut :kbd:`Shift-Ctrl-S`
+  to open the File Browser Window in order to save your Blender file.
+- Click Screw and adjust the Steps and Turns as you like and we have a nice spring,
+  but now here comes the interesting part!
 
 
 Clockwise and Counterclockwise using the Spring Example
@@ -243,7 +280,7 @@ Left click :kbd:`LMB` in the middle of the Value and set this value to **-1.000*
 At first, the Spring was being constructed in a Counterclockwise direction,
 and you reverted the operation **180** degrees in the **Z** Axis. This is because you have
 changed the angular vector of the height you have given to Blender to the opposite direction
-(remember, **-90**  to **90** = **180** degrees ?). See  Fig.
+(remember, **-90** to **90** = **180** degrees ?). See Fig.
 10 - Counterclockwise direction and Fig. 11 - Flipped to Clockwise direction.
 
 
@@ -280,7 +317,6 @@ Counterclockwise effect.
    the vector will be clear for Blender and you will have the full degree of freedom to change the vectors. Our
    example is important because it only changes the direction of the profile without the tilt and/or bending effect,
    as there is only one direction for the extrusion, parallel to one of the Blender Axes
-
 
 
 Bending the Profiles using the Spring Example
@@ -321,24 +357,36 @@ so the spindles of the screw (which are defined by the turns value)
 will assembly perfectly with each other.
 
 
-- Open Blender and click in *File* located at the header of the Info Window again, choose *Open Recent* and the file we saved for this exercise. All of the things will be placed exactly the way you saved before. Choose the last saved Blender file; in the last exercise, we gave it the name *Screw Spring Example.blend*.
+- Open Blender and click in *File* located at the header of the Info Window again,
+  choose *Open Recent* and the file we saved for this exercise.
+  All of the things will be placed exactly the way you saved before.
+  Choose the last saved Blender file; in the last exercise,
+  we gave it the name *Screw Spring Example.blend*.
 - Press the shortcut :kbd:`A` to de-select all vertices.
 - Press the shortcut :kbd:`B`, and Blender will change the cursor; you're now in border selection mode.
-- Open a box that selects all of the circle vertices except the two vertices we used to create the height of the extrusions in the last example.
+- Open a box that selects all of the circle vertices except the
+  two vertices we used to create the height of the extrusions in the last example.
 - Use the shortcut :kbd:`X` to delete them.
 - Press the shortcut :kbd:`A` to select the remaining vertices.
 - Press the shortcut :kbd:`W` for the *Specials Menu*, and select *Subdivide*
 - Now, click with the Right Mouse button at the middle vertex.
-- Grab this vertex using the shortcut :kbd:`G-X`, type **-1** and :kbd:`Enter`. See Fig. 14 - Profile for a perfect screw spindle.
-- At this point, we will save this Blender file to recycle the generated Screw for another exercise; click with :kbd:`LMB` in *File* -- it is in the header of the Info Window (at the top left side), and choose *Save as*. Our suggestion is to name it *Screw Hardware Example.blend* and click in *Save as Blender file*. You can also use the shortcut :kbd:`Shift-Ctrl-S` to open the File Browser Window in order to save your Blender file.
+- Grab this vertex using the shortcut :kbd:`G-X`, type **-1** and :kbd:`Enter`.
+  See Fig. 14 - Profile for a perfect screw spindle.
+- At this point, we will save this Blender file to recycle the generated Screw for another exercise;
+  click with :kbd:`LMB` in *File* --
+  it is in the header of the Info Window (at the top left side), and choose *Save as*.
+  Our suggestion is to name it *Screw Hardware Example.blend* and click in *Save as Blender file*.
+  You can also use the shortcut :kbd:`Shift-Ctrl-S` to open the
+  File Browser Window in order to save your Blender file.
 - Press shortcut :kbd:`A` twice to de-select and select all vertices again.
 - Now press Screw.
-- Change Steps and Turns as you like.  Fig. 15 - Generated Mesh - Shows you an example of the results.
+- Change Steps and Turns as you like. Fig. 15 - Generated Mesh - Shows you an example of the results.
 
 
 .. figure:: /images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Perfect_Spindle_Profile)_(GBAFN).jpg
 
-   Fig. 14 - Profile for a perfect screw spindle. The starting and ending vertices are forming a parallel line with the Blender Axis
+   Fig. 14 - Profile for a perfect screw spindle.
+   The starting and ending vertices are forming a parallel line with the Blender Axis
 
 
 .. figure:: /images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Generated_Perfect_Spindle)_(GBAFN).jpg
@@ -385,8 +433,12 @@ In this example, you will learn how to create a simple Screw Tip
 To make this new example as short as possible, we will recycle our last example (again).
 
 
-- Open Blender and click in *File* located in the header of the Info Window again; choose *Open Recent* and the file we saved for this exercise. All of the things will be placed exactly the way you saved before. Choose the last saved Blender file; in the last exercise, we gave it the name *Screw Hardware Example.blend*.
-- Grab the upper vertex and move a bit to the left, but no more than you have moved your last vertex. (See Fig. 18 - Profile With Starting Vector Angle)
+- Open Blender and click in *File* located in the header of the Info Window again;
+  choose *Open Recent* and the file we saved for this exercise.
+  All of the things will be placed exactly the way you saved before.
+  Choose the last saved Blender file; in the last exercise, we gave it the name *Screw Hardware Example.blend*.
+- Grab the upper vertex and move a bit to the left, but no more than you have moved your last vertex.
+  (See Fig. 18 - Profile With Starting Vector Angle)
 - Press the shortcut :kbd:`A` twice to de-select and select all.
 - Press the shortcut :kbd:`Shift-S` and select *Cursor to Center*
 - Press Screw.

@@ -7,7 +7,6 @@
 .. toctree::
 
    introduction.rst
-   navigating/index.rst
    transformations.rst
    transformations/advanced/mirror.rst
    transformations/advanced/to_sphere.rst

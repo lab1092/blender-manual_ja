@@ -112,21 +112,33 @@ Closest
    move the closest point of the selection to the target.
 
 
-+--------------------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+.. figure:: /images/3D-interaction_Transform-Control_Snap-snap-closest.jpg|.. figure:: /images/3D-interaction_Transform-Control_Snap-snap-active.jpg|.. figure:: /images/3D-interaction_Transform-Control_Snap-snap-median.jpg+
-+                                                                          |                                                                         |                                                                         +
-+   Closest                                                                |   Active                                                                |   Median                                                                +
-+--------------------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/3D-interaction_Transform-Control_Snap-snap-closest.jpg
+
+          Closest
+
+     - .. figure:: /images/3D-interaction_Transform-Control_Snap-snap-active.jpg
+
+          Active
+
+     - .. figure:: /images/3D-interaction_Transform-Control_Snap-snap-median.jpg
+
+          Median
 
 
 Additional snap options
 -----------------------
 
-+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-interaction_Transform-Control_Snap-snap-options-object-mode.jpg|.. figure:: /images/3D-interaction_Transform-Control_Snap-snap-options-edit-mode.jpg+
-+                                                                                      |                                                                                    +
-+   Object mode                                                                        |   Edit mode                                                                        +
-+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/3D-interaction_Transform-Control_Snap-snap-options-object-mode.jpg
+
+          Object mode
+
+     - .. figure:: /images/3D-interaction_Transform-Control_Snap-snap-options-edit-mode.jpg
+
+          Edit mode
 
 
 As seen by the red highlighted areas in the image above,

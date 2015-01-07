@@ -130,11 +130,15 @@ one for each interpolation axis (U and V). Note that unlike with curves, you hav
 (the *Resol U* and *V* fields, in the *Curve Tools* panel)...
 
 
-+-----------------------------------------------+-----------------------------------------------+
-+.. figure:: /images/NurbsSurface1Resolution.jpg|.. figure:: /images/NurbsSurface3Resolution.jpg+
-+                                               |                                               +
-+   Resolution 1x1.                             |   Resolution 3x3.                             +
-+-----------------------------------------------+-----------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/NurbsSurface1Resolution.jpg
+
+          Resolution 1x1.
+
+     - .. figure:: /images/NurbsSurface3Resolution.jpg
+
+          Resolution 3x3.
 
 
 (*Resolution 1x1*) is an example of a surface resolution of 3 for both ``U`` and ``V``. (*Resolution 3x3 surface*)
@@ -186,18 +190,16 @@ Order
 =====
 
 One more time, this property is the same as with :doc:`NURBS Curves </modeling/curves#order>`;
-it specifies how much the control points are taken into account for calculating the curve of the surface shape. For high *Orders*, (*1*), the surface pulls away from the control points, creating a smoother surface - assuming that the
-FIXME(TODO: Internal Link;
-[[#Surface Resolution|resolution]]
-) is high enough. For lowest *Orders*, (*2*), the surface follows the control points,
+it specifies how much the control points are taken into account for calculating the curve of the surface shape.
+For high *Orders*, (*1*), the surface pulls away from the control points,
+creating a smoother surface - assuming that the
+`Surface Resolution`_ is high enough. For lowest *Orders*, (*2*), the surface follows the control points,
 creating a surface that tends to follow the grid cage.
 
 
-+------------------------------------------------+
-+.. figure:: /images/NurbsSurfaceOrderExample.jpg+
-+                                                +
-+   Order 2 and order 4 surface.                 +
-+------------------------------------------------+
+.. figure:: /images/NurbsSurfaceOrderExample.jpg
+
+   Order 2 and order 4 surface.
 
 
 For illustration purposes, in both (*Order 4 surface*) and (*Order 2 surface*),

@@ -1,30 +1,18 @@
-*******
-Startup
-*******
+
+***********************
+Troubleshooting Startup
+***********************
+
+There are some common causes for problems when using Blender. If you can not find a solution for your problem here,
+try asking the `community <introduction/community>`__ for help.
+
+
+Crash on Startup
+================
 
 If blender crashes on startup there are a few things to check for:
 
-- OpenGL version. Make sure a graphics card driver with support for OpenGL version 1.4 at least is installed
-  Check your graphics hardware manual and/or graphics vendor webpage for updated drivers.
-  Note: a graphics card with OpenGL support will not work without a driver. Some windows installations
-  come without a driver installation, even though the computer hardware is capable of supporting OpenGL.
-  To detect your OpenGL version, you can use external software, like OpenGL extensions viewer(glview) on windows 
-  or glxinfo on Linux.
-- Make sure you are using the correct version (32 or 64 bit) for your operating system.
-
-
-Linux
-=====
-
-
-MS-Windows
-==========
-
-Make sure the latest service packs for your operating system are installed.
-Blender also needs the MSVC 2012 redistributable package installed.
-
-
-OSX
-===
-
+- See if you computer meets the `minimum requirements <http://www.blender.org/download/requirements/>`__
+- Confirm that you graphics card is supported and that the drivers support at least OpenGL 1.4
+- Make sure you are using the correct Blender version (32 or 64 bit) for your architecture.
 

@@ -1,22 +1,26 @@
 
-..    TODO/Review: {{review|split=X|text=need to separate generic information from moving, erase join. like 2.4. Need also to explain objects classes (curves, mesh, etc) and possible conversions from and to (greylica)}} .
-
+..    TODO/Review: {{review|split=X|text=need to separate generic information from moving, erase join. like 2.4.
+..                *update* erase join removed from here (already in /modeling/objects/editing.rst). Moving info
+..                seems to belong to the 3D interaction section (which is to be removed or merged? - pixaal 12/24/14)
+..     Need also to explain objects classes (curves, mesh, etc) and possible conversions from and to (greylica)}} .
+..    FIXME: This section about objects includes armatures, lamps, and cameras, and doesn't fit in the modeling section.
+..           The introduction includes a list of object types that are relevant to modeling, so this section needs to be
+..           moved out to an earlier section, perhaps the beginning of 3d navigation(/3d_interaction/navigating)
 
 ***********
 Object Mode
 ***********
 
 .. figure:: /images/Manual-2.5-Part-II-ObjectMode-Selected-Ex.jpg
-   :width: 300px
-   :figwidth: 300px
+   :width: 400px
+   :figwidth: 400px
 
-   Selected object in 3D View:
-   1 - Solid shading, 2 - Wireframe shading.
+   Selected object in 3D View: (1) Solid shading, (2) Wireframe shading.
 
 
-The geometry of a scene is constructed from one or more Objects:
-For example Lamps, Curves, Surfaces, Cameras, Meshes, and the basic objects ("primitives")
-described in :doc:`Mesh Primitives </modeling/meshes/primitives>`
+The geometry of a scene is constructed from one or more Objects. These objects
+can range from lamps to light your scene, basic 2D and 3D shapes to fill it with models, armatures
+to animate those models, to cameras to take pictures or video of it all.
 
 
 Types of Objects
@@ -24,30 +28,37 @@ Types of Objects
 
 :doc:`Meshes </modeling/meshes>`
    Meshes are objects composed of Polygonal Faces, Edges and/or Vertices,
-   and can be edited extensively with Blender's mesh editing tools.
+   and can be edited extensively with Blender's mesh editing tools. The default scene features a cube,
+   which is one of the many included basic building-block
+   shapes called :doc:`Mesh Primitives </modeling/meshes/primitives>`
 :doc:`Curves </modeling/curves>`
-   Curves are mathematically defined objects,
-   which can be manipulated with control handles or control points, rather than vertices.
+   Curves are mathematically defined objects
+   which can be manipulated with control handles or control points (instead of vertices),
+   to manage their length and curvature.
 :doc:`Surfaces </modeling/surfaces>`
-   Surfaces are four-sided patches that are also manipulated with control points.
-   These are useful for very organic, and rounded, but simple forms.
+   Surfaces are patches that are also manipulated with control points.
+   These are useful for simple rounded forms and organic landscapes.
 :doc:`Meta Objects </modeling/metas>`
-   Meta Objects (or Metaballs) are objects formed by a function defining the 3d volume in which the object exists.
-   Metaballs can create "Blobby" forms that have a liquid-like quality, when two or more Metaballs are used.
+   Meta Objects (or Metaballs) are objects formed by a mathematical function (with no control points or vertices)
+   defining the 3D volume in which the object exists.
+   Meta Objects have a liquid-like quality, where when two or more Metaballs are brought together,
+   they merge by smoothly rounding out the connection, appearing as one unified object.
 :doc:`Text </modeling/texts>`
-   Text objects create a 2d representation of a string of characters.
+   Text objects create a two dimensional representation of a string of characters.
 :doc:`Armatures </rigging/armatures>`
-   Armatures are used for rigging 3d models in order to make them poseable and animateable.
+   Armatures are used for :doc:`rigging </rigging/introduction>`
+   3D models in order to make them poseable and animateable.
 :doc:`Lattice </modifiers/deform/lattice>`
-   Nonrenderable wireframe. Commonly used for taking additional control over other objects with help of modifiers.
+   Lattices are non-renderable wireframes, commonly used for taking additional control
+   over other objects with help of the :doc:`Lattice Modifier </modifiers/deform/lattice>`.
 :doc:`Empty </modeling/empties>`
    Empties are null objects that are simple visual transform nodes that do not render.
    They are useful for controlling the position or movement of other objects.
-:doc:`Speaker </sequencer/audio>`
+:doc:`Speaker </editors/sequencer/audio>`
    Brings to scene source of sound.
 :doc:`Cameras </render/camera>`
    This is the virtual camera that is used to determine what appears in the render.
-:doc:`Lamps </lighting>`
+:doc:`Lamps </render/blender_render/lighting>`
    These are used to place light sources in the scene.
 :doc:`Force Fields </physics/force_fields>`
    Force fields are used in physical simulations.
@@ -103,47 +114,16 @@ Moving Object Centers
 =====================
 
 Object Centers can be moved to different positions through
-*3D View window → Transform → Origin*  (press :kbd:`T` to open panel):
+*3D View window → Transform → Origin* (press :kbd:`T` to open panel):
 
 Geometry to Origin
    Move model to origin and this way origin of the object will also be at the center of the object.
 Origin to Geometry
-   Move origin to the center of the object and this way origin of the object will also be at the center of the object.
+   Move origin to the center of the object and this way origin of the object will also be at
+   the center of the object.
 Origin to 3D Cursor
    Move origin of the model to the place of the 3D cursor.
 Origin to Center of Mass
    Move origin to calculated center of mass of model.
-
-
-Erase Objects
-*************
-
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     *Edit* or *Object* mode
-   | Menu:     *Object* → *Delete*
-   | Hotkey:   :kbd:`X` or :kbd:`DEL`
-
-
-Erases or deletes selected objects.
-
-
-Join Objects
-************
-
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     *Object* mode
-   | Menu:     *Object* → *Join Objects*
-   | Hotkey:   :kbd:`Ctrl-J`
-
-
-Joins all selected objects to one single object. Must be of the same type.
-Origin point is obtained from the previously *active* object.
-Performing a join is equivalent to adding new objects while in *Edit mode*.
-The non-active objects are deleted. Only the active object remains.
-This only works with editable objects, like meshes and curves.
 
 

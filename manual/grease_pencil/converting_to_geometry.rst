@@ -122,7 +122,7 @@ Gap Duration
    else it will be scaled, exactly as the actual strokes' timing is!
 
 Gap Randomness
-   Only when *Gap Duration* is non-null.  The number of frames actual gap duration can vary of.
+   Only when *Gap Duration* is non-null. The number of frames actual gap duration can vary of.
    This allows the creation of gaps having an average well defined duration,
    yet keeping some random variations to avoid an "always the same" effect.
 
@@ -139,4 +139,5 @@ Here is a simple "hand writing" video created with curves converted from sketch 
 .. youtube:: VwWEXrnQAFI
 
 And the blend file:
-`File:ManGreasePencilConvertToCurveDynamicExample.blend <http://wiki.blender.org/index.php/file:ManGreasePencilConvertToCurveDynamicExample.blend>`__
+`File:ManGreasePencilConvertToCurveDynamicExample.blend
+<http://wiki.blender.org/index.php/file:ManGreasePencilConvertToCurveDynamicExample.blend>`__

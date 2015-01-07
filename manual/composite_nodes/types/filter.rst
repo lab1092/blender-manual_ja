@@ -75,8 +75,8 @@ Options
 The X and Y values are the number of pixels over which to spread the blur effect.
 
 The Bokeh button (only visible as Bok or Bo on some screen setups)
-will force the blur node to use a circular blur filter.  This gives higher quality results,
-but is slower then using a normal filter.  The Gam button (for "gamma")
+will force the blur node to use a circular blur filter. This gives higher quality results,
+but is slower then using a normal filter. The Gam button (for "gamma")
 makes the Blur node gamma-correct the image before blurring it.
 
 
@@ -138,7 +138,6 @@ and then combining it (AlphaOver) to build up the progressive sequence of blurs.
 Play with the Value and Multiply nodes to change the amount of blurring that each algorithm does.
 
 
-
 Bilateral Blur Node
 ===================
 
@@ -175,11 +174,10 @@ Options
 -------
 
 Iterations
-   Defines how many times the filter should perform the operation on the image. It practically defines the radius of blur.
-
+   Defines how many times the filter should perform the operation on the image.
+   It practically defines the radius of blur.
 Color Sigma
    Defines the threshold for which color differences in the image should be taken as edges.
-
 Space sigma
    A fine-tuning variable for blur radius.
 
@@ -220,22 +218,23 @@ Motion blur is the effect of objects moving so fast they blur.
 Because CG animations work by rendering individual frames,
 they have no real knowledge of what was where in the last frame, and where it is now.
 
-In Blender, there are two ways to produce motion blur.  The first method
+In Blender, there are two ways to produce motion blur. The first method
 (which produces the most correct results)
 works by rendering a single frame up to 16 times with slight time offsets,
 then accumlating these images together;
-this is called Motion Blur and is activated on the Render panel.  The second (and much faster)
+this is called Motion Blur and is activated on the Render panel. The second (and much faster)
 method is the Compositor node Vector Blur.
 
 To use, connect the appropriate passes from a Render Result node.
 
 .. note::
 
-   Make sure to enable the Speed (called Vec) pass in the Render Layers panel for the render layer you wish to perform motion blur on.
+   Make sure to enable the Speed (called Vec)
+   pass in the Render Layers panel for the render layer you wish to perform motion blur on.
 
 
 Maximum Speed: Because of the way vector blur works, it can produce streaks,
-lines and other artifacts.  These mostly come from pixels moving too fast;
+lines and other artifacts. These mostly come from pixels moving too fast;
 to combat these problems, the filter has minimum and maximum speed settings,
 which can be used to limit which pixels get blurred (e.g. if a pixel is moving really,
 really fast but you have maximum speed set to a moderate amount, it won't get blurred).
@@ -250,16 +249,20 @@ A value of just 3 will already clearly separate the background from foreground.
 
 .. note:: Hint
 
-   You can make vector blur results a little smoother by passing the Speed pass through a blur node (but note that this can make strange results, so it's only really appropriate for still images with lots of motion blur).
+   You can make vector blur results a little smoother by passing the Speed pass through a blur node
+   (but note that this can make strange results,
+   so it's only really appropriate for still images with lots of motion blur).
 
 
 Examples
 --------
 
-An in-depth look at how to use the Vector Blur node :doc:`can be found here </ls/composite_nodes/types/filter/vector_blur>`.
+An in-depth look at how to use the Vector Blur node
+:doc:`can be found here </ls/composite_nodes/types/filter/vector_blur>`.
 
 As far as we know, this node represents a
-`new approach to calculating motion blur <http://www.blender.org/development/release-logs/blender-242/vector-blur/>`__.
+`new approach to calculating motion blur
+<http://www.blender.org/development/release-logs/blender-242/vector-blur/>`__.
 Use vector blur in compositing with confidence instead of motion blur. In face,
 when compositing images, it is necessary to use vector blur since there isn't "real" motion.
 In this `example blend file <http://download.blender.org/demo/test/driven_hand_blur.blend>`__,
@@ -271,9 +274,7 @@ is blurred the least.
 Known Bugs
 ----------
 
-FIXME(Template Unsupported: Version;
-{{Version|2.44}}
-)
+FIXME(Template Unsupported: Version;{{Version|2.44}})
 Does not work when reading from a multilayer OpenEXR sequence set
 
 
@@ -364,7 +365,8 @@ Node Setting
 The settings for this node are:
 
 Bokeh Type menu
-   Here you set the number of iris blades of the virtual camera's diaphragm. It can be set to emulate a perfect circle
+   Here you set the number of iris blades of the virtual camera's diaphragm.
+   It can be set to emulate a perfect circle
    (*Disk*) or it can be set to have 3 (*Triangle*), 4 (*Square*), 5
    (*Pentagon*), 6 (*Hexagon*), 7 (*Heptagon*) or 8 blades
    (*Octagon*). The reason it does not go any higher than 8 is that from that point on the result tends to
@@ -374,8 +376,7 @@ Rotate
    It can be used to add an additional rotation offset to the Bokeh shape. The value is the angle in degrees.
 
 Gamma Correct
-   Exactly the same as the *Gamma* option in Blender's general *Blur* node (see
-   FIXME(TODO: Internal Link; [[#Blur Node|Blur Node]])).
+   Exactly the same as the *Gamma* option in Blender's general *Blur* node (see `Blur Node`_).
    It can be useful to further brighten out of focus parts in the image, accentuating the Bokeh effect.
 
 
@@ -455,7 +456,6 @@ Zscale
    (similar to *fStop* when you *do* use a zbuffer).
 
 
-
 Examples
 --------
 
@@ -474,7 +474,8 @@ Hints
 -----
 
 Preview
-   In general, use preview mode, change parameters to your liking, only then disable preview mode for the final render.
+   In general, use preview mode, change parameters to your liking,
+   only then disable preview mode for the final render.
    This node is compute intensive, so watch your console window,
    and it will give you status as it computes each render scan line.
 Edge Artifacts
@@ -487,14 +488,16 @@ Edge Artifacts
    and the camera focusing on some point far behind it. In the real world, using shallow depth of field,
    it is not impossible for nearby objects to become completely invisible,
    in effect allowing the camera to see 'behind' it.
-   Hollywood cinematographers use this visual characteristic to good effect to achieve the popular "focus pull" effect,
-   where the focus shifts from a nearby to a distant object, such that the "other" object all but disappears.  Well,
-   this is simply not possible to do with the current post-processing method in a single pass.
+   Hollywood cinematographers use this visual characteristic to
+   good effect to achieve the popular "focus pull" effect,
+   where the focus shifts from a nearby to a distant object, such that the "other" object all but disappears.
+   Well, this is simply not possible to do with the current post-processing method in a single pass.
    If you really want to achieve this effect, quite satisfactorily, here's how:
 
    - Split up your scene into "nearby" and "far" objects, and render them in two passes.
    - Now, combine the two the two results, each with their own "defocus" nodes driven by the same Time node,
-     but with one of them inverted. (e.g. using a "Map Value" node with a Size of -1.)  As the defocus of one increases,
+     but with one of them inverted. (e.g. using a "Map Value" node with a Size of -1.)
+     As the defocus of one increases,
      the defocus on the other decreases at the same rate, creating a smooth transition.
 
 

@@ -117,7 +117,7 @@ Basic Surface Editing (translation, rotation, scale)
 
 Once you have a selection of one or more control points,
 you can grab/move (:kbd:`G`), rotate (:kbd:`R`) or scale (:kbd:`S`) them, like many other things in Blender,
-as described in the :doc:`Manipulation in 3D Space </basics/transformations/introduction>` section.
+as described in the :doc:`Manipulation in 3D Space </getting_started/basics/transformations/introduction>` section.
 
 You also have in *Edit* mode an extra option when using these basic manipulations: the
 :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>`.
@@ -189,8 +189,7 @@ row is selected - otherwise nothing happens.
 As for curves, you cannot create a new surface in your object out of nowhere,
 by just :kbd:`Ctrl-LMB` -clicking with nothing selected.
 However, unlike for curves, there is no "cut" option allowing you to separate a surface into several parts,
-so you only can create a new surface by
-FIXME(TODO: Internal Link; [[#Duplication|copying]]) an existing one
+so you only can create a new surface by copying (`Duplication`_) an existing one
 (:kbd:`Shift-D`), or adding a new one (*Add* menu...).
 
 
@@ -256,7 +255,7 @@ The corresponding surface's outer edges will join together to form a "closed" su
    the first being black whereas the latter is correctly shaded -
    there does not seem to be any "double sided" shading option for surfaces...).
    When you close a surface in one or two directions, you might get an entirely black object! In this case,
-   just FIXME(TODO: Internal Link; [[#Switch Direction|switch the "direction"]]) of your surface...
+   just `Switch Direction`_ of your surface...
 
 
 Duplication
@@ -349,7 +348,7 @@ Just like :doc:`curves </modeling/curves/editing#joining_or_merging_curves>`,
 merging two surfaces requires that a single edge, a border row of control points,
 from two separate surfaces are selected. This means that the surfaces must be part of the same object. For example,
 you can't join two surfaces while in *Object* mode - but you can of course, as with any objects of the same type,
-FIXME(TODO: Internal Link; [[#Joining Objects|join two or more {{Literal|Surface}} objects]])
+join two or more *Surface* objects (`Joining Objects`_)
 into one object (:kbd:`Ctrl-J`) - they just won't be "linked" or merged in a single one... Yes, it's a bit confusing!
 
 This command is equivalent to creating edges or :kbd:`F` aces for meshes
@@ -374,17 +373,16 @@ See :doc:`this tutorial </ls/modeling/surfaces/skinning>` for a detailed workflo
 Examples
 --------
 
-(*Joining ready*) is an example of two NURBS surface curves, **not** NURBS curves, in *Edit* mode, ready to be joined.
+(*Joining ready*) is an example of two NURBS surface curves, **not** NURBS curves,
+in *Edit* mode, ready to be joined.
 (*Joining complete*) is the result of joining the two curves.
 
 
-+---------------------------------+
-+.. figure:: /images/NurbsJoin.jpg+
-+   :width: 350px                 +
-+   :figwidth: 350px              +
-+                                 +
-+   Joining ready.                +
-+---------------------------------+
+.. figure:: /images/NurbsJoin.jpg
+   :width: 350px
+   :figwidth: 350px
+
+   Joining ready.
 
 
 Subdivision
@@ -437,7 +435,8 @@ Switch Direction
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Surface --> Segments --> Switch Direction`, :menuselection:`Specials --> Switch Direction`
+   | Menu:     :menuselection:`Surface --> Segments --> Switch Direction`,
+     :menuselection:`Specials --> Switch Direction`
    | Hotkey:   :menuselection:`[W] --> [pad2]`
 
 

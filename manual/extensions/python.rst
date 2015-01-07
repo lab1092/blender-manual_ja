@@ -47,7 +47,7 @@ Links that deal with distributing your scripts.
 - `Sharing scripts <http://wiki.blender.org/index.php/Dev:Py/Sharing>`__
 
   - Information on how to share your scripts and get them included in the official Blender distribution.
-- `Creating Add-Ons <http://wiki.blender.org/index.php/Dev:2.5/Py/Scripts/Guidelines/Addons>`__
+- `Creating Add-ons <http://wiki.blender.org/index.php/Dev:2.5/Py/Scripts/Guidelines/Addons>`__
 
   - As of Blender 2.5 Alpha1, this is the new way to spread scripts for Blender.
 - `Extensions project <https://projects.blender.org/projects/bf-extensions/>`__
@@ -76,7 +76,8 @@ The following pages are not located on this wiki,
 but contain a lot of good information to start learning how to write scripts for Blender.
 
 
-- `Introductory tutorial by Satish Goda <http://sites.google.com/site/satishgoda/blender/learningblender25/introduction-to-blender-python-api>`__
+- `Introductory tutorial by Satish Goda
+  <http://sites.google.com/site/satishgoda/blender/learningblender25/introduction-to-blender-python-api>`__
   - Takes you from the beginning and teaches how to do basic API manipulations.
 - `Ira Krakow's video tutorials <http://www.youtube.com/watch?v=vmhU_whC6zw>`__
   - First video in a series of video tutorials.
@@ -84,6 +85,7 @@ but contain a lot of good information to start learning how to write scripts for
   - A quickstart guide for people who already have some familiarity with Python and Blender.
 - `Examples thread <http://blenderartists.org/forum/showthread.php?t=164765>`__
   - A forum thread containing many short working script examples.
-- `Introduction to Python <http://cgcookie.com/blender/2011/08/26/introduction-to-scripting-with-python-in-blender/>`__
+- `Introduction to Python
+  <http://cgcookie.com/blender/2011/08/26/introduction-to-scripting-with-python-in-blender/>`__
   - A one hour video tutorial introducing Python and the Blender API.
 

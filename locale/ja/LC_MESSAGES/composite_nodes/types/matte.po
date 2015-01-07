@@ -11,18 +11,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../manual/composite_nodes/types/matte.rst:7
+#: ../../manual/composite_nodes/types/matte.rst:8
 msgid "Composite Matte Nodes"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:9
+#: ../../manual/composite_nodes/types/matte.rst:10
 msgid ""
 "These nodes give you the essential tools for working with blue-screen or "
 "green-screen footage, where live action is shot in front of a blue or green "
 "backdrop for replacement by a matte painting or virtual background."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:13
+#: ../../manual/composite_nodes/types/matte.rst:14
 msgid ""
 "In general, hook up these nodes to a viewer, set your UV/Image Editor to "
 "show the viewer node, and play with the sliders in real-time using a sample "
@@ -32,7 +32,7 @@ msgid ""
 "'flat' or blueish/purplish."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:19
+#: ../../manual/composite_nodes/types/matte.rst:20
 msgid ""
 "You can and should chain these nodes together, refining your color "
 "correction in successive refinements, using each node's strengths to operate"
@@ -40,7 +40,7 @@ msgid ""
 "\"does-it-all\" node; they work best in combination."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:24
+#: ../../manual/composite_nodes/types/matte.rst:25
 msgid ""
 "Usually, green screen is shot in a stage with consistent lighting from shot "
 "to shot, so the same settings will work across multiple shots of raw "
@@ -49,11 +49,11 @@ msgid ""
 "values."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:29
+#: ../../manual/composite_nodes/types/matte.rst:30
 msgid "Garbage Matte"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:31
+#: ../../manual/composite_nodes/types/matte.rst:32
 msgid ""
 "Garbage matte is not a node, but a technique where the foreground is "
 "outlined using a closed curve (bezier or nurbs). Only the area within the "
@@ -61,29 +61,19 @@ msgid ""
 "thus discarded."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:38
+#: ../../manual/composite_nodes/types/matte.rst:39
 msgid "Difference Key Node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:42
+#: ../../manual/composite_nodes/types/matte.rst:43
 msgid "Difference Key node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:45
-msgid ""
-"The difference key node determines how different each channel is  from the "
-"given key in the selected color space. If the differences are below a user "
-"defined threshold then the pixel is considered transparent. Difference "
-"matting does not rely on a certain background color, but can have less than "
-"optimal results if there is a significant amount of background color in the "
-"foreground object."
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:51
+#: ../../manual/composite_nodes/types/matte.rst:52
 msgid "There are two inputs to this node."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:59
+#: ../../manual/composite_nodes/types/matte.rst:62
 msgid ""
 "You can adjust the tolerance of each color in the colorspace individually so"
 " that you can have more red variance or blue variance in what you would "
@@ -92,34 +82,11 @@ msgid ""
 "cutting into the foreground image."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:74
+#: ../../manual/composite_nodes/types/matte.rst:77
 msgid "Simple Example"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:80
-msgid "Using the  Difference Key Node"
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:83
-msgid ""
-"In the example to the right (click to expand), we have a purple cube with "
-"yellow marbeling in front of a very unevenly lit green screen. We start "
-"building our noodle by threading the image to a difference key, and using "
-"the eyedropper, pick a key color very close to the edge of the cube, around "
-"where the halo is  at the corner on the left-hand side; a fairly bright "
-"green. We thread two viewers from the output sockets so we can see what (if "
-"anything) the node is doing. We add an AlphaOver node, threading the Matte "
-"to the **TOP** socket and the image to the **BOTTOM** socket. Very "
-"Important, because 0 time blue is not the same as blue times zero. You "
-"always want your mask to go to the top socket of the AlphaOver. Premultiply "
-"is set and a full multiply is on so that we completely remove the green. In "
-"this example, we thread the output of the alphaover to a SplitViewer node so"
-" we can compare our results; the original is threaded to the bottom input of"
-" the SplitViewer, so that original is on the left, processed is on the "
-"right."
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:99
+#: ../../manual/composite_nodes/types/matte.rst:102
 msgid ""
 "We set our variance to .15, and see what we get. What we get (not shown) is "
 "a matte that masks around the cube, but not on the right and around the "
@@ -131,15 +98,11 @@ msgid ""
 "decreasing the green until we settle on 55% (shown)."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:110
+#: ../../manual/composite_nodes/types/matte.rst:113
 msgid "Chaining Example"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:116
-msgid "Chaining  Difference Key Nodes"
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:119
+#: ../../manual/composite_nodes/types/matte.rst:122
 msgid ""
 "We pay out the wazoo for our highly talented (and egotistical I might add) "
 "Mr. Cube to come into the studio and do a few takes. We told him NOT to wear"
@@ -152,7 +115,7 @@ msgid ""
 " actors."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:128
+#: ../../manual/composite_nodes/types/matte.rst:131
 msgid ""
 "So, we chain two Difference Key nodes as shown to the right, and problem "
 "solved. What we did was lower the variation percentage on the first to "
@@ -162,33 +125,33 @@ msgid ""
 "affected; that shade is outside the key's +/- variation tolerances."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:137
+#: ../../manual/composite_nodes/types/matte.rst:140
 msgid "Chroma Key Node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:141
+#: ../../manual/composite_nodes/types/matte.rst:144
 msgid "Chroma Key node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:150
-#: ../../manual/composite_nodes/types/matte.rst:200
-#: ../../manual/composite_nodes/types/matte.rst:287
+#: ../../manual/composite_nodes/types/matte.rst:153
+#: ../../manual/composite_nodes/types/matte.rst:203
+#: ../../manual/composite_nodes/types/matte.rst:292
 msgid "Control this node using:"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:153
+#: ../../manual/composite_nodes/types/matte.rst:155
 msgid "Green / Blue buttons"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:153
+#: ../../manual/composite_nodes/types/matte.rst:156
 msgid "Basic selection of what color the background is supposed to be."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:156
+#: ../../manual/composite_nodes/types/matte.rst:157
 msgid "Cb Slope and Cr Slope (chroma channel) sliders"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:156
+#: ../../manual/composite_nodes/types/matte.rst:158
 msgid ""
 "Determines how quickly the processed pixel values go from background to "
 "foreground, much like falloff."
@@ -198,7 +161,7 @@ msgstr ""
 msgid "Cb Pos and Cr Pos sliders"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:159
+#: ../../manual/composite_nodes/types/matte.rst:160
 msgid ""
 "Determines where the processing transition point for foreground and "
 "background is in the respective channel."
@@ -208,14 +171,7 @@ msgstr ""
 msgid "Threshold"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:162
-msgid ""
-"Determines if additional detail is added to the pixel if it is transparent."
-"  This is useful for pulling shadows from an image even if they are in the "
-"green screen area."
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:165
+#: ../../manual/composite_nodes/types/matte.rst:168
 msgid "Alpha threshold"
 msgstr ""
 
@@ -228,38 +184,38 @@ msgid ""
 " be considered transparent."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:172
+#: ../../manual/composite_nodes/types/matte.rst:175
 msgid "Color Key"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:176
+#: ../../manual/composite_nodes/types/matte.rst:179
 msgid "Color Key node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:186
+#: ../../manual/composite_nodes/types/matte.rst:189
 msgid "Luminance Key Node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:190
+#: ../../manual/composite_nodes/types/matte.rst:193
 msgid "Luminance Key node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:205
-#: ../../manual/composite_nodes/types/matte.rst:300
+#: ../../manual/composite_nodes/types/matte.rst:210
+#: ../../manual/composite_nodes/types/matte.rst:305
 msgid ""
 "It is possible to have a separation between the two values to allow for a "
 "gradient of transparency between foreground and background objects."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:213
+#: ../../manual/composite_nodes/types/matte.rst:218
 msgid "Example"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:219
+#: ../../manual/composite_nodes/types/matte.rst:224
 msgid "Using Luma Key...with a twist"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:222
+#: ../../manual/composite_nodes/types/matte.rst:227
 msgid ""
 "For this example, let's throw you a ringer. Here, the model was shot against"
 " a *white* background. Using the Luminance Key node, we get a matte out "
@@ -271,7 +227,7 @@ msgid ""
 "mask is shown; her white outline is useable as an alpha mask now."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:232
+#: ../../manual/composite_nodes/types/matte.rst:237
 msgid ""
 "Now to mix, we don't really need the AlphaOver node; we can just use the "
 "mask as our Factor input. In this kinda weird case, we can use the matte "
@@ -284,69 +240,60 @@ msgid ""
 "teleported from Atlanta to aboard a cruise ship docked in Miami."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:244
+#: ../../manual/composite_nodes/types/matte.rst:249
 msgid "Color Spill Node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:248
+#: ../../manual/composite_nodes/types/matte.rst:253
 msgid "Color Spill node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:267
+#: ../../manual/composite_nodes/types/matte.rst:272
 msgid "The outputs of this node are the image with the corrected channels."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:271
+#: ../../manual/composite_nodes/types/matte.rst:276
 msgid "Channel Key Node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:277
+#: ../../manual/composite_nodes/types/matte.rst:282
 msgid "Channel Key node"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:308
+#: ../../manual/composite_nodes/types/matte.rst:313
 msgid "Distance Key"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:310
+#: ../../manual/composite_nodes/types/matte.rst:315
 msgid "..."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:53
+#: ../../manual/composite_nodes/types/matte.rst:54
 msgid "The first is an input *Image* that is to be keyed."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:54
+#: ../../manual/composite_nodes/types/matte.rst:55
 msgid ""
 "The *Key Color* can be input as an RGB value or selected using the color "
 "picker by clicking on the *Key Color* box to bring up the color dialog, then"
 " clicking on the eye dropper tool and selecting a color."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:56
+#: ../../manual/composite_nodes/types/matte.rst:59
 msgid ""
 "The selectable color spaces are *RGB* (default), *HSV*, *YUV*, and *YCbCr*."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:64
-msgid ""
-"When the *Falloff* value is high, pixels that are close to the *Key Color* "
-"are more transparent than pixels that are not as close to the *Key Color* "
-"(but still considered close enough to be keyed).  When the *Falloff* value "
-"is low, it does not matter how close the pixel color (*Image*) is to the "
-"*Key Color*, it is transparent."
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:70
-#: ../../manual/composite_nodes/types/matte.rst:167
-#: ../../manual/composite_nodes/types/matte.rst:208
-#: ../../manual/composite_nodes/types/matte.rst:303
+#: ../../manual/composite_nodes/types/matte.rst:73
+#: ../../manual/composite_nodes/types/matte.rst:170
+#: ../../manual/composite_nodes/types/matte.rst:213
+#: ../../manual/composite_nodes/types/matte.rst:308
 msgid ""
 "The outputs of this node are the *Image* with an alpha channel adjusted for "
 "the keyed selection and a black and white *Matte* (i.e the alpha mask)."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:144
+#: ../../manual/composite_nodes/types/matte.rst:147
 msgid ""
 "The *Chroma Key* node determines if a pixel is foreground or background (and"
 " thereby should be transparent) based on its chroma values. This is useful "
@@ -354,13 +301,13 @@ msgid ""
 "screen."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:148
-#: ../../manual/composite_nodes/types/matte.rst:198
-#: ../../manual/composite_nodes/types/matte.rst:285
+#: ../../manual/composite_nodes/types/matte.rst:151
+#: ../../manual/composite_nodes/types/matte.rst:201
+#: ../../manual/composite_nodes/types/matte.rst:290
 msgid "There is one input to this node, the *Image* that is to be keyed."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:179
+#: ../../manual/composite_nodes/types/matte.rst:182
 msgid ""
 "The color key node creates a matte based on a specified color of the input "
 "image. The sliders represent threshold values for *Hue*, *Saturation*, and "
@@ -368,29 +315,21 @@ msgid ""
 "from the specified will be added to the matte."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:193
-msgid ""
-"The *Luminance Key* node determines background objects from foreground "
-"objects by the difference in the luminance (brightness) levels.  For "
-"example, this is useful when compositing stock footage of explosions (very "
-"bright) which are normally shot against a solid, dark background."
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:202
+#: ../../manual/composite_nodes/types/matte.rst:205
 msgid ""
 "The *High* value selector determines the lowest values that are considered "
 "foreground. (which is supposed to be - relatively - light: from this value "
 "to 1.0)."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:203
+#: ../../manual/composite_nodes/types/matte.rst:207
 msgid ""
 "The *Low* value selector determines the hightes values that are considered "
 "to be background objects. (which is supposed to be - relatively - dark: from"
 " 0.0 to this value)."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:251
+#: ../../manual/composite_nodes/types/matte.rst:256
 msgid ""
 "The *Color Spill* node reduces one of the RGB channels so that it is not "
 "greater than any of the others. This is common when compositing images that "
@@ -403,62 +342,184 @@ msgid ""
 "(or blue) light, you use this fancy node."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:261
+#: ../../manual/composite_nodes/types/matte.rst:266
 msgid "There is one input to this node, the *Image* to be processed."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:263
+#: ../../manual/composite_nodes/types/matte.rst:268
 msgid ""
 "The *Enhance* slider allows you to reduce the selected channel's input to "
 "the image greater than the color spill algorithm normally allows. This is "
 "useful for exceptionally high amounts of color spill."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:280
-msgid ""
-"The *Channel Key* node determines background objects from foreground objects"
-" by the difference in the selected channel's levels.  For example in YUV "
-"color space, this is useful when compositing stock footage of explosions "
-"(very bright) which are normally shot against a solid, dark background."
-msgstr ""
-
-#: ../../manual/composite_nodes/types/matte.rst:289
+#: ../../manual/composite_nodes/types/matte.rst:294
 msgid "Color Space"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:290
+#: ../../manual/composite_nodes/types/matte.rst:295
 msgid "buttons selects what color space the channels will represent."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:291
+#: ../../manual/composite_nodes/types/matte.rst:296
 msgid "Channel"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:292
+#: ../../manual/composite_nodes/types/matte.rst:297
 msgid "buttons selects the channel to use to determine the matte."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:294
+#: ../../manual/composite_nodes/types/matte.rst:299
 msgid "High"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:294
+#: ../../manual/composite_nodes/types/matte.rst:299
 msgid ""
 "value selector determines the lowest values that are considered foreground. "
 "(which is supposed to be - relatively - height values: from this value to "
 "1.0)."
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:298
+#: ../../manual/composite_nodes/types/matte.rst:303
 msgid "Low"
 msgstr ""
 
-#: ../../manual/composite_nodes/types/matte.rst:297
+#: ../../manual/composite_nodes/types/matte.rst:302
 msgid ""
 "value selector determines the highest values that are considered to be "
 "background objects. (which is supposed to be - relatively - low values: from"
 " 0.0 to this value)."
 msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:46
+msgid ""
+"The difference key node determines how different each channel is from the "
+"given key in the selected color space. If the differences are below a user "
+"defined threshold then the pixel is considered transparent. Difference "
+"matting does not rely on a certain background color, but can have less than "
+"optimal results if there is a significant amount of background color in the "
+"foreground object."
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:67
+msgid ""
+"When the *Falloff* value is high, pixels that are close to the *Key Color* "
+"are more transparent than pixels that are not as close to the *Key Color* "
+"(but still considered close enough to be keyed). When the *Falloff* value is"
+" low, it does not matter how close the pixel color (*Image*) is to the *Key "
+"Color*, it is transparent."
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:83
+msgid "Using the Difference Key Node"
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:86
+msgid ""
+"In the example to the right (click to expand), we have a purple cube with "
+"yellow marbeling in front of a very unevenly lit green screen. We start "
+"building our noodle by threading the image to a difference key, and using "
+"the eyedropper, pick a key color very close to the edge of the cube, around "
+"where the halo is at the corner on the left-hand side; a fairly bright "
+"green. We thread two viewers from the output sockets so we can see what (if "
+"anything) the node is doing. We add an AlphaOver node, threading the Matte "
+"to the **TOP** socket and the image to the **BOTTOM** socket. Very "
+"Important, because 0 time blue is not the same as blue times zero. You "
+"always want your mask to go to the top socket of the AlphaOver. Premultiply "
+"is set and a full multiply is on so that we completely remove the green. In "
+"this example, we thread the output of the alphaover to a SplitViewer node so"
+" we can compare our results; the original is threaded to the bottom input of"
+" the SplitViewer, so that original is on the left, processed is on the "
+"right."
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:119
+msgid "Chaining Difference Key Nodes"
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:162
+msgid ""
+"Determines if additional detail is added to the pixel if it is transparent. "
+"This is useful for pulling shadows from an image even if they are in the "
+"green screen area."
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:196
+msgid ""
+"The *Luminance Key* node determines background objects from foreground "
+"objects by the difference in the luminance (brightness) levels. For example,"
+" this is useful when compositing stock footage of explosions (very bright) "
+"which are normally shot against a solid, dark background."
+msgstr ""
+
+#: ../../manual/composite_nodes/types/matte.rst:285
+msgid ""
+"The *Channel Key* node determines background objects from foreground objects"
+" by the difference in the selected channel's levels. For example in YUV "
+"color space, this is useful when compositing stock footage of explosions "
+"(very bright) which are normally shot against a solid, dark background."
+msgstr ""
+
+#~ msgid ""
+#~ "The difference key node determines how different each channel is  from the "
+#~ "given key in the selected color space. If the differences are below a user "
+#~ "defined threshold then the pixel is considered transparent. Difference "
+#~ "matting does not rely on a certain background color, but can have less than "
+#~ "optimal results if there is a significant amount of background color in the "
+#~ "foreground object."
+#~ msgstr ""
+
+#~ msgid "Using the  Difference Key Node"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the example to the right (click to expand), we have a purple cube with "
+#~ "yellow marbeling in front of a very unevenly lit green screen. We start "
+#~ "building our noodle by threading the image to a difference key, and using "
+#~ "the eyedropper, pick a key color very close to the edge of the cube, around "
+#~ "where the halo is  at the corner on the left-hand side; a fairly bright "
+#~ "green. We thread two viewers from the output sockets so we can see what (if "
+#~ "anything) the node is doing. We add an AlphaOver node, threading the Matte "
+#~ "to the **TOP** socket and the image to the **BOTTOM** socket. Very "
+#~ "Important, because 0 time blue is not the same as blue times zero. You "
+#~ "always want your mask to go to the top socket of the AlphaOver. Premultiply "
+#~ "is set and a full multiply is on so that we completely remove the green. In "
+#~ "this example, we thread the output of the alphaover to a SplitViewer node so"
+#~ " we can compare our results; the original is threaded to the bottom input of"
+#~ " the SplitViewer, so that original is on the left, processed is on the "
+#~ "right."
+#~ msgstr ""
+
+#~ msgid "Chaining  Difference Key Nodes"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Determines if additional detail is added to the pixel if it is transparent."
+#~ "  This is useful for pulling shadows from an image even if they are in the "
+#~ "green screen area."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the *Falloff* value is high, pixels that are close to the *Key Color* "
+#~ "are more transparent than pixels that are not as close to the *Key Color* "
+#~ "(but still considered close enough to be keyed).  When the *Falloff* value "
+#~ "is low, it does not matter how close the pixel color (*Image*) is to the "
+#~ "*Key Color*, it is transparent."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Luminance Key* node determines background objects from foreground "
+#~ "objects by the difference in the luminance (brightness) levels.  For "
+#~ "example, this is useful when compositing stock footage of explosions (very "
+#~ "bright) which are normally shot against a solid, dark background."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Channel Key* node determines background objects from foreground objects"
+#~ " by the difference in the selected channel's levels.  For example in YUV "
+#~ "color space, this is useful when compositing stock footage of explosions "
+#~ "(very bright) which are normally shot against a solid, dark background."
+#~ msgstr ""
 
 #~ msgid "The first is an input :guilabel:`Image` that is to be keyed."
 #~ msgstr ""

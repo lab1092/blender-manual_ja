@@ -196,7 +196,8 @@ Multiple Springs
 Normally every particle of the field system influences every particle of the target system.
 Not with *Harmonic* ! Here every target particle is assigned to a field particle.
 So particles will move to the place of other particles, thus forming shapes.
-Tutorial: `Particles forming Shapes <http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Particles_forming_Shapes>`__
+Tutorial: `Particles forming Shapes
+<http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Particles_forming_Shapes>`__
 
 
 Charge
@@ -410,6 +411,6 @@ Quadratic
 Links
 -----
 
-- FIXME(Link Type Unsupported: template; [[Template:Release Notes/2.48/WindCollisions|Wind & Deflector force update 2.48]])
-- `Particle options and guides (v2.40) <http://www.blender.org/development/release-logs/blender-240/new-particle-options-and-guides/>`__
+- `Wind & Deflector force update 2.48
+  <http://wiki.blender.org/index.php/Template:Release_Notes/2.48/WindCollisions>`__
 

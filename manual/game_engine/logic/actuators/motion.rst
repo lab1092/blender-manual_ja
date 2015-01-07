@@ -6,7 +6,7 @@ Motion Actuator
 The Motion actuator sets an object into motion and/or rotation.
 There are two modes of operation, simple or servo in which the object can either teleport,
 rotate or dynamically move. Also,
-simple mode operation depends on the type of  Physics setting for the  Object.
+simple mode operation depends on the type of Physics setting for the Object.
 
 See :doc:`Actuator Common Options </game_engine/logic/actuators/common_options>` for common options.
 
@@ -86,10 +86,10 @@ X, Y, Z
 
 Proportional Coefficient
    Set the Proportional Coefficient.
-   This controls the reaction  to differences between the actual and target linear velocity.
+   This controls the reaction to differences between the actual and target linear velocity.
 
 Integral Coefficient
-   Set the Integral Coefficient. This controls the reaction  to the sum of errors so far in this move.
+   Set the Integral Coefficient. This controls the reaction to the sum of errors so far in this move.
 
 Derivative Coefficient
    Set the Derivative Coefficient. This controls the reaction

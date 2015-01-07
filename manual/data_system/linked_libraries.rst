@@ -113,17 +113,15 @@ At Cursor
    since objects on unselected layers are invisible.
 
 
-
 Reusing Objects (Meshes, Curves, Cameras, Lights, ...)
 ======================================================
 
-Let's suppose you created a wheel in one.
-blend file and want to reuse it for your current project.
+Let's suppose you created a wheel in one ``.blend`` file and want to reuse it for your current project.
 The physical model of the wheel would be a mesh, and probably comprised of a tire and rim.
 Hopefully you named this mesh something reasonable, like, oh, I don't know, ``Wheel``.
 The wheel may be colored and thus have some materials assigned to it (like rubber and chrome).
 
-Once you navigate to the file, select the "\ ``Wheel`` "
+Once you navigate to the file, select the ``Wheel``
 (in the *Object* s datablocks) and it will be imported into your current file.
 You can import a copy of it, or merely link to it.
 
@@ -143,7 +141,7 @@ When selected, linked objects are outlined in Cyan.
 Normal selected objects are outlined in pink.
 
 Notice that you cannot move a linked object! It resides at the same position it has in the source file.
-To move/scale/rotate the object, turn it into a FIXME(TODO: Internal Link; [[#Proxy Objects|proxy]]).
+To move/scale/rotate linked objects, turn them into `Proxy Objects`_.
 
 
 .. tip:: Using Appended/Linked Mesh Data
@@ -282,8 +280,8 @@ Armatures and Multiple instances
 Development of this feature is a work in progress; in Blender 2.43 and CVS
 (as of 29 April 2007), a proxy object controls *all instances of a group*.
 It is not yet possible to have one proxy per group instance. In particular,
-it is not yet possible to have one proxy armature per group instance.  One partially effective
-remedy to use file append rather than file link for multiple instance duplication.
+it is not yet possible to have one proxy armature per group instance.
+One partially effective remedy to use file append rather than file link for multiple instance duplication.
 File append will not be updated with update to the origination file.
 
 If you are using a POSIX compliant file system, you can work around the one proxy object per

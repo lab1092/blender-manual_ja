@@ -41,7 +41,6 @@ The shader search path is located in the same place as the scripts or configurat
 under:
 
 
-
 Linux
    ``/home/$user/.config/blender/`` *Version Number* ``/shaders/``
 Windows
@@ -65,59 +64,16 @@ For more details on how to write shaders, see the
 `OSL specification <https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-languagespec.pdf>`__.
 Here is a simple example:
 
+.. code-block:: cpp
 
-FIXME(Tag Unsupported:span;
-<span style="color: lightgreen">shader</span>
-) simple_material(
-
-FIXME(Tag Unsupported:span;
-<span style="color: lightgreen;">color</span>
-) Diffuse_Color = color(
-FIXME(Tag Unsupported:span;
-<span style="color: red;">0.6</span>
-),
-FIXME(Tag Unsupported:span;
-<span style="color: red;">0.8</span>
-),
-FIXME(Tag Unsupported:span;
-<span style="color: red;">0.6</span>
-)),
-
-FIXME(Tag Unsupported:span;
-<span style="color: lightgreen;">float</span>
-) Noise_Factor =
-FIXME(Tag Unsupported:span;
-<span style="color: red;">0.5</span>
-),
-
-FIXME(Tag Unsupported:span;
-<span style="color: lightgreen;">output closure color</span>
-) BSDF =
-FIXME(Tag Unsupported:span;
-<span style="color: orange;">diffuse</span>
-)(N))
-{
-
-FIXME(Tag Unsupported:span;
-<span style="color: lightgreen;">color</span>
-) material_color = Diffuse_Color *
-FIXME(Tag Unsupported:span;
-<span style="color: orange;">mix</span>
-)(
-FIXME(Tag Unsupported:span;
-<span style="color: red;">1.0</span>
-),
-FIXME(Tag Unsupported:span;
-<span style="color: orange;">noise</span>
-)(P *
-FIXME(Tag Unsupported:span;
-<span style="color: red;">10.0</span>
-)), Noise_Factor);
-BSDF = material_color *
-FIXME(Tag Unsupported:span;
-<span style="color: orange;">diffuse</span>
-)(N);
-}
+   shader simple_material(
+       color Diffuse_Color = color(0.6, 0.8, 0.6),
+       float Noise_Factor = 0.5,
+       output closure color BSDF = diffuse(N))
+   {
+       color material_color = Diffuse_Color * mix(1.0, noise(P * 10.0), Noise_Factor);
+       BSDF = material_color * diffuse(N);
+   }
 
 
 Closures
@@ -170,16 +126,7 @@ Volume
 ~~~~~~
 
 - ``henyey_greenstein(g)``
-
-FIXME(Template Unsupported: NewIn;
-{{NewIn|2.70}}
-)
-
 - ``absorption()``
-
-FIXME(Template Unsupported: NewIn;
-{{NewIn|2.70}}
-)
 
 
 Other

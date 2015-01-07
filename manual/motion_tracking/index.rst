@@ -27,7 +27,7 @@ Supervised 2D tracking
 There's no common algorithm which can be used for all kinds of footage,
 feature points and their motions. Such algorithms can be constructed,
 but they'll be really slow and they can still fail, so the only way to perform 2D tracking is
-to manually choose the tracking algorithm  and its settings. Current defaults work nicely for
+to manually choose the tracking algorithm and its settings. Current defaults work nicely for
 general footage which isn't very blurry and where feature points aren't getting highly
 deformed by perspective.
 
@@ -199,7 +199,7 @@ Marker panel
   the track preview widget to control how accurately the marker is placed.
 
 - The :strong:`Detect Features` operator detects all possible features on the current
-  frame and places markers at these features.  This operator doesn't take into account other frames,
+  frame and places markers at these features. This operator doesn't take into account other frames,
   so it can place markers on features which belong to moving objects, and if camera is turning away from this shot,
   no markers would be placed on frames after the camera moved away.
 
@@ -422,7 +422,7 @@ Focal Length
 Sensor Width
    is the width of the CCD sensor in the camera. This value can be found in camera specifications.
 Pixel Aspect Ratio
-   is the  pixel aspect of the CCD sensor.
+   is the pixel aspect of the CCD sensor.
    This value can be found in camera specifications,
    but can also be guessed. For example, you know that the footage should be 1920x1080,
    but the images themselves are 1280x1080. In this case, the pixel aspect is: ``1920 / 1280 = 1.5``
@@ -431,8 +431,9 @@ Optical Center
    but it can be different in some special cases. Check camera/lens specifications in such cases.
    To set the optical center to the center of image, there's a :kbd:`Enter` button below the sliders.
 Undistortion K1, K2 and K3
-   are coefficients used to compensate for lens distortion when the  movie was shot. Currently these values can be
-   tweaked by hand only (there are no calibration tools yet) using tools available in Distortion mode. Basically, just
+   are coefficients used to compensate for lens distortion when the movie was shot. Currently these values can be
+   tweaked by hand only (there are no calibration tools yet)
+   using tools available in Distortion mode. Basically, just
    tweak K1 until solving is most accurate for the known focal length (but also take grid and grease pencil into
    account to prevent "impossible" distortion).
 
@@ -444,11 +445,13 @@ This panel contains all settings which control things displayed in the clip edit
 
 
 R, G, B
-   and :strong:`B/W` buttons at the top of this panel are used to control color channels used for frame preview and to
+   and :strong:`B/W` buttons at the top of this panel are used to control color channels used
+   for frame preview and to
    make the whole frame gray scale. It's needed because the tracking algorithm works with gray-scale images and it's
    not always obvious to see which channels disabled will increase contrast of feature points and reduce noise.
 Pattern
-   can be used to disable displaying of rectangles which correspond to pattern areas of tracks. In some cases it helps
+   can be used to disable displaying of rectangles which correspond to pattern areas of tracks.
+   In some cases it helps
    to make the clip view cleaner to check how good tracking is.
 Search
    can be used to disable displaying of rectangles which correspond to search areas of tracks.
@@ -464,7 +467,8 @@ Disabled Tracks
    makes it possible to hide all tracks which are disabled on the current frame. This helps to make view more clear,
    to see if tracking is happening accurately enough.
 Bundles
-   makes sense after solving the movie clip, and it works in the following way: the solved position of each track gets
+   makes sense after solving the movie clip,
+   and it works in the following way: the solved position of each track gets
    projected back to the movie clip and displayed as a small point. The color of the point depends on the distance
    between the projected coordinate and the original coordinate: if they are close enough, the point is green,
    otherwise it'll be red. This helps to find tracks which weren't solved nicely and need to be tweaked.
@@ -472,9 +476,11 @@ Track Names and Status
    displays information such as track name and status of the track (if it's keyframed, disabled, tracked or
    estimated). Names and status for selected tracks are displayed.
 Compact Markers
-   The way in which markers are displayed (black outline and yellow foreground color) makes tracks visible on all kind
+   The way in which markers are displayed (black outline and yellow foreground color)
+   makes tracks visible on all kind
    of footage (both dark and light). But sometimes it can be annoying and this option will make the marker display
-   more compactly - the outline is replaced by dashed black lines drawn on top of the foreground, so that marker areas
+   more compactly - the outline is replaced by dashed black lines drawn on top of the foreground,
+   so that marker areas
    are only 1px thick.
 Grease pencil
    controls if grease pencil strokes are allowed to be displayed and made.
@@ -487,7 +493,7 @@ Grid
    lines in the footage.
 Manual Calibration
    (available in distortion mode only) applies the distortion model for grease pencil strokes. This option also helps
-   to perform manual calibration.  A more detailed description of this process will be added later.
+   to perform manual calibration. A more detailed description of this process will be added later.
 Stable
    (available in reconstruction mode only). This option makes the displayed frame be affected by the 2D stabilization
    settings. It's only a preview option, which doesn't actually change the footage itself.
@@ -541,7 +547,7 @@ and tracking between keyframed image and next image is used.
 Speed
    can be used to control the speed of sequence tracking.
    This option doesn't affect the quality of tracking; it just helps to control if tracking happens accurately.
-   In most  cases tracking happens much faster than real time, and it's difficult to notice when a track began
+   In most cases tracking happens much faster than real time, and it's difficult to notice when a track began
    to slide out of position. In such cases **Speed** can be set to Double or Half to add some delay between
    tracking two frames, so slide-off would be noticed earlier and the tracking process can be cancelled to
    adjust positions of tracks.
@@ -640,7 +646,7 @@ Depending on your camera and codec, different timecodes can give better result.
 
 :strong:`Proxy Render Size` defines which proxy image resolution is used for display.
 If :strong:`Render Undistorted` is set, then images created from undistorted frames are used.
-If there's no generated proxies,  render size is set to "No proxy, full render",
+If there's no generated proxies, render size is set to "No proxy, full render",
 and render undistorted is enabled, undistortion will happen automatically on frame draw.
 
 

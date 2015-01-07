@@ -36,9 +36,14 @@ during rendering. This must be selected according to the type of apparatus avail
 display the appropriate images to the viewer's eyes.
 
 Anaglyph
-   One frame is displayed with both images color encoded with red-blue filters. This mode only requires `glasses with color filters <https://en.wikipedia.org/wiki/Stereoscopy#Color_anaglyph_systems>`__, there are no special requirements for the display screen and GPU.
+   One frame is displayed with both images color encoded with red-blue filters.
+   This mode only requires
+   `glasses with color filters <https://en.wikipedia.org/wiki/Stereoscopy#Color_anaglyph_systems>`__,
+   there are no special requirements for the display screen and GPU.
 Quad Buffer
-   Uses double buffering with a buffer for each eye, totaling four buffers (Left Front, Left Back, Right Front and Right Back), allowing to swap the buffers for both eyes in sync. See `Quad Buffering <https://en.wikipedia.org/wiki/Quad_buffering>`__ for more information.
+   Uses double buffering with a buffer for each eye, totaling four buffers
+   (Left Front, Left Back, Right Front and Right Back), allowing to swap the buffers for both eyes in sync.
+   See `Quad Buffering <https://en.wikipedia.org/wiki/Quad_buffering>`__ for more information.
 Side by Side
    Lines are displayed one after the other, so providing the two images in two frames side by side.
 Above-Below
@@ -46,8 +51,10 @@ Above-Below
 Interlaced
    One frame is displayed with the two images on alternate lines of the display.
 Vinterlaced
-   One frame is displayed with both images displayed on alternate columns of the display. This works with some 'autostereo displays'.
+   One frame is displayed with both images displayed on alternate columns of the display.
+   This works with some 'autostereo displays'.
 3D Tv Top-Bottom
-   One frame displays the left image above and the right image below. The images are squashed vertically to fit. This mode is designed for passive 3D TV.
+   One frame displays the left image above and the right image below.
+   The images are squashed vertically to fit. This mode is designed for passive 3D TV.
 
 

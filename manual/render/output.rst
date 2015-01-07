@@ -139,10 +139,10 @@ Channels
 --------
 
 Blender renders color (*RGB*) images by default, but Black and White
-(*BW*) and color with Alpha Channel (*RGBA*) are also possible.  Beware:
-unless the Extensions button of the Output panel is set,
-Blender does *not* automatically add extensions to filenames, hence any *.tga* or
-*.png* extension must be explicitly written in the File Save window.
+(*BW*) and color with Alpha Channel (*RGBA*) are also possible.
+Beware: unless the Extensions button of the Output panel is set,
+Blender does *not* automatically add extensions to filenames, hence any ``.tga`` or
+``.png`` extension must be explicitly written in the File Save window.
 
 **OpenEXR** and **OpenEXR Multilayer** formats are the only formats that store Z-depth buffer information.
 **OpenEXR Multilayer** is the only format that stores Render Layer and

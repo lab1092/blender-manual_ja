@@ -9,19 +9,25 @@ Curves
 
 
 Curves and :doc:`Surfaces </modeling/surfaces>` are particular types of Blender Objects.
-They are expressed by mathematical functions rather than a series of points. Blender offers both
-FIXME(TODO: Internal Link; [[#Beziers|Bezier]]) curves and FIXME(TODO: Internal Link; [[#NURBS|NURBS]])
-curves and surfaces. NURBS stands for "Non-Uniform Rational B-Splines".
+They are expressed by mathematical functions rather than a series of points.
+
+Blender offers both `Bezier Curves`_ and `Non-Uniform Rational B-Splines (NURBS)`_.
 Both Bezier curves and NURBS curves and surfaces are defined in terms of a set of "control points"
 (or "control vertices") which define a "control polygon".
 
+Both bezier and NURBs curves are named after their mathematical definitions, and choosing between them
+is often more a matter of how they are computed behind the scenes than how they appear from a modeler's
+perspective. Bezier curves are generally more intuitive because they start and end at the
+control points that you set,
+but NURBs curves are more efficient for the computer to calculate when there are many twists and turns in a curve.
+
 The main advantage to using curves instead of polygonal meshes is that curves are defined by
-less data and so can produce excellent results using less memory and storage space at modeling
+less data and so can produce results using less memory and storage space at modeling
 time. However, this procedural approach to surfaces can increase demands at render time.
 
 Certain modeling techniques, such as
 :doc:`extruding a profile along a path </modeling/curves/editing/advanced#curve_extrusion>`,
-are possible only using curves.  On the other hand, when using curves,
+are possible only using curves. On the other hand, when using curves,
 vertex-level control is more difficult and if fine control is necessary,
 :doc:`mesh editing </modeling/meshes/editing>` may be a better modeling option.
 
@@ -109,7 +115,8 @@ Bezier Curve Handle Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Automatic :kbd:`V-A`
-   This handle has a completely automatic length and direction which is set by Blender to ensure the smoothest result.
+   This handle has a completely automatic length and direction which is set by Blender to
+   ensure the smoothest result.
    These handles convert to *Aligned* handles when moved.
 
    .. figure:: /images/Modeling_Curves_automatic-handles.jpg
@@ -164,7 +171,6 @@ Resolution
    The *Preview U* setting determines the resolution in the 3D viewport while the *Render U* setting
    determines the Curve's render resolution. If *Render U* is set to zero (0),
    then the *Preview U* setting is used for both the 3D viewport and render resolution.
-
 
 
 .. figure:: /images/Modeling_Curves_shape-resolution.jpg
@@ -282,7 +288,6 @@ Start Bevel Factor and End Bevel Factor
    of the Curve (in effect shortening the Curve).
    Decreasing the *End Bevel Factor* by 0.25 will start beveling the Curve 25% of the distance from the end
    of the Curve (again, shortening the Curve).
-
 
 
 .. figure:: /images/Modeling_Curves_geometry-bevel-start-end-factor.jpg

@@ -136,31 +136,51 @@ Falloff
    or by pressing :kbd:`Shift-O` to toggle between the various options.
 
 
-+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-constant.jpg|.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-random.jpg+
-+   :width: 300px                                                                           |   :width: 300px                                                                         +
-+   :figwidth: 300px                                                                        |   :figwidth: 300px                                                                      +
-+                                                                                           |                                                                                         +
-+   Constant, No Falloff.                                                                   |   Random Falloff.                                                                       +
-+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-linear.jpg  |.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-sharp.jpg +
-+   :width: 300px                                                                           |   :width: 300px                                                                         +
-+   :figwidth: 300px                                                                        |   :figwidth: 300px                                                                      +
-+                                                                                           |                                                                                         +
-+   Linear Falloff.                                                                         |   Sharp Falloff.                                                                        +
-+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-root.jpg    |.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-sphere.jpg+
-+   :width: 300px                                                                           |   :width: 300px                                                                         +
-+   :figwidth: 300px                                                                        |   :figwidth: 300px                                                                      +
-+                                                                                           |                                                                                         +
-+   Root Falloff.                                                                           |   Sphere Falloff.                                                                       +
-+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-smooth.jpg                                                                                            +
-+   :width: 300px                                                                                                                                                                     +
-+   :figwidth: 300px                                                                                                                                                                  +
-+                                                                                                                                                                                     +
-+   Smooth Falloff.                                                                                                                                                                   +
-+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-constant.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Constant, No Falloff.
+
+     - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-random.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Random Falloff.
+
+   * - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-linear.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Linear Falloff.
+
+     - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-sharp.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Sharp Falloff.
+
+   * - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-root.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Root Falloff.
+
+     - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-sphere.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Sphere Falloff.
+
+   * - .. figure:: /images/3D-interaction_Transform-Control_Proportional-Edit-falloff-smooth.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Smooth Falloff.
+
+     -
 
 
 Examples

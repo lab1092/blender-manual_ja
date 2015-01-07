@@ -53,26 +53,39 @@ similar to setting the pivot point to median and Edge mode often produces distor
 Using Individual Origins in Face mode produces the most predictable results.
 
 
-+-----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-rotation-individual-faces.jpg|.. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-rotation-grouped-faces.jpg+
-+   :width: 320px                                                                                                 |   :width: 320px                                                                                              +
-+   :figwidth: 320px                                                                                              |   :figwidth: 320px                                                                                           +
-+                                                                                                                 |                                                                                                              +
-+   Rotation of individual faces with the pivot point indicated by the image text.                                |   Rotation of grouped faces with the pivot point indicated by the image text.                                +
-+-----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-rotation-individual-faces.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          Rotation of individual faces with the pivot point indicated by the image text.
+
+     - .. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-rotation-grouped-faces.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          Rotation of grouped faces with the pivot point indicated by the image text.
+
 
 As can be seen in the images above, faces that touch each other will deform when rotated when
 the pivot point is set to Individual Origins.
 Faces that do not touch will rotate around their Individual Origins (their center).
 
 
-+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-+.. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-scale-individual-faces.jpg|.. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-scale-group-fgon-faces.jpg+
-+   :width: 320px                                                                                              |   :width: 320px                                                                                              +
-+   :figwidth: 320px                                                                                           |   :figwidth: 320px                                                                                           +
-+                                                                                                              |                                                                                                              +
-+   Scaling with non-touching faces.                                                                           |   Scaling with touching faces.                                                                               +
-+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-scale-individual-faces.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          Scaling with non-touching faces.
+
+     - .. figure:: /images/3D-Interaction_Transform-Control_Pivot-Point_Individual-Origins-scale-group-fgon-faces.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          Scaling with touching faces.
 
 
 Groups of faces and Fgons can be scaled without their outside perimeter being deformed.

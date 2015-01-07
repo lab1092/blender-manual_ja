@@ -117,8 +117,7 @@ Unlinked Datablocks
 
 A datablock can become unlinked.
 For example a material datablock will be unlinked if the object it was linked to is deleted.
-If a datablock is unlinked, by default it will be deleted from the .
-blend file when Blender is closed. To keep an unlinked datablock in a .blend file,
+If a datablock is unlinked, by default it will be deleted from the ``.blend`` file when Blender is closed.
+To keep an unlinked datablock in a .blend file,
 click the "F" button to the right of the object's name in the Objects and Links panel.
-
 

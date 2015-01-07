@@ -28,10 +28,7 @@ This object will be *replaced* by the fluid during the simulation.
    When you calculate the fluid simulation, **you bake the simulation on the domain object**.
    For this reason all the baking options are visible only when selecting the Domain Object.
 
-   For baking options, please refer to
-   FIXME(TODO: Internal Link;
-   [[#Baking|the baking section]]
-   ) in this page.
+   For baking options, please refer to `Baking`_ in this page.
 
 
 Options
@@ -43,7 +40,7 @@ Options
 
 
 Bake button
-   For baking options please refer to FIXME(TODO: Internal Link; [[#Baking|the baking section]]) in this page.
+   For baking options please refer to `Baking`_ in this page.
 
 Resolution
 
@@ -53,13 +50,19 @@ Resolution
       determines the amount of details in the fluid, the memory and disk usage as well as computational time.
 
 
-+------------------------------------------+-------------------------------------------+
-+.. figure:: /images/Manual-Fluid-70res.jpg|.. figure:: /images/Manual-Fluid-200res.jpg+
-+   :width: 270px                          |   :width: 270px                           +
-+   :figwidth: 270px                       |   :figwidth: 270px                        +
-+                                          |                                           +
-+   10cm mug at Resolution 70.             |   10cm mug at Resolution 200.             +
-+------------------------------------------+-------------------------------------------+
+      .. list-table::
+
+         * - .. figure:: /images/Manual-Fluid-70res.jpg
+                :width: 270px
+                :figwidth: 270px
+
+                10cm mug at Resolution 70.
+
+           - .. figure:: /images/Manual-Fluid-200res.jpg
+                :width: 270px
+                :figwidth: 270px
+
+                10cm mug at Resolution 200.
 
 
       Note that the amount of required memory quickly increases: a resolution of 32 requires ca. 4MB,
@@ -69,11 +72,10 @@ Resolution
       even if the *machine* contains much more than this. Find out what limitations apply to your machine.
 
 
-
 .. note:: Resolution and Real-size of the Domain
 
    Be sure to set the resolution appropriate to the real-world size of the domain (see the *Realworld-size* in the
-   FIXME(TODO: Internal Link; [[#Domain Wold|Domain Wold panel]])).
+   `Domain Wold`_).
    If the domain is not cubic, the resolution will be taken for the longest side.
    The resolutions along the other sides will be reduced according to their lengths
    (therefore, a non-cubic domain will need less memory than a cubic one, resolutions being the same).
@@ -87,7 +89,8 @@ Resolution
       there might be a thin fluid surface that cannot be resolved in the preview.
 
 Display quality
-   How to display a baked simulation in the 3d view (menu *Viewport Display*) and for rendering (menu *Render Display*):
+   How to display a baked simulation in the 3d view (menu *Viewport Display*)
+   and for rendering (menu *Render Display*):
 
    Geometry
      use the original geometry (before simulation).
@@ -141,7 +144,7 @@ Reverse fluid frames
    The simulation is calculated backward
 
 *Bake* directory
-   For baking options please refer to FIXME(TODO: Internal Link; [[#Baking|the baking section]]) in this page.
+   For baking options please refer to `Baking`_ in this page.
 
 
 Domain World
@@ -181,14 +184,19 @@ Viscosity
 
 .. note:: Viscosity varies
 
-   The default values in Blender are considered typical for those types of fluids and "look right" when animated. However, actual viscosity of some fluids, especially sugar-laden fluids like chocolate syrup and honey, depend highly on temperature and concentration. Oil viscosity varies by SAE rating. Glass at room temperature is basically a solid, but glass at 1500 degrees Celsius flows (nearly) like water.
+   The default values in Blender are considered typical for those types of fluids and "look right" when animated.
+   However, actual viscosity of some fluids,
+   especially sugar-laden fluids like chocolate syrup and honey, depend highly on temperature and concentration.
+   Oil viscosity varies by SAE rating.
+   Glass at room temperature is basically a solid, but glass at 1500 degrees Celsius flows (nearly) like water.
 
 
 ..    Comment: <!--
 
    There's still some things that aren't correct in this table, I think.
    Let me put as clear as I can:
-   *The dynamic viscosity international unit is the Pascal-seconds (Pa.s). There are also Poise (P = 0.1 Pa.s), and centiPoise (cP = 0.001 Pa.s).
+   *The dynamic viscosity international unit is the Pascal-seconds (Pa.s).
+   There are also Poise (P = 0.1 Pa.s), and centiPoise (cP = 0.001 Pa.s).
    *The kinematic viscosity international unit is in m^2.s^-1.
    *The density international unit is in kg.m^-3.
    Which implies that a Pascal corresponds to 1 kg.m^-1.s^-2,
@@ -221,21 +229,31 @@ Viscosity
    --> .
 
 
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Blender Viscosity Unit Conversion|Fluid                     |dynamic viscosity (in cP)        |kinematic viscosity (Blender, in m\ :sup:`2`.s\ :sup:`-1`)    +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Water (20- C)                    |1.002×10\ :sup:`0` (1.002)|1.002×10\ :sup:`-6` (0.000001002)                                                               +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Oil SAE 50                       |5.0×10\ :sup:`2` (500)    |5.0×10\ :sup:`-5` (0.00005)                                                                     +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Honey (20- C)                    |1.0×10\ :sup:`4` (10,000) |2.0×10\ :sup:`-3` (0.002)                                                                       +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Chocolate Syrup                  |3.0×10\ :sup:`4` (30,000) |3.0×10\ :sup:`-3` (0.003)                                                                       +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Ketchup                          |1.0×10\ :sup:`5` (100,000)|1.0×10\ :sup:`-1` (0.1)                                                                         +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
-+Melting Glass                    |1.0×10\ :sup:`15`         |1.0×10\ :sup:`0` (1.0)                                                                          +
-+---------------------------------+--------------------------+---------------------------------+--------------------------------------------------------------+
+.. list-table::
+   Blender Viscosity Unit Conversion.
+   :header-rows: 1
+
+   * - Fluid
+     - dynamic viscosity (in cP)
+     - kinematic viscosity (Blender, in m\ :sup:`2`.s\ :sup:`-1`)
+   * - Water (20- C)
+     - 1.002×10\ :sup:`0` (1.002)
+     - 1.002×10\ :sup:`-6` (0.000001002)
+   * - Oil SAE 50
+     - 5.0×10\ :sup:`2` (500)
+     - 5.0×10\ :sup:`-5` (0.00005)
+   * - Honey (20- C)
+     - 1.0×10\ :sup:`4` (10,000)
+     - 2.0×10\ :sup:`-3` (0.002)
+   * - Chocolate Syrup
+     - 3.0×10\ :sup:`4` (30,000)
+     - 3.0×10\ :sup:`-3` (0.003)
+   * - Ketchup
+     - 1.0×10\ :sup:`5` (100,000)
+     - 1.0×10\ :sup:`-1` (0.1)
+   * - Melting Glass
+     - 1.0×10\ :sup:`15`
+     - 1.0×10\ :sup:`0` (1.0)
 
 
 Realworld-size
@@ -246,10 +264,12 @@ Realworld-size
 Optimization
 
    Gridlevel
-      How many adaptive grid levels to be used during simulation - setting this to -1 will perform automatic selection.
+      How many adaptive grid levels to be used during simulation -
+      setting this to -1 will perform automatic selection.
 
    Compressibility
-      If you have problems with large standing fluid regions at high resolution, it might help to reduce this number (note that this will increase computation times).
+      If you have problems with large standing fluid regions at high resolution,
+      it might help to reduce this number (note that this will increase computation times).
 
 
 Domain Boundary
@@ -265,9 +285,7 @@ Domain Boundary
 This box has all the slip and surface options.
 
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Physics/Fluid/split_type;
-{{Doc:2.6/Manual/Physics/Fluid/split_type}}
-)
+FIXME(Template Unsupported: Doc:2.6/Manual/Physics/Fluid/split_type;{{Doc:2.6/Manual/Physics/Fluid/split_type}})
 
 *Surface*
 
@@ -284,7 +302,6 @@ FIXME(Template Unsupported: Doc:2.6/Manual/Physics/Fluid/split_type;
       this can lead to long computation times due to the surface mesh generation.
 
    *Hide fluid surface*
-
 
 
 Domain Particles
@@ -375,7 +392,7 @@ Baking always starts at Frame #1
    it will always bake from frame 1.
    If you wish the simulation to start later than frame 1, you must key the fluid objects in your domain
    to be inactive until the frame you desire to start the simulation. See
-   FIXME(TODO: Internal Link; [[#Animating Fluid Property Changes|below]]) for more information.
+   `Animating Fluid Property Changes`_ for more information.
 
 Baking always ends at the *End* Frame set in the *Anim* panel
    If your frame-rate is 25 frames per second,
@@ -417,8 +434,11 @@ Baking processing time
 
    Advanced
    :Gravity vector
-   ::Strength and direction of the gravity acceleration and any lateral (x,y plane) force. The main component should be along the negative z-axis (in ``m.s<sup>-2</sup>``).
-   ::''Please Note:'' All of the x,y,z values should not be zero, or the fluid won't flow! Imagine a droplet floating in the nothingness of deep space... It must be some small number in at least one direction.
+   ::Strength and direction of the gravity acceleration and any lateral (x,y plane) force.
+   The main component should be along the negative z-axis (in ``m.s<sup>-2</sup>``).
+   ::''Please Note:'' All of the x,y,z values should not be zero, or the fluid won't flow!
+   Imagine a droplet floating in the nothingness of deep space...
+   It must be some small number in at least one direction.
 
    --> .
 

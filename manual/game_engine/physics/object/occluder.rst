@@ -19,14 +19,14 @@ Now observe what happens to the profiling stats for each of the following (in or
 
 - Hit :kbd:`P` as the scene is. It hums along at a fairly slow rate. On my system the Rasterizer step takes 130ms.
   The framerate will finally jump up once the "Cube" object has completely moved out of the view frustum.
-  FIXME(Tag Unsupported:span;
-  <span style="color: #E7007A">??? - It's as if the Occluder doesn't do anything while the Cube is behind it.</span>)
+  It's as if the Occluder doesn't do anything while the Cube is behind it.
 - Delete the "Cube.OffCamera" object above,
   and notice that there is no improvement in speed.
   This is the view frustum culling working for you - it does not matter if that object exists or not.
 - Hit :kbd:`Z` to view wireframe. Notice that in the 3D Viewport you can see "Cube.BG",
   but once you hit :kbd:`P`, it is not there.
-- Make the "Occluder" object take up the whole camera's view with :kbd:`S-X-5`. You will see a huge leap in framerate,
+- Make the "Occluder" object take up the whole camera's view with :kbd:`S-X-5`.
+  You will see a huge leap in framerate,
   since almost nothing is being Rasterized. On my system the Rasterizer step drops to 5ms.
 - Try a run with :menuselection:`World properties --> Physics --> Occlusion Culling` disabled. It will be slow again.
 - Reenable :menuselection:`World properties --> Physics --> Occlusion Culling`
@@ -35,24 +35,16 @@ Now observe what happens to the profiling stats for each of the following (in or
 - Change it back to "Physics Type: Occlude".
 - Now make the "Occluder" invisible. The framerate is back down to its original, slow rate.
 
-FIXME(Tag Unsupported:span;
-<span style="color: #E7007A">??? - I thought this was supposed to work when invisible.</span>
-)
+.. ??? - I thought this was supposed to work when invisible.
 
-
-TODO
-
-----
-
-
-FIXME(Tag Unsupported:span; Incorporate some of the
-[[Dev:Ref/Release_Notes/2.49/Game_Engine#BGE_Scenegraph_improvement|2.49 Release Notes]] Details.)
+.. Incorporate some of the details from:
+   Dev:Ref/Release_Notes/2.49/Game_Engine#BGE_Scenegraph_improvement|2.49 Release Notes
 
 
 Details
 =======
 
-As far as Physics is concerned, this type is equivalent to Rigid Object "No collision".  The
+As far as Physics is concerned, this type is equivalent to Rigid Object "No collision". The
 reason why the Occluder mode is mutually exclusive with other physics mode is to emphasize
 the fact that occluders should be specifically designed for that purpose and not every mesh
 should be an occluder. However,

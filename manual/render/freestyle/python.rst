@@ -37,13 +37,21 @@ point of your own style module writing. See also the section of the Freestyle Py
 the Blender Python API reference manual for the full detail of style module constructs.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-+.. figure:: /images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg                                                                     |.. figure:: /images/Sketchy_Broken_Topology.jpg                                                                                                          +
-+   :width: 300px                                                                                                                           |   :width: 300px                                                                                                                                         +
-+   :figwidth: 300px                                                                                                                        |   :figwidth: 300px                                                                                                                                      +
-+                                                                                                                                           |                                                                                                                                                         +
-+   By T.K. using the Python Scripting mode (`File:Turning_Pages.zip <http://wiki.blender.org/index.php/File:Turning_Pages.zip>`__, CC0)    |   By T.K. using the Python Scripting mode (`File:Lily_Broken_Topology.zip <http://wiki.blender.org/index.php/File:Lily_Broken_Topology.zip>`__, CC0)    +
-+-------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          By T.K. using the Python Scripting mode
+          (`File:Turning_Pages.zip <http://wiki.blender.org/index.php/File:Turning_Pages.zip>`__, CC0)
+
+     - .. figure:: /images/Sketchy_Broken_Topology.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          By T.K. using the Python Scripting mode
+          (`File:Lily_Broken_Topology.zip <http://wiki.blender.org/index.php/File:Lily_Broken_Topology.zip>`__, CC0)
 
 
 Writing Style Modules
@@ -51,9 +59,9 @@ Writing Style Modules
 
 A style module is a piece of code responsible for the stylization of Freestyle line drawing.
 The input of a style module is a set of feature edges called view map (ViewMap).
-The output is a set of stylized lines also referred to as strokes.  A style module is
+The output is a set of stylized lines also referred to as strokes. A style module is
 structured as a pipeline of operations that allow for building strokes from the input edges
-within the view map.  There are five kinds of operations
+within the view map. There are five kinds of operations
 (corresponding operator functions in parentheses):
 
 
@@ -63,14 +71,14 @@ within the view map.  There are five kinds of operations
 - Sorting (Operators.sort())
 - Stroke creation (Operators.create())
 
-The input view map is populated with a set of ViewEdge objects.  The selection operation is
+The input view map is populated with a set of ViewEdge objects. The selection operation is
 used to pick up ViewEdges of interest to artists based on user-defined selection conditions
-(predicates).  Chaining operations take the subset of ViewEdges and build Chains by
+(predicates). Chaining operations take the subset of ViewEdges and build Chains by
 concatenating ViewEdges according to user-defined predicates and functions.
 The Chains can be further refined by splitting them into smaller pieces (e.g.,
 at points where edges make an acute turn) and selecting a fraction of them (e.g.,
-to keep only those longer than a length threshold).  The sorting operation is used to arrange
-the stacking order of chains to draw one line on top of another.  The chains are finally
+to keep only those longer than a length threshold). The sorting operation is used to arrange
+the stacking order of chains to draw one line on top of another. The chains are finally
 transformed into stylized strokes by the stroke creation operation applying a series of stroke
 shaders to individual chains.
 
@@ -87,7 +95,7 @@ Selection
 ---------
 
 The selection operator goes through every element of the active set and keeps only the ones
-satisfying a certain predicate.  The Operators.select() method takes as the argument a unary
+satisfying a certain predicate. The Operators.select() method takes as the argument a unary
 predicate that works on any Interface1D that represents a 1D element. For example:
 
 ::
@@ -103,9 +111,9 @@ elements.
 
 It is noted that QuantitativeInvisibilityUP1D is a class implementing the predicate that tests
 line visibility, and the Operators.select()
-method takes an instance of the predicate class as argument.  The testing of the predicate for
+method takes an instance of the predicate class as argument. The testing of the predicate for
 a given 1D element is actually done by calling the predicate instance, that is,
-by invoking the __call__ method of the predicate class.  In other words, the Operators.select
+by invoking the __call__ method of the predicate class. In other words, the Operators.select
 () method takes as argument a functor which in turn takes an Interface0D object as argument.
 The Freestyle Python API employs functors extensively to implement predicates,
 as well as functions.
@@ -120,13 +128,13 @@ marching along ViewEdges. The iterator defines a chaining rule that determines t
 ViewEdge to follow at a given vertex (see ViewEdgeIterator).
 Several such iterators are provided as part of the Freestyle Python API
 (see ChainPredicateIterator and ChainSilhouetteIterator).
-Custom iterators can be defined by inheriting the ViewEdgeIterator class.  The chaining
+Custom iterators can be defined by inheriting the ViewEdgeIterator class. The chaining
 operator also takes as argument a UnaryPredicate working on Interface1D as a stopping
-criterion.  The chaining stops when the iterator has reached a ViewEdge satisfying this
+criterion. The chaining stops when the iterator has reached a ViewEdge satisfying this
 predicate during the march along the graph.
 
 Chaining can be either unidirectional (Operators::chain()) or bidirectional
-(Operators::bidirectional_chain()).  In the latter case,
+(Operators::bidirectional_chain()). In the latter case,
 the chaining will propagate in the two directions from the starting edge.
 
 The following is a code example of bidirectional chaining:
@@ -159,7 +167,7 @@ Splitting
 ---------
 
 The splitting operation is used to refine the topology of each Chain.
-Splitting is performed either sequentially or recursively.  Sequential splitting
+Splitting is performed either sequentially or recursively. Sequential splitting
 (Operators::sequentialSplit()) in its basic form,
 parses the Chain at a given arbitrary resolution and evaluates a unary predicate
 (working on 0D elements) at each point along the Chain.
@@ -181,7 +189,7 @@ lead to a set of Chains that are disjoint or that overlap if the two predicates 
 
 Recursive splitting (Operators::recursiveSplit()) evaluates a function on the 0D elements
 along the Chain at a given resolution and find the point that gives the maximum value for the
-function.  The Chain is then split into two at that point.
+function. The Chain is then split into two at that point.
 This process is recursively repeated on each of the two new Chains,
 until the input Chain satisfies a user-specified stopping condition.
 
@@ -214,8 +222,8 @@ elements.
 In this code example, the sorting uses the Length2DBP1D binary predicate to sort the
 Interface1D objects in the ascending order in terms of 2D length.
 
-The sorting is particularly useful when combined with causal density.  Indeed,
-the causal density evaluates the density of the resulting image as it is modified.  If we wish
+The sorting is particularly useful when combined with causal density. Indeed,
+the causal density evaluates the density of the resulting image as it is modified. If we wish
 to use such a tool to decide to remove strokes whenever the local density is too high,
 it is important to control the order in which the strokes are drawn. In this case,
 we would use the sorting operator to insure that the most "important" lines are drawn first.
@@ -225,7 +233,7 @@ Stroke creation
 ---------------
 
 Finally, the stroke creation operator (Operators::create())
-takes the active set of Chains as input and build Strokes.  The operator takes two arguments.
+takes the active set of Chains as input and build Strokes. The operator takes two arguments.
 The first is a unary predicate that works on Interface1D that is designed to make a last
 selection on the set of chains.
 A Chain that doesn't satisfy the condition won't lead to a Stroke. The second input is a list
@@ -261,7 +269,7 @@ splitting, and sorting operations.
 The stroke creation is always the last operation that concludes a style module.
 
 Predicates, functions, chaining iterators, and stroke shaders can be defined by inheriting
-base classes and overriding appropriate methods.  See the reference manual entries of the
+base classes and overriding appropriate methods. See the reference manual entries of the
 following base classes for more information on the user-scriptable constructs.
 
 

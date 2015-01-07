@@ -288,47 +288,59 @@ More Details On Absolute Shape Keys
 ===================================
 
 The thing to remember about absolute shape keys is that they are
-incomplete until you click the Reset Timing button.  When you create a
+incomplete until you click the Reset Timing button. When you create a
 shape key its "frame" property is zero (https://developer.blender.org/T39897),
 which is a completely useless
-value.  This frame value is not displayed on the UI so you can't
+value. This frame value is not displayed on the UI so you can't
 easily tell if something is wrong or screwy until your animation
 starts misbehaving.
 
 The number displayed to the right of the key name is the value and is used in relative shape
-keys.  It has no effect on absolute shape keys, so ignore it.
+keys. It has no effect on absolute shape keys, so ignore it.
 
 When you reset the timings blender iterates through the shape keys
 assigning them frame values incrementing by 0.1 from key to key.
 
 
-+-----+-----+---------------+
-+name |frame|evaluation time+
-+-----+-----+---------------+
-+Basis|0.1  |10             +
-+-----+-----+---------------+
-+Key 1|0.2  |20             +
-+-----+-----+---------------+
-+Key 2|0.3  |30             +
-+-----+-----+---------------+
-+Key 3|0.4  |40             +
-+-----+-----+---------------+
+.. list-table::
+   :header-rows: 1
+
+   * - name
+     - frame
+     - evaluation time
+   * - Basis
+     - 0.1
+     - 10
+   * - Key 1
+     - 0.2
+     - 20
+   * - Key 2
+     - 0.3
+     - 30
+   * - Key 3
+     - 0.4
+     - 40
 
 
 If you delete a shape key this does not automatically alter the frame values
 assigned to remaining shape keys.
 
 
-+-----+-----+---------------+
-+name |frame|evaluation time+
-+-----+-----+---------------+
-+Basis|0.1  |10             +
-+-----+-----+---------------+
-+Key 1|0.2  |20             +
-+-----+-----+---------------+
-+Key 3|0.4  |40             +
-+-----+-----+---------------+
+.. list-table::
+   :header-rows: 1
 
+   * - name
+     - frame
+     - evaluation time
+   * - Basis
+     - 0.1
+     - 10
+   * - Key 1
+     - 0.2
+     - 20
+   * - Key 3
+     - 0.4
+     - 40
 
 The Evaluation Time is how you choose which shape key is active, and how active it is.
 The interesting values range from 10 .. (n*10) where n is the number of shape keys.
@@ -357,4 +369,5 @@ See Also
 - :doc:`2.4 Editing Shape Keys </animation/techs/shape/shape_keys/editing>`
 - :doc:`2.4 Animating Shape Keys </animation/techs/shape/shape_keys/animating>`
 - :doc:`2.4 Shape Keys Examples </animation/techs/shape/shape_keys/examples>`
-- `Add-on: Corrective Shape Key <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Animation/Corrective_Shape_Key>`__
+- `Add-on: Corrective Shape Key
+  <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Animation/Corrective_Shape_Key>`__

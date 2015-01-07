@@ -17,7 +17,7 @@ Note that none of this prevents you from transforming the Static Objects with
 The visual objects will correctly move and their physics representation will update in the engine as well.
 
 Another important note is that the default
-FIXME(TODO: Internal Link; [[#Collision_Bounds|Collision Bounds]])
+`Collision Bounds`_
 is a Triangle Mesh, meaning it is higher in computational requirements but also in detail.
 This in turn means the "Radius" option has no effect by default.
 
@@ -30,24 +30,20 @@ For more documentation, see the :doc:`Top BGE Physics page </game_engine/physics
 Options
 =======
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/PythonAccessToOptions;
-{{Doc:2.6/Manual/Game_Engine/Physics/PythonAccessToOptions}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/PythonAccessToOptions;{{Doc:2.6/Manual/Game_Engine/Physics/PythonAccessToOptions}})
 
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/CommonOptions;
-{{Doc:2.6/Manual/Game_Engine/Physics/CommonOptions}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/CommonOptions;{{Doc:2.6/Manual/Game_Engine/Physics/CommonOptions}})
 
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/RadiusOption;
-{{Doc:2.6/Manual/Game_Engine/Physics/RadiusOption}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/RadiusOption;{{Doc:2.6/Manual/Game_Engine/Physics/RadiusOption}})
 
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/AnisotropicFrictionOptions;
-{{Doc:2.6/Manual/Game_Engine/Physics/AnisotropicFrictionOptions}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/AnisotropicFrictionOptions;{{Doc:2.6/Manual/Game_Engine/Physics/AnisotropicFrictionOptions}})
 
 
 Collision Bounds
@@ -59,24 +55,21 @@ Collision Bounds
    instead of a simple sphere.
 
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/Collision_Bounds;
-{{Doc:2.6/Manual/Game_Engine/Physics/Collision_Bounds}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/Collision_Bounds;{{Doc:2.6/Manual/Game_Engine/Physics/Collision_Bounds}})
 
 
 Create Obstacle
 ===============
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/Create_Obstacle;
-{{Doc:2.6/Manual/Game_Engine/Physics/Create_Obstacle}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/Create_Obstacle;{{Doc:2.6/Manual/Game_Engine/Physics/Create_Obstacle}})
 
 
 All Types
 =========
 
-FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/AllTypes;
-{{Doc:2.6/Manual/Game_Engine/Physics/AllTypes}}
-)
+FIXME(Template Unsupported:
+Doc:2.6/Manual/Game_Engine/Physics/AllTypes;{{Doc:2.6/Manual/Game_Engine/Physics/AllTypes}})
 
 

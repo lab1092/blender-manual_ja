@@ -104,6 +104,7 @@ Gamma
 
 RGB Curves
    Curves to control image colors before color space conversion.
+   Read more about using the :ref:`Curve Widget <curve-widget>`.
 Color Unpremultiply
    For premultiplied alpha render output, do color space conversion on colors without alpha,
    to avoid fringing on light backgrounds.
@@ -185,7 +186,7 @@ however, these bake the exposure effects into the rendered image,
 as opposed the techniques explained on this page,
 which affect the color space of rendered images.
 
-See :doc:`Exposure </lighting/exposure>`, for details.
+See :doc:`Exposure </render/blender_render/lighting/exposure>`, for details.
 
 
 OpenColorIO Configuration

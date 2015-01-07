@@ -10,13 +10,19 @@ The Bevel modifier is a non-destructive alternative to the
 :doc:`Bevel Operation </modeling/meshes/editing/subdividing/bevel>` in edit mode.
 
 
-+--------------------------------------------------+------------------------------------------------+
-+.. figure:: /images/Manual_-_Unbevelled_Square.jpg|.. figure:: /images/Manual_-_Bevelled_Square.jpg+
-+   :width: 150px                                  |   :width: 150px                                +
-+   :figwidth: 150px                               |   :figwidth: 150px                             +
-+                                                  |                                                +
-+   Unbeveled                                      |   Beveled                                      +
-+--------------------------------------------------+------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual_-_Unbevelled_Square.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          Unbeveled
+
+     - .. figure:: /images/Manual_-_Bevelled_Square.jpg
+          :width: 150px
+          :figwidth: 150px
+
+          Beveled
 
 
 The images above show the side views of a plain (unbeveled) cube and a beveled one.

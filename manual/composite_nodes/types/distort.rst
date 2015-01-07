@@ -61,7 +61,8 @@ Right now, frame 21 is showing Moe and Curly, and Larry has scrolled off the scr
 
 .. note:: Alpha channel
 
-   Be sure to save your credits image in a format that supports an alpha channel, such as PNG, so that the AlphaOver node can overlay it on the background and let the background show through.
+   Be sure to save your credits image in a format that supports an alpha channel, such as PNG,
+   so that the AlphaOver node can overlay it on the background and let the background show through.
 
 
 You *could* have parented and animated all of the text to roll up past your camera,
@@ -123,7 +124,10 @@ or throwing up on a long sea voyage, or surviving an earthquake:
 (I know you were thinking expletives and changing your underpants,
 but this is about compositing).
 
-**Camera Motion** happens because the camera physically gets moved; but its mass and its tripod also acts as a dampening device, softening out and absorbing the initial bump. The cameraman also acts as a dampener, and also as a corrector, trying to get the camera back to where it was pointed originally.
+**Camera Motion** happens because the camera physically gets moved;
+but its mass and its tripod also acts as a dampening device, softening out and absorbing the initial bump.
+The cameraman also acts as a dampener, and also as a corrector,
+trying to get the camera back to where it was pointed originally.
 
 There can be quite a delay between the shock and the correction; for example,
 a lone actor/cameraman may trip on the tripod coming out from behind the camera,
@@ -304,7 +308,10 @@ little node comes along and you have the power to **re-texture your objects** *a
 have been rendered**. Yes, you read that right; it's not a typo and I'm not crazy. At least,
 not today.
 
-Using this node (and having saved the UV map in a multilayer OpenEXR format image sequence), you can apply new flat image textures to all objects (or individual objects if you used the very cool :doc:`ID Mask Node </composite_nodes/types/convertor#id_mask_node>` to enumerate your objects) in the scene.
+Using this node (and having saved the UV map in a multilayer OpenEXR format image sequence),
+you can apply new flat image textures to all objects
+(or individual objects if you used the very cool
+:doc:`ID Mask Node </composite_nodes/types/convertor#id_mask_node>` to enumerate your objects) in the scene.
 
 Thread the new UV Texture to the Image socket,
 and the UV Map from the rendered scene to the UV input socket.
@@ -359,9 +366,11 @@ Crop Node
 The Crop Node takes an input image and crops it to a selected region.
 
 Crop Image Size
-   When enabled, the image size is cropped to the specified region. When disabled, image remains the same size, and uncropped areas become transparent pixels.
+   When enabled, the image size is cropped to the specified region.
+   When disabled, image remains the same size, and uncropped areas become transparent pixels.
 Relative
-   When enabled, crop dimensions are a percentage of the image's width and height. When disabled, the range of the sliders are the width and height of the image in pixels.
+   When enabled, crop dimensions are a percentage of the image's width and height.
+   When disabled, the range of the sliders are the width and height of the image in pixels.
 Crop Region Values
    These sliders define the lower, upper, left, and right borders if the crop region.
 
@@ -374,10 +383,11 @@ Use this node to simulate distortions that real camera lenses produce.
 Distort
    This creates a bulging or pinching effect from the center of the image.
 Dispersion
-   This simulates chromatic aberration, where different wavelengths of light refract slightly differently, creating a rainbow colored fringe.
-
+   This simulates chromatic aberration, where different wavelengths of light refract slightly differently,
+   creating a rainbow colored fringe.
 Projector
-   Enable or disable slider projection mode. When on, distortion is only applied horizontally. Disables *Jitter* and *Fit*.
+   Enable or disable slider projection mode.
+   When on, distortion is only applied horizontally. Disables *Jitter* and *Fit*.
 Jitter
    Adds jitter to the distortion. Faster, but noisier.
 Fit

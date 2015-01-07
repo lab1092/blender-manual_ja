@@ -21,7 +21,8 @@ Merging Vertices
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`, :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Merge...`,
+     :menuselection:`Specials --> Merge` or :menuselection:`Vertex Specials --> Merge`
    | Hotkey:   :kbd:`Alt-M`
 
 
@@ -30,19 +31,23 @@ can choose the location of the surviving vertex in the menu this tool pops up be
 executing:
 
 At First
-   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the first one selected.
-
+   Only available in *Vertex* select mode,
+   it will place the remaining vertex at the location of the first one selected.
 At Last
-   Only available in *Vertex* select mode, it will place the remaining vertex at the location of the last one selected (the active one).
-
+   Only available in *Vertex* select mode,
+   it will place the remaining vertex at the location of the last one selected (the active one).
 At Center
-   Available in all select modes, it will place the remaining vertex at the center of the selection.
-
+   Available in all select modes,
+   it will place the remaining vertex at the center of the selection.
 At Cursor
-   Available in all select modes, it will place the remaining vertex at the 3D Cursor.
-
+   Available in all select modes,
+   it will place the remaining vertex at the 3D Cursor.
 Collapse
-   This is a special option, as it might let "live" more than one vertex. In fact, you will have as much remaining vertices as you had "islands" of selection (i.e. groups of linked selected vertices). The remaining vertices will be positioned at the center of their respective "islands". It is also available *via* the :menuselection:`Mesh --> Edges --> Collapse` menu option...
+   This is a special option, as it might let "live" more than one vertex.
+   In fact, you will have as much remaining vertices as you had "islands" of selection
+   (i.e. groups of linked selected vertices).
+   The remaining vertices will be positioned at the center of their respective "islands".
+   It is also available *via* the :menuselection:`Mesh --> Edges --> Collapse` menu option...
 
 Merging vertices of course also deletes some edges and faces. But Blender will do everything
 it can to preserve edges and faces only partly involved in the reunion.
@@ -72,16 +77,20 @@ Remove Doubles
 
    | Mode:     *Edit* mode
    | Panel:    *Editing* context → *Mesh Tools*
-   | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`, :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
+     :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
 
 
-Remove Doubles is a useful tool to simplify a mesh by merging vertices that are closer than a specified distance to each other. An alternate way to simplify a mesh is to use the :doc:`Decimate modifier </modifiers/generate/decimate>`.
+Remove Doubles is a useful tool to simplify a mesh by merging vertices that
+are closer than a specified distance to each other.
+An alternate way to simplify a mesh is to use the :doc:`Decimate modifier </modifiers/generate/decimate>`.
 
 Merge Distance
    Sets the distance threshold for merging vertices, in Blender units.
 Unselected
-   Allows vertices in selection to be merged with unselected vertices. When disabled, selected vertices will only be merged with other selected ones.
+   Allows vertices in selection to be merged with unselected vertices.
+   When disabled, selected vertices will only be merged with other selected ones.
 
 
 Separating
@@ -221,7 +230,8 @@ Separate
    | Hotkey:   :kbd:`P`
 
 
-This will separate the selection in another mesh object, as described :doc:`here </modeling/objects/groups_and_parenting>`.
+This will separate the selection in another mesh object,
+as described :doc:`here </modeling/objects/groups_and_parenting>`.
 
 
 Vertex Connect
@@ -315,7 +325,8 @@ Smooth
 
    | Mode:     *Edit* mode
    | Panel:    *Editing* context → *Mesh Tools*
-   | Menu:     :menuselection:`Mesh --> Vertices --> Smooth`, :menuselection:`Specials --> Smooth` or :menuselection:`Vertex Specials --> Smooth`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Smooth`,
+     :menuselection:`Specials --> Smooth` or :menuselection:`Vertex Specials --> Smooth`
    | Hotkey:   :menuselection:`[ctrl][V] --> Smooth vertex`
 
 
@@ -333,7 +344,8 @@ Make Vertex Parent
    | Hotkey:   :kbd:`Ctrl-P`
 
 
-This will parent the other selected object(s) to the vertices/edges/faces selected, as described :doc:`here </modeling/objects/groups_and_parenting>`.
+This will parent the other selected object(s) to the vertices/edges/faces selected,
+as described :doc:`here </modeling/objects/groups_and_parenting>`.
 
 
 Add Hook
@@ -347,7 +359,10 @@ Add Hook
    | Hotkey:   :kbd:`Ctrl-H`
 
 
-Adds a :doc:`Hook Modifier </modifiers/deform/hooks>` (using either a new empty, or the current selected object) linked to the selection. Note that even if it appears in the history menu, this action cannot be undone in *Edit* mode - probably because it involves other objects...
+Adds a :doc:`Hook Modifier </modifiers/deform/hooks>` (using either a new empty,
+or the current selected object) linked to the selection.
+Note that even if it appears in the history menu,
+this action cannot be undone in *Edit* mode - probably because it involves other objects...
 
 
 Blend From Shape, Propagate Shapes
@@ -357,8 +372,10 @@ Blend From Shape, Propagate Shapes
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`(Vertex) Specials --> Blend From Shape` and :menuselection:`Vertex Specials --> Shape Propagate`
-   | Hotkey:   :menuselection:`[W] --> [alt][Blend From Shape]` or :menuselection:`[ctrl][V] --> Blend From Shape`, and :menuselection:`[W] --> [alt][Shape Propagate]` or :menuselection:`[ctrl][V] --> Shape Propagate`
+   | Menu:     :menuselection:`(Vertex) Specials --> Blend From Shape` and
+     :menuselection:`Vertex Specials --> Shape Propagate`
+   | Hotkey:   :menuselection:`[W] --> [alt][Blend From Shape]` or :menuselection:`[ctrl][V] --> Blend From Shape`,
+     and :menuselection:`[W] --> [alt][Shape Propagate]` or :menuselection:`[ctrl][V] --> Shape Propagate`
 
 
 These are options regarding :doc:`shape keys </animation/techs/shape/shape_keys>`.

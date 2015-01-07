@@ -18,7 +18,7 @@ In *Pose* mode, bones behave like objects. So the transform actions
 (all available ones are regrouped in the :menuselection:`Pose --> Transform` sub-menu). However,
 there are some important specificities:
 
-- Bones' relationships are crucial, as FIXME(TODO: Internal Link; [[#Effects of Bones Relationships|detailed below]]).
+- Bones' relationships are crucial (see `Effects of Bones Relationships`_).
 - The "transform center" of a given bone
   (i.e. its default pivot point, when it is the only selected one) is *its root*.
   Note by the way that some pivot point options seem to not work properly - in fact,
@@ -159,7 +159,8 @@ Copy/Paste Pose
 
    | Mode:     *Pose* mode
    | Panel:    *3D View* header
-   | Menu:     :menuselection:`Pose --> Copy Current Pose`, :menuselection:`Pose --> Paste Pose`, :menuselection:`Pose --> Paste Flipped Pose`
+   | Menu:     :menuselection:`Pose --> Copy Current Pose`,
+     :menuselection:`Pose --> Paste Pose`, :menuselection:`Pose --> Paste Flipped Pose`
 
 
 .. figure:: /images/Doc26-rigging-copyPastePose.jpg
@@ -236,15 +237,26 @@ By default, children bones inherit:
 - Their parent rotation (i.e. they keep a constant rotation relatively to their parent).
 - Their parent scale, here again with their own offset.
 
-+-----------------------------------------------------------------------+------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
-+**Examples of transforming parented/connected bones.**                                                                                                                                                                                +
-+-----------------------------------------------------------------------+------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExBasis.jpg|.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExMonoRotation.jpg|.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExScalingChains.jpg+
-+   :width: 200px                                                       |   :width: 200px                                                              |   :width: 200px                                                               +
-+   :figwidth: 200px                                                    |   :figwidth: 200px                                                           |   :figwidth: 200px                                                            +
-+                                                                       |                                                                              |                                                                               +
-+   The armature in its rest position.                                  |   Rotation of a root bone.                                                   |   Scaling of a root bone.                                                     +
-+-----------------------------------------------------------------------+------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+.. list-table::
+   Examples of transforming parented/connected bones.
+
+   * - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExBasis.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The armature in its rest position.
+
+     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExMonoRotation.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Rotation of a root bone.
+
+     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExScalingChains.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Scaling of a root bone.
 
 
 Exactly like standard children objects. You can modify this behavior on a per-bone basis,
@@ -270,15 +282,26 @@ However, if you set one bone's *Inherit Scale* or *Inherit Rotation*
 property on in this "family", this will break the scaling propagation, i.e. this bone *and
 all its descendants* will no longer be affected when you scale one of its ancestors.
 
-+-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
-+**Examples of transforming parented/connected bones with** *Inherit Rotation* **disabled.**                                                                                                                                                                                     +
-+-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBone.jpg                          |.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInRotation.jpg|.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInScaling.jpg+
-+   :width: 200px                                                                                     |   :width: 200px                                                                     |   :width: 200px                                                                    +
-+   :figwidth: 200px                                                                                  |   :figwidth: 200px                                                                  |   :figwidth: 200px                                                                 +
-+                                                                                                     |                                                                                     |                                                                                    +
-+   The yellow outlined Inherit Rotation disabled bone in the armature.                               |   Rotation of a bone with a Inherit Rotation disabled bone among its descendants.   |   Scaling of a bone with a Inherit Rotation disabled bone among its descendants.   +
-+-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+.. list-table::
+   Examples of transforming parented/connected bones with** *Inherit Rotation* disabled.
+
+   * - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBone.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The yellow outlined Inherit Rotation disabled bone in the armature.
+
+     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInRotation.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Rotation of a bone with a Inherit Rotation disabled bone among its descendants.
+
+     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInScaling.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Scaling of a bone with a Inherit Rotation disabled bone among its descendants.
 
 
 Connected bones have another specificity: they cannot be translated. Indeed,

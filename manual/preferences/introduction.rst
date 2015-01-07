@@ -13,14 +13,13 @@ change to control the way Blender behaves each time you open the application.
 Open User Preferences
 =====================
 
+.. |user-preferences-icon| image:: /images/User-preferences-icon.jpg
+
 To open a Blender *User Preferences* editor
 go to :menuselection:`File --> User Preferences` or press :kbd:`Ctrl-Alt-U`.
 Mac users can press :kbd:`Cmd-,`.
-You can also load the Preferences editor in any window by selecting
-
-.. figure:: /images/User-preferences-icon.jpg
-
- *User Preferences* from the Window type selection menu.
+You can also load the Preferences editor in any window by selecting (|user-preferences-icon|)
+*User Preferences* from the :doc:`Window type selection menu </getting_started/basics/interface/window_types>`.
 
 
 .. figure:: /images/User-preferences.jpg
@@ -28,23 +27,26 @@ You can also load the Preferences editor in any window by selecting
    :figwidth: 650px
 
 
-This editor permits you to configure how Blender will work.
-The available options are grouped into seven tabs, accessible at the top of the window.
-The options are: *Interface*, *Editing*, *Input*, *Add-Ons*, *Themes*,
-*File* and *System*.
-
-
 Configure
 =========
 
-Now that you have opened the *User Preferences* editor,
-you can configure Blender to your liking.
-Select what you want to change in the following list:
+Now that you have opened the User Preferences editor, you can configure Blender to your liking.
+At the top of the window, the available options are grouped into seven tabs:
 
-
-FIXME(Template Unsupported: Doc:RO/2.5/Manual/Interface/Configuration/index;
-{{Doc:RO/2.5/Manual/Interface/Configuration/index}}
-)
+:doc:`Interface </preferences/interface>`
+   Change how UI elements are displayed and how they react.
+:doc:`Editing </preferences/editing>`
+   Control how several tools will interact with your input.
+:doc:`Input </preferences/input>`
+   Customize how Blender reacts to the mouse and keyboard as well as define your own keymap.
+:doc:`Add-ons </preferences/add_ons>`
+   Manage secondary options which are not enabled in Blender by default as well as install new features.
+:doc:`Themes </preferences/themes>`
+   Customize interface appearance and colors.
+:doc:`File </preferences/file>`
+   Configure auto-save preferences and set default file paths for .blend files, rendered images, and more.
+:doc:`System </preferences/system>`
+   Set resolution, scripting console preferences, sound, graphics cards, and internationalization.
 
 
 Save the new preferences
@@ -52,9 +54,10 @@ Save the new preferences
 
 Once you have set your preferences, you will need to manually save them,
 otherwise the new configuration will be lost after a restart.
-Blender saves its preferences to *userpref.blend* in your user folder.
+Blender saves its preferences to *userpref.blend* in your user folder
+(see next section, “Load Factory Settings”, for details).
 
-In the *User Preferences* window, click on *Save User Settings*.
+In the *User Preferences* window, click on the *Save User Settings* button in the bottom left.
 This will save all of the new preferences.
 
 
@@ -71,13 +74,17 @@ There are two ways to restore the default Blender settings:
   Linux
      .. parsed-literal:: /home/$user/.config/.blender/|BLENDER_VERSION|/startup.blend
 
-     (you'll need to show hidden files).
   Windows
      .. parsed-literal:: C:/Users/$user/AppData/Roaming/Blender Foundation/Blender/|BLENDER_VERSION|/config/startup.blend
+
   OSX
      .. parsed-literal:: /Users/$user/Library/Application Support/Blender/|BLENDER_VERSION|/config/startup.blend
 
-     (you'll need to show hidden files).
+
+.. note::
+
+   You may need to have the “show hidden files” option checked in your file browser settings.
+
 
 While you're in the Blender config folder,
 it can be valuable to copy your Blender settings file to another folder.

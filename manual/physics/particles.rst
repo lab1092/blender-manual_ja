@@ -9,7 +9,8 @@ They may react to many different influences and forces, and have the notion of a
 Dynamic particles can represent fire, smoke, mist,
 and other things such as dust or magic spells.
 
-:doc:`Hair </physics/particles/hair>` type particles are a subset of regular particles. Hair systems form strands that can represent hair, fur, grass and bristles.
+:doc:`Hair </physics/particles/hair>` type particles are a subset of regular particles.
+Hair systems form strands that can represent hair, fur, grass and bristles.
 
 You see particles as a *Particle* modifier,
 but all settings are done in the *Particle tab*.
@@ -19,7 +20,8 @@ but all settings are done in the *Particle tab*.
    :width: 300px
    :figwidth: 300px
 
-   Image 1: Some fur made from particles (`Blend file <http://wiki.blender.org/index.php/Media:Blender3D FurExample 2.49.blend>`__).
+   Image 1: Some fur made from particles
+   (`Blend file <http://wiki.blender.org/index.php/Media:Blender3D FurExample 2.49.blend>`__).
 
 
 Particles generally flow out from their mesh into space.
@@ -30,15 +32,19 @@ Their movement can be affected by many things, including:
 - Movement according to "gravity" or "air resistance".
 - Influence of force fields like wind, vortexes or guided along a curve.
 - Interaction with other objects like collisions.
-- Partially intelligent members of a flock (herd, school, ...), that react to other members of their flock, while trying to reach a target or avoid predators.
+- Partially intelligent members of a flock (herd, school, ...),
+  that react to other members of their flock, while trying to reach a target or avoid predators.
 - Smooth motion with softbody physics (only *Hair* particle systems).
 - Or even manual transformation with :doc:`Lattices </modifiers/deform/lattice>`.
 
 Particles may be rendered as:
 
 - :doc:`Halos </materials/halos>` (for Flames, Smoke, Clouds).
-- Meshes which in turn may be animated (e.g. fish, bees, ...). In these cases, each particle "carries" another object.
-- :doc:`Strands </materials/properties/strands>` (for :doc:`Hair, Fur, Grass </physics/particles/hair>`); the complete way of a particle will be shown as a strand. These strands can be manipulated in the 3D window (combing, adding, cutting, moving, etc).
+- Meshes which in turn may be animated (e.g. fish, bees, ...).
+  In these cases, each particle "carries" another object.
+- :doc:`Strands </render/blender_render/materials/properties/strands>` (for :doc:`Hair, Fur,
+  Grass </physics/particles/hair>`); the complete way of a particle will be shown as a strand.
+  These strands can be manipulated in the 3D window (combing, adding, cutting, moving, etc).
 
 Every object may carry many particle systems. Each particle system may contain up to 100.
 000 particles. Certain particle types (*Hair* and *Keyed*)
@@ -63,11 +69,13 @@ Workflow
 The process for working with standard particles is:
 
 - Create the mesh which will emit the particles.
-- Create one or more Particle Systems to emit from the mesh. Many times, multiple particle systems interact or merge with each other to achieve the overall desired effect.
+- Create one or more Particle Systems to emit from the mesh.
+  Many times, multiple particle systems interact or merge with each other to achieve the overall desired effect.
 - Tailor each Particle System's settings to achieve the desired effect.
 - Animate the base mesh and other particle meshes involved in the scene.
 - Define and shape the path and flow of the particles.
-- For :doc:`Hair </physics/particles/hair>` particle systems: Sculpt the emitter's flow (cut the hair to length and comb it for example).
+- For :doc:`Hair </physics/particles/hair>` particle systems: Sculpt the emitter's flow
+  (cut the hair to length and comb it for example).
 - Make final render and do physics simulation(s), and tweak as needed.
 
 
@@ -152,7 +160,8 @@ Links
 *****
 
 - `Tutorials <http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Particle_Systems>`__
-- `Physics Caching and Baking <http://www.blender.org/development/release-logs/blender-246/physics-caching-and-baking/>`__
+- `Physics Caching and Baking
+  <http://www.blender.org/development/release-logs/blender-246/physics-caching-and-baking/>`__
 - `Particle Rewrite Documentation <http://wiki.blender.org/index.php/BlenderDev/Particles_Rewrite_Doc>`__
 - `Thoughts about the particle rewrite code <http://wiki.blender.org/index.php/BlenderDev/Particles_Rewrite>`__
 - `Static Particle Fur Library <http://cs.unm.edu/~sketch/gallery/resource/furlib.html>`__

@@ -22,7 +22,8 @@ The *To Sphere* transformation will give the selection spherical qualities. The
    :width: 640px
    :figwidth: 640px
 
-   Suzanne with inceasing sphericity. The sequence above shows a Suzanne mesh with a 0, 0.25 (25%), 0.5 (50%) and 1 (100%) To Sphere transform applied.
+   Suzanne with inceasing sphericity.
+   The sequence above shows a Suzanne mesh with a 0, 0.25 (25%), 0.5 (50%) and 1 (100%) To Sphere transform applied.
 
 
 Usage
@@ -57,7 +58,9 @@ will be smoother and more spherical when there are more mesh elements available 
    :width: 640px
    :figwidth: 640px
 
-   To Sphere applied to cubes with different subdivision levels. In this image sequence, To Sphere was applied to the entire cube at levels of 0, 0.25 (25%), 0.5 (50%) and 1 (100%) respectively.
+   To Sphere applied to cubes with different subdivision levels.
+   In this image sequence, To Sphere was applied to the entire cube
+   at levels of 0, 0.25 (25%), 0.5 (50%) and 1 (100%) respectively.
 
 
 The *To Sphere* transform will generate different results depending on the number

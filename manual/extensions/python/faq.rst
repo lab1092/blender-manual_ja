@@ -18,7 +18,8 @@ How can I generate a mesh object using the API?
 ===============================================
 
 Download this code example
-`Script_GeneratePyramidMesh.py <https://svn.blender.org/svnroot/bf-extensions/contrib/py/api-doc/Script_GeneratePyramidMesh.py>`__
+`Script_GeneratePyramidMesh.py
+<https://svn.blender.org/svnroot/bf-extensions/contrib/py/api-doc/Script_GeneratePyramidMesh.py>`__
 and run it from the Text Window.
 
 

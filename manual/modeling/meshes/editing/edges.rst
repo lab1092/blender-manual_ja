@@ -37,7 +37,7 @@ Mark Seam and Clear Seam
 
 
 Seams are a way to create separations, "islands", in UV maps.
-See the :doc:`UVTexturing section </textures/mapping/uv>` for more details.
+See the :doc:`UVTexturing section </render/blender_render/textures/mapping/uv>` for more details.
 These commands set or unset this flag for selected edges.
 
 

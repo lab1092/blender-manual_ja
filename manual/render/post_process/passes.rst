@@ -57,8 +57,8 @@ The answer to each of the above questions is an image or map, as shown below:
    :figwidth: 600px
 
 
-Each Render Pass puts out an image or a map.  For the purposes of this example,
-a Render Layer was defined to produce all possible outputs.  When a Render Layer input-node
+Each Render Pass puts out an image or a map. For the purposes of this example,
+a Render Layer was defined to produce all possible outputs. When a Render Layer input-node
 was added to the node diagram and the Render Layer input-node was subsequently associated with
 the Render Layer, all of the layer's outputs appeared as connection points on the right-hand
 (output) side of the node.
@@ -86,7 +86,7 @@ Selecting Render Passes
 Render Passes are the various distinct outputs that the renderer is able to generate.
 All of the following render outputs are normally combined into a single output known,
 appropriately enough, as the **Combined** output.
-But you can also select any of them to be output as a separate pass.  (If you do so, in most
+But you can also select any of them to be output as a separate pass. (If you do so, in most
 cases you can choose whether to *also* continue to include it in the Combined output.)
 
 Some of these outputs must be enabled and used within your scene
@@ -153,7 +153,7 @@ Excluding Render Passes
 =======================
 
 As we said, the **Combined** output is an amalgam of several outputs which are *also*
-available separately.  When you select one of these outputs,
+available separately. When you select one of these outputs,
 they will be provided separately *and also* included in the Combined pass.
 
 When you enable the Camera icon that is beside several of the pass options,
@@ -250,7 +250,7 @@ To configure your noodle, consider the example image above.
 
 
 - First, depending on the AO mode do one of the following: If AO mode is Add: directly use the AO pass.
-  If AO mode is Sub: Calculate AO - 1, or if AO mode is  Both: Calculate 2*AO - 1.
+  If AO mode is Sub: Calculate AO - 1, or if AO mode is Both: Calculate 2*AO - 1.
 - Multiply the output of Step 1 with the AO energy level.
 - Multiply the output of Step 2 with the material's ambience value.
   If you have materials which receive different ambience light levels (0.5 is the default),

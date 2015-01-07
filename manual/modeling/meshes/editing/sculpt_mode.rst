@@ -20,7 +20,7 @@ Sculpt Mode
 Sculpt mode is selected from the mode menu of the *3D View* header.
 
 Once sculpt mode is activated the *Toolbar* of the *3D View* will change
-to sculpt mode specific panels.  The panels in the toolbar will be *Brush*,
+to sculpt mode specific panels. The panels in the toolbar will be *Brush*,
 *Texture*, *Tool*, *Symmetry*, *Stroke*,
 *Curve*, *Appearance*, and *Options*.
 Also a red circle will appear that follows the location of the cursor in the 3d view.
@@ -39,7 +39,7 @@ Also a red circle will appear that follows the location of the cursor in the 3d 
 Sculpt Brushes
 **************
 
-Brushes are brush presets.  They are a combination of a 'tool', along with stroke, texture,
+Brushes are brush presets. They are a combination of a 'tool', along with stroke, texture,
 and options.
 
 *Sculpt* Mode has sixteen brushes, each of which operates on the model in a unique way.
@@ -62,7 +62,8 @@ Clay Strips
 Crease
    Creates sharp indents or ridges by pushing or pulling the mesh, while pinching the vertices together.
 Draw (:kbd:`D`)
-   Moves vertices inward or outward, based the average normal of the vertices contained within the drawn brush stroke.
+   Moves vertices inward or outward,
+   based the average normal of the vertices contained within the drawn brush stroke.
 Fill
    The *Fill* brush works like the Flatten brush, but only brings vertices below the brush plane upwards.
    The inverse of the Scrape brush is to *Deepen* by pushing vertices above the plane downward.
@@ -121,7 +122,7 @@ This panel appears in the tool palette on the left side of the 3D viewport.
 Brush Menu
 ==========
 
-Radius 
+Radius
    This option controls the radius of the brush, measured in pixels.
    :kbd:`F` in the 3D view allows you to change the brush size interactively by
    dragging the mouse and then left clicking (the texture of the brush should be visible inside the circle).
@@ -205,6 +206,10 @@ Curve Menu
 The *Curve* section allows you to use a curve control to the right to modify the
 intensity of the brush from its centre (left part of the curve) towards its borders
 (right part of the curve).
+
+.. seealso::
+
+   - Read more about using the :ref:`Curve Widget <curve-widget>`.
 
 
 Texture Menu
@@ -323,72 +328,72 @@ Keyboard Shortcuts
 These shortcuts may be customized under File > User preferences > Input > 3D View > Sculpt
 Mode.
 
-Action -> Shortcut table:
 
 .. list-table::
+   Action -> Shortcut table:
 
    * - Hide mesh inside selection
-     -  :kbd:`H` then click & drag
+     - :kbd:`H` then click & drag
    * - Reveal mesh inside selection
-     -  :kbd:`Shift-H` then click & drag
+     - :kbd:`Shift-H` then click & drag
    * - Show entire mesh
-     -  :kbd:`Alt-H`
+     - :kbd:`Alt-H`
    * - Interactively set brush size
-     -  :kbd:`F`
+     - :kbd:`F`
    * - Increase/decrease brush size
-     -  :kbd:`[` and :kbd:`]`
+     - :kbd:`[` and :kbd:`]`
    * - Interactively set brush strength
-     -  :kbd:`Shift-F`
+     - :kbd:`Shift-F`
    * - Interactively rotate brush texture
-     -  :kbd:`Ctrl-F`
+     - :kbd:`Ctrl-F`
    * - Brush direction toggle (*Add* / *Sub*)
-     -  :kbd:`Ctrl` pressed while sculpting
+     - :kbd:`Ctrl` pressed while sculpting
    * - Set stroke method (airbrush, anchored, ..)
-     -  :kbd:`A`
+     - :kbd:`A`
    * - Smooth stroke toggle
-     -  :kbd:`Shift-S`
+     - :kbd:`Shift-S`
    * - *Draw* brush
-     -  :kbd:`D`
+     - :kbd:`D`
    * - *Smooth* brush
-     -  :kbd:`S`
+     - :kbd:`S`
    * - *Pinch/Magnify* brush
-     -  :kbd:`P`
+     - :kbd:`P`
    * - *Inflate/Deflate* brush
-     -  :kbd:`I`
+     - :kbd:`I`
    * - *Grab* brush
-     -  :kbd:`G`
+     - :kbd:`G`
    * - *Layer* brush
-     -  :kbd:`L`
+     - :kbd:`L`
    * - *Flatten/Contrast* brush
-     -  :kbd:`Shift-T`
+     - :kbd:`Shift-T`
    * - *Clay* brush
-     -  :kbd:`C`
+     - :kbd:`C`
    * - *Crease* brush
-     -  :kbd:`Shift-C`
+     - :kbd:`Shift-C`
    * - *Snake Hook* brush
-     -  :kbd:`K`
+     - :kbd:`K`
    * - *Mask* brush
-     -  :kbd:`M`
+     - :kbd:`M`
    * - Mask clear
-     -  :kbd:`Alt-M`
+     - :kbd:`Alt-M`
    * - Mask invert
-     -  :kbd:`Ctrl-I`
+     - :kbd:`Ctrl-I`
    * - Set brush by number
-     -  :kbd:`0` - :kbd:`9` and :kbd:`Shift-0` to :kbd:`Shift-9`
+     - :kbd:`0` - :kbd:`9` and :kbd:`Shift-0` to :kbd:`Shift-9`
    * - Sculpt options panel toggle
-     -  :kbd:`T`
+     - :kbd:`T`
    * - Step up one multires level
-     -  :kbd:`Page Up`
+     - :kbd:`Page Up`
    * - Step down one multires level
-     -  :kbd:`Page Down`
+     - :kbd:`Page Down`
    * - Set multires level
-     -  :kbd:`Ctrl-0` to :kbd:`Ctrl-5`
+     - :kbd:`Ctrl-0` to :kbd:`Ctrl-5`
    * - Dynamic topology toggle
-     -  :kbd:`Ctrl-D`
+     - :kbd:`Ctrl-D`
    * - Set texture angle type
-     -  :kbd:`R`
+     - :kbd:`R`
    * - Translate/scale/rotate stencil texture
-     -  :kbd:`RMB`, :kbd:`Shift-RMB`, :kbd:`Ctrl-RMB`
+     - :kbd:`RMB`, :kbd:`Shift-RMB`, :kbd:`Ctrl-RMB`
    * - Translate/scale/rotate stencil mask
-     -  :kbd:`Alt-RMB`, :kbd:`Alt-Shift-RMB`, :kbd:`Alt-Ctrl-RMB`
+     - :kbd:`Alt-RMB`, :kbd:`Alt-Shift-RMB`, :kbd:`Alt-Ctrl-RMB`
 

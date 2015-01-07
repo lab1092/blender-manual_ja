@@ -149,13 +149,15 @@ Linked Library Duplication
    | Hotkey:   :kbd:`Shift-F1`
 
 
-:doc:`Linked Libraries </data_system/linked_libraries>` :Linked Libraries are also a form of duplication.  Any object or datablock in other *.blend* files can be reused in the current file.
+:doc:`Linked Libraries </data_system/linked_libraries>` :Linked Libraries are also a form of duplication.
+Any object or datablock in other *.blend* files can be reused in the current file.
 
 
 Hints
 *****
 
-- If you want transform properties (i.e. object datablocks) to be "linked", see the page on :doc:`parenting </modeling/objects/groups_and_parenting>`.
-- Material Transparency will not display when instancing dupli-groups; this is a known limitation of Blender's view-port.
-
+- If you want transform properties (i.e. object datablocks) to be "linked",
+  see the page on :doc:`parenting </modeling/objects/groups_and_parenting>`.
+- Material Transparency will not display when instancing dupli-groups;
+  this is a known limitation of Blender's view-port.
 

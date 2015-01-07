@@ -34,6 +34,6 @@ Notes:
 
 .. note:: Note about soft bodies
 
-   The *Near* sensor can not detect soft bodies. This is a limitation in Bullet, the physics library used by the Game Engine.
-
+   The *Near* sensor can not detect soft bodies.
+   This is a limitation in Bullet, the physics library used by the Game Engine.
 

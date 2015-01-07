@@ -17,7 +17,8 @@ Mostly this is controlled using the Properties panel of the camera(s) used in th
 
 .. tip:: Render Engine
 
-   Make sure that the render engine is set to Blender Game when attempting to set these controls - otherwise this description will not tally with what you see!
+   Make sure that the render engine is set to Blender Game when attempting to set these controls -
+   otherwise this description will not tally with what you see!
 
 
 In the Camera Properties area, there are six panels available, as shown.
@@ -48,7 +49,8 @@ Standalone Player
    Standalone Panel
 
 
-This panel provides information for the Standalone Game Player which allows games to be run without Blender. See :doc:`Standalone Player </game_engine/standalone_player>` for further details.
+This panel provides information for the Standalone Game Player which allows games to be run without Blender.
+See :doc:`Standalone Player </game_engine/standalone_player>` for further details.
 
 Fullscreen -
    Off - opens standalone game as a new window.
@@ -77,7 +79,8 @@ Framing
 
 Bar Color
    Select a color to use as the color of bars around the viewport (default black).
-   To use this, select a color mode (RGB, HSV or Hex), then use the color slider and color wheel to choose a bar color.
+   To use this, select a color mode (RGB, HSV or Hex),
+   then use the color slider and color wheel to choose a bar color.
 
 
 Stereo
@@ -90,15 +93,17 @@ Stereo
    Stereo Panel
 
 
-Select a stereo mode that  will be used to capture stereo images of the game (and also,
+Select a stereo mode that will be used to capture stereo images of the game (and also,
 by implication, that stereo displays will use to render images in the standalone player).
 
 None
    Render single images with no stereo.
 Stereo
-   Render dual images for stereo viewing using appropriate equipment. See :doc:`Stereo Camera </game_engine/camera/stereo>` for full details of available options.
+   Render dual images for stereo viewing using appropriate equipment.
+   See :doc:`Stereo Camera </game_engine/camera/stereo>` for full details of available options.
 Dome
-   Provides facilities for an immersive dome environment in which to view the game. See :doc:`Dome Camera </game_engine/camera/dome>` for full details of available options.
+   Provides facilities for an immersive dome environment in which to view the game.
+   See :doc:`Dome Camera </game_engine/camera/dome>` for full details of available options.
 
 
 Shading
@@ -112,7 +117,7 @@ Shading
 
 
 Specifies the shading mode to be used in rendering the game.
-The shading facilities available in Blender for use in :doc:`Materials </materials>` and :doc:`Textures </textures>`
+The shading facilities available in Blender for use in :doc:`Materials </render/blender_render/materials>` and :doc:`Textures </render/blender_render/textures>`
 are essentially the same in the Blender Game Engine.
 However the constraints of real-time display mean that only some of the facilities are available.
 
@@ -139,7 +144,8 @@ Use Frame Rate
 Display Lists
    Use display lists to speed up rendering by keeping geometry on the GPU.
 Restrict Animation Updates
-   Restrict number of animation updates to the animation FPS (this is better for performance but can cause issues with smooth playback).
+   Restrict number of animation updates to the animation FPS
+   (this is better for performance but can cause issues with smooth playback).
 
 
 Display
@@ -152,18 +158,20 @@ Display
    Display Panel
 
 
-Gives various display options when running the Game Engine. under the .
+Gives various display options when running the Game Engine. Under the...
 
 Debug Properties
    Show properties marked for debugging while game runs.
    Note that debug properties to be shown must be requested at source (eg. i-button in state tables).
    Only available when game is run within Blender - not in standalone player version.
 Framerate and Profile
-   Show framerate and profiling information while game runs. Only available when game is run within Blender - not in standalone player version.
+   Show framerate and profiling information while game runs.
+   Only available when game is run within Blender - not in standalone player version.
 Physics Visualization
    Show physics bounds and interactions while game runs (available in both Blender and standalone versions).
 Deprecation Warnings
-   Print warnings when using deprecated features in the python API. Only available when game is run within Blender - not in standalone player version.
+   Print warnings when using deprecated features in the python API.
+   Only available when game is run within Blender - not in standalone player version.
 Mouse Cursor
    Show mouse cursor while game runs (available in both Blender and standalone versions).
 

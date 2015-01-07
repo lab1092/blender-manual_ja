@@ -71,7 +71,7 @@ msgid ""
 "will contribute significantly to the lighting of this pixel."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:57
+#: ../../manual/render/cycles/reducing_noise.rst:65
 msgid ""
 "The lamp is a known light source, so it will not be too hard to find, but "
 "the glossy highlight (s) that it causes are a different matter. The best we "
@@ -82,7 +82,7 @@ msgid ""
 "cover all the important sources of light."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:64
+#: ../../manual/render/cycles/reducing_noise.rst:72
 msgid ""
 "With some tricks we can reduce this noise. If we blur the bright spots, they"
 " become bigger and less intense, making them easier to find and less noisy. "
@@ -91,11 +91,11 @@ msgid ""
 "using Filter Glossy and Smooth Light Falloff."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:79
+#: ../../manual/render/cycles/reducing_noise.rst:95
 msgid "Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:81
+#: ../../manual/render/cycles/reducing_noise.rst:97
 msgid ""
 "In reality light will bounce a huge number of times due to the speed of "
 "light being very high. In practice more bounces will introduce more noise, "
@@ -106,7 +106,7 @@ msgid ""
 "most."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:96
+#: ../../manual/render/cycles/reducing_noise.rst:120
 msgid ""
 "Also important is to **use shader colors that do not have components of "
 "value 1.0** or values near that; try to keep the maximum value to 0.8 or "
@@ -117,11 +117,11 @@ msgid ""
 "intensity then does not decrease much as it bounces off each surface."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:106
+#: ../../manual/render/cycles/reducing_noise.rst:130
 msgid "Caustics and Filter Glossy"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:108
+#: ../../manual/render/cycles/reducing_noise.rst:132
 msgid ""
 "Caustics are a well-known source of noise, causing fireflies. They happen "
 "because the renderer has difficulty finding specular highlights viewed "
@@ -131,7 +131,7 @@ msgid ""
 "caustics by default."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:123
+#: ../../manual/render/cycles/reducing_noise.rst:155
 msgid ""
 "However using No Caustics will result in missing light, and it still does "
 "not cover the case where a sharp glossy reflection is viewed through a soft "
@@ -141,17 +141,17 @@ msgid ""
 "find, by increasing the shader Roughness."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:129
+#: ../../manual/render/cycles/reducing_noise.rst:161
 msgid ""
 "The above images show default settings, no caustics, and filter glossy set "
 "to 1.0."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:133
+#: ../../manual/render/cycles/reducing_noise.rst:165
 msgid "Light Falloff"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:135
+#: ../../manual/render/cycles/reducing_noise.rst:167
 msgid ""
 "In reality light in a vacuum will always fall off at a rate of "
 "1/(distance^2). However as distance goes to zero, this value goes to "
@@ -161,11 +161,11 @@ msgid ""
 "typical recipe for fireflies."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:157
+#: ../../manual/render/cycles/reducing_noise.rst:192
 msgid "Sample as Lamp"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:167
+#: ../../manual/render/cycles/reducing_noise.rst:202
 msgid ""
 "The optimal setting here is difficult to guess; it may be a matter of trial "
 "and error, but often it is clear that a somewhat glowing object may be only "
@@ -175,22 +175,11 @@ msgid ""
 "noise by disabling Sample as Lamp on them."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:181
-msgid ""
-"The world background also has a FIXME(TODO: Internal Link; "
-"[[../Integrator#World_Settings|Sample as Lamp]] ) option. This is mostly "
-"useful for environment maps that have small bright spots in them, rather "
-"than being smooth. This option will then, in a preprocess, determine the "
-"bright spots, and send light rays directly towards them. Again, enabling "
-"this option may take samples away from more important light sources if it is"
-" not needed."
-msgstr ""
-
-#: ../../manual/render/cycles/reducing_noise.rst:193
+#: ../../manual/render/cycles/reducing_noise.rst:229
 msgid "Glass and Transparent Shadows"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:195
+#: ../../manual/render/cycles/reducing_noise.rst:231
 msgid ""
 "With caustics disabled, glass will miss shadows, and with filter glossy they"
 " might be too soft. We can make a glass shader that will **use a Glass BSDF "
@@ -201,18 +190,18 @@ msgid ""
 "which of the two shaders."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:216
+#: ../../manual/render/cycles/reducing_noise.rst:256
 msgid ""
 "Above we can see the node setup used for the glass transparency trick; on "
 "the left the render has too much shadow due to missing caustics, and on the "
 "right the render with the trick."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:222
+#: ../../manual/render/cycles/reducing_noise.rst:262
 msgid "Window Lights"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:224
+#: ../../manual/render/cycles/reducing_noise.rst:264
 msgid ""
 "When rendering a daylight indoor scene where most of the light is coming in "
 "through a window or door opening, it is difficult for the integrator to find"
@@ -224,45 +213,92 @@ msgid ""
 " in the material."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:233
+#: ../../manual/render/cycles/reducing_noise.rst:273
 msgid ""
 "The two renders below have the same render time, with the second render "
 "using a mesh light positioned in the window."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:245
+#: ../../manual/render/cycles/reducing_noise.rst:289
 msgid "Clamp Fireflies"
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:247
+#: ../../manual/render/cycles/reducing_noise.rst:186
+msgid ""
+"To reduce this problem, the :ref:`render-cycles-nodes-more-light_falloff` "
+"node has a **Smooth factor, that can be used to reduce the maximum "
+"intensity** a light can contribute to nearby surfaces. The images above show"
+" default falloff and smooth value 1.0."
+msgstr ""
+
+#: ../../manual/render/cycles/reducing_noise.rst:194
+msgid ""
+"Materials with emission shaders can be configured to be **sampled as lamp** "
+"(:ref:`render-cycles-integrator-material_settings`). This means that they "
+"will get rays sent directly towards them, rather than ending up there based "
+"on rays randomly bouncing around. For very bright mesh light sources, this "
+"can reduce noise significantly. However when the emission is not "
+"particularly bright, this will take samples away from other brighter light "
+"sources for which it is important to find them this way."
+msgstr ""
+
+#: ../../manual/render/cycles/reducing_noise.rst:220
+msgid ""
+"The world background also has a *Sample as Lamp* (:ref:`render-cycles-"
+"integrator-world_settings`) option. This is mostly useful for environment "
+"maps that have small bright spots in them, rather than being smooth. This "
+"option will then, in a preprocess, determine the bright spots, and send "
+"light rays directly towards them. Again, enabling this option may take "
+"samples away from more important light sources if it is not needed."
+msgstr ""
+
+#: ../../manual/render/cycles/reducing_noise.rst:291
 msgid ""
 "Ideally with all the previous tricks, fireflies would be eliminated, but "
 "they could still happen. For that, **the intensity that any individual light"
 " ray sample will contribute to a pixel can be clamped** to a maximum value "
-"with the integrator FIXME(TODO: Internal Link; [[../Integrator#Tricks|Clamp "
-"setting]]). If set too low this can cause missing highlights in the image, "
-"which might be useful to preserve for camera effects such as bloom or glare."
+"with the integrator :ref:`Clamp setting <render-cycles-integrator-"
+"clamp_samples>`. If set too low this can cause missing highlights in the "
+"image, which might be useful to preserve for camera effects such as bloom or"
+" glare."
 msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:150
-msgid ""
-"To reduce this problem, the FIXME(TODO: Internal Link; "
-"[[../Nodes/More/#Light_Falloff|Light Falloff node]]) has a **Smooth factor, "
-"that can be used to reduce the maximum intensity** a light can contribute to"
-" nearby surfaces. The images above show default falloff and smooth value "
-"1.0."
-msgstr ""
+#~ msgid ""
+#~ "The world background also has a FIXME(TODO: Internal Link; "
+#~ "[[../Integrator#World_Settings|Sample as Lamp]] ) option. This is mostly "
+#~ "useful for environment maps that have small bright spots in them, rather "
+#~ "than being smooth. This option will then, in a preprocess, determine the "
+#~ "bright spots, and send light rays directly towards them. Again, enabling "
+#~ "this option may take samples away from more important light sources if it is"
+#~ " not needed."
+#~ msgstr ""
 
-#: ../../manual/render/cycles/reducing_noise.rst:159
-msgid ""
-"Materials with emission shaders can be configured to be FIXME(TODO: Internal"
-" Link; [[../Integrator#Material_Settings|Sampled as a Lamp]]). This means "
-"that they will get rays sent directly towards them, rather than ending up "
-"there based on rays randomly bouncing around. For very bright mesh light "
-"sources, this can reduce noise significantly. However when the emission is "
-"not particularly bright, this will take  samples away from other brighter "
-"light sources for which it is important to find them this way."
-msgstr ""
+#~ msgid ""
+#~ "Ideally with all the previous tricks, fireflies would be eliminated, but "
+#~ "they could still happen. For that, **the intensity that any individual light"
+#~ " ray sample will contribute to a pixel can be clamped** to a maximum value "
+#~ "with the integrator FIXME(TODO: Internal Link; [[../Integrator#Tricks|Clamp "
+#~ "setting]]). If set too low this can cause missing highlights in the image, "
+#~ "which might be useful to preserve for camera effects such as bloom or glare."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To reduce this problem, the FIXME(TODO: Internal Link; "
+#~ "[[../Nodes/More/#Light_Falloff|Light Falloff node]]) has a **Smooth factor, "
+#~ "that can be used to reduce the maximum intensity** a light can contribute to"
+#~ " nearby surfaces. The images above show default falloff and smooth value "
+#~ "1.0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Materials with emission shaders can be configured to be FIXME(TODO: Internal"
+#~ " Link; [[../Integrator#Material_Settings|Sampled as a Lamp]]). This means "
+#~ "that they will get rays sent directly towards them, rather than ending up "
+#~ "there based on rays randomly bouncing around. For very bright mesh light "
+#~ "sources, this can reduce noise significantly. However when the emission is "
+#~ "not particularly bright, this will take  samples away from other brighter "
+#~ "light sources for which it is important to find them this way."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "To reduce this problem, the FIXME(TODO: Internal Link; "

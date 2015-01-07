@@ -44,10 +44,12 @@ Hide Selected elements
    Use :kbd:`H`, or the :menuselection:`Curve --> Show/Hide --> Hide Selected` menu option from the 3D window header.
 
 Show Hidden elements
-   Use :kbd:`Alt-H`, or the :menuselection:`Curve --> Show/Hide --> Show Hidden` menu option from the 3D window header.
+   Use :kbd:`Alt-H`, or the
+   :menuselection:`Curve --> Show/Hide --> Show Hidden` menu option from the 3D window header.
 
 Hide Unselected elements
-   Use :kbd:`Shift-H`, or the :menuselection:`Curve --> Show/Hide --> Hide Unselected` menu option from the 3D window header.
+   Use :kbd:`Shift-H`,
+   or the :menuselection:`Curve --> Show/Hide --> Hide Unselected` menu option from the 3D window header.
 
 
 ----
@@ -64,7 +66,11 @@ Basic Curve Editing (translation, rotation, scale)
    | Hotkey:   :kbd:`G` / :kbd:`R` / :kbd:`S`
 
 
-Like other elements in Blender, Curve control points can be grabbed/moved (:kbd:`G`), rotated (:kbd:`R`) or scaled (:kbd:`S`) as described in the :doc:`Basic Transformations </basics/transformations/introduction>` section. When in *Edit* mode, :doc:`proportional editing </3d_interaction/transform_control/proportional_edit>` is also available for transformation actions.
+Like other elements in Blender, Curve control points can be grabbed/moved (:kbd:`G`),
+rotated (:kbd:`R`) or scaled (:kbd:`S`)
+as described in the :doc:`Basic Transformations </getting_started/basics/transformations/introduction>` section.
+When in *Edit* mode, :doc:`proportional editing
+</3d_interaction/transform_control/proportional_edit>` is also available for transformation actions.
 
 
 Snapping
@@ -77,7 +83,10 @@ Snapping
    | Panel:    *Curve Tools* (*Editing* context)
 
 
-:doc:`Mesh snapping </modeling/meshes/snapping>` also works with curve components. Both control points and their handles will be affected by snapping, except for within itself (other components of the active curve). Snapping works with 2D curves but points will be constrained to the local XY axes.
+:doc:`Mesh snapping </modeling/meshes/snapping>` also works with curve components.
+Both control points and their handles will be affected by snapping,
+except for within itself (other components of the active curve).
+Snapping works with 2D curves but points will be constrained to the local XY axes.
 
 
 Deforming Tools
@@ -90,7 +99,10 @@ Deforming Tools
    | Menu:     :menuselection:`Curve --> Transform`
 
 
-The *To Sphere*, *Shear*, *Wrap* and *Push/Pull* transform tools are described in the :doc:`Transformations </3d_interaction/transformations>` sections. The two other tools, *Tilt* and *Shrink/Fatten Radius* are related to :doc:`Curve Extrusion </modeling/curves/editing/advanced>`.
+The *To Sphere*, *Shear*, *Wrap* and *Push/Pull* transform tools are described in the
+:doc:`Transformations </3d_interaction/transformations>` sections.
+The two other tools, *Tilt* and *Shrink/Fatten Radius* are related to
+:doc:`Curve Extrusion </modeling/curves/editing/advanced>`.
 
 
 Smoothing
@@ -119,7 +131,8 @@ Mirror
    | Hotkey:   :kbd:`Ctrl-M`
 
 
-The *Mirror* tool is also available, behaving exactly as with :doc:`mesh vertices </modeling/meshes/editing/deforming/mirror>`,
+The *Mirror* tool is also available, behaving exactly as with
+:doc:`mesh vertices </modeling/meshes/editing/deforming/mirror>`,
 
 
 ----
@@ -137,7 +150,10 @@ Set Bézier Handle Type
    | Hotkey:   :kbd:`V`
 
 
-Handle types are a property of :doc:`Bézier curves. </modeling/curves>` and can be used to alter features of the curve. For example, switching to *Vector handles* can be used to create curves with sharp corners. Read the :doc:`Bézier curves </modeling/curves>` page for more details.
+Handle types are a property of :doc:`Bézier curves.
+</modeling/curves>` and can be used to alter features of the curve.
+For example, switching to *Vector handles* can be used to create curves with sharp corners.
+Read the :doc:`Bézier curves </modeling/curves>` page for more details.
 
 
 Extending Curves
@@ -158,14 +174,6 @@ Each new segment is added to one end of the curve.
 A new segment will only be added if a single vertex, or handle,
 at one end of the curve is selected. If two or more control points are selected,
 a new Bézier closed curve is started.
-
-Unlike mesh editing, you cannot create a new curve inside the edited object by :kbd:`Ctrl-LMB` -clicking without any control points selected. to do so, you can cut an existing curve in two parts (by
-FIXME(TODO: Internal Link;
-[[#Deleting Elements|deleting a segment]]
-)),
-FIXME(TODO: Internal Link;
-[[#Duplication|copying]]
-) an existing one (:kbd:`Shift-D`), or add a new one through the menu.
 
 
 Subdivision
@@ -262,23 +270,37 @@ The *Erase* pop-up menu of curves offers you three options:
 
 
 Selected
-   This will delete the selected control points, *without* breaking the curve (i.e. the adjacent points will be directly linked, joined, once the intermediary ones are deleted). Remember that NURBS order cannot be higher than its number of control points, so it might decrease when you delete some control point. Of course, when only one point remains, there is no more visible curve, and when all points are deleted, the curve itself is deleted.
+   This will delete the selected control points, *without* breaking the curve (i.e.
+   the adjacent points will be directly linked, joined, once the intermediary ones are deleted).
+   Remember that NURBS order cannot be higher than its number of control points,
+   so it might decrease when you delete some control point.
+   Of course, when only one point remains, there is no more visible curve,
+   and when all points are deleted, the curve itself is deleted.
 
 Segment
-   This option is somewhat the opposite to the preceding one, as it will cut the curve, without removing any control points, by erasing one selected segment.
-   This option always removes *only one segment* (the last "selected" one), even when several are in the selection. So to delete all segments in your selection, you'll have to repetitively use the same erase option...
+   This option is somewhat the opposite to the preceding one, as it will cut the curve,
+   without removing any control points, by erasing one selected segment.
+   This option always removes *only one segment* (the last "selected" one),
+   even when several are in the selection.
+   So to delete all segments in your selection, you'll have to repetitively use the same erase option...
 
 All
    As with meshes, this deletes everything in the object!
 
 
-+------------------------------------------------------+-----------------------------------------------------+
-+.. figure:: /images/Editing_Curves_delete-selected.jpg|.. figure:: /images/Editing_Curves_delete-segment.jpg+
-+   :width: 300px                                      |   :width: 300px                                     +
-+   :figwidth: 300px                                   |   :figwidth: 300px                                  +
-+                                                      |                                                     +
-+   Deleting Curve Selected                            |   Deleting Curve segments                           +
-+------------------------------------------------------+-----------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Editing_Curves_delete-selected.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Deleting Curve Selected
+
+     - .. figure:: /images/Editing_Curves_delete-segment.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Deleting Curve segments
 
 
 Opening and Closing a Curve
@@ -320,7 +342,8 @@ Switch Direction
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Curve --> Segments --> Switch Direction`, :menuselection:`Specials --> Switch Direction`
+   | Menu:     :menuselection:`Curve --> Segments --> Switch Direction`,
+     :menuselection:`Specials --> Switch Direction`
    | Hotkey:   :menuselection:`[W] --> [pad2]`
 
 
@@ -407,7 +430,9 @@ Curve Parenting
    | Hotkey:   :kbd:`Ctrl-P`
 
 
-You can make other selected objects :doc:`children </modeling/objects/groups_and_parenting#parenting_objects>` of one or three control points :kbd:`Ctrl-P`, as with mesh objects.
+You can make other selected objects
+:doc:`children </modeling/objects/groups_and_parenting#parenting_objects>` of one or three control points
+:kbd:`Ctrl-P`, as with mesh objects.
 
 Select either 1 or 3 control points,
 then :kbd:`Ctrl-RMB` another object and use :kbd:`Ctrl-P` to make a vertex parent.
@@ -438,5 +463,6 @@ Set Goal Weight
 
 
 Set Goal Weight
-   This sets the "goal weight" of selected control points, which is used when a curve has Soft Body physics, forcing the curve to "stick" to their original positions, based on the weight.
+   This sets the "goal weight" of selected control points, which is used when a curve has Soft
+   Body physics, forcing the curve to "stick" to their original positions, based on the weight.
 

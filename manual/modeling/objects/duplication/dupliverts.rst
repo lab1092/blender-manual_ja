@@ -45,8 +45,8 @@ Setup
 
 
 All you need is a base object (e.g. the *tree* or the *column*)
-and a pattern mesh with its vertices following the pattern you have in mind.  In this section,
-we will use a simple scene for the following part.  We'll be using a monkey head located at
+and a pattern mesh with its vertices following the pattern you have in mind. In this section,
+we will use a simple scene for the following part. We'll be using a monkey head located at
 the origin of the coordinate system as our base object and a circle at the same location as
 our parent mesh.
 
@@ -59,8 +59,8 @@ our parent mesh.
 First, in *Object mode*,
 select the base object and :kbd:`Shift-RMB` to add the circle to the selection
 (order is very important here),
-and  :kbd:`Ctrl-P` to parent the base object to the circle.  Now,
-the circle is the parent of the monkey; if you move the circle, the monkey will follow it.
+and :kbd:`Ctrl-P` to parent the base object to the circle.
+Now, the circle is the parent of the monkey; if you move the circle, the monkey will follow it.
 
 
 With only the circle selected, enable *Duplication vertices* in the
@@ -68,7 +68,7 @@ With only the circle selected, enable *Duplication vertices* in the
 A monkey head should be placed at every vertex of the circle.
 
 The original monkey head at the center and the parent mesh are still shown in the 3D view but
-neither will be rendered.  If the placement and rotation of your monkey head is odd,
+neither will be rendered. If the placement and rotation of your monkey head is odd,
 you might need to clear its rotation (:kbd:`Alt-R`), scale :kbd:`Alt-S`,
 location :kbd:`Alt-G`, and origin :kbd:`Alt-O`.
 

@@ -73,7 +73,7 @@ Cursor to Active
    snaps the cursor to the *active* (last selected) object, edge, face or vertex.
 
 The *Cursor to Selected* option is also affected by the number of elements in the
-selection and the current pivot point.  For example,
+selection and the current pivot point. For example,
 with several elements selected and the *Bounding Box Center* pivot point active,
 the *Cursor to Selected* option will snap the 3D cursor to the:
 

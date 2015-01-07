@@ -52,41 +52,41 @@ msgid ""
 "configuration path, under:"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:45
+#: ../../manual/render/cycles/nodes/osl.rst:44
 msgid "Linux"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:46
+#: ../../manual/render/cycles/nodes/osl.rst:45
 msgid "``/home/$user/.config/blender/`` *Version Number* ``/shaders/``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:47
+#: ../../manual/render/cycles/nodes/osl.rst:46
 msgid "Windows"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:48
+#: ../../manual/render/cycles/nodes/osl.rst:47
 msgid ""
 "``C:\\Users\\$user\\AppData\\Roaming\\Blender Foundation\\Blender\\`` "
 "*Version Number* ``\\shaders\\``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:51
+#: ../../manual/render/cycles/nodes/osl.rst:50
 msgid "Mac OS X"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:50
+#: ../../manual/render/cycles/nodes/osl.rst:49
 msgid ""
 "``/Users/$user/Library/Application Support/Blender/`` *Version Number* "
 "``/shaders/``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:53
+#: ../../manual/render/cycles/nodes/osl.rst:52
 msgid ""
 "(Replace *Version Number* with the release number of your current Blender "
 "installation, e.g. *2.65* or *2.66*.)"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:55
+#: ../../manual/render/cycles/nodes/osl.rst:54
 msgid ""
 "For use in production, we suggest to **use a node group to wrap shader "
 "script nodes**, and link that into other .blend files. This makes it easier "
@@ -94,56 +94,15 @@ msgid ""
 "without having to update the script nodes in all files."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:62
+#: ../../manual/render/cycles/nodes/osl.rst:61
 msgid "Writing Shaders"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:69
-msgid ""
-"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen\">shader</span> "
-") simple_material("
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/osl.rst:73
-msgid ""
-"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">color</span> "
-") Diffuse_Color = color( FIXME(Tag Unsupported:span; <span style=\"color: "
-"red;\">0.6</span> ), FIXME(Tag Unsupported:span; <span style=\"color: "
-"red;\">0.8</span> ), FIXME(Tag Unsupported:span; <span style=\"color: "
-"red;\">0.6</span> )),"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/osl.rst:86
-msgid ""
-"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">float</span> "
-") Noise_Factor = FIXME(Tag Unsupported:span; <span style=\"color: "
-"red;\">0.5</span> ),"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/osl.rst:93
-msgid ""
-"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">output "
-"closure color</span> ) BSDF = FIXME(Tag Unsupported:span; <span "
-"style=\"color: orange;\">diffuse</span> )(N)) {"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/osl.rst:101
-msgid ""
-"FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">color</span> "
-") material_color = Diffuse_Color * FIXME(Tag Unsupported:span; <span "
-"style=\"color: orange;\">mix</span> )( FIXME(Tag Unsupported:span; <span "
-"style=\"color: red;\">1.0</span> ), FIXME(Tag Unsupported:span; <span "
-"style=\"color: orange;\">noise</span> )(P * FIXME(Tag Unsupported:span; "
-"<span style=\"color: red;\">10.0</span> )), Noise_Factor); BSDF = "
-"material_color * FIXME(Tag Unsupported:span; <span style=\"color: "
-"orange;\">diffuse</span> )(N); }"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/osl.rst:124
+#: ../../manual/render/cycles/nodes/osl.rst:80
 msgid "Closures"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:126
+#: ../../manual/render/cycles/nodes/osl.rst:82
 msgid ""
 "OSL is different from, for example, RSL or GLSL, in that it does not have a "
 "light loop. There is no access to lights in the scene, and the material must"
@@ -152,354 +111,349 @@ msgid ""
 " optimizations and ensure all shaders can be importance sampled."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:132
+#: ../../manual/render/cycles/nodes/osl.rst:88
 msgid ""
 "The available closures in Cycles correspond to the shader nodes and their "
 "sockets; for more details on what they do and the meaning of the parameters,"
 " see the :doc:`shader nodes manual </render/cycles/nodes/shaders>`."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:138
+#: ../../manual/render/cycles/nodes/osl.rst:94
 msgid "BSDF"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:140
+#: ../../manual/render/cycles/nodes/osl.rst:96
 msgid "``diffuse(N)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:141
+#: ../../manual/render/cycles/nodes/osl.rst:97
 msgid "``oren_nayar(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:142
+#: ../../manual/render/cycles/nodes/osl.rst:98
 msgid "``reflection(N)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:143
+#: ../../manual/render/cycles/nodes/osl.rst:99
 msgid "``refraction(N, ior)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:144
+#: ../../manual/render/cycles/nodes/osl.rst:100
 msgid "``microfacet_beckmann(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:145
+#: ../../manual/render/cycles/nodes/osl.rst:101
 msgid "``microfacet_beckmann_refraction(N, roughness, ior)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:146
+#: ../../manual/render/cycles/nodes/osl.rst:102
 msgid "``microfacet_ggx(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:147
+#: ../../manual/render/cycles/nodes/osl.rst:103
 msgid "``microfacet_ggx_refraction(N, roughness, ior)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:148
+#: ../../manual/render/cycles/nodes/osl.rst:104
 msgid "``phong_ramp(N, exponent, colors[8])``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:149
+#: ../../manual/render/cycles/nodes/osl.rst:105
 msgid "``diffuse_ramp(N, colors[8])``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:150
+#: ../../manual/render/cycles/nodes/osl.rst:106
 msgid "``translucent(N)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:151
+#: ../../manual/render/cycles/nodes/osl.rst:107
 msgid "``transparent()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:152
+#: ../../manual/render/cycles/nodes/osl.rst:108
 msgid "``ashikhmin_velvet(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:153
+#: ../../manual/render/cycles/nodes/osl.rst:109
 msgid "``ward(N, T, roughness_u, roughness_v)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:154
+#: ../../manual/render/cycles/nodes/osl.rst:110
 msgid "``diffuse_toon(N, size, smooth)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:155
+#: ../../manual/render/cycles/nodes/osl.rst:111
 msgid "``glossy_toon(N, size, smooth)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:156
+#: ../../manual/render/cycles/nodes/osl.rst:112
 msgid "``westin_sheen(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:157
+#: ../../manual/render/cycles/nodes/osl.rst:113
 msgid "``westin_backscatter(N, edginess)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:158
+#: ../../manual/render/cycles/nodes/osl.rst:114
 msgid "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:159
+#: ../../manual/render/cycles/nodes/osl.rst:115
 msgid "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:163
+#: ../../manual/render/cycles/nodes/osl.rst:119
 msgid "BSSRDF"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:165
+#: ../../manual/render/cycles/nodes/osl.rst:121
 msgid "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:166
+#: ../../manual/render/cycles/nodes/osl.rst:122
 msgid "``bssrdf_gaussian(N, radius, texture_blur)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:170
+#: ../../manual/render/cycles/nodes/osl.rst:126
 msgid "Volume"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:172
+#: ../../manual/render/cycles/nodes/osl.rst:128
 msgid "``henyey_greenstein(g)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:174
-#: ../../manual/render/cycles/nodes/osl.rst:180
-msgid "FIXME(Template Unsupported: NewIn; {{NewIn|2.70}} )"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/osl.rst:178
+#: ../../manual/render/cycles/nodes/osl.rst:129
 msgid "``absorption()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:186
+#: ../../manual/render/cycles/nodes/osl.rst:133
 msgid "Other"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:188
+#: ../../manual/render/cycles/nodes/osl.rst:135
 msgid "``emission()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:189
+#: ../../manual/render/cycles/nodes/osl.rst:136
 msgid "``ambient_occlusion()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:190
+#: ../../manual/render/cycles/nodes/osl.rst:137
 msgid "``holdout()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:191
+#: ../../manual/render/cycles/nodes/osl.rst:138
 msgid "``background()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:195
+#: ../../manual/render/cycles/nodes/osl.rst:142
 msgid "Attributes"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:197
+#: ../../manual/render/cycles/nodes/osl.rst:144
 msgid ""
 "Some object, particle and mesh attributes are available to the built-in "
 "getattribute() function. UV maps and vertex colors can be retrieved using "
 "their name. Other attributes are listed below:"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:202
+#: ../../manual/render/cycles/nodes/osl.rst:149
 msgid "``geom:generated``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:203
+#: ../../manual/render/cycles/nodes/osl.rst:150
 msgid "Generated texture coordinates"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:204
+#: ../../manual/render/cycles/nodes/osl.rst:151
 msgid "``geom:uv``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:205
+#: ../../manual/render/cycles/nodes/osl.rst:152
 msgid "Default render UV map"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:206
+#: ../../manual/render/cycles/nodes/osl.rst:153
 msgid "``geom:dupli_generated``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:207
+#: ../../manual/render/cycles/nodes/osl.rst:154
 msgid "For instances, generated coordinate from duplicator object"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:208
+#: ../../manual/render/cycles/nodes/osl.rst:155
 msgid "``geom:dupli_uv``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:209
+#: ../../manual/render/cycles/nodes/osl.rst:156
 msgid "For instances, UV coordinate from duplicator object"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:210
+#: ../../manual/render/cycles/nodes/osl.rst:157
 msgid "``geom:trianglevertices``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:211
+#: ../../manual/render/cycles/nodes/osl.rst:158
 msgid "3 vertex coordinates of the triangle"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:212
+#: ../../manual/render/cycles/nodes/osl.rst:159
 msgid "``geom:numpolyvertices``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:213
+#: ../../manual/render/cycles/nodes/osl.rst:160
 msgid "Number of vertices in the polygon (always returns 3 currently)"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:214
+#: ../../manual/render/cycles/nodes/osl.rst:161
 msgid "``geom:polyvertices``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:215
+#: ../../manual/render/cycles/nodes/osl.rst:162
 msgid "Vertex coordinates array of the polygon (always 3 vertices currently)"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:216
+#: ../../manual/render/cycles/nodes/osl.rst:163
 msgid "``geom:name``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:217
+#: ../../manual/render/cycles/nodes/osl.rst:164
 msgid "Name of the object"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:218
+#: ../../manual/render/cycles/nodes/osl.rst:165
 msgid "``geom:is_curve``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:219
+#: ../../manual/render/cycles/nodes/osl.rst:166
 msgid "Is object a strand or not"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:220
+#: ../../manual/render/cycles/nodes/osl.rst:167
 msgid "``geom:curve_intercept``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:221
+#: ../../manual/render/cycles/nodes/osl.rst:168
 msgid "Point along the strand, from root to tip"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:222
+#: ../../manual/render/cycles/nodes/osl.rst:169
 msgid "``geom:curve_thickness``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:223
+#: ../../manual/render/cycles/nodes/osl.rst:170
 msgid "Thickness of the strand"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:224
+#: ../../manual/render/cycles/nodes/osl.rst:171
 msgid "``geom:curve_tangent_normal``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:225
+#: ../../manual/render/cycles/nodes/osl.rst:172
 msgid "Tangent Normal of the strand"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:226
+#: ../../manual/render/cycles/nodes/osl.rst:173
 msgid "``path:ray_length``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:227
+#: ../../manual/render/cycles/nodes/osl.rst:174
 msgid "Ray distance since last hit"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:228
+#: ../../manual/render/cycles/nodes/osl.rst:175
 msgid "``object:location``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:229
+#: ../../manual/render/cycles/nodes/osl.rst:176
 msgid "Object location"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:230
+#: ../../manual/render/cycles/nodes/osl.rst:177
 msgid "``object:index``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:231
+#: ../../manual/render/cycles/nodes/osl.rst:178
 msgid "Object index number"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:232
+#: ../../manual/render/cycles/nodes/osl.rst:179
 msgid "``object:random``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:233
+#: ../../manual/render/cycles/nodes/osl.rst:180
 msgid "Per object random number generated from object index and name"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:234
+#: ../../manual/render/cycles/nodes/osl.rst:181
 msgid "``material:index``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:235
+#: ../../manual/render/cycles/nodes/osl.rst:182
 msgid "Material index number"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:236
+#: ../../manual/render/cycles/nodes/osl.rst:183
 msgid "``particle:index``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:237
+#: ../../manual/render/cycles/nodes/osl.rst:184
 msgid "Particle instance number"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:238
+#: ../../manual/render/cycles/nodes/osl.rst:185
 msgid "``particle:age``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:239
+#: ../../manual/render/cycles/nodes/osl.rst:186
 msgid "Particle age in frames"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:240
+#: ../../manual/render/cycles/nodes/osl.rst:187
 msgid "``particle:lifetime``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:241
+#: ../../manual/render/cycles/nodes/osl.rst:188
 msgid "Total lifespan of particle in frames"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:242
+#: ../../manual/render/cycles/nodes/osl.rst:189
 msgid "``particle:location``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:243
+#: ../../manual/render/cycles/nodes/osl.rst:190
 msgid "Location of the particle"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:244
+#: ../../manual/render/cycles/nodes/osl.rst:191
 msgid "``particle:size``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:245
+#: ../../manual/render/cycles/nodes/osl.rst:192
 msgid "Size of the particle"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:246
+#: ../../manual/render/cycles/nodes/osl.rst:193
 msgid "``particle:velocity``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:247
+#: ../../manual/render/cycles/nodes/osl.rst:194
 msgid "Velocity of the particle"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:250
+#: ../../manual/render/cycles/nodes/osl.rst:197
 msgid "``particle:angular_velocity``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:249
+#: ../../manual/render/cycles/nodes/osl.rst:196
 msgid "Angular velocity of the particle"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:253
+#: ../../manual/render/cycles/nodes/osl.rst:200
 msgid "Trace"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:255
+#: ../../manual/render/cycles/nodes/osl.rst:202
 msgid ""
 "We support the trace(point pos, vector dir, ...) function, to trace rays "
 "from the OSL shader. The \"shade\" parameter is not supported currently, but"
@@ -508,7 +462,7 @@ msgid ""
 "on how to use this."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:260
+#: ../../manual/render/cycles/nodes/osl.rst:207
 msgid ""
 "This function can't be used instead of lighting; the main purpose is to "
 "allow shaders to \"probe\" nearby geometry, for example to apply a projected"
@@ -531,12 +485,51 @@ msgid ""
 "installed to compile OSL scripts."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:64
+#: ../../manual/render/cycles/nodes/osl.rst:63
 msgid ""
 "For more details on how to write shaders, see the `OSL specification "
 "<https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-"
 "languagespec.pdf>`__. Here is a simple example:"
 msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:span; <span style=\"color: lightgreen\">shader</span> "
+#~ ") simple_material("
+#~ msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">color</span> "
+#~ ") Diffuse_Color = color( FIXME(Tag Unsupported:span; <span style=\"color: "
+#~ "red;\">0.6</span> ), FIXME(Tag Unsupported:span; <span style=\"color: "
+#~ "red;\">0.8</span> ), FIXME(Tag Unsupported:span; <span style=\"color: "
+#~ "red;\">0.6</span> )),"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">float</span> "
+#~ ") Noise_Factor = FIXME(Tag Unsupported:span; <span style=\"color: "
+#~ "red;\">0.5</span> ),"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">output "
+#~ "closure color</span> ) BSDF = FIXME(Tag Unsupported:span; <span "
+#~ "style=\"color: orange;\">diffuse</span> )(N)) {"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Tag Unsupported:span; <span style=\"color: lightgreen;\">color</span> "
+#~ ") material_color = Diffuse_Color * FIXME(Tag Unsupported:span; <span "
+#~ "style=\"color: orange;\">mix</span> )( FIXME(Tag Unsupported:span; <span "
+#~ "style=\"color: red;\">1.0</span> ), FIXME(Tag Unsupported:span; <span "
+#~ "style=\"color: orange;\">noise</span> )(P * FIXME(Tag Unsupported:span; "
+#~ "<span style=\"color: red;\">10.0</span> )), Noise_Factor); BSDF = "
+#~ "material_color * FIXME(Tag Unsupported:span; <span style=\"color: "
+#~ "orange;\">diffuse</span> )(N); }"
+#~ msgstr ""
+
+#~ msgid "FIXME(Template Unsupported: NewIn; {{NewIn|2.70}} )"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "For more details on how to write shaders, see the "

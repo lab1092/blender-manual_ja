@@ -12,7 +12,7 @@ The Wireframe modifier transforms a mesh into a wireframe by iterating over its
 faces, collecting all edges and turning those edges into 4 sided polygons.
 Be aware of the fact that your mesh needs to have faces to be wireframed.
 You can define the thickness, the material and several other parameters of the generated
-wireframe dynamically via the given  modifier options.
+wireframe dynamically via the given modifier options.
 
 
 Options

@@ -50,9 +50,11 @@ The keyframes are set values by the user.
 
 The *F-Curve* is used to interpolate the difference between the keyframes.
 
-The *F-Curve* has different types of interpolation and also :doc:`F-Curve Modifiers </animation/editors/graph/fmodifiers>`.
+The *F-Curve* has different types of interpolation and also
+:doc:`F-Curve Modifiers </animation/editors/graph/fmodifiers>`.
 
-Most the settings for the :doc:`F-Curve </animation/editors/graph/fcurves>` are found in the :doc:`Graph Editor </animation/editors/graph>`.
+Most the settings for the :doc:`F-Curve </animation/editors/graph/fcurves>`
+are found in the :doc:`Graph Editor </animation/editors/graph>`.
 
 
 Basic Animation

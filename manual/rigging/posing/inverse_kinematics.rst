@@ -24,9 +24,9 @@ Automatic IK is a tool for quick posing, it can be enabled in the tool shelf in 
 when in pose mode. When the Auto IK option is enabled, translating a bone will activate
 inverse kinematic and rotate bones higher up to follow the selected bone. By default,
 the length of the IK chain is as long as there are parent bones,
-and this length can be modified with :kbd:`Shift`  :kbd:`PageUp`,
-:kbd:`Shift`  :kbd:`PageDown`, or :kbd:`Shift`  :kbd:`WheelUp`,
-:kbd:`Shift`  :kbd:`WheelDown`.
+and this length can be modified with :kbd:`Shift` :kbd:`PageUp`,
+:kbd:`Shift` :kbd:`PageDown`, or :kbd:`Shift` :kbd:`WheelUp`,
+:kbd:`Shift` :kbd:`WheelDown`.
 
 This is a more limited feature than using an IK constraint, which can be configured,
 but it can be useful for quick posing.
@@ -40,8 +40,8 @@ They work by the same method but offer more choices and settings.
 Please refer to these pages for detail about the settings for the contraints:
 
 
-- :doc:`IK Solver </constraints/tracking/ik_solver>`
-- :doc:`Spline IK </constraints/tracking/spline_ik>`
+- :doc:`IK Solver </rigging/constraints/tracking/ik_solver>`
+- :doc:`Spline IK </rigging/constraints/tracking/spline_ik>`
 
 
 Armature IK Panel

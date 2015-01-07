@@ -5,8 +5,10 @@
 ##################
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   introduction.rst
-   startup.rst
-   graphics_display.rst
+   Startup <startup.rst>
+   3D Viewport <3d_view.rst>
+   Graphics Hardware <gpu.rst>
+   Crashes <crash.rst>
+

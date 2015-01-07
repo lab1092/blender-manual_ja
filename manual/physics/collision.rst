@@ -12,7 +12,8 @@ Collisions
 - You may limit the effect on particles to a group of objects
   (in the :doc:`Field Weights panel </physics/particles/physics>`).
 - *Deflection* for softbody objects is difficult, they often penetrate the colliding objects.
-- Hair particles ignore deflecting objects (but you can animate them as softbodies which take deflection into account).
+- Hair particles ignore deflecting objects
+  (but you can animate them as softbodies which take deflection into account).
 
 If you change the deflection settings for an object you have to recalculate the particle,
 softbody or cloth system (*Free Cache*), this is not done automatically. You can
@@ -74,7 +75,6 @@ Damping Factor
 
 *Softbody* collisions are difficult to get perfect. If one of the objects move too fast,
 the soft body will penetrate the mesh. See also the section about :doc:`Soft Bodies </physics/soft_body>`.
-
 
 
 Force Field Interaction

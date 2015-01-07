@@ -17,13 +17,19 @@ you may adjust the thickness with your mouse position. You may also adjust the d
 inset during the modal operation by holding :kbd:`Ctrl`.
 
 
-+----------------------------------------------+---------------------------------------------+
-+.. figure:: /images/mesh_tool_inset_before.jpg|.. figure:: /images/mesh_tool_inset_after.jpg+
-+   :width: 300px                              |   :width: 300px                             +
-+   :figwidth: 300px                           |   :figwidth: 300px                          +
-+                                              |                                             +
-+   Selection to inset                         |   Selection with inset                      +
-+----------------------------------------------+---------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/mesh_tool_inset_before.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Selection to inset
+
+     - .. figure:: /images/mesh_tool_inset_after.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Selection with inset
 
 
 Options

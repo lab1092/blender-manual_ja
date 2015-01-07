@@ -29,14 +29,15 @@ New
    Saves a copy of the current file.
 :doc:`User Preferences </preferences/introduction>`
    Opens the user preferences dialog.
-:doc:`Save User Settings </basics/default_scene>`
+:doc:`Save User Settings </getting_started/basics/default_scene>`
    Saves the current scene and preferences to startup.blend.
-:doc:`Load Factory Settings </basics/default_scene>`
+:doc:`Load Factory Settings </getting_started/basics/default_scene>`
    Restore the default scene to the factory settings.
 :doc:`Link or Append </data_system/linked_libraries>`
    You don't have to load a complete file, you can load in only selected parts from another file if you wish.
 :doc:`Import </data_system/files/import>`, (:doc:`COLLADA </data_system/files/import/collada>`)
-   Blender can use information stored in a variety of other format files which are created by other graphics programs.
+   Blender can use information stored in a variety of other format files which are created by
+   other graphics programs.
 :doc:`Export </data_system/files/export>`
    Normally you save your work in a .blend file,
    but you can export some or all of your work to a format that can be processed by other graphics programs.

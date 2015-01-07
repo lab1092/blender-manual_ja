@@ -9,12 +9,9 @@ Getting Started
 ---------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   introduction/index.rst
-   installing_blender/index.rst
-   3D Interaction <3d_interaction/index.rst>
-   basics/index.rst
+   getting_started/index.rst
 
 
 Sections
@@ -23,26 +20,20 @@ Sections
 .. toctree::
    :maxdepth: 1
 
-   interface/index.rst
-   User Preferences <preferences/index.rst>
+   editors/index.rst
    data_system/index.rst
    Modeling <modeling/index.rst>
-   Modifiers <modifiers/index.rst>
    Physics <physics/index.rst>
-   Lighting <lighting/index.rst>
-   Materials <materials/index.rst>
-   Textures <textures/index.rst>
-   World <world/index.rst>
+   Modifiers <modifiers/index.rst>
    Rigging <rigging/index.rst>
-   Constraints <constraints/index.rst>
    Animation </animation/index.rst>
    Rendering </render/index.rst>
    Compositing <composite_nodes/index.rst>
-   Video Sequence Editor <sequencer/index.rst>
+   motion_tracking/index.rst
    Grease Pencil <grease_pencil/index.rst>
    Game Engine <game_engine/index.rst>
-   motion_tracking/index.rst
    Extending Blender <extensions/index.rst>
+   User Preferences <preferences/index.rst>
    Troubleshooting <troubleshooting/index.rst>
    glossary/index.rst
 

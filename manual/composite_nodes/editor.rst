@@ -46,7 +46,8 @@ Backdrop Channels
 Zoom
    Sets how big the backdrop image is.
 Offset
-   Change the screen space position of the backdrop, or click the *Move* button, or shortcut :kbd:`Alt-MMB` to manually move it.
+   Change the screen space position of the backdrop,
+   or click the *Move* button, or shortcut :kbd:`Alt-MMB` to manually move it.
 
 
 Auto Render

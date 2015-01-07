@@ -27,7 +27,7 @@ shows the center point labeled as "\ ``A`` ".
 A simple way to create a new vertex is to click :kbd:`Ctrl-LMB` in *Edit mode*.
 Of course, as a computer screen is two-dimensional,
 Blender can't determine all three vertex coordinates from a single mouse click,
-so the new vertex is placed at the depth of the 3D cursor.  Using the method described above,
+so the new vertex is placed at the depth of the 3D cursor. Using the method described above,
 any vertices selected previously are automatically connected to the new ones by an edge.
 In the image above, the vertex labeled *C* is a new vertex added to the cube with a
 new edge added between in *B* and *C*.
@@ -49,7 +49,7 @@ A face is the highest level structure in a mesh.
 Faces are used to build the actual surface of the object.
 They are what you see when you render the mesh.
 A face is defined as the area between either three (triangles) or four (quadrangles) vertices,
-with an edge on every side.  Triangles are always flat and therefore easy to calculate.
+with an edge on every side. Triangles are always flat and therefore easy to calculate.
 On the other hand,
 quadrangles "deform well" and are therefore preferred for subdivision modeling.
 
@@ -111,7 +111,8 @@ Take (*Edge Loops in organic modeling*) as an example: the edge loops follow the
 contours and deformation lines of the skin and the underlying muscles and are more dense in
 areas that deform more when the character moves, for example at the shoulders or knees.
 
-Further details on working with Edge Loops can be found in :doc:`Edge Loop Selection </modeling/meshes/selection#edge_loop_selection>`.
+Further details on working with Edge Loops can be found in
+:doc:`Edge Loop Selection </modeling/meshes/selection#edge_loop_selection>`.
 
 
 Face Loops
@@ -122,6 +123,6 @@ Loops, as shown in loops ``3`` and ``4`` in (*Edge and Face Loops*).
 Note that for non-circular loops (``4``)
 the faces containing the poles are not included in a Face Loop.
 
-Further details on working with Face Loops can be found in :doc:`Face Loop Selection </modeling/meshes/selection#face_loop_selection>`.
-
+Further details on working with Face Loops can be found in
+:doc:`Face Loop Selection </modeling/meshes/selection#face_loop_selection>`.
 

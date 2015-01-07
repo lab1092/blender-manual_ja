@@ -46,7 +46,8 @@ Min Air Speed
 Max Air Acceleration
    Lateral acceleration in air, percent of max velocity (turn). Defines how fast a boid is able to change direction.
 Max Air Angular Velocity
-   Tangential acceleration in air, percent 180 degrees. Defines how much the boid can suddenly accelerate in order to fulfill a rule.
+   Tangential acceleration in air, percent 180 degrees.
+   Defines how much the boid can suddenly accelerate in order to fulfill a rule.
 Air Personal Space
    Radius of boids personal space in air. Percentage of particle size.
 Landing Smoothness
@@ -59,7 +60,8 @@ Jump Speed
 Max Land Acceleration
    Lateral acceleration on land, percent of max velocity (turn). Defines how fast a boid is able to change direction.
 Max Land Angular Velocity
-   Tangential acceleration on land, percent 180 degrees. Defines how much the boid can suddenly accelerate in order to fulfill a rule.
+   Tangential acceleration on land, percent 180 degrees.
+   Defines how much the boid can suddenly accelerate in order to fulfill a rule.
 Land Personal Space
    Radius of boids personal space on land. Percentage of particle size.
 Land Stick Force

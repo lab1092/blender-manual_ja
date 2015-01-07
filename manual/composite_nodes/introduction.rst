@@ -40,7 +40,7 @@ FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Concepts;
 Accessing and Activating Nodes
 ==============================
 
-Access the :doc:`Node Editor </materials/nodes/editor>` and enable
+Access the :doc:`Node Editor </render/blender_render/materials/nodes/editor>` and enable
 *Composite Nodes* by clicking on the *Image* icon.
 
 

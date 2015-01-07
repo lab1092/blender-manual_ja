@@ -21,7 +21,9 @@ Friction
    The friction of the surrounding medium. Generally friction dampens a movement.
 
 Mass
-   Mass value for vertices. Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass. Larger mass means larger inertia, so also braking a Soft Body is more difficult.
+   Mass value for vertices.
+   Larger mass slows down acceleration, except for gravity where the motion is constant regardless of mass.
+   Larger mass means larger inertia, so also braking a Soft Body is more difficult.
 
 Vertex Group Mass
    Use a specified vertex group for mass values
@@ -35,7 +37,9 @@ Soft Body Cache
 
 .. note:: Start- and Endframe
 
-   The *Start* and *End* settings in the *Collision* panel are not only valid for the baking, but for all Soft Body simulations. So if your animation lasts longer than 250 frames, you have to increase the *End* value.
+   The *Start* and *End* settings in the *Collision* panel are not only valid for the baking,
+   but for all Soft Body simulations.
+   So if your animation lasts longer than 250 frames, you have to increase the *End* value.
 
 
 Cache
@@ -110,7 +114,9 @@ Minimum / Maximum
    (please note that the blue-red color scale may be altered by User Preferences).
 
 Stiffness
-   The spring stiffness for *Goal*. A low value creates very weak springs (more flexible "attachment" to the goal), a high value creates a strong spring (a stiffer "attachment" to the goal).
+   The spring stiffness for *Goal*. A low value creates very weak springs
+   (more flexible "attachment" to the goal), a high value creates a strong spring
+   (a stiffer "attachment" to the goal).
 
 Damping
    The friction for *Goal*. Higher values dampen the effect of the goal on the soft body.
@@ -145,7 +151,8 @@ Length
 
 
 Stiff Quads
-   For quad faces, the diagonal edges are used as springs. This stops quad faces to collapse completely on collisions (what they would do otherwise).
+   For quad faces, the diagonal edges are used as springs.
+   This stops quad faces to collapse completely on collisions (what they would do otherwise).
 Shear
    Stiffness of the virtual springs for quad faces.
 
@@ -162,7 +169,8 @@ Aerodynamics
       (think of a straw moving through air). Try it with an *Factor* of 30 at first.
 
    Lift Force
-      Use an aerodynamic model that is closer to physical laws and looks more interesting. Disable for a more muted simulation.
+      Use an aerodynamic model that is closer to physical laws and looks more interesting.
+      Disable for a more muted simulation.
    Factor
       How much aerodynamic effect to use
 
@@ -185,12 +193,17 @@ Soft Body Self Collision
 *Self Collision* is working only if you have activated *Use Edges*.
 
 Self Collision
-   When enabled, allows you to control how Blender will prevent the Soft Body from intersecting with itself. Every vertex is surrounded with an elastic virtual ball. Vertices may not penetrate the balls of other vertices. If you want a good result you may have to adjust the size of these balls. Normally it works pretty well with the default options.
+   When enabled, allows you to control how Blender will prevent the Soft Body from intersecting with itself.
+   Every vertex is surrounded with an elastic virtual ball.
+   Vertices may not penetrate the balls of other vertices.
+   If you want a good result you may have to adjust the size of these balls.
+   Normally it works pretty well with the default options.
 
 Manual
    The *Ball Size* directly sets the ball size (in BU).
 Averavge ("average")
-   The average length of all edges attached to the vertex is calculated and then multiplied with the *Ball Size* setting. Works well with evenly distributed vertices.
+   The average length of all edges attached to the vertex is calculated and then multiplied
+   with the *Ball Size* setting. Works well with evenly distributed vertices.
 Minimal / Maximal
    The ball size is as large as the smallest/largest spring length of the vertex multiplied with the *Ball Size*.
 AvMiMax
@@ -198,17 +211,27 @@ AvMiMax
 
 
 Size
-   Default 0.49 BU or fraction of the length of attached edges. The edge length is computed based on the algorithm you choose. You know how when someone stands too close to you, and feel uncomfortable? We call that our "personal space", and this setting is the factor that is multiplied by the spring length. It is a spherical distance (radius) within which, if another vertex of the same mesh enters, the vertex starts to deflect in order to avoid a self-collision.
-   Set this value to the fractional distance between vertices that you want them to have their own "space". Too high of a value will include too many vertices all the time and slow down the calculation. Too low of a level will let other vertices get too close and thus possibly intersect because there won't be enough time to slow them down.
+   Default 0.49 BU or fraction of the length of attached edges.
+   The edge length is computed based on the algorithm you choose.
+   You know how when someone stands too close to you, and feel uncomfortable?
+   We call that our "personal space", and this setting is the factor that is multiplied by the spring length.
+   It is a spherical distance (radius) within which, if another vertex of the same mesh enters,
+   the vertex starts to deflect in order to avoid a self-collision.
+   Set this value to the fractional distance between vertices that you want them to have their own "space".
+   Too high of a value will include too many vertices all the time and slow down the calculation.
+   Too low of a level will let other vertices get too close and thus possibly intersect because
+   there won't be enough time to slow them down.
 
 
 Stiffness
    Default 1.0. How elastic that ball of personal space is.
 
 Dampening
-   Default 0.5. How the vertex reacts. A low value just slows down the vertex as it gets too close. A high value repulses it.
+   Default 0.5. How the vertex reacts.
+   A low value just slows down the vertex as it gets too close. A high value repulses it.
 
-Collisions with other objects are set in the (other) :doc:`Collision panel </physics/collision>`. To collide with another object they have to share at least one common layer.
+Collisions with other objects are set in the (other) :doc:`Collision panel </physics/collision>`.
+To collide with another object they have to share at least one common layer.
 
 
 Soft Body Solver
@@ -220,13 +243,20 @@ Min Step
    Minimum simulation steps per frame. Increase this value, if the Soft Body misses fast moving collision objects.
 
 Max Step
-   Maximum simulation steps per frame. Normally the number of simulation steps is set dynamically (with the *Error Limit*) but you have probably a good reason to change it.
+   Maximum simulation steps per frame.
+   Normally the number of simulation steps is set dynamically
+   (with the *Error Limit*) but you have probably a good reason to change it.
 
 Auto-Step
    helps the Solver figure out how much work it needs to do based on how fast things are moving.
 
 Error Limit
-   Rules the overall quality of the solution delivered. Default 0.1. The most critical setting that says how precise the solver should check for collisions. Start with a value that is 1/2 the average edge length. If there are visible errors, jitter, or over-exaggerated responses, decrease the value. The solver keeps track of how "bad" it is doing and the *Error Limit* causes the solver to do some "adaptive step sizing".
+   Rules the overall quality of the solution delivered. Default 0.1.
+   The most critical setting that says how precise the solver should check for collisions.
+   Start with a value that is 1/2 the average edge length.
+   If there are visible errors, jitter, or over-exaggerated responses, decrease the value.
+   The solver keeps track of how "bad" it is doing and the *Error Limit* causes the solver to
+   do some "adaptive step sizing".
 
 Fuzzy
    Fuzziness while on collision, high values make collision handling faster but less stable.

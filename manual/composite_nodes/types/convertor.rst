@@ -15,7 +15,7 @@ ColorRamp Node
 ==============
 
 The ColorRamp Node is used for mapping values to colors with the use of a gradient.
-It works exactly the same way as a :doc:`colorband for textures and materials </materials/properties/ramps>`,
+It works exactly the same way as a :doc:`colorband for textures and materials </render/blender_render/materials/properties/ramps>`,
 using the Factor value as a slider or index to the color ramp shown,
 and outputting a color value and an alpha value from the output sockets.
 
@@ -166,7 +166,12 @@ Set up and Animate, and you have an image sequence that fades to black over a 2-
 
 .. note:: No Scene information used
 
-   This example node map does not use the RenderLayer. To produce this 2 second animation, no blender scene information was used. This is an example of using Blender's powerful compositing abilities separate from its modeling and animation capabilities. (A Render Layer could be substituted for the Image layer, and the "fade-network" effect will still produce the same effect)
+   This example node map does not use the RenderLayer.
+   To produce this 2 second animation, no blender scene information was used.
+   This is an example of using Blender's powerful compositing abilities
+   separate from its modeling and animation capabilities.
+   (A Render Layer could be substituted for the Image layer,
+   and the "fade-network" effect will still produce the same effect)
 
 
 Using SetAlpha to Fade In a Title
@@ -305,7 +310,7 @@ Manual Z-Mask
 
 This example has one scene input by the top RenderLayer node,
 which has a cube that is about 10 BU from the camera.
-The bottom RenderLayer node inputs a scene  (FlyCam)
+The bottom RenderLayer node inputs a scene (FlyCam)
 with a plane that covers the left half of the view and is 7 BU from the camera.
 Both are fed through their respective Map Value nodes to divide the Z buffer by 20
 (multiply by .05, as shown in the Size field)
@@ -336,7 +341,7 @@ the Map Value node scales that to 0.0 to 1.0 by taking the input (-1 to 1), addi
 (thus scaling the output between 0 and 1).
 The default ColorRamp converts those values to a grayscale. Thus,
 medium gray corresponds to a 0.0 output by the sine, black to -1.0, and white to 1.0.
-As you can see, Sine(pi/2)=1.0.  Like having your own visual color calculator! Animating this
+As you can see, Sine(pi/2)=1.0. Like having your own visual color calculator! Animating this
 noodle provides a smooth cyclic sequence through the range of grays.
 
 Use this function to vary, for example,
@@ -382,7 +387,8 @@ give more possible values to the predominant colors in the image.
 Theory
 ------
 
-`Two Approaches to Quantizing to 6 values <http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Math_ColorBand>`__
+`Two Approaches to Quantizing to 6 values
+<http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Math_ColorBand>`__
 
 To accomplish this quantization of an image to 256 possible values, lets use the set {6,6,7}.
 To split up a continuous range of values between 0 and 1 (the full Red spectrum)
@@ -400,7 +406,8 @@ and so on up to values between 0.83 and 1.0 get mapped to 1.0.
 
 .. note:: Function f(x)
 
-   An algebraic function is made up of primitive mathematical operations (add, subtract, multiply, sine, cosine, etc) that operate on an input value to provide a desired output value.
+   An algebraic function is made up of primitive mathematical operations
+   (add, subtract, multiply, sine, cosine, etc) that operate on an input value to provide a desired output value.
 
 
 `Spreadsheet showing a function <http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Math_spreadsheet>`__
@@ -492,7 +499,7 @@ accomplishes.
 You do not have to reduce the color depth of each channel evenly. For example,
 if blue was the dominant color in an image, to preserve image quality,
 you could reduce Red to 2 values, Green to 4, and let the blue take on 256/(2*4) or 32 values.
-If using the HSV, you could reduce the Saturation  and Value to 2 values (0 or 1.0)
+If using the HSV, you could reduce the Saturation and Value to 2 values (0 or 1.0)
 by Multiply by 2 and Divide by 2, and restrict the Hue to 64 possible values.
 
 You can use this noodle to quantize any channel; alpha, speed (vector), z-values, and so forth.

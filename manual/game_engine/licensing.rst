@@ -18,7 +18,7 @@ Standalone Player License
 =========================
 
 Unfortunately, this does not extend to games or other artwork distributed to run under the
-Blender Standalone Player.  To distribute your game you need to create an executable
+Blender Standalone Player. To distribute your game you need to create an executable
 (run time). What it does is take your Blender .blend file and put it "inside" the Standalone
 Player - a stripped-down version of Blender containing only the functions corresponding to the
 Blender Game Engine.
@@ -38,13 +38,13 @@ license protection:
    "Imitation is the sincerest form of flattery".
 #. Pretend that there is no problem. It is very, very unlikely that the Blender Foundation
    will ever prosecute anyone for distributing a game that is based on the BGE.
-#. Make use of  an external system for running Blender games: e.g. BPPlayer or Gamekit
+#. Make use of an external system for running Blender games: e.g. BPPlayer or Gamekit
    (but these are not fully tested).
 #. Use the Game Actuator, which enables a basic .blend game file to start.
    By making a basic file which contains an "Always" sensor to run,
-   and allowing this to activate a  "Game" actuator to load and run  the full content of your game,
-   this gets round the problem.   Your main file is now "outside" the  Standalone Player,
-   so that it need not be open to GPL and is therefore  "legally protected".
+   and allowing this to activate a "Game" actuator to load and run the full content of your game,
+   this gets round the problem. Your main file is now "outside" the Standalone Player,
+   so that it need not be open to GPL and is therefore "legally protected".
    Although your game is not fully protected with this system,
    it affords a similar level of protection to that used in most other distributed games. The fact that others can
    access your .blend file does not mean that it can be used for purposes not covered by the license you want.

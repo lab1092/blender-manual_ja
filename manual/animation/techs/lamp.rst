@@ -38,7 +38,8 @@ to simulate the irregularities of the flames.
 You might also use the same animation to control the particle system emmission,
 to synchronize the quantity of particles with the luminosity of the lamps.
 
-Once your torch is flying, you should get something as shown below - you can download the blend file `here <http://wiki.blender.org/index.php/File:ManAnimationTechsLampExFlyingTorch.blend>`__.
+Once your torch is flying, you should get something as shown below - you can download the blend
+file `here <http://wiki.blender.org/index.php/File:ManAnimationTechsLampExFlyingTorch.blend>`__.
 
 .. vimeo:: 15837328
 

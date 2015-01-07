@@ -10,16 +10,20 @@ Selecting armature's bones
    | Panel:    :menuselection:`Bone` panel
 
 
-You can select and edit bones of armatures in *Edit mode* and in *Pose mode*. Here, we will see how to select bones in *Edit mode*. Selecting bones in *Pose mode* is similar to selecting in *Edit mode* with a few specific differences that will be detailed in the :doc:`posing part </rigging/posing/editing>`.
+You can select and edit bones of armatures in *Edit mode* and in *Pose mode*.
+Here, we will see how to select bones in *Edit mode*.
+Selecting bones in *Pose mode* is similar to selecting in *Edit mode*
+with a few specific differences that will be detailed in the :doc:`posing part </rigging/posing/editing>`.
 
-Similar to :doc:`vertices/edges selection </modeling/meshes/selecting>` in meshes, there are two ways to select whole bones in *Edit mode*:
+Similar to :doc:`vertices/edges selection </modeling/meshes/selecting>` in meshes,
+there are two ways to select whole bones in *Edit mode*:
 
 - directly, by selecting the bone's body
 - selecting both of its end points (root and tip)
 
 This is an important point to understand,
 because selecting bones' ends only might lead to non-obvious behavior,
-with respect to which bone you actually select, see the .
+with respect to which bone you actually select, see the.
 
 Note that unlike the mesh draw type the armature draw type has no effect on selection
 behavior. In other words,
@@ -31,31 +35,51 @@ Selecting bones' ends
 
 To select bones' ends you have the standard selection methods.
 
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+action                                  |shortcut                                                                                         |menu                                           |mouse+
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Select a bone's end                     |:kbd:`RMB` -click on it                                                                                                                                +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Add or Remove from the current selection|:kbd:`Shift-RMB`                                                                                                                                       +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+(De)select the ends of all bones        |:kbd:`A`                                                                                         |:menuselection:`Select --> Select/Deselect All`      +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Invert the current selection            |:kbd:`Ctrl-I`                                                                                    |:menuselection:`Select --> Inverse`                  +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Box selection tool ON                   |:kbd:`B`                                                                                         |:menuselection:`Select --> Border Select`            +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Box selection                           |click and drag :kbd:`LMB` the box around the ends you want to add to the current selection                                                             +
-+                                        |click and drag :kbd:`LMB` to remove from the current selection                                                                                         +
-+                                        |release :kbd:`LMB` to validate                                                                                                                         +
-+                                        |hit :kbd:`Esc` or click :kbd:`RMB` to cancel                                                                                                           +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Box selection tool OFF                  |:kbd:`B` or :kbd:`Esc`                                                                           |:kbd:`RMB`                                           +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
-+Lasso selection                         |click and drag :kbd:`Ctrl-LMB` the lasso around the ends you want to add to the current selection                                                      +
-+                                        |click and drag :kbd:`Ctrl-Shift-LMB` to remove from the current selection                                                                              +
-+                                        |release :kbd:`LMB` to validate                                                                                                                         +
-+                                        |hit :kbd:`Esc` or click :kbd:`RMB` to cancel                                                                                                           +
-+----------------------------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+-----+
+.. list-table::
+   :header-rows: 1
+
+   * - action
+     - shortcut
+     - menu
+     - mouse
+   * - Select a bone's end
+     -
+     -
+     - :kbd:`RMB` -click on it
+   * - Add or Remove from the current selection
+     -
+     -
+     - :kbd:`Shift-RMB`
+   * - (De)select the ends of all bones
+     - :kbd:`A`
+     - :menuselection:`Select --> Select/Deselect All`
+     -
+   * - Invert the current selection
+     - :kbd:`Ctrl-I`
+     - :menuselection:`Select --> Inverse`
+     -
+   * - Box selection tool ON
+     - :kbd:`B`
+     - :menuselection:`Select --> Border Select`
+     -
+   * - Box selection
+     - | Click and drag :kbd:`LMB` the box around the ends you want to add to the current selection
+       | Click and drag :kbd:`LMB` to remove from the current selection
+       | release :kbd:`LMB` to validate
+       | hit :kbd:`Esc` or click :kbd:`RMB` to cancel
+     -
+     -
+   * - Box selection tool OFF
+     - :kbd:`B` or :kbd:`Esc`
+     -
+     - :kbd:`RMB`
+   * - Lasso selection
+     - | Click and drag :kbd:`Ctrl-LMB` the lasso around the ends you want to add to the current selection
+       | Click and drag :kbd:`Ctrl-Shift-LMB` to remove from the current selection
+       | Release :kbd:`LMB` to validate
+       | Hit :kbd:`Esc` or click :kbd:`RMB` to cancel
+     -
+     -
 
 
 Inverse selection
@@ -71,13 +95,21 @@ Remember that a bone is selected only if both its ends are selected. So,
 when the selection status of bones' ends is inverted, a new set of bones is selected.
 
 
-+-------------------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-+*Inverse selection*|.. figure:: /images/ManRiggingBoneSelectExEditModeTwoBones.jpg|.. figure:: /images/ManRiggingBoneSelectExEditModeThreeBoneEnds.jpg                                                          +
-+                   |   :width: 300px                                              |   :width: 300px                                                                                                             +
-+                   |   :figwidth: 300px                                           |   :figwidth: 300px                                                                                                          +
-+                   |                                                              |                                                                                                                             +
-+                   |   Two bones selected.                                        |   The result of the inverse selection :kbd:`Ctrl-I` the bones ends selection has been inverted, and not the bones selection.+
-+-------------------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+.. list-table::
+   Inverse selection
+
+   * - .. figure:: /images/ManRiggingBoneSelectExEditModeTwoBones.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Two bones selected.
+
+     - .. figure:: /images/ManRiggingBoneSelectExEditModeThreeBoneEnds.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          The result of the inverse selection :kbd:`Ctrl-I` the bones ends selection has been inverted,
+          and not the bones selection.
 
 
 Selecting connected bones' ends
@@ -110,13 +142,20 @@ You can select at once all the bones in the chain which the active (last selecte
 bone belongs to by using the *linked selection* tool, :kbd:`L`.
 
 
-+------------------------+---------------------------------------------------------------+----------------------------------------------------------------+
-+*Linked bones selection*|.. figure:: /images/ManRiggingBoneSelectExEditModeWholeBone.jpg|.. figure:: /images/ManRiggingBoneSelectExEditModeWholeChain.jpg+
-+                        |   :width: 300px                                               |   :width: 300px                                                +
-+                        |   :figwidth: 300px                                            |   :figwidth: 300px                                             +
-+                        |                                                               |                                                                +
-+                        |   A single selected bone.                                     |   Its whole chain selected with [L].                           +
-+------------------------+---------------------------------------------------------------+----------------------------------------------------------------+
+.. list-table::
+   Linked bones selection
+
+   * - .. figure:: /images/ManRiggingBoneSelectExEditModeWholeBone.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A single selected bone.
+
+     - .. figure:: /images/ManRiggingBoneSelectExEditModeWholeChain.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Its whole chain selected with [L].
 
 
 You can deselect the active bone and select its immediate parent or one of its children using
@@ -138,18 +177,25 @@ but not its root if it is also the tip of another selected bone.*
 To understand this, look at *Bone deselection in a selected chain*.
 
 
-+--------------------------------------+----------------------------------------------------------------+--------------------------------------------------------------+
-+*Bone deselection in a selected chain*|.. figure:: /images/ManRiggingBoneSelectExEditModeWholeChain.jpg|.. figure:: /images/ManRiggingBoneSelectExEditModeTwoBones.jpg+
-+                                      |   :width: 300px                                                |   :width: 300px                                              +
-+                                      |   :figwidth: 300px                                             |   :figwidth: 300px                                           +
-+                                      |                                                                |                                                              +
-+                                      |   A selected chain.                                            |   After [shift][rmb]-clicking Bone.003                       +
-+--------------------------------------+----------------------------------------------------------------+--------------------------------------------------------------+
+.. list-table::
+   Bone deselection in a selected chain
+
+   * - .. figure:: /images/ManRiggingBoneSelectExEditModeWholeChain.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A selected chain.
+
+     - .. figure:: /images/ManRiggingBoneSelectExEditModeTwoBones.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          After [shift][rmb]-clicking Bone.003
 
 
 After :kbd:`Shift-RMB` -clicking ``Bone.003``:
 
 - ``Bone.003`` 's tip (which is same as ``Bone.004`` 's root) is deselected
--  ``Bone`` is ``Bone.003`` 's parent. Therefore ``Bone.003`` 's root is same as the tip of ``Bone``. Since ``Bone`` is still selected, its tip is selected. Thus the root of  ``Bone.003`` remains selected.
-
+- ``Bone`` is ``Bone.003`` 's parent. Therefore ``Bone.003`` 's root is same as the tip of ``Bone``.
+  Since ``Bone`` is still selected, its tip is selected. Thus the root of ``Bone.003`` remains selected.
 

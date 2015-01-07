@@ -50,7 +50,7 @@ Crease
       :width: 350px
       :figwidth: 350px
 
-      Rim and edges.  In this example, the object was assigned a second material used to color the rim red.
+      Rim and edges. In this example, the object was assigned a second material used to color the rim red.
 
 
    Inner
@@ -101,7 +101,8 @@ Material Index Offset
 
 .. warning::
 
-  Solidify thickness is an approximation. While "Even Thickness" and "High Quality Normals" should yield good results,
+  Solidify thickness is an approximation.
+  While "Even Thickness" and "High Quality Normals" should yield good results,
   the final wall thickness isn't guaranteed and may vary depending on the mesh topology.
 
   In order to maintain precise wall thickness in every case, we would need to add/remove faces on the offset shell -

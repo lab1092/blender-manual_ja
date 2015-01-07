@@ -22,30 +22,54 @@ off the physics because we want our smoke emit from stationary place.
 We also don't want to see the particles so turn off the render, too.
 
 
-+-----------------------------------------------------+--------------------------------------------------------+------------------------------------------+
-+.. figure:: /images/Particles_tab.jpg                |.. figure:: /images/No_physics.jpg                      |.. figure:: /images/No_render.jpg         +
-+   :width: 200px                                     |   :width: 200px                                        |   :width: 200px                          +
-+   :figwidth: 200px                                  |   :figwidth: 200px                                     |   :figwidth: 200px                       +
-+                                                     |                                                        |                                          +
-+   The particles tab is right next to the physics tab|   We don't want the particles to be affected by physics|   We also don't want to see the particles+
-+-----------------------------------------------------+--------------------------------------------------------+------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Particles_tab.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The particles tab is right next to the physics tab
+
+     - .. figure:: /images/No_physics.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          We don't want the particles to be affected by physics
+
+     - .. figure:: /images/No_render.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          We also don't want to see the particles
 
 
 Now go back to the physics tab and chose the particle system in the smoke section. There
 should be a list with just one system to chose from that is called 'ParticleSystem' since we
 did not change the name.
-Now you can scrub through the timeline to see  smoke coming from the cube.
+Now you can scrub through the timeline to see smoke coming from the cube.
 Another way to preview the smoke is starting the animation by :kbd:`Alt-A`
 (stop it the same way).
 
 
-+------------------------------------------------+--------------------------------------------+--------------------------------------------+
-+.. figure:: /images/Chose_particle_system.jpg   |.. figure:: /images/Scrub_timeline.jpg      |.. figure:: /images/Smoke_viewport.jpg      +
-+   :width: 200px                                |   :width: 200px                            |   :width: 200px                            +
-+   :figwidth: 200px                             |   :figwidth: 200px                         |   :figwidth: 200px                         +
-+                                                |                                            |                                            +
-+   Select the newly created particle system here|   Either scrub on the timeline or use ALT+A|   Now there should be smoke in the viewport+
-+------------------------------------------------+--------------------------------------------+--------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Chose_particle_system.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Select the newly created particle system here
+
+     - .. figure:: /images/Scrub_timeline.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Either scrub on the timeline or use ALT+A
+
+     - .. figure:: /images/Smoke_viewport.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Now there should be smoke in the viewport
 
 
 Settings

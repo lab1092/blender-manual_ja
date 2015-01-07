@@ -21,18 +21,28 @@ For a *Soft Body* to collide with another object there are a few prerequisites:
 
 - Both objects have to share a layer, but the layer does not necessarily have to be visible.
 - The collision object has to be a mesh object.
-- You have to activate the option *Collision* in the *Collision* panel of the *Physics* sub-context (*Image 1*) for the collision object. The collision object may also be a Soft Body.
-- If you use modifiers such as *Array* and *Mirror* you have to activate *EV.M.Stack* to ensure that collision calculation is based on the modified object. The sequence of *Modifiers* is not important.
+- You have to activate the option *Collision* in the *Collision* panel of the *Physics* sub-context
+  (*Image 1*) for the collision object. The collision object may also be a Soft Body.
+- If you use modifiers such as *Array* and *Mirror* you have to activate *EV.M.Stack* to ensure
+  that collision calculation is based on the modified object. The sequence of *Modifiers* is not important.
 
 
 Examples
 ========
 
-+-----------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-+.. figure:: /images/Blender3D_CubePlaneCollision2.gif|.. figure:: /images/Blender3D_CubePlaneCollision3.gif                        |.. figure:: /images/Blender3D_CollidingPlane_CFace.gif+
-+                                                     |                                                                             |                                                      +
-+   Image 2a: A Soft Body cube colliding with a plane.|   Image 2b: A Soft Body plane colliding with a cube - no interaction at all.|   Image 2c: Collision with CFace activated.          +
-+-----------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender3D_CubePlaneCollision2.gif
+
+          Image 2a: A Soft Body cube colliding with a plane.
+
+     - .. figure:: /images/Blender3D_CubePlaneCollision3.gif
+
+          Image 2b: A Soft Body plane colliding with a cube - no interaction at all.
+
+     - .. figure:: /images/Blender3D_CollidingPlane_CFace.gif
+
+          Image 2c: Collision with CFace activated.
 
 
 A cube colliding with a plane works pretty well (*Image 2a*),
@@ -49,12 +59,16 @@ so you can get an idea of how we might optimize it.
 Calculating Collisions
 ======================
 
-+-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-+.. figure:: /images/Blender3D_VertexPlaneCollision.gif                         |.. figure:: /images/Blender3D_VertexPlaneCollision2.gif                            +
-+                                                                               |                                                                                   +
-+   Image 3a: Visualization of the collision of a Soft Body vertex with a plane.|   Image 3b: Six Soft Body vertices with different speed.                          +
-+                                                                               |   `Blend file <http://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__+
-+-------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender3D_VertexPlaneCollision.gif
+
+          Image 3a: Visualization of the collision of a Soft Body vertex with a plane.
+
+     - .. figure:: /images/Blender3D_VertexPlaneCollision2.gif
+
+          Image 3b: Six Soft Body vertices with different speed.
+          `Blend file <http://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__
 
 
 Soft Body simulation is by default done on a per vertex basis. If the vertices of the Soft
@@ -102,14 +116,17 @@ If the collision you have set up is not behaving properly, you can try the follo
 
 .. tip:: The best way
 
-   Add *Loop Cuts* to your Soft Body object in strategic areas that you know are most likely to be involved in a collision.
+   Add *Loop Cuts* to your Soft Body object in strategic areas that you know are most likely to
+   be involved in a collision.
 
 
 - The Soft Body object must have more subdivisions than the collision object.
 - Check the direction of the face normals.
 - If the collision object has sharp spikes they might penetrate the Soft Body.
-- The resolution of the solver must match the speed at which Soft Body vertices are traveling. Lower the parameter *Error Lim* and carefully increase *Min S*.
-- *Outer* and *Inner* should be large enough, but zones of opposite faces should not overlap, or you have forces in opposite directions.
+- The resolution of the solver must match the speed at which Soft Body vertices are traveling.
+  Lower the parameter *Error Lim* and carefully increase *Min S*.
+- *Outer* and *Inner* should be large enough, but zones of opposite faces should not overlap,
+  or you have forces in opposite directions.
 - If you use strong forces you should use large zones.
 - Set *Choke* to a high enough value (all the way up if necessary) if you have difficulties with repelled vertices.
 - Colliding faces are difficult to control and need long calculation times. Try not to use them.
@@ -134,7 +151,8 @@ Ball Size Caclulation
    Man ("manual")
       The *Ball Size* directly sets the ball size (in BU).
    Av ("average")
-      The average length of all edges attached to the vertex is calculated and then multiplied with the *Ball Size* setting. Works well with evenly distributed vertices.
+      The average length of all edges attached to the vertex is calculated and then multiplied
+      with the *Ball Size* setting. Works well with evenly distributed vertices.
    Min / Max
       The ball size is as large as the smallest/largest spring length of the vertex multiplied with the *Ball Size*.
    AvMiMax ("average min/max")
@@ -157,8 +175,10 @@ Stiffness
    Default 1.0. How elastic that ball of personal space is.
 
 Damping
-   Default 0.5. How the vertex reacts. A low value just slows down the vertex as it gets too close. A high value repulses it.
+   Default 0.5. How the vertex reacts.
+   A low value just slows down the vertex as it gets too close. A high value repulses it.
 
-Collisions with other objects are set in the (other) :doc:`Collision panel </physics/collision>`. To collide with another object they have to share at least one common layer.
+Collisions with other objects are set in the (other) :doc:`Collision panel </physics/collision>`.
+To collide with another object they have to share at least one common layer.
 
 

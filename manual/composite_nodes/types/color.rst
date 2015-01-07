@@ -18,20 +18,12 @@ RGB Curves Node
 
 
 For each color component channel (RGB) or the composite (C),
-this node allows you to define a bezier curve that varies the input (across the bottom,
-or x-axis) to produce an output value (the y-axis).
-By default, it is a straight line with a constant slope,
-so that ``0.5`` along the x-axis results in a ``0.5`` y-axis output.
-Click and drag along the curve to create a control point and to change the curve's shape.
-Use the *X* to delete the selected (white) point.
+this node allows you to define a bezier curve that varies the input (x-axis) to produce an output value (y-axis).
+Clicking on one of the *C R G B* components displays the curve for that channel.
 
-Clicking on each *C R G B* component displays the curve for that channel.
-For example, making the composite curve flatter
-(by clicking and dragging the left-hand point of the curve up)
-means that a little amount of color will result in a lot more color (a higher Y value).
-Effectively, this bolsters the faint details while reducing overall contrast.
-You can also set a curve just for the red, and for example,
-set the curve so that a little red does not show at all, but a lot of red does.
+.. seealso::
+
+   - Read more about using the :ref:`Curve Widget <curve-widget>`.
 
 Here are some common curves you can use to achieve desired effects:
 
@@ -129,7 +121,8 @@ black with red and white with blue as the example image might suggest.
 Levels do color scaling, not substitution,
 but depending on the settings they can result in the described color substitution.
 
-(What really happens when setting Black Level to pure red and White Level to pure blue is that the red channel gets inverted, green gets reduced to zero and blue remains unchanged.)
+(What really happens when setting Black Level to pure red and White Level to pure blue
+is that the red channel gets inverted, green gets reduced to zero and blue remains unchanged.)
 
 Because of this the results of setting arbitrary Black/White Levels or RGB curves is hard to
 predict, but can be fun to play with.
@@ -153,7 +146,8 @@ The alpha and Z channels are mixed as well.
 
 .. note:: Color Channels
 
-   There are two ways to express the channels that are combined to result in a color: RGB or HSV. RGB stands for the Red/Green/Blue pixel format, and HSV stands for the Hue/Saturation/Value pixel format.
+   There are two ways to express the channels that are combined to result in a color: RGB or HSV.
+   RGB stands for the Red/Green/Blue pixel format, and HSV stands for the Hue/Saturation/Value pixel format.
 
 
 Alpha
@@ -162,10 +156,11 @@ Alpha
    (when not enabled, light green)
    the output image will mix the colors by considering what effect the Alpha channel has of the base
    (top input socket) image. The Alpha channel of the output image is not affected.
-
-
 Fac
-   The amount of mixing of the bottom socket is selected by the Factor input field (*Fac:*). A factor of zero does not use the bottom socket, whereas a value of 1.0 makes full use. In Mix mode, 50:50 (0.50) is an even mix between the two, but in Add mode, .50 means that only half of the second socket's influence will be applied.
+   The amount of mixing of the bottom socket is selected by the Factor input field (*Fac:*).
+   A factor of zero does not use the bottom socket, whereas a value of 1.0 makes full use.
+   In Mix mode, 50:50 (0.50) is an even mix between the two, but in Add mode,
+   0.50 means that only half of the second socket's influence will be applied.
 
 
 Examples
@@ -178,14 +173,27 @@ Below are samples of common mix modes and uses, mixing a color or checker with a
 
 Some explanation of the mixing methods above might help you use the Mix node effectively:
 
-- *Add* - adding blue to blue keeps it blue, but adding blue to red makes purple. White already has a full amount of blue, so it stays white. Use this to shift a color of an image. Adding a blue tinge makes the image feel colder.
-- *Subtract* : Taking Blue away from white leaves Red and Green, which combined make Yellow (and you never thought you'd need a color wheel again, eh?). Taking Blue away from Purple leaves Red. Use this to de-saturate an image. Taking away yellow makes an image bluer and more depressing.
-- *Multiply* : Black (0.00) times anything leaves black. Anything times White (1.00) is itself. Use this to mask out garbage, or to colorize a black-and-white image.
-- *Hue* : Shows you how much of a color is in an image, ignoring all colors except what is selected: makes a monochrome picture (style 'Black & Hue').
+- *Add* - adding blue to blue keeps it blue, but adding blue to red makes purple.
+  White already has a full amount of blue, so it stays white.
+  Use this to shift a color of an image. Adding a blue tinge makes the image feel colder.
+- *Subtract* : Taking Blue away from white leaves Red and Green,
+  which combined make Yellow (and you never thought you'd need a color wheel again, eh?).
+  Taking Blue away from Purple leaves Red.
+  Use this to de-saturate an image. Taking away yellow makes an image bluer and more depressing.
+- *Multiply* : Black (0.00) times anything leaves black.
+  Anything times White (1.00) is itself. Use this to mask out garbage, or to colorize a black-and-white image.
+- *Hue* : Shows you how much of a color is in an image,
+  ignoring all colors except what is selected: makes a monochrome picture (style 'Black & Hue').
 - *Mix* : Combines the two images, averaging the two.
 - *Lighten* : Like bleach, makes your whites whiter. Use with a mask to lighten up a little.
-- *Difference* : Kinda cute in that it takes out a color. The color needed to turn Yellow into White is Blue. Use this to compare two verrry similar images to see what had been done to one to make it the other; sorta like a change log for images. You can use this to see a watermark (see `Using Mix to Watermark images`_) you have placed in an image for theft detection.
-- *Darken*, with the colors set here, is like looking at the world through rose-colored glasses (sorry, I just couldn't resist).
+- *Difference* : Kinda cute in that it takes out a color.
+  The color needed to turn Yellow into White is Blue.
+  Use this to compare two verrry similar images to see what had been done to one to make it the other;
+  sorta like a change log for images.
+  You can use this to see a watermark (see `Using Mix to Watermark images`_)
+  you have placed in an image for theft detection.
+- *Darken*, with the colors set here, is like looking at the world through rose-colored glasses
+  (sorry, I just couldn't resist).
 
 
 Contrast Enhancement using Mix
@@ -325,16 +333,20 @@ Hue:
    The **Hue** slider specifies how much to shift the hue of the image. Hue 0.5 (in the middle)
    does not shift the hue or affect the color of the image. As Hue shifts left,
    the colors shift as more cyan is added; a blue image goes bluer, then greener, then yellow.
-   A red image goes violet, then purple, blue, and finally teal.  Shifting right (increasing Hue from 0.5 to 1.0)
+   A red image goes violet, then purple, blue, and finally teal. Shifting right (increasing Hue from 0.5 to 1.0)
    introduces reds and greens. A blue image goes purple, plum, red, orange, and then yellow.
    A red image goes golden, olive, green, and cyan.
-
 Sat:
-   **Saturation** affect the amount of pigment in the image.  A saturation of 0 actually *removes* hues from the color, resulting in a black-and-white grayscale image. A saturation of 1.0 blends in the hue, and 2.0 doubles the amount of pigment and brings out the colors.
+   **Saturation** affect the amount of pigment in the image.
+   A saturation of 0 actually *removes* hues from the color, resulting in a black-and-white grayscale image.
+   A saturation of 1.0 blends in the hue, and 2.0 doubles the amount of pigment and brings out the colors.
 Val:
-   **Value** affects the overall amount of the color in the image. Increasing values make an image lighter; decreaing values shift an image darker.
+   **Value** affects the overall amount of the color in the image.
+   Increasing values make an image lighter; decreaing values shift an image darker.
 Fac:
-   **Factor** determines how much this node affects the image. A factor of 0 means that the input image is not affected by the Hue and Saturation settings. A factor of 1 means they rule, with .5 being a mix.
+   **Factor** determines how much this node affects the image.
+   A factor of 0 means that the input image is not affected by the Hue and Saturation settings.
+   A factor of 1 means they rule, with .5 being a mix.
 
 
 Hue/Saturation tips
@@ -358,7 +370,9 @@ Changing the effect over time.
 
 .. note:: Tinge
 
-   This HSV node simply shifts hues that are already there. To colorize a gray image, or to ADD color to an image, use a mix node to add in a static color from an RGB input node with your image.
+   This HSV node simply shifts hues that are already there.
+   To colorize a gray image, or to ADD color to an image,
+   use a mix node to add in a static color from an RGB input node with your image.
 
 
 HSV Example
@@ -384,9 +398,11 @@ Bright/Contrast
 
 
 Bright
-   A multiplier-type factor by which to increase the overall brightness of the image. Use a negative number to darken an image.
+   A multiplier-type factor by which to increase the overall brightness
+   of the image. Use a negative number to darken an image.
 Contrast
-   A scaling type factor by which to make brighter pixels brighter but keeping the darker pixels dark. Higher values make details stand out. Use a negative number to decrease the overall contrast in the image.
+   A scaling type factor by which to make brighter pixels brighter but keeping the darker pixels dark.
+   Higher values make details stand out. Use a negative number to decrease the overall contrast in the image.
 
 
 Notes
@@ -620,7 +636,8 @@ moves to the right created the illusion of depth as Bambi moved through the fore
 
 .. note:: Valid Input
 
-   Z Input Sockets do not accept fixed values; they must get a vector set (see Map Value node). Image Input Sockets will not accept a color, since it does not have UV coordinates.
+   Z Input Sockets do not accept fixed values; they must get a vector set (see Map Value node).
+   Image Input Sockets will not accept a color, since it does not have UV coordinates.
 
 
 .. figure:: /images/Manual-Compositing-Z-Offset-ex_images.jpg
@@ -653,7 +670,10 @@ The resulting image appears to have the cube on the table.
 
 .. note:: Invisible Man Effect
 
-   If you choose a foreground image which has a higher Alpha than the background, and then mix the Z-combine with a slightly magnified background, the outline of the transparent area will distort the background, enough to make it look like you are seeing part of the background through an invisible yet Fresnel-lens object.
+   If you choose a foreground image which has a higher Alpha than the background,
+   and then mix the Z-combine with a slightly magnified background,
+   the outline of the transparent area will distort the background,
+   enough to make it look like you are seeing part of the background through an invisible yet Fresnel-lens object.
 
 
 Color Balance

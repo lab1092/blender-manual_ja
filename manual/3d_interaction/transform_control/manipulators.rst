@@ -58,7 +58,7 @@ Manipulator controls
   to be performed relative to the other two axes (you can let go of :kbd:`Shift` once you have clicked).
   For example, if you :kbd:`Shift` then :kbd:`LMB` the Z axis handle of the translate manipulator,
   movement will occur in the X and Y planes.
-- When in rotate mode,  :kbd:`LMB` on the white circle (largest circle around the rotation manipulator)
+- When in rotate mode, :kbd:`LMB` on the white circle (largest circle around the rotation manipulator)
   will be equivalent to pressing :kbd:`R`.
 - When in rotate mode, :kbd:`LMB` on the grey circle (small inner circle at the center of the rotation manipulator)
   will be equivalent to pressing :kbd:`R` twice.
@@ -66,7 +66,7 @@ Manipulator controls
 
 :doc:`Read more about constraining transformations » </3d_interaction/transform_control/precision>`
 :doc:`Read more about axis locking » </3d_interaction/transform_control/axis_locking>`
-:doc:`Read more about trackball rotation » </basics/transformations/rotate>`
+:doc:`Read more about trackball rotation » </getting_started/basics/transformations/rotate>`
 
 
 Manipulator Preferences

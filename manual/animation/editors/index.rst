@@ -4,7 +4,7 @@
 ####################
 
 .. toctree::
-   
+
    dopesheet.rst
    dopesheet/action.rst
    dopesheet/dopesheet.rst
@@ -16,4 +16,3 @@
    graph/fmodifiers.rst
    nla.rst
    timeline.rst
-   

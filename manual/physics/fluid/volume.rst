@@ -3,7 +3,8 @@
 Controlling the fluid volume
 ****************************
 
-To control the volume of the fluid simulation, you can set objects in the scene to add or absorb fluid within the :doc:`Fluid Domain </physics/fluid/domain>`.
+To control the volume of the fluid simulation,
+you can set objects in the scene to add or absorb fluid within the :doc:`Fluid Domain </physics/fluid/domain>`.
 
 
 Inflow
@@ -27,7 +28,9 @@ Inflow velocity
    Speed of the fluid that is created inside of the object.
 
 Local Coords / Enable
-   Use local coordinates for the inflow. This is useful if the inflow object is moving or rotating, as the inflow stream will follow/copy that motion. If disabled, the inflow location and direction do not change.
+   Use local coordinates for the inflow.
+   This is useful if the inflow object is moving or rotating, as the inflow stream will
+   follow/copy that motion. If disabled, the inflow location and direction do not change.
 
 
 FIXME(Template Unsupported: Doc:2.6/Manual/Physics/Fluid/animated_mesh_export;

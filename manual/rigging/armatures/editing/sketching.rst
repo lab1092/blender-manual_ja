@@ -25,17 +25,8 @@ tick the checkbox next to* *Skeleton Sketching* *to start drawing bone chains*
 
 Sketching is done in two steps:
 
--
-
-FIXME(TODO: Internal Link;
-[[#Drawing Chains|Drawing some "smooth" and/or polygonal lines]]
-) (called "strokes"). Each stroke corresponds to a chain of bones.
-
--
-
-FIXME(TODO: Internal Link;
-[[#Converting to Bones|Converting these strokes into real chains of bones]]
-), using different methods.
+- `Drawing Chains`_ (called "strokes"). Each stroke corresponds to a chain of bones.
+- `Converting to Bones`_, using different methods.
 
 **The point of view is important**, as it determines the future bones' roll angle:
 the Z axis of a future bone will be aligned with the view Z axis of the 3D view in
@@ -44,11 +35,12 @@ Strokes are drawn in the current view plane passing through the 3D cursor,
 but you can create somewhat "3D" strokes using the* *Adjust* drawing option in different views (see below).
 
 If you enable the small* *Quick Sketch* option, the two steps are merged into one:
-once you have finalized the drawing of a stroke (see FIXME(TODO: Internal Link; [[#Drawing Chains|below]])),
+once you have finalized the drawing of a stroke (see `Drawing Chains`_),
 it is immediately converted to bones (using the current active method) and deleted.
 This option makes bone sketching quick and efficient, but you lose all the advanced stroke editing possibilities.
 
-**Sketches are not saved into Blender files**, so you can't interrupt a sketching session without losing all your work!
+**Sketches are not saved into Blender files**,
+so you can't interrupt a sketching session without losing all your work!
 Note also that the* sketching is common to the whole Blender session, i.e.
 there is only one set of strokes (one sketch) in Blender, and not one per armature, or even per file...
 
@@ -82,17 +74,28 @@ To create a straight segment, click* :kbd:`LMB` *at its starting point.
 Then move the mouse cursor,
 without pressing any button - a dashed red line represents the future segment.
 Click* :kbd:`LMB` again to finalize it.
-Each straight segment of a stroke will always create one and only one bone, whatever convert algorithm you use (except for the* *Template* conversion method).
+Each straight segment of a stroke will always create one and only one bone,
+whatever convert algorithm you use (except for the* *Template* conversion method).
 
-+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx1.jpg                          |.. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx2.jpg                                     |.. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx3.jpg       +
-+   :width: 200px                                                                         |   :width: 200px                                                                                    |   :width: 200px                                                      +
-+   :figwidth: 200px                                                                      |   :figwidth: 200px                                                                                 |   :figwidth: 200px                                                   +
-+                                                                                         |                                                                                                    |                                                                      +
-+   The first segment has been started ([lmb] click) and the mouse moved to its end point.|   The first segment has been finalized by a second [lmb] click, which also started a new segment...|   Repeating these steps, we now have a four-segment polygonal stroke.+
-+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-+                                                                                                                                                                                                                                                                     +
-+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx1.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The first segment has been started ([lmb] click) and the mouse moved to its end point.
+
+     - .. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx2.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The first segment has been finalized by a second [lmb] click, which also started a new segment...
+
+     - .. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx3.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Repeating these steps, we now have a four-segment polygonal stroke.
 
 
 Free Segments
@@ -111,21 +114,32 @@ setting as the :doc:`grease pencil tool </grease_pencil/introduction>`
 to control where and when to add a new point to the segment - so if you feel your free segments are too detailed,
 raise this value a bit, and if you find them too jagged, lower it.
 
-+----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx1.jpg                               |.. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx2.jpg                               +
-+   :width: 300px                                                                              |   :width: 300px                                                                              +
-+   :figwidth: 300px                                                                           |   :figwidth: 300px                                                                           +
-+                                                                                              |                                                                                              +
-+   While drawing a first free segment ([lmb] click and drag).                                 |   The first free segment finalized (releasing [lmb]).                                        +
-+----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx3.jpg                               |.. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx4.jpg                               +
-+   :width: 300px                                                                              |   :width: 300px                                                                              +
-+   :figwidth: 300px                                                                           |   :figwidth: 300px                                                                           +
-+                                                                                              |                                                                                              +
-+   If you now move the mouse without pressing [lmb] again, you'll create a straight segment...|   But if you immediately click again and drag [lmb], you'll instead start a new free segment.+
-+----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
-+Drawing free segments example.                                                                                                                                                               +
-+----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+.. list-table::
+   Drawing free segments example.
+
+   * - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx1.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          While drawing a first free segment ([lmb] click and drag).
+
+     - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx2.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          The first free segment finalized (releasing [lmb]).
+
+   * - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx3.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          If you now move the mouse without pressing [lmb] again, you'll create a straight segment...
+
+     - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx4.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          But if you immediately click again and drag [lmb], you'll instead start a new free segment.
 
 
 You finalize a whole stroke by clicking* :kbd:`RMB`. You can cancel the stroke you are drawing by hitting :kbd:`Esc`.
@@ -150,7 +164,7 @@ Deleting
 
 Hitting* :kbd:`X` or clicking on the *Delete* button (*Bone Sketching* panel)
 deletes the selected strokes (be careful, no warning/confirmation pop-up menu here).
-See also the FIXME(TODO: Internal Link; [[#Gestures|gesture description below]]).
+See also `Gestures`_.
 
 
 Modifying Strokes
@@ -168,15 +182,24 @@ when you draw too far away from any other existing stroke, you won't modify any 
 but rather create a new one, as if* *Overdraw Sketching* was disabled.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+
-+.. figure:: /images/Doc26-boneSketch-overdraw.jpg                                                                              |.. figure:: /images/Doc26-boneSketch-overdraw2.jpg+
-+   :width: 350px                                                                                                               |   :width: 350px                                  +
-+   :figwidth: 350px                                                                                                            |   :figwidth: 350px                               +
-+                                                                                                                               |                                                  +
-+   Adjusting a stroke: the gray part of the "unselected" (orange) stroke will be replaced by the currently drawn "replacement".|   Stroke adjusted.                               +
-+-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+
-+Adjusting stroke example.                                                                                                                                                         +
-+-------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-boneSketch-overdraw.jpg
+          :width: 350px
+          :figwidth: 350px
+
+          Adjusting a stroke: the gray part of the "unselected" (orange)
+          stroke will be replaced by the currently drawn "replacement".
+
+     - .. figure:: /images/Doc26-boneSketch-overdraw2.jpg
+          :width: 350px
+          :figwidth: 350px
+
+          Stroke adjusted.
+
+   * - Adjusting stroke example.
+
+     -
 
 
 Finally, note that there is no undo/redo for sketch drawing...
@@ -197,13 +220,25 @@ is to continue to draw until you get a disgusting scribble,
 crossing your stroke several times - in short,
 something that the gesture system would never recognize!
 
-+--------------------------------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingCancelingGestureEx1.jpg|.. figure:: /images/ManRiggingSketchingCancelingGestureEx2.jpg|.. figure:: /images/ManRiggingSketchingCancelingGestureEx3.jpg+
-+                                                              |                                                              |                                                              +
-+   Damn! I didn't want to cut this stroke here!               |   Let's doodle a bit...                                      |   Phew! That was close, but the stroke is still in one piece.+
-+--------------------------------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+
-+                                                                                                                                                                                            +
-+--------------------------------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/ManRiggingSketchingCancelingGestureEx1.jpg
+
+          Damn! I didn't want to cut this stroke here!
+
+     - .. figure:: /images/ManRiggingSketchingCancelingGestureEx2.jpg
+
+          Let's doodle a bit...
+
+     - .. figure:: /images/ManRiggingSketchingCancelingGestureEx3.jpg
+
+          Phew! That was close, but the stroke is still in one piece.
+
+   * -
+
+     -
+
+     -
 
 
 Cut
@@ -213,13 +248,15 @@ To* **cut** a segment (i.e. add a new black dot inside it, making two segments o
 "draw" a straight line crossing the chosen segment where you want to split it.
 
 
-+--------------------------------------------------------+--------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingCutGestureEx1.jpg|.. figure:: /images/ManRiggingSketchingCutGestureEx2.jpg+
-+                                                        |                                                        +
-+   Gesture.                                             |   Result.                                              +
-+--------------------------------------------------------+--------------------------------------------------------+
-+                                                                                                                 +
-+--------------------------------------------------------+--------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/ManRiggingSketchingCutGestureEx1.jpg
+
+          Gesture.
+
+     - .. figure:: /images/ManRiggingSketchingCutGestureEx2.jpg
+
+          Result.
 
 
 Delete
@@ -227,13 +264,15 @@ Delete
 
 To* **delete** a stroke, draw a "V" crossing the stroke to delete twice.
 
-+-----------------------------------------------------------+-----------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingDeleteGestureEx1.jpg|.. figure:: /images/ManRiggingSketchingDeleteGestureEx2.jpg+
-+                                                           |                                                           +
-+   Gesture.                                                |   Result.                                                 +
-+-----------------------------------------------------------+-----------------------------------------------------------+
-+                                                                                                                       +
-+-----------------------------------------------------------+-----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/ManRiggingSketchingDeleteGestureEx1.jpg
+
+          Gesture.
+
+     - .. figure:: /images/ManRiggingSketchingDeleteGestureEx2.jpg
+
+          Result.
 
 
 Reverse
@@ -242,13 +281,15 @@ Reverse
 To **reverse** a stroke (i.e. the future chain of bones will be reversed),
 draw a "C" crossing twice the stroke to reverse.
 
-+------------------------------------------------------------+------------------------------------------------------------+
-+.. figure:: /images/ManRiggingSketchingReverseGestureEx1.jpg|.. figure:: /images/ManRiggingSketchingReverseGestureEx2.jpg+
-+                                                            |                                                            +
-+   Gesture.                                                 |   Result.                                                  +
-+------------------------------------------------------------+------------------------------------------------------------+
-+                                                                                                                         +
-+------------------------------------------------------------+------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/ManRiggingSketchingReverseGestureEx1.jpg
+
+          Gesture.
+
+     - .. figure:: /images/ManRiggingSketchingReverseGestureEx2.jpg
+
+          Result.
 
 
 Converting to Bones
@@ -256,7 +297,7 @@ Converting to Bones
 
 Once you have one or more selected strokes, you can convert them to bones, using either the* *Convert*
 button of the *Bone Sketching* panel, or the corresponding gesture
-(see FIXME(TODO: Internal Link;[[#Gestures|above]])).
+(see `Gestures`_).
 Each selected stroke will generate a chain of bones, oriented from its reddest end to its whitest one.
 Note that converting a stroke does not delete it.
 
@@ -280,15 +321,19 @@ With this method,
 each free segment of the selected strokes will be uniformly divided in ``n`` parts
 (set in *Num* numeric field), i.e. will give ``n`` bones.
 
-+---------------------------------------------------------------------+-------------------------------------------------+
-+.. figure:: /images/Doc26-boneSketch-convert.jpg                     |.. figure:: /images/Doc26-boneSketch-convert2.jpg+
-+   :width: 300px                                                     |   :width: 300px                                 +
-+   :figwidth: 300px                                                  |   :figwidth: 300px                              +
-+                                                                     |                                                 +
-+   The Fixed conversion settings and its preview on selected strokes.|   The Fixed conversion result.                  +
-+---------------------------------------------------------------------+-------------------------------------------------+
-+                                                                                                                       +
-+---------------------------------------------------------------------+-------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-boneSketch-convert.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          The Fixed conversion settings and its preview on selected strokes.
+
+     - .. figure:: /images/Doc26-boneSketch-convert2.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          The Fixed conversion result.
 
 
 Adaptative
@@ -300,15 +345,19 @@ the *Thres* hold numeric field; higher values giving more bones,
 following more closely the segments' shape.
 So the more twisted a free segment, the more bones it will generate.
 
-+--------------------------------------------------------------------------+-------------------------------------------------+
-+.. figure:: /images/Doc26-boneSketch-convert3.jpg                         |.. figure:: /images/Doc26-boneSketch-convert4.jpg+
-+   :width: 300px                                                          |   :width: 300px                                 +
-+   :figwidth: 300px                                                       |   :figwidth: 300px                              +
-+                                                                          |                                                 +
-+   The Adaptative conversion settings and its preview on selected strokes.|   The Adaptative conversion result.             +
-+--------------------------------------------------------------------------+-------------------------------------------------+
-+                                                                                                                            +
-+--------------------------------------------------------------------------+-------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-boneSketch-convert3.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          The Adaptative conversion settings and its preview on selected strokes.
+
+     - .. figure:: /images/Doc26-boneSketch-convert4.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          The Adaptative conversion result.
 
 
 Length
@@ -319,15 +368,25 @@ each free segment of the selected strokes will create as many bones as necessary
 so that none of them is longer than the *Length* numeric field value
 (in Blender Units).
 
-+----------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------+
-+.. figure:: /images/Doc26-boneSketch-convert5.jpg                     |.. figure:: /images/Doc26-boneSketch-convert6.jpg|.. figure:: /images/Doc26-boneSketch-convert7.jpg+
-+   :width: 200px                                                      |   :width: 200px                                 |   :width: 200px                                 +
-+   :figwidth: 200px                                                   |   :figwidth: 200px                              |   :figwidth: 200px                              +
-+                                                                      |                                                 |                                                 +
-+   The Length conversion settings and its preview on selected strokes.|   Using a larger length value.                  |   The Length conversion result.                 +
-+----------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------+
-+                                                                                                                                                                          +
-+----------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-boneSketch-convert5.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The Length conversion settings and its preview on selected strokes.
+
+     - .. figure:: /images/Doc26-boneSketch-convert6.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Using a larger length value.
+
+     - .. figure:: /images/Doc26-boneSketch-convert7.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The Length conversion result.
 
 
 Retarget
@@ -336,7 +395,8 @@ Retarget
 Retarget template bone chain to stroke.
 
 Template
-   Template armature that will be retargeted to the stroke. This is a more complex topic, detailed in its :doc:`own page </rigging/armatures/editing/templating>`.
+   Template armature that will be retargeted to the stroke.
+   This is a more complex topic, detailed in its :doc:`own page </rigging/armatures/editing/templating>`.
 
 
 Retarget roll mode

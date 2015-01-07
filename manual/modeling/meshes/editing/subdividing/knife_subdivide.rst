@@ -35,7 +35,9 @@ Usage
 When you press :kbd:`K` (or :kbd:`Shift-K`), the Knife tool becomes active.
 
 Drawing the cut line
-   When using *Knife Subdivide*, the cursor changes to an icon of a scalpel and the header changes to display options for the tool. You can draw connected straight lines by clicking :kbd:`LMB`.
+   When using *Knife Subdivide*, the cursor changes to an icon of a
+   scalpel and the header changes to display options for the tool.
+   You can draw connected straight lines by clicking :kbd:`LMB`.
 
 
 .. figure:: /images/Knife1.jpg
@@ -63,7 +65,8 @@ Options
 =======
 
 New cut :kbd:`E`
-   Begins a new cut. This allows you to define multiple distinct cut lines. If multiple cuts have been defined, they are recognized as new snapping points.
+   Begins a new cut. This allows you to define multiple distinct cut lines.
+   If multiple cuts have been defined, they are recognized as new snapping points.
 
 
 .. figure:: /images/Knife4.jpg

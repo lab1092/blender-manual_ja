@@ -144,13 +144,20 @@ Snap Keys :kbd:`Shift-S`
       Flatten the *Bezier* handles for the selected keyframes.
 
 
-+-----------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+
-+*Flatten Handles snapping example.*|.. figure:: /images/Manual-Animation-F-Curves-Flatten-Handles-1.jpg|.. figure:: /images/Manual-Animation-F-Curves-Flatten-Handles-2.jpg+
-+                                   |   :width: 200px                                                   |   :width: 200px                                                   +
-+                                   |   :figwidth: 200px                                                |   :figwidth: 200px                                                +
-+                                   |                                                                   |                                                                   +
-+                                   |   Before Flatten Handles.                                         |   After Flatten Handles.                                          +
-+-----------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+
+.. list-table::
+   Flatten Handles snapping example.
+
+   * - .. figure:: /images/Manual-Animation-F-Curves-Flatten-Handles-1.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Before Flatten Handles.
+
+     - .. figure:: /images/Manual-Animation-F-Curves-Flatten-Handles-2.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          After Flatten Handles.
 
 
 Mirror
@@ -180,13 +187,19 @@ Clean Keyframes
 *Clean Keyframes* :kbd:`O`
 
 
-+-------------------------------------------+-------------------------------------------+
-+.. figure:: /images/Doc26-fcurve-clean1.jpg|.. figure:: /images/Doc26-fcurve-clean2.jpg+
-+   :width: 300px                           |   :width: 300px                           +
-+   :figwidth: 300px                        |   :figwidth: 300px                        +
-+                                           |                                           +
-+   Fcurve before cleaning                  |   Fcurve after cleaning                   +
-+-------------------------------------------+-------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-fcurve-clean1.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fcurve before cleaning
+
+     - .. figure:: /images/Doc26-fcurve-clean2.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fcurve after cleaning
 
 
 Smoothing
@@ -199,13 +212,19 @@ without any setting, which gives quite a strong smoothing! Note that the first a
 seem to be never modified by this tool.
 
 
-+-------------------------------------------+-------------------------------------------+
-+.. figure:: /images/Doc26-fcurve-clean1.jpg|.. figure:: /images/Doc26-fcurve-smooth.jpg+
-+   :width: 300px                           |   :width: 300px                           +
-+   :figwidth: 300px                        |   :figwidth: 300px                        +
-+                                           |                                           +
-+   Fcurve before smoothing                 |   Fcurve after smoothing                  +
-+-------------------------------------------+-------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-fcurve-clean1.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fcurve before smoothing
+
+     - .. figure:: /images/Doc26-fcurve-smooth.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fcurve after smoothing
 
 
 Sampling and Baking Keyframes
@@ -215,16 +234,22 @@ Sample Keyframes :kbd:`Shift-O`
    Sampling a set a keyframes replaces interpolated values with a new keyframe for each frame.
 
 
-+-------------------------------------------+--------------------------------------------+
-+.. figure:: /images/Doc26-fcurve-sample.jpg|.. figure:: /images/Doc26-fcurve-sample2.jpg+
-+   :width: 300px                           |   :width: 300px                            +
-+   :figwidth: 300px                        |   :figwidth: 300px                         +
-+                                           |                                            +
-+   Fcurve before sampling                  |   Fcurve after sampling                    +
-+-------------------------------------------+--------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Doc26-fcurve-sample.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fcurve before sampling
+
+     - .. figure:: /images/Doc26-fcurve-sample2.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fcurve after sampling
 
 
-Bake Curves  :kbd:`Alt-C`
+Bake Curves :kbd:`Alt-C`
    Baking a curve replaces it with a set of sampled points, and removes the ability to edit the curve.
 
 
@@ -242,49 +267,36 @@ etc., this menu gathers various other options.
 
 Properties :kbd:`N`
    Opens the properties panel on the right side of the graph editor.
-
 Realtime Updates
    When transforming keyframes, changes to the animation data are flushed to other views.
-
 Show Frame Number Indicator
    Show frame number beside the current frame indicator line.
-
 Show Cursor
    Shows the 2d cursor.
-
 Show Sliders
    Show sliders beside F-Curve channels.
-
 Show Group Colors
    Draw groups and channels with colors matching their corresponding groups.
-
 AutoMerge Keyframes
    Automatically merge nearby keyframes.
-
 Use High Quality Drawing
    Draw F-Curves using Anti-Aliasing and other fancy effects (disable for better performance).
-
 Show Handles
    Show handles of Bezier control points.
-
 Only Selected Curve Keyframes
    Only keyframes of selected F-Curves are visible and editable.
-
 Only Selected Keyframe handles
    Only show and edit handles of selected keyframes.
-
 Show Seconds
    Show timing in seconds not frames.
-
 Set Preview Range, Clear Preview Range (:kbd:`Ctrl-P`, :kbd:`Alt-P`)
-   These entries allow you to define/clear a temporary preview range to use for the :kbd:`Alt-A` realtime playback (this is the same thing as the *Pr* option of the :doc:`Timeline window header </animation/timeline#header_controls>`).
-
+   These entries allow you to define/clear a temporary preview range to use for the :kbd:`Alt-A` realtime playback
+   (this is the same thing as the *Pr* option of the
+   :doc:`Timeline window header </animation/timeline#header_controls>`).
 Auto-Set Preview Range :kbd:`Ctrl-Alt-P`
    Automatically set Preview Range based on range of keyframes.
-
 View All :kbd:`Home`
    Reset viewable area to show full keyframe range.
-
 View Selected :kbd:`Numpad-.`
    Reset viewable area to show selected keyframe range.
 
@@ -295,45 +307,32 @@ Select Menu
 Select All :kbd:`A`
    In edit mode, select/deselect all keyframes.
    In locked mode, select/deselect all visible channels.
-
 Invert Selection :kbd:`Ctrl-I`
    Inverts selected keys.
-
 Border Select :kbd:`B`
    Allows selection of keyframes within a region.
-
 Border Axis Range :kbd:`Alt-B`
    Axis Range...
 Border (include Handles :kbd:`Ctrl-B`
    Include Handles, handles tested individually against the selection criteria.
-
 Columns on Selected Keys :kbd:`K`
    Select all keys on same frame as selected one(s).
-
 Column on current Frame :kbd:`Ctrl-K`
    Select all keyframes on the current frame.
-
 Columns on selected Markers :kbd:`Shift-K`
    Select all keyframes on the frame of selected marker(s).
-
 Between Selected Markers :kbd:`Alt-K`
    Select all keyframes between selected markers.
-
 Before Current Frame :kbd:`[`
    Select all keys before the current frame.
-
 After Current Frame :kbd:`]`
    Select all keys after the current frame.
-
 Select More :kbd:`Ctrl-Numpad+`
    Grow keyframe selection along Fcurve.
-
 Select Less :kbd:`Ctrl-Numpad-`
    Shrink keyframe selection along Fcurve.
-
 Select Linked :kbd:`L`
    Selects all keyframes on Fcurve of selected keyframe.
-
 
 Marker Menu
 ^^^^^^^^^^^

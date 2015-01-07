@@ -27,7 +27,9 @@ Viewer
 The *Viewer* node is a temporary, in-process viewer.
 Plug it in wherever you would like to see an image or value-map in your node-tree.
 
-:kbd:`LMB` click on the image to update it, if it wasn't done automatically. You can use as many of these as you would like. It is possible to automatically plug a Viewer node to any other node by pressing :kbd:`Shift-Ctrl-LMB` on it.
+:kbd:`LMB` click on the image to update it, if it wasn't done automatically.
+You can use as many of these as you would like.
+It is possible to automatically plug a Viewer node to any other node by pressing :kbd:`Shift-Ctrl-LMB` on it.
 
 
 Using the UV/Image Editor Window
@@ -129,7 +131,9 @@ you can save intermediate images automatically. Neat, huh?
 
 .. note:: Filespecs
 
-   As with all filename entries, use // at the beginning of the field to shorthand reference the current directory of the .blend file. You can also use the .. breadcrumb to go up a directory.
+   As with all filename entries, use ``//`` at the beginning of the field
+   to shorthand reference the current directory of the ``.blend`` file.
+   You can also use the .. breadcrumb to go up a directory.
 
 
 Levels Node

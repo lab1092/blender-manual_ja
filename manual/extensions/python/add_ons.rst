@@ -3,11 +3,16 @@
 
 
 *******
-Add-Ons
+Add-ons
 *******
 
-*Add-On* is the general term for any optional script that extends Blender's functionality. They are found in the *Add-Ons* tab of the *User Preferences* window. This tab allows to install, enable and disable Add-Ons.
-Blender comes with some useful Add-Ons already, but you can also add your own, or any interesting ones you find on the web. The `Scripts Catalog <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts>`__ provides an index of Add-Ons that are included with Blender as well as listing a number of external Add-Ons.
+*Add-on* is the general term for any optional script that extends Blender's functionality.
+They are found in the *Add-ons* tab of the *User Preferences* window.
+This tab allows to install, enable and disable Add-ons.
+Blender comes with some useful Add-ons already, but you can also add your own,
+or any interesting ones you find on the web.
+The `Scripts Catalog <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts>`__ provides
+an index of Add-ons that are included with Blender as well as listing a number of external Add-ons.
 
 
 .. figure:: /images/Userpref_addons_en_oct20_2013.jpg
@@ -15,18 +20,18 @@ Blender comes with some useful Add-Ons already, but you can also add your own, o
    :figwidth: 640px
 
 
-Installation of an Add-On
+Installation of an Add-on
 =========================
 
-For a script to show up in the Add-Ons tab it will first have to be installed. For this you
-can use the *Install Add-On* button in the header of the Add-Ons window.
+For a script to show up in the Add-ons tab it will first have to be installed. For this you
+can use the *Install Add-on* button in the header of the Add-ons window.
 Simply click the button and locate the script you wish to install. Once installed,
 the script will show up in the panel.
 
-Alternatively you can manually install an Add-On.
-An Add-On is considered installed when it is located in the ``..
+Alternatively you can manually install an Add-on.
+An Add-on is considered installed when it is located in the ``..
 /scripts/addons`` folder (where .. is the path to your Blender configuration folder).
-Simply moving the Add-On into that folder is enough.
+Simply moving the Add-on into that folder is enough.
 
 Add-ons can be python scripts **.py** or **.zip** files (containing **.py** scripts).
 
@@ -37,7 +42,8 @@ File locations
 - Windows 7 - ``C:\Users\%username%\AppData\Roaming\Blender Foundation\Blender\2.6x\scripts\addons``
 
 
-- Windows XP - ``C:\Documents and Settings\%username%\Application Data\Blender Foundation\Blender\2.6x\scripts\addons``
+- Windows XP - ``C:\Documents and Settings\%username%\Application Data\Blender
+  Foundation\Blender\2.6x\scripts\addons``
 
 
 - Linux - ``/home/$user/.config/blender/$version/scripts/addons``
@@ -65,19 +71,25 @@ Enabling and Disabling
 
 .. figure:: /images/Manual-Extensions-Python-Addons-EnabledAddOn.jpg
 
-   Enabling an Add-On
+   Enabling an Add-on
 
 
-Once an Add-On has been installed, it has to be enabled before it can be used. Simply place a
-check mark on the *Enable Add-On* box of the Add-On you wish to activate and you're
+Once an Add-on has been installed, it has to be enabled before it can be used. Simply place a
+check mark on the *Enable Add-on* box of the Add-on you wish to activate and you're
 done. The extra functionality of the Add-on is now integrated into Blender and can be used.
 
-To disable the functionality again, uncheck the box. To get more information on a certain Add-on you can press the arrow at the left of the entry and any additional information that is available will be shown. If the Add-On does not activate when enabled, check the :doc:`Console window </interface/window_system/console_window>` for any errors that may have occurred when loading.
+To disable the functionality again, uncheck the box.
+To get more information on a certain Add-on you can press the arrow at the left
+of the entry and any additional information that is available will be shown.
+If the Add-on does not activate when enabled,
+check the :doc:`Console window </getting_started/basics/interface/window_system/console_window>`
+for any errors that may have occurred when loading.
 
 
-.. tip:: Saving Add-On Preferences
+.. tip:: Saving Add-on Preferences
 
-   If you want an Add-On to be enabled everytime you start Blender, you will need to save your :doc:`User Preferences </preferences>`.
+   If you want an Add-on to be enabled everytime you start Blender,
+   you will need to save your :doc:`User Preferences </preferences>`.
 
 
 Development guidelines

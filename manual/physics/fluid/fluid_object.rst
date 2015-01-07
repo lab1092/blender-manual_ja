@@ -39,4 +39,3 @@ Initial velocity
    setting.
 
 
-

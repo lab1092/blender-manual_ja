@@ -21,7 +21,8 @@ The following is a typical workflow for rigging:
 - Add an armature, which starts out with a single bone.
 - Add more bones as needed and link them together to form "limbs".
 
-(you can either extrude an existing bone, which parents it to the extruded bone automatically; or add new bones first and then link them together.)
+(you can either extrude an existing bone, which parents it to the extruded bone automatically;
+or add new bones first and then link them together.)
 
 - Edit the bones to give proper proportions to the skeleton
 - Apply constraints to the joints
@@ -36,7 +37,9 @@ The following is a typical workflow for rigging:
 
 - Give poses to the armature.
 
-(There are multiple methods: By arranging each bone of the armature manually, or by copying a template armature, or by arranging the bones to follow a curve, or by making the armature follow externally collected motion-capture data.)
+(There are multiple methods: By arranging each bone of the armature manually,
+or by copying a template armature, or by arranging the bones to follow a curve,
+or by making the armature follow externally collected motion-capture data.)
 
 - Check how the armature movement affects the skin, and adjust the parameters.
 
@@ -86,13 +89,19 @@ In normal English, "to skin" means 'to peel off skin', but here it is just the r
 around an armature.
 
 :doc:`Linking Objects to Bones </rigging/skinning/objects>`
-   How to parent a bone to an object, so that the bone controls that object. This type of linking is used to simulate mechanical linkage (for example, `Newton's cradle <http://en.wikipedia.org/wiki/Newton_Pendulum|>`__) or where the parts of the mesh are not deformed when the armature moves, as in case of modeling an insect body, crab, etc.
-
+   How to parent a bone to an object, so that the bone controls that object.
+   This type of linking is used to simulate mechanical linkage
+   (for example, `Newton's cradle <http://en.wikipedia.org/wiki/Newton_Pendulum|>`__)
+   or where the parts of the mesh are not deformed when the armature moves,
+   as in case of modeling an insect body, crab, etc.
 :doc:`Skinning to Objects' Shapes </rigging/skinning/obdata>`
-   How to attach the armature so that each of its bones controls a specific part of the "skin" object's geometry. This type of linkage is used when the object surface flexes when the armature moves, such as bulging of biceps when the arm is folded.
-
+   How to attach the armature so that each of its bones controls a specific part of the "skin" object's geometry.
+   This type of linkage is used when the object surface flexes when the armature moves,
+   such as bulging of biceps when the arm is folded.
 :doc:`Retargeting </rigging/skinning/retargeting>`
-   How to apply motion-capture data (acquired from real world) to a rig, so that it mimics the original movements realistically. This method also avoids laborious programming of each movement.
+   How to apply motion-capture data (acquired from real world) to a rig,
+   so that it mimics the original movements realistically.
+   This method also avoids laborious programming of each movement.
 
 
 [[Doc:2.6/Manual/Rigging/Posing|Posing]]
@@ -116,11 +125,13 @@ Then Blender creates all the intermediate poses to create the animation.
 :doc:`Editing Poses </rigging/posing/editing>`
    how to create a pose, and how to edit it to create the snapshots of an animation at different moments.
 :doc:`Pose Library </rigging/posing/pose_library>`
-   storing frequently used poses or existing poses from another armature, so that they can be quickly accessed and applied.
+   storing frequently used poses or existing poses from another armature,
+   so that they can be quickly accessed and applied.
 :doc:`Using Constraints </rigging/posing/constraints>`
    how to apply constraints to bones so that they cannot form an unnatural pose.
 :doc:`Inverse Kinematics </rigging/posing/inverse_kinematics>`
-   a feature where you move the last bone in a chain, and Blender automatically  moves the whole chain accordingly. This is like lifting someone's finger: His whole hand automatically follows that movement.
+   a feature where you move the last bone in a chain, and Blender automatically moves the whole chain accordingly.
+   This is like lifting someone's finger: His whole hand automatically follows that movement.
 :doc:`Spline IK </rigging/posing/inverse_kinematics/spline_ik>`
    a feature where you can align a chain of bones along a curve.
 

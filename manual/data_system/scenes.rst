@@ -34,8 +34,8 @@ Each sequence, or shot, usually lasts a few seconds.
    Technique hard to master if you don't want your audience to fall asleep!
 
 
-A single Blender file is organized and set up to be able to contain an entire movie. Each .
-blend file can contain multiple scenes. A scene is a bunch of objects, organized into layers.
+A single Blender file is organized and set up to be able to contain an entire movie.
+Each ``.blend`` file can contain multiple scenes. A scene is a bunch of objects, organized into layers.
 As you progress through the creative process, you use a set of window
 :doc:`screen layouts </data_system/scene_creation>`
 specifically designed to help you work efficiently through the creative process:

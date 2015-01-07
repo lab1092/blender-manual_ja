@@ -14,7 +14,7 @@ World Physics
 
 
 World settings enable you to set some basic effects which affect all scenes throughout your
-game, so giving it a feeling of unity and continuity.  These include ambient light,
+game, so giving it a feeling of unity and continuity. These include ambient light,
 depth effects (mist) and global physics settings. These effects are a limited subset of the
 more extensive range of effects available with the Blender internal or cycles renderer.
 
@@ -33,12 +33,13 @@ World
 These two color settings allow you to set some general lighting effects for your game.
 
 Horizon Color
-   The RGB color at the horizon ; i.e. the color and intensity of any areas in the scene which are not filled explicitly.
+   The RGB color at the horizon;
+   i.e. the color and intensity of any areas in the scene which are not filled explicitly.
 Ambient Color
    Ambient light mimics an overall background illumination obtained from diffusing surfaces
-   (see :doc:`Ambient Light </lighting>`,
+   (see :doc:`Ambient Light </render/blender_render/lighting>`,
    :doc:`Exposure </render/post_process/cm_and_exposure>` and
-   :doc:`Ambient Occlusion </lighting/ambient_occlusion>`).
+   :doc:`Ambient Occlusion </render/blender_render/lighting/ambient_occlusion>`).
    Its general color and intensity are set by these controls.
 
 
@@ -50,7 +51,7 @@ Mist can greatly enhance the illusion of depth in your rendering.
 To create mist, Blender makes objects farther away more transparent (decreasing their Alpha value)
 so that they mix more of the background color with the object color.
 With Mist enabled, the further the object is away from the camera the less it's alpha value will be.
-For full details, see :doc:`Mist </world/mist>`.
+For full details, see :doc:`Mist </render/blender_render/world/mist>`.
 
 Mist
    Toggles mist on and off
@@ -123,9 +124,11 @@ Obstacle Simulation
 ===================
 
 Simulation used for obstacle avoidance in the Game Engine,
-based on the RVO  (Reciprocal Velocity Obstacles) principle.
+based on the RVO (Reciprocal Velocity Obstacles) principle.
 The aim is to prevent one or more actors colliding with obstacles.
-See `Path finding and steering behaviors <http://wiki.blender.org/index.php/User:Nicks/Gsoc2010/Docs>`__ for more details.
+
+See `Path finding and steering behaviors <http://wiki.blender.org/index.php/User:Nicks/Gsoc2010/Docs>`__
+for more details.
 
 Type
    None

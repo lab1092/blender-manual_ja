@@ -56,8 +56,9 @@ for example, the left camera in (*Active camera (left one)*).
 
  .. warning::
 
-    The active camera, as well as the layers, can be specific to a given view, or global (locked) to the whole scene -
-    see :doc:`this part of the 3D view options page </3d_interaction/navigating/3d_view_options#lock_to_scene>`.
+    The active camera, as well as the layers, can be specific to a given view,
+    or global (locked) to the whole scene -
+    see :doc:`this part of the 3D view options page </getting_started/basics/navigating/3d_view_options#lock_to_scene>`.
 
 
 Camera Settings
@@ -120,7 +121,7 @@ Clipping Start/End
       and only change the view settings when *not* in *Camera* view.
       These settings are accessed through the :menuselection:`View` menu of the *3D View*.
 
-      See the :doc:`3D view options page </3d_interaction/navigating/3d_view_options#view_properties_panel>`
+      See the :doc:`3D view options page </getting_started/basics/navigating/3d_view_options#view_properties_panel>`
       for more details.
 
 
@@ -175,7 +176,7 @@ Mist
    Toggles viewing of the mist limits on and off.
    The limits are shown as two connected white dots on the camera line of sight.
    The mist limits and other options are set in the *World* panel,
-   in the :doc:`Mist section </world/mist>`.
+   in the :doc:`Mist section </render/blender_render/world/mist>`.
 
 
 .. figure:: /images/Manual-Camera-camera-view.jpg
@@ -287,16 +288,16 @@ Horizontal Pan or Yaw
    This corresponds to a rotation around the camera's local Y axis... Yes, that's it, press :kbd:`R`,
    and then :kbd:`Y` twice!
 Dolly
-   To dolly the camera, press :kbd:`G` then :kbd:`MMB` (or  :kbd:`Z` twice).
+   To dolly the camera, press :kbd:`G` then :kbd:`MMB` (or :kbd:`Z` twice).
 Sideways Tracking
    Press :kbd:`G` and move the mouse
-   (you can use  :kbd:`X` twice or :kbd:`Y` to get pure-horizontal or pure-vertical sideways tracking).
+   (you can use :kbd:`X` twice or :kbd:`Y` to get pure-horizontal or pure-vertical sideways tracking).
 
 
 Aiming the camera in Flymode
 ============================
 
 When you are in *Camera* view,
-the :doc:`fly mode </3d_interaction/navigating#fly_mode>` actually moves your active camera...
+the :doc:`fly mode </getting_started/basics/navigating#fly_mode>` actually moves your active camera...
 
 .. youtube:: bTRrHNn-d4w

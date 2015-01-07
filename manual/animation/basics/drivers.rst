@@ -49,8 +49,8 @@ Remove Driver
    Removes the driver from the object.
 
 Type
-   The type of calculation to use on the set of Driver Variables.  (If you only have one driver variable there
-   is no real difference between average, sum, minimum and maximum)
+   The type of calculation to use on the set of Driver Variables.
+   (If you only have one driver variable there is no real difference between average, sum, minimum and maximum)
 
    Average Value
       Uses the average value of the referenced Driver Variables.
@@ -328,7 +328,7 @@ Drivers And Multiple Relative Shape Keys
 
 The following screenshots illustrate combining shape keys, bones, and
 drivers to make multiple chained relative shape keys sharing a single
-root.  While it lacks the convenience of the single Evaluation Time of
+root. While it lacks the convenience of the single Evaluation Time of
 an absolute shape key, it allows you to have more complex
 relationships between your shape keys.
 
@@ -355,33 +355,33 @@ relationships between your shape keys.
 
 .. figure:: /images/Driver_For_Multiple_Shape_Keys_Extended.jpg
 
-The Basis shape key has the stacks fully retracted.  Key1 has the base
-fully extended.  Key2A has the left stack fully extended.  Key2B has
-the right stack fully extended.  Key2A and Key2B are both relative to
+The Basis shape key has the stacks fully retracted. Key1 has the base
+fully extended. Key2A has the left stack fully extended. Key2B has
+the right stack fully extended. Key2A and Key2B are both relative to
 Key1 (as you can see in the field in the bottom right of the Shape Keys
 panel.
 
 The value of Key1 is bound to the position of bones by a driver with
-two variables.  Each variable uses the world Z coordinate of a bone
+two variables. Each variable uses the world Z coordinate of a bone
 and uses the maximum value to determine how much the base should be
-extended.  The generator polynomial is crafted such that the top of
+extended. The generator polynomial is crafted such that the top of
 the dominant stack should line up with the bone for that stack.
 
-The value of Key2A is bound to the position of bone.L .  Its generator
+The value of Key2A is bound to the position of bone.L . Its generator
 parameters are crafted such that when Key1's value reaches 1, the
-value of Key2A starts increasing beyond zero.  In this way the top of
+value of Key2A starts increasing beyond zero. In this way the top of
 the left stack will move with bone.L (mostly).
 
-The value of Key2B is bound to the position of bone.R .  Its generator
+The value of Key2B is bound to the position of bone.R . Its generator
 parameters are similar to Key2A so that the top of the right stack
 will move with bone.R (mostly).
 
 Since it's quite easy for bone.L and bone.R to be in positions that
 indicate conflicting values for Key1 there will be times when the
-bones do not line up with the tops of their respective stacks.  If the
+bones do not line up with the tops of their respective stacks. If the
 driver for Key1 were to use Average or Minimum instead of Maximum to
 determine the value of the shape key then "conflicts" between bone.L
-and bone.R would be resolved differently.  You will chose according to
+and bone.R would be resolved differently. You will chose according to
 the needs of your animation.
 
 
@@ -432,10 +432,10 @@ Intra-armature Bone Drivers Can Misbehave
 -----------------------------------------
 
 There is a `well known limitation <https://developer.blender.org/T40301>`__
-with drivers on bones that refer to another bone in the same armature.  Their values can be
+with drivers on bones that refer to another bone in the same armature. Their values can be
 incorrectly calculated based on the position of the other bone as it was *before* you adjust
-the current_frame.  This can lead to obvious shape glitches when the rendering of frames has
-a jump in the frame number (either because the .blend file is currently on a different frame
+the current_frame. This can lead to obvious shape glitches when the rendering of frames has
+a jump in the frame number (either because the ``.blend`` file is currently on a different frame
 number or because you're skipping already-rendered frames).
 
 

@@ -31,13 +31,19 @@ See :doc:`Selecting Objects </modeling/objects/selecting>` for more information.
 All commands described below can be found in *Object* menu and/or in *Object tools* panel
 (see pictures).
 
-+----------------------------------------------------+----------------------------------------------+
-+.. figure:: /images/Manual-2.6-Panel-ObjectTools.jpg|.. figure:: /images/Manual-2.6-Menu-Object.jpg+
-+   :width: 50px                                     |   :width: 75px                               +
-+   :figwidth: 50px                                  |   :figwidth: 75px                            +
-+                                                    |                                              +
-+   Object tools panel                               |   Object menu                                +
-+----------------------------------------------------+----------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-2.6-Panel-ObjectTools.jpg
+          :width: 50px
+          :figwidth: 50px
+
+          Object tools panel
+
+     - .. figure:: /images/Manual-2.6-Menu-Object.jpg
+          :width: 75px
+          :figwidth: 75px
+
+          Object menu
 
 
 Creation and deletion
@@ -110,13 +116,13 @@ See :doc:`Duplication </modeling/objects/duplication>` for more information.
 
 
 Join
-
-----
+====
 
 
 .. admonition:: Reference
    :class: refbox
 
+   | Mode:     *Object* mode
    | Menu:     *Object → Join*
    | Hotkey:   :kbd:`Ctrl-J`
 
@@ -124,22 +130,23 @@ Join
 Joining makes one single object from all selected objects. Objects must be of the same type.
 Origin point is obtained from the previously *active* object.
 Performing a join is equivalent to adding new objects while in *Edit mode*.
-The non-active objects are deleted (their meshes were taken by active object).
-Only the active object remains. This only works with editable objects,
+The non-active objects are deleted and their meshes added to the active object, so that
+only the active object remains. This only works with editable objects
 containing meshes and curves.
 
 
-Delete
-======
+Delete / Erase
+==============
 
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Object → Delete... → Delete*
-   | Hotkey:   :kbd:`X`, :kbd:`D` or :kbd:`Del`, :kbd:`D`
+   | Mode:     *Edit* or *Object* mode
+   | Menu:     *Object* → *Delete*
+   | Hotkey:   :kbd:`X` or :kbd:`Del`
 
 
-Deletion erases selected objects.
+Erases or deletes selected objects.
 
 
 Transformation tools

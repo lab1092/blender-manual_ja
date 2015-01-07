@@ -23,7 +23,7 @@ To understand this option properly, you need to understand how Blender works wit
 Almost everything in Blender is organized in a hierarchy of Datablocks.
 A Datablock can be thought of as containers for certain pieces of information. For example,
 the Object Datablock contains information about the Object's location while the Object Data
-(*ObData*)  datablock contains information about the mesh.
+(*ObData*) datablock contains information about the mesh.
 
 
 A material may be linked in two different ways:
@@ -64,7 +64,7 @@ Step
 Memory Limit
    Maximum memory usage in Mb (0 is unlimited).
 
-:doc:`Read more about Undo and Redo options » </basics/undo_and_redo>`
+:doc:`Read more about Undo and Redo options » </getting_started/basics/undo_and_redo>`
 
 
 Grease Pencil
@@ -106,16 +106,21 @@ Auto Keyframing
       Automatic keyframe insertion in available curves.
 New F-Curve Defaults
    Interpolation
-      This controls how the state between two keyframes is computed. Default interpolation for new keyframes is Bezier which provides smooth acceleration and de-acceleration whereas Linear or Constant is more abrupt.
+      This controls how the state between two keyframes is computed.
+      Default interpolation for new keyframes is Bezier which provides
+      smooth acceleration and de-acceleration whereas Linear or Constant is more abrupt.
    XYZ to RGB
-      Color for X, Y or Z animation curves (location, scale or rotation) are the same as the colour for the X, Y and Z axis.
+      Color for X, Y or Z animation curves (location, scale or rotation)
+      are the same as the color for the X, Y and Z axis.
 
 
 Transform
 =========
 
 Release confirm
-   Dragging :kbd:`LMB` on an object will move it. To confirm this (and other) transforms, a :kbd:`LMB` is necessary by default. When this option is activated, the release of :kbd:`LMB` acts as confirmation of the transform.
+   Dragging :kbd:`LMB` on an object will move it.
+   To confirm this (and other) transforms, a :kbd:`LMB` is necessary by default.
+   When this option is activated, the release of :kbd:`LMB` acts as confirmation of the transform.
 
 
 Sculpt Overlay Color
@@ -123,7 +128,7 @@ Sculpt Overlay Color
 
 This color selector allows the user to define a color to be used in the inner part of the
 brushes circle when in sculpt mode, and it is placed as an overlay to the brush,
-representing  the focal point of the brush influence.
+representing the focal point of the brush influence.
 The overlay color is visible only when the overlay visibility is selected
 (clicking at the *eye* to set its visibility), and the transparency of the overlay is
 controled by the alpha slider located at the brush selector panel,

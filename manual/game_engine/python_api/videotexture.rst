@@ -220,7 +220,8 @@ The ``VideoFFmpeg`` source has several attributes to control the movie playback:
 
 ``range``
    [start,stop] (*floats*).
-   Set the start and stop time of the video playback, expressed in seconds from beginning. By default the entire video.
+   Set the start and stop time of the video playback, expressed in seconds from beginning.
+   By default the entire video.
 
 ``repeat``
    (*integer*).
@@ -332,7 +333,8 @@ Here are some possible advanced work flow:
    GameLogic.video.source.refresh()
 
 
-- If you have more than 1 material on the mesh and you want to modify a texture of one particular material, get its ID
+- If you have more than 1 material on the mesh and you want to modify a texture of one particular material,
+  get its ID
 
 ::
 

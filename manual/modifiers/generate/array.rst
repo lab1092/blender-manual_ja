@@ -131,65 +131,97 @@ Examples
 Mechanical
 ----------
 
-+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-+.. figure:: /images/Blender_Array_Bridge.jpg                                         |.. figure:: /images/Dev-ArrayModifier-track01.jpg                                                      +
-+   :width: 300px                                                                     |   :width: 300px                                                                                       +
-+   :figwidth: 300px                                                                  |   :figwidth: 300px                                                                                    +
-+                                                                                     |                                                                                                       +
-+   A bridge made from a tileable mesh.                                               |   A track.                                                                                            +
-+                                                                                     |   `Sample blend file <http://wiki.blender.org/index.php/Media:Tracktest.blend>`__                     +
-+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-+.. figure:: /images/Dev-ArrayModifier-Cog01.jpg                                      |.. figure:: /images/Dev-ArrayModifier-Crankshaft01.jpg                                                 +
-+   :width: 300px                                                                     |   :width: 300px                                                                                       +
-+   :figwidth: 300px                                                                  |   :figwidth: 300px                                                                                    +
-+                                                                                     |                                                                                                       +
-+   A cog created from a single segment.                                              |   A crankshaft.                                                                                       +
-+   `Blend <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Cog01.blend>`__ |   `Sample blend file <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Crankshaft01.blend>`__+
-+-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-+.. figure:: /images/Dev-ArrayModifier-Chain01.jpg                                                                                                                                            +
-+   :width: 300px                                                                                                                                                                             +
-+   :figwidth: 300px                                                                                                                                                                          +
-+                                                                                                                                                                                             +
-+   A chain created from a single link.                                                                                                                                                       +
-+   `Sample blend file <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Chain01.blend>`__                                                                                           +
-+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Blender_Array_Bridge.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A bridge made from a tileable mesh.
+
+     - .. figure:: /images/Dev-ArrayModifier-track01.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A track.
+          `Sample blend file <http://wiki.blender.org/index.php/Media:Tracktest.blend>`__
+
+   * - .. figure:: /images/Dev-ArrayModifier-Cog01.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A cog created from a single segment.
+          `Blend <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Cog01.blend>`__
+
+     - .. figure:: /images/Dev-ArrayModifier-Crankshaft01.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A crankshaft.
+          `Sample blend file <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Crankshaft01.blend>`__
+
+   * - .. figure:: /images/Dev-ArrayModifier-Chain01.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A chain created from a single link.
+          `Sample blend file <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Chain01.blend>`__
+
+     -
 
 
 Fractal
 -------
 
-+--------------------------------------------------+-----------------------------------------------------------------------------------------+
-+.. figure:: /images/Dev_Array_Multi_Dimension.jpg |.. figure:: /images/Dev-ArrayModifier-Fractal01.jpg                                      +
-+   :width: 300px                                  |   :width: 300px                                                                         +
-+   :figwidth: 300px                               |   :figwidth: 300px                                                                      +
-+                                                  |                                                                                         +
-+   Multi-level array animated with motion blur.   |   Fractal created with multiple arrays.                                                 +
-+                                                  |   `Blend <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Fractal01.blend>`__ +
-+--------------------------------------------------+-----------------------------------------------------------------------------------------+
-+.. figure:: /images/Dev-ArrayModifier_Fractal_11.jpg                                                                                        +
-+   :width: 300px                                                                                                                            +
-+   :figwidth: 300px                                                                                                                         +
-+                                                                                                                                            +
-+   A fractal fern image created with 2 array modifiers and 1 mirror applied to a cube.                                                      +
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Dev_Array_Multi_Dimension.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Multi-level array animated with motion blur.
+
+     - .. figure:: /images/Dev-ArrayModifier-Fractal01.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fractal created with multiple arrays.
+          `Blend <http://wiki.blender.org/index.php/Media:Dev-ArrayModifier-Fractal01.blend>`__
+
+   * - .. figure:: /images/Dev-ArrayModifier_Fractal_11.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          A fractal fern image created with 2 array modifiers and 1 mirror applied to a cube.
+
+     -
 
 
 Organic
 -------
 
-+--------------------------------------------------+---------------------------------------------------+
-+.. figure:: /images/Dev_Array_Fractal_example.jpg |.. figure:: /images/Dev-ArrayModifier-Spiral01.jpg +
-+   :width: 300px                                  |   :width: 300px                                   +
-+   :figwidth: 300px                               |   :figwidth: 300px                                +
-+                                                  |                                                   +
-+   Fig 01                                         |   Fig 02                                          +
-+--------------------------------------------------+---------------------------------------------------+
-+.. figure:: /images/Manual-Modifier-Array-Tentacle01.jpg                                              +
-+   :width: 600px                                                                                      +
-+   :figwidth: 600px                                                                                   +
-+                                                                                                      +
-+   Fig 03                                                                                             +
-+------------------------------------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Dev_Array_Fractal_example.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fig 01
+
+     - .. figure:: /images/Dev-ArrayModifier-Spiral01.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Fig 02
+
+   * - .. figure:: /images/Manual-Modifier-Array-Tentacle01.jpg
+          :width: 600px
+          :figwidth: 600px
+
+          Fig 03
+
+     -
+
 
 Fig 01
    Subsurfed cube array with 1 object offset, 4 cubes and a high vertex merge setting to give the effect of skinning.

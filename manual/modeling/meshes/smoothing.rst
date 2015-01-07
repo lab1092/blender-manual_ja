@@ -6,13 +6,23 @@ Smoothing
 Mesh Shading
 ************
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+
-+.. figure:: /images/25-manual-meshsmooth-example-2rrflat.jpg                                                                                                                                                                  |.. figure:: /images/25-manual-meshsmooth-example-05edgesplit.jpg|.. figure:: /images/25-manual-meshsmooth-example-10edgeloops.jpg+
-+   :width: 200px                                                                                                                                                                                                              |   :width: 200px                                                |   :width: 200px                                                +
-+   :figwidth: 200px                                                                                                                                                                                                           |   :figwidth: 200px                                             |   :figwidth: 200px                                             +
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+
-+Example mesh rendered flat, smoothed using edge split, and using Subdivision Surface.  Note how edges are rendered differently. `Sample .blend <http://wiki.blender.org/index.php/:File:25-manual-meshsmooth-example.blend>`__                                                                                                                                  +
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+.. list-table::
+   Example mesh rendered flat, smoothed using edge split, and using Subdivision Surface.
+   Note how edges are rendered differently.
+   `Sample .blend <http://wiki.blender.org/index.php/:File:25-manual-meshsmooth-example.blend>`__
+
+   * - .. figure:: /images/25-manual-meshsmooth-example-2rrflat.jpg
+          :width: 200px
+          :figwidth: 200px
+
+     - .. figure:: /images/25-manual-meshsmooth-example-05edgesplit.jpg
+          :width: 200px
+          :figwidth: 200px
+
+     - .. figure:: /images/25-manual-meshsmooth-example-10edgeloops.jpg
+          :width: 200px
+          :figwidth: 200px
+
 
 As seen in the previous sections, polygons are central to Blender. Most objects are
 represented by polygons and truly curved objects are often approximated by polygon meshes.
@@ -39,13 +49,17 @@ Smooth shading
    | Hotkey:   :menuselection:`[ctrl][F] --> Shade Smooth / Shade Flat`
 
 
-+----------------------------------------------------+---------------------------------------------------------------+
-+.. figure:: /images/25-manual-meshsmooth-shading.jpg|.. figure:: /images/25-manual-meshsmooth-example-03rrsmooth.jpg+
-+   :width: 80px                                     |   :width: 220px                                               +
-+   :figwidth: 80px                                  |   :figwidth: 220px                                            +
-+----------------------------------------------------+---------------------------------------------------------------+
-+Same mesh smooth shaded                                                                                             +
-+----------------------------------------------------+---------------------------------------------------------------+
+.. list-table::
+   Same mesh smooth shaded
+
+   * - .. figure:: /images/25-manual-meshsmooth-shading.jpg
+          :width: 80px
+          :figwidth: 80px
+
+     - .. figure:: /images/25-manual-meshsmooth-example-03rrsmooth.jpg
+          :width: 220px
+          :figwidth: 220px
+
 
 The easiest way is to set an entire object as smooth or faceted by selecting a mesh object,
 and in *Object* mode, click *Smooth* in the *Tool Shelf*.
@@ -121,13 +135,25 @@ similar to *Auto Smooth* with the ability to choose which edges should be split,
 based on angle—those marked as sharp.
 
 
-+----------------------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+
-+.. figure:: /images/25-manual-meshsmooth-example-05edgesplit.jpg|.. figure:: /images/25-manual-meshsmooth-example-07marksharp.jpg|.. figure:: /images/25-manual-meshsmooth-example-06marksharp.jpg+
-+   :width: 200px                                                |   :width: 200px                                                |   :width: 200px                                                +
-+   :figwidth: 200px                                             |   :figwidth: 200px                                             |   :figwidth: 200px                                             +
-+                                                                |                                                                |                                                                +
-+   Edge Split modifier enabled, based on angle                  |   Edges marked as sharp                                        |   Resulting render with sharp edge weighting                   +
-+----------------------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/25-manual-meshsmooth-example-05edgesplit.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Edge Split modifier enabled, based on angle
+
+     - .. figure:: /images/25-manual-meshsmooth-example-07marksharp.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Edges marked as sharp
+
+     - .. figure:: /images/25-manual-meshsmooth-example-06marksharp.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Resulting render with sharp edge weighting
 
 
 ----

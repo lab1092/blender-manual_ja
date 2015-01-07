@@ -161,13 +161,19 @@ Fac output
 Voronoi Texture
 ===============
 
-+-----------------------------------------------------------------+-------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_tex_voronoi_intensity.jpg|.. figure:: /images/Manual_cycles_nodes_tex_voronoi_cells.jpg+
-+   :width: 200px                                                 |   :width: 200px                                             +
-+   :figwidth: 200px                                              |   :figwidth: 200px                                          +
-+                                                                 |                                                             +
-+   Voronoi texture, type: Intensity                              |   Voronoi texture, type: Cells                              +
-+-----------------------------------------------------------------+-------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual_cycles_nodes_tex_voronoi_intensity.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Voronoi texture, type: Intensity
+
+     - .. figure:: /images/Manual_cycles_nodes_tex_voronoi_cells.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Voronoi texture, type: Cells
 
 
 Procedural texture producing Voronoi cells.
@@ -191,13 +197,19 @@ Musgrave Texture
 Advanced procedural noise texture. Note that it often needs some adjustments
 (multiplication and addition) in order to see more detail.
 
-+--------------------------------------------------------------+--------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_tex_musgrave_nodes.jpg|.. figure:: /images/Manual_cycles_nodes_tex_musgrave.jpg      +
-+   :width: 200px                                              |   :width: 200px                                              +
-+   :figwidth: 200px                                           |   :figwidth: 200px                                           +
-+                                                              |                                                              +
-+   Nodes for the image to the right                           |   Remapped Musgrave texture such that most values are visible+
-+--------------------------------------------------------------+--------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual_cycles_nodes_tex_musgrave_nodes.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Nodes for the image to the right
+
+     - .. figure:: /images/Manual_cycles_nodes_tex_musgrave.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Remapped Musgrave texture such that most values are visible
 
 
 Type

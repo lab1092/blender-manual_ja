@@ -21,14 +21,14 @@ Markers can be created and edited in all of the following editors
 - The :doc:`Action Editor window </animation/actions>`.
 - The :doc:`The Dope Sheet </animation/dope_sheet>`.
 - The :doc:`NLA Editor window </animation/editors/nla>`.
-- The :doc:`Video Sequence Editor window </sequencer>`.
+- The :doc:`Video Sequence Editor window </editors/sequencer>`.
 - The :doc:`Timeline window </animation/timeline>`.When you create
 
 A marker created in one of these windows will also appear in all others that support them,
 including:
 
 
-- The :doc:`3D View window </3d_interaction/navigating>`.
+- The :doc:`3D View window </getting_started/basics/navigating>`.
 
 
 Pose markers
@@ -159,7 +159,8 @@ Moving Markers
    :class: refbox
 
    | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Grab/Move Marker` ( :menuselection:`Frame --> Grab/Move Marker` in a timeline)
+   | Menu:     :menuselection:`Marker --> Grab/Move Marker`
+     ( :menuselection:`Frame --> Grab/Move Marker` in a timeline)
    | Hotkey:   :kbd:`Ctrl-G` ( :kbd:`G` in a timeline or audio)
 
 
@@ -180,7 +181,8 @@ Duplicating Markers
    :class: refbox
 
    | Mode:     all modes
-   | Menu:     :menuselection:`Marker --> Duplicate Marker` ( :menuselection:`Frame --> Duplicate Marker` in a timeline)
+   | Menu:     :menuselection:`Marker --> Duplicate Marker`
+     ( :menuselection:`Frame --> Duplicate Marker` in a timeline)
    | Hotkey:   :kbd:`Ctrl-Shift-D` ( :kbd:`Shift-D` in a timeline or audio)
 
 

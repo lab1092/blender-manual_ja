@@ -83,7 +83,7 @@ Known Limitations and issues
 
 - FreeStyle is only available for the Blender Internal renderer.
 - Highly memory demanding: All mesh objects in a render layer are loaded at once.
-- Only faced mesh objects are supported.  The following kinds of meshes are ignored.
+- Only faced mesh objects are supported. The following kinds of meshes are ignored.
   - Mesh faces with wire materials.
   - Mesh faces with completely transparent materials.
 - Transparent faces are treated as opaque faces.

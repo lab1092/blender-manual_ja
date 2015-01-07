@@ -37,7 +37,8 @@ Usage
    In this example, a plane is warped around the 3D cursor by the indicated number of degrees.
 
 
-..    Comment: <!--[[File:3D-interaction_Transformation_Advanced_Warp_warp-toolshelf-f6.png|thumb|right|300px|{{Literal|Warp}} Angle Slider.]]--> .
+..    Comment: <!--[[File:3D-interaction_Transformation_Advanced_Warp_warp-toolshelf-f6.png|thumb|
+                    right|300px|{{Literal|Warp}} Angle Slider.]]--> .
 
 Select the elements you want to operate on and activate the *Warp* transform
 function. The *Warp* option can be invoked from the
@@ -67,12 +68,14 @@ to the same Suzanne mesh when in different views. A 3D render is also provided f
    :width: 500px
    :figwidth: 500px
 
-   The left side of this image shows how the Warp transform is influenced by the location of the cursor. The right hand side shows the influence of the current view.
+   The left side of this image shows how the Warp transform is influenced by the location of the cursor.
+   The right hand side shows the influence of the current view.
 
 
 .. note:: Warping text
 
-   If you want to warp text, you will need to convert it from a Text Object to Mesh by pressing :kbd:`Alt-C` and selecting the *Mesh from Curve/Meta/Surf/Text* option.
+   If you want to warp text, you will need to convert it from a Text Object to Mesh
+   by pressing :kbd:`Alt-C` and selecting the *Mesh from Curve/Meta/Surf/Text* option.
 
 
 Example
@@ -80,6 +83,7 @@ Example
 
 .. figure:: /images/3D-interaction_Transformation_Advanced_Warp_warp-text.jpg
 
-   Text wrapped around logo. This was made by creating the Blender logo and text as separate Objects. The text was  converted to a mesh and then warped around the Blender logo.
+   Text wrapped around logo. This was made by creating the Blender logo and text as separate Objects.
+   The text was converted to a mesh and then warped around the Blender logo.
 
 

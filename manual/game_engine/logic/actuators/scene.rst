@@ -34,7 +34,9 @@ Set Scene
 Set Camera
    Changes which camera is used
 Add OverlayScene
-   This adds an other scene, and draws it on top of the current scene. It is good for interfacing: keeping the health bar, ammo meter, speed meter in an overlay scene makes them always visible.
+   This adds an other scene, and draws it on top of the current scene.
+   It is good for interfacing: keeping the health bar, ammo meter,
+   speed meter in an overlay scene makes them always visible.
 Add BackgroundScene
    This is the opposite of an overlay scene, it is drawn behind the current scene
 Remove Scene

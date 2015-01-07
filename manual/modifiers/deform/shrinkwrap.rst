@@ -73,4 +73,4 @@ Mode
 
 .. seealso::
 
-   :doc:`Shrinkwrap Constraint </constraints/relationship/shrinkwrap>`
+   :doc:`Shrinkwrap Constraint </rigging/constraints/relationship/shrinkwrap>`

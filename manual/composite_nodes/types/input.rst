@@ -1,5 +1,6 @@
 
-..    TODO/Review: {{review|text=This page contains some direct how-tos that should be in the example and tutorial section
+..    TODO/Review: {{review|
+      text=This page contains some direct how-tos that should be in the example and tutorial section
    |copy=X}} .
 
 
@@ -16,7 +17,7 @@ For instance, an input could be:
 - a movie clip (such as an animation sequence or home movie), or
 - just a color.
 
-These nodes generate the information that feeds other nodes.  As such,
+These nodes generate the information that feeds other nodes. As such,
 they have no input-connectors; only outputs.
 
 
@@ -26,7 +27,7 @@ Render Layers Node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
    | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Render Layers
 
 
@@ -99,7 +100,7 @@ but basically this node takes a set of values and maps them to something we can 
 The Color Ramp node (also explained later in detail)
 takes each value and maps it to a color that we can see with our eyes. Finally,
 the output of the Color Ramp is output to a Composite viewer to show you, our dear reader,
-a picture of the Alpha  values.
+a picture of the Alpha values.
 Notice that we have set up the map so that things that are perfectly solid (opaque) are white,
 and things that are perfectly transparent (or where there is nothing) are blue.
 
@@ -188,14 +189,13 @@ or will move, to the next frame. You use this socket to create a
 :doc:`blurring effect. </ls/composite_nodes/types/filter/vector_blur>`.
 
 
-
 Image node
 ==========
 
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
    | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Image
 
 
@@ -206,7 +206,8 @@ Image node
 
 The *Image* node injects any image :doc:`format that is supported by Blender </render/output>`.
 Besides inputting the actual image, this node can also input *Alpha* and depth (*Z*) values
-if the image has them. If the image is a MultiLayer format, all saved render passes are input. Use this node to input:
+if the image has them. If the image is a MultiLayer format,
+all saved render passes are input. Use this node to input:
 
 - A single image from a file (such as a JPG picture)
 - Part or all of an animation sequence (such as the 30th to 60th frame)
@@ -214,10 +215,8 @@ if the image has them. If the image is a MultiLayer format, all saved render pas
 - the image that is currently in the UV/Image Editor (and possibly being painted)
 - an image that was loaded in the UV/Image Editor
 
-Animated image sequences or video files can also be used. See
-FIXME(TODO: Internal Link;
-[[#Animations|Animations]]
-) below.
+Animated image sequences or video files can also be used.
+See `Animations`_ below.
 
 To select an image file or generated image from the UV/Image Editor,
 click on the small arrow selector button to the left of the name and pick an existing image
@@ -251,8 +250,8 @@ Z/depth Channel
   - If a Z (depth) channel is detected, the *Z* output socket will supply it.
   - If it does not have a Z channel (e.g. JPG or PNG images),
     Blender will supply one, setting the whole image to be at the camera (a depth of 0.00).
-    To view the Z-depth channel, use the Map Value to ColorRamp noodle given above in the Render Layer input node,
-    in the FIXME(TODO: Internal Link; [[#Using the Z value Socket|{{Literal|Render Layer}} input node]]).
+    To view the Z-depth channel, use the Map Value to ColorRamp noodle given above in the Render Layer input node
+    (see `Using the Z value Socket`_).
 
 .. note:: Formats
 
@@ -312,7 +311,7 @@ a pop-up will offer you four choices:
 
 - Generated -
 - Sequence - a sequence of frames, each frame in a separate file.
-- Movie - a sequence of frames packed into a single .avi or .mov file
+- Movie - a sequence of frames packed into a single ``.avi`` or ``.mov`` file
 - Image - a single frame or still image in a file
 
 A Movie or Image can be named anything,
@@ -327,13 +326,12 @@ that you want to introduce into the animation you are about to render.
 You can start at the beginning and only use the beginning,
 or even pick out a set of frames from the middle of an existing animation.
 
-The *Frs* number button is the number of frames in the sequence that you want to
-show.  For example, if you want to show 2 seconds of the animation, and are running 30 fps,
-you would put 60 here.
+The *Frs* number button is the number of frames in the sequence that you want to show.
+For example, if you want to show 2 seconds of the animation, and are running 30 fps, you would put 60 here.
 
 The *SFra* number button sets the start frame of the animation; namely, at what
 point in the animation that you *are going to render* do you want this sequence to start
-playing.  For example,
+playing. For example,
 if you want to introduce this clip ten seconds into the composite output,
 you would put 300 here (at 30 fps).
 
@@ -380,7 +378,7 @@ Notes
 **No Frame Stretching or Compression:**
 If the input animation (avi or frame set) was encoded at a frame rate that is *different* from your current settings,
 the resultant animation will appear to run faster or slower. Blender Nodes do not adjust input video frame rates. Use
-the scale control inside the :doc:`Video Sequence Editor </sequencer>` to stretch or compress video to the desired
+the scale control inside the :doc:`Video Sequence Editor </editors/sequencer>` to stretch or compress video to the desired
 speed, and input it here. You can incorporate "Slow-Mo" into your video. To do so,
 *ANIM* ate a video segment at 60 frames per second, and input it via this node,
 using Render settings that have an animation frame rate of the normal 30 fps;
@@ -454,7 +452,7 @@ Fade Splicing using Nodes
 
 In the previous topic, we saw how to cut from one sequence to another. To fade in or out,
 we simply replace one set of images with a flat color,
-and expand  the Time frame for the splice. In the image below, beginning at frame 20,
+and expand the Time frame for the splice. In the image below, beginning at frame 20,
 we start fading **out** to cyan:
 
 
@@ -522,7 +520,8 @@ of Blender and how to use its Nodes to achieve just the blended crossover effect
 .. note:: Multiple Feeds
 
    The above examples call out two feeds, but by replicating the Input, Time and Mix nodes,
-   you can have multiple feeds at any one time; just set the Time node to tell the Mixer when to cut over to using it.
+   you can have multiple feeds at any one time;
+   just set the Time node to tell the Mixer when to cut over to using it.
 
 
 Texture Node
@@ -531,7 +530,7 @@ Texture Node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
    | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Texture
 
 
@@ -585,7 +584,7 @@ Value node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
    | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Value
 
 
@@ -602,7 +601,7 @@ RGB node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
    | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → RGB
 
 
@@ -632,7 +631,7 @@ Time node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Node Composition </composite_nodes>`
    | Menu:     :kbd:`Shift-A` → :doc:`Input </ce/windows/nodes/composite#inputs>` → Time
 
 

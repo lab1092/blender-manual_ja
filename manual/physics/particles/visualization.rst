@@ -9,7 +9,10 @@
 Particle Visualization
 **********************
 
-With the items in the *Display* and *Render* panel you can set the way the particles will be rendered or depicted in the view ports in various ways. Some option are valid only for the 3D window, the particles then are rendered always as :doc:`Halos </materials/halos>`. Some of the options will be rendered as shown in the 3D window.
+With the items in the *Display* and *Render* panel you can set the way the particles will be
+rendered or depicted in the view ports in various ways.
+Some option are valid only for the 3D window, the particles then are rendered always as
+:doc:`Halos </materials/halos>`. Some of the options will be rendered as shown in the 3D window.
 
 
 Viewport Display
@@ -25,9 +28,12 @@ Point
 Circle
    Particles are displayed as circles that face the view. Their size is independent of the distance from the camera.
 Cross
-   Particles are displayed as 6-point crosses that align to the rotation of the particles. Their size is independent of the distance from the camera.
+   Particles are displayed as 6-point crosses that align to the rotation of the particles.
+   Their size is independent of the distance from the camera.
 Axis
-   Particles are displayed as 3-point axes. This useful if you want to see the orientation and rotation of particles in the view port. Increase the *Draw Size* until you can clearly distinguish the axis.
+   Particles are displayed as 3-point axes.
+   This useful if you want to see the orientation and rotation of particles in the view port.
+   Increase the *Draw Size* until you can clearly distinguish the axis.
 
 Particles visualized like Point, Circle, Cross and Axis don't have any special options,
 but can be very useful when you have multiple particle systems at play,
@@ -42,7 +48,8 @@ Draw Size
 Size
    Draw the size of the particles with a circle.
 Velocity
-   Draw the velocity of the particles with a line that points in the direction of motion, and length relative to speed.
+   Draw the velocity of the particles with a line that points in the direction of motion,
+   and length relative to speed.
 Number
    Draw the id-numbers of the particles in the order of emission.
 
@@ -57,7 +64,10 @@ None
 Material
    Particles are colored according to the material they are given.
 Velocity
-   Color particles according to their speed. The color is a ramp from blue to green to red, Blue being the slowest, and Red being velocities approaching the value of *Max* or above. Increasing *Max* allows for a wider range of particle velocities.
+   Color particles according to their speed.
+   The color is a ramp from blue to green to red, Blue being the slowest,
+   and Red being velocities approaching the value of *Max* or above.
+   Increasing *Max* allows for a wider range of particle velocities.
 Acceleration
    Color particles according to their acceleration.
 
@@ -75,12 +85,17 @@ Parent
 Emitter
    When disabled, the emitter is no longer rendered. Activate the button *Emitter* to also render the mesh.
 Parents
-   Render also parent particles if child particles are used. Children have a lot of different deformation options, so the straight parents would stand between their curly children. So by default *Parents* are not rendered if you activate *Children*.. See :doc:`Children </physics/particles/children>`
+   Render also parent particles if child particles are used.
+   Children have a lot of different deformation options,
+   so the straight parents would stand between their curly children.
+   So by default *Parents* are not rendered if you activate *Children*..
+   See :doc:`Children </physics/particles/children>`
 
 Unborn
    Render particles before they are born.
 Died
-   Render particles after they have died. This is very useful if particles die in a collision (*Die on hit*), so you can cover objects with particles.
+   Render particles after they have died.
+   This is very useful if particles die in a collision (*Die on hit*), so you can cover objects with particles.
 
 
 None
@@ -124,8 +139,7 @@ Speed
    Multiply the line length by particles' speed. The faster, the longer the line.
 
 Trail Count
-   See description in the
-   FIXME(TODO: Internal Link; [[#Halo|Halo Render Type]]) above.
+   See description in `Halo`_.
 
 
 Path
@@ -137,21 +151,32 @@ Path
    Image 3: The Visualization panel for Path visualization.
 
 
-The *Path* visualization needs a :doc:`Hair </physics/hair>` particle system or :doc:`Keyed </physics/particles/physics/keyed>` particles.
+The *Path* visualization needs a :doc:`Hair </physics/hair>` particle system or
+:doc:`Keyed </physics/particles/physics/keyed>` particles.
 
 Strand render
    [Keypointstrands] Use the strand primitive for rendering. Very fast and effective renderer.
 Adaptive render
-   Tries to remove unnecessary geometry from the paths before rendering particle strands in order to make the render faster and easier on memory.
+   Tries to remove unnecessary geometry from the paths before rendering particle strands in
+   order to make the render faster and easier on memory.
 Angle
-   How many degrees path has to curve to produce another render segment (straight parts of paths need fewer segments).
+   How many degrees path has to curve to produce another render segment
+   (straight parts of paths need fewer segments).
 Pixel
-   How many pixels path has to cover to produce another render segment (very short hair or long hair viewed from far away need fewer parts). (only for Adaptive render).
+   How many pixels path has to cover to produce another render segment
+   (very short hair or long hair viewed from far away need fewer parts). (only for Adaptive render).
 
 B-Spline
-   Interpolate hair using B-Splines. This may be an option for you if you want to use low *Render* values. You loose a bit of control but gain smoother paths.
+   Interpolate hair using B-Splines.
+   This may be an option for you if you want to use low *Render* values.
+   You loose a bit of control but gain smoother paths.
 Steps
-   Set the number of subdivisions of the rendered paths (the value is a power of 2). You should set this value carefully, because if you increase the render value by two you need four times more memory to render. Also the rendering is faster if you use low render values (sometimes drastically). But how low you can go with this value depends on the waviness of the hair.(the value is a power of 2). This means 0 steps give 1 subdivision, 1 give 2 subdivisions, 2→4, 3→8, 4→16, ... *n* ``→2`` *n*.
+   Set the number of subdivisions of the rendered paths (the value is a power of 2).
+   You should set this value carefully,
+   because if you increase the render value by two you need four times more memory to render.
+   Also the rendering is faster if you use low render values (sometimes drastically).
+   But how low you can go with this value depends on the waviness of the hair.(the value is a power of 2).
+   This means 0 steps give 1 subdivision, 1 give 2 subdivisions, 2→4, 3→8, 4→16, ... *n* ``→2`` *n*.
 
 Timing Options
 ==============
@@ -165,7 +190,7 @@ End
 Random
    Give the path length a random variation.
 
-Please see also the manual page about :doc:`Strands </materials/properties/strands>` for an in depth description.
+Please see also the manual page about :doc:`Strands </render/blender_render/materials/properties/strands>` for an in depth description.
 
 
 Object
@@ -193,13 +218,17 @@ are duplicated sequentially in the place of the particles.
 WholeGroup
    Use the whole group at once, instead of one of its elements, the group being displayed in place of each particle.
 Use Count
-   Use objects multiple times in the same groups. Specify the order and nuber of times to repeat each object with the list box that appears. You can duplicate an object in the list with the :kbd:`+` button, or remove a duplicate with the :kbd:`-` button.
+   Use objects multiple times in the same groups.
+   Specify the order and nuber of times to repeat each object with the list box that appears.
+   You can duplicate an object in the list with the :kbd:`+` button, or remove a duplicate with the :kbd:`-` button.
 
 Use Global
    Use object's global coordinates for duplication.
 Pick Random
    The objects in the group are selected in a random order, and only one object is displayed in place of a particle.
-   Please note that this mechanism fully replaces old Blender particles system using parentage and DupliVerts to replace particles with actual geometry. This method is fully deprecated and doesn't work anymore.
+   Please note that this mechanism fully replaces old Blender particles system using parentage
+   and DupliVerts to replace particles with actual geometry.
+   This method is fully deprecated and doesn't work anymore.
 
 Size
    Size of the objects
@@ -215,7 +244,8 @@ Billboard
    Image 4: Billboard visualization for particles.
 
 
-*Billboards* are aligned square planes. They are aligned to the camera by default, but you can choose another object that they should be aligned to.
+*Billboards* are aligned square planes. They are aligned to the camera by default,
+but you can choose another object that they should be aligned to.
 
 If you move a billboard around it's target, it always faces the center of it's target.
 The size of a billboard is set with the parameter *Size* of the particle
@@ -283,7 +313,12 @@ Offset Y
    Offset the billboard vertically in relation to the particle center.
 
 UV Channels
-   Billboards are just square polygons. To texture them in different ways we have to have a way to set what textures we want for the billboards and how we want them to be mapped to the squares. These can then be set in the texture mapping buttons to set wanted textures for different coordinates. You may use three different UV layers and get three different sets of UV coordinates, which can then be applied to different (or the same) textures.
+   Billboards are just square polygons.
+   To texture them in different ways we have to have a way to set what textures we want for the
+   billboards and how we want them to be mapped to the squares.
+   These can then be set in the texture mapping buttons to set wanted textures for different coordinates.
+   You may use three different UV layers and get three different sets of UV coordinates,
+   which can then be applied to different (or the same) textures.
 
 Billboard Normal UV
    Coordinates are the same for every billboard, and just place the image straight on the square.
@@ -318,21 +353,23 @@ Animate
    Age
       The sections of the texture are gone through sequentially in particles' lifetimes.
    Angle
-      Change the section based on the angle of rotation around the *Align to* axis, if *View* is used the change is based on the amount of tilt.
+      Change the section based on the angle of rotation around the *Align to* axis,
+      if *View* is used the change is based on the amount of tilt.
    Frame
       The section is changes according to the frame.
 
 Offset
-   Specifies how to choose the first part (of all the parts in the n×n grid in the texture defined by the *UV Split* number) for all particles.
+   Specifies how to choose the first part
+   (of all the parts in the n×n grid in the texture defined by the *UV Split* number) for all particles.
 
    None
       All particles start from the first part.
    Linear
-      First particle will start from the first part and the last particle will start from the last part, the particles in between will get a part assigned linearly from the first to the last part.
+      First particle will start from the first part and the last particle will start from the last part,
+      the particles in between will get a part assigned linearly from the first to the last part.
    Random
       Give a random starting part for every particle.
 
 Trail Count
-   See the description in the
-   FIXME(TODO: Internal Link; [[#Halo|Halo Render Type]]) above.
+   See the description in `Halo`_.
 

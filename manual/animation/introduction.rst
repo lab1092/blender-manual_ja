@@ -59,7 +59,7 @@ Animating Deformation
 - :doc:`Shape Keys </animation/techs/shape/shape_keys>`
 - :doc:`Deforming by a Lattice </animation/basic/deformation/lattice>`
 - :doc:`Deforming with Hooks </modifiers/deform/hooks>`
-  
+
 See also :doc:`Hook Modifier </modifiers/deform/hooks>`
 
 Drivers
@@ -68,7 +68,8 @@ Drivers
 - :doc:`Drivers </animation/basics/drivers>`
 - :doc:`Driven Shape Keys </animation/driven_shape_keys>`
 
-The `Introduction to Character Animation tutorial <http://wiki.blender.org/index.php/Doc:Tutorials/Animation/BSoD/Character_Animation BSoD>`__
+The `Introduction to Character Animation tutorial
+<http://wiki.blender.org/index.php/Doc:Tutorials/Animation/BSoD/Character_Animation BSoD>`__
 is a good starting point for learning character animation.
 Even if you never used Blender before.
 
@@ -112,7 +113,7 @@ Categories
    With modifiers, you can perform many effects automatically that would otherwise be tedious to do manually.
 :doc:`Rigging </rigging/introduction>`
    Rigging.
-:doc:`Constraints </constraints/introduction>`
+:doc:`Constraints </rigging/constraints/introduction>`
    Constraints are a way of connecting transform properties (position, rotation and scale) between objects.
 :doc:`Physical Simulation </physics/introduction>`
    This category covers various advanced Blender effects, often used to simulate real physical phenomena.

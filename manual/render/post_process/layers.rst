@@ -15,12 +15,12 @@ re-rendering your scene just to find out whether a correction is going to work o
 Render Layers in Compositing
 ============================
 
-What are Render Layers *really* used for?  Blender's node-based compositing system!
+What are Render Layers *really* used for? Blender's node-based compositing system!
 
 In Nodes, when you add an Input Node of type *RenderLayers,* and select the Scene,
 you bring in whatever information you've specified for that RenderLayer.
 This node becomes a source for the rendering pipeline products you've specified
-*(see below)*, as applied to the objects in the qualifying layer(s).  Each of these products
+*(see below)*, as applied to the objects in the qualifying layer(s). Each of these products
 then "flow out of" that node toward their appointed destinations in the node graph you've
 constructed.
 
@@ -98,7 +98,7 @@ Mask Layers
    only that part of Layer 1 which is in front of the object on layer 3 (the cube) is rendered.
 
 You can select that layer by :kbd:`LMB` clicking the button. To select multiple layers,
-:kbd:`Shift-LMB` click.  (The dot in the button in this case turns *dark gray.*)
+:kbd:`Shift-LMB` click. (The dot in the button in this case turns *dark gray.*)
 
 
 .. note:: Layer Sets AND each other

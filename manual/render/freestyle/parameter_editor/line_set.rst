@@ -83,7 +83,7 @@ Border
 
 Edge Marks
    Renders marked edges. See
-   FIXME(TODO: Internal Link; [[#Edge Marks|below]]) for details.
+   `Edge Marks`_ for details.
 
 Contour
    Draws the outer edges and inner open border.
@@ -138,11 +138,19 @@ This is done as follows:
 Edge marks are useful when you want to draw lines along particular mesh edges.
 The examples below explain the use of edge marks.
 
-+-------------------------------------------------------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part26-freestyle-edge-marks-viewport.jpg|.. figure:: /images/Manual-Part26-freestyle-edge-marks-disabled.jpg|.. figure:: /images/Manual-Part26-freestyle-edge-marks-enabled.jpg+
-+                                                                   |                                                                   |                                                                  +
-+   Marking Freestyle Edges in edit mode.                           |   Render without Edge Marks.                                      |   Render with Edge Marks enabled.                                +
-+-------------------------------------------------------------------+-------------------------------------------------------------------+------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part26-freestyle-edge-marks-viewport.jpg
+
+          Marking Freestyle Edges in edit mode.
+
+     - .. figure:: /images/Manual-Part26-freestyle-edge-marks-disabled.jpg
+
+          Render without Edge Marks.
+
+     - .. figure:: /images/Manual-Part26-freestyle-edge-marks-enabled.jpg
+
+          Render with Edge Marks enabled.
 
 
 The image on the left shows a sphere in *Edit* mode.
@@ -181,11 +189,15 @@ Face marks are useful for removing lines from certain areas of a mesh.
 In this example, two faces of the default cube are marked like the image on the left.
 On the right is a render without face marks activated.
 
-+-------------------------------------------------------------------+-------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part26-freestyle-face-marks-viewport.jpg|.. figure:: /images/Manual-Part26-freestyle-face-marks-disabled.jpg+
-+                                                                   |                                                                   +
-+   Marked Faces.                                                   |   Render Output.                                                  +
-+-------------------------------------------------------------------+-------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part26-freestyle-face-marks-viewport.jpg
+
+          Marked Faces.
+
+     - .. figure:: /images/Manual-Part26-freestyle-face-marks-disabled.jpg
+
+          Render Output.
 
 
 .. figure:: /images/Manual-Part26-freestyle-face-mark.jpg
@@ -206,18 +218,26 @@ Both Faces
 
 The image below shows the resulting combinations.
 
-+-----------------------------------------------------------------------+------------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part26-freestyle-face-mark-inclusive-one.jpg|.. figure:: /images/Manual-Part26-freestyle-face-mark-inclusive-both.jpg+
-+                                                                       |                                                                        +
-+   Inclusive, One Face.                                                |   Inclusive, Both Faces.                                               +
-+-----------------------------------------------------------------------+------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part26-freestyle-face-mark-inclusive-one.jpg
+
+          Inclusive, One Face.
+
+     - .. figure:: /images/Manual-Part26-freestyle-face-mark-inclusive-both.jpg
+
+          Inclusive, Both Faces.
 
 
-+-----------------------------------------------------------------------+------------------------------------------------------------------------+
-+.. figure:: /images/Manual-Part26-freestyle-face-mark-exclusive-one.jpg|.. figure:: /images/Manual-Part26-freestyle-face-mark-exclusive-both.jpg+
-+                                                                       |                                                                        +
-+   Exclusive, One Face.                                                |   Exclusive, Both Faces.                                               +
-+-----------------------------------------------------------------------+------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part26-freestyle-face-mark-exclusive-one.jpg
+
+          Exclusive, One Face.
+
+     - .. figure:: /images/Manual-Part26-freestyle-face-mark-exclusive-both.jpg
+
+          Exclusive, Both Faces.
 
 
 Selection by Group

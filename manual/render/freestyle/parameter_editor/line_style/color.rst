@@ -51,7 +51,7 @@ Distance from Camera
    :width: 300px
    :figwidth: 300px
 
-   Line Style  Color's Distance From Camera modifier
+   Line Style Color's Distance From Camera modifier
 
 
 The *Distance from Camera* color modifier alters the base color with a new one from

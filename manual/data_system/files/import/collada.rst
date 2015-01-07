@@ -5,8 +5,8 @@ COLLADA Import and Export
 
 .. figure:: /images/Manual_Data_System_Files_Import_COLLADA_exporter.jpg
 
-The Collada module has been implemented as a flexible tool for exporting and importing .
-dae files. We have taken care to provide a set of parameters which should make it possible to
+The Collada module has been implemented as a flexible tool for exporting and importing ``.dae`` files.
+We have taken care to provide a set of parameters which should make it possible to
 export/import Collada files from/to a variety of tools.
 But please be aware that we are not yet finished with the Collada module.
 So it may well be possible that your particular usage scenario is not yet supported.
@@ -262,7 +262,7 @@ Export
 
 A Blender profile for lights has been added through the <extra> tag.
 The entire Lamp struct from Blender will be exported through this profile,
-with the exception of Light curve falloff .
+with the exception of Light curve falloff.
 
 
 Material & Effect

@@ -65,7 +65,8 @@ These are some other useful tools.
 
 The current frame is represented by a green vertical line called the *Time Cursor*.
 
-As in the :doc:`Timeline </animation/editors/timeline>`, you can change the current frame by pressing or holding :kbd:`LMB`.
+As in the :doc:`Timeline </animation/editors/timeline>`,
+you can change the current frame by pressing or holding :kbd:`LMB`.
 
 The green horizontal line is called the *Cursor*.
 This can be disabled via the *View Menu* or the *View Properties* panel.
@@ -102,7 +103,8 @@ Like with most animation editors, markers are shown at the bottom of the editor.
 
 *Markers* can be modified in the *Graph Editor* though its usually best to use the *Timeline*.
 
-See :doc:`Marker Menu </animation/editors/graph/editing#marker_menu>` or :doc:`Markers </animation/basics/markers>` for more info.
+See :doc:`Marker Menu </animation/editors/graph/editing#marker_menu>` or
+:doc:`Markers </animation/basics/markers>` for more info.
 
 
 Header
@@ -131,15 +133,14 @@ Header Controls
    Graph Mode.
 
 
-
 Mode
-   F-Curve for :doc:`Actions </animation/basics/actions>`, and Drivers for :doc:`Drivers </animation/basics/drivers>`.
+   F-Curve for :doc:`Actions </animation/basics/actions>`,
+   and Drivers for :doc:`Drivers </animation/basics/drivers>`.
 
 
 .. figure:: /images/Doc_Graph_Header_View.jpg
 
    View Controls.
-
 
 
 View controls
@@ -168,7 +169,6 @@ View controls
 .. figure:: /images/Doc_Graph_Header_Edit.jpg
 
    Curve Controls.
-
 
 
 Curve controls
@@ -241,7 +241,7 @@ Channel Editing
 
 *Make only selected visible* :kbd:`V`
 
-*Enable Mute Lock selected*  :kbd:`Shift-Ctrl-W`
+*Enable Mute Lock selected* :kbd:`Shift-Ctrl-W`
 
 *Disable Mute Lock selected* :kbd:`Alt-W`
 

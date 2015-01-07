@@ -34,8 +34,8 @@ This is a very important aspect of render quality. Without this render setting,
 images usually appear particularly CG and amateur.
 
 
-:doc:`Exposure (Lighting) </lighting/exposure>`
-===============================================
+:doc:`Exposure (Lighting) </render/blender_render/lighting/exposure>`
+=====================================================================
 
 Exposure is, in physical terms, the length of time a camera's film or sensor is exposed to light.
 Longer exposure times create a brighter image.

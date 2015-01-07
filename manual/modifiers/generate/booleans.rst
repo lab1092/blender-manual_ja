@@ -136,14 +136,15 @@ The only exception is the difference operation when the normals of the target an
 mesh are inverted (Fig 7 and 8). In this case, Blender will project the textures in an
 inverted direction over the target using the center contact of the meshes as a pivot and the
 resulting mesh will have the modified mesh subtracted from the target.
-For complex target meshes in some  particular cases,
+For complex target meshes in some particular cases,
 you may have to reassign materials to faces because Blender will use the possible projection,
 and this may result in a sub-optimal texture assignment.
 
 Below, some examples are shown to exemplify how materials work with the Boolean modifier;
 we took the cube as the modified mesh, and the icosphere as the target with one material
 (white). We added four different indexes to one of the faces of the cube,
-leaving another basic material in the other faces. Fig. 3 shows how the Boolean modifier interacts with the materials.
+leaving another basic material in the other faces. Fig.
+3 shows how the Boolean modifier interacts with the materials.
 Figs. 4, 5 and 6 show three different Boolean operations applied to the modified mesh.
 The meshes used have normals pointed outwards (Normal meshes).
 See their captions for more information.
@@ -249,12 +250,12 @@ If you want to have a subsurf added to the modified mesh, you have to apply the 
 Boolean modified mesh before applying the Boolean operation.
 
 The Boolean modifier can be added together with other modifiers in the modified mesh,
-but  depending on the modifier,
+but depending on the modifier,
 the calculations can't be done and/or the modifier cannot execute.
 When the modifier cannot execute,
-it will show the message  ``"Cannot execute boolean operation"``  (see Fig. 13),
+it will show the message ``"Cannot execute boolean operation"`` (see Fig. 13),
 and when the modifier cannot be applied to the mesh,
-Blender will show the message  ``"Modifier is disabled, Skipping Apply."``.
+Blender will show the message ``"Modifier is disabled, Skipping Apply."``.
 In this case, you either have to remove some modifiers or apply the necessary ones.
 
 The most common case is when you add or copy a Boolean modifier to use the
@@ -266,7 +267,7 @@ can apply the first Boolean modifier of the stack for the target and then use th
 other Boolean modifier(s) in the stack for subsequent operations.
 
 Also, if some other modifiers are placed above this modifier and you click on Apply,
-Blender will warn you with the message  ``"Applied Modifier was not first,
+Blender will warn you with the message ``"Applied Modifier was not first,
 results may not be as expected"`` . The best usage scenario for this modifier is to
 prepare your modified mesh and target to work with the Boolean modifier.
 
@@ -374,7 +375,7 @@ See Fig. 18 and 19 - All face normals are pointing inwards (Meshes with inverted
 Now, let's see what happens when the normal directions are mixed for one of the
 participants in the Boolean modifier operation.
 In Fig. 20 - Face normals mixed, pointed to different directions and 21 - Resulting operation,
-you can see that the  modifier has bad effects when applied, leaving faces opened:
+you can see that the modifier has bad effects when applied, leaving faces opened:
 
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Mixed_Inwards_Outwards)_(GBAFN).jpg
@@ -407,12 +408,13 @@ here we also give you a small hint on how to do this prior to Boolean modifier u
 
 
 To show the normals of the faces, you can open the Transform Panel, find the Mesh display tab,
-and click on the small cube without the orange dot.  (See Fig. 22 - Mesh Display in the Transform Panel.)
+and click on the small cube without the orange dot. (See Fig. 22 - Mesh Display in the Transform Panel.)
 You can also change the height of the axis that points the direction of the normal.
 The default is ``0.1``.
 
 When some normal directions are mixed pointing inwards and outwards, you can recalculate them to the inside
-using :kbd:`Ctrl-Shift-N` and to outside using :kbd:`Ctrl-N`. If the normals still get mixed due to Mesh complexities,
+using :kbd:`Ctrl-Shift-N` and to outside using :kbd:`Ctrl-N`.
+If the normals still get mixed due to Mesh complexities,
 you can change to Face selection Mode while in Edit Mode using :kbd:`Ctrl-Tab` and choosing *Face Mode*.
 Then select the faces that are pointing in the wrong direction using :kbd:`Shift-RMB` and use the *Mesh* Menu entry
 in the Header of the 3D View, go to *Normals* and choose *Flip Normals*:
@@ -445,12 +447,12 @@ but Blender connected a copy of the icosphere to the Cube mesh, trying to apply 
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_With_Mixed_Empty_Faces)_(GBAFN).jpg
 
-   Fig.  24  - Mesh with two empty faces mixed with normal faces
+   Fig. 24 - Mesh with two empty faces mixed with normal faces
 
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_With_Mixed_Empty_Faces_Result)_(GBAFN).jpg
 
-   Fig. 25  - Result of a difference operation applied - Blender connected what was possible.
+   Fig. 25 - Result of a difference operation applied - Blender connected what was possible.
 
 
 Open Volumes
@@ -488,7 +490,7 @@ incomplete, or meshes that aren't forming a new topology.
 
 .. figure:: /images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Incomplete_Face_Shape)_(GBAFN).jpg
 
-   Fig. 29 - Resulting operation using two open volumes that aren't forming a new  topology.
+   Fig. 29 - Resulting operation using two open volumes that aren't forming a new topology.
 
 
 As you can see in Fig. 28, the faces of one participant in the Boolean operation
@@ -520,7 +522,7 @@ Useful Links
 
 - `Carve Developement Home <https://code.google.com/p/carve/>`__ - GPLv2 C++ source at Google Code
 - `Carve library <http://carve-csg.com/>`__ - Homepage for the Carve Library project.
-- `Sculpt Tools <https://github.com/MadMinstrel/blender-sculpt-tools>`__  -
+- `Sculpt Tools <https://github.com/MadMinstrel/blender-sculpt-tools>`__ -
   Link for a Blender Add-on - This add-on uses another approach to use the Boolean operations,
   when you select two or more objects, the active one becomes the modified mesh and all the others becomes a target.
   This add-on will add the Boolean modifier and apply it to the meshes automatically.

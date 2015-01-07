@@ -38,19 +38,32 @@ The `other settings <http://wiki.blender.org/index.php/User:Broken/VolumeRenderi
 though. We'll cover those later.
 
 
-+------------------------------------+---------------------------------------+--------------------------------------------------------------+
-+.. figure:: /images/Material_tab.jpg|.. figure:: /images/Material_volume.jpg|.. figure:: /images/Density_0.jpg                             +
-+   :width: 200px                    |   :width: 200px                       |   :width: 200px                                              +
-+   :figwidth: 200px                 |   :figwidth: 200px                    |   :figwidth: 200px                                           +
-+                                    |                                       |                                                              +
-+   Go to the material tab           |   Smoke needs a volume material       |   Density applies to the cube only, so we need to set it to 0+
-+------------------------------------+---------------------------------------+--------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Material_tab.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Go to the material tab
+
+     - .. figure:: /images/Material_volume.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Smoke needs a volume material
+
+     - .. figure:: /images/Density_0.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Density applies to the cube only, so we need to set it to 0
 
 
 Add the Texture
 ===============
 
-In addition, Smoke requires its own texture. Blender 2.5 has a new texture just for rendering smoke called :doc:`Voxel Data </textures/types/volume>`. You must remember to set the domain object and change the influence.
+In addition, Smoke requires its own texture. Blender 2.5 has a new texture just for rendering smoke called
+:doc:`Voxel Data </render/blender_render/textures/types/volume>`. You must remember to set the domain object and change the influence.
 
 
 .. figure:: /images/d.jpg
@@ -74,22 +87,40 @@ by turning "Emmision Color" back on.
    Under the world tab, chose a very dark color for the horizon.
 
 
-+----------------------------------------+------------------------------------+----------------------------------------+
-+.. figure:: /images/Texture_tab.jpg     |.. figure:: /images/Texture_type.jpg|.. figure:: /images/Voxel_domain.jpg    +
-+   :width: 200px                        |   :width: 200px                    |   :width: 200px                        +
-+   :figwidth: 200px                     |   :figwidth: 200px                 |   :figwidth: 200px                     +
-+                                        |                                    |                                        +
-+   We need to add a texture of the smoke|   Type should be Voxel Data        |   The domain is once again our big cube+
-+----------------------------------------+------------------------------------+----------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Texture_tab.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          We need to add a texture of the smoke
+
+     - .. figure:: /images/Texture_type.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Type should be Voxel Data
+
+     - .. figure:: /images/Voxel_domain.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          The domain is once again our big cube
 
 
-+-----------------------------------------+-------------------------------------+
-+.. figure:: /images/Influence_density.jpg|.. figure:: /images/Smoke_render.jpg +
-+   :width: 200px                         |   :width: 200px                     +
-+   :figwidth: 200px                      |   :figwidth: 200px                  +
-+                                         |                                     +
-+   Use density as influence              |   Finally your first smoke render :)+
-+-----------------------------------------+-------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Influence_density.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Use density as influence
+
+     - .. figure:: /images/Smoke_render.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Finally your first smoke render :)
 
 
 .. figure:: /images/render2.jpg

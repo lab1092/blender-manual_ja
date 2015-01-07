@@ -8,13 +8,13 @@ system, and is created, parameterized and manipulated in similar ways.
 However because of its use as a real-time device, the Game Engine camera has a number of
 additional features - it may be used as not only as a static camera,
 but also as a moving device with its default characteristics (ie.
-with its own programmed moves), or it may track another object in the game.  Furthermore,
+with its own programmed moves), or it may track another object in the game. Furthermore,
 any game object may be used as a camera; the view is taken from the object's origin point.
 Lastly, it may be given special capabilities such as Stereo vision, Dome visualisation etc.
 which have special relevance to game technology.
 
 When you start the Game Engine, the initial camera view is taken from the latest 3D View.
-This may be either a selected camera object  or the default camera (see below).
+This may be either a selected camera object or the default camera (see below).
 Thus to start the game with a particular camera,
 you must select the camera and press :kbd:`Numpad0` before starting the Game Engine.
 

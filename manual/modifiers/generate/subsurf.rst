@@ -76,7 +76,8 @@ Options:
       When enabled, the UV maps will also be subsurfed
       (i.e. Blender will add "virtual" coordinates for all sub-faces created by this modifier).
       See this
-      `example blend file <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__.
+      `example blend file
+      <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__.
 
 
    .. figure:: /images/Manual-Modifiers-Generate-Subsurf-SubdivideUVs.jpg
@@ -112,7 +113,7 @@ This lets you grab the vertices as they lie in their new smoothed locations, rat
 
 With the edit cage off, some vertices are buried under the subsurfed mesh. With dense vertex configurations,
 you might even have to temporarily disable the modifier or view
-:doc:`wireframe </3d_interaction/navigating/3d_view_options>` shading so that you can see these vertices.
+:doc:`wireframe </getting_started/basics/navigating/3d_view_options>` shading so that you can see these vertices.
 
 With the edit cage on, you do not have this problem. It does, however,
 have its own disadvantage---it can look *too* nice, hiding irregularities.
@@ -120,7 +121,6 @@ Notice the three quads running in the middle of Suzanne's ear:
 you can only tell how crooked they are in the "edit cage off" version. When you are modeling, you will more often
 want to see your mesh deformities in their full ugliness so that you can apply your skills until it is sheer
 prettiness.
-
 
 
 Order of the Modifier Stack
@@ -256,7 +256,8 @@ is to use Blender's "Recalculate Normals" operation: In Edit Mode,
 select all with :kbd:`A`,
 then hit :kbd:`Ctrl-N` to recalculate the normals to point outside.
 If you still have some ugly black gougesyou will have to manually flip some normals.
-To do this (still in Edit Mode), use the :menuselection:`Specials --> Flip Normals` functionality (shortcut: :kbd:`W`,
+To do this (still in Edit Mode),
+use the :menuselection:`Specials --> Flip Normals` functionality (shortcut: :kbd:`W`,
 :kbd:`N`) to fix them. Smoothing out normals is good for the mesh, and it's good for the soul.
 
 
@@ -277,73 +278,133 @@ because the render is generated using your Object Data,
 The total Vertex, Edge, and Face counts from the Modifier's effect on a Cube can be found in this table:
 
 
-+----------------------+---------------+---------------+---------------+
-+Cube Subdivision Level|Resulting Verts|Resulting Edges|Resulting Faces+
-+----------------------+---------------+---------------+---------------+
-+0                     |8              |12             |6              +
-+----------------------+---------------+---------------+---------------+
-+1                     |26             |48             |24             +
-+----------------------+---------------+---------------+---------------+
-+2                     |98             |192            |96             +
-+----------------------+---------------+---------------+---------------+
-+3                     |386            |768            |384            +
-+----------------------+---------------+---------------+---------------+
-+4                     |1538           |3072           |1536           +
-+----------------------+---------------+---------------+---------------+
-+5                     |6146           |12288          |6144           +
-+----------------------+---------------+---------------+---------------+
-+6                     |24578          |49152          |24576          +
-+----------------------+---------------+---------------+---------------+
-+Formula               |3*2**(2*n)+4)/2|3*4**n         |verts - 2      +
-+----------------------+---------------+---------------+---------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Cube Subdivision Level
+     - Resulting Verts
+     - Resulting Edges
+     - Resulting Faces
+   * - 0
+     - 8
+     - 12
+     - 6
+   * - 1
+     - 26
+     - 48
+     - 24
+   * - 2
+     - 98
+     - 192
+     - 96
+   * - 3
+     - 386
+     - 768
+     - 384
+   * - 4
+     - 1538
+     - 3072
+     - 1536
+   * - 5
+     - 6146
+     - 12288
+     - 6144
+   * - 6
+     - 24578
+     - 49152
+     - 24576
+   * - Formula
+     - ``3*2**(2*n)+4)/2``
+     - ``3*4**n``
+     - ``verts - 2``
 
 
 While we're at it, here is the pattern for subdividing a single quadrilateral plane:
 
 
-+----------------------+---------------+-----------------+---------------+
-+Quad Subdivision Level|Resulting Verts|Resulting Edges  |Resulting Faces+
-+----------------------+---------------+-----------------+---------------+
-+0                     |4              |4                |1              +
-+----------------------+---------------+-----------------+---------------+
-+1                     |9              |12               |4              +
-+----------------------+---------------+-----------------+---------------+
-+2                     |25             |40               |16             +
-+----------------------+---------------+-----------------+---------------+
-+3                     |81             |144              |64             +
-+----------------------+---------------+-----------------+---------------+
-+4                     |289            |544              |256            +
-+----------------------+---------------+-----------------+---------------+
-+5                     |1089           |2112             |1024           +
-+----------------------+---------------+-----------------+---------------+
-+6                     |4225           |8320             |4096           +
-+----------------------+---------------+-----------------+---------------+
-+Formula               |((2**n+2)**2)/4|2**(n-1)*(2**n+2)|4**(n-1)       +
-+----------------------+---------------+-----------------+---------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Quad Subdivision Level
+     - Resulting Verts
+     - Resulting Edges
+     - Resulting Faces
+   * - 0
+     - 4
+     - 4
+     - 1
+   * - 1
+     - 9
+     - 12
+     - 4
+   * - 2
+     - 25
+     - 40
+     - 16
+   * - 3
+     - 81
+     - 144
+     - 64
+   * - 4
+     - 289
+     - 544
+     - 256
+   * - 5
+     - 1089
+     - 2112
+     - 1024
+   * - 6
+     - 4225
+     - 8320
+     - 4096
+   * - Formula
+     - ``((2**n+2)**2)/4``
+     - ``2**(n-1)*(2**n+2)``
+     - ``4**(n-1)``
 
 
 And, of course, triangles:
 
 
-+---------------------+---------------+---------------------+---------------+
-+Tri Subdivision Level|Resulting Verts|Resulting Edges      |Resulting Faces+
-+---------------------+---------------+---------------------+---------------+
-+0                    |3              |3                    |1              +
-+---------------------+---------------+---------------------+---------------+
-+1                    |7              |9                    |3              +
-+---------------------+---------------+---------------------+---------------+
-+2                    |19             |30                   |12             +
-+---------------------+---------------+---------------------+---------------+
-+3                    |61             |108                  |48             +
-+---------------------+---------------+---------------------+---------------+
-+4                    |217            |408                  |192            +
-+---------------------+---------------+---------------------+---------------+
-+5                    |817            |1584                 |768            +
-+---------------------+---------------+---------------------+---------------+
-+6                    |3169           |6240                 |3072           +
-+---------------------+---------------+---------------------+---------------+
-+Formula              |Do you know it?|3*(2**(n-3))*(2**n+2)                +
-+---------------------+---------------+---------------------+---------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Tri Subdivision Level
+     - Resulting Verts
+     - Resulting Edges
+     - Resulting Faces
+   * - 0
+     - 3
+     - 3
+     - 1
+   * - 1
+     - 7
+     - 9
+     - 3
+   * - 2
+     - 19
+     - 30
+     - 12
+   * - 3
+     - 61
+     - 108
+     - 48
+   * - 4
+     - 217
+     - 408
+     - 192
+   * - 5
+     - 817
+     - 1584
+     - 768
+   * - 6
+     - 3169
+     - 6240
+     - 3072
+   * - Formula
+     - Do you know it?
+     - ``3*(2**(n-3))*(2**n+2)``
+     -
 
 
 Keyboard Shortcuts

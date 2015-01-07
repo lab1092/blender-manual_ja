@@ -18,7 +18,7 @@ For all other conditions the controller gives a negative (FALSE) output.
 
 **Expression**
 The expression, which is written in the box, can consist of variables,
-constants and operators.  These must follow the rules laid out below.
+constants and operators. These must follow the rules laid out below.
 
 
 Variables
@@ -95,7 +95,7 @@ returns True (the controller sends a positive pulse to the connected actuators).
 
 Given the object has:
 
-- a sensor called ``Key_Inserted``  equal to True,
+- a sensor called ``Key_Inserted`` equal to True,
 - a property named ``Fuel`` equal to False,
 
 ::

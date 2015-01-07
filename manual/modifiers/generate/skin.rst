@@ -35,7 +35,6 @@ Create Armature
    This function does the following:
 
 
-
    #. A new armature object is added with bones matching the input mesh.
       The active selection is switched to the new armature.
    #. Weight groups are added to the input mesh. The Skin modifier propagates these weights to the output as well.
@@ -113,12 +112,15 @@ Examples
 External links
 ==============
 
-- `Skin Modifier Development at Blender Nation <http://www.blendernation.com/2011/03/11/skin-modifier-development/>`__ --
+- `Skin Modifier Development at Blender Nation
+  <http://www.blendernation.com/2011/03/11/skin-modifier-development/>`__ --
   An early demonstration of the skin modifier by Nicholas Bishop (March 2011)
 - Ji, Zhongping; Liu, Ligang; Wang, Yigang (2010).
-  `B-Mesh: A Fast Modeling System for Base Meshes of 3D Articulated Shapes <http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/>`__,
+  `B-Mesh: A Fast Modeling System for Base Meshes of 3D Articulated Shapes
+  <http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/>`__,
   Computer Graphics Forum 29(7), pp. 2169-2178. -- The work this modifier is based on
   (`direct link to PDF <http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/Paper/BMesh.pdf>`__)
-- `Related thread on Blender artists <http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-tools-papers-better-than-zsfere>`__
+- `Related thread on Blender artists
+  <http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-tools-papers-better-than-zsfere>`__
 
 

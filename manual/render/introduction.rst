@@ -7,7 +7,6 @@ Introduction
 ************
 
 
-
 Rendering is the final process of CG (short of post processing, of course)
 and is the phase in which a 2D image corresponding to your 3D scene is finally created.
 Rendering is a CPU-intensive process. You can render an image on your computer, or use a
@@ -59,7 +58,7 @@ Workflow
 In general, the process for rendering is:
 
 - Create all the objects in the scene
-- :doc:`Light the scene </lighting/introduction>`
+- :doc:`Light the scene </render/blender_render/lighting/introduction>`
 - :doc:`Position the Camera </render/camera/introduction>`
 - Render a test image at 25% or so without oversampling or ray tracing etc.,
   so that it is very fast and does not slow you down
@@ -82,7 +81,7 @@ pipeline from one to the other in order:
 
 - Rendering Engine
 - :doc:`Compositor </composite_nodes/introduction>`
-- :doc:`Sequencer </sequencer/introduction>`
+- :doc:`Sequencer </editors/sequencer/introduction>`
 
 You can use each one of these independently, or in a linked workflow. For example,
 you can use the Sequencer by itself to do post-processing on a video stream.
@@ -182,11 +181,11 @@ These are options for controlling what shading effects are calculated in the ren
 Deselecting them disables them.
 
 
-- :doc:`Textures </textures/introduction>`
-- :doc:`Shadows </lighting/shadows>`
-- :doc:`Subsurface Scattering </materials/properties/subsurface_scattering>`
-- :doc:`Environment Maps </textures/mapping/environment>`
-- :doc:`Ray Tracing </lighting/shadows>`
+- :doc:`Textures </render/blender_render/textures/introduction>`
+- :doc:`Shadows </render/blender_render/lighting/shadows>`
+- :doc:`Subsurface Scattering </render/blender_render/materials/properties/subsurface_scattering>`
+- :doc:`Environment Maps </render/blender_render/textures/mapping/environment>`
+- :doc:`Ray Tracing </render/blender_render/lighting/shadows>`
 - :doc:`Color Management </render/post_process/cm_and_exposure>`
 
       Uses a linear workflow when enabled
@@ -215,7 +214,7 @@ Post Processing
 ---------------
 
 Control effects that are applied after the image has been rendered.
-If you are using the :doc:`Compositor </composite_nodes/index>` or :doc:`Sequencer </sequencer/index>`,
+If you are using the :doc:`Compositor </composite_nodes/index>` or :doc:`Sequencer </editors/sequencer/index>`,
 you can tell Blender to process those effects instead of directly rendering the scene.
 
 Fields are used when :doc:`Rendering for Video </render/output/video>`.
@@ -247,7 +246,7 @@ Alternative Render Engines
 
 :doc:`Alternative Render Engines </render/engines/index>` apart from the original Blender rendering engine are
 available that have their respective advantages and disadvantages. :doc:`LuxRender </render/engines/luxrender>`
-for photorealistic, accurate rendering (separate installation required)  and the :doc:`Cycles </render/cycles/index>`
-engine are a couple of the most popular examples.  The :doc:`Cycles </render/cycles/index>` rendering engine is an
+for photorealistic, accurate rendering (separate installation required) and the :doc:`Cycles </render/cycles/index>`
+engine are a couple of the most popular examples. The :doc:`Cycles </render/cycles/index>` rendering engine is an
 add-on that is included with Blender and already activated for you.
 See the :doc:`Cycles Render Engine </render/cycles/index>` for further information.

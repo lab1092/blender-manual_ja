@@ -18,6 +18,7 @@
    performance/index.rst
    engines/index.rst
    internal/index.rst
+   blender_render/index.rst
    cycles/index.rst
    freestyle/index.rst
    workflows/index.rst

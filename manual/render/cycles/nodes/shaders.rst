@@ -25,19 +25,23 @@ BSDF output
    Diffuse :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
 
-+--------------------------------------------------------------+----------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_diffuse.jpg                                                                 +
-+                                                                                                                         +
-+   Diffuse behavior                                                                                                      +
-+--------------------------------------------------------------+----------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_diffuserender.jpg|.. figure:: /images/cycles_manual_materials_oren-nayar.jpg+
-+--------------------------------------------------------------+----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_diffuse.jpg
+
+          Diffuse behavior
+
+     -
+
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_diffuserender.jpg
+
+     - .. figure:: /images/cycles_manual_materials_oren-nayar.jpg
 
 
 Translucent
 ^^^^^^^^^^^
 
-Lambertian diffuse  transmission.
+Lambertian diffuse transmission.
 
 Color input
    Color of the surface, or physically speaking, the probability that light is transmitted for each wavelength.
@@ -47,12 +51,12 @@ BSDF output
    Translucent :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
 
-FIXME(Tag Unsupported:div;
-<div class="center">[[File:Manual_cycles_nodes_bsdf_translucent.png]]</div>
-)
+.. figure:: /images/Manual_cycles_nodes_bsdf_translucent.png
+   :align: center
 
 
 .. figure:: /images/Manual_cycles_nodes_bsdf_translucentrender.jpg
+   :align: center
 
    Translucent Shader
 
@@ -75,16 +79,15 @@ Normal input
 BSDF output
    Glossy :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
+.. list-table::
+   :header-rows: 1
 
-+-------------------------------------------------------------+------------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_glossy_sharp.jpg|.. figure:: /images/Manual_cycles_nodes_bsdf_glossy.jpg           +
-+                                                             |                                                                  +
-+   Sharp Glossy behavior                                     |   Rough Glossy behavior                                          +
-+-------------------------------------------------------------+------------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_glossyrender.jpg|.. figure:: /images/Manual_cycles_nodes_bsdf_glossyroughrender.jpg+
-+                                                             |                                                                  +
-+   A Sharp Glossy Material                                   |   A Rough Glossy Material                                        +
-+-------------------------------------------------------------+------------------------------------------------------------------+
+   * - Sharp Glossy
+     - Rough Glossy
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_glossy_sharp.jpg
+     - .. figure:: /images/Manual_cycles_nodes_bsdf_glossy.jpg
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_glossyrender.jpg
+     - .. figure:: /images/Manual_cycles_nodes_bsdf_glossyroughrender.jpg
 
 
 Anisotropic
@@ -118,13 +121,15 @@ Tangent input
 BSDF output
    Anisotropic glossy :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
+.. list-table::
 
-+----------------------------------------+------------------------------------------+
-+.. figure:: /images/Anisotropic_rot0.jpg|.. figure:: /images/Anisotropic_rot025.jpg+
-+                                        |                                          +
-+   Anisotropic rotation on 0            |                                          +
-+                                        |   Anisotropic rotation on 0.25 (90- )    +
-+----------------------------------------+------------------------------------------+
+   * - .. figure:: /images/Anisotropic_rot0.jpg
+
+         Anisotropic rotation on 0
+
+     - .. figure:: /images/Anisotropic_rot025.jpg
+
+         Anisotropic rotation on 0.25 (90- )
 
 
 Toon
@@ -166,15 +171,22 @@ BSDF output
    Transparent :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
 
-+------------------------------------------------------------------+----------------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_transparent.jpg                                                                             +
-+                                                                                                                                         +
-+   Transparent behaviour                                                                                                                 +
-+------------------------------------------------------------------+----------------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_transparentrender.jpg|.. figure:: /images/Manual_cycles_nodes_bsdf_transparentdarkrender.jpg+
-+                                                                  |                                                                      +
-+   Transparent Shader (pure white)                                |   Transparent Shader (gray)                                          +
-+------------------------------------------------------------------+----------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_transparent.jpg
+          :align: center
+
+          Transparent behaviour
+
+     -
+
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_transparentrender.jpg
+
+          Transparent Shader (pure white)
+
+     - .. figure:: /images/Manual_cycles_nodes_bsdf_transparentdarkrender.jpg
+
+          Transparent Shader (gray)
 
 
 Glass
@@ -201,17 +213,16 @@ Normal input
 BSDF output
    Glass :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
+.. list-table::
+   :header-rows: 1
 
-+------------------------------------------------------------+-----------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_glass_sharp.jpg|.. figure:: /images/Manual_cycles_nodes_bsdf_glass.jpg           +
-+                                                            |                                                                 +
-+   Sharp Glass behaviour                                    |   Rough Glass behaviour                                         +
-+------------------------------------------------------------+-----------------------------------------------------------------+
-+.. figure:: /images/Manual_cycles_nodes_bsdf_glassrender.jpg|.. figure:: /images/Manual_cycles_nodes_bsdf_glassroughrender.jpg+
-+                                                            |                                                                 +
-+   A Sharp Glass Material                                   |   A Rough Glass Material                                        +
-+------------------------------------------------------------+-----------------------------------------------------------------+
-
+   * - Sharp Glass
+     - Rough Glass
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_glass_sharp.jpg
+     - .. figure:: /images/Manual_cycles_nodes_bsdf_glass.jpg
+   * - .. figure:: /images/Manual_cycles_nodes_bsdf_glassrender.jpg
+     - .. figure:: /images/Manual_cycles_nodes_bsdf_glassroughrender.jpg
+       
 
 Refraction
 ^^^^^^^^^^
@@ -258,12 +269,12 @@ BSDF output
    Velvet :abbr:`BSDF (Bidirectional scattering distribution function)` shader.
 
 
-FIXME(Tag Unsupported:div;
-<div class="center">[[File:Manual_cycles_nodes_bsdf_velvet.png]]</div>
-)
+.. figure:: /images/Manual_cycles_nodes_bsdf_velvet.png
+   :align: center
 
 
 .. figure:: /images/Manual_cycles_nodes_bsdf_velvetrender.jpg
+   :align: center
 
    The Velvet Shader
 
@@ -334,11 +345,15 @@ Emission output
    Emission shader.
 
 
-+---------------------------------------------------+-----------------------------------------------------------+
-+.. figure:: /images/Cycles_shader_emission.jpg     |.. figure:: /images/Manual_cycles_nodes_emission_bright.jpg+
-+                                                   |                                                           +
-+   A white Emissive material, with strength at 1.0.|   A white Emissive material, with strength at 3.0.        +
-+---------------------------------------------------+-----------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Cycles_shader_emission.jpg
+
+         Emission shader, with strength at ``1.0``
+
+     - .. figure:: /images/Manual_cycles_nodes_emission_bright.jpg
+
+         Emission shader, with strength at ``3.0``
 
 
 Cycles uses a physically correct light falloff by default,

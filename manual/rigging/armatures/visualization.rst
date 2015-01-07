@@ -138,7 +138,7 @@ X-Ray
 Shapes
    When enabled, the default standard bone shape is replaced,
    in *Object* and *Pose* modes,
-   by the shape of a chosen object (see FIXME(TODO: Internal Link; [[#Shaped Bones|below]]) for details).
+   by the shape of a chosen object (see `Shaped Bones`_ for details).
 Delay Refresh
    When enabled, the bone doesn't deform its children when manipulating the bone in pose mode.
 
@@ -224,7 +224,8 @@ Note that:
   you'll still have a cube shaped bone...).
 - The "along bone" axis is the Y one,
   and the shape object is always scaled so that one Blender Unit stretches along the whole bone length.
-- If you need to remove the custom shape of the bone, just right click in the *Custom Shape* field and select *Reset to default value* in the popup menu.
+- If you need to remove the custom shape of the bone,
+  just right click in the *Custom Shape* field and select *Reset to default value* in the popup menu.
 
 So to summarize all this, you should use meshes as shape objects,
 with their center at their lower-Y end, and an overall Y length of **1.0** BU.
@@ -260,14 +261,21 @@ Only bones in active layers will be visible/editable - but they will always be e
 (i.e move objects or deform geometry), whether in an active layer or not. To
 (de)activate a layer, you have several options, depending in which mode you are in:
 
-- In all modes, use the row of small buttons at the top of the *Display Options* group, *Armature* panel. If you want to enable/disable several layers at once, as usual, hold :kbd:`Shift` while clicking...
-- In *Edit* and *Pose* modes, you can also do this from the *3D View* s, either by using the menu (:menuselection:`Armature --> Switch Armature Layers` or :menuselection:`Pose --> Switch Armature Layers`), or the :kbd:`Shift-M` shortcut, to display a small pop-up dialog containing the same buttons as described above (here again, you can use :kbd:`Shift-LMB` clicks to (de)select several layers at once).
+- In all modes, use the row of small buttons at the top of the *Display Options* group, *Armature* panel.
+  If you want to enable/disable several layers at once, as usual, hold :kbd:`Shift` while clicking...
+- In *Edit* and *Pose* modes, you can also do this from the *3D View* s,
+  either by using the menu (:menuselection:`Armature --> Switch Armature Layers` or
+  :menuselection:`Pose --> Switch Armature Layers`), or the :kbd:`Shift-M` shortcut,
+  to display a small pop-up dialog containing the same buttons as described above
+  (here again, you can use :kbd:`Shift-LMB` clicks to (de)select several layers at once).
 
 
 Protected Layers
 ================
 
-You can lock a given bone layer for all :doc:`proxies </data_system/linked_libraries#proxy_objects>` of your armature, i.e. all bones in this layer won't be editable. To do so, in the *Skeleton* panel, :kbd:`Ctrl-LMB` click on the relevant button, the layer lock will be enabled.
+You can lock a given bone layer for all :doc:`proxies </data_system/linked_libraries#proxy_objects>`
+of your armature, i.e. all bones in this layer won't be editable.
+To do so, in the *Skeleton* panel, :kbd:`Ctrl-LMB` click on the relevant button, the layer lock will be enabled.
 
 Protected layers in proxy are restored to proxy settings on file reload and undo.
 
@@ -297,8 +305,11 @@ layers - note that as with objects, bones can lay in several layers at once,
 just use the usual :kbd:`Shift-LMB` clicks... First of all,
 you have to select the chosen bone(s)!
 
-- In the *Button* window, use the "layer buttons" of each selected bone "sub-panel" (*Armature Bones* panel) to control in which layer(s) it lays.
-- In the *3D View* window, use the menu (:menuselection:`Armature --> Move Bone To Layer` or :menuselection:`Pose --> Move Bone To Layer`) or hit :kbd:`M` to show the usual pop-up layers dialog. Note that this way, *you assign the same layers to all selected bones*.
+- In the *Button* window, use the "layer buttons" of each selected bone "sub-panel" (*Armature Bones* panel)
+  to control in which layer(s) it lays.
+- In the *3D View* window, use the menu (:menuselection:`Armature --> Move Bone To Layer` or
+  :menuselection:`Pose --> Move Bone To Layer`) or hit :kbd:`M` to show the usual pop-up layers dialog.
+  Note that this way, *you assign the same layers to all selected bones*.
 
 
 Hiding Bones

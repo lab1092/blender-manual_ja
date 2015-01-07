@@ -9,7 +9,7 @@ Physical correctness
 
 .. figure:: /images/Manual-Part-X-fluidsim-example3.jpg
 
-   "My cup runneth over", created with Blender and Yafray.
+   "My cup runneth over"
 
 
 Fluid animation can take a lot of time - the better you understand how it works,
@@ -73,7 +73,8 @@ information about the solver can be found at
 `www.ntoken.com <http://graphics.ethz.ch/~thuereyn/ntoken3/Publications.html>`__.
 These Animations were created with the solver before its integration into blender:
 `Adaptive Grids <http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050731_sgposter.avi>`__,
-`Interactive Animations <http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050607_tr1rtlbm.avi>`__.
+`Interactive Animations
+<http://www10.informatik.uni-erlangen.de/~sinithue/public/phd/nthuerey_050607_tr1rtlbm.avi>`__.
 Thanks to Chris Want for organizing the Blender-SoC projects, and
 to Jonathan Merrit for mentoring this one! And of course thanks to Google for starting the
 whole thing... SoC progress updates were posted here:
@@ -84,9 +85,6 @@ people: U. Ruede, T. Pohl, C. Koerner, M. Thies, M. Oechsner and T.
 Hofmann at the Department of Computer Science 10 (System Simulation, LSS) in Erlangen,
 Germany.
 
-
-+----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
-+`http://www10.informatik.uni-erlangen.de/~sinithue/img/lsslogo.png <http://www10.informatik.uni-erlangen.de/>`__|`http://www10.informatik.uni-erlangen.de/~sinithue/img/unierlangenlogo.png <http://www.uni-erlangen.de/>`__+
-+----------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
-
+- `http://www10.informatik.uni-erlangen.de/~sinithue/img/lsslogo.png <http://www10.informatik.uni-erlangen.de/>`__
+- `http://www10.informatik.uni-erlangen.de/~sinithue/img/unierlangenlogo.png <http://www.uni-erlangen.de/>`__
 

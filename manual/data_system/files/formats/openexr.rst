@@ -15,15 +15,11 @@ Blender supports OpenEXR in two ways:
 
 -
 
-FIXME(TODO: Internal Link;
-[[#Render Output|Render Output]]
-)
+`Render Output`_
 
 -
 
-FIXME(TODO: Internal Link;
-[[#Multi-layer, Multi-pass, tile-based files|Multi-layer, Multi-pass, tile-based files]]
-)
+`Multi-layer, Multi-pass, tile-based files`_
 
 
 Render Output

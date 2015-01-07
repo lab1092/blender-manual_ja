@@ -7,18 +7,15 @@ Armature Structure
    :width: 250px
    :figwidth: 250px
 
-   The very basic armature of the :doc:`Gingerbread Man tutorial </your_first_animation/2.animating_the_gingerbread_man>`.
-
+   The very basic armature of the
+   :doc:`Gingerbread Man tutorial </your_first_animation/2.animating_the_gingerbread_man>`.
 
 Armatures mimic real skeletons. They are made out of bones, which are (by default) rigid elements.
 But you have more possibilities than with real skeletons: In addition to the "natural" rotation of bones,
 you can also translate and even scale them! And your bones do not have to be connected to each other;
 they can be completely free if you want. However,
 the most natural and useful setups imply that some bones are related to others, forming so-called "chains of bones",
-which create some sort of "limbs" in your armature, as detailed
-FIXME(TODO: Internal Link;
-[[#Chains of Bones|below]]
-).
+which create some sort of "limbs" in your armature, as detailed in `Chains of Bones`_.
 
 
 Chains of Bones
@@ -74,7 +71,8 @@ but let us have a quick look at this important feature.
 The easiest way to manage bones relationships is to use the *Relations* panel
 *Bone* context:
 
-- First, :doc:`select </rigging/armatures/selecting>` the bones you want to edit (selection order does not matter here).
+- First, :doc:`select </rigging/armatures/selecting>` the bones you want to edit
+  (selection order does not matter here).
 - To *parent* a bone to another one, select the name of this parent in its drop-down *Parent* list.
 - To *unparent* a bone, just select the void entry in the same *Parent* list.
 - To *connect* a bone to its parent, enable its small *Con* button.

@@ -67,7 +67,8 @@ Align X,Y,Z
 Object
    The emitter objects movement (i.e. let the object give the particle a starting speed).
 Random
-   Gives the starting speed a random variation. You can use a texture to only change the value, see Controlling Emission, Interaction and Time).
+   Gives the starting speed a random variation.
+   You can use a texture to only change the value, see Controlling Emission, Interaction and Time).
 
 
 Rotation
@@ -105,7 +106,8 @@ Initial Rotation Mode
       Randomizes rotation.
 
 Dynamic
-   If enabled, only initializes particles to the wanted rotation and angular velocity and let's physics handle the rest.
+   If enabled, only initializes particles to the wanted rotation and angular velocity and let's
+   physics handle the rest.
    Particles then change their angular velocity if they collide with other objects
    (like in the real world due to friction between the colliding surfaces).
    Otherwise the angular velocity is predetermined at all times (i.e. set rotation to dynamic/constant).
@@ -162,7 +164,9 @@ to groom vegetation and/or ecosystems using Object, Group or Billboard types of 
 Field Weights
 *************
 
-The Field Weight Panel allows you to control how much influence each type of external force field, or effector, has on the particle system. Force fields are external forces that give dynamic systems motion. The force fields types are detailed on the :doc:`Force Field Page </physics/force_fields>`.
+The Field Weight Panel allows you to control how much influence each type of external force field, or effector,
+has on the particle system. Force fields are external forces that give dynamic systems motion.
+The force fields types are detailed on the :doc:`Force Field Page </physics/force_fields>`.
 
 Effector Group
    Limit effectors to a specified group. Only effectors in this group will have an effect on the current system.
@@ -183,5 +187,7 @@ Self Effect
 Amount
    Set how many of the particles act as force fields. 0 means all of them are effectors.
 
-You can give particle systems up to 2 force fields. By default they do not have any. Choose an effector type from the dropdowns to enable them. Settings are described on the :doc:`Force Field Page </physics/force_fields>`.
+You can give particle systems up to 2 force fields. By default they do not have any.
+Choose an effector type from the dropdowns to enable them.
+Settings are described on the :doc:`Force Field Page </physics/force_fields>`.
 

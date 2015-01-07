@@ -87,13 +87,19 @@ especially since the cube itself has a side of only 2 Blender units.
 The scale beneath the cube helps in appreciating the movement of 1 Blender unit.
 
 
-+-------------------------------------------------------+-------------------------------------------------------+
-+.. figure:: /images/Manual-Part-XI-MBlur02.jpg         |.. figure:: /images/Manual-Part-XI-MBlur03.jpg         +
-+   :width: 320px                                       |   :width: 320px                                       +
-+   :figwidth: 320px                                    |   :figwidth: 320px                                    +
-+                                                       |                                                       +
-+   Image 1. Frame 1 of moving cube without Motion Blur.|   Image 2. Frame 2 of moving cube without Motion Blur.+
-+-------------------------------------------------------+-------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part-XI-MBlur02.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          Image 1. Frame 1 of moving cube without Motion Blur.
+
+     - .. figure:: /images/Manual-Part-XI-MBlur03.jpg
+          :width: 320px
+          :figwidth: 320px
+
+          Image 2. Frame 2 of moving cube without Motion Blur.
 
 
 .. figure:: /images/Manual-Part-XI-MBlur04.jpg
@@ -110,11 +116,15 @@ unit before and half a unit after the main cube body.
 A value greater than 1 implies a very 'slow' camera shutter.
 
 
-+----------------------------------------------+----------------------------------------------+
-+.. figure:: /images/Manual-Part-XI-MBlur05.jpg|.. figure:: /images/Manual-Part-XI-MBlur06.jpg+
-+   :width: 320px                              |   :width: 320px                              +
-+   :figwidth: 320px                           |   :figwidth: 320px                           +
-+----------------------------------------------+----------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Part-XI-MBlur05.jpg
+          :width: 320px
+          :figwidth: 320px
+
+     - .. figure:: /images/Manual-Part-XI-MBlur06.jpg
+          :width: 320px
+          :figwidth: 320px
 
 
 Better results than those shown can be obtained by setting 11 or 16 samples rather than 8,

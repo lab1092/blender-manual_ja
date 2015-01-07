@@ -99,7 +99,8 @@ Axis
       Specifies the direction to use:
 
       (Axis Number = 1) Joystick Left, Right, Up, Down
-      (Axis Number = 2) Paddle upper (Left); paddle Lower (Right); Joystick twist left (Up) Joystick twist right (Down)
+      (Axis Number = 2) Paddle upper (Left); paddle Lower (Right);
+      Joystick twist left (Up) Joystick twist right (Down)
 
 
 ----

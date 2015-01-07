@@ -163,11 +163,11 @@ importers and exporters, and also to drive animation rigs.
 With Python scripting there are endless possibilities in what you can create with Blender.
 
 Part of Python's power comes from having full access to your system,
-however this power can also be misused in the wrong hands. It's possible
-(but not terribly likely) for dishonest people to distribute .
-blend files containing scripts that may damage your system.
+however this power can also be misused in the wrong hands.
+It's possible (but not terribly likely) for dishonest people to distribute ``.blend``
+files containing scripts that may damage your system.
 These scripts can be attached as part of animation rigs,
-so that they will be run when such a .blend file is opened.
+so that they will be run when such a ``.blend`` file is opened.
 
 
  .. warning::

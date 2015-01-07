@@ -18,7 +18,9 @@ See :doc:`Sensor Common Options </game_engine/logic/sensors/common_options>` for
 Special Options:
 
 Material
-   This field is for filtering materials. Only contact with the material in this field will generate a positive pulse. Leave blank for touch with any object.
+   This field is for filtering materials.
+   Only contact with the material in this field will generate a positive pulse.
+   Leave blank for touch with any object.
 
 A TRUE pulse is sent on collision and the FALSE pulse is sent once the objects are no longer
 in contact.
@@ -26,11 +28,13 @@ in contact.
 
 .. note:: Touch sensor has been removed in 2.69
 
-   The *Touch* sensor is no longer available in v2.69 or later. The :doc:`Collision Sensor </game_engine/logic/sensors/collision>` now provides the same functionality.
+   The *Touch* sensor is no longer available in v2.69 or later.
+   The :doc:`Collision Sensor </game_engine/logic/sensors/collision>` now provides the same functionality.
 
 
 .. note:: Note about soft bodies
 
-   The *Touch* sensor can not detect collisions with soft bodies. This is a limitation in Bullet, the physics library used by the Game Engine.
+   The *Touch* sensor can not detect collisions with soft bodies.
+   This is a limitation in Bullet, the physics library used by the Game Engine.
 
 

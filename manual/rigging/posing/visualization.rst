@@ -10,15 +10,9 @@ We talk in :doc:`this page </rigging/armatures/visualization>`
 about the armature visualization options available in all modes (the visualization types, the bones' shapes, etc.).
 
 In *Pose* mode, you have extra features,
-FIXME(TODO: Internal Link;
-[[#Colors|colors and groups]]
-) to help you visually categorize your bones,
-FIXME(TODO: Internal Link;
-[[#Ghosts|ghosts]]
-) and
-FIXME(TODO: Internal Link;
-[[#Motion Paths|motion paths]]
-) to help you visualize armatures' animations.
+`Colors`_ to help you visually categorize your bones,
+`Ghosts`_ and
+`Motion Paths`_ to help you visualize armatures' animations.
 
 
 Colors
@@ -33,9 +27,7 @@ following two different processes, controlled by the *Color* button
 - When it is enabled,
   bones are colored depending on which bone group they belong to (or as above if they belong to no group).
 
-You can also mix both coloring methods, see
-FIXME(TODO: Internal Link;
-[[#Coloring from Bone Group|below]]
+You can also mix both coloring methods, see `Coloring from Bone Group`_ below
 ).
 
 
@@ -45,41 +37,12 @@ Coloring from Bone State
 This is the default and oldest way - there are six different color codes,
 ordered here by precedence (i.e. the bone will be of the color of the topmost valid state):
 
--
-
-**FIXME(Tag Unsupported:span;
-<span style="color:#6767A5">Purple</span>
-)** : The :doc:`Stride Root bone </animation/techs/armatures/stride>`.
-
--
-
-**FIXME(Tag Unsupported:span;
-<span style="color:#B69667">Orange</span>
-)** : A bone with a targetless Solver constraint.
-
--
-
-**FIXME(Tag Unsupported:span;
-<span style="color:#B6B666">Yellow</span>
-)** : A bone with an :doc:`IK Solver constraint </constraints/tracking/ik_solver>`.
-
--
-
-**FIXME(Tag Unsupported:span;
-<span style="color:#67B68B">Green</span>
-)** : A bone with any other kind of constraint.
-
--
-
-**FIXME(Tag Unsupported:span;
-<span style="color:#80A5B6">Blue</span>
-)** : A bone that is posed (i.e. has keyframes).
-
--
-
-**FIXME(Tag Unsupported:span;
-<span style="color:#959595">Gray</span>
-)** : Default state.
+- **Purple**: The :doc:`Stride Root bone </animation/techs/armatures/stride>`.
+- **Orange**: A bone with a targetless Solver constraint.
+- **Yellow**: A bone with an :doc:`IK Solver constraint </rigging/constraints/tracking/ik_solver>`.
+- **Green**: A bone with any other kind of constraint.
+- **Blue**: A bone that is posed (i.e. has keyframes).
+- **Gray**: Default state.
 
 
 Coloring from Bone Group
@@ -93,7 +56,7 @@ Coloring from Bone Group
 
 
 The bone groups panel is available in the Object data editor for an armature.
-Bone groups facilitate the colouring (theming) of multiple bones.
+Bone groups facilitate the coloring (theming) of multiple bones.
 Bone groups are managed mostly in the *Buttons* window, *Editing* context
 (:kbd:`F9`).
 
@@ -166,11 +129,17 @@ Ghosts
    | Panel:    *Visualisations*
 
 
-+--------------------+------------------------------------------------------+----------------------------------------------+
-+**Ghosts examples.**|.. figure:: /images/Armature_ghost_arround_current.jpg|.. figure:: /images/Manual-PartIX-ie_ghost.jpg+
-+                    |   :width: 200px                                      |   :width: 200px                              +
-+                    |   :figwidth: 200px                                   |   :figwidth: 200px                           +
-+--------------------+------------------------------------------------------+----------------------------------------------+
+.. list-table::
+   Ghosts examples.
+
+   * - .. figure:: /images/Armature_ghost_arround_current.jpg
+          :width: 200px
+          :figwidth: 200px
+
+     - .. figure:: /images/Manual-PartIX-ie_ghost.jpg
+          :width: 200px
+          :figwidth: 200px
+
 
 If you are a bit familiar with traditional cartoon creation,
 you might know that drawing artists use tracing paper heavily,
@@ -264,7 +233,7 @@ by default, or their roots).
 
 Before we look at its options (all regrouped in the same *Visualisations* panel,
 in the *Editing* context, :kbd:`F9`), let's first see how to display/hide these paths. Unlike
-FIXME(TODO: Internal Link; [[#Ghosts|ghosts]]),
+`Ghosts`_,
 you have to do it manually - and you have to first select the bones you want to show/hide the motion paths. Then,
 
 - To show the paths (or update them, if needed),

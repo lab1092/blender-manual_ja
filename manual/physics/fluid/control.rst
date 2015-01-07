@@ -28,7 +28,7 @@ we use the Fluid Control option to control part of the fluid so that it has a ce
    :width: 640px
    :figwidth: 640px
 
-   Falling drop (rendered in Yafray)
+   Falling drop
 
 
 .. figure:: /images/Fluidcontrol-banner.jpg
@@ -56,7 +56,8 @@ Time
    You specify the start and end time during which time the fluid control object is active.
 
 Attraction force
-   The attraction force specifies the force which gets emitted by the fluid control object. Positive force results in attraction of the fluid, negative force in avoidance.
+   The attraction force specifies the force which gets emitted by the fluid control object.
+   Positive force results in attraction of the fluid, negative force in avoidance.
 
 Velocity force
    If the fluid control object moves, the resulting velocity can also introduce a force to the fluid.
@@ -65,7 +66,5 @@ Velocity force
 See also
 ========
 
-Release notes:
-FIXME(Link Type Unsupported: template;
-[[Template:Release_Notes/2.48/FluidControl]]
-)
+Release notes: http://wiki.blender.org/index.php/Template:Release_Notes/2.48/FluidControl
+

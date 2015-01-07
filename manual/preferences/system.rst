@@ -4,8 +4,8 @@
 System preferences
 ******************
 
-This picture shows the *System* tab in the *User Preferences* editor in
-Blender. Options are explained below.
+The *System* tab allows you to set resolution, scripting console preferences, sound, graphics cards,
+and internationalization.
 
 
 .. figure:: /images/(Doc_26x_Manual_Preferences_System)_(Screenshot_Full)_(GBV266FN).jpg
@@ -58,7 +58,6 @@ Sound
 *'Specific sound options'* (With *SDL* or *OpenAL* enabled)
 
 
-
    Channels
       Set the audio channel count. Available options are:
       *Stereo* (Default) , *4 Channels* , *5.1 Surround* , *7.1 Surround*
@@ -70,7 +69,8 @@ Sound
       *44.1 Khz* (Default), *48 Khs* , *96 Khz* and *192Khz*
    Sample Format
       Set the audio sample format. Available options are:
-      *32 bit float* (Default),  *8 bit Unsigned* , *16 Bits Signed* , *24 Bits Signed* , *32 Bits Signed* , *32 Bits Float* and *64 Bits Float*
+      *32 bit float* (Default), *8 bit Unsigned* , *16 Bits Signed* , *24 Bits Signed* , *32 Bits Signed* ,
+      *32 Bits Float* and *64 Bits Float*
 
 
 Screencast
@@ -98,7 +98,7 @@ Compute Device
       the user will be able to choose whether to use CPU or other computing device for Cycles Rendering.
 
 
-*OpenCL''*:sup:`1`  is unsupported, see: :doc:`Cycles </render/cycles>` Render engine page
+*OpenCL''*:sup:`1` is unsupported, see: :doc:`Cycles </render/cycles>` Render engine page
 
 
 Open GL
@@ -183,7 +183,8 @@ Limit Size
    Limit the maximum resolution for pictures used in textured display to save memory.
    The limit options are specified in a square of pixels,
    (e.g.: the option 256 means a texture of 256x256 pixels)
-   This is useful for game engineers, whereas the texture limit matches paging blocks of the textures in the target graphic card memory .
+   This is useful for game engineers,
+   whereas the texture limit matches paging blocks of the textures in the target graphic card memory.
    Available Options are:
    *Off* (No limit - Default) , *128*, *256*, *512*, *1024*, *2048*, *4096*, *8192*.
 Time Out
@@ -217,7 +218,7 @@ Solid OpenGL lights
 ===================
 
 Solid OpenGL Lights
-   *Solid OpenGL Lights*  are used to light the 3D Window,
+   *Solid OpenGL Lights* are used to light the 3D Window,
    mostly during *Solid view*. Lighting is constant and position "world" based.
    There are three virtual light sources, also called OpenGL auxiliary lamps,
    used to illuminate 3D View scenes, which will not display in renders.
@@ -258,7 +259,7 @@ Color Picker Type
       *Circle* (Default), *Square (HS + V)* , *Square (SV + H)* and *Square (HV + S)*
 
 
-      The color pickers are detailed at the :doc:`Buttons and Controls </interface/buttons_and_controls>` page.
+      The color pickers are detailed at the :doc:`Buttons and Controls </getting_started/basics/interface/buttons_and_controls>` page.
 
 
 Custom Weight Paint Range
@@ -270,7 +271,7 @@ Custom Weight Paint Range
    Enabling the checkbox will enable an alternate map using a ramp starting with an empty range.
    Now you can create your custom map using the common color ramp options.
    For detailed information about how to use color ramps,
-   see: to the :doc:`Buttons and Controls </interface/buttons_and_controls>` page.
+   see: to the :doc:`Buttons and Controls </getting_started/basics/interface/buttons_and_controls>` page.
 
 
 International Fonts
@@ -288,7 +289,7 @@ International Fonts
 
 
    Blender supports I18N for internationalization, for more information,
-   see: :doc:`Internationalization </interface/internationalization>` page.
+   see: :doc:`Internationalization </getting_started/basics/interface/internationalization>` page.
    For more Information on how to load International fonts,
    see: :doc:`Editing Texts </modeling/texts/editing>` page.
 

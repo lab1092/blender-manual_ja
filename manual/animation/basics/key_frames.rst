@@ -20,9 +20,9 @@ There are several methods of adding new keys. Namely:
 
 - Hovering over a property and pressing :kbd:`I`
 - In the 3D View, pressing :kbd:`I` will bring up a menu to choose what to add a key frame to.
-  
+
 .. TODO more methods
-  
+
 
 Removing Key Frames
 ===================

@@ -59,8 +59,7 @@ you can get multiple copies of linked data very easily.
 Making a DupliGroup Object Real
 ===============================
 
-Say you want to make further edits on an DupliGroup instance or render the DupliGroup in
-Yafaray or some other render that does not support importing DupliGroups directly:
+Say you want to make further edits on an DupliGroup instance:
 
 Simply select your DupliGroup and press :kbd:`Ctrl-Shift-A` to convert the DupliGroup
 into regular objects that can be transformed and animated normally.

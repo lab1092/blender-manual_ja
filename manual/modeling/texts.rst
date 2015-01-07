@@ -54,7 +54,7 @@ including the "blue" font that has been applied to a curve path.
    equally in both modes ... and this implies that you cannot apply them to just a part of the
    mesh. So font, size, and so on, are common to all letters in a *Text* object.
    There is just one exception:
-   the *Bold* / *Italic*  buttons control properties specific to each letter
+   the *Bold* / *Italic* buttons control properties specific to each letter
    (this is a way to use up to four different fonts in a text).
 
    For optimum resource usage, only characters that are being used consume memory
@@ -138,23 +138,71 @@ There are a few special characters that are available using the :kbd:`Alt` key o
 
 Here is a summary of these characters:
 
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-C`   |Copyright (©)                 |:kbd:`Alt-R` |Registered trademark (®)         +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-G`   |Degrees (- )                  |:kbd:`Alt-X` |Multiply symbol (×)              +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-S`   |German "ss" (ß)               |:kbd:`Alt-F` |Currency sign (¤)                +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-L`   |British Pound (£)             |:kbd:`Alt-Y` |Japanese Yen (¥)                 +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-1`   |Superscript 1 (¹)             |:kbd:`Alt-2` |Superscript 2 (²)                +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-3`   |Superscript 3 (³)             |:kbd:`Alt-.` |Circle                           +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-?`   |Spanish question mark (¿)     |:kbd:`Alt-!` |Spanish exclamation mark (¡)     +
-+---------------+------------------------------+-------------+---------------------------------+
-+:kbd:`Alt-<`   |Left double quotation mark («)|:kbd:`Alt->` |Right double quotation mark (»)  +
-+---------------+------------------------------+-------------+---------------------------------+
+.. list-table::
+
+   * - :kbd:`Alt-C`
+
+     - Copyright (©)
+
+     - :kbd:`Alt-R`
+
+     - Registered trademark (®)
+
+   * - :kbd:`Alt-G`
+
+     - Degrees (- )
+
+     - :kbd:`Alt-X`
+
+     - Multiply symbol (×)
+
+   * - :kbd:`Alt-S`
+
+     - German "ss" (ß)
+
+     - :kbd:`Alt-F`
+
+     - Currency sign (¤)
+
+   * - :kbd:`Alt-L`
+
+     - British Pound (£)
+
+     - :kbd:`Alt-Y`
+
+     - Japanese Yen (¥)
+
+   * - :kbd:`Alt-1`
+
+     - Superscript 1 (¹)
+
+     - :kbd:`Alt-2`
+
+     - Superscript 2 (²)
+
+   * - :kbd:`Alt-3`
+
+     - Superscript 3 (³)
+
+     - :kbd:`Alt-.`
+
+     - Circle
+
+   * - :kbd:`Alt-?`
+
+     - Spanish question mark (¿)
+
+     - :kbd:`Alt-!`
+
+     - Spanish exclamation mark (¡)
+
+   * - :kbd:`Alt-<`
+
+     - Left double quotation mark («)
+
+     - :kbd:`Alt->`
+
+     - Right double quotation mark (»)
 
 
 All the characters on your keyboard should work, including stressed vowels and so on.
@@ -165,11 +213,31 @@ and then press the desired "modifier" to produce the special character.
 Some examples are given below:
 
 
-+----------------------------------------+-+----------------------------------------+-+-----------------------------------------+-+
-+:kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`~`|ã|:kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`'`|á|:kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`\``|à+
-+----------------------------------------+-+----------------------------------------+-+-----------------------------------------+-+
-+:kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`O`|å|:kbd:`E`, :kbd:`Alt-BackSpace`, :kbd:`"`|ë|:kbd:`O`, :kbd:`Alt-BackSpace`, :kbd:`/` |ø+
-+----------------------------------------+-+----------------------------------------+-+-----------------------------------------+-+
+.. list-table::
+
+   * - :kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`~`
+
+     - ã
+
+     - :kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`'`
+
+     - á
+
+     - :kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`\``
+
+     - à
+
+   * - :kbd:`A`, :kbd:`Alt-BackSpace`, :kbd:`O`
+
+     - å
+
+     - :kbd:`E`, :kbd:`Alt-BackSpace`, :kbd:`"`
+
+     - ë
+
+     - :kbd:`O`, :kbd:`Alt-BackSpace`, :kbd:`/`
+
+     - ø
 
 
 Convert text to text object
@@ -181,7 +249,7 @@ Convert text to text object
 
 
 An easy way to get text into Blender is to type it in :doc:`The Text Editor </extensions/python/text_editor>`.
-It is suggested to do this with a :doc:`split window </interface/window_system/arranging_frames#splitting_a_window>`
+It is suggested to do this with a :doc:`split window </getting_started/basics/interface/window_system/arranging_frames#splitting_a_window>`
 as you will be able to see the 3D view port and text editor at the same time.
 In the *Text Editor* select *Text > Create Text Block*. Then begin typing.
 When finished, select *Edit >> Text to 3D Object >> One Object* or *One Object per Line* depending on your needs.
@@ -192,16 +260,14 @@ which can be useful for importing large amounts of text at once.
 3D Mesh
 ^^^^^^^
 
-It is possible to convert a Text Object to a 3D Mesh object. This can be useful so that you may edit the vertices in
-FIXME(TODO: Internal Link;
-[[Edit Mode]]
-), but you will lose the ability to edit the text itself. To do this, go to
-FIXME(TODO: Internal Link;
-[[Object Mode]]
-) and select your Text Object. Press :kbd:`Alt-C` and select *Mesh From Curve/Meta/Surf/Text*. Now you can return to
-FIXME(TODO: Internal Link;
-[[Edit Mode]]
-) and manually edit the vertices. They are usually a bit messy, so it may be useful to use a *Limited Dissolve* deletion or *Remesh* Object :doc:`Modifier </modifiers>` at a low threshold to clean up your mesh.
+It is possible to convert a Text Object to a 3D Mesh object.
+This can be useful so that you may edit the vertices in *Edit Mode*,
+but you will lose the ability to edit the text itself.
+To do this, go to *Object Mode* and select your Text Object.
+Press :kbd:`Alt-C` and select *Mesh From Curve/Meta/Surf/Text*.
+Now you can return to *Edit Mode* and manually edit the vertices.
+They are usually a bit messy, so it may be useful to use a *Limited Dissolve* deletion or *Remesh* Object
+:doc:`Modifier </modifiers>` at a low threshold to clean up your mesh.
 
 
 .. figure:: /images/TextObjectFromText.jpg
@@ -270,7 +336,8 @@ as seen in *Loading a Type 1 font file.*
 .. note:: Unix note
 
    Fonts are typically located under ``/usr/lib/fonts``, or some variant like ``/usr/lib/X11/fonts``, but not always.
-   They may be in other locations as well, such as ``/usr/share/local`` or ``/usr/local/share``, and possibly related sub-trees.
+   They may be in other locations as well,
+   such as ``/usr/share/local`` or ``/usr/local/share``, and possibly related sub-trees.
 
 
 If you select a font that Blender can't understand,
@@ -308,7 +375,8 @@ Size
 
 
 Shear
-   Controls the inclination of the whole text. Even if this seems similar to italics style, *this is not the same thing* !
+   Controls the inclination of the whole text.
+   Even if this seems similar to italics style, *this is not the same thing* !
 
 
 Objects as Fonts
@@ -387,19 +455,20 @@ Character
 
 
 Bold
-   Toggled with the *Bold* button before typing. Text can also be set to Bold by selecting it then using the :kbd:`Bold` button in the Tool Shelf.
+   Toggled with the *Bold* button before typing.
+   Text can also be set to Bold by selecting it then using the :kbd:`Bold` button in the Tool Shelf.
 Italics
-   Toggled with the *Italic* button before typing. Text can also be set to Italic by selecting it then using the :kbd:`Italic` button in the Tool Shelf.
+   Toggled with the *Italic* button before typing.
+   Text can also be set to Italic by selecting it then using the :kbd:`Italic` button in the Tool Shelf.
 Underline
    Enables underlining, as controlled by the Underline settings above.
 Small Caps
    type small capital text.
 
 
-Blender's *Bold* and *Italic* buttons don't work the same way as other applications, as they also serve as placeholders for you to load up other fonts manually, which get applied when you define the corresponding style; see
-FIXME(TODO: Internal Link;
-[[#Fonts|above]]
-).
+Blender's *Bold* and *Italic* buttons don't work the same way as other applications,
+as they also serve as placeholders for you to load up other fonts manually,
+which get applied when you define the corresponding style; see `Fonts`_.
 
 To apply the Bold/Italics/Underline attribute to a set of characters, you either turn on
 *Bold* / *Italics* / *Underline* prior to typing characters,
@@ -435,15 +504,21 @@ Align
 ^^^^^
 
 Left
-   Aligns text to left of frames when using them, else uses the center point of the *Text* object as the starting point of the text (which grows to the right).
+   Aligns text to left of frames when using them,
+   else uses the center point of the *Text* object as the starting point of the text (which grows to the right).
 Center
-   Centers text in the frames when using them, else uses the center point of the *Text* object as the mid-point of the text (which grows equally to the left and right).
+   Centers text in the frames when using them,
+   else uses the center point of the *Text* object as the mid-point of the text
+   (which grows equally to the left and right).
 Right
-   Aligns text to right of frames when using them, else uses the center point of the *Text* object as the ending point of the text (which grows to the left).
+   Aligns text to right of frames when using them,
+   else uses the center point of the *Text* object as the ending point of the text (which grows to the left).
 Justify
-   Only flushes a line when it is **terminated** by a wordwrap (**not** by :kbd:`Enter`), it uses *whitespace* instead of *character spacing* (kerning) to fill lines.
+   Only flushes a line when it is **terminated** by a wordwrap (**not** by :kbd:`Enter`),
+   it uses *whitespace* instead of *character spacing* (kerning) to fill lines.
 Flush
-   **Always** flushes the line, even when it's still being entered; it uses character spacing (kerning) to fill lines.
+   **Always** flushes the line, even when it's still being entered;
+   it uses character spacing (kerning) to fill lines.
 
 Both *Justify* and *Flush* only work within frames.
 
@@ -454,7 +529,8 @@ Spacing
 Character
    A factor by which space between each character is scaled in width
 Word
-   A factor by which whitespace between words is scaled in width. You can also control it by pressing :kbd:`Alt-←` or :kbd:`Alt-→` to decrease/increase spacing by steps of **0.1**.
+   A factor by which whitespace between words is scaled in width.
+   You can also control it by pressing :kbd:`Alt-←` or :kbd:`Alt-→` to decrease/increase spacing by steps of **0.1**.
 Line
    A factor by which the vertical space between lines is scaled.
 
@@ -464,7 +540,7 @@ Offset
 
 X offset and Y offset
    Well, these settings control the X and Y offset of the text, regarding its "normal" positioning. Note that with
-   FIXME(TODO: Internal Link; [[#Text Boxes|frames]]), it applies to all frames' content...
+   frames (`Text Boxes`_), it applies to all frames' content...
 
 
 Shape

@@ -3,36 +3,58 @@
 Introduction
 ************
 
-As you have seen in the :doc:`Quick Start </your_first_animation/1.a_static_gingerbread_man>` chapter,
-the creation of a 3D scene needs at least three key things: Models, Materials and Lights.
-In this Part we will delve deeper into the first of these issues: modeling.
-Modeling is the art and science of creating a surface that mimics the shape
-of a real-world object or fits your imagination of abstract objects.
+The creation of a 3D scene needs at least three key components: Models, Materials and Lights.
+In this part, we will delve deeper into the creation of the first of these: modeling.
+Modeling is the art and science of creating a surface that either mimics the shape
+of a real-world object or expresses your imagination of abstract objects.
 
-Objects come in many forms, shapes and sizes, so Blender has many different tools available to
-help you make your model quickly and efficiently:
+There are three primary types of modeling - mesh modeling, curve/surface modeling, and meta modeling.
 
-:doc:`Objects </modeling/objects>`
-   Working with objects as a whole
-:doc:`Meshes </modeling/meshes>`
-   Working with the mesh that defines the shape of an object
-:doc:`Curves </modeling/curves>`
-   Using Curves to model and control objects
-:doc:`Surfaces </modeling/surfaces>`
-   Modeling a NURBS surface
-:doc:`Text </modeling/texts>`
-   Textual tools for putting words in 3D space
-:doc:`Meta Objects </modeling/metas>`
-   Globs and Globules
-:doc:`Duplications </modeling/objects/duplication>`
-   Duplicating Objects
-:doc:`Modeling Scripts </modeling/scripts>`
-   Since Blender functionality is extensible via Python,
-   there are a number of very useful scripts that assist you in modeling.
+:doc:`Mesh Modeling </modeling/meshes>`
+=======================================
 
-Many people use "box modeling" which starts with a basic cube,
-and proceeds with extruding faces and moving vertices to create a larger,
-more complicated mesh. For flat objects, like walls and table tops,
-you can use "curve modeling" which defines the outline using bezier or Nurbs curves,
-and then extrudes it to the desired thickness.
-Either method is fully supported in Blender using its modeling tools.
+Mesh modeling typically begins with a primitive shape (e.g. circle, cube, cylinder...).
+This :doc:`Mesh Primitive </modeling/meshes/primitives>` is defined by an array of points in 3D space called vertices
+(singular form is :term:`Vertex`). From there you might begin extruding faces and moving vertices to create a larger,
+more complex shape.
+
+:doc:`Curve </modeling/curves>` and :doc:`Surface </modeling/surfaces>` Modeling
+================================================================================
+
+:doc:`Curve modeling</modeling/curves>` uses control points to define the shape of the curve.
+
+:doc:`Surface modeling</modeling/surfaces>` is similar to curve modeling,
+but instead of being limited to simple linear paths, they allow the creation of three dimensional surfaces,
+potentially with volume.
+
+:doc:`Meta Object (Metaball) Modeling</modeling/metas>`
+=======================================================
+
+Metaball modeling begins similarly to mesh modeling, with a base shape like a cube or sphere, but instead of
+extruding these base shapes, these objects are clumped together to form a larger object. In order to accomplish this,
+the metaballs have a liquid-like quality, when two or more are brought together they merge by smoothly rounding
+out the point of connection, appearing as one unified object.
+
+This is one of the quickest ways to get started roughly modeling an object.
+The resulting figure can then be converted into a mesh for further detailing using :kbd:`Alt-C`.
+
+:doc:`Text Modeling </modeling/texts>`
+======================================
+
+Inserting text is quite common for the creation of logos, and can be seen as a special case of neither curve nor mesh
+modeling. You may define the text, font, bevel, extruded width and several other parameters
+that control generated object.
+
+:doc:`Scripted Modeling </modeling/scripts>`
+============================================
+
+Since Blender functionality is extensible via Python scripting, there are a number of very useful scripts that assist
+you in modeling. They may give you new mesh primitives to work with, or apply some fancy manipulation of the meshes
+that you are already working with.
+
+Modeling scripts are generally more advanced, but also less frequently used
+programmatic effects that can be a huge time saver in certain cases.
+
+The included :doc:`spin </modeling/meshes/editing/duplicating/spin>`
+and :doc:`screw </modeling/meshes/editing/duplicating/screw>` functions are examples of a modeling scripts that
+might otherwise take significantly more work to replicate by hand through mesh or curve modeling.

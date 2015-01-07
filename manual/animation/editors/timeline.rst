@@ -82,7 +82,8 @@ Markers are usually used to identify key parts of the animation.
 
 Markers can be selected by pressing :kbd:`RMB` or :kbd:`Shift-RMB` to select more.
 
-See :doc:`Marker Menu </animation/editors/timeline#marker_menu>` below or :doc:`Markers </animation/markers>` for more info.
+See :doc:`Marker Menu </animation/editors/timeline#marker_menu>` below or
+:doc:`Markers </animation/markers>` for more info.
 
 
 Adjusting the View
@@ -320,7 +321,9 @@ The Timeline header controls.
 
 
    When you play an animation, the FPS is displayed at the top left of the 3D View.
-   If the scene is detailed and playback is slower than the set :doc:`Frame Rate </render/output/video#dimensions_presets>`, these options are used to synchronize the playback.
+   If the scene is detailed and playback is slower than the set
+   :doc:`Frame Rate </render/output/video#dimensions_presets>`,
+   these options are used to synchronize the playback.
 
    No Sync
       Do not sync, play every frame.
@@ -349,7 +352,8 @@ The Timeline header controls.
       For example, when enabled, first set the *Time Cursor* to the desired frame,
       then move an object in the 3d view, or set a new value for a property in the UI.
 
-      When you set a new value for the properties, blender will add keyframes on the current frame for the transform properties.
+      When you set a new value for the properties,
+      blender will add keyframes on the current frame for the transform properties.
 
       *Auto Keying Set* - Optional if Auto Keyframe enabled.
          *Auto Keyframe* will insert new keyframes for the properties in the active *Keying Set*.
@@ -381,7 +385,8 @@ The Timeline header controls.
 
       They are made so the user can record multiple properties at the same time.
 
-      With a keying set selected, when you insert a keyframe, blender will add keyframes for the properties in the active *Keying Set*.
+      With a keying set selected, when you insert a keyframe,
+      blender will add keyframes for the properties in the active *Keying Set*.
 
       There are some built in keying sets, 'LocRotScale', and also custom keying sets.
 
@@ -406,7 +411,8 @@ Playback
 Keyframing
    Visual Keying
       When an object is using constraints, the objects property value doesnt actually change.
-      *Visual Keying* will add keyframes to the object property, with a value based on the visual transformation from the constraint.
+      *Visual Keying* will add keyframes to the object property,
+      with a value based on the visual transformation from the constraint.
    Only Insert Needed
       This will only insert keyframes if the value of the propery is different.
    Auto Keyframing

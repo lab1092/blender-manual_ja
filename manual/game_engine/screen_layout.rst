@@ -28,7 +28,7 @@ together with the appropriate options for game setup/debug/running
 **1) Game Logic**
 Selected from the list of screen layouts for various applications.
 This includes many already-familiar panels Information, 3D view,
-Properties  but also a new Logic Editor panel concerned solely with the BGE.
+Properties but also a new Logic Editor panel concerned solely with the BGE.
 
 
 .. figure:: /images/BGE_Game_Logic_Screen_Layout2.jpg
@@ -70,8 +70,9 @@ Auto Start
 
 **4) Logic Editor panel**
 The :doc:`Logic Editor </game_engine/logic/editor>` is where the
-:doc:`logic, properties and states </game_engine/logic>` are set up to control the behaviour of the objects in the game.
-(The Logic Editor panel can also be  displayed by selecting Logic Editor in the Display Editor menu,
+:doc:`logic, properties and states </game_engine/logic>` are set up to control the behaviour of
+the objects in the game.
+(The Logic Editor panel can also be displayed by selecting Logic Editor in the Display Editor menu,
 by pressing :kbd:`Shift-F2`, or by pressing :kbd:`Ctrl-Right`).
 
 

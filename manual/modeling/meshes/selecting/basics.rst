@@ -71,16 +71,31 @@ is available in both *Edit mode* and *Object* mode.
 Rectangular region (Border select)
 ----------------------------------
 
-*Border Select* is available in either *Edit mode* or *Object* mode. To activate the tool use the :kbd:`B`. Use *Border Select* to select a group of objects by drawing a rectangle while holding down :kbd:`LMB`. In doing this you will select all objects that lie within or touch this rectangle. If any object that was last active appears in the group it will become selected *and* active.
+*Border Select* is available in either *Edit mode* or *Object* mode. To activate the tool use the :kbd:`B`.
+Use *Border Select* to select a group of objects by drawing a rectangle while holding down :kbd:`LMB`.
+In doing this you will select all objects that lie within or touch this rectangle.
+If any object that was last active appears in the group it will become selected *and* active.
 
 
-+-------------------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------+
-+.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect1.jpg|.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect2.jpg|.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect3.jpg+
-+   :width: 200px                                                         |   :width: 200px                                                         |   :width: 200px                                                         +
-+   :figwidth: 200px                                                      |   :figwidth: 200px                                                      |   :figwidth: 200px                                                      +
-+                                                                         |                                                                         |                                                                         +
-+   Start                                                                 |   Selecting                                                             |   Complete                                                              +
-+-------------------------------------------------------------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect1.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Start
+
+     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect2.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Selecting
+
+     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect3.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Complete
 
 
 In (*Start*), *Border Select* has been activated and is indicated by showing a
@@ -111,15 +126,21 @@ You can enlarge or shrink the circle region using :kbd:`Numpad+` and :kbd:`Numpa
 or the :kbd:`Wheel`.
 
 
-+---------------------------------------------------------------------------+---------------------------------------------------------------------------+
-+.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Circularselect1.jpg|.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Circularselect2.jpg+
-+   :width: 300px                                                           |   :width: 300px                                                           +
-+   :figwidth: 300px                                                        |   :figwidth: 300px                                                        +
-+                                                                           |                                                                           +
-+   Before                                                                  |   After                                                                   +
-+---------------------------------------------------------------------------+---------------------------------------------------------------------------+
-+Circle Region Select                                                                                                                                   +
-+---------------------------------------------------------------------------+---------------------------------------------------------------------------+
+.. list-table::
+   Circle Region Select
+
+   * - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Circularselect1.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Before
+
+     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Circularselect2.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          After
+
 
 (*Circle Region Select*) is an example of selecting edges while in *Edge Select Mode*.
 As soon as an edge intersects the circle the edge becomes selected.
@@ -149,15 +170,27 @@ The one difference between *Lasso* and *Border* select is that in *Object mode*,
 To deselect, use :kbd:`Ctrl-Shift-LMB` while dragging.
 
 
-+------------------------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+
-+.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect1.jpg|.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect2.jpg|.. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect3.jpg+
-+   :width: 200px                                                        |   :width: 200px                                                        |   :width: 200px                                                        +
-+   :figwidth: 200px                                                     |   :figwidth: 200px                                                     |   :figwidth: 200px                                                     +
-+                                                                        |                                                                        |                                                                        +
-+   Start                                                                |   Selecting                                                            |   Complete                                                             +
-+------------------------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+
-+Lasso selection                                                                                                                                                                                                           +
-+------------------------------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+
+.. list-table::
+   Lasso selection
+
+   * - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect1.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Start
+
+     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect2.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Selecting
+
+     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect3.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Complete
+
 
 (*Lasso selection*) is an example of using the *Lasso* select tool in *Vertex Select Mode*.
 

@@ -29,3 +29,4 @@
    posing/constraints.rst
    posing/inverse_kinematics.rst
    posing/inverse_kinematics/spline_ik.rst
+   constraints/index.rst

@@ -7,13 +7,11 @@ When in *Edit* mode, the *Active Element* panel appears.
 These settings apply only to the selected meta element.
 
 
-+----------------------------------------------+
-+.. figure:: /images/MetaPropertiesEditMode.jpg+
-+   :width: 300px                              +
-+   :figwidth: 300px                           +
-+                                              +
-+   the active element panel.                  +
-+----------------------------------------------+
+.. figure:: /images/MetaPropertiesEditMode.jpg
+   :width: 300px
+   :figwidth: 300px
+
+   the active element panel.
 
 
 Meta Shape
@@ -27,7 +25,7 @@ Stiffness
 
 Together with *Threshold*, *Stiffness* controls the influencing range.
 While the threshold is common to all metas in the same object (or even the same
-FIXME(TODO: Internal Link; [[#Object Family|object family]])),
+`Object Family`_),
 the stiffness is specific to each meta.
 
 Scaling the inner green circle changes the *Stiffness* value.
@@ -40,11 +38,7 @@ When a *Meta* object comes within "range" of another meta,
 the two will begin to interact with each other. They don't necessarily need to intersect,
 and depending on the *Threshold* and *Stiffness* settings,
 they most likely won't need to.
-*Stiffness* is materialized by the
-*FIXME(Tag Unsupported:span;
-<span style="color:
-lightgreen;">green ring</span>
-)*.
+*Stiffness* is materialized by the *green ring*
 
 
 The range is from **0.0** to **10.0**. But to be visible,
@@ -62,11 +56,7 @@ select it and activate *Scale* mode with :kbd:`S`.
 
 In (*Stiffness*), the meta ball labeled "\ ``A`` ",
 has a smaller *Stiffness* value than the one labeled "\ ``B`` ".
-As you can see, the
-*FIXME(Tag Unsupported:span;
-<span style="color:
-lightgreen;">green ring</span>
-)* radius is different for each of them.
+As you can see, the *green ring* radius is different for each of them.
 
 
 Negative Influence

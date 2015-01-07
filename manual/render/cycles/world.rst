@@ -40,7 +40,7 @@ Currently this is most useful for night time or other dark scenes,
 as the world surface shader or sun lamps will have no effect if a volume shader is used.
 This is because the world background is assumed to be infinitely far away,
 which is accurate enough for the sun for example.
-However for modelling effects such as fog or atmospheric scattering,
+However for modeling effects such as fog or atmospheric scattering,
 it is not a good assumption that the volume fills the entire space,
 as most of the distance between the sun and the earth is empty space.
 For such effects it is be better to create a volume object surrounding the scene.
@@ -90,11 +90,15 @@ Below is a comparison between Multiple Importance Sample Off and On - both image
 25 seconds (Off: 1500 samples, On: 1000 samples)
 
 
-+---------------------------------------------+--------------------------------------------+
-+.. figure:: /images/Manual-Cycles-MIS-Off.jpg|.. figure:: /images/Manual-Cycles-MIS-On.jpg+
-+                                             |                                            +
-+   Multiple Importance Sample Off            |   Multiple Importance Sample On            +
-+---------------------------------------------+--------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Manual-Cycles-MIS-Off.jpg
+
+          Multiple Importance Sample Off
+
+     - .. figure:: /images/Manual-Cycles-MIS-On.jpg
+
+          Multiple Importance Sample On
 
 
 Ray Visibility

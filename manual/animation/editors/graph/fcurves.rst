@@ -26,7 +26,8 @@ As animation is composed of incremental changes spanning multiple frames,
 usually these properties ARE NOT manually modified *frame by frame*, because:
 
 - it would take ages!
-- it would be very difficult to get smooth variations of the property (unless you compute mathematical functions and type a precise value for each frame, which would be crazy).
+- it would be very difficult to get smooth variations of the property
+  (unless you compute mathematical functions and type a precise value for each frame, which would be crazy).
 
 This is why nearly all direct animation is done using **interpolation**.
 
@@ -83,7 +84,9 @@ Constant
 
 
 Linear
-   This simple interpolation creates a straight segment between each neighbor keyframes, giving a broken line. It can be useful when using only two keyframes and the *Extrapolation* extend mode, to easily get an infinite straight line (i.e. a linear curve).
+   This simple interpolation creates a straight segment between each neighbor keyframes, giving a broken line.
+   It can be useful when using only two keyframes and the *Extrapolation* extend mode,
+   to easily get an infinite straight line (i.e. a linear curve).
 
 
 .. figure:: /images/Doc26-fcurve-linear.jpg
@@ -94,7 +97,8 @@ Linear
 
 
 Bezier
-   The more powerful and useful interpolation, and the default one. It gives nicely smoothed curves, i.e. smooth animations!
+   The more powerful and useful interpolation, and the default one.
+   It gives nicely smoothed curves, i.e. smooth animations!
 
 
 .. figure:: /images/Doc26-fcurve-clean1.jpg
@@ -118,7 +122,8 @@ Extrapolation defines the behavior of a curve before the first and after the las
 There are two basic extrapolation modes:
 
 Constant
-   The default one, curves before their first keyframe and after their last one have a constant value (the one of these first and last keyframes).
+   The default one, curves before their first keyframe and after their last one have a constant value
+   (the one of these first and last keyframes).
 
 
 .. figure:: /images/Doc26-fcurve-extrapolate1.jpg
@@ -129,7 +134,8 @@ Constant
 
 
 Linear
-   Curves ends are straight lines (linear), as defined by their first two keyframes (respectively their last two keyframes).
+   Curves ends are straight lines (linear), as defined by their first two keyframes
+   (respectively their last two keyframes).
 
 
 .. figure:: /images/Doc26-fcurve-extrapolate2.jpg
@@ -139,7 +145,8 @@ Linear
    Linear extrapolation
 
 
-Additional extrapolation tools (e.g. the "Cycles" F-Modifier) are located in the :doc:`F-Curve Modifiers </animation/editors/fmodifiers>`
+Additional extrapolation tools (e.g. the "Cycles" F-Modifier)
+are located in the :doc:`F-Curve Modifiers </animation/editors/fmodifiers>`
 
 
 Handle Types
@@ -160,7 +167,8 @@ Automatic
 
 
 Vector
-   Creates linear interpolation between keyframes. The linear segments remain if keyframe centers are moved. If handles are moved, the handle becomes Free.
+   Creates linear interpolation between keyframes.
+   The linear segments remain if keyframe centers are moved. If handles are moved, the handle becomes Free.
 
 
 .. figure:: /images/Doc26-fcurve-vector.jpg
@@ -206,23 +214,28 @@ Auto Clamped
 Direction of time
 =================
 
-Although F-curves are very similar to :doc:`Bézier curves </modeling/curves#béziers>`, there are some important differences.
+Although F-curves are very similar to :doc:`Bézier curves </modeling/curves#béziers>`,
+there are some important differences.
 
 For obvious reasons,
 **a property represented by a Curve cannot have more than one value at a given time**,
 hence:
 
 
-- when you move a control point ahead of a control point that was previously ahead of the point that you are moving, the two control points switch their order in the edited curve, to avoid that the curve goes back in time
+- when you move a control point ahead of a control point that was previously ahead of the point that you are moving,
+  the two control points switch their order in the edited curve, to avoid that the curve goes back in time
 - for the above reason, it's impossible to have a closed Ipo curve
 
 
-+------------------------------------------------------------------+----------------------------------------------------------+
-+**Two control points switching: the curve can't go back in time!**                                                           +
-+------------------------------------------------------------------+----------------------------------------------------------+
-+.. figure:: /images/Manual-Animation-F-Curves-Moving-1.jpg        |.. figure:: /images/Manual-Animation-F-Curves-Moving-2.jpg+
-+                                                                  |                                                          +
-+   Before moving the second keyframe                              |   After moving the second keyframe                       +
-+------------------------------------------------------------------+----------------------------------------------------------+
+.. list-table::
+   Two control points switching: the curve can't go back in time!
+
+   * - .. figure:: /images/Manual-Animation-F-Curves-Moving-1.jpg
+
+          Before moving the second keyframe
+
+     - .. figure:: /images/Manual-Animation-F-Curves-Moving-2.jpg
+
+          After moving the second keyframe
 
 

@@ -15,7 +15,8 @@ Emphasizing the distinction between a GameEngine,
 Logical or Render object and its representation for the Physics Engine is important.
 
 To simulate a vehicle as a true rigid body, on top of also rigid body wheels, with a real suspension system made with
-joints, would be far too complicated and unstable. Cars and other vehicles are complicated mechanical devices and most
+joints, would be far too complicated and unstable.
+Cars and other vehicles are complicated mechanical devices and most
 often we do not want to simulate that, only that it 'acts as expected'. The Vehicle Controller exists to provide a
 dedicated way of simulating a vehicle behavior without having to simulate all the physics that would actually happen
 in the real world. It abstracts the complexity away by providing a simple interface with tweakable parameters such as
@@ -26,12 +27,13 @@ How it works
 ============
 
 Bullet's approach to a vehicle controller is called a "Raycast Vehicle".
-Collision detection for the wheels is approximated by ray casts and the tire friction is an  anisotropic friction model.
+Collision detection for the wheels is approximated
+by ray casts and the tire friction is an anisotropic friction model.
 
 A raycast vehicle works by casting a ray for each wheel.
 Using the ray's intersection point,
 we can calculate the suspension length and hence the suspension force that is then applied to the chassis,
-keeping it from hitting the ground.  In effect, the vehicle chassis 'floats' along on the rays.
+keeping it from hitting the ground. In effect, the vehicle chassis 'floats' along on the rays.
 
 The friction force is calculated for each wheel where the ray contacts the ground.
 This is applied as a sideways and forwards force.
@@ -75,10 +77,10 @@ Assembling the Vehicle
 ^^^^^^^^^^^^^^^^^^^^^^
 The overall steps are:
 
-* create a constraint for the vehicle and save its ID for future reference
-* attach the wheels
-* set wheel parameters: influence, stiffness, damping, compression and friction
-* init variables
+- create a constraint for the vehicle and save its ID for future reference
+- attach the wheels
+- set wheel parameters: influence, stiffness, damping, compression and friction
+- init variables
 
 You can see an example in the file below.
 
@@ -94,7 +96,7 @@ Whenever the player presses a key, you should set a value accordingly, such as i
 .. code-block:: python
 
     if key[0] == events.UPARROWKEY:
-        logic.car["force"]  = -15.0
+        logic.car["force"] = -15.0
     elif key[0] == events.RIGHTARROWKEY:
         logic.car["steer"] -= 0.05
 

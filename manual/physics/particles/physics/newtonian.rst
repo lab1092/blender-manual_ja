@@ -19,9 +19,12 @@ Forces
 
 
 Brownian
-   Specify the amount of Brownian motion. Brownian motion adds random motion to the particles based on a Brownian noise field. This is nice to simulate small, random wind forces.
+   Specify the amount of Brownian motion.
+   Brownian motion adds random motion to the particles based on a Brownian noise field.
+   This is nice to simulate small, random wind forces.
 Drag
-   A force that reduces particle velocity in relation to it's speed and size (useful in order to simulate Air-Drag or Water-Drag).
+   A force that reduces particle velocity in relation to it's speed and size
+   (useful in order to simulate Air-Drag or Water-Drag).
 Damp
    Reduces particle velocity (deceleration, friction, dampening).
 
@@ -55,17 +58,20 @@ Euler
    Use this integrator for short simulations or simulations with a lot of
    dampening where speedy calculations is more important than accuracy.
 Varlet
-   Very fast and stable integrator, energy is conserved over time with very little numerical dissipation.                                                                                                                                                                                                                                                                                                                                                                                                                                         +
+   Very fast and stable integrator, energy is conserved over time with very little numerical dissipation.
+   +
 Midpoint
    Also known as "2nd order Runge-Kutta". Slower than Euler but much more stable.
    If the acceleration is constant (no drag for example), it is energy conservative.
    It should be noted that in example of the bouncing particles,
    the particles might bounce higher than they started once in a while, but this is not a trend.
-   This integrator is a generally good integrator for use in most cases.                                                                                                                                             +
+   This integrator is a generally good integrator for use in most cases.
+   +
 RK4
    Short for "4th order Runge-Kutta". Similar to Midpoint but slower and in most cases more accurate.
    It is energy conservative even if the acceleration is not constant.
-   Only needed in complex simulations where Midpoint is found not to be accurate enough.                                                                                                                                                                                                                                                                                   +
+   Only needed in complex simulations where Midpoint is found not to be accurate enough.
+   +
 
 
 Timestep

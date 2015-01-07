@@ -6,13 +6,19 @@ Triangulate Modifier
 The Triangulate modifier converts all faces in a mesh (whether it be quads or N-gons) to triangular faces.
 This modifier does the exact same function as the triangulate function (:kbd:`Ctrl-T`) in Edit Mode.
 
-+-------------------------------------------+------------------------------------------+
-+.. figure:: /images/Triangulate-before.jpg |.. figure:: /images/Triangulate-after.jpg +
-+   :width: 300px                           |   :width: 300px                          +
-+   :figwidth: 300px                        |   :figwidth: 300px                       +
-+                                           |                                          +
-+   Mesh before Triangulate Modifier        |   Mesh after Triangulate Modifier        +
-+-------------------------------------------+------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/Triangulate-before.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Mesh before Triangulate Modifier
+
+     - .. figure:: /images/Triangulate-after.jpg
+          :width: 300px
+          :figwidth: 300px
+
+          Mesh after Triangulate Modifier
 
 
 Options

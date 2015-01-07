@@ -19,7 +19,7 @@ The *Action Editor* window enables you to see and edit the FCurve datablocks you
 Hence, you do not have to use them for simple Ipo curves animations - and they have not much interest in themselves,
 so you will mostly use this window when you do :doc:`NLA animation </animation/editors/nla>`
 (they do have a few specific usages on their own,
-though, like e.g. with the :doc:`Action constraint </constraints/relationship/action>`,
+though, like e.g. with the :doc:`Action constraint </rigging/constraints/relationship/action>`,
 or the :doc:`pose libraries </rigging/posing/pose_library>`).
 
 This is not a mandatory window, as you do can edit the actions used by the NLA directly in the

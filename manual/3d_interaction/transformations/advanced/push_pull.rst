@@ -19,7 +19,10 @@ Description
    Push/Pull distance.
 
 
-*Push/Pull* will move the selected elements (Objects, vertices, edges or faces) closer together (Push) or further apart (Pull). Specifically, each element is moved towards or away from the center by the same distance. This distance is controlled by moving the mouse up (Push) or down (Pull), numeric input or through slider control.
+*Push/Pull* will move the selected elements (Objects, vertices, edges or faces)
+closer together (Push) or further apart (Pull).
+Specifically, each element is moved towards or away from the center by the same distance.
+This distance is controlled by moving the mouse up (Push) or down (Pull), numeric input or through slider control.
 
 
 Usage

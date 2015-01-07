@@ -1,5 +1,6 @@
 
-..    TODO/Review: {{review|partial=X|text=Just started. If you have any suggestions, please add them in the discussion page. Thank you.}} .
+..    TODO/Review: {{review|partial=X|text=Just started.
+      If you have any suggestions, please add them in the discussion page. Thank you.}} .
 
 
 ****************************
@@ -13,13 +14,11 @@ This page exists for two reasons.
 - And most importantly teach inside of Blender's Console, so you can learn in context.
 - See
 
-FIXME(TODO: Internal Link;
-[[#External links|External links]]
-) below
+`External links`_ below
 
 
 What is Programming?
-********************
+====================
 
 Programming in simple terms is nothing more than manipulating data.
 Operations on the data either modifies it, or create new data.
@@ -37,9 +36,9 @@ operations that work with that data.
 
 
 What is Python?
-***************
+===============
 
-`Python  <http://www.python.org>`__ is an interpreted, interactive, object-oriented programming language.
+`Python <http://www.python.org>`__ is an interpreted, interactive, object-oriented programming language.
 It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes.
 Python combines remarkable power with very clear syntax.
 
@@ -47,7 +46,7 @@ Learning Python is also very easy, even if you have never programmed before.
 
 
 Python Interpreter
-******************
+==================
 
 All the exercises in this tutorial will be using the built-in Console window type in Blender,
 which has a Python 3.x interpreter embedded in it.
@@ -66,7 +65,7 @@ expressions and statements at the interpreter prompt **>>>**
 
 
 Hello World
-***********
+===========
 
 Let's get started with the classical "Hello World" program.
 
@@ -83,7 +82,7 @@ Let's break down the above statement.
 - ``print("Hello World")`` outputs *Hello World* to the console.
 
 Exercise
-========
+--------
 
 Type the following commands and check the output
 
@@ -109,21 +108,16 @@ By doing so we are repeating the string by the count specified by *number*
 
 
 External links
-**************
+==============
 
 Webpages
-========
+--------
 
 - http://www.sthurlow.com/python/
 
 
 Video Tutorials
-===============
+---------------
 
-- If you want to learn Python programming in general, have a look at this tutorials
-
-FIXME(Tag Unsupported:playlist;
-<playlist>EA1FEF17E1E5C0DA</playlist>
-)
-
-
+- If you want to learn Python programming in general, have a look at
+  `these tutorials <https://www.youtube.com/watch?list=PLEA1FEF17E1E5C0DA&v=4Mf0h3HphEA>`__.

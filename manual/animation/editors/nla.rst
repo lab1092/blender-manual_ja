@@ -11,7 +11,7 @@
 Non-Linear Animation Editor
 ***************************
 
-The NLA editor can manipulate and repurpose actions,  without the tedium of keyframe handling.
+The NLA editor can manipulate and repurpose actions, without the tedium of keyframe handling.
 Its often used to make broad, significant changes to a scene's animation, with relative ease.
 It can also repurpose, and 'layer' actions, which make it easier to organize,
 and version-control your animation.
@@ -20,8 +20,8 @@ and version-control your animation.
 Tracks
 ======
 
-Tracks are the layering system of the NLA.  At its most basic level,
-it can help organize strips.  But it also
+Tracks are the layering system of the NLA. At its most basic level,
+it can help organize strips. But it also
 layers motion much like an image editor layers pixels - the bottom layer first, to the top,
 last.
 
@@ -41,12 +41,12 @@ and Meta will group strips together as a whole.
 Creating Action Strips
 ----------------------
 
-Any action used by the NLA first must be turned into an Action strip.  This is done so by clicking the
+Any action used by the NLA first must be turned into an Action strip. This is done so by clicking the
 
 .. figure:: /images/NLA_Snowflake.jpg
 
 
- next to the action listed in the NLA.  Alternatively, you can go to
+ next to the action listed in the NLA. Alternatively, you can go to
 
 .. admonition:: Reference
    :class: refbox
@@ -92,13 +92,20 @@ A meta strip can be moved and duplicated like a normal strip.
    | Hotkey:   :kbd:`Shift-G`
 
 
-+------------------------------------------+------------------------------------------+
-+.. figure:: /images/NLA_meta_strips_01.jpg|.. figure:: /images/NLA_meta_strips_02.jpg+
-+   :width: 200px                          |   :width: 200px                          +
-+   :figwidth: 200px                       |   :figwidth: 200px                       +
-+                                          |                                          +
-+   Shift-select two or more strips..      |   Combine them into a meta strip.        +
-+------------------------------------------+------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/NLA_meta_strips_01.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Shift-select two or more strips..
+
+     - .. figure:: /images/NLA_meta_strips_02.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Combine them into a meta strip.
+
 
 A meta strip still contains the underlying strips. You can ungroup a Meta strip.
 
@@ -122,17 +129,23 @@ The contents of Action strips can be edited, but you must be in 'Tweak Mode' to 
    | Hotkey:   :kbd:`Tab`
 
 
-+------------------------------------------+------------------------------------------+
-+.. figure:: /images/NLA_strip_NLA_Mode.jpg|.. figure:: /images/NLA_strip_EditMode.jpg+
-+   :width: 200px                          |   :width: 200px                          +
-+   :figwidth: 200px                       |   :figwidth: 200px                       +
-+                                          |                                          +
-+   Strip in NLA mode..                    |   Strip in Tweak mode.                   +
-+------------------------------------------+------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/NLA_strip_NLA_Mode.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Strip in NLA mode..
+
+     - .. figure:: /images/NLA_strip_EditMode.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Strip in Tweak mode.
 
 
 If you try moving the strip, while in edit mode,
-you'll notice that the keys will go along with it.  On occasion,
+you'll notice that the keys will go along with it. On occasion,
 you'll prefer the keys to remain on their original frames, regardless of where the strip is.
 To do so, hit the 'unpin' icon, next to the strip.
 
@@ -164,7 +177,7 @@ Note the default key for this is Tab.
 Re-Instancing Strips
 ====================
 
-The contents' of one Action strip can be instanced multiple times.  To instance another strip,
+The contents' of one Action strip can be instanced multiple times. To instance another strip,
 select
 a strip, go to
 
@@ -178,13 +191,25 @@ Now, when any strip is tweaked, the others will change too.
 If a strip other than the original is tweaked,
 the original will turn to red.
 
-+------------------------------------------+--------------------------------------------+---------------------------------------------------+
-+.. figure:: /images/NLA_original_strip.jpg|.. figure:: /images/NLA_linked_duplicate.jpg|.. figure:: /images/NLA_linked_duplicate_edited.jpg+
-+   :width: 200px                          |   :width: 200px                            |   :width: 200px                                   +
-+   :figwidth: 200px                       |   :figwidth: 200px                         |   :figwidth: 200px                                +
-+                                          |                                            |                                                   +
-+   Original strip.                        |   Duplicated strip.                        |   Duplicated strip being edited.                  +
-+------------------------------------------+--------------------------------------------+---------------------------------------------------+
+.. list-table::
+
+   * - .. figure:: /images/NLA_original_strip.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Original strip.
+
+     - .. figure:: /images/NLA_linked_duplicate.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Duplicated strip.
+
+     - .. figure:: /images/NLA_linked_duplicate_edited.jpg
+          :width: 200px
+          :figwidth: 200px
+
+          Duplicated strip being edited.
 
 
 Strip Properties
@@ -219,8 +244,8 @@ This is which track the strip currently belongs to.
 Active Strip
 ------------
 
-Elements of the strip itself.  An Action Strip can be either an Action Clip,
-or a Transition Clip.  Note that the 'Strip Extents' fields determine strictly the strip,
+Elements of the strip itself. An Action Strip can be either an Action Clip,
+or a Transition Clip. Note that the 'Strip Extents' fields determine strictly the strip,
 and not the action.
 Also, the "Hold" value in the Extrapolation section means hold both beginning, and after.
 This can cause
@@ -233,7 +258,7 @@ previous clips to not work, if checked.
 Active Action
 -------------
 
-This represents the 'object data' of the strip.  Much like the transform values of an object.
+This represents the 'object data' of the strip. Much like the transform values of an object.
 
 
 .. figure:: /images/ActionClip.jpg

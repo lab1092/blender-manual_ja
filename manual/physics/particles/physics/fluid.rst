@@ -26,7 +26,8 @@ From liquids to slime, goo to sand and wispy smoke the possibilities are endless
 Settings
 ********
 
-Fluid physics share options with :doc:`Newtonian Physics </physics/particles/physics/newtonian>`. These are covered on that page.
+Fluid physics share options with :doc:`Newtonian Physics </physics/particles/physics/newtonian>`.
+These are covered on that page.
 
 
 Fluid Properties
@@ -44,7 +45,8 @@ Advanced
 ========
 
 Repulsion Factor
-   How strongly the fluid tries to keep from clustering (factor of stiffness). Check box sets repulsion as a factor of stiffness.
+   How strongly the fluid tries to keep from clustering (factor of stiffness).
+   Check box sets repulsion as a factor of stiffness.
 Stiff Viscosity
    Creates viscosity for expanding fluid. Check box sets this to be a factor of normal viscosity.
 Interaction Radius

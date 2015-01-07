@@ -12,7 +12,7 @@ Actuator Editing
 
 Blender actuators can be set up and edited in the right-hand column of the Logic Panel.
 This page describes the general column controls,
-and also those parameters  which are common to all individual actuator types.
+and also those parameters which are common to all individual actuator types.
 
 The image shows a typical actuator column with a single example actuator.
 At the top of this column, the column heading includes menus and buttons to control which of
@@ -35,28 +35,26 @@ necessary ones are visible and easier to reach. Both these can be controlled ind
 
 **Actuators**
 
-+----------------+----------------------------------------------------+
-+*Show Objects*  |Expands all objects.                                +
-+----------------+----------------------------------------------------+
-+*Hide Objects*  |Collapses all objects to just a bar with their name.+
-+----------------+----------------------------------------------------+
-+*Show Actuators*|Expands all actuators.                              +
-+----------------+----------------------------------------------------+
-+*Hide Actuators*|Collapses all actuators to bars with their names.   +
-+----------------+----------------------------------------------------+
+Show Objects
+   Expands all objects.
+Hide Objects
+   Collapses all objects to just a bar with their name.
+Show Actuators
+   Expands all actuators.
+Hide Actuators
+   Collapses all actuators to bars with their names.
 
 
 It is also possible to filter which actuators are viewed using the four heading buttons:
 
-+-------+----------------------------------------------------------------------+
-+*Sel*  |Shows all actuators for selected objects.                             +
-+-------+----------------------------------------------------------------------+
-+*Act*  |Shows only  actuators belonging to the active object.                 +
-+-------+----------------------------------------------------------------------+
-+*Link* |Shows actuators which have a link to a controller.                    +
-+-------+----------------------------------------------------------------------+
-+*State*|Only actuators connected to a controller with active states are shown.+
-+-------+----------------------------------------------------------------------+
+Sel
+   Shows all actuators for selected objects.
+Act
+   Shows only actuators belonging to the active object.
+Link
+   Shows actuators which have a link to a controller.
+State
+   Only actuators connected to a controller with active states are shown.
 
 
 Object Heading

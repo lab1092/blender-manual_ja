@@ -35,7 +35,7 @@ followed by **+** button to create new files. To remove the text block,
 click the **X** button.
 
 The following three buttons toggle display of line numbers,
-word-wrap text and syntax  highlighting respectively.
+word-wrap text and syntax highlighting respectively.
 
 Typing on the keyboard produces text in the text buffer. As usual,
 pressing dragging and releasing :kbd:`LMB` selects text.
@@ -71,8 +71,8 @@ can access them through the *Text* → *Text Plugins* menu entry.
 Other usages for the Text window
 ================================
 
-The text window is handy also when you want to share your .
-blend files with the community or with your friends. A Text window can be used to write in a
+The text window is handy also when you want to share your ``.blend`` files with the community or with your friends.
+A Text window can be used to write in a
 README text explaining the contents of your blender file.
 Much more handy than having it on a separate application. Be sure to keep it visible when
 saving! If you are sharing the file with the community and you want to share it under some

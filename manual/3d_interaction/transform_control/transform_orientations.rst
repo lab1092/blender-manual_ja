@@ -37,7 +37,8 @@ since it is at the bottom of the view by default),
 or with :kbd:`Alt-Space` or through the *Orientation* menu in a 3D view header.
 
 
-In addition to the four built-in options, you can define your own custom orientation (see `Custom Orientations`_ below).
+In addition to the four built-in options,
+you can define your own custom orientation (see `Custom Orientations`_ below).
 
 
 Our Demo Cube
@@ -140,7 +141,7 @@ the same movement---except along that second vertex's normal instead.
 Gimbal
 ------
 
-Gimbal's behavior highly depends on the :doc:`Rotation Mode </basics/transformations/rotate>`
+Gimbal's behavior highly depends on the :doc:`Rotation Mode </getting_started/basics/transformations/rotate>`
 that you are in (accessible in the :kbd:`N` Properties Panel in the *3D View*,
 in top section, *Transform*).
 
@@ -173,7 +174,8 @@ Z → Towards/Away from you.
 This way you can constrain movement to one View axis with :kbd:`G-X-X`.
 
 
-..    Comment: <!--[[File:Manual-3D_interaction-Transform_Control-Transform_Orientations-06.Foozle.png|frame|right|Custom Orientations.]]
+..    Comment: <!--[[File:Manual-3D_interaction-Transform_Control-Transform_Orientations-06.Foozle.png|
+                    frame|right|Custom Orientations.]]
    Custom Orientations
    :(See below, [[#Custom_Orientations|Custom Orientations]]).--> .
 

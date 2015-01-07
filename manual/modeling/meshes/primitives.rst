@@ -65,11 +65,13 @@ specified in the context panel in the *Tool Shelf* which appears when the circle
 created.
 
 Vertices
-   The number of vertices that define the circle. The more vertices the circle contains, the smoother its contour will be; see (*"Circles" obtained with various settings*).  In contrast, a circle with only 3 vertices is actually a triangle — the circle is actually the standard way of adding polygons such as triangles, pentagons, et cetera.
-
+   The number of vertices that define the circle.
+   The more vertices the circle contains, the smoother its contour will be;
+   see (*"Circles" obtained with various settings*).
+   In contrast, a circle with only 3 vertices is actually a triangle —
+   the circle is actually the standard way of adding polygons such as triangles, pentagons, et cetera.
 Radius
    Sets the radius of the circle.
-
 Fill Type
    Set how the circle will be filled
 
@@ -97,7 +99,9 @@ Rings
 
 .. note::
 
-   If you specify a six segment, six ring UVsphere you'll get something which, in top view, is a hexagon (six segments), with five rings plus two points at the poles. Thus, one ring fewer than expected, or one more, if you count the poles as rings of radius 0.
+   If you specify a six segment, six ring UVsphere you'll get something which, in top view,
+   is a hexagon (six segments), with five rings plus two points at the poles.
+   Thus, one ring fewer than expected, or one more, if you count the poles as rings of radius 0.
 
 
 Icosphere
@@ -105,11 +109,15 @@ Icosphere
 
 An icosphere is a polyhedra sphere made up of triangles. The number of subdivisions and radius
 can be specified in the context panel in the *Tool Shelf* after the Icosphere is
-created.  Icospheres are normally used to achieve a more isotropical and economical layout of
+created. Icospheres are normally used to achieve a more isotropical and economical layout of
 vertices than a UV sphere.
 
 Subdivisions
-   How many recursions are used to define the sphere. Increasing the number of subdivisions makes the surface of the Icosphere smoother. At level 1 the Icosphere is an icosahedron, a solid with 20 equilateral triangular faces. Any increasing level of subdivision splits each triangular face into four triangles, resulting in a more spherical appearance.
+   How many recursions are used to define the sphere.
+   Increasing the number of subdivisions makes the surface of the Icosphere smoother.
+   At level 1 the Icosphere is an icosahedron, a solid with 20 equilateral triangular faces.
+   Any increasing level of subdivision splits each triangular face into four triangles,
+   resulting in a more spherical appearance.
 
 Size
    The radius of the sphere.
@@ -117,7 +125,9 @@ Size
 
 .. note::
 
-   It is possible to add an icosphere subdivided 500 times. Adding such a dense mesh is a sure way to cause a program crash. An icosphere subdivided 10 times would have 5,242,880 triangles, so be very careful about this!
+   It is possible to add an icosphere subdivided 500 times.
+   Adding such a dense mesh is a sure way to cause a program crash.
+   An icosphere subdivided 10 times would have 5,242,880 triangles, so be very careful about this!
 
 
 Cylinder
@@ -204,13 +214,13 @@ the object is created; the higher the resolution, the more vertices are created.
 Example objects that can be created out of grids include landscapes
 (with the proportional editing tool or *Displace* modifier)
 and other organic surfaces. You can also obtain a grid when you create a plane and then use a
-subdivide modifier in *Edit mode*.  However,
+subdivide modifier in *Edit mode*. However,
 there is a *Landscape* add-on available in the *User Preferences*.
 
 X Subdivisions
-   The number of spans in the x  direction. Minimum of 3, creating two face loops.
+   The number of spans in the x direction. Minimum of 3, creating two face loops.
 Y Subdivisions
-   The number of spans in the y  direction.
+   The number of spans in the y direction.
 Size
    The length of the sides of the grid.
 
@@ -237,12 +247,12 @@ Add-ons
 
 
 In addition to the basic geometric primitives, Blender has a constantly increasing number of
-script generated meshes to offer as pre-installed add-ons.  These become available when
+script generated meshes to offer as pre-installed add-ons. These become available when
 enabled in the *User Preferences* ' *Add-ons* section
-(filter by *Add Mesh*).  Only a few are mentioned here:
+(filter by *Add Mesh*). Only a few are mentioned here:
 
 `Landscape <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/ANT Landscape>`__
-   Adds a landscape primitive.  Many parameters and filters appear in the *Tool Shelf*.
+   Adds a landscape primitive. Many parameters and filters appear in the *Tool Shelf*.
 
 `Pipe Joints <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Add Mesh/Add Pipe Joints>`__
    Adds one of five different pipe joint primitives.
