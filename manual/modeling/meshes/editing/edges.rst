@@ -1,9 +1,12 @@
 
 ..    TODO/Review: {{review|}} .
 
-**************
+*****
+Edges
+*****
+
 Make Edge/Face
-**************
+==============
 
 .. admonition:: Reference
    :class: refbox
@@ -15,18 +18,18 @@ Make Edge/Face
 
 It will create an edge or some faces, depending on your selection.
 We have already discussed this tool in the
-:doc:`editing basics page </modeling/meshes/editing/basics#edge_and_face_creation>`.
+:doc:`editing basics page </modeling/meshes/editing/basics/introduction#edge_and_face_creation>`.
 
 
 Set Edge Attributes
-*******************
+===================
 
 Edges can have several different attributes that affect how certain other tools affect the
 mesh.
 
 
 Mark Seam and Clear Seam
-========================
+------------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -42,7 +45,7 @@ These commands set or unset this flag for selected edges.
 
 
 Mark Sharp and Clear Sharp
-==========================
+--------------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -58,7 +61,7 @@ As seams, it is a property of edges, and these commands set or unset it for sele
 
 
 Adjust Bevel Weight
-===================
+-------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -76,7 +79,7 @@ you can set the (average) bevel weight of selected edges.
 
 
 Crease SubSurf
-==============
+--------------
 
 .. admonition:: Reference
    :class: refbox
@@ -95,7 +98,7 @@ To clear the crease edge property, enter a value of **-1**.
 
 
 Edge Slide
-**********
+==========
 
 .. admonition:: Reference
    :class: refbox
@@ -123,7 +126,7 @@ which is displayed in the 3D View footer and in the *Tool Shelf*
 A numerical value between ``-1`` and ``1`` can be entered for precision.
 
 In *Proportional* mode, :kbd:`Wheel`,
-or :kbd:`←` and :kbd:`→` changes the selected edge for calculating a proportion.
+or :kbd:`Left` and :kbd:`Right` changes the selected edge for calculating a proportion.
 Unlike *Percentage* mode, *Proportional*
 
 Holding :kbd:`Ctrl` or :kbd:`Shift` control the precision of the sliding.
@@ -132,7 +135,7 @@ to 1% steps. The default is 5% steps per move.
 
 
 Usage
-=====
+-----
 
 By default, the position of vertices on the edge loop move as a percentage of the distance
 between their original position and the adjacent edge loop, regardless of the edges' lengths.
@@ -140,20 +143,18 @@ between their original position and the adjacent edge loop, regardless of the ed
 
 .. figure:: /images/EdgeSlide1.jpg
    :width: 250px
-   :figwidth: 250px
 
    selected edge loop
 
 
 .. figure:: /images/EdgeSlide2.jpg
    :width: 250px
-   :figwidth: 250px
 
    Repositioned edge loop
 
 
 Even mode
----------
+^^^^^^^^^
 
 *Even* mode keeps the shape of the selected edge loop the same as one of the edge loops adjacent to it,
 rather than sliding a percentage along each perpendicular edge.
@@ -169,14 +170,12 @@ use the :kbd:`Alt-Wheel` to scroll to a different edge.
 
 .. figure:: /images/EdgeSlide3.jpg
    :width: 250px
-   :figwidth: 250px
 
    Even mode enabled
 
 
 .. figure:: /images/EdgeSlide4.jpg
    :width: 250px
-   :figwidth: 250px
 
    Even mode with flip enabled
 
@@ -187,7 +186,7 @@ conforming to the shape of one of the bounding edge loops.
 
 
 Limitations & Workarounds
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are restrictions on the type of edge selections that can be operated upon.
 Invalid selections are:
@@ -213,7 +212,7 @@ in different edge loops.
 
 
 Rotate Edge
-***********
+===========
 
 .. admonition:: Reference
    :class: refbox
@@ -231,30 +230,28 @@ or on two selected vertices or two selected faces that implicitly share an edge 
 
 .. figure:: /images/EdgeFlip1.jpg
    :width: 250px
-   :figwidth: 250px
 
    selected edge
 
 
 .. figure:: /images/EdgeFlip2.jpg
    :width: 250px
-   :figwidth: 250px
 
    Edge, rotated CW
 
 
 Using Face Selection
-====================
+--------------------
 
 To rotate an edge based on faces you must select two faces, (*Adjacent selected faces*),
-otherwise Blender notifies you with an error message, "\ ``ERROR:
-Could not find any select edges that can be rotated`` ". Using either *Rotate Edge CW*
+otherwise Blender notifies you with an error message,
+*"ERROR: Could not find any select edges that can be rotated"*. Using either *Rotate Edge CW*
 or *Rotate Edge CCW* will produce exactly the same results as if you had
 selected the common edge shown in (*Selected edge rotated CW and CCW.*).
 
 
 Delete Edge Loop
-****************
+================
 
 .. admonition:: Reference
    :class: refbox
@@ -278,7 +275,7 @@ This will create one face-loop where two previously existed.
 
 
 Example
-=======
+-------
 
 The selected edge loop on the UV Sphere has been deleted and the faces have been merged with
 the surrounding edges. If the edges had been deleted by choosing *Edges* from the
@@ -288,20 +285,18 @@ there would be an empty band of deleted faces all the way around the sphere inst
 
 .. figure:: /images/DeleteEdgeLoop1.jpg
    :width: 300px
-   :figwidth: 300px
 
    Selected edge loop
 
 
 .. figure:: /images/DeleteEdgeLoop2.jpg
    :width: 300px
-   :figwidth: 300px
 
    Edge loop deleted
 
 
 Collapse
-********
+========
 
 .. admonition:: Reference
    :class: refbox
@@ -318,20 +313,18 @@ removing the face loop it ran through.
 
 .. figure:: /images/Collapse1.jpg
    :width: 300px
-   :figwidth: 300px
 
    Selected edge ring
 
 
 .. figure:: /images/Collapse2.jpg
    :width: 300px
-   :figwidth: 300px
 
    Edge ring collapsed
 
 
 Edge Split
-**********
+==========
 
 .. admonition:: Reference
    :class: refbox
@@ -348,20 +341,18 @@ a hole will be created, and the selected edges are duplicated to form the border
 
 .. figure:: /images/EdgeSplit1.jpg
    :width: 300px
-   :figwidth: 300px
 
    Selected edges
 
 
 .. figure:: /images/EdgeSplit2.jpg
    :width: 300px
-   :figwidth: 300px
 
    Adjacent face moved to reveal hole left by split
 
 
 Bridge Edge Loops
-*****************
+=================
 
 .. admonition:: Reference
    :class: refbox
@@ -377,14 +368,12 @@ Simple example showing 2 closed edge loops.
 
 .. figure:: /images/mesh_bridge_simple_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Input
 
 
 .. figure:: /images/mesh_bridge_simple_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Bridge result
 
@@ -394,14 +383,12 @@ Example of bridge tool between edge loops with different numbers of vertices.
 
 .. figure:: /images/mesh_bridge_uneven_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Input
 
 
 .. figure:: /images/mesh_bridge_uneven_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Bridge result
 
@@ -411,14 +398,12 @@ Example using the bridge tool to punch holes in face selections and connect them
 
 .. figure:: /images/mesh_bridge_faces_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Input
 
 
 .. figure:: /images/mesh_bridge_faces_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Bridge result
 
@@ -428,14 +413,12 @@ Example showing how bridge tool can detect multiple loops and loft them in one s
 
 .. figure:: /images/mesh_bridge_multi_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Input
 
 
 .. figure:: /images/mesh_bridge_multi_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Bridge result
 
@@ -445,14 +428,12 @@ Example of the subdivision option and surface blending with UV's.
 
 .. figure:: /images/mesh_bridge_advanced_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Input
 
 
 .. figure:: /images/mesh_bridge_advanced_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Bridge result
 

@@ -35,7 +35,7 @@ this can quickly become cluttered. Therefore, Blender also provides layers just 
 Armature layers are very similar to object layers, in that you can divide up an armature (rig)
 across layers and only display those layers you wish to work on.
 
-:doc:`Read more about armature layers » </rigging/armatures/visualization#armature_layers>`
+:doc:`Read more about armature layers </rigging/armatures/visualization#armature_layers>`
 
 
 Working with Layers
@@ -65,7 +65,6 @@ use :kbd:`Shift-LMB` - doing this on an already active layer will deselect it.
 
 .. figure:: /images/Manual-3Dinteraction-Navigating-Layers-layer-buttons.jpg
    :width: 600px
-   :figwidth: 600px
 
    3D Viewport layer buttons.
 
@@ -83,7 +82,7 @@ Locking to the scene
 
 By default, the lock button directly to the right of the layer buttons is enabled.
 This means that changes to the viewed layers affect all other 3D Views locked to the scene -
-see the :doc:`navigating the 3D view options page </getting_started/basics/navigating>` for more information.
+see the :doc:`navigating the 3D view options page </getting_started/basics/navigating/index>` for more information.
 
 
 Multiple Layers

@@ -22,8 +22,8 @@ Material Node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` → :doc:`Material Nodes </render/blender_render/materials/nodes>`
-   | Menu:     :kbd:`Shift-A` → Input → Material
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` --> :doc:`Material Nodes </render/blender_render/materials/nodes>`
+   | Menu:     :kbd:`Shift-A` --> Input --> Material
 
 
 .. figure:: /images/26-Manual-Material-Node.jpg
@@ -61,7 +61,7 @@ Color
    The base color of the paint. Can be set
 
    - manually by :kbd:`LMB` clicking on the color swatch applet next to the socket,
-     choosing a color using the control panel that pops up, and pressing :kbd:`Enter`
+     choosing a color using the control panel that pops up, and pressing :kbd:`Return`
    - based on an Active Material which is specified using the material panels, or
    - plugged in from an RGB color generator.
 Spec
@@ -102,7 +102,6 @@ Using the Material Node with Specularity
 
 .. figure:: /images/26-Manual-Material-Node-Specular.jpg
    :width: 250px
-   :figwidth: 250px
 
    Material Node using Specularity
 
@@ -130,7 +129,6 @@ Extended Material Node
 
 .. figure:: /images/26-Manual-Extended-Material-Node.jpg
    :width: 200px
-   :figwidth: 200px
 
    Extended Material node
 
@@ -193,7 +191,6 @@ Lamp Data Node
 
 .. figure:: /images/26-Manual-Lamp-Data-Node.jpg
    :width: 180px
-   :figwidth: 180px
 
    Lamp Data node
 
@@ -263,7 +260,6 @@ is selected and introduced through the value and/or color socket.
 
 .. figure:: /images/26-Manual-Texture-Node-Example.jpg
    :width: 500px
-   :figwidth: 500px
 
    Example of the applying Texture node
 
@@ -330,7 +326,8 @@ Front/Back
 .. note::
 
    These are exactly the same settings as in the
-   :doc:`Mapping </render/blender_render/textures/mapping>` panel for :doc:`Textures </render/blender_render/textures>`,
+   :doc:`Mapping </render/blender_render/textures/mapping>` panel for
+   :doc:`Textures </render/blender_render/textures/index>`,
    though a few settings - like *Stress* or *Tangent* - are missing here.
    Normally you would use this node as input for a `Texture Node`_.
 
@@ -340,7 +337,6 @@ Geometry Node Example using a UV image
 
 .. figure:: /images/26-Manual-Geometry-Node-Example.jpg
    :width: 500px
-   :figwidth: 500px
 
    Setup to render an UV-Mapped Image Texture.
 

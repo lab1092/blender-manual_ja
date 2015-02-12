@@ -19,7 +19,8 @@ So why should one use Environment Maps?
   You may even modify the precalculated Environment Map in an image editor.
 - Environment maps can also be blurred and render even faster because the resolution can then be lowered.
   Blurring a reflection with the raytracer always adds to the render time, sometimes quite a lot.
-- :doc:`Halos </materials/halos>` (a visualization type for particles) are not visible to raytraced reflections,
+- :doc:`Halos </render/blender_render/materials/special_effects/halo>`
+  (a visualization type for particles) are not visible to raytraced reflections,
   so you need to setup environment maps to reflect them.
 - :doc:`Keypoint strands </physics/particles/visualization>`
   (another visualization type for particles) are also not visible to raytraced reflections,
@@ -191,13 +192,11 @@ onto which it is being mapped.
 
    * - .. figure:: /images/Manual-Part-IV-EnvMap01-2.40.jpg
           :width: 300px
-          :figwidth: 300px
 
           Planar reflection example. 1: Camera, 2: Empty, 3: Reflecting Plane.
 
      - .. figure:: /images/Manual-Part-IV-EnvMap04.jpg
           :width: 200px
-          :figwidth: 200px
 
           Sphere on a reflecting surface.
 
@@ -212,13 +211,11 @@ in order to get reflections of reflections.
 
    * - .. figure:: /images/Manual-Part-IV-EnvMap05.jpg
           :width: 200px
-          :figwidth: 200px
 
           Reflecting sphere on a reflecting surface.
 
      - .. figure:: /images/Manual-Part-IV-EnvMap06.jpg
           :width: 200px
-          :figwidth: 200px
 
           Reflecting sphere on a reflecting surface with multiple
           reflections.

@@ -8,13 +8,13 @@ Spot Volumetric Effects
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Spot-HaloOptions.jpg
    :width: 310px
-   :figwidth: 310px
 
    Spot lamps's Halo options
 
 
 *Spot* lights also can produce "volumetric" effects.
-See :doc:`Volumetric Light </render/blender_render/lighting/volumetric_lights>` for more information about what it means.
+See :doc:`Volumetric Light </render/blender_render/lighting/volumetric_lights>`
+for more information about what it means.
 
 Halo
    The *Halo* button allows a *Spot* lamp to have a volumetric effect applied to it.
@@ -52,7 +52,8 @@ Step
 
    The halo effect can be greatly enhanced when using buffered shadows: when the halo's *Step* is not null,
    they can create "volumetric shadows".
-   See the page about *Spot* :doc:`Buffered Shadows </render/blender_render/lighting/lamps/spot/buffered_shadows>` for more information.
+   See the page about *Spot*
+   :doc:`Buffered Shadows </render/blender_render/lighting/lamps/spot/buffered_shadows>` for more information.
 
 
 See Also

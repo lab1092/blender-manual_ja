@@ -116,7 +116,7 @@ OK now let us see some important ground rules:
 - If you try to *Convert* without template bones (i.e.
   either an empty armature selected as template,
   or no bones selected in the current edited armature),
-  you will get the error message "\ ``No Template and no deforming bones selected`` ", and nothing will occur.
+  you will get the error message ``No Template and no deforming bones selected``, and nothing will occur.
 
 
 .. list-table::
@@ -147,24 +147,21 @@ No, View, Joint buttons
 
 
 .. list-table::
-   Templating: bone roll example. The ``Bone.003`` -to-\ ``Bone.005`` chain is the mapped-to-stroke
-   version of ``Bone`` -to-\ ``Bone.002`` selected one, and ``Bone.001`` has a modified roll angle.
+   Templating: bone roll example. The ``Bone.003`` -to- ``Bone.005`` chain is the mapped-to-stroke
+   version of ``Bone`` -to- ``Bone.002`` selected one, and ``Bone.001`` has a modified roll angle.
 
    * - .. figure:: /images/ManRiggingTemplatingBoneRollExNo.jpg
           :width: 200px
-          :figwidth: 200px
 
           With No roll option.
 
      - .. figure:: /images/ManRiggingTemplatingBoneRollExView.jpg
           :width: 200px
-          :figwidth: 200px
 
           With View roll option.
 
      - .. figure:: /images/ManRiggingTemplatingBoneRollExJoint.jpg
           :width: 200px
-          :figwidth: 200px
 
           With Joint roll option.
 
@@ -198,25 +195,21 @@ Think of them as A(ngle of bones), L(ength of bones) and D(efinition of stroke).
 
    * - .. figure:: /images/ManRiggingTemplatingInfluenceWeightsEx111.jpg
           :width: 150px
-          :figwidth: 150px
 
           A: 1.0; L: 1.0; D: 1.0.
 
      - .. figure:: /images/ManRiggingTemplatingInfluenceWeightsEx100.jpg
           :width: 150px
-          :figwidth: 150px
 
           A: 1.0; L: 0.0; D: 0.0.
 
      - .. figure:: /images/ManRiggingTemplatingInfluenceWeightsEx010.jpg
           :width: 150px
-          :figwidth: 150px
 
           A: 0.0; L: 1.0; D: 0.0.
 
      - .. figure:: /images/ManRiggingTemplatingInfluenceWeightsEx001.jpg
           :width: 150px
-          :figwidth: 150px
 
           A: 0.0; L: 0.0; D: 1.0.
 
@@ -239,14 +232,12 @@ Naming and placeholders, using a simple leg template.
 
       * - .. figure:: /images/ManRiggingTemplatingNamePlaceholdersEx1.jpg
              :width: 325px
-             :figwidth: 325px
 
              Before conversion (note the &n and &s
              placeholders in template bones' names).
 
         - .. figure:: /images/ManRiggingTemplatingNamePlaceholdersEx2.jpg
              :width: 205px
-             :figwidth: 205px
 
              After conversion: the placeholders have been replaced by the
              content of the S and N text fields of the Bone Sketching panel.
@@ -258,25 +249,23 @@ Auto naming and placeholders, using a simple leg template.
 
       * - .. figure:: /images/ManRiggingTemplatingAutoNamingEx1.jpg
              :width: 285px
-             :figwidth: 285px
 
              Before conversion (note that, in the Bone Sketching panel,
              the S and N fields are empty, and the small "auto" button is enabled).
 
         - .. figure:: /images/ManRiggingTemplatingAutoNamingEx2.jpg
              :width: 315px
-             :figwidth: 315px
 
 
 Static text line
    The line just above the *Peel Objects* button gives you two informations:
 
-   - The "\ *n* ``joints`` " part gives you the number of joints
+   - The *n* ``joints`` part gives you the number of joints
      (i.e. bones' ends, with connected ends considered as one joint),
      either from the selected bones of the edited armature, or in the whole other template armature.
    - The second part is only present when another armature has been selected as template -
      it gives you *the root bone's name of the chain that will be mapped to the strokes*.
      Or, while you are drawing a stroke with straight segments,
      the name of the bone corresponding to the current segment
-     (and "\ ``Done`` " when you have enough segments for all bones in the template chain).
+     (and ``Done`` when you have enough segments for all bones in the template chain).
 

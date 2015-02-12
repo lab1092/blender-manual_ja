@@ -68,7 +68,7 @@ print("Using Index:", master_doc)
 
 
 # General information about the project.
-project = 'Blender Manual'
+project = 'Blender Reference Manual'
 copyright = 'Creative Commons Zero'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -139,24 +139,28 @@ if sphinx_rtd_theme:
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "Blender Manual"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "images/blender-logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = "images/blender-logo.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ["../theme"]
+
+def setup(app):
+    app.add_stylesheet("css/theme_overrides.css")
+
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -186,10 +190,10 @@ html_static_path = []
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = False
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -200,7 +204,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Blender Manual'
+htmlhelp_basename = 'Blender Reference Manual'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -266,8 +270,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('contents', 'Blender Manual', 'Blender Manual Documentation',
-   'Campbell Barton', 'Blender Manual', 'One line description of project.',
+  ('contents', 'Blender Reference Manual', 'Blender Manual Documentation',
+   'Campbell Barton', 'Blender Reference Manual', 'One line description of project.',
    'Miscellaneous'),
 ]
 

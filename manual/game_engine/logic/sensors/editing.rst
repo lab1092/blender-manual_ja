@@ -5,7 +5,6 @@ Sensor Editing
 
 .. figure:: /images/BGE_Sensor_Column.jpg
    :width: 292px
-   :figwidth: 292px
 
    Sensor Column with Typical Sensor
 
@@ -24,7 +23,6 @@ Column Heading
 
 .. figure:: /images/BGE_Sensor_Column1.jpg
    :width: 292px
-   :figwidth: 292px
 
    Sensor Column Heading
 
@@ -62,7 +60,6 @@ Object Heading
 
 .. figure:: /images/BGE_Sensor_Column2.jpg
    :width: 292px
-   :figwidth: 292px
 
    Sensor Object Heading
 
@@ -78,4 +75,4 @@ Name
 Add Sensor
    When clicked, a menu appears with the available sensor types.
    Selecting an entry adds a new sensor to the object.
-   See :doc:`Sensors </game_engine/logic/sensors>` for a list of available sensor types.
+   See :doc:`Sensors </game_engine/logic/sensors/index>` for a list of available sensor types.

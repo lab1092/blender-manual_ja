@@ -18,7 +18,7 @@ Exporting UV Layout Image
 
 As a way of communicating to an artist who is painting your UV Texture for you,
 Blender has a tool called *Save UV Face Layout*
-(located in the UV/Image Editor Window, UVs→Save UV Face Layout)
+(located in the UV/Image Editor Window, UVs-->Save UV Face Layout)
 that saves an image as a Targa (.tga), EPS, or an SVG format for the object you have selected.
 
 The image is an outline of the UV face mapping.
@@ -55,14 +55,12 @@ For using images as textures, see the page on :doc:`Image Textures </render/blen
 
 .. figure:: /images/Doc26-textures-uv-layout.jpg
    :width: 250px
-   :figwidth: 250px
 
    A uv layout in the uv editor
 
 
 .. figure:: /images/Doc26-textures-uv-layout2.jpg
    :width: 250px
-   :figwidth: 250px
 
    A snapshot of the uv layout to be used in an image editor
 
@@ -110,7 +108,8 @@ Make sure it is mapped to Color in the Influence section as well
 If the image has an alpha channel and you want to use it,
 click "UseAlpha" in the Map Image panel.
 
-Full details of using Image textures are on the :doc:`Image Textures </render/blender_render/textures/types/image>` page.
+Full details of using Image textures are on the
+:doc:`Image Textures </render/blender_render/textures/types/image>` page.
 
 
 .. note:: Material is Required for Rendering
@@ -154,12 +153,12 @@ or make a new texture by clicking the *New* button.
 
 In a team environment, or if you are using an external paint program to edit the image while
 the .blend file is active, and the file is updated and re-saved, use the UV/Image Editor to
-*Image→Reload* it and see the latest and greatest in Blender. Also,
+*Image-->Reload* it and see the latest and greatest in Blender. Also,
 use Reload if you have mapped more faces to an image,
 and the 3D View will be updated with the latest image mapping back to faces.
 
 If you move the image file, Blender may not be able to find it,
-and you will have to *Image→Replace* it.
+and you will have to *Image-->Replace* it.
 Use this option to map a UV layout to a different image altogether.
 
 Replacing the active Image
@@ -176,7 +175,6 @@ New Images
 
 .. figure:: /images/Doc26-textures-uv-layout-testGrid.jpg
    :width: 200px
-   :figwidth: 200px
 
    The new Image dialogue
 
@@ -219,21 +217,19 @@ look like cloth, you do NOT want any stretching
 
 .. figure:: /images/Doc26-textures-uv-layout-testGrid2.jpg
    :width: 200px
-   :figwidth: 200px
 
    The test grid applied to the UVs
 
 
 .. figure:: /images/Doc26-textures-uv-layout-testGrid3.jpg
    :width: 200px
-   :figwidth: 200px
 
    A preview of the texture on the geometry
 
 
 When you render, the mesh will have the test grid as its colors,
 and the UV Texture will be the size image you specified.
-You can save the UV image using the Image→Save menu.
+You can save the UV image using the Image-->Save menu.
 
 
 Image Settings
@@ -306,15 +302,15 @@ To modify your new Texture, you can:
 - :doc:`Render Bake </render/workflows/bake>` an image based on how the mesh looks
 
   - The Render Bake feature provides several tools to replace the current image
-    based on a render of :doc:`Vertex Paint </materials/vertex_paint>` colors,
+    based on a render of :doc:`Vertex Paint </render/blender_render/materials/special_effects/vertex_paint>` colors,
     Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.
 - Paint using :doc:`Texture Paint </render/blender_render/textures/painting>`.
 
-  - Use the UV/Image Editor menu *Image* → *New*. Then start painting your mesh with
+  - Use the UV/Image Editor menu *Image* --> *New*. Then start painting your mesh with
 - Use external software to create an image
 
   - Using your favorite image painting program, you could use an exported UV layout to create a texture.
-    Then save your changes, and back in Blender, use the Image→Open menu command to load it as your UV image
+    Then save your changes, and back in Blender, use the Image-->Open menu command to load it as your UV image
     for the mesh in Face Select Mode for the desired (and active) UV Texture layer.
     Using the *Edit Externally* tool in the *Image* menu, Blender will open an image editor,
     as specified in the *User Preferences* and load in the image to be edited.
@@ -328,7 +324,7 @@ Texture paint and external software can be used to add or enhance the image.
 Regardless of which method you use, ultimately you must either
 
 - save your texture in a separate image file (for example JPG for colors, PNG with RGBA for alpha),
-- pack the image inside the blend file (UV/Image Editor Image→Pack as PNG),
+- pack the image inside the blend file (UV/Image Editor Image-->Pack as PNG),
 - or do both.
 
 The advantage to saving as a separate file is that you can easily switch textures just by
@@ -352,7 +348,7 @@ you will have to re-pack or reload.
 To pack an image, select *Pack Image* from the *Image* menu. To Unpack,
 select this option again and select *Remove Pack*.
 
-The File→Append function automatically goes into ``.blend`` files and shows you the image textures packed in it.
+The File-->Append function automatically goes into ``.blend`` files and shows you the image textures packed in it.
 The public domain Blender Texture CD is also a great resource,
 and there are many other sources of public domain (and licensed) textures. All textures on the
 Elephants Dream CD are liberally licensed under

@@ -64,7 +64,7 @@ Multiply
    Although many people like to use AO alone as a quick shortcut to light a scene,
    the results it gives will be muted and flat, like an overcast day. In most cases,
    it is best to light a scene properly with Blender's standard lamps, then use AO on top of that,
-   set to "\ *Multiply* ", for the additional details and contact shadows.
+   set to *Multiply*, for the additional details and contact shadows.
 
 
 The *Gather* panel contains settings for the ambient occlusion quality.
@@ -112,19 +112,16 @@ Attenuation
 
       * - .. figure:: /images/Manual-AmbientOcclusion-3Samples.jpg
              :width: 200px
-             :figwidth: 200px
 
              Ambient Occlusion with 3 Samples.
 
         - .. figure:: /images/Manual-AmbientOcclusion-6Samples.jpg
              :width: 200px
-             :figwidth: 200px
 
              Ambient Occlusion with 6 Samples.
 
         - .. figure:: /images/Manual-AmbientOcclusion-12Samples.jpg
              :width: 200px
-             :figwidth: 200px
 
              Ambient Occlusion with 12 Samples.
 
@@ -136,7 +133,7 @@ Attenuation
       The base Quasi-Monte Carlo, gives evenly and randomly distributed rays.
 
    Adaptive QMC
-      An improved version of QMC,
+      An improved method of QMC,
       that tries to determine when the sample rate can be lowered or the sample skipped, based on its two settings:
 
       Threshold
@@ -145,12 +142,13 @@ Attenuation
       Adapt to Speed
          A factor to reduce AO sampling on fast-moving pixels.
          As it uses the *Vec* render pass, that must also be enabled
-         (see :doc:`render passes page </render/post_process/passes>`).
+         (see :doc:`render passes page </render/post_process/layers>`).
 
 
 .. note:: About QMC
 
-   See also the :doc:`raytraced shadows page </render/blender_render/lighting/shadows/raytraced_properties#what_is_quasi-monte_carlo?>`
+   See also the
+   :doc:`raytraced shadows page </render/blender_render/lighting/shadows/raytraced_properties#what_is_quasi-monte_carlo?>`
    for more info about the Quasi-Monte Carlo sampling method.
 
 
@@ -158,9 +156,9 @@ Attenuation
       The historical sample method, more prone to "bias" artifacts...
 
       Bias
-         The angle (in radians) the hemisphere will be made narrower (i.e.
-         the hemisphere will no longer be a real hemisphere: its section will no longer be a semicircle,
-         but an arc of a circle of "\ *pi* ``- Bias`` " radians).
+         The angle (in radians) the hemisphere will be made narrower
+         (i.e. the hemisphere will no longer be a real hemisphere: its section will no longer be a semicircle,
+         but an arc of a circle of ``pi - bias`` radians).
 
 
          The bias setting allows you to control how smooth "smooth" faces will appear in AO rendering.
@@ -176,14 +174,12 @@ Attenuation
 
    * - .. figure:: /images/Manual-AmbientOcclusion-Bias0.05.jpg
           :width: 200px
-          :figwidth: 200px
 
           24×24 UV Sphere with Bias: 0.05 (default).
           Note the facets on the sphere's surface even though it is set to smooth.
 
      - .. figure:: /images/Manual-AmbientOcclusion-Bias0.15.jpg
           :width: 200px
-          :figwidth: 200px
 
           Raising the Bias to 0.15 removes the faceted artifacts.
 
@@ -255,6 +251,6 @@ Hints
 
 Ambient occlusion is a ray-tracing technique (at least with the *Raytrace* method), so it tends to be slow.
 Furthermore, performance severely depends on octree size,
-see the :doc:`rendering chapter </render>` for more information.
+see the :doc:`rendering chapter </render/index>` for more information.
 
 

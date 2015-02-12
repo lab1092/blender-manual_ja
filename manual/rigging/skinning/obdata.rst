@@ -19,12 +19,12 @@ This type of skinning is available for meshes, lattices, curves, surfaces, and t
 
 Bones can affect the object's shape in two ways:
 
-- The `Envelopes`_ process is available for all type of skinnable objects -
+- The `Envelope`_ process is available for all type of skinnable objects -
   it uses the "proximity" and "influence" of the bones to determine which part of the object they can deform.
 - The `Vertex Groups`_ method is (obviously) reserved to meshes and lattices -
   one bone only affect the vertices in the
-  :doc:`group </modeling/meshes/vertex_groups>` having the same name,
-  using vertices' :doc:`weights </modeling/meshes/weight_paint>` as influence value.
+  :doc:`group </modeling/meshes/vertex_groups/index>` having the same name,
+  using vertices' :doc:`weights </modeling/meshes/vertex_groups/weight_paint>` as influence value.
   A much more precise method, but also generally longer to set up.
 
 Both methods have some
@@ -72,7 +72,6 @@ Automatic Weights
 
 .. figure:: /images/Doc26-rigging-armature-modifier.jpg
    :width: 250px
-   :figwidth: 250px
 
    The Armature modifier.
 
@@ -126,37 +125,31 @@ Preserve Volume (Armature modifier)
 
    * - .. figure:: /images/ManRiggingSkinningQuaternionOptExInitState.jpg
           :width: 200px
-          :figwidth: 200px
 
           Initial state.
 
      - .. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg
           :width: 200px
-          :figwidth: 200px
 
           100- rotation, Preserve Volume disabled.
 
      - .. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg
           :width: 200px
-          :figwidth: 200px
 
           180- rotation, Preserve Volume disabled.
 
    * - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg
           :width: 200px
-          :figwidth: 200px
 
           100- rotation, Preserve Volume enabled.
 
      - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg
           :width: 200px
-          :figwidth: 200px
 
           179.9- rotation, Preserve Volume enabled.
 
      - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg
           :width: 200px
-          :figwidth: 200px
 
           180.1- rotation, Preserve Volume enabled.
 
@@ -173,7 +166,6 @@ Bone Deform Options
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtDeformPanel.jpg
    :width: 250px
-   :figwidth: 250px
 
    Bone Deform Options
 
@@ -192,7 +184,6 @@ Envelope
 
 .. figure:: /images/ManRiggingEnvelopePrinciples3DViewEditMode.jpg
    :width: 200px
-   :figwidth: 200px
 
    Bone influence areas for envelopes method.
 
@@ -245,12 +236,12 @@ Vertex Groups
 =============
 
 Vertex groups skinning method is only available for meshes and lattices - the only objects having
-:doc:`vertex groups </modeling/meshes/vertex_groups>` Its principle is very simple:
+:doc:`vertex groups </modeling/meshes/vertex_groups/index>` Its principle is very simple:
 each bone only affects vertices belonging to a vertex group having the same name as the bone.
 So if you have e.g. a ``forearm`` bone, it will only affect the ``forearm`` vertex group of its skin object(s).
 
 The influence of one bone on a given vertex is controlled by the weight of this vertex in the relevant group.
-Thus, the :doc:`Weight Paint mode </modeling/meshes/weight_paint>`
+Thus, the :doc:`Weight Paint mode </modeling/meshes/vertex_groups/weight_paint>`
 (:kbd:`Ctrl-Tab` with a mesh selected) is most useful here, to easily set/adjust the vertices' weights.
 
 However, you have a few goodies when weight-painting a mesh already parented to (skinning)
@@ -290,25 +281,21 @@ To automatically weight multiple bones, you can simply
 
    * - .. figure:: /images/ManRiggingSkinningVertexGroupsExArmWeights.jpg
           :width: 150px
-          :figwidth: 150px
 
           The weights of the arm vertex group.
 
      - .. figure:: /images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg
           :width: 150px
-          :figwidth: 150px
 
           The weights of the forearm vertex group.
 
    * - .. figure:: /images/ManRiggingSkinningVertexGroupsExResult.jpg
           :width: 150px
-          :figwidth: 150px
 
           The result when posing the armature.
 
      - .. figure:: /images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg
           :width: 150px
-          :figwidth: 150px
 
           The same pose, but using envelopes method rather that vertex groups.
 

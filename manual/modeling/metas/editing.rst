@@ -9,7 +9,6 @@ These settings apply only to the selected meta element.
 
 .. figure:: /images/MetaPropertiesEditMode.jpg
    :width: 300px
-   :figwidth: 300px
 
    the active element panel.
 
@@ -24,8 +23,8 @@ Stiffness
 =========
 
 Together with *Threshold*, *Stiffness* controls the influencing range.
-While the threshold is common to all metas in the same object (or even the same
-`Object Family`_),
+While the threshold is common to all metas in the same object
+(or even the same `Object Families`_),
 the stiffness is specific to each meta.
 
 Scaling the inner green circle changes the *Stiffness* value.
@@ -49,13 +48,12 @@ select it and activate *Scale* mode with :kbd:`S`.
 
 .. figure:: /images/MetaStiffness.jpg
    :width: 630px
-   :figwidth: 630px
 
    Stiffness.
 
 
-In (*Stiffness*), the meta ball labeled "\ ``A`` ",
-has a smaller *Stiffness* value than the one labeled "\ ``B`` ".
+In (*Stiffness*), the meta ball labeled ``A``,
+has a smaller *Stiffness* value than the one labeled ``B``.
 As you can see, the *green ring* radius is different for each of them.
 
 
@@ -64,7 +62,6 @@ Negative Influence
 
 .. figure:: /images/2.5_Manual-Part-II-MetaObject-Metaball-Negative-Ex.jpg
    :width: 630px
-   :figwidth: 630px
 
    Negative.
 
@@ -115,7 +112,6 @@ Conversion
 
 .. figure:: /images/MetaConvertToMesh.jpg
    :width: 300px
-   :figwidth: 300px
 
    the convert menu
 
@@ -130,7 +126,7 @@ To convert the meta, press :kbd:`Alt-C` in *Object* mode, and select *mesh*
 
 
 Object Families
-***************
+===============
 
 *Meta* objects have different behavior in *Object* mode than other object types -
 they can be "regrouped" into so-called "families".
@@ -139,24 +135,23 @@ A "family" is a way to regroup several meta objects,
 producing something very similar to having several metas inside the same object.
 
 A family is defined by the left part of an object's name (the one before the dot). Remember,
-an object's name is the one in the "\ *OB* " field, in most panels,
-**not** the "\ *MB* " field, which is the meta datablock's name... For example,
-the *family* part of "\ ``MetaPlane.001`` " is "\ ``MetaPlane`` ".
+an object's name is the one in the *OB* field, in most panels,
+**not** the *MB* field, which is the meta datablock's name... For example,
+the *family* part of ``MetaPlane.001`` is ``MetaPlane``.
 Each meta object in the same "family" is associated with one another as discussed below.
 
 
 .. figure:: /images/2.5_Manual-Part-II-MetaObject-Base-Ex.jpg
    :width: 300px
-   :figwidth: 300px
 
    Meta ball base.
 
 
 Families of metas are controlled by a *base* *Meta* object which is identified by
 an *Object* name **without** a right part. For example,
-if we have five metas called "\ ``MetaThing`` ", "\ ``MetaThing.001`` ",
-"\ ``MetaThing.002`` ", "\ ``MetaThing.003`` " and "\ ``MetaThing.004`` ",
-the *base* *Meta* object would be "\ ``MetaThing`` ".
+if we have five metas called ``MetaThing`` ", ``MetaThing.001``,
+``MetaThing.002``, ``MetaThing.003`` and ``MetaThing.004``,
+the *base* *Meta* object would be ``MetaThing``.
 
 The *base* *Meta* object determines the basis, the resolution, the threshold,
 *and* the transformations. It also has the material and texture area.
@@ -179,7 +174,6 @@ and you see that both the parent's mesh *and* all of the children's meshes are n
 
 .. figure:: /images/2.5_Manual-Part-II-MetaObject-Base-Scale-Ex.jpg
    :width: 300px
-   :figwidth: 300px
 
    Scaling the "base".
 
@@ -202,5 +196,4 @@ For example, if you scale the *base*, the children's mesh structure changes. In
 which has the effect of scaling the mesh structure of each of the children. As you can see,
 the children's mesh resolution has increased, while the *base* decreased.
 *The children did not change size!*
-
 

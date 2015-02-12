@@ -16,7 +16,6 @@ Time
 
 .. figure:: /images/Doc26-textureNodes-time.jpg
    :width: 200px
-   :figwidth: 200px
 
    Time node
 
@@ -26,8 +25,8 @@ By default the node output a linear transition from 0 to 1 from frame 1 to 250.
 The shape of the curve can be manipulated to vary the output over time in different ways.
 
 
-:kbd:`+`:Zoom in.
-:kbd:`-`:Zoom out
+:kbd:`Plus`:Zoom in.
+:kbd:`Minus`:Zoom out
 *Tools*:
 
    Reset View
@@ -42,7 +41,6 @@ The shape of the curve can be manipulated to vary the output over time in differ
 
 .. figure:: /images/Doc26-textureNodes-time-extendHorizontal.jpg
    :width: 150px
-   :figwidth: 150px
 
    Extend Horizontal
 
@@ -54,7 +52,6 @@ The shape of the curve can be manipulated to vary the output over time in differ
 
 .. figure:: /images/Doc26-textureNodes-time-extendExtrapolate.jpg
    :width: 150px
-   :figwidth: 150px
 
    Extend Extrapolate
 

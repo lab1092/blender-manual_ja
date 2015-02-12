@@ -12,7 +12,7 @@ These tools can be used to remove components.
 Delete
 ======
 
-Delete (:kbd:`X` or :kbd:`Del`)
+Delete (:kbd:`X` or :kbd:`Delete`)
    Deletes selected vertices, edges, or faces. This operation can also be limited to:
 
    Vertices
@@ -48,7 +48,6 @@ Limited Dissolve
 
 .. figure:: /images/Bmesh_limited-dissolve.jpg
    :width: 400px
-   :figwidth: 400px
 
    Example showing the how Limited Dissolve can be used.
 
@@ -60,7 +59,6 @@ Limited Dissolve
 
 .. figure:: /images/Bmesh_dissolve_face_split.jpg
    :width: 500px
-   :figwidth: 500px
 
    Dissolve Face Split option. Left - the input, middle - regular dissolve, right - Face Split enabled
 
@@ -159,7 +157,7 @@ Remove Doubles
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Panel:    *Editing* context → *Mesh Tools*
+   | Panel:    *Editing* context --> *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
      :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`

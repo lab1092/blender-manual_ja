@@ -20,13 +20,13 @@ General Procedure
    :class: refbox
 
    | Mode:     All Modes
-   | Menu:     *File* → *Append or Link*
+   | Menu:     *File* --> *Append or Link*
    | Hotkey:   :kbd:`Shift-F1`
 
 
 The main menu in Blender is located in the *Info* window
 (by default the header located at the top of your screen). From that menu,
-all you have to do is use *File* → *Append or Link*,
+all you have to do is use *File* --> *Append or Link*,
 or press :kbd:`Shift-F1` in your active window.
 The active window will change to a *File Browser*
 (the *Window type* icon looks like a manila folder) selector window. Use this window
@@ -60,7 +60,7 @@ Appending library objects into your current project
 The following procedure appends an object with all its linked data, such as mesh data,
 materials, textures, ..., to the current .blend file.
 
-- Select *File* → *Append or Link*.
+- Select *File* --> *Append or Link*.
 - Locate and select the file that contains the object you want to append (often a "library" file).
 - Navigate to the *Object* section of the file.
 - Select one object from the list using :kbd:`LMB`, multiple objects via :kbd:`RMB`,
@@ -68,7 +68,7 @@ materials, textures, ..., to the current .blend file.
 - Repeat the above for each kind of object you wish to append or link.
   Parents and armatures (all modifier objects) must be selected separately.
 - Set desired options that are shown in the header (*At Cursor*, *Active Layer*, ...).
-- :kbd:`LMB` on *Load Library* or press :kbd:`Enter` or :kbd:`MMB` directly on the data to append.
+- :kbd:`LMB` on *Load Library* or press :kbd:`Return` or :kbd:`MMB` directly on the data to append.
 
 Of course, you can append or link many other things besides objects:
 all the *ObData* - cameras, curves, groups, lamps, materials, meshes,
@@ -151,11 +151,8 @@ To move/scale/rotate linked objects, turn them into `Proxy Objects`_.
    When Appending or Linking certain resources such as mesh data,
    it may not be instantly visible in the 3D Viewport.
    This is because the data has been loaded into Blender but has not been assigned to an object,
-   which would allow it to be seen. You can verify this by looking in the *Outliner*
-   window and switching it to *OOPS Schematic* view
-   (you may need to have the *Displays Scene datablock* button selected in its header).
-   In the OOPS Schematic picture you can see that "\ ``Wheel`` " is not linked to any
-   object.
+   which would allow it to be seen.
+   You can verify this by looking in the *Outliner* window.
 
 
    .. figure:: /images/Manual-UsingLinkLibraries-LinksAndMats.jpg
@@ -176,7 +173,6 @@ Reusing Material/Texture Settings
 
 .. figure:: /images/Manual-Append-Materials.jpg
    :width: 150px
-   :figwidth: 150px
 
    Material preview in Image Browser.
 
@@ -215,7 +211,7 @@ Reusing Node Layouts
 To reuse noodles (node layouts), open the original (source)
 file and create a Group for the set of nodes that you think you want to reuse.
 When you want to import that node group into your current file, :kbd:`LMB` on
-*File* → *Append* or :kbd:`LMB` on *File* →
+*File* --> *Append* or :kbd:`LMB` on *File* -->
 *Link* from the *Info* window header (or press :kbd:`F1` for
 *Append* or :kbd:`Ctrl-Alt-O` for *Link*), and navigate to the file.
 When you dive into the file, there will be a *NodeTree* option.
@@ -261,7 +257,7 @@ Use :kbd:`Ctrl-LMB` on a button to restrict or unrestrict that layer.
 To make a proxy object for yourself, establish a link to the source object as described above.
 With that linked copy selected (:kbd:`RMB`) and in view (you can see it in the 3D View),
 press :kbd:`Ctrl-Alt-P` and confirm the *Make Proxy* dialog.
-The object will be named with the original name plus a "\ ``_proxy`` " suffix.
+The object will be named with the original name plus a ``_proxy`` suffix.
 You may now move and modify the proxy. When selected, it will look like a local object
 (outlined in orange).
 
@@ -277,8 +273,7 @@ but will not reset your changes (unless the owner has).
 Armatures and Multiple instances
 ================================
 
-Development of this feature is a work in progress; in Blender 2.43 and CVS
-(as of 29 April 2007), a proxy object controls *all instances of a group*.
+A proxy object controls *all instances of a group*.
 It is not yet possible to have one proxy per group instance. In particular,
 it is not yet possible to have one proxy armature per group instance.
 One partially effective remedy to use file append rather than file link for multiple instance duplication.

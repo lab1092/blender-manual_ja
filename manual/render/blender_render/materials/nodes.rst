@@ -43,7 +43,8 @@ we are just not getting what we are looking for? What if we want to control the 
 tightly or add more complexity? Here is where nodes come in.
 
 
-Making this node map is accomplished by working in a :doc:`Node Editor window </render/blender_render/materials/nodes/editor>`.
+Making this node map is accomplished by working in a
+:doc:`Node Editor window </render/blender_render/materials/nodes/editor>`.
 This section covers:
 
 - Enabling Material Nodes.

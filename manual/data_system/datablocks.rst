@@ -15,7 +15,6 @@ Datablocks can reside within as many .blend files as needed for good project org
 
 .. figure:: /images/Doc26-datablocks.jpg
    :width: 400px
-   :figwidth: 400px
 
    Datablocks view
 
@@ -95,7 +94,7 @@ Full copy
    :kbd:`Shift-D` is used to make normal copy of the selected objects.
    The object and some of it's child datablocks will really be duplicated, the other children are just linked;
    you can define the attributes to be duplicated in
-   *User Preferences* → *Edit Methods*, button group *Duplicate with object:*.
+   *User Preferences* --> *Edit Methods*, button group *Duplicate with object:*.
 
 Linked copy
    :kbd:`Alt-D` makes a linked copy.

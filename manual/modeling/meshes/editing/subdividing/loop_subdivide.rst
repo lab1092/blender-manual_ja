@@ -10,7 +10,7 @@ Loop Subdivide
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Panel:    *Editing* context → *Mesh Tools*
+   | Panel:    *Editing* context --> *Mesh Tools*
    | Hotkey:   :kbd:`Ctrl-R`
 
 
@@ -36,21 +36,18 @@ Sliding the new edge loop
 
 .. figure:: /images/Doc26-loopCut-before.jpg
    :width: 200px
-   :figwidth: 200px
 
    mesh before inserting edge loop
 
 
 .. figure:: /images/Doc26-loopCut-preview.jpg
    :width: 200px
-   :figwidth: 200px
 
    Preview of edge loop location
 
 
 .. figure:: /images/Doc26-loopCut-placement.jpg
    :width: 200px
-   :figwidth: 200px
 
    Interactive placement of edge loop between adjacent loops
 
@@ -67,24 +64,22 @@ Even :kbd:`E`
 Flip :kbd:`F`
    When Even is enabled, this flips the target edge loop to match.
    (See :doc:`Edge Slide tool </modeling/meshes/editing/edges#edge_slide>` for details)
-Number of Cuts :kbd:`Wheel` or :kbd:`Numpad+` / :kbd:`Numpad-`
+Number of Cuts :kbd:`Wheel` or :kbd:`NumpadPlus` / :kbd:`NumpadMinus`
    After activating the tool, but before confirming initial loop location,
    you can increase and decrease the number of cuts to create,
-   by entering a number with the keyboard, scrolling :kbd:`Wheel` or using :kbd:`Numpad+` and :kbd:`Numpad-`.
+   by entering a number with the keyboard, scrolling :kbd:`Wheel` or using :kbd:`NumpadPlus` and :kbd:`NumpadMinus`.
    Note that when creating multiple loops, these cuts are uniformly distributed in the original face loop,
    and *you will not be able to control their positions*.
 
 
 .. figure:: /images/Doc26-loopCut-multicut.jpg
    :width: 250px
-   :figwidth: 250px
 
    Preview of multiple edge loops
 
 
 .. figure:: /images/Doc26-loopCut-multicut-after.jpg
    :width: 250px
-   :figwidth: 250px
 
    Result of using multiple cuts
 
@@ -100,14 +95,12 @@ Smoothing :kbd:`Alt-Wheel`
 
 .. figure:: /images/Doc26-loopCut-unsmooth.jpg
    :width: 250px
-   :figwidth: 250px
 
    Added edge loops without smoothing
 
 
 .. figure:: /images/Doc26-loopCut-smooth.jpg
    :width: 250px
-   :figwidth: 250px
 
    Same edge loops, but with smoothing value
 

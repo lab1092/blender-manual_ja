@@ -25,7 +25,6 @@ for good!
 
 .. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Text-editor-Toolbar-with-file-open.jpg
    :width: 600px
-   :figwidth: 600px
 
    Text Toolbar with a file open
 
@@ -65,7 +64,7 @@ as described in the :doc:`API references </extensions/python/references>`.
 
 The *Text Editor* has now also some dedicated Python scripts,
 which add some useful writing tools, like a class/function/variable browser, completion... You
-can access them through the *Text* → *Text Plugins* menu entry.
+can access them through the *Text* --> *Text Plugins* menu entry.
 
 
 Other usages for the Text window
@@ -119,7 +118,7 @@ Copy the text below in the Text Editor.
    bpy.ops.mesh.primitive_cube_add(location=(x, y, z))
 
 
-Execute the script with :kbd:`ALT-P`.
+Execute the script with :kbd:`Alt-P`.
 
 You can see the result of running the above script in this video.
 

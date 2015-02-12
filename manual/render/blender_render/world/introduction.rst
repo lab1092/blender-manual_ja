@@ -25,11 +25,8 @@ You have:
 :doc:`Mist </render/blender_render/world/mist>`
    Add a mist to your scene to enhance the feeling of depth.
 
-:doc:`Stars </render/blender_render/world/stars>`
-   Randomly covers the background with halo-like dots.
-
 While these world settings offers a simple way of adding effects to a scene,
-:doc:`compositing nodes </composite_nodes>` are often preferred, though more complex to master,
+:doc:`compositing nodes </composite_nodes/index>` are often preferred, though more complex to master,
 for the additional control and options they offer.
 For example, filtering the Z value (distance from camera) or normals (direction of surfaces)
 through compositing nodes can further increase the depth and spacial clarity of a scene.
@@ -38,8 +35,10 @@ through compositing nodes can further increase the depth and spacial clarity of 
 .. note::
 
    Some of the settings under the World panel in Blender affect lighting so you find them under the
-   :doc:`Lighting </render/blender_render/lighting>` chapter (see :doc:`Ambient Light </lighting/environment>`,
-   :doc:`Exposure </render/exposure>` and :doc:`Ambient Occlusion </render/blender_render/lighting/ambient_occlusion>`).
+   :doc:`Lighting </render/blender_render/lighting/index>` chapter
+   (see :doc:`Ambient Light </render/blender_render/lighting/ambient_light>`,
+   :doc:`Exposure </render/blender_render/lighting/exposure>` and
+   :doc:`Ambient Occlusion </render/blender_render/lighting/ambient_occlusion>`).
    When using a *Sun Lamp* options for *Sky & Atmosphere*
    are available in the *Lamp* menu.
 

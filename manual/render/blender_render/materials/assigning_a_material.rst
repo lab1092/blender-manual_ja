@@ -54,7 +54,7 @@ This action has a series of effects:
 - brings up additional buttons in the immediate panel,
 - adds the new material to the Available Materials list,
 - adds the new material to the Object Material Slots list for the active object (or its object data - see below)
-- brings up a :doc:`preview </materials/preview>` of the new material,
+- brings up a :doc:`preview </render/blender_render/materials/properties/preview>` of the new material,
 - provides you with a range of panels allowing you to select the
   :doc:`properties </render/blender_render/materials/properties/introduction>` of the new material.
 
@@ -124,7 +124,7 @@ Data
    the objects can have different materials and still share the same mesh.
    Short explanation: If connected to the object,
    you can have several instances of the same obData using different materials.
-   If linked to mesh data, you can't. See :doc:`Data System </data_system/data_system>` for more information.
+   If linked to mesh data, you can't. See :doc:`Data System </data_system/introduction>` for more information.
 
 
 Object Render Format (menu)

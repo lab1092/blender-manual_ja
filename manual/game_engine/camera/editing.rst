@@ -5,7 +5,6 @@ Camera Editing
 
 .. figure:: /images/BGE_Camera_Properties.jpg
    :width: 300px
-   :figwidth: 300px
 
    Camera Properties
 
@@ -31,7 +30,6 @@ Embedded Player
 
 .. figure:: /images/BGE_Camera_Properties_Game.jpg
    :width: 300px
-   :figwidth: 300px
 
    Game Panel
 
@@ -44,13 +42,12 @@ Standalone Player
 
 .. figure:: /images/BGE_Camera_Properties_Standalone.jpg
    :width: 300px
-   :figwidth: 300px
 
    Standalone Panel
 
 
 This panel provides information for the Standalone Game Player which allows games to be run without Blender.
-See :doc:`Standalone Player </game_engine/standalone_player>` for further details.
+See :doc:`Standalone Player </game_engine/blender_player>` for further details.
 
 Fullscreen -
    Off - opens standalone game as a new window.
@@ -88,7 +85,6 @@ Stereo
 
 .. figure:: /images/BGE_Camera_Properties_Stereo.jpg
    :width: 300px
-   :figwidth: 300px
 
    Stereo Panel
 
@@ -111,13 +107,13 @@ Shading
 
 .. figure:: /images/BGE_Camera_Properties_Shading.jpg
    :width: 300px
-   :figwidth: 300px
 
    Shading Panel
 
 
 Specifies the shading mode to be used in rendering the game.
-The shading facilities available in Blender for use in :doc:`Materials </render/blender_render/materials>` and :doc:`Textures </render/blender_render/textures>`
+The shading facilities available in Blender for use in
+:doc:`Materials </render/blender_render/materials/index>` and :doc:`Textures </render/blender_render/textures/index>`
 are essentially the same in the Blender Game Engine.
 However the constraints of real-time display mean that only some of the facilities are available.
 
@@ -134,7 +130,6 @@ Performance
 
 .. figure:: /images/BGE_Camera_Properties_Performance.jpg
    :width: 300px
-   :figwidth: 300px
 
    Performance Panel
 
@@ -153,7 +148,6 @@ Display
 
 .. figure:: /images/BGE_Camera_Properties_Display.jpg
    :width: 300px
-   :figwidth: 300px
 
    Display Panel
 

@@ -9,7 +9,6 @@ well as define your own keymap.
 
 .. figure:: /images/Manual-Interface-Configuration-Input-UserPreferencesInput.jpg
    :width: 650px
-   :figwidth: 650px
 
 
 Managing presets
@@ -56,7 +55,6 @@ Setting presets to default
 
 .. figure:: /images/Manual-Interface-Configuration-Input-SplashScreenInteraction.jpg
    :width: 307px
-   :figwidth: 307px
 
 
 Once you've configured your mouse and keyboard *Presets*,
@@ -84,11 +82,32 @@ Mouse
 =====
 
 Emulate 3 Button Mouse
-   It is possible to use Blender without a 3 button mouse (such as a two-button mouse,
-   Apple single-button Mouse, or laptop).
-   This functionality can be emulated with key/mousebutton combos.
-   This option is only available if *Select With* is set to *Right*.
-   :doc:`Read more about emulating a 3 button mouse » </getting_started/basics/interface/keyboard_and_mouse#mouse_button_emulation>`
+   Blender can be configured to work with different mouse types (such as a two-button mouse,
+   Apple single-button Mouse, or laptop touchpad).
+   The functionality of the 3 mouse buttons will then be be emulated with 
+   key/mousebutton combos as shown in the table below.
+
+   .. list-table:: Shortcuts for supported mouse hardware
+      :header-rows: 1
+      :stub-columns: 1
+
+      * - 3-button Mouse
+        - 2-button Mouse
+        - Apple Mouse
+      * - :kbd:`LMB`
+        - :kbd:`LMB`
+        - :kbd:`LMB` (mouse button)
+      * - :kbd:`MMB`
+        - :kbd:`Alt-LMB`
+        - :kbd:`Cmd-LMB` (Option/Alt key + mouse button)
+      * - :kbd:`RMB`
+        - :kbd:`RMB`
+        - :kbd:`Cmd-LMB` (Command/Apple key + mouse button)
+
+
+   All the Mouse/Keyboard combinations mentioned in the Manual can be expressed with the
+   combinations shown in the table. For Example,
+   :kbd:`Shift-Alt-RMB` becomes :kbd:`Shift-Alt-Cmd-LMB` on a single-button mouse.
 Continuous Grab
    Allows moving the mouse outside of the view (for translation, rotation, scale for example).
 Drag Threshold
@@ -101,8 +120,21 @@ Double Click
 
 .. note::
 
-   If you're using a graphic tablet instead of mouse, and pressure doesn't work properly,
-   try to place the mouse pointer to Blender window and then unplug/replug your graphic tablet. This might help.
+   The Mouse emulate option is only available if *Select With* is set to *Right*.
+
+
+Graphic Tablets
+===============
+
+Graphic tablets can be used to provide a more traditional method of controlling the mouse cursor using a pen.
+This can help to provide a more familiar experience for artists
+who are used to painting and drawing with similar tools,
+as well as provide additional controls such as pressure sensitivity.
+
+.. note::
+
+   If you are using a graphic tablet instead of a mouse and pressure sensitivity doesn't work properly,
+   try to place the mouse pointer in the Blender window and then unplug/replug your graphic tablet. This might help.
 
 
 Numpad emulation
@@ -153,7 +185,6 @@ Keymap editor
 
 .. figure:: /images/Manual-Interface-Configuration-Input-KeymapEditor.jpg
    :width: 320px
-   :figwidth: 320px
 
 
 The Keymap editor lets you change the default Hotkeys. You can change keymaps for each window.

@@ -10,19 +10,16 @@ Cloth Simulation
 
    * - .. figure:: /images/Cloth-example1.jpg
           :width: 150px
-          :figwidth: 150px
 
           Cloth example.
 
      - .. figure:: /images/Cloth-oncarvedwood.jpg
           :width: 150px
-          :figwidth: 150px
 
           Cloth on carved wooden men (made by motorsep).
 
      - .. figure:: /images/Cloth-example2.jpg
           :width: 150px
-          :figwidth: 150px
 
           Cloth example.
 
@@ -50,8 +47,8 @@ However, Blender's :doc:`Softbody system </physics/soft_body>` provides better s
 Cloth is a specialized simulation of fabrics.
 
 Once the object is designated as Cloth,
-a Cloth :doc:`modifier </modifiers>` will be added to the object's modifier stack automatically.
-As a :doc:`modifier </modifiers>` then, it can interact with other modifiers,
+a Cloth :doc:`modifier </modifiers/index>` will be added to the object's modifier stack automatically.
+As a :doc:`modifier </modifiers/index>` then, it can interact with other modifiers,
 such as *Armature* and *Smooth*. In these cases,
 the ultimate shape of the mesh is computed in accordance with the order of the modifier stack. For example,
 you should smooth the cloth *after* the modifier computes the shape of the cloth.
@@ -149,14 +146,13 @@ Pinning
 
 .. figure:: /images/Clothscreeny2.jpg
    :width: 200px
-   :figwidth: 200px
 
    Cloth in action.
 
 
-The first thing you need when pinning cloth is a :doc:`Vertex Group </modeling/meshes/vertex_groups>`.
+The first thing you need when pinning cloth is a :doc:`Vertex Group </modeling/meshes/vertex_groups/index>`.
 There are several ways of doing this including using the Weight Paint tool to paint the areas you want to pin
-(see the :doc:`Weight paint </modeling/meshes/weight_paint>` section of the manual).
+(see the :doc:`Weight paint </modeling/meshes/vertex_groups/weight_paint>` section of the manual).
 
 Once you have a vertex group set, things are pretty straightforward; all you have to do is
 press the *Pinning of cloth* button in the *Cloth* panel and select which
@@ -208,7 +204,6 @@ Collision Settings
 
 .. figure:: /images/Cloth_collisionpanel.jpg
    :width: 200px
-   :figwidth: 200px
 
    Cloth Collisions panel.
 
@@ -282,7 +277,7 @@ Mesh Objects Collide
 
 If your colliding object is not a mesh object, such as a NURBS surface, or text object,
 you must convert it to a mesh object. To do so, select the object in object mode,
-and in the 3D View header, select *Object* → *Convert Object Type*
+and in the 3D View header, select *Object* --> *Convert Object Type*
 (:kbd:`Alt-C`), and select *Mesh* from the popup menu.
 
 
@@ -291,7 +286,6 @@ Cloth - Object collisions
 
 .. figure:: /images/Manual-Panel-Collision.jpg
    :width: 200px
-   :figwidth: 200px
 
    Collision settings.
 
@@ -321,7 +315,6 @@ Mesh Object Modifier Stack
 
 .. figure:: /images/Manual-Simulation-Cloth-ColliderStack.jpg
    :width: 200px
-   :figwidth: 200px
 
    Collision stack.
 
@@ -346,7 +339,6 @@ Bake Collision
 
 .. figure:: /images/Manual-Simulation-Cloth-CollisionBake.jpg
    :width: 200px
-   :figwidth: 200px
 
    After Baking.
 
@@ -376,7 +368,7 @@ Just go to the frame you want to fix and :kbd:`Tab` into *Edit mode*.
 There you can move your vertices using all of Blender's mesh shaping tools. When you exit,
 the shape of the mesh will be recorded for that frame of the animation.
 If you want Blender to resume the simulation using the new shape going forward,
-:kbd:`LMB` click '\ *Rebake from next Frame* and play the animation.
+:kbd:`LMB` click *Rebake from next Frame* and play the animation.
 Blender will then pick up with that shape and resume the simulation.
 
 Edit the mesh to correct minor tears and places where the colliding object has punctured the
@@ -422,10 +414,10 @@ let's delete the default cube and add a plane. I scaled mine up along the Y axis
 but you don't have to do this. In order to get some good floppy and flexible fabric,
 you'll need to subdivide it several times. I did it 8 times for this example.
 So :kbd:`Tab` into *Edit mode*,
-and press :kbd:`W` → *Subdivide multi*, and set it to 8.
+and press :kbd:`W` --> *Subdivide multi*, and set it to 8.
 
 Now, we'll make this cloth by going to the *Object* context
-(:kbd:`F7`) → *Physics* sub-context.
+(:kbd:`F7`) --> *Physics* sub-context.
 Scroll down until you see the *Cloth* panel, and press the *Cloth* button.
 Now, a lot of settings will appear, most of which we'll ignore for now.
 
@@ -492,7 +484,6 @@ Using Cloth for Softbodies
 
 .. figure:: /images/Cloth-Sb1.jpg
    :width: 200px
-   :figwidth: 200px
 
    Using cloth for softbodies.
 
@@ -511,7 +502,6 @@ Cloth with Wind
 
 .. figure:: /images/Cloth-flag2.jpg
    :width: 200px
-   :figwidth: 200px
 
    Flag with wind applied.
 

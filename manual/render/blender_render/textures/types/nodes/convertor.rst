@@ -69,7 +69,8 @@ ColorRamp Node
 
 
 The ColorRamp Node is used for mapping values to colors with the use of a gradient.
-It works exactly the same way as a :doc:`Colorband for textures and materials </render/blender_render/materials/properties/ramps>`,
+It works exactly the same way as a
+:doc:`Colorband for textures and materials </render/blender_render/materials/properties/ramps>`,
 using the Factor value as a slider or index to the color ramp shown,
 and outputting a color value and an alpha value from the output sockets.
 
@@ -86,9 +87,10 @@ Alpha setting, and interpolation type.
 To change the hue of the selected color in the colorband,
 :kbd:`LMB` click on the swatch,
 and use the popup color picker control to select a new color.
-Press :kbd:`Enter` to set that color.
+Press :kbd:`Return` to set that color.
 
-To add colors, hold :kbd:`Ctrl` down and :kbd:`LMB` click inside the gradient.
+To add colors,
+hold :kbd:`Ctrl` down and :kbd:`Ctrl-LMB` click inside the gradient.
 Edit colors by clicking on the rectangular color swatch, which pops up a color-editing dialog.
 Drag the gray slider to edit Alpha values. Note that you can use textures for masks
 (or to simulate the old "Emit" functionality)

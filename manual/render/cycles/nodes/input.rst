@@ -161,11 +161,11 @@ Commonly used texture coordinates,
 typically used as inputs for the *Vector* input for texture nodes.
 
 Generated
-   Automatically generated texture coordinates from the vertex positions of the mesh without deformation,
+   Automatically-generated texture coordinates from the vertex positions of the mesh without deformation,
    keeping them sticking to the surface under animation. Range from 0.0 to 1.
    0 over the bounding box of the undeformed mesh.
 Normal
-   Object space normal, for texturing objects with the texture staying fixed on the object as it transforms.
+   Object space normal, for texturing objects with the texture staying fixed on the object as it transformed.
 UV
    UV texture coordinates from the active render UV layer.
 Object
@@ -176,7 +176,7 @@ Window
    Location of shading point on the screen, ranging from 0.0 to 1.
    0 from the left to right side and bottom to top of the render.
 Reflection
-   Vector in the direction of a sharp reflection; typically used for environment maps.
+   Vector in the direction of a sharp reflection, typically used for environment maps.
 
 
 Particle Info

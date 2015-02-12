@@ -62,7 +62,7 @@ and if the header is at the bottom the item text will read "Flip to Top".
    If you find that the colors you see on screen do not match those mentioned
    in the Manual then it could be that your default theme has been altered.
    Creating a new theme or selecting/altering a pre-existing one can be done by selecting the
-   :doc:`User Preferences </preferences>` window and clicking on the *Themes* tab of the window.
+   :doc:`User Preferences </preferences/index>` window and clicking on the *Themes* tab of the window.
 
 
 Window type button
@@ -90,4 +90,23 @@ All Menu entries show the relevant shortcut keys, if any.
 Menus and buttons will change with *Window Type* and the selected object and mode.
 They only show the actions that can be performed.
 
+
+Collapsing Menus
+----------------
+
+Sometimes its helpful to gain some extra horizontal space in the header by collapsing menus,
+this can be accessed from the header context menu,
+simply right click on the header and enable set it to collapsed.
+
+
+.. figure:: /images/Header_menu_expand.jpg
+   :width: 359px
+
+   Right click to access the header menu
+
+
+.. figure:: /images/Header_menu_collapsed.jpg
+   :width: 359px
+
+   Access the menu from the collapsed icon
 

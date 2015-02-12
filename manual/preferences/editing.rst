@@ -8,7 +8,6 @@ These preferences control how several tools will interact with your input.
 
 .. figure:: /images/Manual-Interface-Configuration-Editing-EditingUserPreferences.jpg
    :width: 640px
-   :figwidth: 640px
 
 
 Link Materials To
@@ -39,7 +38,7 @@ ObData
 Object
    Any created material will be created as part of the Object datablock.
 
-:doc:`Read more about Blender's Data System » </data_system>`
+:doc:`Read more about Blender's Data System </data_system/index>`
 
 
 New objects
@@ -64,7 +63,7 @@ Step
 Memory Limit
    Maximum memory usage in Mb (0 is unlimited).
 
-:doc:`Read more about Undo and Redo options » </getting_started/basics/undo_and_redo>`
+:doc:`Read more about Undo and Redo options </getting_started/basics/undo_and_redo>`
 
 
 Grease Pencil

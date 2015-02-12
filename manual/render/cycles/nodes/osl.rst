@@ -17,7 +17,7 @@ select Open Shading Language as the shading system** in the render settings.
 
 
 Script Node
-^^^^^^^^^^^
+===========
 
 OSL was designed for node-based shading,
 and **each OSL shader corresponds to a node** in a node setup. To add an OSL shader,
@@ -58,7 +58,7 @@ without having to update the script nodes in all files.
 
 
 Writing Shaders
-^^^^^^^^^^^^^^^
+===============
 
 For more details on how to write shaders, see the
 `OSL specification <https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-languagespec.pdf>`__.
@@ -77,7 +77,7 @@ Here is a simple example:
 
 
 Closures
-^^^^^^^^
+========
 
 OSL is different from, for example, RSL or GLSL, in that it does not have a light loop.
 There is no access to lights in the scene,
@@ -91,46 +91,51 @@ see the :doc:`shader nodes manual </render/cycles/nodes/shaders>`.
 
 
 BSDF
-~~~~
+----
 
 - ``diffuse(N)``
 - ``oren_nayar(N, roughness)``
-- ``reflection(N)``
-- ``refraction(N, ior)``
-- ``microfacet_beckmann(N, roughness)``
-- ``microfacet_beckmann_refraction(N, roughness, ior)``
-- ``microfacet_ggx(N, roughness)``
-- ``microfacet_ggx_refraction(N, roughness, ior)``
-- ``phong_ramp(N, exponent, colors[8])``
 - ``diffuse_ramp(N, colors[8])``
-- ``translucent(N)``
-- ``transparent()``
-- ``ashikhmin_velvet(N, roughness)``
-- ``ward(N, T, roughness_u, roughness_v)``
+- ``phong_ramp(N, exponent, colors[8])``
 - ``diffuse_toon(N, size, smooth)``
 - ``glossy_toon(N, size, smooth)``
-- ``westin_sheen(N, roughness)``
-- ``westin_backscatter(N, edginess)``
+- ``translucent(N)``
+- ``reflection(N)``
+- ``refraction(N, ior)``
+- ``transparent()``
+- ``microfacet_ggx(N, roughness)``
+- ``microfacet_ggx_aniso(N, T, ax, ay)``
+- ``microfacet_ggx_refraction(N, roughness, ior)``
+- ``microfacet_beckmann(N, roughness)``
+- ``microfacet_beckmann_aniso(N, T, ax, ay)``
+- ``microfacet_beckmann_refraction(N, roughness, ior)``
+- ``ashikhmin_shirley(N, T, ax, ay)``
+- ``ashikhmin_velvet(N, roughness)``
+
+
+Hair
+----
+
 - ``hair_reflection(N, roughnessu, roughnessv, T, offset)``
 - ``hair_transmission(N, roughnessu, roughnessv, T, offset)``
 
 
 BSSRDF
-~~~~~~
+------
 
 - ``bssrdf_cubic(N, radius, texture_blur, sharpness)``
 - ``bssrdf_gaussian(N, radius, texture_blur)``
 
 
 Volume
-~~~~~~
+------
 
 - ``henyey_greenstein(g)``
 - ``absorption()``
 
 
 Other
-~~~~~
+-----
 
 - ``emission()``
 - ``ambient_occlusion()``
@@ -139,7 +144,7 @@ Other
 
 
 Attributes
-^^^^^^^^^^
+==========
 
 Some object, particle and mesh attributes are available to the built-in getattribute()
 function. UV maps and vertex colors can be retrieved using their name.
@@ -197,12 +202,12 @@ Other attributes are listed below:
 
 
 Trace
-^^^^^
+=====
 
-We support the trace(point pos, vector dir, ...) function, to trace rays from the OSL shader.
+We support the ``trace(point pos, vector dir, ...)`` function, to trace rays from the OSL shader.
 The "shade" parameter is not supported currently,
-but attributes can be retrieved from the object that was hit using the getmessage("trace", ..
-) function. See the OSL specification for details on how to use this.
+but attributes can be retrieved from the object that was hit using the ``getmessage("trace", ..)`` function.
+See the OSL specification for details on how to use this.
 
 This function can't be used instead of lighting;
 the main purpose is to allow shaders to "probe" nearby geometry,

@@ -5,7 +5,6 @@ Controller Editing
 
 .. figure:: /images/BGE_Controller_Column.jpg
    :width: 292px
-   :figwidth: 292px
 
    Controller Column with Typical Sensor
 
@@ -25,7 +24,6 @@ Column Heading
 
 .. figure:: /images/BGE_Controller_Column1.jpg
    :width: 292px
-   :figwidth: 292px
 
    Controller Column Headings
 
@@ -62,12 +60,10 @@ Object Heading
 
 .. figure:: /images/BGE_Controller_Column2.jpg
    :width: 292px
-   :figwidth: 292px
 
 
 .. figure:: /images/BGE_Controller_Column4.jpg
    :width: 292px
-   :figwidth: 292px
 
 
 In the column list, controllers are grouped by object. By default,
@@ -83,5 +79,5 @@ Name
 Add Controller
    When clicked, a menu appears with the available controller types.
    Selecting an entry adds a new controller to the object.
-   See :doc:`Controllers </game_engine/logic/controllers>` for a list of available controller types.
+   See :doc:`Controllers </game_engine/logic/controllers/index>` for a list of available controller types.
 

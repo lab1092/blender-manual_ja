@@ -3,6 +3,8 @@
 View Settings
 *************
 
+.. _view_shading:
+
 View Shading
 ============
 
@@ -37,7 +39,7 @@ Solid
    This draw mode is not dependent on scene light sources and can be configured in the *Solid OpenGL lights*
    group of controls from the *System & OpenGL* tab of the *User Preferences* window.
 
-   :doc:`Read more about System Configuration » </preferences/system>`
+   :doc:`Read more about System Configuration </preferences/system>`
 Wireframe
    Objects only consist of lines that make their shapes recognizable (e.g. the edges of meshes or surfaces).
 Bounding Box
@@ -88,20 +90,17 @@ View
 ----
 
 Lens
-   Control the focal length of the 3d view camera in millimeters, unlike a :doc:`rendering camera </render/camera>`
-
+   Control the focal length of the 3d view camera in millimeters,
+   unlike a :doc:`rendering camera </render/camera/index>`
 Lock to Object
    By entering the name of an object in the *Object* field, you lock your view to this object, i.e.
    it will always be at the center of the view (the only exception is the active camera view, :kbd:`Numpad0`).
    If the locked object is an armature,
    you can further center the view on one of its bones by entering its name in the *Bone* field.
-
 Lock to Cursor
    Lock the center of the view to the position of the 3D cursor
-
 Lock Camera to View
    When in camera view, use this option to move the camera in 3D space, while continuing to remain in camera view.
-
 Clip Start and Clip End
    Adjust the minimum and maximum distances to be visible for the view-port.
 
@@ -181,7 +180,7 @@ Textured Solid
    Display face assigned textures in solid view.
 Toggle Quad View
    Toggles the four pane 3D view.
-   :doc:`Read more about arranging frames » </getting_started/basics/interface/window_system/arranging_frames>`
+   :doc:`Read more about arranging frames </getting_started/basics/interface/window_system/arranging_frames>`
 
 
 Background Image

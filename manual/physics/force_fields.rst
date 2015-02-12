@@ -31,7 +31,7 @@ Creating a Force Field
    :class: refbox
 
    | Mode:     *Object* Mode
-   | Panel:    *Object* context → *Physics* sub-context → *Fields*
+   | Panel:    *Object* context --> *Physics* sub-context --> *Fields*
    | Hotkey:   :kbd:`F7`
 
 
@@ -51,7 +51,7 @@ these common options are explained for the *Spherical* field.
    After changing the fields (*Fields* panel) or deflection
    (*Collision* panel) settings, you have to recalculate the particle,
    softbody or cloth system (*Free Cache*), this is not done automatically. You can
-   clear the cache for all selected objects with :kbd:`Ctrl-B` → *Free cache selected*.
+   clear the cache for all selected objects with :kbd:`Ctrl-B` --> *Free cache selected*.
 
    *Particles* react to all kind of *Force Fields*,
    *Soft Bodies* only to *Spherical* / *Wind* / *Vortex*
@@ -138,7 +138,6 @@ Whether *Boids* seek or fly goals/predators depends on the *Physics* settings of
 
 .. figure:: /images/UM_PART_XIII_KST_PI03.jpg
    :width: 100px
-   :figwidth: 100px
 
    Image 2b: Spherical field indicator.
 
@@ -149,7 +148,6 @@ Wind
 
 .. figure:: /images/UM_PART_XIII_KST_PI02.jpg
    :width: 100px
-   :figwidth: 100px
 
    Image 3a: Wind field indicator.
 
@@ -163,7 +161,6 @@ Vortex Field
 
 .. figure:: /images/UM_PART_XIII_KST_PI04.jpg
    :width: 100px
-   :figwidth: 100px
 
    Image 3b: Vortex field indicator.
 
@@ -337,7 +334,6 @@ Shape
 
 .. figure:: /images/Blender3D_CurveGuideKink.jpg
    :width: 400px
-   :figwidth: 400px
 
    Image 4b: Kink options of a curve guide. From left to right: Radial, Wave, Braid, Roll.
    `Animation <http://www.vimeo.com/1866538>`__

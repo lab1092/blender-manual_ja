@@ -4,18 +4,35 @@
   Interface
 ############
 
+
+Overview
+********
+
 .. toctree::
    :maxdepth: 1
 
    introduction.rst
-   keyboard_and_mouse.rst
+   input_devices.rst
+
+
+Window Controls
+***************
+
+.. toctree::
+   :maxdepth: 1
+
    window_system/index.rst
-   window_types.rst
    screens.rst
    scenes.rst
-   modes.rst
-   contexts.rst
-   menus.rst
+
+
+Interface Controls
+******************
+
+.. toctree::
+   :maxdepth: 1
+
    panels.rst
    buttons_and_controls.rst
-   internationalization.rst
+   extended_controls.rst
+

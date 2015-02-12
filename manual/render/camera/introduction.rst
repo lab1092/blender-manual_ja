@@ -7,12 +7,12 @@ Introduction
 ************
 
 A *Camera* is an object that provides a means of rendering images from Blender.
-It defines which portions of a scene is visible at render time.
-Scenes can have multiples cameras, but *must* contain, at minimum,
-one camera in order to generate any images.
+It defines which portions of a scene is visible in the rendered image.
+
+A scene can contain more than one camera, but only one of them will be used at a time.
 
 
-Add a new camera
+Add a New Camera
 ================
 
 .. admonition:: Reference
@@ -26,9 +26,13 @@ Add a new camera
 In *Object* mode simply press :kbd:`Shift-A` and in the popup menu,
 choose :menuselection:`Add --> Camera`.
 
+The default scene in Blender includes a camera,
+so you'll probably only need to add a new one if you have deleted the default one,
+or need to animate a cut between two cameras.
 
-Change active camera
-====================
+
+Changing the Active Camera
+==========================
 
 .. admonition:: Reference
    :class: refbox
@@ -39,27 +43,29 @@ Change active camera
 
 .. figure:: /images/Manual-CameraView-ActiveCamera.jpg
    :width: 200px
-   :figwidth: 200px
 
    Active camera (left one).
 
 
 The *active* camera is the camera that is currently being used for rendering and camera view
 (:kbd:`Numpad0`).
+
 Select the camera you would like to make active and press :kbd:`Ctrl-Numpad0` (by doing so,
 you also switch the view to camera view). In order to render,
-each scene **must** have a camera.
+each scene **must** have an active camera.
 
-The active camera is the one with the filled "up" triangle on top seen in the 3D viewport,
-for example, the left camera in (*Active camera (left one)*).
+The active camera can also be set in the *Scene* context of the *Properties Editor*
+
+The camera with the solid triangle on top is the active camera.
 
 
- .. warning::
+.. warning::
 
-    The active camera, as well as the layers, can be specific to a given view,
-    or global (locked) to the whole scene -
-    see :doc:`this part of the 3D view options page </getting_started/basics/navigating/3d_view_options#lock_to_scene>`.
+   The active camera, as well as the layers, can be specific to a given view,
+   or global (locked) to the whole scene - see
+   :doc:`this part of the 3D view options page </getting_started/basics/navigating/3d_view_options#lock_to_scene>`.
 
+.. _camera_settings:
 
 Camera Settings
 ===============
@@ -67,111 +73,83 @@ Camera Settings
 .. admonition:: Reference
    :class: refbox
 
-   | Mode:     *Object* mode
-   | Panel:    *Camera*
+   | Mode:     Object mode
+   | Editor:   Properties
+   | Context:  Object Data
 
 
 Cameras are invisible in renders, so they don't have any material or texture settings.
 However, they do have *Object* and *Editing* setting panels available
 which are displayed when a camera is the selected (active!) object.
 
-`Camera Lens panel. <http://wiki.blender.org/index.php/File:Manual-CameraPanel-2.57>`__
-
 
 Lens
 ----
 
-
-Perspective / Orthographic / Panoramic
-   Select what projection type to use. *Perspective* is the default and makes objects further away
-   appear smaller while *Orthographic* maintains the exact measures of objects. A
-   *Perspective* projection is more similar to what an image obtained with a real camera would look like
-   while an *Orthographic* projection is a more technical view, best for blueprints,
-   but worst to convey distances between objects.
-   To configure these projections,
-   see :doc:`this page </render/camera/perspective>` on vanishing points and isometric view.
-   *Panoramic* renders the scene with a cylindrical projection.
-
-   .. figure:: /images/Manual-CameraView-Camera.jpg
-      :width: 200px
-      :figwidth: 200px
-
-      A camera with the clipping limits and focal point visible.
-
-Focal Length
-   Available in Perspective and Panoramic camera types, represents the lens focal length,
-   represented in degrees or millimeters. When *Orthographic* mode is selected,
-   the *Focal Length* setting changes to the *Orthographic Scale* setting.
-   This setting determines the size of the camera's visible area.
-Shift X/Y
-   Shifts the camera viewport. Note that most of the time,
-   this setting should not be used to adjust the camera position,
-   as the *Shift* setting is relative to the actual camera position, which will not be changed.
-Clipping Start/End
-   Sets the clipping limits. Only objects within the limits are rendered.
-   If *Limits* in the *Display* panel is enabled,
-   the clip bounds will be visible as two yellow connected dots on the camera line of sight.
+The camera lens options control the way 3D objects are represented in a 2D image.
+See :doc:`Camera Lens </render/camera/lens>` for details.
 
 
-   .. note::
-
-      The *3D View* window contains settings similar to the camera,
-      such as *Orthographic* / *Perspective* and *Clip Start* / *Clip End*.
-      These settings have no effect on the camera rendering,
-      and only change the view settings when *not* in *Camera* view.
-      These settings are accessed through the :menuselection:`View` menu of the *3D View*.
-
-      See the :doc:`3D view options page </getting_started/basics/navigating/3d_view_options#view_properties_panel>`
-      for more details.
-
-
-Camera Presets
-==============
+Camera
+------
 
 .. figure:: /images/Manual-Camera-presets-panel.jpg
    :width: 270px
-   :figwidth: 270px
 
    Camera Presets panel.
 
 
-   ToDo
+.. TODO: Camera Presets
 
-- *Camera Presets*
-- *Sensor*
+.. _render-camera-sensor-size:
 
+Sensor size
+   This setting is an alternative way to control the focal-length,
+   it's useful to match the camera in Blender to a physical camera & lens combination,
+   e.g. for :doc:`motion tracking </motion_tracking/index>`.
+
+.. _render-camera-dof:
 
 Depth of Field
-==============
+--------------
 
 .. figure:: /images/Manual-Camera-dof-panel.jpg
    :width: 270px
-   :figwidth: 270px
 
    Camera Display panel
 
 
+Real world cameras transmit light through a lens that bends and focuses it onto the sensor.
+Because of this, objects that are a certain distance away are in focus,
+but objects in front and behind that are blurred.
+
+The area in focus is called the *focal point* and can be set using either an exact value,
+or by using the distance between the camera and a chosen object:
+
 Depth of Field Object
-   When using :doc:`Depth of Field </render/camera/depth_of_field>`,
-   the linked object will determine the focal point. Linking an object will deactivate the distance parameter.
+   Choose an object which will determine the focal point. Linking an object will deactivate the distance parameter.
+   Typically this is used to give precise control over the position of the focal point,
+   and also allows it to be animated or constrained to another object.
 Distance
-   Distance to the focal point. It is shown as a yellow cross on the camera line of sight.
-   *Limits* must be enabled to see the cross.
-   It is used in combination with the :doc:`Defocus Compositing Node </composite_nodes/types/filter#defocus>`.
+   Distance to the focal point. If *Limits* are enabled, it is shown as a yellow cross on the camera line of sight.
+
+   .. tip::
+
+      You can hover the mouse over the *Distance* property and press :kbd:`E` to use a special *Depth Picker*.
+      Then click on a point in the 3D View to sample the distance from that point to the camera.
 
 
 Display
-=======
+-------
 
 .. figure:: /images/Manual-Camera-display-panel.jpg
    :width: 270px
-   :figwidth: 270px
 
    Camera Display panel
 
 
 Limits
-   Toggles viewing of the limits on and off.
+   Shows a line which indicates *Start* and *End Clipping* values.
 Mist
    Toggles viewing of the mist limits on and off.
    The limits are shown as two connected white dots on the camera line of sight.
@@ -181,7 +159,7 @@ Mist
 
 .. figure:: /images/Manual-Camera-camera-view.jpg
    :width: 350px
-   :figwidth: 350px
+   :align: right
 
    Camera view displaying safe areas, sensor and name
 
@@ -202,7 +180,7 @@ Passepartout, Alpha
 
 
 Composition Guides
-==================
+^^^^^^^^^^^^^^^^^^
 
 *Composition Guides* are available from the drop-down menu, which can help when framing a shot.
 There are 8 types of guides available:
@@ -231,17 +209,17 @@ Harmonious Triangle B
 Camera Navigation
 =================
 
-Here you will find some handy ways to navigate and position your camera in your scene.
+There are several different ways to navigate and position the camera in your scene, some of them are explained below.
 
 
 .. note::
 
    Remember that the active "camera" might be any kind of object.
-   So these actions can be used e.g. to position and aim a lamp...
+   So these actions can be used, for example, to position and aim a lamp.
 
 
 Move active camera to view
-==========================
+--------------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -260,7 +238,7 @@ and switches to camera view.
 
 
 Camera View Positioning
-=======================
+-----------------------
 
 By enabling *Lock Camera to View* in the View menu of the View Properties panel,
 while in camera view, you can navigate the 3d viewport as usual,
@@ -268,7 +246,7 @@ while remaining in camera view. Controls are exactly the same as when normally m
 
 
 Roll, Pan, Dolly, and Track
-===========================
+---------------------------
 
 To perform these camera moves, the camera must first be *selected*,
 so that it becomes the active object (while viewing through it,
@@ -283,7 +261,8 @@ Roll
 Vertical Pan or Pitch
    This is just a rotation along the local X-axis. Press :kbd:`R` to enter object rotation mode, then :kbd:`X` twice
    (the first press selects the *global* axis - pressing the same letter a second time selects the *local* axis -
-   this works with any axis; see the :doc:`axis locking page </3d_interaction/transform_control/axis_locking>`).
+   this works with any axis;
+   see the :doc:`axis locking page </getting_started/basics/transformations/transform_control/axis_locking>`).
 Horizontal Pan or Yaw
    This corresponds to a rotation around the camera's local Y axis... Yes, that's it, press :kbd:`R`,
    and then :kbd:`Y` twice!
@@ -295,7 +274,7 @@ Sideways Tracking
 
 
 Aiming the camera in Flymode
-============================
+----------------------------
 
 When you are in *Camera* view,
 the :doc:`fly mode </getting_started/basics/navigating#fly_mode>` actually moves your active camera...

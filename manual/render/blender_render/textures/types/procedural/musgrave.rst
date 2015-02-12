@@ -5,7 +5,6 @@ Procedural textures: Musgrave
 
 .. figure:: /images/25-Manual-Textures-Procedural-Musgrave.jpg
    :width: 307px
-   :figwidth: 307px
 
    Musgrave Texture Panels
 
@@ -39,31 +38,26 @@ Examples with Basis : Voronoi F1 - Dimension : 0.5 - Lacunarity : 0.15 - Octave:
 
    * - .. figure:: /images/Musgrave_HeteroTerrain.jpg
           :width: 120px
-          :figwidth: 120px
 
           Hetero Terrain
 
      - .. figure:: /images/Musgrave_fBM.jpg
           :width: 120px
-          :figwidth: 120px
 
           fBM
 
      - .. figure:: /images/Musgrave_HybridMultifractal.jpg
           :width: 120px
-          :figwidth: 120px
 
           Hybrid Multifrct
 
      - .. figure:: /images/Musgrave_RidgedMultifractal.jpg
           :width: 120px
-          :figwidth: 120px
 
           Ridged Multifrct
 
      - .. figure:: /images/Musgrave_Multifractal.jpg
           :width: 120px
-          :figwidth: 120px
 
           Multifractal
 
@@ -83,7 +77,7 @@ Dimension
 Lacunarity
    Lacunarity controls the scaling of each layer of the Musgrave texture,
    meaning that each additional layer will have a scale that is the inverse of the value which shows on the button.
-   i.e. Lacunarity = 2 → Scale = 1/2 original. Range: 0 to 6.
+   i.e. Lacunarity = 2 --> Scale = 1/2 original. Range: 0 to 6.
 Octaves
    Octave controls the number of times the original noise pattern is overlayed on itself and
    scaled/contrasted with the fractal dimension and lacunarity settings. Range: 0 to 8.

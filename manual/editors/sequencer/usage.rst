@@ -21,7 +21,6 @@ providing advanced hollywood-style effects for a professional looking video.
 
 .. figure:: /images/2.5_Manual-VSE-header.jpg
    :width: 400px
-   :figwidth: 400px
 
    Video Sequence Editor in Sequence display mode
 
@@ -110,7 +109,7 @@ as a visual cue that you can pick them successfully:
 Add Movies or Images
 --------------------
 
-When adding a Movie or Movie+Audio\ :kbd:`LMB` LEFT CLICK to put the name of the file into
+When adding a Movie or Movie+Audio :kbd:`LMB` to put the name of the file into
 the text box at the top; this selects a **single** file (like a movie)
 
 In the case of (numbered) image **sequences**, you have a choice:
@@ -250,7 +249,7 @@ select one base strip (image, movie, or scene) by :kbd:`RMB` clicking on it.
 For some effects, like the Cross transition effect,
 you will need to :kbd:`Shift-RMB` a second overlapping strip
 (it depends on the effect you want).
-Then select Add → Effect and pick the effect you want from the pop-up menu. When you do,
+Then select Add --> Effect and pick the effect you want from the pop-up menu. When you do,
 the Effect strip will be shown above the source strips. If it is an independent effect,
 like the color generator (described later), it will be rubberbanded to your mouse;
 click to drop the strip.
@@ -280,12 +279,12 @@ thus layering effects on top of one another.
    :class: refbox
 
    | Mode:     Sequence, Effects Strip Selected
-   | Menu:     Strip → Change Effect
+   | Menu:     Strip --> Change Effect
    | Hotkey:   :kbd:`C`
 
 
 If you picked the wrong effect from the menu, you can always change it by selecting the strip
-(:kbd:`RMB`) and using the Strip→Change Effect selection. Or,
+(:kbd:`RMB`) and using the Strip-->Change Effect selection. Or,
 you can press *C* hange to switch effects on a selected Effects strip.
 
 
@@ -465,7 +464,7 @@ Fit preview in Window :kbd:`Home`
    Resizes preview so that it fits in the window.
 Show Preview 1:1 :kbd:`Numpad1`
    Resizes preview to a 1:1 scale (actual size).
-View Selected :kbd:`Numpad.`
+View Selected :kbd:`NumpadPeriod`
    Zooms in the display to fit only the selected strips
 
 Use this when working arranging a lot of strips and you want to use all of your screen to work.
@@ -474,7 +473,7 @@ Use this when working arranging a lot of strips and you want to use all of your 
    :class: refbox
 
    | Mode:     Sequence
-   | Menu:     View → Show Frames, View → Show Seconds
+   | Menu:     View --> Show Frames, View --> Show Seconds
    | Hotkey:   :kbd:`T`
 
 

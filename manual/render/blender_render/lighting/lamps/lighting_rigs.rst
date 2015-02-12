@@ -9,9 +9,7 @@ A rig provides a basic setup and allows you to start from a known point and go f
 Different rigs are used for different purposes and emulate different conditions;
 the rig you start with depends on what you want to convey in your scene.
 Lighting can be very confusing, and the defaults do not give good results. Further,
-very small changes can have a dramatic effect on the mood and colors. At major studios,
-lighting is an entire step and specialty. Well,
-let's get out of the darkness of confusion and let me en\ *light* en you.
+very small changes can have a dramatic effect on the mood and colors.
 
 In all the lighting rigs,
 the default camera is always positioned nearly ``15`` degrees off dead-on, about **25 BU**
@@ -29,7 +27,6 @@ Environment or Ambient Only
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-EL.jpg
    :width: 300px
-   :figwidth: 300px
 
    Environment (Ambient) lighting only.
 
@@ -42,7 +39,6 @@ and traveling to camera.
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-AO.jpg
    :width: 256px
-   :figwidth: 256px
 
    Ambient occlusion.
 
@@ -57,7 +53,6 @@ Single Rig
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-01.jpg
    :width: 300px
-   :figwidth: 300px
 
    Standard Spot light rig.
 
@@ -98,7 +93,6 @@ Two-Point Rig
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-02.jpg
    :width: 300px
-   :figwidth: 300px
 
    Standard two-point light rig.
 
@@ -149,7 +143,6 @@ Studio rig
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-03a-Studio.jpg
    :width: 300px
-   :figwidth: 300px
 
    Studio three-point light rig.
 
@@ -187,7 +180,6 @@ Standard Rig
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-03b-Standart.jpg
    :width: 300px
-   :figwidth: 300px
 
    Standard three-point light rig.
 
@@ -221,7 +213,6 @@ Four-point Rig
 
 .. figure:: /images/27x-Manual-Lighting-Rigs-04.jpg
    :width: 300px
-   :figwidth: 300px
 
    Four-point light rig.
 

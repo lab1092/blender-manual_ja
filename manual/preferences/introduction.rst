@@ -19,12 +19,11 @@ To open a Blender *User Preferences* editor
 go to :menuselection:`File --> User Preferences` or press :kbd:`Ctrl-Alt-U`.
 Mac users can press :kbd:`Cmd-,`.
 You can also load the Preferences editor in any window by selecting (|user-preferences-icon|)
-*User Preferences* from the :doc:`Window type selection menu </getting_started/basics/interface/window_types>`.
+*User Preferences* from the :doc:`Window type selection menu </editors/index>`.
 
 
 .. figure:: /images/User-preferences.jpg
    :width: 650px
-   :figwidth: 650px
 
 
 Configure

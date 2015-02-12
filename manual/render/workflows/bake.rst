@@ -51,7 +51,6 @@ Options
 
 .. figure:: /images/25-Manual-Render-Bake-AO.jpg
    :width: 329px
-   :figwidth: 329px
 
    Ambient Occlusion
 
@@ -60,13 +59,13 @@ Bake Mode
 ---------
 
 Full Render
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Bakes all materials, textures, and lighting except specularity and SSS.
 
 
 Ambient Occlusion
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 Bakes ambient occlusion as specified in the World panels. Ignores all lights in the scene.
 
@@ -74,27 +73,25 @@ Normalized
    Normalize without using material's settings.
 
 Shadow
-~~~~~~
+^^^^^^
 
 Bakes shadows and lighting.
 
 
 .. figure:: /images/25-Manual-Render-Bake-Norm.jpg
    :width: 330px
-   :figwidth: 330px
 
    Normals
 
 
 .. figure:: /images/25-Manual-Render-Bake-NormSpace.jpg
    :width: 217px
-   :figwidth: 217px
 
    Normal Space
 
 
 Normals
-~~~~~~~
+^^^^^^^
 
 Bakes tangent and camera-space normals (amongst many others) to an RGB image.
 
@@ -117,20 +114,19 @@ next to the existing *Normal Map* setting. For correct results,
 the setting here should match the setting used for baking.
 
 Textures
-~~~~~~~~
+^^^^^^^^
 
 Bakes colors of materials and textures only, without shading.
 
 
 .. figure:: /images/25-Manual-Render-Bake-Disp.jpg
    :width: 329px
-   :figwidth: 329px
 
    Displacement
 
 
 Displacement
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 Similar to baking normal maps,
 displacement maps can also be baked from a high-res object to an unwrapped low-res object,
@@ -151,32 +147,31 @@ renderers.
 
 
 Emission
-~~~~~~~~
+^^^^^^^^
 
 Bakes Emit, or the Glow color of a material.
 
 
 Alpha
-~~~~~
+^^^^^
 
 Bakes Alpha values, or transparency of a material.
 
 
 Mirror Color and Intensity
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Bakes Mirror color or intensity values.
 
 
 Specular Color and Intensity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Bakes specular color or specular intensity values.
 
 
 .. figure:: /images/25-Manual-Render-Bake-FullRender.jpg
    :width: 328px
-   :figwidth: 328px
 
    Full Render
 
@@ -230,7 +225,9 @@ Workflow
 - When rendering is complete, Blender replaces the image with the Baked image.
 - Save the image.
 - Apply the image to the mesh as a UV texture. For displacement and normal maps,
-  refer to :doc:`Bump and Normal Maps </render/blender_render/textures/influence/material/bump_and_normal>`. For full and texture bakes,
-  refer to :doc:`Textures </render/blender_render/textures>`.
+  refer to :doc:`Bump and Normal Maps </render/blender_render/textures/influence/material/bump_and_normal>`.
+  For full and texture bakes,
+  refer to :doc:`Textures </render/blender_render/textures/index>`.
 - Refine the image using the process described below,
-  or embellish with :doc:`Texture Paint </textures/uv/painting_the_texture>` or an external image editor.
+  or embellish with :doc:`Texture Paint </render/blender_render/textures/painting/projection>`
+  or an external image editor.

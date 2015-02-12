@@ -95,10 +95,10 @@ Frame Sequence Workflow
   Do a long task [like sleeping, playing a video game,
   or cleaning your driveway] while you wait for your computer to finish rendering the frames.
 - Once the animation is finished,
-  use your OS file explorer to navigate into the output folder (".\render in this example).
+  use your OS file explorer to navigate into the output folder ("``render`` in this example).
   You will see lots of images (.png or .exr, etc... depending on the format you chose to render)
   that have a sequence number attached to them ranging from 0000 to a max of 9999. These are your single frames.
-- In Blender, now go into the :doc:`video sequence editor </editors/sequencer>`.
+- In Blender, now go into the :doc:`video sequence editor </editors/sequencer/index>`.
 - Choose *Add Image* from the add menu. Select all the frames from your output folder that you want to include
   in your animation (Press A to Select All easily). They will be added as a strip to the sequence editor.
 - Now you can edit the strip and add effects or simply leave it like it is.

@@ -54,13 +54,11 @@ Resolution
 
          * - .. figure:: /images/Manual-Fluid-70res.jpg
                 :width: 270px
-                :figwidth: 270px
 
                 10cm mug at Resolution 70.
 
            - .. figure:: /images/Manual-Fluid-200res.jpg
                 :width: 270px
-                :figwidth: 270px
 
                 10cm mug at Resolution 200.
 
@@ -75,7 +73,7 @@ Resolution
 .. note:: Resolution and Real-size of the Domain
 
    Be sure to set the resolution appropriate to the real-world size of the domain (see the *Realworld-size* in the
-   `Domain Wold`_).
+   `Domain World`_).
    If the domain is not cubic, the resolution will be taken for the longest side.
    The resolutions along the other sides will be reduced according to their lengths
    (therefore, a non-cubic domain will need less memory than a cubic one, resolutions being the same).
@@ -123,7 +121,7 @@ Time
 
    If you set *Start* time to 3.0, and *End* time to 4.0, you will simulate 1 second of fluid motion.
    That one second of fluid motion will be spread across however-many frames are set in the *Anim* panel
-   (*Scene* context → *Render* sub-context → *Anim* and *Output* panel).
+   (*Scene* context --> *Render* sub-context --> *Anim* and *Output* panel).
 
    This means, for example, that if you have Blender set to make 250 frames at 25 fps, the fluid
    will look like it had already been flowing for 3 seconds at the start of the simulation,
@@ -161,19 +159,19 @@ Viscosity
    honey, oil, or water).
 
    For manual entry, please note that the normal real-world viscosity (the so-called dynamic viscosity)
-   is measured in Pascal-seconds (Pa.s), or in Poise units (P, equal to 0.1 Pa.s, pronounced "\ *pwaz* ",
+   is measured in Pascal-seconds (Pa.s), or in Poise units (P, equal to 0.1 Pa.s, pronounced *pwaz*,
    from the Frenchman Jean-Louis Poiseuille, who discovered the laws on "the laminar flow of viscous fluids"),
-   and commonly centiPoise units (cP, equal to 0.001 Pa.s, "\ *sentipwaz* "). Blender, on the other hand,
-   uses the kinematic viscosity (which is dynamic viscosity in Pa.s, divided by the density in kg.m\ :sup:`-3`,
-   unit ``m``:sup:`2` ``.s``:sup:`-1`).
+   and commonly centiPoise units (cP, equal to 0.001 Pa.s, *sentipwaz*).
+   Blender, on the other hand, uses the kinematic viscosity
+   (which is dynamic viscosity in Pa.s, divided by the density in kg.m :sup:`-3`, unit ``m``:sup:`2` ``.s``:sup:`-1`).
    The table below gives some examples of fluids together with their dynamic and kinematic viscosities.
 
    Manual entries are specified by a floating point number and an exponent.
    These floating point and exponent entry fields (scientific notation)
    simplify entering very small or large numbers. The viscosity of water at room temperature is 1.002 cP,
-   ou 0.001002 Pa.s; the density of water is about 1000 kg.m\ :sup:`-3`, which gives us a kinematic viscosity of
-   0.000001002 m\ :sup:`2`.s\ :sup:`-1` - so the entry would be 1.002 times 10 to the minus six (``1.
-   002?10``:sup:`-6` in scientific notation). Hot Glass and melting iron is a fluid, but very thick;
+   ou 0.001002 Pa.s; the density of water is about 1000 kg.m :sup:`-3`, which gives us a kinematic viscosity of
+   0.000001002 m :sup:`2`.s :sup:`-1` - so the entry would be 1.002 times 10 to the minus six
+   (``1.002?10``:sup:`-6` in scientific notation). Hot Glass and melting iron is a fluid, but very thick;
    you should enter something like ``1.0?10``:sup:`0` (= 1.0) as its kinematic viscosity
    (indicating a value of ``1.0?10``:sup:`6` cP).
 
@@ -190,9 +188,7 @@ Viscosity
    Oil viscosity varies by SAE rating.
    Glass at room temperature is basically a solid, but glass at 1500 degrees Celsius flows (nearly) like water.
 
-
-..    Comment: <!--
-
+..
    There's still some things that aren't correct in this table, I think.
    Let me put as clear as I can:
    *The dynamic viscosity international unit is the Pascal-seconds (Pa.s).
@@ -201,32 +197,30 @@ Viscosity
    *The density international unit is in kg.m^-3.
    Which implies that a Pascal corresponds to 1 kg.m^-1.s^-2,
    or else you cannot divide Pa.s by kg.m^-3 to obtain m^2.s^-1 !
-
+..
    So if I take the kinematics values given bellow,
    and try to get the corresponding dynamic values, I have:
    *water: density: about 1000 (kg.m^-3); kinematic viscosity: 1×10^-6 (m^2.s^-1)
-   → dynamic viscosity is 1000 × 1×10^-6 = 1×10^-3 Pa.s, hence 1 cP.
-   → COHERENT
+   --> dynamic viscosity is 1000 × 1×10^-6 = 1×10^-3 Pa.s, hence 1 cP.
+   --> COHERENT
    *Oil:   density: more or less like water, so about 1000; Kinematic viscosity: 5×10^-5
-   → dynamic viscosity is 1000 × 5×10^-5 = 1×10^-2 Pa.s, hence 50 cP, and not 500 cP
-   → NOT COHERENT, unless Oil SAE 50 is ten times heavier than water!
+   --> dynamic viscosity is 1000 × 5×10^-5 = 1×10^-2 Pa.s, hence 50 cP, and not 500 cP
+   --> NOT COHERENT, unless Oil SAE 50 is ten times heavier than water!
    *Honey: density: about 1250 (kg.m^-3); kinematic viscosity: 2×10^-3
-   → dynamic viscosity is 1250 × 2×10^-3 = 2.5 Pa.s, hence 2500 cP, and not 1×10^4 cP
-   → NOT COHERENT, unless honey is five times heavier than water!
+   --> dynamic viscosity is 1250 × 2×10^-3 = 2.5 Pa.s, hence 2500 cP, and not 1×10^4 cP
+   --> NOT COHERENT, unless honey is five times heavier than water!
    *And so on, chocolate syrup density should be of 1×10^4 kg.m^-3 (ten times water density),
    ketchup density should be of 1×10^3 kg.m^-3 (same as water density, coherent I think),
    melting glass density should be of 1×10^12 kg.m^-3 (a thousand million times water density,
    it's more like black hole!)
-
+..
    So, either the values in the tables are wrong (one way or the other),
    or the law to pass from dynamic viscosity to kinematic viscosity is just a "trick",
    an approximation, only working with fluids around water viscosity...
-
+..
    Don't know, I'm not a physicist, but there definitively something wrong here,
    so if someone who knows better about this matter could check and correct it, it would be nice!
    --Mont29, 2009/08
-
-   --> .
 
 
 .. list-table::
@@ -235,25 +229,25 @@ Viscosity
 
    * - Fluid
      - dynamic viscosity (in cP)
-     - kinematic viscosity (Blender, in m\ :sup:`2`.s\ :sup:`-1`)
+     - kinematic viscosity (Blender, in m :sup:`2`.s :sup:`-1`)
    * - Water (20- C)
-     - 1.002×10\ :sup:`0` (1.002)
-     - 1.002×10\ :sup:`-6` (0.000001002)
+     - 1.002×10 :sup:`0` (1.002)
+     - 1.002×10 :sup:`-6` (0.000001002)
    * - Oil SAE 50
-     - 5.0×10\ :sup:`2` (500)
-     - 5.0×10\ :sup:`-5` (0.00005)
+     - 5.0×10 :sup:`2` (500)
+     - 5.0×10 :sup:`-5` (0.00005)
    * - Honey (20- C)
-     - 1.0×10\ :sup:`4` (10,000)
-     - 2.0×10\ :sup:`-3` (0.002)
+     - 1.0×10 :sup:`4` (10,000)
+     - 2.0×10 :sup:`-3` (0.002)
    * - Chocolate Syrup
-     - 3.0×10\ :sup:`4` (30,000)
-     - 3.0×10\ :sup:`-3` (0.003)
+     - 3.0×10 :sup:`4` (30,000)
+     - 3.0×10 :sup:`-3` (0.003)
    * - Ketchup
-     - 1.0×10\ :sup:`5` (100,000)
-     - 1.0×10\ :sup:`-1` (0.1)
+     - 1.0×10 :sup:`5` (100,000)
+     - 1.0×10 :sup:`-1` (0.1)
    * - Melting Glass
-     - 1.0×10\ :sup:`15`
-     - 1.0×10\ :sup:`0` (1.0)
+     - 1.0×10 :sup:`15`
+     - 1.0×10 :sup:`0` (1.0)
 
 
 Realworld-size
@@ -277,7 +271,6 @@ Domain Boundary
 
 .. figure:: /images/Blender_fluids_domain_boundary.jpg
    :width: 300px
-   :figwidth: 300px
 
    The Domain Boundary panel
 
@@ -309,7 +302,6 @@ Domain Particles
 
 .. figure:: /images/Blender_fluids_domain_particles.jpg
    :width: 300px
-   :figwidth: 300px
 
    The Domain Particles panel
 
@@ -328,7 +320,6 @@ Generate Particles
 
 .. figure:: /images/Manual-FluidSimParts.jpg
    :width: 600px
-   :figwidth: 600px
 
    An example of the effect of particles can be seen here - the image to the left was simulated without,
    and the right one with particles and subdivision enabled.
@@ -348,8 +339,8 @@ Bake Button
 Perform the actual fluid simulation. Blender will continue to work normally,
 except there will be a status bar in the top of the window, next to the render pulldown.
 Pressing :kbd:`Esc` or the "x" next to the status bar will abort the simulation.
-Afterwards two "\ ``.bobj.gz`` " (one for the *Final* quality,
-one for the *Preview* quality), plus one "\ ``.bvel.gz`` "
+Afterwards two ``.bobj.gz`` (one for the *Final* quality,
+one for the *Preview* quality), plus one ``.bvel.gz``
 (for the *Final* quality) will be in the selected output directory for each frame.
 
 
@@ -361,17 +352,11 @@ Bake directory
 Directory and file prefix to store baked surface meshes.
 
 This is similar to the animation output settings, only selecting a file is a bit special:
-when you select any of the previously generated surface meshes (e.g.
-"\ ``test1_fluidsurface_final_0132.bobj.gz`` "), the prefix will be automatically set
-("\ ``test1_`` " in this example).
+when you select any of the previously generated surface meshes
+(e.g. ``test1_fluidsurface_final_0132.bobj.gz``),
+the prefix will be automatically set (``test1_`` in this example).
 This way the simulation can be done several times with different settings,
 and allows quick changes between the different sets of surface data.
-
-The default value is "\ ``/tmp/`` ", which is probably *not* what you want. Choose an
-appropriate directory-name and file prefix so that these files will be stored in an
-appropriate location *and* named in such a way that two different fluid-simulations won't
-conflict with one another (if you're intending to specify only a directory-name here, i.e.
-without a filename-prefix, don't forget the trailing "\ ``/`` ").
 
 
 Notes
@@ -392,7 +377,7 @@ Baking always starts at Frame #1
    it will always bake from frame 1.
    If you wish the simulation to start later than frame 1, you must key the fluid objects in your domain
    to be inactive until the frame you desire to start the simulation. See
-   `Animating Fluid Property Changes`_ for more information.
+   :doc:`/physics/fluid/animation` for more information.
 
 Baking always ends at the *End* Frame set in the *Anim* panel
    If your frame-rate is 25 frames per second,

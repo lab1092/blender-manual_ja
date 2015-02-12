@@ -252,7 +252,7 @@ Size
 Sample Bias
    Value added to texture samples.
 Overlay
-   When enabled, the texture is shown in the viewport, as determined by the ;\ *Alpha* value.
+   When enabled, the texture is shown in the viewport, as determined by the; *Alpha* value.
 
 
 Symmetry Menu
@@ -317,7 +317,6 @@ To reveal all hidden parts, just hit :kbd:`Alt-H`.
 
 .. figure:: /images/Hide_before_and_after.jpg
    :width: 610px
-   :figwidth: 610px
 
    Before and after Hiding.
 
@@ -383,9 +382,9 @@ Mode.
    * - Sculpt options panel toggle
      - :kbd:`T`
    * - Step up one multires level
-     - :kbd:`Page Up`
+     - :kbd:`PageUp`
    * - Step down one multires level
-     - :kbd:`Page Down`
+     - :kbd:`PageDown`
    * - Set multires level
      - :kbd:`Ctrl-0` to :kbd:`Ctrl-5`
    * - Dynamic topology toggle

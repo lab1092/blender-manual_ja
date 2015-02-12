@@ -17,7 +17,6 @@ an index of Add-ons that are included with Blender as well as listing a number o
 
 .. figure:: /images/Userpref_addons_en_oct20_2013.jpg
    :width: 640px
-   :figwidth: 640px
 
 
 Installation of an Add-on
@@ -33,20 +32,18 @@ An Add-on is considered installed when it is located in the ``..
 /scripts/addons`` folder (where .. is the path to your Blender configuration folder).
 Simply moving the Add-on into that folder is enough.
 
-Add-ons can be python scripts **.py** or **.zip** files (containing **.py** scripts).
+Add-ons can be python scripts ``.py`` or ``.zip`` files (containing ``.py`` scripts).
 
 
 File locations
 ==============
 
-- Windows 7 - ``C:\Users\%username%\AppData\Roaming\Blender Foundation\Blender\2.6x\scripts\addons``
-
-
-- Windows XP - ``C:\Documents and Settings\%username%\Application Data\Blender
-  Foundation\Blender\2.6x\scripts\addons``
-
-
-- Linux - ``/home/$user/.config/blender/$version/scripts/addons``
+- Linux -
+  ``/home/$user/.config/blender/$version/scripts/addons``
+- Windows XP -
+  ``C:\Documents and Settings\%username%\Application Data\Blender Foundation\Blender\2.6x\scripts\addons``
+- Windows 7 -
+  ``C:\Users\%username%\AppData\Roaming\Blender Foundation\Blender\2.6x\scripts\addons``
 
 Note that the ``AppData`` folder in Windows 7 and the ``.
 config`` folder in Linux is hidden. The location may also be different depending on your
@@ -63,7 +60,7 @@ To create a personnal script folder:
 - Fill the *Scripts* entry with the path to your script folder (i.e. 'script_addon_2-6x').
 
 For information on the location of blender directories
-see: :doc:`Configuration & Data Paths </introduction/installing_blender/directorylayout>`
+see: :doc:`Configuration & Data Paths </getting_started/installing_blender/directorylayout>`
 
 
 Enabling and Disabling
@@ -89,7 +86,7 @@ for any errors that may have occurred when loading.
 .. tip:: Saving Add-on Preferences
 
    If you want an Add-on to be enabled everytime you start Blender,
-   you will need to save your :doc:`User Preferences </preferences>`.
+   you will need to save your :doc:`User Preferences </preferences/index>`.
 
 
 Development guidelines

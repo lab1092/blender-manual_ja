@@ -5,7 +5,8 @@ Texture Nodes
 
 As an alternative to using the :doc:`Texture Stack </render/blender_render/textures/options>`,
 Blender includes a node-based texture generation system which enables you to create textures by combining colors,
-patterns and other textures in much the same way that you combine :doc:`Material Nodes </render/blender_render/materials/nodes>`.
+patterns and other textures in much the same way that you combine
+:doc:`Material Nodes </render/blender_render/materials/nodes>`.
 
 You can use these textures wherever you can use regular textures:
 you can place them in texture channels, in material nodes, in particle systems,
@@ -25,7 +26,8 @@ FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Concepts;
 Using Texture Nodes
 ===================
 
-To use texture nodes with the current texture, open a :doc:`Node Editor window </textures/types/nodes/editor>`,
+To use texture nodes with the current texture,
+open a :doc:`Node Editor window </render/blender_render/textures/types/nodes/editor>`,
 set it to *Texture* mode by clicking the "Texture" icon (
 
 .. figure:: /images/26-Manual-Selector-Node-Btn-Texture.jpg
@@ -40,7 +42,7 @@ or the *New* button in the texture panel. Once you have a texture selected, you 
 toggle it to function as a regular texture or a node texture by clicking the *Use Nodes* option in the Node Editor.
 
 The default node setup will appear: a red-and-white checkerboard node connected to an
-*Output* named "\ ``Default`` ". For *texture* nodes,
+*Output* named ``Default``. For *texture* nodes,
 you can create as many Outputs as you like in your node setup. (Other types of node networks,
 as you may recall, are limited to only one Output node.) See the next section for details.
 
@@ -65,15 +67,8 @@ you would:
 
 You can also use these named outputs if you've decided to define your material using Material
 Nodes. In this case, you probably won't be using Texture Channels. Instead, you'll insert
-*Texture* nodes into your Material Node tree using *Add* →
-*Input* → *Texture*. Then,
+*Texture* nodes into your Material Node tree using *Add* -->
+*Input* --> *Texture*. Then,
 inside the texture node that you've just added, you can select which output you want to use
 *(e.g.* ``Diffuse`` or ``Normal``).
-
-
-See also
-========
-
-- `Development page <http://wiki.blender.org/index.php/Dev:2.4/Source/Textures/Nodes - Blender 2.49>`_
-
 

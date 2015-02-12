@@ -33,7 +33,8 @@ In Blender, the elements under your control which affect lighting are:
 - The color of the world :doc:`ambient light </render/blender_render/lighting/ambient_light>`.
 - The use of :doc:`Ambient Occlusion </render/blender_render/lighting/ambient_occlusion>`
   as a way to cast that ambient light onto the object.
-- The degree to which the ambient light colors the :doc:`material </render/blender_render/materials>` of the object.
+- The degree to which the ambient light colors the
+  :doc:`material </render/blender_render/materials/index>` of the object.
 - The use of :doc:`Indirect lighting </render/blender_render/lighting/indirect_lighting>`,
   where the color of one object radiates onto another.
 - The :doc:`lamps </render/blender_render/lighting/lamps>` in your scene.
@@ -41,8 +42,8 @@ In Blender, the elements under your control which affect lighting are:
 The physics of light bouncing around in the real world is simulated by Ambient Occlusion (a world setting),
 buffer shadows (which approximate shadows being cast by objects), ray tracing
 (which traces the path of photons from a light source). Also,
-within Blender you can use :doc:`Indirect lighting </render/blender_render/lighting/indirect_lighting>`. Ray tracing, ambient occlusion,
-and indirect lighting are computer-intensive processes.
+within Blender you can use :doc:`Indirect lighting </render/blender_render/lighting/indirect_lighting>`.
+Ray tracing, ambient occlusion, and indirect lighting are computer-intensive processes.
 Blender can perform much faster rendering with its internal scan line renderer,
 which is a very good scan line renderer indeed.
 This kind of rendering engine is much faster since it does not try to simulate the real behavior of light,
@@ -61,7 +62,8 @@ The main things under your control are the:
 - Position of the light and its direction.
 - Settings for the light, including energy and falloff.
 
-Then you are back to how that material's :doc:`shader </render/blender_render/materials/properties/diffuse_shaders>` reacts to the light.
+Then you are back to how that material's
+:doc:`shader </render/blender_render/materials/properties/diffuse_shaders>` reacts to the light.
 
 This chapter attempts to address the above,
 including how lights can work together in rigs to light your scene.
@@ -87,7 +89,6 @@ Overriding Materials to Reset Lighting
 
 .. figure:: /images/25-Manual-Lighting-MatField.jpg
    :width: 310px
-   :figwidth: 310px
 
    Material field in the Render Layers panel
 
@@ -99,7 +100,7 @@ no *Shadeless*, just plain old middle gray with RGB of (``0.8``, ``0.8``, ``0.8`
 Name this ``Gray``.
 
 Next go to the *Render* context. In the *Render Layers* panel,
-select your new "\ ``Gray`` " material in the *Material* field.
+select your new ``Gray`` material in the *Material* field.
 This will override any materials you may have set, and render everything with this color.
 Using this material, you can now go about adjusting the lighting.
 Just empty this field to get back to your original materials.

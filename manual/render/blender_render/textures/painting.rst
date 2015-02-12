@@ -15,7 +15,7 @@ There are three ways to establish the image used by the UV Texture:
 - Paint a flat image in the UV/Image Editor onto the currently selected UV Texture,
   using its UV map to transfer the colors to the faces of the mesh.
 - Paint the mesh in the 3D View, and let Blender use the currently selected UV map to update the UV Texture
-  (see "\ :doc:`Projection Painting </render/blender_render/textures/painting/projection>` ").
+  (see :doc:`Projection Painting </render/blender_render/textures/painting/projection>`).
 - Use any image-editing (paint) program to create an image.
   In the UV/Image Editor, select the UV Texture and load the image.
   Blender will then use that texture's UV map to transfer the colors to the faces of the mesh
@@ -29,7 +29,6 @@ GIMP is a full-featured image manipulation program that is also open-source.
 
 .. figure:: /images/Doc26-textures-painting.jpg
    :width: 400px
-   :figwidth: 400px
 
    Texture painting in Blender
 
@@ -52,9 +51,9 @@ You cannot paint on a mesh in Texture Paint mode without **first** unwrapping yo
 
 
 - :doc:`Load an image </render/blender_render/textures/mapping/uv/applying_image#load>`
-  into the UV/Image Editor (Image→Open→select file), or
+  into the UV/Image Editor (Image-->Open-->select file), or
 - :doc:`Create a new image </render/blender_render/textures/mapping/uv/applying_image#load>`
-  (Image→New→specify size).
+  (Image-->New-->specify size).
 
 After you have done one of these two things,
 you can modify the image using the Texture Paint mode:
@@ -62,7 +61,6 @@ you can modify the image using the Texture Paint mode:
 
 .. figure:: /images/Doc26-textures-painting-paintMode.jpg
    :width: 250px
-   :figwidth: 250px
 
    Enabling paint mode
 
@@ -93,7 +91,7 @@ A full complement of brushes and colors can be selected from the Properties pane
 UV/Image Editor.
 Brush changes made in either panel are immediately reflected in the other panel. However,
 the modified texture will **not** be saved automatically;
-you must explicitly do so by Image→Save in the UV/Image Editor window.
+you must explicitly do so by Image-->Save in the UV/Image Editor window.
 
 
 Texture Preview
@@ -147,7 +145,6 @@ Brush
 
 .. figure:: /images/Doc26-textures-painting-brush.jpg
    :width: 200px
-   :figwidth: 200px
 
    Brush Settings
 
@@ -211,7 +208,6 @@ Texture
 
 .. figure:: /images/Doc26-textures-painting-brushTexture.jpg
    :width: 250px
-   :figwidth: 250px
 
    Texture options and example
 
@@ -275,7 +271,6 @@ Stroke Method
 
       Rate
          Interval between paints for airbrush
-
    Space
       Creates brush stroke as a series of dots, whose spacing is determined by the *Spacing* setting.
 
@@ -286,7 +281,6 @@ Stroke Method
       Apply paint on each mouse move step
    Jitter
       Jitter the position of the brush while painting
-
 Smooth stroke
    Brush lags behind mouse and follows a smoother path. When enabled, the following become active:
 
@@ -294,10 +288,8 @@ Smooth stroke
       Sets the minimun distance from the last point before stroke continues.
    Factor
       Sets the amount of smoothing.
-
 Input Samples
    Average multiple input samples together to smooth the brush stroke.
-
 Wrap
    wraps your paint to the other side of the image as your brush moves off the OTHER side of the canvas
    (any side, top/bottom, left/right). Very handy for making seamless textures.
@@ -334,7 +326,7 @@ Saving
 ======
 
 If the header menu item Image has an asterisk next to it,
-it means that the image has been changed, but not saved. Use the *Image→Save Image*
+it means that the image has been changed, but not saved. Use the *Image-->Save Image*
 option to save your work with a different name or overwrite the original image.
 
 .. note:: UV Textures
@@ -347,7 +339,7 @@ The image format for saving is independent of the format for rendering.
 The format for saving a UV image is selected in the header of the Save Image window,
 and defaults to PNG (.png).
 
-If Packing is enabled in the window header, or if you manually *Image→Pack Image*,
+If Packing is enabled in the window header, or if you manually *Image-->Pack Image*,
 saving your images to a separate file is not necessary.
 
 

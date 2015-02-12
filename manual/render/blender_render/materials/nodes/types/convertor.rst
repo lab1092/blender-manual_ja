@@ -15,7 +15,8 @@ ColorRamp Node
 
 
 The ColorRamp Node is used for mapping values to colors with the use of a gradient.
-It works exactly the same way as a :doc:`Colorband for textures and materials </render/blender_render/materials/properties/ramps>`,
+It works exactly the same way as a
+:doc:`Colorband for textures and materials </render/blender_render/materials/properties/ramps>`,
 using the Factor value as a slider or index to the color ramp shown,
 and outputting a color value and an alpha value from the output sockets.
 
@@ -403,8 +404,7 @@ Outputs
 -------
 
 H
-   Value of the hue color channel,
-   separated out by the node (in some way, choose a «color» of the rainbow).
+   Value of the **hue** color channel, separated out by the node (choose a color of the rainbow).
 S
    Value of the saturation color channel,
    separated out by the node (the *quantity* of hue in the color

@@ -63,7 +63,10 @@ Control Object
    The name of an object to control the effect.
    The location of this object's center defines the center of the projection.
    Also, its size and rotation transform the projected vertices.
-   Hint: animating (keyframing) this control object also animates the modified object.
+
+   .. hint::
+
+      Animating (keyframing) this control object also animates the modified object.
 
 
 Example
@@ -71,7 +74,6 @@ Example
 
 .. figure:: /images/263-Manual-Modifiers-Cast-Example.jpg
    :width: 400px
-   :figwidth: 400px
 
    Top: Suzanne without modifiers. Middle: Suzanne with each type of Cast Modifier (Sphere, Cylinder and Cuboid).
    Bottom: Same as above, but now only X axis is enabled.

@@ -51,12 +51,11 @@ Any action used by the NLA first must be turned into an Action strip. This is do
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     Add → Action
+   | Menu:     Add --> Action
 
 
 .. figure:: /images/NLA_Action_Strip.jpg
    :width: 200px
-   :figwidth: 200px
 
    Action Strip.
 
@@ -69,12 +68,11 @@ Select two or more strips on the same track, and go to
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     Add → Transition
+   | Menu:     Add --> Transition
 
 
 .. figure:: /images/Manual_NLA-Basics_Transition.jpg
    :width: 200px
-   :figwidth: 200px
 
    Transition Strip.
 
@@ -88,7 +86,7 @@ A meta strip can be moved and duplicated like a normal strip.
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     Add → Add Meta-Strips
+   | Menu:     Add --> Add Meta-Strips
    | Hotkey:   :kbd:`Shift-G`
 
 
@@ -96,13 +94,11 @@ A meta strip can be moved and duplicated like a normal strip.
 
    * - .. figure:: /images/NLA_meta_strips_01.jpg
           :width: 200px
-          :figwidth: 200px
 
           Shift-select two or more strips..
 
      - .. figure:: /images/NLA_meta_strips_02.jpg
           :width: 200px
-          :figwidth: 200px
 
           Combine them into a meta strip.
 
@@ -112,7 +108,7 @@ A meta strip still contains the underlying strips. You can ungroup a Meta strip.
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     Add → Remove Meta-Strips
+   | Menu:     Add --> Remove Meta-Strips
    | Hotkey:   :kbd:`Alt-G`
 
 
@@ -125,7 +121,7 @@ The contents of Action strips can be edited, but you must be in 'Tweak Mode' to 
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     View → Enter Tweak Mode
+   | Menu:     View --> Enter Tweak Mode
    | Hotkey:   :kbd:`Tab`
 
 
@@ -133,13 +129,11 @@ The contents of Action strips can be edited, but you must be in 'Tweak Mode' to 
 
    * - .. figure:: /images/NLA_strip_NLA_Mode.jpg
           :width: 200px
-          :figwidth: 200px
 
           Strip in NLA mode..
 
      - .. figure:: /images/NLA_strip_EditMode.jpg
           :width: 200px
-          :figwidth: 200px
 
           Strip in Tweak mode.
 
@@ -151,21 +145,18 @@ To do so, hit the 'unpin' icon, next to the strip.
 
 .. figure:: /images/nla_pinned_01.jpg
    :width: 350px
-   :figwidth: 350px
 
    Nla strip with pinned keys.
 
 
 .. figure:: /images/nla_pin_02.jpg
    :width: 350px
-   :figwidth: 350px
 
    Strip moved, notice the keys move with it.
 
 
 .. figure:: /images/nla_pin_03.jpg
    :width: 350px
-   :figwidth: 350px
 
    The unpinned keys return to their original frames.
 
@@ -184,7 +175,7 @@ a strip, go to
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     Edit→ Duplicate Strips
+   | Menu:     Edit--> Duplicate Strips
 
 
 Now, when any strip is tweaked, the others will change too.
@@ -195,19 +186,16 @@ the original will turn to red.
 
    * - .. figure:: /images/NLA_original_strip.jpg
           :width: 200px
-          :figwidth: 200px
 
           Original strip.
 
      - .. figure:: /images/NLA_linked_duplicate.jpg
           :width: 200px
-          :figwidth: 200px
 
           Duplicated strip.
 
      - .. figure:: /images/NLA_linked_duplicate_edited.jpg
           :width: 200px
-          :figwidth: 200px
 
           Duplicated strip being edited.
 
@@ -220,7 +208,7 @@ Strip properties can be accessed via the NLA header.
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     View→ Properties
+   | Menu:     View--> Properties
 
 
 Renaming Strips

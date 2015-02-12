@@ -7,7 +7,7 @@ Transparency
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Transparency
+   | Panel:    Shading/Material Context --> Transparency
 
 
 Materials in Blender can be set to be transparent,
@@ -65,7 +65,7 @@ This is useful for making textures of solid or semi-transparent objects from pho
 reference material - a mask is made with alpha opaque for pixels within the object,
 and transparent for pixels outside the object.
 
-See :doc:`Mask Transparency </materials/properties/mask_transparency>`.
+See :doc:`Mask Transparency </render/blender_render/materials/properties/transparency>`.
 
 
 Z Buffer
@@ -111,10 +111,10 @@ this is all because of the Index of Refraction of glass.
    To get ray-traced transparency, you need to:
 
    - enable ray tracing in your Render settings.
-     This is done in the Render context → Shading Panel. Ray tracing is enabled by default.
+     This is done in the Render context --> Shading Panel. Ray tracing is enabled by default.
    - set your Alpha value to something other than 1.0.
    - in order for the background material to receive light passing through your transparent object,
-     *Receive Transparent* must be turned on for that material in the Material → Shadow panel.
+     *Receive Transparent* must be turned on for that material in the Material --> Shadow panel.
 
 
 Options
@@ -187,11 +187,9 @@ Fresnel
 
    * - .. figure:: /images/Manual-2.5-Material-RayTraceTransp-FresnelExampel.jpg
           :width: 320px
-          :figwidth: 320px
 
      - .. figure:: /images/Manual-2.5-Material-RayTraceTransp-FresnelExampelZTransp.jpg
           :width: 320px
-          :figwidth: 320px
 
    * - 16 pieces of glass rotated in various directions demonstrate the angle-dependent Fresnel effect
        with ray-traced (left) and alpha buffered transparency (right).
@@ -202,11 +200,9 @@ Fresnel
 
    * - .. figure:: /images/Manual-2.5-Material-RayTraceTransp-FresnelSettings.jpg
           :width: 320px
-          :figwidth: 320px
 
      - .. figure:: /images/Manual-2.5-Material-RayTraceTransp-FresnelSettingsZTransp.jpg
           :width: 320px
-          :figwidth: 320px
 
    * - Settings for Fresnel using ray-traced (left) and Z transparency (right).
 
@@ -226,7 +222,6 @@ Depth
 
 .. figure:: /images/Manual-2.5-Material-Transp-3GlassesExample.jpg
    :width: 640px
-   :figwidth: 640px
 
    A simple scene with three glasses on a surface, and three lamps.
    Depth was set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min, and 11 min respectively.
@@ -260,37 +255,31 @@ Transparent shadows
 
    * - .. figure:: /images/Manual25-Material-TranspShadow-Example-NoTraSha.jpg
           :width: 320px
-          :figwidth: 320px
 
           No transparent shadows
 
      - .. figure:: /images/Manual25-Material-TranspShadow-Example-EnvLight.jpg
           :width: 320px
-          :figwidth: 320px
 
           No transparent shadows, environment lighting enabled
 
    * - .. figure:: /images/Manual25-Material-TranspShadow-Example-TraSha.jpg
           :width: 320px
-          :figwidth: 320px
 
           Transparent shadows enabled, alpha set to 0.0
 
      - .. figure:: /images/Manual25-Material-TranspShadow-Example-TraSha2.jpg
           :width: 320px
-          :figwidth: 320px
 
           As previous, alpha set to 0.25
 
    * - .. figure:: /images/Manual25-Material-TranspShadow-Example-TraSha-AO1.jpg
           :width: 320px
-          :figwidth: 320px
 
           Transparent shadows with ambient occlusion set to multiply, distance 1 (radius of sphere)
 
      - .. figure:: /images/Manual25-Material-TranspShadow-Example-TraSha-AO2.jpg
           :width: 320px
-          :figwidth: 320px
 
           As previous, distance increased to 2 (diameter of sphere)
 
@@ -302,7 +291,7 @@ the more transparent an object is, the lighter its shadow will be.
 In Blender, transparent shadows are set on the materials that receive the shadows from the
 transparent object.
 This is enabled and disabled with the *Receive Transparent* button,
-in the *Material* context → *Shadow* panel. The shadow's brightness is
+in the *Material* context --> *Shadow* panel. The shadow's brightness is
 dependent on the *Alpha* value of the shadow casting material.
 
 Alternatives to transparent ray-traced shadows can be found in the *World* context,

@@ -12,7 +12,8 @@ Particle Visualization
 With the items in the *Display* and *Render* panel you can set the way the particles will be
 rendered or depicted in the view ports in various ways.
 Some option are valid only for the 3D window, the particles then are rendered always as
-:doc:`Halos </materials/halos>`. Some of the options will be rendered as shown in the 3D window.
+:doc:`Halos </render/blender_render/materials/special_effects/halo>`.
+Some of the options will be rendered as shown in the 3D window.
 
 
 Viewport Display
@@ -110,7 +111,7 @@ Halo
 ====
 
 
-Halo particles are rendered as :doc:`Halo Type Materials </materials/halos>`.
+Halo particles are rendered as :doc:`Halo Type Materials </render/blender_render/materials/special_effects/halo>`.
 
 Trail Count
    Set the number of trail particles. When greater than 1, additional options appear.
@@ -151,7 +152,7 @@ Path
    Image 3: The Visualization panel for Path visualization.
 
 
-The *Path* visualization needs a :doc:`Hair </physics/hair>` particle system or
+The *Path* visualization needs a :doc:`Hair </physics/particles/hair>` particle system or
 :doc:`Keyed </physics/particles/physics/keyed>` particles.
 
 Strand render
@@ -176,7 +177,7 @@ Steps
    because if you increase the render value by two you need four times more memory to render.
    Also the rendering is faster if you use low render values (sometimes drastically).
    But how low you can go with this value depends on the waviness of the hair.(the value is a power of 2).
-   This means 0 steps give 1 subdivision, 1 give 2 subdivisions, 2→4, 3→8, 4→16, ... *n* ``→2`` *n*.
+   This means 0 steps give 1 subdivision, 1 give 2 subdivisions, 2-->4, 3-->8, 4-->16, ... *n* ``-->2`` *n*.
 
 Timing Options
 ==============
@@ -190,7 +191,8 @@ End
 Random
    Give the path length a random variation.
 
-Please see also the manual page about :doc:`Strands </render/blender_render/materials/properties/strands>` for an in depth description.
+Please see also the manual page about
+:doc:`Strands </render/blender_render/materials/properties/strands>` for an in depth description.
 
 
 Object
@@ -220,7 +222,8 @@ WholeGroup
 Use Count
    Use objects multiple times in the same groups.
    Specify the order and nuber of times to repeat each object with the list box that appears.
-   You can duplicate an object in the list with the :kbd:`+` button, or remove a duplicate with the :kbd:`-` button.
+   You can duplicate an object in the list with the :kbd:`Plus` button,
+   or remove a duplicate with the :kbd:`Minus` button.
 
 Use Global
    Use object's global coordinates for duplication.

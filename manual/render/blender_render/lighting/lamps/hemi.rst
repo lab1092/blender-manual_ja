@@ -5,7 +5,6 @@ Hemi Lamp
 
 .. figure:: /images/Manual-Part-V-HemiScheme.jpg
    :width: 250px
-   :figwidth: 250px
 
    Hemi light conceptual scheme
 
@@ -30,7 +29,6 @@ Options
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Hemi.jpg
    :width: 307px
-   :figwidth: 307px
 
    Hemi lamp's panel
 
@@ -38,8 +36,7 @@ Options
 Energy and Color
    These settings are common to most types of lamps, and are described in
    :doc:`Light Properties </render/blender_render/lighting/lights/light_properties>`.
-
-Layer, Negative,\ Specular, and Diffuse
+Layer, Negative, Specular, and Diffuse
    These settings control what the lamp affects, as described in
    :doc:`What Light Affects </render/blender_render/lighting/lights/what_light_affects>`.
 

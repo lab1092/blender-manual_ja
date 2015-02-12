@@ -18,17 +18,17 @@ Markers can be created and edited in all of the following editors
 
 
 - The :doc:`Graph Editor Window </animation/editors/graph>`.
-- The :doc:`Action Editor window </animation/actions>`.
-- The :doc:`The Dope Sheet </animation/dope_sheet>`.
+- The :doc:`Action Editor window </animation/basic/actions>`.
+- The :doc:`The Dope Sheet </animation/editors/dopesheet>`.
 - The :doc:`NLA Editor window </animation/editors/nla>`.
-- The :doc:`Video Sequence Editor window </editors/sequencer>`.
-- The :doc:`Timeline window </animation/timeline>`.When you create
+- The :doc:`Video Sequence Editor window </editors/sequencer/index>`.
+- The :doc:`Timeline window </animation/editors/timeline>`.When you create
 
 A marker created in one of these windows will also appear in all others that support them,
 including:
 
 
-- The :doc:`3D View window </getting_started/basics/navigating>`.
+- The :doc:`3D View window </getting_started/basics/navigating/index>`.
 
 
 Pose markers
@@ -62,7 +62,6 @@ Sequencer
 
 .. figure:: /images/Sequencer-markers.jpg
    :width: 186px
-   :figwidth: 186px
 
    Markers in the Sequencer
 
@@ -166,7 +165,7 @@ Moving Markers
 
 Once you have one or more markers selected, hit :kbd:`Ctrl-G`
 (or :kbd:`G` in Timeline or Audio windows) to move them,
-and confirm the move with :kbd:`LMB` or :kbd:`Enter` (as usual,
+and confirm the move with :kbd:`LMB` or :kbd:`Return` (as usual,
 cancel the move with :kbd:`RMB`, or :kbd:`Esc`).
 
 By default, you grab the markers in one-frame steps, but if you hold :kbd:`Ctrl`, the

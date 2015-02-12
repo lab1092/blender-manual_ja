@@ -30,7 +30,7 @@ If you are unsure what video codecs your system supports, select *AVI JPEG*.
 
 
 The FPS for video Screencasts and time between each Screenshot for an image series Screencast
-can be set from the :doc:`System panel </preferences/system>` of the :doc:`User Preferences </preferences>` window.
+can be set from the :doc:`System panel </preferences/system>` of the :doc:`User Preferences </preferences/index>` window.
 
 (See Fig: Options in the User Preferences Editor)
 
@@ -75,7 +75,8 @@ Info Window - Header - Capture Stop Button).
 
 The frames are stored using a suffix added to their file name,
 where the suffix is composed of the numbers present in the fields for *start* and *end frames*,
-defined in the Frame Range of the Dimensions panel, :doc:`Render context </getting_started/basics/interface/contexts>`.
+defined in the Frame Range of the Dimensions panel,
+:doc:`Render context </getting_started/basics/interface/contexts>`.
 (See Fig: Dimensions Panel - Frame Range - highlighted in yellow)
 
 .. note::

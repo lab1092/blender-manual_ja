@@ -24,7 +24,6 @@ You can add several modifiers to a single object to form a :doc:`Modifier Stack 
 
 .. figure:: /images/25-Manual-Modifiers-menu.jpg
    :width: 600px
-   :figwidth: 600px
 
    Modifiers menu
 
@@ -86,7 +85,7 @@ general appearance of or automatically add new geometry to an object.
 :doc:`Triangulate </modifiers/generate/triangulate>`
    Converts all faces to Triangles.
 :doc:`Wireframe </modifiers/generate/wireframe>`
-   Converts all faces into a wireframe (included in trunk atm).
+   Converts all faces into a wireframe.
 
 
 Deform

@@ -14,7 +14,6 @@ Options
 
 .. figure:: /images/Ocean_modifier.jpg
    :width: 240px
-   :figwidth: 240px
 
    Ocean Modifier Panel
 
@@ -112,7 +111,6 @@ Simulation Data Generation Options
 
 .. figure:: /images/Ocean_foam_layer_name.jpg
    :width: 240px
-   :figwidth: 240px
 
    Using foam vertex colors with a named data layer
 
@@ -215,16 +213,3 @@ Examples
 
 Simulated and baked to image maps in Blender, rendered in 3Delight.
 
-
-History
-=======
-
-The core simulator was developed by Drew Whitehouse,
-for the `Houdini Ocean Toolkit <https://github.com/eloop/hot>`__.
-This was ported to C by Hamed Zaghaghi and integrated in a patch for the Blender 2.4 series,
-sponsored by ProMotion Studios `Red Cartel <http://www.redcartel.com.au>`__
-during production of the short film Lighthouse.
-
-In this work, Matt Ebb re-integrated the core simulator for Blender 2.5,
-and added additional functionality, fixes, and optimisations,
-sponsored by the Save the Ocean Simulation project.

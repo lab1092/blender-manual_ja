@@ -18,7 +18,6 @@ but all settings are done in the *Particle tab*.
 
 .. figure:: /images/Blender3D_FurExample_2.49.jpg
    :width: 300px
-   :figwidth: 300px
 
    Image 1: Some fur made from particles
    (`Blend file <http://wiki.blender.org/index.php/Media:Blender3D FurExample 2.49.blend>`__).
@@ -39,7 +38,7 @@ Their movement can be affected by many things, including:
 
 Particles may be rendered as:
 
-- :doc:`Halos </materials/halos>` (for Flames, Smoke, Clouds).
+- :doc:`Halos </render/blender_render/materials/special_effects/halo>` (for Flames, Smoke, Clouds).
 - Meshes which in turn may be animated (e.g. fish, bees, ...).
   In these cases, each particle "carries" another object.
 - :doc:`Strands </render/blender_render/materials/properties/strands>` (for :doc:`Hair, Fur,
@@ -51,16 +50,6 @@ Every object may carry many particle systems. Each particle system may contain u
 may have up to 10.000 children for each particle
 (children move and emit more or less like their respective parents).
 The size of your memory and your patience are your practical boundaries.
-
-
-.. note:: Incompatibility with Prior Versions
-
-   There are many differences between the "old" particle system that was used up to and including version 2.45,
-   and the "new" particle system. There are many things possible now that could not be done with the old system.
-   The new system is incompatible to the old system, though Blender tries to convert old particle systems,
-   which works only to some extent. The old system is most like the new *Emitter* system
-   (keep reading to find out what that is). If you are using an old version of Blender 2.45 and previous,
-   :doc:`click here to access the old documentation </physics/particles/blender_2.45_particles>`.
 
 
 Workflow

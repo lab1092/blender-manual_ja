@@ -306,7 +306,6 @@ This example is a Shape Key Driver. The driver was added to the shape key Value.
 
 .. figure:: /images/Doc_Animation_Driver_Shape_Key.jpg
    :width: 400px
-   :figwidth: 400px
 
    Shape Key Driver. Click to enlarge.
 
@@ -320,7 +319,7 @@ The Driver F-Curve is mapped like so
 
 This kind of driver can also be setup with the Variable Type Rotational Difference.
 
-See :doc:`Shape Keys </animation/basics/shape_keys>` for more info.
+See :doc:`Shape Keys </animation/techs/shape/shape_keys>` for more info.
 
 
 Drivers And Multiple Relative Shape Keys
@@ -442,7 +441,7 @@ number or because you're skipping already-rendered frames).
 See Also
 ========
 
-- :doc:`Animation </animation>`
+- :doc:`Animation </animation/index>`
 - :doc:`Graph Editor </animation/editors/graph>`
 - :doc:`F-Curves </animation/editors/graph/fcurves>`
 - :doc:`Extending Blender with python </extensions/python>`.

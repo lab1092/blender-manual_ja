@@ -30,7 +30,6 @@ The header shows you a menu and the current mode, as explained below.
 
 .. figure:: /images/2.5_Manual-3D-Header.jpg
    :width: 600px
-   :figwidth: 600px
 
    3D View header.
 
@@ -40,7 +39,6 @@ View Menu
 
 .. figure:: /images/2.5_Manual-3D-View-Menu.jpg
    :width: 300px
-   :figwidth: 300px
 
    The View menu.
 
@@ -54,7 +52,7 @@ Properties Panel
    - :doc:`Item </getting_started/basics/navigating/3d_view_options>`
    - :doc:`Display </getting_started/basics/navigating/3d_view_options>`
    - :doc:`Background Images </getting_started/basics/navigating/3d_view_options>`
-   - :doc:`Transform Orientations </3d_interaction/transform_control/transform_orientations>`
+   - :doc:`Transform Orientations </getting_started/basics/transformations/transform_control/transform_orientations>`
 
 Tool Shelf
    Toggles the *Tool Shelf* (:kbd:`T`), which appears on the left side of the 3d view,
@@ -104,21 +102,21 @@ Tool Shelf
 :doc:`Show all Layers </getting_started/basics/navigating/layers>` (:kbd:`~`)
    Makes all of the display layers visible.
 
-:doc:`Global View/Local View </getting_started/basics/navigating/3d_view>` (:kbd:`Numpad/`)
+:doc:`Global View/Local View </getting_started/basics/navigating/3d_view>` (:kbd:`NumpadSlash`)
    Global view shows all of the 3D objects in the scene. Local view only displays the selected objects.
    This helps if there are many objects in the scene, that may be in the way.
-   Accidentally pressing :kbd:`Numpad/` can happen rather often if you're new to Blender,
+   Accidentally pressing :kbd:`NumpadSlash` can happen rather often if you're new to Blender,
    so if a bunch of the objects in your scene seem to have mysteriously vanished, try turning off local view.
 
 
-:doc:`View Selected </getting_started/basics/navigating/3d_view>` (:kbd:`Numpad.`)
+:doc:`View Selected </getting_started/basics/navigating/3d_view>` (:kbd:`NumpadPeriod`)
    Zooms the 3D view to encompass all the *selected* objects.
-      :doc:`Read more about Zooming the 3D View » </getting_started/basics/navigating/3d_view#zooming_the_view>`
+      :doc:`Read more about Zooming the 3D View </getting_started/basics/navigating/3d_view#zooming_the_view>`
 
 :doc:`View All </getting_started/basics/navigating/3d_view>` (:kbd:`Home`)
    Zooms the 3D view to encompass *all* the objects in the current scene.
 
-:doc:`Play Back Animation </animation>` (:kbd:`Alt-A`)
+:doc:`Play Back Animation </animation/index>` (:kbd:`Alt-A`)
    Plays back the animation from the current frame.
 
 :doc:`Duplicate area in new window </getting_started/basics/interface/window_system/arranging_frames>`
@@ -136,7 +134,7 @@ Select Menu
 
 This menu contains tools for selecting objects.
 
-:doc:`Read more about Selecting » </modeling/objects/selecting>`
+:doc:`Read more about Selecting </modeling/objects/selecting>`
 
 
 Object Menu
@@ -145,7 +143,7 @@ Object Menu
 This menu appears when in Object Mode. In edit mode,
 it will change to the appropriate menu with editing tools.
 
-:doc:`Read more about Objects » </modeling/objects>`
+:doc:`Read more about Objects </modeling/objects/introduction>`
 
 
 Mode List
@@ -169,8 +167,8 @@ Edit Mode
 The cursor becomes a brush in:
 
 
-- :doc:`Vertex Paint </materials/vertex_paint>` mode
-- :doc:`Weight Paint </modeling/meshes/weight_paint>` mode
+- :doc:`Vertex Paint </render/blender_render/materials/special_effects/vertex_paint>` mode
+- :doc:`Weight Paint </modeling/meshes/vertex_groups/weight_paint>` mode
 - :doc:`Texture Paint </render/blender_render/textures/painting>` mode.
 
 
@@ -186,7 +184,7 @@ Allows you to change the way 3D objects are displayed in the viewport.
 - Material
 - Rendered
 
-:doc:`Read more about 3D view options » </getting_started/basics/navigating/3d_view_options#view_shading>`
+:doc:`Read more about 3D view options </getting_started/basics/navigating/3d_view_options#view_shading>`
 
 
 Pivot Point Selector
@@ -210,7 +208,7 @@ Using this selector, you can change the pivot point to the location of the:
 Use the *Object Center* to switch between transforming the entire objects,
 or just the position of the objects
 
-:doc:`Read more about Pivot Points » </3d_interaction/transform_control/pivot_point>`
+:doc:`Read more about Pivot Points </getting_started/basics/transformations/transform_control/pivot_point/index>`
 
 
 Transform (Manipulator) Selectors
@@ -219,7 +217,7 @@ Transform (Manipulator) Selectors
 These handy selectors allow you to rotate or move objects by grabbing
 (clicking with your mouse) their controls and moving your mouse in the axis.
 
-:doc:`Read more about Transform Manipulators » </3d_interaction/transform_control/manipulators>`
+:doc:`Read more about Transform Manipulators </getting_started/basics/transformations/transform_control/manipulators>`
 
 
 Layer Selector
@@ -249,7 +247,7 @@ cluttered with the whole scene, and still have an ancillary complete view
 Or to have several views with different active cameras. Remember that you can use
 (:kbd:`Ctrl-Numpad0` to make the active object the active camera.
 
-:doc:`Read more about Scenes » </data_system/scenes>`
+:doc:`Read more about Scenes </data_system/scenes>`
 
 
 Snap to Mesh
@@ -258,7 +256,7 @@ Snap to Mesh
 This "magnet" button controls the snapping tools that help with transforming and modeling
 objects.
 
-:doc:`Read more about Snapping » </3d_interaction/transform_control/snap_to_mesh>`
+:doc:`Read more about Snapping </3d_interaction/transform_control/snap_to_mesh>`
 
 
 Render Buttons

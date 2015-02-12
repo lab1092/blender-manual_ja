@@ -38,7 +38,7 @@ the 3D views header. Let's detail them.
 Border Select
    All these options have the same meaning and behavior as in :doc:`Object mode </modeling/objects/selecting>`
    (and the specifics of *Border Select* in *Edit* mode have already been discussed
-   :doc:`here </modeling/meshes/selecting>`).
+   :doc:`here </modeling/meshes/selecting/introduction>`).
 
 
 Every Nth
@@ -98,7 +98,7 @@ More and Less
 
    | Mode:     *Edit* mode
    | Menu:     :menuselection:`Select --> More/Less`
-   | Hotkey:   :kbd:`Ctrl-Numpad+` / :kbd:`Ctrl-Numpad-`
+   | Hotkey:   :kbd:`Ctrl-NumpadPlus` / :kbd:`Ctrl-NumpadMinus`
 
 
 These two options are complementary and similar to

@@ -10,8 +10,9 @@
    introduction.rst
    open.rst
    save.rst
-   import.rst
-   export.rst
+   import_export.rst
+   relative_paths.rst
    formats.rst
    formats/openexr.rst
-   formats/dpx,_cineon,_hdr.rst
+   formats/dpx_cineon.rst
+   formats/hdr.rst

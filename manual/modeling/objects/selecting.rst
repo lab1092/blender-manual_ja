@@ -63,7 +63,7 @@ Rectangular or Border Select
    :class: refbox
 
    | Mode:     *Object mode* and *Edit mode*
-   | Menu:     *Select* → *Border Select*
+   | Menu:     *Select* --> *Border Select*
    | Hotkey:   :kbd:`B`
 
 
@@ -84,7 +84,6 @@ Example
 
 .. figure:: /images/25-Manual-Object-Selection-Border.jpg
    :width: 610px
-   :figwidth: 610px
 
    Border selecting in three steps
 
@@ -135,7 +134,6 @@ Lasso select adds to the previous selection. For deselection, use :kbd:`Ctrl-Shi
 
 .. figure:: /images/25-Manual-Object-Selection-Lasso.jpg
    :width: 610px
-   :figwidth: 610px
 
    Lasso selection example
 
@@ -147,7 +145,7 @@ Circle Select
    :class: refbox
 
    | Mode:     *Object mode* and *Edit mode*
-   | Menu:     *Select* → *Circle Select*
+   | Menu:     *Select* --> *Circle Select*
    | Hotkey:   :kbd:`C`
 
 
@@ -156,7 +154,6 @@ Description
 
 .. figure:: /images/26-Manual-Object-Selection-Circle0.jpg
    :width: 100px
-   :figwidth: 100px
 
    Main selection menu
 
@@ -171,13 +168,11 @@ To cancel the selection use :kbd:`RMB` or key :kbd:`Esc`,
 
    * - .. figure:: /images/26-Manual-Object-Selection-Circle1.jpg
           :width: 300px
-          :figwidth: 300px
 
           Circle selection
 
      - .. figure:: /images/26-Manual-Object-Selection-Circle2.jpg
           :width: 320px
-          :figwidth: 320px
 
           ...with huge circle
 
@@ -198,7 +193,7 @@ Select Grouped
    :class: refbox
 
    | Mode:     *Object mode*
-   | Menu:     *Select* → *Grouped*
+   | Menu:     *Select* --> *Grouped*
    | Hotkey:   :kbd:`Shift-G`
 
 
@@ -219,7 +214,7 @@ groups.
 Options
 -------
 
-*Select* → *Grouped* in *Object mode* uses the active object as a basis to select all others.
+*Select* --> *Grouped* in *Object mode* uses the active object as a basis to select all others.
 
 Available options are:
 
@@ -243,11 +238,11 @@ Object Hooks
    Every hook that belongs to the active object.
 Pass
    Select objects assigned to the same render pass.
-   Render passes are set in *Properties* → *Object* → *Relations* and can be used in the *Node Compositor*
-   (*Add* → *Convertor* → *ID Mask*.)
+   Render passes are set in *Properties* --> *Object* --> *Relations* and can be used in the *Node Compositor*
+   (*Add* --> *Convertor* --> *ID Mask*.)
 Color
    Select objects with same *Object Color*.
-   Object colors are set in *Properties* → *Object* → *Display* → *Object Color*.)
+   Object colors are set in *Properties* --> *Object* --> *Display* --> *Object Color*.)
 Properties
    Select objects with same *Game Engine* *Properties*.
 Keying Set
@@ -265,7 +260,7 @@ Select linked
    :class: refbox
 
    | Mode:     *Object* mode
-   | Menu:     *Select* → *Linked*
+   | Menu:     *Select* --> *Linked*
    | Hotkey:   :kbd:`Shift-L`
 
 
@@ -283,7 +278,7 @@ Selects all objects which share a common datablock with the active object.
 Options
 -------
 
-*Select* → *Linked* in *Object mode* uses the active object as a basis to select all others.
+*Select* --> *Linked* in *Object mode* uses the active object as a basis to select all others.
 
 Available options are:
 
@@ -312,7 +307,7 @@ Select All by Type
    :class: refbox
 
    | Mode:     *Object* mode
-   | Menu:     *Select* → *Select All by Type*
+   | Menu:     *Select* --> *Select All by Type*
    | Hotkey:   None
 
 
@@ -348,7 +343,7 @@ Select All by Layer
    :class: refbox
 
    | Mode:     *Object* mode
-   | Menu:     *Select* → *Select All by Layer*
+   | Menu:     *Select* --> *Select All by Layer*
    | Hotkey:   None
 
 
@@ -372,7 +367,7 @@ visible or not, in one single command.
 Options
 -------
 
-In the *Tool Shelf* → *Select by Layer* the following options are available:
+In the *Tool Shelf* --> *Select by Layer* the following options are available:
 
 Match
    The match type for selection.
@@ -405,7 +400,7 @@ Select Camera
    Select the active camera.
 
 Mirror (:kbd:`Shift-Ctrl-M`)
-   Select the Mirror objects of the selected object eg. L.sword → R.sword.
+   Select the Mirror objects of the selected object eg. L.sword --> R.sword.
 
 Random
    Randomly selects unselected objects based on percentage probability on currently active layers.

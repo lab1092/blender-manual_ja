@@ -9,7 +9,7 @@ Introduction
 In this section will be described tools for editing objects in *Object Mode*.
 
 Information about some additional possibilities are described in
-:doc:`Manipulation in 3D </3d_interaction/transform_control>`.
+:doc:`Manipulation in 3D </getting_started/basics/transformations/transform_control/index>`.
 
 
 Object Mode
@@ -21,7 +21,7 @@ Object Mode
 
 
 By default new files opens with enabled *Object Mode*.
-To enable it you may in *3D View window → Header* click *Object Mode button*
+To enable it you may in *3D View window --> Header* click *Object Mode button*
 (see picture *Object Mode button*)
 
 All edition tools works only with selected objects.
@@ -35,13 +35,11 @@ All commands described below can be found in *Object* menu and/or in *Object too
 
    * - .. figure:: /images/Manual-2.6-Panel-ObjectTools.jpg
           :width: 50px
-          :figwidth: 50px
 
           Object tools panel
 
      - .. figure:: /images/Manual-2.6-Menu-Object.jpg
           :width: 75px
-          :figwidth: 75px
 
           Object menu
 
@@ -58,7 +56,7 @@ Add
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Main* → *Add*
+   | Menu:     *Main* --> *Add*
    | Hotkey:   :kbd:`Shift-A`
 
 
@@ -99,20 +97,20 @@ Duplicate
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Object → Duplicate Objects*
+   | Menu:     *Object --> Duplicate Objects*
    | Hotkey:   :kbd:`Shift-D`
 
 
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Object → Duplicate Linked*
+   | Menu:     *Object --> Duplicate Linked*
    | Hotkey:   :kbd:`Alt-D`
 
 
 Duplication makes exact copy of objects.
 May be linkage of some attributes depending on specific tool.
-See :doc:`Duplication </modeling/objects/duplication>` for more information.
+See :doc:`Duplication </modeling/objects/duplication/introduction>` for more information.
 
 
 Join
@@ -123,7 +121,7 @@ Join
    :class: refbox
 
    | Mode:     *Object* mode
-   | Menu:     *Object → Join*
+   | Menu:     *Object --> Join*
    | Hotkey:   :kbd:`Ctrl-J`
 
 
@@ -142,8 +140,8 @@ Delete / Erase
    :class: refbox
 
    | Mode:     *Edit* or *Object* mode
-   | Menu:     *Object* → *Delete*
-   | Hotkey:   :kbd:`X` or :kbd:`Del`
+   | Menu:     *Object* --> *Delete*
+   | Hotkey:   :kbd:`X` or :kbd:`Delete`
 
 
 Erases or deletes selected objects.
@@ -162,7 +160,7 @@ Translate
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Object → Transform → Grab/Move*
+   | Menu:     *Object --> Transform --> Grab/Move*
    | Hotkey:   :kbd:`G`
 
 
@@ -176,7 +174,7 @@ Rotate
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Object → Transform → Rotate*
+   | Menu:     *Object --> Transform --> Rotate*
    | Hotkey:   :kbd:`R`
 
 
@@ -191,7 +189,7 @@ Scale
 .. admonition:: Reference
    :class: refbox
 
-   | Menu:     *Object → Transform → Scale*
+   | Menu:     *Object --> Transform --> Scale*
    | Hotkey:   :kbd:`S`
 
 

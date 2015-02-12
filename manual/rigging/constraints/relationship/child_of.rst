@@ -33,7 +33,6 @@ Options
 
 .. figure:: /images/25-Manual-Constraints-Relationship-ChildOf.jpg
    :width: 307px
-   :figwidth: 307px
 
    Child Of panel
 
@@ -127,6 +126,6 @@ Examples
 
        **6. Offset set again**
        *Set Offset* has been clicked again.
-       As you can see, it *does not gives the same result as in (* Target/parent transformed\ *)*.
+       As you can see, it does not gives the same result as in (*Target/parent transformed*).
        As noted above, use *Set Inverse* only once, before transforming your target/parent.
 

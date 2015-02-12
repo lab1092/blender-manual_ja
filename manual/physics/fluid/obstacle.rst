@@ -9,7 +9,7 @@ obstacle objects currently should not intersect. As for fluid objects,
 the actual mesh geometry is used for obstacles. For objects with a volume,
 make sure that the normals of the obstacle are calculated correctly, and radiating properly
 (use the *Flip Normal* button, in *Edit mode*,
-*Mesh Tools* panel, *Editing* context [\ :kbd:`F9` ]),
+*Mesh Tools* panel, *Editing* context),
 particularly when using a spinned container. Applying the Modifier *SubSurf* before
 baking the simulation could also be a good idea if the mesh is not animated.
 
@@ -35,7 +35,6 @@ Boundary type
 
 .. figure:: /images/Manual-Part-X-bndtcomp.jpg
    :width: 610px
-   :figwidth: 610px
 
    Example of the different boundary types for a drop falling onto the slanted wall.
    From left to right: no-slip, part-slip 0.3, part-slip 0.7 and free-slip.

@@ -55,8 +55,7 @@ to change to the previous screen, press :kbd:`Ctrl-Left`.
 By default, each screen layout 'remembers' the last :doc:`scene </getting_started/basics/interface/scenes>`
 it was used on. Selecting a different layout will switch to the layout **and** jump to that scene.
 
-All changes to windows, as described in :doc:`Window system </getting_started/basics/interface/window_system>` and
-:doc:`Window types </getting_started/basics/interface/window_types>`, are saved within one screen.
+All changes to windows, as described in :doc:`Editor types </editors/index>`, are saved within one screen.
 If you change your windows in one screen, other screens won't be affected.
 
 
@@ -123,7 +122,8 @@ your workflow as this will help increase your productivity. Some examples could 
       Properties window for rendering and lamp properties and controls
    3-Material
       Properties window for Material settings, 3D window for selecting objects, Outliner,
-      Library script (if used), Node Editor (if using :doc:`Node based materials </render/blender_render/materials/nodes>`)
+      Library script (if used), Node Editor
+      (if using :doc:`Node based materials </render/blender_render/materials/nodes>`)
    4-UV Layout
       UV/Image Editor Window, 3D Window for seaming and unwrapping mesh
    5-Painting

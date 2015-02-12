@@ -6,17 +6,18 @@
 Introduction
 ============
 
-Motion tracking is a new technique available in Blender. It is still under development,
-and currently supports basic operations for 2D motion tracking, 3D motion tracking,
-and camera solution. It's already ready to be used in production,
-as validated by "Tears of Steel."
+Blender's motion tracker supports a couple of very powerful tools for 2D tracking and 3D motion tracking,
+including camera tracking and object tracking, as well as some special features like the plane track for compositing.
+Tracks can also be used to move and deform masks for rotoscoping in the Mask Editor,
+which is available as a special mode in the Movie Clip Editor. 
+
+It's ready to be used in production,
+as validated for example by the open movie `"Tears of Steel" <http://tearsofsteel.org>`__ by the Blender Foundation.
+Since then it has been improved a lot and the tracker is now fast, accurate and versatile.
 
 
 Getting started
 ===============
-
-Motion tracking is available in current SVN Trunk and is included with Blender 2.61 release.
-It's enabled by default for all platforms and can be used "out-of-box".
 
 Here's brief descriptions of motion tracking tools currently available in Blender
 
@@ -31,7 +32,6 @@ to manually choose the tracking algorithm and its settings. Current defaults wor
 general footage which isn't very blurry and where feature points aren't getting highly
 deformed by perspective.
 
-Improving 2D tracking is already in our TODO list, but it's not high priority at this moment.
 If you aren't sure about algorithms and settings and don't want to read this document,
 you can just play with settings and find one which works for you.
 
@@ -45,26 +45,27 @@ For accurate camera motion,
 the exact value of the focal length and the "strength" of distortion are needed.
 
 Currently, focal length can be automatically obtained only from the camera's settings or from
-the EXIF information -- there are no tools inside Blender which can estimate it. But there are
-some tools which can help to find approximate values to compensate for distortion. There are
-also fully manual tools where you can use a grid which is getting affected by distortion model
-and deformed cells defines straight lines in the footage. You can also use the grease pencil
-for this - just draw line which should be straight on the footage using poly line brush and
-adjust distortion values to make the grease pencil match lines on the footage.
+the EXIF information. There are some tools which can help to find approximate values to compensate for distortion.
+There are also fully manual tools where you can use a grid which is getting affected by distortion model and deformed
+cells defines straight lines in the footage. 
+
+You can also use the grease pencil for this - just draw a line which should be straight on the footage using poly
+line brush and adjust the distortion values to make the grease pencil match lines on the footage.
 
 To calibrate your camera more accurately, use the grid calibration tool from OpenCV.
 OpenCV is using the same distortion model, so it shouldn't be a problem.
 
 
-Camera motion solving
----------------------
+Camera and object motion solving
+--------------------------------
 
-Despite the fact that there's no difference in solving camera motion and object motion from a
-mathematical point of view, only camera solving is currently supported.
-And it still has some limitations,
-like unsupported solve of tripod motions or dominant plane motions
-(where all trackable features belong to one plane).
-These limitations are planned to be solved in the future.
+Blender not only supports the solving of camera motion, including tripod shots,
+but also the solving of object motion in relation to the motion of the camera.
+In addition to that there is the Plane Track, which solves the motion of all markers on one plane. 
+
+There are also plans to add more tools in the future, for example more automatic tracking and solving,
+multi-camera solving and constrained solutions. 
+
 
 
 Basic tools for scene orientation and stabilization
@@ -91,8 +92,7 @@ Not implemented tools
 ---------------------
 
 Some tools aren't available in Blender yet, but they are in our TODO list.
-So there's currently no support for such things as rolling shutter filtering,
-object motion solving, motion capturing.
+So there's currently no support for such things as rolling shutter filtering or motion capturing.
 But you can try to hack this stuff using currently implemented things.
 
 
@@ -112,7 +112,6 @@ This editor can be found in the list of editor types.
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_type_menu.jpg
    :width: 120px
-   :figwidth: 120px
 
    Editor type menu
 
@@ -122,7 +121,6 @@ When you switch to Movie Clip Editor window, the interface changes in the follow
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_space_ui.jpg
    :width: 300px
-   :figwidth: 300px
 
    Movie Clip Editor interface
 
@@ -131,9 +129,9 @@ The next logical step to open a new video clip to start working with.
 There are several ways to to this:
 
 
-- Use :kbd:`Open` button from movie editor header
+- Use *Open* button from movie editor header
 - Use :menuselection:`Clip --> Open` menu
-- Use :kbd:`Alt-O>` shortcut
+- Use :kbd:`Alt-O` shortcut
 
 Both movie files and image sequences can be used in the clip editor.
 If you're using an image sequence there's one limitation on naming of files:
@@ -145,7 +143,6 @@ extra panels are displayed in the interface.
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_clip_opened_ui.jpg
    :width: 300px
-   :figwidth: 300px
 
    Movie Clip Editor with opened clip
 
@@ -168,7 +165,6 @@ header.
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_mode_menu.jpg
    :width: 300px
-   :figwidth: 300px
 
    Movie Clip Editor mode menu
 
@@ -185,20 +181,20 @@ Tools available in tracking mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Marker panel
-""""""""""""
+^^^^^^^^^^^^
 
-- The :strong:`Add Marker and Move` operator places a new marker at the position of the mouse
+- The **Add Marker and Move** operator places a new marker at the position of the mouse
   (which is under the button in this case, not ideal but it's just how things work)
   and then it can be moved to the needed location. When it's moved to the desired position,
   FIXME(Template Unsupported: Shortcut/Mouse; {{Shortcut/Mouse|lmb}}) can be used to finish placing the new marker.
-  Also, :kbd:`Enter` and :kbd:`Space` can be used to finish placing the marker.
+  Also, :kbd:`Return` and :kbd:`Spacebar` can be used to finish placing the marker.
   But it's faster to use :kbd:`Ctrl-LMB` to place markers directly on the footage.
   This shortcut will place the marker in the place you've clicked.
   One more feature here: until you've released the mouse button,
   you can adjust the marker position by moving the mouse and using
   the track preview widget to control how accurately the marker is placed.
 
-- The :strong:`Detect Features` operator detects all possible features on the current
+- The **Detect Features** operator detects all possible features on the current
   frame and places markers at these features. This operator doesn't take into account other frames,
   so it can place markers on features which belong to moving objects, and if camera is turning away from this shot,
   no markers would be placed on frames after the camera moved away.
@@ -223,11 +219,11 @@ Marker panel
          defines the minimal distance between placed markers. It's needed to prevent markers from being placed too
          close to each other (such placement can confuse the camera solver).
 
-- :strong:`Delete Track` is a quite self-explaining operator which deletes all selected tracks.
+- **Delete Track** is a quite self-explaining operator which deletes all selected tracks.
 
 
 Track panel
-"""""""""""
+^^^^^^^^^^^
 
 - The first row of buttons is used to perform tracking of selected tracks
   (i.e. following the selected feature from frame to frame).
@@ -256,7 +252,7 @@ Join
 
 
 Solve panel
-"""""""""""
+^^^^^^^^^^^
 
 **Camera Motion** operator solves the motion of camera using all tracks placed
 on the footage and two keyframes specified on this panel. There are some requirements:
@@ -273,7 +269,7 @@ position of tracks. Basically, reprojection error below 0.3 means accurate repro
 Values above 3 means some tracks should be tracked more accurately,
 or that values for focal length or distortion coefficients were set incorrectly.
 
-The :strong:`Refine` option specifies which parameters should be refined during solve.
+The **Refine** option specifies which parameters should be refined during solve.
 Such refining is useful when you aren't sure about some camera intrinsics,
 and solver should try to find the best parameter for those intrinsics. But you still have to
 know approximate initial values - it'll fail to find correct values if they were set
@@ -281,7 +277,7 @@ completely incorrectly initially.
 
 
 Cleanup Panel
-"""""""""""""
+^^^^^^^^^^^^^
 
 This panel contains a single operator and its settings. This operator cleans up bad tracks:
 tracks which aren't tracked long enough or which failed to reconstruct accurately.
@@ -295,9 +291,9 @@ several actions can be performed for bad tracks:
 
 
 Clip Panel
-""""""""""
+^^^^^^^^^^
 
-This panel currently contains the single operator :kbd:`Set as background` which sets the
+This panel currently contains the single operator *Set as background* which sets the
 clip currently being edited as the camera background for all visible 3D viewports.
 If there's no visible 3D viewports or the clip editor is open in full screen,
 nothing will happen.
@@ -307,7 +303,7 @@ Properties available in tracking mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Grease Pencil Panel
-"""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^
 
 It's a standard grease pencil panel where new grease pencil layers and frames can be
 controlled. There's one difference in the behavior of the grease pencil from other areas -
@@ -318,11 +314,10 @@ This makes the stroke easy to notice on all kinds of movies.
 
 
 Objects Panel
-"""""""""""""
+^^^^^^^^^^^^^
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_objects_panel.jpg
    :width: 130px
-   :figwidth: 130px
 
    Objects Panel in clip editor
 
@@ -335,8 +330,8 @@ all added objects are used for object tracking and solving only.
 These objects can be referenced from Follow Track and Object Solver constraints.
 Follow Track uses the camera object by default.
 
-New objects can be added using :kbd:`+` and the active object can be deleted with the
-:kbd:`-` button.
+New objects can be added using :kbd:`Plus` and the active object can be deleted with the
+:kbd:`Minus` button.
 Text entry at the bottom of this panel is used to rename the active object.
 
 If some tracks were added and tracked to the wrong object, they can be copied to another
@@ -348,11 +343,10 @@ refining of camera intrinsics happens when solving camera motion only.
 
 
 Track Panel
-"""""""""""
+^^^^^^^^^^^
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_track_panel.jpg
    :width: 130px
-   :figwidth: 130px
 
    Track Panel in clip editor
 
@@ -403,7 +397,7 @@ tracks so a whole group of tracks can be selected by color using the Select Grou
 
 
 Camera Data Panel
-"""""""""""""""""
+^^^^^^^^^^^^^^^^^
 
 This panel contains all settings of the camera used for filming the movie which is currently
 being edited in the clip editor.
@@ -429,7 +423,7 @@ Pixel Aspect Ratio
 Optical Center
    is the optical center of the lens used in the camera. In most cases it's equal to the image center,
    but it can be different in some special cases. Check camera/lens specifications in such cases.
-   To set the optical center to the center of image, there's a :kbd:`Enter` button below the sliders.
+   To set the optical center to the center of image, there's a :kbd:`Return` button below the sliders.
 Undistortion K1, K2 and K3
    are coefficients used to compensate for lens distortion when the movie was shot. Currently these values can be
    tweaked by hand only (there are no calibration tools yet)
@@ -439,13 +433,13 @@ Undistortion K1, K2 and K3
 
 
 Display Panel
-"""""""""""""
+^^^^^^^^^^^^^
 
 This panel contains all settings which control things displayed in the clip editor.
 
 
 R, G, B
-   and :strong:`B/W` buttons at the top of this panel are used to control color channels used
+   and **B/W** buttons at the top of this panel are used to control color channels used
    for frame preview and to
    make the whole frame gray scale. It's needed because the tracking algorithm works with gray-scale images and it's
    not always obvious to see which channels disabled will increase contrast of feature points and reduce noise.
@@ -461,7 +455,7 @@ Pyramid
    makes the highest pyramid level be visible. Pyramids are defined later in the Tracking Settings panel section, but
    basically it helps to determine how much a track is allowed to move from one frame to another.
 Track Path
-   and :strong:`Length` control displaying of the paths of tracks. The ways tracks are moving can be visible looking
+   and **Length** control displaying of the paths of tracks. The ways tracks are moving can be visible looking
    at only one frame. It helps to determine if a track jumps from its position or not.
 Disabled Tracks
    makes it possible to hide all tracks which are disabled on the current frame. This helps to make view more clear,
@@ -506,10 +500,10 @@ Display Aspect Ratio
 
 
 Tracking Settings Panel
-"""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Common options
-~~~~~~~~~~~~~~
+""""""""""""""
 
 This panel contains all settings for the 2D tracking algorithms.
 Depending on which algorithm is used, different settings are displayed,
@@ -533,15 +527,15 @@ can be sent to the tracker. Most commonly used combinations:
   This configuration prevents sliding from the original position
   (because the position which best corresponds to the original pattern is returned by the tracker),
   but it can lead to small jumps and can lead to failures when the feature point is deformed due to camera motion
-  (perspective transformation, for example). Such a configuration is used if :strong:`Adjust Frames` is set to 0.
+  (perspective transformation, for example). Such a configuration is used if **Adjust Frames** is set to 0.
 - An image created from the current frame is sent as first image to the tracker.
   In this configuration the pattern is tracking between two neighboring frames.
   It allows dealing with cases of large transformations of the feature point
   but can lead to sliding from the original position, so it should be controlled.
   Such a configuration is used if **Adjust Frames** is set to 1.
 
-If :strong:`Adjust Frames` is greater than 1, the behavior of tracker is:
-keyframes for tracks are creating every :strong:`Adjust Frames` frames,
+If **Adjust Frames** is greater than 1, the behavior of tracker is:
+keyframes for tracks are creating every **Adjust Frames** frames,
 and tracking between keyframed image and next image is used.
 
 Speed
@@ -561,7 +555,7 @@ Margin
 
 
 KLT tracker options
-~~~~~~~~~~~~~~~~~~~
+"""""""""""""""""""
 
 The KLT tracker is the algorithm used by default.
 It allows tracking most kinds of feature points and their motion.
@@ -569,7 +563,7 @@ It uses pyramid tracking which works in the following way. The algorithm tracks 
 larger than the defined pattern first to find the general direction of motion. Then it tracks
 a slightly smaller image to refine the position from the first step and make the final
 position more accurate. This iterates several times. The number of steps of such tracking is
-equal to the :strong:`Pyramid Level` option and we tell that on first step tracking
+equal to the **Pyramid Level** option and we tell that on first step tracking
 happens for highest pyramid level. So Pyramid Level=1 is equal to pattern itself,
 and each next level doubles tracking image by 2.
 
@@ -586,7 +580,7 @@ texture around that feature point is moving in another direction.
 
 
 SAD tracker options
-~~~~~~~~~~~~~~~~~~~
+"""""""""""""""""""
 
 On each step, the SAD tracker reviews the whole search area and finds the pattern on the
 second image which is most like the pattern which is getting tracking.
@@ -601,7 +595,7 @@ There's one limitation: currently: it works for features of size 16x16 pixels on
 
 
 Marker Panel
-""""""""""""
+^^^^^^^^^^^^
 
 This panel contains numerical settings for marker position,
 pattern and search area dimensions, and offset of anchor point from pattern center.
@@ -609,11 +603,10 @@ All sliders are self-explanatory.
 
 
 Proxy / Timecode Panel
-""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_proxy_timecode_panel.jpg
    :width: 130px
-   :figwidth: 130px
 
    Proxy / Timecode Panel in clip editor
 
@@ -627,25 +620,25 @@ The first four options are used to define which resolutions of proxy images shou
 Currently it's possible to build images 25%, 50%, 75% and 100% of the original image size.
 Proxy size of 100% can be used for movies which contain broken frames which can't be decoded.
 
-:strong:`Build Undistorted` means that the proxy builder also creates images from undistorted original images for the
+**Build Undistorted** means that the proxy builder also creates images from undistorted original images for the
 sizes set above. This helps provide faster playback of undistorted footage.
 
 Generated proxy images are encoding using JPEG,
-and the quality of the JPEG codec is controlled with the :strong:`Quality` slider.
+and the quality of the JPEG codec is controlled with the **Quality** slider.
 
 By default, all generated proxy images are storing to the <path of original
 footage>/BL_proxy/<clip name> folder,
-but this location can be set by hand using the :strong:`Proxy Custom Directory` option.
+but this location can be set by hand using the **Proxy Custom Directory** option.
 
-:kbd:`Rebuild Proxy` will regenerate proxy images for all sizes set above and
+*Rebuild Proxy* will regenerate proxy images for all sizes set above and
 regenerate all timecodes which can be used later.
 
-:strong:`Use Timecode Index` can (and better be used) for movie files.
+**Use Timecode Index** can (and better be used) for movie files.
 Basically, timecode makes frame search faster and more accurate.
 Depending on your camera and codec, different timecodes can give better result.
 
-:strong:`Proxy Render Size` defines which proxy image resolution is used for display.
-If :strong:`Render Undistorted` is set, then images created from undistorted frames are used.
+**Proxy Render Size** defines which proxy image resolution is used for display.
+If **Render Undistorted** is set, then images created from undistorted frames are used.
 If there's no generated proxies, render size is set to "No proxy, full render",
 and render undistorted is enabled, undistortion will happen automatically on frame draw.
 
@@ -655,7 +648,6 @@ Tools available in reconstruction mode
 
 .. figure:: /images/Manual_movie_tracking_clip_editor_2d_stabilization_panel.jpg
    :width: 130px
-   :figwidth: 130px
 
    Proxy / 2D Stabilization Panel in clip editor
 
@@ -670,20 +662,19 @@ It works in the following way: it gets tracks from the list of tracks used for l
 stabilization and finds the median point of all these tracks on the first frame.
 On each frame, the algorithm makes this point have the same position in screen coordinates by
 moving the whole frame. In some cases it's not necessary to fully compensate camera jumps and
-:strong:`Location Influence` can be used in such cases.
+**Location Influence** can be used in such cases.
 
 The camera can also have rotated a bit, adding some tilt to the footage.
-There's the :strong:`Stabilize Rotation` option to compensate for this tilt.
+There's the **Stabilize Rotation** option to compensate for this tilt.
 A single extra track needs to be set for this, and it works in the following way.
 On first frame of the movie, this track is connected with the median point of the tracks from
 list above and angle between horizon and this segment is ket constant through the whole
-footage. The amount of rotation applied to the footage can be controlled by :strong:`Rotation
-Influence`.
+footage. The amount of rotation applied to the footage can be controlled by **Rotation Influence**.
 
 If the camera jumps a lot, there'll be noticeable black areas near image boundaries.
-To get rid of these black holes, there's the :strong:`Autoscale` option,
+To get rid of these black holes, there's the **Autoscale** option,
 which finds smallest scale factor which, when applied to the footage,
 would eliminate all the black holes near the image boundaries.
-There's an option to control the maximal scale factor, (:strong:`Maximal Scale`),
-and the amount of scale applied to the footage (:strong:`Scale Influence`).
+There's an option to control the maximal scale factor, (**Maximal Scale**),
+and the amount of scale applied to the footage (**Scale Influence**).
 

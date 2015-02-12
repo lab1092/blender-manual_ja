@@ -8,12 +8,12 @@ Constraints Common Interface
 
 .. figure:: /images/25-Manual-Constraints-Subpanel-3parts.jpg
    :width: 303px
-   :figwidth: 303px
 
    The three parts of a constraint interface
 
 
-As with :doc:`modifiers </modifiers>`, an object (or bone, see the :doc:`rigging chapter </rigging>` for details)
+As with :doc:`modifiers </modifiers/index>`,
+an object (or bone, see the :doc:`rigging chapter </rigging/index>` for details)
 can use several constraints at once.
 Hence, these constraints are organized in a stack which controls their order of evaluation (from top to bottom).
 
@@ -30,7 +30,6 @@ Constraints Header
 
 .. figure:: /images/25-Manual-Constraints-Subpanel-header.jpg
    :width: 406px
-   :figwidth: 406px
 
    A constraint header
 
@@ -65,7 +64,6 @@ Constraints Settings
 
 .. figure:: /images/25-Manual-Constraints-Subpanel-body.jpg
    :width: 303px
-   :figwidth: 303px
 
    The central part of a constraint's subpanel contains the constraint's settings, the target, and constraint space
 
@@ -148,7 +146,6 @@ Influence
 
 .. figure:: /images/25-Manual-Constraints-Subpanel-influence.jpg
    :width: 303px
-   :figwidth: 303px
 
    Influence
 

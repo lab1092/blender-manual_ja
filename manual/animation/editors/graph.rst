@@ -12,7 +12,6 @@ and *Drivers* for :doc:`Drivers </animation/basics/drivers>`. Both are very simi
 
 .. figure:: /images/Doc_Graph_Editor.jpg
    :width: 600px
-   :figwidth: 600px
 
    The Graph Editor.
 
@@ -51,7 +50,7 @@ These are some other useful tools.
 *View All* :kbd:`Home`
    Reset viewable area to show all keyframes.
 
-*View Selected* :kbd:`Numpad-.`
+*View Selected* :kbd:`NumpadPeriod`
    Reset viewable area to show selected keyframes.
 
 
@@ -231,11 +230,11 @@ Channel Editing
 
 *Toggle Select All* :kbd:`A`
 
-*Border Select* :kbd:`Drag-LMB` or :kbd:`B` :kbd:`Drag-LMB`
+*Border Select* (:kbd:`LMB` drag) or :kbd:`B` (:kbd:`LMB` drag)
 
-*Border Deselect* :kbd:`Shift-Drag-LMB` or :kbd:`B` :kbd:`Shift-Drag-LMB`
+*Border Deselect* (:kbd:`Shift-LMB` drag) or :kbd:`B` (:kbd:`Shift-LMB` drag)
 
-*Delete selected* :kbd:`X` or :kbd:`Del`
+*Delete selected* :kbd:`X` or :kbd:`Delete`
 
 *Lock selected* :kbd:`Tab`
 

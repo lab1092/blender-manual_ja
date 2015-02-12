@@ -48,9 +48,9 @@ Toggle Select All :kbd:`A`
 
 Select Linked :kbd:`L`
 
-Border Select :kbd:`B` :kbd:`Drag-LMB`
+Border Select :kbd:`B` (:kbd:`LMB` drag)
 
-Border Deselect :kbd:`B` :kbd:`Shift-Drag-LMB`
+Border Deselect :kbd:`B` (:kbd:`Shift-LMB` drag)
 
 
 Editing
@@ -98,7 +98,7 @@ View Tools
 
 View All :kbd:`Home`
 
-View Selected :kbd:`Numpad-.`
+View Selected :kbd:`NumpadPeriod`
 
 Set Preview Range :kbd:`Ctrl-P`
 
@@ -149,13 +149,11 @@ Snap Keys :kbd:`Shift-S`
 
    * - .. figure:: /images/Manual-Animation-F-Curves-Flatten-Handles-1.jpg
           :width: 200px
-          :figwidth: 200px
 
           Before Flatten Handles.
 
      - .. figure:: /images/Manual-Animation-F-Curves-Flatten-Handles-2.jpg
           :width: 200px
-          :figwidth: 200px
 
           After Flatten Handles.
 
@@ -191,13 +189,11 @@ Clean Keyframes
 
    * - .. figure:: /images/Doc26-fcurve-clean1.jpg
           :width: 300px
-          :figwidth: 300px
 
           Fcurve before cleaning
 
      - .. figure:: /images/Doc26-fcurve-clean2.jpg
           :width: 300px
-          :figwidth: 300px
 
           Fcurve after cleaning
 
@@ -216,13 +212,11 @@ seem to be never modified by this tool.
 
    * - .. figure:: /images/Doc26-fcurve-clean1.jpg
           :width: 300px
-          :figwidth: 300px
 
           Fcurve before smoothing
 
      - .. figure:: /images/Doc26-fcurve-smooth.jpg
           :width: 300px
-          :figwidth: 300px
 
           Fcurve after smoothing
 
@@ -238,13 +232,11 @@ Sample Keyframes :kbd:`Shift-O`
 
    * - .. figure:: /images/Doc26-fcurve-sample.jpg
           :width: 300px
-          :figwidth: 300px
 
           Fcurve before sampling
 
      - .. figure:: /images/Doc26-fcurve-sample2.jpg
           :width: 300px
-          :figwidth: 300px
 
           Fcurve after sampling
 
@@ -292,12 +284,12 @@ Show Seconds
 Set Preview Range, Clear Preview Range (:kbd:`Ctrl-P`, :kbd:`Alt-P`)
    These entries allow you to define/clear a temporary preview range to use for the :kbd:`Alt-A` realtime playback
    (this is the same thing as the *Pr* option of the
-   :doc:`Timeline window header </animation/timeline#header_controls>`).
+   :doc:`Timeline window header </animation/editors/timeline#header_controls>`).
 Auto-Set Preview Range :kbd:`Ctrl-Alt-P`
    Automatically set Preview Range based on range of keyframes.
 View All :kbd:`Home`
    Reset viewable area to show full keyframe range.
-View Selected :kbd:`Numpad-.`
+View Selected :kbd:`NumpadPeriod`
    Reset viewable area to show selected keyframe range.
 
 
@@ -327,9 +319,9 @@ Before Current Frame :kbd:`[`
    Select all keys before the current frame.
 After Current Frame :kbd:`]`
    Select all keys after the current frame.
-Select More :kbd:`Ctrl-Numpad+`
+Select More :kbd:`Ctrl-NumpadPlus`
    Grow keyframe selection along Fcurve.
-Select Less :kbd:`Ctrl-Numpad-`
+Select Less :kbd:`Ctrl-NumpadMinus`
    Shrink keyframe selection along Fcurve.
 Select Linked :kbd:`L`
    Selects all keyframes on Fcurve of selected keyframe.
@@ -343,12 +335,12 @@ Marker Menu
 
 *Duplicate Marker to Scene*
 
-*Delete Marker* :kbd:`X` or :kbd:`Del`
+*Delete Marker* :kbd:`X` or :kbd:`Delete`
    Note, make sure no channels are selected.
 
 *Rename Marker* :kbd:`Ctrl-M`
 
-*Grab/Move Marker* :kbd:`Tweak Select`
+*Grab/Move Marker* (:kbd:`RMB` drag)
 
 *Jump to Next Marker*
 
@@ -358,7 +350,7 @@ Marker Menu
 Channel Menu
 ^^^^^^^^^^^^
 
-*Delete Channels* :kbd:`X` or :kbd:`Del`
+*Delete Channels* :kbd:`X` or :kbd:`Delete`
 
 *Group Channels* :kbd:`Ctrl-G`
 
@@ -386,9 +378,9 @@ Channel Menu
    *Make Cyclic (F-Modifiers)*
    *Clear Cyclic (F-Modifiers)*
 
-*Expand Channels* :kbd:`Numpad-+`
+*Expand Channels* :kbd:`NumpadPlus`
 
-*Collapse Channels* :kbd:`Numpad--`
+*Collapse Channels* :kbd:`NumpadMinus`
 
 Move...
    *To Top* :kbd:`Shift-PageUp`
@@ -433,7 +425,7 @@ Jump to Keyframes :kbd:`Ctrl-G`
 
 Duplicate :kbd:`Shift-D`
 
-Delete Keyframes :kbd:`X` or :kbd:`Del`
+Delete Keyframes :kbd:`X` or :kbd:`Delete`
 
 Handle Type :kbd:`V`
    *Free*

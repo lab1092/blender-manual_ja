@@ -4,9 +4,8 @@ Material Vector Nodes
 *********************
 
 Vector nodes manipulate information about how light interacts with the material,
-multiplying vector sets, and other wonderful things that normal humans barely comprehend
-(except math geniuses, who may not be considered «normal»). Even if you aren't a math wiz,
-you'll find these nodes to be very useful.
+multiplying vector sets, and other wonderful things which can become quite advanced.
+Even if you don't have experience with vector maths, you'll find these nodes to be very useful.
 
 Vectors, in general, are two or three element values, for example,
 surface normals are vectors. Vectors are also important for calculating shading.
@@ -32,7 +31,7 @@ The resulting colorized output can be easily varied by moving the light source
 The (face) normal is the direction of the face in relation to the camera.
 You can use it to do the following:
 
-- Use this node to create a fixed direction → output *Normal*.
+- Use this node to create a fixed direction --> output *Normal*.
 - Calcuate the *Dot* -Product with the *Normal* -Input. The *Dot* -Product is a scalar value (a number).
 
   - If two normals are pointing in the same direction the *Dot* -Product is 1.
@@ -189,65 +188,3 @@ Outputs
 Vector
    The output vector, combined by the node.
 
-
-Controls
---------
-
-.. figure:: /images/26-Manual-Material-Vector-Node-Curves-Axes.jpg
-
-   Curve channel selector
-
-
-Channel selector
-   Allows to select appropriate curve channel.
-
-   X
-      Curve of X-direction.
-   Y
-      Curve of Y-direction.
-   Z
-      Curve of Z-direction.
-
-
-.. figure:: /images/26-Manual-Material-Vector-Node-Curves-Controls.jpg
-
-   Node curve controls
-
-
-.. figure:: /images/26-Material-Color-Node-Curves-Zoomin-Buticon.jpg
-
-   Zoom in curve.
-
-
-.. figure:: /images/26-Material-Color-Node-Curves-Zoomout-Buticon.jpg
-
-   Zoom out curve.
-
-
-.. figure:: /images/26-Material-Color-Node-Curves-Tools.jpg
-
-   Advanced tools for curve
-
-
-Reset View
-   Resets view of the cuve.
-Vector Handle
-   Vector type of curve point's handle.
-Auto Handle
-   Automatic type of curve point's handle.
-Extend Horizontal
-   Extends the curve horizontal.
-Extend Extrapolated
-   Extends the curve extrapolated.
-Reset Curve
-   Resets the curve in default (removes all added curve's points).
-
-
-.. figure:: /images/26-Material-Color-Node-Curves-Clipping-Buticon.jpg
-
-   Clipping options display of the curve.
-
-
-.. figure:: /images/26-Material-Color-Node-Curves-Delpoints-Buticon.jpg
-
-   Deletes points of the curve.

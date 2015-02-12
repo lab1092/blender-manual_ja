@@ -3,7 +3,7 @@
 Soft Body Physics Object Type
 *****************************
 
-The most advanced type of object in the :doc:`Game Engine </game_engine>`.
+The most advanced type of object in the :doc:`Game Engine </game_engine/index>`.
 Also, it is the most finicky. If you are used to the fun experimentation
 that comes from playing around with the non-BGE Soft Body sims (such as Cloth),
 you will probably find a frustrating lack of options and exciting results.
@@ -54,10 +54,7 @@ FIXME(Template Unsupported: Doc:2.6/Manual/Game_Engine/Physics/MassOption;
       <http://www.continuousphysics.com/Bullet/BulletFull/structbtSoftBody_1_1Config.html#a8e9d39cceaf15fd8697b2f8831b2fee1>`__.
     - Python property: ``obj.game.soft_body.shape_threshold``
 - *Welding*
-  Seems to not be hooked up. Blender will tell Bullet to weld any time you enable Soft Body.
-  Look at `BL_BlenderDataConversion.cpp
-  <https://svn.blender.org/svnroot/bf-blender/trunk/blender/source/gameengine/Converter/BL_BlenderDataConversion.cpp>`__
-  where ``objprop.m_soft_welding`` is hard-coded to 0.0f]
+  TODO.
 - *Position Iteration* - Increase the accuracy at a linearly-increasing expense of time.
   The effect is visible especially with Soft Bodies that fall on sharp corners,
   though this can slow down even very simple scenes.
@@ -132,7 +129,7 @@ Hints
 =====
 
 - A very important configurable in the case of Soft Body interactions is
-  :doc:`World properties </game_engine/physics/world>` :menuselection:`--> Physics --> Physics Steps --> Substeps`.
+  :doc:`World properties </game_engine/world>` :menuselection:`--> Physics --> Physics Steps --> Substeps`.
   In the test ``.blend`` here:
   `Manual-BGE-Physics-SoftBody_PhysicsSteps.blend
   <http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-SoftBody_PhysicsSteps.blend>`__,

@@ -21,8 +21,8 @@ A vertex is primarily a single point or position in 3D space.
 It is usually invisible in rendering and in *Object mode*.
 Don't mistake the center point of an object for a vertex. It looks similar,
 but it's bigger and you can't select it. (*Vertex example*)
-shows the center point labeled as "\ ``A`` ".
-"\ ``B`` " and "\ ``C`` " are vertices.
+shows the center point labeled as ``A``.
+``B`` and ``C`` are vertices.
 
 A simple way to create a new vertex is to click :kbd:`Ctrl-LMB` in *Edit mode*.
 Of course, as a computer screen is two-dimensional,
@@ -79,8 +79,8 @@ Loops
 
 
 *Edge* and *Face Loops* are sets of faces or edges that form continuous "loops" as shown in
-(*Edge and Face Loops*). The top row (``1`` -\ ``4``) shows a solid view,
-the bottom row (``5`` -\ ``8``) a wireframe view of the same loops.
+(*Edge and Face Loops*). The top row (``1`` - ``4``) shows a solid view,
+the bottom row (``5`` - ``8``) a wireframe view of the same loops.
 
 Note that loops ``2`` and ``4`` do not go around the whole model.
 Loops stop at so called poles because there is no unique way to continue a loop from a pole.
@@ -92,7 +92,8 @@ They start and end at the same vertex and divide the model into two partitions.
 Loops can be a quick and powerful tool to work with specific,
 continuous regions of a mesh and are a prerequisite for organic character animation.
 For a detailed description of how to work with loops in Blender,
-please refer to the Manual page on :doc:`Edge and Face Tools </modeling/meshes/selection#advanced_selection_tools>`.
+please refer to the Manual page on
+:doc:`Edge and Face Tools </modeling/meshes/selecting/introduction#advanced_selection_tools>`.
 
 
 Edge Loops
@@ -112,7 +113,7 @@ contours and deformation lines of the skin and the underlying muscles and are mo
 areas that deform more when the character moves, for example at the shoulders or knees.
 
 Further details on working with Edge Loops can be found in
-:doc:`Edge Loop Selection </modeling/meshes/selection#edge_loop_selection>`.
+:doc:`Edge Loop Selection </modeling/meshes/selecting/introduction#edge_loop_selection>`.
 
 
 Face Loops
@@ -124,5 +125,5 @@ Note that for non-circular loops (``4``)
 the faces containing the poles are not included in a Face Loop.
 
 Further details on working with Face Loops can be found in
-:doc:`Face Loop Selection </modeling/meshes/selection#face_loop_selection>`.
+:doc:`Face Loop Selection </modeling/meshes/selecting/introduction#face_loop_selection>`.
 

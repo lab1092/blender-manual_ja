@@ -46,7 +46,8 @@ and another that has three maps.
 
 
 When using file textures, it is very important that you have
-:doc:`Mapped the UVs </render/blender_render/textures/mapping/uv/unwrapping>` of the mesh, and they are laid out appropriately.
+:doc:`Mapped the UVs </render/blender_render/textures/mapping/uv/unwrapping>`
+of the mesh, and they are laid out appropriately.
 
 You don't have to UV map the *entire* mesh.
 The sphere above on the left has some faces mapped,
@@ -95,7 +96,8 @@ or you can create a New image and save it as the texture.
 
 If you want to start off by creating an image using an external paint program,
 you will want to save an outline of your UV faces by using the *Save UV Face Layout* tool located in the UVs menu.
-This is discussed :doc:`here </render/blender_render/textures/mapping/uv/applying_image#saving_an_outline_of_your_uv_layout>`.
+This is discussed
+:doc:`here </render/blender_render/textures/mapping/uv/applying_image#saving_an_outline_of_your_uv_layout>`.
 
 
 Creating an Image Texture
@@ -161,14 +163,12 @@ Layering UV Textures
 
 .. figure:: /images/Manual-UV-Layer_One.jpg
    :width: 300px
-   :figwidth: 300px
 
    Base UV Texture
 
 
 .. figure:: /images/Manual-UV-Layer-Two.jpg
    :width: 300px
-   :figwidth: 300px
 
    Layered UV Texture
 
@@ -185,7 +185,7 @@ just create one UV Texture (map) as described in this section. Then,
 create material image textures as described in the procedural materials section.
 Instead of mapping to Original Coordinates (OrCo), map to UV.
 
-Use that map name repeatedly in the Material→Textures→Map Input panel by selecting UV and
+Use that map name repeatedly in the Material-->Textures-->Map Input panel by selecting UV and
 typing the name in the text field. In the example to the right,
 our UV Texture is called "Head" (you may have to expand the image to see the panel settings).
 Then, the image texture shown will be mapped using the UV coordinates.
@@ -254,7 +254,6 @@ The vertex colors are used to modulate the brightness or color of the UV image t
 
 .. figure:: /images/Manual-Part-IV-uv04.jpg
    :width: 550px
-   :figwidth: 550px
 
    Vertex colors modulate texture.
 
@@ -273,7 +272,6 @@ Using Alpha Transparency
 
 .. figure:: /images/Manual-UV-Alpha.jpg
    :width: 200px
-   :figwidth: 200px
 
    Alpha UV Textures
 
@@ -301,7 +299,7 @@ Transparent areas of the UV Image show as black.
 
 The top right ball has had a pink vertex color applied to the vertical band of faces
 (in the 3D View window, select the faces in UV Paint mode, switch to Vertex Paint mode,
-pick a pink color, and *Paint→Set Vertex Colors*).
+pick a pink color, and *Paint-->Set Vertex Colors*).
 The finger is mapped to the middle vertical band of faces,
 and VCol and Face Textures are enabled.
 The texture is mapped to Alpha black and multiplies the base material alpha value which is ``1.0``.
@@ -334,14 +332,15 @@ To overlay multiple UV images, you have several options:
 
 - Create multiple UV Textures which map the same,
   and then use different images (with Alpha) and blender will overlay them automatically.
-- Use the :doc:`Composite Nodes </composite_nodes>` to combine the two images via the AlphaOver node,
+- Use the :doc:`Composite Nodes </composite_nodes/index>` to combine the two images via the AlphaOver node,
   creating and saving the composite image. Open that composited image as the UV Texture.
 - Use an external paint program to alpha overlay the images and save the file,
   and load it as the face's UV Texture
 - Define two objects, one just inside the other.
   The inner object would have the base image,
   and the outer image the overlaid image with a material alpha less than one (1.0).
-- Use the :doc:`Material nodes </render/blender_render/materials/nodes>` to combine the two images via the AlphaOver or Mix node,
+- Use the :doc:`Material nodes </render/blender_render/materials/nodes>`
+  to combine the two images via the AlphaOver or Mix node,
   thus creating a third noded material that you use as the material for the face.
   Using this approach, you will not have to UV map;
   simply assign the material to the face using the Multiple Materials
@@ -402,7 +401,6 @@ Image
 
 .. figure:: /images/25-Manual-Textures-Image-panel.jpg
    :width: 306px
-   :figwidth: 306px
 
    Image panel
 
@@ -491,7 +489,6 @@ Fields
 
 .. figure:: /images/26-Manual-Textures-Image-panel-Generated.jpg
    :width: 306px
-   :figwidth: 306px
 
    Image panel for Generated source of Image texture
 
@@ -514,7 +511,8 @@ Float Buffer
    Generate floating point buffer.
 
 
-About specific options for **movie** and **image sequence** source see :doc:`here </render/blender_render/textures/types/video>`
+About specific options for **movie** and **image sequence** source.
+see :doc:`here </render/blender_render/textures/types/video>`
 
 
 Image Sampling
@@ -527,10 +525,8 @@ In the *Image Sampling* panel we can control how the information is retrieved fr
 
    * - .. figure:: /images/Manual-PartIV-Bahnhofstrasse.jpg
           :width: 120px
-          :figwidth: 120px
      - .. figure:: /images/Manual-PartIV-Map_To_Eingabewerte.jpg
           :width: 100px
-          :figwidth: 100px
    * - Background image
      - Foreground image
 
@@ -546,10 +542,8 @@ the horizontal bar has 50% alpha.
 
    * - .. figure:: /images/Manual-PartIV-UseAlpha.jpg
           :width: 150px
-          :figwidth: 150px
      - .. figure:: /images/Manual-PartIV-CalcAlpha.jpg
           :width: 150px
-          :figwidth: 150px
    * - Foreground image with *Use* alpha. The alpha values of the pixels are evaluated
      - Foreground image with *Calculate* alpha
 
@@ -577,7 +571,6 @@ Flip X/Y Axis
 
 .. figure:: /images/25-Manual-Textures-ImageSampling-panel.jpg
    :width: 306px
-   :figwidth: 306px
 
    Image Sampling panel
 
@@ -619,10 +612,8 @@ MIP Map
 
    * - .. figure:: /images/Manual-PartIV-ImageTextur-Linien.jpg
           :width: 160px
-          :figwidth: 160px
      - .. figure:: /images/Manual-PartIV_ImageTexturInterPol-Linien.jpg
           :width: 160px
-          :figwidth: 160px
 
 
 Interpolation
@@ -687,7 +678,6 @@ Image Mapping
 
 .. figure:: /images/25-Manual-Textures-ImageMapping-panel.jpg
    :width: 306px
-   :figwidth: 306px
 
    Image Mapping panel
 

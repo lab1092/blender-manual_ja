@@ -15,7 +15,8 @@ Transforming Bones
 ==================
 
 We won't detail here the various transformations of bones, nor things like axis locking, pivot points, and so on,
-as they are common to most object editing, and already described :doc:`here </3d_interaction/transform_control>`
+as they are common to most object editing, and already described 
+:doc:`here </getting_started/basics/transformations/transform_control/index>`
 (note however that some options, like snapping, do not seem to work, even though they are available...).
 The same goes for mirroring,
 as it's nearly the same as with :doc:`mesh editing </modeling/meshes/tools/transform_deform#mirror>`.
@@ -32,7 +33,6 @@ so by transforming a bone, you will affect all its connected parent/children/sib
 
 .. figure:: /images/ManRiggingTransformPropertiesPanelEditMode.jpg
    :width: 200px
-   :figwidth: 200px
 
    The Transform Properties panel for armatures in Edit mode.
 
@@ -66,25 +66,21 @@ you scale at the same time the radius of the parent's tip and of the children's 
 
    * - .. figure:: /images/ManRiggingBoneSelectExEditModeWholeBone.jpg
           :width: 300px
-          :figwidth: 300px
 
           A single selected bone...
 
      - .. figure:: /images/ManRiggingBoneScalingExEditModeOctahedron.jpg
           :width: 300px
-          :figwidth: 300px
 
           ...Scaled in Octahedron visualization.
 
    * - .. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope1.jpg
           :width: 300px
-          :figwidth: 300px
 
           A single selected bone...
 
      - .. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope2.jpg
           :width: 300px
-          :figwidth: 300px
 
           ...Scaled in Envelope visualization - its length remains the same, but its ends' radius are bigger.
 
@@ -119,13 +115,11 @@ this is a one-value property, so there is no axis locking and such.
 
    * - .. figure:: /images/ManRiggingBoneScalingExEditModeEnvelope1.jpg
           :width: 300px
-          :figwidth: 300px
 
           A single bone selected in Envelope visualization.
 
      - .. figure:: /images/ManRiggingBoneAltScalingExEditModeEnvelope.jpg
           :width: 300px
-          :figwidth: 300px
 
           Its envelope scaled with [ctrl][alt][S].
 
@@ -147,19 +141,16 @@ WARNING! If you have more than one bone selected, using this tool crashes Blende
 
    * - .. figure:: /images/ManRiggingBoneAltScalingExEditModeBBone1.jpg
           :width: 200px
-          :figwidth: 200px
 
           A single "default size" bone selected in B-Bone visualization.
 
      - .. figure:: /images/ManRiggingBoneAltScalingExEditModeBBone2.jpg
           :width: 200px
-          :figwidth: 200px
 
           Its size scaled with [ctrl][alt][S].
 
      - .. figure:: /images/ManRiggingBoneAltScalingExObjectModeBBone.jpg
           :width: 200px
-          :figwidth: 200px
 
           The same armature in Object mode and B-Bone visualization, with Bone.004's size scaled up.
 
@@ -190,13 +181,11 @@ but in "reversed order". See the *Switching example*.
 
    * - .. figure:: /images/ManRiggingBoneSwitchExEditMode1.jpg
           :width: 300px
-          :figwidth: 300px
 
           An armature with one selected bone, and one selected chain of three bones, just before switching.
 
      - .. figure:: /images/ManRiggingBoneSwitchExEditMode2.jpg
           :width: 300px
-          :figwidth: 300px
 
           The selected bones have been switched. Bone.005 is no more connected nor parented to anything.
           The chain of switched bones still exists, but reversed (Now Bone.002 is its root, and Bone is its tip).
@@ -248,7 +237,6 @@ Properties
 
 .. figure:: /images/ManRiggingEditingCxtArmatureBonesPanelEditMode.jpg
    :width: 200px
-   :figwidth: 200px
 
    The Armature Bones panel in Edit mode.
 
@@ -305,7 +293,6 @@ Bone Rigidity Settings
 
 .. figure:: /images/ManRiggingEditingCxtArmatureBonesPanelPoseMode.jpg
    :width: 200px
-   :figwidth: 200px
 
    The Armature Bones panel in Pose mode.
 
@@ -320,7 +307,6 @@ so you can't visualize the effects of these settings.
 
 .. figure:: /images/ManRiggingBBoneSegmentExPoseMode.jpg
    :width: 200px
-   :figwidth: 200px
 
    An armature in Pose mode, B-Bone visualization: Bone.003 has one segment,
    Bone.004 has four, and Bone.005 has sixteen.
@@ -332,7 +318,8 @@ The *Segm* numeric field allows you to set the number of segments inside a given
 it is **1**, which gives a standard rigid bone! The higher this setting (max **32**), the smoother the bone,
 but the heavier the pose calculations...
 
-Each bone's ends are mapped to its "virtual" Bezier curve's :doc:`"auto" </modeling/curves#editing_bezier_curves>`
+Each bone's ends are mapped to its "virtual" Bezier curve's
+:doc:`"auto" </modeling/curves/introduction#editing_bezier_curves>`
 handle. Therefore, you can't control their direction,
 but you can change their "length" using the *In* and *Out* numeric fields,
 to control the "root handle" and "tip handle" of the bone, respectively.
@@ -346,13 +333,11 @@ angle with previous/next bones in the chain, and so on.
 
      - .. figure:: /images/ManRiggingBBoneInOutEx1.jpg
           :width: 300px
-          :figwidth: 300px
 
           Look at Bone.004: it has the default In and Out values (1.0).
 
      - .. figure:: /images/ManRiggingBBoneInOutEx2.jpg
           :width: 300px
-          :figwidth: 300px
 
           Bone.004 with In at 2.0, and Out at 0.0.
 
@@ -401,26 +386,22 @@ To parent and/or connect bones, you can:
 
    * - .. figure:: /images/ManRiggingBoneRelationshipExEditMode1.jpg
           :width: 300px
-          :figwidth: 300px
 
           The starting armature, with Bone.005 parented and connected to Bone.004.
 
      - .. figure:: /images/ManRiggingBoneRelationshipExEditMode4.jpg
           :width: 300px
-          :figwidth: 300px
 
           Bone.005 re-parented to Bone.002, but not connected to it
           (same result, using either [ctrl][P][2] in 3D view, or the Armature Bones panel settings).
 
    * - .. figure:: /images/ManRiggingBoneRelationshipExEditMode2.jpg
           :width: 300px
-          :figwidth: 300px
 
           Bone.005 parented and connected to Bone.002, using [ctrl][P][1] in 3D view.
 
      - .. figure:: /images/ManRiggingBoneRelationshipExEditMode3.jpg
           :width: 300px
-          :figwidth: 300px
 
           Bone.005 parented and connected to Bone.002, using the Parent drop-down list of Bone.005 sub-panel.
 
@@ -463,7 +444,6 @@ Naming Conventions
 
 .. figure:: /images/Ie_bonesname.jpg
    :width: 440px
-   :figwidth: 440px
 
    An example of left/right bone naming in a simple rig.
 
@@ -487,11 +467,11 @@ This will enable you to use some tools that will probably save you time and effo
     See below for a list of valid separators.
     Pick one and stick to it as close as possible when rigging; it will pay off. Examples of **valid saparators**:
 
-    - *(nothing)*: hand\ ``Left`` → hand\ ``Right``
-    - ``_`` *(underscore)*: Hand\ ``_L`` → Hand\ ``_R``
-    - ``.`` *(point)*: hand\ ``.l`` → hand\ ``.r``
-    - ``-`` *(dash)*: Foot\ ``-l`` → Foot\ ``-r``
-    - `` `` *(space)*: pelvis ``LEFT`` → pelvis ``RIGHT``
+    - *(nothing)*: hand ``Left`` --> hand ``Right``
+    - ``_`` *(underscore)*: Hand ``_L`` --> Hand ``_R``
+    - ``.`` *(point)*: hand ``.l`` --> hand ``.r``
+    - ``-`` *(dash)*: Foot ``-l`` --> Foot ``-r``
+    - `` `` *(space)*: pelvis ``LEFT`` --> pelvis ``RIGHT``
 
     Note that all examples above are also valid with the left/right part placed before the name.
     You can only use the short ``L`` / ``R`` code if you use a separator (i.e. ``handL`` / ``handR`` won't work!).

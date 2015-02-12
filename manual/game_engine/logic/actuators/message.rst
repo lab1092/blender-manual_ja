@@ -9,14 +9,12 @@ and between scenes themselves.
 
 .. figure:: /images/2.5_Game_Engine_Actuator_Message.jpg
    :width: 271px
-   :figwidth: 271px
 
    Message actuator
 
 
 .. figure:: /images/2.5_Game_Engine_Actuator_Message_Options.jpg
    :width: 271px
-   :figwidth: 271px
 
    Message actuator Options
 
@@ -29,7 +27,7 @@ To
    Object to broadcast to. Leave blank if broadcast to all (or sending to another scene).
 Subject
    Subject of message. Useful if sending certain types of message, such as "end-game",
-   to a message sensor listening for "end game"→AND→Quit Game actuator
+   to a message sensor listening for "end game"-->AND-->Quit Game actuator
 Body
    Body of message sent (only read by Python*).
 Text

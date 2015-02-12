@@ -12,7 +12,6 @@ Lens Size and Angle
 
 .. figure:: /images/Manual_cycles_camera_persp.jpg
    :width: 300px
-   :figwidth: 300px
 
 
 Orthographic
@@ -24,8 +23,9 @@ Scale
 
 .. figure:: /images/Manual_cycles_camera_ortho.jpg
    :width: 300px
-   :figwidth: 300px
 
+
+.. _cycles-panoramic-camera:
 
 Panoramic
 =========

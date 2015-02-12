@@ -13,7 +13,7 @@ it is possible to translate and zoom a *Buttons* window and its panels.
 .. tip:: Mouse Buttons and Numpad
 
    If you have a mouse with less than three buttons or a keyboard without numpad,
-   please refer to the :doc:`Keyboard and Mouse </getting_started/basics/interface/keyboard_and_mouse>`
+   please refer to the :doc:`Keyboard and Mouse </getting_started/basics/interface/input_devices>`
    page of the manual to learn how to use them with Blender.
 
 
@@ -38,7 +38,6 @@ projections* image below.
 
 .. figure:: /images/Manual-Part-I-3DPerspective.jpg
    :width: 630px
-   :figwidth: 630px
 
    Orthographic (left) and perspective (right) projections.
 
@@ -81,11 +80,11 @@ One possibility may be that the :doc:`clipping distance </render/camera#camera_s
 The camera will only show objects that fall within the clipping range.
 
 
-:doc:`Read more about Render perspectives » </render/camera/perspective>`
+:doc:`Read more about Render perspectives </render/camera/lens>`
 
-:doc:`Read more about Camera View » </getting_started/basics/navigating/camera_view>`
+:doc:`Read more about Camera View </getting_started/basics/navigating/camera_view>`
 
-:doc:`Read more about Camera clipping » </render/camera#camera_settings>`
+:doc:`Read more about Camera clipping </render/camera#camera_settings>`
 
 
 Technical Details
@@ -131,7 +130,6 @@ Description
 
 .. figure:: /images/Manual-Part-I-3DView2.5.jpg
    :width: 300px
-   :figwidth: 300px
 
    A 3D viewport's View menu.
 
@@ -175,14 +173,13 @@ to rotate the scene around the Z global axis from your current point of view.
 TrackBall/Turntable
 -------------------
 
-By default, when you rotate the view as described above,
-you are using the **turntable** method.
-For some users this is intuitive and for others it is not. If you feel you are having
-difficulties with this style of 3D window rotation you can switch to the "\ **trackball** "
-style. With the trackball style you are rotating the scene as though you are rolling your hand
-across a "\ **trackball** "
+By default, when you rotate the view as described above, you are using the *turntable* method.
+For some users this is intuitive and for others it is not.
+If you feel you are having difficulties with this style of 3D window rotation
+you can switch to the *trackball* style.
+With the trackball style you are rotating the scene as though you are rolling your hand across a *trackball*.
 
-The *Turntable* style is fashioned more like a record player where you have two axes
+The *turntable* style is fashioned more like a record player where you have two axes
 of rotation available,
 and the world seems to have a better definition of what is "Up" and "Down" in it. The downside
 to using the *Turntable* style is that you lose some flexibility when working with
@@ -196,7 +193,7 @@ Of course you can always switch between the styles depending on what you are wor
    View rotation.
 
 
-To change the rotation "style", use the :doc:`User Preferences window </preferences>`.
+To change the rotation "style", use the :doc:`User Preferences window </preferences/index>`.
 Click on the *Input* button and you will see an option for choosing the Orbit style.
 There are two additional checkboxes for controlling the display in the 3D window in the *Interface* tab in
 the *User Preferences*.
@@ -213,7 +210,7 @@ Panning the View
    :class: refbox
 
    | Mode:     All modes
-   | Menu:     *View* → *Navigation*
+   | Menu:     *View* --> *Navigation*
    | Hotkey:
    | :kbd:`Shift-MMB` / :kbd:`Ctrl-Numpad2` / :kbd:`Ctrl-Numpad4` /
    | :kbd:`Ctrl-Numpad6` / :kbd:`Ctrl-Numpad8` / :kbd:`Shift-Alt-LMB`
@@ -237,20 +234,20 @@ Zooming the View
    :class: refbox
 
    | Mode:     All modes
-   | Menu:     *View* → *Navigation*
-   | Hotkey:   :kbd:`Ctrl-MMB` / :kbd:`Wheel` / :kbd:`Numpad+` / :kbd:`Numpad-`
+   | Menu:     *View* --> *Navigation*
+   | Hotkey:   :kbd:`Ctrl-MMB` / :kbd:`Wheel` / :kbd:`NumpadPlus` / :kbd:`NumpadMinus`
 
 
 Description
 ===========
 
 You can zoom in and out by holding down :kbd:`Ctrl` and dragging :kbd:`MMB`.
-The hotkeys are :kbd:`Numpad+` and :kbd:`Numpad-`.
+The hotkeys are :kbd:`NumpadPlus` and :kbd:`NumpadMinus`.
 The :menuselection:`View --> Navigation` sub-menu holds these functions too as well.
 Refer to the 3D viewport's *View* menu image above for more information.
 
 If you have a wheel mouse, you can perform all of the actions in the 3D viewport that you
-would do with :kbd:`Numpad+` and :kbd:`Numpad-` by rotating the :kbd:`Wheel`.
+would do with :kbd:`NumpadPlus` and :kbd:`NumpadMinus` by rotating the :kbd:`Wheel`.
 To zoom a *Buttons* window,
 hold :kbd:`Ctrl-MMB` and move your mouse up and down.
 
@@ -259,7 +256,7 @@ hold :kbd:`Ctrl-MMB` and move your mouse up and down.
 
    If you get lost in 3D space, which is not uncommon, two hotkeys will help you:
    :kbd:`Home` changes the view so that you can see all objects (:menuselection:`View --> View All` menu entry),
-   while :kbd:`Numpad.` zooms the view to the currently selected objects when in perspective mode
+   while :kbd:`NumpadPeriod` zooms the view to the currently selected objects when in perspective mode
    (:menuselection:`View --> View Selected` menu entry).
 
 
@@ -322,7 +319,7 @@ They are found in the *View Menu*
       moves the cursor back to the origin **and** zooms in/out so that you can see everything in your scene.
    Align Active Camera to View, :kbd:`Ctrl-Alt-Numpad0`
       Gives your active camera the current viewpoint
-   View selected, :kbd:`Numpad.`
+   View selected, :kbd:`NumpadPeriod`
       Focuses view on currently selected object/s by centering them in the viewport,
       and zooming in until they fill the screen.
    Center view to cursor, :kbd:`Alt-Home`
@@ -338,11 +335,11 @@ Local and Global View
 *********************
 
 You can toggle between *Local* and *Global* view by selecting the option
-from the *View Menu* or using the shortcut :kbd:`Numpad/`.
+from the *View Menu* or using the shortcut :kbd:`NumpadSlash`.
 Local view isolates the selected object or objects,
 so that they are the only ones visible in the viewport.
 This is useful for working on objects that are obscured by other ones, or have heavy geometry.
-Press :kbd:`Numpad/` to return to *Global View*.
+Press :kbd:`NumpadSlash` to return to *Global View*.
 
 
 Quad View
@@ -358,7 +355,6 @@ Quad View
 
 .. figure:: /images/3D_Interaction-Navigating-3D_view-Quad_View.jpg
    :width: 340px
-   :figwidth: 340px
 
    Quad View
 
@@ -374,7 +370,7 @@ If you want to be able to rotate each view, you can un-check the *Locked* option
 
 However in sometimes its preferable to split the view, so each can have its own configuration.
 
-:doc:`Read more about splitting windows » </getting_started/basics/interface/window_system/arranging_frames>`
+:doc:`Read more about splitting windows </getting_started/basics/interface/window_system/arranging_frames>`
 
 
 View Clipping Border
@@ -393,7 +389,6 @@ Description
 
 .. figure:: /images/3D_Interaction-Navigating-3D_view-Region_Clipping.jpg
    :width: 340px
-   :figwidth: 340px
 
    Region/Volume clipping.
 
@@ -455,19 +450,18 @@ or you apparently cannot move the camera any nearer. As an example,
 try to navigate to a very distant object in the view with traditional methods
 (explained above) and see what you can get.
 
-With :doc:`Walk mode </3d_interaction/navigating/3d_view/navigation_modes#walk_mode>` and
-:doc:`Fly mode </3d_interaction/navigating/3d_view/navigation_modes#fly_mode>` you move, pan and tilt,
+With :doc:`Walk mode </getting_started/basics/navigating/3d_view#walk_mode>` and
+:doc:`Fly mode </getting_started/basics/navigating/3d_view#fly_mode>` you move, pan and tilt,
 and dolly the camera around without any of those limitations.
 
 
 .. figure:: /images/3D_Interaction-Navigating-3D_view-Navigation_Mode.jpg
    :width: 173px
-   :figwidth: 173px
 
    View Navigation.
 
 
-In the :doc:`User Preferences window </preferences>`
+In the :doc:`User Preferences window </preferences/index>`
 select the navigation mode you want to use as default when invoking the View Navigation operator.
 Alternatively you can call the individual modes from the View Navigation menu.
 

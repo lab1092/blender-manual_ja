@@ -54,7 +54,6 @@ Lamps: Ray-traced Shadows
 
 .. figure:: /images/25-Manual-Lighting-Shadow-Ray.jpg
    :width: 310px
-   :figwidth: 310px
 
    Ray Shadow enabled for a lamp
 
@@ -100,14 +99,12 @@ Lamps: Buffered Shadows
 
 .. figure:: /images/25-Manual-Lighting-Shadow-SpotBufShad.jpg
    :width: 310px
-   :figwidth: 310px
 
    Buffer Shadow enabled for a Spot lamp
 
 
 .. figure:: /images/25-Manual-Lighting-Shadow-MatBufShad.jpg
    :width: 310px
-   :figwidth: 310px
 
    Cast Buffer Shadows enabled for a material
 
@@ -132,6 +129,7 @@ To enable buffered shadows these actions are required:
 - Make sure the *Cast Buffer Shadows* options is enabled in each *Material* 's *Shadow* panel.
 
 
-- The :doc:`Spot lamp </render/blender_render/lighting/lamps/spot/buffered_shadows>` is the only lamp able to cast buffered shadows.
+- The :doc:`Spot lamp </render/blender_render/lighting/lamps/spot/buffered_shadows>`
+  is the only lamp able to cast buffered shadows.
 
 

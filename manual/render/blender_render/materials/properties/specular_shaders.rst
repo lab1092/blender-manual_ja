@@ -7,11 +7,12 @@ Specular Shaders
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Specular
+   | Panel:    Shading/Material Context --> Specular
 
 
 Specular shaders create the bright highlights that one would see on a glossy surface,
-mimicking the reflection of light sources. Unlike :doc:`diffuse shading </render/blender_render/materials/properties/diffuse_shaders>`,
+mimicking the reflection of light sources.
+Unlike :doc:`diffuse shading </render/blender_render/materials/properties/diffuse_shaders>`,
 specular reflection is *viewpoint dependent*.
 According to Snell's Law, light striking a specular surface will be reflected at an angle which mirrors the
 incident light angle (with regard to the surface's normal), which makes the viewing angle very important.
@@ -23,7 +24,7 @@ incident light angle (with regard to the surface's normal), which makes the view
    phenomenon discussed here is not the reflection we would see in a mirror,
    but rather the light highlights we would see on a glossy surface.
    To obtain true mirror-like reflections you would need to use the internal raytracer.
-   Please refer to section :doc:`RENDERING </render>` of this manual.
+   Please refer to section :doc:`RENDERING </render/index>` of this manual.
 
 
 Common Options
@@ -37,7 +38,8 @@ Intensity
    The intensity, or brightness of the specular highlight. This has a range of [0-1].
 Ramp
    Allows you to set a range of specular colors for *Material*,
-   and define how the range will vary over a surface. See :doc:`Ramps </render/blender_render/materials/properties/ramps>` for details.
+   and define how the range will vary over a surface.
+   See :doc:`Ramps </render/blender_render/materials/properties/ramps>` for details.
 
 As a result, a material has at least two different colors, a diffuse, and a specular one.
 The specular color is normally set to pure white
@@ -94,12 +96,11 @@ CookTorr
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Shaders
+   | Panel:    Shading/Material Context --> Shaders
 
 
 .. figure:: /images/Manual-2.5-Material-Shader-CookTorr.jpg
    :width: 320px
-   :figwidth: 320px
 
    CookTorr Shader (Lambert 0.8)
 
@@ -128,12 +129,11 @@ Phong
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Shaders
+   | Panel:    Shading/Material Context --> Shaders
 
 
 .. figure:: /images/Manual-2.5-Material-Shader-Phong.jpg
    :width: 320px
-   :figwidth: 320px
 
    Phong Shader (Lambert 0.8)
 
@@ -168,12 +168,11 @@ Blinn
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Shaders
+   | Panel:    Shading/Material Context --> Shaders
 
 
 .. figure:: /images/Manual-2.5-Material-Shader-Blinn.jpg
    :width: 320px
-   :figwidth: 320px
 
    Blinn Shader (Oren-Nayar Int 0.8, Rough 0.5)
 
@@ -211,12 +210,11 @@ Toon
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Shaders
+   | Panel:    Shading/Material Context --> Shaders
 
 
 .. figure:: /images/Manual-2.5-Material-Shader-ToonSpec.jpg
    :width: 320px
-   :figwidth: 320px
 
    Toon Specular Shader (Toon Diffuse, Int 0.8, Size & Smooth match)
 
@@ -244,12 +242,11 @@ WardIso
    :class: refbox
 
    | Mode:     All Modes
-   | Panel:    Shading/Material Context → Shaders
+   | Panel:    Shading/Material Context --> Shaders
 
 
 .. figure:: /images/Manual-2.5-Material-Shader-WardIso.jpg
    :width: 320px
-   :figwidth: 320px
 
    WardIso Shader
 

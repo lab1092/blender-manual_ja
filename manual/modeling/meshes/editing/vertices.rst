@@ -76,7 +76,7 @@ Remove Doubles
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Panel:    *Editing* context → *Mesh Tools*
+   | Panel:    *Editing* context --> *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
      :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
    | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
@@ -118,42 +118,36 @@ Examples
 
 .. figure:: /images/Doc26-rip-before.jpg
    :width: 300px
-   :figwidth: 300px
 
    selected vertex
 
 
 .. figure:: /images/Doc26-rip-after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Hole created after using rip on vertex
 
 
 .. figure:: /images/Doc26-rip-edges-before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Edges selected
 
 
 .. figure:: /images/Doc26-rip-edges-after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Result of rip with edge selection
 
 
 .. figure:: /images/Doc26-rip-complexSelection-before.jpg
    :width: 300px
-   :figwidth: 300px
 
    A complex selection of vertices
 
 
 .. figure:: /images/Doc26-rip-complexSelection-after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Result of rip operation
 
@@ -163,9 +157,9 @@ Limitations
 
 Rip will only work when edges and/or vertices are selected.
 Using the tool when a face is selected (explicitly or implicitly), will return an error
-message "\ ``Can't perform ripping with faces selected this way`` ".
+message *"Can't perform ripping with faces selected this way"*
 If your selection includes some edges or vertices that are not "between" two faces (:term:`manifold`),
-it will also fail with message "\ ``No proper selection or faces include`` ".
+it will also fail with message *"No proper selection or faces include"*.
 
 
 Rip Fill
@@ -185,14 +179,12 @@ it fills in the gap with geometry.
 
 .. figure:: /images/Doc26-rip-edges-before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Edges selected
 
 
 .. figure:: /images/Doc26-ripFill-result.jpg
    :width: 300px
-   :figwidth: 300px
 
    Result of rip fill
 
@@ -251,21 +243,18 @@ splitting the face into two new faces.
 
 .. figure:: /images/Doc26-vertexConnect-before.jpg
    :width: 200px
-   :figwidth: 200px
 
    Selected vertices before connecting
 
 
 .. figure:: /images/Doc26-vertexConnect-after.jpg
    :width: 200px
-   :figwidth: 200px
 
    After connecting vertices
 
 
 .. figure:: /images/Doc26-vertexConnect-after-faces.jpg
    :width: 200px
-   :figwidth: 200px
 
    Two faces created from vertex connect operation
 
@@ -277,7 +266,7 @@ Vertex Slide
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Panel:    *Editing* context → *Mesh Tools*
+   | Panel:    *Editing* context --> *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Slide` or :menuselection:`[Ctrl][V] --> Vertex Slide`
    | Hotkey:   :menuselection:`[Shift][V] --> Vertex Slide`
 
@@ -298,21 +287,18 @@ There are three options available by holding the following keys:
 
 .. figure:: /images/VertexSlide1.jpg
    :width: 200px
-   :figwidth: 200px
 
    Selected vertex
 
 
 .. figure:: /images/VertexSlide2.jpg
    :width: 200px
-   :figwidth: 200px
 
    Positioning vertex interactively
 
 
 .. figure:: /images/VertexSlide3.jpg
    :width: 200px
-   :figwidth: 200px
 
    Repositioned vertex
 
@@ -324,7 +310,7 @@ Smooth
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Panel:    *Editing* context → *Mesh Tools*
+   | Panel:    *Editing* context --> *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Smooth`,
      :menuselection:`Specials --> Smooth` or :menuselection:`Vertex Specials --> Smooth`
    | Hotkey:   :menuselection:`[ctrl][V] --> Smooth vertex`

@@ -8,7 +8,6 @@ Description
 
 .. figure:: /images/25-Manual-Lighting-Falloff-hilite.jpg
    :width: 312px
-   :figwidth: 312px
 
    Lamp panel, falloff options highlighted
 
@@ -27,7 +26,6 @@ Lin/Quad Weighted
 
 .. figure:: /images/25-Manual-Lighting-Falloff-linquad.jpg
    :width: 308px
-   :figwidth: 308px
 
    Lamp panel with Lin/Quad Weighted Falloff options highlighted
 
@@ -69,7 +67,6 @@ Quadratic
 
 .. figure:: /images/Manual_-_Light_-_Example_-_Default_Lin-Quad_Weighted.jpg
    :width: 250px
-   :figwidth: 250px
 
    Lamp with Lin/Quad Weighted falloff default settings
 
@@ -151,7 +148,6 @@ showing attenuation with or without the *Sphere* option (described later).
 
 .. figure:: /images/Manual-Part-V-DistanceGraph.jpg
    :width: 610px
-   :figwidth: 610px
 
 
 Custom Curve
@@ -202,13 +198,11 @@ the graph shows that the intensity of the light starts off at its maximum
 
    * - .. figure:: /images/25-Manual-Lighting-Falloff-CustomDefault.jpg
           :width: 306px
-          :figwidth: 306px
 
           Default Falloff Curve panel graph.
 
      - .. figure:: /images/Manual_-_Light_-_Example_-_Default_Custom_Curve.jpg
           :width: 250px
-          :figwidth: 250px
 
           Render showing the Custom Curve lamp falloff type effect with default settings.
 
@@ -221,13 +215,11 @@ the light source, you could alter the graph as below:
 
    * - .. figure:: /images/25-Manual-Lighting-Falloff-CustomReversed.jpg
           :width: 310px
-          :figwidth: 310px
 
           Falloff Curve for reversed attenuation.
 
      - .. figure:: /images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Reverse_Render.jpg
           :width: 250px
-          :figwidth: 250px
 
           Falloff Curve for reversed attenuation rendered.
 
@@ -243,13 +235,11 @@ along with its resultant render output:
 
    * - .. figure:: /images/25-Manual-Lighting-Falloff-CustomOscill.jpg
           :width: 310px
-          :figwidth: 310px
 
           Oscillating attenuation profile.
 
      - .. figure:: /images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Render.jpg
           :width: 250px
-          :figwidth: 250px
 
           Render showing the effects of a "wavelet" profile graph on the light attenuation.
 
@@ -259,7 +249,6 @@ Inverse Square
 
 .. figure:: /images/Manual_-_Light_-_Example_-_Inverse_Square.jpg
    :width: 300px
-   :figwidth: 300px
 
    Render showing the Inverse Square lamp falloff type effect with default settings.
 
@@ -277,7 +266,6 @@ Inverse Linear
 
 .. figure:: /images/Manual_-_Light_-_Example_-_Inverse_Linear.jpg
    :width: 300px
-   :figwidth: 300px
 
    Render showing the Inverse Linear lamp falloff type effect with default settings.
 
@@ -295,7 +283,6 @@ Constant
 
 .. figure:: /images/Manual_-_Light_-_Example_-_Constant.jpg
    :width: 300px
-   :figwidth: 300px
 
    Render showing the Constant lamp falloff type effect with default settings.
 
@@ -311,7 +298,6 @@ Sphere
 
 .. figure:: /images/25-Manual-Lighting-Falloff-PointSphere.jpg
    :width: 300px
-   :figwidth: 300px
 
    Screenshot of the 3D view window, showing the Sphere light clipping circle.
 
@@ -344,13 +330,11 @@ option.
 
    * - .. figure:: /images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Active_-_Lighted_Plane.jpg
           :width: 300px
-          :figwidth: 300px
 
           Render showing the light attenuation of a Constant falloff light type with the Sphere option active.
 
      - .. figure:: /images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Deactivated_-_Lighted_Plane.jpg
           :width: 300px
-          :figwidth: 300px
 
           Render showing the light attenuation of a Constant falloff light type with the Sphere option deactivated.
 
@@ -358,8 +342,9 @@ option.
 Examples
 ========
 
-Distance
---------
+
+Distance Example
+----------------
 
 In this example, the *Lamp* has been set pretty close to the group of planes.
 This causes the light to affect the front, middle and rear planes more dramatically.
@@ -407,8 +392,8 @@ That is the nature of a *Lamp* light object. By moving the light infinitely far 
 you would begin to approach the characteristics of the *Sun* lamp type.
 
 
-Inverse Square
---------------
+Inverse Square Example
+----------------------
 
 *Inverse Square* makes the light's intensity falloff with a non-linear rate, or specifically, a quadratic rate.
 The characteristic feature of using *Inverse Square* is that the light's intensity begins to
@@ -451,8 +436,8 @@ This means there are at least two things that are controlling the surface's brig
 intensity and the angle between the light source and the surface's normal.
 
 
-Sphere
-------
+Sphere Example
+--------------
 
 .. figure:: /images/Manual-Part-V-LampRender-SphereView.jpg
 
@@ -501,16 +486,15 @@ which is beyond the last object. However, the light doesn't make it to the last 
 because the intensity has fallen to nearly ``0``.
 
 
-Hints
-=====
+.. hint::
 
-If a *Lamp* light is set to not cast shadows,
-it illuminates through walls and the like.
-If you want to achieve some nice effects like a fire,
-or a candle-lit room interior seen from outside a window,
-the *Sphere* option is a must. By carefully working on the *Distance*
-value you can make your warm firelight shed only within the room,
-while illuminating outside with a cool moonlight,
-the latter achieved with a *Sun* or *Hemi* light or both.
+   If a *Lamp* light is set to not cast shadows,
+   it illuminates through walls and the like.
+   If you want to achieve some nice effects like a fire,
+   or a candle-lit room interior seen from outside a window,
+   the *Sphere* option is a must. By carefully working on the *Distance*
+   value you can make your warm firelight shed only within the room,
+   while illuminating outside with a cool moonlight,
+   the latter achieved with a *Sun* or *Hemi* light or both.
 
 

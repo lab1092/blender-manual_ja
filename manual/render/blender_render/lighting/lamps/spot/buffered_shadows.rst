@@ -8,12 +8,12 @@ Spot Buffered Shadows
 
 .. figure:: /images/25-Manual-Lighting-Shadow-SpotBufShad.jpg
    :width: 310px
-   :figwidth: 310px
 
    Buffer Shadow enabled for a Spot lamp
 
 
-Spotlights can use either :doc:`Raytraced Shadows </render/blender_render/lighting/lamps/spot#raytraced_shadows>` or buffered shadows.
+Spotlights can use either
+:doc:`Raytraced Shadows </render/blender_render/lighting/lamps/spot#raytraced_shadows>` or buffered shadows.
 Either of the two can provide various extra options.
 
 Raytraced shadows are generally more accurate,
@@ -57,7 +57,6 @@ For more information on the different shadow generation methods see these links:
 
 .. figure:: /images/25-Manual-Lighting-Shadow-SpotBufShad.jpg
    :width: 310px
-   :figwidth: 310px
 
    Buffer Shadowset to Classic-Halfway
 
@@ -66,7 +65,7 @@ Classical
    A shadow generation which used to be the Blender default and unique method for generation of buffered shadows.
    It used an older way of generating buffered shadows,
    but it could have some problems with accuracy of the generated shadows and can be very
-   sensitive to the resolution of the shadow buffer (*Shadow Buffer* →\ *Size*),
+   sensitive to the resolution of the shadow buffer (*Shadow Buffer* --> *Size*),
    different *Bias* values, and all the self-shadowing issues that brings up.
 
    The *Classical* method of generating shadows is obsolete and is really only still present to
@@ -149,7 +148,7 @@ Filter Type
       The buffered shadows will be anti-aliased using the "Gaussian" filtering method.
       It produces a very soft/blurry anti-aliasing. As result, this filter is excellent with high resolution renders.
 
-   The :doc:`Anti-Aliasing page </render/options/antialiasing>` in the Render chapter will give
+   The :doc:`Anti-Aliasing page </render/internal/antialiasing>` in the Render chapter will give
    more information on the various filtering/distribution methods and their uses.
 
 Samples
@@ -194,7 +193,6 @@ Sample Buffers
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Spot-Buf-Irregular.jpg
    :width: 313px
-   :figwidth: 313px
 
    Buffer Shadow set to Irregular
 
@@ -203,8 +201,8 @@ Sample Buffers
 This method offers very good performance because it can be done as a multi-threaded process.
 
 This method supports transparent shadows. To do so, you will first need to setup the shadow
-setting for the object which will receive the transparent shadow. (*Material* →
-*Shadow* → *Cat Buffer Shadows* and *Buffer Bias*)
+setting for the object which will receive the transparent shadow. (*Material* -->
+*Shadow* --> *Cat Buffer Shadows* and *Buffer Bias*)
 
 
 Deep generation method
@@ -212,7 +210,6 @@ Deep generation method
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Spot-Buf-Deep.jpg
    :width: 313px
-   :figwidth: 313px
 
    Buffer Shadow set to Deep
 
@@ -253,7 +250,8 @@ Bias
 
 .. note:: Finer Bias tuning
 
-   You can now refine the *Bias* value independently for each :doc:`Material </render/blender_render/materials>`,
+   You can now refine the *Bias* value independently for each
+   :doc:`Material </render/blender_render/materials/index>`,
    using the *Bias* slider (*Material* menu, *Shadow* panel).
    This value is a factor by which the *Bias* value of each *Spot* buffered shadows lamp is multiplied,
    each time its light hits an object using this material.

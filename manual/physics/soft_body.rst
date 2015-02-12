@@ -5,7 +5,6 @@ Soft Bodies
 
 .. figure:: /images/Blender3D_HiddenTextSoftbody.jpg
    :width: 600px
-   :figwidth: 600px
 
    Image 1a: A softbody cloth uncovering a text.
    `Animation <http://www.vimeo.com/1865528>`__ -
@@ -36,7 +35,6 @@ Typical scenarios for using Soft Bodies
 
 .. figure:: /images/Blender3D_WindConeSoftbody.jpg
    :width: 300px
-   :figwidth: 300px
 
    Image 1b: A wind cone. The cone is a Soft Body, as the suspension.
    `Animation <http://www.vimeo.com/1865817>`__ - `Blend file
@@ -78,7 +76,7 @@ For a reference of all the settings see :doc:`this page </physics/soft_body/refe
 
 
 - You start a Soft Body simulation with :kbd:`Alt-A`.
-- You pause the simulation with :kbd:`Space`, continue with :kbd:`Alt-A`.
+- You pause the simulation with :kbd:`Spacebar`, continue with :kbd:`Alt-A`.
 - You stop the simulation with :kbd:`Esc`.
 
 
@@ -143,7 +141,7 @@ that will make a recalculating necessary.
 
   - As animation is played, each physics system writes each frame to disk,
     between the simulation start and end frames.
-    These files are stored in folders with prefix "\ ``blendcache`` ", next to the .blend file.
+    These files are stored in folders with prefix ``blendcache``, next to the ``.blend`` file.
   - The cache is cleared automatically on changes - but not on all changes,
     so it may be necessary to free it manually, e.g. if you change a force field.
     Note that for the cache to fill up, one has to start playback before or on the frame that the simulation starts.

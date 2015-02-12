@@ -52,9 +52,9 @@ Key Short-Cuts
 - :kbd:`P` toggle ping-pong.
 - :kbd:`F` flip drawing on the X axis.
 - :kbd:`Shift-F` flip drawing on the Y axis.
-- :kbd:`Enter` start playback (when paused).
+- :kbd:`Return` start playback (when paused).
 - :kbd:`Numpad0` toggle looping.
-- :kbd:`Numpadperiod` manual frame stepping.
+- :kbd:`NumpadPeriod` manual frame stepping.
 - :kbd:`Left` step back one frame.
 - :kbd:`Right` step forward one frame.
 - :kbd:`Down` step back 10 frames.
@@ -76,7 +76,7 @@ Key Short-Cuts
 - :kbd:`Numpad7` 12 fps
 - :kbd:`Numpad8` 10 fps
 - :kbd:`Numpad9` 6 fps
-- :kbd:`Numpad/` 5 fps
+- :kbd:`NumpadSlash` 5 fps
 - :kbd:`Minus` slow down playback.
 - :kbd:`Plus` speed up playback.
 
@@ -99,7 +99,7 @@ Render Layer
    use this menu to select which layer is displayed.
 
 Render Pass
-   If you are using :doc:`Render Passes </render/post_process/passes>`,
+   If you are using :doc:`Render Passes </render/post_process/layers>`,
    use this menu to select which pass is displayed.
 
 Image Painting

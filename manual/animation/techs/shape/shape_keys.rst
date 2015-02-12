@@ -188,15 +188,8 @@ Evaluation Time
 
 .. figure:: /images/Doc_Shape_Keys_Evaluation.jpg
    :width: 600px
-   :figwidth: 600px
 
    Animation with Evaluation Time.
-
-
-Slurph
-   Quote 2.66 "Create a delay (in frames) in applying key positions, first vertex goes first."
-   As far as i can tell this doesnt anything in 2.66. Im not sure what it used to do in 2.4x.
-   :doc:`2.4 Slurph </animation/techs/shape/shape_keys/editing#editing_shape_properties>`
 
 
 Workflow For Relative Shape Keys
@@ -230,7 +223,6 @@ Workflow For Absolute Shape Keys
 
 .. figure:: /images/Doc_Absolute_SK_Workflow_2.jpg
    :width: 50px
-   :figwidth: 50px
 
 
 - Select the top face.
@@ -239,7 +231,6 @@ Workflow For Absolute Shape Keys
 
 .. figure:: /images/Doc_Absolute_SK_Workflow_3.jpg
    :width: 50px
-   :figwidth: 50px
 
 
 - Select a side face on the top half. (the one at x=1 if possible)
@@ -249,7 +240,6 @@ Workflow For Absolute Shape Keys
 
 .. figure:: /images/Doc_Absolute_SK_Workflow_4.jpg
    :width: 50px
-   :figwidth: 50px
 
 
 - Add a basis shape keys and two more via the + button on the Shape Key Panel.
@@ -260,7 +250,6 @@ Workflow For Absolute Shape Keys
 
 .. figure:: /images/Doc_Absolute_SK_Workflow5.jpg
    :width: 50px
-   :figwidth: 50px
 
 
 - Select shape key Key 2 to edit the third shape key.
@@ -269,12 +258,11 @@ Workflow For Absolute Shape Keys
 
 .. figure:: /images/Doc_Absolute_SK_Workflow_6.jpg
    :width: 50px
-   :figwidth: 50px
 
 
 - Select shape key Basis to edit the first shape key.
 - Select the extruded size face and
-  :kbd:`S` :kbd:`0`:kbd:`.`:kbd:`5` :kbd:`LMB`, then :kbd:`G` :kbd:`X` :kbd:`-`:kbd:`1` :kbd:`LMB`.
+  :kbd:`S` :kbd:`0`:kbd:`.`:kbd:`5` :kbd:`LMB`, then :kbd:`G` :kbd:`X` :kbd:`Minus`:kbd:`1` :kbd:`LMB`.
 
 
 - Switch to Object Mode.

@@ -1,7 +1,4 @@
 
-..    TODO/Review: {{review|}} .
-
-
 **********
 Knife Tool
 **********
@@ -14,19 +11,7 @@ Knife Tool
    | Hotkey:   :kbd:`K` or :kbd:`Shift-K`
 
 
-The *Knife Tool* has been improved for Blender 2.6.
-It subdivides edges and faces intersected by a user-drawn "knife" line.
-The tool is now fully interactive, and snaps to edges, cut lines, and vertices,
-and can create multiple cuts on an edge.
-
-For example, if you wish to cut a hole in the front of a sphere,
-you select only the front edges, and then draw a line over the selected edges with the mouse.
-The tool is interactive, and works on primary edges,
-selected either implicitly by selecting all,
-or explicitly by box-selecting or :kbd:`Shift-RMB` -clicking a few edges.
-
-Use :kbd:`Shift-K` or the Select tool in the tool panel to force the knife tool to work
-only on a selection and in cut-through mode (see below).
+The knife tool can be used to interactively cut up geometry by drawing lines or closed loops to create holes.
 
 
 Usage
@@ -35,34 +20,35 @@ Usage
 When you press :kbd:`K` (or :kbd:`Shift-K`), the Knife tool becomes active.
 
 Drawing the cut line
-   When using *Knife Subdivide*, the cursor changes to an icon of a
-   scalpel and the header changes to display options for the tool.
+   When using *Knife*, the cursor changes to an icon of a scalpel
+   and the header changes to display options for the tool.
    You can draw connected straight lines by clicking :kbd:`LMB`.
 
 
 .. figure:: /images/Knife1.jpg
    :width: 200px
-   :figwidth: 200px
 
    Mesh before knife cut
 
 
 .. figure:: /images/Knife2.jpg
    :width: 200px
-   :figwidth: 200px
 
    Knife cut active
 
 
 .. figure:: /images/Knife3.jpg
    :width: 200px
-   :figwidth: 200px
 
    After confirming knife cut
 
 
 Options
 =======
+
+
+Knife selection :kbd:`Shift-K`
+   Activates the knife so only selected faces are cut.
 
 New cut :kbd:`E`
    Begins a new cut. This allows you to define multiple distinct cut lines.
@@ -71,14 +57,12 @@ New cut :kbd:`E`
 
 .. figure:: /images/Knife4.jpg
    :width: 300px
-   :figwidth: 300px
 
    Creating multiple cuts
 
 
 .. figure:: /images/Knife5.jpg
    :width: 300px
-   :figwidth: 300px
 
    Result of starting new cuts while in the tool
 
@@ -89,54 +73,40 @@ Ignore snap :kbd:`Shift`
    Hold to make the tool ignore snapping.
 Angle constrain :kbd:`C`
    Hold to constrain the cut vector to the view in 45 degree increments.
-
+Close loop: Double click :kbd:`LMB`
+   This is a quick way to close the loop you're currently cutting.
+Draw a continuous line: :kbd:`LMB` drag.
+   So you can draw a freehand line over a surface,
+   points will be created at edge intersections.
+Cut through: :kbd:`Z`
+   Allow the cut tool to cut through to obscured faces, instead of only the visible ones.
 
 .. figure:: /images/Knife6.jpg
    :width: 300px
-   :figwidth: 300px
 
    Constraining cut angle
 
 
 .. figure:: /images/Knife7.jpg
    :width: 300px
-   :figwidth: 300px
 
    Result of constraining cut angle
-
-
-Cut through :kbd:`Z`
-   Allow the cut tool to cut through to obscured faces, instead of only the visible ones.
 
 
 Confirming and selection
 ========================
 
 Pressing :kbd:`Esc` or :kbd:`RMB` at any time cancels the tool,
-and pressing :kbd:`Enter` confirms the cut, with the following options:
+and pressing :kbd:`LMB` or :kbd:`Return` confirms the cut, with the following options:
 
-:kbd:`Enter` will leave selected every edge except the new edges created from the cut.
+:kbd:`Return` will leave selected every edge except the new edges created from the cut.
 
 
 Limitations
 ===========
 
-If you try to make cuts that end off in the middle of a face, those cuts are ignored.
+Cuts that begin or end in the middle of a face, will be ignored.
 This is a limitation of the current geometry that can be modeled in Blender.
-
-Closed cycles can be cut in the middle of a face, forming holes,
-but those holes will be connected to the surrounding geometry by two edges,
-for similar modeling limitation reasons.
-
-In 'cut through' mode, only cut lines that completely cross faces will make cuts.
-
-
-Optimizations
-=============
-
-With a large mesh, it will be quicker to select a smaller number of vertices—those defining
-only the edges you plan to split—so that the Knife will save time in testing selected vertices
-for knife trail crossings.
 
 
 Knife Project
@@ -160,42 +130,36 @@ Examples
 
 .. figure:: /images/Knife_project_text_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Before projecting from a text object
 
 
 .. figure:: /images/Knife_project_text_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Resulting knife projection
 
 
 .. figure:: /images/Knife_project_mesh_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Before projecting from a mesh object
 
 
 .. figure:: /images/Knife_project_mesh_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Resulting knife projection (extruded after)
 
 
 .. figure:: /images/Knife_project_curve_before.jpg
    :width: 300px
-   :figwidth: 300px
 
    Before projecting from a 3D curve object
 
 
 .. figure:: /images/Knife_project_curve_after.jpg
    :width: 300px
-   :figwidth: 300px
 
    Resulting knife projection (extruded after)
 

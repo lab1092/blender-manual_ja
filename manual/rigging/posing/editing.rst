@@ -8,7 +8,6 @@ Editing Poses
 
 .. figure:: /images/Doc26-rigging-poseTools.jpg
    :width: 100px
-   :figwidth: 100px
 
    Pose Tools
 
@@ -61,7 +60,6 @@ in *Pose* mode, each bone has a scale of **1.0**, and null rotation and position
 
 .. figure:: /images/Doc26-rigging-pose-localRotate.jpg
    :width: 250px
-   :figwidth: 250px
 
    An example of locally-Y-axis locked rotation, with two bones selected.
    Note that the two green lines materializing the axes are centered on the armature's center,
@@ -133,7 +131,7 @@ There are several tools for editing poses in an animation.
 
 Relax Pose (:menuselection:`Pose --> In-Betweens --> Relax Pose` or :kbd:`Alt-E`)
    Relax pose is somewhat related to the above topic - but it is only useful with keyframed bones
-   (see the :doc:`animation chapter </animation>`).
+   (see the :doc:`animation chapter </animation/index>`).
    When you edit such a bone (and hence take it "away" from its "keyed position"),
    using this command will progressively "bring it back" to its "keyed position",
    with smaller and smaller steps as it comes near it.
@@ -187,8 +185,8 @@ Here are important points:
 - Only the selected bones are taken into account during copying (i.e. you copy only selected bones' pose).
 - During pasting, on the other hand, bone selection has no importance.
   The copied pose is applied on a per-name basis
-  (i.e. if you had a "\ ``forearm`` " bone selected when you copied the pose,
-  the "\ ``forearm`` " bone of the current posed armature will get its pose when you paste it -
+  (i.e. if you had a ``forearm`` bone selected when you copied the pose,
+  the ``forearm`` bone of the current posed armature will get its pose when you paste it -
   and if there is no such named bone, nothing will happen...).
 - What is copied and pasted is in fact the position/rotation/scale of each bone, in its own space.
   This means that the resulting pasted pose might be very different from the originally copied one, depending on:
@@ -242,19 +240,16 @@ By default, children bones inherit:
 
    * - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExBasis.jpg
           :width: 200px
-          :figwidth: 200px
 
           The armature in its rest position.
 
      - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExMonoRotation.jpg
           :width: 200px
-          :figwidth: 200px
 
           Rotation of a root bone.
 
      - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExScalingChains.jpg
           :width: 200px
-          :figwidth: 200px
 
           Scaling of a root bone.
 
@@ -265,7 +260,6 @@ using their sub-panels in the *Armature Bones* panel:
 
 .. figure:: /images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg
    :width: 200px
-   :figwidth: 200px
 
    The Armature Bones panel in Pose mode.
 
@@ -287,19 +281,16 @@ all its descendants* will no longer be affected when you scale one of its ancest
 
    * - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBone.jpg
           :width: 200px
-          :figwidth: 200px
 
           The yellow outlined Inherit Rotation disabled bone in the armature.
 
      - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInRotation.jpg
           :width: 200px
-          :figwidth: 200px
 
           Rotation of a bone with a Inherit Rotation disabled bone among its descendants.
 
      - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInScaling.jpg
           :width: 200px
-          :figwidth: 200px
 
           Scaling of a bone with a Inherit Rotation disabled bone among its descendants.
 
@@ -319,7 +310,6 @@ possible ones below - but this should anyway give you a good idea of the problem
 
 .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExMultiScaling.jpg
    :width: 200px
-   :figwidth: 200px
 
    Scaling bones, some of them related.
 

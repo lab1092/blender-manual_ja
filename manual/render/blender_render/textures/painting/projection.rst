@@ -20,8 +20,8 @@ you need to select a mesh object and select *Texture Paint* from the mode menu
 
 Painting on a 3D model requires some setup before being possible.
 Blender needs a way to map an image to the 3D model. This is accomplished by using a UV map
-(see :doc:`UV Mapping </render/blender_render/textures/mapping/uv>` for more details), so if the model hasn't been unwrapped yet,
-it should be unwrapped prior to entering *Texture Paint* mode.
+(see :doc:`UV Mapping </render/blender_render/textures/mapping/uv>` for more details),
+so if the model hasn't been unwrapped yet, it should be unwrapped prior to entering *Texture Paint* mode.
 The image assigned to the UV layer is also used for painting. That means that the user should either:
 
 - unwrap the model while the target image is being displayed in the image editor window, or

@@ -23,7 +23,7 @@ Weight Paint in a nutshell
    Weight Painted Vertex Group
 
 
-- You enter *Weight Paint* mode from the Mode Menu (hotkey=\ :kbd:`Ctrl-Tab`).
+- You enter *Weight Paint* mode from the Mode Menu (:kbd:`Ctrl-Tab`).
   The selected Mesh Object is displayed slightly shaded with a rainbow color spectrum.
 - The color visualizes the weights associated to each vertex in the active Vertex Group.
   Blue means unweighted; Red means fully weighted.
@@ -62,7 +62,6 @@ green, yellow, orange, red)
 
 .. figure:: /images/Blender3D_Weight_Spec.jpg
    :width: 610px
-   :figwidth: 610px
 
    Image 3: The color spectrum and their respective weights.
 
@@ -170,7 +169,6 @@ The Brush stroke definition
 
 .. figure:: /images/26-Manual-Modeling-Meshes-weight-paint-stroke.jpg
    :width: 235px
-   :figwidth: 235px
 
    Stroke Panel
 
@@ -200,7 +198,6 @@ The brush Falloff curve
 
 .. figure:: /images/26-Manual-Modeling-Meshes-weight-paint-curve.jpg
    :width: 235px
-   :figwidth: 235px
 
    Curve Panel
 
@@ -214,7 +211,6 @@ The brush appearance
 
 .. figure:: /images/26-Manual-Modeling-Meshes-weight-paint-appearance.jpg
    :width: 235px
-   :figwidth: 235px
 
    Brush appearance
 
@@ -445,7 +441,8 @@ When a bone moves, vertices around the joint should move as well,
 but just a little, to mimic the stretching of the skin around the joint.
 Use a "light" weight (10-40%)
 paint on the vertices around the joint so that they move a little when the bone rotates.
-While there are ways to automatically assign weights to an armature (see the :doc:`Armature section </rigging>`),
+While there are ways to automatically assign weights to an armature
+(see the :doc:`Armature section </rigging/index>`),
 you can do this manually. To do this from scratch, refer to the process below.
 To modify automatically assigned weights, jump into the middle of the process where noted:
 

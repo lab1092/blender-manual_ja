@@ -9,7 +9,7 @@
 Armatures
 *********
 
-An "armature" is a type of object used for :doc:`rigging </rigging>`.
+An "armature" is a type of object used for :doc:`rigging </rigging/index>`.
 Armature object borrows many ideas from real life skeletons.
 
 
@@ -29,15 +29,14 @@ Open a default scene, then:
 - then, either:
   - in the Main Menu, Go to Add > Armature > Single Bone
   - -or- in the 3D view, add an armature with :kbd:`Shift-A` :menuselection:`popup --> Armature --> Single Bone`
-- press :kbd:`Del Numpad` to see the armature at maximum zoom
+- press :kbd:`NumpadDelete` to see the armature at maximum zoom
 
 
 .. figure:: /images/ManRiggingDefaultArmature2.5.jpg
    :width: 500px
-   :figwidth: 500px
 
    The default armature
-   `Toolbox: Add » Armature » Single Bone <http://wiki.blender.org/index.php/File:ManRiggingAddArmature2.5>`__
+   `Toolbox: --> Add Armature --> Single Bone <http://wiki.blender.org/index.php/File:ManRiggingAddArmature2.5>`__
 
 
 The armature object

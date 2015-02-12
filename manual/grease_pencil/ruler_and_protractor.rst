@@ -1,6 +1,7 @@
 
 ..    TODO/Review: {{review|text = blender version|fixes=move page}} .
 
+********************
 Ruler and Protractor
 ********************
 
@@ -10,14 +11,12 @@ once activated you can use the ruler to measure lengths and angles in the scene.
 
 .. figure:: /images/View3d_ruler_example.jpg
    :width: 500px
-   :figwidth: 500px
 
    Example of the ruler and protractor.
 
 
 .. figure:: /images/View3d_ruler_thickness.jpg
    :width: 592px
-   :figwidth: 592px
 
    Example using the ruler to measure thickness.
 
@@ -52,7 +51,7 @@ Shortcuts
 - :kbd:`Ctrl-LMB` Adds new ruler.
 - :kbd:`LMB` Drag end-points to place them, Hold Ctrl to snap, Hold Shift to measure thickness.
 - :kbd:`LMB` Drag center-point to measure angles, drag out of the view to convert back to a ruler.
-- :kbd:`Del` Deletes the ruler.
+- :kbd:`Delete` Deletes the ruler.
 - :kbd:`Ctrl-C` Copies the rulers value to the clipboard.
 - :kbd:`Esc` Exits
-- :kbd:`Enter` Saves the rulers for the next time the tool is activated.
+- :kbd:`Return` Saves the rulers for the next time the tool is activated.

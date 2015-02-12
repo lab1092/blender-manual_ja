@@ -7,7 +7,6 @@ Area Raytraced Shadows
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Area-AdapQMC.jpg
    :width: 300px
-   :figwidth: 300px
 
    Adaptive QMC settings
 
@@ -32,13 +31,13 @@ Samples
 Sample Generator Types
 ======================
 
-Adaptive QMC;\ Constant QMC
-   These common setting are described in :doc:`Shadow Properties </render/blender_render/lighting/shadows/properties>`.
+Adaptive QMC / Constant QMC
+   These common setting are described in
+   :doc:`Shadow Properties </render/blender_render/lighting/shadows/properties>`.
 
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Area-ContJitt.jpg
    :width: 300px
-   :figwidth: 300px
 
    Constant Jittered settings
 
@@ -77,7 +76,6 @@ Technical Details
 
 .. figure:: /images/Manual-Part-V-AreaLightConcept.jpg
    :width: 250px
-   :figwidth: 250px
 
    Principles behind the Area light
 

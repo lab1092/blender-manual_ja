@@ -24,7 +24,6 @@ Lamp options
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Spot-LampOptions.jpg
    :width: 307px
-   :figwidth: 307px
 
    Common Lamp options of a Spot
 
@@ -41,7 +40,6 @@ Light Falloff and Sphere
 
    .. figure:: /images/25-Manual-Lighting-Lamps-Spot-Terms.jpg
       :width: 610px
-      :figwidth: 610px
 
       Changing the Spot options also changes the appearance of the spotlight as displayed in the 3D View
 
@@ -51,7 +49,6 @@ Shadows
 
 .. figure:: /images/25-Manual-Lighting-Lamps-Spot-RayPanel.jpg
    :width: 306px
-   :figwidth: 306px
 
    Shadow panel set to Ray Shadow
 
@@ -67,7 +64,8 @@ No Shadow
 Buffer Shadow
    *Buffered Shadows* are also known as depth map shadows.
    Shadows are created by calculating differences in the distance from the light to scene objects.
-   See :doc:`Buffered Shadows </render/blender_render/lighting/lamps/spot/buffered_shadows>` for full details on using this feature.
+   See :doc:`Buffered Shadows </render/blender_render/lighting/lamps/spot/buffered_shadows>`
+   for full details on using this feature.
    Buffered shadows are more complex to set up and involve more faking,
    but the speed of rendering is a definite advantage.
    Nevertheless, it shares with other lamp types common shadow options
@@ -93,11 +91,9 @@ Spot Shape
 
       * - .. figure:: /images/25-Manual-Lighting-Lamps-Spot-Size45.jpg
              :width: 300px
-             :figwidth: 300px
 
         - .. figure:: /images/25-Manual-Lighting-Lamps-Spot-Size60.jpg
              :width: 300px
-             :figwidth: 300px
 
 
 Blend
@@ -124,7 +120,6 @@ Blend
 
    .. figure:: /images/Manual_-_Shadow_&_Spot_-_Spotlight_-_Render_-_Sharp_Shadow.jpg
       :width: 400px
-      :figwidth: 400px
 
       Render showing the soft edge spotlighted area and the sharp/hard object shadow
 
@@ -138,6 +133,7 @@ Square
 Show Cone
    Draw a transparent cone in 3D view to visualize which objects are contained in it.
 Halo
-   Adds a volumetric effects to the spot lamp. See :doc:`Spot Halos </render/blender_render/lighting/lamps/spot/halos>`.
+   Adds a volumetric effects to the spot lamp.
+   See :doc:`Spot Halos </render/blender_render/lighting/lamps/spot/halos>`.
 
 

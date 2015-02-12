@@ -7,7 +7,7 @@ Grab/Move
    | Mode:     *Object* Mode, *Edit* Mode, and *Pose* Mode for the 3D View;
      *UV/Image Editor* Tools, *Sequence Editor*, *Dopesheet*,
      and *Graph Editor* for other specific types of Grab/Move operation.
-   | Menu:     Context Sensitive, Object Based → *Transform* → *Grab/Move*
+   | Menu:     Context Sensitive, Object Based --> *Transform* --> *Grab/Move*
    | Hotkey:   :kbd:`G` or combinations for specific Axis constraint
 
 
@@ -87,6 +87,14 @@ full control over your transformation.
 :kbd:`Alt` + :kbd:`G` clears any previous transformation on the object and sets its origin back to the center.
 This only works in Object Mode.
 
+You can also move an object by clicking and holding :kbd:`RMB` on the object to move it.
+To confirm the action, press :kbd:`LMB`.
+
+.. note::
+
+   This behavior can be changed using *Release Confirms* in the :doc:`User Preferences </preferences/editing>`,
+   so that a single :kbd:`RMB` drag can be used to move and confirm.
+
 
 Controling Grab/Move Precision
 ------------------------------
@@ -99,7 +107,7 @@ Blender offers options to limit the amount of the transformation in small or pre
    holding down :kbd:`Shift` reduces how quickly the object moves and allows extra precision.
 
 :kbd:`Ctrl`
-   This activates :doc:`snapping </3d_interaction/transform_control/snap>` based on the
+   This activates :doc:`snapping </getting_started/basics/transformations/transform_control/snap>` based on the
    snapping constraint which has been already set. You may not be able to enable every snapping option in all cases.
 
 :kbd:`Ctrl` + :kbd:`Shift`
@@ -110,7 +118,7 @@ Blender offers options to limit the amount of the transformation in small or pre
    will be the magnitude of the translation along that axis.
    This decimal number is displayed at the bottom left corner of the 3D view window as it is entered.
 
-   - Hitting :kbd:`BackSpace` during number entry and deleting the number removes the numerical
+   - Hitting :kbd:`Backspace` during number entry and deleting the number removes the numerical
      specification option but the object will remain constrained to the same axis.
 
    - Hitting :kbd:`/` during number entry switches the number being entered to its reciprocal, e.g.
@@ -124,7 +132,7 @@ Orientations
 
 There are 5 standard orientation references for all transformations.
 You can find out more about transform orientations :doc:`here
-</3d_interaction/transform_control/transform_orientations>`.
+</getting_started/basics/transformations/transform_control/transform_orientations>`.
 
 .. figure:: /images/3d_interaction_trans_grab_orientation.png
 

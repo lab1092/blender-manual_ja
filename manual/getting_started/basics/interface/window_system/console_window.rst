@@ -19,7 +19,6 @@ Windows XP/Vista/7
 .. figure:: /images/Interface-Window-System-console-windows.jpg
    :align: right
    :width: 360px
-   :figwidth: 360px
 
    The Blender Console Window on Windows XP and subsequent messages.
 
@@ -53,13 +52,12 @@ Linux
 .. figure:: /images/Interface-Window-System-console-linux.jpg
    :align: right
    :width: 360px
-   :figwidth: 360px
 
    Starting Blender from a Linux console window and subsequent messages.
 
 
 The Blender *Console Window* in Linux will generally only be visible on the Desktop
-if Blender is started from a Linux Terminal/\ *Console Window* as Blender uses the
+if Blender is started from a Linux Terminal as Blender uses the
 *Console Window* it is started from to display Console output.
 
 Depending on your Desktop Environment setup, a Blender icon may appear on your desktop or an
@@ -68,7 +66,7 @@ When you start Blender using a Desktop icon or menu entry rather than a Terminal
 Blender *Console Window* text will most likely be hidden on the Terminal that your
 `XWindows <http://en.wikipedia.org/wiki/Xwindows>`__ server was started from.
 
-This screenshot shows Blender started from a Linux Terminal/\ *Console Window* and the
+This screenshot shows Blender started from a Linux Terminal and the
 resulting console text being printed to it. This example shows that when Blender was started
 it was unable to access a library related to the Pulseaudio sound server. When Blender closed,
 it saved the recovery file to */tmp/quit.blend*.
@@ -80,7 +78,6 @@ MacOS
 .. figure:: /images/Interface-Window-System-console-mac.jpg
    :align: right
    :width: 360px
-   :figwidth: 360px
 
    Starting Blender from a Mac OS X console window and subsequent messages.
 
@@ -90,8 +87,8 @@ MacOS uses "files" with the .app extension called *applications*.
 These files are actually folders that appear as files in Finder. In order to run Blender you
 will have specify that path to the Blender executable inside this folder,
 to get all output printed to the terminal.
-You can start a terminal from Applications → Utilities.
-The path to the executable in the .app folder is *./blender.app/Contents/MacOS/blender*.
+You can start a terminal from Applications --> Utilities.
+The path to the executable in the ``.app`` folder is ``./blender.app/Contents/MacOS/blender``.
 
 If you have Blender installed in the Applications folder, the following command could be used,
 adapted to the particular Blender version:

@@ -34,7 +34,7 @@ will be the default startup file instead of the one that comes with the default 
 install.
 
 The *Save Startup File* popup confirmation will appear.
-Click :kbd:`LMB` on the *Save Startup File* popup or press :kbd:`Enter`.
+Click :kbd:`LMB` on the *Save Startup File* popup or press :kbd:`Return`.
 
 
 Press :kbd:`Esc` to abort.
@@ -48,7 +48,7 @@ Restoring the Default Scene to Factory Settings
 
    | Mode:     All modes
    | Menu:     :menuselection:`File --> Load factory Settings`
-   | Hotkey:   Undefined, you can add one for your :doc:`Keymap » </preferences/input>`
+   | Hotkey:   Undefined, you can add one for your :doc:`Keymap </preferences/input>`
 
 
 To restore the default scene to the factory settings,
@@ -60,6 +60,6 @@ use :kbd:`Ctrl-U` and your Factory Settings will be saved as the default Scene f
 .. note:: User Preferences Window
 
    For more information about the Editor Window for User Preferences or how to clean your preferences manually,
-   please read the chapter about :doc:`User Preferences </preferences>`
+   please read the chapter about :doc:`User Preferences </preferences/index>`
 
 

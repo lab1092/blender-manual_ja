@@ -20,12 +20,11 @@ decrease as the pointer is moved towards it.
 If the mouse pointer crosses from the original side of the Pivot Point to the opposite side,
 the scale will continue in the negative direction and flip the element.
 
-:doc:`Read more about Pivot Points » </3d_interaction/transform_control/pivot_point>`
+:doc:`Read more about Pivot Points </getting_started/basics/transformations/transform_control/pivot_point/index>`
 
 
 .. figure:: /images/3D_interaction-Transformations-Basic-Scale-scale_basic_usage.jpg
    :width: 640px
-   :figwidth: 640px
 
    Basic scale usage. From left to right, the panels show: the original Object,
    a scaled down Object, a scaled up Object and a scale-flipped Object.
@@ -43,8 +42,8 @@ wish to read the Transform Control and Orientation pages which provide more info
 options such as Precision, Axis Locking, Numeric Input,
 Snapping and the different types of Pivot Point.
 
-:doc:`Read more about Transform Control » </3d_interaction/transform_control>`
-:doc:`Read more about Transform Orientations » </3d_interaction/transform_control/transform_orientations>`
+:doc:`Read more about Transform Control </getting_started/basics/transformations/transform_control/index>`
+:doc:`Read more about Transform Orientations </getting_started/basics/transformations/transform_control/transform_orientations>`
 
 
 ----
@@ -73,7 +72,7 @@ Constraining the scaling axis (axis locking)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Scaling can be constrained to a particular axis or axes through the use of
-:doc:`Axis Locking </3d_interaction/transform_control/axis_locking>`.
+:doc:`Axis Locking </getting_started/basics/transformations/transform_control/axis_locking>`.
 To constrain scaling, the following shortcuts can be used:
 
 
@@ -87,22 +86,23 @@ moving the mouse in the desired direction e.g.
 
 - :kbd:`S`, move the mouse along the X axis, :kbd:`MMB`: Scale only along the **X Axis**
 
-:doc:`Read more about Axis Locking » </3d_interaction/transform_control/axis_locking>`
+:doc:`Read more about Axis Locking </getting_started/basics/transformations/transform_control/axis_locking>`
 
 
 Fine Tuning The Scaling
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-:doc:`Precise control </3d_interaction/transform_control/precision>` can be had over scaling through the use of the
-:kbd:`Shift` and :kbd:`Ctrl` keys to limit scaling to discrete amounts.
-You can also enter a :doc:`numerical value </3d_interaction/transform_control/numeric_input>` in Blender Units
-(BU) to specify the amount of scaling after after initiating a scale transformation.
+:doc:`Precise control </getting_started/basics/transformations/transform_control/precision>`
+can be had over scaling through the use of the :kbd:`Shift` and :kbd:`Ctrl`
+keys to limit scaling to discrete amounts.
+You can also enter a :doc:`numerical value </getting_started/basics/transformations/transform_control/numeric_input>`
+in Blender Units (BU) to specify the amount of scaling after after initiating a scale transformation.
 
 
 - Hold :kbd:`Ctrl` down while scaling to scale the selected element in degree 0.1 BU increments.
 - Hold :kbd:`Shift` down while scaling to scale the selected element in very fine increments.
 - Hold :kbd:`Shift-Ctrl` down while scaling to scale the selected element in 0.01 BU increments.
-- Press :kbd:`S`, type in a number and press :kbd:`Enter` to confirm.
+- Press :kbd:`S`, type in a number and press :kbd:`Return` to confirm.
 
 
 .. tip:: Orientation dependent scaling
@@ -112,9 +112,9 @@ You can also enter a :doc:`numerical value </3d_interaction/transform_control/nu
    :kbd:`S`, :kbd:`X`, :kbd:`X` will by default set scaling to occur around the local orientation.
 
 
-:doc:`Read more about Precision Control » </3d_interaction/transform_control/precision>`
-:doc:`Read more about Numerical Transformations » </3d_interaction/transform_control/numeric_input>`
-:doc:`Read more about Transform Orientations » </3d_interaction/transform_control/transform_orientations>`
+:doc:`Read more about Precision Control </getting_started/basics/transformations/transform_control/precision>`
+:doc:`Read more about Numerical Transformations </getting_started/basics/transformations/transform_control/numeric_input>`
+:doc:`Read more about Transform Orientations </getting_started/basics/transformations/transform_control/transform_orientations>`
 
 
 Scaling with the 3D Transform Manipulator
@@ -122,7 +122,6 @@ Scaling with the 3D Transform Manipulator
 
 .. figure:: /images/Icon-library_3D-Window_3D-transform-scale-manipulator.jpg
    :width: 100px
-   :figwidth: 100px
 
    Scaling Transform Manipulator
 
@@ -138,10 +137,10 @@ and blue triad is selected). Set the manipulator type to scale
 - Use :kbd:`LMB` and drag any of the three colored axes on the scaling manipulator to scale
   your object along that axis.
   You can also use :kbd:`Shift`, :kbd:`Ctrl` or numeric input with the 3D manipulator widget for further control.
-- Your changes will be applied when you release :kbd:`LMB` or press :kbd:`Space` or
-  :kbd:`Enter`. Your changes will be cancelled if you press :kbd:`RMB` or :kbd:`Esc`.
+- Your changes will be applied when you release :kbd:`LMB` or press :kbd:`Spacebar` or
+  :kbd:`Return`. Your changes will be cancelled if you press :kbd:`RMB` or :kbd:`Esc`.
 
-:doc:`Read more about the 3D Transform Manipulator » </3d_interaction/transform_control/manipulators>`
+:doc:`Read more about the 3D Transform Manipulator </getting_started/basics/transformations/transform_control/manipulators>`
 
 
 Scaling with the Properties Panel
@@ -149,7 +148,6 @@ Scaling with the Properties Panel
 
 .. figure:: /images/3D_interaction-Transformations-Basic-Scale-scale_properties_panel.jpg
    :width: 180px
-   :figwidth: 180px
 
    Scale transform properties panel.
 
@@ -158,8 +156,8 @@ Scale values can also be specified in the Properties panel (:kbd:`N`)
 by altering the amount value in the scaling slider of the Transform panel.
 Scaling along particular axes can be enabled or disabled by toggling the padlock icon.
 
-:doc:`Read more about Panels » </getting_started/basics/interface/panels>`
+:doc:`Read more about Panels </getting_started/basics/interface/panels>`
 
-:doc:`Read more about scaling modes » </3d_interaction/transform_control/transform_orientations>`
+:doc:`Read more about scaling modes </getting_started/basics/transformations/transform_control/transform_orientations>`
 
 

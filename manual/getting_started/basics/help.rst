@@ -10,7 +10,7 @@ Help system
 
    | Mode:     All modes
    | Menu:     :menuselection:`Help`
-   | Hotkey:   Undefined - You can add one for your :doc:`Keymap » </preferences/input>`
+   | Hotkey:   Undefined - You can add one for your :doc:`Keymap </preferences/input>`
 
 
 Blender has a range of built-in and web-based Help options.
@@ -79,7 +79,7 @@ You can also use Blender Search to generate the file. The text will list the ava
 While Blender is generating this list, the *Info Window* will change,
 showing a message for the operation (See Fig: Info Window - Operator Cheat Sheet ).
 To read the Text, switch to the Blender *Text Editor* Window,
-using the :doc:`Window type Selector </getting_started/basics/interface/window_types>`, and then,
+using the :doc:`Editor type Selector </editors/index>`, and then,
 clicking on the button *Browse Text to be Linked* of the Text Editor, your text block will be shown in the Editor.
 The file will be in your list of Text-block, named as ``OperatorsList.txt``,
 if the file is already generated, Blender will add a numeric suffix for the subsequent ones.
@@ -99,7 +99,7 @@ Creates a ``system-info.txt`` text block, which you can access in the Blender *T
 The text lists various key properties of your system and Blender, which can be useful in diagnosing problems.
 
 To read the Text, switch to the Blender *Text Editor* Window,
-using the :doc:`Window type Selector </getting_started/basics/interface/window_types>`, and then,
+using the :doc:`Editor type Selector </editors/index>`, and then,
 clicking on the button *Browse Text to be Linked* of the Text Editor, your text block will be shown in the Editor.
 The ``system-info.txt`` will be in your list of Text-blocks.
 
@@ -191,7 +191,7 @@ Blender Search
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   :kbd:`Space`
+   | Hotkey:   :kbd:`Spacebar`
 
 
 .. figure:: /images/Manual-Vitals-Help-Search-Keyword-Render.jpg
@@ -199,18 +199,14 @@ Blender Search
    Blender Search - Render
 
 
-The Blender Search feature, called *Blender Search*,
-is a new functionality added by the Blender recode
-(from 2.4x series to 2.5x series and so on).
-The Internal name of the feature is *Operator Search*.
-When you hit :kbd:`Space` from your keyboard,
-Blender will present you with a small Pop Up Window,
-no matter which Blender Window your Mouse pointer is located
+The Blender Search feature, called the *Search Menu*,
+Activate by pressing :kbd:`Spacebar`, Blender will present you with a search popup,
+no matter at which Blender Editor your Mouse pointer is located
 (except the *Text Editor* Window and *Python console*),
 and a field for you to type in.
 Just type what you need and Blender will present you a list of available options.
 You can click on the appropriate function for you, or search through them using your keyboard,
-type :kbd:`Enter` to accept, or :kbd:`Esc` to leave.
+type :kbd:`Return` to accept, or :kbd:`Esc` to leave.
 Clicking outside of the Blender Search Window or taking the Mouse pointer away,
 will also leave Blender Search.
 

@@ -14,7 +14,6 @@ or linen.
 
 .. figure:: /images/Doc_2.6_Materials_Demo.jpg
    :width: 320px
-   :figwidth: 320px
 
    Various basic materials (single, multiple material, transparency, vertex paint).
 
@@ -26,7 +25,7 @@ different faces of the object may use different materials
 
 In Blender, materials can (optionally) have associated textures. Textures *describe* the substance: e.g.
 *polished* brass, *dirty* glass or *embroidered* linen.
-The :doc:`Textures </render/blender_render/textures>` chapter describes how to add textures to materials.
+The :doc:`Textures </render/blender_render/textures/index>` chapter describes how to add textures to materials.
 
 
 How Materials Work
@@ -113,9 +112,11 @@ There are several ways in which materials can be set up in Blender. Generally sp
 are not compatible - you must choose which method you are going to use for each particular
 object in your scene.
 
-   First, you can set the :doc:`Properties </render/blender_render/materials/properties/introduction>` in the various Material panels.
+   First, you can set the :doc:`Properties </render/blender_render/materials/properties/introduction>`
+   in the various Material panels.
 
-   Second, you can use :doc:`Nodes </render/blender_render/materials/nodes>`; a graphical nodes editor is available.
+   Second, you can use :doc:`Nodes </render/blender_render/materials/nodes>`;
+   a graphical nodes editor is available.
 
    Last, you can directly set the color of object surfaces using various special effects. Strictly speaking,
    these are not materials at all, but they are included here because they affect the appearance of your objects.

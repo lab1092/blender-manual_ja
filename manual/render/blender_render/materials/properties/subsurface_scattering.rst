@@ -52,25 +52,21 @@ Instead let's see what SSS does to a distinct light point.
 
    * - .. figure:: /images/25-Manual-Materials-SSS.jpg
           :width: 300px
-          :figwidth: 300px
 
           Image 3a: No SSS.
 
      - .. figure:: /images/25-Manual-Materials-SSS1.jpg
           :width: 300px
-          :figwidth: 300px
 
           Image 3b: Small SSS radius.
 
    * - .. figure:: /images/25-Manual-Materials-SSS2.jpg
           :width: 300px
-          :figwidth: 300px
 
           Image 3c: SSS radius enlarged.
 
      - .. figure:: /images/25-Manual-Materials-SSS3.jpg
           :width: 300px
-          :figwidth: 300px
 
           Image 3d: SSS with very large red radius value.
 
@@ -124,8 +120,8 @@ IOR
    Higher values means that light falls off faster.
    The effect is quite subtle and changes the distribution function only a little bit.
    By the examination of many different materials, values of **1.3** to **1.5**
-   have been found to work well for most materials. If you know the exact material you are trying to simulate,
-   see :doc:`our IOR table </materials/properties/raytraced_transparency#ior_values_for_common_materials>`.
+   have been found to work well for most materials. If you know the exact material you are trying to simulate, see
+   :doc:`our IOR table </render/blender_render/materials/properties/transparency#ior_values_for_common_materials>`.
 
 Scale
    The scale of your object, in Blender units, across which you want the scattering effect to take place.
@@ -137,7 +133,6 @@ Scale
 
 .. figure:: /images/Manual-25-Material-SSS-Swatch.jpg
    :width: 90px
-   :figwidth: 90px
 
    The SSS Color Swatch
 
@@ -227,31 +222,26 @@ Skin
 
    * - .. figure:: /images/Manual-25-Material-SSS-MH-Head-1.jpg
           :width: 100px
-          :figwidth: 100px
 
           1
 
      - .. figure:: /images/Manual-25-Material-SSS-MH-Head-2.jpg
           :width: 100px
-          :figwidth: 100px
 
           2
 
      - .. figure:: /images/Manual-25-Material-SSS-MH-Head-3.jpg
           :width: 100px
-          :figwidth: 100px
 
           3
 
      - .. figure:: /images/Manual-25-Material-SSS-MH-Head-4.jpg
           :width: 100px
-          :figwidth: 100px
 
           4
 
      - .. figure:: /images/Manual-25-Material-SSS-MH-Head-5.jpg
           :width: 100px
-          :figwidth: 100px
 
           5
 

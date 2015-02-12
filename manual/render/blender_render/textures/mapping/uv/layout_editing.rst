@@ -156,13 +156,14 @@ Proportional Editing
 ====================
 
 Proportional Editing is available in UV editing. The controls are the same as in the 3D view.
-See :doc:`Proportional Editing in 3D </3d_interaction/transform_control/proportional_edit>` for full reference.
+See :doc:`Proportional Editing in 3D </getting_started/basics/transformations/transform_control/proportional_edit>`
+for full reference.
 
 
 Snapping
 ========
 
-Snapping in UV is also similar to :doc:`Snapping in 3D </3d_interaction/transform_control/snap>`,
+Snapping in UV is also similar to :doc:`Snapping in 3D </getting_started/basics/transformations/transform_control/snap>`,
 but only snapping to UVs works, however,
 the *Snap to Pixels* option in the *UVs Menu* will force the UVs to snap to the pixels of an image if loaded.
 
@@ -181,7 +182,7 @@ Weld and Align
 
 the *Weld* tool, :kbd:`W-1` will move selected UVs to their average position
 
-*Align*, :kbd:`W-2`,\ :kbd:`W-3`, and :kbd:`W-4`
+*Align*, :kbd:`W-2`, :kbd:`W-3`, and :kbd:`W-4`
 will line up selected UVs on the X axis, Y axis, or automatically chosen axis.
 
 
@@ -215,10 +216,10 @@ Face Mirror and Rotate UVs
 
 Recall how the orientation of the UV Texture is relative to each face? Well,
 you might find that, for example, the image is upside down or laying on its side. If so,
-use *Face→Rotate UVs* (in the 3D window in Face Select mode)
+use *Face-->Rotate UVs* (in the 3D window in Face Select mode)
 menu to rotate the UVs per face in 90-degree turns.
 
-The *Face→Mirror UVs* to flips the image over like a pankcake in a pan,
+The *Face-->Mirror UVs* to flips the image over like a pankcake in a pan,
 mirroring the UVs per face and showing you the image 'reversed'.
 
 
@@ -266,7 +267,7 @@ each UV unwrap is its own linked set of coordinates.
 You can lay them on top of one another, and they will onionskin
 (the bottom one will show through the top one). To grab only one though,
 :kbd:`RMB` select one of the UV coordinates,
-and use *Select* →\ *Linked UVs* (:kbd:`Ctrl-L`)
+and use :menuselection:`Select --> Linked UVs` (:kbd:`Ctrl-L`)
 to select connected UVs, not border select because UVs from both will be selected.
 
 
@@ -275,7 +276,6 @@ Combining UV Maps
 
 .. figure:: /images/Manual-UV-Unwrap-Bad.jpg
    :width: 300px
-   :figwidth: 300px
 
    Bad Unwrap-Note Ear and Neck
 
@@ -289,7 +289,6 @@ and the neck, it is stretched and folded under. Too much work to clean up.
 
 .. figure:: /images/Manual-UV-Unwrap-Face.jpg
    :width: 300px
-   :figwidth: 300px
 
    Unwrap Face Only, without Ear or Neck
 
@@ -305,7 +304,6 @@ rotate them somewhat to fit logically within the image area of the UV/Image Edit
 
 .. figure:: /images/Manual-UV-Unwrap-Ear.jpg
    :width: 300px
-   :figwidth: 300px
 
    Unwrap Projection: Ear
 
@@ -332,7 +330,6 @@ painting of that piece.
 
 .. figure:: /images/Manual-UV-Unwrap-All.jpg
    :width: 300px
-   :figwidth: 300px
 
    UV Maps together
 
@@ -347,7 +344,6 @@ to construct the entire UV Map as a single map.
 
 .. figure:: /images/Manual-UV-Unwrap-Combo.jpg
    :width: 300px
-   :figwidth: 300px
 
    UV Maps Arranged and Stitched
 

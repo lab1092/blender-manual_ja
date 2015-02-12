@@ -44,7 +44,6 @@ Subtract Effect
 
 .. figure:: /images/Manual-VSE-Subtract.jpg
    :width: 300px
-   :figwidth: 300px
 
    Subtract Effect
 
@@ -73,7 +72,6 @@ Fade to Black
 
 .. figure:: /images/Manual-VSE-Cross-Fade.jpg
    :width: 300px
-   :figwidth: 300px
 
    Cross-Fade between Black
 
@@ -82,7 +80,7 @@ Many scenes fade to black, and then fade in from black,
 rather than directly from one to the other.
 
 The strip setup to do this is shown to the right. The two strips are on Channel 1,
-and you Add→Color Generator strip to Channel 2, straddling the two main strips.
+and you Add-->Color Generator strip to Channel 2, straddling the two main strips.
 Change the color to black, and add two Cross Effects; the first from Channel 1 to Channel 2
 (black), and the second from Channel 2 to Channel 1. The first strip will fade to black,
 and then the second will fade in from black. Of course,
@@ -95,7 +93,6 @@ Multiply
 
 .. figure:: /images/Manual-VSE-Multiply.jpg
    :width: 300px
-   :figwidth: 300px
 
    Multiply Effect.
 
@@ -141,7 +138,6 @@ Alpha Over, Under, and Over Drop
 
 .. figure:: /images/Manual-VSE-Alpha.jpg
    :width: 300px
-   :figwidth: 300px
 
    AlphaOver Effect
 
@@ -209,7 +205,6 @@ Wipe
 
 .. figure:: /images/Manual-VSE-wipe.jpg
    :width: 300px
-   :figwidth: 300px
 
    VSE Wipe Built-in Effect
 
@@ -240,7 +235,6 @@ Glow
 
 .. figure:: /images/Manual-VSE-Glow_example.jpg
    :width: 300px
-   :figwidth: 300px
 
    Example of a Glow effect applied to a picture.
    Top left: base picture (Lofoten Islands, Norway - source: wikipedia.fr);
@@ -324,14 +318,13 @@ Creating a Slow-Motion Effect
 
 .. figure:: /images/Manual-VSE-Speed-slomo-2.jpg
    :width: 300px
-   :figwidth: 300px
 
    50% Slow motion using Speed Control
 
 
 Suppose you want to sssslooow your strip dowwwwwwn.
 You need to affect the speed of the video clip without affecting the overall frame rate.
-Select the clip and Add→Effect→Speed Control effect strip.
+Select the clip and Add-->Effect-->Speed Control effect strip.
 Click to drop it and press :kbd:`N` to get the Properties.
 Uncheck the *Stretch to input strip length* option in the Effect Strip section.
 Set the Speed factor to be the factor by which you want to adjust the speed.

@@ -22,7 +22,7 @@ These controls affect the rendered image, and the results are baked into the ren
 For information on achieving similar affects with render controls,
 see :doc:`Color Management and Exposure </render/post_process/cm_and_exposure>`.
 
-Previously Blender clipped color directly with "\ ``1.0`` " (or 255)
+Previously Blender clipped color directly with ``1.0`` (or 255)
 when it exceeded the possible RGB space.
 This caused ugly banding and overblown highlights when light overflowed
 (*An overexposed teapot*).
@@ -69,25 +69,21 @@ so that the darker parts of the image won't be changed at all
 
    * - .. figure:: /images/Manual-PartVI-DenseTeapot.jpg
           :width: 320px
-          :figwidth: 320px
 
           An overexposed teapot.
 
      - .. figure:: /images/Manual-PartVI-DenseTeapot-Range2.jpg
           :width: 320px
-          :figwidth: 320px
 
           Range: 2.0.
 
    * - .. figure:: /images/Manual-PartVI-DenseTeapot-Range0.5.jpg
           :width: 320px
-          :figwidth: 320px
 
           Range: 0.5.
 
      - .. figure:: /images/Manual-PartVI-DenseTeapot-Range2.0-Exposure0.3.jpg
           :width: 320px
-          :figwidth: 320px
 
           Range: 2.0, Exposure: 0.3.
 

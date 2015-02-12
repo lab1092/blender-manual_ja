@@ -25,7 +25,6 @@ Options
 
 .. figure:: /images/25-Manual-Constraints-Transform-Transformation.jpg
    :width: 305px
-   :figwidth: 305px
 
    Transformation panel
 
@@ -50,8 +49,8 @@ Extrapolate
    When you enable this button, the *min* and *max* values are no longer strict limits,
    but rather "markers" defining a proportional (linear) mapping between input and corresponding output values.
    Let's illustrate that with two graphs (*The* *Extrapolate* *principles*).
-   In these pictures, the input range (in abscissa) is set to [\ **1.0**, **4.0** ],
-   and its corresponding output range (in ordinate), to [\ **1.0**, **2.0** ].
+   In these pictures, the input range (in abscissa) is set to [``1.0, 4.0``],
+   and its corresponding output range (in ordinate), to [``1.0, 2.0``].
    The yellow curve represents the mapping between input and output.
 
 
@@ -60,13 +59,11 @@ Extrapolate
 
    * - .. figure:: /images/ManConstraintsTransformationExtrapolatePrinciple1.jpg
           :width: 300px
-          :figwidth: 300px
 
           Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] range.
 
      - .. figure:: /images/ManConstraintsTransformationExtrapolatePrinciple2.jpg
           :width: 300px
-          :figwidth: 300px
 
           Extrapolate enabled: the output values are "free" to proportionally follow the input ones.
 
@@ -75,7 +72,7 @@ Extrapolate
 
    Note that:
 
-   - When mapping transform properties to location (i.e. `Loc`, `Destination` button is enabled),
+   - When mapping transform properties to location (i.e. *Loc*, *Destination* button is enabled),
      the owner's existing location is added to the result of evaluating this constraint
      (exactly like when the *Offset* button of the
      :doc:`Copy Location constraint </rigging/constraints/transform/copy_location>` is enabled...).

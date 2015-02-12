@@ -5,7 +5,6 @@ Halo Rendering
 
 .. figure:: /images/Doc-26-Materials-HeloRender-Activate.jpg
    :width: 300px
-   :figwidth: 300px
 
    Activating helo rendering
 
@@ -25,7 +24,6 @@ Options
 
 .. figure:: /images/25-Manual-Materials-Halos.jpg
    :width: 309px
-   :figwidth: 309px
 
    Halo panels
 
@@ -36,7 +34,7 @@ press the *Halo* button in the *Material* menu's top panel.
 As you will see in the 3D View, the mesh faces are no longer rendered.
 Instead just the vertex is rendered, since that is where each halo will originate.
 Halos can be hard to find in a crowded scene, so name it well for easy location in
-:doc:`the outliner </data_system/the_outliner>`.
+:doc:`the outliner </editors/outliner>`.
 
 In the properties window, where we normally find the *Diffuse*,
 *Specular*, and *Shading* panels,
@@ -108,7 +106,6 @@ which include Flare, Rings, Lines, Star, Texture, Extreme Alpha, and Shaded.
 
 .. figure:: /images/Manual-Part-III-Halo02.jpg
    :width: 630px
-   :figwidth: 630px
 
    Halo Variations
 
@@ -181,7 +178,6 @@ and disappears when another object occludes the flare mesh.
 
 .. figure:: /images/Manual-Part-III-Halo04.jpg
    :width: 630px
-   :figwidth: 630px
 
    Lens Flare
 

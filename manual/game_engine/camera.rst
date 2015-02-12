@@ -36,7 +36,7 @@ Camera Object
 =============
 
 The Camera object in the Game Engine follows much the same structure as the conventional Blender camera - see
-:doc:`Camera </render/camera>` for details of how to set up,
+:doc:`Camera </render/camera/index>` for details of how to set up,
 manipulate and select a camera. The following sections show some of the special facilities available in BGE cameras.
 
 
@@ -44,7 +44,7 @@ Parent Camera to Object
 =======================
 
 The camera will follow the object. First select the camera and then select the object.
-Next :kbd:`Ctrl-P` → *Make Parent*.
+Next :kbd:`Ctrl-P` --> *Make Parent*.
 
 Note that if your object has any rotations then the camera will also have those rotations.
 To avoid this use "Parent to Vertex" (see below).

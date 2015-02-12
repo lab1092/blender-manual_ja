@@ -12,7 +12,6 @@ is shown by default at the bottom of the screen.
 
 .. figure:: /images/K_Doc_Timeline.jpg
    :width: 700px
-   :figwidth: 700px
 
    Timeline 2.69
 
@@ -75,7 +74,6 @@ Markers are usually used to identify key parts of the animation.
 
 .. figure:: /images/K_Doc_Timeline_Markers.jpg
    :width: 700px
-   :figwidth: 700px
 
    Markers
 
@@ -83,7 +81,7 @@ Markers are usually used to identify key parts of the animation.
 Markers can be selected by pressing :kbd:`RMB` or :kbd:`Shift-RMB` to select more.
 
 See :doc:`Marker Menu </animation/editors/timeline#marker_menu>` below or
-:doc:`Markers </animation/markers>` for more info.
+:doc:`Markers </animation/basics/markers>` for more info.
 
 
 Adjusting the View
@@ -97,7 +95,6 @@ The main *Timeline* area displays the animation frames over time.
 
 .. figure:: /images/K_Doc_Timeline_Main.jpg
    :width: 700px
-   :figwidth: 700px
 
    Timeline Main Area
 
@@ -106,7 +103,7 @@ The *Timeline* can be panned by holding :kbd:`MMB`,
 then dragging the area left or right.
 
 You can zoom the *Timeline* by using :kbd:`Ctrl-MMB`, the mouse :kbd:`Wheel`,
-or pressing the :kbd:`-` and :kbd:`+` keys on the numpad.
+or pressing the :kbd:`Minus` and :kbd:`Plus` keys on the numpad.
 
 By default, the *Playback/Rendering Range* (Frame Start 1 to Frame End 200)
 is a lighter shade of gray.
@@ -246,7 +243,6 @@ The Timeline header controls.
 
 .. figure:: /images/K_Doc_Timeline_Header.jpg
    :width: 700px
-   :figwidth: 700px
 
    Timeline header controls.
 

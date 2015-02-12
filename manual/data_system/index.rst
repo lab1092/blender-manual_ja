@@ -7,10 +7,8 @@
 .. toctree::
    :maxdepth: 2
 
-   files/index.rst
-   data_system.rst
+   introduction.rst
    datablocks.rst
    scenes.rst
-   scene_creation.rst
-   the_outliner.rst
+   files/index.rst
    linked_libraries.rst

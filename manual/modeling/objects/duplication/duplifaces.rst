@@ -7,7 +7,7 @@ DupliFaces
    :class: refbox
 
    | Mode:     *Object* mode
-   | Panel:    *Object* → *Duplication*
+   | Panel:    *Object* --> *Duplication*
 
 
 *Duplication Faces* or *DupliFaces* is the capability to replicate an object on each face of a parent object.
@@ -16,8 +16,8 @@ One of the best ways to explain this is through an example illustration.
 
 .. note:: Example .blend file
 
-   Download the .blend file used for the examples on this page `here
-   <http://wiki.blender.org/index.php/:File:Manual-2.5-Duplifaces-Example01.blend>`__
+   Download the .blend file used for the examples on this page
+   `here <http://wiki.blender.org/index.php/:File:Manual-2.5-Duplifaces-Example01.blend>`__
 
 
 Basic usage

@@ -5,7 +5,6 @@ Procedural textures: Voronoi
 
 .. figure:: /images/25-Manual-Textures-Procedural-Voronoi.jpg
    :width: 307px
-   :figwidth: 307px
 
    Voronoi Texture Panels
 
@@ -46,37 +45,31 @@ Distance Metric
 
    * - .. figure:: /images/VoronoyMinkovsky0.5.jpg
           :width: 200px
-          :figwidth: 200px
 
           Minkovsky Exponent : 0.5 (Minkovsky 1/2)
 
      - .. figure:: /images/VoronoyMinkovsky1.jpg
           :width: 200px
-          :figwidth: 200px
 
           Minkovsky Exponent : 1 (Manhattan)
 
      - .. figure:: /images/VoronoiMinkovsky2.jpg
           :width: 200px
-          :figwidth: 200px
 
           Minkovsky Exponent : 2 (Actual Distance)
 
    * - .. figure:: /images/VoronoyMinkovsky4.jpg
           :width: 200px
-          :figwidth: 200px
 
           Minkovsky Exponent : 4 (Minkovsky 4)
 
      - .. figure:: /images/VoronoyMinkovsky10.jpg
           :width: 200px
-          :figwidth: 200px
 
           Minkovsky Exponent : 10 (Chebychev)
 
      - .. figure:: /images/VoronoyDistanceSquared.jpg
           :width: 200px
-          :figwidth: 200px
 
           Distance Squared (More contrast than ActualDistance)
 
@@ -99,4 +92,4 @@ Technical Details
 =================
 
 For a more in depth description of the Worley algorithm, see:
-`Worley Documentation <http://www.ypoart.com/Downloads/Worley.htm>`__\ (dead link).
+`Worley Documentation <http://www.ypoart.com/Downloads/Worley.htm>`__ (dead link).

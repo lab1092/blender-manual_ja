@@ -5,9 +5,11 @@
 #################
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    materials/index.rst
    textures/index.rst
    lighting/index.rst
    world/index.rst
+   layers.rst
+   passes.rst

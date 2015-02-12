@@ -4,7 +4,6 @@ Vertex Groups
 *************
 
 .. figure:: /images/modeling_meshes_vgroups_01.jpg
-   :figwidth: image
    :align: right
 
    The Vertex Group Panel
@@ -73,7 +72,6 @@ Creating Vertex Groups
 ======================
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-panel-empty.jpg
-   :figwidth: image
    :align: right
 
    Empty Vertex Group Panel
@@ -93,7 +91,6 @@ Vertex Groups Panel Controls
 ----------------------------
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-panel-one.jpg
-   :figwidth: image
    :align: right
 
    One Vertex Group
@@ -103,7 +100,7 @@ vertex Groups panel. There you find 3 clickable elements:
 
 
 Group Name
-   The Groupname can be changed by :kbd:`LMB-x2` on the name itself.
+   The Groupname can be changed by double clicking :kbd:`LMB` on the name itself.
    Then you can edit the name as you like.
 
 Plus Icon
@@ -129,7 +126,6 @@ Deleting vertex Groups
 ======================
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-panel-dg.jpg
-   :figwidth: image
    :align: right
 
    Delete a Vertex Group
@@ -146,7 +142,6 @@ Locking Vertex Groups
 =====================
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-panel-lg.jpg
-   :figwidth: image
    :align: right
 
    Lock a Vertex Group
@@ -169,7 +164,6 @@ Working with Content of Vertex Groups
 =====================================
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-panel-one.jpg
-   :figwidth: image
    :align: right
 
    Vertex Group Panel in Edit Mode
@@ -200,7 +194,6 @@ Assigning verts to a Group
 --------------------------
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-panel-assign.jpg
-   :figwidth: image
    :align: right
 
    Assign weights to active group
@@ -279,43 +272,32 @@ Finding ungrouped verts
 You can find ungrouped vertices as follows:
 
 - Press :kbd:`A` once or twice to unselect all vertices.
-- In the footer of the 3D Viewport: Navigate to Select → Ungrouped verts
+- In the footer of the 3D Viewport: Navigate to Select --> Ungrouped verts
 
 
 Keyboard Shortcuts
 ------------------
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-popup.jpg
-   :figwidth: image
    :align: right
 
    Vertex Groups popup menu
 
 
-In Edit Mode you can type :menuselection:`[ctrl][G]` to a shortcut Menu for adding/removing
-verts to/from groups.
+In Edit Mode you can press :kbd:`Ctrl-G` to a shortcut Menu for adding/removing verts to/from groups.
 The popup menu provides the following functions with obvious functionality:
-
+(also available via :menuselection:`Mesh --> Vertices --> Vertex Groups`)
 
 - Assign to New Group
 - Assign to Active Group
 - Remove from Active Group
 - Remove from All
 
-The following functions should not be located here and might be removed in a future version of
-Blender:
-
-
-- Set Active Group
-- Set Remove Acive Group
-- Set Remove All Groups
-
 
 Vertex Group Management
 =======================
 
 .. figure:: /images/26-Manual-Modeling-Meshes-vertex-group-pulldown.jpg
-   :figwidth: image
    :align: right
 
    Vertex groups panel's dropdown menu

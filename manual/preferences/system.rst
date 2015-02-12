@@ -10,7 +10,6 @@ and internationalization.
 
 .. figure:: /images/(Doc_26x_Manual_Preferences_System)_(Screenshot_Full)_(GBV266FN).jpg
    :width: 650px
-   :figwidth: 650px
 
 
 General
@@ -22,9 +21,8 @@ DPI
    (such as Retina Display and others) matching the screen DPI with Blender DPI.
    During normal usage, most Blender users might prefer to zoom screen elements
    pressing :kbd:`Ctrl` and dragging :kbd:`MMB` left and right over a panel to resize its contents,
-   or use the :kbd:`Numpad-+` and :kbd:`Numpad--` to zoom in and out the contents.
+   or use the :kbd:`NumpadPlus` and :kbd:`NumpadMinus` to zoom in and out the contents.
    Pressing :kbd:`Home` (Show All) will reset the zooming at the screen/panel focused by the mouse pointer.
-   Minimum: **48** , Maximum: **128** , Default:\ **72**
 Frame Server Port
    TCP/IP port used in conjunction with the IP Address of the machine for frameserver rendering.
    Used when working with distributed rendering.
@@ -32,11 +30,9 @@ Frame Server Port
    existing service ports used by your Operating System and/or softwares.
    Always consult your operating system documentation and services or
    consult your system administrator before changing this value.
-   Minimum: **0** , Maximum: **32727** , Default: **8080**
 Console Scrollback
    The number of lines, buffered in memory of the console window.
    Useful for debugging purposes and command line rendering.
-   Minimum: **32** , Maximum: **32768** , Default: **256**
 
 
 Sound
@@ -98,7 +94,7 @@ Compute Device
       the user will be able to choose whether to use CPU or other computing device for Cycles Rendering.
 
 
-*OpenCL''*:sup:`1` is unsupported, see: :doc:`Cycles </render/cycles>` Render engine page
+*OpenCL''*:sup:`1` is unsupported, see: :doc:`Cycles </render/cycles/index>` Render engine page
 
 
 Open GL
@@ -254,12 +250,8 @@ Color Picker Type
 Color Picker Type
    Choose which type of color dialog you prefer - it will show when clicking :kbd:`LMB` on any color field.
 
-
-   There are **4** types of color pickers available for Blender:
-      *Circle* (Default), *Square (HS + V)* , *Square (SV + H)* and *Square (HV + S)*
-
-
-      The color pickers are detailed at the :doc:`Buttons and Controls </getting_started/basics/interface/buttons_and_controls>` page.
+   See the different color picker types at the
+   :doc:`Extended Controls </getting_started/basics/interface/extended_controls>` page.
 
 
 Custom Weight Paint Range
@@ -271,7 +263,7 @@ Custom Weight Paint Range
    Enabling the checkbox will enable an alternate map using a ramp starting with an empty range.
    Now you can create your custom map using the common color ramp options.
    For detailed information about how to use color ramps,
-   see: to the :doc:`Buttons and Controls </getting_started/basics/interface/buttons_and_controls>` page.
+   see: to the :doc:`Extended Controls </getting_started/basics/interface/extended_controls>` page.
 
 
 International Fonts
@@ -289,7 +281,7 @@ International Fonts
 
 
    Blender supports I18N for internationalization, for more information,
-   see: :doc:`Internationalization </getting_started/basics/interface/internationalization>` page.
+   see: :doc:`Internationalization </preferences/internationalization>` page.
    For more Information on how to load International fonts,
    see: :doc:`Editing Texts </modeling/texts/editing>` page.
 

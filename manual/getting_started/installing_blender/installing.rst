@@ -3,15 +3,13 @@ Getting Blender
 ***************
 
 Blender is available for download for Windows, Mac and Linux.
-For BSD systems, Blender is also likely to work with instructions similar to Linux, but it is no longer officially
-supported.
 
 
 Minimum Requirements
 ====================
 
 Check if your system meets the
-`minimum and recommended requirements <http://www.blender.org/download/requirements/>`__.
+`minimum or recommended requirements <http://www.blender.org/download/requirements/>`__.
 
 Always check that the graphics drivers are up to date and that OpenGL is well supported.
 Other Blender dependencies are already included in the binary and you do not need to worry
@@ -28,7 +26,7 @@ Download Blender
 The Blender Foundation distributes Blender in 3 different ways that you can choose from to better suit your needs.
 
 The options comprise binary packages for all the supported platforms and the source code. Within the binary packages,
-you can choose from a stable release or a daily build. The first has the benefit of being more reliable, the later
+you can choose from a stable release or a daily build. The first has the benefit of being more reliable, the latter
 provides the newest features, as they are developed. Blender is released approximately every 3 months.
 You can keep up to date with the newest changes
 through the `release notes <http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/>`__.
@@ -46,9 +44,15 @@ through the `release notes <http://wiki.blender.org/index.php/Dev:Ref/Release_No
 
 
 `Build from Source <https://developer.blender.org/diffusion/B/>`__
+
+   .. note::
+
+      This is included for completeness, but it is **not** expected
+      that regular users should have to compile their own Blender builds.
+
    Blender's source is available for reference and installation, with the following advantages:
 
-   - is always up to date,
+   - it is always up to date,
    - allows access to any version or branch where a feature is being developed,
    - can be freely customized.
 
@@ -56,9 +60,9 @@ through the `release notes <http://wiki.blender.org/index.php/Dev:Ref/Release_No
    `instructions <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`__ available.
 
 
+
 Install Blender
 ===============
-
 The procedure for installing a binary, either the last stable release or a daily build, is the same.
 Follow the steps for your operative system:
 
@@ -69,5 +73,3 @@ Follow the steps for your operative system:
    mac.rst
    linux.rst
 
-For building from source,
-follow the `wiki instructions <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`__.

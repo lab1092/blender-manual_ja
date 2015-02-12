@@ -18,7 +18,7 @@ and compositing.
   *Full Render* Engine built inside Blender, called *Blender Internal*,
   consult the section about :doc:`Rendering with Blender Internal </render/introduction>`.
 - There is also a section in this wiki manual dedicated to the new
-  :doc:`Cycles </render/cycles/index>` Render Engine, built into Blender since Version 2.61.
+  :doc:`Cycles </render/cycles/index>` Render Engine.
 
 
 Rendering an image using ''Full Render'' - Blender Internal
@@ -44,7 +44,7 @@ options:
 - Go to :menuselection:`Properties Window --> Render context --> Render panel` and press the *Image* button
 - Go to :menuselection:`Render --> Render Image` from the header of the *Info Window*
   (see: *Header of the Info Window*)
-- Using Blender Search: press :kbd:`Space`, type Render and click on *Render*.
+- Using Blender Search: press :kbd:`Spacebar`, type Render and click on *Render*.
 
 To abort or quit the render, press :kbd:`Esc`.
 
@@ -56,7 +56,7 @@ Rendering an image using ''OpenGL Render''
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   Undefined -You can add one for your :doc:`Keymap » </preferences/input>`
+   | Hotkey:   Undefined -You can add one for your :doc:`Keymap </preferences/input>`
 
 
 To start an *OpenGL render* you can use any of the following options:
@@ -75,7 +75,7 @@ To start an *OpenGL render* you can use any of the following options:
   in the header of the 3D View
 - Go to :menuselection:`Render --> OpenGL Render Image` from the header of the *Info Window*
   (see: *Header of the Info Window* Image)
-- Using Blender Search: press :kbd:`Space`, type *Render* and click on *OpenGL Render*.
+- Using Blender Search: press :kbd:`Spacebar`, type *Render* and click on *OpenGL Render*.
 
 To abort or quit the render, press :kbd:`Esc`.
 
@@ -178,7 +178,7 @@ Rendering an animation using ''OpenGL Render''
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   Undefined -You can add one for your :doc:`Keymap » </preferences/input>`
+   | Hotkey:   Undefined -You can add one for your :doc:`Keymap </preferences/input>`
 
 
 To Render an animation using *OpenGL Render*, you can use any of the following options:
@@ -201,7 +201,7 @@ Showing Only Rendered Objects
    :class: refbox
 
    | Mode:     All modes
-   | Hotkey:   Undefined - You can add one for your :doc:`Keymap » </preferences/input>`
+   | Hotkey:   Undefined - You can add one for your :doc:`Keymap </preferences/input>`
 
 
 .. figure:: /images/Manual-Vitals-Quick-Render-Display-Only-Render.jpg

@@ -12,7 +12,6 @@ Choosing the Texture context
 
 .. figure:: /images/25-Manual-Textures-top-panel.jpg
    :width: 300px
-   :figwidth: 300px
 
    Texture panel
 
@@ -25,7 +24,6 @@ Choosing the Texture data type
 
 .. figure:: /images/25-Manual-Textures-panel.jpg
    :width: 311px
-   :figwidth: 311px
 
    Texture panel with buttons for Material, World, and Brush textures highlighted
 
@@ -37,7 +35,6 @@ the kind of texture that is being edited.
 
 .. figure:: /images/26-Manual-Textures-Lamp-panel.jpg
    :width: 300px
-   :figwidth: 300px
 
    Texture panel with button for Lamp textures highlighted
 
@@ -47,7 +44,6 @@ Textures Slots
 
 .. figure:: /images/25-Manual-Textures-top-panel.jpg
    :width: 300px
-   :figwidth: 300px
 
    Texture panel
 
@@ -64,7 +60,7 @@ It can have up to eighteen *Texture Slots*:
 Creating a new Texture Datablock in a new Texture Slot
 ======================================================
 
-Select an empty slot, then click on the :kbd:`+ New` button.
+Select an empty slot, then click on the *New* button.
 
 This will do two things:
 
@@ -75,7 +71,7 @@ This will do two things:
 Creating a new Texture Datablock in a non-empty slot
 ====================================================
 
-Select a non-empty slot, then click on the :kbd:`+` button.
+Select a non-empty slot, then click on the *Plus* button.
 
 This will do two things:
 
@@ -87,7 +83,7 @@ This will do two things:
 Sharing a Texture Datablock in a non-empty slot
 ===============================================
 
-- Select a non-empty slot, then click on the :kbd:`Browse` button.
+- Select a non-empty slot, then click on the *Browse* button.
   This will open a menu showing all the available Texture Datablocks in this file.
 - Choose a texture datablock in the menu to assign it to the selected slot.
   This will share the chosen texture with more than one object,

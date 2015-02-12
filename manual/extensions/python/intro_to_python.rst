@@ -57,7 +57,6 @@ Following is a video that shows how you can switch to the interpreter.
 
 .. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Console-Default-Console.jpg
    :width: 600px
-   :figwidth: 600px
 
 
 You can start typing Python commands,
@@ -69,7 +68,7 @@ Hello World
 
 Let's get started with the classical "Hello World" program.
 
-Type the following print statement at the interpreter prompt and press :kbd:`Enter` key.
+Type the following print statement at the interpreter prompt and press :kbd:`Return` key.
 
 
 .. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Tutorial-Hello-World.jpg
@@ -104,7 +103,7 @@ By doing so we are repeating the string by the count specified by *number*
 
 .. note::
 
-   Check out :doc:`all the above examples in one place </extensions/python/intro_to_python/examples>`
+   Check out :doc:`all the above examples in one place </extensions/python/intro_to_python>`
 
 
 External links
