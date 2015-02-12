@@ -1,0 +1,148 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/composite_nodes/node_groups.rst:3
+msgid "Node Groups"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:5
+msgid ""
+"Both material and composite nodes can be grouped. Grouping nodes can "
+"simplify the node network layout in the node editor, making your material or"
+" composite 'noodle' (node network) easier to work with. Grouping nodes also "
+"creates what are called NodeGroups (inside a .blend file) or NodeTrees (when"
+" appending)."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:9
+msgid ""
+"Conceptually, \"grouping\" allows you to specify a *set* of nodes that you "
+"can treat as though it were \"just one node\". You can then re-use it one or"
+" more times in this or some other .blend file(s)."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:12
+msgid ""
+"As an example:  If you have created a material using nodes that you would "
+"like to use in another .blend file, you *could* simply append the material "
+"from one .blend file to another. However, what if you would like to create a"
+" new material, and use a branch from an existing material node network? You "
+"could re-create the branch. Or you could append the material to the new "
+".blend file, then cut and paste the branch that you want into the new "
+"material. Both of these options work, but are not very efficient when "
+"working across different .blend files. A better method of re-use, for either"
+" material node branches or composite node networks, would be to create "
+"groups of nodes."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:19
+msgid ""
+"Once a group has been defined, it becomes an opaque object; a reusable "
+"software component. You can (if you choose) ignore exactly how it is "
+"*defined,* and simply use it as many times as you like."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:23
+msgid "Grouping Nodes"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:25
+msgid ""
+"To create a node group, in the node editor, select the nodes you want to "
+"include, then press :kbd:`Ctrl-G` or :menuselection:`Group --> Make Group` "
+"(:kbd:`Shift-A`). A node group will have a green title bar. All of the "
+"selected nodes will now be contained within the group node. Default naming "
+"for the node group is *NodeGroup,* *NodeGroup.001* etc. There is a name "
+"field in the node group you can click into to change the name of the group. "
+"Change the name of the node group to something meaningful. When appending "
+"node groups from one .blend file to another, Blender does not make a "
+"distinction between material node groups or composite node groups, so it's "
+"recommended some naming convention that will allow you to easily distinguish"
+" between the two types."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:35
+msgid "**What not to include in your groups (all types of Node editors)**"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:37
+msgid ""
+"Remember that the essential idea is that a group should be an easily-"
+"reusable, self-contained software component. Material node groups should "
+"**not include**:"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:43
+msgid "Input nodes"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:41
+msgid ""
+"if you include a source node in your group, you'll end up having the source "
+"node appearing *twice:* once inside the group, and once outside the group in"
+" the new material node-network."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:45
+msgid "Output node"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:46
+msgid ""
+"if you include an output node in the group, there won't be an output socket "
+"available *from* the group!"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:50
+msgid "Editing Node Groups"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:52
+msgid ""
+"With a group node selected, :kbd:`Tab` expands the node to a window frame, "
+"and the individual nodes within it are shown. You can move them around, play"
+" with their individual controls, re-thread them internally, etc. just like "
+"you can if they were a normal part of your editor window. You will not be "
+"able, though, to thread them to a node outside the group; you have to use "
+"the external sockets on the side of the group node. To add or remove nodes "
+"from the group, you need to ungroup them."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:60
+msgid "Ungrouping Nodes"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:62
+msgid ""
+"The :kbd:`Alt-G` command removes the group and places the individual nodes "
+"into your editor workspace. No internal connections are lost, and now you "
+"can thread internal nodes to other nodes in your workspace."
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:67
+msgid "Appending Node Groups"
+msgstr ""
+
+#: ../../manual/composite_nodes/node_groups.rst:69
+msgid ""
+"Once you have appended a NodeTree to your .blend file, you can make use of "
+"it in the node editor by pressing :kbd:`Shift-A`: :menuselection:`Add --> "
+"Group`, then select the appended group. The \"control panel\" of the Group "
+"is the individual controls for the grouped nodes. You can change them by "
+"working with the Group node like any other node."
+msgstr ""
+
+#~ msgid ""
+#~ "FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Node_Groups; "
+#~ "{{Doc:2.6/Reference/Nodes/Node_Groups}} )"
+#~ msgstr ""
