@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:4
+# 7b1edaf9b3ce4c9b90425d87bfe7409c
+msgid "Vehicle Controller"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:7
+# fdf277fe1cda410f9c734ea0077a770a
+msgid "Introduction"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:9
+# 33c3f71ebac24e989f036452e8cd0c2d
+msgid "The Vehicle Controller is a special :ref:`type of physics object <game_engine-physics-types>` that the Physics Engine (bullet) recognizes."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:12
+# bd0e807bdd954f8789354fa5f6b6278a
+msgid "It is composed of a **rigid body** representing the chassis and a set of wheels that are set to **no collision**. Emphasizing the distinction between a GameEngine, Logical or Render object and its representation for the Physics Engine is important."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:17
+# 27d4870d8a664483a89c34d47b72f32e
+msgid "To simulate a vehicle as a true rigid body, on top of also rigid body wheels, with a real suspension system made with joints, would be far too complicated and unstable. Cars and other vehicles are complicated mechanical devices and most often we do not want to simulate that, only that it 'acts as expected'. The Vehicle Controller exists to provide a dedicated way of simulating a vehicle behavior without having to simulate all the physics that would actually happen in the real world. It abstracts the complexity away by providing a simple interface with tweakable parameters such as suspension force, damping and compression."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:27
+# da3ffedb22bb4cdf80b9094d668bca9d
+msgid "How it works"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:29
+# 0711b40fa07540beb6929d68452cd3d0
+msgid "Bullet's approach to a vehicle controller is called a \"Raycast Vehicle\". Collision detection for the wheels is approximated by ray casts and the tire friction is an anisotropic friction model."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:33
+# f2304e65ef5f4c78bf19f04d8e5a417c
+msgid "A raycast vehicle works by casting a ray for each wheel. Using the ray's intersection point, we can calculate the suspension length and hence the suspension force that is then applied to the chassis, keeping it from hitting the ground. In effect, the vehicle chassis 'floats' along on the rays."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:38
+# 77f4e774e01340b9a92e5853c832a9aa
+msgid "The friction force is calculated for each wheel where the ray contacts the ground. This is applied as a sideways and forwards force."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:41
+# 8b0377af2d63402ca352ce9b834d4ea1
+msgid "You can check Kester Maddock's approach to vehicle simulation `here <http://tinyurl.com/ydfb7lm>`__. It includes some common problems, workarounds and tips and tricks."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:45
+# 4896b526266443ed9f0904876ff2b3e1
+msgid "How to use"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:47
+# 8e6efcba417c48c584be62dd9769d54f
+msgid "Currently the Vehicle Controller can only be used as a constraint via Python. There are plans to add it to the interface."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:52
+# 99ed000c7dff494eac38c02f43240d7e
+msgid "Setup"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:54
+# 652970ac358b4792ab13733c06fe602a
+msgid "You should have a body acting as the chassis, set it as a 'Rigid Body'."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:56
+# 8d86ae8c277a4248b05dadc9912dcc46
+msgid "The wheels should be separate objects set to 'No Collision'. The vehicle controller will calculate the collisions for you as rays so, if you set it to something else, it will calculate it twice in different ways and produce weird results."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:62
+# f5879bd7a1e94124a2c72e8d4cb25288
+msgid "Collisions"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:64
+# 3601ffa07bf148e3bd3b395c6cc53624
+msgid "A cylinder is typically a good collision shape for the wheels. For the chassis, the shape should be rough, like a box. If the vehicle is very complicated, you should split it into simpler objects and parent those (with their collision shapes) to the vehicle controller so that they will follow it. If your vehicle even has moving bits (weapons, wrecking balls, trolleys etc) they should also be simulated separately and connected to the vehicle as a joint."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:74
+# 8b35c6ecd0da47ccbf2e456921eb7b7e
+msgid "Python"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:77
+# ddd8a72de24e4fa9ab4a8d329d95321d
+msgid "Assembling the Vehicle"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:78
+# e9a3f9950cda4a05a7aaa67e878674b6
+msgid "The overall steps are:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:80
+# 14902b8aeb93406ea029a437e1f9acef
+msgid "create a constraint for the vehicle and save its ID for future reference"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:81
+# 46a5eb94d61d4b56a3b97ae0aebea1ac
+msgid "attach the wheels"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:82
+# ad0c0c6b72c343ab876f46a60b4b6458
+msgid "set wheel parameters: influence, stiffness, damping, compression and friction"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:83
+# 59d26d391c5a4c8c8ea077b44a338ae8
+msgid "init variables"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:85
+# d1ec474d60af4052abfe6952b342773b
+msgid "You can see an example in the file below."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:88
+# 1bf298be7fed4a11b9a5a8888bab7b7d
+msgid "Controlling the Vehicle"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:89
+# 48e9f60800104f3097667a7221ca47df
+msgid "This is done in 2 parts and it should be modeled according to the desired behavior. You should think of your gameplay and research appropriate functions for the input. For instance, can the vehicle reverse? jump? drift? does it turn slowly? How much time does it take to brake or get to full speed? The first part is **response to keys**. Whenever the player presses a key, you should set a value accordingly, such as increase acceleration. Example:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:104
+# e619f01421364884ba65e767a2bfad61
+msgid "The second part is to **compute the movement** according to your functions."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:116
+# 9848c72baccd4ae9806b4a96547393be
+msgid "Both should be run each frame."
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:120
+# 4899bcb7466c47aea3ae2abd4a295e5a
+msgid "Example"
+msgstr ""
+
+#: ../../../manual/game_engine/physics/object/vehicle.rst:121
+# 81b08e1980244993bcc7db6a14e65b30
+msgid "`demo_file.zip <https://dl.dropboxusercontent.com/u/3226675/blender/vehicle_controller_demo.zip>`__ (last update 9 September 2014)"
+msgstr ""
+

@@ -2,7 +2,7 @@
 SPHINXOPTS    =
 PAPER         =
 SPHINXBUILD   = sphinx-build
-BUILDDIR      = .
+BUILDDIR      = build
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -21,10 +21,10 @@ QUICKY_CHAPTERS=$(filter $(MAKECMDGOALS),$(CHAPTERS))
 $(CHAPTERS): all
 
 all: FORCE
-	# './' (input), './html/en' (output)
+	# './' (input), './html/' (output)
 	QUICKY_CHAPTERS=$(QUICKY_CHAPTERS) \
 	$(SPHINXBUILD) -b html $(SPHINXOPTS) ./manual $(BUILDDIR)/html/en
-	@echo "firefox" $(shell pwd)"$(BUILDDIR)/html/en"
+	@echo "firefox" $(shell pwd)"/$(BUILDDIR)/html/"
 
 # NOTE: PDF is giving warnings, non-trivial to fix, disable for now.
 #~ pdf: FORCE
@@ -36,11 +36,17 @@ all: FORCE
 readme: FORCE
 	rst2html readme.rst > readme.html
 
-check: FORCE
-	- python3 tools/rst_check.py > rst_check.log
+check_syntax: FORCE
+	- python3 tools/rst_check_syntax.py --long > rst_check_syntax.log
 	- @echo "Lines:" `cat rst_check.log  | wc -l`
-	- gvim --nofork -c "cfile rst_check.log" -c "cope" -c "clast"
-	- rm rst_check.log
+	- gvim --nofork -c "cfile rst_check_syntax.log" -c "cope" -c "clast"
+	- rm rst_check_syntax.log
+
+check_structure: FORCE
+	- python3 tools/rst_check_structure.py --long > rst_check_structure.log
+	- @echo "Lines:" `cat rst_check.log  | wc -l`
+	- gvim --nofork -c "cfile rst_check_structure.log" -c "cope" -c "clast"
+	- rm rst_check_structure.log
 
 gettext: FORCE
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale/pot

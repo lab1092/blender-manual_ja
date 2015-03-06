@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/data_system/introduction.rst:4
+# e8d4b9e992f045058b09d509d18f8c40
+msgid "Introduction"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:6
+# 77232688263b4dca9cbc6303e20b3b94
+msgid "Each .blend file contains a database. This database contains all scenes, objects, meshes, textures, etc. that are in the file."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:9
+# a080ebf0cd254b4983be5bd44d1138b5
+msgid "A file can contain multiple scenes and each scene can contain multiple objects. Objects can contain multiple materials which can contain many textures. It is also possible to create links between different objects."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:15
+# a9b1641ba1fd4678841e168c5f7c3fc8
+msgid "Outliner"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:17
+# 8bafa73b08dc405ab7298d8d3728289f
+msgid "You can easily inspect the contents of your file by using the *Outliner* editor, which displays all of the data in your .blend file."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:20
+# 7e7ad0d9e4a44a0f9d44799ceaf6da6e
+msgid "The *Outliner* allows you to do simple operations on objects, such as selecting, renaming, deleting, linking and parenting."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:23
+# 39398e0573194ed2ad8ef418cb5df882
+msgid ":doc:`Read more about the Outliner </editors/outliner>`"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:27
+# 7ce9013b6fc74b4480ec461701a019b3
+msgid "Users (Sharing)"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:29
+# aebc6dffea4e4447ab9d1a1589f9e7db
+msgid "Many datablocks can be shared among other datablocks - re-use is encouraged. For example, suppose you have a material for one object, named ``Glossy``. You can select a second object, for example, one that does not have a material yet. Instead of clicking *ADD NEW* for the material, click the little up-down arrow next to the *ADD NEW*, which brings up a list of existing materials. Select ``Glossy``. Now, these two objects share the same material. You will notice a \"2\" next to the name of the material, indicating that there are two users (the two objects) for this material. Other common examples include:"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:39
+# 9ce0f73543a2403da936413e27990fb2
+msgid "Sharing textures among materials."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:40
+# 6d296a5ef8af47af8e6c89fb4929ec5c
+msgid "Sharing meshes between objects (\"clones\")."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:41
+# a648252ce50b48809bb69345ecd68714
+msgid "Sharing Ipo curves between objects, for example to make all the lights dim together."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:45
+# 42616355210e4a0686f872b1cbeeabff
+msgid "Fake User"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:47
+# 90362f6f695f4b018fbdc48454ba49ca
+msgid "Remember that Blender does not save datablocks that are not linked to anything in the *current* file. If you're building a ``.blend`` file to serve as a library of things that you intend to link-to from *other* files, you'll need to make sure that they don't accidentally get deleted from the current (the library) file. Do this by giving the datablocks a \"fake user\", by pressing the *F* button next to the name of the datablock. This prevents the user count from ever becoming zero: therefore, the datablock will not be deleted. (Blender does not keep track of how many other files link to this one.)"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:58
+# b709fc9f334d42bfa840086f0f0b3b06
+msgid "Copying and Linking Objects Between Scenes"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:60
+# 96fe5dee22fe4ed5ae264e7963f42dac
+msgid "Sometimes you may want to link or copy objects between scenes. This is possible by first selecting objects you want to link or copy and then using the *Make Links* and *Make Single User* items found in *Object* menu in the 3D viewport header. Use *Make Links* to make links between scenes. To make a plain copy, you first make a link and then use *Make Single User* to make a stand-alone copy of the object in your current scene. Further information on working with scenes can be found :doc:`here </data_system/scenes>`."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:69
+# 109b8f8147ca4910a4b0fdccee9fbb56
+msgid "Appending or Linking Across Files"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:71
+# 0e2dc026c29f463491c5cf86c56b2e9b
+msgid "The content of one ``.blend`` file is easily accessed and put into your current file by using :menuselection:`File --> Append` or :menuselection:`File --> Link` To find out more about how to copy or link objects across ``.blend`` files, see :doc:`click here </data_system/linked_libraries>`."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:79
+# 0b311a84af1b45aca09a027aa2757bf2
+msgid "Pack and Unpack Data"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:81
+# 27e4ae68b2934e0cba51f70f59ed3b44
+msgid "Blender has the ability to encapsulate (incorporate) various kinds of data within the .blend file that is normally saved outside of the ``.blend`` file. For example, an image texture that is an external ``.jpg`` file can be put \"inside\" the ``.blend`` file via :menuselection:`File --> External Data --> Pack into .blend file`. When the .blend file is saved, a copy of that ``.jpg`` file is put inside the ``.blend`` file. The ``.blend`` file can then be copied or emailed anywhere, and the image texture moves with it."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:88
+# 58162b13de1b4349b82cc7c40339c2ac
+msgid "You know that an image texture is packed because you will see a little \"Christmas present gift box\" displayed in the header."
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:93
+# 2ca344eb78ad4e65bb1398d9f0feb34f
+msgid "Unpack Data"
+msgstr ""
+
+#: ../../../manual/data_system/introduction.rst:95
+# ec86933bf328464cba6f8b2545360be2
+msgid "When you have received a packed file, you can :menuselection:`File --> External Data --> Unpack into Files...`. You will be presented with the option to create the original directory structure or put the file in the ``//`` (directory where the .blend file is). Use \"original locations\" if you will be modifying the textures and re-packing and exchanging .blend files, so that when you send it back and the originator unpacks, his copies of the textures will be updated."
+msgstr ""
+

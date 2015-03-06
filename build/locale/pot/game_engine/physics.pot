@@ -1,0 +1,423 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/game_engine/physics.rst:4
+# 157707d8ac874523b5be32dd82163ed2
+msgid "Blender Game Physics"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:6
+# fd482daed818499bb3247bf913b7963a
+msgid "Blender includes advanced physics simulation in the form of the Bullet Physics Engine (`BulletPhysics.org <http://bulletphysics.org>`__). Most of your work will involve setting the right properties on the objects in your scene, then you can sit back and let the engine take over. The physics simulation can be used for Games, but also for Animation."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:12
+# 0e706783541149b784d57c0623eece79
+msgid "The Blender Game Engine (BGE) is based on Rigid-Body Physics, which differs significantly from the complementary set of tools available in the form of Soft Body Physics Simulations. Though the BGE does have a Soft Body type, it is not nearly as nuanced as the non-BGE Soft Body. The inverse is even more true: it is difficult to get the non-BGE physics to resemble anything like a stiff shape. Rigid Body Physics does not have, as an effect or a cause, any mesh deformations. For a discussion on how to partially overcome this, see: `Mesh Deformations`_."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:24
+# a16e5f0e69d9402c87ac0b3122fe1e35
+msgid "Global Options"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:26
+# 880a9b5c367c40a98620a988dafd4825
+msgid "The global Physics Engine settings can be found in the :doc:`World Properties </game_engine/world>`, which include the Gravity constant and some important engine performance tweaks."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:31
+# 7036203d11d44c55adbc948ffbe3fc78
+msgid "Object Physics"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:39
+# 612eeca0d99d45329f00956d82a43831
+msgid "Physics Type"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:43
+# 82f501c03eec4156b269c4edb4a7c151
+msgid ":doc:`No Collision </game_engine/physics/object/no_collision>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:44
+# 9d5c295400274442a7be3738dd4b7cd2
+msgid "Is not affected by the simulation nor affects other objects."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:45
+# 954bbcff1f3441928988c1b8fec8bb7d
+msgid ":doc:`Static </game_engine/physics/object/static>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:46
+# f951da78ad6b4a7fbb5324123716323f
+msgid "Participates in the simulation, affecting other objects, but is not affected by it."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:47
+# 398d4bdfd5b642b0a300cdf643a2b27b
+msgid ":doc:`Dynamic </game_engine/physics/object/dynamic>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:48
+# 0042b4dd259d4a089f85c6543b954b77
+msgid "Object that can move besides colliding and being collided with."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:49
+# 4289a5168eff40d78c1d20d01fff626d
+msgid ":doc:`Rigid Body </game_engine/physics/object/rigid_body>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:50
+# 9740dc5cf3e64d72a5ac9a14d29e9e78
+msgid "Has rigid body dynamics."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:51
+# bc2f51c10fd14f28827b9e9bf231688d
+msgid ":doc:`Soft Body </game_engine/physics/object/soft_body>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:52
+# 56875b692bc94b56a971485e9ada72a2
+msgid "Soft body dynamics."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:53
+# 79095a1233074cd1b1d8868dcb0e1965
+msgid ":doc:`Character Controller </game_engine/physics/object/character>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:54
+# e2a1e3dec135443fae1e6a0429ac61a9
+msgid "Character controller."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:55
+# ade6643c237f41bfb51e4cb19f4c5ebc
+msgid ":doc:`Vehicle Controller </game_engine/physics/object/vehicle>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:56
+# 6c88180970904cf980059bf11e30fc93
+msgid "Vehicle controller."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:57
+# 476a07807ab24c4e8bed9901bca930ae
+msgid ":doc:`Occluder </game_engine/physics/object/occluder>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:58
+# 8b6f8006838c4828a5edf7015ede060d
+msgid "Prevents calculation of rendered objects (not their physics, though!)."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:59
+# 6978ff1e03e74085862db68345c4d6cb
+msgid ":doc:`Sensor </game_engine/physics/object/sensor>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:60
+# 77657c9d745245978ce82df987ea3e05
+msgid "Detects presence without restituting collisions."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:63
+# ce96387fb7434d6094c99593a6718b9b
+msgid ":doc:`Navigation Mesh </game_engine/physics/object/navigation_mesh>`"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:62
+# 57bb9c0a90a644108dfa45e94004a838
+msgid "To make pathfinding paths. Useful for Artificial Intelligence."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:66
+# a525b7259da54a0fa7fd058e97f36af7
+msgid "Material Physics"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:67
+# 09d4442b13df44f0a3f5a0433af4005e
+msgid "Physics can be associated with a material on the material properties tab. These are settings that one would normally associate with a material, such has it's friction and they are meant to be used in conjunction with the object physics settings, not replace it."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:74
+# 70517fd5dfb74f27bf14e251ed3a73b8
+msgid "Constraints"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:76
+# f4674a0b6739478f917d677217e75720
+msgid "It is imperative to understand that the Blender Constraints generally don't work inside the BGE. This means interesting effects such as *Copy Rotation* are unavailable directly."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:79
+# 9af2b4c23b72464faf5411070bef2855
+msgid "Your options include:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:81
+# 863fded3188f4d20a0781ff3de1f5da4
+msgid ":doc:`Parenting </modeling/objects/groups_and_parenting>` - But not Vertex Parenting."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:82
+# 8d953caa581841f1b05805f2a86cd179
+msgid ":doc:`Rigid Body Joint </rigging/constraints/relationship/rigid_body_joint>` - This is the one Constraint that you can set up through the UI that works in the BGE. It has several options, and can be very powerful - see ITS page for a detailed description and demo .blend. Don't forget that you can loop through objects using ``bpy`` instead of clicking thousands of times to set up chains of these Constraints."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:87
+# c545be3f5a3b46fd87d93c39fcd2b777
+msgid "Rigid Body Joints on the Fly - You can add/remove them after the BGE starts by using ``bge.constraints.createConstraint()``. This can be good either to simply automate their setup, or to truly make them dynamic. A simple demo can be viewed in: `BGE-Physics-DynamicallyCreateConstraint.blend <http://wiki.blender.org/index.php/Media:BGE-Physics-DynamicallyCreateConstraint.blend>`__"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:92
+# 4c2c3482b63a4cab8fdb426105fa85b0
+msgid "`Python Controllers </game_engine/logic/controllers/python>`__ - As always, in the BGE, you can get the most power when you drop into Python and start toying with the settings directly. For instance, the *Copy Rotation* mentioned above is not hard -- All you have to do is something to the effect of ``own.worldOrientation = bge.logic.getCurrentScene().objects['TheTargetObject'].worldOrientation``"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:100
+# 63ef3417d63242738cace0a79164a7d8
+msgid "Visualizing Physics"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:104
+# b04c88a8a8684aaf85f19519516e3ad4
+msgid "Go to :menuselection:`Game --> Show Physics Visualization` to show lines representing various attributes of the Bullet representation of your objects. Note that these might be easier to see when you turn on Wireframe Mode (:kbd:`Z`) before you press :kbd:`P`. Also note that you can see how the Bullet triangulation is working (it busts all your Quads to Tris at run-time, but the BGE meshes are still quads at run-time)."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:112
+# 9aebc6c6b72041a3a3b24676b0cf54f4
+msgid "**RGB/XYZ Widget** - Representing the object's Local Orientation and Origin."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:113
+# 1a6097cc7cc34dad9e74d993cdf6ec9d
+msgid "**Green** - \"sleeping meshes\" that are not moving, saving calculations until an external event \"wakes\" it."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:114
+# bca8534ce9a74c9fb153935c606a3beb
+msgid "**White** - White lines represent active bounding meshes at are undergoing physics calulations, untill such calculations are so small that the object is put to rest. This is how you can see the effects of the *Collision Bounds*. - **Thick, or Many White Lines** - A compound collision mesh/meshes."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:118
+# ec747eaf197042908d17e9346677dbed
+msgid "**Violet** - Bounding meshes for Soft bodies."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:119
+# 8e6406d470e84cb8929e285883c499ab
+msgid "**Red** - The Bounding Box, the outer boundary of object. It is always aligned with global X Y and Z, and is used to optimize calculations. Also represents meshes that have been forced into \"no sleep\" status."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:122
+# 703b14ad45654c0d862fe9e66a39c589
+msgid "**Yellow** - Normals."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:123
+# 1f8593970d374deea40103b2b24e07d0
+msgid "**Black** - When in wireframe, this is your mesh's visual appearance."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:125
+# 17098445ae39480c9a264f1c6a703a3d
+msgid "If you want finer-grained control over the display options, you can add this as a Python Controller and uncomment whichever pieces you want to see:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:157
+# 93d1cb192def42ef865ff3244554a8a9
+msgid "Show Framerate and Profile"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:161
+# 139d00e0272c48128deb2a9aa8f61611
+msgid "A shot of `Manual-BGE-Physics-DancingSticks.blend <http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-DancingSticks.blend>`__ with [Game --> Show Framerate and Profile] enabled"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:166
+# 5132532a9b4d4535b6e1a89261d5a9de
+msgid "If you enable :menuselection:`Game --> Show Framerate and Profile`, it will put some statistics in the upper-left area of the game window."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:169
+# 5c3805b77f1b437c88029911dfe0c4c1
+msgid "These can be very informative, but also a bit cryptic. Moguri has elaborated on their meanings, for us: http://mogurijin.wordpress.com/2012/01/03/bge-profile-stats-and-what-they-mean/"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:175
+# 87e8dd017ba5436b90e0c0ba94f6393e
+msgid "Mesh Deformations"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:177
+# c1d6679c9d7d4d88be185a55d373c4db
+msgid "As mentioned above, Rigid Body physics do not affect mesh deformations, nor do they account for them in the physics model. This leaves you with a few options:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:182
+# 0316689a37a84ba79469eae5decfaca3
+msgid "Soft Bodies"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:184
+# 5aadb7a38df54b719f979509a9a26c15
+msgid "You can try using a :doc:`Soft Body </game_engine/physics/object/soft_body>`, but these are fairly hard to configure well."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:189
+# 363e51f8ce884f11baded25b1cf047fc
+msgid "Actions"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:191
+# 0a4508acbdb2409abf8ef2b94e5f62b7
+msgid "To use an :doc:`Action Actuator </game_engine/logic/actuators/action>` to do the deformation, you have to make a choice. If you use Shapekeys in the Action, you will be fine as far as the overall collisions (but see below for the note on ``reinstancePhysicsMesh()``). The mesh itself is both a display and a physics mesh, so there is not much to configure."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:196
+# befcf4348b114d8caa3740106e696cf6
+msgid "To use an Armature as the deformer will require a bit of extra thought and effort. Basically the Armature will only deform a mesh if the Armature is the parent of that mesh. But at that point, your mesh will lose its physics responsivenes, and only hang in the air (it's copying the location/rotation of the Armature). To somewhat fix this you can then parent the Armature to a collision mesh (perhaps a simple box or otherwise very-low-poly mesh). This \"Deformation Mesh\" will be the physics representative, being type: Dynamic or Rigid Body, but it will be set to Invisible. Then \"Display Mesh\" will be the opposite set to type: No Collision, but visible. This still leaves us with the problem mentioned in the previous paragraph."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:207
+# 28bbeaf4936047848a2ab4bf5c060823
+msgid "When you deform a display mesh, it does not update the corresponding physics mesh. You can view this evidently when you enable physics visualization (`Visualizing Physics`_) - the collision bounds will remain exactly as when they began. To fix this, you must call ``own.reinstancePhysicsMesh()`` in some form. Currently this only works on *Triangle Mesh* bounds, not *Convex Hull*. We have prepared a demonstration file in `Manual-BGE-Physics-DancingSticks.blend <http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-DancingSticks.blend>`__. Note that we had to increase the :menuselection:`World --> Physics --> Physics Steps --> Substeps` to make the collisions work well. The more basic case is the case the Shapekeyed Action, which you can see in the back area of the scene. Since it is the only object involved, you can call ``reinstancePhysicsMesh()`` unadorned, and it will do the right thing."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:221
+# e7f2c9714da049d7823a408a5afd5ef2
+msgid "The more complicated case is the :menuselection:`Collision Mesh --> Armature --> Display Mesh` cluster, which you can see in the front of the scene. What it does in the .blend is call ``reinstancePhysicsMesh(viz)``, that is, passing in a reference to the visual mesh. If we tried to establish this relationship without the use of Python, we would find that Blender's dependency check system would reject it as a cyclic setup. This is an example of where Blender's checking is too coarsely-grained, as this circle is perfectly valid: the grandparent object (the Collision Mesh) controls the location/rotation, while the middle object (the Armature) receives the animated Action, where the child (the Display Mesh) receives the deformation, and passes that on up to the top, harmlessly. Something to note is that the Collision Mesh is merely a plane -- that is all it requires for this, since it will be getting the mesh data from ``viz``."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:237
+# 6e1468c136bb47369a04e58bf6aa1035
+msgid "Ragdolls"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:239
+# 4eb25dedb0b9400e8af88244f1d42b88
+msgid "A third option is to create your items out of many sub-objects, connected together with Rigid Body Joints or similar. This can be quite a bit more work, but the results can be much more like a realistic response to collisions. For an Add-on that can help you out in the process, check out the `Blender Ragdoll Implementation Kit <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Game_Engine/BRIK_ragdolls>`__."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:249
+# 530f0ecbe5a44ff688e8650685d10429
+msgid "Digging Deeper"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:251
+# 576c8c6d71c54deabb5160f754027ca0
+msgid "Sometimes you will want to look at:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:253
+# 89ce4c9a7f624e76a73980b32a7be33e
+msgid "The main Bullet Physics page - http://bulletphysics.org/wordpress/"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:254
+# fc77606eb58a446c91a943b5ef52dd8a
+msgid "The Bullet Wiki - http://www.bulletphysics.org/mediawiki-1.5.8/index.php?title=Documentation"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:255
+# 3e007b0d9db94106922f21cdf69e7c25
+msgid "The Bullet API Docs - http://www.continuousphysics.com/Bullet/BulletFull/index.html"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:256
+# 038c5472827f4a5cbd337e2207124cf3
+msgid "The Bullet Forums - http://www.bulletphysics.org/Bullet/phpBB3/"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:260
+# 5bd815e16b7849dd8eff49c8fc885ac0
+msgid "Recording to Keyframes"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:262
+# 0974b8877e1145548e366e954584e4dc
+msgid "Beyond gaming, sometimes you wish to render a complex scene that involves collisions, multiple forces, friction between multiple bodies, and air drag or even a simple setup that is just easier to achieve using the realtime physics."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:266
+# 499e18330a24474ebc42d1511e8b79ac
+msgid "Blender provides a way to ''bake'' or ''record'' a physics simulation into keyframes allowing it then to be played as an action either for animation or games. Keep in mind that the result of this method is a recording, no longer a simulation. This means that the result is completely deterministic (the same everytime it is run) and unable to interact with new objects that are added to the physics simulation after it was recorded. This may, or not, be desired according to the situation."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:276
+# e3168cf8eb0145acb8072f6a1f93e770
+msgid "Menu to record Keyframes to the Dopesheet."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:278
+# 5e58e87bb11a4333ac04b17213ea3a2f
+msgid "All you have to do to achieve this effect is go to the Info Editor (the bar at the top of the window) :menuselection:`Game --> Record Animation`, and it will lock away your keyframes for use in *Blender Render* mode. You can go back to the 3D view and hit :kbd:`Alt-A` to play it back, or :kbd:`Ctrl-F12` to render it out as an animation."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:284
+# fdec8b4261b84a1bb1660b316db95efb
+msgid "Note that you can also use Game Logic Bricks and scripting. Everything will be recorded."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:288
+# f098152a8dfc4c169df9c840daa412b6
+msgid "Keyframe Clean-up"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:292
+# c97233ae1d0948de80a591c3cb96392e
+msgid "Resulting recorded animation"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:294
+# 2fdf91d3b2e44a62afc7094d27b55bcd
+msgid "*Record Animation* keys redundant data (data that was did not change relative to the last frame). Pressing :kbd:`O` while in the *DopeSheet* will remove all superfluous keyframes. Unwanted channels can also be removed."
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:301
+# 7b2ef9cc611e4ca3b63e90d06848a2b6
+msgid "Cleaned up recording"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:305
+# 1cebfff67c7f48978053d5ea44dc4c27
+msgid "Exporting"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:308
+# d75b6107ab1b4f4ab618e1b3e4df262b
+msgid ".bullet / Bullet compatible engines"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:310
+# 9de2ed9a89494ec09c8e03d335796b9e
+msgid "You can snapshot the physics world at any time with the following code:"
+msgstr ""
+
+#: ../../../manual/game_engine/physics.rst:319
+# a595caaf247548aeb1ee3466a1cded2b
+msgid "This will allow importing into other Bullet-based projects. See the `Bullet Wiki on Serialization <http://bulletphysics.org/mediawiki-1.5.8/index.php/Bullet_binary_serialization>`__ for more."
+msgstr ""
+

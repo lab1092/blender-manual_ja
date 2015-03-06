@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/post_process/edges.rst:7
+# 62dbdae346354d99a4303b5cee1a8b0f
+msgid "Edge (Toon) Rendering"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:12
+# 2d379e87354d4d5c8c544564223f3752
+msgid "A scene with Toon materials."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:15
+# b1602721586141e9bc2de5f194c351fb
+msgid "Blender's toon shaders can give your rendering a comic-book-like or manga-like appearance, affecting the shades of colors. The effect is not perfect since real comics and manga also usually have china ink outlines. Blender can add this feature as a post-processing operation."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:22
+# 8a025526c63c47b6b2f9089cb44c2477
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:26
+# 92bbcd86b8604e6a900abe6c605d47ec
+msgid "Toon edge buttons (F10)."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:31
+# 388f9cabc8b84622b391667af8f0cf3a
+msgid "Edge"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:30
+# a86af6455c9b4a2186c11c27838035ae
+msgid "This makes Blender search for edges in your rendering and add an 'outline' to them."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:35
+# d017e0139710461d8897eca71bda392b
+msgid "Toon edge settings (F10)."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:38
+# 1193c3dd8bf445cba8cc486c9dd8ae75
+msgid "Before repeating the rendering it is necessary to set some parameters:"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:43
+# ef87bb296b8b4a07a74551b852e65c01
+msgid "Threshold"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:41
+# dc1b9b93e8184d109a9994f758d4ddb3
+msgid "The threshold of the angle between faces for drawing edges, from 0 to 255. A value of 10 would just give outline of object against the background, whereas higher settings start to add outlines on surface edges, starting with sharper angles. At maximum intensity, Edge will even faintly display geometry subsurf edge lines in areas of imperfect smoothing."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:47
+# 1c12a1840a1f4a66a70fecc03951fdeb
+msgid "Color / R/G/B"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:46
+# 2b71474d14494a779a3fb02332ed76d7
+msgid "The color of the rendered edges (black by default). Click on the swatch to see the color picker"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:50
+# 1e8c92dc47b94bbf95fc6ec597ba0898
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:55
+# 4768adfd772a411e821380ce9d36abcc
+msgid "Scene re-rendered with toon edge set."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:61
+# 1f19d015859c4ffb89573df7ab0de869
+msgid "Post-processing Edge and Renderlayers"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:64
+# d75aeebe341a4170be99ee8706732573
+msgid "It is possible to separate out the edge layer using a render layer dedicated to that purpose. The alpha channel is 0 where there is no edge, and 1 where the edge is. By separating out the edge layer, you can blur it, change its color, mask it, etc. The image to the right shows how to do this. I created an Edge render layer that only has the Sky and Edge layers (I included sky so that we get the world color later on in the composite output). The other render layer omits the Edge layer, so it returns just the normal image. On the output panel I enabled Edge with a width of 10 in black. I run that layer through a blur node. Using the Alphaover node, I then composite the cube on top of the blurred edge. The result gives a soft-shadow kind of effect. Note that Premultiply is set because the Edge image already has an alpha of 1.0 set."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:79
+# 933290482328444299ff8589bc00b42e
+msgid "Dithering"
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:81
+# 6e198eb6297a4c068c36427f136fde81
+msgid "Dithering is a technique for blurring pixels to prevent banding that is seen in areas of gradients, where stair-stepping appears between colors. Banding artifacts are more noticeable when gradients are longer, or less steep. Dithering was developed for graphics with low bit depths, meaning they had a limited range of possible colors."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:87
+# 0014e9d2065b445c934ea52132842f25
+msgid "Dithering works by taking pixel values and comparing them with a threshold and neighboring pixels then does calculations to generate the appropriate color. Dithering creates the perceived effect of a larger color palette by creating a sort of visual color mixing. For example, if you take a grid and distribute red and yellow pixels evenly across it, the image would appear to be orange."
+msgstr ""
+
+#: ../../../manual/render/post_process/edges.rst:93
+# 737a73014fe940bb868b907b588f5590
+msgid "The *Dither* value ranges from 0 to 2."
+msgstr ""
+

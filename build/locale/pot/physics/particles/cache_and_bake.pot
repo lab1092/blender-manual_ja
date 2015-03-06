@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:10
+# 78feab7c634844daae7ac1ed9be9d974
+msgid "Cache"
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:14
+# 716d88fb97bd4ff796ffeed852fa0eec
+msgid "Image 4: Cache panel for particles."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:17
+# 1475f533a2244ebd8b7bb964e06adf1a
+msgid "*Emitter* systems use a unified system for caching and baking (together with softbody and cloth). The results of the simulation are automatically cached to disk when the animation is played, so that the next time it runs, it can play again quickly by reading in the results from the disk. If you *Bake* the simulation the cache is protected and you will be asked when you're trying to change a setting that will make a recalculating necessary."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:24
+# 7b5da0ffc09b4e06b0885492ec8bea39
+msgid "Beware of the *Start* and *End* Settings"
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:26
+# 32e4b3d615114e2eb58ea0fc45de0113
+msgid "The simulation is only calculated for the positive frames in-between the *Start* and *End* frames of the *Bake* panel, whether you bake or not. So if you want a simulation longer than 250 frames you have to change the *End* frame!"
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:32
+# e6f0dd18c2bd49f7917c036032e78f70
+msgid "Caching"
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:34
+# d73d30adaa584cd2bb08b7d5887360e6
+msgid "As animation is played, each physics system writes each frame to disk, between the simulation start and end frames. These files are stored in folders with prefix ``blendcache``, next to the ``.blend`` file. Note that for the cache to fill up, one has to start playback before or on the frame that the simulation starts."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:38
+# a65d0dd9b82646d2ba7f867bbe85b3c1
+msgid "The cache is cleared automatically on changes - but not on all changes, so it may be necessary to free it manually e.g. if you change a force field."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:40
+# 584b86fa29764f7799f2cf9d344c9ba2
+msgid "If it is impossible to write in the subdirectory there will be no caching."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:41
+# 18bae50a55b64001934dfbdc593404fc
+msgid "The cache can be freed per physics system with a button in the panels, or with the :kbd:`Ctrl-B` shortcut key to free it for all selected objects."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:43
+# aeaf37155c2040e382b6914adfc1ed31
+msgid "If the file path to the cache is longer than what is possible with your operating system (more than 250 characters for example), strange things might happen."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:48
+# c2aabd39dcc841588288ab87cbfa1058
+msgid "Baking"
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:50
+# 1cf0e92ced33435d8457225e363062e9
+msgid "The system is protected against changes after baking."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:51
+# d4e3eb56f0314a9d8c322d57a615e0f8
+msgid "The *Bake* result is cleared also with :kbd:`Ctrl-B` for all selected objects or click on *Free Bake* for a singular particle system."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:53
+# dfa94493e3e04b5aa930d4fa89774679
+msgid "If the mesh changes the simulation is not calculated anew."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:54
+# 2d20fbc6af66401282bd622e7bbb58a0
+msgid "Sorry: no bake editing for particles like for softbodies and clothes."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:57
+# 2eeb1b50d4b44d61b6efcb516961781c
+msgid "Two notes at the end:"
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:59
+# 99db3ceec425489496b452f475304056
+msgid "For renderfarms, it is best to bake all the physics systems, and then copy the blendcache to the renderfarm as well."
+msgstr ""
+
+#: ../../../manual/physics/particles/cache_and_bake.rst:61
+# 22a31cda6ac54ee89ee59251b5086875
+msgid "Be careful with the sequence of modifiers in the modifier stack (as always). You may have a different number of faces in the 3D window and for rendering (e.g. when using subdivision surface), if so, the rendered result may be very different from what you see in the 3D window."
+msgstr ""
+

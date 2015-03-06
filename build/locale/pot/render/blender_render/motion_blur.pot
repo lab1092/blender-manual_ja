@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/motion_blur.rst:4
+# 4c05c7532f854e089dbfcc367f2213b7
+msgid "Motion Blur"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:6
+# 72534839dcf74f65884a174e32148b9e
+msgid "Blender's animations are by default rendered as a sequence of *perfectly still* images. While great for stop-motion and time-lapses, this is unrealistic, since fast-moving objects do appear to be blurred in the direction of motion, both in a movie frame and in a photograph from a real-world camera."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:11
+# c9a8ed0da2eb4134945c32003ef25461
+msgid "Blender has two ways to achieve motion blur:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:15
+# 71a666fe81b548a4877e9b377fb9ea4e
+msgid "Sampled Motion Blur"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:17
+# 68be0003e8114d768c62d607c90cd269
+msgid "Blender can be made to render the current frame and some more 'virtual' frames in between it and the next frame, then merge them all together to obtain an image where moving objects are 'blurred'."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:20
+# e5bad9d62f094eeca9380998d42cb8a5
+msgid "This method is slow, but produces good results. It can be activated in the *Sampled Motion Blur* panel of the render settings. This kind of motion blur is done during the render."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:27
+# d13ad163c8e14b7e82250f1233bc4748
+msgid "Motion Samples"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:25
+# 3eed81f58b7e4489a34686c3db534431
+msgid "Set the number of samples to take for each frame.  The higher the samples, the smoother the blur effect, but the longer the render, as each virtual intermediate frame has to be rendered."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:32
+# d689ada1cd9b4843a871f1b258625e3a
+msgid "Shutter"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:30
+# fa47036c80404ea7ababa9638289c953
+msgid "Time (in frames) the shutter is open.  If you are rendering at 24 fps, and the Shutter is set to .5, the time in between frames is 41.67 ms, so the shutter is open for half that, 20.83 ms."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:36
+# e1c5df1363cc42f5905661c545e559ff
+msgid "Samples are taken only from the *next* frame, not the previous one. Therefore the blurred object will appear to be slightly ahead of how it would look without motion blur."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:41
+# 01b6db282e76413abb2d18267081bceb
+msgid "Vector Blur"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:43
+# 86814715dc2841ce8c64f5d01567ae1b
+msgid ":doc:`Vector Blur </composite_nodes/types/filter/vector_blur>` is faster but sometimes has unwanted side-effects which are sometimes difficult to avoid."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:46
+# bec57677d7d14fd38a734f80384e973f
+msgid "Vector blur is a process done in compositing (post-render time), by rendering the scene without any blur, plus a pass that has movement information for each pixel. This information is a vector map which describes a 2d or 3d direction and magnitude. The compositor uses that data to blur each pixel in the given direction."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:52
+# f47d346dcd054b2f92a378980aadf41d
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:54
+# 1807777d1d7040439614bcbd12a1a4b5
+msgid "To better grasp the concept, let's assume that we have a cube 2 units wide, uniformly moving 1 unit to the right at each frame."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:57
+# a548a482a2814bb5be1f368fe92e0ede
+msgid "*Image 1* shows a render of frame 1 without Motion Blur; *Image 2* shows a render of frame 2. The scale beneath the cube helps in appreciating the movement of 1 Blender unit."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:66
+# 5d413c950d2f48448777f65158db8f65
+msgid "Image 1. Frame 1 of moving cube without Motion Blur."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:71
+# 13da9947b6784984ae8b160f8ded3ac8
+msgid "Image 2. Frame 2 of moving cube without Motion Blur."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:78
+# 7351a56d1563417c9977efc90c4ef9fc
+msgid "*Image 3* shows the rendering of frame 1 when Sampled Motion Blur is enabled and 8 'intermediate' frames are computed. *Shutter* is set to 0.5 - thus the image 8 samples are rendered between frame 1 and halfway to frame 2."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:81
+# 65f9cd9f9e4845a0a42ff4790368c72f
+msgid "*Image 4* and *Image 5* show the effect of increasing shutter values. A value greater than 1 is physically impossible in a real-world camera, but can be used to exaggerate the effect."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:94
+# 62df5974bea345119bf507676f31f76d
+msgid "Better results than those shown can be obtained by using higher samples than 8, but, of course, since as many *separate* renders as samples are needed, a Motion Blur render takes that many times more time than a non-Motion Blur one."
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:100
+# bc9bb4da51ac43b7b62b1c3f95eaa7ac
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/render/blender_render/motion_blur.rst:102
+# 9b733a62380a4b9abdf6cbc5aa499234
+msgid "Sampled Motion Blur can be used as an additional form of :doc:`Anti-Aliasing </render/internal/antialiasing>`, since aliasing artifacts are computed differently for each sample and averaged together at the end."
+msgstr ""
+

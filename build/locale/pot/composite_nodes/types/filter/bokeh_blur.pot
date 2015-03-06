@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:4
+# 6fb08497201d4247a3def08ce8dd5fc0
+msgid "Bokeh Blur"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:6
+# 5b1a22f450434b6ca5456743c420e2dd
+msgid "The Bokeh Blur node generates a bokeh type blur similar to Defocus. Unlike defocus an in-focus region is defined in the compositor. There is also more flexibility in the type of blur applied through the :doc:`Bokeh Image</composite_nodes/types/input/bokeh_image>` node."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:11
+# 2dfb1016a5a44a0a9649d23b897eaee4
+msgid "Several performance optimizations are also available such as OpenCL support, calculation area restriction and masking."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:16
+# 0864067c7be642d2901c6df02230e351
+msgid "Sockets"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:19
+# 164ba03f23cf42c2ba1d7ab96d1ad10c
+msgid "Max blur"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:19
+# d94abe1a7e914231ab7f3437b5d826d1
+msgid "Max blur is intended to act as an optimization tool by limiting the number of pixels across which the blur is calculated."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:21
+# 46099e4613044df6907d94afbc65b01e
+msgid "Bokeh"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:22
+# c0cb0bf045d340d68fbe644aeacb3ced
+msgid "This is an input for the :doc:`Bokeh Image</composite_nodes/types/input/bokeh_image>` node."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:25
+# bee8e06af5e94214809d8c673d89c430
+msgid "Size"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:24
+# 4ff410056a9640679f77ed0ef13d02a1
+msgid "Size controls the amount of blur. Size can either be a single value across the entire image or a variable value controlled by an input image. In order to use the latter the Variable Size option must be selected. See the examples section below for more on how to use this."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:33
+# 97cb1d2b03234a94a55fce9d49e8abae
+msgid "Bounding Box"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:28
+# a061e5d0574f4521ab22f5d4f7bd9251
+msgid "This can be used with a :doc:`Box Mask</composite_nodes/types/matte/box_mask>` matte node or with a :doc:`Mask</composite_nodes/types/input/mask>` input node to restrict the area of the image the blur is applied to. This could be helpful, for example, when developing a node system by allowing only a small area of the image to be filtered thus saving composite time each time adjustments are made."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:36
+# 2f42bcc46cd84da7b52f8a2eb467abde
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:38
+# e4350ef7439f4859958f465bce9fa4e2
+msgid "Three examples of how the size input may be used follow."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:40
+# 9f30d77e45724eb0bd6b965c6f682ad0
+msgid "An :doc:`ID masked</composite_nodes/types/converter/id_mask>` alpha image can be used so that a background is blurred while foreground objects remain in focus. To prevent strange edges the :doc:`Dilate node</composite_nodes/types/filter/dilate_erode>` should be used."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:44
+# c980a4ae54424f49ac7ddbbdf0ea4dee
+msgid "The Z pass can be visualized using a :doc:`Map Value</composite_nodes/types/vector/map_value>` node and :doc:`ColorRamp</composite_nodes/types/converter/color_ramp>` node as described in :doc:`Render Layers</composite_nodes/types/input/render_layers>` . A *multiply* :doc:`Math</composite_nodes/types/converter/math>` node can be used following the color-ramp so that a blur value greater than 1 is used for objects outside the focal range."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/filter/bokeh_blur.rst:54
+# ba8996fe670d47c0904baee1f92d7b3e
+msgid "A manually created greyscale image can be used to define the sharp and blurry areas of a pre existing image. Again, a *multiply* node can be used so that a blur value greater than 1 is used."
+msgstr ""
+

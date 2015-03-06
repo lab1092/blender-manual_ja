@@ -1,0 +1,233 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/game_engine/camera.rst:4
+msgid "Camera"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:22
+msgid "To avoid camera distortion"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:24
+msgid ""
+"Always zoom the view in until the camera object fills the entire viewport."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:28
+msgid "Default Camera"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:30
+msgid ""
+"The default camera view is taken from the latest 3D viewport view, at a "
+"distance equivalent to the viewer. This means that if the normal 3D view is "
+"active the scene does not change when the Game Engine is started."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:36
+msgid "Camera Object"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:44
+msgid "Parent Camera to Object"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:49
+msgid ""
+"Note that if your object has any rotations then the camera will also have "
+"those rotations. To avoid this use \"Parent to Vertex\" (see below)."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:54
+msgid "Parent to Vertex"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:64
+msgid ""
+"Now the camera will follow the object and it will maintain its rotation, "
+"while the object rotates."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:69
+msgid "Object as a Camera"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:71
+msgid ""
+"Any object may also become a camera with whatever properties are set for the"
+" object."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:80
+msgid "Camera Lens Shift"
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:82
+msgid ""
+"In the Blender interface, there is an option to shift the camera view on the"
+" x/y plane of the view. It is comparable to lens shift in video projectors "
+"that usually shift the image up along the Y axis. So for example, when you "
+"put the beamer on a table it does not project half of the image on the "
+"table."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:88
+msgid ""
+"Unfortunately, this parameter is not taken in account by the Game Engine."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:90
+msgid ""
+"To manipulate the projection we can then directly modify the camera "
+"projection matrix in Python."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:106
+msgid ""
+"Here in field of view units are shiftx and shifty. So for example, for "
+"shifting the view up half a screen shifty is set to 0.5."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:109
+msgid ""
+"Note that a camera's projection_matrix attribute may not be set until after "
+"initialization scripts are executed and running this code immediately after "
+"the game starts will mess up the projection matrix."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:56
+msgid ""
+"The easiest way to accomplish this is to select your object and :kbd:`Tab` "
+"to *Edit mode*. Now select the vertex and :kbd:`Tab` back to *Object* mode."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:60
+msgid ""
+"Next, without any objects selected, select the camera and, holding the "
+":kbd:`Shift` key, select the object. :kbd:`Tab` into *Edit mode*, and "
+":kbd:`Ctrl-P` and choose *Make vertex parent*."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:73
+msgid ""
+"To make an object the camera, in *Object* mode select the object and press "
+":kbd:`Ctrl-Numpad0` on the numpad."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:76
+msgid "To reverse it, just select the camera and :kbd:`Ctrl-Numpad0` again."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:6
+msgid ""
+"The Game Engine camera is in many ways similar to the Camera in the normal "
+"Blender Render system, and is created, parameterized and manipulated in "
+"similar ways. However because of its use as a real-time device, the Game "
+"Engine camera has a number of additional features - it may be used as not "
+"only as a static camera, but also as a moving device with its default "
+"characteristics (ie. with its own programmed moves), or it may track another"
+" object in the game. Furthermore, any game object may be used as a camera; "
+"the view is taken from the object's origin point. Lastly, it may be given "
+"special capabilities such as Stereo vision, Dome visualisation etc. which "
+"have special relevance to game technology."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:16
+msgid ""
+"When you start the Game Engine, the initial camera view is taken from the "
+"latest 3D View. This may be either a selected camera object or the default "
+"camera (see below). Thus to start the game with a particular camera, you "
+"must select the camera and press :kbd:`Numpad0` before starting the Game "
+"Engine."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:38
+msgid ""
+"The Camera object in the Game Engine follows much the same structure as the "
+"conventional Blender camera - see :doc:`Camera </render/camera/index>` for "
+"details of how to set up, manipulate and select a camera. The following "
+"sections show some of the special facilities available in BGE cameras."
+msgstr ""
+
+#: ../../../manual/game_engine/camera.rst:46
+msgid ""
+"The camera will follow the object. First select the camera and then select "
+"the object. Next :kbd:`Ctrl-P` --> *Make Parent*."
+msgstr ""
+
+#~ msgid ""
+#~ "The Camera object in the Game Engine follows much the same structure as the "
+#~ "conventional Blender camera - see :doc:`Camera </render/camera>` for details"
+#~ " of how to set up, manipulate and select a camera. The following sections "
+#~ "show some of the special facilities available in BGE cameras."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The camera will follow the object. First select the camera and then select "
+#~ "the object. Next :kbd:`Ctrl-P` → *Make Parent*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Game Engine camera is in many ways similar to the Camera in the normal "
+#~ "Blender Render system, and is created, parameterized and manipulated in "
+#~ "similar ways. However because of its use as a real-time device, the Game "
+#~ "Engine camera has a number of additional features - it may be used as not "
+#~ "only as a static camera, but also as a moving device with its default "
+#~ "characteristics (ie. with its own programmed moves), or it may track another"
+#~ " object in the game.  Furthermore, any game object may be used as a camera; "
+#~ "the view is taken from the object's origin point. Lastly, it may be given "
+#~ "special capabilities such as Stereo vision, Dome visualisation etc. which "
+#~ "have special relevance to game technology."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you start the Game Engine, the initial camera view is taken from the "
+#~ "latest 3D View. This may be either a selected camera object  or the default "
+#~ "camera (see below). Thus to start the game with a particular camera, you "
+#~ "must select the camera and press :kbd:`Numpad0` before starting the Game "
+#~ "Engine."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you start the Game Engine, the initial camera view is taken from the "
+#~ "latest 3D View. This may be either a selected camera object  or the default "
+#~ "camera (see below). Thus to start the game with a particular camera, you "
+#~ "must select the camera and press :kbd:`pad0` before starting the Game "
+#~ "Engine."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The camera will follow the object. First select the camera and then select "
+#~ "the object. Next :kbd:`ctrl-P` → :guilabel:`Make Parent`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The easiest way to accomplish this is to select your object and :kbd:`Tab` "
+#~ "to :guilabel:`Edit mode`. Now select the vertex and :kbd:`Tab` back to "
+#~ ":guilabel:`Object` mode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Next, without any objects selected, select the camera and, holding the "
+#~ ":kbd:`Shift` key, select the object. :kbd:`Tab` into :guilabel:`Edit mode`, "
+#~ "and :kbd:`ctrl-P` and choose :guilabel:`Make vertex parent`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To make an object the camera, in :guilabel:`Object` mode select the object "
+#~ "and press :kbd:`ctrl-pad0` on the numpad."
+#~ msgstr ""
+
+#~ msgid "To reverse it, just select the camera and :kbd:`ctrl-pad0` again."
+#~ msgstr ""

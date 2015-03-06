@@ -1,0 +1,764 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/physics/force_fields.rst:6
+# 1e632daa682e4bff9a275f8ab1523ce0
+msgid "Force Fields"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:8
+# 4f041d006c1145a2abb92a0c2e818596
+msgid "Force Fields offer a way to add extra movement to dynamic systems. :doc:`Particles </physics/particles/index>`, :doc:`Soft Bodies </physics/soft_body/index>`, `Rigid Bodies <http://wiki.blender.org/index.php/User:Sergof/GSoC2012/Documentation>`__ and :doc:`Cloth objects </physics/cloth>` can all be affected by forces fields. Force Fields automatically affect everything. To remove a simulation or particle system from their influence, simply turn down the influence of that type of Force Field in its Field Weights panel."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:17
+# dfa88e84fa9841b5b33a95967eb9cd1c
+msgid "All types of objects and particles can generate fields, but only curve object can bear *Curve Guides* fields."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:19
+# 122c22e8895647858b29b6d76a85cd32
+msgid "Force Fields can also be generated from particles. See :doc:`Particle Physics </physics/particles/physics/index>`"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:21
+# e1e57c4062a642119bba70323c63a173
+msgid "The objects need to share at least one common layer to have effect."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:23
+# 883b690b836d46a094aa716d49248b5e
+msgid "You may limit the effect on particles to a group of objects (see the :doc:`Particle Physics </physics/particles/physics/index>` page)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:28
+# 3cc00f7316bb49db991eed10acc17645
+msgid "Creating a Force Field"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:30
+# 0a9ab25f5d184efc9babfd86b759ef49
+msgid "Reference"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:38
+# e957a218da2747e08cbf12358314fbf3
+msgid "To create a single Force Field, you can select :menuselection:`Add --> Force Field` and select the desired force field. This method creates an Empty with the force field attached."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:42
+# 0a89c2320385474ea349a32812e1b92c
+msgid "To create a field from an existing object you have to select the object and change to the *Physics* sub-context. Select the field type in the *Fields* menu."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:45
+# 4ad0ebd91c1241f793954f37e321c0c6
+msgid "The fields have many options in common, these common options are explained for the *Spherical* field."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:51
+# 42e3525c4fb14583aa7cd84a4a7b3b89
+msgid "After changing the fields (*Fields* panel) or deflection (*Collision* panel) settings, you have to recalculate the particle, softbody or cloth system (*Free Cache*), this is not done automatically. You can clear the cache for all selected objects with :kbd:`Ctrl-B` --> *Free cache selected*."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:56
+# bcffd7117ddb4a51aa51380552d2cf07
+msgid "*Particles* react to all kind of *Force Fields*, *Soft Bodies* only to *Spherical* / *Wind* / *Vortex* (they react on *Harmonic* fields but not in a useful way)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:62
+# 6b6999c26d5c4c4bac7f1a80c2cff96b
+msgid "Common Field Settings"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:64
+# 85c2ba81e2c84a5c9288b80394801db2
+msgid "Most Fields have the same settings, even though they act very differently. Settings unique to a field type are described below. Curve Guide and Texture Fields have very different options."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:69
+#: ../../../manual/physics/force_fields.rst:333
+#: ../../../manual/physics/force_fields.rst:360
+# 050fa05e5b0040029fceb249666dc7fc
+# 2b54f41a8427413bb78d59fb85f9917c
+# 9d4f29f4cdfe4920bb027041a314c766
+msgid "Shape"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:69
+# 1d923a1b72e34a39be52fab0b399f3f3
+msgid "The field is either a *Point*, with omnidirectional influence, or a *Plane*, constant in the XY-plane, changes only in Z direction."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:74
+# cf9078dc3b57442e84795518a0a9ba13
+msgid "Strength"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:72
+# 5a17baa18b1248fda49488ef4f9edc38
+msgid "The strength of the field effect. This can be positive or negative to change the direction that the force operates in. A force field's strength is scaled with the force object's scale, allowing you to scale up and down scene, keeping the same effects."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:76
+# bd5760a5461443bbb554b1b8b71ac175
+msgid "Flow"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:77
+# bc83d4ba4a804e138f1b9e1965fd7931
+msgid "Convert effector force into air flow velocity."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:78
+# a11722e278a8462c849e03f5bee45ed6
+msgid "Noise"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:79
+# f35284ca13794fc297c067718da66f21
+msgid "Adds noise to the strength of the force."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:80
+# 81b9c8c45ba848a2b394ea51badbe7eb
+msgid "Seed"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:81
+# 3350aa3ded5c4936b1cbefecdd8a847e
+msgid "Changes the seed of the random noise."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:83
+# 805b096dbefc4c00bfaef3e5144fdf2d
+msgid "Effect Point"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:83
+# fdf7cb75106e41da813b129cdef8ee61
+msgid "You can toggle the field's effect on particle *Location* and *Rotation*"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:87
+# 2b56f64452844c7b9c70e09a4a584b8a
+msgid "Collision Absorption"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:86
+# 3492b7bdbb694ed1957f1fd0ac232562
+msgid "Force gets absorbed by collision objects."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:90
+# 874ede11723d4c55a43ef51222669361
+msgid "Falloff"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:92
+# b956c6eb96ee472081e04fd9e36ed544
+msgid "Here you can specify the shape of the force field (if the *Fall-off* Power is greater than 0)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:95
+# 3c7eaf16974b45739e54eca440c640b8
+msgid "Sphere"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:96
+# ef6ef30a3a514de688ae5676dcff3739
+msgid "Falloff is uniform in all directions, as in a sphere."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:99
+# 2e49ce29147945e28d3759bc3c7a52d6
+msgid "Tube"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:98
+# b1d09f1459f44145abf34d033f7969db
+msgid "Fall off results in a tube shaped force field. The Field's *Radial falloff* can be adjusted, as well as the *Minimum* and *Maximum* distances of the field."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:102
+# c3ff9691d25b48f3b9ecf79f4a655da1
+msgid "Cone"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:102
+# 9039c0be3ea8407799c25fc7cf5cc4d9
+msgid "Fall off results in a cone shaped force field. Additional options are the same as those of *Tube* options."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:105
+# 50c7577dac1a48d5a804960674750b3b
+msgid "Z Direction"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:105
+# beae5eaea871421f85298d0426ecc348
+msgid "*Fall-off* can be set to apply only in the direction of the positive Z Axis, negative Z Axis, or both."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:111
+# 9479c55b6fd3405fa2aa05dd39a493b3
+msgid "Power (Power)"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:108
+# 4e332fbbaf46416b92ca300e4302a44b
+msgid "How the power of the force field changes with the distance from the force field. If ``r`` is the distance from the center of the object, the force changes with ``1/r``:sup:`Power`. A *Fall-off* of 2 changes the force field with ``1/r``:sup:`2`, which is the falloff of gravitational pull."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:114
+# 7c3fa284ea6b440085cdc0d89cd8ab3b
+msgid "Max Distance"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:114
+# 6580dca578bf4acdadadd90283723fdd
+msgid "Makes the force field only take effect within a specified maximum radius (shown by an additional circle around the object)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:121
+# 971746e82c3242e5bea9db269437955e
+msgid "Min Distance"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:117
+# 2e229eb18697465494cc3501259ce919
+msgid "The distance from the object center, up to where the force field is effective with full strength. If you have a *Fall-off* of 0 this parameter does nothing, because the field is effective with full strength up to *Max Dist* (or the infinity). Shown by an additional circle around the object."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:124
+# 0804d3e5fbc644d2b6cb4082076cb42b
+msgid "Field Types"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:127
+# 4f9374e4b3dd409b86665c91aa88359c
+msgid "Force"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:129
+# 5ff548ad4f094ad38834d548a6126a2f
+msgid "The *Force* field is the simplest of the fields. It gives a constant force towards (positive strength) or away from (negative strength) the object's center. Newtonian particles are attracted to a field with negative strength, and are blown away from a field with positive strength."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:134
+# c391f3eea4ee4aea83cfde0c5be0b2fa
+msgid "For :doc:`Boids </physics/particles/physics/index>` a field with positive strength can be used as a *Goal*, a field with negative strength can be used as *Predator*. Whether *Boids* seek or fly goals/predators depends on the *Physics* settings of the Boids."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:142
+# ddb5b9c395564856a712e209a9341bb9
+msgid "Image 2b: Spherical field indicator."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:146
+# 2fd807c233d14421801639cc68538994
+msgid "Wind"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:152
+# edd9f51d7de845acad79d7febd1db714
+msgid "Image 3a: Wind field indicator."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:155
+# 7a35a5f3849c4af9b123fc8e55a68247
+msgid "Wind gives a constant force in a single direction, along the force object's local Z axis. The strength of the force is visualized by the spacing of the circles shown."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:160
+# d9be55081a53490196705474fc6a86c7
+msgid "Vortex Field"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:165
+# 610bed25386c424ba51041f0cb0e343d
+msgid "Image 3b: Vortex field indicator."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:168
+# c4bd23b4d870434ba86c10a736e35ecc
+msgid "Vortex fields give a spiraling force that twists the direction of points around the force object's local Z axis. This can be useful for making a swirling sink, or tornado, or kinks in particle hair."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:174
+# 36547349a81a4804b4571bc870b4f309
+msgid "Magnetic"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:176
+# 73062798330f45da8ababf5bb8619998
+msgid "This field depends on the speed of the particles. It simulates the force of magnetism on magnetized objects."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:181
+# 97763a498f4e43c8b1873fb25f6d3a08
+msgid "Harmonic"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:183
+# 44af047580804021a486f383d70aed71
+msgid "The source of the force field is the zero point of a harmonic oscillator (spring, pendulum). If you set the *Damping* parameter to 1, the movement is stopped in the moment the object is reached. This force field is really special if you assign it to particles."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:188
+# 10254c5e4ac94f05b850455618a3017f
+msgid "Rest Length"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:189
+# 39c4c8bd89b8428598042a5716d799b2
+msgid "Controls the rest length of the harmonic force."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:191
+# 65bf29c9fb0745a0b24c6f7a43d84c12
+msgid "Multiple Springs"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:191
+# 57f36234bd294fffa06e9b0261045ac9
+msgid "Causes every point to be affected by multiple springs."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:193
+# 84cec877c37b4e3e8dcf8fc604e670a9
+msgid "Normally every particle of the field system influences every particle of the target system. Not with *Harmonic* ! Here every target particle is assigned to a field particle. So particles will move to the place of other particles, thus forming shapes. Tutorial: `Particles forming Shapes <http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Particles_forming_Shapes>`__"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:201
+# d785d553fe0b4484b90c46aa4f178a68
+msgid "Charge"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:203
+# ecec551fb68f4931ac8d7c1737d63f05
+msgid "It is similar to spherical field except it changes behavior (attract/repulse) based on the effected particles charge field (negative/positive), like real particles with a charge. This mean this field has only effect on particles that have also a *Charge* field (else, they have no \"charge\", and hence are unaffected)!"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:211
+# 99b990bc967d4c41a25356c947d78eee
+msgid "Lennard-Jones"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:213
+# b792a9f1ce6c4783bfe5acb61aef45d6
+msgid "This field is a very short range force with a behavior determined by the sizes of the effector and effected particle. At a distance smaller than the combined sizes the field is very repulsive and after that distance it's attractive. It tries to keep the particles at an equilibrium distance from each other. Particles need to be at a close proximity to each other to be effected by this field at all."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:219
+# 8de1a6fed0d94d0390ee036f87e528b8
+msgid "Particles can have for example both a charge and a Lennard-Jones potential - which is probably something for the nuclear physicists amongst us."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:224
+# 21f859e573924806b8758314eb5c9069
+msgid "Texture field"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:226
+# 250b6ab246dd4d71a62f87eb4298c21d
+msgid "You can use a texture force field to create an arbitrarily complicated force field, which force in the 3 directions is color coded. Red is coding for the x-axis, green for the y-axis and blue for the z-axis (like the color of the coordinate axes in the 3D window). A value of 0.5 means no force, a value larger than 0.5 acceleration in negative axis direction (like -Z), a value smaller than 0.5 acceleration in positive axis direction (like +Z)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:246
+# f0a8be7fd68742c0a8834d718a64412d
+msgid "Texture mode"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:234
+# 44cb0d04445649bdb2ad0f3a377a160b
+msgid "This sets the way a force vector is derived from the texture."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:238
+# 4c6d3bac7fdf4229a0870ca914afb75d
+msgid "RGB"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:237
+# 7df24a26011341688cc075269ca22077
+msgid "Uses the color components directly as the force vector components in the color encoded directions. You need an RGB texture for this, e.g. an image or a colorband. So a *Blend* texture without a colorband would not suffice."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:241
+# f82d9efb782a4d1b8581baf784d6d623
+msgid "Gradient"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:241
+# 40c5abefce36434e8a46a5b17d623c91
+msgid "Calculates the force vector as the 3d-gradient of the intensity (grayscale) of the texture. The gradient vector always points to the direction of increasing brightness."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:246
+#: ../../../manual/physics/force_fields.rst:344
+# 5ae5f0d7ccb5496694d93202c5e4447d
+# 81d5e33e6ce04b049b6dba20d103e862
+msgid "Curl"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:244
+# 4f28532ee53a4b3aa3d4314a1a83bf46
+msgid "Calculates the force vector from the curl of the 3d-rgb texture (rotation of rgb vectors). This also works only with a color texture. It can be used for example to create a nice looking turbulence force with a color clouds texture with perlin noise."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:249
+# 8987831f79e24307beea9b60c0239aee
+msgid "Nabla"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:249
+# e7e56ea0b4dd454daa67b3aac0fcd697
+msgid "It is the offset used to calculate the partial derivatives needed for *Gradient* and *Curl* texture modes."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:252
+# bb53ab1e2c41475f8a1ec3c85745711f
+msgid "Use Object Coordinates"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:252
+# 6b76e7a62a534d5e86521ed38b18158a
+msgid "Uses the emitter object coordinates (and rotation & scale) as the texture space the particles use. Allows for moving force fields, that have their coordinates bound to the location coordinates of an object."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:255
+# 8dc7debb0993487993fca2125b52fe31
+msgid "Root Texture Coordinates"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:255
+# 38166f92dbb3448ca10d670d4e4c736f
+msgid "This is useful for hair as it uses the texture force calculated for the particle root position for all parts of the hair strand."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:259
+# cca5cb1420144956b92369df60263bba
+msgid "2D"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:258
+# 1963bd4e106840448404fbb3937340b0
+msgid "The *2D* button disregards the particles z-coordinate and only uses particles x&y as the texture coordinates."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:261
+# a2738bcdad9b4f7d85bcde3d3182b5b9
+msgid "Remember that only procedural texture are truly 3D."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:265
+# a601a06f65964e819f3819f951b9672a
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:267
+# c0e79b3e3ba34f819f29bfb8801fa1c5
+msgid "A single colored texture 0.5/0.0/0.5 creates a force in the direction of the positive y-axis, e.g. hair is orientated to the y-axis."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:269
+# 71f40a4273e44ce6bec2035b07049054
+msgid "A blend texture with colorband can be used to created a force \"plane\". E.g. on the left side 0.5/0.5/0.5, on the right side 1.0/0.5/0.5 you have a force plane perpendicular to XY (i.e. parallel to Z). If you use an object for the coordinates, you can use the object to push particles around."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:272
+# e8503ac21ac3421aa49c67d94f08a97c
+msgid "An animated wood texture can be used to create a wave like motion."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:276
+# 3e8c5b11ce5e40999ada52c50c57ee6e
+msgid "Curve Guide"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:280
+# 8542e806dba74728af872da12b98acbf
+msgid "Image 4a: A Curve Guide field."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:283
+# c3f5b4cd929d4e4fababc7dad0eed686
+msgid "*Curve* objects can be the source of a *Curve Guide* field. You can guide particles along a certain path, they don't affect Softbodys. A typical scenario would be to move a red blood cell inside a vein, or to animate the particle flow in a motor. You can use *Curve Guide* s also to shape certain hair strands - though this may no longer be used as often now because we have the :doc:`Particle Mode </physics/particles/mode>`. Since you can animate curves as Softbody or any other usual way, you may build very complex animations while keeping great control and keeping the simulation time to a minimum."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:291
+# 65af1ab37f7f4431869fa383e9ac651b
+msgid "The option *Curve Follow* does not work for particles. Instead you have to set *Angular Velocity* (in the *Physics* panel of the *Particle* sub-context) to *Spin* and leave the rotation constant (i.e. don't turn on *Dynamic*)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:296
+# 26b783d40fdc4adba60829864f000acc
+msgid "*Curve Guide* s affect all particles on the same layer, independently from their distance to the curve. If you have several guides in a layer, their fields add up to each other (the way you may have learned it in your physics course). But you can limit their influence radius:"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:306
+# 5a462eb49a52447a965caf7418291893
+msgid "Minimum Distance"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:302
+# ab793ec0d34147d29adc8ba378acb238
+msgid "The distance from the curve, up to where the force field is effective with full strength. If you have a *Fall-off* of 0 this parameter does nothing, because the field is effective with full strength up to *MaxDist* (or the infinity). *MinDist* is shown with a circle at the endpoints of the curve in the 3D window."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:309
+# 17648f4bd5cd42f5bbd46e138a76e4ab
+msgid "Free"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:309
+# b487bc59e7234cd89c4fb9f71ad1a623
+msgid "Fraction of particle life time, that is not used for the curve."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:313
+# f1fa086e5bf349b09f96b5fa6f3c6a3a
+msgid "Fall-off"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:312
+# 4500cdcde7114d229952d9588ee730df
+msgid "This setting governs the strength of the guide between *MinDist* and *MaxDist*. A *Fall-off* of 1 means a linear progression."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:315
+# dd4dccc2078c43e4b51f59965f9c17f3
+msgid "A particle follows a *Curve Guide* during it's lifetime, the velocity depends from it's lifetime and the length of the path."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:318
+# cf1dd84ba33e4634945e19fe3ae91028
+msgid "Additive"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:319
+# ba2d88d1aeb841859dcf8b8fba15ef27
+msgid "If you use *Additive*, the speed of the particles is also evaluated depending on the *Fall-off*."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:320
+# 1cca196a223a4e4ba9c44cc4c0fe1ade
+msgid "Weights"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:321
+# 15ff80f06adf43f0a391d3d425d2583c
+msgid "Use Curve weights to influence the particle influence along the curve."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:323
+# a599f8f8f95c4ff9985311f55ac87040
+msgid "Maximum Distance / Use Max"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:323
+# 2ffa1a049ecc4334875744b9ec75d33c
+msgid "The maximum influence radius. Shown by an additional circle around the curve object."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:325
+# 1f278e607abf4902979141ffd86781fc
+msgid "The other settings govern the form of the force field along the curve."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:327
+# 4da1a51af9fc4decab9593119e23e78d
+msgid "Clumping Amount"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:328
+# 46f06533b8154ca6bdce3ec07401fae2
+msgid "The particles come together at the end of the curve (1) or they drift apart (-1)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:330
+# 805c44220e4d49939e227282a90ca5f6
+msgid "Defines the form in which the particles come together. +0.99: the particles meet at the end of the curve. 0: linear progression along the curve. -0.99: the particles meet at the beginning of the curve."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:338
+# 1ac7de37db7e4862a4999808ac4c236a
+msgid "Image 4b: Kink options of a curve guide. From left to right: Radial, Wave, Braid, Roll. `Animation <http://www.vimeo.com/1866538>`__"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:342
+# 4d5d844f4b004cabb2d48bbaa97df5df
+msgid "With the drop down box *Kink*, you can vary the form of the force field:"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:345
+# dbfff08a73d5472b8f95d41ab5737a4e
+msgid "The radius of the influence depends on the distance of the curve to the emitter."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:346
+# 77c96277c82040d7aa95c58ed05e4580
+msgid "Radial"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:347
+# cf11ce459ac246d08fdb5eafb3b4d1f2
+msgid "A three dimensional, standing wave."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:348
+# 2a25f6571c4f40deb1c41b805ba50713
+msgid "Wave"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:349
+# aeb1f7fc3c894911ad190664d7d8231d
+msgid "A two dimensional, standing wave."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:350
+# 2d95664f401440a798bc2460403cb35c
+msgid "Braid"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:351
+# 0c7be616b2704f7da4a8cafe55aa3793
+msgid "Braid."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:353
+# 5a746bda06af4ca2a95d1e8d8d4b9b3c
+msgid "Roll"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:353
+# e35fce38abcd438d958e9c89ec9f2061
+msgid "A one dimensional, standing wave."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:355
+# aec7944e83ea447a892eef8f861f72ee
+msgid "It is not so easy to describe the resulting shapes, I hope it's shown clearly enough in (*Image 4b*)."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:358
+# b5ede9eb14984ae0b0aa453e3200f365
+msgid "Frequency"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:359
+# cae542be22d84e3b8e16f021161204cf
+msgid "The frequency of the offset."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:361
+# ab3c44a7ddd24294acda49b52f2c7aa7
+msgid "Adjust the offset to the beginning/end."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:364
+# 7b5cb72244684bea9f2991b3c2c98117
+msgid "Amplitude"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:363
+# db62ffb01d02413ba6f1aeebd281ef9c
+msgid "The Amplitude of the offset."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:367
+# f93f48d3eccf405f82baf01e5a566b23
+msgid "Boid"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:369
+# 3546474be2ac40bebf5a32374902e84b
+msgid "Boid probably comes from theoretical works. *Boids* is an artificial life program, developed by Craig Reynolds in 1986, which simulates the flocking behaviour of birds. His paper on this topic was published in 1987 in the proceedings of the ACM SIGGRAPH conference. The name refers to a \"bird-like object\", but its pronunciation evokes that of \"bird\" in a stereotypical New York accent. As with most artificial life simulations, Boids is an example of emergent behavior; that is, the complexity of Boids arises from the interaction of individual agents (the boids, in this case) adhering to a set of simple rules. The rules applied in the simplest Boids world are as follows: separation: steer to avoid crowding local flockmates alignment: steer towards the average heading of local flockmates cohesion: steer to move toward the average position (center of mass) of local flockmates More complex rules can be added, such as obstacle avoidance and goal seeking."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:386
+# dbd2f7158ffb405ebd5d000e753b3657
+msgid "Turbulence"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:388
+# 01261f11b67446f6b09825f2e0095424
+msgid "Create a random turbulence effect with a 3d noise."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:390
+# b739381667874f3fa69a57a5e0df9d68
+msgid "Size"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:391
+# 3bed12988d9e4a8a9930bfb6884a8065
+msgid "Indicates the scale of the noise."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:394
+# 4ef3e2beaa1b475cb1c8bd355f20b019
+msgid "Global"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:393
+# c5672df1fd2a4a34978a6df19cbb4a1b
+msgid "Makes the size and strength of the noise relative to the world, instead of the object it is attached to."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:397
+# f93105047a644e388b2fa92b367ea2f9
+msgid "Drag"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:399
+# 5ef0589a0e244324b3767f4b6c6b6640
+msgid "Drag is a force that works to resist particle motion by slowing it down."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:401
+# 447a19f773d847c1bfa2b2073fa0c113
+msgid "Linear"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:402
+# 161479bc45b148ab9e2386b683c93b67
+msgid "Drag component proportional to velocity."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:405
+# 540411bed17f4ca6a9d678ca4618848c
+msgid "Quadratic"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:404
+# d3be10f985004bb297a6cc38a8869ddd
+msgid "Drag component proportional to the square of the velocity."
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:408
+# 0f656c508b134c6b86807df2510994cf
+msgid "Links"
+msgstr ""
+
+#: ../../../manual/physics/force_fields.rst:410
+# 882e86cc87894d3592a7647fcc33b318
+msgid "`Wind & Deflector force update 2.48 <http://wiki.blender.org/index.php/Template:Release_Notes/2.48/WindCollisions>`__"
+msgstr ""
+

@@ -1,0 +1,3259 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:4
+# 6119f782fd3242de96ff7817d083e4ac
+msgid "Transparency"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:6
+# 259ee649920b474ebc0c023791848b45
+msgid "Reference"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:13
+# 5bf485d18adf4ceb89b830b0cac22425
+msgid "Materials in Blender can be set to be transparent, so that light can pass through any objects using the material. Transparency is controlled using an \"alpha\" channel, where each pixel has an additional value, range 0-1, in addition to its RGB color values. If alpha=0, then the pixel is transparent, and the RGB values for the surface contribute nothing to the pixel's appearance; for alpha=1, the surface is fully opaque, and the color of the surface determines the final color of the pixel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:24
+# 340724d0754144e4baa6c73d2eef7467
+msgid "Transparency Panel"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:27
+# 346c233f21614e6ebc9bedbbbe82e290
+msgid "In Blender, there are three ways in which the transparency of a material can be set: Mask, Z-Buffer and Ray-trace. Each of these is explained in more detail below. The :doc:`Material Preview </render/blender_render/materials/properties/preview>` option with a sphere object gives a good demonstration of the capabilities of these three options."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:34
+# 56b5a343170b4835949c8d501f0894d0
+msgid "Common Options"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:36
+# 64da032892f34e9f9b8a761fb58e153a
+msgid "The following property controls are available for all transparency options:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:38
+# 5ad32ac10b3c41b9a8168e01a38a60c0
+msgid "Alpha"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:39
+# cf37437b57024208b736bd16b83e99e3
+msgid "Sets the transparency of the material by setting all pixels in the alpha channel to the given value."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:44
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:184
+# 5a6e2082273c4b80a2f44c6bcd11ab46
+# f6c68721d8984cd68e121b70b33762e8
+msgid "Fresnel"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:41
+# fa13523427fd46a683b463c0407b5c43
+msgid "Sets the power of the Fresnel effect. The Fresnel effect controls how transparent the material is, depending on the angle between the surface normal and the viewing direction. Typically, the larger the angle, the more opaque a material becomes (this generally occurs on the outline of the object)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:46
+# 61d8832f5aa043c1ac4ed1434bb47a34
+msgid "Specular -"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:47
+# 266d10a2029849f8be26b739a5fa571b
+msgid "Controls the alpha/falloff for the specular color."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:50
+# 2df29f621bdf4724b28b72d9d3043044
+msgid "Blend"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:49
+# 04f2e0e8a45e4d0ab2f631ad4b3670d5
+msgid "Controls the blending between transparent and non-transparent areas. Only used if Fresnel is greater than 0."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:52
+# b2059e40dfe9420380b3fe0999b4e9cd
+msgid "Mask"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:57
+# 326b19362b124b7582e26314e9a1231f
+msgid "This option simply masks the Background. It uses the alpha channel to mix the color of each pixel on the active object plane with the color of the corresponding background pixel, according to the alpha channel of the pixel. Thus for alpha = 1, the object color is seen - the object is completely opaque; but if alpha = 0, only the background is seen - the object is transparent (but note that any other object behind the active object disappears)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:64
+# d8fe934c85c54439a58cf216422bf239
+msgid "This is useful for making textures of solid or semi-transparent objects from photographic reference material - a mask is made with alpha opaque for pixels within the object, and transparent for pixels outside the object."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:68
+# e0748bd277c441cc892a0c0dbb1f3c6c
+msgid "See :doc:`Mask Transparency </render/blender_render/materials/properties/transparency>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:72
+# 916b7bd600494f7ab988078a5ac7d22d
+msgid "Z Buffer"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:74
+# a8ba8047fe6a4d978e7b6210cbb106e4
+msgid "This uses the alpha buffer for transparent faces. The alpha value of each pixel determines the mix of the basic color of the material, and the color of the pixel is determined from the objects/background behind it. Only basic settings are available with this option; it does not calculate refractions."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:81
+# f8f313b0ac12448da2d32664e98cf48d
+msgid "Raytraced Transparency"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:83
+# 4d7918012ae445639e025f5a859e6a37
+msgid "Uses ray tracing to calculate refractions. Ray tracing allows for complex refractions, falloff, and blurring, and is used for simulating the refraction of light rays through a transparent material, like a lens."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:88
+# 9b70efdfbc6e46d19d7f70ba04112fba
+msgid "Note that the RayTrace option is only available in the Blender Render and Cycles render engines, but not in the Game Engine."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:91
+# eeb40aa590b148bdb1bbcda442502e28
+msgid "A ray is sent from the camera and travels through the scene until it encounters an object. If the first object hit by the ray is non-transparent, then the ray takes the color of the object."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:95
+# ca7cb265dee44513a0f87df578d54495
+msgid "If the object is transparent, then the ray continues its path through it to the next object, and so on, until a non-transparent object is finally encountered which gives the whole chain of rays its color. Eventually, the first transparent object inherits the colors of its background, proportional to its *Alpha* value (and the Alpha value of each transparent Material hit in between)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:102
+# c255fe11556146e685ea22aed084d358
+msgid "But while the ray travels through the transparent object, it can be deflected from its course according to the Index of Refraction (IOR) of the material. When you actually look through a plain sphere of glass, you will notice that the background is upside-down and distorted: this is all because of the Index of Refraction of glass."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:109
+# f97249d782524e27976cef14fbfcec04
+msgid "Enable Raytracing"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:111
+# 95dbb25abeb44fbd9432329c7d33d5e7
+msgid "To get ray-traced transparency, you need to:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:113
+# 054e278e1b7247409cc55a6d91230f7d
+msgid "enable ray tracing in your Render settings. This is done in the Render context --> Shading Panel. Ray tracing is enabled by default."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:115
+# bb287983d06f465eacc11b06a311ee3b
+msgid "set your Alpha value to something other than 1.0."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:116
+# 9eeae5c92871430ca985abe25e117d39
+msgid "in order for the background material to receive light passing through your transparent object, *Receive Transparent* must be turned on for that material in the Material --> Shadow panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:121
+# 2a6f0a788b9c4052b53a804c69500422
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:125
+# 1b5818106e9b428da0068748a84de7f3
+msgid "The Transparency Panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:128
+# 856bf014ed954ab8a70e76a708c1c2e1
+msgid "In addition to the common options given above, the following property controls are available:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:132
+# 82d5c1827b864f6bae8a01b4beacc6bd
+msgid "IOR"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:131
+# d4fdc6edda6f48938e59cb7eedbdb329
+msgid "Index of Refraction. Sets how much a ray traveling through the material will be refracted, hence producing a distorted image of its background. See `IOR values for Common Materials`_ below."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:137
+# 657f63f182f14581a7328103a3439b45
+msgid "Filter"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:135
+# 6e86cc2821e54567b9ce599404875280
+msgid "Amount of filtering for transparent ray trace. The higher this value, the more the base color of the material will show. The material will still be transparent but it will start to take on the color of the material. Disabled (0.0) by default."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:139
+# 8aa6f11a51d445a9bdd99ceeeb39d5e3
+msgid "Falloff"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:140
+# 22dd5646b60d49faabc42dad1ee6a7f6
+msgid "How fast light is absorbed as it passes through the material. Gives 'depth' and 'thickness' to glass."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:142
+# e9cf194d1f874cd18b449dcf8adac994
+msgid "Limit"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:142
+# ac5197ef5d4342f9a8cc07205475c3bf
+msgid "Materials thicker than this are not transparent. This is used to control the threshold after which the filter color starts to come into play."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:151
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:221
+# adeff12b1c0348d1a6e944d40a0b1d5b
+# c9dd96ae477548499752eb887d3afb87
+msgid "Depth"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:145
+# 16064a07863c458f8c8ac4e98837129f
+msgid "Sets the maximum number of transparent surfaces a single ray can travel through. There is no typical value. Transparent objects outside the *Depth* range will be rendered pitch black if viewed through the transparent object that the *Depth* is set for. In other words, if you notice black areas on the surface of a transparent object, the solution is probably to increase its *Depth* value (this is a common issue with ray tracing transparent objects). You may also need to turn on transparent shadows on the background object."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:163
+# 756a337f820e4355aca67e4c0d7946a5
+msgid "Gloss"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:154
+# 2cd8b71eb2934a49a6eb9c4eeeea3437
+msgid "Settings for the glossiness of the material."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:156
+# 81fcfe3edaa7490fadf47576960ea947
+msgid "Amount"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:157
+# 618d324bc1c84bd2a71e1a71cddd4899
+msgid "The clarity of the refraction. Set this to something lower than zero to get a blurry refraction."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:159
+# 61c9078fd03d428b8e4bca510e59b717
+msgid "Threshold"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:159
+# e206cf2beb6841cb9822ab9ed8f23c90
+msgid "Threshold for adaptive sampling. If a sample contributes less than this amount (as a percentage), sampling is stopped."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:163
+# bddb1eec3e3843559f07ae8988734d1d
+msgid "Samples"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:162
+# 24557be1433145c291098997fc345543
+msgid "Number of cone samples averaged for blurry refraction."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:166
+# fa0ffecc4ebe424cbc7d9ab0c627f68b
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:169
+# e0e98c2ae2ca4b08bccc7446409fe814
+msgid "Index of Refraction"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:173
+# e7446d39bcd74efaaf040c7d6ecd5b49
+msgid "Influence of the IOR of an Object on the distortion of the background: spheres of Water, Glass and Diamond (top to bottom)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:177
+# 86ec50bc28c44d44a05dfd4265992cc8
+msgid "(*Influence of the IOR of an Object on the distortion of the background: spheres of Water, Glass and Diamond (top to bottom).*). There are different values for typical materials: Air is **1.000** (no refraction), Alcohol is **1.329**, Glass is **1.517**, Plastic is **1.460**, Water is **1.333** and Diamond is **2.417**."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:194
+# f14a596c52a3404e93f265dcdbe6f271
+msgid "16 pieces of glass rotated in various directions demonstrate the angle-dependent Fresnel effect with ray-traced (left) and alpha buffered transparency (right). Note that the major difference is the lack of IOR effect in the latter case. (Download `.blend <http://wiki.blender.org/index.php/:File:Manual25-Material-FresnelExample.blend>`__.)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:207
+# e001788982f246ff82f0a261750e2672
+msgid "Settings for Fresnel using ray-traced (left) and Z transparency (right)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:212
+# 9c980fdc2f83470c8f7d456050d7763f
+msgid "Note the specular highlight in the F4 glass tile (which is facing midway between the light and the camera); the Fresnel effect can be seen in row C and column 6 where the faces are turned away from the camera."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:216
+# eb3bf56a3f0f45539b31475083e52b97
+msgid "The amount of Fresnel effect can be controlled by either increasing the *Blend* value or decreasing the *Alpha* value."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:226
+# 819e68a54786401593c78dae99787353
+msgid "A simple scene with three glasses on a surface, and three lamps. Depth was set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min, and 11 min respectively. (Download `.blend <http://wiki.blender.org/index.php/:File:Manual25-Material-3GlassesExample.blend>`__.)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:231
+# 7aa048cb48834bf4b68f0cc9bcf19c1f
+msgid "Increasing *Depth* also considerably increases render time. Each time a light ray passes through a surface, the ray-tracing algorithm is called recursively. In the example above, each side of each glass has an exterior and an interior surface. Light rays thus have to pass through four surfaces for each glass."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:237
+# 5459b9ae9acd43099c6e414e157ace60
+msgid "But not only that, at every point on a surface, some of the light can be reflected, or mirrored off the surface in various directions. This results in multiple rays needing to be calculated for each point (often referred to as a `tree of rays <http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.html>`__). In each of the rendered images above there are 640×400=256 000 pixels. By increasing *Depth*, at least one tree of rays is added to each pixel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:244
+# 15135ebc4105460bb46566aa46fefb76
+msgid "Be kind to your computer. Carefully placing objects in a scene to avoid overlapping transparent objects is often an interesting alternative."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:249
+# bdf97c0da81f4ce69dd225806115d241
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:252
+# db0c37cabb8d4d2586df37889d8b7bb5
+msgid "Transparent shadows"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:259
+# f56422d7d60144ecb90a32b7c6dffa28
+msgid "No transparent shadows"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:264
+# 9ac71c61c47d4e9a9e453a6c5f60e225
+msgid "No transparent shadows, environment lighting enabled"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:269
+# 9b9d4b5bdd4948e7abcba31dcce41366
+msgid "Transparent shadows enabled, alpha set to 0.0"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:274
+# 1b110db5f4a540bbab2f918e935b9ea1
+msgid "As previous, alpha set to 0.25"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:279
+# 8ab0d9fd2e064c2c861fc817e027af23
+msgid "Transparent shadows with ambient occlusion set to multiply, distance 1 (radius of sphere)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:284
+# 0dd29d2cc1c1489b88380184ba65f254
+msgid "As previous, distance increased to 2 (diameter of sphere)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:287
+# 8383c4b54a524b61bf4f3338d44d78bf
+msgid "By default, the shadows of transparent objects are rendered solid black, as if the object was not transparent at all. But in reality, the more transparent an object is, the lighter its shadow will be."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:291
+# d3e5f1dbe80a4ba99b4ea31a15b8de9b
+msgid "In Blender, transparent shadows are set on the materials that receive the shadows from the transparent object. This is enabled and disabled with the *Receive Transparent* button, in the *Material* context --> *Shadow* panel. The shadow's brightness is dependent on the *Alpha* value of the shadow casting material."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:297
+# e49b09277a184d2fb5aafd132da92466
+msgid "Alternatives to transparent ray-traced shadows can be found in the *World* context, namely the *Ambient Occlusion*, *Environment Lighting*, and *Gather* panels. Alternatively, a texture can be used to control the *Intensity* value of the shadow-receiving material."
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:304
+# d971f945f69c46e3a364d9421939236e
+msgid "IOR values for Common Materials"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:306
+# bcd794f8462548f2bc3b8208af4f7eee
+msgid "The following list provides some index of refraction values to use when ray-traced transparency is used for various liquids, solids (gems), and gases:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:309
+# 37f5f1e03bb64f3ca9a206b1a25a2518
+msgid "Acetone"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:310
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:324
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:506
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:508
+# 6ea5ef07f96d427bb54b11aeb8ada425
+# 74905633fef74114ab40cff2ba98d736
+# 379ac480a1dd4ef9a1a87b025d1aca68
+# b4ef30e53e634630805d9534cab485f5
+msgid "``1.36``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:311
+# 76548d7d20164cd28712b29a491a939f
+msgid "Actinolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:312
+# ba57c3c2e52d440e95b958ee96c4d6b6
+msgid "``1.618``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:313
+# fa3c1d8e4ea34ac1b59169a656c66b30
+msgid "Agalmatolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:314
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:442
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:894
+# 91692350cf294f6a9d8010ee7386ee3f
+# e83e806699f146c387599757573a82cc
+# 8347e9b030fa489aa995da68f78cf750
+msgid "``1.550``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:315
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:317
+# ed155de8bdf341d5955cd5fe7e20dfca
+# 57a35398a814439dbcca2e65fdaf34d6
+msgid "Agate"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:316
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:760
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:804
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:852
+# 4451960e86864a80af29661840664629
+# beef6196036348ad94ad475a4270f8a9
+# a493d42f66474803abf058e27bd5a855
+# 10096a4be57f402995606537b7215af3
+msgid "``1.544``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:318
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:338
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:464
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:618
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:626
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:736
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:738
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:776
+# a75f19678ce14f518ff67603c4306f45
+# 0b9baad735ec4cf9a681b93b9fd28354
+# 2e0315f9e98d4721ae1c2daa49673bbc
+# 70cc80e8ac74412b8ca2ec4ef719b829
+# 1ac3784736814d02b4c93268f7853665
+# a837cd2e35174604b0589d14d1d29deb
+# 9bee5eae85bd4eb5ab12e8a3c0b27d9c
+# 86bec015bfb94383bb789da0100cd51c
+msgid "``1.540``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:319
+# aa64d9c23b96430ca302374413f0c6e3
+msgid "Air"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:320
+# 92c2b2cffc974f66a519da8712804b87
+msgid "``1.000``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:321
+# 473abefdb3b24dfcbb7b4eea43908d54
+msgid "Alcohol"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:322
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:656
+# 8f86133a4a9645c787d77cdd17228335
+# 50becb61b72f434a8119470ca058e888
+msgid "``1.329``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:323
+# d1482aff9d4e4c4d96a28f19caf8ddf1
+msgid "Alcohol, Ethyl (grain)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:325
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:327
+# d235207d99f5462ea4be2c3803cf6666
+# 39f67335cc7c4e4f8e9194222a897286
+msgid "Alexandrite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:326
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:432
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:538
+# 9a66a5488218459285ad3c5149172052
+# 83fdfb7bfe0f42f6a56f3584fb9aec0f
+# 295e2929382748968970d73f32c7ab3a
+msgid "``1.745``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:328
+# 8f07efb54b214b81886d85ba9c2400ac
+msgid "``1.750``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:329
+# a3f02a04b41545a3831a9f1194d2dc61
+msgid "Almandine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:330
+# aaf1dde4ba594895bd0e0252e5ce8660
+msgid "``1.83``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:331
+# 485d4145f11b4576834305f74374d2b1
+msgid "Aluminum"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:332
+# e2f378b6b9be48d0a760fc8a1d7c6b7d
+msgid "``1.44``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:333
+# 697e6304170947638c19c0c4cd330085
+msgid "Amber"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:334
+# 6bdb5a3490634fe58c9308ce86ca9009
+msgid "``1.545``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:335
+# 4425ddd6082e49ccaebf377ed10664ba
+msgid "Amblygonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:336
+# cef12a71157c49f48dd902a7e60bfc00
+msgid "``1.611``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:337
+# 26d66f726a7d4c698f60256f2d488518
+msgid "Amethyst"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:339
+# 3bd73e9166a74c369f2e357bb7af84af
+msgid "Ammolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:340
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:490
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:672
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:756
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:880
+# 9458c0b63e4c46fa8be4edae78a67e4e
+# b066db1b2e49469c904d556cc42d6fe1
+# d948049e721a4e4695978e6cbbe512ba
+# 5ba54c38659746f99bc73d22a95a2732
+# b3f7b6da02e047639336ef90fadc2bb6
+msgid "``1.600``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:341
+# e0917cdf490c41f3becd73d78ad10d17
+msgid "Anatase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:342
+# b179933b62fe413d875123f33d8aa1d1
+msgid "``2.490``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:343
+# 6690f2ed3be9463bb8a86dd56c0b89d1
+msgid "Andalusite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:344
+# 97a18ea99a0a43d78be3b70eda798e0d
+msgid "``1.640``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:345
+# 4ea2a9e3f68e46488f807753bc47df65
+msgid "Anhydrite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:346
+# e3b97d37f3194d6dae449c4ee238cde7
+msgid "``1.571``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:347
+# a635edd4631e44fda7e18523a1fa1729
+msgid "Apatite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:348
+# f0380999590c4f9884d6e3dbfe048f81
+msgid "``1.632``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:349
+# c896e9addea24b6f8e7069effdb1936f
+msgid "Apophyllite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:350
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:682
+# b1335670219845b2a197e210ed190ff0
+# 1ef5a754dcae4f40866e69d721f19d23
+msgid "``1.536``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:351
+# 5fbb0fb9474b459baf1520b86c24242a
+msgid "Aquamarine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:352
+# 475f2d7b22b047e8b258389e627a6b15
+msgid "``1.575``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:353
+# 5693c7c6ac324adab02796777ad26b0b
+msgid "Aragonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:354
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:652
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:716
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:788
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:850
+# c140fb0ece604fc698d49077509c9c4a
+# 53edb965c6bd46d38d85d3f50d0c72d5
+# 3c7f007e83c747a0adf1968f086acd6e
+# ae80e5060ce3491c96a9961d557470d2
+# 7e3bfdb25b164c109776013c0b1141bd
+msgid "``1.530``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:355
+# 44d529092e0142e08d6f7d623f98bc90
+msgid "Argon"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:356
+# 907b2a8d887c48c4ad09ebe495728075
+msgid "``1.000281``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:357
+# d3853d36a5324c65a41bdedefc2af0a6
+msgid "Asphalt"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:358
+# 6b6e6cfe520548859cc8f0d851a3986b
+msgid "``1.635``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:359
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:361
+# 5a79ea45b72f49e5b883f7b2e90243fd
+# f88c14dbd6a04d3c86312400b50c055e
+msgid "Axinite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:360
+# 1f87561c299f4d2f8f9639df9fbdb787
+msgid "``1.674 - 1.704``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:362
+# c71182c7a05b4a96b14fab849d31447b
+msgid "``1.675``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:363
+# 14ef8dea91514ca9bfccdac77de6c5f2
+msgid "Azurite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:364
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:840
+# a8a431272c5c4940be1e229e4e50823c
+# 7016e62c205e4635bf07dd6f4a9e1476
+msgid "``1.730``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:365
+# f60fb1c4de714f1eb0816eedaaa9224e
+msgid "Barite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:366
+# 2518106f2f5f41698b412ed33c2eaedd
+msgid "``1.636``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:367
+# d65b051c50874ea79fda62a6ba107597
+msgid "Barytocalcite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:368
+# 4f19c978d84342f29e3dc40bce7118bb
+msgid "``1.684``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:369
+# 989b4c87076a43bf81bb15577552e6b9
+msgid "Beer"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:370
+# 310466f992674930a002e434b2778821
+msgid "``1.345``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:371
+# 188eadf6668b42458580efbdf62ca9ee
+msgid "Benitoite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:372
+# 78d8b7c6ca93413299baf07cd0914824
+msgid "``1.757``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:373
+# 702e6971f4f946a2a1017915c91ea714
+msgid "Benzene"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:374
+# 112f23365b944d59918e81bf61cc14cd
+msgid "``1.501``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:375
+# 19b090832cc741d3a868a3c95e678ca7
+msgid "Beryl"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:376
+# de91cef4eaad49059955b92bdd0b329e
+msgid "``1.57 - 1.60``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:377
+# 3f4b0d5b80074564adc0a59898be8a1c
+msgid "Beryl, Red"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:378
+# 4dabe34c206e4814b735f13faffdcee7
+msgid "``1.570 - 1.598``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:379
+# 85e991a671af4b1d8a7d490bfe907687
+msgid "Beryllonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:380
+# acdd7b3f20de498595110660a1dfa6bd
+msgid "``1.553``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:381
+# ae0cf400a6414995be8f3674a54949b8
+msgid "Brazilianite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:382
+# 0b9b73438ad84d0c9d021cec231eaf88
+msgid "``1.603``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:383
+# 93e5a28b64c948e294f4db02991d2d8c
+msgid "Bromine (liq)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:384
+# d80d94fb9f3a4bdeb60e444c3a226276
+msgid "``1.661``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:385
+# 52f2575e3b2c4f60a367dc747a5d5f1f
+msgid "Bronze"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:386
+# 78c8f879bbbb46a1933dce6129e84bd2
+msgid "``1.18``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:387
+# e2a14055099642fab7d122cdbd4fdcf4
+msgid "Brownite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:388
+# c9706e87b68647ce9d1a5f4d56f0a080
+msgid "``1.567``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:389
+# 8f3182f5416e4188b5b292d3e97ef224
+msgid "Calcite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:390
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:392
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:460
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:698
+# 0746616f5e38480ca48eba6a0f7602ce
+# 35d8bc9af31f49a9af159e21e739307f
+# f5ba74402e0443bca18276e911d29d67
+# 267f3b099c414225b95e0e01ed0f1036
+msgid "``1.486``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:391
+# 2f65403023664d51a52600be409c51a2
+msgid "Calspar"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:393
+# 41353c7a81f444398aaff5a004b50cbf
+msgid "Cancrinite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:394
+# 25e4358fab6a4fa9a87af688dbef7558
+msgid "``1.491``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:395
+# c819bff5e4774184b441aec429fb89b4
+msgid "Carbon Dioxide (gas)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:396
+# a09581805ee6423fb5984672a6f28be5
+msgid "``1.000449``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:397
+# dbcb93ae191d4435b330f62cc1194570
+msgid "Carbon Disulfide"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:398
+# 92fc6503af604db690d6749b271677c4
+msgid "``1.628``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:399
+# 572ee99c50094e13a1a8bad04e7e598f
+msgid "Carbon Tetrachloride"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:400
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:730
+# df247f53b01245a3a6d51e5bda6c9c61
+# 8b692e545b9b4496aefcdcc5350a1a7b
+msgid "``1.460``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:401
+# 1020c294e4974b94a82e4573cab073f3
+msgid "Carbonated Beverages"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:402
+# d1ac2e85658a4efe89c775846e81746e
+msgid "``1.34 - 1.356``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:403
+# 2446905411bb42ddbdb17c44cb8af169
+msgid "Cassiterite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:404
+# 17339551471f4a1bbd40088deba43137
+msgid "``1.997``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:405
+# 5d1b11eec89f40e9a99e426cc1112283
+msgid "Celestite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:406
+# 19f3c45c9dbc4b9496cddad4a3aa8911
+msgid "``1.622``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:407
+# 85f746d1c6964d10bcf27efd0bf23617
+msgid "Cerussite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:408
+# 63112c24d0284f04bbf928714e1de8d7
+msgid "``1.804``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:409
+# a6d0dd1ba9ab4f6394edb2ec495238a1
+msgid "Ceylonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:410
+# d9513a7fdda94b1da7808d5a659c8317
+msgid "``1.770``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:411
+# 7919be1f368d49d7b5bacc25b6c81f35
+msgid "Chalcedony"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:412
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:750
+# 8bcf5e967f8c4b4cb5c54750066f4fa6
+# 567791fa5e7f43b99087c9ec50ee072c
+msgid "``1.544 - 1.553``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:413
+# 361fdfc1f4784f5aaf66568365afba04
+msgid "Chalk"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:414
+# d3497532844a49ceb674fa4d5038d66d
+msgid "``1.510``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:415
+# fe2bb912110a4ebf8b4d23d983ba8c3c
+msgid "Chalybite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:416
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:862
+# 9dc229f334fc4ec1bc21c90e609e8cdf
+# 48ebf235510149a3bc3a10eb260ed113
+msgid "``1.630``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:417
+# 0148d2175df44a6ba5c97705dc232403
+msgid "Chlorine (gas)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:418
+# 826e610ff29a4d0b8ff4240eafbb6e57
+msgid "``1.000768``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:419
+# cd14e5835a0a4b3ab04468cd71a249d0
+msgid "Chlorine (liq)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:420
+# a9668ee0dec345488ceedb8a06cff39a
+msgid "``1.385``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:421
+# 80837e172211438daf57eb10287720fc
+msgid "Chrome Green"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:422
+# e25b2092e05449e1aa9ac15ee9144ad4
+msgid "``2.4``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:423
+# 436791cf0bd348c1ae5a6a7427f2c983
+msgid "Chrome Red"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:424
+# 4135c292eff44cdd81d2fad6f0a43718
+msgid "``2.42``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:425
+# 211378b1f3d94e41a3e0b63d5d6df4f4
+msgid "Chrome Tourmaline"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:426
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:870
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:872
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:874
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:878
+# 3be1111e5b6e4393b52348401e3272c0
+# bc0c4359c3004b5b94665cfebc9be165
+# 106560698465429bb8e493023191a688
+# a136bd28a37647a3849c293dc8fef39c
+# 9272edf90dae4000a40cf23cc422211b
+msgid "``1.61 - 1.64``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:427
+# dcb942ec201d43f1b40c6cdff87aed9e
+msgid "Chrome Yellow"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:428
+# f86b721d6acc4ac4ad87962769d1555f
+msgid "``2.31``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:429
+# 284df0f9903a41cf904ecb36cfd4583d
+msgid "Chromium"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:430
+# 1f1dd4657acf44508ab7ceaba96d18ca
+msgid "``2.97``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:431
+# 58708b61624b4e65bc06eeecd636cdc3
+msgid "Chrysoberyl"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:433
+# 8445eba1c237417583d10cf817ab98cd
+msgid "Chrysoberyl, Cat's eye"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:434
+# aeb963f182b84176aea52fb64d3871f4
+msgid "``1.746 - 1.755``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:435
+# 11e9c649cd114b5fba4aabdec1b32372
+msgid "Chrysocolla"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:436
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:638
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:660
+# a6f0dcd1a1bd432aa1baad14641ed5c6
+# 8ec310a82f11410faccdc9a7c1cdb746
+# 15c68025c0f64af9a43d1a9cf7d2408a
+msgid "``1.500``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:437
+# 8297c1c40bd9473e9d2a896e3156587c
+msgid "Chrysoprase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:438
+# 8d52cd1cb4b0496a9e4d405d227bc8bc
+msgid "``1.534``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:439
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:441
+# f0f9cd87ab6045308891875c8bdd5487
+# 880ec80850324ed4ad6746229ff17456
+msgid "Citrine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:440
+# 8010c30b26e1426db200ae6347b7e9c1
+msgid "``1.532 - 1.554``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:443
+# eddcec58186b47fe8c62a6bbbaa138d1
+msgid "Clinohumite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:444
+# 0014ea590b5a41078d71178e802100e1
+msgid "``1.625 - 1.675``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:445
+# 92f678cbee314da6bab00e6f574f8a4c
+msgid "Clinozoisite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:446
+# 07b5b695ed11416099038a63b872a2bd
+msgid "``1.724``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:447
+# 3dc5bf264a124942912d0465dc828feb
+msgid "Cobalt Blue"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:448
+# 24fb13f6f6c04b0da49aff9b85844177
+msgid "``1.74``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:449
+# ddd99bf053534d098e90e7b306692e81
+msgid "Cobalt Green"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:450
+# de25d4bf255f450ca81ec45c94b612df
+msgid "``1.97``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:451
+# 6360542565e04e45bc465a355b9eadd0
+msgid "Cobalt Violet"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:452
+# 7c8a11704ecd4f499de7e33557906188
+msgid "``1.71``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:453
+# 002e4bdb6a774ccd818c761bf1d4c601
+msgid "Colemanite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:454
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:600
+# 21374e036a06485ab007ff4c1d6c4612
+# 92d654b8dd30477faca72f922bacb0d0
+msgid "``1.586``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:455
+# 09514f3431a54d719e1f6c571924faeb
+msgid "Copper"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:456
+# e7c02e0b5bd74f609cd78e7bde3d4844
+msgid "``1.10``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:457
+# 899a2e93957b4f659e2a916e20dce990
+msgid "Copper Oxide"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:458
+# 037c4a96665d46999ef8b8e40b22cb43
+msgid "``2.705``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:459
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:461
+# 4d60262cb54e4213b173b1b2e989ee7e
+# 903080f8689046ca99865b67648ba8ca
+msgid "Coral"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:462
+# 83535aef4e7c4e29a1c53d7b7cfa9bf2
+msgid "``1.486 - 1.658``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:463
+# 00bdd347f47f4e17803a7095ce94c12f
+msgid "Cordierite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:465
+# dda11c422acb4270be9e12d5158ed6bf
+msgid "Corundum"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:466
+# 658767f35b184f2989cfb29ceeb4d89c
+msgid "``1.766``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:467
+# 4e15ba4aae4e4ae5b8dd1315201dd5e6
+msgid "Cranberry Juice (25%)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:468
+# d78471b2a3c8447dae3e645e61f5df4d
+msgid "``1.351``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:469
+# 1e828f131af54b7396c11036a3777e6c
+msgid "Crocoite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:470
+# bd2058660c96420d8b2cfe0b1a6737c6
+msgid "``2.310``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:471
+# 4490a7987b094e1ea217e8cb26962fd7
+msgid "Crystal"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:472
+# 6cb6ad0164534cef83eebed1f2857250
+msgid "``2.000``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:473
+# d13034cfae904d29807ea9417d60d926
+msgid "Cuprite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:474
+# 3b48dcb9a45a4629a3a57c95cd7d09af
+msgid "``2.850``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:475
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:477
+# 0cad78cbd3774501b6df08b34a778070
+# 5c603e33ae844b898dd2016c77e71afe
+msgid "Danburite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:476
+# d53fd5b3c4634a7da7e43de736a83a88
+msgid "``1.627 - 1.641``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:478
+# e1ab4c106a394c4599325dcbe23450ca
+msgid "``1.633``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:479
+# ae75af51bbac4ad5a20ba3c225d8ad3e
+msgid "Diamond"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:480
+# 8eea6a610e21432ca4dc668d4de8989e
+msgid "``2.417``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:481
+# baf573c8bfff4f329e2c86e5621c3723
+msgid "Diopside"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:482
+# 411e1320cae746b6a388aa7bd719b0ef
+msgid "``1.680``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:483
+# 15b0e3bcfaa54de89e9ffbe2c0fbf9cf
+msgid "Dolomite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:484
+# 94ecb77331d947ec8ce7c863025867b4
+msgid "``1.503``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:485
+# 518b8e80ff8b490a93d0df25bd77e1c4
+msgid "Dumortierite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:486
+# 5fb2e7bbeee346c78567f92f3200008c
+msgid "``1.686``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:487
+# b36a512421e74688b8551b2129c526d1
+msgid "Ebonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:488
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:564
+# e08a0bad720b4f3f980893cb380597c6
+# df515078ca4f47b7b1a9e55cbcc4ee0a
+msgid "``1.66``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:489
+# 2f0d28775cdf459bb4085daec210bdcb
+msgid "Ekanite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:491
+# 974047d65a0a44f3b673df2962d4e1f9
+msgid "Elaeolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:492
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:514
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:910
+# 87381e16ca0c40e5bebbd3ef32b7f862
+# a37eaadfe1434b618da959594b9fb182
+# e0a05fffdeae487ea4d6a5b1b2532432
+msgid "``1.532``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:493
+# 0956304407da49f58f2260340e6b83ea
+msgid "Emerald"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:494
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:496
+# a133469f3fe14a7db8f93188a5e4592b
+# 727b5efe171a47b1b34849d1871c893b
+msgid "``1.560 - 1.605``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:495
+# 8dedfb1dcdb3450ca2f0794cd281d975
+msgid "Emerald Catseye"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:497
+# 0ea77cb924534c51a5fd11508f6f5eb2
+msgid "Emerald, Synth flux"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:498
+# 3ad97e72a390402489a37a15b2e875b7
+msgid "``1.561``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:499
+# 3c54dc085ddf467c823ca4201354188c
+msgid "Emerald, Synth hydro"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:500
+# 0c96b975d8a64f9399621d66a3bd9811
+msgid "``1.568``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:501
+# f36c3a77ebbd449b853c1c88ec26e88d
+msgid "Enstatite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:502
+# 2c0b8c7d78084338b29a5cbaac8f12cd
+msgid "``1.663``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:503
+# 33afc108a81741e9af221c028d51c49c
+msgid "Epidote"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:504
+# 9eba8e74234748fe90ec848e33a63efa
+msgid "``1.733``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:505
+# 8a66c643056a422e9808d026b4febc25
+msgid "Ethanol"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:507
+# 02703db4ae16426bbbbc4cb08eb3c1ec
+msgid "Ethyl Alcohol"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:509
+# daa4ae316d664bad8be4a565ae489c51
+msgid "Euclase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:510
+# 6e59024abcc341e5b20139c9fe943c96
+msgid "``1.652``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:511
+# 809df713a4dd44ab9049dd3f4357a53d
+msgid "Fabulite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:512
+# b2bc36a8a9e644ed937d2c81278462ca
+msgid "``2.409``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:513
+# 28f13e0cbaf348b993266db6a72da259
+msgid "Feldspar, Adventurine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:515
+# 357fd10c3a304b809fe4c86ad06d9392
+msgid "Feldspar, Albite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:516
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:518
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:522
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:664
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:722
+# cd82bee51b9b43909f68db25fc2b04fd
+# ffca881cc6ea4546a5b28f52012ad1f9
+# d56426d0cba44a38ada355bf8f6338c8
+# 88980d5a0bc749038bc2c37505367cdd
+# c5aacfa0f7e244c9822b6811d9f695e6
+msgid "``1.525``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:517
+# e3dce5a00af64b81a449d07106e65359
+msgid "Feldspar, Amazonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:519
+# c5bed8368c5e4857934f885a69f6a47f
+msgid "Feldspar, Labradorite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:520
+# 9cc2bc7a01814edbbfbd08e958122e7a
+msgid "``1.565``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:521
+# 3aeae5983b8e4762bc9f01e9cd8534f7
+msgid "Feldspar, Microcline"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:523
+# 41ce481e59df499697ca88e8c8a38cce
+msgid "Feldspar, Oligoclase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:524
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:824
+# 73ec289acf7944df9370ae38f5451c6c
+# f1a059d6a9e44037993beddb41275278
+msgid "``1.539``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:525
+# 7a6c232bef534a4b85a7dff52553ab9f
+msgid "Flourite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:526
+# d35b6afce3e5425ea58e8934887be2c8
+msgid "``1.434``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:527
+# 078177bc3ae6497f8d6e7927e107a6e9
+msgid "Formica"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:528
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:694
+# fc735f3cad414cc59c5d1090a4f2c9b4
+# b082db4432554e4599d2c0e4fcc422af
+msgid "``1.47``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:529
+# cca5f6a2065a4bf2a6f14cdab0aafa79
+msgid "Garnet, Andradite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:530
+# 3125f33bf51f41fb8a6a17d568107b34
+msgid "``1.88 - 1.94``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:531
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:533
+# 93361f4771c14cd0808be7792bd3ea25
+# 8c19a238aacc40aca8b2342bcb0d38cc
+msgid "Garnet, Demantoid"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:532
+# 64b2fa2a08cf44a089e54b22afee3c88
+msgid "``1.880 - 1.9``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:534
+# d6c472f7d0e44bda9f57414a04ab14d6
+msgid "``1.880``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:535
+# 272a706995a04c4d8fb4f7ebf768ffbe
+msgid "Garnet, Grossular"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:536
+# eeea9bffc71a4c58a9022261f00cffe3
+msgid "``1.738``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:537
+# c1470e2117874eaf8a25564ed0fbdaeb
+msgid "Garnet, Hessonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:539
+# abc1d1475b7c44fea75deda61c882113
+msgid "Garnet, Mandarin"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:540
+# d31149725c4d4d5a905a91a5ea88d69c
+msgid "``1.790 - 1.8``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:541
+# c5ece6f00cb745c89001c05811091cac
+msgid "Garnet, Pyrope"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:542
+# cbe4d7c89e0640f58c744d733c160d1c
+msgid "``1.73 - 1.76``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:543
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:545
+# 4195344c10974b058a0a90f7c147db4a
+# 188fc44323474071ac8d5da8cd1d10d7
+msgid "Garnet, Rhodolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:544
+# c8f62e5aa4624775a20cee01ed6257c5
+msgid "``1.740 - 1.770``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:546
+# 49f84731512940ef85af72aa9c8bae4d
+msgid "``1.760``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:547
+# c2e84034afde40ce83b85ff396392862
+msgid "Garnet, Spessartite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:548
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:746
+# 9dbd54b98871418dae5a188a8e039bb6
+# 50734c48cfc7465293ac46637ef23dde
+msgid "``1.810``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:549
+# 5136f40748e34705a2046296a97452e9
+msgid "Garnet, Tsavorite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:550
+# 612f48e4ed9c46888f6c06c334349a8e
+msgid "``1.739 - 1.744``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:551
+# 1fabefc10f9e47679227cd0b1dcce61c
+msgid "Garnet, Uvarovite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:552
+# 26dbbad29fd74d4faac3ed9cc6465202
+msgid "``1.74 - 1.87``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:553
+# 907213e50c7642658a7be9709ad66d9b
+msgid "Gaylussite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:554
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:562
+# e3542ade070a402d9291b12ad947af93
+# 1f6937bf4b074bc39fa5d8fcec45a08b
+msgid "``1.517``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:555
+# 5fe437b3070c4ac6bc04f6e436015144
+msgid "Glass"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:556
+# 5c1f314ddfda46079b60dfbc0054f76d
+msgid "``1.51714``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:557
+# 287704eca7744eccbcc2875c10f90576
+msgid "Glass, Albite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:558
+# de95861d77294e9a93ddc8c9a76591fc
+msgid "``1.4890``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:559
+# 252d040550cb4494828edd052bca0173
+msgid "Glass, Crown"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:560
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:828
+# 4054157301b649869252de39572abd1d
+# 6230aa2a160d48d3b41a4a84962bb1a8
+msgid "``1.520``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:561
+# 1654602e7ad844d2aef92d12b35d19ce
+msgid "Glass, Crown, Zinc"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:563
+# f7e0fdd901d14b44beca949a7133e0d2
+msgid "Glass, Flint, Dense"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:565
+# 3f76add2fc774dcba0d5a44c5ee6a8f0
+msgid "Glass, Flint, Heaviest"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:566
+# 9d04744ea0644de0ba80944a9e63aced
+msgid "``1.89``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:567
+# 28380d4d7b1b43af94e0ff8b6444b6e9
+msgid "Glass, Flint, Heavy"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:568
+# ba3a5c406cad4c558542523d93fddc8e
+msgid "``1.65548``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:569
+# 24f796a5f71142bfb8958634814fff49
+msgid "Glass, Flint, Lanthanum"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:570
+# 95c3fc84e04b4187bd23c1df270ed3f3
+msgid "``1.80``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:571
+# 163020b28036436e8799fa327ecb1c1f
+msgid "Glass, Flint, Light"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:572
+# bcec6ff522444f43989b0c3231c55e10
+msgid "``1.58038``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:573
+# 5dc69c36eb214185a9868e9f382321f3
+msgid "Glass, Flint, Medium"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:574
+# e4fc1be3609d4267aadb6e1f5cf81d70
+msgid "``1.62725``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:575
+# d3a1fcce092b4f3a8081eec46867143b
+msgid "Glycerine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:576
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:690
+# c3c3b4f71bc747559f4d025b9149f8e4
+# df34b4faddc7412385195726c0ca9beb
+msgid "``1.473``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:577
+# 9238857ad61f456ab9c736fad992d2df
+msgid "Gold"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:578
+# 45b1cc89545f4afbbcf85accad50714c
+msgid "``0.47``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:579
+# 1559ed5ae5284e1c84f7a05838110815
+msgid "Hambergite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:580
+# 21685ea7f5d54005a21a16a04c0d8e9c
+msgid "``1.559``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:581
+# a93a3f81d50e4456a6fe80a47b534512
+msgid "Hauyne"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:582
+# 3220d4508b9c41f1bf0a8fd678a12c9f
+msgid "``1.490 - 1.505``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:583
+# 4b249eedd5c040ef8c9e306a8b575e55
+msgid "Hauynite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:584
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:724
+# 9fbb0bda33154601b6dfc02cad0dd06d
+# 5a07f74bdc3c46fdba969ea2026ff3f1
+msgid "``1.502``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:585
+# a389b6fe9ff043b9aa9563cc194f2155
+msgid "Helium"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:586
+# 5eaf509562384118b1e999436d47ef72
+msgid "``1.000036``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:587
+# 94ec892c64db4486813f4bd3494842d2
+msgid "Hematite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:588
+# e3097bccb4664db7aeb7ef47c39a5faa
+msgid "``2.940``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:589
+# c77306b4105e4b77980b159a33be8cee
+msgid "Hemimorphite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:590
+# 5912a092c89b401eaad1d6956872d74d
+msgid "``1.614``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:591
+# 13022be181c44237a22fc46c3c38c754
+msgid "Hiddenite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:592
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:650
+# da6ac918e5a94a4db402ff1961310678
+# f19e81096c944d849807dc50169b9996
+msgid "``1.655``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:593
+# 062af574a77844a5bb12c1ea4dd27b41
+msgid "Honey, 13% water content"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:594
+# 26b1229ccf9f4bc398285789a05a730b
+msgid "``1.504``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:595
+# d6a4582080594d1380609a71657993d4
+msgid "Honey, 17% water content"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:596
+# 2c1bffcad627472ba8833c33ae272115
+msgid "``1.494``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:597
+# e55d63f6a4e544468206e548d3efe172
+msgid "Honey, 21% water content"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:598
+# 41039feb53fd47faa9d2a34711838c0f
+msgid "``1.484``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:599
+# 02a03f94618a450b871b4d4a669d7f86
+msgid "Howlite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:601
+# b81a637342ee4450a96d1aa3187d09db
+msgid "Hydrogen (gas)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:602
+# 75b95a97334b48bdbbba640cf439adc9
+msgid "``1.000140``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:603
+# b3acc75d4d7c4e64969a2fea7d8259f6
+msgid "Hydrogen (liq)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:604
+# 0c0929c1cbd74e888a5e94206822a074
+msgid "``1.0974``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:605
+# 067ed7c717c841f5a5eeff795a350d98
+msgid "Hypersthene"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:606
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:696
+# 2eaa9f73ffbf47e4ac8b78db7f241c33
+# a1e57d2825444dcd93172b3876de9194
+msgid "``1.670``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:607
+# 33f911d43eae49349b7730764a8d9a29
+msgid "Ice"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:608
+# a20df611de6143399a70dfd3ff9fe647
+msgid "``1.309``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:609
+# 2580345bdedd4d8793c5fe77abc1d8ac
+msgid "Idocrase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:610
+# 7159572ed51b40a1b3bdd4f0f679d239
+msgid "``1.713``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:611
+# fda93a6a38b047fb8beb2c7d47b6ceb5
+msgid "Iodine Crystal"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:612
+# ac552b9c3a0c44989457ffdb8c179dd4
+msgid "``3.34``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:613
+# 244ebbd685ea498493ae30e10cb76113
+msgid "Iolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:614
+# dafc733a08d6446b83d61f9fdcff24f4
+msgid "``1.522 - 1.578``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:615
+# c7b1f0d2b1ed444f8f447c7a6fe5fb16
+msgid "Iron"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:616
+# 047f9b9ca4674c75903548bcfbe6a065
+msgid "``1.51``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:617
+# 69a648d0833440668b121080c3bcc469
+msgid "Ivory"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:619
+# 6af4c5d0ea754ff98bc383ed55d209c9
+msgid "Jade, Jadeite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:620
+# 7c43a0150c6b42f1a87e29abab86bd6b
+msgid "``1.64 - 1.667``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:621
+# f4de5a5689524386afe5a2eae012ad83
+msgid "Jade, Nephrite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:622
+# 5fde079502fb4365a6421feeb7a39589
+msgid "``1.600 - 1.641``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:623
+# 1b40e6127b7e47cebc4f8f78797beb15
+msgid "Jadeite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:624
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:630
+# 0e56c0a4b7ac4b50bd939c405d3e9185
+# 5361e1f3b35f4d55923b39e7bb73bfb3
+msgid "``1.665``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:625
+# 55f22d9aa7694855b86b2b819aa5cd54
+msgid "Jasper"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:627
+# 4eb080a35a594c098c2c026be7663cc9
+msgid "Jet"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:628
+# 4e476750e487477b96ec57e01cb4fb4d
+msgid "``1.660``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:629
+# 6bae4c39afa94f0ab4058f66c544a8d7
+msgid "Kornerupine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:631
+# 0547b3f002ab42238b43e6b2023d4c3b
+msgid "Kunzite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:632
+# c48756d75f774accb0bd79dc213664c5
+msgid "``1.660 - 1.676``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:633
+# 2b75b50b9dfa462a9781069e9734ecb2
+msgid "Kyanite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:634
+# f922c4159a3c444c9cfe56d5a31d8e69
+msgid "``1.715``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:635
+# f8fb6bb1cc28450c875df6ab7929d4bb
+msgid "Labradorite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:636
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:706
+# 289594d88ddc4c31b0e8c213651f108b
+# 034871550ab4440dad9d9bd8f4b23b8c
+msgid "``1.560 - 1.572``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:637
+# 9ff225bc51174e8caa2db3032885746c
+msgid "Lapis Gem"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:639
+# d6e1605fd0b340f1b8075907e450b501
+msgid "Lapis Lazuli"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:640
+# 3d0a30be64e748e39916f0803af16d08
+msgid "``1.50 - 1.55``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:641
+# da3b6906e72b4aaabe74c6572bc31f0b
+msgid "Lazulite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:642
+# a653d521f03e46b4b07144b37ec231b3
+msgid "``1.615``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:643
+# 31c60ec0f7a34b71b990789b127b418d
+msgid "Lead"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:644
+# aacd67eab26240aba6cb7571178d839a
+msgid "``2.01``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:645
+# aebdd7d78e4744c1a1885255c5c8db56
+msgid "Leucite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:646
+# 59999c6615ab45bc82e8bce7c582c546
+msgid "``1.509``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:647
+# cae251bd72244939835a11e6d8ca0b70
+msgid "Magnesite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:648
+# 26df7894dda14d5a8b8fb7b20911a03f
+msgid "``1.515``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:649
+# 2337363640b44b1a820617db7569471b
+msgid "Malachite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:651
+# 57763b0cff7d445dba97bc302b81a852
+msgid "Meerschaum"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:653
+# b61b5f7efbd24dc49a3395ccfa9904cf
+msgid "Mercury (liq)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:654
+# 23b5c9c764ca4d51abb672b2b9d624ca
+msgid "``1.62``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:655
+# 186cf8b7a1b94395862db44b85acdef3
+msgid "Methanol"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:657
+# 3692abe5b4ec454c88b4c6f98ab849a1
+msgid "Milk"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:658
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:848
+# 1d7aa6f50b544259b3a9d539391eaa1c
+# 266141ea6cf9426cb75ecd0045398d4b
+msgid "``1.35``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:659
+# 928d8d25edad443ebc48bf6fa1103b30
+msgid "Moldavite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:661
+# ed5dac1db36b4e68bd7a067c05f0e167
+msgid "Moonstone"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:662
+# 0cf11df5c2d44bcf88c675832d9b3859
+msgid "``1.518 - 1.526``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:663
+# d656a36ca99740249afa49ff439eb1b1
+msgid "Moonstone, Adularia"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:665
+# 029579b522324cb198359f30991f1bf0
+msgid "Moonstone, Albite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:666
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:684
+# cf91cb966f9c459bb18d0f63fe3a7282
+# 37169144fe3f43e1b7a9e365e7bb7b68
+msgid "``1.535``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:667
+# 102817754dfb4100aa850ab5e2c78fdb
+msgid "Morganite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:668
+# f45a62242d8e4d8381414f479b7e6e81
+msgid "``1.585 - 1.594``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:669
+# 42b70f1a544e4bb2b239710c62b4512f
+msgid "Natrolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:670
+# 253b408362b44751b37dab716d241fa6
+msgid "``1.480``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:671
+# 949a6edb5f59423dba1650f7012ce34c
+msgid "Nephrite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:673
+# 4374ba3a60ae48f1b59c2e27764dc9c6
+msgid "Nitrogen (gas)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:674
+# a1ab18847eae4edc939ba170e135f612
+msgid "``1.000297``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:675
+# 917a0fa8fdf24e1b896cb8b0dad4758e
+msgid "Nitrogen (liq)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:676
+# 1f4a079630f3422b8845181010778866
+msgid "``1.2053``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:677
+# 48cd429aa6e14ee4ad373d4d9156c8b3
+msgid "Nylon"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:678
+# 5a2d8c3cf6cf4982946c218f2da62ce7
+msgid "``1.53``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:679
+# da93dff2737d43d8949f3725e4dee84e
+msgid "Obsidian"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:680
+# 5128d70021cf42748bb2e6dbad992b1b
+msgid "``1.489``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:681
+# ad8a2934721143f9bf2ebd943e686aff
+msgid "Oil of Wintergreen"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:683
+# 182befa815f84133aace166319f29eb9
+msgid "Oil, Clove"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:685
+# bf2ad20948244e4abf00b9b0e38213d5
+msgid "Oil, Lemon"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:686
+# 64210b588aed49c3bfa32398fc309392
+msgid "``1.481``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:687
+# 482b3d46372e459a9e6731f5f93182b2
+msgid "Oil, Neroli"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:688
+# 53422f52cff840a38855ffb61407cae9
+msgid "``1.482``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:689
+# 49c381c646fe4ed983805e25204f2ad4
+msgid "Oil, Orange"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:691
+# e9521e57e2a146bf8259ba709ad515d3
+msgid "Oil, Safflower"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:692
+# c2bbbd6643da4b938746d41d3c5058ad
+msgid "``1.466``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:693
+# 22727f2d667b46baae9feeae48981a97
+msgid "Oil, vegetable (50- C)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:695
+# 8645ab6af4fd4c40806e6bd471c6ce14
+msgid "Olivine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:697
+# f087afde0f02405994e9227458f22399
+msgid "Onyx"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:699
+# b18fc462b0344d7ebf050c20326f23fe
+msgid "Opal, Black"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:700
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:704
+# 43bd9c2c169a452ea43518fc42e5710f
+# 71929ae190d340eeb661e00c6a976c4d
+msgid "``1.440 - 1.460``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:701
+# 287514e33e594861b5b05fbd4708b73e
+msgid "Opal, Fire"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:702
+# d7978b26d1f74e9981ae5d53c958673e
+msgid "``1.430 - 1.460``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:703
+# 8f4af8b1d9384086ba6361291cdbefd6
+msgid "Opal, White"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:705
+# 2cb621a8659c4f87904230660c3ca7c9
+msgid "Oregon Sunstone"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:707
+# ead57c03bad74a3ea52e6760448ec822
+msgid "Oxygen (gas)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:708
+# 8d0e2efc85dc4922ba6dd22502aaf032
+msgid "``1.000276``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:709
+# 7d0223f4151541ad804d1c76c2c27818
+msgid "Oxygen (liq)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:710
+# 667fe2b70bb946ab9bd00a5cd29005dc
+msgid "``1.221``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:711
+# b445b9be29874d15abfc91d0cc6b0859
+msgid "Padparadja"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:712
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:774
+# 4ee2cfe456674d6a94633d8a94a5165d
+# 36d4b7aff15b46f1af9e52c2201438c2
+msgid "``1.760 - 1.773``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:713
+# a46d43026c834af693d443e54e6137f0
+msgid "Painite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:714
+# b3ab97b5b5f34232851f0346d223bb2a
+msgid "``1.787``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:715
+# 89372742b450417f99ffd5273993d9eb
+msgid "Pearl"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:717
+# 93c484c98d204a348357f2a4b0efa156
+msgid "Periclase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:718
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:748
+# 8c54d9894d064915ab8f21ea077afbfb
+# 45d0baf7196f4417a888f413e66d061b
+msgid "``1.740``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:719
+# 06c651c55fdd4e9e93f6f17ee76e9822
+msgid "Peridot"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:720
+# dd500b72d47949b1be51c3dbce3fc83a
+msgid "``1.635 - 1.690``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:721
+# 06f69603637b4e6b8b3ee204022706fb
+msgid "Peristerite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:723
+# 96749493d08e497a9986570ac2fbd407
+msgid "Petalite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:725
+# 9db8ab44ae2b42d3b570eac106343028
+msgid "Phenakite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:726
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:818
+# babb62718a53472eafeb5086158a46ce
+# 652efc8f1ff5451498e75fe5a2fd6f97
+msgid "``1.650``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:727
+# d5619cff58084c63bb21d5170f74f476
+msgid "Phosgenite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:728
+# d5729e89fecb41a3b91df06906dbe3eb
+msgid "``2.117``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:729
+# 349c60a89bbe449d83cc4167e292bc4d
+msgid "Plastic"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:731
+# 42f541e464694378850d3a0795a1d57c
+msgid "Plexiglas"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:732
+# ee958a4654bc442cafc293a5ae004076
+msgid "``1.50``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:733
+# c00f81f718db43a0800e2fbf96a9f0a7
+msgid "Polystyrene"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:734
+# d2aa8fe8bfdc4ccabf3de59667c883f1
+msgid "``1.55``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:735
+# e80db9394d904b4e91e9b514c7614180
+msgid "Prase"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:737
+# 4acf14f8b8df42d7b15a3ddc4646f184
+msgid "Prasiolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:739
+# b331d9613d6048f7a610dac59f025f4f
+msgid "Prehnite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:740
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:856
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:886
+# 6dfbf8d5b37445ce96646d051f6869ac
+# 5d3e7c65250d4f7ca85e6d291addcbe9
+# a98af34f5fbb4bd5ae22ddabbb30f568
+msgid "``1.610``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:741
+# 0b1861e9a9e441029108d3480dad5066
+msgid "Proustite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:742
+# 060653a1246b41f9845e72544a1d0115
+msgid "``2.790``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:743
+# 839501327f9b40a1ab95a9f4cd9bf706
+msgid "Purpurite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:744
+# 267b1b69361e497da63e62599be21a81
+msgid "``1.840``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:745
+# 83d24cfc52d741cc8a2cbcbda2830e8d
+msgid "Pyrite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:747
+# 6c7a161fd68f4354a7841f1c742408a8
+msgid "Pyrope"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:749
+# 4f393d6cadeb4e8e8ecad04a8c6f45ed
+msgid "Quartz"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:751
+# 967eec51bbaf4654a99bdba867e32ef9
+msgid "Quartz, Fused"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:752
+# 8c554355c6284e93a4d4bf7fc7216fec
+msgid "``1.45843``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:753
+# 0814e8dbaa8648c4ac7d6b607d274e14
+msgid "Rhodizite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:754
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:908
+# 54d9254a32c84936a903a552815048d6
+# aadc7c547343496594c2e3fa37fa53e1
+msgid "``1.690``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:755
+# b99dfa6c314c401ba5ab542dd131afcc
+msgid "Rhodochrisite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:757
+# 5fe8a482379a48e8b5424d4c675b368e
+msgid "Rhodonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:758
+# fc38bea9963648cfb4e219f96ed74f79
+msgid "``1.735``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:759
+# a7fa25f76bed41978610c738924d284a
+msgid "Rock Salt"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:761
+# cad0e7c297f44755ba2bd15a575dfaff
+msgid "Rubber, Natural"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:762
+# 27f5be649de44ebba0248015a31d03b1
+msgid "``1.5191``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:763
+# ddf2e6b180a14e23a9d54ab957d48ad3
+msgid "Ruby"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:764
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:772
+# 5c07596f6e244df5a22359a140442356
+# 117a87b57839428c9352d371a1e3cdbd
+msgid "``1.757 - 1.779``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:765
+# 1cb03c8a15b343a18f835c8f9299c1b2
+msgid "Rum, White"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:766
+# 69121e351ecf4993a1a3a0634dc247be
+msgid "``1.361``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:767
+# 67e5c4239b4349df80bfa2ab4ab5bb3c
+msgid "Rutile"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:768
+# 18b3fd24cabb4957ba2a336ee1f378e1
+msgid "``2.62``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:769
+# 1700a7042fd14a9ab2c0672ec5b4b6fe
+msgid "Sanidine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:770
+# 78ff7dcb55184e2aa0b415b9c0787a19
+msgid "``1.522``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:771
+# fd3bc0bc7ec44779a513d715f01bfcf5
+msgid "Sapphire"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:773
+# de6670a069fd4ce2bd1a28d2021df6f2
+msgid "Sapphire, Star"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:775
+# a2df6588552f4079bbbdaa79bcb246c8
+msgid "Scapolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:777
+# 74db9b1831ab4957850778fbcc7d6a1d
+msgid "Scapolite, Yellow"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:778
+# d45855f07a404dec98a1429cc3258471
+msgid "``1.555``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:779
+# 51ebf3fa0ea343c8b8c673b31003e7fb
+msgid "Scheelite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:780
+# 0bccf72f56dc46f585c0dd375ac2c561
+msgid "``1.920``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:781
+# 234bf171433649b4a5d7f7c4bfe8f3b8
+msgid "Selenium, Amorphous"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:782
+# 010c8954fa8f43daa9f9d4928db1245d
+msgid "``2.92``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:783
+# b364b9a0d42b4360b5bc9e0e2fbad4e5
+msgid "Serpentine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:784
+# 3acdb0b6545942a9aef9f430a38c3bb5
+msgid "``1.560``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:785
+# c475ad106d3b4e8ab3d107cdbc68e18f
+msgid "Shampoo"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:786
+# 2202e6d1821b45d69874b40a846f6f06
+msgid "``1.362``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:787
+# d3dc28bda870485597c6053edfe4a7df
+msgid "Shell"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:789
+# afcd3ab5fce845889553d77fc93aa84d
+msgid "Silicon"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:790
+# 181341bf24d44ac0b36f8fb6735f15d1
+msgid "``4.24``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:791
+# bde98c1f1d974d1cbd01290a1cc02c35
+msgid "Sillimanite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:792
+# 833b3aa938db49c2895cd0fb0c6a3617
+msgid "``1.658``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:793
+# f7a91f7b5a354a7b9ac42aebf9af5864
+msgid "Silver"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:794
+# 0410cab3a61d402a81e899661cccaac2
+msgid "``0.18``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:795
+# f6a604e24adb49d8a0124203734d8b8d
+msgid "Sinhalite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:796
+# 76aff66c548740dfa6c9632bcf9b310f
+msgid "``1.699``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:797
+# 7f3902aa8de444bd9c213798266da9fe
+msgid "Smaragdite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:798
+# 9d4608839680475c887ce99ab1428255
+msgid "``1.608``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:799
+# c7aba61665ca40bcb827974aa7a17ee1
+msgid "Smithsonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:800
+# 2c1811d9e0874bd6b58028ded925aead
+msgid "``1.621``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:801
+# 308b83a2c93f4b3c83e792ffb7a8132c
+msgid "Sodalite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:802
+# bd468617b3ca412ea31f26103aacc9c5
+msgid "``1.483``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:803
+# 7904f8e70d754deb94aa76cd9a718628
+msgid "Sodium Chloride"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:805
+# 35ce6c2890394d5f9c1a50b97372f6b9
+msgid "Spessartite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:806
+# c4006f19db9249ee982ec78fa8885902
+msgid "``1.79 - 1.81``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:807
+# 164d7d133ae94e2a93863a1670746070
+msgid "Sphalerite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:808
+# 0cdabfa83fc64adbabc0c6cfc9467eaa
+msgid "``2.368``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:809
+# c59955ce606c45d3acb72b9436db0625
+msgid "Sphene"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:810
+# 3bb9b088c09d4a24baccdeb784c53e77
+msgid "``1.885``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:811
+# ae350846b7b84f6a92b9718f333c58f3
+msgid "Spinel"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:812
+# fabaa4c12c8b4be690cbdc05c652c1a5
+msgid "``1.712 - 1.717``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:813
+# 957da86f175845099e4b3b49c55e7966
+msgid "Spinel, Blue"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:814
+# 339afce78f0e4c21a07fc3675f2f6f2e
+msgid "``1.712 - 1.747``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:815
+# babf3451668340239334a96a59fe9d37
+msgid "Spinel, Red"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:816
+# 19378455e8cd4d20bfc2d7432a0c86d1
+msgid "``1.708 - 1.735``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:817
+# b1e98171d3ee435fad8e7a6fe83a846d
+msgid "Spodumene"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:819
+# 078948c9d6944820961d85afa669fc05
+msgid "Star Ruby"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:820
+# a7d558e4ea4c4b0fbf0ce9a0ac593bd1
+msgid "``1.76 - 1.773``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:821
+# a6e9cccc45a44494a84614adc279c5b3
+msgid "Staurolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:822
+# 1259d68bcb9d41f1a82e935859c2612b
+msgid "``1.739``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:823
+# 9e71137320c247b0908d94dcb90412df
+msgid "Steatite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:825
+# 5d0802f79153494f869e81e1b90caec2
+msgid "Steel"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:826
+# 799ebc1895134dce8c3cb951cef46133
+msgid "``2.50``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:827
+# 136d821ef3d24adbbf82a903c44d87e7
+msgid "Stichtite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:829
+# 45da2fdc74624abeb6d748f87863055a
+msgid "Strontium Titanate"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:830
+# 2f51a5ac37cf42d5b2a303af458a5545
+msgid "``2.410``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:831
+# c7b345c60f5b451f9abe247fea5c8c37
+msgid "Styrofoam"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:832
+# e5c1393d53b14d6da452c5f2e1b815bc
+msgid "``1.595``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:833
+# 1d4b99903217461e9984db7d73a9d787
+msgid "Sugar Solution 30%"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:834
+# ca396775972b495fa8cdd40b17c07fe9
+msgid "``1.38``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:835
+# 2eedb4239d994232ab1ec8b5abfdb9a7
+msgid "Sugar Solution 80%"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:836
+# 12226702d2484e499aef7ca5f4499809
+msgid "``1.49``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:837
+# 6fffcdee5982464889b148103be93133
+msgid "Sulphur"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:838
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:922
+# ae7a08b3e6c74afcb03cb1edf471e622
+# 43e75990518f4fe4b04eb977eae52b05
+msgid "``1.960``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:839
+# da35d0149df24d3ca0de69eda06e5114
+msgid "Synthetic Spinel"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:841
+# 43c166fc761042508b237dd699b2fa65
+msgid "Taaffeite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:842
+# ce5b25dd62324bf1867414c61c221506
+msgid "``1.720``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:843
+# 905f34d19fa647319b1a62948a324d32
+msgid "Tantalite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:844
+# 4116217d6a4f4900afc08b517692bcc9
+msgid "``2.240``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:845
+# 494285fc8d524cf59b8df1ec7cdb5cd1
+msgid "Tanzanite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:846
+# fa65b90b57004a1c8e8ca483f469537c
+msgid "``1.690-1.7``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:847
+# 6f2620f9e1a94ed89e390bb518cfa613
+msgid "Teflon"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:849
+# 90e5ae3e1d4c4fc5ba35c5b440ac91dc
+msgid "Thomsonite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:851
+# 6a34d437997f4bc28b5278be2539a140
+msgid "Tiger eye"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:853
+# 6767d541a4db46f3a0670a4463d146ae
+msgid "Topaz"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:854
+# bbaa649397c649abb7745dc5486086cb
+msgid "``1.607 - 1.627``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:855
+# 44db7d57ec4c42a8be6feb2a0d3890d5
+msgid "Topaz, Blue"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:857
+# 2522e5c1d29643a198992fe786d98be5
+msgid "Topaz, Imperial"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:858
+# 3bc2dade320e4306a6a6c3eba66719da
+msgid "``1.605 - 1.640``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:859
+# ed230ca477904687bb65e51f177b96d3
+msgid "Topaz, Pink"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:860
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:864
+# 0785580da1a746ba9a7f1b039ad5fcda
+# cd52ec3a6b594af689680269bb115952
+msgid "``1.620``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:861
+# 3c6687b53bf046d0979f0284a733f125
+msgid "Topaz, White"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:863
+# 34020871915f4249a121f2ecc0ccd544
+msgid "Topaz, Yellow"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:865
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:867
+# e8e0c30f60da4cefb8ac1e060bce7237
+# c41bc6738cdb4a238075cfd4afa57974
+msgid "Tourmaline"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:866
+# 4bb3bfeb3b8b4c7982785454930d44a8
+msgid "``1.603 - 1.655``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:868
+# 4e0ce0f7cfb542919fcc59d05f970c25
+msgid "``1.624``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:869
+# d4cfe2d5d1454cdd83fa3954552ad988
+msgid "Tourmaline, Blue"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:871
+# 2fae64dfdc1247ab8674613e0c2c88a9
+msgid "Tourmaline, Catseye"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:873
+# 32b6a895de0c43209fb22138690677c2
+msgid "Tourmaline, Green"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:875
+# f1893c1be6c7479d891d41ffa18a1a15
+msgid "Tourmaline, Paraiba"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:876
+# 5cc0dc58707a40c4ba1b30e970a86c98
+msgid "``1.61 - 1.65``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:877
+# 0661d6a543bd4062bc616cb2ace41f88
+msgid "Tourmaline, Red"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:879
+# 836bf04c93334856b41f78f70fcf9dde
+msgid "Tremolite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:881
+# 14e1844ddd0d4a268d6b757abd6047ca
+msgid "Tugtupite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:882
+# 12d195f9e7c94840b83cff2978e238d5
+msgid "``1.496``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:883
+# 2a515c76e762470a923608efff243588
+msgid "Turpentine"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:884
+# 92a86b53f3424dc896547820a24acaf9
+msgid "``1.472``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:885
+# de713b764ce5469a8867aa46025591f4
+msgid "Turquoise"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:887
+# 5c20003a7c044f5aa68ec74543e907c2
+msgid "Ulexite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:888
+# f3fc8d85e5874e78bcfe072efec3c4e7
+msgid "``1.490``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:889
+# 0e5bf9ec09db46e4906d1641817f2ad7
+msgid "Uvarovite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:890
+# 5342a1cb2e6f4e18baf0495d43d3ed42
+msgid "``1.870``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:891
+# 8aa570f289cb4b9aab8c0e953a8958e6
+msgid "Wardite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:892
+# d07b03a313584128894e41c2281de048
+msgid "``1.590``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:893
+# 08d2c95a6b124b81b70946e9dee5d836
+msgid "Variscite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:895
+# ab34314568424e528c5c8008b87c6727
+msgid "Water (0- C)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:896
+# f4e219cebfd94a4b84d5ebad86b3d2fb
+msgid "``1.33346``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:897
+# 61a54f9e76444201a5f61d77e01e993a
+msgid "Water (100- C)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:898
+# 67ef8b9ffdf84f3fbb2fdccb31a2217a
+msgid "``1.31766``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:899
+# aeb892102e884eba81066c41ce81cb84
+msgid "Water (20- C)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:900
+# 542fb5857f474b498e2be12c246a949f
+msgid "``1.33283``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:901
+# 91091768c59b47e480a5d3594c1133b0
+msgid "Water (gas)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:902
+# ab5e0b3611794008a31a6a851c66dacb
+msgid "``1.000261``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:903
+# 14cd7a9486324b079bdc373780324056
+msgid "Water (35- C, room temp)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:904
+# 63359dee81734a789c5874e7e1a52216
+msgid "``1.33157``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:905
+# 3c605ea3a4d04eccbe696cfe3de55588
+msgid "Whisky"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:906
+# bae5c98397ca4c9abdcbb45b12721ec2
+msgid "``1.356``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:907
+# 38525c4f2515459895876fc996dafcf6
+msgid "Willemite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:909
+# 0d9cb479d458484ebf23d5083d5f2fd7
+msgid "Witherite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:911
+# ddee3b6a91414cd3a968c17379a66a84
+msgid "Vivianite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:912
+# 13d762391d434f10ba8ac6340892cb34
+msgid "``1.580``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:913
+# 5f46f422cc404d5d977018e26cf37459
+msgid "Vodka"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:914
+# 701893403c444ff7be26b4f394404cc7
+msgid "``1.363``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:915
+# 7f21988f9b5b44ecb6ffe80dc994f1bf
+msgid "Wulfenite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:916
+# 5a6a32a0bd294b1ca2d81e111412fd18
+msgid "``2.300``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:917
+# 6517729a3f174db19ecd2d1ffce3c7dd
+msgid "Zincite"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:918
+# 2fc0729c9c3c4106b379509e409c3175
+msgid "``2.010``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:919
+# f2b780c8b5da4e169be095e709a3316b
+msgid "Zircon"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:920
+# f563a9455c3e487380ad6d7514cf491c
+msgid "``1.777 - 1.987``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:921
+# 537ac65bcecb41fd82528dcf5d4335ef
+msgid "Zircon, High"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:923
+# 5faec1fde0de4db8a2973eb8618ec36f
+msgid "Zircon, Low"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:924
+# 1577d6a76c7a405fbebe5eed7e350f78
+msgid "``1.800``"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:927
+# 2debe118ecc04e189c7522a93f484098
+msgid "Zirconia, Cubic"
+msgstr ""
+
+#: ../../../manual/render/blender_render/materials/properties/transparency.rst:926
+# cbd558fca34c4e88800b2e23bcb568d5
+msgid "``2.173 - 2.21``"
+msgstr ""
+

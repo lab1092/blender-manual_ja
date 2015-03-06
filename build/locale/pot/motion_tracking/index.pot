@@ -1,0 +1,1015 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/motion_tracking/index.rst:4
+# be5fa27a8d1847229e608e030dc822df
+msgid "Motion Tracking"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:7
+# 89d08f9bfc9245f6b23eeada9790f126
+msgid "Introduction"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:9
+# 6b47ec9defd64318bb92855744e8277b
+msgid "Blender's motion tracker supports a couple of very powerful tools for 2D tracking and 3D motion tracking, including camera tracking and object tracking, as well as some special features like the plane track for compositing. Tracks can also be used to move and deform masks for rotoscoping in the Mask Editor, which is available as a special mode in the Movie Clip Editor."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:14
+# b7d1b8549e684032a913e1f2a6bd3a84
+msgid "It's ready to be used in production, as validated for example by the open movie `\"Tears of Steel\" <http://tearsofsteel.org>`__ by the Blender Foundation. Since then it has been improved a lot and the tracker is now fast, accurate and versatile."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:20
+# 83b37d96381f466bb20e51a578c08717
+msgid "Getting started"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:22
+# 1fc1be61139248b59c2c9f0c21664d27
+msgid "Here's brief descriptions of motion tracking tools currently available in Blender"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:26
+# 26ebd270dd9540b2b13ce747ffbb9dbe
+msgid "Supervised 2D tracking"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:28
+# 1b637ec36a5f4871a2de15f7295a9afd
+msgid "There's no common algorithm which can be used for all kinds of footage, feature points and their motions. Such algorithms can be constructed, but they'll be really slow and they can still fail, so the only way to perform 2D tracking is to manually choose the tracking algorithm and its settings. Current defaults work nicely for general footage which isn't very blurry and where feature points aren't getting highly deformed by perspective."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:35
+# e82c011af70746e1813900ced31f3fbc
+msgid "If you aren't sure about algorithms and settings and don't want to read this document, you can just play with settings and find one which works for you."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:40
+# bbfd1bcdd8984664ba0b6b936a8844b9
+msgid "Manual lens calibration using grease pencil and/or grid"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:42
+# 34785f9f863b43b7b88286cd2dc089a0
+msgid "All cameras record distorted video. Nothing can be done about this because of the manner in which optical lenses work. For accurate camera motion, the exact value of the focal length and the \"strength\" of distortion are needed."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:47
+# de89afa77ef44888b905cd81f3188084
+msgid "Currently, focal length can be automatically obtained only from the camera's settings or from the EXIF information. There are some tools which can help to find approximate values to compensate for distortion. There are also fully manual tools where you can use a grid which is getting affected by distortion model and deformed cells defines straight lines in the footage."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:52
+# ac5d0de9c96c47bc906a71213a7216a4
+msgid "You can also use the grease pencil for this - just draw a line which should be straight on the footage using poly line brush and adjust the distortion values to make the grease pencil match lines on the footage."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:55
+# 231005c7c9b946d8b75816c17908994d
+msgid "To calibrate your camera more accurately, use the grid calibration tool from OpenCV. OpenCV is using the same distortion model, so it shouldn't be a problem."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:60
+# fe13adc64b65450cb232ed98e5d7c1f0
+msgid "Camera and object motion solving"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:62
+# d4540ee6d9c3415bae9f0abb8fe6285c
+msgid "Blender not only supports the solving of camera motion, including tripod shots, but also the solving of object motion in relation to the motion of the camera. In addition to that there is the Plane Track, which solves the motion of all markers on one plane."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:66
+# 80eb1e86f7bd4601ac6377c982af5052
+msgid "There are also plans to add more tools in the future, for example more automatic tracking and solving, multi-camera solving and constrained solutions."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:72
+# 979df61e540b48ba8725b8b9e8ddd09f
+msgid "Basic tools for scene orientation and stabilization"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:74
+# 1fb841e4c8b3423d902ddf77e06a32db
+msgid "After solve, you need to orient the real scene in the 3D scene for more convenient compositing. There are tools to define the floor, the scene origin, and the X/Y axes to perform scene orientation."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:79
+# 6e8edb1944c24519b7d29c4611ed025f
+msgid "If something is needed to stabilize video from the camera to make the final result looks nicer, 2D stabilization is available to help. It stabilizes video from the camera, which can compensate for camera jumps and tilt."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:85
+# c837378c07db43388a50a5e1626659dc
+msgid "Basic nodes for compositing scene into real footage"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:87
+# e5903b1793e24ecd9355b4b97631d07c
+msgid "Some new nodes were added to the Compositor to composite scene into footage in easier way. So there are nodes for 2D stabilization, distortion and undistortion which are easy to use."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:92
+# 86e6b85cc9a44a5abecd4555e394d27b
+msgid "Not implemented tools"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:94
+# f48b6a62d648480689e2dbecac57b596
+msgid "Some tools aren't available in Blender yet, but they are in our TODO list. So there's currently no support for such things as rolling shutter filtering or motion capturing. But you can try to hack this stuff using currently implemented things."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:100
+# ee39b4c1146a481393f596b76cc623d9
+msgid "Manual"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:103
+# 97343d1b564643a28e7f3e6ec6812d0d
+msgid "Movie Clip Editor"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:105
+# e86827f3dad1489ea48f056825543458
+msgid "Almost all motion tracking tools are concentrated in the Movie Clip Editor. Currently it doesn't have any tools which aren't related to motion tracking, but in the future it may be expanded to be used for masking, so that's why it's given this more abstract name, rather than motion tracking."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:110
+# 7552048bcc8543dc8b2e05690d1400f3
+msgid "This editor can be found in the list of editor types."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:116
+# 55b0799dbe2241d1ae107d0adeeded85
+msgid "Editor type menu"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:119
+# d0bf1f53876e49f1861e35909ffa5d72
+msgid "When you switch to Movie Clip Editor window, the interface changes in the following way."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:125
+# f62f19c0c8604867b408cb5ce38bd07a
+msgid "Movie Clip Editor interface"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:128
+# 50498690f8b74c36b4fbf9d79801b992
+msgid "The next logical step to open a new video clip to start working with. There are several ways to to this:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:132
+# e9409459b8dc45d39befcd672768b356
+msgid "Use *Open* button from movie editor header"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:133
+# 3e3db80f157644559c4ba04ddf1f5307
+msgid "Use :menuselection:`Clip --> Open` menu"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:134
+# 55af8e70ac8447549954a9502d118624
+msgid "Use :kbd:`Alt-O` shortcut"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:136
+# 368dc62c75b54a53b3d08991a7f58731
+msgid "Both movie files and image sequences can be used in the clip editor. If you're using an image sequence there's one limitation on naming of files: the numbers at the end of the image name should be increasing continuously."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:140
+# 28b0e3df2ee74bd7b8a733f28c3f87f0
+msgid "So, when a movie clip is loaded into the clip editor, extra panels are displayed in the interface."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:147
+# 8fcb69504f094dba9316beb9c0021a97
+msgid "Movie Clip Editor with opened clip"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:150
+# 196eacfe9b754a9295fdd9382174b905
+msgid "There are plenty of new tools on the screen and here's short description of all of them."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:152
+# d95da101fb5b44a18ea446f2a21f4709
+msgid "First of all, it should be mentioned that the camera solver consists of three quite separate steps:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:156
+# c46eda61f1b8466183f5adb7ef9ea0c7
+msgid "2D tracking of footage"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:157
+# 0aa7297a199a474cb66b4a0251724158
+msgid "Camera intrinsics (focal length, distortion coefficients) specification/estimation/calibration"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:158
+# 66acdaff02e44d219fe17e2ed7d9c9ce
+msgid "Solving camera, scene orientation, scene reconstruction"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:160
+# 7148a457feec468bbf5ae60ba9338687
+msgid "Tools in the clip editor are split depending on which step they're used in, so the interface isn't cluttered up with scene orientation tools when only 2D tracking can be done. The currently displayed tool category can be changed using the Mode menu which is in the editor header."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:169
+# 94988d9c94b643c9a118dd07a67c3233
+msgid "Movie Clip Editor mode menu"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:172
+# ffbc0498142741eab836481c0d04bc8b
+msgid "But almost all operators can be called from menus, so it's not necessary to change the mode every time you want to use a tool which is associated with a different editor mode."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:175
+# ea223ab554bd49db8d5b825358a43446
+msgid "In tracking mode only tools which are related to tracking and camera solving are displayed. Camera solving tools are included here because it's after solving you'll most probably want to re-track existing tracks or place new tracks to make solving more accurate."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:181
+# b84a2a0efb85409daf359f3abbff6a16
+msgid "Tools available in tracking mode"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:184
+# 54eeb9b35bcf4ecc8970e3745d30552c
+msgid "Marker panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:186
+# 3d115c2fa2464a12b576277476cd04b4
+msgid "The **Add Marker and Move** operator places a new marker at the position of the mouse (which is under the button in this case, not ideal but it's just how things work) and then it can be moved to the needed location. When it's moved to the desired position, FIXME(Template Unsupported: Shortcut/Mouse; {{Shortcut/Mouse|lmb}}) can be used to finish placing the new marker. Also, :kbd:`Return` and :kbd:`Spacebar` can be used to finish placing the marker. But it's faster to use :kbd:`Ctrl-LMB` to place markers directly on the footage. This shortcut will place the marker in the place you've clicked. One more feature here: until you've released the mouse button, you can adjust the marker position by moving the mouse and using the track preview widget to control how accurately the marker is placed."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:197
+# 2da5ebab33904acb86eb29d2ebadd49c
+msgid "The **Detect Features** operator detects all possible features on the current frame and places markers at these features. This operator doesn't take into account other frames, so it can place markers on features which belong to moving objects, and if camera is turning away from this shot, no markers would be placed on frames after the camera moved away."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:202
+# a11403129ecd4d1f91d6996ce1e02f22
+msgid "There are several properties for this operator:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:208
+# 33498628e94f4a798f282f4b4686994e
+msgid "Placement"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:205
+# dcd8477c72d04c04a854b6dc7fef7615
+msgid "is used to control where to place markers. By default, they'll be added through the whole frame, but you can also outline some areas with interesting features with grease pencil and place markers only inside the outlined area. That's how the \"Inside Grease Pencil\" placement variant works. You can also outline areas of no interest (like trees, humans and so) and place markers outside of these areas. That's how the \"Outside Grease Pencil\" placement variant works."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:212
+#: ../../../manual/motion_tracking/index.rst:555
+# ff8fc66d18044c4baf0e0400ea6ff775
+# a96433a4a6124ad6a9f8f5657f2ec888
+msgid "Margin"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:211
+# 1047bb09452c4ff9a2d2c9bffc7553e9
+msgid "controls the distance from the image boundary for created markers. If markers are placed too close to the image boundary, they'll fail to track really quickly and they should be deleted manually. To reduce the amount of manual clean-up, this parameter can be used."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:216
+# 9b06fd2eaf2b4ac9bd238aa764a8fea0
+msgid "Trackability"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:215
+# e7e2d776f3d642ea99de86bdc97910f4
+msgid "limits minimal trackability for placing markers. This value comes from the feature detection algorithm and basically it means: low values means most probably this feature would fail to track very soon, high value means it's not much such track. Amount of markers to be added can be controlled with this value."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:220
+# 294437683f044cd19d494ca80b063af0
+msgid "Distance"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:219
+# 44cfed2580174dbfaa8af32fabfa7dc3
+msgid "defines the minimal distance between placed markers. It's needed to prevent markers from being placed too close to each other (such placement can confuse the camera solver)."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:222
+# 631c27a050264627aa52a6034b677c0d
+msgid "**Delete Track** is a quite self-explaining operator which deletes all selected tracks."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:226
+# 0843aa7e96c44cafa65207c0bd62725f
+msgid "Track panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:228
+# 0b388f2ed1c243dc8539a32d7f1d27cc
+msgid "The first row of buttons is used to perform tracking of selected tracks (i.e. following the selected feature from frame to frame). Tracking can happen (in order of buttons):"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:232
+# 3f75f02b48ca40858c821d1bed3e8d2b
+msgid "Backward one frame"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:233
+# 027b3db5920a48ba983dac60c8c80359
+msgid "Backward along the sequence"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:234
+# ee86637c0da54618a0f3515846a8ddda
+msgid "Forward along the whole sequence"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:235
+# 8b1f865f4b9849b3a850bfe4c45e3bdb
+msgid "Forward one frame"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:237
+# 45299ad2d40a44aeaeb5f127756b2caa
+msgid "This operator depends on settings from the Tracking Settings panel, which will be described later. If during sequence tracking the algorithm fails to track some markers, they'll be disabled and tracking will continue for the rest of the markers. If the algorithm fails when tracking frame-by-frame, the marker is not disabled, and the most likely position of the feature on the next frame is used."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:243
+# e9150f6ab023456abe595cef2f16769f
+msgid "Clear After"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:244
+# 93d1191a9353414a8e2fc3bf6135c385
+msgid "deletes all tracked and keyframed markers after the current frame for all selected tracks."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:245
+# e7aa69d09d5547e795bd1bc7a9bb1121
+msgid "Clear Before"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:246
+# a2d32f008e704e96a76ee5f6a3450b7a
+msgid "deletes all tracked and keyframed markers before the current frame for all selected tracks."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:247
+# 817014a5dddf4096a8ed06ef05a17d35
+msgid "Clear"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:248
+# 4f5d616292bb4e1b85941dd46ada5250
+msgid "clears all markers except the current one from all selected tracks."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:252
+# e70f6ae0b1bb4865aa89fc7488faedb2
+msgid "Join"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:250
+# 3c9600492c3d4f738a7cc2f2117a1e77
+msgid "operator joins all selected tracks into one. Selected tracks shouldn't have common tracked or keyframed markers at the same frame."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:255
+# 108da05ef8b340369e19a19d9912bf9b
+msgid "Solve panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:257
+# 8cb9833eca694f3d900a21b0b62a31ca
+msgid "**Camera Motion** operator solves the motion of camera using all tracks placed on the footage and two keyframes specified on this panel. There are some requirements:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:261
+# f92b188d3748455b938d761b65cd9790
+msgid "There should be at least 8 common tracks on the both of the selected keyframes."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:262
+# f9623980da3b412b94168d621e0a6604
+msgid "There should be noticeable parallax effects between these two keyframes."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:264
+# db0e19af55354715896459ae5f8d6bdb
+msgid "If everything goes smoothly during the solve, the average reprojection error is reported to the information space and to the clip editor header. Reprojeciton error means the average distance between reconstructed 3D position of tracks projected back to footage and original position of tracks. Basically, reprojection error below 0.3 means accurate reprojection, 0.3-3.0 means quite nice solving which still can be used. Values above 3 means some tracks should be tracked more accurately, or that values for focal length or distortion coefficients were set incorrectly."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:272
+# c9713228036d443982b8c8fd9c39c591
+msgid "The **Refine** option specifies which parameters should be refined during solve. Such refining is useful when you aren't sure about some camera intrinsics, and solver should try to find the best parameter for those intrinsics. But you still have to know approximate initial values - it'll fail to find correct values if they were set completely incorrectly initially."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:280
+# c3b423c033c44a73bd923a88956578ba
+msgid "Cleanup Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:282
+# 1fea3fba4b3e45ef9d147c0138b5e364
+msgid "This panel contains a single operator and its settings. This operator cleans up bad tracks: tracks which aren't tracked long enough or which failed to reconstruct accurately. Threshold values can be specified from sliders below the button. Also, several actions can be performed for bad tracks:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:288
+# 9898840fae024850a2de53d649417a9e
+msgid "They can simply be selected"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:289
+# a01a0a84321f42e4bedae996222754c8
+msgid "Bad segments of tracked sequence can be removed"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:290
+# 1b190e2622f740b29ec84b5e924eb144
+msgid "The whole track can be deleted"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:294
+# 4baf06a03b344801a7fe9547fc3cedec
+msgid "Clip Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:296
+# 22fb2b293795464c9d08943286af4c42
+msgid "This panel currently contains the single operator *Set as background* which sets the clip currently being edited as the camera background for all visible 3D viewports. If there's no visible 3D viewports or the clip editor is open in full screen, nothing will happen."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:303
+# b1f0a07c60eb42ffaf2c23a30d9b7a1e
+msgid "Properties available in tracking mode"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:306
+# ea24b167adbb436ab7a502f9b42265ff
+msgid "Grease Pencil Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:308
+# cfafead7a19240999566ba98fe179754
+msgid "It's a standard grease pencil panel where new grease pencil layers and frames can be controlled. There's one difference in the behavior of the grease pencil from other areas - when a new layer is created \"on-demand\" (when making a stroke without adding a layer before this) the default color for the layer is set to pink. This makes the stroke easy to notice on all kinds of movies."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:317
+# 766d2200bf5d4afba97a945f3b3374a6
+msgid "Objects Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:322
+# 02eaa542203545499443aa8d13d4354d
+msgid "Objects Panel in clip editor"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:325
+# 8159529b028145dd8363b5dc4863907c
+msgid "This panel contains a list of all objects which can be used for tracking, camera or object solving. By default there's only one object in this list which is used for camera solving. It can't be deleted and other objects can't be used for camera solving; all added objects are used for object tracking and solving only. These objects can be referenced from Follow Track and Object Solver constraints. Follow Track uses the camera object by default."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:333
+# 88e15556e38246fdbeffcbea83735ae8
+msgid "New objects can be added using :kbd:`Plus` and the active object can be deleted with the :kbd:`Minus` button. Text entry at the bottom of this panel is used to rename the active object."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:337
+# 34fca7683ad74b34b7189835ec1b1882
+msgid "If some tracks were added and tracked to the wrong object, they can be copied to another object using :menuselection:`Track --> Copy Tracks` and :menuselection:`Track --> Paste Tracks`."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:340
+# b5fecc2a69d24260b223b71bca7e6687
+msgid "The usage for all kind of objects (used for camera and object tracking) is the same: track features, set camera data, solve motion. Camera data is sharing between all objects and refining of camera intrinsics happens when solving camera motion only."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:346
+# 8f2de1ed156a4b8dafcffbb766fb374c
+msgid "Track Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:351
+# 6bccad3985f849339f91a6de0bea869c
+msgid "Track Panel in clip editor"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:354
+# 208126bcaae04edf965f69e7c345ec61
+msgid "First of all, track name can be changed in this panel. Track names are used for linking tracking data to other areas, like a Follow Track constraint."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:357
+# b6bf167579ea4f24b244f36f9b81e0fb
+msgid "The next thing which can be controlled here is the marker's enabled flag (using the button with the eye icon). If a marker is disabled, its position isn't used either by solver nor by constraints."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:361
+# f17654e4cc7841f6a3f06b5f60923dde
+msgid "The button with the lock icon to the right of the button with the eye controls whether the track is locked. Locked tracks can't be edited at all. This helps to prevent accidental changes to tracks which are \"finished\" (tracked accurate along the whole footage)."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:366
+# 7c807a1a2f1d4d888a4c440162f4aee1
+msgid "The next widget in this panel is called \"Track Preview\" and it displays the content of the pattern area. This helps to check how accurately the feature is being tracked (controlling that there's no sliding off original position) and also helps to move the track back to the correct position. The track can be moved directly using this widget by mouse dragging."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:372
+# 9c1371c41c5446e0b085312e5f0c84a7
+msgid "If an anchor is used (the position in the image which is tracking is different from the position which is used for parenting), a preview widget will display the area around the anchor position. This configuration helps in masking some things when there's no good feature at position where the mask corner should be placed. Details of this technique will be written later."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:378
+# f88aaf57440141e99a8ff2aec69cf9e6
+msgid "There's small area below the preview widget which can be used to enlarge the vertical size of preview widget (the area is highlighted with two horizontal lines)."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:381
+# fa024a75a2a7491d9c34b3d1db2be8a1
+msgid "The next setting is channels control. Tracking happens in gray-scale space, so a high contrast between the feature and its background yields more accurate tracking. In such cases disabling some color channels can help."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:385
+# b73ff1539b314cc3b3f0c03148e3e2e7
+msgid "The last thing is custom color, and the preset for it. This setting overrides the default marker color used in the clip editor and 3D viewport, and it helps to distinguish different type of features (for example, features in the background vs. foreground and so on). Color also can be used for \"grouping\" tracks so a whole group of tracks can be selected by color using the Select Grouped operator."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:394
+# 6e3221102979489190923b823077d630
+msgid "To select good points for tracking, use points in the middle of the footage timeline and track backwards and forwards from there. This will provide a greater chance of the marker and point staying in the camera shot."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:400
+# 2fd60f75b0d54a6eb5164ff887e0122a
+msgid "Camera Data Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:402
+# 5257aba74cc34fef9aac0a00e4e03150
+msgid "This panel contains all settings of the camera used for filming the movie which is currently being edited in the clip editor."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:405
+# 81a06c14fe074d9cae525a13e2bf8c1a
+msgid "First of all, predefined settings can be used here. New presets can be added or unused presets can be deleted. But such settings as distortion coefficients and principal point aren't included into presets and should be filled in even if camera presets are used."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:414
+# 2dabb2934ab84918b46ec0a6e8e981b2
+msgid "Focal Length"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:412
+# 6ba6eb7d41e74106b1d1536e206f914c
+msgid "is self-explanatory; it's the focal length with which the movie was shot. It can be set in millimeters or pixels. In most cases focal length is given in millimeters, but sometimes (for example in some tutorials on the Internet) it's given in pixels. In such cases it's possible to set it directly in the known unit."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:416
+# b9ed4bb595974e6b974ed28c46d07568
+msgid "Sensor Width"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:417
+# dcc09bd0600843878b0b285708f0b4e8
+msgid "is the width of the CCD sensor in the camera. This value can be found in camera specifications."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:421
+# 1e1b1f17678a409aa3e8b854712e9fac
+msgid "Pixel Aspect Ratio"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:419
+# 16993e6f4bdb4ea3a06696a957d22401
+msgid "is the pixel aspect of the CCD sensor. This value can be found in camera specifications, but can also be guessed. For example, you know that the footage should be 1920x1080, but the images themselves are 1280x1080. In this case, the pixel aspect is: ``1920 / 1280 = 1.5``"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:425
+# 2f9645208111427c9a90400c217aaf28
+msgid "Optical Center"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:424
+# 1c81cb1be2074082bfa0dbb0cae6005a
+msgid "is the optical center of the lens used in the camera. In most cases it's equal to the image center, but it can be different in some special cases. Check camera/lens specifications in such cases. To set the optical center to the center of image, there's a :kbd:`Return` button below the sliders."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:433
+# 32ea67e5895a463e8ee50f0ed1a68176
+msgid "Undistortion K1, K2 and K3"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:428
+# 8c56db527f784c78a18ac9314c703ea4
+msgid "are coefficients used to compensate for lens distortion when the movie was shot. Currently these values can be tweaked by hand only (there are no calibration tools yet) using tools available in Distortion mode. Basically, just tweak K1 until solving is most accurate for the known focal length (but also take grid and grease pencil into account to prevent \"impossible\" distortion)."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:436
+# d4b9537e1e7840a9a990f3de915584f4
+msgid "Display Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:438
+# 602f628610ee4c23b1fe51e5f97d15c9
+msgid "This panel contains all settings which control things displayed in the clip editor."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:444
+# a46fa987b3ad4663b4ffe81b6bd1fe93
+msgid "R, G, B"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:442
+# 88ec0a6808744a85989aeb6128114219
+msgid "and **B/W** buttons at the top of this panel are used to control color channels used for frame preview and to make the whole frame gray scale. It's needed because the tracking algorithm works with gray-scale images and it's not always obvious to see which channels disabled will increase contrast of feature points and reduce noise."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:448
+# 04cd1f38799447bb8e70a18daf60562e
+msgid "Pattern"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:447
+# 34002af6b25749a6897b053d8baf5902
+msgid "can be used to disable displaying of rectangles which correspond to pattern areas of tracks. In some cases it helps to make the clip view cleaner to check how good tracking is."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:452
+# eaeb9ea9c6314dbe9ac413d902b24c54
+msgid "Search"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:451
+# d8243ddfd2894fec8909ab7f68743985
+msgid "can be used to disable displaying of rectangles which correspond to search areas of tracks. In some cases it helps to make the clip view cleaner to check how good tracking is. Only search areas for selected tracks will be displayed."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:455
+# 0f2d67ee68ee4472995f2a4d8f295970
+msgid "Pyramid"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:455
+# 3270653ee95843999cc32fbdc0742a4e
+msgid "makes the highest pyramid level be visible. Pyramids are defined later in the Tracking Settings panel section, but basically it helps to determine how much a track is allowed to move from one frame to another."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:458
+# b27aa0984dca42e5be9fa9fd4255bad6
+msgid "Track Path"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:458
+# 907d734b15bf4115999b2b9a1b4279a3
+msgid "and **Length** control displaying of the paths of tracks. The ways tracks are moving can be visible looking at only one frame. It helps to determine if a track jumps from its position or not."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:461
+# a2443ef65f1e4a48b60d73bf668d04cf
+msgid "Disabled Tracks"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:461
+# 29be74c73f68493a8d227fa222840366
+msgid "makes it possible to hide all tracks which are disabled on the current frame. This helps to make view more clear, to see if tracking is happening accurately enough."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:467
+# 15ccf2e3ed3548f38c2ae994e121eb29
+msgid "Bundles"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:464
+# a0dea8c8dcf44003b2f6e1b963c4b888
+msgid "makes sense after solving the movie clip, and it works in the following way: the solved position of each track gets projected back to the movie clip and displayed as a small point. The color of the point depends on the distance between the projected coordinate and the original coordinate: if they are close enough, the point is green, otherwise it'll be red. This helps to find tracks which weren't solved nicely and need to be tweaked."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:470
+# 9c2acc9f19bd454c877a58eea062c15e
+msgid "Track Names and Status"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:470
+# 6e7907d8cb384366b0e103c70e087cfb
+msgid "displays information such as track name and status of the track (if it's keyframed, disabled, tracked or estimated). Names and status for selected tracks are displayed."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:477
+# aae70f1549e74d8bba7ba09a529b2be2
+msgid "Compact Markers"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:473
+# 8ccf31833f5d4299b398944d6b8e2833
+msgid "The way in which markers are displayed (black outline and yellow foreground color) makes tracks visible on all kind of footage (both dark and light). But sometimes it can be annoying and this option will make the marker display more compactly - the outline is replaced by dashed black lines drawn on top of the foreground, so that marker areas are only 1px thick."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:479
+# b4c645117fd148d2a6a495776d5df04c
+msgid "Grease pencil"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:480
+# 7f52e20a81be4c06bd47d2bdab5611dc
+msgid "controls if grease pencil strokes are allowed to be displayed and made."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:482
+# ced1af9b47804db3972f2267bd7c585e
+msgid "Mute"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:482
+# f2d7f09712684455ad49d2a136c8b54e
+msgid "changes displaying on movie frame itself with black square, It helps to find tracks which are tracked inaccurately or which weren't tracked at all."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:486
+# 747123c2f3f34d77990453871ca36f46
+msgid "Grid"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:485
+# 85c4be5dc7c041a299a88ca003518f6b
+msgid "(available in distortion mode only) displays a grid which is originally orthographic, but os affected by the distortion model. This grid can be used for manual calibration - distorted lines of grids are equal to straight lines in the footage."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:489
+# c5342e72ad92471e857d9faa8bb66ec8
+msgid "Manual Calibration"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:489
+# d67acffe2c7f4e74abc0f2c95e538816
+msgid "(available in distortion mode only) applies the distortion model for grease pencil strokes. This option also helps to perform manual calibration. A more detailed description of this process will be added later."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:492
+# 3d529e72d4a54e1d9d0467bf56c0a0e7
+msgid "Stable"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:492
+# 14dab9e94258417da11b29d07a5e3d9e
+msgid "(available in reconstruction mode only). This option makes the displayed frame be affected by the 2D stabilization settings. It's only a preview option, which doesn't actually change the footage itself."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:496
+# 57551076f5ac4b8ca40eeca8ce0e88a3
+msgid "Lock to Selection"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:495
+# c1e233d5337e404ebace8e5c64bf71bf
+msgid "makes the editor display selected tracks at the same screen position along the whole footage during playback or tracking. This option helps to control the tracking process and stop it when the track is starting to slide off or when it jumped."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:500
+# 1ea48f9ff1b741458c453c23496bf983
+msgid "Display Aspect Ratio"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:499
+# e70a245d8e4d42aba6ac74a76ae7ba2d
+msgid "changes the aspect ratio for displaying only. It does not affect the tracking or solving process."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:503
+# 083c142a692b419f87051d3c987a5443
+msgid "Tracking Settings Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:506
+# e965cb7c97b343998435f2ca19c0c438
+msgid "Common options"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:508
+# 077fe362fdff4e418adf1cf7f4ccf25b
+msgid "This panel contains all settings for the 2D tracking algorithms. Depending on which algorithm is used, different settings are displayed, but there are a few that are common for all tracker settings:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:512
+# 7b212d4e781f46d48e7ca34513bf82ab
+msgid "**Adjust Frames** controls which patterns get tracked; to be more precise, the pattern from which frame is getting tracked. Here's an example which should make things clearer."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:515
+# 7221815b7f5b429dac20a3de6bd2b27c
+msgid "The tracker algorithm receives two images inside the search area and the position of a point to be tracked in the first image. The tracker tries to find the position of that point from the first image in the second image."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:519
+# 5bbecd229cd0470aa27f62e1a2fe24fb
+msgid "Now, this is how tracking of the sequence happens. The second image is always from a frame at which the position of marker isn't known (next tracking frame). But a different first image (instead of the one that immediately precedes the second image in the footage) can be sent to the tracker. Most commonly used combinations:"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:526
+# 5e9db61633354719bf1b92e4c7e9237f
+msgid "An image created from a frame on which the track was keyframed. This configuration prevents sliding from the original position (because the position which best corresponds to the original pattern is returned by the tracker), but it can lead to small jumps and can lead to failures when the feature point is deformed due to camera motion (perspective transformation, for example). Such a configuration is used if **Adjust Frames** is set to 0."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:531
+# 9dd7bba5887144ac84cdad6b57b5694d
+msgid "An image created from the current frame is sent as first image to the tracker. In this configuration the pattern is tracking between two neighboring frames. It allows dealing with cases of large transformations of the feature point but can lead to sliding from the original position, so it should be controlled. Such a configuration is used if **Adjust Frames** is set to 1."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:537
+# 5ac7969cc25440398e530306cec91aa2
+msgid "If **Adjust Frames** is greater than 1, the behavior of tracker is: keyframes for tracks are creating every **Adjust Frames** frames, and tracking between keyframed image and next image is used."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:546
+# bba12c22d529400eb42c351a4d4cd16e
+msgid "Speed"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:542
+# 8a8764e1904e44b7a8b4d828a355b0ad
+msgid "can be used to control the speed of sequence tracking. This option doesn't affect the quality of tracking; it just helps to control if tracking happens accurately. In most cases tracking happens much faster than real time, and it's difficult to notice when a track began to slide out of position. In such cases **Speed** can be set to Double or Half to add some delay between tracking two frames, so slide-off would be noticed earlier and the tracking process can be cancelled to adjust positions of tracks."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:550
+# 3f002a06407a405bb5e17749895ed74b
+msgid "Frames Limit"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:549
+# 053f44b32b4649119c4149aeca1e2334
+msgid "controls how many frames can be tracked when the Track Sequence operator is called. So, each Track Sequence operation would track maximum **Frames Limit** frames. This also helps to notice slide-off of tracks and correct them."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:553
+# 42802e8f0b0d4eddbaaed366549a0a30
+msgid "can be used disable tracks when they become too close to the image boundary. This slider sets \"too close\" in pixels."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:558
+# 386ae7912c5840059c6250a0c556965a
+msgid "KLT tracker options"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:560
+# db347aaeccab4426a06f5ed1d43b3996
+msgid "The KLT tracker is the algorithm used by default. It allows tracking most kinds of feature points and their motion. It uses pyramid tracking which works in the following way. The algorithm tracks an image larger than the defined pattern first to find the general direction of motion. Then it tracks a slightly smaller image to refine the position from the first step and make the final position more accurate. This iterates several times. The number of steps of such tracking is equal to the **Pyramid Level** option and we tell that on first step tracking happens for highest pyramid level. So Pyramid Level=1 is equal to pattern itself, and each next level doubles tracking image by 2."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:570
+# 7ca2c776d6fe406b85cc282f5218130a
+msgid "The search area should be larger than the highest pyramid level and the \"free space\" between the search area and highest pyramid level defines how much the feature can move from one frame to another and still be tracked."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:574
+# a69710ad6f7f4a578069ff48a96a6d03
+msgid "Default settings should work in most general cases, but sometimes the pyramid level should be changed. For example, when footage is blurry, adding extra pyramid levels helps to track them."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:578
+# b8a6febb017f4feca5d53cfbd13b61e6
+msgid "This algorithm can fail in situations where a feature point is moving in one direction and the texture around that feature point is moving in another direction."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:583
+# c3976b529c3c46d4945babefee596e24
+msgid "SAD tracker options"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:585
+# d6ce500cb4e94514833fddf09f023cfd
+msgid "On each step, the SAD tracker reviews the whole search area and finds the pattern on the second image which is most like the pattern which is getting tracking. This works pretty quickly, but can fail in several cases. For example, when there's another feature point which looks like the tracking feature point in the search area. In this case, SAD will tend to jump off track from one feature to another."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:591
+# 5f9120cb0e82449186137b5ee9daf71d
+msgid "**Correlation** defines the threshold value for correlation between two patterns which is still considered successful tracking. 0 means there's no correlation at all, 1 means correlation is full."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:594
+# 1441a3df530e4efe935aea330c85716a
+msgid "There's one limitation: currently: it works for features of size 16x16 pixels only."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:598
+# 2887c293074a4f6a95c153f1203a8eb0
+msgid "Marker Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:600
+# d2d5dddff65f4c9688362eb2e0ce16b3
+msgid "This panel contains numerical settings for marker position, pattern and search area dimensions, and offset of anchor point from pattern center. All sliders are self-explanatory."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:606
+# 9f6fd26751b14aadbdce2c8c1dac02eb
+msgid "Proxy / Timecode Panel"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:611
+# 7a9962548f2440ddb5be86a4ea08a4ef
+msgid "Proxy / Timecode Panel in clip editor"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:614
+# 48f2e2ae24044396b53e5834073b87f0
+msgid "This panel contains options used for image proxies and timecodes for movies."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:616
+# e9a34cc3eb3b47f892b2431f55d314b3
+msgid "Proxy allows displaying images with lower resolution in the clip editor. This can be helpful in cases when tracking of 4K footage is happening on a machine with a small amount of RAM."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:619
+# 7d31527c531543389732635043fcd679
+msgid "The first four options are used to define which resolutions of proxy images should be built. Currently it's possible to build images 25%, 50%, 75% and 100% of the original image size. Proxy size of 100% can be used for movies which contain broken frames which can't be decoded."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:623
+# 86c15315d7f74769919b86aaf61abe23
+msgid "**Build Undistorted** means that the proxy builder also creates images from undistorted original images for the sizes set above. This helps provide faster playback of undistorted footage."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:626
+# 6b9c3801672a446b911252af2a9c3f8c
+msgid "Generated proxy images are encoding using JPEG, and the quality of the JPEG codec is controlled with the **Quality** slider."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:629
+# 09ec0766e1c9470d961b6b74218d6d9d
+msgid "By default, all generated proxy images are storing to the <path of original footage>/BL_proxy/<clip name> folder, but this location can be set by hand using the **Proxy Custom Directory** option."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:633
+# 02812882c8994c66a6ec04c95d96ff41
+msgid "*Rebuild Proxy* will regenerate proxy images for all sizes set above and regenerate all timecodes which can be used later."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:636
+# 00933b5ea323440a8315cd98adcb7652
+msgid "**Use Timecode Index** can (and better be used) for movie files. Basically, timecode makes frame search faster and more accurate. Depending on your camera and codec, different timecodes can give better result."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:640
+# 26a11afac1484ee692a79d8533658a35
+msgid "**Proxy Render Size** defines which proxy image resolution is used for display. If **Render Undistorted** is set, then images created from undistorted frames are used. If there's no generated proxies, render size is set to \"No proxy, full render\", and render undistorted is enabled, undistortion will happen automatically on frame draw."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:647
+# b7ca32b34c274bd6bebf070c949334fa
+msgid "Tools available in reconstruction mode"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:652
+# a482ad6886ce4c888a4ac4b1be50c97f
+msgid "Proxy / 2D Stabilization Panel in clip editor"
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:655
+# b2040829288941a0b35fe3f1aaf17538
+msgid "There's one extra panel which is available in reconstruction mode - 2D stabilization panel."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:657
+# 347356bcb9024b39a9274a2d8d41e4a3
+msgid "This panel is used to define data used for 2D stabilization of the shot. Several options are available in this panel."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:660
+# 1b0f1fe1508a4237a065bd81a7628b67
+msgid "First of all is the list of tracks to be used to compensate for camera jumps, or location. It works in the following way: it gets tracks from the list of tracks used for location stabilization and finds the median point of all these tracks on the first frame. On each frame, the algorithm makes this point have the same position in screen coordinates by moving the whole frame. In some cases it's not necessary to fully compensate camera jumps and **Location Influence** can be used in such cases."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:667
+# cc3b829fc673401f88550f53afc48160
+msgid "The camera can also have rotated a bit, adding some tilt to the footage. There's the **Stabilize Rotation** option to compensate for this tilt. A single extra track needs to be set for this, and it works in the following way. On first frame of the movie, this track is connected with the median point of the tracks from list above and angle between horizon and this segment is ket constant through the whole footage. The amount of rotation applied to the footage can be controlled by **Rotation Influence**."
+msgstr ""
+
+#: ../../../manual/motion_tracking/index.rst:674
+# bfac68a5d6634948a800a5e9980d6737
+msgid "If the camera jumps a lot, there'll be noticeable black areas near image boundaries. To get rid of these black holes, there's the **Autoscale** option, which finds smallest scale factor which, when applied to the footage, would eliminate all the black holes near the image boundaries. There's an option to control the maximal scale factor, (**Maximal Scale**), and the amount of scale applied to the footage (**Scale Influence**)."
+msgstr ""
+

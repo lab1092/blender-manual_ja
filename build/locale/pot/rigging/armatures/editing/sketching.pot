@@ -1,0 +1,440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:7
+# 550a9d3e6e424a9898093e1428c698c9
+msgid "Skeleton Sketching"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:11
+# 0b191ee64b04434298fbc556c60c0586
+msgid "The Bone Sketching panel in its default (inactive) state."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:14
+# 7605eb52891b4912bd2d2bdc0a50c13d
+msgid "If you think that creating a whole rig by hand, bone after bone, is quite boring, be happy: some Blender developers had the same feeling, and created the Skeleton Sketching tool, formerly the Etch-a-ton tool, which basically allows you to \"draw\" (sketch) whole chains of bones at once."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:19
+# 712e79764f6c4bba888093a115d4dc7a
+msgid "Skeleton Sketching is obviously only available in *Edit* mode, in the 3D views. You control it through its *Skeleton Sketching* panel in the *Transform panel*, which you can open with :kbd:`N`. Use mouse (:kbd:`LMB` to draw strokes, and :kbd:`RMB` for gestures. Showing its tool panel won't enable sketching - *you must tick the checkbox next to* *Skeleton Sketching* *to start drawing bone chains* (otherwise, you remain in the standard *Edit* mode...)."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:26
+# 609f9ea4713342cb9dfc2521546cf800
+msgid "Sketching is done in two steps:"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:28
+# 60ef9d8b1f554590bbe385e11eab83d2
+msgid "`Drawing Chains`_ (called \"strokes\"). Each stroke corresponds to a chain of bones."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:29
+# 8ab85fb8ba474c15814eda512d19b714
+msgid "`Converting to Bones`_, using different methods."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:31
+# ce1387e7a5fb4d23ad548f365e9187a1
+msgid "**The point of view is important**, as it determines the future bones' roll angle: the Z axis of a future bone will be aligned with the view Z axis of the 3D view in which you draw its \"parent\" stroke (unless you use the* *Template* converting method...). Strokes are drawn in the current view plane passing through the 3D cursor, but you can create somewhat \"3D\" strokes using the* *Adjust* drawing option in different views (see below)."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:37
+# a1ab563d8ea644f485ba104b68d42498
+msgid "If you enable the small* *Quick Sketch* option, the two steps are merged into one: once you have finalized the drawing of a stroke (see `Drawing Chains`_), it is immediately converted to bones (using the current active method) and deleted. This option makes bone sketching quick and efficient, but you lose all the advanced stroke editing possibilities."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:42
+# 1eb7e08efb6e42c680028f90da558565
+msgid "**Sketches are not saved into Blender files**, so you can't interrupt a sketching session without losing all your work! Note also that the* sketching is common to the whole Blender session, i.e. there is only one set of strokes (one sketch) in Blender, and not one per armature, or even per file..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:49
+# 9ee630d20737494ba88420e2a068127b
+msgid "Drawing Chains"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:54
+# 81af3f29f87d4a56b0cc21e1e362ef4e
+msgid "Strokes example. From top to bottom: A selected polygonal stroke of four straight segments, oriented from left to right. An unselected free stroke of two segments, oriented from left to right. A mixed stroke, with one straight segment between two free ones, right to left."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:60
+# 3a89dab13678479aadc8b5c233268e85
+msgid "So, each stroke you draw will be a chain of bones, oriented from the starting point (the reddest or most orange part of the stroke) to its end (its whitest part). A stroke is made of several segments, delimited by small black dots - there will be at least one bone per segment (except with the* *Template* conversion method, see :doc:`next page </rigging/armatures/editing/templating>`), so all black points represents future bones' ends. There are two types of segments, which can be mixed together:"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:70
+# 58cc06f35e0746eaac2f714690f53b5c
+msgid "Straight Segments"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:72
+# 97894b3812c74fee9516fcc1a5de5395
+msgid "To create a straight segment, click* :kbd:`LMB` *at its starting point. Then move the mouse cursor, without pressing any button - a dashed red line represents the future segment. Click* :kbd:`LMB` again to finalize it. Each straight segment of a stroke will always create one and only one bone, whatever convert algorithm you use (except for the* *Template* conversion method)."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:84
+# d8b83e671a42478fb04a0f28147a0562
+msgid "The first segment has been started ([lmb] click) and the mouse moved to its end point."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:89
+# cf413c257520447a95d714a826d8bb1a
+msgid "The first segment has been finalized by a second [lmb] click, which also started a new segment..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:94
+# 273ca5b7f77b464e85cda9b43ed2cedb
+msgid "Repeating these steps, we now have a four-segment polygonal stroke."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:98
+# 0e1eba57988e40e5ac44aedd6874902a
+msgid "Free Segments"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:100
+# b4f2d6e536b747febc13843257105b80
+msgid "To create a free (curved) segment, click* and hold :kbd:`LMB` at its starting point. Then draw your segment by moving the mouse cursor - as in any paint program! Release :kbd:`LMB` to finalize the segment - you will then be creating a new straight segment, so if you would rather start a new free segment, you must immediately re-press :kbd:`LMB`. The free segments of a stroke will create different number of bones, in different manners, depending on the conversion method used. The future bones' ends for the current selected method are represented by small green dots for each one of those segments, for the selected strokes only. The free segment drawing uses the same* *Manhattan Dist* setting as the :doc:`grease pencil tool </grease_pencil/introduction>` (*User Preferences* *window,* *Edit Methods* \"panel\", *Grease Pencil* group) to control where and when to add a new point to the segment - so if you feel your free segments are too detailed, raise this value a bit, and if you find them too jagged, lower it."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:0
+# 7bd3e72781f849c3baca96edbd9da61f
+msgid "Drawing free segments example."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:119
+# 8ef16c8f7f724aa4bb75f376c52af339
+msgid "While drawing a first free segment ([lmb] click and drag)."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:124
+# 646f81021df34e7c8f4309e68b4e1501
+msgid "The first free segment finalized (releasing [lmb])."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:129
+# c3b4e69113ae4b208adedcd754f7c9a9
+msgid "If you now move the mouse without pressing [lmb] again, you'll create a straight segment..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:134
+# a2b13c3d2ec74252b6a3a4279efe071e
+msgid "But if you immediately click again and drag [lmb], you'll instead start a new free segment."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:137
+# 42e72b0ef6bb42e8a9c82ce340bd05af
+msgid "You finalize a whole stroke by clicking* :kbd:`RMB`. You can cancel the stroke you are drawing by hitting :kbd:`Esc`. You can also snap strokes to underlying meshes by holding* :kbd:`Ctrl` while drawing. By the way, the *Peel Objects* *button at the bottom of the* *Bone Sketching* panel is the same thing as the \"monkey\" button of the snapping header bar controls shown when* *Volume* snap element is selected - see the :doc:`snap to mesh </getting_started/basics/transformations/transform_control/snap#snap_element>` page for details."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:145
+# a2fe3c23ead545dcb51335d0e042860f
+msgid "Selecting Strokes"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:147
+# ba2ba06ce7d54a50a9de8387f0abd861
+msgid "A stroke can be selected (materialized by a solid red-to-white line), or not (shown as a orange-to-white line) - see (Strokes example) above. As usual, you select a stroke by clicking* :kbd:`RMB` on it, you add one to/remove one from the current selection with a* :kbd:`Shift-RMB` *click, and* :kbd:`A` (de)selects all strokes..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:155
+# 9e674e782db9489a9e49b497bdab0495
+msgid "Deleting"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:157
+# 5fcc68ae60d04f7c94c04e5a9ff78b79
+msgid "Hitting* :kbd:`X` or clicking on the *Delete* button (*Bone Sketching* panel) deletes the selected strokes (be careful, no warning/confirmation pop-up menu here). See also `Gestures`_."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:163
+# 4d500b9e3c4144659d0b6fcd907b5d4c
+msgid "Modifying Strokes"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:165
+# 62c249772d9a4cce8344d5e89261e1fa
+msgid "You can adjust, or \"redraw\" your strokes by enabling the *Overdraw Sketching* *option of the* *Bone Sketching* panel. This will modify the behavior of the strokes drawing (i.e. :kbd:`LMB` clicks and/or hold): when you draw, you won't create a new stroke, but rather modify the nearest one. The part of the old stroke that will be replaced by the new one are drawn in gray. This option does not take into account stroke selection, i.e. all strokes can be modified this way, not just the selected ones... Note also that even if it is enabled, when you draw too far away from any other existing stroke, you won't modify any of them, but rather create a new one, as if* *Overdraw Sketching* was disabled."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:182
+# 322ccc4b344248d19a0620bfbe9afc6e
+msgid "Adjusting a stroke: the gray part of the \"unselected\" (orange) stroke will be replaced by the currently drawn \"replacement\"."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:188
+# 4831fede64424807ace0741643695bdf
+msgid "Stroke adjusted."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:190
+# 7bb43ce5e8b6472ea7600dac2f652a11
+msgid "Adjusting stroke example."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:195
+# 3bfde2d5e83248be815df1c91cf8d076
+msgid "Finally, note that there is no undo/redo for sketch drawing..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:199
+# bd6a2c549f5b46b09e989367648e534d
+msgid "Gestures"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:201
+# 87739a8bf9e04e9ab53ce8436fd09717
+msgid "There quite a few things about strokes editing that are only available through gestures. Gestures are started by clicking and holding FIXME(Template Unsupported: Shortcut/Keypress; {{Shortcut/Keypress|shift}}) :kbd:`LMB` (when you are not already drawing a stroke), and materialized by blue-to-white lines. A gesture can affect several strokes at once."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:207
+# 9c60fabbc08b456b8dcd60295eacba46
+msgid "There is no direct way to cancel a gesture once you've started \"drawing\" it. So the best thing to do, if you change your mind (or made a \"false move\"), is to continue to draw until you get a disgusting scribble, crossing your stroke several times - in short, something that the gesture system would never recognize!"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:217
+# db55accee1594d08935c9e5bbd09ef34
+msgid "Damn! I didn't want to cut this stroke here!"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:221
+# cbc4bc3e5d3742a1adeec59b5e9de76d
+msgid "Let's doodle a bit..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:225
+# c737c0345cfd47f38bab054a89d720fc
+msgid "Phew! That was close, but the stroke is still in one piece."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:235
+# e76853f92b774654989213d630f27ae4
+msgid "Cut"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:237
+# fda7be1653504d39920c026a7e63dd72
+msgid "To* **cut** a segment (i.e. add a new black dot inside it, making two segments out of one), \"draw\" a straight line crossing the chosen segment where you want to split it."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:245
+#: ../../../manual/rigging/armatures/editing/sketching.rst:261
+#: ../../../manual/rigging/armatures/editing/sketching.rst:278
+# 93266ed379ec40c8a263c6c58d2fcbb4
+# 2b00bc57db1b42c6a0e905f5ec9a6cc0
+# d8eb51274b1c440f86f3928659218352
+msgid "Gesture."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:249
+#: ../../../manual/rigging/armatures/editing/sketching.rst:265
+#: ../../../manual/rigging/armatures/editing/sketching.rst:282
+# 4aa5eb8a031b427787d0f68ccf6f43ae
+# 0b1411f050b342b9b3106fcf7c095c2d
+# 3e33696fad404ceba42b9cc894997889
+msgid "Result."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:253
+# c6eb2cb88bc3466eb8ef9d296ed9a3c9
+msgid "Delete"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:255
+# 682ee2faa1ef43d18e32f2e685ec7139
+msgid "To* **delete** a stroke, draw a \"V\" crossing the stroke to delete twice."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:269
+# b245d15eb9c24b73abee2d079a070bad
+msgid "Reverse"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:271
+# 91f39a1b7b1c42f1a8b4b45153aedf2e
+msgid "To **reverse** a stroke (i.e. the future chain of bones will be reversed), draw a \"C\" crossing twice the stroke to reverse."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:286
+# 18b57de94c18403588a65d37ee6cbaba
+msgid "Converting to Bones"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:288
+# d6b07f2781b94d5490d313057ff39e25
+msgid "Once you have one or more selected strokes, you can convert them to bones, using either the* *Convert* button of the *Bone Sketching* panel, or the corresponding gesture (see `Gestures`_). Each selected stroke will generate a chain of bones, oriented from its reddest end to its whitest one. Note that converting a stroke does not delete it."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:294
+# 9aaf142b811f4883aa963a84645f1fcd
+msgid "There are four different conversion methods - three \"simple\" ones, and one more advanced and complex, *Template*, that reuses bones from the same armature or from another one as a template for the strokes to convert, and which is detailed in :doc:`the next page </rigging/armatures/editing/templating>`. Anyway, remember that* straight segments are always converted to one and only one bone (except for the *Template* conversion method), and that the future bones' ends are shown as green dots on selected free segments."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:302
+# 007bdd9ff6ba43a0a3a8869ddad75d40
+msgid "Remember also that the roll rotation of the created bones has been set during their \"parent\" stroke drawing (except for the *Template* conversion method) - their Z axis will be aligned with the view Z axis of the active 3D view at draw time."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:308
+# 4ee71a97fde840f29012c3acde48145d
+msgid "Fixed"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:310
+# 12da700a79a546d4b801bfe011d80e1f
+msgid "With this method, each free segment of the selected strokes will be uniformly divided in ``n`` parts (set in *Num* numeric field), i.e. will give ``n`` bones."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:319
+# 29455af46a5049b69fe303527c20803a
+msgid "The Fixed conversion settings and its preview on selected strokes."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:324
+# e8b8b0e356cf4602aaa275c96aa74764
+msgid "The Fixed conversion result."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:328
+# 85064ea11eb448bab81a7829db9ebf21
+msgid "Adaptative"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:330
+# ba9a4462075b4f518addc8f92d4ca639
+msgid "With this method, each free segment of the selected strokes will create as many bones as necessary to follow its shape closely enough - this \"closely enough\" parameter being set by the *Thres* hold numeric field; higher values giving more bones, following more closely the segments' shape. So the more twisted a free segment, the more bones it will generate."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:341
+# dc3fd0b5d13b41df85a7b73f10cb581f
+msgid "The Adaptative conversion settings and its preview on selected strokes."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:346
+# eb7ec6188e464066a77fabead3178e14
+msgid "The Adaptative conversion result."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:350
+# d2cba0ea90e4475e9abb82d443f49f01
+msgid "Length"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:352
+# 2d8d4d5f9a894e77886811b064c6f423
+msgid "With this method, each free segment of the selected strokes will create as many bones as necessary, so that none of them is longer than the *Length* numeric field value (in Blender Units)."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:362
+# 28c8cbd68edb487981cdc97a24bb5c7f
+msgid "The Length conversion settings and its preview on selected strokes."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:367
+# f255bc17c2c44250beaee5a90eac8d19
+msgid "Using a larger length value."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:372
+# 64f6ff0ea1b4486984e6399309c884ac
+msgid "The Length conversion result."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:376
+# 97330bdc57944dcdaca627cde732dbd2
+msgid "Retarget"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:378
+# 5ef4cb144e7841249527ae0b984d666e
+msgid "Retarget template bone chain to stroke."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:383
+# 14b12e96dccd4cb08add6f2f120aefc2
+msgid "Template"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:381
+# 85b14c4c5ea745899406b2dace8d1c47
+msgid "Template armature that will be retargeted to the stroke. This is a more complex topic, detailed in its :doc:`own page </rigging/armatures/editing/templating>`."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:391
+# 43f424078b9c43c6aa6c351ce45c8dd7
+msgid "Retarget roll mode"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:386
+# 18a536c9c8f24017a17d1b530199d353
+msgid "None"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:387
+# acb1b01d15ba42d9b0f1a1360e498a1a
+msgid "Don't adjust roll."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:388
+# d6a6eec4bb83441dbc371b070db89acc
+msgid "View"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:389
+# 93ae3df5905145e682adb5e9f9fa4dcf
+msgid "Roll bones to face the view."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:391
+# 7e87097d93784411b31267ee968df5db
+msgid "Joint"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:391
+# 5e10ec133ede45cda2316035531196f9
+msgid "Roll bone to original joint plane offset."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:393
+# 1314a96ce0c1498cb631821b2a750227
+msgid "Autoname"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:394
+#: ../../../manual/rigging/armatures/editing/sketching.rst:396
+#: ../../../manual/rigging/armatures/editing/sketching.rst:398
+# c9cc821a8aab43b6adb10e8a76071aea
+# db828cae20d146b492e2b9db440bb490
+# fc07a817fed648ff97d66fbb40b8d623
+msgid "..."
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:395
+# 68e79a2b88fa4ee88cbe9d1dcd12e6e4
+msgid "Number"
+msgstr ""
+
+#: ../../../manual/rigging/armatures/editing/sketching.rst:401
+# 9e00095b8bfb43929b380796abb9511d
+msgid "Side"
+msgstr ""
+

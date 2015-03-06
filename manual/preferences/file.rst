@@ -14,32 +14,31 @@ The *File Preferences* tab allows you to configure auto-save preferences and set
 File Paths
 ==========
 
-When you work on an important project, it is wise to configure it.
-Set default paths for the different file types you will be using.
-
-Here is an example of a configuration:
-
+Locations for various external files can be set for the following options:
 
 Fonts
-   ``//fonts/``
+   Default location when searching for font files.
 Textures
-   ``//textures/``
-Texture Plugins
-   ``//plugins/texture/``
-Sequence Plugins
-   ``//plugins/sequence/``
+   Default location when searching for image textures.
 Render Output
-   ``//renders/``
+   Where rendered images/videos are saved.
 Scripts
-   ``//scripts/``
+   An additional location to search for Python scripts. See `Scripts Path`_ below.
 Sounds
-   ``//sounds/``
+   Default location when searching for sound files.
 Temp
-   ``//tmp/``
+   The location where temporary files are stored.
+Render Cache
+   The location where cached render images are stored.
+I18n Branches
+   The path to the ``/branches`` directory of your local svn-translation copy, to allow translating from the UI.
+Image Editor
+   The path to an external program to use for image editing.
+Animation Player
+   The path to an external program to use for playback of rendered animations.
 
 
-Note that blender wont create your project structure automatically.
-You need to create all directories manually in your file browser.
+.. note:: If these folders do not exist, they will *not* be created automatically.
 
 
 Scripts Path
@@ -69,11 +68,25 @@ the installation directory of Blender:
   Not all of the folders have to be present.
 
 
+Auto Execution
+==============
+
+Python scripts (including driver expressions) are not executed by default for security reasons.
+
+Auto Run Python Scripts
+   You may choose to ignore these security issues and allow scripts to be executed automatically.
+Excluded Paths
+   Blend files in these folders will *not* automatically run Python scripts.
+   This can be used to define where blend files from untrusted sources are kept.
+
+.. seealso:: :doc:`/extensions/python/security`
+
+
 Save & Load
 ===========
 
 Relative Paths
-   By default, external files use a relative path. This works only when a Blender file is saved.
+   By default, external files use a :doc:`relative path </data_system/files/relative_paths>`. 
 Compress File
    Compress ``.blend`` file when saving.
 Load UI

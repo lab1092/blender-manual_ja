@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:4
+# a3bc318117c14db78e158cddac1773c4
+msgid "Introduction"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:6
+# feeff83cece242fdb7449ef8df763ba2
+msgid "Light wouldn't even exist without its counterpart: shadows. Shadows are a darkening of a portion of an object because light is being partially or totally blocked from illuminating the object. They add contrast and volume to a scene; there is nearly no place in the real world without shadows, so to get realistic renders, you will need them. Blender supports the following kinds of shadows:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:12
+# e2f30b3b756246dfa0d130d5335fc07a
+msgid "`Lamps: Ray-traced Shadows`_"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:13
+# e8ce2f40a734402bb5a6f0af963e4db6
+msgid "`Lamps: Buffered Shadows`_"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:14
+# fb89cd7bb74d4fefaddd048ece6e6ccb
+msgid ":doc:`Ambient occlusion </render/blender_render/lighting/ambient_occlusion>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:15
+# ce6fe17139f44e27980d131d0cf49f20
+msgid ":doc:`Indirect lighting </render/blender_render/lighting/indirect_lighting>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:17
+# 67533608d4ad426e935c3653be33bb5b
+msgid "Ambient occlusion really isn't a shadow based on light *per se*, but based on geometry. However, it does mimic an effect where light is prevented from fully and uniformly illuminating an object, so it is mentioned here. Also, it is important to mention ambient lighting, since increasing *Ambient* decreases the effect of a shadow."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:23
+# 2437f05567f44a9b82276141432b33a5
+msgid "You can use a combination of ray-traced and buffer shadows to achieve different results. Even within ray-traced shadows, different lamps cast different patterns and intensities of shadow. Depending on how you arrange your lamps, one lamp may wipe out or override the shadow cast by another lamp."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:29
+# 6b7a9692fad642148baba118b49d1eb6
+msgid "Shadows is one of those trifectas in Blender, where multiple things have to be set up in different areas to get results:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:32
+# f92fee2b042241bd991a46d213ff041a
+msgid "The lamp has to cast shadows (ability and direction)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:33
+# 405f753e184f4cc9b1586c103cfb2080
+msgid "An opaque object has to block light on its way (position and layer)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:34
+# f8643e18e7654869b4ddd972b1b84fc1
+msgid "Another object's material has to receive shadows (*Shadow* and *Receive Transparent* enabled)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:35
+# 2b4f3113d91041a493541fdd3d9bd064
+msgid "The render engine has to calculate shadows (*Shadow* for buffered shadows, *Shadow* and *Ray* for ray-traced shadows)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:38
+# e34f6e2b8b0842e591cf0cc6c6a8437e
+msgid "For example, the simple *Lamp*, *Area*, and *Sun* light has the ability to cast ray shadows, but not buffer shadows. The *Spot* light can cast both, whereas the *Hemi* light does not cast any. If a *Sun* lamp is pointing sideways, it will not cast a shadow from a sphere above a plane onto the plane, since the light is not traveling that way. All lamps able to cast shadows share some common options, described :doc:`here </render/blender_render/lighting/shadows/properties>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:45
+# 8e5c419cb6f24b3b81994a900280e89f
+msgid "Just to give you more shadow options (and further confuse the issue), lamps and materials can be set to respectively **only** cast and receive shadows, and not light the diffuse/specular aspects of the object. Also, render layers can turn on/off the shadow pass, and their output may or may not contain shadow information..."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:53
+# 9a3f19a0d1e944b19d4db9b8f99e5a5d
+msgid "Lamps: Ray-traced Shadows"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:58
+# 54c1e170d0d4425aafe0aa250ef23807
+msgid "Ray Shadow enabled for a lamp"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:61
+# 7f4e8619ed1d4cd0a96c29c356ebd24b
+msgid "Ray-traced shadows produce very precise shadows with very low memory use, but at the cost of processing time. This type of shadowing is available to all lamp types except *Hemi*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:65
+# 18657374d1ba4bbd908c3164e8574a28
+msgid "As opposed to buffered shadows (`Lamps: Buffered Shadows`_), ray-traced shadows are obtained by casting rays from a regular light source, uniformly and in all directions. The ray-tracer then records which pixel of the final image is hit by a ray light, and which is not. Those that are not are obviously obscured by a shadow."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:70
+# b15fcdc06f60480eb058c29c3d0f20db
+msgid "Each light casts rays in a different way. For example, a *Spot* light casts rays uniformly in all directions within a cone. The *Sun* light casts rays from a infinitely distant point, with all rays parallel to the direction of the *Sun* light."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:75
+# ae41da584e16485eb73ab5bdc4b25640
+msgid "For each additional light added to the scene, with ray-tracing enabled, the rendering time increases. Ray-traced shadows require more computation than buffered shadows but produce sharp shadow borders with very little memory resource usage."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:79
+# f9c13c05dc404461bcc5d798f7f03ede
+msgid "To enable ray-traced shadows, three actions are required:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:81
+# 9a06861392364af3b8a4a899f60254db
+msgid "Enable *Shadows* globally in the *Render* menu's *Shading* panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:82
+# 15cd0e882f0e4fa5b6643274bfb96222
+msgid "Enable *Ray tracing* globally from the same panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:83
+# 241a5a0df5eb4f319483b71a891ef13e
+msgid "Enable ray-traced shadows for the light using the *Ray Shadow* button in the *Light* menu's *Shadow* panel. This panel varies depending on the type of light."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:86
+# 21feb92b08ce4c8d878405cc0739b1ee
+msgid "All lamps able to cast ray-traced shadows share some common options, described in :doc:`Ray-traced Properties </render/blender_render/lighting/shadows/raytraced_properties>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:89
+# 531448e8ce784d69b247c81ccfd9428c
+msgid "Ray-traced shadows can be cast by the following types of lamp:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:91
+# f6f19841b3284c4b89ad21b5bcfa989a
+msgid ":doc:`Point lamp </render/blender_render/lighting/lamps/point/introduction>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:92
+# 3f680e10afcd4653bb0248d399256f11
+msgid ":doc:`Spot lamp </render/blender_render/lighting/lamps/spot/introduction>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:93
+# 6ca54d1771a84e4f8779166cb583b4b4
+msgid ":doc:`Area lamp </render/blender_render/lighting/lamps/area/introduction>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:94
+# 9f5dddd558e4426c81af222558379f87
+msgid ":doc:`Sun lamp </render/blender_render/lighting/lamps/sun/introduction>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:98
+# 3db9da2b71f94e339769b60effca6422
+msgid "Lamps: Buffered Shadows"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:103
+# 6db27f1be28346eda462f708c029fe9f
+msgid "Buffer Shadow enabled for a Spot lamp"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:109
+# c740afc85bee49b4822324972ee31630
+msgid "Cast Buffer Shadows enabled for a material"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:112
+# 43e59156140b4fdca6adfc0339b5b2c7
+msgid "*Buffered* shadows provide fast-rendered shadows at the expense of precision and/or quality. Buffered shadows also require more memory resources as compared to ray tracing. Using buffered shadows depends on your requirements. If you are rendering animations or can't wait hours to render a complex scene with soft shadows, buffer shadows are a good choice."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:118
+# 4094d7347d0d4bb1a2454cd20e38c719
+msgid "For a scanline renderer - and Blender's built-in engine *is*, among other things, a scanline renderer - shadows can be computed using a *shadow buffer*. This implies that an \"image\", as seen from the spot lamp's point of view, is \"rendered\" and that the distance - in the image - for each point from the spot light is saved. Any point in the \"rendered\" image that is farther away than any of those points in the spot light's image is then considered to be in shadow. The shadow buffer stores this image data."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:125
+# c5c582592e3b40348680ec55f37e794c
+msgid "To enable buffered shadows these actions are required:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:127
+# 3bc1921da4eb4701a1e3aee3f6f558a4
+msgid "Enable shadows globally from the *Scene* menu's *Gather* panel by selecting *Approximate*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:128
+# b648572468b94116a622960c6963d1f1
+msgid "Enable shadows for the light using the *Buffer Shadow* button in the *Lamp* menu's *Shadow* panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:129
+# 73627d8a954e42d8a849defb1aa1e297
+msgid "Make sure the *Cast Buffer Shadows* options is enabled in each *Material* 's *Shadow* panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/shadows/introduction.rst:132
+# eac0d941dfcc43678d735dc560f66946
+msgid "The :doc:`Spot lamp </render/blender_render/lighting/lamps/spot/buffered_shadows>` is the only lamp able to cast buffered shadows."
+msgstr ""
+

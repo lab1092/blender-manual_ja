@@ -1,0 +1,727 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/textures/painting.rst:7
+# 8759bd51e8944f1698e348aef3f2aade
+msgid "Texture Painting"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:9
+# f3124b6a4e9e4ca787aec384779484b1
+msgid "A UV Texture is a picture (image, sequence or movie) that is used to color the surface of a mesh. The UV Texture is mapped to the mesh through one or more UV maps. There are three ways to establish the image used by the UV Texture:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:15
+# 1f3e798f14594bfcb808965dd5c046be
+msgid "Paint a flat image in the UV/Image Editor onto the currently selected UV Texture, using its UV map to transfer the colors to the faces of the mesh."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:17
+# 3ece2dcd14794197ac08b9e753a9aa21
+msgid "Paint the mesh in the 3D View, and let Blender use the currently selected UV map to update the UV Texture (see :doc:`Projection Painting </render/blender_render/textures/painting/projection>`)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:19
+# d9cc6f1512d846eaa015fe7d081abedc
+msgid "Use any image-editing (paint) program to create an image. In the UV/Image Editor, select the UV Texture and load the image. Blender will then use that texture's UV map to transfer the colors to the faces of the mesh"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:23
+# 17efd95d2c434542b356c05bce4801a2
+msgid "Blender features a built-in paint mode called Texture Paint which is designed specifically to help you edit your UV Textures and images quickly and easily in either the UV/Image Editor window or the 3D View window. Since a UV Texture is just a special-purpose image, you can also use any external paint program. For example, GIMP is a full-featured image manipulation program that is also open-source."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:33
+# d1ff7edaa2c1453caea92602d8ab7f20
+msgid "Texture painting in Blender"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:36
+# 05485aaaa9614b46bf69d4cadaa3f30d
+msgid "Since a mesh can have layers of UV Textures, there may be many images that color the mesh. However, each UV Texture only has one image."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:39
+# 05e5d10e8f214803b7a95fab250c1377
+msgid "Texture Paint works in both a 3D window and the UV/Image Editor window. In the 3D window in Texture Paint mode, you paint directly on the mesh by :doc:`projecting onto the UVs </render/blender_render/textures/painting/projection>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:45
+# 78edb3301d9143f4b5fe08a17b5be63b
+msgid "Getting Started"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:47
+# b5cca43206f541a9995ac99773adb7ea
+msgid "Once you have unwrapped your model to a UV Map (as explained in previous pages), you can begin the texturing process. You cannot paint on a mesh in Texture Paint mode without **first** unwrapping your mesh, **and** doing one of the following steps. Either:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:53
+# 49393b3c6c20434eb6d6996b79d807ca
+msgid ":doc:`Load an image </render/blender_render/textures/mapping/uv/applying_image#load>` into the UV/Image Editor (Image-->Open-->select file), or"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:55
+# 1fa897945237492a9fa7279fa4c0119a
+msgid ":doc:`Create a new image </render/blender_render/textures/mapping/uv/applying_image#load>` (Image-->New-->specify size)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:58
+# baf88851362b4f22abfff794f974f1f0
+msgid "After you have done one of these two things, you can modify the image using the Texture Paint mode:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:65
+# 3727bc8afe3b46b5934dac26241a191e
+msgid "Enabling paint mode"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:68
+# 33492be026f94d3d8336cb9ad0edb796
+msgid "In the 3D View window, select Texture Paint mode from the mode selector in the window header, and you can paint directly onto the mesh."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:70
+# f898434bf9da40a191d9612477799924
+msgid "In the UV/Image Editor window, switch the editing context from View to Paint (shown to the right)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:73
+# 9d45b3a7dc2143cfa4197813a7232725
+msgid "Square Power of 2"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:75
+# d902db3ccd5b4dca8a3e1538aa2352a5
+msgid "Texture paint is very fast and responsive when working in the 3D window and when your image is sized as a square where the side lengths are a power of two, e.g. 256x256, 512x512, 1024x1024, etc."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:79
+# 378ca302688f44dab70c4a7ef7870e1e
+msgid "Once you enable Texture Painting, your mouse becomes a brush. To work with the UV layout (for example, to move coordinates) you must go back to \"View\" mode."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:82
+# ea9a20b084294cffbecf267a5a702cad
+msgid "As soon as you enable Texture Painting or switch to Texture Paint mode, brush settings become available in the Toolbar Panel (T-key)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:85
+# c068a6be26464345bdc9f8af1dc6c6ec
+msgid "In the UV/Image Editor window, you paint on a flat canvas that is wrapped around the mesh using UV coordinates. Any changes made in the UV/Image Editor window show up immediately in the 3D window, and vice versa."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:90
+# a3d832466db7422a845c11cbba365255
+msgid "A full complement of brushes and colors can be selected from the Properties panel in the UV/Image Editor. Brush changes made in either panel are immediately reflected in the other panel. However, the modified texture will **not** be saved automatically; you must explicitly do so by Image-->Save in the UV/Image Editor window."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:98
+# 8dd3bab4af18448a954adeb0273525bb
+msgid "Texture Preview"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:100
+# 477220b320274aeab207eb5b3ea7bc81
+msgid "If your texture is already used to color, bump map, displace, alpha-transparent, etc., a surface of a model in your scene (in other techie words, is mapped to some aspect of a texture via a texture channel using UV as a map input), you can see the effects of your painting in the context of your scene as you paint."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:105
+# 6e426de884c2403f84479c8d82cb2480
+msgid "To do this, set up side-by-side windows, one window in 3D View set to Textured display mode, and the second UV/Image Editor window loaded with your image. Position the 3D View to show the object that is UV mapped to the loaded image. Open a Preview window (see 3D View Options for more info) and position it over the object. In the image to the right, the texture being painted is mapped to the \"Normal\" attribute, and is called \"bump mapping\", where the gray-scale image is used to make the flat surface appear bumpy. See Texture Mapping Output for more information on bump mapping."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:116
+# 07e07187d1ab4ef29184515e504db8ab
+msgid "Brushes Settings"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:118
+# feef7c5eb32c416aafb4e6d47742647c
+msgid "Press :kbd:`T` in the UV/Image Editor to show the Toolbar panel. With this panel, you can create many brushes, each with unique settings (such as color and width). Use the Brush selector to switch between brushes, or to create a new brush. When you add a brush, the new brush is a clone of the current one. You can then change the setting for the new brush. Texture paint has an unlimited number of brushes and unique user-defined controls for those brushes which can be set in the Paint Tool panel."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:126
+# 8f679e5aae294a17b238f252ec18a71b
+msgid "To use a brush, click on its name. Use the selector up/down arrow, if there are more brushes on the flyout window than can be displayed at once. Name your brush by clicking on the name field and entering any name you wish, such as \"Red Air\" for a red airbrush. To toss out a brush, click the brush delete *X* button next to its name. If you want to keep this brush around for the next time you run Blender, click the *F* ake user button next to the brush delete X button."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:134
+# dba10796c6c24f1389ebb9676db371c9
+msgid "If you have a tablet pen with pressure sensitivity, toggle the small \"P\" button next to the opacity, size, falloff and spacing buttons to control these parameters using the pressure of the pen. Using your pen's eraser end will toggle on the Erase Alpha mode."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:139
+# cb88236a026a4acfa6faba7cfc831ab9
+msgid "Press :kbd:`S` on any part of the image to sample that color and set it as the brush color."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:144
+# 69259222ca9e427898cb6f491700da0b
+msgid "Brush"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:149
+# 45e765caeeae407e8282100aeb46b463
+msgid "Brush Settings"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:154
+# 5dabc80e20ee4131a1658d8351783332
+msgid "Brush presets"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:153
+# 660bbdfb78a04553b586038cff3c95d6
+msgid "Select a preset brush. Most brushes have common settings."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:157
+# ae4997b204fb4d8a9be0a47d5a81db92
+msgid "Types of brushes"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:170
+# a4ce4e72a961480fac33d9ea75082265
+msgid "There are four different types of brushes"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:160
+# 69d69969b2124ae2a7355566f3b8442a
+msgid "Draw"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:161
+# 6d266051ab52401e98665275d14e59d6
+msgid "the normal brush; paints a swath of color"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:162
+# d7e48075dff54b06bbaf2b17b290125f
+msgid "Soften"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:163
+# ceb0dcb4c5034c779b2b0469000f4561
+msgid "blends edges between two colors"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:165
+# e2994e9c7c0b436181477c8f45974972
+msgid "Smear"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:165
+# 403e5669571845ca81a350ccf8b1c7fa
+msgid "when you click, takes the colors under the cursor, and blends them in the direction you move the mouse. Similar to the \"smudge\" tool of *Gimp*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:170
+# e99cd697c386411bb9876dc678b413eb
+msgid "Clone"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:168
+# 187d913485654d688b41da61593531d7
+msgid "copies the colors from the image specified (Tex.Dirt in the example), to the active image. The background image is shown when this brush is selected; use the *B* lend slider to control how prominent the background image is."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:173
+# 40f8c975d6094ce0bf7c96e67ea72158
+msgid "Enable Pressure Sensitivity"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:173
+# 4fe5d43db9a941638d73a4b790a48d18
+msgid "The icon to the right of the following three settings will enable or disable tablet pressure sensitivity to control how strong the effect is."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:175
+# bc626bbf78b14c79bddfa1c196d37c6b
+msgid "Color"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:176
+# d1106c67447a4ed4a5baab9f89410149
+msgid "The color of the brush"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:177
+#: ../../../manual/render/blender_render/textures/painting.rst:287
+# 41b2e2c5aad943edbeaac1114b8f84d9
+# e7d02b8484b14929a8ecb3faf6b232ee
+msgid "Radius"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:178
+# b0652e1596bc4feb8dbe6d0468e5a334
+msgid "The radius of the brush in pixels"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:179
+# 5a695f431d1642bb92bfc4272f6bb306
+msgid "Strength"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:180
+# d9d8994f887f475da86fa1d6de78c190
+msgid "How powerful the brush is when applied}}"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:183
+# a1e242ce43864990a56a21ec11e7f946
+msgid "Blend"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:182
+# c70ee4ed7a7c4abf879868f12f76c167
+msgid "Set the way the paint is applied over the underlying texture"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:185
+# 60680232548b4f87a68cda51a2f2a782
+msgid "Mix: the brush color is mixed in with existing colors"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:186
+# 8799445bc16a40129baeec55a9b719e3
+msgid "Add: the brush color is added to the existing color; green added to red gives yellow."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:187
+# d5849aecb0b54a1c8a2929e92f80b23b
+msgid "Subtract: the brush color is subtracted; painting blue on purple gives red"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:188
+# 907ae164d52d4268bbe595d4bd9fce17
+msgid "Multiply: the RGB value of the base is multiplied by the brush color"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:189
+# 7372b04ca6c245c8b1bbeaf334aa7cea
+msgid "Lighten: the RGB value of the base color is increased by the brush color"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:190
+# 3ab89e49c05149d38127e754eff8325b
+msgid "Darken: tones down the colors"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:191
+# b1cf7c3134ab49f89f6d1b032030dd13
+msgid "Erase Alpha: makes the image transparent where painted, allowing background colors and lower-level textures to show through. As you 'paint', the false checkerboard background will be revealed"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:194
+# cedab706b6c94591baf414a91d406fa5
+msgid "Add Alpha: makes the image more opaque where painted"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:196
+# aac2f934293c41eba975500a70d35cc5
+msgid "In order to see the effects of the Erase and Add Alpha mix modes in the UV/Image Editor, you must enable the alpha channel display by clicking the Display Alpha or the Alpha-Only button. Transparent (no alpha) areas will then show a checkered background."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:200
+# 5b25551fc6cb4bfe844688edab7c3c90
+msgid "Image"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:201
+# 5643c88ff5dd4b55866115ef57ace9bb
+msgid "When using the clone brush, this allows you to select an image as a clone source."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:204
+# 1ba0dc3379f84feba67cd9876e1c814f
+msgid "Alpha"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:203
+# fe751d5e905b4d45b83c5eeadd1dae0e
+msgid "Opacity of the clone image display"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:207
+# c3972411af4e4eda93df0976587ba476
+msgid "Texture"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:212
+# 3f07845a5f90420d8a27228ae40de30e
+msgid "Texture options and example"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:215
+# 345a18af927c4ad9b2b8831d888738ca
+msgid "Use the texture selector at the bottom of the paint panel to select a pre-loaded image or procedural texture to use as your brush pattern. Note that in order to use it, you must have a placeholder material defined, and that particular texture defined using the Material and Texture buttons. It is not necessary to have that material or texture applied to any mesh anywhere; it must only be defined. The example to the right shows the effects of painting with a flat (banded) wood texture. Switching the texture to Rings makes a target/flower type of brush painting pattern."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:226
+# dea606dc3fee4940af5b5b9702979cb0
+msgid "In Clone paint mode, this field changes to indicate the picture image or texture that you are cloning from."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:241
+# 757b48117d3f46a1a818c12d83208c72
+msgid "Brush Mapping"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:230
+# 9227bc495a9a4747bba33c41657f30e0
+msgid "Sets how the texture is applied to the brush"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:232
+# 7ab266b7fe084502a54a611fa0a0ca49
+msgid "View Plane"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:233
+# 5a958623a4384242823884bae7e75e36
+msgid "In 2D painting, the texture moves with the brush"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:234
+# d63d17a502d249a69735c96df091a30b
+msgid "Tiled"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:235
+# fe145040eac0498895a7f23dca65fb74
+msgid "The texture is offset by the brush location"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:236
+# 69d8d87617a143a39fb52eaf53785a85
+msgid "3D"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:237
+# fe64dfb32dc74313bf87b8308bd7536d
+msgid "Same as tiled mode"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:238
+# 60e15d2d68574e4ba9e68855f767f933
+msgid "Stencil"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:239
+# ca9389d61d3b454ab9f945c8940b4a00
+msgid "Texture is applied only in borders of the stencil."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:241
+#: ../../../manual/render/blender_render/textures/painting.rst:253
+# ff974b724b134fbbadc0f516d2553be9
+# 8c04c8786def4f12a6cc4da5e4df15ca
+msgid "Random"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:241
+# 21776fd030dd40d39ed980074f20accd
+msgid "Random applying of texture."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:253
+# c94b65c37e2b46feac36d7ae5020ed49
+msgid "Angle"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:244
+# d7a50da1db974c80af2fc8a6699c0e03
+msgid "This is the rotation angle of the texture brush. It can be changed interactively via :kbd:`Ctrl-F` in the 3D view. While in the interactive rotation you can enter a value numerically as well. Can be set to:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:248
+# 735fc59a46c7444e8734a61f08e1886c
+msgid "User"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:249
+# 3c891031f1d249d89f51dde7286a5dd1
+msgid "Directly input the angle value."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:250
+# a0ff4ace61a746889a7ec54d4f40b173
+msgid "Rake"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:251
+# 6138fbd401bb4dbfa309c0a9d521053f
+msgid "Angle follows the direction of the brush stroke. Not available with *3D* textures."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:253
+# 1547fd044bd24e4aac4b92d1dac4cb12
+msgid "Angle is randomized."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:256
+# ef7a519596774b2c9624671ee90c3df8
+msgid "Offset"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:256
+# 1253486627784d18a6acce8a0f5a9798
+msgid "Offset the texture in x, y, and z."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:260
+# 337c30ae832a440fb46b0672c6d85d6f
+msgid "Size"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:259
+# c3dd1b38eceb43f0b408287d7904b648
+msgid "Set the scale of the texture in each axis."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:263
+# 42aa1e49a75e4fb5a13911702707433b
+msgid "Stroke"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:282
+# 869934ff34194c459c0e282472279400
+msgid "Stroke Method"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:266
+# 47d395100b124582905d470ce8e1aefe
+msgid "Allows set the way applying strokes."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:272
+# 174528e8c35443639edf86e00a398834
+msgid "Airbrush"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:269
+# fa8aeb7114294036bf5be92735a0685f
+msgid "Flow of the brush continues as long as the mouse click is held, determined by the *Rate* setting. If disabled, the brush only modifies the color when the brush changes its location."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:272
+# 84449c9794c3442183573b4c5e603873
+msgid "Rate"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:273
+# 4a7a25e6bea64ceda37c25ab872fc270
+msgid "Interval between paints for airbrush"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:278
+# e7e3c1936beb48119f15219611f88c73
+msgid "Space"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:275
+# e672477cee5c43ff85ecb6b6a1fbea32
+msgid "Creates brush stroke as a series of dots, whose spacing is determined by the *Spacing* setting."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:278
+# 24a9331a50e346c49df3f1dfadafb5a7
+msgid "Spacing"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:278
+# 1a4724dfdd3841a289859f31e20ee89b
+msgid "Represents the percentage of the brush diameter. Limit brush application to the distance specified by spacing."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:280
+# de82138273034d7896fb4c11da85f8f5
+msgid "Dots"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:281
+# 2bc9db87c79f41eca77a480a23728a05
+msgid "Apply paint on each mouse move step"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:282
+# 53658af6654b4f7baa68deba8f78a5fc
+msgid "Jitter"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:283
+# 33911ec4d95848f38168c16f781fd8e9
+msgid "Jitter the position of the brush while painting"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:289
+# a1a8227135dc48ad9ac8565b4b81a56d
+msgid "Smooth stroke"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:285
+# 89a20e0e55ce47e3be07d0a78c47bdd9
+msgid "Brush lags behind mouse and follows a smoother path. When enabled, the following become active:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:288
+# 745a6238fbe04ccca78dc2b87e88be45
+msgid "Sets the minimun distance from the last point before stroke continues."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:289
+# c16baf90eb014b7ea35cbd97208c0bb2
+msgid "Factor"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:290
+# 204165f57bc04ad5b6afc676272a2a2a
+msgid "Sets the amount of smoothing."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:291
+# cc0cea96622f4fadbd6be4966406f4e6
+msgid "Input Samples"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:292
+# 66ec1ed8682c4a4c8da93db16dc5cf32
+msgid "Average multiple input samples together to smooth the brush stroke."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:296
+# edf681a5cefc40089988c57aa67520a5
+msgid "Wrap"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:294
+# f0bd637e924c49f68467a737c369451b
+msgid "wraps your paint to the other side of the image as your brush moves off the OTHER side of the canvas (any side, top/bottom, left/right). Very handy for making seamless textures."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:299
+# 92422023223e4294ad785136705573a4
+msgid "Curve"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:301
+# c0fcbeed335c433b8acfb9ebc55d9e73
+msgid "The paint curve allows you to control the falloff of the brush. Changing the shape of the curve will make the brush softer or harder."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:306
+# d0a82511130548b184bd440869232d0d
+msgid "Read more about using the :ref:`Curve Widget <curve-widget>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:310
+# cc049b1535684abbb9c5731e5e69233e
+msgid "Paint options"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:313
+# c5ed914a12044c8883f3ccfbf826e36b
+msgid "Overlay"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:315
+# 24586c0809e446b59c4ca3037b23008c
+msgid "Allows you to customize the display of curve and texture that applied to the brush."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:319
+# c0585f352b05495ab8e40298091b4cef
+msgid "Appearance"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:321
+# e300a86fa45148059dcf8b3e9f24f85d
+msgid "Allows you to customize the color of the brush radius outline, as well as specify a custom icon."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:326
+# 1b99ab6ce6094bb7b5512ee2210a0d06
+msgid "Saving"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:328
+# a3d04fc063d54403a90b459c08aaa244
+msgid "If the header menu item Image has an asterisk next to it, it means that the image has been changed, but not saved. Use the *Image-->Save Image* option to save your work with a different name or overwrite the original image."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:332
+# da99fcbd7f5d4333bc2bb498e474346f
+msgid "UV Textures"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:334
+# 56e7030c3e7b45fc8bec296425c937d0
+msgid "Since images used as UV Textures are functionally different from other images, you should keep them in a directory separate from other images."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:338
+# 835d278317e141338a18891060fe7c78
+msgid "The image format for saving is independent of the format for rendering. The format for saving a UV image is selected in the header of the Save Image window, and defaults to PNG (.png)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:342
+# 5e84fc352e6742d8ad5fe7ac8e8922ef
+msgid "If Packing is enabled in the window header, or if you manually *Image-->Pack Image*, saving your images to a separate file is not necessary."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:347
+# 05190ce93f374a378a59defd23d27c5e
+msgid "Using an External Image Editor"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:349
+# 445f5e0108474661b553fd8e7a72110c
+msgid "If you use an external program to edit your UV Texture, you must:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:352
+# 2e80814e4bf6413e8cc2411c9b969e62
+msgid "run that paint program (GIMP, Photoshop, etc.)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:353
+# 2b45a292f0f046dc864a336ae2086f4b
+msgid "load the image or create a new one"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:354
+# 773253a8ef57454f9d3a347f856cf3e3
+msgid "change the image, and"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:355
+# de0100bb4b8f43cfac4ea159c31798d2
+msgid "re-save it within that program."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:356
+# 6d9a065270eb445b8d5ab12de4046f77
+msgid "Back in Blender, you reload the image in the UV/Image Editor window."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/painting.rst:358
+# 137c5f4b97d941eaaf11a5c868eb1312
+msgid "You want to use an external program if you have teams of people using different programs that are developing the UV textures, or if you want to apply any special effects that Texture Paint does not feature, or if you are much more familiar with your favorite paint program."
+msgstr ""
+

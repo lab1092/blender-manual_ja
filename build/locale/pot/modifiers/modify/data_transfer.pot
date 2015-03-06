@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:4
+# a1336f63610b4bdd9b5db6c79b3ccc9b
+msgid "Data Transfer Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:6
+# c98b7a5df0fd4f2bb45fd34b63b28b39
+msgid "The **Data Transfer** modifier transfers several types of data from one mesh to another. Data types include vertex groups, UV layers, vertex colors, custom normals…"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:9
+# 81eb3da3fc7648a19b0ce5d2ad82547f
+msgid "Transfer works by generating a mapping between source mesh’s items (vertices, edges, etc.) and destination ones, either on a one-to-one basis, or mapping several source items to a single destination one - interpolated mapping."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:15
+# 15310f6339dc4868a6a37a0f49eabae3
+msgid "From left to right, a flat-shaded beveled cube, a smooth-shaded beveled cube, and an autosmooth-shaded beveled cube copying its normals from the reference, flat-shaded cube shown as wire here, to achieve the 'fake round corners' effect."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:21
+# cfea32b20f14401eb928535127b38f49
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:25
+# 52de9dcaf8194d6394fa5185db6a587d
+msgid "Data Transfer modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:32
+# 6f36ed90ada5439e921bb2f8fabb68c0
+msgid "Source Object"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:28
+# 2bc2ab9fe2bb408397af8cb7e72bb16e
+msgid "Mesh object to copy data from."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:30
+# 32cfb3c7203649dca124a8093bcb41c2
+msgid "If the button to the right of the field is unset, source and destination geometries are considered in global space when generating the mapping, otherwise they are evaluated in local space (i.e. as if both object's centers were at the same place)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:40
+# 49f367a53835493aa35cf75eec3f0264
+msgid "Max Distance"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:35
+# c9b96ae02b7243abbdeb0ca13e4d49f1
+msgid "When the icon “finger” button to the right is enabled, this is the maximum distance between source and destination to get a successful mapping. If a destination item cannot find a source one withing that range, then it will get no transfered data."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:39
+# 515d05e2db5e4ddf95f3d041c2f2f523
+msgid "This allows to transfer a small sub-detailed mesh onto a more complete one (e.g. from a “hand” mesh towards a “full body” one)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:44
+# 9b813f9242484c3ba4fc1f3606e7858d
+msgid "Ray Radius"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:43
+# 375a5c0f1e0c4893a16b9c7c4c72d138
+msgid "For ray-casting-based mapping methods, the radius of the cast rays. Especially important for 1D and 2D items (i.e. vertices and edges), without some width there would be nearly no ray-casting matches…"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:64
+# 7e3f5a92835543fc978cc3bc5644acc7
+msgid "Mix Mode"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:47
+# 0236696ad5ed4bb3ba2331b3c239f806
+msgid "Controls how destination data are affected:"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:50
+# e9294efdf716425985599248c99e65f5
+msgid "All"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:50
+# 2fc607f841e244f981a95f264ecf766a
+msgid "Replaces everything in destination (note that *Mix Factor* is still used)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:55
+# cfe1527db7f943eeacd6ed9de6b45ae1
+msgid "Above Threshold"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:53
+# f34de1b1ba2543498a0faa94aa1da501
+msgid "Only replaces destination value if it’s above given threshold (*Mix Factor*). How that threshold is interpreted depends on data type, note that for boolean values this option fakes a logical AND."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:60
+# 2b96da01f3494fe59b66fc4e00b52998
+msgid "Below Threshold"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:58
+# 1ba61d186ddc47ecab95ab3f45437edd
+msgid "Only replaces destination value if it’s below given threshold (*Mix Factor*). How that threshold is interpreted depends on data type, note that for boolean values this option fakes a logical OR."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:64
+# 3ac7fb5448104306ab89a512c79c3663
+msgid "Mix, Add, Subtract, Multiply"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:63
+# 8dd204112adc41739a086cc6bf462cea
+msgid "Apply that operation, using mix factor to control how much of source or destination value to use. Only available for a few types (vertex groups, vertex colors)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:67
+# 1c38d434baef43d19a3db3acd3bcdb5e
+msgid "Mix Factor"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:67
+# ef9916517e3f4bf6909be3d92a2722c8
+msgid "How much of the transfered data gets mixed into existing one (not supported by all data types)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:71
+# 1b9baa154e9b4f2399fe04e8de801a48
+msgid "Vertex Group"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:70
+# bf09c1b8d2be438fbfd5bb7264305c2c
+msgid "Allows per-item fine control of the mix factor. Vertex group influence can be reverted using the small “arrow” button to the right."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:76
+# 01f389ed660f4690a54a194634aa79e8
+msgid "Generate Data Layers"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:74
+# 87c206575d414eb987bde0dd1257bba9
+msgid "This modifier cannot generate needed data layers itself. Once the set of source data to transfer is selected, this button shall be used to generate matching destination layers."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:79
+# afc787c638704800804edff16fdc66b3
+msgid "Selection of Data to Transfer"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:81
+# b39ec830306041f8b2aa84d11cf1b1db
+msgid "To keep the size of the modifier reasonable, the kind of items to be affected must be selected first (vertices, edges, face corners and/or faces)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:86
+# 519838a6e53247d9a56b0785afa97c4f
+msgid "Mapping Type"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:85
+# d86899eef2004159a93929453c68b772
+msgid "How is generated the mapping between those source and destination items. Each type has its own options, see `Geometry Mapping`_ below for details."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:89
+# 56a07e4e7d26476ead639411e130c7b3
+msgid "Data Types"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:89
+# 1c80deafb9c94941acca3e3ce8dd0c72
+msgid "The left column of toggle buttons, to select which data types to transfer."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:94
+# 651085aecc8545b791d261f4753b8a5f
+msgid "Multi-layers Data Types Options"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:92
+# 2d3132510e6848c4bcd0559b0e4de2e9
+msgid "In those cases (vertex groups, vertex colors, UVs), one can select which source layers to transfer (usually, either all of them, or a single specified one), and how to affect destination (either by matching names, matching order/position, or, if a single source is selected, by specifying manually destination layer)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:101
+# 737d3d5d737e404189a75c2d233036ff
+msgid "Islands Handling Refinement"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:97
+# 1321462c838f4e848dd54387169e5b87
+msgid "This setting only affects UV transfer currently. It allows to avoid a given destination face to get UV coordinates from different source UV islands. Keeping it at 0.0 means no island handling at all. Typically, small values like 0.02 are enough to get good results, but if you are mapping from a very high poly source towards a very low poly destination, you may have to raise it quite significantly."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:104
+# 91d835655bdf4f98929f4eefc2c85801
+msgid "Usage"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:106
+# 02f7c440d644465fa5f1179e0bba2424
+msgid "First key thing to keep in mind when using this modifier is that **it will not create destination data layers**. *Generate Data Layers* button shall always be used for this purpose, once set of source data to transfer is selected. It should also be well understood that creating those data layers on destination mesh is **not** part of the modifier stack, which means e.g. that they will remain even once the modifier is deleted, or if source data selection is modified."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:114
+# d4f5ad6cc8f140d08ee2efb2ca2d4242
+msgid "Geometry Mapping"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:116
+# 63d08a09535a472ea82f7213ecd35e50
+msgid "Geometry mapping is the process by which a given destination vertex/edge/… knows **which part** of the source mesh to get its data from. It is crucial to understand this topic well to get good results with this modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:121
+# 200ff0efe65641eebaae9662bbcca61c
+msgid "Topology"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:120
+# aa87479c561542db93b81a43dabae8df
+msgid "The simplest option, expects both meshes to have identical number of items, and match them by order (indices). Useful e.g. between meshes that were identical copies, and got deformed differently."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:166
+# 5f5db8cfa40246e583c6b24e742be7c1
+msgid "One-To-One Mappings"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:124
+# 47c26daa15ae4e348458475a80d742ab
+msgid "Those always select only one source item for each destination one, often based on shortest distance."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:134
+#: ../../../manual/modifiers/modify/data_transfer.rst:180
+# 402bd13f39794476a92dbf2123dd52c3
+# 402bd13f39794476a92dbf2123dd52c3
+msgid "Vertices"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:128
+# d00877f0fa0840ed9932dc5587b1e058
+msgid "Nearest Vertex"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:128
+# a5fa4c67a7e14762a75269e6b0833a46
+msgid "Uses source’s nearest vertex."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:131
+# 94667f082a61468e877cab566e2a2567
+msgid "Nearest Edge Vertex"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:131
+# 5973e75e6a8f47cb9331dedb209840af
+msgid "Uses source’s nearest vertex of source’s nearest edge."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:134
+# 6c4179b215934610953e544183e58957
+msgid "Nearest Face Vertex"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:134
+# d4815114015740d7a5c8c9cd67a10f1f
+msgid "Uses source’s nearest vertex of source’s nearest face."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:144
+#: ../../../manual/modifiers/modify/data_transfer.rst:186
+# 1614468bf627448a988f0f2f96dce46f
+# 1614468bf627448a988f0f2f96dce46f
+msgid "Edges"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:138
+# 5be5d55decf841589a2b98f558beda04
+msgid "Nearest Vertices"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:138
+# 633749af20a242fcb113d3da20aecdc4
+msgid "Uses source’s edge which vertices are nearest from destination edge’s vertices."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:141
+# e1514fe898934484a76fe37e4a3c4959
+msgid "Nearest Edge"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:141
+# 8a091d59907e453ab5e075f51190a0fb
+msgid "Uses source’s nearest edge (using edge’s midpoints)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:144
+# 61a8463119184fa29938cd6dff18b701
+msgid "Nearest Face Edge"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:144
+# 5c37f8aa13664f21aff906e5f147abaa
+msgid "Uses source’s nearest edge of source’s nearest face (using edge’s midpoints)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:159
+#: ../../../manual/modifiers/modify/data_transfer.rst:197
+# 65c9aa1490bd4fcbaf2d82e422c7572b
+# 65c9aa1490bd4fcbaf2d82e422c7572b
+msgid "Face Corners"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:147
+#: ../../../manual/modifiers/modify/data_transfer.rst:189
+# 709c55d0aff340a49fd41b3ded676913
+# 709c55d0aff340a49fd41b3ded676913
+msgid "A face corner is not a real item by itself, it’s some kind of split vertex attached to a specific face. Hence both vertex (location) and face (normal, …) aspects are used to match them together."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:152
+# b8086989d0df474a8025484490171b8c
+msgid "Nearest Corner and Best Matching Normal"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:151
+# 5c722d42e88648d59ee22fd9214fae80
+msgid "Uses source’s corner having the most similar **split** normal with destination one, from those sharing the nearest source’s vertex."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:156
+# 7e14916537c04d3a8c37a672de714f36
+msgid "Nearest Corner and Best Matching Face Normal"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:155
+# 157be65200494489a70b9f324fcca8a0
+msgid "Uses source’s corner having the most similar **face** normal with destination one, from those sharing the nearest source’s vertex."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:159
+# 5cf47dddcc3f4f64985b9f36bb87c538
+msgid "Nearest Corner of Nearest Face"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:159
+# 558c6af6df8a45caa6c526f81e684d17
+msgid "Uses source’s nearest corner of source’s nearest face."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:166
+#: ../../../manual/modifiers/modify/data_transfer.rst:204
+# 68c51830bbce4575aa3e7a71fffdec1a
+# 68c51830bbce4575aa3e7a71fffdec1a
+msgid "Faces"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:163
+# ac4915cf96a049758377b5ef59e35b38
+msgid "Nearest Face"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:163
+# c911576d34fe491c80c26802414411d8
+msgid "Uses source’s nearest face."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:166
+# c40a9756fd54411ca12906659240b8bc
+msgid "Best Normal-Matching:"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:166
+# e8cae2aa2ba8484fae12fb8ce17cfe83
+msgid "Uses source’s face which normal is most similar with destination one."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:204
+# 60a8e3f7e9694448b581504cb374897d
+msgid "Interpolated Mappings"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:169
+# 1526fa42b38441d2ae11581c8622557a
+msgid "Those use several source items for each destination one, interpolating their data during the transfer."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:173
+# a0d82e1aaaae49e9bfc9e4f15cb11729
+msgid "Nearest Edge Interpolated"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:173
+# 9c56af058c0b4babaaa645fa90e28465
+msgid "Uses nearest point on nearest source’s edge, interpolates data from both source edge’s vertices."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:176
+#: ../../../manual/modifiers/modify/data_transfer.rst:193
+# 0cba01cac7f24df1913ec42b9d220cbb
+# 0cba01cac7f24df1913ec42b9d220cbb
+msgid "Nearest Face Interpolated"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:176
+# 4240521c22764ffa9ce7fa36549b9ea0
+msgid "Uses nearest point on nearest source’s face, interpolates data from all that source face’s vertices."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:180
+#: ../../../manual/modifiers/modify/data_transfer.rst:197
+#: ../../../manual/modifiers/modify/data_transfer.rst:204
+# 80cb262100ca4b738f22fd465bd15b09
+# 80cb262100ca4b738f22fd465bd15b09
+# 80cb262100ca4b738f22fd465bd15b09
+msgid "Projected Face Interpolated"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:179
+# d7231fea2da042ef89b0e0c974019c0b
+msgid "Uses point of face on source hit by projection of destination vertex along its own normal, interpolates data from all that source face’s vertices."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:186
+# 19b7958475794269a74f4025ec5793d3
+msgid "Projected Edge Interpolated"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:184
+# b461b8f49bc94cbb943d9812ad9dd491
+msgid "This is a sampling process. Several rays are cast from along the destination’s edge (interpolating both edge’s vertex normals), and if enough of them hit a source’s edge, all hit source edges’ data are interpolated into destination one."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:193
+# 50f436a2a1df46c7b252558d46be51ff
+msgid "Uses nearest point of nearest source’s face, interpolates data from all that source face’s corners."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:196
+# f2a137965a9842d285278d1e4c8c3788
+msgid "Uses point of face on source hit by projection of destination corner along its own normal, interpolates data from all that source face’s corners."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/data_transfer.rst:201
+# bd8de3a862dd437798bdf0b28bf7196d
+msgid "This is a sampling process. Several rays are cast from the whole destination’s face (along its own normal), and if enough of them hit a source’s face, all hit source faces’ data are interpolated into destination one."
+msgstr ""
+

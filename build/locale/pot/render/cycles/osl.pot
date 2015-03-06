@@ -1,0 +1,558 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/cycles/osl.rst:5
+# 0e4c0d3d0fe2417aaeb9ccf1c3d0f08f
+msgid "Open Shading Language"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:7
+# 1af0e90ab9b94b9895f71caabb5fd3e7
+msgid "Users can now create their own nodes using `Open Shading Language <http://github.com/imageworks/OpenShadingLanguage>`__ (OSL). Note that these nodes will only work for CPU rendering; there is no support for running OSL code on the GPU."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:12
+# 8d13e395801b4e8e94bc1cb64489031b
+msgid "To enable it, select Open Shading Language as the shading system in the render settings."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:16
+# aef9fb49a6a94931bb2a2d7d3c76baeb
+msgid "On Linux, C/C++ compiler tools (in particular /usr/bin/cpp) must be installed to compile OSL scripts."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:21
+# 3379b8c196a64da18a9c34ac435db0fc
+msgid "Script Node"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:23
+# 12ecb9845a41401e8505d6d5b1643bfb
+msgid "OSL was designed for node-based shading, and **each OSL shader corresponds to a node** in a node setup. To add an OSL shader, add a script node and link it to a text datablock or an external file. Input and output sockets will be created from the shader parameters on clicking the update button in the node or the text editor."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:29
+# 9baf4a31490245c6a601d1b9e350570d
+msgid "OSL shaders can be linked to the node in a few different ways. With the **Internal** mode, a text datablock is used to store the OSL shader, and the OSO bytecode is stored in the node itself. This is useful for distributing a .blend file with everything packed into it."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:34
+# 70f93327ecac485197f14c1d29dac61f
+msgid "The **External** mode can be used to specify a .osl file on disk, and this will then be automatically compiled into a .oso file in the same directory. It is also possible to specify a path to a .oso file, which will then be used directly, with compilation done manually by the user. The third option is to specify just the module name, which will be looked up in the shader search path."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:41
+# 6ab401337e244d20bca188c83c7045e7
+msgid "The shader search path is located in the same place as the scripts or configuration path, under:"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:45
+# 91f841fe4e73417184eb3d8bea3cdfd6
+msgid "Linux"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:46
+# 483ed3962d1a47898cc0dcf3d9d31626
+msgid "``/home/$user/.config/blender/`` *Version Number* ``/shaders/``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:47
+# bf19d6e6515b4e0c93c2b1378bf78286
+msgid "Windows"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:48
+# eaaa288309a74f779cc20d4eaf677be0
+msgid "``C:\\Users\\$user\\AppData\\Roaming\\Blender Foundation\\Blender\\`` *Version Number* ``\\shaders\\``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:51
+# aade61fc7bb847a79d5428ad3ae47257
+msgid "Mac OS X"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:50
+# 0ef0f5a419a04dcaaf4a25fe948b7705
+msgid "``/Users/$user/Library/Application Support/Blender/`` *Version Number* ``/shaders/``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:53
+# 6d3e46a515a34ab69b293ed97c628311
+msgid "(Replace *Version Number* with the release number of your current Blender installation, e.g. *2.65* or *2.66*.)"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:55
+# 2d3766d6c5c348a180b7009679a2e15a
+msgid "For use in production, we suggest to **use a node group to wrap shader script nodes**, and link that into other .blend files. This makes it easier to make changes to the node afterwards as sockets are added or removed, without having to update the script nodes in all files."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:62
+# 4cf8f4c7409c461cb1181f0d6ac2e566
+msgid "Writing Shaders"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:64
+# 3ecfbc123b4c47f6adc5dfe19bb6e13f
+msgid "For more details on how to write shaders, see the `OSL specification <https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-languagespec.pdf>`__. Here is a simple example:"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:81
+# 604abc5561a44369885bd3d3068e0166
+msgid "Closures"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:83
+# c464a4d7e9d44331ad765fe627261dd7
+msgid "OSL is different from, for example, RSL or GLSL, in that it does not have a light loop. There is no access to lights in the scene, and the material must be built from closures that are implemented in the render engine itself. This is more limited, but also makes it possible for the render engine to do optimizations and ensure all shaders can be importance sampled."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:89
+# 96e01142a3b7493eac2cec0c9d988326
+msgid "The available closures in Cycles correspond to the shader nodes and their sockets; for more details on what they do and the meaning of the parameters, see the :doc:`shader nodes manual </render/cycles/nodes/shaders>`."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:95
+# f81dda2049b14409b0cc7b3b8bb2a98f
+msgid "BSDF"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:97
+# d519a9cf557848ada1032e24837c07c2
+msgid "``diffuse(N)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:98
+# 1c6d0916ed4e486baad5258e11169fa5
+msgid "``oren_nayar(N, roughness)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:99
+# 3c0bed25735c45818355a25dbe868955
+msgid "``diffuse_ramp(N, colors[8])``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:100
+# adcf3ff5e8e04b358d3e4acf58cca0af
+msgid "``phong_ramp(N, exponent, colors[8])``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:101
+# a22f24a1899f4b2d90294be6c279b149
+msgid "``diffuse_toon(N, size, smooth)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:102
+# 4e659fcd0eb845e0be4e9cb63d9d45eb
+msgid "``glossy_toon(N, size, smooth)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:103
+# e77bf93639ab4dd98a859458c70ee601
+msgid "``translucent(N)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:104
+# ebab418c03ba434395a775164229d717
+msgid "``reflection(N)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:105
+# 38b72082ba6a41f5bfae8b6806c75540
+msgid "``refraction(N, ior)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:106
+# 43a35d24059e453998b0e83d46e72f23
+msgid "``transparent()``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:107
+# 72710457132e4581bd843cdd6aaab6ba
+msgid "``microfacet_ggx(N, roughness)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:108
+# 8d0c3a79948c470c83306ac8bc9daf8f
+msgid "``microfacet_ggx_aniso(N, T, ax, ay)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:109
+# de8a091b37f84df38aefc68d7d9d9cec
+msgid "``microfacet_ggx_refraction(N, roughness, ior)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:110
+# c8ec23ef1ec540f18dff205d8365a2fe
+msgid "``microfacet_beckmann(N, roughness)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:111
+# cca3075a5b124ed599ab99e313017d51
+msgid "``microfacet_beckmann_aniso(N, T, ax, ay)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:112
+# 73b52ab7a10843948cf741849e4bdf14
+msgid "``microfacet_beckmann_refraction(N, roughness, ior)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:113
+# 8184c8d117b04ee18816368029b764a7
+msgid "``ashikhmin_shirley(N, T, ax, ay)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:114
+# 070e7a77cad14cdd9006f3e2ed5ef2ff
+msgid "``ashikhmin_velvet(N, roughness)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:118
+# 42a4030c5e4b415c8c0fed697c088edc
+msgid "Hair"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:120
+# 2a10231086e04a91b5ecdd67d1f2664f
+msgid "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:121
+# 9c2398b7f3e84795b6dcd88e8cd7e1ad
+msgid "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:125
+# 1228342f161247548c2500bfdf82fdcc
+msgid "BSSRDF"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:127
+# 12ef7c1215974c2e9d790ffafa1d8fc5
+msgid "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:128
+# 282e767d5fd746e18605a23fd8a5c6d8
+msgid "``bssrdf_gaussian(N, radius, texture_blur)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:132
+# 5814528c66f44de69f34718e34ca88c6
+msgid "Volume"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:134
+# 477121e5f4ff438ca759cb9e6f42d8da
+msgid "``henyey_greenstein(g)``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:135
+# e83177d97dba4bf1a394bde9a912fe82
+msgid "``absorption()``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:139
+# f0bd2d8448424d4f8e8af1b51620cfac
+msgid "Other"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:141
+# 72a6685c47794e5b92b0374917dc837e
+msgid "``emission()``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:142
+# d0277b07a94b4ab79eb77944ccc3a802
+msgid "``ambient_occlusion()``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:143
+# 9835ae6747fb4469bdb87a3da98c8604
+msgid "``holdout()``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:144
+# 0416f55128a747c38fcbd7221944723b
+msgid "``background()``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:148
+# 555942cda4194e4cb91c2ef51f44e422
+msgid "Attributes"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:150
+# e3a46b34f9124b76818c04442cd133ea
+msgid "Some object, particle and mesh attributes are available to the built-in getattribute() function. UV maps and vertex colors can be retrieved using their name. Other attributes are listed below:"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:155
+# e7023822244f4d0a9de3879e08973b4e
+msgid "``geom:generated``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:156
+# 856d2b6f6e6446a9a7fc1eaccca21a4c
+msgid "Generated texture coordinates"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:157
+# 84955b8dfad248e69e37768fdf240e6b
+msgid "``geom:uv``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:158
+# 86ba7c76c02b41d7b26ebc4c80e319a3
+msgid "Default render UV map"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:159
+# e61821e5338549358320b964362e2830
+msgid "``geom:dupli_generated``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:160
+# 47cbbc13d4004cee8638ba9e3c2b430c
+msgid "For instances, generated coordinate from duplicator object"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:161
+# 82006a8cabae4323adb37cca6f6b5ca2
+msgid "``geom:dupli_uv``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:162
+# 9cdb93c569ab469a8f7a3e710282ee01
+msgid "For instances, UV coordinate from duplicator object"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:163
+# ea0d2014f952464090562947bf85070b
+msgid "``geom:trianglevertices``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:164
+# 0a8b5fa63f2341deb625c4a241e5ee6d
+msgid "3 vertex coordinates of the triangle"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:165
+# 29a53f9b491f4735b4efce3dcf399448
+msgid "``geom:numpolyvertices``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:166
+# 54d4a601f6424879a0f707d94d181805
+msgid "Number of vertices in the polygon (always returns 3 currently)"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:167
+# 96386b53dbda40d2abb01c62cd013803
+msgid "``geom:polyvertices``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:168
+# 8557a5ead7894c3cb2382a2385507266
+msgid "Vertex coordinates array of the polygon (always 3 vertices currently)"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:169
+# 6b5466b142b748f69715eb3067fc15f4
+msgid "``geom:name``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:170
+# ae43f51913ad4a20b60ee85c142a3b81
+msgid "Name of the object"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:171
+# 60afdd18b8084c55b8802ce670c5372c
+msgid "``geom:is_curve``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:172
+# 331819f6408c4f7dbb0e58cabc9b6800
+msgid "Is object a strand or not"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:173
+# 4ab65b13763b41bbb89b4656556feef1
+msgid "``geom:curve_intercept``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:174
+# a2b76aa98ccb400ab138e606259de606
+msgid "Point along the strand, from root to tip"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:175
+# 138c275b0ac64ffc9d4d89a86443c1fc
+msgid "``geom:curve_thickness``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:176
+# 8e63fa33050f4bf6a6475b6e0a6a5886
+msgid "Thickness of the strand"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:177
+# 9aa0edde027642afb175432fa2d29432
+msgid "``geom:curve_tangent_normal``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:178
+# fd67318277a746459ac1be75727b8dc1
+msgid "Tangent Normal of the strand"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:179
+# ee3e5143d2ea48f4938fba0a1931fbc2
+msgid "``path:ray_length``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:180
+# 5b5002f2e4564cc6a99cd6a6aef40be0
+msgid "Ray distance since last hit"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:181
+# 940aa4fa7aed4cbb925cdf01a0827c70
+msgid "``object:location``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:182
+# d7ce5da6d0844077a60e633e2c0aad4e
+msgid "Object location"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:183
+# e4f61859c4c1401aadcd1f1fd06fd374
+msgid "``object:index``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:184
+# 3983fe077f0d48ed974c3b3e0e0a3d28
+msgid "Object index number"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:185
+# 90e9b3eae1014dadbe959da31b85c1bf
+msgid "``object:random``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:186
+# bea55ce2843744c1bce8ced4358f389a
+msgid "Per object random number generated from object index and name"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:187
+# 6fe6be1780bf4528b0e8116f06af7b8f
+msgid "``material:index``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:188
+# b8b29e0e59f1430c9c2fb926f9184ddf
+msgid "Material index number"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:189
+# fc7bdeed96cb4eadb18c843a55341594
+msgid "``particle:index``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:190
+# 21198be201a749158e4a90ee9b9a4e44
+msgid "Particle instance number"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:191
+# d8f0dd92c35b4eec80586d821eea9dca
+msgid "``particle:age``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:192
+# 72fa3133d9494a9fac166b3433c4842f
+msgid "Particle age in frames"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:193
+# c5d6d69f3ec541dca8cc40bda81e164c
+msgid "``particle:lifetime``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:194
+# 9a943c93b3a6443d8fd9f60c84201825
+msgid "Total lifespan of particle in frames"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:195
+# c197ec0bb1ef4dbaa4652ba4d86f8ee0
+msgid "``particle:location``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:196
+# 2122825b6725484d9115f5b2e9482b70
+msgid "Location of the particle"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:197
+# 1e76bf90844d47a5bc3fb020d99b5454
+msgid "``particle:size``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:198
+# e5aa3cb6b3134088a09cac9814237151
+msgid "Size of the particle"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:199
+# 8cdc063aac4145e0ae9cb603f02d0c96
+msgid "``particle:velocity``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:200
+# 4398b9d4ad5a480f80dbf75ca6bdb865
+msgid "Velocity of the particle"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:203
+# f21870c680e444f988054bb7f57f769e
+msgid "``particle:angular_velocity``"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:202
+# be62a21990cf4297b80e26b3b9ddc775
+msgid "Angular velocity of the particle"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:206
+# 86677793feed420389286fd45af26df6
+msgid "Trace"
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:208
+# 5a341b9c984e45aba49522dd0d9b500b
+msgid "We support the ``trace(point pos, vector dir, ...)`` function, to trace rays from the OSL shader. The \"shade\" parameter is not supported currently, but attributes can be retrieved from the object that was hit using the ``getmessage(\"trace\", ..)`` function. See the OSL specification for details on how to use this."
+msgstr ""
+
+#: ../../../manual/render/cycles/osl.rst:213
+# e5d9e0d0c13747ee82017c18be20e7de
+msgid "This function can't be used instead of lighting; the main purpose is to allow shaders to \"probe\" nearby geometry, for example to apply a projected texture that can be blocked by geometry, apply more \"wear\" to exposed geometry, or make other ambient occlusion-like effects."
+msgstr ""
+

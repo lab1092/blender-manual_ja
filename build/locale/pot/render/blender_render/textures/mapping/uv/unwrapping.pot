@@ -1,0 +1,796 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:7
+# 3631d850201943068948852be33dbc9f
+msgid "UV Mapping a Mesh"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:9
+# a1fd42d8800c4a71a170fd214f763a9a
+msgid "The first step is to unwrap your mesh. You want to unwrap when you feel your mesh is complete with respect to the number of faces it needs to have. If you do add faces or subdivide existing faces when a model is already unwrapped, Blender will add those new faces for you, but you may need to do additional mapping or editing. In this fashion, you can use the UV Texture image to guide additional geometry changes."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:16
+# f00263a16f264114810ccc86985aee5a
+msgid "This section covers techniques for Mapping Uvs. The next sections cover :doc:`Editing UVs </render/blender_render/textures/mapping/uv/layout_editing>`, followed by methods of :doc:`Managing UV Layouts </render/blender_render/textures/mapping/uv/layout_management>`, and :doc:`Applying Images to UVs </render/blender_render/textures/mapping/uv/applying_image>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:23
+# 6028235fbd9e40f6836afe275c6f5e07
+msgid "About UVs"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:25
+# deb9f470e258485eaa5df6139145b2d7
+msgid "Every point in the UV map corresponds to a vertex in the mesh. The lines joining the UVs correspond to edges in the mesh. Each face in the UV map corresponds to a mesh face."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:29
+# b3f9226f87f1481a83d8b4c3c7a16351
+msgid "Each face of a mesh can have many UV Textures. Each UV Texture can have an individual image assigned to it. When you unwrap a face to a UV Texture in the UV/Image Editor, each face of the mesh is automatically assigned *four UV coordinates:* These coordinates define the way an image or a texture is mapped onto the face. These are 2D coordinates, which is why they're called UV, to distinguish them from XYZ coordinates. These coordinates can be used for rendering or for real-time OpenGL display as well."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:37
+# 0e5920fcea0046a19989f3deb7111488
+msgid "Every face in Blender can have a link to a different image. The UV coordinates define how this image is mapped onto the face. This image then can be rendered or displayed in real time. A 3D window has to be in \"Face Select\" mode to be able to assign Images or change UV coordinates of the active Mesh Object. This allows a face to participate in many UV Textures. A face at the hairline of a character might participate in the facial UV Texture, *and* in the scalp/hair UV Texture."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:45
+# 472d46463ec644f79f1b829b2672673f
+msgid "These are described more fully in the next sections."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:49
+# f4d166101ec74ae1b919a1f396799172
+msgid "Getting Started"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:54
+# 3307ae9fae1845faaecaa606204fa85c
+msgid "UV Editing screen layout"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:57
+# b89a36c65fc0426bab05de3869200d66
+msgid "By default, meshes are not created with UVs. First you must map the faces, then you can :doc:`edit them </render/blender_render/textures/mapping/uv/layout_editing>`. The process of unwrapping your model is done within Edit Mode in the 3D View window. This process creates one or more UV Islands in the :doc:`UV/Image Editor window </render/blender_render/textures/mapping/uv_image_editor>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:63
+# 806365a3b8f640af8d1205206f7ceebc
+msgid "To begin, choose the *UV Editing* :doc:`screen layout </getting_started/basics/interface/screens>` from the selection list at the top of your screen in the User Preferences window header. This sets one of the panes to show you the UV/Image Editor window (:kbd:`Shift-F10`), and the other pane to the 3D window (:kbd:`Shift-F5`)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:69
+# 53151e8424724b298518cedaab02f307
+msgid "Enter edit mode, as all unwrapping is done in Edit mode. You can be in vertex, face, or edge selection mode."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:74
+# b530db39cbc342499403fe14a090c13f
+msgid "Workflow"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:78
+# 5393ebadff614fc39c962dc2f3675b09
+msgid "Choosing the unwrapping method"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:81
+# 82c5db9a6a274763ac7e7285f1d3d6d5
+msgid "The process for unwrapping is straightforward, but there are tons of options available, each of which dramatically affect the outcome of the unwrap. By understanding the meaning behind the options, you will become more efficient at unwrapping. The process is:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:86
+# 0ff6064ff066459ab34318c84c7eacea
+msgid "Mark Seams if necessary"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:87
+# eb346e8f1cc84299851aeba16b4bfed5
+msgid "Select all of the mesh components"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:88
+# e929d105726f464d884e91e81d188a2a
+msgid "Select a UV mapping method from the UV Unwrap menu"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:89
+# 0ee670f26a3148abbb7a036fca91dad5
+msgid "Adjust the unwrap settings"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:90
+# f1d656bc9a2a410e86f51cba22a4b358
+msgid "Add a test image to see if there will be any distortion. See :doc:`Applying Images to UVs </render/blender_render/textures/mapping/uv/applying_image>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:92
+# e82e3537b0dc4fb781db4eaffcd37266
+msgid "Adjust UVs in the UV editor. See :doc:`Editing UVs </render/blender_render/textures/mapping/uv/layout_editing>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:97
+# 0b1e7ec314074bebbe0b8ca09dd4b7ab
+msgid "Mapping Types"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:99
+# b9f870975d1443bb998064f7ada5381f
+msgid "Blender offers several ways of mapping UVs. The simpler projection methods use formulas that map 3d space onto 2d space, by interpolating the position of points toward a point/axis/plane through a surface. The more advanced methods can be used with more complex models, and have more specific uses."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:104
+# 3af313c442074c3c946ebd86d9b75983
+msgid "Basic:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:107
+# 1fbb634bcf6f4534b347274c9330273c
+msgid "`Cube`_"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:107
+# a8ffb0117f514d38b33cfbee4e27b401
+msgid "Maps the mesh onto the faces of a cube, which is then unfolded."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:110
+# e460964278214d31874ee46985d5c4f7
+msgid ":ref:`Sphere <cylinder-and-sphere>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:110
+# b9de8aba56364846bfc0d7585a0d786f
+msgid "Projects the UVs onto a spherical shape. Useful only for spheres or spherical shapes, like eyes, planets, etc."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:113
+# a383cb48a2ef424f88bd53f816ebc04c
+msgid ":ref:`Cylinder <cylinder-and-sphere>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:113
+# fd5891e616d7499e9f1f97ba5d754c02
+msgid "Projects UVs onto a cylindrical surface."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:116
+# 0bc1c0b878324a40b9ae1f98ba7cc5da
+msgid "`Project from View`_"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:116
+# 8dfb61ad857a4095bad5d4a968a1703e
+msgid "Takes the current view in the 3D viewport and flattens it as it appears."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:118
+# 56e02578beb14dd8aeae622f26e0ced3
+msgid "Advanced:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:121
+# 80675d00c5d146e59cf8063240c524b2
+msgid ":ref:`Unwrap <unwrap-using-seams>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:121
+# aa3520f115fa4b8398237f12ec208b2f
+msgid "Useful for organic shapes. Smooths the mesh into a flat surface by cutting along seams."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:124
+# 2fbe08dedc704fd68f28f9e7eb3c13ea
+msgid "`Smart UV Project`_"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:124
+# 9975c62c40c248749eb97729bb49983c
+msgid "Breaks the mesh into islands based on an angle threshold."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:127
+# 25db28c5ecd04fba920d68d4265e0581
+msgid ":ref:`Lightmap Pack <lightmap-pack>`"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:127
+# e64d433f38c04472947d52ee32774619
+msgid "Separates each face and packs them onto the UV grid."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:130
+# a1b48087bda34fe7a6cb709a439681e0
+msgid "`Follow Active Quads`_"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:130
+# 9708876b5cd544b6adb60cf7195aab03
+msgid "Follow UV from active quads along continuous face loops."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:132
+# 554eeae196714afe848d1e7bf76199af
+msgid "You can also :ref:`reset UVs <reset-uvs>`, which maps each face to fill the UV grid, giving each face the same mapping."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:135
+# 7eefa8426e604e62ba40f475d68a564b
+msgid "If we were to use an image that was tileable, the surface would be covered in a smooth repetition of that image, with the image skewed to fit the shape of each individual face. Use this unwrapping option to reset the map and undo any unwrapping (go back to the start)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:142
+# 469bbfee375942229c07ddaed8793cd2
+msgid "Basic Mapping"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:144
+# 672d020c36944235a91091156d035179
+msgid "Based on the fundamental geometry of the object, and how it is being viewed, the *Mesh-->UV Unwrap-->Cube, Cylinder, and Sphere* UV Calculations attempt to unfold the faces for you as an initial best fit. Here, the view from the 3D window is especially important. Also, the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel) should be set (in Blender units) to encompass the object."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:151
+# d4b93cd9870347a58fe154a7391b5a7d
+msgid "The following settings are common for the Cube, Cylinder, and Sphere mappings:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:155
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:383
+# 72d82e1a4f8d450abf28d668e7221828
+# bd09476d8dde4968920dc28c706eb54a
+msgid "Correct Aspect"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:154
+# b7546c50fc7f4993ac055908f0f90e20
+msgid "Map UVs taking image aspect ratios into consideration. If an image has already been mapped to the texture space that is non-square, the projection will take this into account and distort the mapping to appear correct."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:158
+# 47dc1ff166424965b56f8eec337b3ffd
+msgid "Clip to Bounds"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:158
+# b736f36f584c4e4693fe486c95c1fc7c
+msgid "Any UVs that lie outside the 0 to 1 range will be clipped to that range by being moved to the UV space border it is closest to."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:162
+# d9180f3e571b40da839420e79e60b177
+msgid "Scale to Bounds"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:161
+# b3222a4782804d08b9bcc86cbe2292dd
+msgid "If the UV map is larger than the 0 to 1 range, the entire map will be scaled to fit inside."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:165
+# c59379d992c24cf7949849b7c9be32e3
+msgid "Cube"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:168
+# 9f5f47a9c18543d7a2ccc1e24efb454f
+msgid "Cube mapping projects s mesh onto six separate planes, creating 6 UV islands. In the UV editor, these will appear overlapped, but can be moved. See :doc:`Editing UVs </render/blender_render/textures/mapping/uv/layout_editing>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:173
+# a77185a33b1e4aa58a2eea7320ab0989
+msgid "Cube Size"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:173
+# 7f7c8bb2a7d046e19b6f9ae77a5264a9
+msgid "Set the size of the cube to be projected onto."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:178
+# b90be4fe0c6a483fbf72068401a1fee3
+msgid "Cylinder and Sphere"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:183
+# 0daf45a055234658bf20e785702ddf95
+msgid "Using a Mercator image with a Sphere Projection"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:186
+# 09ac671f01044a1f87f71420ae0985c5
+msgid "Cylindrical and Spherical mappings have the same settings. The difference is that a cylindrical mapping projects the UVs on a plan toward the cylinder shape, while a spherical map takes into account the sphere's curvature, and each latitude line becomes evenly spaced."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:191
+# fde52269bec44a8bbbe6bf2f17130cc8
+msgid "Normally, to unwrap a cylinder (tube) as if you slit it lengthwise and folded it flat, Blender wants the view to be vertical, with the tube standing 'up'. Different views will project the tube onto the UV map differently, skewing the image if used. However you can set the axis on which the calculation is done manually. This same idea works for the sphere mapping:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:197
+# 9755eafa3fd34f94acdb32e3a009bd73
+msgid "Recall the opening cartographer's approaching to mapping the world? Well, you can achieve the same here when unwrapping a sphere from different perspectives. Normally, to unwrap a sphere, view the sphere with the poles at the top and bottom. After unwrapping, Blender will give you a Mercator projection; the point at the equator facing you will be in the middle of the image. A polar view will give a very different but common projection map. Using a Mercator projection map of the earth as the UV image will give a very nice planet mapping onto the sphere."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:211
+# 026363e8b49d48e3b105906a7a4f31a8
+msgid "Direction"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:206
+# 48e4540096414de985dc6a4b7041c7a6
+msgid "View on Poles"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:207
+# 2a905aa69d754caa99bc1d350ad52308
+msgid "Use when viewing from the top (at a pole) by using an axis that is straight down from the view"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:208
+# eeba4259a9784abc9b2da9defb812fb5
+msgid "View on Equator"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:209
+# eafdd96fed984ff0bc61438ab0e4e1ef
+msgid "Use if view is looking at the equator, by using a vertical axis"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:211
+# c6afa411a4d94f1e9d59a1f60b09cde2
+msgid "Align to Object"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:211
+# a7b4e9a1546f4bc3a7f6988585f2ee59
+msgid "Uses the object's transform to calculate the axis"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:220
+# 9dd8b901066f4fbc9676151ed455b16a
+msgid "Align"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:214
+# b412a7944b4b463f90fe49b58ca3b43a
+msgid "Select which axis is up"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:216
+# a2af19d79c69410289c0f22c3071cff8
+msgid "Polar ZX"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:217
+# daa55262928b4f77b4c53a09a0b4780d
+msgid "Polar 0 is on the x axis"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:220
+# b67360cb1b9947bea8ad09fcdebe39e2
+msgid "Polar ZY"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:219
+# d4c147ee54034c77aa817b6a34341dcb
+msgid "Polar 0 is on the y axis"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:224
+# 5e7b4f3d46254956bde7cabf93684c24
+msgid "Radius"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:223
+# e4cdffab83ba47b98bde6ccbb0fc59a1
+msgid "The radius of the cylinder to use"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:227
+# afded80e5e0e42f78e2b8ce91b477580
+msgid "Project From View"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:229
+# 8b95c51c62cd44c78698370b447fabc6
+msgid "In the 3D window, the *Face-->Unwrap UVs-->Project from View* option maps the face as seen through the view of the 3D window it was selected from. It is almost like you had x-ray vision or squashed the mesh flat as a pancake onto the UV map. Use this option if you are using a picture of a real object as a UV Texture for an object that you have modeled. You will get some stretching in areas where the model recedes away from you."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:235
+# ebc48d124099481f87536688f1c4bf5e
+msgid "Using *Project from View (Bounds)* will do the same as above, but scales the UVs to the bounds of the UV space."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:241
+# 21f49d204e084bf69c6fb3d7fcd20aae
+msgid "Resetting UVs"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:243
+# 7a4eff8734c64a13a5efa2c816a5ce9c
+msgid "In the 3D window, *Face-->Unwrap-->Reset* maps each selected face to the same area of the image, as previously discussed. To map all the faces of an object (a cube, for example) to the same image, select all the faces of the cube, and unwrap them using the Reset menu option."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:251
+# 57ba44028f0248e88b47a13ea373f590
+msgid "Advanced Mapping"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:256
+# 42533aa5dd1947fa97ad67bf7eea17a8
+msgid "Unwrapping Using Seams"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:261
+# fb0c29ecbb0349e3818b13ebb7355778
+msgid "Simple Seam on a Cylinder"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:264
+# 37c89975d4234a48b334d7eef8adbddf
+msgid "For many cases, using the Unwrap calculations of Cube, Cylinder, Sphere, or best fit will produce a good UV layout. However, for more complex meshes, especially those with lots of indentations, you may want to define a **seam** to limit and guide any of the unwrapping processes discussed above."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:269
+# 6b596aeddf644f018002f90224a8206f
+msgid "Just like in sewing, a seam is where the ends of the image/cloth are sewn together. In unwrapping, the mesh is unwrapped at the seams. Think of this method as peeling an orange or skinning an animal. You make a series of cuts in the skin, then peel it off. You could then flatten it out, applying some amount of stretching. These cuts are the same as seams."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:275
+# d96e672c7718413ba8cd0637784d6ecb
+msgid "When using this method, you need to be aware of how much stretching there is. The more seams there are, the less stretching there is, but this is often an issue for the texturing process. It's a good idea to have as few seams as possible while having the least amount of stretching. Try to hide seams where they will not be seen. In productions where 3d Paint is used, this becomes less of an issue, as projection painting can easily deal with seams, as opposed to 2d texturing, where it is difficult to match the edges of different UV islands."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:284
+# d127b1f157214f3c96eae8e736188026
+msgid "The workflow is the following:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:286
+# 4f57f29dc7344b65bd8882158eb70a2e
+msgid "Create seams. A seam is marked in Edit mode by selecting edges to make the seam and then issuing the command to Mark Seam."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:288
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:348
+# ae6cb4e708e141449968708c16f741ee
+# 43f02a560f8b451b887c8d4dcdf23595
+msgid "Unwrap"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:289
+# 55e7bcec84fc4bb1865985835b5b4653
+msgid "Adjust seams and repeat"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:290
+# c9bf108f0f7d4021aa26d9b49a0afaab
+msgid "Manually adjust UVs. See the next section on Editing UVs."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:294
+# 4bb369d085ad47919ff9c3a447228b54
+msgid "Marking Seams"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:299
+# 990c5f7c4fc1431c88a5ff70166e0d08
+msgid "Seamed Suzanne"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:302
+# b5423f374907408c958660191f75c856
+msgid "To add an edge to a seam, simply select the edge and :kbd:`Ctrl-E` *Mark Seam*. To take an edge out of a seam, select it, :kbd:`Ctrl-E` and *Clear Seam*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:306
+# 63f102f88b9043d89c8e1b8335d98a12
+msgid "In the example to the right, the back-most edge of the cylinder was selected as the seam (to hide the seam), and the default unwrap calculation was used. In the UV/Image Editor window, you can see that all the faces are nicely unwrapped, just as if you cut the seam with a scissors and spread out the fabric."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:312
+# 5e19f83c51bd468c94e022125450da0a
+msgid "When marking seams, you can use the *Select-->Linked Faces* or :kbd:`Ctrl-L` in Face Select Mode to check your work. This menu option selects all faces connected to the selected one, up to a seam. If faces outside your intended seam are selected, you know that your seam is not continuous. You do not need continuous seams, however, as long as they resolve regions that may stretch."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:318
+# 3527260612834374ad9244dac1ff632d
+msgid "Just as there are many ways to skin a cat, there are many ways to go about deciding where seams should go. In general though, you should think as if you were holding the object in one hand, and a pair of sharp scissors in the other, and you want to cut it apart and spread it on the table with as little tearing as possible. Note that we seamed the outside edges of her ears, to separate the front from the back. Her eyes are disconnected sub-meshes, so they are automatically unwrapped by themselves. A seam runs along the back of her head vertically, so that each side of her head is flattened out."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:328
+# 1aa5c0cac8df4054812fb9a9e1152231
+msgid "Another use for seams is to limit the faces unwrapped. For example, when texturing a head, you don't really need to texture the scalp on the top and back of the head since it will be covered in hair. So define a seam at the hairline. Then, when you select a frontal face, and then select linked faces before unwrapping, the select will only go up to the hairline seam, and the scalp will not be unwrapped."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:334
+# e6fa77c70dbc4cd4b1c63a5b2b0ca649
+msgid "When unwrapping anything that is bilateral, like a head or a body, seam it along the mirror axis. For example, cleave a head or a whole body right down the middle in front view. When you unwrap, you will be able to overlay both halves onto the same texture space, so that the image pixels for the right hand will be shared with the left; the right side of the face will match the left, etc."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:341
+# 16a9b4082fa7429e99ce86e40298c86e
+msgid "Finally, remember that you *don't* have to come up with \"one unwrapping that works perfectly for everything everywhere.\" As we'll discuss later, you can easily have multiple UV unwrappings, using different approaches in different areas of your mesh."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:353
+# a9cc77bf7e6e4872a5363b4a1409f3a4
+msgid "Result of unwrapping Suzanne"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:356
+# ee4ce9b6b458411da36c3ead3e96c32a
+msgid "Begin by selecting all faces to be unwrapped in the 3D View. With our faces selected, it is now time to unwrap them. In the 3D View, select :menuselection:`Mesh --> UV Unwrap --> Unwrap` or :kbd:`U` and select Unwrap."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:361
+# 1653c3ef493e4494ba88f195cc0d559e
+msgid "You can also do this from the UV/Image Editor window with command :menuselection:`UVs --> Unwrap` or :kbd:`E`. This method will unwrap all of the faces and reset previous work. The UVs menu will appear in the UV/Image Editor window after unwrapping has been performed once."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:365
+# c9ef24d5a34a47cdbfc069bdf863ebf3
+msgid "This tool unwraps the faces of the object to provide the 'best fit' scenario based on how the faces are connected and will fit within the image, and takes into account any seams within the selected faces. If possible, each selected face gets its own different area of the image and is not overlapping any other faces UV's. If all faces of an object are selected, then each face is mapped to some portion of the image."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:371
+# 9fccf4b59c2543fba43829930260ec6e
+msgid "Blender has two ways of calculating the unwrapping. They can be selected in the tool setting in the tool panel in the 3D View."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:374
+# ffa6aa09c61b4d97858da54c2ccb1d9b
+msgid "Angle Based"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:375
+# 764f08a36469456c8bfd0bd7089aa2ec
+msgid "This method gives a good 2d representation of a mesh."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:378
+# 7261c725da9548bfbd9cf52a494fdfcb
+msgid "Conformal"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:377
+# d345635b1ceb43da8484b926d317303f
+msgid "Uses LSCM (Least Squared Conformal Mapping). This usually gives a less accurate UV mapping than Angle Based, but works better for simpler objects."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:380
+# 60ea2e11332b4c1c97b5eb12b3dacec3
+msgid "Fill Holes"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:381
+# 840d3c389c0847c8aebaf8733a0453aa
+msgid "Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:383
+# 8a29ba928f9444a482b3808bfd156f5a
+msgid "Map UVs taking image aspect into account"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:386
+# b5057a0d84d14f0ea7b2064df76b0c19
+msgid "Use Subsurf Modifier"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:386
+# 80ea0a1e5c2841fe9ac5f117aeac92a3
+msgid "Map UVs taking vertex position after subsurf modifier into account"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:389
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:474
+# 12e0e19434bb492ba022205372a2af4b
+# 329ed588da864d51842e99bea0e14fc2
+msgid "Margin"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:389
+# e5b10617d7dd45c4930b6745ea55b403
+msgid "Space between UV islands"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:391
+# bb0fff2be7a648bfb783b18900e955a8
+msgid "**This point is crucial to understanding mapping** later on: a face's UV image texture only has to use *part* of the image, not the *whole* image. Also, portions of the same image can be shared by multiple faces. A face can be mapped to less and less of the total image."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:398
+# 9ef1a704e3b04959886b33649e7a41bb
+msgid "Smart UV Project"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:403
+# af99c5c0caba4b9fb39dc20e9404a87c
+msgid "Smart UV project on a cube"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:406
+# f406791d253046a8988b12ad0b41dec8
+msgid "Smart UV Project, (previously called the Archimapper) gives you fine control over how automatic seams should be created, based on angular changes in your mesh. This method is good for simple and complex geometric forms, such as mechanical objects or architecture."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:412
+# 9234f5051d6f46eea11ae7296227f9f6
+msgid "This function examines the shape of your object, the faces selected and their relation to one another, and creates a UV map based on this information and settings that you supply."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:416
+# 0912815320df44ee9afc9de34d5ef25f
+msgid "In the example to the right, the Smart Mapper mapped all of the faces of a cube to a neat arrangement of 3 sides on top, 3 sides on the bottom, for all six sides of the cube to fit squarely, just like the faces of the cube."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:421
+# 5aeffee55b9f4119a8589af8806f4493
+msgid "For more complex mechanical objects, this tool can very quickly and easily create a very logical and straightforward UV layout for you."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:424
+# f3a3f29a07204d1aa5de6f171d2b5b22
+msgid "The Tool Settings panel in the Tool Shelf allows the fine control over how the mesh is unwrapped:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:429
+# f7efe683848140e1adf4f77df2e2d6c9
+msgid "Angle Limit"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:428
+# e42743afe34a4b1b9dc594e30bf9b9c7
+msgid "This controls how faces are grouped: a higher limit will lead to many small groups but less distortion, while a lower limit will create fewer groups at the expense of more distortion."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:433
+# 937bc636b9534f7d89cdadfd749cbb26
+msgid "Island Margin"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:432
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:472
+# b2fb9526b41d48b0954d9e8040fde339
+# 6df7b16a646d47aeb866c8457a1c9c39
+msgid "This controls how closely the UV islands are packed together. A higher number will add more space in between islands."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:436
+# 43d8ab9bbf6648bfad7bfe67eca6ae5b
+msgid "Area Weight"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:436
+# 4d5be393d43143528dbf6a4bcc4d7460
+msgid "Weight projection's vector by faces with larger areas"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:441
+# bb87878d551740e6bdecfb046f1a1423
+msgid "Lightmap"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:443
+# e2b43ed35bda4645bf2a102a14796162
+msgid "Lightmap Pack takes each of a mesh's faces, or selected faces, and packs them into the UV bounds. Lightmaps are used primarily in gaming contexts, where lighting information is baked onto texture maps, when it is essential to utilize as much UV space as possible. It can also work on several meshes at once. It has several options that appear in the Tool Shelf:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:450
+# ef776b27d8d442a7990c78683bd92742
+msgid "You can set the tool to map just *Selected Faces* or *All Faces* if working with a single mesh."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:453
+# b8b4f4f4f9814cab8c58e01fd08a1fd8
+msgid "The *Selected Mesh Object* option works on multiple meshes. To use this, in *Object Mode* select several mesh objects, then go into *Edit Mode* and activate the tool."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:458
+# 2ca222650d064be684b7466c036d7fa8
+msgid "Share Tex Space"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:458
+# 8b1454b8c204472dba9b11f2cfb54960
+msgid "This is useful if mapping more than one mesh. It attempts to fit all of the objects' faces in the UV bounds without overlapping."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:461
+# c5109c5a424040bab9713ff5d0ffc05f
+msgid "New UV Layer"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:461
+# b1e0cc78dfb94aaba11531b09b58eec1
+msgid "If mapping multiple meshes, this option creates a new UV layer for each mesh. See :doc:`Managing the Layout </render/blender_render/textures/mapping/uv/layout_management>`."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:467
+# 5b149eac9ec64f4eaa9839f07dce51e3
+msgid "New Image"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:464
+# 001920af293b457787cff0834ae92dc0
+msgid "Assigns new images for every mesh, but only one if *Shared Tex Space* is enabled."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:467
+# 7f513d793540432b94af90970a56daa8
+msgid "Image Size"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:467
+# c4595eb9ff2346c88a24b33c1725d350
+msgid "Set the size of the new image."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:469
+# 8e22fc86460d453c9450b4de5099ab46
+msgid "Pack Quality"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:470
+# 59b70847b9b540b796227fa6849b7529
+msgid "Pre-packing before the more complex Box packing."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:477
+# d28be0da7e0e46628e12fadbe814b235
+msgid "Follow Active Quads"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:479
+# 6ad1907458cf4b3bbcc0256893884028
+msgid "The *Face-->Unwrap-->Follow Active Quads* takes the selected faces and lays them out by following continuous face loops, even if the mesh face is irregularly shaped. Note that it does not respect the image size, so you may have to scale them all down a bit to fit the image area."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:484
+# ce5b759308684abbbfb137b494a4c45c
+msgid "Edge Length Mode:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:486
+# 386a5e331146449cb5cda9bb97f00cee
+msgid "Even"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:487
+# c74b77e2046d4deb93d8bc5fc21bf81f
+msgid "Space all UVs evenly."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:489
+# 6fc3b399a2b0480e90b259c00e010d5e
+msgid "Length"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:489
+# bf85c54774094eb7bce0d3111c9336d2
+msgid "Average space UV's edge length of each loop."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/mapping/uv/unwrapping.rst:491
+# 7bdb61ce766a48b2b9b356041d54ffa1
+msgid "Please note that it is the shape of the active quad in UV space that is being followed, not its shape in 3d space. To get a clean 90-degree unwrap make sure the active quad is a rectangle in UV space before using \"Follow active quad\"."
+msgstr ""
+

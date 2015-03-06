@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/game_engine/logic/states.rst:4
+# b44f756deb804ae9ac32ea417dcff643
+msgid "States"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:6
+# 5f928e4efa5d48e5aae65766d3e2796f
+msgid "In the BGE, an object can have different \"states\". At any time while the game is playing, the current state of the object defines its behavior. For instance, a character in your game may have states representing awake, sleeping or dead. At any moment their behavior in response to a loud bang will be dependent on their current state; they may crouch down (awake); wake up (asleep) or do nothing (dead)."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:14
+# 41d8d59b94034fadb4dc31a201a52f20
+msgid "How States Operate"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:16
+# cdd1aa2f3f274bc7bac7dab3a4c9809c
+msgid "States are set up and used through controllers: note that only controllers, not actuators and sensors, are directly controlled by the state system. Each object has a number of states (up to 30; default = 1), and can only be in one state at any particular time. A controller must always specify the state for which it will operate - it will only give an output pulse if a) its logic conditions are met, and b) the object is currently in the specified State. States are set up and edited in the object's Controller settings (for details see below)."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:26
+# 3a4ed8dda3764e61bc352b4184c31825
+msgid "State settings are automatic in simple games. By default, the number of states for each object is 1, and all controllers are set to use State 1. So, if a game does not need multiple states, everything will work without explicitly setting states - you do not need to bother about states at all."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:32
+# 80c8d99e762f427989929bed835b80db
+msgid "One of the actuators, the State actuator, can set or unset the object's State bits, and so allow the object's reaction to a sensor signal to depend on its current state. So, in the above example, the actor will have a number of controllers connected to the \"loud bang\" sensor, for each of the \"awake\", \"asleep\" or \"dead\" states. These will operate different actuators depending on the current state of the actor, and some of these actuators may switch the actor's state under appropriate conditions."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:42
+# 54350a1a574e438e849b0efd2d82fbe2
+msgid "Editing States"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:47
+# 92b6a2d635004aa5b4583db79b3f00db
+msgid "State Panel Button"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:50
+# f4bbe1a9137343cbb722376dc1904d5f
+msgid "States are set up and edited using the Controller (center) column of the Game Logic Panel. To see the State panel, click on the State Panel Button shown. The panel shows two areas for each of the 30 available states; these show Visible states, and Initial states (see below). Setting up the State system for a game is performed by choosing the appropriate state for each controller in the object's logic."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:56
+# d0c9c78861e64752905cad4b6c26f256
+msgid "The display of an object's state logic, and other housekeeping, is carried out using the State Panel for the object, which is switched on and off using the button shown. The panel is divided into two halves, Visible and Initial."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:65
+# 5f6f12bf22d64506bc80174bbf5d98bb
+msgid "State Panel Visible"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:68
+# 2cdd46eb4249407fb1741cf75123dce7
+msgid "**Visible States**"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:70
+# 92c97df200594588b11d7bd4c771405d
+msgid "In the Visible area, each of the 30 available states is represented by a light-gray square. This panel shows what logic is visible for the logic brick displayed for the object. At the right is the All button; if clicked, then all the object's logic bricks are displayed (this is a toggle), and all State Panel squares are light-gray. Otherwise, individual states can be clicked to make their logic visible. (Note that you can click more than one square). Clicking the square again unselects the state."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:77
+# 29527a6b522b4852a06ca28ced718f56
+msgid "States for the object that are in use (i.e. the object has controllers which operate in that state) have dots in them, and squares are dark-gray if these controllers are shown in the Game Logic display. The display of their connected sensors and actuators can also be controlled if the State buttons at the head of their columns are ticked."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:87
+# 15079fdab5b344b9903856e6cd70e9f1
+msgid "State Panel Initial"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:90
+# 899cfde57f29458589c7ccc0231a67f9
+msgid "**Initial State**"
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:92
+# 4ead5854de4b41468f7dd8a00f393f65
+msgid "In the Initial area, each of the 30 available states is again represented by a light-gray square. One of these states may be clicked as the state in which the object starts when the game is run."
+msgstr ""
+
+#: ../../../manual/game_engine/logic/states.rst:96
+# 08397b8d8aaa43eb88d9a5c647dfa30d
+msgid "At the right is the I (Information) button; if clicked, and the (Game) Show Debug Properties menu entry is clicked, the current state of the object is shown in the top left-hand corner of the display while the game is running."
+msgstr ""
+

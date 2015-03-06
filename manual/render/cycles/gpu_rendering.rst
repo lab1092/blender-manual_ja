@@ -7,7 +7,7 @@ GPU Rendering
 Introduction
 ============
 
-GPU rendering makes it possible to use your graphics card for rendering, instead of the CPU.
+:abbr:`GPU (Graphics Processing Unit)` rendering makes it possible to use your graphics card for rendering, instead of the CPU.
 This can speed up rendering,
 because modern GPUs are designed to do quite a lot of number crunching. On the other hand,
 they also have some limitations in rendering complex scenes, due to more limited memory,
@@ -31,8 +31,8 @@ CUDA
 ----
 
 
-NVidia :abbr:`CUDA (Compute Unified Device Architecture)` is supported for :abbr:`GPU (Graphics
-processing unit)` rendering with **NVidia graphics cards**.
+NVidia :abbr:`CUDA (Compute Unified Device Architecture)` is supported for GPU
+rendering with **NVidia graphics cards**.
 We support graphics cards starting from GTX 4xx (computing capability 2.0).
 
 Cycles requires recent drivers to be installed, on all operating systems.
@@ -48,8 +48,10 @@ Limitations
 - The maximum amount of individual textures is limited to 95 byte-image textures (PNG, JPEG, ..)
   and 5 float-image textures (OpenEXR, 16 bit TIFF, ..) on GTX 4xx/5xx cards,
   and 145 byte-image textures and 5 float-image textures on GTX6xx cards and above. 
-- :doc:`Open shading language </render/cycles/nodes/osl>` (OSL) is only supported by CPU.
-- Smoke/Fire rendering is not supported on GPU. 
+- :doc:`Open shading language </render/cycles/osl>` (OSL) is only supported by CPU.
+- Smoke/Fire rendering is not supported on GPU.
+- The :ref:`SSS shader <cycles_shader_sss>` is only supported
+  in the :doc:`Experimental Feature Set </render/cycles/experimental_features>`.
 
 
 Frequently Asked Questions
@@ -60,12 +62,12 @@ Why is Blender unresponsive during rendering?
 
 While a graphics card is rendering, it can not redraw the user interface,
 which makes Blender unresponsive. We attempt to avoid this problem by giving back control over
-the :abbr:`GPU (Graphics processing unit)` as often as possible,
+the GPU as often as possible,
 but a completely smooth interaction can't be guaranteed, especially on heavy scenes.
 This is a limitation of graphics cards for which no true solution exists,
 though we might be able to improve this somewhat in the future.
 
-If possible, it is best to install more than one :abbr:`GPU (Graphics processing unit)`,
+If possible, it is best to install more than one GPU,
 using one for display and the other(s) for rendering.
 
 
@@ -82,14 +84,14 @@ We do intend to add a system to support scenes bigger than GPU memory,
 but this will not be added soon.
 
 
-Can I use multiple GPU|Graphics processing units for rendering?
----------------------------------------------------------------
+Can I use multiple GPUs for rendering?
+--------------------------------------
 
 Yes, go to User Preferences > System > Compute Device Panel, and configure it as you desire.
 
 
-Would multiple GPU|Graphics processing units increase available memory?
------------------------------------------------------------------------
+Would multiple GPUs increase available memory?
+----------------------------------------------
 
 No, each GPU can only access its own memory.
 
@@ -98,7 +100,7 @@ What renders faster, NVidia or AMD, CUDA or OpenCL?
 ---------------------------------------------------
 
 Currently NVidia with CUDA is rendering faster. There is no fundamental reason why this should
-be so—we don't use any CUDA-specific features—but the compiler appears to be more mature,
+be so - we don't use any CUDA - specific features - but the compiler appears to be more mature,
 and can better support big kernels.
 OpenCL support is still being worked on and has not been optimized as much,
 because we haven't had the full kernel working yet.
@@ -115,7 +117,6 @@ On Linux, depending on your GCC version you might get this error.
 If so, delete the following line in /usr/local/cuda/include/host_config.h
 
 ::
-
 
    #error -- unsupported GNU version! gcc 4.7 and up are not supported!
 

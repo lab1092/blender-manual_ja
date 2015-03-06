@@ -62,7 +62,7 @@ to link or copy and then using the *Make Links* and *Make Single User* items fou
 *Object* menu in the 3D viewport header. Use *Make Links* to make links between scenes.
 To make a plain copy, you first make a link and then use *Make Single User* to make a stand-alone copy of
 the object in your current scene.
-Further information on working with scenes can be found :doc:`here </data_system/scene_creation>`.
+Further information on working with scenes can be found :doc:`here </data_system/scenes>`.
 
 
 Appending or Linking Across Files
@@ -73,19 +73,6 @@ The content of one ``.blend`` file is easily accessed and put into your current 
 To find out more about how to copy or link objects across ``.blend`` files,
 see :doc:`click here </data_system/linked_libraries>`.
 
-
-Proxy Objects
--------------
-
-:doc:`Proxy objects </data_system/linked_libraries>` allow you to make (parts of) linked data local. For example,
-this allows an animator to make a local "copy" of the handler bones of a character,
-without having the actual rig duplicated. This is especially useful for character animation setups,
-where you want the entire character to be loaded from an external library,
-but still permit the animator to work with poses and actions. Another example:
-you can have a modeler working on the shape (mesh)
-of a car and another painter working on the materials for that car. The painter cannot alter the shape of the car,
-but can start working with color schemes for the car.
-Updates made to the shape of the car are applied automatically to the painter's proxy.
 
 
 Pack and Unpack Data

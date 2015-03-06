@@ -1,0 +1,796 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modifiers/generate/subsurf.rst:4
+# f17719dc162747e393c45d5a6a0f2974
+msgid "Subdivision Surface Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:9
+# 456a2752e3f641ac937e62f75eaf984d
+msgid "Click to zoom; Subsurfs levels 0 to 3, without and with Smooth Shading. This was rendered from: `SubsurfDemo.blend <http://wiki.blender.org/index.php/Media:SubsurfDemo.blend>`__"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:13
+# 45e0d40eff5040a4a85f1b2ab256945e
+msgid "Subdivision Surface (*Subsurf* in short) is a method of subdividing the faces of a mesh to give a smooth appearance, to enable modeling of complex smooth surfaces with simple, low-vertex meshes. This allows high resolution mesh modeling without the need to save and maintain huge amounts of data and gives a smooth *organic* look to the object."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:18
+# edb30c016a6642bc9d1c3df7644680bf
+msgid "This process creates virtual geometry that is generated non-destructively without modifying the original mesh, but it can be converted to real geometry that you could edit with the *Apply* button."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:21
+# 42144d6747734a7ab7eee45c1b789bba
+msgid "Also, like the rest of the Modifiers, order of execution has an important bearing on the results. For this, see the documentation on :doc:`The Stack </modifiers/the_stack>`."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:24
+# 0ada266d9c93433baeab2781a7b1e8ae
+msgid "Keep in mind that this is a different operation than its companion, :doc:`Smooth Shading </modeling/meshes/smoothing>`. You can see the difference between the two in the grid image to the right."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:30
+# 6bf9b92ac3204a2ab730a6c7777eacb0
+msgid "The Subsurf modifier does not allow you to edit the new subdivided geometry without applying it, but the :doc:`Multires </modifiers/generate/multiresolution>` modifier does (in sculpt mode)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:35
+# c0c4c77adc984303a72951ad00e0fdff
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:39
+# 6bb0f3efa38747458a1a49a0eb4fe55e
+msgid "Modifier's panel"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:53
+# 49b0b7af6e1d4329bcbede04f23babf7
+msgid "Type"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:43
+# a6ef96f400ca45b9a0bde298836cf2ca
+msgid "This toggle button allows you to choose the subdivision algorithm:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:48
+# f50012c8ff8d4f3eb714f28635861fe5
+msgid "Catmull-Clark"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:46
+# 431e46006a7041879c834e6607fc0362
+msgid "The default option, subdivides and smooths the surfaces. According to `its Wikipedia page <http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__, the \"arbitrary-looking formula was chosen by Catmull and Clark based on the aesthetic appearance of the resulting surfaces rather than on a mathematical derivation.\""
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:53
+# 0eb775cc0f2c440fad06b777995822a0
+msgid "Simple"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:51
+# 5c95869379f84706a632814f00d7c1a7
+msgid "Only subdivides the surfaces, without any smoothing (the same as :kbd:`W` --> *Subdivide*, in Edit Mode). Can be used, for example, to increase base mesh resolution when using displacement maps."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:61
+# 982321fd0f2b49f59c2b94705016ab51
+msgid "Subdivisions"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:56
+# 1b833803c38f4daf976144b580ede450
+msgid "Recursively adds more geometry. For details on polygon counts, see the :ref:`subsurf_performance` section."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:58
+# f32f60b9b05942d9a28936311f8858c1
+msgid "View"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:59
+# fcdd040af2184c04819542900a11c588
+msgid "The number of subdivision levels shown in the 3D View."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:61
+# 2cb6cafe43344dbebac9014588634a7c
+msgid "Render"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:61
+# 30f04aa6f34b4a32a44118597036074a
+msgid "The number of subdivision levels shown in renders."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:63
+# b7d8d8ceb5f840019bb1f8b935284185
+msgid "The right combination of these settings will allow you to keep a fast and lightweight approximation of your model when interacting with it in 3D, but use a higher quality version when rendering."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:69
+# ec9dc322e57f49f5ac71e8134e3caf35
+msgid "Be careful not to set the *View* subdivisions higher than the *Render* subdivisions, this would mean the 3D View will be higher quality than the render."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:92
+# 021b498849cb42d1914e521fee791968
+msgid "Options:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:80
+# b3240303dd08439ba72f000faec36df3
+msgid "Subdivide UVs"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:75
+# 8438d2cf5f5944fe9df10ffda19cea41
+msgid "When enabled, the UV maps will also be subsurfed (i.e. Blender will add \"virtual\" coordinates for all sub-faces created by this modifier). See this `example blend file <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:84
+# 858c736c19494c5a83d9eaf25eeea582
+msgid "Subdivide UVs on and off -- see the `.blend <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__ for the source of this image."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:92
+# c27c2eee532743b685d61a146485ac9b
+msgid "Optimal Display"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:90
+# 372af493a5094c28b3ec82decdfdcea9
+msgid "When drawing the wireframe of this object, the wires of the new subdivided edges will be skipped (only draws the edges of the original geometry)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:95
+# db5e099fc2ff4ea3aff5cd47014788e3
+msgid "Edit Cage"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:97
+# a990a942f1284466bbeb50bd489e03a3
+msgid "To view and edit the results of the subdivision while you're editing the mesh, you must enable the *Editing Cage* (the triangle button in the modifier's header). This lets you grab the vertices as they lie in their new smoothed locations, rather than on the original mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:107
+# 504f521819194587905c9452ead17139
+msgid "Edit Cage Off (Default)"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:108
+# 19acb5ed178547f0a9dd7da3dd18447a
+msgid "Edit Cage On"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:111
+# 4311e7b9e6d74e438a9074b45facff4b
+msgid "With the edit cage off, some vertices are buried under the subsurfed mesh. With dense vertex configurations, you might even have to temporarily disable the modifier or view :doc:`wireframe </editors/3dview/shading>` shading so that you can see these vertices."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:115
+# 1e093ce7721c4a5da10c18d13cadcb26
+msgid "With the edit cage on, you do not have this problem. It does, however, have its own disadvantage---it can look *too* nice, hiding irregularities. Notice the three quads running in the middle of Suzanne's ear: you can only tell how crooked they are in the \"edit cage off\" version. When you are modeling, you will more often want to see your mesh deformities in their full ugliness so that you can apply your skills until it is sheer prettiness."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:124
+# 77d540e3fdc14eed86d06658a4bc7c2c
+msgid "Order of the Modifier Stack"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:128
+# 827aa2f521dc426cb8305a4dc8d35e34
+msgid "Notice that the Armature Modifier before the Subsurf comes out much better in this case. Also, the Mirror before the Subsurf is clearly correct compared to the other way around."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:132
+# ef9313122c1a4163b3d0cf3810cdafe8
+msgid "The :doc:`Evaluation order </modifiers/the_stack>` of Modifiers is often significant, but especially so in the case of the Subsurf. The key to deciding your Modifier stack order is to picture the changes at each step, perhaps by temporarily Apply'ing the Modifiers, or perhaps by simply tinkering with the order until things come out right. To see the file behind these screenshots, you can look at `Manual-Modifiers-Generate-Subsurf_OrderOfExecution.blend <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf_OrderOfExecution.blend>`__."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:142
+# 9de15061276343d4b37249e6dc0dc2a6
+msgid "Control"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:144
+# 3e3f5a43d1564d5190873d0a192dbc34
+msgid "Subsurf rounds off edges, and often this is not what you want. There are several solutions."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:148
+# ef53a2ad08324b37b6304e831b9ca0ce
+msgid "Weighted Creases"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:150
+#: ../../../manual/modifiers/generate/subsurf.rst:181
+# bd66c6e301374ff99f5e230b6a66dd12
+# 33bdb69bb7e24410b0442012d522b613
+msgid "Reference"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:161
+# cfe3cc723c8a40258db235419715a8db
+msgid "A Subsurfed Cube with Creased Edges"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:164
+# d9e5d8e5e3cd45d5810d075ceb85584c
+msgid "Weighted edge creases for subdivision surfaces allows you to change the way Subsurf subdivides the geometry to give the edges a smooth or sharp appearance."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:167
+# 5099ab0e457a48f2b1218c30760c0313
+msgid "The crease weight of selected edges can be changed in the *Transform* panel of the properties region (:kbd:`N`), or by using the shortcut :kbd:`Shift-E` and moving the mouse closer or further from the selected edges to adjust the crease weight. A higher value makes the edge \"stronger\" and more resistant to the smoothing effect of subdivision surfaces."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:172
+# 9c25852a681b4b4b9edff9cb91eff854
+msgid "Another way to remember it is that the weight refers to the edge's sharpness; Edges with a higher weight will be deformed less by subsurf. Recall that the subsurfed shape is a product of all intersecting edges, so to make an area sharper, you have to increase the weight of all the surrounding edges."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:179
+# 8ef4a2c9f76649ce825a92d98402a98d
+msgid "Edge Loops"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:190
+# 6894a6e5e97f49538a7bf54aa81b8ad7
+msgid "A Subsurf Level 2 Cube, the same with an extra Edge Loop, and the same with six extra Edge Loops"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:193
+# 4eb03e52f1b54f6391b1c44f3e2bf67f
+msgid "The Subsurf modifier demonstrates why good, clean topology is so important. As you can see in the figure, the Subsurf modifier has a drastic effect on a default Cube. Until you add in additional Loops (with :kbd:`Ctrl-R`), the shape is almost unrecognizable as a cube."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:198
+# ab8b30f8da8c45acbe27757adc2ca343
+msgid "A mesh with deliberate topology has good placement of Edge Loops, which allow the placement of more Loops (or removal of Loops, with :menuselection:`[x] --> Edge Loop`) to control the sharpness/smoothness of the resultant mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:205
+# be40bc4f69164807b167d13f6c5bb783
+msgid "Combination"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:209
+# f005c57aa4f44d02bcc91c427301d55a
+msgid "Purple edges are creased, orange (selected) are intended to be rounded off. See: `WoodBlock.blend <http://wiki.blender.org/index.php/File:WoodBlock.blend>`__"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:213
+# a233ebc73fe14fe396a2302e7bd34b65
+msgid "It is valuable to know the use of all three tools: Smooth/Flat Shading, Edge Creases and Edge Loops."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:215
+# 23062f8c934349c188177d61abfab7a0
+msgid "Consider the task of modeling a 2\"x4\" block of wood that has had a notch cut out. The factory edges are rounded off (a good task for Smooth Shading and some Edge Loops), but the edges where the saw touched are crisp (a good task for Flat Shading and Edge Crease)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:219
+# 0c82388895cf4fc7b618f7a4da8cf9c8
+msgid "Note that we had to add some extra edge loops near the Creased edges -- this was only to limit the effects of Smooth Shading, which bleeds over onto the adjacent flat faces."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:224
+# 111516f34a774609bc16dd3e40f16229
+msgid "Limitations & Workarounds"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:226
+# 1331fb3aa3814615b49cd92a366c2566
+msgid "Blender's subdivision system produces nice smooth subsurfed meshes, but any subsurfed face (that is, any small face created by the algorithm from a single face of the original mesh), shares the overall normal orientation of that original face."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:234
+# 6b0ec65299304a3b9c7f745246e3f599
+msgid "Fig. 1: Solid view of subsurfed meshes with inconsistent normals (top) and consistent normals (bottom). Note the ugly dark areas that appear."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:241
+# 2a4a5d48fff84d14944c8fbddc6ee805
+msgid "Fig. 2: Side view of the above meshes' normals, with random normals (top) and with coherent normals (bottom)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:244
+# c0b4038b989240dfbed767eeed1efd4e
+msgid "Abrupt normal changes can produce ugly black gouges (See: *Fig. 1*), even though these flipped normals are not an issue for the shape itself (See: *Fig. 2*)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:249
+# 5ebcd390acae4e45a317a36e3f5444c0
+msgid "A quick way to fix this (one which works 90% of the time) is to use Blender's \"Recalculate Normals\" operation: In Edit Mode, select all with :kbd:`A`, then hit :kbd:`Ctrl-N` to recalculate the normals to point outside. If you still have some ugly black gougesyou will have to manually flip some normals. To do this (still in Edit Mode), use the :menuselection:`Specials --> Flip Normals` functionality (shortcut: :kbd:`W`, :kbd:`N`) to fix them. Smoothing out normals is good for the mesh, and it's good for the soul."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:262
+# 4ee01fe459bf496ab12e870f35d21691
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:264
+# 706c4705f38946a99242d182ee2286bc
+msgid "Higher levels of subdivisions mean more vertices, and more vertices means more memory will be used (both video memory for display, and system RAM for rendering). Blender could potentially crash or hang if you do not have enough memory."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:268
+# da212e94551a4937b909c3c3b5b174ea
+msgid "When using high levels of subdivision with a graphics card that has a low total amount of Vram, some parts of the geometry will disappear visually. Your mesh will actually be OK, because the render is generated using your Object Data, (even though it cannot be shown by your graphics card)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:273
+# 559ae3cf1c9848cba798a5235e391136
+msgid "The total Vertex, Edge, and Face counts from the Modifier's effect on a Cube can be found in this table:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:279
+# a4b4dec231094d22bb8e4f6e968028b9
+msgid "Cube Subdivision Level"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:280
+#: ../../../manual/modifiers/generate/subsurf.rst:324
+#: ../../../manual/modifiers/generate/subsurf.rst:368
+# 8c6e6287af184db996328495ef8c4af6
+# fd51aa90a099400b928125742b676a79
+# ee9d6a07902144828d8b5d438ca2bd38
+msgid "Resulting Verts"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:281
+#: ../../../manual/modifiers/generate/subsurf.rst:325
+#: ../../../manual/modifiers/generate/subsurf.rst:369
+# 638489cbef6d4d69b89cd9de406be51c
+# d2480ce57b374cc9aae33a99a1f94989
+# 0ffe653c4b0f4add80840ad2436a3445
+msgid "Resulting Edges"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:282
+#: ../../../manual/modifiers/generate/subsurf.rst:326
+#: ../../../manual/modifiers/generate/subsurf.rst:370
+# 37cf9a8c77f14e2d8adad84d0d005f97
+# dbd2f12b1fe241d9a25f940d2a50ef1c
+# fd229d7ebd4543bca492532b195ee672
+msgid "Resulting Faces"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:283
+#: ../../../manual/modifiers/generate/subsurf.rst:327
+#: ../../../manual/modifiers/generate/subsurf.rst:371
+# 205ac17dbf504aa1bcb6ea29b50a1127
+# 82fe77b406e04a80a6d428c854a5b534
+# 63259a70415644ef951975cd5ae6f33f
+msgid "0"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:284
+# 2222aa2924484b4d879bc5dcfd049466
+msgid "8"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:285
+#: ../../../manual/modifiers/generate/subsurf.rst:333
+#: ../../../manual/modifiers/generate/subsurf.rst:382
+# 5b2ff9b484f4452285ad475a71546591
+# 076e11d937fc4ef88ef83f5c90262a7c
+# 79d30a8ed0df4b98b25c97ffb4e4b115
+msgid "12"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:286
+#: ../../../manual/modifiers/generate/subsurf.rst:307
+#: ../../../manual/modifiers/generate/subsurf.rst:351
+#: ../../../manual/modifiers/generate/subsurf.rst:395
+# 1a472ad7154e41a885dd856daf16e725
+# 9d35ca701a0d4df38cd9573fe8b647b8
+# 096b782905604c578b6adabbe06d9358
+# 3f875214d45b4be98e9b661a9327e484
+msgid "6"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:287
+#: ../../../manual/modifiers/generate/subsurf.rst:330
+#: ../../../manual/modifiers/generate/subsurf.rst:331
+#: ../../../manual/modifiers/generate/subsurf.rst:374
+#: ../../../manual/modifiers/generate/subsurf.rst:375
+# b234f7a1a0754dfdb8f147c183f286fe
+# 7ab5df7836e94670b100e875c6f34056
+# 24f923b0b9b1490799ef884214466333
+# a63e3185b59a4222a747b351a2fdf87c
+# 89cce1f2899e426bbf0934891453349e
+msgid "1"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:288
+# 66f6ce4c28424996933a5f9343fb41a1
+msgid "26"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:289
+#: ../../../manual/modifiers/generate/subsurf.rst:386
+# f0c2d2ef56474811807794be1a73e792
+# 190baf4725014733beeaec2f2fee603c
+msgid "48"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:290
+# b9e6f70120224659baef78e6b4ff13fd
+msgid "24"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:291
+#: ../../../manual/modifiers/generate/subsurf.rst:335
+#: ../../../manual/modifiers/generate/subsurf.rst:379
+# 7ee75d8d270c438888e97217da21bbc3
+# 4a29e34af9a64dee8dbd2d42cfa907ca
+# 1084ce9ca95949cb99dee85302de22c9
+msgid "2"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:292
+# b2cb0ccfd3e74341899a37cccc47970d
+msgid "98"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:293
+#: ../../../manual/modifiers/generate/subsurf.rst:390
+# 2533d0cd8baa4ad591acbf429935126e
+# 192588dd2a1e4cb5bf734fc382cd47b6
+msgid "192"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:294
+# 57838d0a9c9c4f79b7c75d74def8c33f
+msgid "96"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:295
+#: ../../../manual/modifiers/generate/subsurf.rst:339
+#: ../../../manual/modifiers/generate/subsurf.rst:372
+#: ../../../manual/modifiers/generate/subsurf.rst:373
+#: ../../../manual/modifiers/generate/subsurf.rst:378
+#: ../../../manual/modifiers/generate/subsurf.rst:383
+# 57f4d2da1dd548049bea61e3c3f0c241
+# adb14a325c6a4c36809a2a84d08d14bd
+# 0f889869019d4530994abe44615596ff
+# a7ddc14b05584929bbf122a60947ec35
+# b692bd940d7b485da51487c6d2acd2a1
+# 0c78f46947094e62b7c4f885c42ce046
+msgid "3"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:296
+# 9d892b5ce6124290b27585e63278702d
+msgid "386"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:297
+#: ../../../manual/modifiers/generate/subsurf.rst:394
+# bc4475f152ef43e193d55f3fd42e59fa
+# 4f60a7075214464c9ba2bf70cd3d0512
+msgid "768"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:298
+# 74afc1fdfbaa4ffabaf5d44e18bfd5c9
+msgid "384"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:299
+#: ../../../manual/modifiers/generate/subsurf.rst:328
+#: ../../../manual/modifiers/generate/subsurf.rst:329
+#: ../../../manual/modifiers/generate/subsurf.rst:334
+#: ../../../manual/modifiers/generate/subsurf.rst:343
+#: ../../../manual/modifiers/generate/subsurf.rst:387
+# 360c4f3fe98343c09740bb0ae5df0046
+# 77b5ce4f35f74b4093ab0da1dadaf04f
+# 855b217a3f5e4796b465d0469bc01d4d
+# 9f182891758f4714b3df0108557544ad
+# 2d1ebaa7a8dc42949e00fcf055be1ccd
+# 220b70199a5a4427a8b9b8a8e84be3f5
+msgid "4"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:300
+# b5b72da47dcc49e6a850b9065b5707d7
+msgid "1538"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:301
+#: ../../../manual/modifiers/generate/subsurf.rst:398
+# a90ffec9e4f94bdbb404fe8728ef8007
+# b12192bf77ba42db88c202aea9981121
+msgid "3072"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:302
+# a35d1b6dbb924fc9ae09679e019c19a4
+msgid "1536"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:303
+#: ../../../manual/modifiers/generate/subsurf.rst:347
+#: ../../../manual/modifiers/generate/subsurf.rst:391
+# 0e78421a182d4d43b99eb0e890493004
+# 27153a91d4ff482eaae13249ad9f24f3
+# ac9493047f83480fa2ff04bf02b6c625
+msgid "5"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:304
+# 26d027a64a064dc39dedbbd05e0d198c
+msgid "6146"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:305
+# e1e84d82c515494bb1e24ef176fb7ee3
+msgid "12288"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:306
+# f4465adc3d1a482d93fb832dd68a76f2
+msgid "6144"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:308
+# 8538a7d14ba9474380ca5a9e6441307d
+msgid "24578"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:309
+# 65f4ee4eba34413ea2ae604f9df03113
+msgid "49152"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:310
+# 6046f99cc6554b288ebb48d44aa8021f
+msgid "24576"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:311
+#: ../../../manual/modifiers/generate/subsurf.rst:355
+#: ../../../manual/modifiers/generate/subsurf.rst:399
+# bc1caff0cd3843679cf3cbbd24cde13c
+# cf742e9617d44f1986632ab57e39948f
+# 4b667e533814407d9400b30892e0dbcc
+msgid "Formula"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:312
+# 0a57b67d532c434a984c9ac326e57a13
+msgid "``3*2**(2*n)+4)/2``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:313
+# c3a23b0d6d7541c991808da2e43e45d5
+msgid "``3*4**n``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:314
+# aab7fca110f541a08a426349b927d3c6
+msgid "``verts - 2``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:317
+# deba916198aa4e82834eb970c4ef09d8
+msgid "While we're at it, here is the pattern for subdividing a single quadrilateral plane:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:323
+# cd3dadf02db14bd4b5e4058608315170
+msgid "Quad Subdivision Level"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:332
+#: ../../../manual/modifiers/generate/subsurf.rst:377
+# 0303cf06e12e475db03563a40af54d4d
+# 7986c44771d147bcaa6b590ff92e14b0
+msgid "9"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:336
+# c803c5a97af3480e96990e016b4470fd
+msgid "25"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:337
+# e57706b7c2594bdb81911af7e0e3aef1
+msgid "40"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:338
+# 316f4af20e544c8f889f1bcf2cf4d038
+msgid "16"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:340
+# 90c4e63e77ce4ae7ac62a3cce6f310f7
+msgid "81"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:341
+# db4e754dd26d42599f316ece366d56a3
+msgid "144"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:342
+# ee7a5582d2c74169bba7f4da030afffc
+msgid "64"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:344
+# 80d1ff6223d140548e825f4a32b9cb44
+msgid "289"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:345
+# 2599d580f6be46fda92a8bb9b2bf1bfe
+msgid "544"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:346
+# d2ddd65aec8848cb8da8945501fc87f3
+msgid "256"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:348
+# b6d8b4d62b054fdc965ad9019d6772a0
+msgid "1089"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:349
+# 399ac03e7ce04170a19ec016d4c022e2
+msgid "2112"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:350
+# a63d4f0f339d404b98fdd89bdf178510
+msgid "1024"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:352
+# 8cb13d72bc6e43ce9e199aa87dd5547e
+msgid "4225"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:353
+# adc20a61f27e47aa80490623388ff4f4
+msgid "8320"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:354
+# 0e9ee6624ae54db2934b2cecddd10378
+msgid "4096"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:356
+# 689e069a351148efa5b8732784fe12f7
+msgid "``((2**n+2)**2)/4``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:357
+# 9388cd51fd0a42ccbcc8a076f61af372
+msgid "``2**(n-1)*(2**n+2)``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:358
+# 6832e7cf97e543f8913ac48674bc8911
+msgid "``4**(n-1)``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:361
+# d3173e0fb0bf49d386d663a019819cdd
+msgid "And, of course, triangles:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:367
+# effb4b4e226e48988b5150e501de0372
+msgid "Tri Subdivision Level"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:376
+# e5d544945bea4dc899314bf8411632aa
+msgid "7"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:380
+# b5ba8e1757bd441c947b6e2a25be73bd
+msgid "19"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:381
+# 2340dd293c3f4f6792ceccd0203a982d
+msgid "30"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:384
+# 38efada1f950448a8c1bf4fa885a07eb
+msgid "61"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:385
+# 4f40fee086e244e4b537117cff510962
+msgid "108"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:388
+# 13071b47348a44d7a7d3fd4678582ab0
+msgid "217"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:389
+# d98721927ea94b02b9161fa1b7c04d20
+msgid "408"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:392
+# ef3f1db91c3b4de7b4fc093d6de70739
+msgid "817"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:393
+# 42c3a63521a94b81b0c42916a073a5b3
+msgid "1584"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:396
+# 4d10e5af43a04f098e02f59d67c471fe
+msgid "3169"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:397
+# 035bcf50e2c54d4881547a695c5856f7
+msgid "6240"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:400
+# 18ce2b9ad4fc4eaea6caef17fee4d769
+msgid "Do you know it?"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:401
+# 5659caf2462c4732b2667634aaeca366
+msgid "``3*(2**(n-3))*(2**n+2)``"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:406
+# a8a8498a1196423a9a5fbf67a676f925
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:408
+# 3fed88cd628b4275940162e858749f56
+msgid "To quickly add a subsurf modifier to one or more objects, select it/them and press :kbd:`Ctrl-1`. That will add a subsurf modifier with *View Subdivisions* on 1."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:411
+# 90e248e7d10c4dc48651d79dbafc36e1
+msgid "You can use other numbers too, such as :kbd:`Ctrl-2`, :kbd:`Ctrl-3`, etc, to add a subsurf with that number of subdivisions. The *Render Subdivisions* will always be on ``2`` when added like this."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/subsurf.rst:414
+# 1237e3a47acc428aa629c69b2fb1ed6b
+msgid "If an object already has a subsurf modifier, doing this will simply change its subdivision level instead of adding another modifier."
+msgstr ""
+

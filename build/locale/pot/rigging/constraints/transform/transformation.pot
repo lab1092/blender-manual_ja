@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:6
+# 7b3c317670ed4293ab7d07166aaa72a9
+msgid "Transformation Constraint"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:8
+# 19d93cbd6a4c4ca7b68145c31401f33d
+msgid "This constraint is more complex and versatile than the other \"transform\" constraints. It allows you to map one type of transform properties (i.e. location, rotation or scale) of the target, to the same or another type of transform properties of the owner, within a given range of values (which might be different for each target and owner property). You can also switch between axes, and use the range values not as limits, but rather as \"markers\" to define a mapping between input (target) and output (owner) values."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:15
+# 5066de0fa11e47db9df5ff72b810f83a
+msgid "So, e.g. you can use the position of the target along the X axis to control the rotation of the owner around the Z axis, stating that **1 BU** along the target X axis corresponds to"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:18
+# 336d5296a06c4693907e45040b99f9f8
+msgid "``10`` around the owner Z axis. Typical uses for this include gears (see note below),"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:20
+# 95bff531cd2a4390afbf9d3f3ec37128
+msgid "and rotation based on location setups."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:24
+# 1c76340c39bc471d9157d405cfe84eb8
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:29
+# d1cd1a1a6c7c4d2dbe4b0db85b96c6af
+msgid "Transformation panel"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:44
+# fec2f78ed6fe4c4990ea48bef4b9df63
+msgid "Target"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:33
+# 0d16740a7ae2456bbcb97264629fdeb2
+msgid "This constraint uses one target, and is not functional (red state) when it has none."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:40
+# b70755387893488f8ef47f0dde682e8b
+msgid "Bone"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:36
+# 472702b72cf249fb8014c6aaca636630
+msgid "If *Target* is an *Armature*, a new field is displayed offering the optional choice to set an individual bone as *Target*."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:40
+# eba5a88860804440b7308cf92bc8c020
+msgid "Head/Tail"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:40
+# 4c66a53a44d54fb78006300e97ff4466
+msgid "If a *Bone* is set as *Target*, a new field is displayed offering the optional choice of where along this bone the target point lies."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:44
+# 41cad25a4cd64cb08d56fb0be38d9beb
+msgid "Vertex Group"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:43
+# b3cf2c14f4574a5283bad513ad968d6c
+msgid "If *Target* is a *Mesh*, a new field is displayed offering the optional choice to set a *Vertex Group* as target."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:55
+# 5c54147a9a564f14a10d0bae2130a47c
+msgid "Extrapolate"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:47
+# 11dfcb6b783c4505981047b7965fc1e7
+msgid "By default, the *min* and *max* values bound the input and output values; all values outside these ranges are clipped to them. When you enable this button, the *min* and *max* values are no longer strict limits, but rather \"markers\" defining a proportional (linear) mapping between input and corresponding output values. Let's illustrate that with two graphs (*The* *Extrapolate* *principles*). In these pictures, the input range (in abscissa) is set to [``1.0, 4.0``], and its corresponding output range (in ordinate), to [``1.0, 2.0``]. The yellow curve represents the mapping between input and output."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:0
+# a696b8fb4ad9475cbf3e78bfab58723b
+msgid "The *Extrapolate* principles."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:63
+# 501d09cc94a84c3ebf64b89d6de92ee1
+msgid "Extrapolate disabled: the output values are bounded inside the [1.0, 2.0] range."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:68
+# 33518abbe3ef4b00b1b7ecd743769d92
+msgid "Extrapolate enabled: the output values are \"free\" to proportionally follow the input ones."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:73
+# 6c5863ec865d4657871337c2adec05bb
+msgid "Note that:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:75
+# ab822c6bdb7742ffb215392dbce134de
+msgid "When mapping transform properties to location (i.e. *Loc*, *Destination* button is enabled), the owner's existing location is added to the result of evaluating this constraint (exactly like when the *Offset* button of the :doc:`Copy Location constraint </rigging/constraints/transform/copy_location>` is enabled...)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:79
+# 5dd880e943f246cfba621bb5335d3701
+msgid "Conversely, when mapping transform properties to rotation or scale, the owner's existing rotation or scale is overridden by the result of evaluating this constraint."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:81
+# cc3a959618614da9aa3905fe0f5a5a9e
+msgid "When using the rotation transform properties of the target as input, whatever the real values are, the constraint will always \"take them back\" into the ``-180, 180`` range (e.g. if the target has a rotation of ``420`` around its X axis, the values used as X input by the constraint will be ``((420 + 180) modulo 360) - 180 = 60- ...)``. This is why this constraint is not really suited for gears!"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:86
+# 5379c960fe54436294dcc57067144ee2
+msgid "Similarly, when using the scale transform properties of the target as input, whatever the real values are, the constraint will always take their absolute values (i.e. invert negative ones)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:88
+# 2b4660fd9c904d16a124699e6cce774d
+msgid "When a *min* value is higher than its corresponding *max* one, both are considered equal to the *max* one. This implies you cannot create \"reversed\" mappings..."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:97
+# 02c92ca58d084ba1b8c32e5af1c810aa
+msgid "Source"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:92
+# 7cdf389df7024f7692530ff7e2ba20ce
+msgid "It contains the input (from target) settings. The three *Loc*, *Rot* and *Scale* toggle buttons, mutually exclusive, allow you to select which type of property to use. The *X:*, *Y:* and *Z:* *min* and *max* numeric fields control the lower and upper bounds of the input value range, independently for each axis. Note that if a min value is higher than its corresponding max value, the constraint behaves as if it had the same value as the max one."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:109
+# d3f4ac4e08b846e8baef1b3f11508870
+msgid "Destination"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:100
+# 22e7f6bc6d73444fb4ac6d6808d1dcf2
+msgid "It contains the output (to owner) settings."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:102
+# 2cc23f770f79480882578a12f87546db
+msgid "The three *Loc*, *Rot* and *Scale* toggle buttons, mutually exclusive, allow you to select which type of property to control."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:104
+# 1a3c15b1107c491a9c9d2650ea703c94
+msgid "The three *Axis Mapping* drop-down lists allow you to select which input axis to map to, respectively (from top to bottom), the X, Y and Z output (owner) axes."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:106
+# d387a6f947e840d2b79ccb567fbd16de
+msgid "The *min* and *max* numeric fields control the lower and upper bounds of the output value range, independently for each mapped axis. Note that if a min value is higher than its corresponding max value, the constraint behaves as if it had the same value as the max one."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:115
+# 3bbe4f97ae86455bb45e6b09eeff3194
+msgid "Space"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/transform/transformation.rst:112
+# 5de54d530194484ea6ba3703d8fc1821
+msgid "This constraint allows you to choose in which space to evaluate its owner's and target's transform properties."
+msgstr ""
+

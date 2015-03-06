@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:7
+# ccef33cdffa844c4be0179c127b42832
+msgid "Ambient Occlusion"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:9
+# feb9985d97474c468c167d104a281d7a
+msgid "Ambient Occlusion is a sophisticated ray-tracing calculation which simulates soft global illumination shadows by faking darkness perceived in corners and at mesh intersections, creases, and cracks, where ambient light is occluded, or blocked."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:13
+# 39360fd04c024bc989eb9a79b7a3e757
+msgid "There is no such thing as AO in real life; AO is a specific not-physically-accurate (but generally nice-looking) rendering trick. It basically samples a hemisphere around each point on the face, sees what proportion of that hemisphere is occluded by other geometry, and shades the pixel accordingly."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:19
+# d859bc43abbf4cd799027608d27d043a
+msgid "It's got nothing to do with light at all; it's purely a rendering trick that tends to look nice because generally in real life surfaces that are close together (like small cracks) will be darker than surfaces that don't have anything in front of them, because of shadows, dirt, etc."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:24
+# 6d966532b337480ea607a6835a0dd103
+msgid "The AO process, though, approximates this result; it's not simulating light bouncing around or going through things. That's why AO still works when you don't have any lights in the scene, and it's why just switching on AO alone is a very bad way of \"lighting\" a scene."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:29
+# 74d4130edac94870a9ce9d40b9b70eb4
+msgid "You must have ray tracing enabled as a *Render* panel option in the *Shading* section for this to work."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:32
+# 42946653539645af8f41fb34ef201bd8
+msgid "You must have an ambient light color set as you desire. By default, the ambient light color (world) is black, simulating midnight in the basement during a power outage. Applying that color as ambient will actually darken all colors. A good outdoor mid-day color is RGB (``0.9``, ``0.9``, ``0.8``) which is a whitish yellow sunny kind of color on a bright-but-not-harshly-bright day."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:40
+# 5801eb4a948c402ca1d87fb622e56d4e
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:44
+# 36fb714042754f0fbe0c3be10c48223f
+msgid "The World panel with ambient color sliders highlighted."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:48
+# 6b5dfca0d7d541e4b3146de3abf52353
+msgid "Factor"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:48
+# 3c659dd69f504a20b6bb68e3956ddd4b
+msgid "The strength of the AO effect, a multiplier for addition."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:50
+# 53f1a878a0514488a1f3b824828f8d5e
+msgid "Ambient Occlusion is composited during the render. Two blending modes are available:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:54
+# 1450eced20df4380a7ba137c07eec298
+msgid "Add"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:53
+# 9e39cc0f4f5d45e1b58d2fa2c7668653
+msgid "The pixel receives light according to the number of non-obstructed rays. The scene is lighter. This simulates global illumination."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:58
+# d9ed1b6ad6764660be26d1b97d0a8759
+msgid "Multiply"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:57
+# a5f54325ed5e47e4ac7b8c85a42f0456
+msgid "Ambient occlusion is multiplied over the shading, making things darker."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:62
+# 5f74a76e93c34200a2b0e8eadf5ea352
+msgid "If *Multiply* is chosen, there must be other light sources; otherwise the scene will be pitch black. In the other two cases the scene is lit even if no explicit light is present, just from the AO effect. Although many people like to use AO alone as a quick shortcut to light a scene, the results it gives will be muted and flat, like an overcast day. In most cases, it is best to light a scene properly with Blender's standard lamps, then use AO on top of that, set to *Multiply*, for the additional details and contact shadows."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:70
+# 9c4935f682f44955b9a15efc74e19136
+msgid "The *Gather* panel contains settings for the ambient occlusion quality. Note that these settings also apply to Environment Lighting and Indirect Lighting."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:73
+# 59a3c055aca74829b849e91266d06761
+msgid "Ambient occlusion has two main methods of calculation: *Raytrace* and *Approximate*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:78
+# 72acbf4cd8ac4cbf906f2dc58690e4be
+msgid "Gather"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:81
+# a69f155710f24426af8a7f0ffde65d67
+msgid "Raytrace"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:85
+# 9c1d6ceeb21641608760754cf45255d4
+msgid "The Amb Occ panel, Raytrace method."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:88
+# 3fb5db5f512d4a959517e3cfc33d78f5
+msgid "The *Raytrace* method gives the more accurate, but also the more noisy results. You can get a nearly noiseless image, but at the cost of render time... It is the only option if you want to use the colors of your sky's texture."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:97
+# 49ae0275c9774726986e59c5d42c61f9
+msgid "Attenuation"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:93
+# e11ed55fd744457f9a34da2e70b6ec5b
+msgid "Length of rays defines how far away other faces may be and still have an occlusion effect. The longer this distance, the greater impact that far-away geometry will have on the occlusion effect. A high *Distance* value also means that the renderer has to search a greater area for geometry that occludes, so render time can be optimized by making this distance as short as possible for the visual effect that you want."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:99
+# 566551b5bbf1498684861210d28787a2
+msgid "*Sampling*"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:109
+# af5783c636ed490992ce0a508a8a5d22
+msgid "Samples"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:102
+# fceaecf7db6e4efdbaf3d2c5fb7accd0
+msgid "The number of rays used to detect if an object is occluded. Higher numbers of samples give smoother and more accurate results, at the expense of slower render times. The default value of ``5`` is usually good for previews. The actual number of rays shot out is the square of this number (i.e. *Samples* at ``5`` means ``25`` rays). Rays are shot at the hemisphere according to a random pattern (determined by the sample methods described above); this causes differences in the occlusion pattern of neighboring pixels unless the number of shot rays is big enough to produce good statistical data."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:116
+# a2f9a37f9ee748899ea35b2912e4ec05
+msgid "Ambient Occlusion with 3 Samples."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:121
+# 3fb19e393b12412fb7118dfd2c9e9858
+msgid "Ambient Occlusion with 6 Samples."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:126
+# 9d53f7f55fb74f38af446d277f8853f8
+msgid "Ambient Occlusion with 12 Samples."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:129
+# aeda18c1abf14504acf1fd8d19e3b154
+msgid "You have the three standard sampling options:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:133
+# ac88acb8ad4443b1ba0d99b1e78de649
+msgid "Constant QMC"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:133
+# 516bc3c9b6e64a83b5562af49381118d
+msgid "The base Quasi-Monte Carlo, gives evenly and randomly distributed rays."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:146
+# dedf4b55e4224c7485f4c1e7539a45ec
+msgid "Adaptive QMC"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:136
+# cf3f5456a78c403fa7d72783af03af9b
+msgid "An improved method of QMC, that tries to determine when the sample rate can be lowered or the sample skipped, based on its two settings:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:140
+# 05ab414f9f6e4945bb3c1aefcdef18a1
+msgid "Threshold"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:140
+# 78d7bd52a95f4732bbfc590bf03052ca
+msgid "The limit below which the sample is considered fully occluded (\"black\") or un-occluded (\"white\"), and skipped."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:146
+# c9b907d6e93d4c79aa43540e156db1d5
+msgid "Adapt to Speed"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:143
+# 0d63d12ed7b04723b3a35ac7c4c99272
+msgid "A factor to reduce AO sampling on fast-moving pixels. As it uses the *Vec* render pass, that must also be enabled (see :doc:`render passes page </render/post_process/layers>`)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:148
+# 78c481d5d0bc4ed9a85ccc14143f34fc
+msgid "About QMC"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:150
+# 410657b4a4e744b7b9f32afc9cd7456e
+msgid "See also the :doc:`raytraced shadows page </render/blender_render/lighting/shadows/raytraced_properties#what_is_quasi-monte_carlo?>` for more info about the Quasi-Monte Carlo sampling method."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:169
+# bd58bbbd6ff747bcbd6829fa2f634f3b
+msgid "Constant Jittered"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:156
+# 84d1c9c22d8143aea13d69968fcadc57
+msgid "The historical sample method, more prone to \"bias\" artifacts..."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:169
+# f9b9fb971195405da39f34a21b63195f
+msgid "Bias"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:159
+# 3be0dc2daa7b4fc89edbacea84800327
+msgid "The angle (in radians) the hemisphere will be made narrower (i.e. the hemisphere will no longer be a real hemisphere: its section will no longer be a semicircle, but an arc of a circle of ``pi - bias`` radians)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:164
+# 215c1a9fcbc44e9d818afc8d48f734de
+msgid "The bias setting allows you to control how smooth \"smooth\" faces will appear in AO rendering. Since AO occurs on the original faceted mesh, it is possible that the AO light makes faces visible even on objects with \"smooth\" on. This is due to the way AO rays are shot, and can be controlled with the *Bias* slider. Note that while it might even happen with QMC sampling methods, it is much more visible with the *Constant Jittered* one - and anyway, you have no *Bias* option for QMC."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:178
+# df5552ecb180491187ce779881eef3d4
+msgid "24×24 UV Sphere with Bias: 0.05 (default). Note the facets on the sphere's surface even though it is set to smooth."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:184
+# c3a68d98fa014e0a92a06d5b9f0fb3e2
+msgid "Raising the Bias to 0.15 removes the faceted artifacts."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:188
+# a5e165e0c901439f85a67d3e32636e71
+msgid "Approximate"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:192
+# 37a83ae795ef49aab0e8469d9b96be9e
+msgid "The Amb Occ panel, Approximate method."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:195
+# 8a9e4824e4a6435faad74c6142e1a20c
+msgid "The *Approximate* method gives a much smoother result for the same amount of render time, but as its name states, it is only an approximation of the *Raytrace* method, which implies it might produce some artifacts - and it cannot use the sky's texture as the base color"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:200
+# 143c8f72ac89434ca623c702002238db
+msgid "This method seems to tend to \"over-occlude\" the results. You have two complementary options to reduce this problem:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:205
+# 9c3441e6801d4ce4a61c1a1292ceb8c8
+msgid "Passes"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:204
+# 1d15e626b59846918309b325511479a0
+msgid "Set the number of pre-processing passes, between ``0`` (no pre-processing) to ``10``. Keeping the pre-processing passes high will increase render time but will also clear some artifacts and over-occlusions."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:210
+# 78cfc98dd3b64c81ae563cdcbed89600
+msgid "Error"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:208
+# e25693490a5a493cb226cfc44cd5644d
+msgid "This is the tolerance factor for approximation error (i.e. the max allowed difference between approximated result and fully computed result). The lower, the slower the render, but the more accurate the results... Ranges between ``0.0`` and ``10.0``, defaults to ``0.250``."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:213
+# 6c8cf100d0524153aa5ed50608218319
+msgid "Pixel Cache"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:213
+# 5d5ad2d301d846c78a2314924ed6876d
+msgid "When enabled, it will keep values of computed pixels to interpolate it with its neighbors. This further speeds up the render, generally without visible loss in quality..."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:217
+# 49d1f93159e640cf92f6a7577bef45f6
+msgid "Correction"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:216
+# 0ad03253b20f48aea584c7d7b8de9e26
+msgid "A correction factor to reduce over-occlusion. Ranges between ``0.0`` (no correction) to ``1.0``."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:220
+# fe7a44e6118d49d5b34e1dc86fc93347
+msgid "Common Settings"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:233
+# fea69c2b556245c7b5ca1e3f97df4de7
+msgid "Falloff"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:223
+# 4c995a631e464f8eb880bae217ca0af7
+msgid "When activated, the distance to the occluding objects will influence the \"depth\" of the shadow. This means that the further away the occluding geometry is, the lighter its \"shadow\" will be. This effect only occurs when the *Strength* factor is higher than ``0.0``. It mimics light dispersion in the atmosphere..."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:233
+# f6bca57b953b42d78338fec3ad991575
+msgid "Strength"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:229
+# d96020dccd1d4b03b5f30921dd2b2726
+msgid "Controls the attenuation of the shadows enabled with *Use Falloff*. Higher values give a shorter shadow, as it falls off more quickly (corresponding to a more foggy/dusty atmosphere). Ranges from ``0.0`` (default, no falloff) to ``10.0``."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:236
+# fec7d54245e64a75a1d1d0dae286ff7b
+msgid "Technical Details"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:238
+# 1ebb4d927808478fb85bcbb0105afc97
+msgid "Ambient occlusion is calculated by casting rays from each visible point, and by counting how many of them actually reach the sky, and how many, on the other hand, are obstructed by objects."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:242
+# 088564ec2bdd413ba176f05e2cf22828
+msgid "The amount of light on the point is then proportional to the number of rays which have \"escaped\" and have reached the sky. This is done by firing a hemisphere of shadow rays around. If a ray hits another face (it is occluded) then that ray is considered \"shadow\", otherwise it is considered \"light\". The ratio between \"shadow\" and \"light\" rays defines how bright a given pixel is."
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:250
+# 8422c4574cea434986bdf33fcabbc12e
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/render/blender_render/lighting/ambient_occlusion.rst:252
+# 102251478b7f4f5e8391daee44c5638e
+msgid "Ambient occlusion is a ray-tracing technique (at least with the *Raytrace* method), so it tends to be slow. Furthermore, performance severely depends on octree size, see the :doc:`rendering chapter </render/index>` for more information."
+msgstr ""
+

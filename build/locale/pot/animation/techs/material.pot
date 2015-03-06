@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/animation/techs/material.rst:7
+# e0d911f51a06404faab4892e0d87bc76
+msgid "Animating Material Attributes"
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:9
+# 95d7fb40302a44358cf26416a4897c48
+msgid "As of Blender 2.5, :doc:`Everything is animatable </introduction/whats_new_in_this_series#animation_system>`. Read more about keyframes :doc:`Here </animation/basics/key_frames>`."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:12
+# a3a12f7e11e0477b9f653d9f9a70ae14
+msgid "Before reading this page, you should know about Blender's materials - if not, read :doc:`this chapter </render/blender_render/materials/index>` first!"
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:15
+# 8494a5444b1c424980d67876c216d51c
+msgid "Animated materials can be a very powerful tool, for many different purposes. For example, you can use them to simulate the color changes of a chameleon's skin, a video screen lighting up, the surface of a river or lake, a light lighting up (with an halo material), etc., etc."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:20
+# e0bbfc43db594d36baa27bf3b5d275a5
+msgid "The possibilities are nearly unlimited. For example, you could keyframe the *Glossiness* of raytraced reflection/transparency, which would enable the simulation of condensation spreading over a mirror or window...)."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:26
+# 62641a12f9e54c19a31cc5920b972e2f
+msgid "Example"
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:28
+# a7cfa47a8dc34cacbf2ac6196643315a
+msgid "As an illustration, we'll create a simple \"psychedelic\" background. This obviously won't demonstrate all possibilities of material animation - but I think this would need at least a whole book!"
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:32
+# 7b94bbdebe7c4553b787428b8dbb4d56
+msgid "Add a plane and a camera, such that the plane faces the camera and covers the whole view."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:34
+# 520499c73400461ca60f38bdef98b6e6
+msgid "Add a material to the plane. As we won't use any light, set its *Emit* value to ``1.0``."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:37
+# ae9eee1e1bcd468dbc89c84f8de97f4a
+msgid "Create Fcurves for *R*, *G* and *B*, with a few random control points, all in the ``[0.0, 1.0]`` range. Manage to have three different length between the first and last keyframes, and enable the *Cyclic* extend mode (:kbd:`E-Numpad2`). This way, with the three curves cycling over various periods, you'll get a never-the-same color animation! Unless you want to get a \"time-tileable\" animation, in which case you should manage to get exactly the same color at start and end... You can also create an *Emit* Fcurve, e.g. to create a fade in/out..."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:46
+# 0952a82fdf614869ab8e0598d3edb61c
+msgid "Now, let's add a bit of fun in this plain colored background. Add a texture to the material and, in the *Texture* sub-context, select a procedural texture (*DistortedNoise*, for example, but any one will work - follow your taste!), and set it to your liking."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:51
+# 4b1dbab6e45e4333bd9ed577de5e8371
+msgid "Back in the *Material* sub-context, choose to what you want to map the texture - for this example, I chose to map it to diffuse color in *Difference* mode, in a first texture channel, and to emit value in *Mul* tiply mode, in a second texture channel."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:56
+# f56bce45708d42d1988e7ee05315e250
+msgid "Finally, animate the Z offset of the mapping of both channels (define a first *OfsZ* Fcurve, and use the copy/paste buttons to exactly copy it to the second texture channel's curve). Here again, you can either have two different values for start and end, or the same if you want a cyclic animation..."
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:62
+# 0d45823ab0fb403698584e54ebc256ca
+msgid "Usually, you will create a slow, linear variation of the Z offset (i.e. a straight curve with low gradient), e.g. a decay of ``1.0`` over ``500`` to ``1000`` frames, but the only way to find the good value is to make preview renders!"
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:67
+# 479fcbfd7c3c444785acf71c71e38c93
+msgid "You should get something similar to what shown below. You can download the blend file"
+msgstr ""
+
+#: ../../../manual/animation/techs/material.rst:69
+# 75d05560f61c43bebd31a77793a675ca
+msgid "`here <http://wiki.blender.org/index.php/File:ManAnimationTechsMaterialExPshychedelic.blend>`__."
+msgstr ""
+

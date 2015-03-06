@@ -1,0 +1,911 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/output/video.rst:4
+# 8196d3b7fcf54b7eb2c062a5bf899fde
+msgid "Video Output"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:7
+# 2ceefe8a0adf4b0fafb9d1d2e0f03d81
+msgid "Preparing your work for video"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:9
+# 499883daa9d04e859c8c6524a8601df1
+msgid "Once you have mastered the trick of animation you will surely start to produce wonderful animations, encoded with your favorite codecs, and possibly you'll share them on the Internet with the rest of the community."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:13
+# 5ba1e57354aa412198af77a31297686f
+msgid "Sooner or later you will be struck with the desire to build an animation for television, or maybe burn your own DVDs. To spare you some disappointment, here are some tips specifically targeted at Video preparation. The first and principal one is to remember the double-dashed white lines in the camera view!"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:18
+# 023237f19cac4ba188aca11aaecb8fd6
+msgid "If you render for PC then the whole rendered image which lies within the *outer* dashed rectangle will be shown. For television, some lines and some part of the lines will be lost due to the mechanics of the electron beam scanning in your TV's cathode ray tube. You are guaranteed that what is within the *inner* dashed rectangle in camera view will be visible on the screen. Everything within the two rectangles may or may not be visible, depending on the given TV set that your audience watches the video on."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:27
+# 0b7ffd75526c443797df8defb453f519
+msgid "Dimensions Presets"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:31
+# 53c7d440666f453897caaffd05571e90
+msgid "The rendering size is strictly dictated by the TV standard. Blender has 11 pre-set settings for your convenience:"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:34
+# ea66b8d0c255492b878d860c2418a3e1
+msgid "See: :term:`Video Presets`"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:36
+# 2993d0d5e0974f8bb02e32d8992fbf8d
+msgid "Note that if you render your animation at 1600x1200 resolution, and then burn a DVD, your image will not be clearer or crisper on the TV; in fact the DVD burning software will have had to downsize your images to fit the resolutions shown above, and you will have wasted about 4x disk space and render time."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:43
+# f0ec8a95e85f4e51b8a1d9c79378ea15
+msgid "Pixel Aspect Ratio"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:45
+# 24e3f86883ee4c1cab92566c12eb620e
+msgid "Older TV screens do *not* have the square pixels which Computer monitors have; their pixels are somewhat rectangular, so it is necessary to generate *pre-distorted* images which will look bad on a computer but which will display nicely on a TV set. It is important that you use the correct pixel aspect ratio when rendering to prevent re-sampling, resulting in lowered image quality."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:53
+# df5281282dbe463abb967de04d68a9ce
+msgid "Color Saturation"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:55
+# c4718b78b2654d6aa924be980af0f276
+msgid "Most video tapes and video signals are not based on the RGB model but on the YCrCb model: more precisely, the YUV in Europe (PAL), and the YIQ in the USA (NTSC), the latter being quite similar to the former. Hence some knowledge of this is necessary too."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:59
+# 1b07c7ed0f6340af9569c994f16d957f
+msgid "The YCrCb model sends information as 'Luminance', or intensity (Y) and two 'Crominance' signals, red and blue (Cr and Cb). Actually a Black and White TV set shows only luminance, while color TV sets reconstruct color from Crominances (and from luminance). Construction of the YCrCb values from the RGB ones takes two steps (the constants *in italics* depend on the system: PAL or NTSC):"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:66
+# 87f3679ea0c144caa25118795aa9f39a
+msgid "First, the Gamma correction (*g* varies: 2.2 for NTSC, 2.8 for PAL):"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:68
+# 8aa6274914c6449b8e67fa1c13daaf93
+msgid "R' = R :sup:`1/g` :\\*G' = G :sup:`1/g`"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:69
+# 01f489d62ae54f80a2b1ffc4b8eb0ed7
+msgid "B' = B :sup:`1/g`"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:71
+# 162216b9dc584dd8815b25283e9645c7
+msgid "Then, the conversion itself:"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:73
+# 4075857eb31247f4866f8cf5badbc2c0
+msgid "Y = 0.299R' + 0.587G' + 0.114B'"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:74
+# b2ac8f8808a74ccbbf9b53d85a7e7485
+msgid "Cr = *a* :sub:`1` (R' - Y) + *b* :sub:`1` (B' - Y)"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:75
+# eaf7eba39feb4e9683fc512b2c872282
+msgid "Cb = *a* :sub:`2` (R' - Y) + *b* :sub:`2` (B' - Y)"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:77
+# 432169dee6ec4ae48fc9921551f31ce7
+msgid "Whereas a standard 24 bit RGB picture has 8 bits for each channel, to keep bandwidth down, and considering that the human eye is more sensitive to luminance than to chrominance, the luminance signal is sent with more bits than the two chrominance signals. This bit expansion results in a smaller dynamic of colors in video, than what you are used to on monitors. You hence have to keep in mind that not all colors can be correctly displayed."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:84
+# bbb42ed3f994484f8565fb36cb67ac86
+msgid "A rule of thumb is to keep the colors as 'grayish' or 'unsaturated' as possible; this roughly means keeping the dynamics of your colors within 80% of one another. In other words, the difference between the highest RGB value and the lowest RGB value should not exceed 0.8 ([0-1] range) or 200 ([0-255] range)."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:90
+# b16721c9f4ca4f11a9bc154130f641bd
+msgid "This is not strict - something more than 0.8 is acceptable - but an RGB display with color contrast that ranges from 0.0 to 1.0 will appear to be very ugly (over-saturated) on video, while appearing bright and dynamic on a computer monitor."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:96
+# 0d23b51b936143c6b2cb4aa8e2aa6cfb
+msgid "Rendering to fields"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:100
+# 71b9698badbd4a44ab25ab65f0903719
+msgid "Field Rendering result."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:103
+# fe7ec8936b544d9e9522de81c124abff
+msgid "The TV standards prescribe that there should be 25 frames per second (PAL) or 30 frames per second (NTSC). Since the phosphors of the screen do not maintain luminosity for very long, this could produce a noticeable flickering."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:108
+# adffed40ba164246bca8f74de3a9fce0
+msgid "To minimize this, a TV does not represent frames as a Computer does ('progressive' mode), but rather represents half-frames, or *fields* at a double refresh rate, hence 50 half frames per second on PAL and 60 half frames per second on NTSC. This was originally bound to the frequency of power lines in Europe (50Hz) and the US (60Hz)."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:113
+# b94619e35f5f4d2d8732e3d5cc90f388
+msgid "In particular, fields are \"interlaced\" in the sense that one field presents all the even lines of the complete frame and the subsequent field the odd ones."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:116
+# 59ed0a408f704509a70451d53e96af3a
+msgid "Since there is a non-negligible time difference between each field (1/50 or 1/60 of a second) merely rendering a frame the usual way and splitting it into two half frames does not work. A noticeable jitter of the edges of moving objects would be present."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:122
+#: ../../../manual/render/output/video.rst:343
+# 8843110ea7cd4d6e9106952414da9b15
+# 4df51722bdc6447f945ab41815cae456
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:126
+# 939133e040d64f58b8f6898f3caeff28
+msgid "Field Rendering setup."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:135
+# f37aa6ab64454fdcbb50ed0aee0b0998
+msgid "Fields"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:130
+# 654a7128deb24c6688644548ec21a3d1
+msgid "Enable field rendering. When the *Fields* button in the *Render* Panel is pressed (*Post Processing* section), Blender prepares each frame in two passes. On the first it renders only the even lines, then it *advances in time by half a time step* and renders all the odd lines. This produces odd results on a PC screen *(Field Rendering result)*. but will show correctly on a TV set."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:137
+# 9d3cb0a632dc43488983cab3744f7fa5
+msgid "Upper First / Lower First"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:138
+# 98ea0687104643408d948abf42ad9f6d
+msgid "Toggles between rendering the even and odd frames first."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:141
+# 0f8f2cb3d65642c188c9e21b7acea88e
+msgid "Still"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:140
+# f47f4d6952de4c20921837b2f28b60a9
+msgid "Disables the half-frame time step between fields (*x*)."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:143
+# 1fa6aa88ae2c4cd9bfac029a4bd5c064
+msgid "Setting up the correct field order"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:145
+# 27dc8cf011f147138565390b38833e93
+msgid "Blender's default setting is to produce Even fields *before* Odd fields; this complies with European PAL standards. Odd fields are scanned first on NTSC."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:149
+# eb69edfe8a8843a084a4da565925d9cf
+msgid "Of course, if you make the wrong selection things are even worse than if no Field rendering at all was used!"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:152
+# d862c25734544f3b80153fc2aa075fd2
+msgid "If you are really confused, a simple trick to determine the correct field order is to render a short test animation of a white square moving from left to right on a black background. Prepare one version with odd field order and another with even field order, and look at them on a television screen. The one with the right field order will look smooth and the other one horrible. Doing this simple test will save you *hours* of wasted rendering time..."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:160
+# b00bb32ba2354baaa67f79916f41d380
+msgid "Fields and Composite Nodes"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:162
+# e4a637e5bd674bacafa3b404a679fbf7
+msgid "Nodes are currently not field-aware. This is partly due to the fact that in fields, too much information is missing to do good neighborhood operations (blur, vector blur etc.). The solution is to render your animation at double the frame rate without fields and do the interlacing of the footage afterwards."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:169
+# 78c03ce422374baa8e537d174250f4bd
+msgid "Video Files"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:171
+# 762da644c0d248b2a74ba637e2d20a96
+msgid "These formats are primarily used for compressing rendered sequences into a playable movie (they can also be used to make plain audio files)."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:174
+# 1dcae327dc7d43489615e1c5ca731497
+msgid "A codec is a little routine that compresses the video so that it will fit on a DVD, or be able to be streamed out over the Internet, over a cable, or just be a reasonable file size. Codecs compress the channels of a video down to save space and enable continuous playback. *Lossy* codecs make smaller files at the expense of image quality. Some codecs, like H.264, are great for larger images. Codecs are used to encode and decode the movie, and so must be present on both the encoding machine (Blender) and the target machine. The results of the encoding are stored in a container file."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:183
+# 8e3999445652449095bcab342f84c67e
+msgid "There are dozens, if not hundreds, of codecs, including XviD, H.264, DivX, Microsoft, and so on. Each has advantages and disadvantages and compatibility with different players on different operating systems."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:187
+# a6585fb9dc134903b800b46d60ee166a
+msgid "Most codecs can only compress the RGB or YUV color space, but some support the Alpha channel as well. Codecs that support RGBA include:"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:190
+# 3349e78814a64e83bce64f7888f36422
+msgid "animation (quicktime)"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:191
+# b2be6d325e17423eacd44a4f0f19310f
+msgid "PNG TIFF Pixlet - not loss-less, and may be only available on Apple Mac."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:192
+# 390421e2863e465c8233152ea55f322d
+msgid "`Lagarith Loss-less Video Codec <http://lags.leetcode.net/codec.html>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:197
+# 36e0b9f993704538911da10eae5e2951
+msgid "AVI Codec"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:196
+# 1d9a22d63b97421499a1340e9f21cdb5
+msgid "AVI codec compression. Available codecs are operating-system dependent. When an AVI codec is initially chosen, the codec dialog is automatically launched. The codec can be changed directly using the *Set Codec* button which appears (*AVI Codec settings.*)."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:201
+# 6d9eddf710754deca2c69dbd540259ab
+msgid "AVI Jpeg"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:200
+# e8f8d81799a04edead36a650d9788ee5
+msgid "AVI but with Jpeg compression. Lossy, smaller files but not as small as you can get with a Codec compression algorithm. Jpeg compression is also the one used in the DV format used in digital camcorders."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:203
+# c4fbbe95396f4a0c86cc5e2adb0971a3
+msgid "AVI Raw"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:204
+# fff8a4cdb10745c6b54cb23e37bc2a55
+msgid "Audio-Video Interlaced (AVI) uncompressed frames."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:208
+# faebaf18743a48e3a72de4491d000fb3
+msgid "Frameserver"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:206
+# 672fba8406ae45e69b62fc79e403927f
+msgid "Blender puts out `frames upon request <http://wiki.blender.org/index.php/Dev:Source/Render/Frameserver>`__ as part of a render farm. The port number is specified in the OpenGL User Preferences panel."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:210
+# d542c364f9b54f518534a5e919f52d84
+msgid "H.264"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:211
+# 37295aad06ab42afbb7f0d252ed6efa8
+msgid "Encodes movies with the H.264 codec. See :doc:`Advanced Encoding </render/output/video#advanced_encoding>`."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:212
+# b1306dd3cafd48bcb59b653431cf05e5
+msgid "MPEG"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:213
+# 072f1034554e4518ba8f51e110c1d450
+msgid "Encodes movies with the MPEG codec. See :doc:`Advanced Encoding </render/output/video#advanced_encoding>`."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:215
+# ca828fc571af4a90b18c61d934d9d986
+msgid "Ogg Theora"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:215
+# eb41d81d486f4e4da12fc06f1fbbaf83
+msgid "Encodes movies with the Theora codec as Ogg files. See :doc:`Advanced Encoding </render/output/video#advanced_encoding>`."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:226
+# 721df442002743e9948d407a75d2493a
+msgid "QuickTime"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:218
+# 47b4e9614ff7475e94915814baa8d303
+msgid "Apple's Quicktime .mov file. The Quicktime codec dialog is available when this codec is installed and this format is initially chosen. See :doc:`Quicktime Encoding </render/output/video#quicktime>`."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:222
+# b223799fdbf74d3990b1b390a9fd1ad9
+msgid "Reads GIF if QuickTime is Installed"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:224
+# 509c2efa3c2145a6bab40a351d4bc126
+msgid "Blender can read GIF files on Windows and Mac platforms with `QuickTime <http://www.apple.com/quicktime/download>`__ installed. The GIF capabilities (as well as flattened PSD, flattened PDF on Mac, and others) come along with QuickTime."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:230
+# 2b561041c90d4ccb96ee3865734047e3
+msgid "Xvid"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:229
+# 6b824e70e14b48f58d4913934b26578d
+msgid "Encodes movies with the Xvid codec. See :doc:`Advanced Encoding </render/output/video#advanced_encoding>`."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:233
+# 80d0d5c2c9e246b28637c10c28472b8f
+msgid "Advanced Encoding"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:237
+# 26ff2c1dd58640c0a282e81dc2b18da3
+msgid "If the *H.264*, *MPEG*, *Ogg Theora*, or *Xvid* codecs are chosen, an *Encoding* panel becomes available. This has settings for encoding these file types, and other formats using FFmpeg."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:241
+# 9b37ebce81b5407bb0d85818c4f8a5fa
+msgid "`FFmpeg <http://ffmpeg.org>`__, short for Fast Forward Moving Pictures Expert Group, is a collection of free and open source software libraries that can record, convert and stream digital audio and video in numerous formats. It includes libavcodec, an audio/video codec library used by several other projects, and libavformat, an audio/video container mux and demux library."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:249
+# e86855a3458a47bba687735c4db3b9b1
+msgid "Video Settings"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:251
+# 08b263ab61764e69967576c004656238
+msgid "Here you choose which video codec you want to use, and compression settings. With all of these compression choices, there is a tradeoff between file size, compatibility across platforms, and playback quality."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:255
+# ef58d21bbd194edfbcb48f98bb800c55
+msgid "When you view the :doc:`System Console </getting_started/basics/interface/window_system/console_window>`, you can see some of the output of the encoding process. You will see even more output if you execute Blender as ``blender -d``."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:259
+# 6e1b11853bf846fb8ebcc8108d534ef7
+msgid "You can use the presets, DV, SVCD, DVD, etc. which choose optimum settings for you for that type of output, or you can manually select the format (MPEG-1, MPEG-2, MPEG-4, AVI, Quicktime (if installed), DV, H.264, or Xvid (if installed). You must have the proper codec installed on your computer for Blender to be able to call it and use it to compress the video stream."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:267
+# 5e452fdbbddb4f35b95d6c21d648a67d
+msgid "Video Formats"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:270
+# 1f5ca9e742774a66b0ac21e68a53381a
+msgid "`MPEG-1 <http://en.wikipedia.org/wiki/MPEG-1>`__: ``.mpg``, ``.mpeg``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:270
+# 001a252cb1c649f0a074650bfc7eea9a
+msgid "A standard for lossy compression of video and audio. It is designed to compress VHS-quality raw digital video and CD audio down to 1.5 Mbit/s."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:275
+# e4840a1184e341289e8770d46b286e3b
+msgid "`MPEG-2 <http://en.wikipedia.org/wiki/MPEG-2>`__: ``.dvd``, ``.vob``, ``.mpg``, ``.mpeg``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:273
+# 7871fd31002e4c1c877dbfa362d5bed6
+msgid "A standard for \"the generic coding of moving pictures and associated audio information\". It describes a combination of lossy video compression and lossy audio data compression methods which permit storage and transmission of movies using currently available storage media and transmission bandwidth."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:277
+# 2ce40b7f137e4efb900c189f7676423a
+msgid "`MPEG-4(DivX) <http://en.wikipedia.org/wiki/MPEG-4>`__: ``.mp4``, ``.mpg``, ``.mpeg``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:278
+# a9a484e0e33e41c29d931853d8363f40
+msgid "Absorbs many of the features of MPEG-1 and MPEG-2 and other related standards, and adds new features."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:279
+# 4887fb6c750f45a1bb73996904bb54f7
+msgid "`AVI <http://en.wikipedia.org/wiki/Audio_Video_Interleave>`__: ``.avi``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:280
+# db93d2025dcc40a5900d6dbadace19dd
+msgid "A derivative of the Resource Interchange File Format (RIFF), which divides a file's data into blocks, or \"chunks.\""
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:283
+# e16ef33170e34d76b20ff8b873a839f2
+msgid "`Quicktime <http://en.wikipedia.org/wiki/.mov>`__: ``.mov``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:282
+# 2d79129fa64e4056919d903468cca7b0
+msgid "A multi-tracked format. QuickTime and MP4 container formats can use the same MPEG-4 formats; they are mostly interchangeable in a QuickTime-only environment. MP4, being an international standard, has more support."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:287
+# baa2d068b6a84ba79dfcb6165ab9ef63
+msgid "`DV <http://en.wikipedia.org/wiki/DV>`__: ``.dv``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:286
+# 4f568b3ecfa340238a18c7a67ff39a34
+msgid "An intraframe video compression scheme, which uses the discrete cosine transform (DCT) to compress video on a frame-by-frame basis. Audio is stored uncompressed."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:290
+# 221ef1e642a14a5e83447b335e0c3308
+msgid "`H.264 <http://en.wikipedia.org/wiki/H.264>`__: ``.avi`` *for now*."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:290
+# 550f5b033a624754a5cdfee49d7b3336
+msgid "A standard for video compression, and is currently one of the most commonly used formats for the recording, compression, and distribution of high definition video."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:294
+# 9a0722e1d9b9405e89435756fb643d8b
+msgid "`Xvid <http://en.wikipedia.org/wiki/Xvid>`__: ``.avi`` *for now*"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:293
+# 983131d7097a4083be4e586c6eab73ec
+msgid "A video codec library following the MPEG-4 standard. It uses ASP features such as b-frames, global and quarter pixel motion compensation, lumi masking, trellis quantization, and H.263, MPEG and custom quantization matrices. Xvid is a primary competitor of the DivX Pro Codec."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:297
+# e1fa4d0e9e424014a10df4c3c1962ded
+msgid "`Ogg <http://en.wikipedia.org/wiki/Theora>`__: ``.ogg``, ``.ogv``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:297
+# 6214901a2cf646a79324c8b8cb2274b1
+msgid "A free lossy video compression format. It is developed by the Xiph.Org Foundation and distributed without licensing fees."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:300
+# 2ba6711080ea439685498476791051ce
+msgid "`Matroska <http://en.wikipedia.org/wiki/Matroska>`__: ``.mkv``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:300
+# 015ba31b298346e697343bccfac82508
+msgid "An open standard free container format, a file format that can hold an unlimited number of video, audio, picture or subtitle tracks in one file."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:302
+# 609bd135c29741ca8ef3fcd800be9876
+msgid "`Flash <http://en.wikipedia.org/wiki/Flash_Video>`__: ``.flv``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:303
+# de98fd79098244c7a314121b9fce972a
+msgid "A container file format used to deliver video over the Internet using Adobe Flash Player."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:304
+# 1cbd9b4e08774fbaa981611a8de8e76e
+msgid "`Wav <http://en.wikipedia.org/wiki/Wav>`__: ``.wav``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:305
+# 7807442ebed349f4a3d488797a9f33fe
+msgid "An uncompressed (or lightly compressed) Microsoft and IBM audio file format."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:310
+# 44125fdf8ada4cd3b056400fb7778004
+msgid "`Mp3 <http://en.wikipedia.org/wiki/MP3>`__: ``.mp3``"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:307
+# 25042a715bf84c94a6d5cdf276991843
+msgid "A highly-compressed, patented digital audio encoding format using a form of lossy data compression. It is a common audio format for consumer audio storage, as well as a de facto standard of digital audio compression for the transfer and playback of music on digital audio players."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:313
+# 2f47a623cb40432593bbfbce5d85ac5e
+msgid "Video Codecs"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:315
+# 9611199f62ca458a806be77621ad1bcb
+msgid "None"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:316
+# 988503ae196e4e0081f05051bdde1279
+msgid "*For audio-only encoding.*"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:317
+# cfbf4d523728491b8abd5c5692a3ed12
+msgid "`MPEG-1 <http://en.wikipedia.org/wiki/MPEG-1>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:318
+#: ../../../manual/render/output/video.rst:320
+#: ../../../manual/render/output/video.rst:322
+#: ../../../manual/render/output/video.rst:327
+#: ../../../manual/render/output/video.rst:329
+#: ../../../manual/render/output/video.rst:331
+#: ../../../manual/render/output/video.rst:335
+# b308ca97be664b0c83ee947f48e3b11c
+# f8bbb75eab74474eb2dcb593f201ac0a
+# be787555cce34c8caf3f69a0619ce969
+# 56494f07a90c4b0f8ee0be5acd5a1648
+# 64c649d19864411786760bf5ca3c50ee
+# 92ff572acb91418ca4c5bac75158815e
+# 6a5f59bb184f49058e01569ad4fa0f76
+msgid "See `Video Formats`_."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:319
+# 8dd35dfea11b48308e5b5f70c17bd9d4
+msgid "`MPEG-2 <http://en.wikipedia.org/wiki/MPEG-2>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:321
+# e7e47700d50443b2a5ffc8804df1b621
+msgid "`MPEG-4(DivX) <http://en.wikipedia.org/wiki/MPEG-4>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:324
+# dcfa76d9255a40ef9363cb16304784f2
+msgid "`HuffYUV <http://en.wikipedia.org/wiki/HuffYUV>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:324
+# d738351d3f9c4414b5581c4facb2ff83
+msgid "Loss-less video codec created by Ben Rudiak-Gould which is meant to replace uncompressed YCbCr as a video capture format."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:326
+# 56cc0c5145a34ad5b6055180a57fb1e4
+msgid "`DV <http://en.wikipedia.org/wiki/DV>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:328
+# bff654ff5fef4985a3ebaec6b5afd617
+msgid "`H.264 <http://en.wikipedia.org/wiki/H.264>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:330
+# 1eda42bb2eaa4bb3b17a8e60de3bfbc4
+msgid "`Xvid <http://en.wikipedia.org/wiki/Xvid>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:332
+# a90d935cbea8419780a0a1f5be112f17
+msgid "`Theora <http://en.wikipedia.org/wiki/Theora>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:333
+# 819e06b2182449a58386f2a2515c7150
+msgid "See Ogg in `Video Formats`_."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:334
+# 98ed2e8300324c2596ae917a07ef6d39
+msgid "`Flash Video <http://en.wikipedia.org/wiki/Flash_Video>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:340
+# 5d446b0f3ff94ef68c4b57ef7804bb8c
+msgid "`FFmpeg video codec #1 <http://en.wikipedia.org/wiki/FFV1>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:337
+# fc3cd86b30fa4aa9ac2794a9f87fb49a
+msgid "A.K.A. FFV1, a loss-less intra-frame video codec. It can use either variable length coding or arithmetic coding for entropy coding. The encoder and decoder are part of the free, open-source library libavcodec in FFmpeg."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:348
+#: ../../../manual/render/output/video.rst:418
+# cff23cdd311b4603b5b7009a792a1060
+# f3616dea315f42ccba411b0217295f01
+msgid "Bitrate"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:346
+# 1a96314a6b3648e9912a497458ae4dc2
+msgid "Set the average `bitrate <http://en.wikipedia.org/wiki/Bit_rate>`__ (quality), which is the count of binary digits per frame. See also: `ffmpeg -b:v <http://ffmpeg.org/ffmpeg.html#Description>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:354
+#: ../../../manual/render/output/video.rst:372
+# 26207ed196cb4189b9d7eba6cee7d4a7
+# c8c06667ea0b448a9eb6cb7d982f6cff
+msgid "Rate"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:351
+# 4dc977deaf634b19a31cd17cdcdba95b
+msgid "The bitrate control also includes a *Minimum* and a *Maximum*."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:354
+# ac56c7725dbb4d8183a3051d197f18f4
+msgid "Buffer"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:354
+# bd0d6d61104d479ab5fa5a7ac7acdfd4
+msgid "The `decoder bitstream buffer <http://en.wikipedia.org/wiki/Video_buffering_verifier>`__ size."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:362
+# 90422c0bfdef4debac6e90ba9c707fea
+msgid "GOP Size"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:357
+# 73a008b87f814ee799b3077813efd8f8
+msgid "The number of pictures per `Group of Pictures <http://en.wikipedia.org/wiki/Group_of_pictures>`__. Set to 0 for \"intra_only\", which disables `inter-frame <http://en.wikipedia.org/wiki/Inter-frame>`__ video. From ffmpeg docs: \"For streaming at very low bitrate application, use a low frame rate and a small GOP size. This is especially true for RealVideo where the Linux player does not seem to be very fast, so it can miss frames\""
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:367
+# 46a96a8fa8c543af9aa97f4fdc278aa0
+msgid "Autosplit Output"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:365
+# b731ab762f144b4f997252ffa725e663
+msgid "If your video is HUGE and exceeds 2Gig, enable Autosplit Output. The main control over output filesize is the GOP, or keyframe interlace. A higher number generally leads to a smaller file, but needs a higher-powered device to replay it."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:376
+# f242392ecd23496299d2c4b709abad74
+msgid "Mux"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:370
+# 50468413f657403eb06d5f9582dfeac5
+msgid "`Multiplexing <http://www.afterdawn.com/glossary/term.cfm/multiplexing>`__ settings."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:373
+# 772de1a5478b4be1940dc2c489cf823f
+msgid "Maximum bit rate of the multiplexed stream."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:376
+# b2fde68a585c41c8aa32e1563b4b6838
+msgid "Packet Size"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:375
+# 0bf4b265489e46b6b5225d589aa5b565
+msgid "(Undocumented in ffmpeg)"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:378
+# 3beaf82afb9c4fbfb914f3bee4babb7f
+msgid "Standards"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:380
+# b88cde14aa0e4b02b67d403719dafe96
+msgid "Codecs cannot encode off-the-wall video sizes, so stick to the XY sizes used in the presets for standard TV sizes."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:384
+# 12ed58b62da745be93b4922fa1e002ca
+msgid "Audio Settings"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:386
+# b1723bc044b34ccb94ea54bbc1cd29bd
+msgid "Audio is encoded using the codec you choose."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:388
+# 38585845c96142cb8dfc8625d39e4d18
+msgid "Audio Codecs"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:390
+# 1163ac5b534643aa9814ab4941a52f9f
+msgid "`MP2 <http://en.wikipedia.org/wiki/MPEG-1_Audio_Layer_II>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:391
+# 6bbfc2eec3434f05944d45aec77faa78
+msgid "A lossy audio compression format defined by ISO/IEC 11172-3."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:392
+# e13dd8ab9c05483187f2b1d3c953c43b
+msgid "`MP3 <http://en.wikipedia.org/wiki/MP3>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:393
+# aa9fe7e1e8264ed2a33d7521f2e7a106
+msgid "See MP3 in `Video Formats`_ above.)"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:394
+# 72a5fba5d24348168190b5036f0e5ba4
+msgid "`AC3 <http://en.wikipedia.org/wiki/Dolby_Digital>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:395
+# 32689e1a85c648ac9b732076d0c16cb9
+msgid "Audio Codec 3, an audio compression technology developed by Dolby Laboratories."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:398
+# ba416f59ba164f21b4cd65afec3cc304
+msgid "`AAC <http://en.wikipedia.org/wiki/Advanced_Audio_Coding>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:397
+# c39f66d674fc49dea02ec9b89f63ab2c
+msgid "Advanced Audio Codec,\" a standardized, lossy compression and encoding scheme for digital audio. Designed to be the successor of the MP3 format, AAC generally achieves better sound quality than MP3 at similar bit rates."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:404
+# 61de1d1ce5a848c0819ec6193a922bba
+msgid "`Vorbis <http://en.wikipedia.org/wiki/Vorbis>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:401
+# a39b8df8457746249a351e25bed479de
+msgid "An open-standard, highly-compressed format comparable to MP3 or AAC. Had been shown to perform significantly better than many other lossy audio formats in the past in that it produced smaller files at equivalent or higher quality while retaining computational complexity comparable to other MDCT formats such as AAC or Windows Media Audio."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:408
+# 2fc9be675b824a989d47a4ce514689a5
+msgid "`FLAC <http://en.wikipedia.org/wiki/FLAC>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:407
+# 07c34cd7e5a94135982f7e1f01667d3a
+msgid "Free Loss-less Audio Codec. Digital audio compressed by FLAC's algorithm can typically be reduced to 50-60% of its original size, and decompressed into an identical copy of the original audio data."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:414
+# 66ce80df72de4b80a92a205558d97885
+msgid "`PCM <http://en.wikipedia.org/wiki/PCM>`__"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:411
+# 2c0e59fb1d8f4387b0460ab5faf07d89
+msgid "Pulse Code Modulation, a method used to digitally represent sampled analog signals. It is the standard form for digital audio in computers and various Blu-ray, Compact Disc and DVD formats, as well as other uses such as digital telephone systems"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:417
+# cbd63557312d4648813af430deeae95b
+msgid "For each codec, you can to control the bitrate (quality) of the sound in the movie. This example shows MP3 encoding at 128kbps. Higher bitrates are bigger files that stream worse but sound better. Stick to powers of 2 for compatibility."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:421
+# c6293e5519974b4d84b18c33b82a1fad
+msgid "Samplerate"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:421
+# 1a0d3328aa4b4f02bdf0dc2a28cf1bb2
+msgid "Samplerate controls the number of samples per second of the audio. The default, 44100, is standard for many file types, including CD audio, and produces a high quality sound."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:425
+# fda2852c0f1942b498742f85b0360b5a
+msgid "Volume"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:424
+# cc7e116d728147bcb9a665e6e76840eb
+msgid "Set the output volume of the audio."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:427
+# cf01fe5402ca41f182ba5a2fca11ec34
+msgid "Tips"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:432
+# 4e833145fe87478bb660526fe2880fcf
+msgid "Choosing which format to use depends on what you are going to do with the image."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:434
+# 047707370f0b410cbca5601d7f89fb12
+msgid "If you are animating a movie and are not going to do any post-processing or special effects on it, use either **AVI-JPEG** or **AVI Codec** and choose the XviD open codec. If you want to output your movie with sound that you have loaded into the VSE, use **FFMPEG**."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:439
+# 644d2066653d4014a155438ffd6e143b
+msgid "If you are going to do post-processing on your movie, it is best to use a frame set rendered as **OpenEXR** images; if you only want one file, then choose **AVI Raw**. While AVI Raw is huge, it preserves the exact quality of output for post-processing. After post-processing (compositing and/or sequencing), you can compress it down. You don't want to post-process a compressed file, because the compression artifacts might throw off what you are trying to accomplish with the post-processing."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:447
+# 3a20bd64db734835b1bad9355a9b7094
+msgid "Note that you might not want to render directly to a video format. If a problem occurs while rendering, you have to re-render all frames from the beginning. If you first render out a set of static images (such as the default PNG, or the higher-quality OpenEXR), you can stitch them together with an Image Strip in the :doc:`Video Sequence Editor (VSE) </editors/sequencer/usage>`. This way, you can easily:"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:453
+# 7288bf053cd7475a8082866c2991fe20
+msgid "Restart the rendering from the place (the frame) where the problem occurred."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:454
+# 227bd09e25114c7fa2886c58c0424709
+msgid "Try out different video options in seconds, rather than minutes or hours."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:455
+# db35293058da4bd5859277274ca02f0b
+msgid "Enjoy the rest of the features of the VSE, such as adding Image Strips from previous renders, audio, video clips, etc."
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:460
+# 9a0cb9076e9440eaaf37434e78b25092
+msgid "Home-made Render Farm"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:464
+# e504953ed88742f0b7b9d087bed20807
+msgid "An easy way to get multiple machines to share the rendering workload is to:"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:466
+# 61218061d9ae4e0998793e2695a26dbf
+msgid "Set up a shared directory (such as a Windows Share or an NFS mount)"
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:467
+# dcbf9b1d385440eaa8c7c5dcff8808c3
+msgid "Un-check \"Overwrite\" and check \"Placeholders\""
+msgstr ""
+
+#: ../../../manual/render/output/video.rst:468
+# c875fe648c1049f4b26f2b700b937b19
+msgid "Start as many machines as you wish rendering to that directory -- they will not step on each other's toes."
+msgstr ""
+

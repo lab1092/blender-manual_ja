@@ -4,15 +4,10 @@
 
 This directory is customized contents from the **blender_docs** SVN repository.
 
-****************************
-build i18n document
-****************************
-
 .. note::
-   this repository is for testing:
-
+   Currently, this repository is for testing:
    
-      * to make the steps to build i18ned document.
+      * to make the steps how to make i18ned documentation workflow.
 
 .. caution::
     Do not commit files to original BF documentation repogitory from this repo.
@@ -21,7 +16,7 @@ build i18n document
 Translation steps for blender-manual
 *************************************
 
-(on OS X 10.10)
+(on OS X 10.10 & Python 2.7)
 
 below is a sample for adding 'ja' locale.
 you can try translation to your own Sphinx project.
@@ -31,8 +26,8 @@ you can try translation to your own Sphinx project.
 :documentroot: ~/GitHub/blender-manual_i18n/manual
 :pot files: ~/GitHub/blender-manual_i18n/locale/pot
 :po files(ja): ~/GitHub/blender-manual_i18n/locale/ja
-:html files(en): ~/GitHub/blender-manual_i18n/html/en
-:html files(ja): ~/GitHub/blender-manual_i18n/html/ja
+:html files(en): ~/GitHub/blender-manual_i18n/build/html/en
+:html files(ja): ~/GitHub/blender-manual_i18n/build/html/ja
 
 
 Install sphinx-intl package
@@ -41,7 +36,6 @@ Install sphinx-intl package
 After installation blender manual steps, IInstall sphinx-intl package for translation
 
    ::
-   	
       $ pip install sphinx-intl 
 
 Download/Update from svn
@@ -49,7 +43,7 @@ Download/Update from svn
 
 Run a svn command to download files from svn repository.
 
-   ::
+   .. code-block::
 
       $ cd ~/GitHub/
       $ svn checkout https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs
@@ -59,14 +53,14 @@ Edit Configuration files
 
 Change  locale directory and gettext option in manual/conf.py
 
-   ::
+   .. code-block::
 
       locale_dirs = ['../locale/']   # path is example but recommended.
       gettext_compact = False     # optional. 
 
 Chanege output folder in Make file
 
-   ::
+   .. code-block::
 
       all: FORCE
           # './' (input), './html/en' (output)
@@ -79,7 +73,7 @@ Bluld POT files
 
 after add 'gettext' target , run ``make gettext`` command.
 
-    ::
+   .. code-block::
 
       $ cd ~/GitHub/blender-manual_i18n
       $ sphinx-build -b gettext ./manual ./locale/pot
@@ -90,7 +84,7 @@ Update message file
 
 To sync messages to ja locale, run the command
 
-   ::
+   .. code-block::
 
       $ cd ~/GitHub/blender-manual_i18n
       $ sphinx-intl update -d ./locale/ -p ./locale/pot -l ja
@@ -103,7 +97,7 @@ You can translate message text (.po file ).
 
    Before
    
-   ::
+   .. code-block:: 
    
       #: ../manual/contents.rst:3
       msgid "Blender Manual contents"
@@ -111,7 +105,7 @@ You can translate message text (.po file ).
 
    After
 
-   ::
+   .. code-block::
     
       #: ../manual/contents.rst:3
       msgid "Blender Manual contents"
@@ -126,19 +120,19 @@ Bulid mo files:
    	  please make sure if current directory is "~/GitHub/blender-manual_i18n" 
    	  before run these commands.
 
-   ::
+   .. code-block::
 
       $ sphinx-intl build -d ./locale/
 
 Bulid html files(ja)
 
-   ::
+   .. code-block::
 
-      $ sphinx-build -D language='ja' -b html ./manual ./html/ja
+      $ sphinx-build -D language='ja' -b html ./manual ./build/html/ja
 
 Bulid html files(en)
 
-   ::
+   .. code-block::
 
       $ make all
 
@@ -151,10 +145,10 @@ Template customize
 
  /Library/Python/2.7/site-packages/sphinx_rtd_theme/breadcrumbs.html
 
-   ::
-
+   .. code-block::
+      
       <li>{{ title }}</li>
-          <li class="wy-breadcrumbs-aside">
+        <li class="wy-breadcrumbs-aside">
           <a href="{{ url_root +'../en/contents.html' }}"> [EN]</a> | 
           <a href="{{ url_root +'../ja/contents.html' }}"> [JA]</a> | 
 
@@ -170,7 +164,7 @@ Japanese Translation Sample
 
 
 
-[EOF]
+
 
 #########
   Readme

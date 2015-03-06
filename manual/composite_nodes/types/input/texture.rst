@@ -6,8 +6,9 @@ Texture Node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` --> :doc:`Node Composition </composite_nodes/index>`
-   | Menu:     :kbd:`Shift-A` --> :doc:`Input </ce/windows/nodes/composite#inputs>` --> Texture
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` -->
+               :doc:`Node Composition </composite_nodes/index>`
+   | Menu:     :kbd:`Shift-A` --> :doc:`Input </composite_nodes/types/input/index>` --> Texture
 
 
 .. figure:: /images/Tutorials-NTR-Tex.jpg

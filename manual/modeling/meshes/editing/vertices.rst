@@ -1,7 +1,4 @@
 
-..    TODO/Review: {{review|im=merging examples}} .
-
-
 ************
 Vertex Tools
 ************
@@ -12,10 +9,10 @@ some also work with edge or face selections.
 
 
 Merging
-*******
+=======
 
 Merging Vertices
-================
+----------------
 
 .. admonition:: Reference
    :class: refbox
@@ -54,7 +51,7 @@ it can to preserve edges and faces only partly involved in the reunion.
 
 
 AutoMerge Editing
-=================
+-----------------
 
 .. admonition:: Reference
    :class: refbox
@@ -70,7 +67,7 @@ as soon as a vertex moves closer to another one than the *Limit* setting
 
 
 Remove Doubles
-==============
+--------------
 
 .. admonition:: Reference
    :class: refbox
@@ -79,7 +76,7 @@ Remove Doubles
    | Panel:    *Editing* context --> *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Remove Doubles`,
      :menuselection:`Specials --> Remove Doubles` or :menuselection:`Vertex Specials --> Remove Doubles`
-   | Hotkey:   :menuselection:`[W] --> [4]` or :menuselection:`[ctrl][V] --> Remove doubles`
+   | Hotkey:   :menuselection:`[W] --> Remove Doubles` or :menuselection:`Mesh --> Vertices --> Remove doubles`
 
 
 Remove Doubles is a useful tool to simplify a mesh by merging vertices that
@@ -94,10 +91,10 @@ Unselected
 
 
 Separating
-**********
+==========
 
 Rip
-===
+---
 
 .. admonition:: Reference
    :class: refbox
@@ -114,7 +111,7 @@ borders of the faces of the other side of the rip.
 
 
 Examples
---------
+^^^^^^^^
 
 .. figure:: /images/Doc26-rip-before.jpg
    :width: 300px
@@ -153,7 +150,7 @@ Examples
 
 
 Limitations
------------
+^^^^^^^^^^^
 
 Rip will only work when edges and/or vertices are selected.
 Using the tool when a face is selected (explicitly or implicitly), will return an error
@@ -163,7 +160,7 @@ it will also fail with message *"No proper selection or faces include"*.
 
 
 Rip Fill
-========
+--------
 
 .. admonition:: Reference
    :class: refbox
@@ -190,7 +187,7 @@ it fills in the gap with geometry.
 
 
 Split
-=====
+-----
 
 .. admonition:: Reference
    :class: refbox
@@ -212,7 +209,7 @@ Note that the "copy" is left exactly at the same position as the original, so yo
 
 
 Separate
-========
+--------
 
 .. admonition:: Reference
    :class: refbox
@@ -226,19 +223,40 @@ This will separate the selection in another mesh object,
 as described :doc:`here </modeling/objects/groups_and_parenting>`.
 
 
-Vertex Connect
-**************
+Connect Vertex Path
+===================
 
 .. admonition:: Reference
    :class: refbox
 
    | Mode:     *Edit* mode
-   | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Connect` or :menuselection:`[Ctrl][V] --> Vertex Connect`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Connect Vertex Path`
    | Hotkey:   :kbd:`J`
 
+This tool connects vertices in the order they're selected, splitting the faces between them.
 
-Vertex Connect takes two vertices that share a face, and creates an edge between the two,
-splitting the face into two new faces.
+Runnign a second time will connect the first/last endpoints.
+
+Vertices not connected to any faces will create edges,
+so this can be used as a way to quickly connect isolated vertices too.
+
+
+.. TODO, example images
+
+
+Connect Vertices
+================
+
+.. admonition:: Reference
+   :class: refbox
+
+   | Mode:     *Edit* mode
+   | Menu:     :menuselection:`Mesh --> Vertices --> Connect Vertices`
+
+
+This tool connects selected vertices by creating edges between them and splitting the face.
+
+This tool can be used on many faces at once.
 
 
 .. figure:: /images/Doc26-vertexConnect-before.jpg
@@ -260,14 +278,14 @@ splitting the face into two new faces.
 
 
 Vertex Slide
-************
+============
 
 .. admonition:: Reference
    :class: refbox
 
    | Mode:     *Edit* mode
    | Panel:    *Editing* context --> *Mesh Tools*
-   | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Slide` or :menuselection:`[Ctrl][V] --> Vertex Slide`
+   | Menu:     :menuselection:`Mesh --> Vertices --> Vertex Slide`
    | Hotkey:   :menuselection:`[Shift][V] --> Vertex Slide`
 
 
@@ -304,7 +322,7 @@ There are three options available by holding the following keys:
 
 
 Smooth
-******
+======
 
 .. admonition:: Reference
    :class: refbox
@@ -313,14 +331,14 @@ Smooth
    | Panel:    *Editing* context --> *Mesh Tools*
    | Menu:     :menuselection:`Mesh --> Vertices --> Smooth`,
      :menuselection:`Specials --> Smooth` or :menuselection:`Vertex Specials --> Smooth`
-   | Hotkey:   :menuselection:`[ctrl][V] --> Smooth vertex`
+   | Hotkey:   :menuselection:`Mesh --> Vertices --> Smooth vertex`
 
 
 This will apply once the :doc:`Smooth Tool </modeling/meshes/editing/deforming/smooth>`.
 
 
 Make Vertex Parent
-******************
+==================
 
 .. admonition:: Reference
    :class: refbox
@@ -335,7 +353,7 @@ as described :doc:`here </modeling/objects/groups_and_parenting>`.
 
 
 Add Hook
-********
+========
 
 .. admonition:: Reference
    :class: refbox
@@ -352,16 +370,14 @@ this action cannot be undone in *Edit* mode - probably because it involves other
 
 
 Blend From Shape, Propagate Shapes
-**********************************
+==================================
 
 .. admonition:: Reference
    :class: refbox
 
    | Mode:     *Edit* mode
    | Menu:     :menuselection:`(Vertex) Specials --> Blend From Shape` and
-     :menuselection:`Vertex Specials --> Shape Propagate`
-   | Hotkey:   :menuselection:`[W] --> [alt][Blend From Shape]` or :menuselection:`[ctrl][V] --> Blend From Shape`,
-     and :menuselection:`[W] --> [alt][Shape Propagate]` or :menuselection:`[ctrl][V] --> Shape Propagate`
+               :menuselection:`Mesh --> Vertices --> Shape Propagate`
 
 
 These are options regarding :doc:`shape keys </animation/techs/shape/shape_keys>`.

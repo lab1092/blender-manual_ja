@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:7
+# 3887865e3f354eec82da08de210bcfd6
+msgid "Action Constraint"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:9
+# ded405aee7d54bb5bc25f9d4f2188baa
+msgid "The *Action* constraint is powerful. It allows you control an :doc:`Action </animation/editors/dopesheet/action>` using the transformations of another object."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:13
+# af9bafeb4d2343c9ba9a47cbcaf5b6ef
+msgid "The underlying idea of the *Action* constraint is very similar to the one behind the :doc:`Drivers </animation/basics/drivers>`, except that the former uses a whole action (i.e. a bunch a Fcurves of the same type), while the latter controls a single Fcurve of their \"owner\"..."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:17
+# 183dbfec50334789ae35b838f65b3f52
+msgid "Note that even if the constraint accepts the *Mesh* action type, only the *Object*, *Pose* and *Constraint* types are really working, as constraints can only affect objects' or bones' transform properties, and not meshes' shapes... . Also note that only the object transformation (location, rotation, scale) is affected by the action, if the action contains keyframes for other properties they are ignored, as constraints do not influence those."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:26
+# 765f158c6315495e97fa5045d4dff1df
+msgid "As an example, let's assume you have defined an *Object* action (it can be assigned to any object, or even no object at all), and have mapped it on your owner through an *Action* constraint, so that moving the target in the ``[0.0, 2.0]`` range along its X axis maps the action content on the owner in the ``[0, 100]`` frame range. This will mean that when the target's X property is **0.0**, the owner will be as if in frame **0** of the linked action; with the target's X property at **1.0**, the owner will be as if in frame **50** of the linked action, etc."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:38
+# bcadde8330b244ecb97c27ca8a33a10f
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:43
+# 70158771ea5e4bde9b21b6d03607b97b
+msgid "Action panel"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:47
+# 8314860c2efd4d61bf28d9ca2aa5bcd9
+msgid "Target"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:47
+# b4614b692d0f4243987e8fc2314a5ec8
+msgid "This constraint uses one target, and is not functional (red state) when it has none."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:50
+# a4188888b276483d89032db6c86b4859
+msgid "Bone:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:50
+# 77da24ac1ef54c97921d97fae940a553
+msgid "When target is an armature object, use this field to select the target bone."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:54
+# 6f9ca829c33645b6a33fc1491c6f2362
+msgid "Transform Channel"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:53
+# 394f46c7434649b9bc6c4407d155db8f
+msgid "This drop-down list controls which transform property (location, rotation or scale along/around one of its axes) from the target to use as \"action driver\"."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:57
+# 4039db09a53544ffa30cd4d039718c4b
+msgid "Target Space"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:57
+# 73a7487ca51b43bda3760d2a1c3d8ae4
+msgid "This constraint allows you to choose in which space to evaluate its target's transform properties."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:66
+# 187ce8ceb6d34887a20879c69281bb92
+msgid "To Action"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:60
+# 7e2fb78b28694a9f8c31403036f2d20f
+msgid "Select the name of the action you want to use."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:64
+# c761b596930d4e8292f4afb11de194f1
+msgid "Even though it might not be in red state (UI refresh problems...), this constraint is obviously not functional when this field does not contain a valid action."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:71
+# e42ccd15911c4f238c48f23e4a9e98c6
+msgid "Object Action"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:69
+# 57b18271249b485596c8983111fbcfe6
+msgid "**Bones only**, when enabled, this option will make the constrained bone use the \"object\" part of the linked action, instead of the \"same-named pose\" part. This allows you to apply the action of an object to a bone."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:83
+# 919e5164e95143faac8e49b034d7adfa
+msgid "Target Range Min / Max"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:74
+# e8bec90f45b34b0c8dd9d682235855f6
+msgid "The lower and upper bounds of the driving transform property value. By default, both values are set to **0.0**"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:79
+# 3c8ae466d3a04fad905905495d4b3a3b
+msgid "Unfortunately, here again we find the constraints limitations:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:81
+# afce650d8fca48b082e7a4db60ef5894
+msgid "When using a rotation property as \"driver\", these values are \"mapped back\" to the ``[-180.0- , 180.0- [`` range."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:83
+# 62a1730aa6244ec39525a84cf3a06b4f
+msgid "When using a scale property as \"driver\", these values are limited to null or positive values."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:92
+# 56399db27ce24152b9ba4e5300906a43
+msgid "Action Range Start / End"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:86
+# 37649a00ec4348a598afd148f729801a
+msgid "The starting and ending frames of the action to be mapped. Note that:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:89
+# 8b590d65408a4d0788094e0c93a9d3eb
+msgid "These values must be strictly positive."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:90
+# c63c876d03ed49228bf77205deb00ff8
+msgid "By default, both values are set to **0**, which disables the mapping (i.e. the owner just gets the properties defined at frame **0** of the linked action...)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:95
+# 1337acf0d8294e5e9c4269d900da4c07
+msgid "Notes"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:97
+# b4faddf931e647bb8cb641b764f287c6
+msgid "When the linked action affects some location properties, the owner's existing location is added to the result of evaluating this constraint (exactly as when the *Offset* button of the :doc:`Copy Location constraint </rigging/constraints/transform/copy_location>` is enabled...)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:101
+# 48a0718c5f144c25b534deccc1405321
+msgid "When the linked action affects some scale properties, the owner's existing scale is multiplied with the result of evaluating this constraint."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:103
+# 90d2c5038fe34b859c5f27a88d7359b3
+msgid "When the linked action affects some rotation properties, the owner's existing rotation is overridden by the result of evaluating this constraint."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:105
+# b329ab80d7d742d99189f44c6731a822
+msgid "Unlike usual, you can have a *Start* value higher than the *End* one, or a *Min* one higher than a *Max* one: this will reverse the mapping of the action (i.e. it will be \"played\" reversed...), unless you have both sets reversed, obviously!"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:108
+# ebbf027c3bae418489b5a5878294f13e
+msgid "When using a *Constraint* action, it is the constraint *channel's names* that are used to determine to which constraints of the owner apply the action. E.g. if you have a constraint channel named \"trackto_empt1\", its keyed *Influence* and/or *Head/Tail* values (the only ones you can key) will be mapped to the ones of the owner's constraint named \"trackto_empt1\"."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:113
+# a3037309ae324e3c91fde81922bf8150
+msgid "Similarly, when using a *Pose* action (which is obviously only meaningful and working when constraining a bone!), it is the bone's name that is used to determine which bone *channel's names* from the action to use (e.g. if the constrained bone is named \"arm\", it will use and only use the action's bone channel named \"arm\"...). Unfortunately, using a *Pose* action on a whole armature object (to affect all the keyed bones in the action at once) won't work..."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/action.rst:119
+# 84dcae38c50945b4b1174a02f6286b00
+msgid "Note also that you can use the :doc:`pose library feature </rigging/posing/pose_library>` to create/edit a *Pose* action datablock... just remember that in this situation, there's one pose per frame!"
+msgstr ""
+

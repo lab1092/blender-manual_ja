@@ -1,0 +1,716 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/physics/cloth.rst:7
+# b16b7852f890402b91fa25ac97a50c4c
+msgid "Cloth Simulation"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:14
+#: ../../../manual/physics/cloth.rst:24
+# c5b6dd5f83224967b46c1eec4de60d43
+# c553babac1b14dd2ba2824f6f20846cb
+msgid "Cloth example."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:19
+# ded46f2af7dc409ca08a34343e5bce11
+msgid "Cloth on carved wooden men (made by motorsep)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:27
+# 91406e32d8964a2aa427e3ea88974989
+msgid "Cloth simulation is one of the hardest aspects of CG, because it is a deceptively simple real-world item that is taken for granted, yet actually has very complex internal and environmental interactions. After years of development, Blender has a very robust cloth simulator that is used to make clothing, flags, banners, and so on. Cloth interacts with and is affected by other moving objects, the wind and other forces, as well as a general aerodynamic model, all of which is under your control."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:38
+# f56298cafd8d4b6699402fff0b06e1db
+msgid "Description"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:40
+# efc66b5a902a482d930cb7b3daabd382
+msgid "A piece of cloth is any mesh, open or enclosed, that has been designated as cloth. The *Cloth* panels are located in the *Physics* sub-context and consist of three panels of options. Cloth is either an open or closed mesh and is mass-less, in that all cloth is assumed to have the same density, or mass per square unit."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:45
+# dc9fae10a577477b8d4c00144ff56b21
+msgid "Cloth is commonly modeled as a mesh grid primitive, or a cube, but can also be, for example, a teddy bear. However, Blender's :doc:`Softbody system </physics/soft_body/index>` provides better simulation of closed meshes; Cloth is a specialized simulation of fabrics."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:49
+# fb8c9facd9fe4efd97e6ba747507c0f7
+msgid "Once the object is designated as Cloth, a Cloth :doc:`modifier </modifiers/index>` will be added to the object's modifier stack automatically. As a :doc:`modifier </modifiers/index>` then, it can interact with other modifiers, such as *Armature* and *Smooth*. In these cases, the ultimate shape of the mesh is computed in accordance with the order of the modifier stack. For example, you should smooth the cloth *after* the modifier computes the shape of the cloth."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:56
+# b18d4bb45cd9491fa5f2167c6bd47ec5
+msgid "So you edit the Cloth settings in two places: use the F7 Physics buttons to edit the properties of the cloth and use the Modifier stack to edit the Modifier properties related to display and interaction with other modifiers."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:60
+# 9ed4987062194918a5a56b1adab7c012
+msgid "You can *Apply* the cloth modifier to freeze, or lock in, the shape of the mesh at that frame, which removes the modifier. For example, you can drape a flat cloth over a table, let the simulation run, and then apply the modifier. In this sense, you are using the simulator to save yourself a lot of modeling time."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:65
+# 11d81cae98014833aa612cb7517d5e7b
+msgid "Results of the simulation are saved in a cache, so that the shape of the mesh, once calculated for a frame in an animation, does not have to be recomputed again. If changes to the simulation are made, you have full control over clearing the cache and re-running the simulation. Running the simulation for the first time is fully automatic and no baking or separate step interrupts the workflow."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:72
+# 32e2a28b6af5484a9bc3a6df35f6d3c9
+msgid "Computation of the shape of the cloth at every frame is automatic and done in the background; thus you can continue working while the simulation is computed. However it is CPU-intensive and depending on the power of your PC and the complexity of the simulation, the amount of CPU needed to compute the mesh varies, as does the lag you might notice."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:78
+# 4b1e765f4891446d987c731ab6a21612
+msgid "Don't jump ahead"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:80
+# c145a1ed952348a2bc8829e2d5b26a07
+msgid "If you set up a cloth simulation but Blender has not computed the shapes for the duration of the simulation, and if you jump ahead a lot of frames forward in your animation, the cloth simulator may not be able to compute or show you an accurate mesh shape for that frame, if it has not previously computed the shape for the previous frame(s)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:87
+# 5a0f0a9e71df4ea5a8729a81e8612258
+msgid "Workflow"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:89
+# 56e2aa94869e42878787773097636812
+msgid "A general process for working with cloth is to:"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:91
+# addd2ff879fc482e8234dbf84df86123
+msgid "Model the cloth object as a general starting shape."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:92
+# 1a004fa2b49546cdb28cdf9ce782606a
+msgid "Designate the object as a \"cloth\" in the *Physics* tab of the *Properties* window."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:93
+# c28f82906f684a549a9c30ad446f06e3
+msgid "Model other deflection objects that will interact with the cloth. Ensure the Deflection modifier is last on the modifier stack, after any other mesh deforming modifiers."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:95
+# c35219366f464a879b9fbbf90184a0ba
+msgid "Light the cloth and assign materials and textures, UV-unwrapping if desired."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:96
+# dbcc9a99e6644bda9784e53ef3f1c12f
+msgid "If desired, give the object particles, such as steam coming off the surface."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:97
+# 895ce971206b455083ad6ba18069e0c3
+msgid "Run the simulation and adjust Options to obtain satisfactory results. The timeline window's VCR controls are great for this step."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:99
+# db2cf7d0a6af42d9b943790436bcb763
+msgid "Optionally age the mesh to some point in the simulation to obtain a new default starting shape."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:100
+# e3e2af88eca04e64a5b82bacdc43c067
+msgid "Make minor edits to the mesh on a frame-by-frame basis to correct minor tears."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:104
+# a594031e48e04a1483a4f0d6ffacfa83
+msgid "Creating Cloth Simulations"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:106
+# 39c32a0aa4f84000b7f7fff3d918684f
+msgid "This section discusses how to use those options to get the effect you want. First, enable *Cloth*. Set up for the kind of cloth you are simulating. You can choose one of the presets to have a starting point."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:110
+# 14ce4c28361443b78beaa16029c9ca1a
+msgid "As you can see, the heavier the fabric, the more stiff it is and the less it stretches and is affected by air."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:115
+# 7c9364ca99d749f1b8b8c8134e5949c2
+msgid "Cloth Panel"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:118
+# 1e9e98132a1d42338a36e40b237c9ac5
+msgid "Presets"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:118
+# 5e7681b01697449c98e62c5613101de7
+msgid "Contains a number of preset cloth examples, and allows you to add your own."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:122
+#: ../../../manual/physics/cloth.rst:217
+#: ../../../manual/physics/cloth.rst:243
+# 8dd060e35653410ab143d581b34fc898
+# c7854283fd71434a93b000b0f30d7e11
+# 696ceefb4d5a4d379ee85d233d4b0025
+msgid "Quality"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:121
+# f05fe02597d64e899b6ae7ba0439e64c
+msgid "Set the number of simulation steps per frame. Higher values result in better quality, but is slower."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:125
+# e95f3490716840149f307ee15c2549f7
+msgid "Material"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:127
+# 88f2c07638884aeabaa48f726ca04a94
+msgid "Mass"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:128
+# bee75b971dc5447dbf90a958d67ad9f1
+msgid "The mass of the cloth material."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:129
+# 895264b2be664828a4a572ede07c705d
+msgid "Structural"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:130
+# 8d5255c21d554b40b2d0f6c5f54b9cf2
+msgid "Overall stiffness of the cloth."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:133
+# e1b6e172f5024a22aa47bed934d88d44
+msgid "Bending"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:132
+# ad4b334e3d7f4f3f84adc885280010f1
+msgid "Wrinkle coefficient. Higher creates more large folds."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:136
+# a11199179e7b47e1b34a56cfa464c790
+msgid "Damping"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:138
+# 8234704163a6440e815e1646195f83ed
+msgid "Spring"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:139
+# b9e8bef3bc414f9ba162cc8999ddb02d
+msgid "Damping of cloth velocity. Higher = more smooth, less jiggling."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:142
+# 7ee4a40ee1104c1f814f31e4a1e42a2e
+msgid "Air"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:141
+# 4609d3d5dba447279e239dd53e372495
+msgid "Air normally has some thickness which slows falling things down."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:145
+# 83d10ed9803a44f099a506f5b1e538ba
+msgid "Pinning"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:150
+# e55515519e574aa08f723ca21801e368
+msgid "Cloth in action."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:153
+# 95ab7fd5c5ad443b9f0f232dbe25d1c7
+msgid "The first thing you need when pinning cloth is a :doc:`Vertex Group </modeling/meshes/vertex_groups/index>`. There are several ways of doing this including using the Weight Paint tool to paint the areas you want to pin (see the :doc:`Weight paint </modeling/meshes/vertex_groups/weight_paint>` section of the manual)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:157
+# 07ee8e085b14426eb2f709cc09c11b55
+msgid "Once you have a vertex group set, things are pretty straightforward; all you have to do is press the *Pinning of cloth* button in the *Cloth* panel and select which vertex group you want to use, and the stiffness you want it at."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:163
+# 44df1b2fa9b94918860af9133a2b6893
+msgid "Stiffness"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:162
+# a201e125c7994dd1b4df21c75a4b0df5
+msgid "Target position stiffness. You can leave the stiffness as it is; the default value of 1 is fine."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:183
+# 22b553a859e3441b8a9e87ecc73d3d67
+msgid "Collisions"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:185
+# a0d5d570d82f4661a8a95f6e8e8abd0a
+msgid "In most cases, a piece of cloth does not just hang there in 3D space, it collides with other objects in the environment. To ensure proper simulation, there are several items that have to be set up and working together:"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:189
+# 844fe08d396449c6853547119db8cddd
+msgid "The *Cloth* object must be told to participate in *Collision* s."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:190
+# e8d01791c1f644c385e56816b069e9f9
+msgid "Optionally (but recommended) tell the cloth to collide with itself."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:191
+# ed5653625ea4427d9bdb2cf92d994639
+msgid "Other objects must be visible to the *Cloth* object *via* shared layers."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:192
+# 5a3a2c8f396c4637aa0f230001ee3af2
+msgid "The other objects must be mesh objects."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:193
+# 1dbbb7991f7a41ab84a380ab6b839a9e
+msgid "The other objects may move or be themselves deformed by other objects (like an armature or shape key)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:194
+# f769a824aad446c884dc8a850fd1c53e
+msgid "The other mesh objects must be told to deflect the cloth object."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:195
+# 96330c72b23c4f2e882c6130d85d84c4
+msgid "The blend file must be saved in a directory so that simulation results can be saved."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:196
+# 815174f9bbc14ce0bc5157a5eddf5856
+msgid "You then *Bake* the simulation. The simulator computes the shape of the cloth for a frame range."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:197
+# 827b1698333d406d9b967b7aa0c1a219
+msgid "You can then edit the simulation results, or make adjustments to the cloth mesh, at specific frames."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:198
+# af9d2b6211a24dc998cedf9ed1f6233e
+msgid "You can make adjustments to the environment or deforming objects, and then re-run the cloth simulation from the current frame forward."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:203
+# a27e62e738234dc8a3dab7ff0223bfd4
+msgid "Collision Settings"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:208
+# 5460beecca8240c38338cb25b931ed06
+msgid "Cloth Collisions panel."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:211
+# eaca07feefac4a69974300ecd931ed42
+msgid "Now you must tell the *Cloth* object that you want it to participate in collisions. For the cloth object, locate the *Cloth Collision* panel, shown to the right:"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:214
+# e2e41392858245929a51aec154ab43c7
+msgid "Enable Collisions"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:215
+# 2d1adf2a8641452d97cbe19d99dd0b55
+msgid ":kbd:`LMB` click this to tell the cloth object that it needs to move out of the way."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:217
+# 3ea4fdfec6f8499195ea218cffa5326b
+msgid "A general setting for how fine and good a simulation you wish. Higher numbers take more time but ensure less tears and penetrations through the cloth."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:220
+#: ../../../manual/physics/cloth.rst:248
+# 137cbff5555045bf835d1eafb27b7da3
+# dfea3c3cd00445aea454aa3edf3ad70f
+msgid "Distance"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:220
+# 1ffc9bf1a6c842aab52d10ee0c4004ae
+msgid "As another object gets this close to it (in Blender Units), the simulation will start to push the cloth out of the way."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:222
+# 958c7d26361a41c69da09b98100aefcb
+msgid "Repel"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:223
+# 4c1154fae8044aec9771b3dc107f0673
+msgid "Repulsion force to apply when cloth is close to colliding."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:224
+# c1c30f02171547d6bddefabcd41151b3
+msgid "Repel Distance"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:225
+# da207db7e1ed475da259185346901211
+msgid "Maximum distance to apply repulsion force. Must be greater than minimum distance."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:229
+# d7a8e70370794bab86fc525d7febeabe
+msgid "Friction"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:227
+# c3e7a201a5c24f2cb4a381c3431c59b1
+msgid "A coefficient for how slippery the cloth is when it collides with the mesh object. For example, silk has a lower coefficient of friction than cotton."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:232
+# 52f6ad7d18004d1ba0b2867b379fc70a
+msgid "Self-collisions"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:234
+# 1a49408f88db435ca10b96fe740828d8
+msgid "Real cloth cannot permeate itself, so you normally want the cloth to self-collide."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:238
+# c01c72fb7a4f43e0be26e472774966a3
+msgid "Enable Self Collisions"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:237
+# 0aa0ad22d49349f2a5b084b09fdc5a28
+msgid "Click this to tell the cloth object that it should not penetrate itself. This adds to simulation compute time, but provides more realistic results. A flag, viewed from a distance does not need this enabled, but a close-up of a cape or blouse on a character should have this enabled."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:241
+# eadfdad0c8bd437d919d2dd186a76e15
+msgid "For higher self-collision quality just increase the *Quality* and more self collision layers can be solved. Just keep in mind that you need to have at least the same *Collision Quality* value as the *Quality* value."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:246
+# c6a6c88826db4ef0bd116ba795dbcc0a
+msgid "If you encounter problems, you could also change the *Min Distance* value for the self-collisions. The best value is 0.75; for fast things you better take 1.0. The value 0.5 is quite risky (most likely many penetrations) but also gives some speedup."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:250
+# 9ed7125f4b984c8ba3aca407aa45221a
+msgid "Regression blend file: `Cloth selfcollisions <http://wiki.blender.org/index.php/Media:Cloth-regression-selfcollisions.blend>`__."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:255
+# 46ae1179bb454ceb9b5a22337721ba21
+msgid "Shared Layers"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:257
+# 1a504f49afd74d4b813c860bac94b8d5
+msgid "Suppose you have two objects: a pair of Pants on layers 2 and 3, and your Character mesh on layers 1 and 2. You have enabled the Pants as cloth as described above. You must now make the Character \"visible\" to the Cloth object, so that as your character bends its leg, it will push the cloth. This principle is the same for all simulations; simulations only interact with objects on a shared layer. In this example, both objects share layer 2."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:266
+# 7e055b7b28a649b8a3d31c6a3e65a1b7
+msgid "To view/change an object's layers, :kbd:`RMB` click to select the object in *Object* mode in the 3D view. :kbd:`M` to bring up the \"Move Layers\" popup, which shows you all the layers that the object is on. To put the object on a single layer, :kbd:`LMB` click the layer button. To put the object on multiple layers, :kbd:`Shift-LMB` the layer buttons. To remove an object from a selected layer, simply :kbd:`Shift-LMB` the layer button again to toggle it."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:276
+# f8434d374c0f48e18478c152d1ebfb2a
+msgid "Mesh Objects Collide"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:278
+# ce39d3b6f3e544bd9afda48c429e9fda
+msgid "If your colliding object is not a mesh object, such as a NURBS surface, or text object, you must convert it to a mesh object. To do so, select the object in object mode, and in the 3D View header, select *Object* --> *Convert Object Type* (:kbd:`Alt-C`), and select *Mesh* from the popup menu."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:285
+# a0cda492ece548cabc4ede9fa7d36b93
+msgid "Cloth - Object collisions"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:290
+# 1c71ed6e9d3e497eabe5086af5912cc6
+msgid "Collision settings."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:293
+# f315024ecb1a45609715744b939862bb
+msgid "The cloth object needs to be deflected by some other object. To deflect a cloth, the object must be enabled as an object that collides with the cloth object. To enable Cloth - Object collisions, you have to enable deflections on the collision object (not on the cloth object)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:298
+# 8cfc268efbf04484b213a6f06e3939d6
+msgid "In the *Buttons* window, *Object* context, *Physics* sub-context, locate the *Collision* panel shown to the right. It is also important to note that this collision panel is used to tell all simulations that this object is to participate in colliding/deflecting other objects on a shared layer (particles, soft bodies, and cloth)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:307
+# 5e0824c0647f4292999eeadfdde5db61
+msgid "There are three different *Collision* panels, all found in the *Physics* sub-context. The first (by default), a tab beside the *Fields* panel, is the one needed here. The second panel, a tab in the *Soft Body* group, concern softbodies (and so has nothing to do with cloth). And we have already seen the last one, by default a tab beside the *Cloth* panel."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:314
+# c1dfdff8dbd44d7cb93e25b8a3f16d2c
+msgid "Mesh Object Modifier Stack"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:319
+# 2eb7b466791847a69510b10c0c02e487
+msgid "Collision stack."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:322
+# f93c734c40ac474fb82b15a31a7eefe3
+msgid "The object's shape deforms the cloth, so the cloth simulation must know the \"true\" shape of that mesh object at that frame. This true shape is the basis shape as modified by shape keys or armatures. Therefore, the *Collision* modifier must be **after** any of those. The image to the right shows the *Modifiers* panel for the Character mesh object (not the cloth object)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:331
+# a962b4b6f7f345e3a168af7d17579980
+msgid "Cloth Cache"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:333
+# 5eaaa0659cbf47a39b9cf43b7cd0c104
+msgid "Cache settings for cloth are the same as with other dynamic systems. See :doc:`Particle Cache </physics/particles/cache_and_bake>` for details."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:338
+# bea1dca5be18458ea26deae60eca4286
+msgid "Bake Collision"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:343
+# 34c7dbc3a11a40aa915543e71f8c53d0
+msgid "After Baking."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:346
+# 07903e9c98c447f088318819d605fe30
+msgid "After you have set up the deflection mesh for the frame range you intend to run the simulation (including animating that mesh *via* armatures), you can now tell the cloth simulation to compute (and avoid) collisions. Select the cloth object and in the *Object* context, *Physics* sub-context, set the *Start* and *End* settings for the simulation frames you wish to compute, and click the *Bake* button."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:353
+# c2dd256644de47db9aedfdfb43a81be4
+msgid "You cannot change *Start* or *End* without clearing the bake simulation. When the simulation has finished, you will notice you have the option to free the bake, edit the bake and re-bake:"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:357
+# 92eadb654da44fbe96404228abc4a228
+msgid "There's a few things you'll probably notice right away. First, it will bake significantly slower than before, and it will probably clip through the box pretty badly as in the picture on the right."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:363
+# ba67219670c44dc3ab2be232b7b684a1
+msgid "Editing the cached simulation"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:365
+# bf1a26ea8af24653a7b717a7c94ee834
+msgid "The cache contains the shape of the mesh at each frame. You can edit the cached simulation, after you've baked the simulation and pressed the *Bake Editing* button. Just go to the frame you want to fix and :kbd:`Tab` into *Edit mode*. There you can move your vertices using all of Blender's mesh shaping tools. When you exit, the shape of the mesh will be recorded for that frame of the animation. If you want Blender to resume the simulation using the new shape going forward, :kbd:`LMB` click *Rebake from next Frame* and play the animation. Blender will then pick up with that shape and resume the simulation."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:374
+# 9d2914c575af491fa60bf6a323961816
+msgid "Edit the mesh to correct minor tears and places where the colliding object has punctured the cloth."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:377
+# c1d8bc9eb51442f3bf93d68608cb3fbf
+msgid "If you add, delete, extrude, or remove vertices in the mesh, Blender will take the new mesh as the starting shape of the mesh back to the *first frame* of the animation, replacing the original shape you started with, up to the frame you were on when you edited the mesh. Therefore, if you change the content of a mesh, when you :kbd:`Tab` out of *Edit mode*, you should unprotect and clear the cache ..    Comment: <!--''From next frame'' ???--> . so that Blender will make a consistent simulation."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:387
+# 7faa8c1683a047e79a4599180f543ab4
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:389
+# b195177f32aa4e37a1562952ea328525
+msgid "If you encounter some problems with collision detection, there are two ways to fix them:"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:392
+# e13689fafc16463a899f3af53fb9578c
+msgid "The fastest solution is to increase the *Min Distance* setting under the *Cloth Collision* panel. This will be the fastest way to fix the clipping; however, it will be less accurate and won't look as good. Using this method tends to make it look like the cloth is resting on air, and gives it a very rounded look."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:395
+# 2ac67eed34464c9e99bef7fedb53face
+msgid "A second method is to increase the *Quality* (in the first *Cloth* panel). This results in smaller steps for the simulator and therefore to a higher probability that fast-moving collisions get caught. You can also increase the *Collision Quality* to perform more iterations to get collisions solved."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:399
+# 74c4bb5e32f04fdb83886458fe4b3462
+msgid "If none of the methods help, you can easily edit the cached/baked result in *Edit mode* afterwards."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:400
+# 30b57325ccdd42a8a3c85b4e63d1d3d0
+msgid "My Cloth is torn by the deforming mesh - he \"Hulks Out\": Increase its structural stiffness (*StructStiff* setting, *Cloth* panel), very high, like 1000."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:404
+# b5e119e13fd445b19c7c519746b83796
+msgid "*Subsurf* modifier"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:406
+# 413444ce09c848e19f22f6f16ea42f93
+msgid "A bake/cache is done for every subsurf level so please use **the equal** subsurf level for render and preview."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:410
+# edd8f36ead1c4535a5bf17fcff6aff7f
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:412
+# c062d9b512034608a60014e15a16fdc9
+msgid "To start with cloth, the first thing you need, of course, is some fabric. So, let's delete the default cube and add a plane. I scaled mine up along the Y axis, but you don't have to do this. In order to get some good floppy and flexible fabric, you'll need to subdivide it several times. I did it 8 times for this example. So :kbd:`Tab` into *Edit mode*, and press :kbd:`W` --> *Subdivide multi*, and set it to 8."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:419
+# 21abd1ada72b4ce98ec871e522af1f8a
+msgid "Now, we'll make this cloth by going to the *Object* context (:kbd:`F7`) --> *Physics* sub-context. Scroll down until you see the *Cloth* panel, and press the *Cloth* button. Now, a lot of settings will appear, most of which we'll ignore for now."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:424
+# 3004f8e00ae241c0a7cac4d713c191e2
+msgid "That's all you need to do to set your cloth up for animating, but if you hit :kbd:`Alt-A`, your lovely fabric will just drop very un-spectacularly. That's what we'll cover in the next two sections about pinning and colliding."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:430
+# ec7b505395fc4b8ca333a474339fd6e4
+msgid "Using Simulation to Shape/Sculpt a Mesh"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:432
+# 8033c1061eca4420a43bea0cac92fad0
+msgid "You can *Apply* the *Cloth* modifier at any point to freeze the mesh in position at that frame. You can then re-enable the cloth, setting the start and end frames from which to run the simulation forward."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:436
+# 9e4e566a9d0d4cd6b4e6c50f4ed8a159
+msgid "Another example of aging is a flag. Define the flag as a simple grid shape and pin the edge against the flagpole. Simulate for 50 frames or so, and the flag will drop to its \"rest\" position. Apply the *Cloth* modifier. If you want the flag to flap or otherwise move in the scene, re-enable it for the frame range when it is in camera view."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:445
+# 4bd7dc6d7dae4f75967321084d72673c
+msgid "Smoothing of Cloth"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:447
+# 5e9b6ef2a27949d8acf5b5236c1426d8
+msgid "Now, if you followed this from the previous section, your cloth is probably looking a little blocky. In order to make it look nice and smooth like the picture you need to apply a *Smooth* and/or *Subsurf* modifier in the *Modifiers* panel under the *Editing* context (:kbd:`F9`). Then, in the same context, find the *Links and Materials* panel (the same one you used for vertex groups) and press *Set Smooth*."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:454
+# bab143c52c5343b28c185f5f1395e391
+msgid "Now, if you hit :kbd:`Alt-A`, things are starting to look pretty nice, don't you think?"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:458
+# 3b083659c13b49d4b363a2c795cff24e
+msgid "Cloth on armature"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:460
+# cb23a25a6b47456eb045b3bfcd4af55e
+msgid "Cloth deformed by armature and also respecting an additional collision object: `Regression blend file <http://wiki.blender.org/index.php/Media:Cloth-regression-armature.blend>`__."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:465
+# a3c0d5f3e8994522b9e26acc5172f979
+msgid "Cloth with animated vertex groups"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:467
+# 96a7472c8b324945afa3e8bb56815506
+msgid "Cloth with animated pinned vertices: `Regression blend file <http://wiki.blender.org/index.php/Media:Cloth_anim_vertex.blend>`__. UNSUPPORTED: Starting with a goal of 0 and increasing it, but still having the vertex not pinned will not work (e.g. from goal = 0 to goal = 0.5)."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:474
+# 91758eba6355433493b2baffa94a2441
+msgid "Cloth with Dynamic Paint"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:476
+# 77a8a6601ccc4fbbae9786257d66fd35
+msgid "Cloth with Dynamic Paint using animated vertex groups: `Regression blend file <http://wiki.blender.org/index.php/Media:Cloth_dynamic_paint.blend>`__. UNSUPPORTED: Starting with a goal of 0 and increasing it, but still having the vertex not pinned will not work (e.g. from goal = 0 to goal = 0.5) because the necessary \"goal springs\" cannot be generated on the fly."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:483
+# c4a9aba47254448b96c3d68ccbed604a
+msgid "Using Cloth for Softbodies"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:488
+# 12677af5292249da8ff480c629b82e50
+msgid "Using cloth for softbodies."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:491
+# f6434a3601ef437681342babd8de1200
+msgid "Cloth can also be used to simulate softbodies. It's for sure not its main purpose but it works nonetheless. The example image uses standard *Rubber* material, no fancy settings, just :kbd:`Alt-A`."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:496
+# b86e9a63664d4065bab611595ef93322
+msgid "Blend file for the example image: `Using Cloth for softbodies <http://wiki.blender.org/index.php/Media:Cloth-sb1.blend>`__."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:501
+# 482a43883b2b47b885fc2405efc2d1c8
+msgid "Cloth with Wind"
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:506
+# 429fb1fb84d948669ae29417edff5b6b
+msgid "Flag with wind applied."
+msgstr ""
+
+#: ../../../manual/physics/cloth.rst:509
+# f9fb9119f9124b948b2b5468894c9cec
+msgid "Regression blend file for Cloth with wind and self collisions (also the blend for the image above): `Cloth flag with wind and selfcollisions <http://wiki.blender.org/index.php/Media:Cloth-flag2.blend>`__."
+msgstr ""
+

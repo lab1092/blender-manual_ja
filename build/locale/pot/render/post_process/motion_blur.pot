@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/post_process/motion_blur.rst:4
+# eec10f0f51e441039e4335f50181ea50
+msgid "Motion Blur"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:6
+# e85a6ce151c7412eb14aed03202433a3
+msgid "Blender's animations are by default rendered as a sequence of *perfectly still* images. This is unrealistic, since fast-moving objects do appear to be 'moving', that is, blurred by their own motion, both in a movie frame and in a photograph from a 'real-world camera'. To obtain such a Motion Blur effect, Blender can be made to render the current frame and some more frames, in between the real frames, and merge them all together to obtain an image where fast-moving details are 'blurred'."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:17
+# faa21ebdfcd545b1ae6c94b831c63ee1
+msgid "The Human Eye"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:19
+# 7685109bbde54a69b03bcbd70477780c
+msgid "Our brains process about 15 images from each eye in parallel each second. My brain cognates those images together and I perceive motion by comparing the two. If something is moving fast enough, I perceive it to be a blur (either because my rods have some latency in reacting to light, or my brain, in overlaying and differencing the images, somehow merges them in a mix sort of fashion). The POINT IS, I *perceive* a motion blur."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:28
+# bcbfae56ce174b6cb8613e08058d1fc4
+msgid "In Film"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:30
+# 62d13855cfab483daeaa1416422fde2c
+msgid "To keep us from seeing jumpy motion pictures, we simply doubled the frame rate to 30 frames per second (fps) (24 fps EU). So, the shutter is basically open for a 30th of a second and the film is exposed to the world for that length of time. As things moved in the real world during that time, the film exposure caused the image of the moving thing to be physically blurred or smeared on that frame. When developed and shown, we physically see an image that is blurred. The POINT IS, I *see* a blurred image."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:40
+# b3e03bff40a442ecba614aa9752d95b9
+msgid "In CG"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:42
+# 9e2bcf97b97543f8bc487d07ada42aee
+msgid "In CG, when a frame is rendered, the computer knows exactly where everything should be, and renders it as such. From frame to frame, an object is location A in frame 1, and location B in frame 2. When we show you these two frames at speed (30 fps), the image appears jumpy to us, because somewhere between the eyeballs and the film, there isn't that same blurring as in the real world and film, and we can tell."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:50
+# ddcd045115ff4535aa6521a5cb1e1474
+msgid "Motion Blur in Blender"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:52
+# ea12535ed942419aa2097593f7780dbe
+msgid "So, how can we make a blurry CG image? Blender has two ways to achieve Motion Blur:"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:56
+# c685e221bbaa4787bcd7e489c88611e9
+msgid "Sampled Motion Blur"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:58
+# 9788fa3eec29475c932e6c693ee5df12
+msgid "This method is slow, but produces better results. It can be activated in the motion blur section in the render options panel."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:62
+# 4f333eee1f854670bf349808d67f90ca
+msgid "Motion Samples"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:62
+# 326738673e7449859c92f7a91b0bff4f
+msgid "Set the number of samples to take for each frame."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:66
+# 4aec1878fd4f4c2e913572f7d30b3124
+msgid "Shutter"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:65
+# 7fadcd177069488fb3c75eb38eb4970e
+msgid "Time Taken in frames between shutter open and close."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:69
+# a52748cf076b411d8fd84a8b1105e047
+msgid "Vector Blur"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:71
+# 57ab7facc7f54774acd22ec72e0447b3
+msgid ":doc:`Vector Blur </composite_nodes/vector_blur#vector-based_motion_blur>` is faster but sometimes has unwanted side-effects - which can be avoided, though. Vector blur is a process done in compositing, by rendering the scene without any blur, plus a pass that has movement information for each pixel. This information is a vector map which describes a 2d or 3d direction and magnitude. The compositor uses that data to blur each pixel in the given direction."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:80
+# 69b75828cfa84f6cbeaf88882f76698c
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:82
+# 4d748edea29e4ede9164011260fa5358
+msgid "To better grasp the concept, let's assume that we have a cube, uniformly moving 1 Blender unit to the right at each frame. This is indeed fast, especially since the cube itself has a side of only 2 Blender units."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:86
+# 3cc534ca89274ca1bef227b4761f7d88
+msgid "*Image 1* shows a render of frame 1 without Motion Blur; *Image 2* shows a render of frame 2. The scale beneath the cube helps in appreciating the movement of 1 Blender unit."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:95
+# 786ce86fe69c4e7ebde1faecabbb5c34
+msgid "Image 1. Frame 1 of moving cube without Motion Blur."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:100
+# 1397764726774ecbb458102383408314
+msgid "Image 2. Frame 2 of moving cube without Motion Blur."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:107
+# c148168fafc34351b4cd56dc4ac13b5d
+msgid "*Image 3* on the other hand shows the rendering of frame 1 when Motion Blur is set and 8 'intermediate' frames are computed. *Shutter* is set to 0.5; this means that the 8 'intermediate' frames are computed on a 0. 5 frame period starting from frame 1. This is very evident since the whole 'blurriness' of the cube occurs half a unit before and half a unit after the main cube body."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:112
+# a792485c9a10488099fdaa6ffbaba6c7
+msgid "*Image 4* and *Image 5* show the effect of increasing Bf values. A value greater than 1 implies a very 'slow' camera shutter."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:125
+# 09434094a1374411a056a8646ceb1bea
+msgid "Better results than those shown can be obtained by setting 11 or 16 samples rather than 8, but, of course, since as many *separate* renders as samples are needed, a Motion Blur render takes that many times more time than a non-Motion Blur one."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:131
+# 124db1012cf8438f97b2dc5c34d1acc7
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:133
+# dfb9aca5e2da42e4b1a0f52a3ad697fb
+msgid "If Motion Blur is active, even if nothing is moving in the scene, Blender actually 'jitters' the camera a little between an 'intermediate' frame and the next. This implies that, even if Anti-Aliasing is off, the resulting images have nice Anti-Aliasing. MBLUR-obtained Anti-Aliasing is comparable to Anti-Aliasing of the same level, but is generally slower."
+msgstr ""
+
+#: ../../../manual/render/post_process/motion_blur.rst:139
+# 08dc9b5daf304fb49bd25fb1339aa567
+msgid "This is interesting since, for very complex scenes where a level 16 Anti-Aliasing does not give satisfactory results, better results can be obtained using *both* Anti-Aliasing and MBlur. This way you have as many samples per frame as you have 'intermediate' frames, effectively giving oversampling at levels 25, 64, 121, 256 if 5,8,11,16 samples are chosen, respectively."
+msgstr ""
+

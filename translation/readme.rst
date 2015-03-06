@@ -5,9 +5,9 @@
 This directory is customized contents from the **blender_docs** SVN repository.
 
 .. note::
-   this repository is for testing:
+   Currently, this repository is for testing:
    
-      * to make the steps to build i18ned document.
+      * to make the steps how to make i18ned documentation workflow.
 
 .. caution::
     Do not commit files to original BF documentation repogitory from this repo.
@@ -16,7 +16,7 @@ This directory is customized contents from the **blender_docs** SVN repository.
 Translation steps for blender-manual
 *************************************
 
-(on OS X 10.10)
+(on OS X 10.10 & Python 2.7)
 
 below is a sample for adding 'ja' locale.
 you can try translation to your own Sphinx project.
@@ -24,10 +24,13 @@ you can try translation to your own Sphinx project.
 :svnroot: ~/GitHub/blender_docs
 :projectroot: ~/GitHub/blender-manual_i18n
 :documentroot: ~/GitHub/blender-manual_i18n/manual
-:pot files: ~/GitHub/blender-manual_i18n/locale/pot
-:po files(ja): ~/GitHub/blender-manual_i18n/locale/ja
-:html files(en): ~/GitHub/blender-manual_i18n/html/en
-:html files(ja): ~/GitHub/blender-manual_i18n/html/ja
+:pot files: ~/GitHub/blender-manual_i18n/build/locale/pot
+:po files(ja): ~/GitHub/blender-manual_i18n/build/locale/ja
+:html files(en): ~/GitHub/blender-manual_i18n/build/html/en
+:html files(ja): ~/GitHub/blender-manual_i18n/build/html/ja
+
+  .. note::
+     BUILDDIR = build
 
 
 Install sphinx-intl package
@@ -55,7 +58,7 @@ Change  locale directory and gettext option in manual/conf.py
 
    .. code-block::
 
-      locale_dirs = ['../locale/']   # path is example but recommended.
+      locale_dirs = ['../build/locale/']   # path is example but recommended.
       gettext_compact = False     # optional. 
 
 Chanege output folder in Make file
@@ -76,7 +79,7 @@ after add 'gettext' target , run ``make gettext`` command.
    .. code-block::
 
       $ cd ~/GitHub/blender-manual_i18n
-      $ sphinx-build -b gettext ./manual ./locale/pot
+      $ sphinx-build -b gettext ./manual ./build/locale/pot
 
 
 Update message file
@@ -87,7 +90,7 @@ To sync messages to ja locale, run the command
    .. code-block::
 
       $ cd ~/GitHub/blender-manual_i18n
-      $ sphinx-intl update -d ./locale/ -p ./locale/pot -l ja
+      $ sphinx-intl update -d ./locale/ -p ./build/locale/pot -l ja
 
 
 Translate it
@@ -122,13 +125,13 @@ Bulid mo files:
 
    .. code-block::
 
-      $ sphinx-intl build -d ./locale/
+      $ sphinx-intl build -d ./build/locale/
 
 Bulid html files(ja)
 
    .. code-block::
 
-      $ sphinx-build -D language='ja' -b html ./manual ./html/ja
+      $ sphinx-build -D language='ja' -b html ./manual ./build/html/ja
 
 Bulid html files(en)
 
@@ -164,7 +167,7 @@ Japanese Translation Sample
 
 
 
-[EOF]
+
 
 #########
   Readme

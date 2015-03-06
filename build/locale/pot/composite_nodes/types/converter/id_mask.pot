@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:4
+# 637f7d66372344efa9ec65d41d35fab2
+msgid "ID Mask Node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:8
+# 1a21f70f4893413197aa4c3346112f51
+msgid "ID Mask node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:11
+# 0fac4b06191d48cd9611407964bec72a
+msgid "This node will use the Object Index pass (see RenderLayers) to produce an anti-aliased alpha mask for the object index specified. The mask is opaque where the object is, and transparent where the object isn't. If the object is partially transparent, the alpha mask matches the object's transparency. This post-process function fills in the jaggies with interpolated values."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:17
+# 0eeb986d3d73431bad754e9a61b04706
+msgid "Object Index"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:19
+# 8e2a2a3262d849cc9426dfe374201b14
+msgid "Object indices are only output from a RenderLayers node or stored in a multilayer OpenEXR format image."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:24
+# f3b7824c74274565bf44d42754301137
+msgid "Setting an Object Index"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:27
+# 85b0ffa3fcd14c5eb45337462df8abc0
+msgid "You can specify, for any of the objects in your scene, an Object Index as shown the right (the currently select object has an index of 2). When rendered, if Object Index passes are enabled, its index will be 2, and setting the ID Mask node to 2 will show where that object is in the scene."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:32
+# 0f1a8e5d48064b68beebd53fd289e66e
+msgid "This node is extremely well suited to removing the aliases shown as output from the Defocus node or DOF noodles caused by some objects being close to camera against objects far away."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:37
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:42
+# 723582043d53411a9eee7013b4c1d1e5
+# 176e8474100647849f69deb0f0fdf6c6
+msgid "Example"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:45
+# 0e83b5f4433a41bdbd1a091dc2a3e784
+msgid "In this example, the left rear red cube is assigned PassIndex 1, and the right cube PassIndex 2. Where the two cubes intersect, there is going to be noticeable pixelation (jaggies) because they come together at a sharp angle and are different colors. Using the mask from object 1, which is smoothed (anti-aliased) at the edges, we use a Mix node set on Multiply to multiply the smoothed edges against the image, thus removing those nasty (Mick) Jaggies. Thus, being smoothed out, the Rolling Stones gather no moss. (I really hope you get that obscure reference :)"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/converter/id_mask.rst:54
+# e78d81cf5e9a47bf9cbfc743ba5e0e05
+msgid "Note that the mask returns white where the object is fully visible to the camera (not behind anything else) and black for the part of the object that is partially or totally obscured by a fully or partially opaque object in front of it. If something else is in front of it, even if that thing is partially transparent and you can see the object in a render, the mask will not reflect that partially obscured part."
+msgstr ""
+

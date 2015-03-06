@@ -1,0 +1,633 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modifiers/generate/booleans.rst:4
+# f18e3c186d014173b9e59c9baa4401f3
+msgid "Boolean Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:7
+# efa4c3e2214a4c3581ed3b51464ccc1b
+msgid "Introduction"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:9
+# 2b8c5ed5693e477e9896f01332436cd3
+msgid "The Boolean modifier performs operations on meshes that are otherwise too complex to achieve with as few steps by editing meshes manually, meaning you can achieve results with little effort to make mesh operations like Unions, Differences and Intersections."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:13
+# b964d2b5964c49d880d9b9afad569fb1
+msgid "The Boolean modifier uses one of three Boolean operations (*Difference* (negation), *Union* (conjunction), and *Intersect* (disjunction)) to create a single compound object out of two mesh objects."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:20
+# bde098e572954a83ad1e5b56814b87e4
+msgid "Fig. 1 - The Union, Intersection and Difference between a Cube and a UV Sphere, with the modifier applied to the Sphere and using the cube as target. (Detail, Union is using Ngons)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:25
+# ad63dd45564f4e28aafff0e66a2d6aeb
+msgid "Description"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:27
+# 28c09fb69fca49b786f6b7aee1e57880
+msgid "The Boolean modifier can only be used on mesh objects."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:29
+# aeeed23ae0af40c788c0ad0fc7f2d136
+msgid "It performs one of the three Boolean Operations for the faces of open or closed volumes that creates a complete topology in the faces it's being used. This means that this modifier will only work properly for the intersection of faces of the two meshes that will result in another closed loop of edges (filled with faces), creating a new resulting face topology."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:34
+# 681382f1fc394b1eac230f80a8076385
+msgid "The Boolean modifier is non-destructive for the target; it uses the topology of the target to make the calculations, but you will still have the target in the scene. In normal conditions, using face normals pointed outside, when you apply the Boolean modifier operation, the modified mesh will receive changes in topology, and you will have to move or hide the target to see the resulting mesh. The only exception is when you are using inverted normals; in this case, depending on the calculations, you will also change the topology of the target. You can see one example of a target being modified in the :ref:`Materials <boolean_materials>` section in this page, see Fig. 7 and 8."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:43
+# ebc30cc022d54e76b8888b3eb13c31d2
+msgid "The results of the mesh operation will only be shown in Object Mode of the 3D View."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:46
+# 473e37d82eae4554a908f21629077775
+msgid "The Boolean modifier works with open and closed volumes."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:47
+# 727f1218274341de98e2c2ae7d906216
+msgid "The Boolean modifier doesn't work on edges without faces."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:48
+# 74fcf9b099be4472a9d731a780ccf58d
+msgid "The target topology determines the new topology of the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:49
+# 5d1fd664732b43e9ac628f6f73af45be
+msgid "The face normals are taken into account for the calculations."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:50
+# f2718f1a30bd4639a4083c7f9a2057da
+msgid "Whether faces are marked for smooth or flat for shading doesn't affect the calculations of this modifier. (See Fig. 28 and 29.)"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:52
+# 10f82c1495de4ee9b7a02b1b07d9af8c
+msgid "The line at which this modifier is calculated is delimited by the first tangential contact between faces of the modified mesh and target."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:56
+# 20b8d6ae097948bca94a71a3867f6a92
+msgid "This is a dynamic real-time modifier!"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:58
+# 25af44d61a144c5eb66f0226a6cd0260
+msgid "If you have marked your Objects to show the Edges (in Properties Window, Object context, Display panel, enable *Wire*), you will see the Edge creation process while you're moving your Objects. Depending on your mesh topology, you can also enable X-Ray and Transparency and see the topology being created in real time."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:65
+# d34f5db97b7e4fc48fe8d3f8c9e73d70
+msgid "Usage"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:67
+# 6fa69cad5b1e4f25a7aaade109d85876
+msgid "Using the default Blender install, with the desired mesh Object selected, go to the *Properties Window* which is located at the right of your Blender Screen, below the Outliner. Click on the Modifiers Context, which is represented by a wrench (see Fig. 2 - The Boolean modifier; the wrench is highlighted in blue). Then, click on the *Add Modifier* Button and Blender will show you a list of all of the available Modifiers. The Boolean modifier is located on the third row in the *Generate* Column."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:74
+# dcfa82c4f96744179f2747c546cf68b7
+msgid "You can also click on the *Add Modifier* Button and use :kbd:`N` to add the Boolean modifier, or use Blender search with the shortcut :kbd:`Spacebar` and type \"Add Modifier\", click on *Add Modifier* and press :kbd:`N`."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:79
+# 64baad7772ef41fbae8bb0363eec43b2
+msgid "When you add the Boolean modifier for an Object, Blender will need a second Object to perform the operation. You can use open or closed Meshes, as long as they have faces for calculations."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:83
+# 8d5acd9abebb4cba99b180cecdffe976
+msgid "You can add one or more modifiers of this type for an Object but you can only apply one operation for the Boolean modifier at a time."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:88
+# 6bcf0c7c3e594868bc34f59b680aa86e
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:92
+# 7cc07f34df364730be62d7f21990b08c
+msgid "Fig. 2 - The Boolean Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:96
+# c04f196b2a2442b9b22eccf968d92de0
+msgid "Operations"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:120
+# 6920d96fa90c43de9213298e6f480f22
+msgid "Operation"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:99
+# bdc929be37e84496a6f69c9af6dcc28d
+msgid "Which boolean operation will be used."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:106
+# 6a1356e8c90e41129180956b2a534e7c
+msgid "Difference"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:102
+# 77f924f2504346b4a047e959d32d9cba
+msgid "The modified mesh is subtracted from the target mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:104
+# 5fa46c54e56541588b4e4d231df27b7e
+msgid "If the target Mesh has inverted normals, Blender will Intersect the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:105
+# bd6e528c00d346e38618d9c75b3f6566
+msgid "If the modified Mesh has inverted normals, Blender will add both meshes (Union)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:106
+# 0ae8d4668cf64379a6828262cb142732
+msgid "If both Meshes use inverted normals, Blender will Intersect the target Mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:113
+# 1278dff30dac40a59ccc89f52472b7d3
+msgid "Union"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:109
+# c69c8cd1285d4b28895f3f3ae61a16e6
+msgid "The target mesh is added to the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:111
+# 5af16185b26747dd8468bc27320b757a
+msgid "If the target Mesh has inverted normals, Blender will Intersect the target Mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:112
+# 42f489ddd41a4cf381aaffdbbc5398a9
+msgid "If the modified Mesh has inverted normals, Blender will subtract the target Mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:113
+# 347363a2e2614db6988c717781761728
+msgid "If both Meshes use inverted normals, Blender will Intersect the modified Mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:120
+# 28671a4888634bde8f4330decee4800e
+msgid "Intersect"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:116
+# 10b6dd03f62a4f98936e026690d76daf
+msgid "The target mesh is subtracted from the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:118
+# 32bd962920f446b69dcbe297a3a5e2ca
+msgid "If the target Mesh has inverted normals, Blender will subtract the target Mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:119
+# 7fa77b21346c4e698828fe61532385fb
+msgid "If the modified Mesh has inverted normals, Blender will intersect the target Mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:120
+# 89d7f3a2ac98486e983f5506cf65e2fd
+msgid "If both Meshes use inverted normals, Blender will add both meshes (Union)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:124
+# 512bb01b73a2426fbdd564620800476b
+msgid "Object"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:123
+# 94404df163e64db9a76952ecc60cadd6
+msgid "The name of the target mesh object."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:129
+# 7c684c1eb1c342faad111b6c8ae6a87e
+msgid "Materials"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:131
+# 9f865cdf69f543c9a7efa4a93375c313
+msgid "The Boolean modifier preserves the Materials of the participant Meshes, including their basic textures and mappings, and the modified mesh will receive its first active material index assigned to its new topology (the first active material)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:135
+# 9c36603700374b33b849195a47b2ae38
+msgid "The only exception is the difference operation when the normals of the target and modified mesh are inverted (Fig 7 and 8). In this case, Blender will project the textures in an inverted direction over the target using the center contact of the meshes as a pivot and the resulting mesh will have the modified mesh subtracted from the target. For complex target meshes in some particular cases, you may have to reassign materials to faces because Blender will use the possible projection, and this may result in a sub-optimal texture assignment."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:143
+# 420e8f46fc324b68bd0034e6c0e3cedf
+msgid "Below, some examples are shown to exemplify how materials work with the Boolean modifier; we took the cube as the modified mesh, and the icosphere as the target with one material (white). We added four different indexes to one of the faces of the cube, leaving another basic material in the other faces. Fig. 3 shows how the Boolean modifier interacts with the materials. Figs. 4, 5 and 6 show three different Boolean operations applied to the modified mesh. The meshes used have normals pointed outwards (Normal meshes). See their captions for more information."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:155
+# cc79d10f8933467ca25da167006d8d39
+msgid "Fig. 3 - Cube with Multi-Material Mesh (modified) and Icosphere (target) with basic Material"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:160
+# 8a566f87d4cb4fa8a355daba0ec3e9bd
+msgid "Fig. 4 - Union - The first active Material of the Cube is added to the new topology; other materials remain in the old topology"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:166
+# b12f15e65f974a17a99d849edc92f60b
+msgid "Fig. 5 - Difference - The Icosphere was subtracted from the Cube; the new topology has received the first active Material of the Cube"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:172
+# e954fe0a8dc942bc8464bc498e048b67
+msgid "Fig. 6 - Intersect - The resulting Mesh was copied and rotated 180- - You can see the first active material of the cube in the back face (new topology); the front face received the 4 basic materials of the cube."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:177
+# f1b297fa9f224cd6bb3216ffaeb3baaa
+msgid "In our last examples (Figs. 7 and 8) of how the Boolean modifier works with Materials, we have inverted normals for both the target (Icosphere) and modified mesh (Cube). As we said before, this is an exception rather than the rule. As you can see, the target received the materials of the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:185
+# 35d81f992d7741088a3f2d8eb907d53c
+msgid "Fig. 7 - Front of the target with the modified mesh materials"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:190
+# 7095afbef67c40fba2957cb980546a28
+msgid "Fig. 8 - Back of the target with the modified mesh materials"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:194
+# 9019e473bd5c4b289535410c21e3a694
+msgid "UV Mappings"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:196
+# 6187c974e36c4852800b0cb0cd924249
+msgid "When you map UV Images to your target, Blender will add a map for each of the faces of the target. When you apply the Boolean modifier, Blender will follow the UV maps already assigned to the faces of the target topology that will be the result of the operation on the modified mesh. Blender will also use the same image mapped to the target faces in the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:203
+# 38670379c3614e83bb5bfad66c276840
+msgid "Depending on the way you have assigned textures to the faces during the UV unwrap, and the complexity of your meshes, the boolean operation may generate imperfect UVs for the new faces."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:206
+# 7a4f487d0e66419bb091d1a4aee67001
+msgid "Below we have four Images, a UV sphere mapped with a test grid tinted blue and the other face tinted in purple, one face of the cube tinted in a light orange and the other faces using the normal test grid. Fig. 9 shows the operation at the start (difference), and on the right (Fig. 10), the resulting mesh. In Figs. 11 and 12 we show the unwrap in the Blender UV/Image Editor Window."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:214
+# ab835fa9a7c343039a2354f59b3ad594
+msgid "Fig. 9 - A UV Sphere and a Cube with different UV Maps"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:219
+# 459ce526009848f291a3c2ec28ce79a1
+msgid "Fig. 10 - Difference operation applied"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:224
+# 81735d70b4a342659dfb7ec8769d2e38
+msgid "Fig. 11 - Faces of the modified mesh mapped"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:229
+# 11c284c5dad540fc914548863aa71d3e
+msgid "Fig. 12 - New topology mapped and UV faces assigned; we have another image assigned to the purple tinted faces."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:233
+# 32b2d204cae34ad3a4e595d820b3fcee
+msgid "Other Modifiers"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:237
+# b1aa3b4094f74128ba88a61fbbe1780e
+msgid "Fig. 13 - Boolean modifier with error message"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:240
+# 81d16a228bfd4885be6232042da46859
+msgid "The Boolean modifier calculation is performed using the target modified mesh topology and dimensions. Other modifiers added to the modified mesh are bypassed. It means that if a target is using another modifier, like subsurf, the resulting topology for the modified mesh will take into account the subsurf of the target; but for the modified mesh, the basic topology is used anyway (see examples)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:246
+# 120f468f016d440ab2032b0cf9f9c3a7
+msgid "If you add subsurf to the modified mesh with a Boolean modifier, Blender will visually add the subsurf for the modified mesh, but not for its calculations; it will only take into account its basic mesh topology. If you want to have a subsurf added to the modified mesh, you have to apply the subsurf to the Boolean modified mesh before applying the Boolean operation."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:252
+# ad631f794c4e4a2ea1d3a1e48ff2c587
+msgid "The Boolean modifier can be added together with other modifiers in the modified mesh, but depending on the modifier, the calculations can't be done and/or the modifier cannot execute. When the modifier cannot execute, it will show the message ``\"Cannot execute boolean operation\"`` (see Fig. 13), and when the modifier cannot be applied to the mesh, Blender will show the message ``\"Modifier is disabled, Skipping Apply.\"``. In this case, you either have to remove some modifiers or apply the necessary ones."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:261
+# 6dd35740fed14ebf9db741ecaa660138
+msgid "The most common case is when you add or copy a Boolean modifier to use the modified mesh in conjunction with another target later; Blender will place the warning in the subsequent Boolean modifiers in the stack depending on the operation, because you may be creating concurrent Boolean operations for the same modified mesh, which in most cases is impossible to execute depending on the chosen target. In this case, you can apply the first Boolean modifier of the stack for the target and then use the other Boolean modifier(s) in the stack for subsequent operations."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:269
+# 53d041c648014f46bc72fe7c28c5410d
+msgid "Also, if some other modifiers are placed above this modifier and you click on Apply, Blender will warn you with the message ``\"Applied Modifier was not first, results may not be as expected\"`` . The best usage scenario for this modifier is to prepare your modified mesh and target to work with the Boolean modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:274
+# c350c04369ef41a7b707fe996438a457
+msgid "When the Boolean modifier is the first of the stack and is applied, the other Modifiers will act over the resulting meshes using the resulting topology and will remain in the modifiers stack."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:278
+# e2e3d1d4187e464bacd1bcd47004bbdc
+msgid "Below are two images: one with the subsurf added to the target (Fig. 14), and another with the resulting topology (Fig. 15)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:284
+# 2341f41048974263bbe92ae7a18ad599
+msgid "Fig. 14 - The Subsurf is only added to the target (Icosphere), not applied"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:289
+# c8ae3e2733cf49fab2e66ff69171a0aa
+msgid "Fig. 15 - The resulting topology. The Subsurf added to the target was taken into account"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:292
+# 4f10a5890e86485f87a209ba96446ae0
+msgid "As you can see, the added (not applied) subsurf to the target was taken into consideration. The topology of the Icosphere with subsurf (Level 2) was completely transferred to the modified mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:296
+# 263ddadf0f7949ccbab866f2ccd473fe
+msgid "The target topology determines the resulting topology"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:298
+# 76aa39cda4f14598b95d4315ab12a558
+msgid "The target topology determines the results of the Boolean modifier operation. It means that any modifier added to the target which modifies its topology will affect the resulting mesh of the operation."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:304
+# ec2ccfcf87d44bbb8fae2bb6fd695145
+msgid "Concurrent Operations"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:306
+# 3b892e92050047d992483b98b6d18191
+msgid "For the modified meshes, you can only apply one operation at a time, but you can use the same target for other modified meshes and use modified meshes as a target for other meshes as well. Also, you can copy or add the same modifier to the modifiers stack as many times as you wish to suit the number of operations you need, but be aware that if you choose concurrent targets which are, at the same time, modified meshes pointing to each other, you can cause Blender to crash with closed loops!"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:315
+# 0b681ac5b45b46b8afe203ac07f659ad
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:317
+# 557d585dd4e049ed95fe8776fe7d9873
+msgid "Be aware that other modifiers and their stack position could cause this modifier to fail in certain circumstances."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:323
+# 036c24a677494688885286fc75becea0
+msgid "The best way to work with this modifier when you need to make lots of sequential operations of the same modifier is to define the target at the time you need to apply the changes to the topology."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:328
+# b3c55a6814c54f05ad3886ec5016f292
+msgid "Face Normals"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:330
+# 656694ca7f48435c85e08a6361af15b1
+msgid "When using the Boolean modifier, Blender will use the face normal directions to calculate the three Boolean operations. The direction of the normals will define the result of the three available operations. When one of the participants has inverted normals, you're in fact multiplying the operation by ``-1`` and inverting the calculation order. You can, at any time, select your modified mesh, enter Edit Mode and flip the normals to change the behavior of the Boolean modifier. See *Tips for Fixing Mixed Normals* below."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:339
+# 771c41e14e9c41e18431178bc463e510
+msgid "Blender also cannot perform any optimal Boolean operation when one or more of the mesh Normals of the participants that are touching has outwards/inwards normals mixed."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:342
+# b83de2a02dba47ceb80819ba2ce51598
+msgid "This means you can use the normals of the meshes pointed completely towards the inside or outside of your participants in the operation, but you cannot mix normals pointed inwards and outwards for the faces of the topology used for calculations. In this case, Blender will enable the modifier and you may apply the modifier, but with bad to no effects. We made some examples with a cube and an icosphere showing the results."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:349
+# 9f13f4441fe34d9ab8b5d6be0d2f3595
+msgid "See Fig. 16 and 17 - All face normals are pointing outwards (Normal meshes)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:354
+# 6afc3c4a025f428795e1edc5b0846005
+msgid "Fig. 16 - Faces with normals pointing outwards"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:359
+# 6af8e3a13c404c80832223f812534a84
+msgid "Fig. 17 - Normal Boolean modifier operation (Difference operation)"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:362
+# f198a3f849324314a27c755a2712d67d
+msgid "See Fig. 18 and 19 - All face normals are pointing inwards (Meshes with inverted normals)"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:367
+# fa22f109b27e4d8093b475d83549f32d
+msgid "Fig. 18 - Faces with normals pointing inwards"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:372
+# 90741e60398d4a6f8d5e0c1aff8ddb31
+msgid "Fig. 19 - Normal Boolean modifier operation (Intersection operation)"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:375
+# 8939e4e863074264aecb263f7ed75edf
+msgid "Now, let's see what happens when the normal directions are mixed for one of the participants in the Boolean modifier operation. In Fig. 20 - Face normals mixed, pointed to different directions and 21 - Resulting operation, you can see that the modifier has bad effects when applied, leaving faces opened:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:383
+# 79b9069836db4c698dcb01e9ad1b7f7f
+msgid "Fig. 20 - Face normals mixed, pointed to different directions"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:388
+# f130d9199d8b4162920cacfcc1bb4db1
+msgid "Fig. 21 - Resulting operation, Modifier has bad effect when applied, leaving faces opened"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:391
+# 74d69fc2528343e783d6e108cf6b0275
+msgid "As you can see, the normal directions can be pointing to any of the Mesh sides, but can't be mixed in opposite directions for the faces of the participants. The Library can't determine properly what's positive and negative for the operation, so the results will be bad or you will have no effect when using the Boolean modifier operation."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:399
+# c395d6da035f49e8b18eba2cf7f6d6ad
+msgid "Tip for Fixing Mixed Normals"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:401
+# bb39eeca1a9e45ca8032d2c1ac50fa55
+msgid "You can fix mixed normals by recalculating them outside or inside; here we also give you a small hint on how to do this prior to Boolean modifier usage:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:407
+# c329b19153cd4589816cabc18a983322
+msgid "Fig. 22 - Mesh Display in the Transform Panel"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:410
+# 4f794c69f5204b4b989cedb6db93ceca
+msgid "To show the normals of the faces, you can open the Transform Panel, find the Mesh display tab, and click on the small cube without the orange dot. (See Fig. 22 - Mesh Display in the Transform Panel.) You can also change the height of the axis that points the direction of the normal. The default is ``0.1``."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:415
+# 954fdc619694475b948312ec6fc3d243
+msgid "When some normal directions are mixed pointing inwards and outwards, you can recalculate them to the inside using :kbd:`Ctrl-Shift-N` and to outside using :kbd:`Ctrl-N`. If the normals still get mixed due to Mesh complexities, you can change to Face selection Mode while in Edit Mode using :kbd:`Ctrl-Tab` and choosing *Face Mode*. Then select the faces that are pointing in the wrong direction using :kbd:`Shift-RMB` and use the *Mesh* Menu entry in the Header of the 3D View, go to *Normals* and choose *Flip Normals*:"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:425
+# ddc353b1956e49f9829ea0be1f5393f6
+msgid "Fig. 23 - Recalculate and Flip Normals in Mesh Menu Entry - 3D View"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:429
+# 97f3e23e37d94c3595105015a54e76b6
+msgid "Empty or Duplicated Faces"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:431
+# bd8a892ec1024ed9956cc953b7b1ee0c
+msgid "This modifier doesn't work when the modified and/or the target mesh uses empty faces in the topology used for calculations. If the modifier faces a situation where you have empty faces mixed with normal faces, the modifier will try, as much as possible, to connect the faces and apply the operation. For situations where you have two concurrent faces at the same position, the modifier will operate on the target mesh using both faces, but the resulting normals will get messed. To avoid duplicated faces, you can remove doubles for the vertices before recalculating the normals outside or inside. The button for remove doubles is located in the *Mesh Tools* Panel in the 3D View, while in Edit Mode."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:440
+# d6be24b318c241dba825a353d12589f8
+msgid "The best usage scenario for this modifier is when you have clean meshes with faces pointing clearly to a direction (inwards/outwards)"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:443
+# 04213cb41e2f4b4caf5f47d31aab9ac7
+msgid "Below we show an example of meshes with open faces mixed with normal faces being used to create a new topology. In this example, a difference between the cube and the icosphere is applied, but Blender connected a copy of the icosphere to the Cube mesh, trying to apply what was possible."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:450
+# 816597eb5d6e445083db7f8814978e54
+msgid "Fig. 24 - Mesh with two empty faces mixed with normal faces"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:455
+# ae17430a19be45c08b4cd9630419df83
+msgid "Fig. 25 - Result of a difference operation applied - Blender connected what was possible."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:459
+# 2e4283996aef49d8af1e5088bc7bcd27
+msgid "Open Volumes"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:461
+# e4d8b413b9fb4f80a7b3347d17b03098
+msgid "The Boolean modifier permits you to use open meshes or non-closed volumes (not open faces)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:464
+# 99d26c15457f482383c27e25502b5274
+msgid "When using open meshes or non-closed volumes, the Boolean modifier won't perform any operation in faces that don't create a new topology filled with faces using the faces of the target."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:469
+# 2559adaa61424b249da3db76b2137190
+msgid "See Fig. 26 and Fig. 27 - Resulting operation using two non-closed volumes with faces forming a new topology."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:474
+# df1ade1d0a224736bbf4f19d92b3053f
+msgid "Fig. 26 - Non-closed volumes forming a new topology"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:479
+# defd285630d246ce8b7ed5eed2c641b3
+msgid "Fig. 27 - Resulting operation using two open volumes performing a new closed topology"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:482
+# 9a4f5256b67044a4bfa816f26880ddac
+msgid "Now, let's see what happens when we use meshes that are partially open, incomplete, or meshes that aren't forming a new topology."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:488
+# 3d44189a00044bb69b1c671c6921a52d
+msgid "Fig. 28 - Open volumes that aren't forming a new topology."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:493
+# eef31291813c4aa092cf8148008c7823
+msgid "Fig. 29 - Resulting operation using two open volumes that aren't forming a new topology."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:496
+# 5be45e30276e4e8bbc9505ce1b58f990
+msgid "As you can see in Fig. 28, the faces of one participant in the Boolean operation gives incomplete information to the modifier; the result is shown in Fig. 29 - Resulting operation using two open volumes that aren't forming a new topology. The resulting edges get messy and there is not enough information to create faces for the resulting Mesh. This example uses a smooth shaded UVsphere cut in half. As explained before, the shading (smooth/flat) doesn't affect the calculations of the modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:505
+# af8cdfa1e6f94d2484071d8ca0e283ac
+msgid "Useful Links"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:507
+# ead1a84f7b8f410f865cdd9f1e69c089
+msgid "`Carve Developement Home <https://code.google.com/p/carve/>`__ - GPLv2 C++ source at Google Code"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:508
+# 95fc069814ea4daa854c6207db6cd53a
+msgid "`Carve library <http://carve-csg.com/>`__ - Homepage for the Carve Library project."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/booleans.rst:509
+# adc549f6a9234fccaf3ff3c18f2450bd
+msgid "`Sculpt Tools <https://github.com/MadMinstrel/blender-sculpt-tools>`__ - Link for a Blender Add-on - This add-on uses another approach to use the Boolean operations, when you select two or more objects, the active one becomes the modified mesh and all the others becomes a target. This add-on will add the Boolean modifier and apply it to the meshes automatically."
+msgstr ""
+

@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:4
+# 687e64e3b0b94d7496269803399b0dff
+msgid "Bump and Normal Maps"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:7
+# 5b23706a22ca4a02bb916a94c0521e88
+msgid "Description"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:9
+# 030d50f5db1545b0b5645cf8c5134f66
+msgid "*Normal Maps* and *Bump Maps* both serve the same purpose: they simulate the impression of a detailed 3D surface, by modifying the shading as if the surface had lots of small angles, rather than being completely flat. Because it's just modifying the shading of each pixel, this will not cast any shadows and will not obstruct other objects. If the camera angle is too flat to the surface, you will notice that the surface is not really shaped."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:17
+# 189e82fa5ba14f1fa0e64834e3c19345
+msgid "Both *Bump Maps* and *Normal Maps* work by modifying the normal angle (the direction pointing perpendicular from a face), which influences how a pixel is shaded. Although the terms *Normal Map* and *Bump Map* are often used synonymously, there are certain differences."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:27
+# 39d02ae26dd6420490152d3f7f8ab2db
+msgid "Bump maps"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:23
+# 799e768ff9b14d7a915da22dab9394d3
+msgid "These are textures that store an **intensity**, the relative height of pixels from the viewpoint of the camera. The pixels seem to be moved by the required distance in the direction of the face normals. (The \"bump\" consists only of a displacement, which takes place along the existing, and unchanged, normal-vector of the face.) You may either use greyscale pictures or the intensity values of a RGB-Texture (including images)."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:47
+# ab158de05f9b481cbd59e79a1eebe74b
+msgid "Normal maps"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:30
+# dc2b0f2970bf41a682b015db19a58a72
+msgid "These are images that store a **direction**, the direction of normals directly in the RGB values of an image. They are much more accurate, as rather than only simulating the pixel being away from the face along a line, they can simulate that pixel being moved at any direction, in an arbitrary way. The drawbacks to normal maps are that unlike bump maps, which can easily be painted by hand, normal maps usually have to be generated in some way, often from higher resolution geometry than the geometry you're applying the map to."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:38
+# 2c7f49d4230444de83e7b225afc02f30
+msgid "Normal maps in Blender store a normal as follows:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:40
+# 148d4336d43b400eae604176f6d075dd
+msgid "Red maps from (0-255) to X (-1.0 - 1.0)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:41
+# b03de7901d5146fb806adc4217112358
+msgid "Green maps from (0-255) to Y (-1.0 - 1.0)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:42
+# 94bfff037cfc4decb3c7dd2b802cba8b
+msgid "Blue maps from (0-255) to Z (0.0 - 1.0)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:44
+# fb92efedb9f64f8990be0b31a9b2992b
+msgid "Since normals all point towards a viewer, negative Z-values are not stored (they would be invisible anyway). In Blender we store a full blue range, although some other implementations also map blue colors (128-255) to (0.0 - 1.0). The latter convention is used in \"Doom 3\" for example."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:50
+# f64c3bcea642465a930f52b96cf2645b
+msgid "Workflow"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:52
+# 116cf976f3ef43f9bec760c2f6fde86b
+msgid "The steps involved in making and using Bump and Normal Maps is:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:54
+# e0353d48ad2744df85211e7597755279
+msgid "Model a highly detailed (\"hi-poly\") model"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:55
+# 18237bf609b54e68b0814cb7b687b769
+msgid "Bake the Bump and/or Normal maps"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:56
+# 35461f4fb3cf45a8930ef17bfc2ddc90
+msgid "Make a low-poly, less detailed model"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:57
+# bfcefdd66dd34649b31d1bedd8904053
+msgid "Map the map to the low-poly model using a common coordinate system"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:59
+# f5f1c8dc6336478a8d87e0fde6fa8417
+msgid "Consult the Modeling section for how to model a highly detailed model using the Mesh tools. How much detail you put in is totally up to you. The more ridges and details (knobs, creases, protrusions) you put in, the more detailed your map will be."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:63
+# d5b63c68b8ae4684bbe5e48cc7f45702
+msgid "Baking a map, simply put, is to take the detail of a high polygon mesh, and apply it to a similar object. The similar object is identical to the high-poly mesh except with less vertices. Use the :doc:`Render Bake </render/workflows/bake>` feature in Blender to accomplish this."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:68
+# 593ab4cb29c24ab3bcb32df787db986a
+msgid "Modeling a low-poly using Blender's Mesh editing tools. In general, the same or similar faces should exist that reflect the model. For example, a highly detailed ear may have 1000 faces in the high-poly model. In the low-poly model, this may be replaced with a single plane, oriented in the same direction as the detailed ear mesh. *(Tip:* Blender's :doc:`multi-resolution mesh </modifiers/generate/multiresolution>` modeling feature can be used to good effect here.)"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:75
+# d64d0f5b3d7641fd89ff839b98e0ec40
+msgid "Mapping is the process of applying a texture to the low-poly mesh. Consult the :doc:`Textures Mapping section</render/blender_render/textures/mapping>` for more information on applying a texture to a mesh's material.Special considerations for Bump and Normal Maps is:"
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:79
+# 8f4a4d57681a41bca661c044dbe058f0
+msgid "When using a Bump map, map the texture to *Normal* and enable *No RGB*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:80
+# d359b86319834f6f8a9a5a2431b55505
+msgid "When using a Normal map, map the texture to *Normal*."
+msgstr ""
+
+#: ../../../manual/render/blender_render/textures/influence/material/bump_and_normal.rst:82
+# 5ae996b5faee40d58dd771a4533ea73c
+msgid "The coordinate systems of the two objects must match. For example, if you bake using a UV map of the high-poly model, you must UV map the low poly model and line up its UV coordinates to match the outline of the high-poly image (see :doc:`UV unwrapping </render/blender_render/textures/mapping/uv>` to line up with the high-poly map edges."
+msgstr ""
+

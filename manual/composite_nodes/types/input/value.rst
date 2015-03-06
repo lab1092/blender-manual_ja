@@ -6,8 +6,9 @@ Value node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` --> :doc:`Node Composition </composite_nodes/index>`
-   | Menu:     :kbd:`Shift-A` --> :doc:`Input </ce/windows/nodes/composite#inputs>` --> Value
+   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` -->
+               :doc:`Node Composition </composite_nodes/index>`
+   | Menu:     :kbd:`Shift-A` --> :doc:`Input </composite_nodes/types/input/index>` --> Value
 
 
 The Value node has no inputs; it just outputs a numerical value

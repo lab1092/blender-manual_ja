@@ -1,0 +1,630 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:4
+# 2cb257568edb45cc84196686aee57e14
+msgid "Vertex Groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:9
+# 15118a22de1d407b92463f104b540911
+msgid "The Vertex Group Panel"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:11
+# c83059e4e6d34abab11998654eda0cb1
+msgid "Vertex Groups are mainly used to tag the vertices belonging to parts of a Mesh Object or :term:`Lattice`. Think of the legs of a chair or the hinges of a door, or hands, arms, limbs, head, feet, etc. of a character. In addition you can assign different *weight values* (in the range [ 0.0, 1.0 ] ) to the vertices within a Vertex Group. Hence Vertex Groups are sometimes also named *Weight Groups*."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:18
+# d0edb0009f71432c86332faf363ca1c7
+msgid "Vertex Groups are most commonly used for Armatures (See also :doc:`Skinning Mesh Objects </rigging/skinning/obdata>`). But they are also used in many other areas of Blender, like for example:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:22
+# 4d020e629d38458d8712b31b2ef5b7b4
+msgid "Shape keys"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:23
+# fcc0876c6f644e3fa333fe27be300997
+msgid "Modifiers"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:24
+# 770d800105214a9ab005edebd853493d
+msgid "Particle Generators"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:25
+# 9dface065a8e4f9b8cf6aad4c59d9f4d
+msgid "Physics Simulations"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:27
+# 47cc09dd03224eeb80940f05feb5a26b
+msgid "Many more usage scenarios are possible. Actually you can use Vertex Groups for whatever makes sense to you. In some contexts Vertex Groups can also be automatically generated (i.e. for rigged objects). However in this section we will focus on manually created (user-defined) Vertex Groups."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:33
+# e0f5b1afe9f74297a55006c5adc7467c
+msgid "Vertex groups only apply to Mesh and Lattice Objects"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:35
+# 328fcc5be21d4d60b3357d6dc8cfc21f
+msgid "Any other Object type has no vertices, hence it can not have Vertex Groups."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:39
+# 81d84c38b29f4309aeb48bddb2e5e8f9
+msgid "Typical usage scenarios for Vertex groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:47
+# fd93f89249a341dfba019faf78dc71f6
+msgid "Skinning an armature"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:42
+# ebf041a365d943a699e443fc8d7da3d8
+msgid "If you want to animate your mesh and make it move, you will define an armature which consists of a bunch of bones. Vertex Groups are used to associate parts of the Mesh to Bones of the Armature, where you can specify an influence *weight* in the range [0.0 ... 1.0] for each vertex in the Vertex Group."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:53
+# 64c82ee60cd64f75849e925dc8ff60d4
+msgid "Working with Modifiers"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:50
+# a4654ab1dfd84de7ace5b2de80f5104a
+msgid "Many modifiers contain the ability to control the modifier influence on each vertex separately. This is also done via Vertex Groups and the weight values associated to the vertices."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:60
+# 24e62a9dd0c243f3a429d33fb4c72e6f
+msgid "Quickly select/edit/hide parts of a mesh"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:56
+# d2b2cdc1d3974c14890cb4485b4cfbad
+msgid "By defining mesh regions with Vertex Groups you can easily select entire parts of your mesh with 3 clicks and work on them in isolation without having to create separate objects. With the hide function you can even remove a vertex group from the view (for later unhide)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:69
+# 6336eb44d1c84f339aa477a8a2377561
+msgid "Cull out and duplicate parts of a mesh"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:63
+# 7d652e8792044b159ee007700602edf9
+msgid "Consider modeling a Lego block. The most simple brick consists of a base and a stud (the bump to connect the bricks together). To create a four-stud block, you would want to be able to easily select the stud vertices, and, still in *Edit mode*, duplicate them and position them where you want them."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:72
+# b3e6af4370474fbba5687782f464021b
+msgid "Creating Vertex Groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:77
+# 8cfd6e4ac6ab454ab4c78321a7766b8e
+msgid "Empty Vertex Group Panel"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:80
+# 4fa13498c05b4e2796ca9462d5038274
+msgid "Vertex Groups are maintained within the *Object Data Properties* window (1), and there in the *Vertex Groups* panel. As long as no Vertex groups are defined (the default for new Mesh Objects), the Panel is empty (2)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:85
+# 61b82b3d5ea3455d86f9a07885a84ead
+msgid "You create a vertex group by :kbd:`LMB` *+* on the right Panel border (3). Initially the group is named *Group* (or *Group.nnn* when the name already exists) and gets displayed in the Panel (2) (see next image)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:91
+# 8fda06ea266d4fd487fe9a887a40383d
+msgid "Vertex Groups Panel Controls"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:96
+# abbed71c5d51471887cd88c2195bb372
+msgid "One Vertex Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:98
+# 4666daea1580408c80c9c32665d6260c
+msgid "Once a new Vertex Group has been added, the new Group appears in the vertex Groups panel. There you find 3 clickable elements:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:104
+# 1f51ab1e0ce4432485416c186640774d
+msgid "Group Name"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:103
+# d0a5e51a910b4fd6831077ab6190e432
+msgid "The Groupname can be changed by double clicking :kbd:`LMB` on the name itself. Then you can edit the name as you like."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:109
+# 4ad8796205b64674b35501d41e41e077
+msgid "Plus Icon"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:107
+# 3eb2ee89cef04e3691bb073b63ea4414
+msgid "When the little icon in the left lower corner can be clicked, a new row opens up where you can enter a search term. This becomes handy when the number of vertex groups gets big."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:114
+# ec009fb352a74a99bae67c9ea663b520
+msgid "Drag Handle"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:112
+# 1d2369d2d767422e9d8973d5beadabb1
+msgid "If you have a large number of vertex groups and you want to see more then a few Groups, you can :kbd:`LMB` on the small drag handle to tear the vertex groups list larger or smaller."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:123
+# 4bd2fbdcea7047e1912c5ca47a721f29
+msgid "Active Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:117
+# e18d2faee6f54516a98acbb3c476fe3e
+msgid "When a Vertex Group is created, then it is also automatically marked as the *Active Group*. This is indicated by setting the background of the panel entry to a light blue color. If you have two or more groups in the list, then you can change the active group by :kbd:`LMB` on the corresponding entry in the Vertex Group panel."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:126
+# a25d7b6b09844eb49d6cb272542bd15d
+msgid "Deleting vertex Groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:131
+# 6ba5609c808b4929af83b457ce816525
+msgid "Delete a Vertex Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:133
+# 931de356df124480b1e1467a24ee1bd2
+msgid "You delete a Vertex Group by first making it the active group (select it in the panel) and then :kbd:`LMB` the *-* button at the right Panel border."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:137
+# 4e34cd7bf9e849a6bc8474bc9cf4c776
+msgid "Deleting a Vertex Group only deletes the vertex assignments to the Group. The vertices themselves are not deleted."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:142
+# 630cdcd8e307457688a7854f30cb4d57
+msgid "Locking Vertex Groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:147
+# ea1bc8575a254b64acb3000e5a5897e7
+msgid "Lock a Vertex Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:150
+# 8836ae72b587438c98eaa17ec250eb6d
+msgid "Right after creation of a Vertex Group, an open lock icon shows up on the right side of the Vertex Group List entry. This icon indicates that the Vertex Group can be edited. You can add vertex assignments to the group or remove assignments from the group. And you can change it with the weight paint brushes, etc."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:156
+# b1895e3c63944386858736a36cdadd79
+msgid "When you click on the icon, it changes to a closed lock icon and all vertex group modifications get disabled. You can only rename or delete the group, and unlock it again. No other operations are allowed on locked Vertex Groups, thus all corresponding function buttons become disabled for locked Vertex Groups."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:164
+# ebec71bc17f24908bf0f405fa0e962a8
+msgid "Working with Content of Vertex Groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:169
+# ea0fee929db94e19bc79de6e00cad5fe
+msgid "Vertex Group Panel in Edit Mode"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:172
+# 3c22ff2fe8c84f698caa538b0c7ec94f
+msgid "When you switch either to *Edit-Mode* or to *Weight-Paint* Vertex Selection Mode, then the Vertex Group panel expands and displays 2 more rows:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:176
+# 76e58e60facf4539a1f3102423054fb7
+msgid "The first row contains 4 buttons for maintaining the Assign- and Select- status of vertices of the active Vertex Group:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:180
+# bf2a8ac39a394385a30faa3702870dab
+msgid "Assign"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:181
+# 400210334f5d4ca58422ca245d23d2dd
+msgid "To assign the Selected vertices to the Group with the weight as defined in the \"Weight:\" input field (see below)"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:182
+# fea830a82e484bf5afede09807d42e1d
+msgid "Remove"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:183
+# d61ce88e42c3471bb41e8fc8889d990e
+msgid "To Remove the selected vertices from the Group (and thus also delete their weight values)"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:184
+# 20493a8cea5e444fbef553a93644d0c8
+msgid "Select"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:185
+# 05f4068cd0bd435d8027ccf3907655ea
+msgid "To Select all vertices contained in the Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:187
+# 4f12fa781a73453aac3bfa5df43cc51b
+msgid "Deselect"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:187
+# 8a51c0069f3340679bd17b2de43b323f
+msgid "To deselect all verts contained in the group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:189
+# f37daebc74b1447eb1b54bb0bfd62278
+msgid "Below this row of buttons you see a numeric \"Weight:\" input field where you specify the weight value that gets assigned to the selected verts when you press the Assign Button."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:194
+# 5a20ea7eb75643daad17247033040ffa
+msgid "Assigning verts to a Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:199
+# 54069180c12b4438885b1524272eeea2
+msgid "Assign weights to active group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:202
+# 0bef7a73ac024d6f9a0ec08cc23ee7f2
+msgid "You add vertices to a group as follows:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:204
+# 434d0d2ced644e24859d932288dc045f
+msgid "Select the group from the group list, thus make it the Active Group (1)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:205
+# 47338bfa7ff24c7a9431fa0ddab7da38
+msgid "From the 3D Viewport select :kbd:`Shift-RMB` all vertices that you want to add to the group."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:206
+# b8a39c2877584b999e0fb3a7b04c9661
+msgid "Set the weight value that shall be assigned to all selected verts (2)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:207
+# c7054c10ec824b3e9c6c4e7263425a3b
+msgid ":kbd:`LMB` the *Assign* button to assign the selected verts to the active group using the given weight (3)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:209
+# 6c05cea932a545769019526c36e90a04
+msgid "Note that weight Assignment is not available for locked Vertex Groups. The Assign button is grayed out in that case."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:213
+# f85d9fed26ee47a3ad8011564a4da410
+msgid "Assign is additive"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:215
+# dd4377b679ad480c9a603deefcef57ef
+msgid "The *Assign* button only adds the currently selected vertices to the active group. Vertices already assigned to the group are not removed from the group."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:219
+# 4589ce34b4d447bc98c67c440c44d4ed
+msgid "Also keep in mind that a vertex can be assigned to multiple groups."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:223
+# 0b20205934174012bfcda20c99b7693d
+msgid "Checking assignments"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:225
+# 5a56bafb3d8545068f33d3dea89902cd
+msgid "To be sure the selected verts really have been added to the Vertex Group, you can try the deselect button. If the verts do not get deselected, then you probably forgot to hit the *Assign* button. But you can do that safely now. But remind: All selected verts get the weight assigned as displayed in the \"Weight:\" input field!"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:234
+# 5970329eec56438ea4db58a350eb2ead
+msgid "Removing assignments from a Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:236
+# 820a4af686a4444099ec96f92c7590a9
+msgid "You remove vertices from a group as follows:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:238
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:252
+# cac095908786446a92d2ace52099f42e
+# 12b5c7b18e8542629f4060e2aa94ce36
+msgid "Select the group from the group list (make it the active group)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:239
+# aa322211340f4e019aac521b4e52f8ef
+msgid ":kbd:`Shift-RMB` all vertices that you want to remove from the group."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:240
+# 5eaa99d1a7644a60b3f00c1f393582f6
+msgid ":kbd:`LMB` click the *Remove* button."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:242
+# 7b9b71aa6b8a41269e89d9ed256323fa
+msgid "Note that Removing weight Assignments is not available for locked Vertex Groups. The Remove button is grayed out in that case."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:247
+# df0560ff6b704c7ab5d6af0356664a44
+msgid "Using groups for Selecting/Deselecting"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:249
+# 30990b2fa4e2460ca621d199051ed721
+msgid "You can quickly select all assigned vertices of a group:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:251
+# ade2312574f046feb4a4eb800168ef94
+msgid "(optionally) press :kbd:`A` once or twice to unselect all vertices."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:253
+# 9a095c49d2934e8084e13e28c469414d
+msgid "When you now :kbd:`LMB` click the *Select* button, then the vertices assigned to the active group will be selected and highlighted in the 3D Viewport."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:255
+# 14614266ae614d80bcc0f363bc8fe0a0
+msgid "When you :kbd:`LMB` click the *Deselect* button instead, then the vertices assigned to the active group will be deselected in the 3D Viewport."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:259
+# 8230a42dcea94a78a3804ce5f6540943
+msgid "Selecting/Deselecting is additive"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:261
+# 10250b8a9b524688994e4fa39cde7225
+msgid "If you already have verts selected in the 3D View, then selecting the verts of a group will add the verts but also keep the already-selected verts selected. Vice versa, deselecting the verts of a vertex group will only deselect the verts assigned to the group and keep all other verts selected."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:270
+# 63d12e76e0ee4207a0a5ceaf5773ad5d
+msgid "Finding ungrouped verts"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:272
+# 8850574823ac484ea0aeb78b207733e4
+msgid "You can find ungrouped vertices as follows:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:274
+# 74477983fea54760b381474e6ec792f3
+msgid "Press :kbd:`A` once or twice to unselect all vertices."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:275
+# 2a23f01c82f5436c84d0287febbe1419
+msgid "In the footer of the 3D Viewport: Navigate to Select --> Ungrouped verts"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:279
+# adba6566bff94a37adaa506fe7ead6d2
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:284
+# 005756eac2e64045915ba6fab874fcd7
+msgid "Vertex Groups popup menu"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:287
+# 66be624620da4c7c9e78a275ce7d4b8b
+msgid "In Edit Mode you can press :kbd:`Ctrl-G` to a shortcut Menu for adding/removing verts to/from groups. The popup menu provides the following functions with obvious functionality: (also available via :menuselection:`Mesh --> Vertices --> Vertex Groups`)"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:291
+# 28cb7c9496d546aba009a0e3aacee14a
+msgid "Assign to New Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:292
+# 2202c57e6b7e40ca8341365946e59946
+msgid "Assign to Active Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:293
+# 5b4925a7e6124c67b26632b0b1dab98a
+msgid "Remove from Active Group"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:294
+# 17b4fb61622f4350b74fc4356a3b4642
+msgid "Remove from All"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:298
+# 2956478f28364d588367d6e06f75d9da
+msgid "Vertex Group Management"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:303
+# c9fb8c5be5234907987abb2d44a5a9af
+msgid "Vertex groups panel's dropdown menu"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:306
+# 9b92282746024ff48f1074bcd7652403
+msgid "Vertex Groups provide a more complex set of functions inside a Pull down menu. This menu is accessible from the Vertex Group Panel by clicking on the dark gray *arrow down* icon on the right panel border."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:311
+# efe2f8e10764491797b8068d3c5071e5
+msgid "The following functions of the Pulldown Menu operate on the assigned vertices:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:314
+# 79bd2296940e4e23bc1bde01958d4a5f
+msgid "Sort Vertex Groups:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:314
+# c05e2d29fed245da912084d4b46dae07
+msgid "Sorts Vertex Groups Alphabetically"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:320
+# 85c16513a30a4c628473113a32c5ea52
+msgid "Copy Vertex Group:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:317
+# eb0f3d90c3994ffaa6ede823a86757fc
+msgid "Add a Copy of the active Vertex Group as a new Group. The new group will be named like the original group with \"_copy\" appended at the end of its name. And it will contain associations to exactly the same verts with the exact same weights as in the source vertex group."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:323
+# 0409cba3f4314369904ceaf5c577843e
+msgid "Copy Vertex Groups to Linked:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:323
+# 4932acc2155c4c02bbdea226b4fc7e44
+msgid "Copy Vertex Groups of this Mesh to all linked Objects which use the same mesh data (all users of the data)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:327
+# a92260b5bb814d3a8b31c5e91140ba07
+msgid "Copy Vertex Group to Selected:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:326
+# c435d7efd8da42e59ed73440a5506799
+msgid "Copy all Vertex Groups to other Selected Objects provided they have matching indices (typically this is true for copies of the mesh which are only deformed and not otherwise edited)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:332
+# 3ecf0594a92d4743aeae50eea30fb934
+msgid "Mirror Vertex Group:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:330
+# d8477eba83ba401a8af4d6b8c1451b71
+msgid "Mirror all Vertex Groups, flip weights and/or names, editing only selected vertices, flipping when both sides are selected; otherwise copy from unselected. Note this function will be reworked (and fully documented) in a future release."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:336
+# 760b1cc7d862466e850cfbd8c45b4bfc
+msgid "Remove from All Groups:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:335
+# 6e5b6ae56be946308805fbc6d661578e
+msgid "(not available for locked groups) Unassigns the selected Vertices from all groups. After this operation has been performed, the verts will no longer be contained in any vertex group."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:340
+# a23cd75415894a5e831db8d8fa412312
+msgid "Clear Active group (not available for locked groups):"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:339
+# aa1f2871ff6c4d0f83abf8215fc907fd
+msgid "Remove all assigned vertices from the active Group. The group is made empty. Note that the vertices may still be assigned to other Vertex Groups of the Object."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:344
+# 5204c8b3b7c74a458b6830b40109ed20
+msgid "Delete All Groups:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:343
+# faa404dca09048d6bdf03b65b1640079
+msgid "Remove all Vertex Groups from the Object."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:346
+# d9e0f28513be48659bc67659298d1dba
+msgid "The following functions operate only on the lock state settings:"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:349
+# b7091d9b0836428a9421b83c0aa02524
+msgid "Lock All"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:349
+# 270109abded74c35b08f4f572d39ab17
+msgid "Lock all groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:352
+# 90e1c947f23d403e85d6243d06010c02
+msgid "Unlock All"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:352
+# 9874e9f72f2c46349e611d40c2867f44
+msgid "Unlock all groups"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:356
+# 796904aec5c7446496d6d3eff2e63600
+msgid "Lock_Invert All"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:355
+# 59acc04b020c49fda25174214d07f1a2
+msgid "Invert Group Locks"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:359
+# 91a81347427d484e8827501520a62a72
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/vertex_groups/vertex_groups.rst:361
+# 27281a66c39e41e0b1c2fbe6f9db931a
+msgid "Multiple objects sharing the same mesh data have the peculiar property that the group names are stored on the object, but the weights in the mesh. This allows you to name groups differently on each object, but take care because removing a vertex group will remove the group from all objects sharing this mesh."
+msgstr ""
+

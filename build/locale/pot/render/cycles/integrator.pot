@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/cycles/integrator.rst:4
+# 179caf4256234379b9f50be19de17cd7
+msgid "Integrator"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:6
+# 88983bfa4e1040d19b125cf20b43e849
+msgid "The integrator is the rendering algorithm used to compute the lighting. Cycles currently supports a path tracing integrator with direct light sampling. It works well for various lighting setups, but is not as suitable for caustics and some other complex lighting situations."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:11
+# 146f1a816bed480db66f422e2274d486
+msgid "Rays are traced from the camera into the scene, bouncing around until they find a light source such as a lamp, an object emitting light, or the world background. To find lamps and surfaces emitting light, both indirect light sampling (letting the ray follow the surface BSDF) and direct light sampling (picking a light source and tracing a ray towards it) are used."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:19
+# 6e6e85635ccd461ab49b678a4b676381
+msgid "Scene Settings"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:22
+# 6a3cdbf564c94c3b9d4377667d72a4d8
+msgid "Sampling"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:24
+# 7d2c8f8cf1474d49a9eee8bc7ab632c4
+msgid "There are two integrator modes that can be used: path tracing and branched path tracing. The **path tracing integrator** is a pure path tracer; at each hit it will bounce light in one direction and pick one light to receive lighting from. This makes each individual sample faster to compute, but will typically require more samples to clean up the noise."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:31
+# 2752fa6f5dfb42fba8310a6b45086bc6
+msgid "Render Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:31
+# 997bc4f996734070b845400c78847fcc
+msgid "Number of paths to trace for each pixel in the final render. As more samples are taken, the solution becomes less noisy and more accurate."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:34
+# a9a2091b5fb848c9972d67aa35dd1725
+msgid "Preview Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:34
+#: ../../../manual/render/cycles/integrator.rst:48
+# 26c34254f7464cfb9fd2ad6998ca2ad1
+# 2fea27398d204652aa02bb2bc1b49585
+msgid "Number of samples for viewport rendering."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:36
+# 1a68a28c0e6f4cbe954b99923130cd2d
+msgid "The **branched path tracing integrator** (formerly called non-progressive integrator) is similar, but at the first hit it will split the path for different surface components and will take all lights into account for shading instead of just one. This makes each sample slower, but will reduce noise, especially in scenes dominated by direct or one-bounce lighting. To get the same number of diffuse samples as in the path tracing integrator, note that e.g. 250 path tracing samples = 10 AA samples x 25 diffuse samples. The Sampling panel shows this total number of samples."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:45
+# 163d6efea7204c45b0e564bda65c080f
+msgid "AA Render Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:46
+# e0a6cfe6e2754519a64f9307603a1dd3
+msgid "Number of samples to take for each pixel in the final render. More samples will improve antialiasing."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:48
+# 9ad4eeffefea48b8ac7df2de75d94044
+msgid "AA Preview Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:50
+# 339b61b624254696b3091d8bde302501
+msgid "Diffuse Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:51
+# 2e6381c45dfc4f5aaf1c60cff70c5f14
+msgid "Number of diffuse bounce samples to take for each AA sample."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:52
+# b14f87bd5cd547c595eecb79f81e93f5
+msgid "Glossy Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:53
+# 041cc7c7c0a0438284ef57bdd99b2735
+msgid "Number of glossy bounce samples to take for each AA sample."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:54
+# ea6a90bdc4cf47f9afccb96f0e9a933a
+msgid "Transmission Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:55
+# 35b8d5561ffa43a591e249359633f2ac
+msgid "Number of transmission bounce samples to take for each AA sample."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:56
+# 83e00168a62f4e19b58cb1f5131a0455
+msgid "AO Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:57
+# 11f177b9dc1049f2b2f6840ef3ec31df
+msgid "Number of ambient occlusion samples to take for each AA sample."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:58
+# 85875ee7662444a4a75bfbe5dde660de
+msgid "Mesh Light Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:59
+# 2061b22bc43c4eb9865d0d29e6036094
+msgid "Number of mesh light samples to take for each AA sample."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:61
+# ccea960b0b534c1b99904248b8b97cf4
+msgid "Subsurface Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:61
+# ae69839520a64e9cafb2feaeb7f55e3f
+msgid "Number of subsurface scattering samples to take for each AA sample."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:63
+# 89bfe22b64ac478cba70fcb1c5ffdb7f
+msgid "For both integrators the noise pattern can be controlled."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:67
+# f7928fb0dec74095adc9b3c9c06e0cec
+msgid "Seed"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:66
+# 8315a6fe14814a0891e1d63f5128adba
+msgid "Random number generator seed; each different value gives a different noise pattern."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:70
+# c5ab92b19d0546dcb4c4dca59482db10
+msgid "Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:74
+# c2acad3ae5d24e6fbc2e801645732054
+msgid "Max Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:73
+# 30b9ff7f39cb485684747b4375a49e4e
+msgid "Maximum number of light bounces. For best quality, this should be set to the maximum. However, in practice, it may be good to set it to lower values for faster rendering. Setting it to maximum 1 bounce results in direct lighting."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:80
+# 1b99c7c6bba04a8da4513a6651cdeb9a
+msgid "Min Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:77
+# 60b7a70f66de4598a9d027e9930fdb91
+msgid "Minimum number of light bounces for each path, after which the integrator uses Russian Roulette to terminate paths that contribute less to the image. Setting this higher gives less noise, but may also increase render time considerably. For a low number of bounces, it's strongly recommended to set this equal to the maximum number of bounces."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:82
+# 9260a7f27f44499cb0bb9f724c9988c5
+msgid "Diffuse Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:83
+# 17201b07408d4cf69936106dbe06650d
+msgid "Maximum number of diffuse bounces."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:84
+# b300c1399c00412689dab9c6838593a4
+msgid "Glossy Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:85
+# 0be9b3c15867498bbd326e880f661ebf
+msgid "Maximum number of glossy bounces."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:88
+# 8fc0abfa9e1c4420a98c49af2ccab876
+msgid "Transmission Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:87
+# ac6e2d5854ce4e38979104e6ebf28e6d
+msgid "Maximum number of transmission bounces."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:91
+# c862c739d7db414eb6a3afda82cbaf77
+msgid "Transparency"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:93
+# b7b5eec93ee845e29b796440eeebf778
+msgid "Transparency Max"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:94
+# ad8c3b4ba3d94f1caca5f0afba092435
+msgid "Maximum number of transparency bounces."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:95
+# 0f56befabc9b4eb2bb130b943271420e
+msgid "Transparency Min"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:96
+# 7b3f4a3a2b90493cae245352e4361bf2
+msgid "Minimum number of transparency bounces, after which Russian Roulette termination is used."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:100
+# fd54a75521084b31838fbb035b2fa5cf
+msgid "Transparent Shadows"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:98
+# c4556eb7114542709e8e0bd797a240c9
+msgid "For direct light sampling, use transparency of surfaces in between to produce shadows affected by transparency of those surfaces."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:103
+# f8ee5a6594694b76adfeb326d45ae475
+msgid "Tricks"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:111
+# b9e4e5bcd1a14ef1bf0e3c07e8c0d1d4
+msgid "No Caustics"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:108
+# 29012dead6dd4462b8ed5b91925df3d7
+msgid "While in principle path tracing supports rendering of caustics with a sufficient number of samples, in practice it may be inefficient to the point that there is just too much noise. This option makes it possible to disable them entirely."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:129
+# 0d30b9686e07461f8fe4edf3bf5e9ff8
+msgid "Filter Glossy"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:116
+# fa43f7da7e474b729bd55d80004a1b81
+msgid "When using a value higher than 0.0, this will blur glossy reflections after blurry bounces, to reduce noise at the cost of accuracy. 1.0 is a good starting value to tweak."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:119
+# f39512b7fe9c40dfa5661925251a67df
+msgid "Some light paths have a low probability of being found while contributing much light to the pixel. As a result these light paths will be found in some pixels and not in others, causing fireflies. An example of such a difficult path might be a small light that is causing a small specular highlight on a sharp glossy material, which we are seeing through a rough glossy material. In fact in such a case we practically have a caustic."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:126
+# b9cfa3ad48d443a3a9b99272533ca265
+msgid "With path tracing it is difficult to find the specular highlight, but if we increase the roughness on the material, the highlight gets bigger and softer, and so easier to find. Often this blurring will hardly be noticeable, because we are seeing it through a blurry material anyway, but there are also cases where this will lead to a loss of detail in lighting."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:143
+# 9ce7bfe20c1748cf964e2d7cef1bb6ad
+msgid "Clamp Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:134
+# f5e02eb1a3864633a9c52a4f684c81ad
+msgid "This option will clamp all samples to a maximum intensity they can contribute to the pixel, again to reduce noise at the cost of accuracy. With value 0.0 this option is disabled; lower values clamp more light away."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:139
+# b2abc51462cb4af190927ea880c73995
+msgid "If the image has fireflies, there will be samples that contribute very high values to pixels, and this option provides a way to limit that. However note that as you clamp out such values, bright colors in other places where there is no noise will be lost as well. So this is a balance between reducing the noise and keeping the image from losing its intended bright colors."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:146
+# cc06a0e9bbf84e428e16514b25dc7ab4
+msgid "Motion Blur"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:148
+# b5a55ba25925480280cbbc9fbe29144b
+msgid "Camera and object motion blur rendering can be enabled per scene, and affects all render layers. This will take the camera and object motion into account to blur objects along 3 points through the previous, current and next frame. Currently scale motion is not supported, only object transformations like translation and rotation. Viewport rendering currently will not show motion blur."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:155
+# 2ffaea52996749b08917fe9f42701a85
+msgid "If there are particles or other physics system in a scene, be sure to bake them before rendering, otherwise you might not get correct or consistent motion."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:161
+# c12b2b9b13ea4c9bae8319d4db2a853b
+msgid "Shutter"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:160
+# d543b9c7018b4aa5a8e4adad57d05fca
+msgid "Time between frames over which motion blur is computed. Shutter time 1.0 blurs over the length of 1 frame, 2.0 over the length of two frames, from the previous to the next."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:166
+# da6643bfe6c24cb38b6ea2ad9a281077
+msgid "Material Settings"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:176
+#: ../../../manual/render/cycles/integrator.rst:187
+#: ../../../manual/render/cycles/integrator.rst:203
+# 36b84cb3b4ae40b2a1f8ba1c4b680d28
+# 3b0e23ff089b41aa928b5bd416b7efbc
+# d141a5c0e5b54868bd7c5064461dcd2d
+msgid "Multiple Importance Sample"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:169
+# fac91c77dda0415aba12dd09eca21ae2
+msgid "By default objects with emitting materials use both direct and indirect light sampling methods, but in some cases it may lead to less noise overall to disable direct light sampling for some materials. This can be done by disabling the *Multiple Importance Sample* option. This is especially useful on large objects that emit little light compared to other light sources."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:175
+# ac8c7ff9239440838a66d7c246732203
+msgid "This option will only have an influence if the material contains an emission node; it will be automatically disabled otherwise."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:181
+# 3ce079fee2974381acaff1dc076a00f2
+msgid "World Settings"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:184
+# c7e286ddd622408591611354147a266c
+msgid "By default lighting from the world is computed solely with indirect light sampling. However for more complex environment maps this can be too noisy, as sampling the BSDF may not easily find the highlights in the environment map image. By enabling this option, the world background will be sampled as a lamp, with lighter parts automatically given more samples."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:195
+# 592758ef1a6647689a499186992eba5f
+msgid "Map Resolution"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:190
+# 381b4687e2554b34add009e6fafc66b9
+msgid "When Multiple Importance Sample is enabled, this specifies the size of the importance map (resolution x resolution). Before rendering starts, an importance map is generated by \"baking\" a grayscale image from the world shader. This will then be used to determine which parts of the background are light and so should receive more samples than darker parts. Higher resolutions will result in more accurate sampling but take more setup time and memory."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:198
+# a3ef2001a9b2493e8f63a8fe01af731e
+msgid "Lamp Settings"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:201
+# 8425bb6463284cf6b1ba301c5522ba72
+msgid "By default lamps use only direct light sampling. For area lights and sharp glossy reflections, however, this can be noisy, and enabling this option will enable indirect light sampling to be used in addition to reduce noise."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:208
+# fa30f7c79f3d43b38a95a14516c14d43
+msgid "Samples"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:206
+# f506231b87c34c93bc1ffc9f08ac3e32
+msgid "For the branch path tracing integrator, this specifies the number of direct light samples per AA sample. Point lamps might need only one sample, while area lamps typically need more."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:211
+# b3e6de1ca78a435b872436e9d3f8a47a
+msgid "Volume Render Settings"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:213
+# baca0ccb1c8c4536bd5c92618f1a4010
+msgid "The scene has these settings:"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:216
+# bf05c155610c491fb6aad8fc25aa27e2
+msgid "Step Size"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:216
+# 05ebc8301c56478a922f57b5f743fbf4
+msgid "Distance between volume shader samples when rendering the volume. Lower values give more accurate and detailed results but also increased render time."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:220
+# 7204c5e44b6744409fecb49f86a531c9
+msgid "Max Steps"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:219
+# 25556ab96601409eb48be266a2c9db92
+msgid "Maximum number of steps through the volume before giving up, to protect from extremely long render times with big objects or small step sizes."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:222
+# ee29417431b444d78b7df9434ed2414f
+msgid "The world and materials have the following setting:"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:226
+# 7f2eae219bb34b419bc5363a085b4199
+msgid "Homogeneous Volume"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:225
+# 9f77539390d7440283d2385805b461c5
+msgid "Assume volume has the same density everywhere (not using any textures), for faster rendering. For example absorption in a glass object would typically not have any textures, and by knowing this we can avoid taking small steps to sample the volume shader."
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:233
+# cbdc0a8e9d9e4d53990866a050b833cf
+msgid "Sampling Method"
+msgstr ""
+
+#: ../../../manual/render/cycles/integrator.rst:229
+# 490cf71cbafc4c4ba86039c2ed75194a
+msgid "Options are \"Multiple Importance\", \"Distance\" or \"Equiangular\". If you've got a pretty dense volume that's lit from far away then distance sampling is usually more efficient. If you've got a light inside or near the volume then equiangular sampling is better. If you have a combination of both, then the multiple importance sampling will be better."
+msgstr ""
+

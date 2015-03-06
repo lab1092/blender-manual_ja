@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:6
+# d711d2a75f11472f8478e63da622f414
+msgid "Follow Path Constraint"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:8
+# 3ed3802204804d3791df5ac836810829
+msgid "The *Follow Path* constraint places its owner onto a *curve* target object, and makes it move along this curve (or path). It can also affect its owner's rotation to follow the curve's bends, when the *Follow Curve* option is enabled."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:13
+# df1a5df272c9494696363ee599ae0d16
+msgid "The owner is always evaluated in the global (world) space:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:15
+# 92d163bd0de640c68362bac5e84038cb
+msgid "Its location (as shown in the *Transform Properties* panel, :kbd:`N`) is used as an offset from its normal position on the path. E.g. if you have an owner with the ``(1.0, 1.0, 0.0)`` location, it will be one BU away from its normal position on the curve, along the X and Y axis. Hence, if you want your owner *on* its target path, clear its location (:kbd:`Alt-G`)!"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:20
+# 4a30b316937c46298cf913dfa8f83c9a
+msgid "This location offset is also proportionally affected by the *scale of the target curve*. Taking the same ``(1.0, 1.0, 0.0)`` offset as above, if the curve has a scale of ``(2.0, 1.0, 1.0)``, the owner will be offset *two* BU along the X axis (and one along the Y one)..."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:23
+# 14895d3228254b158a47e4ec18473ac8
+msgid "When the *Curve Follow* option is enabled, its rotation is also offset to the one given by the curve (i.e. if you want the Y axis of your object to be aligned with the curve's direction, it must be in rest, non-constrained state, aligned with the global Y axis). Here again, clearing your owner's rotation (:kbd:`Alt-R`) might be useful..."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:28
+# 436bb8c10d3e48dea919a341e34c499c
+msgid "The movement of the owner along the target curve/path may be controlled in two different ways:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:30
+# c6e0eacdc8294a849dd4ebfaa132cc15
+msgid "The most simple is to define the number of frames of the movement, in the Path Animation panel of the Object Data context, via the numeric field Frames, and its start frame via the constraint's Offset option (by default, start frame: 1 [= offset of 0)], duration: 100)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:34
+# b527e985a825494ca14abfc0b25fd82d
+msgid "The second way, much more precise and powerful, is to define a *Evaluation Time* interpolation curve for the *Target* path (in the *Graph Editor*. See the :doc:`animation chapter </animation/index>` to learn more about Fcurves."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:37
+# 49d8e30efc2645e384c6ecd8d8a034fb
+msgid "If you don't want your owner to move along the path, you can give to the target curve a flat *Speed* FCurve (its value will control the position of the owner along the path)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:40
+# abf6fa5f69534b2a8151c8ce98ef3ad7
+msgid "*Follow Path* is another constraint that works well with the :doc:`Locked Track one </rigging/constraints/tracking/locked_track>`. One example is a flying camera on a path. To control the camera's roll angle, you can use a *Locked Track* and a target object to specify the up direction, as the camera flies along the path."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:46
+# 2b7becdb034c4a0b8c5a9f0ae6e8f1f5
+msgid "*Follow Path* and *Clamp To*"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:48
+# 48a27037512e4f2db94395fd48cc0ed7
+msgid "Do not confuse these two constraints. Both of them constraint the location of their owner along a curve, but *Follow Path* is an \"animation-only\" constraint, inasmuch that the position of the owner along the curve is determined by the time (i.e. current frame), whereas the :doc:`Clamp To </rigging/constraints/tracking/clamp_to>` *constraint* determines the position of its owner along the curve using one of its location properties' values."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:57
+# 74131b0e9794460b94a938cf77593a69
+msgid "Note that you also need to keyframe Evaluation Time for the Path. Select the path, go to the path properties, set the overall frame to the first frame of the path (e.g. frame 1), set the value of Evaluation time to the first frame of the path (e.g. 1), right click on Evaluation time, select create keyframe, set the overall frame to the last frame of the path (e.g. frame 100), set the value of Evaluation time to the last frame of the path (e.g. 100), right click on Evaluation time, select create keyframe. ..    Comment: <!-- from http://overshoot.tv/node/1123 paragraph needs cleanup but this definitely needs to be in the documentation --> ."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:67
+# 2be374a4554f4a8a8de9419e3ba5e2f7
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:72
+# 607da8696ec64641998e88c8256b2a94
+msgid "Follow Path panel"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:77
+# 66dd3fce59f64ac793b21b537516baf5
+msgid "Target"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:76
+# a20909e374344a94a5107b3fdc90c561
+msgid "This constraint uses one target, which *must be a curve object*, and is not functional (red state) when it has none."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:79
+# f8154308b4804baa897e9af394ec8d8b
+msgid "Curve Radius"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:80
+# 992d269974f347bf938e46a79c6e0aa4
+msgid "Objects scale by the curve radius. See :doc:`Curve Editing </modeling/curves/editing/advanced>`"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:81
+# ddcec24097f6417cb32c09cfa0ef34de
+msgid "Fixed Position"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:82
+# 5aa8528ecf5e4df1ae3ab21f3269395e
+msgid "Object will stay locked to a single point somewhere along the length of the curve regardless of time"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:83
+# b016d7fede5a4be8931591cf3cb94c01
+msgid "Offset"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:84
+# 78ddcaa7ca4842fdb274a42e385e08e8
+msgid "The number of frames to offset from the \"animation\" defined by the path (by default, from frame **1**)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:99
+# 814e5c1dc185470c9ba2ef621e74db8d
+msgid "Follow Curve"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:86
+# 8a0e97db147943dcac3bdc1ab8f2fc64
+msgid "If this option is not activated, the owner's rotation isn't modified by the curve; otherwise, it's affected depending on the following options:"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:90
+# 5a92267b1deb45f7924beb80327b355f
+msgid "Forward"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:90
+# 0e0d7a5499a44efdbc988f83d730c442
+msgid "The axis of the object that has to be aligned with the forward direction of the path (i.e. tangent to the curve at the owner's position)."
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:99
+# 5f53d1c27f0d4d8b87c4afbdc34f253d
+msgid "Up"
+msgstr ""
+
+#: ../../../manual/rigging/constraints/relationship/follow_path.rst:93
+# 0919d2dd8dd947389de4a2d662dbdf0c
+msgid "The axis of the object that has to be aligned (as much as possible) with the world Z axis. In fact, with this option activated, the behavior of the owner shares some properties with the one caused by a :doc:`Locked Track constraint </rigging/constraints/tracking/locked_track>`, with the path as \"axle\", and the world Z axis as \"magnet\"."
+msgstr ""
+

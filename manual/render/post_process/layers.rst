@@ -63,13 +63,13 @@ Material Override
    Additional options shown in this panel are different for each render engine. See these options for:
 
    - :doc:`Blender Render </render/blender_render/layers>`
-   - :doc:`Cycles </render/cycles/passes>`
+   - :doc:`Cycles </render/cycles/settings/passes>`
 
 
 Using Render Layers
 ===================
 
-Each Render Layer has an associated set of :doc:`Scene Layers </getting_started/basics/navigating/layers>`.
+Each Render Layer has an associated set of :doc:`Scene Layers </editors/3dview/layers>`.
 Objects which are on one of the associated Scene Layers are shown in that Render Layer,
 as long as that Scene Layer is also visible.
 

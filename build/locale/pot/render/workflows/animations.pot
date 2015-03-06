@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/workflows/animations.rst:4
+# 9172728a12dc4ad097c70de3702042ed
+msgid "Rendering Animations"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:6
+# 097a57f8c5d04aec8db75cf3837512b0
+msgid "While rendering stills will allow you to view and save the image from the render buffer when it's complete, animations are a series of images, or frames, and are automatically saved directly out to disk after being rendered."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:10
+# 1811b87bd7ef4072a000eed7279ffb97
+msgid "After rendering the frames, you may need to edit the clips, or first use the Compositor to do green-screen masking, matting, color correction, DOF, and so on to the images. That result is then fed to the Sequencer where the strips are cut and mixed and a final overlay is done."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:15
+# 78ae9c9bc9d54beab8654be808c34852
+msgid "Finally you can render out from the Sequencer and compress the frames into a playable movie clip."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:19
+# cd27de41d42c42fc8b0a4d14da47e6e4
+msgid "Workflow"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:21
+# 658ecdf01f194a4dbb2518b7af474d3c
+msgid "Generally, you do a lot of intermediate renders of different frames in your animation to check for timing, lighting, placement, materials, and so on. At some point, you are ready to make a final render of the complete animation for publication."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:25
+# 45492d5ecf2046d9bdd20bb9e8fcf7f1
+msgid "There are two approaches you can use when making a movie, or animation, with or without sound. The approach you should use depends on the amount of CPU time you will need to render the movie. You can render a \"typical\" frame at the desired resolution, and then multiply by the number of frames that will ultimately go into the movie, to arrive at an total render time."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:30
+# 547474b3b766497eac7c407faa48597a
+msgid "If the total render time is an hour or more, you want to use the \"Frame Sequence\" approach. For example, if you are rendering a one-minute video clip for film, there will be (60 seconds per minute) * (24 frames per second) or 1440 frames per minute. If each frame takes 30 seconds to render, then you will be able to render two frames per minute, or need 720 minutes (12 hours) of render time."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:37
+# 411d31c386dd4803b6bd7d64a6b55496
+msgid "Rendering takes all available CPU time; you should render overnight, when the computer is not needed, or set Blender to a low priority while rendering, and work on other things (be careful with the RAM space!)."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:41
+# d4500a956c624d6483413d11c31aa1ab
+msgid "The **Direct Approach** - highly **not** recommended and not a standard practice - is where you set your output format to an AVI or MOV format, and click ANIM to render your scene directly out to a movie file. Blender creates one file that holds all the frames of your animation. You can then use Blender's VSE to add an audio track to the animation and render out to an MPEG format to complete your movie."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:48
+# 93823eaf0a4343bdbc9fd93438e02551
+msgid "The **Frame Sequence** is a much more stable approach, where you set your output format to a still format (such as JPG, PNG or MultiLayer), and click ANIM to render your scene out to a set of images, where each image is the frame in the sequence."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:53
+# 36ccb771bb7e46b485116f17f5bb2018
+msgid "Blender creates a file for each frame of the animation. You can then use Blender's compositor to perform any frame manipulation (post processing). You can then use Blender's VSE to load that final image sequence, add an audio track to the animation, and render out to an MPEG format to complete your movie. The Frame Sequence approach is a little more complicated and takes more disk space, but gives you more flexibility."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:60
+# a049d13b1a144506a56e7a9154a3d0cf
+msgid "Here are some guidelines to help you choose an approach."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:62
+# c0caa2cf1a2f42d295e08aeb7bb79513
+msgid "Direct Approach"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:64
+# 68677cabfcb1490494e6abf526cfbae6
+msgid "short segments with total render time < 1 hour"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:65
+# 64b268a66dfc4fc0a78d47574ca2a0ba
+msgid "stable power supply"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:66
+# e6da9168b30a4b50bf6f5c3fa9e55ab4
+msgid "computer not needed for other uses"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:68
+# 924fb554b06e47a0a65a23ea66dd7913
+msgid "Frame Sequence Approach"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:70
+# f144eb0ebcb34c1e85ffeb86bc2d500a
+msgid "total render time > 1 hour"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:74
+# 433bc246283742fd85878fa003861e43
+msgid "post-production work needed"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:72
+# 3e524fac8028422abab951e58ef0073c
+msgid "Color/lighting adjustment"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:73
+# 2937921d19404e9aaefd5966b5e1a5ee
+msgid "Green screen / matte replacement"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:74
+# ef1b8f25b8074b598010e1c6c049e345
+msgid "Layering/compositing"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:75
+# 1d70b61bb148429b9f8672292c9e5f0a
+msgid "Multiple formats and sizes of ultimate product"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:76
+# 4def34b8849e48a3a11bdbccc49b3e6c
+msgid "intermediate frames/adjustments needed for compression/codec"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:77
+# abe952e060ed4f91a7f01c3591beac5f
+msgid "precise timing (e.g. lip-sync to audio track) needed in parts"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:78
+# 49c05d1e8460451094fff080f1ee95e6
+msgid "may need to interrupt rendering to use the computer, and want to be able to resume rendering where you left off."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:82
+# e2412361d6f44262935831f8338d9bae
+msgid "Frame Sequence Workflow"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:84
+# 66d1f4edada043b5beafebbd34d5006d
+msgid "First prepare your animation."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:85
+# e6ca0fca23224f1b91c27056422f42ea
+msgid "In the *Dimensions* panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use, as well as the frame rate, which should already be set."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:87
+# d022d5336e50443d80a98a5289e156b1
+msgid "In the Output panel set up your animation to be rendered out as images, generally using a format that does not compromise any quality (I prefer PNG or MultiLayer because of their loss-less nature)."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:90
+# 11a9f331707b4bfc8da300f91a3230d9
+msgid "Choose the output path and file type in the Output panel as well, for example ``//render/my-anim-``."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:91
+# 03340dc8a0ad4178a4e06a0e7755ff5a
+msgid "Confirm the range of your animation frame Start and End."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:92
+# 849ff2941bc14bc3a67e2a07996f0e3b
+msgid "Save your .blend file."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:93
+# bcf9bb8ae7ce40e1a0856f6020d19b95
+msgid "Press the big *Animation* button. Do a long task [like sleeping, playing a video game, or cleaning your driveway] while you wait for your computer to finish rendering the frames."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:96
+# 4f0cb8562fa041fbac4b5a860898f84b
+msgid "Once the animation is finished, use your OS file explorer to navigate into the output folder (\"``render`` in this example). You will see lots of images (.png or .exr, etc... depending on the format you chose to render) that have a sequence number attached to them ranging from 0000 to a max of 9999. These are your single frames."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:100
+# 9acd889b0cf6431fa7e5cd5d9b2f0ca6
+msgid "In Blender, now go into the :doc:`video sequence editor </editors/sequencer/index>`."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:101
+# 43ed2b13357b4e68b76803959e8747b7
+msgid "Choose *Add Image* from the add menu. Select all the frames from your output folder that you want to include in your animation (Press A to Select All easily). They will be added as a strip to the sequence editor."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:103
+# 47c6fdda7e414abc97001b6a93af8121
+msgid "Now you can edit the strip and add effects or simply leave it like it is. You can add other strips, like an audio strip."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:105
+# ccf5fdfc1bf34aa5af4e2f7bf1b81748
+msgid "Scrub through the animation, checking that you have included all the frames."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:106
+# 3d557c3ebe2c4efa9bfc20578c7a51ad
+msgid "In the Scene Render buttons, in the Post Processing panel, activate *Sequencer*."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:107
+# 97857e2eaf6c486f9d5abe47052375da
+msgid "In the Format panel, choose the container and codec you want (e.g. MPEG H.264) and configure it. The video codecs are described on the previous page: :doc:`Output Options </render/output>`."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:109
+# 41f946c35be543049c186fbdbb6913f7
+msgid "Click the ANIMATION render button and Blender will render out the sequence editor output into your movie."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:111
+# 0d3047e1d83044f08220fa93c76cc3c3
+msgid "Why go through all this hassle? Well, first of all, if you render out single frames you can stop the render at any time by pressing :kbd:`Esc` in the render window. You will not lose the frames you have already rendered, since they have been written out to individual files. You can always adjust the range you want to continue from where you left off."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:117
+# d1d0432a310c489384e866285db6efa9
+msgid "You can edit the frames afterwards and post-process them. You can add neat effects in the sequence editor. You can render the same sequence into different resolutions (640x480, 320x240, etc) and use different codecs (to get different file sizes and quality) with almost no effort whatsoever."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:125
+# b6185a5750c243a09c50a37752519b7c
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:135
+# 9ac549bbb4d2454a91965453633b2e20
+msgid "Post Processing Panel"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:130
+# d64d9499276e4f5dae600892f40331c6
+msgid "Sequencer"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:129
+# 6cd02b517437492cbfc01b41094dbd84
+msgid "Renders the output of the sequence editor, instead of the view from the 3D scene's active camera. If the sequence contains scene strips, these will also be rendered as part of the pipeline. If Do Composite is also enabled, the Scene strip will be the output of the Compositor."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:135
+# 9d9581c958f24b84be40065e89794b12
+msgid "Compositing"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:133
+# 01fe093dfb3747f3b21648e9b9b59b59
+msgid "Renders the output from the Compositing noodle, and then pumps all images through the Composite node map, displaying the image fed to the Composite Output node."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:138
+# e0a3af220d5948c7b4ca929387dcb34c
+msgid "Hints"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:148
+# efd86ef4623e4373b3cb8ea6e33f3fb8
+msgid "Argh! My bratty sister turned off the PC right in the middle of rendering my movie!"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:141
+# bd7c6cbc52974fe590f385bedc00c38e
+msgid "Unless your animation is really simple, and you expect it to render in half an hour or less, it is always a good idea to render the animation as separate image frames in a loss-less format (TGA, PNG, BMP) rather than as a movie file from the beginning. This allows you an easy recovery if there is a problem and you have to re-start the rendering, since the frames you have already rendered will still be in the Output directory. Just change the *START* frame number to the frame number where you want to pick up from, and click *ANIM* again."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:153
+# f83244f8a28d408296cff7fb53b888e9
+msgid "I only need to re-render a few frames in the middle"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:151
+# ffef3ce0bf90467aad2b61f050de2f7b
+msgid "It's also a good idea to render initially to a frame sequence, since if only a few frames have an error, you can make corrections and re-render just the affected frames. You can then make a movie out of the separate frames with Blender's sequence editor or with compositing nodes."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:157
+# e212f3f9f9184afe9979d83af28fd0cc
+msgid "Only first frame renders, then Blender locks up"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:156
+# fb160878366642948707111db33e2aba
+msgid "If you click ANIM and only the first frame renders, be sure the output file is not locked by the media player. In general, check the console when rendering."
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:164
+# cd33e25443c244c59aa43410146f0034
+msgid "Unable to create Quicktime movie"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:160
+# a39fdf7144b44e60a27e934921d9c5a0
+msgid "CreateMovieFile error: -47"
+msgstr ""
+
+#: ../../../manual/render/workflows/animations.rst:162
+# 8b4a6cb4150c480a809b0325f129d3e8
+msgid "The Quicktime movie strip is in use (possibly in the VSE) and cannot be overwritten. If it is used in the VSE, delete the strip, or delete the file using your file explorer."
+msgstr ""
+

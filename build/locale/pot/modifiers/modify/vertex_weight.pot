@@ -1,0 +1,944 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:4
+# 214c39d98c4549b294ed7edf292993b6
+msgid "Vertex Weight Modifiers"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:6
+# 9711ed2cb1184442a15eb738e3e38e42
+msgid "The Vertex Weight modifiers work on a vertex group of the affected object, by modifying its weights and/or which vertices belong to the vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:12
+# 955481ae55b242629e9d060124cce16c
+msgid "These modifiers do implicit clamping of weight values in the standard ``[0.0, 1.0]`` range. All values below ``0.0`` will be set to ``0.0``, and all values above ``1.0`` will be set to ``1.0``."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:15
+# adf303b500784f44bdf5f13d1dbc4b7e
+msgid "There are currently three Vertex Weight modifiers:"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:17
+# c35b1e75ee634f6b9729c4654502d18a
+msgid "`Vertex Weight Edit Modifier`_"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:18
+# 0f68acb06a3247e68c2764b291165ec6
+msgid "`Vertex Weight Mix Modifier`_"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:19
+# eef65f4611c84fca822aacb058cbf3df
+msgid "`Vertex Weight Proximity Modifier`_"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:23
+# 496ab1b1b5ba431bb50c21051e044a59
+msgid "Common Settings"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:28
+# 946d2d7ba9dc41c8896e1fa40e8e4449
+msgid "The influence/masking part of Vertex Weight modifiers."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:31
+# fd7618ebd6944c6eb4046419fadd7d38
+msgid "The three Vertex Weight modifiers share a few settings, controlling their influence on the affected vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:40
+# 88c7ff076cc249088e6c41dc813dfbee
+msgid "Global Influence"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:34
+# f3fd241e9ae64139a6b495e456f49f81
+msgid "The overall influence of the modifier (``0.0`` will leave the vertex group's weights untouched, ``1.0`` is standard influence)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:39
+# 3e3373907c8f433989872af8f9c844f5
+msgid "Influence only affects weights, adding/removing of vertices to/from vertex group is not prevented by setting this value to ``0.0``."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:45
+# ab12e01b14324bfaaf8d1c51073f4519
+msgid "Vertex Group Mask"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:43
+# 0008173e18ff478389a01fee3cc8d234
+msgid "An additional vertex group, the weights of which will be multiplied with the global influence value for each vertex. If a vertex is not in the masking vertex group, its weight will be not be affected."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:88
+# f80cf539c9dc490eb8b5f20f0ba1eaeb
+msgid "Texture"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:48
+# 89ac2af965714e7d8bf4d6455b0594fe
+msgid "An additional texture, the values of which will be multiplied with the global influence value for each vertex."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:50
+# d481f5b1ba214392ab9046cb087d0b57
+msgid "This is a standard texture :doc:`datablock </data_system/datablocks>` control. When set, it reveals other settings:"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:63
+# 1d9f9043de9f435fae1561a8074d302b
+msgid "Texture Coordinates"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:54
+# c2d3274d3669452aa1be8a97e68f4084
+msgid "How the texture is mapped to the mesh."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:56
+# c5e50060add04c98995d30a6c345ba4d
+msgid "Local"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:57
+# de806fadeffa4a9299ee187c211dfc72
+msgid "Use local vertex coordinates."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:58
+# 205becd9de224e63b63e4c9eb60ff1fc
+msgid "Global"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:59
+# 4fd4b604550543af98ecb2d4e7b9dcd2
+msgid "Use vertex coordinates in global space."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:60
+#: ../../../manual/modifiers/modify/vertex_weight.rst:84
+# a33a8ba9d5924903b0b7146ad6201ef2
+# e25928055a6c4438a805c6f137309716
+msgid "Object"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:61
+# 953f03cae771467ebad3a3a3d46fc3cc
+msgid "Use vertex coordinates in another object's space."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:63
+# 7253c7b32cbf4e86ac6aaa6218c1e0c0
+msgid "UV"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:63
+# 21f999adae974b4ca16770a74285f0f0
+msgid "Use a UV layer's coordinates."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:81
+# d851cae0603149d88bd7aa33dcf2985f
+msgid "Use Channel"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:66
+# 74484ac29f664e1b830e53c19197a882
+msgid "Which channel to use as weight factor source/"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:68
+# 430cc8d89829474e80f88e9a3b463291
+msgid "Red/Green/Blue/Alpha"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:69
+# d04a8c316511400ba74ac6fe6ed3c860
+msgid "One of the color channels' values."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:70
+# c566dea975104ed69bdef7e13e82bba8
+msgid "Intensity"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:71
+# f03b014bdbd24e1cbccaf1cb00dab134
+msgid "The average of the RGB channels (If RGB = ``1.0, 0.0, 0.0``, value is ``0.33``)"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:72
+# a6ac444dd3f4486588b7c30359da8ce9
+msgid "Value"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:73
+# a146e06aa7254e04b32eaeb35d9224f6
+msgid "The highest value of the RGB channels (If RGB = ``1.0, 0.0, 0.0``, value is ``1.0``)"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:74
+# 694063d27d9f4f2092f87dffd452f7b6
+msgid "Hue"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:75
+# 1874fe4cbf2243279128cf2874f23dd6
+msgid "Uses the hue value from the standard color wheel (e.g. blue has a higher hue value than yellow)"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:77
+# 873e8116094c47e2953ad701a90f547e
+msgid "Saturation"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:77
+# 52062192531a4a8d84c23e5829234651
+msgid "Uses the saturation value (e.g. pure red's value is ``1.0``, gray is ``0.0``)"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:81
+# f7530dec2d7a4c4aab810fdf2d56ebea
+msgid "All of the channels above are gamma corrected, except for *Intensity*."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:84
+# 92d8e5e8f20b4e3eb48d1d995671a613
+msgid "The object to be used as reference for *Object* mapping."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:88
+# 0088aa8d12e7481a9f43e0910baa053c
+msgid "UV Layer"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:87
+# e0b52b0c92ef4f7c80b9e343f9b657c3
+msgid "The UV layer to be used for *UV* mapping."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:91
+# 71d3591cdd0b4c99a9259b8586f5abb4
+msgid "Viewing Modified Weights"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:93
+# 1b45984c5cb94becb9b794bf611c2c3e
+msgid "You can view the modified weights in *Weight Paint* mode. This also implies that you'll have to disable the Vertex Weight modifiers if you want to see the original weights of the vertex group you are editing."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:99
+# 149d236b920f4952ab81cee2037d8d84
+msgid "Vertex Weight Edit Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:104
+# 7a12818829484c538f5cc5991f68b305
+msgid "The Vertex Weight Edit modifier panel."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:106
+# c3372f6884884a29b7f7d5cc1186dd7b
+msgid "This modifier is intended to edit the weights of one vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:108
+# bc7a522ca0684a3e9810db4bf7f1ff94
+msgid "The general process is the following, for each vertex:"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:110
+# 9a4e7847dccd4ab6a7651db116c52f74
+msgid "[Optional] It does the mapping, either through one of the predefined functions, or a custom mapping curve."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:111
+# ff0c1f8e691d439e9396d01860f63294
+msgid "It applies the influence factor, and optionally the vertex group or texture mask (``0.0`` means original weight, ``1.0`` means fully mapped weight)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:113
+# d5a367449eb2441b8a78a2093d9ca770
+msgid "It applies back the weight to the vertex, and/or it might optionally remove the vertex from the group if its weight is below a given threshold, or add it if it's above a given threshold."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:118
+#: ../../../manual/modifiers/modify/vertex_weight.rst:161
+#: ../../../manual/modifiers/modify/vertex_weight.rst:227
+# c863dcb1aa4944d8b09b4e2a5655fa79
+# a48b16fab0944f36aac96643bda75f9d
+# b464cf8f0e634183845dc88f6259061f
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:121
+#: ../../../manual/modifiers/modify/vertex_weight.rst:230
+# 13bbdc3878864d3a9e60d3afda8a20d0
+# 3491e985c6ae43f8b33a69f2d6e06564
+msgid "Vertex Group"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:121
+#: ../../../manual/modifiers/modify/vertex_weight.rst:164
+#: ../../../manual/modifiers/modify/vertex_weight.rst:230
+# 5c6e7f904f0c4f53a337684f2178392f
+# ff69b9ac9eae41baa6b570167db3642c
+# f69f31a681f0473e989f4741ec81a14f
+msgid "The vertex group to affect."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:124
+# 073351dcec3948798cafbcf334733f01
+msgid "Default Weight"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:124
+#: ../../../manual/modifiers/modify/vertex_weight.rst:167
+# 1367e2880ea44c75a6856b643b1be3ac
+# 3e0d7ee05eaa43bead5ecee283914ba7
+msgid "The default weight to assign to all vertices not in the given vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:138
+#: ../../../manual/modifiers/modify/vertex_weight.rst:257
+# 71a2bf8b49e8469aa50da25ced591a65
+# bb9a99a811f34789bb4767251509d06c
+msgid "Falloff Type"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:127
+# f7a7eeffdeb84ca1a68e67145bfe5c7e
+msgid "Type of mapping:"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:129
+# 5edf7c36b9794721aeef4701286a050c
+msgid "Linear"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:130
+# cdbe543236364572aa4e840bf27c4e4b
+msgid "No mapping."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:131
+# 77230a79e5ea4c86b52adb7ccb4e99b5
+msgid "Custom Curve"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:132
+# ec4c0690e5f440108347f6551c5a6d85
+msgid "Allows the user to manually define the mapping using a curve."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:133
+# 8588be2ce00f4b859a38c62a1445ea30
+msgid "Sharp, Smooth, Root and Sphere"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:134
+# 074e8485d865421a991eac5de5f742b5
+msgid "These are classical mapping functions, from spikiest to roundest."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:135
+# 94ea9b0d63e04702969a8680da622ccf
+msgid "Random"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:136
+# 15814d18d52e45619ee2d9cbb46257a2
+msgid "Uses a random value for each vertex."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:138
+# e5a33c7360c348d68fb8376263af54aa
+msgid "Median Step"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:138
+# 9ec0c79f290f484d8f1126bb46c781fe
+msgid "Creates binary weights (``0.0`` or ``1.0``), with ``0.5`` as cutting value."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:141
+# d62897a8f1414419b1aa3809680a3993
+msgid "Group Add"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:141
+# 97f662eb73c14ceaadba37df74f3e3c9
+msgid "Adds vertices with a final weight over *Add Threshold* to the vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:145
+# 82a690f5527c4dd58015a9d4f5b6a598
+msgid "Group Remove"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:144
+# 72749cd5905c407cac312b08f0fb4e2b
+msgid "Removes vertices with a final weight below *Remove Threshold* from the vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:148
+# c892b7e0f6674da4ab36e16540d9efac
+msgid "Vertex Weight Mix Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:153
+# 4133838997434e29b9f5d64cd2909c75
+msgid "The Vertex Weight Mix modifier panel."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:156
+# ab73f7479ab243dcab8367864c6aaf0e
+msgid "This modifier mixes a second vertex group (or a simple value) into the affected vertex group, using different operations."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:164
+# d330868c3cea4e26900444b13a640b8b
+msgid "Vertex Group A"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:167
+# 262e565f4b5840b6abac866499227ffe
+msgid "Default Weight A"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:170
+# eec487387e094782aaf3d919c83f9d5b
+msgid "Vertex Group B"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:170
+# 781777879c58474297d3d9486b723014
+msgid "The second vertex group to mix into the affected one. Leave it empty if you only want to mix in a simple value."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:173
+# 760338c69b2949748379238b86cd528a
+msgid "Default Weight B"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:173
+# 9ea60927a312408fb555a4f2c836a2b2
+msgid "The default weight to assign to all vertices not in the given second vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:191
+# 6a49cb84166e47fd8f9204dd281d29e4
+msgid "Mix Mode"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:176
+# 67a0a7bb92ce473ca0c735ce6e82272a
+msgid "How the vertex group weights are affected by the other vertex group's weights."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:178
+# 3d7e1a0eb4144fdca998d1907be14773
+msgid "Replace weights"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:179
+# 1968bc5497704f089d3d928f4497da3f
+msgid "Replaces affected weights with the second group's weights."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:180
+# cee87c94608546bdbeda7e93bcde3b77
+msgid "Add to weights"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:181
+# b383a870348c42b0937b1d6fd715878c
+msgid "Adds the values of *Group B* to *Group A*."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:182
+# be89a6235ddf4b3196ee5aed74fc43aa
+msgid "Subtract from weights"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:183
+# 9173981a32d94e568727b21510f4ddee
+msgid "Subtracts the values of *Group B* from *Group A*."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:184
+# 318b6654ba414b1a99110c5e8910e96b
+msgid "Multiply weights"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:185
+# c1bf63a9ff3b4549872321bf16ee96db
+msgid "Multiplies the values of *Group B* with *Group A*."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:186
+# bde24b6cfba443ababbb47cda32b9af6
+msgid "Divide weights"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:187
+# e82f1be0df3043789edaf1db6cbbdb75
+msgid "Divides the values of *Group A* by *Group B*."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:188
+# 80a327c1ffd746c1ab8c8ce3bba926d6
+msgid "Difference"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:189
+# 26584d39e2d14f6e8486414157444641
+msgid "Subtracts the smaller of the two values from the larger."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:191
+# 2ef3d3c2d0704815a783387cb21e6d19
+msgid "Average"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:191
+# 7d905d04f9d44fc8b249bec732ae175c
+msgid "Adds the values together, then divides by 2."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:211
+# cf499c3c049e49b89b05a1f120d09fd0
+msgid "Mix Set"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:194
+# f49376651f35479ca5f0b7bcb30ccbf9
+msgid "Choose which vertices will be affected."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:196
+# 08473ac29d674f03872827ae310a0eb1
+msgid "All vertices"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:197
+# 5550932f6eff4c9d806378548a2eff4a
+msgid "Affects all vertices, disregarding the vertex groups content."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:198
+# c11a669936844a8a96ac636b6bd4f14d
+msgid "Vertices from group A"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:199
+# beae0c60f11c406a8da8a4074b39b6ed
+msgid "Affects only vertices belonging to the affected vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:200
+# 0a2661df089f4b86ae5368a3581b860b
+msgid "Vertices from group B"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:201
+# 962c9b6f1e314402b974fc1d5693abca
+msgid "Affects only vertices belonging to the second vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:202
+# bb6db054de4e4a4689b2e20eea844870
+msgid "Vertices from one group"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:203
+# 230f2970afab424186a20a839ad5d5ca
+msgid "Affects only vertices belonging to at least one of the vertex groups."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:205
+# 0d3227a29e7042cda007836fe38bae98
+msgid "Vertices from both groups"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:205
+# 3feba8a5d0c54140b1c1e7644a8eedde
+msgid "Affects only vertices belonging to both vertex groups."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:209
+# ed706a2a068d4499a538e8158fa0aa1e
+msgid "When using *All vertices*, *Vertices from group B* or *Vertices from one group*, vertices might be added to the affected vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:214
+# 7770356b75234d3789c16dce86b03569
+msgid "Vertex Weight Proximity Modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:219
+# 89e4e21326a74ca389f8f2e086dbc615
+msgid "The Vertex Weight Proximity modifier panel."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:222
+# 86063b88c657468b9a1c46c3e08a9d5c
+msgid "This modifier sets the weights of the given vertex group, based on the distance between the object (or its vertices), and another target object (or its geometry)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:233
+# 91dd32cd017e4f3593f545a3a93c68c0
+msgid "Target Object"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:233
+# 3607071d4fca4e89afdb6f7d28f5a63d
+msgid "The object from which to compute distances."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:240
+# 933d250d880b4a1da7cc88d8438e971e
+msgid "Proximity mode"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:237
+# 731bf055fab640aebd1cd7cf111fe20f
+msgid "Object Distance"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:237
+# 43e525bf4469434397964a436ee2d1a1
+msgid "Use the distance between the modified mesh object and the target object as weight for all vertices in the affected vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:240
+# a743c44dd0bc40c3b9d3622f03d5e103
+msgid "Geometry Distance"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:240
+# 733d1563a13f41e1aaa8c701c389327d
+msgid "Use the distance between each vertex and the target object, or its geometry."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:242
+# a15b710b2c67439ea5adbe15099db5e5
+msgid "The *Geometry Distance* mode has three additional options, *Vertex*, *Edge* and *Face*. If you enable more than one of them, the shortest distance will be used. If the target object has no geometry (e.g. an empty or camera), it will use the location of the object itself."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:246
+# 4d0f0537572b4130b9faa71d23013a7a
+msgid "Vertex"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:247
+# 3341be2f6a2a4d30ba5545d13ef1fde8
+msgid "This will set each vertex's weight from its distance to the nearest vertex of the target object."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:248
+# db44252d6ca54dbd97325568643f673b
+msgid "Edge"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:249
+# 95963abf9d524c4091bed445c35d491a
+msgid "This will set each vertex's weight from its distance to the nearest edge of the target object."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:250
+# f97209754b874c8ea558d7b18c956f22
+msgid "Face"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:251
+# 1daff02f0142460e94cee462ce6c502d
+msgid "This will set each vertex's weight from its distance to the nearest face of the target object."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:252
+# 7ba000c8aa2b4750a0fc8398ae128a8c
+msgid "Lowest"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:253
+# 339cb4fb620f4f369257b4c75f7c1fd3
+msgid "Distance mapping to ``0.0`` weight."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:254
+# e72f7c6d9f5f47308865012a721595b2
+msgid "Highest"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:255
+# 790b230c399146c2abf30d3d400f553e
+msgid "Distance mapping to ``1.0`` weight."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:257
+# 4ea69be5620b44b5a1797ebfe91779a2
+msgid "Some predefined mapping functions, see `Vertex Weight Edit Modifier`_."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:261
+# a641513ba75e4cd1a22d8c2a43aca195
+msgid "*Lowest* can be set above *Highest* to reverse the mapping."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:265
+# df1fc8c82fe84a7c85e4f8f19e3b1a4f
+msgid "Examples"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:268
+# 2ed675bfd24545fba64cf5937d85665d
+msgid "Using Distance from a Target Object"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:270
+# cfdf719f2f3f4940a305ce18be7c7c24
+msgid "As a first example, let's dynamically control a *Wave* modifier with a modified vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:273
+# 97f6d51d447c42809c95611ad171d539
+msgid "Add a *Grid* mesh, with many vertices (e.g. a **100×100** vertices), and ``10`` BU side-length. Switch to *Edit* mode (:kbd:`Tab`), and in the *Object Data* properties, *Vertex Groups* panel, add a vertex group. Assign to it all your mesh's vertices (with e.g. a ``1.0`` weight). Go back to *Object* mode."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:279
+# 75f98e7ffcd0435882c7c9679e9a45f1
+msgid "Then, go to the *Modifiers* properties, and add a *Vertex Weight Proximity* modifier. Set the mode to *Object Distance*. Select your vertex group, and the target object you want (here I used the lamp)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:284
+# 1e7fb672b3844d719ffa2fa56f7950e8
+msgid "You will likely have to adjust the linear mapping of the weights produced by the *Vertex Weight Proximity* modifier. To do so, edit *Lowest Dist* and *Highest Dist* so that the first corresponds to the distance between your target object and the vertices you want to have lowest weight, and similarly with the second and highest weight..."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:290
+# 128b20346e044ed1bfa22944a6591695
+msgid "Now add a *Wave* modifier, set it to your liking, and use the same vertex group to control it."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:293
+# 964c16debad140f5b67b1c441f1e87b0
+msgid "Animate your target object, making it move over the grid. As you can see, the waves are only visible around the reference object! Note that you can insert a *Vertex Weight Edit* modifier before the *Wave* one, and use its *Custom Curve* mapping to get larger/narrower \"wave influence's slopes\"."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:300
+# 19922810125e4fd3ba21653554ed346a
+msgid "`The Blender file <http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__, ``TEST_1`` scene."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:304
+# 9f8ab14c34e74a3986a0d3c24b13b831
+msgid "Using Distance from a Target Object's Geometry"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:306
+# 8b9ab80b58734969b0de586000bb3d5d
+msgid "We're going to illustrate this with a *Displace* modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:308
+# 57c6f28f84ec413c807a644dddba56e5
+msgid "Add a **10×10** BU **100×100** vertices grid, and in *Edit* mode, add to it a vertex group containing all of its vertices, as above. You can even further sub-divide it with a first *Subsurf* modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:312
+# 8e5b5a6ac59041c8b592c9e7e86b9f31
+msgid "Now add a curve circle, and place it ``0.25`` BU above the grid. Scale it up a bit (e.g. ``4.0``)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:315
+# 67089ab0dc0144498a735c0872f6192c
+msgid "Back to the grid object, add to it a *Vertex Weight Proximity* modifier, in *Geometry Distance* mode. Enable *Edge* (if you use *Vertex* only, and your curve has a low U definition, you would get wavy patterns, see (*Wavy patterns*))."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:0
+# 8431cf138ea6409a845aa1ff6b72aab1
+msgid "Wavy patterns."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:327
+# 76889e25f0034c7a904b93e868ec35d4
+msgid "Distance from edges."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:332
+# 5acaba04c22c48ab8124cc1307d8abff
+msgid "Distance from vertices."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:335
+# 16336f43eb574bb385669c62cf6f2fb2
+msgid "Set the *Lowest Dist* to ``0.2``, and the *Highest Dist* to ``2.0``, to map back the computed distances into the regular weight range."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:338
+# d371b2ed411f45799a26485031af1ce8
+msgid "Add a third *Displace* modifier and affect it the texture you like. Now, we want the vertices of the grid nearest to the curve circle to remain undisplaced. As they will get weights near zero, this means that you have to set the *Midlevel* of the displace to ``0.0``. Make it use our affected vertex group, and that's it! Your nice mountains just shrink to a flat plane near the curve circle."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:345
+# b5f08baf57084196840ab62c30e5f9cd
+msgid "As in the previous example, you can insert a *Vertex Weight Edit* modifier before the *Displace* one, and play with the *Custom Curve* mapping to get a larger/narrower \"valley\"..."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:0
+# 0c370cc9238947ebba995a3880aa562e
+msgid "*Curve Map* variations."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:356
+# 0191bbb0f6a74e23bcd7a75b8f1a2e55
+msgid "Concave-type mapping curve."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:361
+# c7af7b5e5d0c4d12961b04f14c1dc1c2
+msgid "No mapping curve (linear)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:366
+# d2e08135548f44b492ef9ea6ab6083c7
+msgid "Convex-type mapping curve."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:372
+# 32fe4ddbf9b94722bcc6722124a0760e
+msgid "Vertices with a computed weight below 0.1 removed from the vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:375
+# 2d52c13ecbaa4d32bdc65e5623460aa9
+msgid "You can also add a fifth *Mask* modifier, and enable *Vertex Weight Edit* 's *Group Remove* option, with a *Remove Threshold* of ``0.1``, to see the bottom of your valley disappear."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:381
+# 616141cf58c749499b3c695283d334a1
+msgid "`The Blender file <http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__, ``TEST_2`` scene."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:385
+# a97d060df9c341faaf1b3fff9a9852d7
+msgid "Using a Texture and the Mapping Curve"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:387
+# f5e7c90d8a1c452b8b7d5ce5f3691c47
+msgid "Here we are going to create a sort of strange alien wave (yes, another example with the *Wave* modifier... but it's a highly visual one; it's easy to see the vertex group effects on it...)."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:391
+# 8c96d65936aa4309adcd2600f8b2a5f3
+msgid "So as above, add a **100×100** grid. This time, add a vertex group, but without assigning any vertex to it - we'll do this dynamically."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:394
+# bc20609a2b554407bf6d658db7dfaf11
+msgid "Add a first *Vertex Weight Mix* modifier, set the *Vertex Group A* field with a *Default Weight A* of ``0.0``, and set *Default Weight B* to ``1.0``. Leave the *Mix Mode* to *Replace weights*, and select *All vertices* as *Mix Set*. This way, all vertices are affected. As none are in the affected vertex group, they all have a default weight of ``0.0``, which is replaced by the second default weight (``1.0``). And all those vertices are also added to the affected vertex group."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:403
+# 0a28f687983746e687312b978e7c30f0
+msgid "Now, select or create a masking texture - here I chose a default *Magic* one. The values of this texture will control how much of the \"second weight\" (``1.0``) replaces the \"first weight\" (``0.0``)... In other words, they are taken as weight values!"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:407
+# 731b21b72cc94e5baefcd5adb83f343b
+msgid "You can then select which texture coordinates and channel to use. Leave the mapping to the default *Local* option, and play with the various channels..."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:0
+# a9415e2310af4e1ea27c79b984888ad2
+msgid "Texture channel variations."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:417
+# 0ed6ccfac6cd402bb76847a389b1af6c
+msgid "Using intensity."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:422
+# cb30b7cc1c344ac58c7b6042181b637a
+msgid "Using Red."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:427
+# 45c5147a2ab34df5908ed5d299c9d3fd
+msgid "Using Saturation."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:430
+# ede6a515f99c40bea0e07d4d84c49227
+msgid "Don't forget to add a *Wave* modifier, and select your vertex group in it!"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:432
+# 141ffbe03aaa4851b4fc2fb8f85ab80f
+msgid "You can use the weights created this way directly, but if you want to play with the curve mapping, you must add the famous *Vertex Weight Edit* modifier, and enable its *Custom Curve* mapping."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:437
+# 16e66b5d459b44a18a80ab71ea078536
+msgid "By default, it's a one-to-one linear mapping - in other words, it does nothing! Change it to something like in (*A customized mapping curve*), which maps ``[0.0, 0.5]`` to ``[0.0, 0.25]`` and ``[0.5, 1.0]`` to ``[0.75, 1.0]``, thus producing nearly only weights below ``0.25``, and above ``0.75`` : this creates great \"walls\" in the waves..."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:0
+# da893767b9ce418d97d9ef491583d415
+msgid "Custom mapping curve."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:450
+# 7b75a8025c0d4c6fad7c8167c25ec474
+msgid "A customized mapping curve."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:455
+# 8ee2293a1b8b4fc38853e2afd24a6baa
+msgid "Custom Mapping disabled."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:460
+# 50fb8c2c5cdd42f38f32aaefc1cef46b
+msgid "Custom Mapping enabled."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:465
+# 7b52341d2bce482bbf07cf18155aad28
+msgid "`The Blender file <http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__, ``TEST_4`` scene."
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:469
+# 70c0a207e0c54489adc277ced176780b
+msgid "See Also"
+msgstr ""
+
+#: ../../../manual/modifiers/modify/vertex_weight.rst:471
+# 2dd7b0485c3649f9ba6f4de44b41c4a6
+msgid "The `Development page <http://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
+msgstr ""
+

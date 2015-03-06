@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:5
+# ff35f0bc18804c6ca8c19e8f53e3dbf6
+msgid "GPU Rendering"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:8
+# 9610aae37f2c48ab90711a06fd89d524
+msgid "Introduction"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:10
+# fd82ae8c4f57428ca63275f0e43d7c33
+msgid ":abbr:`GPU (Graphics Processing Unit)` rendering makes it possible to use your graphics card for rendering, instead of the CPU. This can speed up rendering, because modern GPUs are designed to do quite a lot of number crunching. On the other hand, they also have some limitations in rendering complex scenes, due to more limited memory, and issues with interactivity when using the same graphics card for display and rendering."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:16
+# 55b357be43e64b1e9e52cd0b7c5b85d8
+msgid "Cycles has two GPU rendering modes: through CUDA, which is the preferred method for NVidia graphics cards; and OpenCL, which is intended to support rendering on AMD/ATI graphics cards. The implementation of OpenCL is only in an experimental stage and disabled in official builds."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:23
+# 2d3ad17cf448484997e79af423fcbaeb
+msgid "Configuration"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:25
+# e259a2fec9ad4d0ea33bd2b955243198
+msgid "To enable GPU rendering, go into the User Preferences, and under the System tab, select the Compute Device(s) to use. Next, for each scene, you can configure to use CPU or GPU rendering in the Render properties."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:31
+# ea0308f5bfe6452d9fcd62ba0328295d
+msgid "CUDA"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:34
+# fa3918c95a7649258f4341a9b051d1c1
+msgid "NVidia :abbr:`CUDA (Compute Unified Device Architecture)` is supported for GPU rendering with **NVidia graphics cards**. We support graphics cards starting from GTX 4xx (computing capability 2.0)."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:38
+# cbed2198a60244bcb47c2dc1fe00c149
+msgid "Cycles requires recent drivers to be installed, on all operating systems. Be sure to download the Blender version matching your operating system; that is, download 64-bit Blender for 64-bit operating systems."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:42
+# 3c96c4e24e474dfbbce6f2bf8b8477c9
+msgid "`List of CUDA cards with shader model <http://www.nvidia.com/object/cuda_gpus.htm>`__"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:46
+# db512ee43eeb47cfa61ce1670e974de8
+msgid "Limitations"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:48
+# 5e0324ee24b84ac6970fb6d501192000
+msgid "The maximum amount of individual textures is limited to 95 byte-image textures (PNG, JPEG, ..) and 5 float-image textures (OpenEXR, 16 bit TIFF, ..) on GTX 4xx/5xx cards, and 145 byte-image textures and 5 float-image textures on GTX6xx cards and above."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:51
+# 5d7fe8817cb54e9d8433a09418654a7b
+msgid ":doc:`Open shading language </render/cycles/osl>` (OSL) is only supported by CPU."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:52
+# 04307eaba25a4218bfda83fdb33d5343
+msgid "Smoke/Fire rendering is not supported on GPU."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:53
+# 73013185f1654ce5b3aa1ed03f52e933
+msgid "The :ref:`SSS shader <cycles_shader_sss>` is only supported in the :doc:`Experimental Feature Set </render/cycles/experimental_features>`."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:58
+# d9b7220917884d018f7346654506def9
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:61
+# fde105f95ceb4034b60c80e4ebca528a
+msgid "Why is Blender unresponsive during rendering?"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:63
+# 35da1529518942ffbb7d8f132d6b98b9
+msgid "While a graphics card is rendering, it can not redraw the user interface, which makes Blender unresponsive. We attempt to avoid this problem by giving back control over the GPU as often as possible, but a completely smooth interaction can't be guaranteed, especially on heavy scenes. This is a limitation of graphics cards for which no true solution exists, though we might be able to improve this somewhat in the future."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:70
+# 30d058a2bb94407b9b68945b16da471d
+msgid "If possible, it is best to install more than one GPU, using one for display and the other(s) for rendering."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:75
+# 91a70ff9d63e44d6bfef2e181db7bb18
+msgid "Why does a scene that renders on the CPU not render on the GPU?"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:77
+# 030ef3b353b64b34b4fcc6c4cb7fb678
+msgid "There maybe be multiple causes, but the most common is that there is not enough memory on your graphics card. We can currently only render scenes that fit in graphics card memory, and this is usually smaller than that of the CPU. Note that, for example, 8k, 4k, 2k and 1k image textures take up respectively 256MB, 64MB, 16MB and 4MB of memory."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:83
+# 1b468cee23ce444ba3422dff12c6c8a6
+msgid "We do intend to add a system to support scenes bigger than GPU memory, but this will not be added soon."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:88
+# b1b1372b2ee242c486fed777f3580e30
+msgid "Can I use multiple GPUs for rendering?"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:90
+# 5cba600e0dcc45699dcb018e6e9cadc5
+msgid "Yes, go to User Preferences > System > Compute Device Panel, and configure it as you desire."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:94
+# 16b0627b876b43119160fc2915f23afa
+msgid "Would multiple GPUs increase available memory?"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:96
+# ba1fbdbc39f24bb4aa071ba7049c8c49
+msgid "No, each GPU can only access its own memory."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:100
+# 4fc77dfd13ac4fb9bd8baf084cc66f33
+msgid "What renders faster, NVidia or AMD, CUDA or OpenCL?"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:102
+# b31307ebb76a423f98183aa00b4a7348
+msgid "Currently NVidia with CUDA is rendering faster. There is no fundamental reason why this should be so - we don't use any CUDA - specific features - but the compiler appears to be more mature, and can better support big kernels. OpenCL support is still being worked on and has not been optimized as much, because we haven't had the full kernel working yet."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:110
+# a6621c4705174f58a1f9f7749aaa549e
+msgid "Error Messages"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:113
+# 0357920b11b24931a4c60e39607033a4
+msgid "Unsupported GNU version! gcc 4.7 and up are not supported!"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:115
+# 626c936d36bd4c15a20187ef3675a702
+msgid "On Linux, depending on your GCC version you might get this error."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:117
+# 245948f045a54d348b17ba5b280a61b2
+msgid "If so, delete the following line in /usr/local/cuda/include/host_config.h"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:125
+# 5412e46c730644e1a9e58feb882f7289
+msgid "CUDA Error: Invalid kernel image"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:127
+# 07bede74e972415c9942b68f026543bd
+msgid "If you get this error on Windows 64-bit, be sure to use the 64-bit build of Blender, not the 32-bit version."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:132
+# 2c9d5a2115804912b6fa014193e35fdd
+msgid "CUDA Error: Out of memory"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:134
+# 437630b9c3584128992241d29295dd1b
+msgid "This usually means there is not enough memory to store the scene on the GPU. We can currently only render scenes that fit in graphics card memory, and this is usually smaller than that of the CPU. See above for more details."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:140
+# 3d6a33698a1d4a35ad160e354af0a73a
+msgid "The NVIDIA OpenGL driver lost connection with the display driver"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:142
+# e1b0ba9838d745fca7003ab5d6c0e70d
+msgid "If a GPU is used for both display and rendering, Windows has a limit on the time the GPU can do render computations. If you have a particularly heavy scene, Cycles can take up too much GPU time. Reducing Tile Size in the Performance panel may alleviate the issue, but the only real solution is to use separate graphics cards for display and rendering."
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:148
+# f9dd3a9b54554165adb42a63ef52b3bd
+msgid "Another solution can be to increase the timeout, although this will make the user interface less responsive when rendering heavy scenes. http://msdn.microsoft.com/en-us/windows/hardware/gg487368.aspx"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:154
+# 274c627bd1c0495fa653b62101b78877
+msgid "CUDA error: Unknown error in cuCtxSynchronize()"
+msgstr ""
+
+#: ../../../manual/render/cycles/gpu_rendering.rst:156
+# cd854887051b4ce4b2dceaf599dbd389
+msgid "An unknown error can have many causes, but one possibility is that it's a timeout. See the above answer for solutions."
+msgstr ""
+

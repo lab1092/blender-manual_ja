@@ -1,0 +1,222 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:4
+msgid "Newtonian Physics"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:6
+msgid ""
+"These are the \"normal\" particle physics. Particles start their life with "
+"the specified initial velocities and angular velocities, and move according "
+"to Newtonian forces. The response to environment and to forces is computed "
+"differently, according to any given integrator chosen by the animator."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:14
+msgid "Forces"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:18
+msgid "Image 5: Newtonian Physics."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:23
+msgid "Brownian"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:22
+msgid ""
+"Specify the amount of Brownian motion. Brownian motion adds random motion to"
+" the particles based on a Brownian noise field. This is nice to simulate "
+"small, random wind forces."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:26
+msgid "Drag"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:26
+msgid ""
+"A force that reduces particle velocity in relation to it's speed and size "
+"(useful in order to simulate Air-Drag or Water-Drag)."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:30
+msgid "Damp"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:29
+msgid "Reduces particle velocity (deceleration, friction, dampening)."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:33
+msgid "Collision"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:35
+msgid "Size Deflect"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:36
+msgid "Use the particle size in deflections."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:39
+msgid "Die on Hit"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:38
+msgid "Kill particle when it hits a deflector object."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:42
+msgid "Integration"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:46
+msgid ""
+"Integrators are a set of mathematical methods available to calculate the "
+"movement of particles. The following guidelines will help to choose a proper"
+" integrator, according to the behavior aimed at by the animator."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:52
+msgid ""
+"Also known as \"Forward Euler\". Simplest integrator. Very fast but also "
+"with less exact results. If no dampening is used, particles get more and "
+"more energy over time. For example, bouncing particles will bounce higher "
+"and higher each time. Should not be confused with \"Backward Euler\" (not "
+"implemented) which has the opposite feature, energies decrease over time, "
+"even with no dampening. Use this integrator for short simulations or "
+"simulations with a lot of dampening where speedy calculations is more "
+"important than accuracy."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:77
+msgid "Timestep"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:78
+msgid "The simulation time step per frame."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:83
+msgid "Subframes"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:80
+msgid ""
+"Subframes to simulate for improved stability and finer granularity in "
+"simulations. Use higher values for faster moving particles."
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:58
+msgid "Euler"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:61
+msgid "Varlet"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:68
+msgid "Midpoint"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:75
+msgid "RK4"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:61
+msgid ""
+"Very fast and stable integrator, energy is conserved over time with very "
+"little numerical dissipation. +"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:64
+msgid ""
+"Also known as \"2nd order Runge-Kutta\". Slower than Euler but much more "
+"stable. If the acceleration is constant (no drag for example), it is energy "
+"conservative. It should be noted that in example of the bouncing particles, "
+"the particles might bounce higher than they started once in a while, but "
+"this is not a trend. This integrator is a generally good integrator for use "
+"in most cases. +"
+msgstr ""
+
+#: ../../../manual/physics/particles/physics/newtonian.rst:71
+msgid ""
+"Short for \"4th order Runge-Kutta\". Similar to Midpoint but slower and in "
+"most cases more accurate. It is energy conservative even if the acceleration"
+" is not constant. Only needed in complex simulations where Midpoint is found"
+" not to be accurate enough. +"
+msgstr ""
+
+#~ msgid ""
+#~ "Very fast and stable integrator, energy is conserved over time with very "
+#~ "little numerical dissipation."
+#~ "                                                                                                                                                                                                                                                                                                                                                                                                                                         "
+#~ "+"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also known as \"2nd order Runge-Kutta\". Slower than Euler but much more "
+#~ "stable. If the acceleration is constant (no drag for example), it is energy "
+#~ "conservative. It should be noted that in example of the bouncing particles, "
+#~ "the particles might bounce higher than they started once in a while, but "
+#~ "this is not a trend. This integrator is a generally good integrator for use "
+#~ "in most cases."
+#~ "                                                                                                                                             "
+#~ "+"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Short for \"4th order Runge-Kutta\". Similar to Midpoint but slower and in "
+#~ "most cases more accurate. It is energy conservative even if the acceleration"
+#~ " is not constant. Only needed in complex simulations where Midpoint is found"
+#~ " not to be accurate enough."
+#~ "                                                                                                                                                                                                                                                                                   "
+#~ "+"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Euler`"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Varlet`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Very fast and stable integrator, energy is conserved over time with very "
+#~ "little numerical dissipation."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Midpoint`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also known as \"2nd order Runge-Kutta\". Slower than Euler but much more "
+#~ "stable. If the acceleration is constant (no drag for example), it is energy "
+#~ "conservative. It should be noted that in example of the bouncing particles, "
+#~ "the particles might bounce higher than they started once in a while, but "
+#~ "this is not a trend. This integrator is a generally good integrator for use "
+#~ "in most cases."
+#~ msgstr ""
+
+#~ msgid ":guilabel:`RK4`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Short for \"4th order Runge-Kutta\". Similar to Midpoint but slower and in "
+#~ "most cases more accurate. It is energy conservative even if the acceleration"
+#~ " is not constant. Only needed in complex simulations where Midpoint is found"
+#~ " not to be accurate enough."
+#~ msgstr ""

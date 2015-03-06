@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:4
+# 33bb658af864408ba1b0ff3b3dd7bdf9
+msgid "Vertices, Edges and Faces"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:6
+# 179786d9f0c0405cb334f2213dfffcd5
+msgid "In basic meshes, everything is built from three basic structures: *Vertices*, *Edges* and *Faces* (we're not talking about curves, NURBS, and so forth here). But there is no need to be disappointed: this simplicity still provides us with a wealth of possibilities that will be the foundation for all our models."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:13
+# 15232083bce3497a9b75949e718ac8c8
+msgid "Vertices"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:17
+# bad784f16dcd4eb5a49ecfe09ddcda1b
+msgid "Vertex example"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:20
+# fa8fd51231dd4629808613ff26b7b979
+msgid "A vertex is primarily a single point or position in 3D space. It is usually invisible in rendering and in *Object mode*. Don't mistake the center point of an object for a vertex. It looks similar, but it's bigger and you can't select it. (*Vertex example*) shows the center point labeled as ``A``. ``B`` and ``C`` are vertices."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:27
+# ea257869a913491397d5b5cb3b6c14e4
+msgid "A simple way to create a new vertex is to click :kbd:`Ctrl-LMB` in *Edit mode*. Of course, as a computer screen is two-dimensional, Blender can't determine all three vertex coordinates from a single mouse click, so the new vertex is placed at the depth of the 3D cursor. Using the method described above, any vertices selected previously are automatically connected to the new ones by an edge. In the image above, the vertex labeled *C* is a new vertex added to the cube with a new edge added between in *B* and *C*."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:37
+# 1613554a7db14a4c8f3efe10dc3e21a9
+msgid "Edges"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:39
+# 89d0beec7f294a7991b0c3676a927fb2
+msgid "An edge always connects two vertices by a straight line. The edges are the \"wires\" you see when you look at a mesh in wireframe view. They are usually invisible on the rendered image. They are used to construct faces. Create an edge by selecting two vertices and pressing :kbd:`F`."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:46
+# 2d6a7cbf07a44714a612b63e8a9219fe
+msgid "Faces"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:48
+# f817b498eb134b65a7bacd4b234a7e60
+msgid "A face is the highest level structure in a mesh. Faces are used to build the actual surface of the object. They are what you see when you render the mesh. A face is defined as the area between either three (triangles) or four (quadrangles) vertices, with an edge on every side. Triangles are always flat and therefore easy to calculate. On the other hand, quadrangles \"deform well\" and are therefore preferred for subdivision modeling."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:56
+# ab3881129f9e4e95af42b72cc2b3f617
+msgid "Take care when using four-sided faces (quads), because internally they are simply divided into two triangles each. Four-sided faces only work well if the face is pretty much flat (all points lie within one imaginary plane) and convex (the angle at no corner is greater than or equal to 180 degrees). This is the case with the faces of a cube, for example. That's why you can't see any diagonal in its wireframe model, because they would divide each square face into two triangles."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:65
+# 2db28f6c12dc48bbb1c9ddffb81ff06b
+msgid "While you could build a cube with triangular faces, it would just look more confusing in *Edit mode*. An area between three or four vertices, outlined by edges, doesn't have to be a face. If this area does not contain a face, it will simply be transparent or non-existent in the rendered image. To create a face, select three or four suitable vertices and press :kbd:`F`."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:74
+# 0a26e421c3664baa85f067422420e1a1
+msgid "Loops"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:78
+# b6ac1c4a36dd4442aa0b2fa56f9b197d
+msgid "Edge and Face Loops"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:81
+# 9f0ed8cd81094a9b8a0a82cda73dde19
+msgid "*Edge* and *Face Loops* are sets of faces or edges that form continuous \"loops\" as shown in (*Edge and Face Loops*). The top row (``1`` - ``4``) shows a solid view, the bottom row (``5`` - ``8``) a wireframe view of the same loops."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:85
+# adf5673f971a4bc6976157586bb1d9a6
+msgid "Note that loops ``2`` and ``4`` do not go around the whole model. Loops stop at so called poles because there is no unique way to continue a loop from a pole. Poles are vertices that are connected to either three, five, or more edges. Accordingly, vertices connected to exactly one, two or four edges are not poles."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:90
+# 2d5d108594624018b6d7f5981bb263bb
+msgid "In the image above, loops that do not end in poles are cyclic (``1`` and ``3``). They start and end at the same vertex and divide the model into two partitions. Loops can be a quick and powerful tool to work with specific, continuous regions of a mesh and are a prerequisite for organic character animation. For a detailed description of how to work with loops in Blender, please refer to the Manual page on :doc:`Edge and Face Tools </modeling/meshes/selecting/introduction#advanced_selection_tools>`."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:100
+# bcd8b43f42494e98ab60c90702878f7f
+msgid "Edge Loops"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:102
+# 27f429d84db44b009c46647fcbb5a46c
+msgid "Loops ``1`` and ``2`` in (*Edge and Face Loops*) are edge Loops. They connect vertices so that each one on the loop has exactly two neighbors that are not on the loop and placed on both sides of the loop (except the start and end vertex in case of poles)."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:106
+# e5496076111d4ff7bfefc7cce5e6ad91
+msgid "Edge Loops are an important concept especially in organic (subsurface) modeling and character animation. When used correctly, they allow you to build models with relatively few vertices that look very natural when used as subdivision surfaces and deform very well in animation."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:111
+# 49a45861534d4e8e94928ac0e585b698
+msgid "Take (*Edge Loops in organic modeling*) as an example: the edge loops follow the natural contours and deformation lines of the skin and the underlying muscles and are more dense in areas that deform more when the character moves, for example at the shoulders or knees."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:115
+# 62a8a30dd0984c76a7e14531420e5dcb
+msgid "Further details on working with Edge Loops can be found in :doc:`Edge Loop Selection </modeling/meshes/selecting/introduction#edge_loop_selection>`."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:120
+# c4783408ac3345449d53dab5405e62dc
+msgid "Face Loops"
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:122
+# f5e6ffa8013147fca71721fa9325cff9
+msgid "These are a logical extension of Edge Loops in that they consist of the faces between two Edge Loops, as shown in loops ``3`` and ``4`` in (*Edge and Face Loops*). Note that for non-circular loops (``4``) the faces containing the poles are not included in a Face Loop."
+msgstr ""
+
+#: ../../../manual/modeling/meshes/mesh_structures.rst:127
+# 2735ebccf2dd4eb899079fa446011554
+msgid "Further details on working with Face Loops can be found in :doc:`Face Loop Selection </modeling/meshes/selecting/introduction#face_loop_selection>`."
+msgstr ""
+

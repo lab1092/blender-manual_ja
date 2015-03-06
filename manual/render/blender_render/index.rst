@@ -1,8 +1,8 @@
 .. _blender-render-index:
 
-#################
-  Blender Render
-#################
+########################
+  Blender Render Engine
+########################
 
 .. toctree::
    :maxdepth: 1
@@ -13,3 +13,7 @@
    world/index.rst
    layers.rst
    passes.rst
+   motion_blur.rst
+   antialiasing.rst
+   quality.rst
+   performance.rst

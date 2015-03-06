@@ -1,0 +1,432 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/composite_nodes/types/input/image.rst:4
+#: ../../../manual/composite_nodes/types/input/image.rst:16
+# 72f0da2cabd3413bb24864d26e3fb934
+# 7b91939d6aa6459ba3942dacf9370ec2
+msgid "Image node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:6
+# 7f08450fc2ff490f9891dc78e040753e
+msgid "Reference"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:19
+# 69d9bde9a1da4d9b857b8574e90dafe5
+msgid "The *Image* node injects any image :doc:`format that is supported by Blender </render/output>`. Besides inputting the actual image, this node can also input *Alpha* and depth (*Z*) values if the image has them. If the image is a MultiLayer format, all saved render passes are input. Use this node to input:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:24
+# e229ebf8d61a42888234d967961de022
+msgid "A single image from a file (such as a JPG picture)"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:25
+# 36b46e8ed15741cc93fd8f650453b9a7
+msgid "Part or all of an animation sequence (such as the 30th to 60th frame)"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:26
+# 0c79a85a07e24e50b915069c30b0290e
+msgid "Part or all of a movie clip (such as an AVI file)"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:27
+# 3922aac59ea148cca197b5af37bf7192
+msgid "the image that is currently in the UV/Image Editor (and possibly being painted)"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:28
+# 4860d761ad22453793977601e16b7366
+msgid "an image that was loaded in the UV/Image Editor"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:30
+# d68932b04855465e833316aa6f3ee24f
+msgid "Animated image sequences or video files can also be used. See `Animations`_ below."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:33
+# b0ef93109ac942ae965672cc8d6a9a39
+msgid "To select an image file or generated image from the UV/Image Editor, click on the small arrow selector button to the left of the name and pick an existing image (e.g. loaded in the UV editor or elsewhere) or click on *LOAD NEW* to select a file from your hard disk via a file-browser. These images can be e.g. previously rendered images, matte paintings, a picture of your cat, whatever. Blender really doesn't care."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:40
+# f03c6ea0f17449779226df8645ca7298
+msgid "If the image is part of a sequence, manually click the Image Type selector to the right of the name, and select *Sequence*. Additional controls will allow you to define how much of the sequence to pull in (see Animations below). If the file is a video file, these controls will automatically appear."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:47
+# 7bea085b5b374152bcc7d6195fcb2b47
+msgid "Image Channels"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:49
+# 4b229e23a6fa48698c80d607f171a919
+msgid "When the image is loaded, the available channels will be shown as sockets on the node. As a minimum, the Image, Alpha, and Z channels are made available. The picture may or may not have an alpha (transparency) and/or Z (depth) channel, depending on the format. If the image format does not support A and/or Z, default values are supplied (1.0 for A, 0.0 for Z)."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:59
+# 4ecb0538e0734197beee34ded00a3399
+msgid "Alpha/Transparency Channel"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:56
+# 6d83810f46e04368ae5215a1275299ea
+msgid "If a transparency channel is detected, the *Alpha* output socket will supply it."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:57
+# e3c623bef4da492988d28a78cfc43502
+msgid "If it does not have an Alpha channel (e.g. JPG images), Blender will supply one, setting the whole image to completely opaque (an Alpha of 1.00, which will show in a *Viewer* node as white - if connected to the *Image* input socket)."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:66
+# 4e3b8c8519d94f529fc3ada5d26fe04a
+msgid "Z/depth Channel"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:62
+# 29aea2813d5545fa9732f09e7754e1ec
+msgid "If a Z (depth) channel is detected, the *Z* output socket will supply it."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:63
+# 194a51d8bdf64b97bad484a2c0b1ccd0
+msgid "If it does not have a Z channel (e.g. JPG or PNG images), Blender will supply one, setting the whole image to be at the camera (a depth of 0.00). To view the Z-depth channel, use the Map Value to ColorRamp noodle given above in the Render Layer input node (see :ref:`render_layers-z_socket_usage` )."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:68
+# 7b1b074a26624b3d836ffa0e2e0ab543
+msgid "Formats"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:70
+# 56421bb6ca034112825ea103df4902d4
+msgid "Blender supports many image formats. Currently only the OpenEXR image format stores RGB (color), A (alpha), and Z (depth) buffer information in a single file, if enabled."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:76
+# 99758068f2c245e58659ff27e9bf1a7c
+msgid "Saving/Retrieving Render Passes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:80
+# e558fed9ad3944259de957492b491d07
+msgid "Blender can save the individual Render Layers and specific passes in a MultiLayer file format, which is an extension of the OpenEXR format. In this example, we are reading in frames 50 to 100 of a RenderLayer that were generated some time ago. The passes that were saved were the Image, Alpha, Z, Specular and AO passes."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:85
+# 9935fe0ef6034186a5cf7c67da8fb043
+msgid "To create a MultiLayer image set when initially rendering, simply disable Do Composite, set your Format to MultiLayer, enable the Render Layer passes you wish to save over the desired frame range, and Animate. Then, in Blender, enable Compositing Nodes and Do Composite, and use the Image input node to read in the EXR file. When you do, you will see each of the saved passes available as sockets for you to use in your compositing noodle."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:94
+# f683f14e910e4731b27e2a8a51734f1c
+msgid "Image Size"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:96
+# 3531850edd6441a6b9eb19925cb5d7ad
+msgid "Size matters - Pay attention to image resolution and color depth when mixing and matching images. Aliasing (rough edges), color *flatness*, or distorted images can all be traced to mixing inappropriate resolutions and color depths."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:100
+# ae8769bc440c4a118034ad6c8ca1d8fb
+msgid "The compositor can mix images with any size, and will only perform operations on pixels where images have an overlap. When nodes receive inputs with differently sized Images, these rules apply:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:104
+# 5ed7529423ef4ccea530dbe4c1ddeb19
+msgid "The first/top Image input socket defines the output size."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:105
+# 44e1dbc54f7d41f4bb81a86a0ffe3b57
+msgid "The composite is centered by default, unless a translation has been assigned to a buffer using a *Translate* node."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:108
+# af3443caf5394e5383f4e1884ebde622
+msgid "So each node in a composite can operate on different sized images, as defined by its inputs. Only the *Composite* output node has a fixed size, as defined by the *Scene buttons* (Format Panel - :kbd:`F10`). The *Viewer* node always shows the size from its input, but when not linked (or linked to a value) it shows a small 320x256 pixel image."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:116
+# 050942df71ff43a4a08967ed9de6c9d3
+msgid "Animations"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:120
+# 421c7b048f9f44408a0daa22f28aa6aa
+msgid "To use image sequences or movies within your composition, press the face or little film strip button located to the right of the selector. As you click, a pop-up will offer you four choices:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:124
+# 12ed17da79074a52b496bb851c527c8a
+msgid "Generated -"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:125
+# f2c9cb4fff5a4bbea0f12d533ca7cc30
+msgid "Sequence - a sequence of frames, each frame in a separate file."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:126
+# 4b9ee424397e4457bff1b4c6f530e4de
+msgid "Movie - a sequence of frames packed into a single ``.avi`` or ``.mov`` file"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:127
+# e0c885263718434487a57c47426e5f65
+msgid "Image - a single frame or still image in a file"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:129
+# 22c8579ccd484a0fa1c57d8e0d6411c8
+msgid "A Movie or Image can be named anything, but a Sequence must have a digit sequence somewhere in its filename, for example fire0001set.jpg, fire0002set.jpg, fire0003set.jpg and so on. The number indicates the frame."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:134
+# 7423cbc74ec5431293589d863de06279
+msgid "If a Sequence or Movie is selected, an additional set of controls will appear that allows you to select part or all of the sequence. Use these controls to specify which frames, out of the original sequence, that you want to introduce into the animation you are about to render. You can start at the beginning and only use the beginning, or even pick out a set of frames from the middle of an existing animation."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:141
+# 727834b4fcc14cabb6c5c5b5e81ae4db
+msgid "The *Frs* number button is the number of frames in the sequence that you want to show. For example, if you want to show 2 seconds of the animation, and are running 30 fps, you would put 60 here."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:144
+# 1bf7edfc0f16499b8e131e0d81a795a2
+msgid "The *SFra* number button sets the start frame of the animation; namely, at what point in the animation that you *are going to render* do you want this sequence to start playing. For example, if you want to introduce this clip ten seconds into the composite output, you would put 300 here (at 30 fps)."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:150
+# c16b2b7ee1da4f27938143f0c5800f51
+msgid "The *First* number button sets the first number in the animated sequence name. For example, if your images were called \"credits-0001.png\", \"credits-0002.png\" through \"credits-0300.png\" and you wanted to start picking up with frame 20, you'd put 20 here."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:154
+# 650710af433042318e26d425de256293
+msgid "To have the movie/sequence start over and repeat when it is done, press the *Cycl* ic button. For example, if you were compositing a fan into a room, and the fan animation lasted 30 frames, the animation would start over at frame 31, 61, 91, and so on, continuously looping. As you scrub from frame to frame, to see the actual video frame used for the current frame of animation, press the auto button to the right of the *Cycl* ic button."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:163
+# d83c37122e0e44708aae64045e52bbf1
+msgid "Generated Images"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:165
+# 8ff4d5399c794479af40002676190a75
+msgid "`Using the Nodes to modify a painting in progress in the UV/Image window <http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Image-Generagedjpg>`__ Blender features :doc:`Texture Paint </render/blender_render/textures/painting/projection>` which works in the UV/Image Editor, that allows you to paint on the fly, and the image is kept in memory or saved. If sync lock is enabled (the lock icon in the header), changes are broadcast throughout Blender as soon as you lift the mouse button. One of the places that the image can go is to the Image Input node. The example shows a painting session going on in the right-hand UV/Image Editor window for the painting \"Untitled\". Create this image via Image?New in the UV/Image Editor. Refer to the texture paint section of the user maual for more info on using Texture Paint."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:177
+# aa441cf592f449e0ba5a3bded519e1a2
+msgid "In the left-hand window, the Image input node was used to select that \"Untitled\" image. Notice that the Image type icon is blank, indicating that it is pulling in a Generated image. That image is colorized by the noodle, with the result used as a backdrop in the Node Editor Window."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:182
+# 1eade758e74f4af08a264f85cb5cef61
+msgid "Using this setup and the Generated Image type is like painting and post-processing as you continue painting. Changes to either the painting or the post-pro noodle are dynamic and real-time."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:188
+# fb24e37981804d5a976e7684e5cd6526
+msgid "Notes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:190
+# 3061831799b244108899d8380a61b736
+msgid "**No Frame Stretching or Compression:** If the input animation (avi or frame set) was encoded at a frame rate that is *different* from your current settings, the resultant animation will appear to run faster or slower. Blender Nodes do not adjust input video frame rates. Use the scale control inside the :doc:`Video Sequence Editor </editors/sequencer/index>` to stretch or compress video to the desired speed, and input it here. You can incorporate \"Slow-Mo\" into your video. To do so, *ANIM* ate a video segment at 60 frames per second, and input it via this node, using Render settings that have an animation frame rate of the normal 30 fps; the resulting video will be played at half speed. Do the opposite to mimic Flash running around at hyperspeed."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:201
+# a189ba0b0b5c4b738ea9266a6e362562
+msgid "AVI (Audio Video Interlaced) files are encoded and often compressed using a routine called a *Codec*. You must have a codec installed on your machine and available to Blender that understands and is able to read the file, in order for Blender to be able to de-code and extract frames from the file. If you get the error message **FFMPEG or unsupported video format** when trying to load the file, you need to get a Codec that understands the video file. Contact the author of the file and find out how it was encoded. An outside package, such as VirtualDub, might help you track this information down. Codecs are supplied by video device manufacturers, Microsoft, DivX, and Xvid, among others, and can often be downloaded from their web sites for free."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:214
+# ae041d8c851e4b4892df0b961b346da6
+msgid "Splicing Video Sequences using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:216
+# 84c1ece7bf604b95bebcb2ee7dc8de83
+msgid "The above animation controls, coupled with a little mixing, is all you need to splice video sequences together. There are many kinds of splices:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:219
+# fe766fe35ac445a9a51f336a81dba738
+msgid "Cut Splice - literally the ends of the footage are just stuck together"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:220
+# 757c856485544d3f9bcb939347eaf0d0
+msgid "Fade In - The scene fades in, usually from black"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:221
+# 8b16e0acc57e4a71b730dadc11a454e6
+msgid "Fade Out - The scene fades out, usually to black"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:222
+# 1fd9754a8263438d9609e29402b69a17
+msgid "Mix - Toward the end of one scene, the images from the next scene meld in as the first scene fades"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:223
+# 830b05bc6e1e4c79982e41766678cf3c
+msgid "Winking and Blinking - fading one cut out while the other fades in, partially or totally through black"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:224
+# b5138bb53d6649cb991884a253f967db
+msgid "Bumps and Wipes - one cut bumps the other one out of frame, or wipes over it (like from the top left corner down)"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:228
+# 082a5e69e46044c4a29f529ec0fef1f7
+msgid "Cut Splicing using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:230
+# 5c37637ce5304f5985db2fdb57b38288
+msgid "In the example noodle below, we have two pieces of footage that we want to cut splice together."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:232
+# a4204fb2c27d48398e2e762009fa0be3
+msgid "Magic Monkey - named 0001.png through 0030.png"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:233
+# cfd0b5b872f3490daf9baf2e3936bfb1
+msgid "Credits - named credits0001.png through credits0030.png"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:235
+# a9da8c40e12b4991a8ed0d15467a2ab1
+msgid "The editor has reviewed the Credits and thought the first two frames could be thrown away (onto the cutting room floor, as they say) along with the last 8, leaving 20 frames from the total shot. Not shown in this image, but crucial, is that in the Output panel, we set our render output filename to \"Monkey-Credits-\", and our Animation start and end frames to 1 and 50 (30 from the Monkey, 20 from the credits). Notice the Time node; it tells the Mix node to use the top image until frame 30, and then, at frame 31, changes the Mix factor to 1, which means to use the bottom set of images."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:246
+# 0d14f01ff2894e3896a9270c7f5edd94
+msgid "Cut Splice using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:249
+# df98ed8fd1ca4ca8bdaf8df92529debc
+msgid "Upon pressing the ANIM button, Blender will composite the animation. If you specified an image format for output, for example, PNG, Blender will create 50 files, named \"Monkey-Credits-0001.png\" through \"Monkey-Credits-0050.png\". If you specified a movie format as output, such as AVI-JPEG, then Blender will create only one file, \"Monkey-Credits-.avi\", containing all 50 frames."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:255
+# a9ee899eb49b435089dc9f1e43fc9bce
+msgid "Use cut scenes for rapid-fire transition, conveying a sense of energy and excitement, and to pack in a lot of action in a short time. Try to avoid cutting from a dark scene to a light one, because it's hard on the eyes. It is very emotionally contrasting, and sometimes humorous and ironic, to cut from a very active actor in one scene to a very still actor in another scene, a la old Road Runner and Coyote scenes."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:264
+# 069a2f8918594059a6cfc78abb6e7775
+msgid "Fade Splicing using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:266
+# 1d34adda9eec457494e1261814dd6639
+msgid "In the previous topic, we saw how to cut from one sequence to another. To fade in or out, we simply replace one set of images with a flat color, and expand the Time frame for the splice. In the image below, beginning at frame 20, we start fading **out** to cyan:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:274
+# 27038f4579c54576ab9303376ec911b4
+msgid "Fading Out using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:277
+# 27b7ee84e92c4c95af8d79c436411038
+msgid "Cyan was chosen because that is the color of the Monkey at that time, but you can just as easily choose any color. The image below shows frame 30, when we have almost faded completely."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:281
+# e0e65c746dfa4e6e8fc812a814f18cb8
+msgid "To fade **in**, change the Mix node and plug the image sequence into the bottom socket, and specify a flat color for the top socket."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:286
+#: ../../../manual/composite_nodes/types/input/image.rst:297
+# 7fcc897e0cd34d8f9a4a18b059f21df2
+# 5a0562bcaaf44bac8c9dc9d361170301
+msgid "Mix Splice using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:288
+# 2e2ee0f293ae4b949c338e8fd14c80d1
+msgid "To mix, or crossover, from one scene to the next, start feeding the second scene in while the first is mixing out. The noodle below shows frame 25 of a mix crossover special effect to transition from one scene to the next, beginning at frame 20 with the transition completed by frame 30. Action continues in the first scene as it fades out and is mixed with action that starts in the second scene."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:300
+# b4f355adb9074332a62ff59447ccd735
+msgid "Use this effect to convey similarities between the two scenes. For example, Scene 1 is the robber walking down the street, ending with the camera focusing in on his feet. Scene 2 is a cop walking down the street after him, starting with his feet and working its way up to reveal that the cop is following the robber."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:307
+# e9bca4d60da44932a52c96ac0d426c7d
+msgid "Wink Splice using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:309
+# ba09bcc37f9649e9aeace82feb80e04c
+msgid "A Wink is just like blinking your eyes; one scene fades to black and the other fades in. To use Blender to get this effect, build on the Cut and Fade splices discussed above to yield:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:315
+# b2f2371d69e24088afaa360997171427
+msgid "A Wink using Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:318
+# ea1db1af1d754bf491b0ed26650e199f
+msgid "In the above example, showing frame 27, we have adjusted some parameters to show you the power of Blender and how to use its Nodes to achieve just the blended crossover effect you desire:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:321
+# 7c05c5718632436fb1fee3a6fd58c9c5
+msgid "Postfeed: Even though there were only 15 frames of animation in the Toucan strip, the cutover (top Time node) does not occur until frame 30. Blender continues to put out the last frame of an animation, *automatically extending it for you*, for frames out of the strip's range."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:325
+# 97ce1fc10c7b4afdb87debfdcc35d8f9
+msgid "Prefeed: Even though the swirl does not start playing until frame 34, Blender supplies the first frame of it for Frames 31 through 33. In fact, it supplies this image all the way back to frame 1."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:328
+# bdf48bd8b4a847cebd49d6b3733bf2ce
+msgid "Partial Fade: Notice the second 'wink' Time node. Like a real wink, it does not totally fade to black; only about 75%. When transitioning between scenes where you want some visual carryover, use this effect because there is not a break in perceptual sequence."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:333
+# 7603107c3b4c465eaff7880664444b0f
+msgid "Multiple Feeds"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/input/image.rst:335
+# aa6ec8f4b5024518b8055426baf9ca11
+msgid "The above examples call out two feeds, but by replicating the Input, Time and Mix nodes, you can have multiple feeds at any one time; just set the Time node to tell the Mixer when to cut over to using it."
+msgstr ""
+

@@ -1,0 +1,329 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-03 14:26+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/modifiers/generate/decimate.rst:4
+msgid "Decimate Modifier"
+msgstr "ポリゴン数削減モディファイアー"
+
+#: ../../../manual/modifiers/generate/decimate.rst:24
+msgid "Options"
+msgstr "オプション"
+
+#: ../../../manual/modifiers/generate/decimate.rst:28
+msgid "decimate modifier"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:55
+msgid "Ratio"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:6
+msgid ""
+"The Decimate modifier allows you to reduce the vertex/face count of a mesh "
+"with minimal shape changes."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:8
+msgid ""
+"This is not usually used on meshes which have been created by modeling "
+"carefully and economically (where all vertices and faces are necessary to "
+"correctly define the shape). But if the mesh is the result of complex "
+"modeling, sculpting and/or applied subsurf/multires modifiers, the Decimate "
+"modifier can be used to reduce the polygon count for a performance increase,"
+" or simply remove unnecessary vertices and edges."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:14
+msgid ""
+"The Decimate modifier is a quick and easy way of reducing the polygon count "
+"of a mesh non-destructively. This modifier demonstrates the advantages of a "
+"mesh modifier system because it shows how an operation which is normally "
+"permanent and destroys original mesh data, can be done interactively and "
+"safely using a modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:19
+msgid ""
+"Unlike the majority of existing modifiers, the Decimate modifier does not "
+"allow you to visualize your changes in Edit Mode."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:84
+msgid "Decimate Type"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:55
+msgid "Collapse"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:33
+msgid ""
+"Merge vertices together progressively, taking the shape of the mesh into "
+"account."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:36
+msgid "The ratio of faces to keep after decimation."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:38
+msgid "On ``1.0``, the mesh is unchanged."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:39
+msgid ""
+"On ``0.5``, edges have been collapsed such that half the number of faces "
+"remain (See *Note* below)."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:40
+msgid "On ``0.0``, all faces have been removed."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:47
+msgid ""
+"This means that if your mesh contains quads, the number of remaining faces "
+"will be larger than expected, because quads remain unchanged if their edges "
+"are not collapsed."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:54
+msgid ""
+"N-Gons are currently not supported when collapsing edges, the operation will"
+" still succeed, but edges attached aren't considered for reduction."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:64
+msgid "Un-Subdivide"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:58
+msgid ""
+"Can be thought of as the reverse of subdivide. Attempts to remove edges that"
+" were the result of a subdivide operation. If additional editing has been "
+"done after the subdivide operation, the results may be unexpected."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:64
+msgid "Iterations"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:63
+msgid ""
+"The number of times to perform the un-subdivide operation. Two iterations is"
+" the same as one subdivide operation, so you will usually want to use even "
+"numbers."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:84
+msgid "Planar"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:67
+msgid "Dissolve geometry on the same plane."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:70
+msgid "Angle Limit"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:70
+msgid "Dissolve geometry which form angles lower than this setting."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:74
+msgid "All Boundaries"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:84
+msgid "Delimit"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:77
+msgid "Prevent dissolving geometry in certain places."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:79
+msgid "Normal"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:80
+msgid ""
+"Does not dissolve edges on the borders of areas where the face normals are "
+"reversed."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:81
+msgid "Material"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:82
+msgid ""
+"Does not dissolve edges on the borders of where different materials are "
+"assigned."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:84
+msgid "Seam"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:84
+msgid "Does not dissolve edges marked as seams."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:88
+msgid "Face Count"
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:87
+msgid ""
+"This field shows the number of remaining faces as a result of applying the "
+"Decimate modifier."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:44
+msgid ""
+"Although the *Ratio* is directly proportional to the number of remaining "
+"faces, triangles are used when calculating the ratio."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:50
+msgid "This is only true if the *Triangulate* option is disabled."
+msgstr ""
+
+#: ../../../manual/modifiers/generate/decimate.rst:73
+msgid ""
+"When enabled, all vertices along the boundaries of faces are dissolved. This"
+" can give nicer results when using a high *Angle Limit*."
+msgstr ""
+
+#~ msgid ""
+#~ "Although the :guilabel:`Ratio` is directly proportional to the number of "
+#~ "remaining faces, triangles are used when calculating the ratio."
+#~ msgstr ""
+
+#~ msgid "This is only true if the :guilabel:`Triangulate` option is disabled."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When enabled, all vertices along the boundaries of faces are dissolved. This"
+#~ " can give nicer results when using a high :guilabel:`Angle Limit`."
+#~ msgstr ""
+
+#~ msgid "Description"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Decimate` modifier allows you to reduce the vertex/face count"
+#~ " of a mesh with minimal shape changes. This is not applicable to meshes "
+#~ "which have been created by modeling carefully and economically, where all "
+#~ "vertices and faces are necessary to correctly define the shape, but if the "
+#~ "mesh is the result of complex modeling, with proportional editing, "
+#~ "successive refinements, possibly some conversions from SubSurfed to non-"
+#~ "SubSurfed meshes, you might very well end up with meshes where lots of "
+#~ "vertices are not really necessary."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Decimate` modifier is a quick and easy way of reducing the "
+#~ "polygon count of a mesh non-destructively. This modifier demonstrates the "
+#~ "advantages of a mesh modifier system because it shows how an operation which"
+#~ " is normally permanent and destroys original mesh data, can be done "
+#~ "interactively and safely using a modifier."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unlike the majority of existing modifiers, the :guilabel:`Decimate` modifier"
+#~ " does not allow you to visualize your changes in :guilabel:`Edit mode`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Decimate` only handles triangles, so each quadrilateral face is "
+#~ "implicitly split into two triangles for decimation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ratio of faces to keep after decimation, from ``0.0`` (0%, all faces "
+#~ "have been completely removed) to ``1.0`` (100%, mesh is completely intact, "
+#~ "except quads have been triangulated). As the percentage drops from ``1.0`` "
+#~ "to ``0.0``, the mesh becomes more and more decimated until it no longer "
+#~ "visually looks like the original mesh."
+#~ msgstr ""
+
+#~ msgid "Face Count (display only)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This field shows the number of remaining faces as a result of applying the "
+#~ ":guilabel:`Decimate` modifier."
+#~ msgstr ""
+
+#~ msgid "Examples"
+#~ msgstr "例"
+
+#~ msgid "Simple plane"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A simple example is a plane, and a 4x4 undeformed :guilabel:`Grid` object. "
+#~ "Both render exactly the same, but the plane has one face and four vertices, "
+#~ "while the grid has nine faces and sixteen vertices, hence lots of unneeded "
+#~ "vertices and faces. The :guilabel:`Decimate` modifier allows you to "
+#~ "eliminate these unneeded faces."
+#~ msgstr ""
+
+#~ msgid "Decimated cylinder"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We take a simple example of decimating a cylinder with the default of ``32``"
+#~ " segments. This will generate a cylinder with ``96`` faces. When the "
+#~ ":guilabel:`Decimate` modifier is applied, the face count goes up! This is "
+#~ "because the modifier converts all quadrangles (*quads*) into triangles "
+#~ "(*tris*) which always increases the face count. Each quad decomposes into "
+#~ "two triangles."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The main purpose of the :guilabel:`Decimate` modifier is to reduce mesh "
+#~ "resources through a reduction of vertices and faces, but at the same time "
+#~ "maintain the original shape of the object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the following picture, the percentage dropped in each successive image, "
+#~ "from **100%** to **5%** (a ratio of ``0.05``). Notice that the face count "
+#~ "has gone from ``128`` to ``88`` at a ratio of ``0.6`` (**60%**) and yet the "
+#~ "cylinder continues to look very much like a cylinder, and we discarded "
+#~ "``40`` unneeded faces."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "1.0 (100%). Faces: 128; 0.8 (80%). Faces: 102; 0.6 (60%). Faces: 88 0.2 "
+#~ "(20%). Faces: 24; 0.1 (10%). Faces: 12; 0.05 (5%). Faces: 6"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see, when the ratio reaches ``0.1``, the cylinder looks more like"
+#~ " a cube. And when it reaches ``0.05``, it doesn't even look like a cube!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once you have reached the face count and appearance you were looking for, "
+#~ "you can :guilabel:`Apply` the modifier. If you want to convert many of the "
+#~ "tris back to quads to reduce mesh resources further, you can switch to "
+#~ ":guilabel:`Edit mode`, select all vertices (:kbd:`A`), and hit :kbd:`alt-J`."
+#~ msgstr ""
+
+#~ msgid "Reference"
+#~ msgstr ""

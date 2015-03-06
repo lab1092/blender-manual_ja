@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:4
+# 397a163f29e747b3a66f792eb59974e5
+msgid "Difference Key Node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:8
+# 92812c623b23406c9d99db61ac01a62e
+msgid "Difference Key node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:11
+# 3e3ffc13e58c4f70a09d2b3321fdc92e
+msgid "The difference key node determines how different each channel is from the given key in the selected color space. If the differences are below a user defined threshold then the pixel is considered transparent. Difference matting does not rely on a certain background color, but can have less than optimal results if there is a significant amount of background color in the foreground object."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:17
+# 3ff36b5120414283927c633ba60af8f1
+msgid "There are two inputs to this node."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:19
+# 8f97cf99e6f046948296c86f21e87743
+msgid "The first is an input *Image* that is to be keyed."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:20
+# add1b1f0c4324f9fabb8b7f03ea54fdd
+msgid "The *Key Color* can be input as an RGB value or selected using the color picker by clicking on the *Key Color* box to bring up the color dialog, then clicking on the eye dropper tool and selecting a color."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:24
+# 4693f304b7d0493fb4660a10fd4f1b4f
+msgid "The selectable color spaces are *RGB* (default), *HSV*, *YUV*, and *YCbCr*."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:27
+# 5fa0d39bd306417a820d6fb9e16a3363
+msgid "You can adjust the tolerance of each color in the colorspace individually so that you can have more red variance or blue variance in what you would allow to be transparent. I find that about 0.15 (or 15%) is plenty of variance if the background is evenly lit. Any more unevenness and you risk cutting into the foreground image."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:32
+# 4dc184194e2a4c879aa3687afc0ff8da
+msgid "When the *Falloff* value is high, pixels that are close to the *Key Color* are more transparent than pixels that are not as close to the *Key Color* (but still considered close enough to be keyed). When the *Falloff* value is low, it does not matter how close the pixel color (*Image*) is to the *Key Color*, it is transparent."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:38
+# aefe370606a94dc29b4e4556ff7d254d
+msgid "The outputs of this node are the *Image* with an alpha channel adjusted for the keyed selection and a black and white *Matte* (i.e the alpha mask)."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:42
+# 0caf2bff17194cb192db8badc85e2e2d
+msgid "Simple Example"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:47
+# 828666cee220412d80aeb2ec51d3ce49
+msgid "Using the Difference Key Node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:50
+# 22a59d07402c48489550275d2d286bb7
+msgid "In the example to the right (click to expand), we have a purple cube with yellow marbeling in front of a very unevenly lit green screen. We start building our noodle by threading the image to a difference key, and using the eyedropper, pick a key color very close to the edge of the cube, around where the halo is at the corner on the left-hand side; a fairly bright green. We thread two viewers from the output sockets so we can see what (if anything) the node is doing. We add an AlphaOver node, threading the Matte to the **TOP** socket and the image to the **BOTTOM** socket. Very Important, because 0 time blue is not the same as blue times zero. You always want your mask to go to the top socket of the AlphaOver. Premultiply is set and a full multiply is on so that we completely remove the green. In this example, we thread the output of the alphaover to a SplitViewer node so we can compare our results; the original is threaded to the bottom input of the SplitViewer, so that original is on the left, processed is on the right."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:66
+# c7bb8ee8a63d4010a2aa0929fc6ab0f9
+msgid "We set our variance to .15, and see what we get. What we get (not shown) is a matte that masks around the cube, but not on the right and around the edges where the green is darker; that shade it is too far away from our key color. So, since it is the green that is varying that we want to remove, we increase the Green variation to 1.00 (not shown). Whoa! All the Green disappears (all green within a 100% variation of our green key color is *all* the green), along with the top of the box! Not good. So, we start decreasing the green until we settle on 55% (shown)."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:77
+# f27efa4df4b1412199197cca17762b10
+msgid "Chaining Example"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:82
+# 682cf52228d24111becc7eb1c3dab2f0
+msgid "Chaining Difference Key Nodes"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:85
+# 245309be52b141be8c39b448234748a5
+msgid "We pay out the wazoo for our highly talented (and egotistical I might add) Mr. Cube to come into the studio and do a few takes. We told him NOT to wear a green tie, but when we look at our footage, lo and behold, there he is with a green striped tie on. When we use our simple noodle, the green stripes on his tie go alpha, and the beach background shows through. So, we call him up and, too late, he's on his way back to Santa Monica and it wasn't in his contract and it wasn't his fault, after all, we're supposed to have all this fancy postpro software yada yada and he hangs up. Geez, these actors."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/matte/difference_key.rst:94
+# 3237e6dc921542c49e15b34663c06280
+msgid "So, we chain two Difference Key nodes as shown to the right, and problem solved. What we did was lower the variation percentage on the first to remove some of the green, then threaded that to a second (lower) difference key, where we sampled the green more toward the shadow side and outside edge. By keeping both variations low, none of the green in his tie is affected; that shade is outside the key's +/- variation tolerances."
+msgstr ""
+

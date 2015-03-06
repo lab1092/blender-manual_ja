@@ -1,0 +1,156 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-13 06:59+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:4
+msgid "Hue Saturation Node"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:8
+msgid ""
+"As an alternative to RGB editing, color can be thought of as a mix of Hues, "
+"namely a normalized value along the visible spectrum from infra-red to "
+"ultraviolet (the rainbow, remember \"Roy G. Biv\"). The amount of the color "
+"added depends on the saturation of that color; the higher the saturation, "
+"the more of that pigment is added. Use the saturation slider of this node to"
+" \"bring out\" the colors of a washed-out image."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:15
+msgid ""
+"This node takes an input image and runs the color of the image (and the "
+"light it reflects and radiates) 'up' through a factor (0.0-1.0) and applies "
+"a saturation of color effect of a hue to the image:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:24
+msgid "Hue:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:20
+msgid ""
+"The **Hue** slider specifies how much to shift the hue of the image. Hue 0.5"
+" (in the middle) does not shift the hue or affect the color of the image. As"
+" Hue shifts left, the colors shift as more cyan is added; a blue image goes "
+"bluer, then greener, then yellow. A red image goes violet, then purple, "
+"blue, and finally teal. Shifting right (increasing Hue from 0.5 to 1.0) "
+"introduces reds and greens. A blue image goes purple, plum, red, orange, and"
+" then yellow. A red image goes golden, olive, green, and cyan."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:28
+msgid "Sat:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:27
+msgid ""
+"**Saturation** affect the amount of pigment in the image. A saturation of 0 "
+"actually *removes* hues from the color, resulting in a black-and-white "
+"grayscale image. A saturation of 1.0 blends in the hue, and 2.0 doubles the "
+"amount of pigment and brings out the colors."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:31
+msgid "Val:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:31
+msgid ""
+"**Value** affects the overall amount of the color in the image. Increasing "
+"values make an image lighter; decreaing values shift an image darker."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:37
+msgid "Fac:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:34
+msgid ""
+"**Factor** determines how much this node affects the image. A factor of 0 "
+"means that the input image is not affected by the Hue and Saturation "
+"settings. A factor of 1 means they rule, with .5 being a mix."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:40
+msgid "Hue/Saturation tips"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:42
+msgid "Some things to keep in mind that might help you use this node better:"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:45
+msgid "Hues are vice versa."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:45
+msgid ""
+"A blue image, with a Hue setting at either end of the spectrum (0 or 1), is "
+"output as yellow (recall that white, minus blue, equals yellow). A yellow "
+"image, with a Hue setting at 0 or 1, is blue."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:48
+msgid "Hue and Saturation work together."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:48
+msgid ""
+"So, a Hue of .5 keeps the blues the same shade of blue, but the saturation "
+"slider can deepen or lighten the intensity of that color."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:52
+msgid "Gray & White are neutral hues."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:51
+msgid ""
+"A gray image, where the RGB values are equal, has no hue. Therefore, this "
+"node can only affect it with the *Val* slider. This applies for all shades "
+"of gray, from black to white; wherever the values are equal."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:56
+msgid "Changing the effect over time."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:55
+msgid ""
+"The Hue and Saturation values are set in the node by the slider, but you can"
+" feed a Time input into the Factor to bring up (or down) the effect change "
+"over time."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:58
+msgid "Tinge"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:60
+msgid ""
+"This HSV node simply shifts hues that are already there. To colorize a gray "
+"image, or to ADD color to an image, use a mix node to add in a static color "
+"from an RGB input node with your image."
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:66
+msgid "HSV Example"
+msgstr ""
+
+#: ../../../manual/composite_nodes/types/color/hue_saturation.rst:70
+msgid ""
+"Here, the image taken by a cheap digital camera in poor lighting at night "
+"using a flash (can we do it any worse, eh?) is adjusted by decreasing the "
+"Hue (decreasing reds and revealing more blues and greens), decreasing "
+"Saturation (common in digital cameras, and evens out contrast) and "
+"increasing Value (making it all lighter)."
+msgstr ""

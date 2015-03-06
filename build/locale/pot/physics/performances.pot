@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/physics/performances.rst:4
+# e0fc76d6943f464698d4142480f2946f
+msgid "Performance"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:7
+# 827df35c1a2f4035aa1b40616777ae5b
+msgid "OpenMP (Mac OSX)"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:9
+# fd28f1bfc3f94f78b4ebbf49e7f3dd28
+msgid "How to use the distributed applescript to optimize simulation performance on OSX"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:13
+# 6c74e4a7e8104d50acb2b07ceb49b0b5
+msgid "Suboptimal baking performance"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:15
+# 6e9826e1f94d4b979c2ea76287066daf
+msgid "Often you will encounter suboptimal baking performance with openMP (OMP) multithreaded simulations, especially fluids."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:18
+# c176ef500f7245b4ad9ce3d08f8bba18
+msgid "This is due how the domain splitting distributes threads to cells which are sometimes not \"filled\" whereas calculations, resulting in lot of threads not giving any speedboost. This is almost dependent on the resolution the simulation and object density."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:22
+# c25e63bad25043499b01663cfd40c7a2
+msgid "If you have such an \"undersaturated\" simulation, it helps a lot to just reduce the OMP threads to a low number instead of letting OMP just use all available cores."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:27
+# 1c8bc0816b144ebea84dbbb7a7908e11
+msgid "Solution"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:29
+# 0bef3b6751844b19b6d5a892e0601b1d
+msgid "For OSX openMP-enabled Blender you can now use a delivered applescript to tune the OMP-threads used. This makes usage of the terminal obsolete."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:32
+# 98f6bf5593954005b51c680505f81eeb
+msgid "The default is for now set to 4 cores."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:34
+# 9e7ebeee95b04eb582179d5edc6d0a20
+msgid "If you leave the input field empty, the script gets the corecount of your logical cpu-cores (including HyperTrading) This is the same what openMP would pull without the environment variable set."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:40
+# beb55a58ad9148d1ac5c0a999b116c2f
+msgid "Steps to use the applescript"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:42
+# a692e9fc916545469cc1cd3854035c82
+msgid "In your Blenderfolder open the \"set_simulation_threads\" applescript"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:46
+# 2ef1da07548d431d8b7d2f0772500e78
+msgid "Set the threadcount you want to use (leave empty to let OMP get all available cores)"
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:50
+# afd655f9e1794562909eea63f490ed5f
+msgid "Press o.k. to set the new value, a messagebox will show you the new setting accepted."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:54
+# a5854f4b7d034fb2994fef76a4a52800
+msgid "Close and reopen Blender to take over the setting."
+msgstr ""
+
+#: ../../../manual/physics/performances.rst:55
+# 4408504c695d4df8ab37ce9dc323ead4
+msgid "Watch your baking progress or simulation framerates and perhaps repeat steps 1- 4 to get the optimal value."
+msgstr ""
+

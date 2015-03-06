@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Creative Commons Zero
+# This file is distributed under the same license as the Blender Reference Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-06 15:40+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/editors/sequencer/audio.rst:7
+# 46ae873d893e43f98d5f40a2b8aaaf28
+msgid "Sound Editing"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:9
+# 892b63efffba4620acf0bb29700b77b9
+msgid "Blender contains a multi-track Audio sequencing toolbox. You can add WAV, Mp3 files from your hard disk as a file, or as encoded within a movie, and mix them using an F-Curve as a volume control."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:17
+# e757d08ad33e443a93684dd03c18aec2
+msgid "A sound strip in the sequence editor."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:21
+# 6a1d4e9850f8492fa2723b52852b9244
+msgid "Options"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:23
+# 788519d4d386451b8c2c769a186eb695
+msgid "Audio-RAM loads a file into memory and plays it from there. You can only load stand-alone WAV files. Audio-HD plays the sound back from the hard disk and thus does not take up memory. With Audio HD, you can load stand-alone WAV files, but also audio tracks from movies."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:28
+# 384d9b8958df4750908c50191350a3ba
+msgid "For either, a green audio strip will be created. With Audio RAM, a waveform is created that shows you the waveform inside the green strip, scaled to the height of the green strip. Since Audio-RAM files are read into memory, changing the audio file will not affect playback, and you will have to re-open the file so that Blender re-reads the file."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:35
+# ed7dde9c920840ef82573787814a33ce
+msgid "Hiss, Crackle and Pop"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:37
+# f2ef4147aa684860a81fe16dbdaeb652
+msgid "Some audiophile users report that Hiss is introduced sometimes if Audio RAM is used. There must be some decoding or sampling going on, that does not occur when Audio HD is used, that introduces some playback noise. If you hear pops and crackles, usually that is a sign that your hardware cannot keep up in real-time playback. They will not be present in your final rendered animation output (but they may show up in Game mode)."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:43
+# 4729980d5d364592bcc80f52c309ace7
+msgid "Also, static hiss seems to occur whenever two or more audio strips are overlapping in the timeline..."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:48
+# dfbb56d541f8462896a5c70691697fa3
+msgid "Audio Mixing in the VSE"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:50
+# 0ee01a8649f347738a4413954a3fe27c
+msgid "You can have as many Audio strips as you wish and the result will be the mixing of all of them. You can give each strip its own name and Gain (in dB) via the :kbd:`N` menu. This also let you set a strip to mute or 'Pan' it; -1 is hard left, +1 is hard right, with percentages in-between."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:55
+# 2cdae0cb16434804bfe0d8222e4fedfe
+msgid "Overlapping strips are automatically mixed down during ANIM processing. For example, you can have the announcer on channel 5, background music on channel 6, and foley sound effects on channel 7."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:61
+# 017f1fc967c94b9c9071459b6a14e9b1
+msgid "Working with Audio Tracks"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:63
+# 1fc3458e443e47ad8248d410e82b5ab5
+msgid "An audio track (strip) is just like any other strip in the VSE. You can grab and move it, adjust its starting offset using :kbd:`RMB` over the arrow end handles, and :kbd:`K` cut it into pieces. A useful example is cutting out the \"um's\" and dead voice time."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:70
+# 5e97303ca7fe49599ea67589e9c10b8f
+msgid "Animating Audio Track Properties"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:72
+# 0d91d29c01224d15bae59813a59a4c93
+msgid "You want to set a value somewhere between 0.0 and 1.0, and the volume becomes that percent; 0.6 is 60%. You can add a gain to the volume through the strip properties (:kbd:`N`). You can make a curve by having multiple points, to vary the volume over its length. Press :kbd:`Tab` to edit the curve, just like any old bezier F-curve."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:77
+# 17a73fe89ec44cfdbea97d5637a4d7d3
+msgid "In the Y direction, 1.0 is full volume, 0.0 is completely silent. Only the FFMPEG-output system is currently able to mix audio and video into one output stream. Use :kbd:`Ctrl-LMB` to add control points, and :kbd:`Tab` to edit a curve."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:81
+# 6b3de9995d424e1588b68980509143aa
+msgid "Animating an audio strip affects the volume of the strip in the resulting composite. Use animation on an audio strip to fade in/out background music or to adjust volume levels. Layered/crossed audio strips are added together; the lower channel does not override and cut out higher channels. This makes Blender an audio mixer. By adding audio tracks and using the curves to adjust each tracks' sound level, you have an automated dynamic multi-track audio mixer!"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:91
+# 88b4a2b5d69040c093be6a9b8ca0bfc7
+msgid "Output"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:93
+# 8f02060da3ea44cf964a4f9955a87c3c
+msgid "The output is therefore a video file if the *ANIMATION* button in the *Render* Panel of the Scene Context/Render Sub-context is used as described before. An audio file may be created via the *MIXDOWN* button in the *Sequencer* button of the Scene Context, Sound Sub-context. This WAV file contains the full audio sequence and is created in the same directory of the video file and with the *same name* but with a ``.wav`` extension. You can mix Video and Audio later on with an external program or by adding it to, for example, an image sequence strip as described above."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:102
+# 2c411082321044aca7982b9554090412
+msgid "The advantage of using Blender's sequence editor lies in the easier synchronization attainable by sequencing frames and sound in the same application."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:105
+# 3ba8889c48bf43ec9f7ef32fcba2fbec
+msgid "To enable audio synchronisation after importing an audio track, select the *Scene* button (:kbd:`F10`) in the buttons window then choose the *Sound Block* Button (small blue sine wave). In here you'll see the *Sync* and *Scrub* tools."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:111
+# f1350e4ff1a64980bc7ba7b4125dee9b
+msgid "Sync"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:111
+# 05eeabdf2ffa4c39bc5aebec3aed6ae1
+msgid "lets Blender drop image frames to keep up with realtime audio when you play an animation in the 3D window. This gives you a rough overview of the timing of your animation."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:115
+# e1f7fc72f7714a22aa38ca13e6e473d7
+msgid "Scrub"
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:114
+# 9cf8c185717240d29ad0f658ee55b94b
+msgid "allows you to drag your frame-marker or change frames in any window and it will play a clip of audio for that point in time."
+msgstr ""
+
+#: ../../../manual/editors/sequencer/audio.rst:117
+# 947b1272ac924e9ea237efa31e14afc8
+msgid "Draging the frame-marker over a range of frames in the Action Editor will allow you to hear roughly where specific sounds occur so that you can key poses or shapes on this frame."
+msgstr ""
+

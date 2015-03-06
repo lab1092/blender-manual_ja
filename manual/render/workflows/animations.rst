@@ -23,8 +23,7 @@ for timing, lighting, placement, materials, and so on. At some point,
 you are ready to make a final render of the complete animation for publication.
 
 There are two approaches you can use when making a movie, or animation, with or without sound.
-The approach you should use depends on the amount of CPU time you will need to render the movie
-(see :doc:`Render Performance </render/performance/index>`).
+The approach you should use depends on the amount of CPU time you will need to render the movie.
 You can render a "typical" frame at the desired resolution,
 and then multiply by the number of frames that will ultimately go into the movie, to arrive at an total render time.
 
@@ -39,7 +38,7 @@ Rendering takes all available CPU time; you should render overnight,
 when the computer is not needed, or set Blender to a low priority while rendering,
 and work on other things (be careful with the RAM space!).
 
-The **Direct Approach** —highly **not** recommended and not a standard practice—is where
+The **Direct Approach** - highly **not** recommended and not a standard practice - is where
 you set your output format to an AVI or MOV format,
 and click ANIM to render your scene directly out to a movie file.
 Blender creates one file that holds all the frames of your animation. You can then use
@@ -124,23 +123,6 @@ with almost no effort whatsoever.
 
 Options
 -------
-
-Output Panel
-   By default the animation is rendered in the directory specified in the *Output* Panel
-   (*Animation location and extensions.*).
-   If an AVI format has been selected, then the name will be ``####_####.avi``
-   where the '####' indicates the start and end frame of the animation,
-   as 4 digit integers padded with zeros as necessary.
-
-   If an image format is chosen, on the other hand, a series of images named ``####``,
-   (``####`` being the pertinent frame number) is created in the directory.
-
-   File Extensions
-      Adds the correct file extensions per file type to the output files
-   Overwrite
-      Overwrite existing files when rendering
-   Placeholders
-      Create empty placeholder frames while rendering
 
 Post Processing Panel
    Sequencer
