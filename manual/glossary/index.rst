@@ -21,6 +21,38 @@
    Alpha Channel
       Additional channel in 2D image for transparency.
 
+      Straight Alpha
+         This is the alpha type used by paint programs such as Photoshop or Gimp,
+         and used in common file formats like PNG, BMP or Targa.
+         So, image textures or output for the web are usually straight alpha.
+         ``RGBA`` color are stored as ``(R, G, B, A)``
+         channels, with the RGB channels unaffected by the alpha channels.
+
+      Premultiplied Alpha
+         Rendering will output premultiplied alpha images, and the OpenEXR file format uses this alpha type.
+         So, intermediate files for rendering and compositing are often stored as premultiplied alpha.
+         Compared to straight alpha, the colors could be considered to be stored as ``(R*A, G*A, B*A, A)``,
+         with the alpha multiplied into the RGB channel.
+
+         This is the natural output of render engines,
+         with the RGB channels representing the amount of light that comes toward the viewer,
+         and alpha representing how much of the light from the background is blocked.
+
+      Conversion (Straight/Premultiplied) Alpha
+         Conversion between the two alpha types is not a simple operation and can involve data loss,
+         as both alpha types can represent data that the other can not, though it is often subtle.
+
+         Straight alpha can be considered to be an RGB color image with a separate alpha mask.
+         In areas where this mask is fully transparent, there can still be colors in the RGB channels.
+         On conversion to premultiplied alpha this mask is *'applied'*
+         and the colors in such areas become black and are lost.
+
+         Premultiplied alpha on the other hand can represent renders
+         that are both emitting light and letting through light from the background.
+         For example a transparent fire render might be emitting light,
+         but also letting through all light from objects behind it.
+         On converting to straight alpha this effect is lost.
+
    Ambient Light
       It's light that doesn't seem to come from a specific source, but is just there.
       In the real world, this is caused by stray photons bouncing around and occasionally ricocheting under the desk.
@@ -94,7 +126,7 @@
    Color Blend Modes
       Ways in which 2 colors can be blended in computer graphics.
 
-      See Wikipedia's `Blend Modes <http://en.wikipedia.org/wiki/Blend_modes>`__ article for more information.
+      See Wikipedia's `Blend Modes <http://en.wikipedia.org/wiki/Blend_modes>`__
 
    Concave face
       Face in which one vert is inside a triangle formed by other vertices of the face.
@@ -303,6 +335,10 @@
       In most cases, this center is at the geometric center of the object (geometric center of its bounding box).
       However, an object's center may be offset from the geometric center.
 
+   OpenGL
+      The graphics system used by Blender (and many other graphics applications)
+      for drawing 3D graphics, often taking advantage of hardware acceleration.
+
    Oversampling
       Is the technique of minimizing :term:`aliasing` when representing a high-resolution
       signal at a lower resolution.
@@ -330,6 +366,9 @@
       It's a vertex in which three or five or more edges are connected to.
       A vertex connected to one, two or four edges, is not a pole.
 
+   Premultiplied Alpha
+      See :term:`Alpha Channel`
+
    Primitive
       Is a basic object that can be used as a basis for modeling more complicated objects.
 
@@ -345,9 +384,12 @@
       It's a :term:`face` that contains exactly four vertices.
 
    Radiosity
-      It's a more accurate but also more process-intensive technique than raytracing,
+      Is a global lighting method
       that calculates patterns of light and shadow for rendering graphics images from three-dimensional models.
       One of the many different tools which can simulate diffuse lighting in Blender.
+
+      See Wikipedia's
+      `Radiosity (computer graphics)<http://en.wikipedia.org/wiki/Radiosity_%28computer_graphics%29>`__
 
    Raytracing
       Rendering technique that works by tracing the path taken by a ray of light through the scene,
@@ -389,6 +431,9 @@
    Specular light
       Refers to the highlights on reflective objects.
 
+   Straight Alpha
+      See :term:`Alpha Channel`
+
    Sub surface scattering
       Mechanism of light transport in which light penetrates the surface of a translucent object,
       is scattered by interacting with the material, and exits the surface at a different point.
@@ -423,10 +468,11 @@
       Vertices are the terminating points of :term:`edges <edge>`.
 
    Vertex Buffer Object
-      Term used for uploading geometry to the graphics cards memory for improved performance.
+      Term used for uploading geometry to the graphics cards memory for improved performance
+      with :term:`OpenGL` drawing.
 
-      See Wikipedia's `Vertex Buffer Object <http://en.wikipedia.org/wiki/Vertex_Buffer_Object>`__
-      article for more information.
+      See Wikipedia's
+      `Vertex Buffer Object <http://en.wikipedia.org/wiki/Vertex_Buffer_Object>`__
 
    Vertex Group
       Vertices can be grouped together so that certain operations can work on specific groups.

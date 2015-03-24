@@ -24,10 +24,13 @@ you can try translation to your own Sphinx project.
 :svnroot: ~/GitHub/blender_docs
 :projectroot: ~/GitHub/blender-manual_i18n
 :documentroot: ~/GitHub/blender-manual_i18n/manual
-:pot files: ~/GitHub/blender-manual_i18n/locale/pot
-:po files(ja): ~/GitHub/blender-manual_i18n/locale/ja
+:pot files: ~/GitHub/blender-manual_i18n/build/locale/pot
+:po files(ja): ~/GitHub/blender-manual_i18n/build/locale/ja
 :html files(en): ~/GitHub/blender-manual_i18n/build/html/en
 :html files(ja): ~/GitHub/blender-manual_i18n/build/html/ja
+
+  .. note::
+     BUILDDIR = build
 
 
 Install sphinx-intl package
@@ -55,7 +58,7 @@ Change  locale directory and gettext option in manual/conf.py
 
    .. code-block::
 
-      locale_dirs = ['../locale/']   # path is example but recommended.
+      locale_dirs = ['../build/locale/']   # path is example but recommended.
       gettext_compact = False     # optional. 
 
 Chanege output folder in Make file
@@ -76,7 +79,7 @@ after add 'gettext' target , run ``make gettext`` command.
    .. code-block::
 
       $ cd ~/GitHub/blender-manual_i18n
-      $ sphinx-build -b gettext ./manual ./locale/pot
+      $ sphinx-build -b gettext ./manual ./build/locale/pot
 
 
 Update message file
@@ -87,7 +90,7 @@ To sync messages to ja locale, run the command
    .. code-block::
 
       $ cd ~/GitHub/blender-manual_i18n
-      $ sphinx-intl update -d ./locale/ -p ./locale/pot -l ja
+      $ sphinx-intl update -d ./locale/ -p ./build/locale/pot -l ja
 
 
 Translate it
@@ -122,7 +125,7 @@ Bulid mo files:
 
    .. code-block::
 
-      $ sphinx-intl build -d ./locale/
+      $ sphinx-intl build -d ./build/locale/
 
 Bulid html files(ja)
 
