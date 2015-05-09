@@ -1,0 +1,852 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Light Attenuation &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Lights" href="index.html"/>
+        <link rel="next" title="Lamps Textures" href="textures.html"/>
+        <link rel="prev" title="Lights Common Options" href="light_properties.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Lighting</a> &raquo;</li>
+      
+          <li><a href="index.html">Lights</a> &raquo;</li>
+      
+    <li>Light Attenuation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/render/blender_render/lighting/lights/light_attenuation.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="light-attenuation">
+<h1>Light Attenuation<a class="headerlink" href="#light-attenuation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Lighting-Falloff-hilite.jpg"><img alt="../../../../_images/25-Manual-Lighting-Falloff-hilite.jpg" src="../../../../_images/25-Manual-Lighting-Falloff-hilite.jpg" style="width: 312px;" /></a>
+<p class="caption">Lamp panel, falloff options highlighted</p>
+</div>
+<p>There are two main controls for light falloff for <em>Point</em> and <em>Spot</em> lamps.</p>
+<ul class="simple">
+<li>The lamp <em>Falloff</em> type drop-down list, and</li>
+<li>The <em>Sphere</em> button.</li>
+</ul>
+</div>
+<div class="section" id="falloff-types">
+<h2>Falloff types<a class="headerlink" href="#falloff-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lin-quad-weighted">
+<h3>Lin/Quad Weighted<a class="headerlink" href="#lin-quad-weighted" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Lighting-Falloff-linquad.jpg"><img alt="../../../../_images/25-Manual-Lighting-Falloff-linquad.jpg" src="../../../../_images/25-Manual-Lighting-Falloff-linquad.jpg" style="width: 308px;" /></a>
+<p class="caption">Lamp panel with Lin/Quad Weighted Falloff options highlighted</p>
+</div>
+<p>When this setting is chosen, two sliders are shown,
+<em>Linear</em> and <em>Quadratic</em>,
+which control respectively the &#8220;linearness&#8221; and &#8220;quadraticness&#8221; of the falloff curve.</p>
+<p>This lamp falloff type is in effect allowing the mixing of the two light attenuation profiles
+(linear and quadratic attenuation types).</p>
+<div class="section" id="linear">
+<h4>Linear<a class="headerlink" href="#linear" title="Permalink to this headline">¶</a></h4>
+<p>This slider input field can have a value between <tt class="docutils literal"><span class="pre">0.0</span></tt> and <tt class="docutils literal"><span class="pre">1.0</span></tt>.
+A value of <tt class="docutils literal"><span class="pre">1.0</span></tt> in the <em>Linear</em> field and <tt class="docutils literal"><span class="pre">0.0</span></tt> in the
+<em>Quadratic</em> field in effect means that the light from this source is completely
+linear. This means that at the number of Blender Units distance specified in the
+<em>Distance</em> field,
+this light source&#8217;s intensity will be half the value it was originally.</p>
+<p>When the <em>Quadratic</em> slider is set to <tt class="docutils literal"><span class="pre">0.0</span></tt>, the formula for working out the
+attenuation at a particular range for full linear attenuation is:</p>
+<p><tt class="docutils literal"><span class="pre">I</span> <span class="pre">=</span> <span class="pre">E</span> <span class="pre">×</span> <span class="pre">(D</span> <span class="pre">/</span> <span class="pre">(D</span> <span class="pre">+</span> <span class="pre">L</span> <span class="pre">×</span> <span class="pre">r))</span></tt></p>
+<p>Where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">I</span></tt> is the calculated Intensity of light.</li>
+<li><tt class="docutils literal"><span class="pre">E</span></tt> is the current <em>Energy</em> slider setting.</li>
+<li><tt class="docutils literal"><span class="pre">D</span></tt> is the current setting of the <em>Dist</em> field.</li>
+<li><tt class="docutils literal"><span class="pre">L</span></tt> is the current setting of the <em>Linear</em> slider.</li>
+<li><tt class="docutils literal"><span class="pre">r</span></tt> is the distance from the lamp where the light intensity gets measured.</li>
+</ul>
+</div>
+<div class="section" id="quadratic">
+<h4>Quadratic<a class="headerlink" href="#quadratic" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Example_-_Default_Lin-Quad_Weighted.jpg"><img alt="../../../../_images/Manual_-_Light_-_Example_-_Default_Lin-Quad_Weighted.jpg" src="../../../../_images/Manual_-_Light_-_Example_-_Default_Lin-Quad_Weighted.jpg" style="width: 250px;" /></a>
+<p class="caption">Lamp with Lin/Quad Weighted falloff default settings</p>
+</div>
+<p>This slider input field can have a value between <tt class="docutils literal"><span class="pre">0.0</span></tt> and <tt class="docutils literal"><span class="pre">1.0</span></tt>. A value of <tt class="docutils literal"><span class="pre">1.0</span></tt>
+in the <em>Quadratic</em> field and <tt class="docutils literal"><span class="pre">0.0</span></tt> in the <em>Linear</em> field means that
+the light from this source is completely quadratic.</p>
+<p>Quadratic attenuation type lighting is considered a more accurate representation of how light
+attenuates (in the real world). In fact, fully quadratic attenuation is selected by default
+for <em>Lin/Quad Weighted</em> lamp fallout
+(see <em>Lamp with</em> <em>Lin/Quad Weighted</em> <em>falloff default settings</em>).</p>
+<p>Here again,
+the light intensity is half when it reaches the <em>Distance</em> value from the lamp.
+Comparing the quadratic falloff to the linear falloff,
+the intensity decays much slower at distances lower than the set <em>Distance</em>,
+but it attenuates much quicker after <em>Distance</em> is reached.</p>
+<p>When the <em>Linear</em> slider is set to <tt class="docutils literal"><span class="pre">0.0</span></tt>, the formula for working out the
+attenuation at a particular range for full quadratic attenuation is:</p>
+<p><tt class="docutils literal"><span class="pre">I</span> <span class="pre">=</span> <span class="pre">E</span> <span class="pre">×</span> <span class="pre">(D</span></tt><sup>2</sup> <tt class="docutils literal"><span class="pre">/</span> <span class="pre">(D</span></tt><sup>2</sup> <tt class="docutils literal"><span class="pre">+</span> <span class="pre">Q</span> <span class="pre">×</span> <span class="pre">r</span></tt><sup>2</sup> <tt class="docutils literal"><span class="pre">))</span></tt></p>
+<p>Where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">I</span></tt> is the calculated Intensity of light.</li>
+<li><tt class="docutils literal"><span class="pre">E</span></tt> is the current <em>Energy</em> slider setting.</li>
+<li><tt class="docutils literal"><span class="pre">D</span></tt> is the current setting of the <em>Dist</em> field.</li>
+<li><tt class="docutils literal"><span class="pre">Q</span></tt> is the current setting of the <em>Quad</em> slider.</li>
+<li><tt class="docutils literal"><span class="pre">r</span></tt> is the distance from the lamp where the light intensity gets measured.</li>
+</ul>
+</div>
+<div class="section" id="mixing-linear-and-quad">
+<h4>Mixing &#8220;Linear&#8221; and &#8220;Quad&#8221;<a class="headerlink" href="#mixing-linear-and-quad" title="Permalink to this headline">¶</a></h4>
+<p>If both the <em>Linear</em> and <em>Quad</em> slider fields have values greater than
+<tt class="docutils literal"><span class="pre">0.0</span></tt>, then the formula used to calculate the light attenuation profile changes to this:</p>
+<p><tt class="docutils literal"><span class="pre">I</span> <span class="pre">=</span> <span class="pre">E</span> <span class="pre">×</span> <span class="pre">(D</span> <span class="pre">/</span> <span class="pre">(D</span> <span class="pre">+</span> <span class="pre">L</span> <span class="pre">×</span> <span class="pre">r))</span> <span class="pre">×</span> <span class="pre">(D</span></tt><sup>2</sup> <tt class="docutils literal"><span class="pre">/</span> <span class="pre">(D</span></tt><sup>2</sup> <tt class="docutils literal"><span class="pre">+</span> <span class="pre">Q</span> <span class="pre">×</span> <span class="pre">r</span></tt><sup>2</sup> <tt class="docutils literal"><span class="pre">))</span></tt></p>
+<p>Where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">I</span></tt> is the calculated Intensity of light.</li>
+<li><tt class="docutils literal"><span class="pre">E</span></tt> is the current <em>Energy</em> slider setting.</li>
+<li><tt class="docutils literal"><span class="pre">D</span></tt> is the current setting of the <em>Dist</em> field.</li>
+<li><tt class="docutils literal"><span class="pre">L</span></tt> is the current setting of the <em>Linear</em> slider.</li>
+<li><tt class="docutils literal"><span class="pre">Q</span></tt> is the current setting of the <em>Quad</em> slider.</li>
+<li><tt class="docutils literal"><span class="pre">r</span></tt> is the distance from the lamp where the light intensity gets measured.</li>
+</ul>
+</div>
+<div class="section" id="zeroing-both-linear-and-quad">
+<h4>Zeroing both &#8220;Linear&#8221; and &#8220;Quad&#8221;<a class="headerlink" href="#zeroing-both-linear-and-quad" title="Permalink to this headline">¶</a></h4>
+<p>If both the <em>Linear</em> and <em>Quadratic</em> sliders have <tt class="docutils literal"><span class="pre">0.0</span></tt> as their
+values, the light intensity will not attenuate with distance.
+This does not mean that the light will not get darker - it will,
+but only because the energy the light has is spread out over a wider and wider distance.
+The total amount of energy in the spread-out light will remain the same, though.
+The light angle also affects the amount of light you see.
+It is in fact the behavior of light in the deep space vacuum.</p>
+<p>If what you want is a light source that doesn&#8217;t attenuate and gives the same amount of light
+intensity to each area it hits,
+you need a light with properties like the <em>Constant</em> lamp <em>Falloff</em> type.</p>
+<p>Also, when the <em>Linear</em> and <em>Quad</em> sliders are both <tt class="docutils literal"><span class="pre">0.0</span></tt> values the
+<em>Distance</em> field ceases to have any influence on the light attenuation,
+as shown by the equation above.</p>
+</div>
+<div class="section" id="graphical-summary">
+<h4>Graphical Summary<a class="headerlink" href="#graphical-summary" title="Permalink to this headline">¶</a></h4>
+<p>Below is a graph summarizing the lin/quad attenuation type,
+showing attenuation with or without the <em>Sphere</em> option (described later).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-Part-V-DistanceGraph.jpg"><img alt="../../../../_images/Manual-Part-V-DistanceGraph.jpg" src="../../../../_images/Manual-Part-V-DistanceGraph.jpg" style="width: 610px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="custom-curve">
+<h3>Custom Curve<a class="headerlink" href="#custom-curve" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Custom Curve</em> lamp <em>Falloff</em> type is very flexible.</p>
+<p>Most other lamp falloff types work by having their light intensity start at its maximum
+(when nearest to the light source) and then with some predetermined pattern decrease their
+light intensity when the distance from the light source increases.</p>
+<p>When using the <em>Custom Curve</em> Lamp Falloff type,
+a new panel is created called <em>Falloff Curve</em>. This <em>Falloff Curve</em>
+profile graph allows the user to alter how intense light is at a particular point along a
+light&#8217;s attenuation profile (i.e. at a specific distance from the light source).</p>
+<p>The <em>Falloff Curve</em> profile graph has two axes,
+the <tt class="docutils literal"><span class="pre">Distance</span></tt> axis and the <tt class="docutils literal"><span class="pre">Intensity</span></tt> axis.</p>
+<dl class="docutils">
+<dt>Distance axis</dt>
+<dd>It represents the position at a particular point along a light source&#8217;s attenuation path.
+The far left is at the position of the light source and the far right is the place where the
+light source&#8217;s influence would normally be completely attenuated.
+I say &#8220;normally would&#8221; because the <em>Falloff Curve</em> can be altered to do the exact opposite if required.</dd>
+<dt>Intensity axis</dt>
+<dd>It represents the intensity at a particular point along a light source&#8217;s attenuation path.
+Higher intensity is represented by being higher up the intensity axis,
+while lower intensity light is represented by being lower down on the intensity axis.</dd>
+</dl>
+<p>Altering the <em>Falloff Curve</em> profile graph is easy. Just <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> click on a
+part of the graph you want to alter and drag it where you want it to be.
+If when you click you are over or near one of the tiny black square handles,
+it will turn white, indicating that this handle is now selected,
+and you will be able to drag it to a new position.
+If when you click on the graph you are not near a handle,
+one will be created at the point that you clicked, which you can then drag where you wish.
+You can also create handles at specific parts of the graph,
+clicking with <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> while holding <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> key;
+it will create a new handle at the point you have clicked.</p>
+<p>In the example below (the default for the <em>Falloff Curve</em> Profile Graph),
+the graph shows that the intensity of the light starts off at its maximum
+(when near the light), and linearly attenuates as it moves to the right
+(further away from the light source).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Lighting-Falloff-CustomDefault.jpg"><img alt="../../../../_images/25-Manual-Lighting-Falloff-CustomDefault.jpg" src="../../../../_images/25-Manual-Lighting-Falloff-CustomDefault.jpg" style="width: 306px;" /></a>
+<p class="caption">Default Falloff Curve panel graph.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Example_-_Default_Custom_Curve.jpg"><img alt="../../../../_images/Manual_-_Light_-_Example_-_Default_Custom_Curve.jpg" src="../../../../_images/Manual_-_Light_-_Example_-_Default_Custom_Curve.jpg" style="width: 250px;" /></a>
+<p class="caption">Render showing the Custom Curve lamp falloff type effect with default settings.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you want to have a light attenuation profile that gets more intense as it moves away from
+the light source, you could alter the graph as below:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Lighting-Falloff-CustomReversed.jpg"><img alt="../../../../_images/25-Manual-Lighting-Falloff-CustomReversed.jpg" src="../../../../_images/25-Manual-Lighting-Falloff-CustomReversed.jpg" style="width: 310px;" /></a>
+<p class="caption">Falloff Curve for reversed attenuation.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Reverse_Render.jpg"><img alt="../../../../_images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Reverse_Render.jpg" src="../../../../_images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Reverse_Render.jpg" style="width: 250px;" /></a>
+<p class="caption">Falloff Curve for reversed attenuation rendered.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You are obviously not just limited to simple changes such as reversing the attenuation
+profile, you can have almost any profile you desire.</p>
+<p>Here is another example of a different <em>Falloff Curve</em> profile graph,
+along with its resultant render output:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Lighting-Falloff-CustomOscill.jpg"><img alt="../../../../_images/25-Manual-Lighting-Falloff-CustomOscill.jpg" src="../../../../_images/25-Manual-Lighting-Falloff-CustomOscill.jpg" style="width: 310px;" /></a>
+<p class="caption">Oscillating attenuation profile.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Render.jpg"><img alt="../../../../_images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Render.jpg" src="../../../../_images/Manual_-_Lights_-_Lamps_-_Falloff_Curve_Render.jpg" style="width: 250px;" /></a>
+<p class="caption">Render showing the effects of a &#8220;wavelet&#8221; profile graph on the light attenuation.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inverse-square">
+<h3>Inverse Square<a class="headerlink" href="#inverse-square" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Example_-_Inverse_Square.jpg"><img alt="../../../../_images/Manual_-_Light_-_Example_-_Inverse_Square.jpg" src="../../../../_images/Manual_-_Light_-_Example_-_Inverse_Square.jpg" style="width: 300px;" /></a>
+<p class="caption">Render showing the Inverse Square lamp falloff type effect with default settings.</p>
+</div>
+<p>This lamp falloff type attenuates its intensity according to inverse square law,
+scaled by the <em>Distance</em> value. Inverse square is a sharper, realistic decay,
+useful for lighting such as desk lamps and street lights.
+This is similar to the old <em>Quad</em> option (and consequently, to the new
+<em>Lin/Quad Weighted</em> option with <em>Linear</em> to <tt class="docutils literal"><span class="pre">0.0</span></tt> and <em>Quad</em>
+to <tt class="docutils literal"><span class="pre">1.0</span></tt>), with slight changes.</p>
+</div>
+<div class="section" id="inverse-linear">
+<h3>Inverse Linear<a class="headerlink" href="#inverse-linear" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Example_-_Inverse_Linear.jpg"><img alt="../../../../_images/Manual_-_Light_-_Example_-_Inverse_Linear.jpg" src="../../../../_images/Manual_-_Light_-_Example_-_Inverse_Linear.jpg" style="width: 300px;" /></a>
+<p class="caption">Render showing the Inverse Linear lamp falloff type effect with default settings.</p>
+</div>
+<p>This lamp falloff type attenuates its intensity linearly,
+scaled by the <em>Dist</em> value. This is the default setting, behaving the same as the
+default in previous Blender versions without <em>Quad</em> switched on, and consequently,
+like the new <em>Lin/Quad Weighted</em> option with <em>Linear</em> to <tt class="docutils literal"><span class="pre">1.0</span></tt> and
+<em>Quad</em> to <tt class="docutils literal"><span class="pre">0.0</span></tt>. This isn&#8217;t physically accurate,
+but can be easier to light with.</p>
+</div>
+<div class="section" id="constant">
+<h3>Constant<a class="headerlink" href="#constant" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Example_-_Constant.jpg"><img alt="../../../../_images/Manual_-_Light_-_Example_-_Constant.jpg" src="../../../../_images/Manual_-_Light_-_Example_-_Constant.jpg" style="width: 300px;" /></a>
+<p class="caption">Render showing the Constant lamp falloff type effect with default settings.</p>
+</div>
+<p>This lamp falloff type does not attenuate its intensity with distance.
+This is useful for distant light sources like the sun or sky,
+which are so far away that their falloff isn&#8217;t noticeable.
+<em>Sun</em> and <em>Hemi</em> lamps always have constant falloff.</p>
+</div>
+</div>
+<div class="section" id="sphere">
+<h2>Sphere<a class="headerlink" href="#sphere" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Lighting-Falloff-PointSphere.jpg"><img alt="../../../../_images/25-Manual-Lighting-Falloff-PointSphere.jpg" src="../../../../_images/25-Manual-Lighting-Falloff-PointSphere.jpg" style="width: 300px;" /></a>
+<p class="caption">Screenshot of the 3D view window, showing the Sphere light clipping circle.</p>
+</div>
+<p>The <em>Sphere</em> option restricts the light illumination range of a <em>Lamp</em> or
+<em>Spot</em> lamp, so that it will completely stop illuminating an area once it reaches
+the number of Blender Units away from the Lamp, as specified in the <em>Dist</em> field.</p>
+<p>When the <em>Sphere</em> option is active,
+a dotted sphere will appear around the light source,
+indicating the demarcation point at which this light intensity will be null.</p>
+<p>The <em>Sphere</em> option adds a term to the chosen attenuation law, whatever it is:</p>
+<p><tt class="docutils literal"><span class="pre">I'</span> <span class="pre">=</span> <span class="pre">I</span> <span class="pre">×</span> <span class="pre">(D</span> <span class="pre">-</span> <span class="pre">r)</span> <span class="pre">/</span> <span class="pre">D</span></tt> <em>if</em> <tt class="docutils literal"><span class="pre">r</span> <span class="pre">&lt;</span> <span class="pre">D;</span> <span class="pre">0</span></tt> <em>otherwise</em></p>
+<p>Where:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">I'</span></tt> is the required Intensity of light (with the <em>Sphere</em> option activated).</li>
+<li><tt class="docutils literal"><span class="pre">I</span></tt> is the intensity of light calculated by the chosen attenuation law (without the <em>Sphere</em> option).</li>
+<li><tt class="docutils literal"><span class="pre">D</span></tt> is the current setting of the <em>Dist</em> field.</li>
+<li><tt class="docutils literal"><span class="pre">r</span></tt> is the distance from the lamp where the light intensity gets measured.</li>
+</ul>
+<p>See the graphic at the end of the description of the <em>Lin/Quad Weighted</em> attenuation
+option.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Active_-_Lighted_Plane.jpg"><img alt="../../../../_images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Active_-_Lighted_Plane.jpg" src="../../../../_images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Active_-_Lighted_Plane.jpg" style="width: 300px;" /></a>
+<p class="caption">Render showing the light attenuation of a Constant falloff light type with the Sphere option active.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Deactivated_-_Lighted_Plane.jpg"><img alt="../../../../_images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Deactivated_-_Lighted_Plane.jpg" src="../../../../_images/Manual_-_Light_-_Constant_Falloff_-_Sphere_Deactivated_-_Lighted_Plane.jpg" style="width: 300px;" /></a>
+<p class="caption">Render showing the light attenuation of a Constant falloff light type with the Sphere option deactivated.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="distance-example">
+<h3>Distance Example<a class="headerlink" href="#distance-example" title="Permalink to this headline">¶</a></h3>
+<p>In this example, the <em>Lamp</em> has been set pretty close to the group of planes.
+This causes the light to affect the front, middle and rear planes more dramatically.
+Looking at (<em>Various</em> <em>Dist</em> <em>ance settings</em>),
+you can see that as the <em>Dist</em> is increased,
+more and more objects become progressively brighter.</p>
+<table border="1" class="docutils">
+<caption>Various <em>Distance</em> settings (shadows disabled).</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Distance10.jpg" src="../../../../_images/Manual-Part-V-LampRender-Distance10.jpg" />
+<p class="caption">Distance: 10.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Distance100.jpg" src="../../../../_images/Manual-Part-V-LampRender-Distance100.jpg" />
+<p class="caption">Distance: 100.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Distance1000.jpg" src="../../../../_images/Manual-Part-V-LampRender-Distance1000.jpg" />
+<p class="caption">Distance: 1000.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>Distance</em> parameter is controlling where the light is falling - at a linear
+rate by default - to half its original value from the light&#8217;s origin.
+As you increase or decrease this value, you are changing where this half falloff occurs. You
+could think of <em>Distance</em> as the surface of a sphere and the surface is where the
+light&#8217;s intensity has fallen to half its strength in all directions.
+Note that the light&#8217;s intensity continues to fall even after <em>Distance</em>.
+<em>Distance</em> just specifies the distance where half of the light&#8217;s energy has weakened.</p>
+<p>Notice in (<em>Distance</em> <em>:</em> <tt class="docutils literal"><span class="pre">1000</span></tt>) that the farthest objects are very bright.
+This is because the falloff has been extended far into the distance,
+which means the light is very strong when it hits the last few objects. It is not until
+<tt class="docutils literal"><span class="pre">1000</span></tt> units that the light&#8217;s intensity has fallen to half of its original intensity.</p>
+<p>Contrast this with (<em>Distance</em> <em>:</em> <tt class="docutils literal"><span class="pre">10</span></tt>),
+where the falloff occurs so soon that the farther objects are barely lit.
+The light&#8217;s intensity has fallen by a half by time it even reaches the tenth object.</p>
+<p>You may be wondering why the first few planes appear to be dimmer? This is because the surface
+angle between the light and the object&#8217;s surface normal is getting close to oblique.
+That is the nature of a <em>Lamp</em> light object. By moving the light infinitely far away
+you would begin to approach the characteristics of the <em>Sun</em> lamp type.</p>
+</div>
+<div class="section" id="inverse-square-example">
+<h3>Inverse Square Example<a class="headerlink" href="#inverse-square-example" title="Permalink to this headline">¶</a></h3>
+<p><em>Inverse Square</em> makes the light&#8217;s intensity falloff with a non-linear rate, or specifically, a quadratic rate.
+The characteristic feature of using <em>Inverse Square</em> is that the light&#8217;s intensity begins to
+fall off very slowly but then starts falling off very rapidly.
+We can see this in the (<em>Inverse Square</em> <em>selected</em>) images.</p>
+<table border="1" class="docutils">
+<caption><em>Inverse Square</em> selected (with the specified distances).</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Quad10.jpg" src="../../../../_images/Manual-Part-V-LampRender-Quad10.jpg" />
+<p class="caption">Inverse Square with 10.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Quad100.jpg" src="../../../../_images/Manual-Part-V-LampRender-Quad100.jpg" />
+<p class="caption">Inverse Square with 100.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Quad1000.jpg" src="../../../../_images/Manual-Part-V-LampRender-Quad1000.jpg" />
+<p class="caption">Inverse Square with 1000.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>With <em>Inverse Square</em> selected,
+the <em>Distance</em> field specifies where the light begins to fall off faster, roughly speaking; see the light attenuation
+description in <a class="reference internal" href="#falloff-types">Falloff types</a> for more info.</p>
+<p>In (<em>Inverse Square</em> <em>with</em> <tt class="docutils literal"><span class="pre">10</span></tt>),
+the light&#8217;s intensity has fallen so quickly that the last few objects aren&#8217;t even lit.</p>
+<p>Both (<em>Inverse Square</em> <em>with</em> <tt class="docutils literal"><span class="pre">100</span></tt>) and
+(<em>Inverse Square</em> <em>with</em> <tt class="docutils literal"><span class="pre">1000</span></tt>) appear to be almost identical and that is
+because the <em>Distance</em> is set beyond the farthest object&#8217;s distance which is at
+about <strong>40 BU</strong> out. Hence, all the objects get almost the full intensity of the light.</p>
+<p>As above, the first few objects are dimmer than farther objects because they are very close to
+the light. Remember, the brightness of an object&#8217;s surface is also based on the angle between
+the surface normal of an object and the ray of light coming from the lamp.</p>
+<p>This means there are at least two things that are controlling the surface&#8217;s brightness:
+intensity and the angle between the light source and the surface&#8217;s normal.</p>
+</div>
+<div class="section" id="sphere-example">
+<h3>Sphere Example<a class="headerlink" href="#sphere-example" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-SphereView.jpg" src="../../../../_images/Manual-Part-V-LampRender-SphereView.jpg" />
+<p class="caption">Clipping Sphere.</p>
+</div>
+<p><em>Sphere</em> indicates that the light&#8217;s intensity is null at the <em>Distance</em> distance and beyond,
+regardless of the chosen light&#8217;s falloff.
+In (<em>Clipping Sphere</em>) you can see a side view example of the setup with <em>Sphere</em> enabled and a distance of <tt class="docutils literal"><span class="pre">10</span></tt>.</p>
+<p>Any objects beyond the sphere receive no light from the lamp.</p>
+<p>The <em>Distance</em> field is now specifying both where the light&#8217;s rays become null,
+and the intensity&#8217;s ratio falloff setting.
+Note that there is no abrupt transition at the sphere:
+the light attenuation is progressive
+(for more details, see the descriptions of the <a class="reference internal" href="#sphere">Sphere</a> and <a class="reference internal" href="#falloff-types">Falloff types</a> above).</p>
+<table border="1" class="docutils">
+<caption><em>Sphere</em> enabled with the specified distances, <em>Inverse Linear</em> light falloff.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Sphere10.jpg" src="../../../../_images/Manual-Part-V-LampRender-Sphere10.jpg" />
+<p class="caption">Sphere with 10.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Sphere20.jpg" src="../../../../_images/Manual-Part-V-LampRender-Sphere20.jpg" />
+<p class="caption">Sphere with 20.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../../_images/Manual-Part-V-LampRender-Sphere40.jpg" src="../../../../_images/Manual-Part-V-LampRender-Sphere40.jpg" />
+<p class="caption">Sphere with 40.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>In (<em>Sphere</em> <em>with</em> <tt class="docutils literal"><span class="pre">10</span></tt>), the clipping sphere&#8217;s radius is <tt class="docutils literal"><span class="pre">10</span></tt> units,
+which means the light&#8217;s intensity is also being controlled by <tt class="docutils literal"><span class="pre">10</span></tt> units of distance.
+With a linear attenuation,
+the light&#8217;s intensity has fallen very low even before it gets to the first object.</p>
+<p>In (<em>Sphere</em> <em>with</em> <tt class="docutils literal"><span class="pre">20</span></tt>),
+the clipping sphere&#8217;s radius is now <strong>20 BU</strong> and some light is reaching the middle objects.</p>
+<p>In (<em>Sphere</em> <em>with</em> <tt class="docutils literal"><span class="pre">40</span></tt>), the clipping sphere&#8217;s radius is now <tt class="docutils literal"><span class="pre">40</span></tt> units,
+which is beyond the last object. However, the light doesn&#8217;t make it to the last few objects
+because the intensity has fallen to nearly <tt class="docutils literal"><span class="pre">0</span></tt>.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">If a <em>Lamp</em> light is set to not cast shadows,
+it illuminates through walls and the like.
+If you want to achieve some nice effects like a fire,
+or a candle-lit room interior seen from outside a window,
+the <em>Sphere</em> option is a must. By carefully working on the <em>Distance</em>
+value you can make your warm firelight shed only within the room,
+while illuminating outside with a cool moonlight,
+the latter achieved with a <em>Sun</em> or <em>Hemi</em> light or both.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="textures.html" class="btn btn-neutral float-right" title="Lamps Textures"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="light_properties.html" class="btn btn-neutral" title="Lights Common Options"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

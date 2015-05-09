@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Weight Editing &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Vertex Groups" href="index.html"/>
+        <link rel="next" title="Weight Paint Mode" href="weight_paint.html"/>
+        <link rel="prev" title="Vertex Groups" href="vertex_groups.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objects/index.html">Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="../index.html">Meshes</a> &raquo;</li>
+      
+          <li><a href="index.html">Vertex Groups</a> &raquo;</li>
+      
+    <li>Weight Editing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/modeling/meshes/vertex_groups/weight_edit.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="weight-editing">
+<h1>Weight Editing<a class="headerlink" href="#weight-editing" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weights-panel-overview.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weights-panel-overview.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weights-panel-overview.jpg" style="width: 235px;" /></a>
+<p class="caption">Vertex Weights Panel</p>
+</div>
+<p>As mentioned before in <a class="reference internal" href="index.html"><em>Vertex Groups</em></a> each entry
+in a Vertex Group also contains a weight value in the range of [0.0,1.0].
+Blender provides a <em>Vertex Weights</em> panel from where you can get (and edit)
+information about the weight values of each Vertex of a mesh.
+That is: to which Vertex Groups the vertex is assigned with which weight value.</p>
+<p>The Vertex Weights panel can be found in the right property sidebar of the 3D Viewport.
+It is available in Edit mode and in Weight Paint mode
+(when Vertex Selection masking is enabled as well). The panel is separated into the sections</p>
+<ul class="simple">
+<li>Vertex Group Categories (1)</li>
+<li>Weight Table (2)</li>
+<li>function bar (3)</li>
+</ul>
+<div class="section" id="vertex-group-categories">
+<h2>Vertex Group Categories<a class="headerlink" href="#vertex-group-categories" title="Permalink to this headline">¶</a></h2>
+<p>Actually we do not have any strict categories of Vertex Groups in Blender.
+Technically they all behave the same way.
+However we can identify 2 implicit categories of Vertex Groups:</p>
+<div class="section" id="the-deform-groups">
+<h3>The <tt class="docutils literal"><span class="pre">Deform</span> <span class="pre">Groups</span></tt><a class="headerlink" href="#the-deform-groups" title="Permalink to this headline">¶</a></h3>
+<p>These Vertex groups are sometimes also named <em>Weight Groups</em>.
+They are used for defining the weight tables of Armature bones.
+All Deform Groups of an Object are strictly related to each other via their weight values.</p>
+<p>Strictly speaking, the sum of all deform weights for any vertex of a mesh should be exactly 1.
+0. In Blender this constraint is a bit relaxed (see below). Nevertheless,
+Deform Groups should always be seen as related to each other. Hence we have provided a filter
+that allows restricting the Vertex Weight panel to display only the Deform bones of an Object.</p>
+</div>
+<div class="section" id="the-other-groups">
+<h3>The <tt class="docutils literal"><span class="pre">Other</span> <span class="pre">Groups</span></tt><a class="headerlink" href="#the-other-groups" title="Permalink to this headline">¶</a></h3>
+<p>All other usages of Vertex Groups are summarized into the <em>Other</em> category.
+These vertex groups can be found within Shape keys, Modifiers, etc...
+There is really no good name for this category,
+so we kept it simple and named it <em>Other</em>.</p>
+</div>
+<div class="section" id="the-weight-table">
+<h3>The Weight Table<a class="headerlink" href="#the-weight-table" title="Permalink to this headline">¶</a></h3>
+<p>The Weight Table shows all weights associated to the <em>active vertex</em>.
+Note that a vertex does not necessarily have to be associated to any vertex groups.
+In that case the Vertex Weights Panel is not displayed.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>The active Vertex</p>
+<p class="last">That is the most recently selected vertex.
+This vertex is always highlighted so that you can see it easily in the mesh.
+If the active Vertex does not have weights, or there is no active vertex selected at the moment,
+then the Vertex Weights Panel disappears.</p>
+</div>
+<p>Each row in the Weight table contains 4 active elements:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-name.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-name.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-name.jpg" style="width: 335px;" /></a>
+<p class="caption">Change Active Group</p>
+</div>
+</div>
+</div>
+<div class="section" id="set-the-active-group">
+<h2>Set the Active Group<a class="headerlink" href="#set-the-active-group" title="Permalink to this headline">¶</a></h2>
+<p>As soon as you select any of the Vertex Group Names in the Weight table,
+the referenced Vertex Group becomes the new Active group.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weights-show.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weights-show.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weights-show.jpg" style="width: 235px;" /></a>
+<p class="caption">Enable display of Weights in Edit Mode</p>
+</div>
+</div>
+<div class="section" id="display-weights-in-edit-mode">
+<h2>Display Weights in Edit Mode<a class="headerlink" href="#display-weights-in-edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>When you are in edit mode, you can make the Weights of the active Group visible on the mesh:</p>
+<p>Search the <em>Mesh Display</em> panel in the Properties sidebar.
+And there enable the <em>Show Weights</em> option.
+Now you can see the weights of the active Vertex Group displayed on the mesh surface.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-weights-in-edit-mode.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-weights-in-edit-mode.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weights-in-edit-mode.jpg" style="width: 235px;" /></a>
+<p class="caption">Weights in Edit Mode</p>
+</div>
+</div>
+<div class="section" id="edit-weights-in-edit-mode">
+<h2>Edit Weights in Edit Mode<a class="headerlink" href="#edit-weights-in-edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>It is now very easy to work with weightmaps in Edit mode. All edit options of the mesh are
+available and you have direct visual control over how your Weights change when you edit the
+weight values.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-weight.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-weight.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-weight.jpg" style="width: 235px;" /></a>
+<p class="caption">Change Weight Value</p>
+</div>
+</div>
+<div class="section" id="change-a-weight">
+<h2>Change a weight<a class="headerlink" href="#change-a-weight" title="Permalink to this headline">¶</a></h2>
+<p>You can either enter a new weight value manually (click on the number and edit the value),
+or you can change the weight by <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> and while holding down the mouse button,
+drag right or left to increase/decrease the weight value. You also can use the right/left
+arrows displayed around the weight value to change the weight in steps.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-paste.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-paste.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-paste.jpg" style="width: 235px;" /></a>
+<p class="caption">Paste weights</p>
+</div>
+</div>
+<div class="section" id="paste-a-weight-to-other-verts">
+<h2>Paste a weight to other verts<a class="headerlink" href="#paste-a-weight-to-other-verts" title="Permalink to this headline">¶</a></h2>
+<p><tt class="kbd docutils literal"><span class="pre">LMB</span></tt> the Paste Icon allows you to forward a single weight of the active Vertex to all selected vertices.
+But note that weights are only pasted to verts which already have a weight value in the affected Vertex Group.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-delete.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-delete.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-delete.jpg" style="width: 235px;" /></a>
+<p class="caption">Delete weights</p>
+</div>
+</div>
+<div class="section" id="delete-a-weight-from-a-group">
+<h2>Delete a weight from a Group<a class="headerlink" href="#delete-a-weight-from-a-group" title="Permalink to this headline">¶</a></h2>
+<p><tt class="kbd docutils literal"><span class="pre">LMB</span></tt> the Delete Icon will instantly remove the weight from the active vertex.
+Thus the entire row disappears when you click on the delete icon.</p>
+<div class="section" id="the-function-bar">
+<h3>The Function bar<a class="headerlink" href="#the-function-bar" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-functions.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-functions.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-functions.jpg" style="width: 235px;" /></a>
+<p class="caption">Vertex Weights panel Function Bar</p>
+</div>
+<p>The function bar contains 2 functions:</p>
+<dl class="docutils">
+<dt>Normalize</dt>
+<dd>Normalizes the weights of the active Vertex.
+That is all weights of the active vertex are recalculated
+such that their relative weight is maintained and the weight sum is 1.0.</dd>
+<dt>Copy</dt>
+<dd>Copies all weights defined for the active Vertex to all selected Verts.
+Thus all previously defined weights are overwritten.</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>The filter setting is respected</p>
+<p class="last">Note that both functions only work on the Vertex Groups currently displayed in the Weights Table.
+So if for example only the <em>Deform weights</em> are displayed,
+then Normalize and Copy only affect the Deform bones.</p>
+</div>
+</div>
+<div class="section" id="about-locked-vertex-groups">
+<h3>About locked Vertex Groups<a class="headerlink" href="#about-locked-vertex-groups" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-locked.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-locked.jpg" src="../../../_images/26-Manual-Modeling-Meshes-vertex-weight-editor-locked.jpg" style="width: 235px;" /></a>
+<p class="caption">Vertex Weights panel Locked</p>
+</div>
+<p>Whenever a Weight Group is locked, all data changing functions get disabled:</p>
+<ul class="simple">
+<li>Normalize the vertex Weights.</li>
+<li>Copy the Vertex weights.</li>
+<li>Change the Weight of the active vert.</li>
+<li>Paste to selected verts.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>The filter setting is respected</p>
+<p class="last">If you have for example all deform weight groups unlocked and all other vertex groups locked,
+then you can safely select <em>Deform</em> from the Filter row
+and use all available functions from the Weight table again.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="weight_paint.html" class="btn btn-neutral float-right" title="Weight Paint Mode"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertex_groups.html" class="btn btn-neutral" title="Vertex Groups"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Multi-View Render &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Workflows" href="index.html"/>
+        <link rel="next" title="Composite Nodes" href="../../composite_nodes/index.html"/>
+        <link rel="prev" title="Render Baking" href="bake.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="index.html">Workflows</a> &raquo;</li>
+      
+    <li>Multi-View Render</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/render/workflows/multiview.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="multi-view-render">
+<h1>Multi-View Render<a class="headerlink" href="#multi-view-render" title="Permalink to this headline">¶</a></h1>
+<p>For this 5-minute guide we will take an existent <tt class="docutils literal"><span class="pre">.blend</span></tt>
+file that was made for monoscopic rendering and transform it in stereo-3d ready.</p>
+<div class="figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_render_anaglyph.png"><img alt="../../_images/Manual_multiview_workflow_render_anaglyph.png" src="../../_images/Manual_multiview_workflow_render_anaglyph.png" style="width: 700px;" /></a>
+<p class="caption">Creature Factory 2 by Andy Goralczyk Rendered in Stereo 3D (anaglyph)</p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Start opening up your project file, in this case <tt class="docutils literal"><span class="pre">turntable.blend</span></tt> from the <strong>Creature Factory 2</strong>
+Open Movie Workshop series from the Blender Institute by <strong>Andy Goralczyk</strong>.</p>
+<div class="figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_1.png"><img alt="../../_images/Manual_multiview_workflow_1.png" src="../../_images/Manual_multiview_workflow_1.png" style="width: 1213px;" /></a>
+<p class="caption">Turn Table Creature Factory 2</p>
+</div>
+</div>
+<div class="section" id="views-setup">
+<h2>Views Setup<a class="headerlink" href="#views-setup" title="Permalink to this headline">¶</a></h2>
+<p>Go to the Render Layers panel and enable <em>Views</em> for this scene.</p>
+<div class="figure" style="width: 270px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_2.png"><img alt="../../_images/Manual_multiview_workflow_2.png" src="../../_images/Manual_multiview_workflow_2.png" style="width: 270px;" /></a>
+<p class="caption">Scene Render Views</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When you turn on <em>Views</em> in the scene you get 3d preview in the viewport,
+as well as multiple panels that are now accessible all over the user interface.</p>
+</div>
+<div class="figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_3.png"><img alt="../../_images/Manual_multiview_workflow_3.png" src="../../_images/Manual_multiview_workflow_3.png" style="width: 1213px;" /></a>
+<p class="caption">Viewport with 3D visualization</p>
+</div>
+</div>
+<div class="section" id="camera">
+<h2>Camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h2>
+<p>To tweak the stereo 3d parameters select the camera in the Outliner.
+In the Camera panel go to the Stereoscopy tab and change the <em>Convergence Distance</em>.</p>
+<p>The viewport will respond in real-time to those changes allowing you to preview the current depth value of the scene.</p>
+<div class="figure" style="width: 247px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_4.png"><img alt="../../_images/Manual_multiview_workflow_4.png" src="../../_images/Manual_multiview_workflow_4.png" style="width: 468px;" /></a>
+<p class="caption">Stereo Convergence Distance</p>
+</div>
+</div>
+<div class="section" id="viewport">
+<h2>Viewport<a class="headerlink" href="#viewport" title="Permalink to this headline">¶</a></h2>
+<p>Before fine-tuning the camera parameters you can set the
+convergence plane in the viewport based in your scene depth layout.
+Go outside the camera view and you will instantly see the convergence plane in front of the camera.</p>
+<p>You can toggle this and other display settings in the Stereoscopy tab of the viewport properties panel.
+In the following image the cameras frustum volumes are also visible.</p>
+<div class="figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_5.png"><img alt="../../_images/Manual_multiview_workflow_5.png" src="../../_images/Manual_multiview_workflow_5.png" style="width: 1036px;" /></a>
+<p class="caption">Viewport Plane and Volume Stereo Preview</p>
+</div>
+</div>
+<div class="section" id="stereo-3d-display">
+<h2>Stereo 3D Display<a class="headerlink" href="#stereo-3d-display" title="Permalink to this headline">¶</a></h2>
+<p>If you have a real 3d display at some point you can change the 3D display mode in the Window menu,
+by calling the Stereo 3D operator.
+Be aware that some modes require a fullscreen editor to work.</p>
+<div class="figure" style="width: 642px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_window_stereo_3d.png"><img alt="../../_images/Manual_multiview_window_stereo_3d.png" src="../../_images/Manual_multiview_window_stereo_3d.png" style="width: 642px;" /></a>
+<p class="caption">Window Menu, Stereo 3D Operator</p>
+</div>
+</div>
+<div class="section" id="opengl-preview">
+<h2>OpenGL Preview<a class="headerlink" href="#opengl-preview" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_6.gif"><img alt="../../_images/Manual_multiview_workflow_6.gif" src="../../_images/Manual_multiview_workflow_6.gif" style="width: 300px;" /></a>
+<p class="caption">Turn Table OpenGL Rendering Preview</p>
+</div>
+<p>Before rendering your scene you can save an OpenGL preview of the animation for testing in the final display.
+In the Render Output panel you can chose the output <em>Views Format</em>.</p>
+<p>The options include individual files per view, top-bottom, anaglyph among others.
+Pick the one that fits your display requirements.</p>
+</div>
+<div class="section" id="rendering-and-image-editor">
+<h2>Rendering and Image Editor<a class="headerlink" href="#rendering-and-image-editor" title="Permalink to this headline">¶</a></h2>
+<p>Once you are happy with the results you can render out the final animation.
+In the Image Editor you can inspect the individual views and the stereo result.</p>
+</div>
+<div class="section" id="image-formats">
+<h2>Image Formats<a class="headerlink" href="#image-formats" title="Permalink to this headline">¶</a></h2>
+<p>Your final animation can be saved in more robust formats than the ones used by the OpenGL render preview.
+In this example we saved as cross-eyed side-by-side stereo 3d.</p>
+<div class="figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_workflow_render_sidebyside.png"><img alt="../../_images/Manual_multiview_workflow_render_sidebyside.png" src="../../_images/Manual_multiview_workflow_render_sidebyside.png" style="width: 700px;" /></a>
+<p class="caption">Side by Side Cross-Eye Format</p>
+</div>
+</div>
+<div class="section" id="final-considerations">
+<h2>Final Considerations<a class="headerlink" href="#final-considerations" title="Permalink to this headline">¶</a></h2>
+<p>As this guide showed, there is more to stereo 3d rendering than just generate two images.
+The earlier the stereo pipeline is considered the smoother it will get.
+The following sections are a more in-depth view of the individual components we visited in the workflow.</p>
+</div>
+<div class="section" id="window-stereo-3d-display">
+<h2>Window Stereo 3D Display<a class="headerlink" href="#window-stereo-3d-display" title="Permalink to this headline">¶</a></h2>
+<p>An essential component of the Stereoscopy pipeline is the ability to display the stereo image in a proper display.
+Blender supports from high-end 3D displays to simple red-cyan glasses.
+On top of that you can set a different display mode for each window.</p>
+<p>The display mode can be changed via the Window menu
+or if you create your own shortcuts for the <strong>wm.stereo_3d</strong> operator.</p>
+<div class="figure" style="width: 642px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_window_stereo_3d.png"><img alt="../../_images/Manual_multiview_window_stereo_3d.png" src="../../_images/Manual_multiview_window_stereo_3d.png" style="width: 642px;" /></a>
+<p class="caption">Window Menu, Stereo 3D Operator</p>
+</div>
+<div class="section" id="display-mode">
+<h3>Display Mode<a class="headerlink" href="#display-mode" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Anaglyph</dt>
+<dd>Render two differently filtered colored images for each eye.
+Anaglyph glasses are required. We support Red-Cyan, Green-Magenta and Yellow-Blue glasses.</dd>
+<dt>Interlace</dt>
+<dd>Render two images for each eye into one interlaced image.
+A 3D-ready monitor is required.  We support Row, Column and Checkerboard Interleaved.
+An option to Swap Left/Right helps to adjust the image for the screen. This method works better in fullscreen.</dd>
+<dt>Time Sequential</dt>
+<dd>Renders alternate eyes.
+This method is also known as Page Flip.
+This requires the graphic card to support Quad Buffer and it only works in fullscreen.</dd>
+<dt>Side-by-Side</dt>
+<dd>Render images for left and right eye side-by-side.
+There is an option to support Cross-Eye glasses.
+It works only in fullscreen, and it should be used with the Full Editor operator.</dd>
+<dt>Top-Bottom</dt>
+<dd>Render images for left and right eye one above another.
+It works only in fullscreen, and it should be used with the Full Editor operator.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Full Screen Stereo 3D Modes</p>
+<p class="last">If you have a 3D display most of the time
+you will use it to see in stereo 3D you will have to go to the fullscreen mode.
+In fact some modes will only work in the full window mode that hides most of the user interface from the work area.
+In this case it is recommended to work with two monitors,
+using the 3D screen for visualizing the stereo result
+while the other screen can be used for the regular Blender work.</p>
+</div>
+</div>
+</div>
+<div class="section" id="stereo-3d-camera">
+<h2>Stereo 3D Camera<a class="headerlink" href="#stereo-3d-camera" title="Permalink to this headline">¶</a></h2>
+<p>When using the Stereo 3D scene view setup a stereo pair is created
+on-the-fly and used for rendering and previsualization.
+For all the purposes this works as two cameras that share most parameters (focal length, clipping, ...).
+The stereo pair, however, is offsetted, and can have unique rotation and shift between itself.</p>
+<div class="figure" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_camera.png"><img alt="../../_images/Manual_multiview_camera.png" src="../../_images/Manual_multiview_camera.png" style="width: 473px;" /></a>
+<p class="caption">Stereo 3D Camera Settings</p>
+</div>
+<dl class="docutils">
+<dt>Interocular Distance</dt>
+<dd>Set the distance between the camera pair.
+Although the convergence of a stereo pair can be changed in post-production,
+different interocular distances will produce different results
+due to the parts of the scene being occluded from each point of view.</dd>
+<dt>Convergence Plane Distance</dt>
+<dd>The converge point for the stereo cameras.
+This is often the distance between a projector and the projection screen.
+You can visualize this in the 3D Viewport.</dd>
+</dl>
+<div class="section" id="convergence-mode">
+<h3>Convergence Mode<a class="headerlink" href="#convergence-mode" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Off-Axis</dt>
+<dd>The stereo camera pair is separated by the interocular distance,
+and shifted inwards so it converges in the convergence plane.
+This is the ideal format since it is the one closest to how the human vision works.</dd>
+<dt>Parallel</dt>
+<dd>This method produces two parallel cameras that do not converge.
+For the viewport stereo 3d preview a <em>Viewport Convergence Distance</em> is used.
+For rendering this is not considered though.
+This method is common when combining real footage with rendered elements.</dd>
+<dt>Toe-in</dt>
+<dd>A less common approach is to rotate the cameras instead of shifting their frustum.
+The Toe-in method is rarely used in modern 3D productions.</dd>
+<dt>Pivot</dt>
+<dd>The stereo pair can be constructed around the active camera with a new camera built for each eye
+(Center Pivot) or using the existing camera and creating (Left or Right).
+The latter is what is used when only one eye needs to be rendered for an existing mono 2D project.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="viewport-stereo-3d">
+<h2>Viewport Stereo 3D<a class="headerlink" href="#viewport-stereo-3d" title="Permalink to this headline">¶</a></h2>
+<p>When you enable &#8216;Views&#8217; in the Render Layer panel a new are is available in the 3D Viewport properties panel.
+In this panel you can pick whether to see the stereo 3d in the viewport, or which camera to see.
+It also allow you to see the Cameras, the Plane and the Volume of the stereo cameras.</p>
+<div class="figure" style="width: 250px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_viewport_settings.png"><img alt="../../_images/Manual_multiview_viewport_settings.png" src="../../_images/Manual_multiview_viewport_settings.png" style="width: 407px;" /></a>
+<p class="caption">Viewport Stereo 3D Settings</p>
+</div>
+<dl class="docutils">
+<dt>Cameras</dt>
+<dd>When working with the Stereo 3D views setup you can inspect what
+each individual generated camera is looking or the combined result of them.
+In the Multi-View mode you can see the combined result of the left and right cameras
+(when available) or the current selected camera.</dd>
+<dt>Plane</dt>
+<dd>The convergence plane represents the screen as it is perceived by the audience.
+Visualizing it in the 3D Viewport allows you to layout your scene
+based on your depth script outside the camera view.</dd>
+<dt>Volume</dt>
+<dd><p class="first">The intersection of the stereo cameras frustums helps planning the show
+by avoiding elements being visible by only one camera.
+The volume is defined by the cameras start and end clipping distances.
+The areas that are in the frustum of one camera only are known as <strong>retinal rivalry areas</strong>.
+They are tolerated in the negative space (the region from the convergence plane into the image)
+but are to be avoided at all costs in the positive space (the area from the convergence plane to the camera).</p>
+<div class="last figure" style="width: 402px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_volume.png"><img alt="../../_images/Manual_multiview_volume.png" src="../../_images/Manual_multiview_volume.png" style="width: 538px;" /></a>
+<p class="caption">Viewport 3D: Convergence Plane and Volume Display</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="multi-view-and-stereo-3d-image-i-o">
+<h2>Multi-View and Stereo 3D Image I/O<a class="headerlink" href="#multi-view-and-stereo-3d-image-i-o" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multi-View and Stereo 3D</dt>
+<dd>Multi-View images can be saved in special formats according to the production requirements.
+By default the system saves each view as an individual file, thus generating as many files as views to be rendered.
+In stereo 3d productions, for the final deployment or even
+intermediary previews it&#8217;s convenient to save stereo 3d images,
+that are ready to use with 3D displays or simple anaglyph glasses.
+The formats supported match the display modes available for the window.</dd>
+<dt>Lossy-Formats</dt>
+<dd>Some stereo 3D formats represent a considerable loss of data.
+For example, the Anaglyph format will cap out entire color channels from the original image.
+The Top-Bottom compressed will discard half of your vertical resolution data.
+The Interlace will mash your data considerably.
+Once you export in those formats, you can still import the image
+back in Blender, for it to be treated as Stereo 3D.
+You will need to match the window stereo 3d display mode to the image stereo 3d format though.</dd>
+<dt>Lossless Formats</dt>
+<dd>Some formats will preserve the original data,
+leading to no problems on exporting and importing the files back in Blender.
+The Individual option will produce separate images that
+(if saved in a lossless encoding such as <tt class="docutils literal"><span class="pre">PNG</span></tt> or <tt class="docutils literal"><span class="pre">OpenEXR</span></tt>)
+can be loaded back in production with no loss of data.
+For the Stereo 3D formats the only lossless options are
+<em>Top-Bottom</em> and <em>Side-by-Side</em> without the Squeezed Frame option.</dd>
+<dt>Multi-View Openexr</dt>
+<dd>Another option is to use Multi-View OpenEXR files.
+This format can save multiple views in a single file and is backward compatible
+with old OpenEXR viewers (you see only one view though).
+Multi-View native support is only available to OpenEXR.</dd>
+</dl>
+</div>
+<div class="section" id="image-editor">
+<h2>Image Editor<a class="headerlink" href="#image-editor" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>View Menu</dt>
+<dd><p class="first">After you render your scene with Stereo 3D you will be able to see
+the rendered result in the combined stereo 3d or to inspect the individual views.
+This works for Viewer nodes, render results or opened images.</p>
+<div class="last figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_image_editor_header.png"><img alt="../../_images/Manual_multiview_image_editor_header.png" src="../../_images/Manual_multiview_image_editor_header.png" style="width: 1225px;" /></a>
+<p class="caption">Stereo 3D and View menu</p>
+</div>
+</dd>
+<dt>Views Format</dt>
+<dd><p class="first">When you drag and drop an image into the Image Editor, Blender will open it as a individual images at first.
+If your image was saved with one of the Stereo 3D formats you can change how
+Blender should interpret the image by switching the mode to Stereo 3D,
+turning on Use Multi-View and picking the corresponding stereo method.</p>
+<div class="last figure" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_image_editor_stereo_3d.png"><img alt="../../_images/Manual_multiview_image_editor_stereo_3d.png" src="../../_images/Manual_multiview_image_editor_stereo_3d.png" style="width: 494px;" /></a>
+<p class="caption">Views Formats and Stereo 3D</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="compositor">
+<h2>Compositor<a class="headerlink" href="#compositor" title="Permalink to this headline">¶</a></h2>
+<p>The compositor works smoothly with Multi-View.
+The compositing of a view is completed before the remaining views start to be composited.
+The pipeline is the same as the single-view workflow, with the difference that you can use Image,
+Movies or Image Sequences in any of the supported Multi-View formats.</p>
+<div class="figure" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_compositor.png"><img alt="../../_images/Manual_multiview_compositor.png" src="../../_images/Manual_multiview_compositor.png" style="width: 1717px;" /></a>
+<p class="caption">Compositor, Backdrop and Split Viewer Node</p>
+</div>
+<p>The views to render are defined in the current scene views,
+in a similar way as you define the composite output resolution in the current scene render panel,
+regardless of the Image nodes resolutions or RenderLayers from different scenes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Single-View Images</p>
+<p class="last">If the image from an Image Node does not have the view you are trying to render,
+the image will be treated as a single-view image.</p>
+</div>
+<dl class="docutils">
+<dt>Switch View Node</dt>
+<dd><p class="first">If you need to treat the views separately you can use the Switch View node
+to combine the views before an output node.</p>
+<div class="last figure" style="width: 200px">
+<a class="reference internal image-reference" href="../../_images/Manual_multiview_compositor_switch_view.png"><img alt="../../_images/Manual_multiview_compositor_switch_view.png" src="../../_images/Manual_multiview_compositor_switch_view.png" style="width: 320px;" /></a>
+<p class="caption">Switch View Node</p>
+</div>
+</dd>
+<dt>Performance</dt>
+<dd>By default when compositing and rendering from the user interface all views are rendered and then composited.
+During test iterations you can disable all but one view from the Scene Views panel,
+and re-enable it after you get the final look.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../composite_nodes/index.html" class="btn btn-neutral float-right" title="Composite Nodes"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bake.html" class="btn btn-neutral" title="Render Baking"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

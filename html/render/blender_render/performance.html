@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Performance Considerations &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Blender Render Engine" href="index.html"/>
+        <link rel="next" title="Cycles Render Engine" href="../cycles/index.html"/>
+        <link rel="prev" title="Render Quality" href="quality.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="index.html">Blender Render Engine</a> &raquo;</li>
+      
+    <li>Performance Considerations</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/render/blender_render/performance.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="performance-considerations">
+<h1>Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="optimizing-render-performance">
+<h2>Optimizing Render Performance<a class="headerlink" href="#optimizing-render-performance" title="Permalink to this headline">¶</a></h2>
+<p>&#8220;A watched pot never boils&#8221; is the old saying, but you may wonder why your render takes so long to create,
+or worse, crashes mid-way through!
+Well, there is lots going on and lots you can do to speed up rendering or enable a complicated render to complete.
+Also, it is possible to render a very complicated scene on a mediocre PC by being &#8220;render-smart&#8221;.
+Here&#8217;s a &#8220;top ten&#8221; list of things to do or not do in order to speed up
+rendering or even avoid crashes during scene render.
+Some options may decrease the quality of your render, but for draft renders you may not care.</p>
+<p>If you get the message &#8220;Malloc returns nil&#8221;, in plain English that means the memory allocator
+tried to get more physical memory for Blender but came back empty-handed.
+This means that you do not have enough memory available to render the scene,
+and Blender cannot continue.
+You will need to do one or more of the following tasks on this page in order to render.</p>
+</div>
+<div class="section" id="hardware-improvements">
+<h2>Hardware Improvements<a class="headerlink" href="#hardware-improvements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Install more system memory.</li>
+<li>Upgrade your CPU to a multi-core/multiprocessor</li>
+<li>Upgrade your OpenGL video drivers</li>
+<li>Get faster memory, up to your PC&#8217;s motherboard limit.</li>
+<li>Use or set up a render farm using all available PCs in your house, or use a render farm.</li>
+</ul>
+</div>
+<div class="section" id="operating-system-configuration">
+<h2>Operating System Configuration<a class="headerlink" href="#operating-system-configuration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Increase Blender&#8217;s processing priority through your OS.</li>
+<li>Increase your swap file space used by the OS for memory swapping. Also called virtual memory pagefile size,
+up to the size of your physical memory.</li>
+<li>Use a system-monitor to check if any other processes are using significant CPU or RAM, which can be closed.</li>
+<li>Render in <em>background mode</em> (from the command line), saves extra memory.</li>
+</ul>
+</div>
+<div class="section" id="blender-settings">
+<h2>Blender Settings<a class="headerlink" href="#blender-settings" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Increase the MEM Cache Limit in the User Preferences System &amp; OpenGL tab.</li>
+<li>Switch to an Orthographic camera, and render your own &#8220;parts&#8221; of the scene as separate images,
+and then paste those parts together in GIMP.
+An old trick in making your own panorama with a real camera is to take three or so pictures of a very wide
+(beach sunset) scene, where you take one picture, rotate to the right, snap another, then another,
+and when you get the pictures developed, you overlap them to make a very wide landscape image.
+Do the same in Blender: render out one shot to a file,
+then move the camera to look at a different area of the scene, and render that shot.
+Each shot will be of a smaller area and thus take in fewer polygons/faces.
+Be sure that when you position your camera that you snap overlapping shots, so that you can then match them up.
+If you don&#8217;t want to use GIMP, you can use compositing nodes and the Translate node to match them up in Blender.</li>
+<li>Minimize the render window (and Blender if rendering to an internal window).
+ATI users report dramatic speedup on a per frame basis, which adds up over the frame range.</li>
+<li>Use the Big Render script to render sub-sections of the overall image, and then paste them together.</li>
+</ul>
+</div>
+<div class="section" id="scene-and-specific-objects">
+<h2>Scene and Specific Objects<a class="headerlink" href="#scene-and-specific-objects" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Remove lamps, or move them to unrendered layers, or tie them to layers.</li>
+<li>Turn off some lamp&#8217;s shadows, using only one or two main sun lamps to cast shadows.
+A few &#8220;shadows only&#8221; lights will render faster than every light having shadows on.</li>
+<li>Use Buffer Shadows rather than ray-traced Shadows</li>
+<li>Bake your shadows using Render Baking Full Render bake on surfaces that do not move.
+Use that texture for that mesh, then disable shadows for that material.</li>
+<li>Simplify meshes (remove polygons). The more vertices you have in camera, the more time it takes to render.</li>
+<li>Remove Doubles, or use the Decimator mesh edit feature.</li>
+<li>Remove Subsurf and Multires modifiers.</li>
+<li>Delete backsides of meshes (removing unseen geometry).</li>
+<li>Render just a few objects at a time; in the beginning of your project,
+render the background objects and sets that will not change and will always be in the background.</li>
+<li>Put the buildings on another layer, and through render layers, don&#8217;t render them.
+Then composite them back in later.</li>
+<li>Make the camera static so that you can better accomplish the above two ideas.</li>
+<li>Avoid use of Area lights.</li>
+<li>Make materials Shadeless.</li>
+<li>Render Bake AO and textures, and then make those materials Shadeless.</li>
+<li>Decrease the Clip distance for spot lights.</li>
+<li>Decrease the Clip distance for the camera.</li>
+<li>Turn off world AO.</li>
+<li>Turn off Material SSS.</li>
+<li>Use smaller image textures. A 256x256 image takes only 1% of the memory that a 2k image does,
+often with no loss of quality in the ultimate render.</li>
+<li>Reduce Subsurf. Each level quadruples (4x) the number of faces from the previous level.</li>
+<li>Reduce Multires.</li>
+<li>Make a matte render of background objects, like buildings,
+and put the image of them on a billboard in the scene instead of the object themselves.
+This will reduce vertex/face count.</li>
+<li>if you have lots of linked instances of an object, use DupliFaces, as these are instanced. If you have 100 of them,
+Blender will only store the geometry for 1 (Instances themselves take a small amount of memory).</li>
+</ul>
+</div>
+<div class="section" id="render-settings">
+<h2>Render Settings<a class="headerlink" href="#render-settings" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="../output.html"><em>Output Panel</em></a>
+- Disable <em>Edge</em> rendering.
+- <em>Save Buffers</em>.<ul>
+<li>Render to an <tt class="xref doc docutils literal"><span class="pre">Image</span> <span class="pre">Editor</span></tt> window,
+not a popup. <a class="reference internal" href="../display.html"><em>Render Window</em></a>.</li>
+<li>Use multiple <em>Threads</em> on a multi-core CPU (with multiple <em>Parts</em>).</li>
+</ul>
+</li>
+<li><a class="reference internal" href="../post_process/layers.html"><em>Render Layers Panel</em></a>
+- Render only the Layers of interest.
+- Render with all lights set to one simple spot (enter its name in the <em>Light:</em> field).
+- Render with one material override (enter its name in the Mat: field).<ul>
+<li>Disable unnecessary Render Passes, such as <em>Z</em>,
+or only render the pass of interest, such as <em>Diffuse</em>.</li>
+</ul>
+</li>
+<li><a class="reference internal" href="quality.html"><em>Render Panel</em></a>
+- Turn off <em>Shadows</em>.
+- Turn off <em>Environment Mapping</em>.
+- Turn off <em>Panoramic Rendering</em>.
+- Turn off <em>Raytracing</em>.
+- Turn off SSS Subsurface Scattering.
+- Turn off or lower oversampling/aliasing <em>OSA</em>.
+- Turn off or lower <em>Motion Blur</em>.<ul>
+<li>Render in Parts. This will also allow you to render HUGE images on a weak PC.
+On a multi-core PC, it will assign a thread to each part as well.</li>
+<li>Increase the octree resolution.</li>
+<li>Render at a percentage size of your final resolution (like 25%).</li>
+<li>Turn off <em>Fields</em> rendering.</li>
+<li>Use <em>Border</em> rendering to render a subset of the full image.</li>
+</ul>
+</li>
+<li><a class="reference internal" href="../workflows/animations.html"><em>Anim Panel</em></a><ul>
+<li>Decrease the frame count of the animation (and use a lower framerate for the same duration of animation).
+For example, render 30 frames at 10 frames per second for a 3-second animation,
+instead of 75 frames at 25 frames per second.</li>
+</ul>
+</li>
+<li><a class="reference internal" href="../workflows/bake.html"><em>Bake Panel</em></a><ul>
+<li>Bake Full Render - create a UV Texture that colors the objects based on materials,
+and then use that UV Texture shadeless instead of the material.</li>
+<li>Bake Ambient Occlusion only.</li>
+<li>Bake textures for objects.</li>
+<li>Baking Normals or Displacement does not speed up render time, and are used for other things.</li>
+</ul>
+</li>
+<li><a class="reference internal" href="../output.html"><em>Format Panel</em></a>
+- Render at a lower resolution. Smaller pictures take less time to render.
+- Choose a faster CODEC or CODEC settings.
+- Render in black and white (<em>BW</em> button).
+- If using FFMPEG, do not activate <em>Multiplex audio</em>.
+- If using FFMPEG, <em>Autosplit Output</em> (<em>Video</em> panel button).<ul>
+<li>Render only RGB if you just need color; the A channel (<em>RGBA</em> button)
+takes more memory and is unused when saving a movie file.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="multi-pass-compositing">
+<h2>Multi-Pass Compositing<a class="headerlink" href="#multi-pass-compositing" title="Permalink to this headline">¶</a></h2>
+<p>Another strategy that can be used to address the problem of long (re-)render times is to
+structure your workflow from the ground up so that you make aggressive use of <em>compositing</em>,
+as described in the &#8220;Post-Production&#8221; section. In this approach,
+you break down each shot into components that can be rendered separately,
+then you combine those separately-rendered elements to achieve the finished clip.
+For instance:</p>
+<ul class="simple">
+<li>If the camera isn&#8217;t moving, then neither is the background: only a single frame is needed.
+(The same is true of any non-moving object within the frame.) These individual elements,
+having been generated <em>once,</em> can be re-used as many times as necessary over as many frames as necessary.</li>
+<li>Both shadows and highlights can be captured separately from the objects that are being illuminated or shadowed,
+such that the intensity, color, and depth of the effect can be adjusted later without re-rendering.</li>
+<li>Start by using lights that do not cast shadows. (Shadow calculations are big time-killers.) Then,
+use &#8220;shadow-only&#8221; lights (which cast shadows, but do not cast light)
+to create shadows <em>only</em> where you judge that they are actually necessary.
+(It is very often the case that only a few of the shadows which could exist in the scene actually matter,
+and that the rest of them simply won&#8217;t be noticed.)</li>
+<li>Tricky lighting situations can be avoided by handling the objects separately,
+then combining the individually-rendered clips and &#8220;tweaking&#8221; the result.</li>
+</ul>
+<p>This is a very familiar idea. Modern sound recordings, for example,
+always use a &#8220;multi-track&#8221; approach.
+Individual components of the song are captured separately and in isolation,
+then the components are &#8220;mixed&#8221; together.
+The &#8220;final mix&#8221; then goes through additional processing stages, called <em>mastering</em>,
+to produce the finished product(s). (In fact, the features and design of modern
+sound-processing software are directly comparable to that of Blender&#8217;s node-based compositor.)</p>
+<p>There are compelling advantages to this approach:</p>
+<ul class="simple">
+<li>You have options. If something is &#8220;not quite right,&#8221; you don&#8217;t necessarily have to start over from scratch.</li>
+<li>In practice, the deadline-killer is <em>re-</em> rendering, which ordinarily must be done (in its entirety)
+just because &#8220;&#8216;one little thing&#8217; about the shot is wrong.&#8221; Compositing helps to avoid this, because (ideally...)
+only the specific parts that are found to be in error must be repeated. (Or, maybe,
+the error can be blocked out with a &#8220;garbage matte&#8221; and a corrected version can be inserted in its place.
+No one will ever know!)</li>
+<li>It&#8217;s also possible that you find yourself saying, &#8220;okay, that&#8217;s <em>almost</em> what I wanted, but now I&#8217;d like to <em>add</em>
+this and maybe <em>take away</em> that.&#8221; A compositing-based approach enables you to do just that, and furthermore,
+to do so <em>non-destructively.</em> In other words, having generated the &#8220;addition&#8221; (or the &#8220;mask&#8221;)
+as a separate channel of information, you can now fine-tune its influence in the overall &#8220;mix,
+&#8221; or even change your mind and remove it altogether, all without permanently altering anything.</li>
+<li>By and large, these stages work <em>two-</em> dimensionally, manipulating what is by that time &#8220;a raster bitmap with R, G,
+B, Alpha <em>(transparency...)</em> and Z-Depth information,&#8221; so they&#8217;re consistently fast.</li>
+<li>Since each discrete rendering task has been simplified, the computer can carry them out using much fewer resources.</li>
+<li>The tasks can be distributed among several different computers ... even less-powerful ones</li>
+<li>&#8220;After all, the scene doesn&#8217;t actually have to be <em>physically perfect,</em> to be <em>convincing.</em> &#8221;
+A compositing-based approach lets you take full advantage of this.
+You can focus your attention (and Blender&#8217;s)
+upon those specific aspects of the scene which will actually make a noticeable difference.
+It is possible to save a considerable amount of time by consciously choosing to exclude
+less-important aspects which (although &#8220;technically correct&#8221;) probably won&#8217;t be noticed.</li>
+</ul>
+<p>Of course, this approach is not without its own set of trade-offs. You must devise a workable
+asset-management system for keeping track of exactly what material you have, where it is,
+whether it is up-to-date, and exactly how to re-create it. You must understand and use the
+&#8220;library linking&#8221; features of Blender to allow you to refer to objects, nodes, materials,
+textures and scenes in a carefully-organized collection of other files.
+You need to have a very clear notion, <em>in advance</em>,
+of exactly what the finished shot must consist of and what the task breakdown must be.
+You must be a scrupulous note-taker and record-keeper. But sometimes this is the best way,
+if not the <em>only</em> way, to accomplish a substantial production.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cycles/index.html" class="btn btn-neutral float-right" title="Cycles Render Engine"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quality.html" class="btn btn-neutral" title="Render Quality"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

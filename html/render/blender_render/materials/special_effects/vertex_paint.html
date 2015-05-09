@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vertex Painting &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Materials" href="../index.html"/>
+        <link rel="next" title="Wire Render" href="wire.html"/>
+        <link rel="prev" title="Options" href="../options.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Materials</a> &raquo;</li>
+      
+    <li>Vertex Painting</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/render/blender_render/materials/special_effects/vertex_paint.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="vertex-painting">
+<h1>Vertex Painting<a class="headerlink" href="#vertex-painting" title="Permalink to this headline">¶</a></h1>
+<p>Vertex Painting is a simple way of painting color onto an object,
+by directly manipulating the color of vertices, rather than textures,
+and is fairly straightforward.</p>
+<p>When a vertex is painted,
+the color of the vertex is modified according to the rules of the &#8216;brush&#8217;. The color of all
+visible planes and edges attached to the vertex are then modified with a gradient to the color
+of the other connected vertices. (Note that the color of non-visible faces are not modified).</p>
+<p>Vertex colors can be painted by first going into Edit Mode, then switching to <em>Vertex Paint Mode</em>;
+however, it will not show up in the render unless you check &#8220;Vertex Color Paint&#8221; in the Materials
+<a class="reference external" href="http://wiki.blender.org/index.php/User:Sculptorjim/Materials/Properties/Options">Options</a> Panel.</p>
+<div class="figure">
+<img alt="../../../../_images/Doc_2.6_Materials_VertexPaint0.jpg" src="../../../../_images/Doc_2.6_Materials_VertexPaint0.jpg" />
+<p class="caption">Vertex Painting Mode</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/vertexpaintmat.jpg" src="../../../../_images/vertexpaintmat.jpg" />
+<p class="caption">Check this box</p>
+</div>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<p>The Tools Shelf, shortcut <tt class="kbd docutils literal"><span class="pre">T</span></tt> contains most of the options for vertex painting.
+The following sections describe the controls in each of the available panels.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Doc-2.6-Materials-VertexPaint-ToolShelf-Tools.jpg"><img alt="../../../../_images/Doc-2.6-Materials-VertexPaint-ToolShelf-Tools.jpg" src="../../../../_images/Doc-2.6-Materials-VertexPaint-ToolShelf-Tools.jpg" style="width: 600px;" /></a>
+<p class="caption">Settings for vertex painting</p>
+</div>
+<div class="section" id="brush">
+<h3>Brush<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Brush Datablock</dt>
+<dd>The image, name panel and color selector at the top allows you to select brush presets,
+rename brushes, as well as add custom brushes, and delete them.</dd>
+<dt>Radius</dt>
+<dd>Set the radius of the brush</dd>
+<dt>Strength</dt>
+<dd>Set the strength of the brush&#8217;s effect.</dd>
+</dl>
+<div class="figure">
+<img alt="../../../../_images/mix.jpg" src="../../../../_images/mix.jpg" />
+<p class="caption">Mix overlay with full strength</p>
+</div>
+<p><strong>Blend</strong> menu</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Mix</dt>
+<dd>Mixes RGB values.
+When set to a strength of 1.0, it will cover the underlying &#8220;paint&#8221;.</dd>
+<dt>Add</dt>
+<dd>Adds RGB values.
+Will eventually turn the entire object white as RGB values accumulate to 1.0-1.0-1.0: Pure White.</dd>
+<dt>Subtract</dt>
+<dd>Subtracts RGB values. Usually results in Black.</dd>
+<dt>Multiply</dt>
+<dd>Multiplies brush colors by the vertex colors.</dd>
+<dt>Blur</dt>
+<dd>Blurs vertex colors.</dd>
+<dt>Lighten</dt>
+<dd>Lightens the color of the vertices.</dd>
+</dl>
+</div></blockquote>
+<div class="figure">
+<img alt="../../../../_images/sub.jpg" src="../../../../_images/sub.jpg" />
+<p class="caption">Subtract with full strength</p>
+<div class="legend">
+<dl class="docutils">
+<dt>Darken</dt>
+<dd>Darkens the color of the vertices.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="texture">
+<h3>Texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
+<p>Use the texture selector at the bottom of the paint panel to select a pre-loaded image or
+procedural texture to use as your brush pattern. Note that in order to use it,
+you must have a placeholder material defined,
+and that particular texture defined using the Material and Texture buttons.
+It is not necessary to have that material or texture applied to any mesh anywhere;
+it must only be defined.</p>
+<dl class="docutils">
+<dt>Brush Mapping Mode</dt>
+<dd><p class="first">Sets how the texture is applied to the brush</p>
+<dl class="last docutils">
+<dt>View Plane</dt>
+<dd>In 2D painting, the texture moves with the brush</dd>
+<dt>Tiled</dt>
+<dd>The texture is offset by the brush location</dd>
+<dt>3D</dt>
+<dd>Same as tiled mode</dd>
+<dt>Stencil</dt>
+<dd>Texture is applied only in borders of the stencil.</dd>
+<dt>Random</dt>
+<dd>Random applying of texture.</dd>
+</dl>
+</dd>
+<dt>Angle</dt>
+<dd><p class="first">This is the rotation angle of the texture brush.
+It can be changed interactively via <tt class="kbd docutils literal"><span class="pre">Ctrl-F</span></tt> in the 3D view.
+While in the interactive rotation you can enter a value numerically as well. Can be set to:</p>
+<dl class="last docutils">
+<dt>User</dt>
+<dd>Directly input the angle value.</dd>
+<dt>Rake</dt>
+<dd>Angle follows the direction of the brush stroke. Not available with <em>3D</em> textures.</dd>
+<dt>Random</dt>
+<dd>Angle is randomized.</dd>
+</dl>
+</dd>
+<dt>Offset</dt>
+<dd>Offset the texture in x, y, and z.</dd>
+<dt>Size</dt>
+<dd>Set the scale of the texture in each axis.</dd>
+</dl>
+<div class="section" id="stroke">
+<h4>Stroke<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Stroke Method</dt>
+<dd><p class="first">Allows set the way applying strokes.</p>
+<dl class="last docutils">
+<dt>Airbrush</dt>
+<dd><p class="first">Flow of the brush continues as long as the mouse click is held, determined by the <em>Rate</em> setting.
+If disabled, the brush only modifies the color when the brush changes its location.</p>
+<dl class="last docutils">
+<dt>Rate</dt>
+<dd>Interval between paints for airbrush</dd>
+</dl>
+</dd>
+<dt>Space</dt>
+<dd><p class="first">Creates brush stroke as a series of dots, whose spacing is determined by the <em>Spacing</em> setting.</p>
+<dl class="last docutils">
+<dt>Spacing</dt>
+<dd>Represents the percentage of the brush diameter.
+Limit brush application to the distance specified by spacing.</dd>
+</dl>
+</dd>
+<dt>Dots</dt>
+<dd>Apply paint on each mouse move step</dd>
+<dt>Jitter</dt>
+<dd>Jitter the position of the brush while painting</dd>
+</dl>
+</dd>
+<dt>Smooth stroke</dt>
+<dd><p class="first">Brush lags behind mouse and follows a smoother path. When enabled, the following become active:</p>
+<dl class="last docutils">
+<dt>Radius</dt>
+<dd>Sets the minimun distance from the last point before stroke continues.</dd>
+<dt>Factor</dt>
+<dd>Sets the amount of smoothing.</dd>
+</dl>
+</dd>
+<dt>Input Samples</dt>
+<dd>Average multiple input samples together to smooth the brush stroke.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/brushcurves.jpg"><img alt="../../../../_images/brushcurves.jpg" src="../../../../_images/brushcurves.jpg" style="width: 200px;" /></a>
+<p class="caption">Various brush curves</p>
+</div>
+</div>
+</div>
+<div class="section" id="curve">
+<h3>Curve<a class="headerlink" href="#curve" title="Permalink to this headline">¶</a></h3>
+<p>Brush Curves affect how strongly the color is applied depending on distance from the center of
+the brush. In other words, they allow you to edit the Falloff of the brush intensity.</p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Doc-2.6-Materials-VertexPaint-ToolShelf-Options.jpg"><img alt="../../../../_images/Doc-2.6-Materials-VertexPaint-ToolShelf-Options.jpg" src="../../../../_images/Doc-2.6-Materials-VertexPaint-ToolShelf-Options.jpg" style="width: 600px;" /></a>
+<p class="caption">Options for vertex painting</p>
+</div>
+<div class="section" id="overlay">
+<h3>Overlay<a class="headerlink" href="#overlay" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to customize the display of curve and texture that applied to the brush.</p>
+</div>
+<div class="section" id="appearance">
+<h3>Appearance<a class="headerlink" href="#appearance" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to customize the color of the brush radius outline,
+as well as specify a custom icon.</p>
+</div>
+<div class="section" id="id1">
+<h3>Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Normals</dt>
+<dd>Applies the Vertex Normal before painting. This does not usually affect painting.</dd>
+<dt>Spray</dt>
+<dd>Continues painting for as long as the mouse is held.</dd>
+<dt>Unified Settings</dt>
+<dd><dl class="first last docutils">
+<dt>Size</dt>
+<dd>All brushes use the same size.</dd>
+<dt>Strength</dt>
+<dd>All brushes use the same strength.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wire.html" class="btn btn-neutral float-right" title="Wire Render"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../options.html" class="btn btn-neutral" title="Options"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

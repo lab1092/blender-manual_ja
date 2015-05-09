@@ -1,0 +1,629 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python Scripting Mode &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Freestyle" href="index.html"/>
+        <link rel="next" title="Viewmaps" href="viewmap.html"/>
+        <link rel="prev" title="Thickness" href="parameter_editor/line_style/thickness.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="index.html">Freestyle</a> &raquo;</li>
+      
+    <li>Python Scripting Mode</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/render/freestyle/python.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="python-scripting-mode">
+<h1>Python Scripting Mode<a class="headerlink" href="#python-scripting-mode" title="Permalink to this headline">¶</a></h1>
+<p>The Python Scripting mode offers full programmability for line stylization.
+In this control mode, all stylization operations are written as Python scripts referred to as
+style modules in the Freestyle terminology. The input to a style module is a view map (i.e.,
+a set of detected feature edges), and the output is a set of stylized strokes.</p>
+<p>A style module is composed of successive calls of five basic operators: selection, chaining,
+splitting, sorting and stroke creation. The selection operator identifies a subset of input
+feature edges based on one or more user-defined selection conditions (predicates).
+The selected edges are processed with the chaining,
+splitting and sorting operators to build chains of feature edges. These operators are also
+controlled by user-supplied predicates and functions in order to determine how to transform
+the feature edges into chains. Finally,
+the chains are transformed into stylized strokes by the stroke creation operator,
+which takes a list of user-defined stroke shaders.</p>
+<p>Python style modules are stored within .blend files as text datablocks.
+External style module files first need to be loaded in the Text Editor window. Then the
+pull-down menu within an entry of the style module stack allows you to select a module from
+the list of loaded style modules.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Freestyle_python_scripting_mode.jpg"><img alt="../../_images/Freestyle_python_scripting_mode.jpg" src="../../_images/Freestyle_python_scripting_mode.jpg" style="width: 600px;" /></a>
+<p class="caption">A screen capture of a style module (cartoon.py) loaded in the Text Editor window (left),
+as well as Freestyle options in the Python Scripting mode in the Render Layers buttons (right)</p>
+</div>
+<p>Freestyle for Blender comes with a number of Python style modules that can serve as a starting
+point of your own style module writing. See also the section of the Freestyle Python API in
+the Blender Python API reference manual for the full detail of style module constructs.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg"><img alt="../../_images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg" src="../../_images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg" style="width: 300px;" /></a>
+<p class="caption">By T.K. using the Python Scripting mode
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:Turning_Pages.zip">File:Turning_Pages.zip</a>, CC0)</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Sketchy_Broken_Topology.jpg"><img alt="../../_images/Sketchy_Broken_Topology.jpg" src="../../_images/Sketchy_Broken_Topology.jpg" style="width: 300px;" /></a>
+<p class="caption">By T.K. using the Python Scripting mode
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:Lily_Broken_Topology.zip">File:Lily_Broken_Topology.zip</a>, CC0)</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="writing-style-modules">
+<h2>Writing Style Modules<a class="headerlink" href="#writing-style-modules" title="Permalink to this headline">¶</a></h2>
+<p>A style module is a piece of code responsible for the stylization of Freestyle line drawing.
+The input of a style module is a set of feature edges called view map (ViewMap).
+The output is a set of stylized lines also referred to as strokes. A style module is
+structured as a pipeline of operations that allow for building strokes from the input edges
+within the view map. There are five kinds of operations
+(corresponding operator functions in parentheses):</p>
+<ul class="simple">
+<li>Selection (Operators.select())</li>
+<li>Chaining (Operators.chain(), Operators.bidirectional_chain())</li>
+<li>Splitting (Operators.sequential_split(), Operators.recursive_split())</li>
+<li>Sorting (Operators.sort())</li>
+<li>Stroke creation (Operators.create())</li>
+</ul>
+<p>The input view map is populated with a set of ViewEdge objects. The selection operation is
+used to pick up ViewEdges of interest to artists based on user-defined selection conditions
+(predicates). Chaining operations take the subset of ViewEdges and build Chains by
+concatenating ViewEdges according to user-defined predicates and functions.
+The Chains can be further refined by splitting them into smaller pieces (e.g.,
+at points where edges make an acute turn) and selecting a fraction of them (e.g.,
+to keep only those longer than a length threshold). The sorting operation is used to arrange
+the stacking order of chains to draw one line on top of another. The chains are finally
+transformed into stylized strokes by the stroke creation operation applying a series of stroke
+shaders to individual chains.</p>
+<p>ViewEdges, Chains and Strokes are generically referred to as one-dimensional (1D) elements.
+A 1D element is a polyline that is a series of connected straight lines.
+Vertices of 1D elements are called 0D elements in general.</p>
+<p>All the operators act on a set of active 1D elements.
+The initial active set is the set of ViewEdges in the input view map.
+The active set is updated by the operators.</p>
+<div class="section" id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h3>
+<p>The selection operator goes through every element of the active set and keeps only the ones
+satisfying a certain predicate. The Operators.select() method takes as the argument a unary
+predicate that works on any Interface1D that represents a 1D element. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This selection operation uses the QuantitativeInvisibilityUP1D predicate to select only the
+visible ViewEdge (more precisely, those whose quantitative invisibility is equal to 0). The
+selection operator is intended to selectively apply the style to a fraction of the active 1D
+elements.</p>
+<p>It is noted that QuantitativeInvisibilityUP1D is a class implementing the predicate that tests
+line visibility, and the Operators.select()
+method takes an instance of the predicate class as argument. The testing of the predicate for
+a given 1D element is actually done by calling the predicate instance, that is,
+by invoking the __call__ method of the predicate class. In other words, the Operators.select
+() method takes as argument a functor which in turn takes an Interface0D object as argument.
+The Freestyle Python API employs functors extensively to implement predicates,
+as well as functions.</p>
+</div>
+<div class="section" id="chaining">
+<h3>Chaining<a class="headerlink" href="#chaining" title="Permalink to this headline">¶</a></h3>
+<p>The chaining operators act on the set of active ViewEdge objects and determine the topology of
+the future strokes. The idea is to implement an iterator to traverse the ViewMap graph by
+marching along ViewEdges. The iterator defines a chaining rule that determines the next
+ViewEdge to follow at a given vertex (see ViewEdgeIterator).
+Several such iterators are provided as part of the Freestyle Python API
+(see ChainPredicateIterator and ChainSilhouetteIterator).
+Custom iterators can be defined by inheriting the ViewEdgeIterator class. The chaining
+operator also takes as argument a UnaryPredicate working on Interface1D as a stopping
+criterion. The chaining stops when the iterator has reached a ViewEdge satisfying this
+predicate during the march along the graph.</p>
+<p>Chaining can be either unidirectional (Operators::chain()) or bidirectional
+(Operators::bidirectional_chain()). In the latter case,
+the chaining will propagate in the two directions from the starting edge.</p>
+<p>The following is a code example of bidirectional chaining:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">bidirectional_chain</span><span class="p">(</span><span class="n">ChainSilhouetteIterator</span><span class="p">(),</span>
+<span class="n">NotUP1D</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>The chaining operator uses the ChainSilhouetteIterator as the chaining rule and stops chaining
+as soon as the iterator has come to an invisible ViewEdge.</p>
+<p>The chaining operators process the set of active ViewEdge objects in order.
+The active ViewEdges can be previously sorted using the Operators::sort() method (see below).
+It starts a chain with the first ViewEdge of the active set.
+All ViewEdges that have already been involved in the chaining process are marked
+(in the case of the example above, the time stamp of each ViewEdge is modified by default),
+in order not to process the same ViewEdge twice.
+Once the chaining reaches a ViewEdge that satisfies the stopping predicate,
+the chain is terminated.
+Then a new chain is started from the first unmarked ViewEdge in the active set.
+This operation is repeated until the last unmarked ViewEdge of the active set was processed.
+At the end of the chaining operation,
+the active set is set to the Chains that have just been constructed.</p>
+</div>
+<div class="section" id="splitting">
+<h3>Splitting<a class="headerlink" href="#splitting" title="Permalink to this headline">¶</a></h3>
+<p>The splitting operation is used to refine the topology of each Chain.
+Splitting is performed either sequentially or recursively. Sequential splitting
+(Operators::sequentialSplit()) in its basic form,
+parses the Chain at a given arbitrary resolution and evaluates a unary predicate
+(working on 0D elements) at each point along the Chain.
+Every time the predicate is satisfied, the chain is split into two chains.
+At the end of the sequential split operation,
+the active set of chains is set to the new chains.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">sequentialSplit</span><span class="p">(</span><span class="n">TrueUP0D</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, the chain is split every 2 units.
+A more elaborated version uses two predicates instead of one: One to determine the starting
+point of the new chain and the other to determine its ending point. This second version can
+lead to a set of Chains that are disjoint or that overlap if the two predicates are different.
+(see Operators::sequentialSplit() for more details).</p>
+<p>Recursive splitting (Operators::recursiveSplit()) evaluates a function on the 0D elements
+along the Chain at a given resolution and find the point that gives the maximum value for the
+function. The Chain is then split into two at that point.
+This process is recursively repeated on each of the two new Chains,
+until the input Chain satisfies a user-specified stopping condition.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">func</span> <span class="o">=</span> <span class="n">Curvature2DAngleF0D</span><span class="p">()</span>
+<span class="n">Operators</span><span class="o">.</span><span class="n">recursive_split</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">NotUP1D</span><span class="p">(</span><span class="n">HigherLengthUP1D</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the code example above,
+the Chains are recursively split at points of the highest 2D curvature.
+The curvature is evaluated at points along the Chain at a resolution of 5 units.
+Chains shorter than 5 units won&#8217;t be split anymore.</p>
+</div>
+<div class="section" id="sorting">
+<h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
+<p>The sorting operator (Operators::sort()) arranges the stacking order of active 1D elements. It
+takes as argument a binary predicate used as a &#8220;smaller than&#8221; operator to order two 1D
+elements.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">Length2DBP1D</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>In this code example, the sorting uses the Length2DBP1D binary predicate to sort the
+Interface1D objects in the ascending order in terms of 2D length.</p>
+<p>The sorting is particularly useful when combined with causal density. Indeed,
+the causal density evaluates the density of the resulting image as it is modified. If we wish
+to use such a tool to decide to remove strokes whenever the local density is too high,
+it is important to control the order in which the strokes are drawn. In this case,
+we would use the sorting operator to insure that the most &#8220;important&#8221; lines are drawn first.</p>
+</div>
+<div class="section" id="stroke-creation">
+<h3>Stroke creation<a class="headerlink" href="#stroke-creation" title="Permalink to this headline">¶</a></h3>
+<p>Finally, the stroke creation operator (Operators::create())
+takes the active set of Chains as input and build Strokes. The operator takes two arguments.
+The first is a unary predicate that works on Interface1D that is designed to make a last
+selection on the set of chains.
+A Chain that doesn&#8217;t satisfy the condition won&#8217;t lead to a Stroke. The second input is a list
+of Shaders that will be responsible for the shading of each built stroke.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">shaders_list</span> <span class="o">=</span> <span class="p">[</span>
+<span class="n">SamplingShader</span><span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
+<span class="n">ConstantThicknessShader</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="n">ConstantColorShader</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">]</span>
+<span class="n">Operators</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">DensityUP1D</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">IntegrationType</span><span class="o">.</span><span class="n">MEAN</span><span class="p">),</span> <span class="n">shaders_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example,
+the DensityUP1D predicate is used to remove all Chains whose mean density is higher than 0.1.
+Each chain is transformed into a stroke by resampling it so as to have a point every 5 units
+and assigning to it a constant thickness of 2 units and a dark gray constant color.</p>
+</div>
+<div class="section" id="user-control-on-the-pipeline-definition">
+<h3>User control on the pipeline definition<a class="headerlink" href="#user-control-on-the-pipeline-definition" title="Permalink to this headline">¶</a></h3>
+<p>Style module writing offers different types of user control,
+even though individual style modules have a fixed pipeline structure.
+One is the sequencing of different pipeline control structures, and another is through the
+definition of functor objects that are passed as argument all along the pipeline.</p>
+<p>Different pipeline control structures can be defined by sequencing the selection, chaining,
+splitting, and sorting operations.
+The stroke creation is always the last operation that concludes a style module.</p>
+<p>Predicates, functions, chaining iterators, and stroke shaders can be defined by inheriting
+base classes and overriding appropriate methods. See the reference manual entries of the
+following base classes for more information on the user-scriptable constructs.</p>
+<ul class="simple">
+<li>UnaryPredicate0D</li>
+<li>UnaryPredicate1D</li>
+<li>BinaryPredicate0D</li>
+<li>BinaryPredicate1D</li>
+<li>UnaryFunction0DDouble</li>
+<li>UnaryFunction0DEdgeNature</li>
+<li>UnaryFunction0DFloat</li>
+<li>UnaryFunction0DId</li>
+<li>UnaryFunction0DMaterial</li>
+<li>UnaryFunction0DUnsigned</li>
+<li>UnaryFunction0DVec2f</li>
+<li>UnaryFunction0DVec3f</li>
+<li>UnaryFunction0DVectorViewShape</li>
+<li>UnaryFunction0DViewShape</li>
+<li>UnaryFunction1DDouble</li>
+<li>UnaryFunction1DEdgeNature</li>
+<li>UnaryFunction1DFloat</li>
+<li>UnaryFunction1DUnsigned</li>
+<li>UnaryFunction1DVec2f</li>
+<li>UnaryFunction1DVec3f</li>
+<li>UnaryFunction1DVectorViewShape</li>
+<li>UnaryFunction1DVoid</li>
+<li>ViewEdgeIterator</li>
+<li>StrokeShader</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="viewmap.html" class="btn btn-neutral float-right" title="Viewmaps"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="parameter_editor/line_style/thickness.html" class="btn btn-neutral" title="Thickness"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

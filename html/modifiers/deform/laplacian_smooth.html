@@ -1,0 +1,921 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Laplacian Smooth Modifier &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Modifiers" href="../index.html"/>
+        <link rel="next" title="Laplacian Deform Modifier" href="laplacian_deform.html"/>
+        <link rel="prev" title="Hook Modifier" href="hooks.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modifiers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#generate">Generate</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modifiers</a> &raquo;</li>
+      
+    <li>Laplacian Smooth Modifier</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modifiers/deform/laplacian_smooth.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="laplacian-smooth-modifier">
+<h1>Laplacian Smooth Modifier<a class="headerlink" href="#laplacian-smooth-modifier" title="Permalink to this headline">¶</a></h1>
+<p>The Laplacian Smooth modifier allows you to reduce noise on a mesh&#8217;s surface with minimal changes to its shape.</p>
+<p>It can also exaggerate the shape using a negative <em>Factor</em>.</p>
+<p>The Laplacian Smooth is useful for objects that have been reconstructed from the
+real world and contain undesirable noise. It removes noise while still
+preserving desirable geometry as well as the shape of the original model.</p>
+<p>The Laplacian Smooth modifier is based on a curvature flow Laplace Beltrami operator in a diffusion equation.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_Modifier_Panel.jpg"><img alt="../../_images/Apinzonf_Diagram_Modifier_Panel.jpg" src="../../_images/Apinzonf_Diagram_Modifier_Panel.jpg" style="width: 369px;" /></a>
+<p class="caption">Laplacian Smooth modifier</p>
+</div>
+<dl class="docutils">
+<dt>Repeat</dt>
+<dd><p class="first">Repetitions allow you to run the Laplacian smoothing multiple times.
+Each repetition causes the flow curvature of the mesh to be recalculated again,
+and as a result it removes more noise with every new iteration using a small <em>Factor</em> &lt; <tt class="docutils literal"><span class="pre">1.0</span></tt>.</p>
+<p>When on <tt class="docutils literal"><span class="pre">0</span></tt>, no smoothing is done.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">More repetitions will take longer to calculate - beware of doing so on meshes with a large number of vertices.</p>
+</div>
+<table border="1" class="docutils">
+<caption>(with a <em>factor</em> of <tt class="docutils literal"><span class="pre">0.5</span></tt>)</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_repeat1.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_repeat1.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_repeat1.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">1</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_repeat5.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_repeat5.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_repeat5.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">5</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_repeat10.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_repeat10.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_repeat10.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">10</span></tt></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<caption>(with a <em>factor</em> of <tt class="docutils literal"><span class="pre">2.0</span></tt>)</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat0.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat1.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat1.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat1.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">1</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat5.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat5.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat5.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">5</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat10.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat10.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_repeat10.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">10</span></tt></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="last docutils">
+<caption>(with a <em>factor</em> of <tt class="docutils literal"><span class="pre">-0.5</span></tt>)</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_repeat0.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_repeat0.jpg" src="../../_images/Apinzonf_Diagram_camel_repeat0.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_repeat1.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_repeat1.jpg" src="../../_images/Apinzonf_Diagram_camel_repeat1.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">1</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_repeat5.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_repeat5.jpg" src="../../_images/Apinzonf_Diagram_camel_repeat5.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">5</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_repeat10.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_repeat10.jpg" src="../../_images/Apinzonf_Diagram_camel_repeat10.jpg" style="width: 130px;" /></a>
+<p class="caption">Repeat: <tt class="docutils literal"><span class="pre">10</span></tt></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Factor</dt>
+<dd><p class="first">Controls the amount of displacement of every vertex along the curvature flow.</p>
+<ul class="simple">
+<li>Using a small <em>Factor</em>, you can remove noise from the shape without affecting desirable geometry.</li>
+<li>Using a large <em>Factor</em>, you get smoothed versions of the shape at the cost of fine geometry details.</li>
+<li>Using a negative <em>Factor</em>, you can enhance the shape, preserving desirable geometry.</li>
+<li>When the <em>Factor</em> is negative, multiple iterations can magnify the noise.</li>
+</ul>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_lambda0_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_lambda0_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_lambda0_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">0.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_lambda0_5.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_lambda0_5.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_lambda0_5.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">0.5</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_lambda2_5.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_lambda2_5.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_lambda2_5.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">2.5</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_lambda5_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_lambda5_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_lambda5_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">5.0</span></tt></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda0_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda0_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda0_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">0.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda1_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda1_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda1_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">1.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda10_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda10_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda10_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">10.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda50_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda50_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_lambda50_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">50.0</span></tt></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_lambda0_0.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_lambda0_0.jpg" src="../../_images/Apinzonf_Diagram_camel_lambda0_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">0.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_lambda20_0.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_lambda20_0.jpg" src="../../_images/Apinzonf_Diagram_camel_lambda20_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">-20.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_lambda50_0.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_lambda50_0.jpg" src="../../_images/Apinzonf_Diagram_camel_lambda50_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">-50.0</span></tt></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_lambda300_0.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_lambda300_0.jpg" src="../../_images/Apinzonf_Diagram_camel_lambda300_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Factor: <tt class="docutils literal"><span class="pre">-300.0</span></tt></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Border</dt>
+<dd><p class="first">Since there is no way to calculate the curvature flow on border edges, they must be controlled separately.
+Border edges are smoothed using a much simpler method, using this property to control the influence.</p>
+<p>Positive values will smooth the vertex positions,
+while negative values will &#8220;enhance&#8221; them by transforming them in the opposite direction.</p>
+<table border="1" class="docutils">
+<caption>(with a <em>factor</em> of <tt class="docutils literal"><span class="pre">2.5</span></tt>)</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_border0_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_border0_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_border0_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 0.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_border1_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_border1_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_border1_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_border2_5.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_border2_5.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_border2_5.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 2.5</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_border10_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_border10_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_border10_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 10.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<caption>(with a <em>factor</em> of <tt class="docutils literal"><span class="pre">20.0</span></tt>)</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border0_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border0_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border0_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 0.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border1_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border1_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border1_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border5_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border5_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border5_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 5.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border20_0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border20_0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_border20_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 20.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="last docutils">
+<caption>(with a <em>factor</em> of <tt class="docutils literal"><span class="pre">-30.0</span></tt>)</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_cup_border0_0.jpg"><img alt="../../_images/Apinzonf_Diagram_cup_border0_0.jpg" src="../../_images/Apinzonf_Diagram_cup_border0_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: 0.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_cup_border20_0.jpg"><img alt="../../_images/Apinzonf_Diagram_cup_border20_0.jpg" src="../../_images/Apinzonf_Diagram_cup_border20_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: -20.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_cup_border50_0.jpg"><img alt="../../_images/Apinzonf_Diagram_cup_border50_0.jpg" src="../../_images/Apinzonf_Diagram_cup_border50_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: -50.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_cup_border200_0.jpg"><img alt="../../_images/Apinzonf_Diagram_cup_border200_0.jpg" src="../../_images/Apinzonf_Diagram_cup_border200_0.jpg" style="width: 130px;" /></a>
+<p class="caption">Border: -200.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>X, Y, Z</dt>
+<dd><p class="first">Toggle buttons to enable/disable deforming vertices in the X, Y and/or Z axis directions.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis.jpg" style="width: 130px;" /></a>
+<p class="caption">X, Y, Z: Unselected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_xyz.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_xyz.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_xyz.jpg" style="width: 130px;" /></a>
+<p class="caption">X, Y, Z: Selected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_xy.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_xy.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_xy.jpg" style="width: 130px;" /></a>
+<p class="caption">X, Y: Selected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_x.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_x.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_axis_x.jpg" style="width: 130px;" /></a>
+<p class="caption">X: Selected</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis.jpg" style="width: 130px;" /></a>
+<p class="caption">X, Y, Z: Unselected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_xyz.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_xyz.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_xyz.jpg" style="width: 130px;" /></a>
+<p class="caption">X, Y, Z: Selected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_xy.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_xy.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_xy.jpg" style="width: 130px;" /></a>
+<p class="caption">X, Y: Selected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_x.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_x.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_axis_x.jpg" style="width: 130px;" /></a>
+<p class="caption">X: Selected</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Preserve Volume</dt>
+<dd><p class="first">The smoothing process can produce shrinkage.
+That is significant for large <em>Factor</em> or large <em>Repeat</em> values;
+to reduce that effect you can use this option.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volumeFalse.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volumeFalse.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volumeFalse.jpg" style="width: 130px;" /></a>
+<p class="caption">Off</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volumeTrue.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volumeTrue.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volumeTrue.jpg" style="width: 130px;" /></a>
+<p class="caption">On</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volume2False.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volume2False.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volume2False.jpg" style="width: 130px;" /></a>
+<p class="caption">Off</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volume2True.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volume2True.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_cube_volume2True.jpg" style="width: 130px;" /></a>
+<p class="caption">On</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Vertex Group</dt>
+<dd><p class="first">A vertex group name, to constrain the effect to a group of vertices only.
+Allows for selective, real-time smoothing or enhancing, by painting vertex weights.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Original Geometry</th>
+<th class="head">No Group Chosen</th>
+<th class="head">Vertex Weights</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_lambda2_5.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_lambda2_5.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_lambda2_5.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_femme_paint.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_femme_paint.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_femme_paint.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_femme_wgroup.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_femme_wgroup.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_femme_wgroup.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_normal.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_normal.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_normal.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_smooth.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_smooth.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_smooth.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_paint.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_paint.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_paint.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_wgroup.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_wgroup.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_wgroup.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_vertex0.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_vertex0.jpg" src="../../_images/Apinzonf_Diagram_camel_vertex0.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_vertex1.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_vertex1.jpg" src="../../_images/Apinzonf_Diagram_camel_vertex1.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_vertex2.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_vertex2.jpg" src="../../_images/Apinzonf_Diagram_camel_vertex2.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_camel_vertex3.jpg"><img alt="../../_images/Apinzonf_Diagram_camel_vertex3.jpg" src="../../_images/Apinzonf_Diagram_camel_vertex3.jpg" style="width: 130px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Normalized</dt>
+<dd><p class="first">When enabled, the results will depend on face sizes. When disabled, geometry spikes may occur.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_monkey_normalized0.jpg"><img alt="../../_images/Apinzonf_Diagram_monkey_normalized0.jpg" src="../../_images/Apinzonf_Diagram_monkey_normalized0.jpg" style="width: 130px;" /></a>
+<p class="caption">Original Geometry</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_monkey_normalized1.jpg"><img alt="../../_images/Apinzonf_Diagram_monkey_normalized1.jpg" src="../../_images/Apinzonf_Diagram_monkey_normalized1.jpg" style="width: 130px;" /></a>
+<p class="caption">On</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_monkey_normalized2.jpg"><img alt="../../_images/Apinzonf_Diagram_monkey_normalized2.jpg" src="../../_images/Apinzonf_Diagram_monkey_normalized2.jpg" style="width: 130px;" /></a>
+<p class="caption">Off</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_Diagram_monkey_normalized3.jpg"><img alt="../../_images/Apinzonf_Diagram_monkey_normalized3.jpg" src="../../_images/Apinzonf_Diagram_monkey_normalized3.jpg" style="width: 130px;" /></a>
+<p class="caption">Off, High Factor</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<p>Meshes with a great number of vertices, more than ten thousand (10,000),
+may take several minutes for processing; you can use small portions of the mesh for testing
+before executing the modifier on the entire model.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_repeat0.jpg" style="width: 200px;" /></a>
+<p class="caption"><a class="reference external" href="http://wiki.blender.org/index.php/Media:Apinzonf_GSOC_2012_Media_femme_front.blend">Femme Front blend file</a></p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Apinzonf_GSOC_2012_Diagram_t_wgroup.jpg"><img alt="../../_images/Apinzonf_GSOC_2012_Diagram_t_wgroup.jpg" src="../../_images/Apinzonf_GSOC_2012_Diagram_t_wgroup.jpg" style="width: 200px;" /></a>
+<p class="caption"><a class="reference external" href="http://wiki.blender.org/index.php/Media:Apinzonf_GSOC_2012_Media_cube_smooth.blend">Cube Smooth blend file</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="smooth.html"><em>Smooth Modifier</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="laplacian_deform.html" class="btn btn-neutral float-right" title="Laplacian Deform Modifier"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hooks.html" class="btn btn-neutral" title="Hook Modifier"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

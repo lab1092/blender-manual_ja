@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reducing Noise &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Cycles Render Engine" href="index.html"/>
+        <link rel="next" title="Experimental Features" href="experimental_features.html"/>
+        <link rel="prev" title="Camera" href="camera.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="index.html">Cycles Render Engine</a> &raquo;</li>
+      
+    <li>Reducing Noise</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/render/cycles/reducing_noise.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="reducing-noise">
+<h1>Reducing Noise<a class="headerlink" href="#reducing-noise" title="Permalink to this headline">¶</a></h1>
+<p>When performing a final render, it is important to reduce noise as much as possible.
+Here we&#8217;ll discuss a number of tricks that, while breaking the laws of physics,
+are particularly important when rendering animations within a reasonable time.
+Click to enlarge the example images to see the noise differences well.</p>
+<div class="section" id="path-tracing">
+<h2>Path Tracing<a class="headerlink" href="#path-tracing" title="Permalink to this headline">¶</a></h2>
+<p>Cycles uses path tracing with next event estimation,
+which is not good at rendering all types of light effects, like caustics, but has the
+advantage of being able to render more detailed and larger scenes compared to some other
+rendering algorithms. This is because we do not need to store, for example,
+a photon map in memory,
+and because we can keep rays relatively coherent to use an on-demand image cache,
+compared to e.g. bidirectional path tracing.</p>
+<div class="figure">
+<img alt="../../_images/Manual_cycles_light_path_rays.jpg" src="../../_images/Manual_cycles_light_path_rays.jpg" />
+</div>
+<p>We do the inverse of what reality does,
+tracing light rays from the camera into the scene and onto lights,
+rather than from the light sources into the scene and then into the camera.
+This has the advantage that we do not waste light rays that will not end up in the camera,
+but also means that it is difficult to find some light paths that may contribute a lot.
+Light rays will be sent either according to the surface BRDF,
+or in the direction of known light sources (lamps, emitting meshes with Sample as Lamp).</p>
+<p>For more details, see the
+<a class="reference internal" href="settings/light_paths.html"><em>Light Paths</em></a> and
+<a class="reference internal" href="settings/integrator.html"><em>Integrator</em></a> documentation.</p>
+</div>
+<div class="section" id="where-noise-comes-from">
+<h2>Where Noise Comes From<a class="headerlink" href="#where-noise-comes-from" title="Permalink to this headline">¶</a></h2>
+<p>To understand where noise can come from, take for example this scene.
+When we trace a light ray into the specified location, this is what the diffuse shader &#8220;sees&#8221;.
+To find the light that is reflected from this surface,
+we need to find the average color from all these pixels.
+Note the glossy highlight on the sphere,
+and the bright spot the lamp casts on the nearby wall. These hotspots are 100x brighter than
+other parts of the image and will contribute significantly to the lighting of this pixel.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_fisheye_reference.jpg"><img alt="../../_images/Cycles_noise_fisheye_reference.jpg" src="../../_images/Cycles_noise_fisheye_reference.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_fisheye.jpg"><img alt="../../_images/Cycles_noise_fisheye.jpg" src="../../_images/Cycles_noise_fisheye.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_fisheye_hotspot.jpg"><img alt="../../_images/Cycles_noise_fisheye_hotspot.jpg" src="../../_images/Cycles_noise_fisheye_hotspot.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The lamp is a known light source, so it will not be too hard to find, but the glossy highlight
+(s) that it causes are a different matter.
+The best we can do with path tracing is to distribute light rays randomly over the hemisphere,
+hoping to find all the important bright spots. If for some pixels we miss some bright spot,
+but we do find it for another, that results in noise. The more samples we take,
+the higher the probability that we cover all the important sources of light.</p>
+<p>With some tricks we can reduce this noise. If we blur the bright spots,
+they become bigger and less intense, making them easier to find and less noisy.
+This will not give the same exact result,
+but often it&#8217;s close enough when viewed through a diffuse or soft glossy reflection.
+Below is an example of using Filter Glossy and Smooth Light Falloff.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_fisheye_blur_reference.jpg"><img alt="../../_images/Cycles_noise_fisheye_blur_reference.jpg" src="../../_images/Cycles_noise_fisheye_blur_reference.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_fisheye_blur.jpg"><img alt="../../_images/Cycles_noise_fisheye_blur.jpg" src="../../_images/Cycles_noise_fisheye_blur.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_fisheye_blur_hotspot.jpg"><img alt="../../_images/Cycles_noise_fisheye_blur_hotspot.jpg" src="../../_images/Cycles_noise_fisheye_blur_hotspot.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bounces">
+<h2>Bounces<a class="headerlink" href="#bounces" title="Permalink to this headline">¶</a></h2>
+<p>In reality light will bounce a huge number of times due to the speed of light being very high.
+In practice more bounces will introduce more noise, and it might be good to use something like
+the Limited Global Illumination preset that uses <strong>fewer bounces for different shader
+types</strong>. Diffuse surfaces typically can get away with fewer bounces,
+while glossy surfaces need a few more,
+and transmission shaders such as glass usually need the most.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_0bounce.jpg"><img alt="../../_images/Cycles_noise_0bounce.jpg" src="../../_images/Cycles_noise_0bounce.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_2bounce.jpg"><img alt="../../_images/Cycles_noise_2bounce.jpg" src="../../_images/Cycles_noise_2bounce.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_4bounce.jpg"><img alt="../../_images/Cycles_noise_4bounce.jpg" src="../../_images/Cycles_noise_4bounce.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Also important is to <strong>use shader colors that do not have components of value 1.0</strong> or
+values near that; try to keep the maximum value to 0.8 or less and make your lights brighter.
+In reality, surfaces are rarely perfectly reflecting all light,
+but there are of course exceptions; usually glass will let most light through,
+which is why we need more bounces there. High values for the color components tend to
+introduce noise because light intensity then does not decrease much as it bounces off each
+surface.</p>
+</div>
+<div class="section" id="caustics-and-filter-glossy">
+<h2>Caustics and Filter Glossy<a class="headerlink" href="#caustics-and-filter-glossy" title="Permalink to this headline">¶</a></h2>
+<p>Caustics are a well-known source of noise, causing fireflies.
+They happen because the renderer has difficulty finding specular highlights
+viewed through a soft glossy or diffuse reflection.
+There is a <a class="reference internal" href="settings/integrator.html#render-cycles-integrator-no-caustics"><em>No Caustics</em></a>
+option to disable glossy behind a diffuse reflection entirely.
+Many render engines will typically disable caustics by default.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_reference.jpg"><img alt="../../_images/Cycles_noise_reference.jpg" src="../../_images/Cycles_noise_reference.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_no_caustics.jpg"><img alt="../../_images/Cycles_noise_no_caustics.jpg" src="../../_images/Cycles_noise_no_caustics.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_filter_glossy.jpg"><img alt="../../_images/Cycles_noise_filter_glossy.jpg" src="../../_images/Cycles_noise_filter_glossy.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>However using No Caustics will result in missing light,
+and it still does not cover the case where a sharp glossy reflection is viewed through a soft glossy reflection.
+There is a <a class="reference internal" href="settings/integrator.html#render-cycles-integrator-filter-glossy"><em>Filter Glossy</em></a>
+option to reduce the noise from such cases at the cost of accuracy.
+This will blur the sharp glossy reflection to make it easier to find, by increasing the shader Roughness.</p>
+<p>The above images show default settings, no caustics, and filter glossy set to 1.0.</p>
+</div>
+<div class="section" id="light-falloff">
+<h2>Light Falloff<a class="headerlink" href="#light-falloff" title="Permalink to this headline">¶</a></h2>
+<p>In reality light in a vacuum will always fall off at a rate of 1/(distance^2).
+However as distance goes to zero,
+this value goes to infinity and we can get very bright spots in the image.
+These are mostly a problem for indirect lighting, where the probability of hitting such a
+small but extremely bright spot is low and so happens only rarely.
+This is a typical recipe for fireflies.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_falloff_hard.jpg"><img alt="../../_images/Cycles_noise_falloff_hard.jpg" src="../../_images/Cycles_noise_falloff_hard.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_falloff_soft.jpg"><img alt="../../_images/Cycles_noise_falloff_soft.jpg" src="../../_images/Cycles_noise_falloff_soft.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>To reduce this problem, the <a class="reference internal" href="nodes/more.html#render-cycles-nodes-more-light-falloff"><em>Light Falloff</em></a> node has a <strong>Smooth factor,
+that can be used to reduce the maximum intensity</strong> a light can contribute to nearby surfaces.
+The images above show default falloff and smooth value 1.0.</p>
+</div>
+<div class="section" id="sample-as-lamp">
+<h2>Sample as Lamp<a class="headerlink" href="#sample-as-lamp" title="Permalink to this headline">¶</a></h2>
+<p>Materials with emission shaders can be configured to be <strong>sampled as lamp</strong>
+(<a class="reference internal" href="settings/integrator.html#render-cycles-integrator-material-settings"><em>Material Settings</em></a>).
+This means that they will get rays sent directly towards them,
+rather than ending up there based on rays randomly bouncing around.
+For very bright mesh light sources, this can reduce noise significantly.
+However when the emission is not particularly bright,
+this will take samples away from other brighter light sources for which it is important to find them this way.</p>
+<p>The optimal setting here is difficult to guess; it may be a matter of trial and error,
+but often it is clear that a somewhat glowing object may be only contributing light locally,
+while a mesh light used as a lamp would need this option enabled.
+Here is an example where the emissive spheres contribute little to the lighting,
+and the image renders with slightly less noise by disabling Sample as Lamp on them.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_sample_lamp.jpg"><img alt="../../_images/Cycles_noise_sample_lamp.jpg" src="../../_images/Cycles_noise_sample_lamp.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_no_sample_lamp.jpg"><img alt="../../_images/Cycles_noise_no_sample_lamp.jpg" src="../../_images/Cycles_noise_no_sample_lamp.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The world background also has a <em>Sample as Lamp</em> (<a class="reference internal" href="settings/integrator.html#render-cycles-integrator-world-settings"><em>World Settings</em></a>) option.
+This is mostly useful for environment maps that have small bright spots in them, rather than being smooth.
+This option will then, in a preprocess, determine the bright spots, and send light rays directly towards them. Again,
+enabling this option may take samples away from more important light sources if it is not needed.</p>
+</div>
+<div class="section" id="glass-and-transparent-shadows">
+<span id="render-cycles-reducing-noise-glass-and-transp-shadows"></span><h2>Glass and Transparent Shadows<a class="headerlink" href="#glass-and-transparent-shadows" title="Permalink to this headline">¶</a></h2>
+<p>With caustics disabled, glass will miss shadows,
+and with filter glossy they might be too soft.
+We can make a glass shader that will <strong>use a Glass BSDF when viewed directly,
+and a Transparent BSDF when viewed indirectly</strong>. The Transparent BSDF can be used for
+transparent shadows to find light sources straight through surfaces,
+and will give properly-colored shadows, but without the caustics.
+The Light Path node is used to determine when to use which of the two shaders.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_glass_setup.jpg"><img alt="../../_images/Cycles_noise_glass_setup.jpg" src="../../_images/Cycles_noise_glass_setup.jpg" style="width: 516px;" /></a>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_glass_too_much_shadow.jpg"><img alt="../../_images/Cycles_noise_glass_too_much_shadow.jpg" src="../../_images/Cycles_noise_glass_too_much_shadow.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_glass_trick.jpg"><img alt="../../_images/Cycles_noise_glass_trick.jpg" src="../../_images/Cycles_noise_glass_trick.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Above we can see the node setup used for the glass transparency trick;
+on the left the render has too much shadow due to missing caustics,
+and on the right the render with the trick.</p>
+</div>
+<div class="section" id="window-lights">
+<h2>Window Lights<a class="headerlink" href="#window-lights" title="Permalink to this headline">¶</a></h2>
+<p>When rendering a daylight indoor scene where most of the light is coming in through a window
+or door opening, it is difficult for the integrator to find its way to them.
+We can replace the opening with a plane with an emission shader,
+so that the integrator knows in which direction to fire rays.
+For camera rays we can make this mesh light invisible,
+so that we can still look into the outside scene.
+This is done either by disabling camera ray visibility on the object,
+or by switching between glass and emission shaders in the material.</p>
+<p>The two renders below have the same render time,
+with the second render using a mesh light positioned in the window.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_window_no_trick.jpg"><img alt="../../_images/Cycles_noise_window_no_trick.jpg" src="../../_images/Cycles_noise_window_no_trick.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_window_trick.jpg"><img alt="../../_images/Cycles_noise_window_trick.jpg" src="../../_images/Cycles_noise_window_trick.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="clamp-fireflies">
+<h2>Clamp Fireflies<a class="headerlink" href="#clamp-fireflies" title="Permalink to this headline">¶</a></h2>
+<p>Ideally with all the previous tricks, fireflies would be eliminated, but they could still happen. For that,
+<strong>the intensity that any individual light ray sample will contribute to a pixel can be clamped</strong>
+to a maximum value with the integrator <a class="reference internal" href="settings/integrator.html#render-cycles-integrator-clamp-samples"><em>Clamp setting</em></a>.
+If set too low this can cause missing highlights in the image,
+which might be useful to preserve for camera effects such as bloom or glare.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_noclamp.jpg"><img alt="../../_images/Cycles_noise_noclamp.jpg" src="../../_images/Cycles_noise_noclamp.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Cycles_noise_clamp_4.0.jpg"><img alt="../../_images/Cycles_noise_clamp_4.0.jpg" src="../../_images/Cycles_noise_clamp_4.0.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="experimental_features.html" class="btn btn-neutral float-right" title="Experimental Features"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="camera.html" class="btn btn-neutral" title="Camera"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

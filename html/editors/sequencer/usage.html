@@ -1,0 +1,1003 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview of the Sequence Editor &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Video Sequence Editor" href="index.html"/>
+        <link rel="next" title="Sequence Display Modes" href="modes.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Editors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Editors</a> &raquo;</li>
+      
+          <li><a href="index.html">Video Sequence Editor</a> &raquo;</li>
+      
+    <li>Overview of the Sequence Editor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/editors/sequencer/usage.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="overview-of-the-sequence-editor">
+<h1>Overview of the Sequence Editor<a class="headerlink" href="#overview-of-the-sequence-editor" title="Permalink to this headline">¶</a></h1>
+<p>Blender&#8217;s Video Sequence Editor is a flexible workbench for editing your video footage.
+It is used to review your footage, and glue many sequences of your movie together.
+It offers a number of built-in and plug-in effects to transition from sequence to sequence,
+providing advanced hollywood-style effects for a professional looking video.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/2.5_Manual-VSE-header.jpg"><img alt="../../_images/2.5_Manual-VSE-header.jpg" src="../../_images/2.5_Manual-VSE-header.jpg" style="width: 400px;" /></a>
+<p class="caption">Video Sequence Editor in Sequence display mode</p>
+</div>
+<p>The Video Sequence Editor has a header (where the menu and view modes are shown) and a workspace,
+and works in one of several view modes. The Marker menu allows you to add markers in the VSE.
+Markers are shared across animation editors. See <a class="reference internal" href="../../animation/basics/markers.html"><em>Markers</em></a></p>
+<p>The sequencer workspace is horizontally striped into channels and each video strip will go in
+a horizontal channel. Each channel is numbered on the left-hand side, starting from 0
+(you can&#8217;t put anything thing in this special one!) and going up.
+Stripes toward the bottom are more dominant, which we&#8217;ll get to in a minute.
+In the x direction, seconds of animation or frames of animation
+(<tt class="kbd docutils literal"><span class="pre">Ctrl-T</span></tt> to choose) are used as the measure of time
+(seconds 1 through 7 are shown). You can scale the time using the zoom keys or mouse actions
+(see the Reference for more info).</p>
+<div class="figure">
+<img alt="../../_images/2.5_Manual-VSE-DoSequence.jpg" src="../../_images/2.5_Manual-VSE-DoSequence.jpg" />
+<p class="caption">Sequence Output Enabled</p>
+</div>
+<p>When you click Render or Anim to generate an image or video,
+Blender has a choice of what image to compose for the current frame/scrub range:</p>
+<ul class="simple">
+<li>Current Scene layer result</li>
+<li>Sequence Editor channel 0 result</li>
+<li>Composition Node Editor renderlayer result</li>
+</ul>
+<p>The video sequencer is enabled by default.</p>
+<p>When you go to the render panel where ordinary renderings take place and you click animation
+or image with the VSE open, it will render the clips for the VSE instead of the scene.</p>
+<div class="section" id="using-the-sequence-editor">
+<h2>Using the Sequence Editor<a class="headerlink" href="#using-the-sequence-editor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="adding-strips">
+<h3>Adding Strips<a class="headerlink" href="#adding-strips" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/VseAddMenu.jpg" src="../../_images/VseAddMenu.jpg" />
+<p class="caption">the add menu</p>
+</div>
+<p>The Add menu is the main menu you will be using to add content to the VSE. In general,
+you load up your strips, create strips of special transition effects,
+and then animate out your sequence by selecting &#8220;Do Sequence&#8221; and clicking the Anim button.
+You can use the Add menu in the header,
+or hover your mouse cursor over the Sequence workspace and press <tt class="kbd docutils literal"><span class="pre">Shift-A</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Clips can be Huge</p>
+<p class="last">A three minute quicktime .mov file can be 140Megs.
+Loading it, even over a high-speed LAN can take some time.
+Don&#8217;t assume your computer or Blender has locked up if nothing happens for awhile.</p>
+</div>
+<p>First, let&#8217;s add a clip:</p>
+<ul class="simple">
+<li>A movie clip in the Audio-Video Interleaved format (<tt class="docutils literal"><span class="pre">*.avi</span></tt> file)</li>
+<li>A movie clip in the Apple QuickTime format (<tt class="docutils literal"><span class="pre">*.mov</span></tt>)</li>
+<li>A single still image to be repeated for a number of frames (<tt class="docutils literal"><span class="pre">*.jpg</span></tt>, <tt class="docutils literal"><span class="pre">*.png</span></tt>, etc.)</li>
+<li>A numbered sequence of images (<tt class="docutils literal"><span class="pre">*-0001.jpg</span></tt>, <tt class="docutils literal"><span class="pre">*-0002.jpg</span></tt>, <tt class="docutils literal"><span class="pre">*-0003.jpg</span></tt>, etc, of any image format)</li>
+<li>One or more images from a directory</li>
+<li>A Scene in your <tt class="docutils literal"><span class="pre">.blend</span></tt> file.</li>
+</ul>
+<p>Blender does not care which of these you use; you can freely mix and match any of them.
+They all become a color-coded strip in the VSE:</p>
+<ul class="simple">
+<li>Blue is used for Avi/mov codec strips</li>
+<li>Grey is a single image that is repeated/copied</li>
+<li>Purple is an image sequences or group of images played one after the other</li>
+<li>Green is an Audio track</li>
+</ul>
+<p>When you choose to add one of these,
+the VSE window will switch to a file browser for you to select what you want to add.
+Supported files have a little rectangle next to their name (blue for images, green for clips)
+as a visual cue that you can pick them successfully:</p>
+<div class="section" id="add-movies-or-images">
+<h4>Add Movies or Images<a class="headerlink" href="#add-movies-or-images" title="Permalink to this headline">¶</a></h4>
+<p>When adding a Movie or Movie+Audio <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to put the name of the file into
+the text box at the top; this selects a <strong>single</strong> file (like a movie)</p>
+<p>In the case of (numbered) image <strong>sequences</strong>, you have a choice:</p>
+<dl class="docutils">
+<dt>Directory</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">RMB</span></tt> right-click on a directory name,
+and all files in that directory will be brought in as part of the image,
+in sort order, one image per frame</dd>
+<dt>Range</dt>
+<dd>Navigate into the directory and right-click and drag over a range of names to highlight multiple files.
+You can page down and continue right-click-dragging to add more to the selection</dd>
+<dt>Batch</dt>
+<dd>Shift-right-click selected non-related stills for batch processing; each image will be one frame, in sort order,
+and can be a mix of file types (jpg, png, exr, etc.)</dd>
+<dt>All</dt>
+<dd>Press <em>A</em> to select/deselect All files in the directory.</dd>
+</dl>
+<p>When you click the <em>Select &lt;whatever&gt;</em> button,
+the window pane will switch back to VSE, and the strip will be rubber-banded to your mouse.
+You cannot load multiple movies at the same time by right-clicking them;
+no movies load if you right click them. Right-clicking only works for images.</p>
+<p>In order to add items to the VSE, left-click for movies, left-click for single images,
+or right-click and drag for image sequences.
+Move your mouse to the frame/time and stripe you want,
+and click to break the rubberband and drop the strip in place
+(in a channel and starting at a frame).</p>
+<p>When you add an image, Blender makes it into a 50-frame strip,
+which means that image will be in your video for two seconds (at 25 fps - PAL).
+Aside from re-positioning it,
+you will want to scale it by <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> -clicking on either the start or end arrow,
+and dragging left or right. As you move, the frame number updates to say where the arrow is.
+Click <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to validate, or <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> to cancel the modification.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Dealing with Different Sizes</p>
+<p class="last">Dealing with different sized images and different sized outputs is tricky. Think like a pixel.
+If you have a mis-match between the size of the input image and the render output size,
+the VSE does try to auto-scale the image to fit it entirely in the output.
+This may result in clipping. If you do not want that, use Crop and/or Offset in the Input
+panel to move and select a region of the image within the output. When you use Crop or Offset,
+the auto-scaling will be disabled and you can manually re-scale by adding the Transform
+effect.</p>
+</div>
+<div class="figure">
+<img alt="../../_images/Manual-VSE-sample.jpg" src="../../_images/Manual-VSE-sample.jpg" />
+</div>
+<p>If you scroll up the workspace, you will see an information channel
+(at vertical location channel 0) that gives you some helpful hints about the active strip.
+The example above shows a color strip from frames 1 to 25, then a mov file,
+and then an image strip. The info channel shows handy information about the image strip,
+whose name has been scrunched in the strip display,
+but is clearly spelled out in the information strip.</p>
+</div>
+<div class="section" id="add-scene">
+<h4>Add Scene<a class="headerlink" href="#add-scene" title="Permalink to this headline">¶</a></h4>
+<p>You can add the virtual image output of a Scene in your current .blend file as well.
+Select the scene from the popup list,
+and a strip will be added and rubberbanded to your mouse just like a movie or image.
+The strip length will be determined based on the animation settings in that scene
+(not the current scene, unless the VSE is operating in the same scene).</p>
+<p>When adding a Scene strip, please note that,
+in order to show you the strip in the VSE Image preview mode, Blender must render the scene.
+This may take awhile if the scene is complex,
+so there may be a delay between the time you select the scene and the time the strip appears.
+To reduce the delay, simplify the scene rendering by selecting fewer layers to render.</p>
+<p>If the extra overhead of rendering the scene becomes burdensome
+(for either preview or for multiple test renders) and you have enough disk space consider
+rendering the scene to a sequence of PNGs and using an Image Sequence strip instead of a
+scene. This is very popular for static graphic overlays like title cards which are often
+little more than a static image with animated opacity.</p>
+</div>
+<div class="section" id="add-audio">
+<h4>Add Audio<a class="headerlink" href="#add-audio" title="Permalink to this headline">¶</a></h4>
+<p>The VSE can incorporate an audio channel which you can hear as you scrub.
+Add an audio track when you are trying to time your video/animation to an audio track, or vice versa.
+Please refer to <a class="reference internal" href="audio.html"><em>the Audio Sequences section</em></a> for more information.</p>
+</div>
+</div>
+<div class="section" id="adding-effects">
+<h3>Adding Effects<a class="headerlink" href="#adding-effects" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/Manual-VSE-SFX.jpg" src="../../_images/Manual-VSE-SFX.jpg" />
+<p class="caption">Available Built-in Effects</p>
+</div>
+<p>Blender offers two categories of effects: Built-in and Plug-in.
+The built-in effects are listed to the right.
+They are built-in to Blender and everyone has them. The plug-in effects are separate files in
+a sequence-plugin directory on your PC that are loaded as they are needed.
+While a standard set of plugins are distributed when you installed Blender,
+everyone&#8217;s computer may have a different set.</p>
+<p>Every Built-in effect is explained in the next page individually,
+but they all are added and controlled in the same way. To add an effect strip,
+select one base strip (image, movie, or scene) by <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> clicking on it.
+For some effects, like the Cross transition effect,
+you will need to <tt class="kbd docutils literal"><span class="pre">Shift-RMB</span></tt> a second overlapping strip
+(it depends on the effect you want).
+Then select Add &#8211;&gt; Effect and pick the effect you want from the pop-up menu. When you do,
+the Effect strip will be shown above the source strips. If it is an independent effect,
+like the color generator (described later), it will be rubberbanded to your mouse;
+click to drop the strip.</p>
+<p>Since most Effects strips depend on one or two source strips,
+their frame location and duration depends on their source strips. Thus,
+you may not be able to move it;
+you have to move the source strips in order to affect the effect strip.</p>
+<p>To use an effect that combines or makes a transition between (or composites) two strips,
+you must <em>B</em> ox select or shift-right-click two of them.
+When you add the effect strip, it will be placed in a channel above the two in Grab mode
+(click to drop it on a channel).
+Its duration will be the overlap between the two strips as a maximum.</p>
+<p>With some effects, like the AlphaOver, the order in which you select the strips is important.
+You can also use one effect strip as the input or source strip with another strip,
+thus layering effects on top of one another.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The only exception is the Color Generator effect. It does not depend on a base strip;
+you can add and position it independent of any other strip.
+Change the length as you would any strip.</p>
+</div>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Sequence, Effects Strip Selected</div>
+<div class="line">Menu:     Strip &#8211;&gt; Change Effect</div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">C</span></tt></div>
+</div>
+</div>
+<p>If you picked the wrong effect from the menu, you can always change it by selecting the strip
+(<tt class="kbd docutils literal"><span class="pre">RMB</span></tt>) and using the Strip&#8211;&gt;Change Effect selection. Or,
+you can press <em>C</em> hange to switch effects on a selected Effects strip.</p>
+</div>
+<div class="section" id="strip-properties">
+<h3>Strip Properties<a class="headerlink" href="#strip-properties" title="Permalink to this headline">¶</a></h3>
+<p>The properties for the strip are examined and set in the properties panel,
+shortcut <tt class="kbd docutils literal"><span class="pre">N</span></tt>.</p>
+<ul class="simple">
+<li>Edit Strip - change properties of the strip</li>
+<li>Strip Input - where to pull images from</li>
+<li>Effect - Settings for effects strips</li>
+<li>Filter - Image pre-processing</li>
+<li>Proxy - Use representatives of the real image, for low-powered PCs</li>
+<li>Scene - Settings for when a scene strip is selected</li>
+<li>Sound - Settings for a sound clip</li>
+</ul>
+<p>The panels for each of these sets of options and controls are shown to the right</p>
+<div class="section" id="edit-strip-panel">
+<h4>Edit Strip Panel<a class="headerlink" href="#edit-strip-panel" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Name</dt>
+<dd>You can name or rename your strips here.</dd>
+<dt>Type</dt>
+<dd>Displays the type of strip selected.</dd>
+<dt>Blend Mode</dt>
+<dd>By default, a strip Replaces the output image of any lower-level strips. However,
+many other blending modes are available based on the strip type. For example,
+Alpha-Over automatically overlays the image on top of a lower level strip.
+Autoblending modes remove the need for separate effect strips.
+Blend percent controls how much of an effect the strip exerts, even over time.</dd>
+<dt>Opacity</dt>
+<dd>Set the opacity of the strip.</dd>
+<dt>Mute</dt>
+<dd>Hides the strip so that it does not participate in the final image computation</dd>
+<dt>Lock</dt>
+<dd>Prevents the strip from being moved.</dd>
+<dt>Channel</dt>
+<dd>Changes the channel number, or row, of the strip.</dd>
+<dt>Start Frame</dt>
+<dd>Changes the starting frame number of the strip, which is the same as grabbing and moving the strip.
+Tip: when you add a strip, I like to just drop it and then use this field to place it at the frame I want,
+rather that trying to drag and drop in exactly the right place.</dd>
+<dt>Length</dt>
+<dd>Specify the number of frames to use for the strip.</dd>
+</dl>
+<p>Use the <em>Convert to Premul</em> button if a strip has an Alpha (transparency) channel.
+Use <em>FilterY</em> if the strip is from broadcast video and has even or odd interlacing
+fields. Enhance the color saturation through the <em>Mul</em> tiply field.
+Play a strip backwards by enabling <em>Reverse Frames</em>.
+Tell Blender to display every nth frame by entering a <em>Strobe</em> value. Finally,
+when using MPEG video (VCD, DVD, XVid, DivX, ...),
+an image is built up over the course of a few frames; use the <em>Preseek</em> field to
+tell Blender to look backward and compose the image based on the n previous frames (e.g.
+<strong>15</strong> for Mpeg2 DVD).</p>
+</div>
+<div class="section" id="effect-strip">
+<h4>Effect Strip<a class="headerlink" href="#effect-strip" title="Permalink to this headline">¶</a></h4>
+<p>For all effects, use the Strip Properties panel to control the effects strip;
+each effect has different controls, but they can all be set in the Properties panel.
+Control the length of the strip to vary the speed with which the transform happens.
+Regardless of whether they are built-in or plug-in,
+all effect strips do some special image manipulation,
+usually by operating on another strip or two in a different channel.
+The effect strip is shown in some channel, but its resultant effect shows up as Channel 0.</p>
+</div>
+<div class="section" id="strip-input">
+<h4>Strip Input<a class="headerlink" href="#strip-input" title="Permalink to this headline">¶</a></h4>
+<p>Controls the source of the strip. Fields include file path, file name, image offset,
+crop settings.</p>
+<p>This is here you can edit/update the path of the file used by a strip. Very useful when you
+moved it one way or the other - this avoid you deleting and re-creating the strip!</p>
+<p>You have two text fields for path, the first being the path of the parent directory
+(<em>Path</em>), and the second the file name itself.</p>
+</div>
+<div class="section" id="filter">
+<h4>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h4>
+<p>Enables you to quickly set common image pre-processing options.
+<em>Strobe</em></p>
+<dl class="docutils">
+<dt>Flip</dt>
+<dd>X flips (reverses) the image left-to-right, Y reverses top-to-bottom.</dd>
+<dt>Backwards</dt>
+<dd>Reverses strip image sequence</dd>
+<dt>De-Interlace</dt>
+<dd>Removes fields in a video file.</dd>
+<dt>Saturation</dt>
+<dd>Increase or decrease the saturation of an image.</dd>
+<dt>Multiply</dt>
+<dd>Multiplies the colors by this value.</dd>
+<dt>Premultiply</dt>
+<dd>Premultiply the Alpha channel.</dd>
+<dt>Convert Float</dt>
+<dd>Converts input to float data.</dd>
+<dt>Use Color Balance</dt>
+<dd>Provides three filters to adjust coloration: Lift, Gamma, and Gain. Each pass can have a positive,
+or inverted effect by clicking the appropriate button.
+Set the amount of the effect by setting the color swatch; white (RGB 1,1,1) has no effect.</dd>
+</dl>
+</div>
+<div class="section" id="proxy-strip-properties-panel">
+<h4>Proxy Strip Properties Panel<a class="headerlink" href="#proxy-strip-properties-panel" title="Permalink to this headline">¶</a></h4>
+<p>A proxy is a smaller image (faster to load) that stands in for the main image.
+When you <em>Rebuild proxy</em> Blender computes small images (like thumbnails)
+for the big images and may take some time. After computing them, though, editing functions
+like scrubbing and scrolling and compositing functions like cross using these proxies is much
+faster but gives a low-res result. Disable proxies before final rendering.</p>
+<p>In order to actually <em>use</em> the proxies, the proper &#8220;Proxy Render Size&#8221; dropdown value must
+be selected in the Properties panel of the Sequencer View (where the edit plays back).</p>
+</div>
+<div class="section" id="sound">
+<h4>Sound<a class="headerlink" href="#sound" title="Permalink to this headline">¶</a></h4>
+<p>This panel appears when a sound file is selected.</p>
+<p>Here you can specify the Sound Strip&#8217;s file path and file name.</p>
+<dl class="docutils">
+<dt>Pack</dt>
+<dd>Packs the sound file into the current .blend file.</dd>
+<dt>Caching</dt>
+<dd>The sound file is decoded and loaded into RAM.</dd>
+<dt>Volume</dt>
+<dd>Set the volume of the Sound file.</dd>
+<dt>Attenuation/dB</dt>
+<dd>Attenuation in decibels</dd>
+<dt>Trim Duration Start/End</dt>
+<dd>Offset the start and end of a sound strip.</dd>
+</dl>
+</div>
+<div class="section" id="scene">
+<h4>Scene<a class="headerlink" href="#scene" title="Permalink to this headline">¶</a></h4>
+<p>Specify the scene to be linked to the current scene strip.</p>
+<dl class="docutils">
+<dt>Sequencer</dt>
+<dd>Process the render (and composited) result through the video sequence editor pipeline,
+if sequencer strips exist. This is the same function as in the render settings.</dd>
+<dt>Camera Override</dt>
+<dd>Change the camera that will be used.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="adjusting-the-view">
+<h3>Adjusting the View<a class="headerlink" href="#adjusting-the-view" title="Permalink to this headline">¶</a></h3>
+<p>Use these shortcuts to adjust the sequence area of the VSE:
+Pan <tt class="kbd docutils literal"><span class="pre">MMB</span></tt>
+Zoom <tt class="kbd docutils literal"><span class="pre">Wheel</span></tt>
+Vertical Scroll use <tt class="kbd docutils literal"><span class="pre">Shift-Wheel</span></tt>, or drag on the left scroll bar.
+Horizontal Scroll use <tt class="kbd docutils literal"><span class="pre">Ctrl-Wheel</span></tt>, or drag on the lower scroll ;bar.
+Scale View Vertically, drag on the circles on the vertical scroll bar.
+Scale View Horizontally, drag on the circles on the horizontal scroll bar.</p>
+<p>As usual, the View Menu controls what and how you view in the workspace.</p>
+<dl class="docutils">
+<dt>Properties Panel</dt>
+<dd>The Properties Panel contains options for the way the preview is displayed.</dd>
+<dt>View all Sequences <tt class="kbd docutils literal"><span class="pre">Home</span></tt></dt>
+<dd>Zooms (out) the display to show all strips.</dd>
+<dt>Fit preview in Window <tt class="kbd docutils literal"><span class="pre">Home</span></tt></dt>
+<dd>Resizes preview so that it fits in the window.</dd>
+<dt>Show Preview <tt class="docutils literal"><span class="pre">1:1</span></tt> <tt class="kbd docutils literal"><span class="pre">Numpad1</span></tt></dt>
+<dd>Resizes preview to a <tt class="docutils literal"><span class="pre">1:1</span></tt> scale (actual size).</dd>
+<dt>View Selected <tt class="kbd docutils literal"><span class="pre">NumpadPeriod</span></tt></dt>
+<dd>Zooms in the display to fit only the selected strips</dd>
+</dl>
+<p>Use this when working arranging a lot of strips and you want to use all of your screen to work.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Sequence</div>
+<div class="line">Menu:     View &#8211;&gt; Show Frames, View &#8211;&gt; Show Seconds</div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">T</span></tt></div>
+</div>
+</div>
+<dl class="docutils">
+<dt>Draw Frames</dt>
+<dd>Diplays the frame number instead of the time, in the Frame Number Indicator.</dd>
+<dt>Show Frame Number Indicator</dt>
+<dd>Toggles the units of measure across the bottom of the workspace between seconds or frames.</dd>
+<dt>Safe Margin</dt>
+<dd>Displays an overlay on the preview, marking where title safe region is.</dd>
+<dt>Separate Colors</dt>
+<dd>When using Luma Waveform view, this separates R,G, and B into separate graphs.</dd>
+<dt>Transform Markers</dt>
+<dd>Transform Markers as well as Strips.</dd>
+</dl>
+<div class="section" id="scrubbing">
+<h4>Scrubbing<a class="headerlink" href="#scrubbing" title="Permalink to this headline">¶</a></h4>
+<p>To move back and forth through your movie, use the Timeline window.
+<tt class="kbd docutils literal"><span class="pre">LMB</span></tt> click and drag left/right in the timeline window,
+moving the vertical bar which indicates the current frame. As you do,
+the image for that frame is displayed in the VSE window.</p>
+<p>Real-time scrubbing and image display is possible on reasonable computers when viewing an
+image sequence or movie (avi/mov) file. Scene images have to be rendered individually,
+which may take some time.</p>
+</div>
+<div class="section" id="view-modes">
+<h4>View Modes<a class="headerlink" href="#view-modes" title="Permalink to this headline">¶</a></h4>
+<p>The icons in the header allow to change the view of the VSE. By default,
+only the sequencer is displayed. The second button displays only the Preview window,
+and the third button displays both the Sequencer and the Preview.</p>
+<p>When the preview is enabled, you have several options to change what type pf preview to display.
+They are explained in the <a class="reference internal" href="modes.html"><em>Display Modes Page</em></a>.</p>
+</div>
+<div class="section" id="scene-preview">
+<h4>Scene Preview<a class="headerlink" href="#scene-preview" title="Permalink to this headline">¶</a></h4>
+<p>When using a Scene Strip in the sequencer,
+these settings in the Properties Panel determine how they are shown in the preview window.</p>
+<dl class="docutils">
+<dt>Open GL Preview</dt>
+<dd>If you have Open GL, enable this setting to use Open GL for the scene preview renders.
+The drop down menu allows you to change how the Scene is displayed (Bounding Box, Wireframe, Solid, Textured).</dd>
+</dl>
+</div>
+<div class="section" id="view-settings">
+<h4>View Settings<a class="headerlink" href="#view-settings" title="Permalink to this headline">¶</a></h4>
+<p>The View Settings section in the properties panel contains addition display options.</p>
+<dl class="docutils">
+<dt>Show Overexposed</dt>
+<dd>Increasing this number to 1 or greater displays a striped overlay to the preview image,
+showing where it is overexposed. A higher number gives a higher threshold for marking overexposure.</dd>
+<dt>Safe Margin</dt>
+<dd>Displays an overlay on the preview, marking where title safe region is.</dd>
+<dt>Proxy Render Size</dt>
+<dd>Draws preview using full resolution or different proxy resolutions.
+Render resolution is determined in the render settings panel. Using a smaller preview size will increase speed.</dd>
+</dl>
+</div>
+<div class="section" id="refresh-view">
+<h4>Refresh View<a class="headerlink" href="#refresh-view" title="Permalink to this headline">¶</a></h4>
+<p>Certain operations, like moving an object in 3D View,
+may not force the Sequencer to call for a refresh of the rendered image
+(since the movement may not affect the rendered image). If an image or video, used as a strip,
+is changed by some application outside of Blender,
+Blender has no real way of being notified from your operating system.
+To force Blender to re-read in files, and to force a re-render of the 3D View, click the
+Refresh button to force Blender to update and synchronize all cached images and compute the
+current frame.</p>
+</div>
+</div>
+<div class="section" id="selecting-strips">
+<h3>Selecting Strips<a class="headerlink" href="#selecting-strips" title="Permalink to this headline">¶</a></h3>
+<p>The Select Menu helps you select strips in different ways.</p>
+<dl class="docutils">
+<dt>Strips to the Left</dt>
+<dd>Select all strips to the left of the currently selected strip.</dd>
+<dt>Strips to the Right</dt>
+<dd>Select all strips to the right of the currently selected strip.</dd>
+<dt>Select Surrounding Handles <tt class="kbd docutils literal"><span class="pre">Alt-Ctrl-RMB</span></tt></dt>
+<dd>Select both handles of the strip, plus the neighboring handles on the immediately adjoining strips.
+Select with this method to move a strip that is between to others without affecting the selected strip&#8217;s length.</dd>
+<dt>Left Handle <tt class="kbd docutils literal"><span class="pre">Alt-RMB</span></tt></dt>
+<dd>Select the left handle of the currently selected strip.</dd>
+<dt>Right Handle <tt class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></tt></dt>
+<dd>Select the right handle of the currently selected strip.</dd>
+<dt>Linked</dt>
+<dd>Select all strips linked to the currently selected strip</dd>
+<dt>Select All <tt class="kbd docutils literal"><span class="pre">A</span></tt></dt>
+<dd>Selects all the strips loaded.</dd>
+<dt>Select Inverse</dt>
+<dd>Inverts the current selection.</dd>
+<dt>Border Select <tt class="kbd docutils literal"><span class="pre">B</span></tt></dt>
+<dd>Begins the <em>Box</em> mode select process.
+Click and drag a rectangular lasso around a region of strips in your Sequence workspace.
+When you release the mouse button, the additional strips will be selected.</dd>
+</dl>
+</div>
+<div class="section" id="moving-and-modifying-strips">
+<h3>Moving and Modifying Strips<a class="headerlink" href="#moving-and-modifying-strips" title="Permalink to this headline">¶</a></h3>
+<p><tt class="kbd docutils literal"><span class="pre">G</span></tt> Moves the selected strip(s) in time or in channels.
+Move your mouse horizontally (left/right) to change the strip&#8217;s position in time.
+Move vertically (up/down) to change channels.</p>
+<ul class="simple">
+<li>To snap while dragging hold <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt></li>
+<li>To &#8216;ripple edit&#8217; (Make room for strips you drag) hold <tt class="kbd docutils literal"><span class="pre">Alt</span></tt> when placing a strip.</li>
+</ul>
+<p>If you have added a strip by mistake or no longer want it,
+delete it by pressing <em>X</em> or using this menu option.</p>
+<p><em>Duplicate</em> a strip to make an unlinked copy; drag it to a time and channel, and drop it by <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> click.</p>
+<p>The Strip Menu contains additional tools for working with strips:
+<em>Grab/Move</em></p>
+<p><em>Grab/Extend from Frame</em></p>
+<p><em>Cut (hard) at frame</em></p>
+<p><em>Cut (soft) at frame</em></p>
+<p><em>Separate Images</em>
+<em>Deinterlace Movies</em></p>
+<p><em>Duplicate Strips</em></p>
+<p><em>Erase Strips</em></p>
+<p><em>Set Render Size</em></p>
+<p><em>Make Meta Strip</em></p>
+<p><em>UnMeta Strip</em></p>
+<p><em>Reload Strips</em></p>
+<p><em>Reassign Inputs</em></p>
+<p><em>Swap Inputs</em></p>
+<p><em>Lock Strips</em></p>
+<p><em>UnLock Strips</em></p>
+<p><em>Mute Strips</em></p>
+<p><em>Un-Mute Strips</em></p>
+<p><em>Mute Deselected Strips</em></p>
+<p><em>Snap Strips</em></p>
+<p><em>Swap Strips</em></p>
+<div class="section" id="snap-to-frame">
+<h4>Snap to Frame<a class="headerlink" href="#snap-to-frame" title="Permalink to this headline">¶</a></h4>
+<p><tt class="kbd docutils literal"><span class="pre">Shift-S</span></tt>
+Position your cursor (vertical green line) to the time you want.
+Snap to current frame to start a strip exactly at the beginning of the frame.
+If your Time display is in seconds,
+you can get to fractional parts of a second by zooming the display;
+you can get all the way down to an individual frame.</p>
+</div>
+<div class="section" id="separate-images-to-strips">
+<h4>Separate Images to Strips<a class="headerlink" href="#separate-images-to-strips" title="Permalink to this headline">¶</a></h4>
+<p><tt class="kbd docutils literal"><span class="pre">Y</span></tt> Converts the strip into multiple strips, one strip for each frame.
+Very useful for slide shows and other cases where you want to bring in a set on non-continuous images.</p>
+</div>
+<div class="section" id="editing-strips">
+<h4>Editing Strips<a class="headerlink" href="#editing-strips" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><tt class="kbd docutils literal"><span class="pre">RMB</span></tt> in the middle of the strip selects the <strong>entire</strong> strip;
+holding it down (or pressing <tt class="kbd docutils literal"><span class="pre">G</span></tt> rab) and then moving the mouse drags a strip around.</li>
+<li><tt class="kbd docutils literal"><span class="pre">RMB</span></tt> on the left arrow of the strip selects the <strong>start</strong> frame offset for that strip;
+holding it down (or pressing <tt class="kbd docutils literal"><span class="pre">G</span></tt> rab and then moving the mouse left/right
+changes the start frame within the strip by the number of frames you move it:<ul>
+<li>If you have a 20-image sequence strip, and drag the left arrow to the right by 10 frames,
+the strip will start at image 11 (images 1 to 10 will be skipped).
+Use this to clip off a rollup or useless lead-in.</li>
+<li>Dragging the left arrow left will create a lead-in (copies) of the first frame for as many frames as you drag it.
+Use this when you want some frames for transitions to the this clip.</li>
+</ul>
+</li>
+<li><tt class="kbd docutils literal"><span class="pre">RMB</span></tt> on the right arrow of the strip selects the <strong>end</strong> frame of the strip;
+holding it down (or pressing <tt class="kbd docutils literal"><span class="pre">G</span></tt> rab) and then moving the mouse changes the ending frame within the strip:<ul>
+<li>Dragging the right arrow to the left shortens the clip;
+any original images at the tail are ignored. Use this to quickly clip off a rolldown.</li>
+<li>Dragging the right arrow right extends the clip.
+For movies and images sequences, more of the animation is used until exhausted.
+Extending a clip beyond its end results in Blender making a copy of the last image.
+Use this for transitions out of this clip.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Multiple selection</p>
+<p class="last">You can select several (handles of) strips by <tt class="kbd docutils literal"><span class="pre">Shift-RMB</span></tt> -clicking: when you&#8217;ll hit <tt class="kbd docutils literal"><span class="pre">G</span></tt>,
+everything that&#8217;s selected will move with your mouse - this means that,
+for example, you can at the same time move a strip, shorten two others, and extend a forth one.</p>
+</div>
+<ul class="simple">
+<li>STRIP EXTEND. With a number of Image strips selected, pressing <tt class="kbd docutils literal"><span class="pre">E</span></tt> enters EXTEND mode.
+All selected strip handles to the &#8220;mouse side&#8221; of the current frame indicator will transform together,
+allowing you to essentially extend the strips that fall exactly on the
+current frame marker and having all others adjust to compensate.</li>
+</ul>
+<p>While splicing two strips happens just by placing them finish-to-start,
+cut a strip by pressing <tt class="kbd docutils literal"><span class="pre">K</span></tt> to cut. At the selected frame for the selected strips,
+K cuts them in two. Use Cut to trim off roll-ups or lead-ins, or roll-downs or extra film shot
+(&#8220;C&#8221; was already taken for Change).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Note on the &#8216;cut&#8217;</p>
+<p>When you &#8216;cut&#8217; a strip, you don&#8217;t really make a cut like it was with the &#8216;old editing&#8217; on real film.
+In fact, you make a copy of the strip: the end of the original one is &#8216;winded&#8217; to the cut point,
+as with the beginning of the new copy.</p>
+<p>For example, imagine that you have a strip of <strong>50</strong> frames,
+and that you want to delete the first ten ones.
+You have to go to the <strong>11</strong> <sup>th</sup> frame, and hit <tt class="kbd docutils literal"><span class="pre">K</span></tt>;
+the cut &#8216;divides&#8217; your strip in two parts. You now can select the first small part
+(frames <strong>1</strong> to <strong>10</strong>), and delete it hitting <tt class="kbd docutils literal"><span class="pre">X</span></tt>.</p>
+<p>You might think that you have really erased the frames <strong>1</strong> to <strong>10</strong>,
+but there are still there, &#8216;winded&#8217;, as in a film reel, under your frame <strong>11</strong> :
+you just have deleted one of the two copies of your strip created by the &#8216;cut&#8217;.
+And you can at any time get your &#8216;lost&#8217; frames back
+(just <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> -click on the left arrow of the strip,
+then <tt class="kbd docutils literal"><span class="pre">G</span></tt> grab it to the left to display the desired number of frames again (or to
+the right to &#8216;hide&#8217; more frames - this is another way to remove frames at the beginning/end of
+a strip!).</p>
+<p class="last">This is at the heart of nearly every editor solution, and that&#8217;s quite handy!</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Action Stops</p>
+<p class="last">When extending the start beyond the beginning or end after the ending,
+keep in mind that only the last image copies, so when viewed, action will stop on that frame.
+Start your transition (fade, cross) a little early while action is
+still happening so that the stop action is not that noticeable
+(unless, of course, you want it to be, like the 80&#8217;s drama sitcoms).</p>
+</div>
+<p>Change the length of an effect strip by changing the start/end frame of the origin strips.</p>
+</div>
+<div class="section" id="copy-and-paste">
+<h4>Copy and Paste<a class="headerlink" href="#copy-and-paste" title="Permalink to this headline">¶</a></h4>
+<p>You can copy a clip and paste it using the two header buttons.</p>
+</div>
+<div class="section" id="meta-strips">
+<h4>Meta Strips<a class="headerlink" href="#meta-strips" title="Permalink to this headline">¶</a></h4>
+<p>A Meta-Strip is a group of strips. Select all the strips you want to group,
+and Ctrl-g to group them into one meta.
+The meta spans from the beginning of the first strip to the end of the last one,
+and condenses all channels into a single strip, just like doing a mixdown in audio software.
+Separating (ungrouping) them restores them to their relative positions and channels.</p>
+<p>The default blend mode for a meta strip is Replace. There are many cases where this alters
+the results of the animation so be sure to check the results and adjust the blend mode if
+necessary.</p>
+<p>One convenient use for meta strips is when you want to apply the same effect to multiple
+strips. For example: scaling a loop. Until blender gets a Loop effect,
+the only way to loop a clip is to duplicate it several times.
+If the clip needs any transforms (like scaling or translating an animated watermark or source
+material in a different aspect ratio) it is much more convenient to apply a single set of
+transforms to a meta strip built from the repeated duplicates than apply copies of those
+transforms to each instance in the loop.</p>
+<p>It is possible to edit the contents of a meta strip by selecting it and pressing Tab.
+You can press Tab again to finish editing that strip. Since meta strips can be nested, to pop
+out one level of meta strip make sure you do not have a meta strip as the active strip when
+you press Tab.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modes.html" class="btn btn-neutral float-right" title="Sequence Display Modes"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

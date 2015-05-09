@@ -1,0 +1,907 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Volume Rendering &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Materials" href="../index.html"/>
+        <link rel="next" title="Halo Rendering" href="halo.html"/>
+        <link rel="prev" title="Wire Render" href="wire.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Materials</a> &raquo;</li>
+      
+    <li>Volume Rendering</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/render/blender_render/materials/special_effects/volume.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="volume-rendering">
+<h1>Volume Rendering<a class="headerlink" href="#volume-rendering" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Doc-26-Materials-VolumeRender-Activate.jpg"><img alt="../../../../_images/Doc-26-Materials-VolumeRender-Activate.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Activate.jpg" style="width: 300px;" /></a>
+<p class="caption">Activation volume rendering</p>
+</div>
+<p>Volume rendering is a method for rendering light as it passes through participating media,
+within a 3d region.
+The implementation in Blender&#8217;s sim-physics branch is a physically based model,
+which represents the various interactions of light in a volume relatively realistically.</p>
+<div class="figure">
+<img alt="../../../../_images/Volumerendering-solid_eq.jpg" src="../../../../_images/Volumerendering-solid_eq.jpg" />
+<p class="caption">Solid rendering</p>
+<div class="legend">
+The process of rendering a solid surface involves the camera finding a piece of geometry,
+then calculating the light that bounces from light sources (lamp objects, or other geometry),
+off the surface, and towards the camera.
+The light that arrives at the camera is the final color that&#8217;s rendered.</div>
+</div>
+<div class="figure">
+<img alt="../../../../_images/Volumerendering-volume_eq.jpg" src="../../../../_images/Volumerendering-volume_eq.jpg" />
+<p class="caption">Volume rendering</p>
+<div class="legend">
+Rendering a volume works differently. Light enters a 3D region of space (defined as the volume) that may be filled
+with small particles, such as smoke, mist or clouds.</div>
+</div>
+<p>The light bounces around off the various molecules, being scattered or absorbed,
+until some light passes through the volume and reaches the camera.
+In order for that volume to be visible, the renderer must figure out how much material the
+light has passed through and how it has acted and reacted within that volume,
+the volume object needs to contain a 3D region of space, for example a <a class="reference internal" href="../../../../glossary/index.html#term-manifold"><em class="xref std std-term">manifold</em></a> closed mesh,
+such as a cube, not just a flat surface like a plane. To get an image,
+the renderer has to step through that region, and see how much &#8216;stuff&#8217; is there (density)
+in order to see how light is absorbed or scattered or whatever. This can be a time consuming
+process since it has to check a lot of points in space and evaluate the density at each.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="density">
+<h3>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Volumerendering-density.jpg" src="../../../../_images/Volumerendering-density.jpg" />
+<p class="caption">Constant density vs textured density</p>
+</div>
+<p>Many things can happen to the light as it passes through the volume,
+which will influence the final color that arrives at the camera.
+These represent physical interactions that happen in the real world,
+and most of these are dependent on the density of the volume,
+which can either be a constant density throughout, or varied, controlled by a texture. It is
+by controlling the density that one can get the typical &#8216;volumetric&#8217; effects such as clouds or
+thick smoke.</p>
+<div class="figure">
+<img alt="../../../../_images/Doc-26-Materials-VolumeRender-Options-Density.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Options-Density.jpg" />
+<p class="caption">Density options</p>
+</div>
+<dl class="docutils">
+<dt>Density</dt>
+<dd>The base density of the material - other density from textures is added on top</dd>
+<dt>Density Scale</dt>
+<dd>A global multiplier to increase or decrease the apparent density.
+This can be useful for getting consistent results across different scene scales.</dd>
+</dl>
+</div>
+<div class="section" id="shading">
+<h3>Shading<a class="headerlink" href="#shading" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Volumerendering-scattering1.jpg" src="../../../../_images/Volumerendering-scattering1.jpg" />
+<p class="caption">Spot lamp scattering in a constant volume</p>
+</div>
+<p>When light enters a volume from an external source, it doesn&#8217;t just pass straight through.
+Light gets scattered off tiny particles in the volume,
+and some proportion of that light reaches the camera. This property makes it possible to see
+light beams as they travel though a volume and are scattered towards the eye.</p>
+<div class="figure">
+<img alt="../../../../_images/Doc-26-Materials-VolumeRender-Options-Shading.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Options-Shading.jpg" />
+<p class="caption">Shading options</p>
+</div>
+<dl class="docutils">
+<dt>Scattering</dt>
+<dd>The amount of light that is scattered out of the volume.
+The more light that is scattered out of the volume, the less it will penetrate through the rest of the volume.
+Raising this parameter can have the effect of making the volume seem denser,
+as the light is scattered out quickly at the &#8216;surface&#8217; of the volume,
+leaving the areas internal to the volume darker, as the light doesn&#8217;t reach it.</dd>
+</dl>
+<p>Note in the examples below, the less light that is scattered out of the volume,
+the more easily it penetrates throughout the volume and to the shadow.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-scatter-Sc0.5.jpg"><img alt="../../../../_images/Manual-volumerendering-scatter-Sc0.5.jpg" src="../../../../_images/Manual-volumerendering-scatter-Sc0.5.jpg" style="width: 150px;" /></a>
+<p class="caption">Scattering: 0.5</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-scatter-Sc1.0.jpg"><img alt="../../../../_images/Manual-volumerendering-scatter-Sc1.0.jpg" src="../../../../_images/Manual-volumerendering-scatter-Sc1.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Scattering: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-scatter-Sc2.0.jpg"><img alt="../../../../_images/Manual-volumerendering-scatter-Sc2.0.jpg" src="../../../../_images/Manual-volumerendering-scatter-Sc2.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Scattering: 2.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-scatter-Sc5.0.jpg"><img alt="../../../../_images/Manual-volumerendering-scatter-Sc5.0.jpg" src="../../../../_images/Manual-volumerendering-scatter-Sc5.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Scattering: 5.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="asymmetry">
+<h4>Asymmetry<a class="headerlink" href="#asymmetry" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Volumerendering-phase_diagram.jpg"><img alt="../../../../_images/Volumerendering-phase_diagram.jpg" src="../../../../_images/Volumerendering-phase_diagram.jpg" style="width: 300px;" /></a>
+<p class="caption">Isotropic and Anisotropic scattering</p>
+</div>
+<p>The default method for scattering light in a volume is for the light to be deflected evenly in
+all directions - known as Isotropic scattering.
+In real life different types of media can scatter light in different angular directions,
+known as Anisotropic scattering.
+Back-scattering means that light is scattered more towards the incoming light direction, and
+forward-scattering means it&#8217;s scattered along the same direction as the light is travelling.</p>
+<dl class="docutils">
+<dt>Asymmetry</dt>
+<dd>Asymmetry controls the range between back-scattering (-1.0) and forward-scattering (1.0).
+The default value of 0.0 gives Isotropic scattering (even in all directions).</dd>
+</dl>
+</div>
+<div class="section" id="transmission">
+<h4>Transmission<a class="headerlink" href="#transmission" title="Permalink to this headline">¶</a></h4>
+<p>Transmission is a general term for light that is transmitted throughout a volume.</p>
+<p>This transmitted light can be the result of various different interactions, for example:</p>
+<ul class="simple">
+<li>the left over result of incoming light after it has reflected/scattered out of the volume</li>
+<li>the left over result of light after being absorbed by the volume (and converted to heat)</li>
+</ul>
+<p>Here, the transmission color is used to set the end result color that light becomes after it
+is transmitted through the volume.</p>
+<dl class="docutils">
+<dt>Transmission Color</dt>
+<dd>The resultant color of light that is transmitted through the volume.</dd>
+</dl>
+<p>Note in the examples below, as more light is scattered out of the volume,
+there is less available to be transmitted through.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-tr_y-sc0.5.jpg"><img alt="../../../../_images/Manual-volumerendering-tr_y-sc0.5.jpg" src="../../../../_images/Manual-volumerendering-tr_y-sc0.5.jpg" style="width: 150px;" /></a>
+<p class="caption">Transmission color: Yellow, Scattering: 0.5</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-tr_y-sc1.0.jpg"><img alt="../../../../_images/Manual-volumerendering-tr_y-sc1.0.jpg" src="../../../../_images/Manual-volumerendering-tr_y-sc1.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Transmission color: Yellow, Scattering: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-tr_y-sc2.0.jpg"><img alt="../../../../_images/Manual-volumerendering-tr_y-sc2.0.jpg" src="../../../../_images/Manual-volumerendering-tr_y-sc2.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Transmission color: Yellow, Scattering: 2.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-tr_y-sc5.0.jpg"><img alt="../../../../_images/Manual-volumerendering-tr_y-sc5.0.jpg" src="../../../../_images/Manual-volumerendering-tr_y-sc5.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Transmission color: Yellow, Scattering: 5.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="emission">
+<h4>Emission<a class="headerlink" href="#emission" title="Permalink to this headline">¶</a></h4>
+<p>Some volumes can emit light where there was none before, via chemical or thermal processes,
+such as fire. This light is generated from the volume itself and is independent of light
+coming from external sources.</p>
+<p>Currently, this emitted light does not affect other volumes or surfaces
+(similar to surface material type, &#8216;Emit&#8217; option).</p>
+<dl class="docutils">
+<dt>Emission Color</dt>
+<dd>The color of light that is emitted by the volume.</dd>
+<dt>Emission</dt>
+<dd>An intensity multiplier for the emitted color, for scaling up and down.</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-emission-0.25-sc0.5.jpg"><img alt="../../../../_images/Manual-volumerendering-emission-0.25-sc0.5.jpg" src="../../../../_images/Manual-volumerendering-emission-0.25-sc0.5.jpg" style="width: 150px;" /></a>
+<p class="caption">Emission 0.25, Scattering: 0.5</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-emission-0.25-sc1.0.jpg"><img alt="../../../../_images/Manual-volumerendering-emission-0.25-sc1.0.jpg" src="../../../../_images/Manual-volumerendering-emission-0.25-sc1.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Emission 0.25, Scattering: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-emission-0.25-sc2.0.jpg"><img alt="../../../../_images/Manual-volumerendering-emission-0.25-sc2.0.jpg" src="../../../../_images/Manual-volumerendering-emission-0.25-sc2.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Emission 0.25, Scattering: 2.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-emission-0.25-sc5.0.jpg"><img alt="../../../../_images/Manual-volumerendering-emission-0.25-sc5.0.jpg" src="../../../../_images/Manual-volumerendering-emission-0.25-sc5.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Emission 0.25, Scattering: 5.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="reflection">
+<h4>Reflection<a class="headerlink" href="#reflection" title="Permalink to this headline">¶</a></h4>
+<p>The &#8216;reflection&#8217; parameters can be used to tint or scale the light that&#8217;s scattered out of the
+volume. This only affects light that has come from lamps and been scattered out,
+it doesn&#8217;t affect the color of transmitted or emitted light and is.</p>
+<p>These settings are not physically correct because they don&#8217;t conserve energy - the light
+scattering out doesn&#8217;t affect the remaining light that is transmitted throughout the rest of
+the volume. For example, physically speaking,
+if the orange components of the light are scattered out of the volume towards the camera,
+only the inverse of that (blue) will remain to continue penetrating through the volume,
+causing the volume to take on a multi-colored appearance, which can be difficult to use.
+To make it a bit easier to plainly set the color of the volume,
+you can use the reflection parameters to quickly set an overall tint.</p>
+<dl class="docutils">
+<dt>Reflection Color</dt>
+<dd>The color of light that is scattered out of the volume.</dd>
+<dt>Reflection</dt>
+<dd>An intensity multiplier for the reflection, for scaling up and down.</dd>
+</dl>
+<div class="section" id="hints">
+<h5>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h5>
+<p>Ideally try to accomplish as much as you can with the other volume settings and lighting
+before using the reflection controls. If you stick to what&#8217;s physically plausible,
+the material will act correctly,
+and be more predictable and usable in a wider range of lighting scenarios.
+Of course you can always break the rules too!</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-reflection-sc0.5.jpg"><img alt="../../../../_images/Manual-volumerendering-reflection-sc0.5.jpg" src="../../../../_images/Manual-volumerendering-reflection-sc0.5.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Scattering: 0.5</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-reflection-sc1.0.jpg"><img alt="../../../../_images/Manual-volumerendering-reflection-sc1.0.jpg" src="../../../../_images/Manual-volumerendering-reflection-sc1.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Scattering: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-reflection-sc2.0.jpg"><img alt="../../../../_images/Manual-volumerendering-reflection-sc2.0.jpg" src="../../../../_images/Manual-volumerendering-reflection-sc2.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Scattering: 2.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-reflection-sc5.0.jpg"><img alt="../../../../_images/Manual-volumerendering-reflection-sc5.0.jpg" src="../../../../_images/Manual-volumerendering-reflection-sc5.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Scattering: 5.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc0.5.jpg"><img alt="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc0.5.jpg" src="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc0.5.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Transmission: Yellow, Scattering: 0.5</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc1.0.jpg"><img alt="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc1.0.jpg" src="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc1.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Transmission: Yellow, Scattering: 1.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc2.0.jpg"><img alt="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc2.0.jpg" src="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc2.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Transmission: Yellow, Scattering: 2.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc5.0.jpg"><img alt="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc5.0.jpg" src="../../../../_images/Manual-volumerendering-refl_g-tr_y-sc5.0.jpg" style="width: 150px;" /></a>
+<p class="caption">Reflection: Green, Transmission: Yellow, Scattering: 5.0</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="lighting">
+<h3>Lighting<a class="headerlink" href="#lighting" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Doc-26-Materials-VolumeRender-Options-Lighting.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Options-Lighting.jpg" />
+<p class="caption">Lighting options</p>
+</div>
+<p>Several shading modes are available,
+providing a range of options between fast to render and physically accurate.</p>
+<dl class="docutils">
+<dt>Lighting Mode</dt>
+<dd><dl class="first last docutils">
+<dt>Shadeless</dt>
+<dd>Shadeless is the simplest, useful for thin, wispy mist or steam.</dd>
+<dt>Shadowed</dt>
+<dd>Shadowed is similar, but with shadows of external objects.</dd>
+<dt>Shaded</dt>
+<dd>Shaded uses a volumetric single-scattering method, for self-shading the volume as light penetrates through.</dd>
+<dt>Multiple Scattering</dt>
+<dd>Allows multiple scatter calculations.</dd>
+<dt>Shaded+Multiple Scattering</dt>
+<dd>Combines Shaded and Multiple Scattering functionality.</dd>
+</dl>
+</dd>
+<dt>Shaded Options:</dt>
+<dd><dl class="first last docutils">
+<dt>External Shadows</dt>
+<dd>Receive shadows from sources outside the volume (temporary).</dd>
+<dt>Light Cache</dt>
+<dd>Pre-calculate the shading information into a voxel grid, speeds up shading at slightly less accuracy.</dd>
+<dt>Resolution</dt>
+<dd>Resolution of the voxel grid, low resolutions are faster, high resolutions use more memory.</dd>
+</dl>
+</dd>
+<dt>Multiple Scattering Options:</dt>
+<dd><dl class="first last docutils">
+<dt>Diffusion</dt>
+<dd>Diffusion factor, the strength of the blurring effect.</dd>
+<dt>Spread</dt>
+<dd>Proportional distance over which the light is diffused.</dd>
+<dt>Intensity</dt>
+<dd>Multiplier for multiple scattered light energy.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="transparency">
+<h3>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Doc-26-Materials-VolumeRender-Options-Transparency.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Options-Transparency.jpg" />
+<p class="caption">Transparency options</p>
+</div>
+<dl class="docutils">
+<dt>Mask</dt>
+<dd>Mask the Background.</dd>
+<dt>Z Transparency</dt>
+<dd>Use Alpha buffer for transparent faces.</dd>
+<dt>Raytrace</dt>
+<dd>Use Raytracing for Transparent Refraction rendering.</dd>
+</dl>
+</div>
+<div class="section" id="integration">
+<h3>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Doc-26-Materials-VolumeRender-Options-Integration.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Options-Integration.jpg" />
+<p class="caption">Integration options</p>
+</div>
+<dl class="docutils">
+<dt>Step Calculation Method</dt>
+<dd><p class="first">Method of calculating the step through the volume.</p>
+<dl class="last docutils">
+<dt>Randomized</dt>
+<dd>Randomized method of calculating the step.</dd>
+<dt>Constant</dt>
+<dd>Constant method of calculating the step.</dd>
+</dl>
+</dd>
+<dt>Step Size</dt>
+<dd>Distance between subsequent volume depth samples.
+Step Sizes determine how noisy the volume is.
+Higher values result in lower render times and higher noise.</dd>
+<dt>Depth Cutoff</dt>
+<dd>Stop ray marching early if transmission drops below this luminance -
+higher values give speedups in dense volumes at the expense of accuracy.</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h3>Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Doc-26-Materials-VolumeRender-Options.jpg" src="../../../../_images/Doc-26-Materials-VolumeRender-Options.jpg" />
+<p class="caption">Material volume options</p>
+</div>
+<dl class="docutils">
+<dt>Traceable</dt>
+<dd>Allow this material to calculate raytracing.</dd>
+<dt>Full Oversample</dt>
+<dd>Force this material to render full shading/textures for all anti-aliasing samples.</dd>
+<dt>Use Mist</dt>
+<dd>Use mist with this material (in world settings).</dd>
+<dt>Light Group</dt>
+<dd>Limit lighting of this material to lamps in this group.</dd>
+<dt>Exclusive</dt>
+<dd>Material uses this group exclusively. Lamps are excluded from other scene lighting.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>&lt;these are sandbox edits to the whole shading intro section of the wiki,
+which groups materials and textures, and gives us an entree into Volumetric shading.
+Note qualification of Mesh object. Need to investigate shading of other object types...&gt;</p>
+<p>Shading is the process and the code which enables an object to be seen in the final render
+output. Blender has four methods to shade a mesh object:</p>
+<ul class="simple">
+<li>Surface</li>
+<li>Volumetric</li>
+<li>Halo</li>
+<li>Wire</li>
+</ul>
+<p>Surface shading indicates that the object is&nbsp;a&nbsp;tangible,
+skinned&nbsp;object that has a solid (but possibly pliable) surface, such as a chair, a sword,
+or a peach. The surface is described in terms of having a diffuse, specular, mirror,
+and transparency.
+It may also have a semi-transparent surface and something inside of it that scatters light,
+called sub-surface scattering. It may be reflective, such as chrome,&nbsp;smooth plastic,
+or metal, and may be partially transparent, such as&nbsp;glass,&nbsp;or liquid.</p>
+<p>Volumetric shading treats the object as a volume of space that is filled with microscopic
+particles, such as a cloud,&nbsp;smoke, mist, fog, mystical spells, and steam.
+As light enters the volume, it is scattered by these particles,
+and some of that scattering reaches the eye/camera for us to see.
+The volume is described in terms of density, xxx.
+The particles may be uniformly colored but have a varying&nbsp;density within the volume,
+and so the shape may have darker areas.
+The density may be uniformly dispersed throughout the volume, or it may be clumpled,
+giving a recognizable shape. Those microscopic particles may give off light themselves,
+as if they contained&nbsp;glowing embers or sparks,
+or were transmitting some energy field inside the cloud.
+That density may be driven by a particle system to create a well-defined jet or emission.</p>
+<p>Halo shading turns each vertex of the object into a glob of light, an effect seen with sparks,
+pixie dust, glint, and sparkles from, for example, a diamond in bright sunlight.
+Halos can also be used to give a rough approximation of a lens flare, which is observed when a
+real camera lens looks directly at a bright light source such as the sun.</p>
+<p>Wire shading renders each edge of the object as a thin line, like&nbsp;a wire cage, or net.
+Wire rendering is very fast and can be used as a proxy material for a more complicated surface
+to save time during intermediate renders.</p>
+<p>There are two major components to shading: the Material and&nbsp;its Textures.
+The color that you see is a function of the light and the shading,
+so you need to also check out the lighting section as well.
+There are five types of objects in Blender that can be shaded: Mesh, Curve, Surface, Meta,
+and Text.
+The table below indicates which types of shading are available for each kind of object.
+Keep in mind that all types of non-mesh objects can be converted from their type to a Mesh,
+so, ultimately, all kinds of shading are available for all kinds of objects</p>
+<table border="1" class="docutils">
+<caption>Shading available per Object type</caption>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Surface</td>
+<td>Halo</td>
+<td>Wire</td>
+<td>Volumetric</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td>Mesh</td>
+<td>yes</td>
+<td>full</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td>Curve</td>
+<td>if cyclic or extruded</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td>Surface</td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr class="row-odd"><td>Meta</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td>Text</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="halo.html" class="btn btn-neutral float-right" title="Halo Rendering"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="wire.html" class="btn btn-neutral" title="Wire Render"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

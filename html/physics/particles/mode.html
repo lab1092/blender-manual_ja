@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Particle Mode &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Particles" href="index.html"/>
+        <link rel="next" title="Smoke Simulation" href="../smoke/index.html"/>
+        <link rel="prev" title="Vertex Groups" href="vertexgroups.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Physics</a> &raquo;</li>
+      
+          <li><a href="index.html">Particles</a> &raquo;</li>
+      
+    <li>Particle Mode</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/physics/particles/mode.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="particle-mode">
+<h1>Particle Mode<a class="headerlink" href="#particle-mode" title="Permalink to this headline">¶</a></h1>
+<p>Using <em>Particle Mode</em> you can edit the key-points (key-frames)
+and paths of <em>Baked</em> <a class="reference internal" href="hair.html"><em>Hair</em></a>, <tt class="xref doc docutils literal"><span class="pre">Particle</span></tt>, <a class="reference internal" href="../cloth.html"><em>Cloth</em></a>, and <a class="reference internal" href="../soft_body/index.html"><em>Soft Body</em></a> simulations.
+(You can also edit and style hair before baking).</p>
+<p>Since working in particle mode is pretty easy and very similar to working with vertices in the
+3D window, we will show how to set up a particle system and then give a reference of the
+various functions.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ways-to-use-particle-mode">
+<h3>Ways to use Particle Mode<a class="headerlink" href="#ways-to-use-particle-mode" title="Permalink to this headline">¶</a></h3>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Only Frames Baked to Memory are Editable!</p>
+<p class="last">If you cannot edit the particles, check that you are not baking to a
+<a class="reference internal" href="cache_and_bake.html"><em>Disk Cache</em></a>.</p>
+</div>
+<p><strong>Setup for Hair Particles</strong></p>
+<ul class="simple">
+<li>Create a <em>Hair</em> particle system - With your object selected,
+click the <em>Particle System</em> icon in the Properties panel. Create a new particle system by clicking the <em>Plus</em>.</li>
+<li>Give it an initial velocity in the <em>Normal</em> direction (first check the <em>Advanced</em> box,
+then modify the <em>Velocity</em> sub-panel), or adjust the <em>Hair Length</em>.</li>
+<li>Create a simulation - Place the camera at a good position
+(<em class="menuselection">popup ‣ View ‣ Cameras ‣ Active Camera</em> ... or</li>
+</ul>
+<p>FIXME(Template Unsupported: Shortcut/Keypress;
+{{Shortcut/Keypress|pad0}}
+)). Check the <em>Hair Dynamics</em> box.
+Select <em class="menuselection">popup ‣ Render ‣ Render OpenGL Animation</em> in <em>Render Engine</em> mode.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Blender2.6_particle_mode.jpg"><img alt="../../_images/Blender2.6_particle_mode.jpg" src="../../_images/Blender2.6_particle_mode.jpg" style="width: 120px;" /></a>
+<p class="caption">Editing hair strands in Particle Mode</p>
+</div>
+<div class="figure">
+<img alt="../../_images/Animated_editing_particles_in_particle_mode.gif" src="../../_images/Animated_editing_particles_in_particle_mode.gif" />
+<p class="caption">Editing a baked particle simulation&#8217;s particle paths in Particle Mode</p>
+</div>
+<p><strong>Setup for Particle, Cloth, and Soft Body Simulations</strong></p>
+<ul class="simple">
+<li>Use <em>Emitter</em> particles, or a cloth/soft-body simulation</li>
+<li>Create a simulation - set up objects and or emitters,
+set your time range (use a small range if you are just starting out and experimenting),
+set up the simulation how you want it, using <tt class="kbd docutils literal"><span class="pre">Alt-A</span></tt> to preview it.</li>
+</ul>
+<blockquote>
+<div><strong>Bake the Simulation</strong></div></blockquote>
+<ul class="simple">
+<li>Once you are happy with the general simulation,
+<a class="reference internal" href="cache_and_bake.html"><em>bake</em></a> the simulation from object mode.
+The simulation must be baked to enable editing. (remember to bake to memory,
+a disk cache will not be editable in <em>Particle Mode</em>)</li>
+</ul>
+<p><strong>Edit the Simulation</strong></p>
+<ul class="simple">
+<li>Switch to <em>Particle Edit</em> from the <em>Mode dropdown menu</em> in the bottom menu bar
+of the <em>3D View</em> to edit the particle&#8217;s paths/key-frames.
+You may need to press <tt class="kbd docutils literal"><span class="pre">T</span></tt> from within the 3D viewport to see the <em>Particle Edit</em> panel.
+Move to the frame you want to edit and use the various <em>Particle Edit</em> tools to edit your simulation.
+Work slowly, previewing your changes with <tt class="kbd docutils literal"><span class="pre">Alt-A</span></tt>, and save often so that you can go back to the previous
+version should something happen, or that you do not like the latest changes you have made.</li>
+</ul>
+<p>To be able to clearly see what you are working on:</p>
+<ul class="simple">
+<li>Turn on the <em>Particle Edit Properties</em> (<em>PEP</em>) panel with <tt class="kbd docutils literal"><span class="pre">N</span></tt>.</li>
+<li>Select <em>Point select mode</em></li>
+</ul>
+<div class="figure">
+<img alt="../../_images/Icon-library_3D-Window_PointSelectMode.jpg" src="../../_images/Icon-library_3D-Window_PointSelectMode.jpg" />
+<p class="caption">in the header of the 3D window. This will display key points along the particle path.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Brush Size</p>
+<p class="last">Press <tt class="kbd docutils literal"><span class="pre">F</span></tt> to resize the brush while working</p>
+</div>
+</div>
+</div>
+<div class="section" id="using-particle-mode">
+<h2>Using Particle Mode<a class="headerlink" href="#using-particle-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="selecting-points">
+<h3>Selecting Points<a class="headerlink" href="#selecting-points" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Single: <tt class="kbd docutils literal"><span class="pre">RMB</span></tt>.</li>
+<li>All: <tt class="kbd docutils literal"><span class="pre">A</span></tt>.</li>
+<li>Linked: Move the mouse over a keypoint and press <tt class="kbd docutils literal"><span class="pre">L</span></tt>.</li>
+<li>Border select: <tt class="kbd docutils literal"><span class="pre">B</span></tt>.</li>
+<li>First/last: <tt class="kbd docutils literal"><span class="pre">W</span></tt> &#8211;&gt; <em>Select First</em> / <em>Select Last</em>.</li>
+</ul>
+<p>You may also use the <em>Select</em> Menu.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Selections</p>
+<p>Selections are extremely useful for modifying only the particles that you want.
+Hover over a particle path and press <tt class="kbd docutils literal"><span class="pre">L</span></tt> to link-select it,
+hover over the next and press <tt class="kbd docutils literal"><span class="pre">L</span></tt> to add that path to the selection.
+To remove a path, hold shift and press <tt class="kbd docutils literal"><span class="pre">L</span></tt>. To Deselect all press <tt class="kbd docutils literal"><span class="pre">A</span></tt>.</p>
+<p class="last">The method to select individual points is the same as in edit mode. click to select,
+shift+click to add/remove a point from the selection</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Beware of Undo!</p>
+<p class="last">Using <em>Undo</em> in <em>Particle Mode</em> can have strange results. Remember to save often!</p>
+</div>
+<div class="section" id="moving-keypoints-or-particles">
+<h4>Moving keypoints or particles<a class="headerlink" href="#moving-keypoints-or-particles" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>To move selected keypoints press <tt class="kbd docutils literal"><span class="pre">G</span></tt>, or use one of the various other methods to grab vertices.</li>
+<li>To move a particle root you have to turn off <em>Keep</em> <em>Root</em> in the <em>Tool Bar</em>.</li>
+<li>You can do many of the things like with vertices, including scaling,
+rotating and removing (complete particles or single keys).</li>
+<li>You may not duplicate or extrude keys or particles,
+but you can subdivide particles which adds new keypoints (<tt class="kbd docutils literal"><span class="pre">W</span></tt> &#8211;&gt; <em>Subdivide</em> / <tt class="kbd docutils literal"><span class="pre">Numpad2</span></tt>).</li>
+<li>Alternatively you can rekey a particle (<tt class="kbd docutils literal"><span class="pre">W</span></tt> &#8211;&gt; <em>Rekey</em> / <tt class="kbd docutils literal"><span class="pre">Numpad1</span></tt>) and choose the number of keys.</li>
+</ul>
+<p>How smoothly the hair and particle paths are displayed depends on the <em>Path Steps</em>
+setting in the <em>Tool Bar</em>. Low settings produce blocky interpolation between points,
+while high settings produce a smooth curve.</p>
+</div>
+<div class="section" id="mirroring-particles">
+<h4>Mirroring particles<a class="headerlink" href="#mirroring-particles" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If you want to create an X-Axis symmetrical haircut you have to do following steps:
+- Select all particles with <tt class="kbd docutils literal"><span class="pre">A</span></tt>.
+- Mirror the particles with <tt class="kbd docutils literal"><span class="pre">Ctrl-M</span></tt>, or use the <em>Particle</em> &#8211;&gt; <em>Mirror</em> menu.
+- Turn on <em>X-Axis Mirror Editing</em> in the <em>Particle</em> menu.</li>
+</ul>
+<p>It may happen that after mirroring two particles occupy nearly the same place.
+Since this would be a waste of memory and rendertime,
+you can <em>Remove doubles</em> either from the <em>Specials</em> (<tt class="kbd docutils literal"><span class="pre">W</span></tt>)
+or the <em>Particle</em> menu.</p>
+</div>
+<div class="section" id="hiding-unhiding">
+<h4>Hiding/Unhiding<a class="headerlink" href="#hiding-unhiding" title="Permalink to this headline">¶</a></h4>
+<p>Hiding and unhiding of particles works similar as with vertices in the 3D window.
+Select one or more keypoints of the particle you want to hide and press <tt class="kbd docutils literal"><span class="pre">H</span></tt>.
+The particle in fact doesn&#8217;t vanish, only the key points.</p>
+<p>Hidden particles (i.e. particles whose keypoints are hidden)
+don&#8217;t react on the various brushes. But:</p>
+<p>If you use <em>Mirror Editing</em> even particles with hidden keypoints may be moved,
+if their mirrored counterpart is moved.</p>
+<p>To un-hide all hidden particles press Alt+H.</p>
+</div>
+<div class="section" id="select-modes">
+<h4>Select Modes<a class="headerlink" href="#select-modes" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Icon-library_3D-Window_ParticleSelectAndDisplayMode.jpg"><img alt="../../_images/Icon-library_3D-Window_ParticleSelectAndDisplayMode.jpg" src="../../_images/Icon-library_3D-Window_ParticleSelectAndDisplayMode.jpg" style="width: 640px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Path</dt>
+<dd>No keypoints are visible, you can select/deselect only all particles.</dd>
+<dt>Point</dt>
+<dd>You see all of the keypoints.</dd>
+<dt>Tip</dt>
+<dd>You can see and edit (including the brushes) only the tip of the particles, i.e. the last keypoint.</dd>
+</dl>
+</div>
+<div class="section" id="brush">
+<h4>Brush<a class="headerlink" href="#brush" title="Permalink to this headline">¶</a></h4>
+<p>With the buttons you can select the type of &#8220;Comb&#8221; utility you want to use.
+Below the brush types, their settings appear:</p>
+<dl class="docutils">
+<dt>Common Options:</dt>
+<dd><dl class="first last docutils">
+<dt>Radius</dt>
+<dd>Set the radius if the brush.</dd>
+<dt>Strength</dt>
+<dd>Set the strength of the brush effect (not for Add brush).</dd>
+<dt>Add/Sub Grow/Shrink</dt>
+<dd>Sets the brush to add the effect or reverse it..</dd>
+</dl>
+</dd>
+<dt>None</dt>
+<dd>No special tool, just edit the keypoints as &#8220;normal&#8221; vertices.</dd>
+<dt>Comb</dt>
+<dd>Moves the keypoints (similar to &#8220;proportional editing&#8221;).</dd>
+<dt>Smooth</dt>
+<dd>Parallels visually adjacent segments.</dd>
+<dt>Add</dt>
+<dd><p class="first">Adds new particles.</p>
+<dl class="last docutils">
+<dt>Count</dt>
+<dd>The number of new particles per step.</dd>
+<dt>Interpolate</dt>
+<dd>Interpolate the shape of new hairs from existing ones.</dd>
+<dt>Steps</dt>
+<dd>Amount of brush steps</dd>
+<dt>Keys</dt>
+<dd>How many keys to make new particles with.</dd>
+</dl>
+</dd>
+<dt>Length</dt>
+<dd>Scales the segments, so it makes the hair longer(<em>Grow</em>) or shorter(<em>Shrink</em>).</dd>
+<dt>Puff</dt>
+<dd><p class="first">Rotates the hair around it&#8217;s first keypoint (root). So it makes the hair stand up (<em>Add</em>) or lay down (<em>Sub</em>).</p>
+<dl class="last docutils">
+<dt>Puff Volume</dt>
+<dd>Apply puff to unselected end-points, (helps maintain hair volume when puffing root)</dd>
+</dl>
+</dd>
+<dt>Cut</dt>
+<dd>Scales the segments until the last keypoint reaches the brush.</dd>
+<dt>Weight</dt>
+<dd>This is especially useful for softbody animations, because the weight defines the softbody <em>Goal</em>.
+A keypoint with a weight of 1 won&#8217;t move at all,
+a keypoint with a weight of 0 subjects fully to softbody animation.
+This value is scaled by the <em>GMin</em> - <em>GMax</em> range of softbody goals...</dd>
+</dl>
+</div>
+<div class="section" id="options">
+<h4>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Deflect Emitter, Dist</dt>
+<dd>Don&#8217;t move keypoints through the emitting mesh. <em>Dist</em> is the distance to keep from the Emitter.</dd>
+<dt>Keep</dt>
+<dd><dl class="first last docutils">
+<dt>Length</dt>
+<dd>Keep the length of the segments between the keypoints when combing or smoothing the hair.
+This is done by moving all the other keypoints.</dd>
+<dt>Root</dt>
+<dd>Keep first key unmodified, so you can&#8217;t transplant hair.</dd>
+</dl>
+</dd>
+<dt>X Mirror</dt>
+<dd>Enable mirror editing across the local x axis.</dd>
+<dt>Draw</dt>
+<dd><dl class="first last docutils">
+<dt>Path Steps</dt>
+<dd>Drawing steps, sets the smoothness of the drawn path.</dd>
+<dt>Show Children</dt>
+<dd>Draws the children of the particles too.
+This allows to fine tune the particles and see their effects on the result,
+but it may slow down your system if you have many children.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../smoke/index.html" class="btn btn-neutral float-right" title="Smoke Simulation"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertexgroups.html" class="btn btn-neutral" title="Vertex Groups"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Skinning to Shapes &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Rigging" href="../index.html"/>
+        <link rel="next" title="Retargeting" href="retargeting.html"/>
+        <link rel="prev" title="Objects" href="objects.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rigging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html">Objects</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Rigging</a> &raquo;</li>
+      
+    <li>Skinning to Shapes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/rigging/skinning/obdata.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="skinning-to-shapes">
+<h1>Skinning to Shapes<a class="headerlink" href="#skinning-to-shapes" title="Permalink to this headline">¶</a></h1>
+<p>We saw in the <a class="reference internal" href="objects.html"><em>previous page</em></a>
+how to link (parent) whole objects to armature bones -
+a way to control the transform properties of this object via a rig.
+However, armatures are much more powerful:
+they can deform the <em>shape</em> of an object (i.e. affect its ObData datablock - its vertices or control points...).</p>
+<p>In this case, the child object is parented (skinned) to the whole armature,
+so that each of its bones controls a part of the &#8220;skin&#8221; object&#8217;s geometry.
+This type of skinning is available for meshes, lattices, curves, surfaces, and texts
+(with more options for the first two types).</p>
+<p>Bones can affect the object&#8217;s shape in two ways:</p>
+<ul class="simple">
+<li>The <a class="reference internal" href="#envelope">Envelope</a> process is available for all type of skinnable objects -
+it uses the &#8220;proximity&#8221; and &#8220;influence&#8221; of the bones to determine which part of the object they can deform.</li>
+<li>The <a class="reference internal" href="#vertex-groups">Vertex Groups</a> method is (obviously) reserved to meshes and lattices -
+one bone only affect the vertices in the
+<a class="reference internal" href="../../modeling/meshes/vertex_groups/index.html"><em>group</em></a> having the same name,
+using vertices&#8217; <a class="reference internal" href="../../modeling/meshes/vertex_groups/weight_paint.html"><em>weights</em></a> as influence value.
+A much more precise method, but also generally longer to set up.</li>
+</ul>
+<p>Both methods have some
+<a class="reference internal" href="#common-options">Common Options</a>, and can be mixed together.</p>
+<div class="section" id="parenting-to-whole-armatures">
+<h2>Parenting to Whole Armatures<a class="headerlink" href="#parenting-to-whole-armatures" title="Permalink to this headline">¶</a></h2>
+<p>But before diving into this, let&#8217;s talk about the different ways to skin (parent)
+an object to a whole armature - as with <a class="reference internal" href="objects.html"><em>object skinning</em></a>,
+there is an &#8220;old parenting&#8221; method and a new, more flexible and powerful one,
+based on modifiers - which allows creation of very complex setups, with objects deformed by several armatures.</p>
+<p>For <em>meshes and lattices only</em>,
+you can use the <tt class="kbd docutils literal"><span class="pre">Ctrl-P</span></tt> parent shortcut in the 3D views
+(after having selected first the &#8220;skin&#8221; object, then the armature).
+The <em>Make Parent To</em> menu pops up, select the <em>Armature</em> entry.
+If the skinning object is a lattice, you&#8217;re done; no more options are available.
+But with a child mesh, another <em>Create Vertex Groups?</em> menu appears,
+with the following options - all regarding the &#8220;vertex groups&#8221; skinning method:</p>
+<div class="figure">
+<img alt="../../_images/Doc26-rigging-armature-parent.jpg" src="../../_images/Doc26-rigging-armature-parent.jpg" />
+<p class="caption">Set Parent menu</p>
+</div>
+<dl class="docutils">
+<dt>With Empty Groups</dt>
+<dd>will create, if they don&#8217;t already exist, empty groups, one for each bone in the skinned armature,
+with these bones&#8217; names.
+Choose this option if you have already created (and weighted) all the vertex groups the mesh requires.</dd>
+<dt>With Envelope Weights</dt>
+<dd>will create, as with <em>Name Groups</em> option, the needed vertex groups. However,
+it will also weight them according to the bones&#8217; envelope settings (i.e.
+it will assign to each groups the vertices that are inside its bone&#8217;s influence area,
+weighted depending on their distance to this bone).
+This means that if you had defined vertex groups using same names as skinned bones, their content will be
+completely overridden! <em>You&#8217;ll get the same behavior as if you used the envelopes skinning method,
+but with vertex groups?</em></dd>
+<dt>Automatic Weights</dt>
+<dd>Creates, as with <em>Envelope Weights</em> option, the needed vertex groups,
+with vertices assigned and weighted using the newer &#8220;bone heat&#8221; algorithm.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Doc26-rigging-armature-modifier.jpg"><img alt="../../_images/Doc26-rigging-armature-modifier.jpg" src="../../_images/Doc26-rigging-armature-modifier.jpg" style="width: 250px;" /></a>
+<p class="caption">The Armature modifier.</p>
+</div>
+<p>This &#8220;parenting&#8221; method will create an* <a class="reference internal" href="../../modifiers/deform/armature.html"><em>Armature modifier</em></a>
+in the skinning object&#8217;s modifiers stack.
+And so, of course, adding an* <a class="reference internal" href="../../modifiers/deform/armature.html"><em>Armature modifier</em></a>
+to an object is the second, new skinning method (which also works for curves/surfaces/texts...).
+Follow the above link to read more about this modifier&#8217;s specific options.
+Note that there is a way with new <em>Armature</em> modifiers to automatically create vertex groups and weight them;
+see the <a class="reference internal" href="#vertex-groups">Vertex Groups</a> description below.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">A single object can have several <em>Armature</em> modifiers
+(with e.g. different armatures, or different settings...),
+working on top of each other, <strong>or</strong> mixing their respective effects
+(depending whether their* <em>MultiModifier</em> option is set,
+see <tt class="xref doc docutils literal"><span class="pre">their</span> <span class="pre">description</span></tt> for more details),
+and only one &#8220;virtual old parenting&#8221; one, which will always be at the top of the stack.</p>
+</div>
+</div></blockquote>
+<p>Note finally that for settings that are present in both the armature&#8217;s <em>Armature</em>
+<em>panel and in the objects&#8217;</em> <em>Armature</em> modifier panel (namely,
+<em>Vertex Groups</em> <em>/</em> <em>VertGroups</em> <em>,</em> <em>Envelopes</em>,
+<em>Quaternion</em> <em>and</em> <em>B-Bone Rest</em>),
+the modifier ones always override the armature ones. This means that if, for example,
+you only enable the <em>Envelopes</em> deformation method of the armature,
+and then skin it with an object using an* <em>Armature</em> modifier, where only
+<em>VertGroups</em> is enabled,
+the object will only be deformed based on its &#8220;bones&#8221; vertex groups,
+ignoring completely the bones&#8217; envelopes.</p>
+</div>
+<div class="section" id="common-options">
+<h2>Common Options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
+<p>There are two armature-global skinning options that are common to both envelopes and vertex
+groups methods:*</p>
+<dl class="docutils">
+<dt>Preserve Volume (Armature modifier)</dt>
+<dd><p class="first">This affects the way geometry is deformed, especially at bones&#8217; joints, when rotating them.</p>
+<p class="last">Without <em>Preserve Volume</em>, rotations at joints tend to scale down the neighboring geometry,
+up to nearly zero at <tt class="docutils literal"><span class="pre">180d</span></tt> from rest position.
+With* <em>Preserve Volume</em>, the geometry is no longer scaled down, but there is a &#8220;gap&#8221;,
+a discontinuity when reaching* <tt class="docutils literal"><span class="pre">180d</span></tt> from rest position.</p>
+</dd>
+</dl>
+<table border="1" class="docutils">
+<caption>Example of <em>Quaternion</em> option effects.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningQuaternionOptExInitState.jpg"><img alt="../../_images/ManRiggingSkinningQuaternionOptExInitState.jpg" src="../../_images/ManRiggingSkinningQuaternionOptExInitState.jpg" style="width: 200px;" /></a>
+<p class="caption">Initial state.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg"><img alt="../../_images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg" src="../../_images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg" style="width: 200px;" /></a>
+<p class="caption">100- rotation, Preserve Volume disabled.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg"><img alt="../../_images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg" src="../../_images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg" style="width: 200px;" /></a>
+<p class="caption">180- rotation, Preserve Volume disabled.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg"><img alt="../../_images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg" src="../../_images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg" style="width: 200px;" /></a>
+<p class="caption">100- rotation, Preserve Volume enabled.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg"><img alt="../../_images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg" src="../../_images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg" style="width: 200px;" /></a>
+<p class="caption">179.9- rotation, Preserve Volume enabled.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg"><img alt="../../_images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg" src="../../_images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg" style="width: 200px;" /></a>
+<p class="caption">180.1- rotation, Preserve Volume enabled.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Note that the IcoSphere is deformed using the envelopes method.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bone-deform-options">
+<h2>Bone Deform Options<a class="headerlink" href="#bone-deform-options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingBoneCxtDeformPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingBoneCxtDeformPanel.jpg" src="../../_images/Man2.5RiggingEditingBoneCxtDeformPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">Bone Deform Options</p>
+</div>
+<p>The bones also have some deforming options in their sub-panels
+(* <em>Armature Bones</em> <em>panel),
+that you can therefore define independently for each of them</em></p>
+<dl class="docutils">
+<dt>Deform</dt>
+<dd>By disabling this setting (enabled by default),
+you can completely prevent a bone from deforming the geometry of the skin object.</dd>
+</dl>
+<div class="section" id="envelope">
+<h3>Envelope<a class="headerlink" href="#envelope" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingEnvelopePrinciples3DViewEditMode.jpg"><img alt="../../_images/ManRiggingEnvelopePrinciples3DViewEditMode.jpg" src="../../_images/ManRiggingEnvelopePrinciples3DViewEditMode.jpg" style="width: 200px;" /></a>
+<p class="caption">Bone influence areas for envelopes method.</p>
+</div>
+<p>Envelopes is the most general skinning method - it works with all available object types for
+skinning (meshes, lattices, curves, surfaces and texts).
+It is based on proximity between bones and their geometry,
+each bone having two different areas of influence,
+shown in the <em>Envelope</em> visualization:</p>
+<ul class="simple">
+<li>The inside area, materialized by the &#8220;solid&#8221; part of the bone, and controlled by both root and tip radius.
+Inside this zone, the geometry if fully affected by the bone.</li>
+<li>The outside area, materialized by the lighter part around the bone,
+and controlled by the <em>Dist</em> setting. Inside this zone,
+the geometry is less and less affected by the bone as it goes away - following a quadratic decay.</li>
+</ul>
+<p>See the* <a class="reference internal" href="../armatures/editing/properties.html"><em>editing pages</em></a> for how to edit these properties.</p>
+<p>There is also a bone property, <em>Weight</em> (in each bone sub-panel,
+in* <em>Edit</em> <em>mode only, defaults to</em> <strong>1.0</strong>),
+that controls the global influence of the bone over the deformed object,
+when using the envelopes method.
+It is only useful for the parts of geometry that are &#8220;shared&#8221;,
+influenced by more than one bone (generally, at the joints...) - a bone with a high weight will
+have more influence on the result than one with a low weight... Note that when set to* <strong>0.0</strong>,
+it has the same effect as disabling the* <em>Deform</em> option.</p>
+<dl class="docutils">
+<dt>Mult</dt>
+<dd>Short for &#8216;Multiply&#8217;. This option controls how the two deforming methods interact when they are both enabled.
+By default, when they are both active, all vertices belonging to at least one vertex group are only deformed
+through the vertex groups method - the other &#8220;orphan&#8221; vertices being handled by the envelopes one.
+When you enable this option, the &#8220;deformation influence&#8221; that this bone would have on a vertex
+(based from its envelope settings) is multiplied with this vertex&#8217;s weight in the corresponding vertex group.
+In other words, the vertex groups method is further &#8220;weighted&#8221; by the envelopes method.</dd>
+<dt>Radius</dt>
+<dd>Set the radius for the head and the tail of envelope bones.</dd>
+</dl>
+</div>
+<div class="section" id="curved-bone">
+<h3>Curved Bone<a class="headerlink" href="#curved-bone" title="Permalink to this headline">¶</a></h3>
+<p><em>Curved Bones</em> (previously known as B-bones) allow you make bones act like bezier curve segments,
+which results in smoother deformations for longer bones.</p>
+<p>See the <a class="reference internal" href="../armatures/editing/properties.html"><em>editing pages</em></a> for how to edit these properties.</p>
+</div>
+</div>
+<div class="section" id="vertex-groups">
+<h2>Vertex Groups<a class="headerlink" href="#vertex-groups" title="Permalink to this headline">¶</a></h2>
+<p>Vertex groups skinning method is only available for meshes and lattices - the only objects having
+<a class="reference internal" href="../../modeling/meshes/vertex_groups/index.html"><em>vertex groups</em></a> Its principle is very simple:
+each bone only affects vertices belonging to a vertex group having the same name as the bone.
+So if you have e.g. a <tt class="docutils literal"><span class="pre">forearm</span></tt> bone, it will only affect the <tt class="docutils literal"><span class="pre">forearm</span></tt> vertex group of its skin object(s).</p>
+<p>The influence of one bone on a given vertex is controlled by the weight of this vertex in the relevant group.
+Thus, the <a class="reference internal" href="../../modeling/meshes/vertex_groups/weight_paint.html"><em>Weight Paint mode</em></a>
+(<tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt> with a mesh selected) is most useful here, to easily set/adjust the vertices&#8217; weights.</p>
+<p>However, you have a few goodies when weight-painting a mesh already parented to (skinning)
+an armature. For these to work, you must:</p>
+<ul class="simple">
+<li>Select the armature.</li>
+<li>Switch to** <em>Pose</em> mode (<tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt>).</li>
+<li>Select the mesh to weight.</li>
+<li>Hit again <tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt> to switch to <em>Weight Paint</em> mode.</li>
+</ul>
+<p>Now, when you select a bone of the armature (which remained in <em>Pose</em> mode),
+you automatically activate the corresponding vertex group of the mesh - Very handy! Obviously,
+you can only select one bone at a time in this mode (so <tt class="kbd docutils literal"><span class="pre">Shift-LMB</span></tt> clicking does not work).</p>
+<p>This way, you can also apply to the active bone/vertex group one of the same &#8220;auto-weighting&#8221;
+methods as available when doing an &#8220;old-parenting&#8221; to armature (<tt class="kbd docutils literal"><span class="pre">Ctrl-P</span></tt>):</p>
+<ul class="simple">
+<li>Select the bone (and hence the vertex group) you want.</li>
+<li>Hit <tt class="kbd docutils literal"><span class="pre">W</span></tt>, and in the <em>Specials</em> menu that pops up,
+choose either <em>Apply Bone Envelopes to Vertex Groups</em> or
+<em>Apply Bone Heat Weights to Vertex Groups</em> (names are self explanatory, I think).
+Once again, even though these names are plural,
+you can only affect <em>one</em> vertex group&#8217;s weights at a time with these options.</li>
+</ul>
+<p>To automatically weight multiple bones, you can simply</p>
+<ul class="simple">
+<li><tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt> out of Weight Paint Mode</li>
+<li>Select the Armature. It should be in Pose mode. If it isn&#8217;t, go <tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt></li>
+<li>Select multiple bones <tt class="kbd docutils literal"><span class="pre">Shift-LMB</span></tt> or hit &#8216;a&#8217; (maybe twice).</li>
+<li>Select Mesh again</li>
+<li>If not in weight paint already, toggle back into <tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt></li>
+<li>Use the <tt class="kbd docutils literal"><span class="pre">W</span></tt> menu to automatic weight. This will weight all the bones you selected in Pose Mode.</li>
+</ul>
+<table border="1" class="docutils">
+<caption>Example of vertex groups skinning method.</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningVertexGroupsExArmWeights.jpg"><img alt="../../_images/ManRiggingSkinningVertexGroupsExArmWeights.jpg" src="../../_images/ManRiggingSkinningVertexGroupsExArmWeights.jpg" style="width: 150px;" /></a>
+<p class="caption">The weights of the arm vertex group.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg"><img alt="../../_images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg" src="../../_images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg" style="width: 150px;" /></a>
+<p class="caption">The weights of the forearm vertex group.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningVertexGroupsExResult.jpg"><img alt="../../_images/ManRiggingSkinningVertexGroupsExResult.jpg" src="../../_images/ManRiggingSkinningVertexGroupsExResult.jpg" style="width: 150px;" /></a>
+<p class="caption">The result when posing the armature.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg"><img alt="../../_images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg" src="../../_images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg" style="width: 150px;" /></a>
+<p class="caption">The same pose, but using envelopes method rather that vertex groups.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Obviously, the same vertex can belong to several groups,
+and hence be affected by several bones,
+with a fine tuning of each bone&#8217;s influence using these vertex weights.
+Quite useful when you want to have a smooth joint. For example, when you skin an elbow,
+the upperarm vertex group contains the vertices of this part at full weight (** <em>1.0</em> <strong>),
+and when reaching the elbow area, these weights decrease progressively to</strong> <em>0.0&#8217;</em> when
+reaching the forearm zone - and vice versa for the forearm group weights... Of course,
+this is a very raw example - skinning a realistic joint is a big job,
+as you have to carefully find good weights for each vertex,
+to have the most realistic behavior when bending - and this is not an easy thing!</p>
+</div>
+<div class="section" id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<p>Making good but short examples about skinning to shapes is not an easy thing - so if you want better examples,
+have a look to <tt class="xref doc docutils literal"><span class="pre">this</span> <span class="pre">BSoD</span> <span class="pre">tutorial</span></tt>,
+which illustrates (among many other things) the skinning of a simple human rig with a mesh object.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="retargeting.html" class="btn btn-neutral float-right" title="Retargeting"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="objects.html" class="btn btn-neutral" title="Objects"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

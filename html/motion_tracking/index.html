@@ -1,0 +1,953 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Motion Tracking &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="next" title="Grease Pencil" href="../grease_pencil/index.html"/>
+        <link rel="prev" title="Switch Node" href="../composite_nodes/types/layout/switch.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+    <li>Motion Tracking</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/motion_tracking/index.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="motion-tracking">
+<h1>Motion Tracking<a class="headerlink" href="#motion-tracking" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Blender&#8217;s motion tracker supports a couple of very powerful tools for 2D tracking and 3D motion tracking,
+including camera tracking and object tracking, as well as some special features like the plane track for compositing.
+Tracks can also be used to move and deform masks for rotoscoping in the Mask Editor,
+which is available as a special mode in the Movie Clip Editor.</p>
+<p>It&#8217;s ready to be used in production,
+as validated for example by the open movie <a class="reference external" href="http://tearsofsteel.org">&#8220;Tears of Steel&#8221;</a> by the Blender Foundation.
+Since then it has been improved a lot and the tracker is now fast, accurate and versatile.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Here&#8217;s brief descriptions of motion tracking tools currently available in Blender</p>
+<div class="section" id="supervised-2d-tracking">
+<h3>Supervised 2D tracking<a class="headerlink" href="#supervised-2d-tracking" title="Permalink to this headline">¶</a></h3>
+<p>There&#8217;s no common algorithm which can be used for all kinds of footage,
+feature points and their motions. Such algorithms can be constructed,
+but they&#8217;ll be really slow and they can still fail, so the only way to perform 2D tracking is
+to manually choose the tracking algorithm and its settings. Current defaults work nicely for
+general footage which isn&#8217;t very blurry and where feature points aren&#8217;t getting highly
+deformed by perspective.</p>
+<p>If you aren&#8217;t sure about algorithms and settings and don&#8217;t want to read this document,
+you can just play with settings and find one which works for you.</p>
+</div>
+<div class="section" id="manual-lens-calibration-using-grease-pencil-and-or-grid">
+<h3>Manual lens calibration using grease pencil and/or grid<a class="headerlink" href="#manual-lens-calibration-using-grease-pencil-and-or-grid" title="Permalink to this headline">¶</a></h3>
+<p>All cameras record distorted video.
+Nothing can be done about this because of the manner in which optical lenses work.
+For accurate camera motion,
+the exact value of the focal length and the &#8220;strength&#8221; of distortion are needed.</p>
+<p>Currently, focal length can be automatically obtained only from the camera&#8217;s settings or from
+the EXIF information. There are some tools which can help to find approximate values to compensate for distortion.
+There are also fully manual tools where you can use a grid which is getting affected by distortion model and deformed
+cells defines straight lines in the footage.</p>
+<p>You can also use the grease pencil for this - just draw a line which should be straight on the footage using poly
+line brush and adjust the distortion values to make the grease pencil match lines on the footage.</p>
+<p>To calibrate your camera more accurately, use the grid calibration tool from OpenCV.
+OpenCV is using the same distortion model, so it shouldn&#8217;t be a problem.</p>
+</div>
+<div class="section" id="camera-and-object-motion-solving">
+<h3>Camera and object motion solving<a class="headerlink" href="#camera-and-object-motion-solving" title="Permalink to this headline">¶</a></h3>
+<p>Blender not only supports the solving of camera motion, including tripod shots,
+but also the solving of object motion in relation to the motion of the camera.
+In addition to that there is the Plane Track, which solves the motion of all markers on one plane.</p>
+<p>There are also plans to add more tools in the future, for example more automatic tracking and solving,
+multi-camera solving and constrained solutions.</p>
+</div>
+<div class="section" id="basic-tools-for-scene-orientation-and-stabilization">
+<h3>Basic tools for scene orientation and stabilization<a class="headerlink" href="#basic-tools-for-scene-orientation-and-stabilization" title="Permalink to this headline">¶</a></h3>
+<p>After solve,
+you need to orient the real scene in the 3D scene for more convenient compositing.
+There are tools to define the floor, the scene origin,
+and the X/Y axes to perform scene orientation.</p>
+<p>If something is needed to stabilize video from the camera to make the final result looks
+nicer, 2D stabilization is available to help. It stabilizes video from the camera,
+which can compensate for camera jumps and tilt.</p>
+</div>
+<div class="section" id="basic-nodes-for-compositing-scene-into-real-footage">
+<h3>Basic nodes for compositing scene into real footage<a class="headerlink" href="#basic-nodes-for-compositing-scene-into-real-footage" title="Permalink to this headline">¶</a></h3>
+<p>Some new nodes were added to the Compositor to composite scene into footage in easier way.
+So there are nodes for 2D stabilization, distortion and undistortion which are easy to use.</p>
+</div>
+<div class="section" id="not-implemented-tools">
+<h3>Not implemented tools<a class="headerlink" href="#not-implemented-tools" title="Permalink to this headline">¶</a></h3>
+<p>Some tools aren&#8217;t available in Blender yet, but they are in our TODO list.
+So there&#8217;s currently no support for such things as rolling shutter filtering or motion capturing.
+But you can try to hack this stuff using currently implemented things.</p>
+</div>
+</div>
+<div class="section" id="manual">
+<h2>Manual<a class="headerlink" href="#manual" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="movie-clip-editor">
+<h3>Movie Clip Editor<a class="headerlink" href="#movie-clip-editor" title="Permalink to this headline">¶</a></h3>
+<p>Almost all motion tracking tools are concentrated in the Movie Clip Editor.
+Currently it doesn&#8217;t have any tools which aren&#8217;t related to motion tracking,
+but in the future it may be expanded to be used for masking,
+so that&#8217;s why it&#8217;s given this more abstract name, rather than motion tracking.</p>
+<p>This editor can be found in the list of editor types.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_type_menu.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_type_menu.jpg" src="../_images/Manual_movie_tracking_clip_editor_type_menu.jpg" style="width: 120px;" /></a>
+<p class="caption">Editor type menu</p>
+</div>
+<p>When you switch to Movie Clip Editor window, the interface changes in the following way.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_space_ui.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_space_ui.jpg" src="../_images/Manual_movie_tracking_clip_editor_space_ui.jpg" style="width: 300px;" /></a>
+<p class="caption">Movie Clip Editor interface</p>
+</div>
+<p>The next logical step to open a new video clip to start working with.
+There are several ways to to this:</p>
+<ul class="simple">
+<li>Use <em>Open</em> button from movie editor header</li>
+<li>Use <em class="menuselection">Clip ‣ Open</em> menu</li>
+<li>Use <tt class="kbd docutils literal"><span class="pre">Alt-O</span></tt> shortcut</li>
+</ul>
+<p>Both movie files and image sequences can be used in the clip editor.
+If you&#8217;re using an image sequence there&#8217;s one limitation on naming of files:
+the numbers at the end of the image name should be increasing continuously.</p>
+<p>So, when a movie clip is loaded into the clip editor,
+extra panels are displayed in the interface.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_clip_opened_ui.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_clip_opened_ui.jpg" src="../_images/Manual_movie_tracking_clip_editor_clip_opened_ui.jpg" style="width: 300px;" /></a>
+<p class="caption">Movie Clip Editor with opened clip</p>
+</div>
+<p>There are plenty of new tools on the screen and here&#8217;s short description of all of them.</p>
+<p>First of all,
+it should be mentioned that the camera solver consists of three quite separate steps:</p>
+<ul class="simple">
+<li>2D tracking of footage</li>
+<li>Camera intrinsics (focal length, distortion coefficients) specification/estimation/calibration</li>
+<li>Solving camera, scene orientation, scene reconstruction</li>
+</ul>
+<p>Tools in the clip editor are split depending on which step they&#8217;re used in, so the interface
+isn&#8217;t cluttered up with scene orientation tools when only 2D tracking can be done. The
+currently displayed tool category can be changed using the Mode menu which is in the editor
+header.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_mode_menu.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_mode_menu.jpg" src="../_images/Manual_movie_tracking_clip_editor_mode_menu.jpg" style="width: 300px;" /></a>
+<p class="caption">Movie Clip Editor mode menu</p>
+</div>
+<p>But almost all operators can be called from menus, so it&#8217;s not necessary to change the mode
+every time you want to use a tool which is associated with a different editor mode.</p>
+<p>In tracking mode only tools which are related to tracking and camera solving are displayed.
+Camera solving tools are included here because it&#8217;s after solving you&#8217;ll most probably want to
+re-track existing tracks or place new tracks to make solving more accurate.</p>
+<div class="section" id="tools-available-in-tracking-mode">
+<h4>Tools available in tracking mode<a class="headerlink" href="#tools-available-in-tracking-mode" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="marker-panel">
+<h4>Marker panel<a class="headerlink" href="#marker-panel" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">The <strong>Add Marker and Move</strong> operator places a new marker at the position of the mouse
+(which is under the button in this case, not ideal but it&#8217;s just how things work)
+and then it can be moved to the needed location. When it&#8217;s moved to the desired position,
+FIXME(Template Unsupported: Shortcut/Mouse; {{Shortcut/Mouse|lmb}}) can be used to finish placing the new marker.
+Also, <tt class="kbd docutils literal"><span class="pre">Return</span></tt> and <tt class="kbd docutils literal"><span class="pre">Spacebar</span></tt> can be used to finish placing the marker.
+But it&#8217;s faster to use <tt class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></tt> to place markers directly on the footage.
+This shortcut will place the marker in the place you&#8217;ve clicked.
+One more feature here: until you&#8217;ve released the mouse button,
+you can adjust the marker position by moving the mouse and using
+the track preview widget to control how accurately the marker is placed.</p>
+</li>
+<li><p class="first">The <strong>Detect Features</strong> operator detects all possible features on the current
+frame and places markers at these features. This operator doesn&#8217;t take into account other frames,
+so it can place markers on features which belong to moving objects, and if camera is turning away from this shot,
+no markers would be placed on frames after the camera moved away.</p>
+<blockquote>
+<div><p>There are several properties for this operator:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Placement</dt>
+<dd><p class="first last">is used to control where to place markers. By default, they&#8217;ll be added through the whole frame, but you can
+also outline some areas with interesting features with grease pencil and place markers only inside the
+outlined area. That&#8217;s how the &#8220;Inside Grease Pencil&#8221; placement variant works. You can also outline areas of
+no interest (like trees, humans and so) and place markers outside of these areas. That&#8217;s how the &#8220;Outside
+Grease Pencil&#8221; placement variant works.</p>
+</dd>
+<dt>Margin</dt>
+<dd><p class="first last">controls the distance from the image boundary for created markers. If markers are placed too close to the
+image boundary, they&#8217;ll fail to track really quickly and they should be deleted manually. To reduce the
+amount of manual clean-up, this parameter can be used.</p>
+</dd>
+<dt>Trackability</dt>
+<dd><p class="first last">limits minimal trackability for placing markers. This value comes from the feature detection algorithm and
+basically it means: low values means most probably this feature would fail to track very soon, high value
+means it&#8217;s not much such track. Amount of markers to be added can be controlled with this value.</p>
+</dd>
+<dt>Distance</dt>
+<dd><p class="first last">defines the minimal distance between placed markers. It&#8217;s needed to prevent markers from being placed too
+close to each other (such placement can confuse the camera solver).</p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Delete Track</strong> is a quite self-explaining operator which deletes all selected tracks.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="track-panel">
+<h4>Track panel<a class="headerlink" href="#track-panel" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">The first row of buttons is used to perform tracking of selected tracks
+(i.e. following the selected feature from frame to frame).
+Tracking can happen (in order of buttons):</p>
+<ul class="simple">
+<li>Backward one frame</li>
+<li>Backward along the sequence</li>
+<li>Forward along the whole sequence</li>
+<li>Forward one frame</li>
+</ul>
+<blockquote>
+<div><p>This operator depends on settings from the Tracking Settings panel, which will be described later.
+If during sequence tracking the algorithm fails to track some markers,
+they&#8217;ll be disabled and tracking will continue for the rest of the markers.
+If the algorithm fails when tracking frame-by-frame, the marker is not disabled,
+and the most likely position of the feature on the next frame is used.</p>
+</div></blockquote>
+</li>
+</ul>
+<dl class="docutils">
+<dt>Clear After</dt>
+<dd>deletes all tracked and keyframed markers after the current frame for all selected tracks.</dd>
+<dt>Clear Before</dt>
+<dd>deletes all tracked and keyframed markers before the current frame for all selected tracks.</dd>
+<dt>Clear</dt>
+<dd>clears all markers except the current one from all selected tracks.</dd>
+<dt>Join</dt>
+<dd>operator joins all selected tracks into one.
+Selected tracks shouldn&#8217;t have common tracked or keyframed markers at the same frame.</dd>
+</dl>
+</div>
+<div class="section" id="solve-panel">
+<h4>Solve panel<a class="headerlink" href="#solve-panel" title="Permalink to this headline">¶</a></h4>
+<p><strong>Camera Motion</strong> operator solves the motion of camera using all tracks placed
+on the footage and two keyframes specified on this panel. There are some requirements:</p>
+<ul class="simple">
+<li>There should be at least 8 common tracks on the both of the selected keyframes.</li>
+<li>There should be noticeable parallax effects between these two keyframes.</li>
+</ul>
+<p>If everything goes smoothly during the solve, the average reprojection error is reported to
+the information space and to the clip editor header. Reprojeciton error means the average
+distance between reconstructed 3D position of tracks projected back to footage and original
+position of tracks. Basically, reprojection error below 0.3 means accurate reprojection,
+0.3-3.0 means quite nice solving which still can be used.
+Values above 3 means some tracks should be tracked more accurately,
+or that values for focal length or distortion coefficients were set incorrectly.</p>
+<p>The <strong>Refine</strong> option specifies which parameters should be refined during solve.
+Such refining is useful when you aren&#8217;t sure about some camera intrinsics,
+and solver should try to find the best parameter for those intrinsics. But you still have to
+know approximate initial values - it&#8217;ll fail to find correct values if they were set
+completely incorrectly initially.</p>
+</div>
+<div class="section" id="cleanup-panel">
+<h4>Cleanup Panel<a class="headerlink" href="#cleanup-panel" title="Permalink to this headline">¶</a></h4>
+<p>This panel contains a single operator and its settings. This operator cleans up bad tracks:
+tracks which aren&#8217;t tracked long enough or which failed to reconstruct accurately.
+Threshold values can be specified from sliders below the button. Also,
+several actions can be performed for bad tracks:</p>
+<ul class="simple">
+<li>They can simply be selected</li>
+<li>Bad segments of tracked sequence can be removed</li>
+<li>The whole track can be deleted</li>
+</ul>
+</div>
+<div class="section" id="clip-panel">
+<h4>Clip Panel<a class="headerlink" href="#clip-panel" title="Permalink to this headline">¶</a></h4>
+<p>This panel currently contains the single operator <em>Set as background</em> which sets the
+clip currently being edited as the camera background for all visible 3D viewports.
+If there&#8217;s no visible 3D viewports or the clip editor is open in full screen,
+nothing will happen.</p>
+</div>
+<div class="section" id="properties-available-in-tracking-mode">
+<h4>Properties available in tracking mode<a class="headerlink" href="#properties-available-in-tracking-mode" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="grease-pencil-panel">
+<h4>Grease Pencil Panel<a class="headerlink" href="#grease-pencil-panel" title="Permalink to this headline">¶</a></h4>
+<p>It&#8217;s a standard grease pencil panel where new grease pencil layers and frames can be
+controlled. There&#8217;s one difference in the behavior of the grease pencil from other areas -
+when a new layer is created &#8220;on-demand&#8221;
+(when making a stroke without adding a layer before this)
+the default color for the layer is set to pink.
+This makes the stroke easy to notice on all kinds of movies.</p>
+</div>
+<div class="section" id="objects-panel">
+<h4>Objects Panel<a class="headerlink" href="#objects-panel" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_objects_panel.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_objects_panel.jpg" src="../_images/Manual_movie_tracking_clip_editor_objects_panel.jpg" style="width: 130px;" /></a>
+<p class="caption">Objects Panel in clip editor</p>
+</div>
+<p>This panel contains a list of all objects which can be used for tracking,
+camera or object solving.
+By default there&#8217;s only one object in this list which is used for camera solving.
+It can&#8217;t be deleted and other objects can&#8217;t be used for camera solving;
+all added objects are used for object tracking and solving only.
+These objects can be referenced from Follow Track and Object Solver constraints.
+Follow Track uses the camera object by default.</p>
+<p>New objects can be added using <tt class="kbd docutils literal"><span class="pre">Plus</span></tt> and the active object can be deleted with the
+<tt class="kbd docutils literal"><span class="pre">Minus</span></tt> button.
+Text entry at the bottom of this panel is used to rename the active object.</p>
+<p>If some tracks were added and tracked to the wrong object, they can be copied to another
+object using <em class="menuselection">Track ‣ Copy Tracks</em> and <em class="menuselection">Track ‣ Paste Tracks</em>.</p>
+<p>The usage for all kind of objects (used for camera and object tracking) is the same:
+track features, set camera data, solve motion. Camera data is sharing between all objects and
+refining of camera intrinsics happens when solving camera motion only.</p>
+</div>
+<div class="section" id="id1">
+<h4>Track Panel<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_track_panel.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_track_panel.jpg" src="../_images/Manual_movie_tracking_clip_editor_track_panel.jpg" style="width: 130px;" /></a>
+<p class="caption">Track Panel in clip editor</p>
+</div>
+<p>First of all, track name can be changed in this panel.
+Track names are used for linking tracking data to other areas, like a Follow Track constraint.</p>
+<p>The next thing which can be controlled here is the marker&#8217;s enabled flag
+(using the button with the eye icon). If a marker is disabled,
+its position isn&#8217;t used either by solver nor by constraints.</p>
+<p>The button with the lock icon to the right of the button with the eye controls whether the
+track is locked. Locked tracks can&#8217;t be edited at all.
+This helps to prevent accidental changes to tracks which are &#8220;finished&#8221;
+(tracked accurate along the whole footage).</p>
+<p>The next widget in this panel is called &#8220;Track Preview&#8221; and it displays the content of the
+pattern area. This helps to check how accurately the feature is being tracked
+(controlling that there&#8217;s no sliding off original position)
+and also helps to move the track back to the correct position.
+The track can be moved directly using this widget by mouse dragging.</p>
+<p>If an anchor is used (the position in the image which is tracking is different from the
+position which is used for parenting),
+a preview widget will display the area around the anchor position. This configuration helps in
+masking some things when there&#8217;s no good feature at position where the mask corner should be
+placed. Details of this technique will be written later.</p>
+<p>There&#8217;s small area below the preview widget which can be used to enlarge the vertical size of
+preview widget (the area is highlighted with two horizontal lines).</p>
+<p>The next setting is channels control. Tracking happens in gray-scale space,
+so a high contrast between the feature and its background yields more accurate tracking.
+In such cases disabling some color channels can help.</p>
+<p>The last thing is custom color, and the preset for it.
+This setting overrides the default marker color used in the clip editor and 3D viewport,
+and it helps to distinguish different type of features (for example,
+features in the background vs. foreground and so on). Color also can be used for &#8220;grouping&#8221;
+tracks so a whole group of tracks can be selected by color using the Select Grouped operator.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">To select good points for tracking, use points in the middle of the footage timeline
+and track backwards and forwards from there.
+This will provide a greater chance of the marker and point staying in the camera shot.</p>
+</div>
+</div>
+<div class="section" id="camera-data-panel">
+<h4>Camera Data Panel<a class="headerlink" href="#camera-data-panel" title="Permalink to this headline">¶</a></h4>
+<p>This panel contains all settings of the camera used for filming the movie which is currently
+being edited in the clip editor.</p>
+<p>First of all, predefined settings can be used here.
+New presets can be added or unused presets can be deleted. But such settings as distortion
+coefficients and principal point aren&#8217;t included into presets and should be filled in even if
+camera presets are used.</p>
+<dl class="docutils">
+<dt>Focal Length</dt>
+<dd>is self-explanatory; it&#8217;s the focal length with which the movie was shot.
+It can be set in millimeters or pixels. In most cases focal length is given in millimeters, but sometimes (for
+example in some tutorials on the Internet) it&#8217;s given in pixels. In such cases it&#8217;s possible to set it directly in
+the known unit.</dd>
+<dt>Sensor Width</dt>
+<dd>is the width of the CCD sensor in the camera. This value can be found in camera specifications.</dd>
+<dt>Pixel Aspect Ratio</dt>
+<dd>is the pixel aspect of the CCD sensor.
+This value can be found in camera specifications,
+but can also be guessed. For example, you know that the footage should be 1920x1080,
+but the images themselves are 1280x1080. In this case, the pixel aspect is: <tt class="docutils literal"><span class="pre">1920</span> <span class="pre">/</span> <span class="pre">1280</span> <span class="pre">=</span> <span class="pre">1.5</span></tt></dd>
+<dt>Optical Center</dt>
+<dd>is the optical center of the lens used in the camera. In most cases it&#8217;s equal to the image center,
+but it can be different in some special cases. Check camera/lens specifications in such cases.
+To set the optical center to the center of image, there&#8217;s a <tt class="kbd docutils literal"><span class="pre">Return</span></tt> button below the sliders.</dd>
+<dt>Undistortion K1, K2 and K3</dt>
+<dd>are coefficients used to compensate for lens distortion when the movie was shot. Currently these values can be
+tweaked by hand only (there are no calibration tools yet)
+using tools available in Distortion mode. Basically, just
+tweak K1 until solving is most accurate for the known focal length (but also take grid and grease pencil into
+account to prevent &#8220;impossible&#8221; distortion).</dd>
+</dl>
+</div>
+<div class="section" id="display-panel">
+<h4>Display Panel<a class="headerlink" href="#display-panel" title="Permalink to this headline">¶</a></h4>
+<p>This panel contains all settings which control things displayed in the clip editor.</p>
+<dl class="docutils">
+<dt>R, G, B</dt>
+<dd>and <strong>B/W</strong> buttons at the top of this panel are used to control color channels used
+for frame preview and to
+make the whole frame gray scale. It&#8217;s needed because the tracking algorithm works with gray-scale images and it&#8217;s
+not always obvious to see which channels disabled will increase contrast of feature points and reduce noise.</dd>
+<dt>Pattern</dt>
+<dd>can be used to disable displaying of rectangles which correspond to pattern areas of tracks.
+In some cases it helps
+to make the clip view cleaner to check how good tracking is.</dd>
+<dt>Search</dt>
+<dd>can be used to disable displaying of rectangles which correspond to search areas of tracks.
+In some cases it helps to make the clip view cleaner to check how good tracking is.
+Only search areas for selected tracks will be displayed.</dd>
+<dt>Pyramid</dt>
+<dd>makes the highest pyramid level be visible. Pyramids are defined later in the Tracking Settings panel section, but
+basically it helps to determine how much a track is allowed to move from one frame to another.</dd>
+<dt>Track Path</dt>
+<dd>and <strong>Length</strong> control displaying of the paths of tracks. The ways tracks are moving can be visible looking
+at only one frame. It helps to determine if a track jumps from its position or not.</dd>
+<dt>Disabled Tracks</dt>
+<dd>makes it possible to hide all tracks which are disabled on the current frame. This helps to make view more clear,
+to see if tracking is happening accurately enough.</dd>
+<dt>Bundles</dt>
+<dd>makes sense after solving the movie clip,
+and it works in the following way: the solved position of each track gets
+projected back to the movie clip and displayed as a small point. The color of the point depends on the distance
+between the projected coordinate and the original coordinate: if they are close enough, the point is green,
+otherwise it&#8217;ll be red. This helps to find tracks which weren&#8217;t solved nicely and need to be tweaked.</dd>
+<dt>Track Names and Status</dt>
+<dd>displays information such as track name and status of the track (if it&#8217;s keyframed, disabled, tracked or
+estimated). Names and status for selected tracks are displayed.</dd>
+<dt>Compact Markers</dt>
+<dd>The way in which markers are displayed (black outline and yellow foreground color)
+makes tracks visible on all kind
+of footage (both dark and light). But sometimes it can be annoying and this option will make the marker display
+more compactly - the outline is replaced by dashed black lines drawn on top of the foreground,
+so that marker areas
+are only 1px thick.</dd>
+<dt>Grease pencil</dt>
+<dd>controls if grease pencil strokes are allowed to be displayed and made.</dd>
+<dt>Mute</dt>
+<dd>changes displaying on movie frame itself with black square, It helps to find tracks which are tracked inaccurately
+or which weren&#8217;t tracked at all.</dd>
+<dt>Grid</dt>
+<dd>(available in distortion mode only) displays a grid which is originally orthographic, but os affected by the
+distortion model. This grid can be used for manual calibration - distorted lines of grids are equal to straight
+lines in the footage.</dd>
+<dt>Manual Calibration</dt>
+<dd>(available in distortion mode only) applies the distortion model for grease pencil strokes. This option also helps
+to perform manual calibration. A more detailed description of this process will be added later.</dd>
+<dt>Stable</dt>
+<dd>(available in reconstruction mode only). This option makes the displayed frame be affected by the 2D stabilization
+settings. It&#8217;s only a preview option, which doesn&#8217;t actually change the footage itself.</dd>
+<dt>Lock to Selection</dt>
+<dd>makes the editor display selected tracks at the same screen position along the whole footage during playback or
+tracking. This option helps to control the tracking process and stop it when the track is starting to slide off or
+when it jumped.</dd>
+<dt>Display Aspect Ratio</dt>
+<dd>changes the aspect ratio for displaying only. It does not affect the tracking or solving process.</dd>
+</dl>
+</div>
+<div class="section" id="tracking-settings-panel">
+<h4>Tracking Settings Panel<a class="headerlink" href="#tracking-settings-panel" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="common-options">
+<h5>Common options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h5>
+<p>This panel contains all settings for the 2D tracking algorithms.
+Depending on which algorithm is used, different settings are displayed,
+but there are a few that are common for all tracker settings:</p>
+<p><strong>Adjust Frames</strong> controls which patterns get tracked; to be more precise,
+the pattern from which frame is getting tracked. Here&#8217;s an example which should make things clearer.</p>
+<p>The tracker algorithm receives two images inside the search area and the position of a point
+to be tracked in the first image.
+The tracker tries to find the position of that point from the first image in the second image.</p>
+<p>Now, this is how tracking of the sequence happens.
+The second image is always from a frame at which the position of marker isn&#8217;t known
+(next tracking frame). But a different first image
+(instead of the one that immediately precedes the second image in the footage)
+can be sent to the tracker. Most commonly used combinations:</p>
+<ul class="simple">
+<li>An image created from a frame on which the track was keyframed.
+This configuration prevents sliding from the original position
+(because the position which best corresponds to the original pattern is returned by the tracker),
+but it can lead to small jumps and can lead to failures when the feature point is deformed due to camera motion
+(perspective transformation, for example). Such a configuration is used if <strong>Adjust Frames</strong> is set to 0.</li>
+<li>An image created from the current frame is sent as first image to the tracker.
+In this configuration the pattern is tracking between two neighboring frames.
+It allows dealing with cases of large transformations of the feature point
+but can lead to sliding from the original position, so it should be controlled.
+Such a configuration is used if <strong>Adjust Frames</strong> is set to 1.</li>
+</ul>
+<p>If <strong>Adjust Frames</strong> is greater than 1, the behavior of tracker is:
+keyframes for tracks are creating every <strong>Adjust Frames</strong> frames,
+and tracking between keyframed image and next image is used.</p>
+<dl class="docutils">
+<dt>Speed</dt>
+<dd>can be used to control the speed of sequence tracking.
+This option doesn&#8217;t affect the quality of tracking; it just helps to control if tracking happens accurately.
+In most cases tracking happens much faster than real time, and it&#8217;s difficult to notice when a track began
+to slide out of position. In such cases <strong>Speed</strong> can be set to Double or Half to add some delay between
+tracking two frames, so slide-off would be noticed earlier and the tracking process can be cancelled to
+adjust positions of tracks.</dd>
+<dt>Frames Limit</dt>
+<dd>controls how many frames can be tracked when the Track Sequence operator is called.
+So, each Track Sequence operation would track maximum <strong>Frames Limit</strong> frames.
+This also helps to notice slide-off of tracks and correct them.</dd>
+<dt>Margin</dt>
+<dd>can be used disable tracks when they become too close to the image boundary.
+This slider sets &#8220;too close&#8221; in pixels.</dd>
+</dl>
+</div>
+<div class="section" id="klt-tracker-options">
+<h5>KLT tracker options<a class="headerlink" href="#klt-tracker-options" title="Permalink to this headline">¶</a></h5>
+<p>The KLT tracker is the algorithm used by default.
+It allows tracking most kinds of feature points and their motion.
+It uses pyramid tracking which works in the following way. The algorithm tracks an image
+larger than the defined pattern first to find the general direction of motion. Then it tracks
+a slightly smaller image to refine the position from the first step and make the final
+position more accurate. This iterates several times. The number of steps of such tracking is
+equal to the <strong>Pyramid Level</strong> option and we tell that on first step tracking
+happens for highest pyramid level. So Pyramid Level=1 is equal to pattern itself,
+and each next level doubles tracking image by 2.</p>
+<p>The search area should be larger than the highest pyramid level and the &#8220;free space&#8221; between
+the search area and highest pyramid level defines how much the feature can move from one frame
+to another and still be tracked.</p>
+<p>Default settings should work in most general cases,
+but sometimes the pyramid level should be changed. For example, when footage is blurry,
+adding extra pyramid levels helps to track them.</p>
+<p>This algorithm can fail in situations where a feature point is moving in one direction and the
+texture around that feature point is moving in another direction.</p>
+</div>
+<div class="section" id="sad-tracker-options">
+<h5>SAD tracker options<a class="headerlink" href="#sad-tracker-options" title="Permalink to this headline">¶</a></h5>
+<p>On each step, the SAD tracker reviews the whole search area and finds the pattern on the
+second image which is most like the pattern which is getting tracking.
+This works pretty quickly, but can fail in several cases. For example, when there&#8217;s another
+feature point which looks like the tracking feature point in the search area. In this case,
+SAD will tend to jump off track from one feature to another.</p>
+<p><strong>Correlation</strong> defines the threshold value for correlation between two patterns which is still
+considered successful tracking. 0 means there&#8217;s no correlation at all, 1 means correlation is full.</p>
+<p>There&#8217;s one limitation: currently: it works for features of size 16x16 pixels only.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h4>Marker Panel<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>This panel contains numerical settings for marker position,
+pattern and search area dimensions, and offset of anchor point from pattern center.
+All sliders are self-explanatory.</p>
+</div>
+<div class="section" id="proxy-timecode-panel">
+<h4>Proxy / Timecode Panel<a class="headerlink" href="#proxy-timecode-panel" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_proxy_timecode_panel.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_proxy_timecode_panel.jpg" src="../_images/Manual_movie_tracking_clip_editor_proxy_timecode_panel.jpg" style="width: 130px;" /></a>
+<p class="caption">Proxy / Timecode Panel in clip editor</p>
+</div>
+<p>This panel contains options used for image proxies and timecodes for movies.</p>
+<p>Proxy allows displaying images with lower resolution in the clip editor. This can be helpful
+in cases when tracking of 4K footage is happening on a machine with a small amount of RAM.</p>
+<p>The first four options are used to define which resolutions of proxy images should be built.
+Currently it&#8217;s possible to build images 25%, 50%, 75% and 100% of the original image size.
+Proxy size of 100% can be used for movies which contain broken frames which can&#8217;t be decoded.</p>
+<p><strong>Build Undistorted</strong> means that the proxy builder also creates images from undistorted original images for the
+sizes set above. This helps provide faster playback of undistorted footage.</p>
+<p>Generated proxy images are encoding using JPEG,
+and the quality of the JPEG codec is controlled with the <strong>Quality</strong> slider.</p>
+<p>By default, all generated proxy images are storing to the &lt;path of original
+footage&gt;/BL_proxy/&lt;clip name&gt; folder,
+but this location can be set by hand using the <strong>Proxy Custom Directory</strong> option.</p>
+<p><em>Rebuild Proxy</em> will regenerate proxy images for all sizes set above and
+regenerate all timecodes which can be used later.</p>
+<p><strong>Use Timecode Index</strong> can (and better be used) for movie files.
+Basically, timecode makes frame search faster and more accurate.
+Depending on your camera and codec, different timecodes can give better result.</p>
+<p><strong>Proxy Render Size</strong> defines which proxy image resolution is used for display.
+If <strong>Render Undistorted</strong> is set, then images created from undistorted frames are used.
+If there&#8217;s no generated proxies, render size is set to &#8220;No proxy, full render&#8221;,
+and render undistorted is enabled, undistortion will happen automatically on frame draw.</p>
+</div>
+<div class="section" id="tools-available-in-reconstruction-mode">
+<h4>Tools available in reconstruction mode<a class="headerlink" href="#tools-available-in-reconstruction-mode" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Manual_movie_tracking_clip_editor_2d_stabilization_panel.jpg"><img alt="../_images/Manual_movie_tracking_clip_editor_2d_stabilization_panel.jpg" src="../_images/Manual_movie_tracking_clip_editor_2d_stabilization_panel.jpg" style="width: 130px;" /></a>
+<p class="caption">Proxy / 2D Stabilization Panel in clip editor</p>
+</div>
+<p>There&#8217;s one extra panel which is available in reconstruction mode - 2D stabilization panel.</p>
+<p>This panel is used to define data used for 2D stabilization of the shot.
+Several options are available in this panel.</p>
+<p>First of all is the list of tracks to be used to compensate for camera jumps, or location.
+It works in the following way: it gets tracks from the list of tracks used for location
+stabilization and finds the median point of all these tracks on the first frame.
+On each frame, the algorithm makes this point have the same position in screen coordinates by
+moving the whole frame. In some cases it&#8217;s not necessary to fully compensate camera jumps and
+<strong>Location Influence</strong> can be used in such cases.</p>
+<p>The camera can also have rotated a bit, adding some tilt to the footage.
+There&#8217;s the <strong>Stabilize Rotation</strong> option to compensate for this tilt.
+A single extra track needs to be set for this, and it works in the following way.
+On first frame of the movie, this track is connected with the median point of the tracks from
+list above and angle between horizon and this segment is ket constant through the whole
+footage. The amount of rotation applied to the footage can be controlled by <strong>Rotation Influence</strong>.</p>
+<p>If the camera jumps a lot, there&#8217;ll be noticeable black areas near image boundaries.
+To get rid of these black holes, there&#8217;s the <strong>Autoscale</strong> option,
+which finds smallest scale factor which, when applied to the footage,
+would eliminate all the black holes near the image boundaries.
+There&#8217;s an option to control the maximal scale factor, (<strong>Maximal Scale</strong>),
+and the amount of scale applied to the footage (<strong>Scale Influence</strong>).</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../grease_pencil/index.html" class="btn btn-neutral float-right" title="Grease Pencil"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../composite_nodes/types/layout/switch.html" class="btn btn-neutral" title="Switch Node"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

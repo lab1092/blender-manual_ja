@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Open Shading Language &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Cycles Render Engine" href="index.html"/>
+        <link rel="next" title="Camera" href="../camera/index.html"/>
+        <link rel="prev" title="GPU Rendering" href="gpu_rendering.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="index.html">Cycles Render Engine</a> &raquo;</li>
+      
+    <li>Open Shading Language</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/render/cycles/osl.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="open-shading-language">
+<span id="osl"></span><h1>Open Shading Language<a class="headerlink" href="#open-shading-language" title="Permalink to this headline">¶</a></h1>
+<p>Users can now create their own nodes using
+<a class="reference external" href="http://github.com/imageworks/OpenShadingLanguage">Open Shading Language</a> (OSL).
+Note that these nodes will only work for CPU rendering;
+there is no support for running OSL code on the GPU.</p>
+<p>To enable it, select Open Shading Language as the shading system in the render settings.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On Linux, C/C++ compiler tools (in particular /usr/bin/cpp)
+must be installed to compile OSL scripts.</p>
+</div>
+<div class="section" id="script-node">
+<h2>Script Node<a class="headerlink" href="#script-node" title="Permalink to this headline">¶</a></h2>
+<p>OSL was designed for node-based shading,
+and <strong>each OSL shader corresponds to a node</strong> in a node setup. To add an OSL shader,
+add a script node and link it to a text datablock or an external file. Input and output
+sockets will be created from the shader parameters on clicking the update button in the node
+or the text editor.</p>
+<p>OSL shaders can be linked to the node in a few different ways. With the <strong>Internal</strong> mode,
+a text datablock is used to store the OSL shader,
+and the OSO bytecode is stored in the node itself.
+This is useful for distributing a .blend file with everything packed into it.</p>
+<p>The <strong>External</strong> mode can be used to specify a .osl file on disk,
+and this will then be automatically compiled into a .oso file in the same directory.
+It is also possible to specify a path to a .oso file, which will then be used directly,
+with compilation done manually by the user.
+The third option is to specify just the module name,
+which will be looked up in the shader search path.</p>
+<p>The shader search path is located in the same place as the scripts or configuration path,
+under:</p>
+<dl class="docutils">
+<dt>Linux</dt>
+<dd><tt class="docutils literal"><span class="pre">/home/$user/.config/blender/</span></tt> <em>Version Number</em> <tt class="docutils literal"><span class="pre">/shaders/</span></tt></dd>
+<dt>Windows</dt>
+<dd><tt class="docutils literal"><span class="pre">C:\Users\$user\AppData\Roaming\Blender</span> <span class="pre">Foundation\Blender\</span></tt> <em>Version Number</em> <tt class="docutils literal"><span class="pre">\shaders\</span></tt></dd>
+<dt>Mac OS X</dt>
+<dd><tt class="docutils literal"><span class="pre">/Users/$user/Library/Application</span> <span class="pre">Support/Blender/</span></tt> <em>Version Number</em> <tt class="docutils literal"><span class="pre">/shaders/</span></tt></dd>
+</dl>
+<p>(Replace <em>Version Number</em> with the release number of your current Blender installation, e.g. <em>2.65</em> or <em>2.66</em>.)</p>
+<p>For use in production, we suggest to <strong>use a node group to wrap shader script nodes</strong>,
+and link that into other .blend files.
+This makes it easier to make changes to the node afterwards as sockets are added or removed,
+without having to update the script nodes in all files.</p>
+</div>
+<div class="section" id="writing-shaders">
+<h2>Writing Shaders<a class="headerlink" href="#writing-shaders" title="Permalink to this headline">¶</a></h2>
+<p>For more details on how to write shaders, see the
+<a class="reference external" href="https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc/osl-languagespec.pdf">OSL specification</a>.
+Here is a simple example:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">shader</span> <span class="nf">simple_material</span><span class="p">(</span>
+    <span class="n">color</span> <span class="n">Diffuse_Color</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span>
+    <span class="kt">float</span> <span class="n">Noise_Factor</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">output</span> <span class="n">closure</span> <span class="n">color</span> <span class="n">BSDF</span> <span class="o">=</span> <span class="n">diffuse</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">color</span> <span class="n">material_color</span> <span class="o">=</span> <span class="n">Diffuse_Color</span> <span class="o">*</span> <span class="n">mix</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">noise</span><span class="p">(</span><span class="n">P</span> <span class="o">*</span> <span class="mf">10.0</span><span class="p">),</span> <span class="n">Noise_Factor</span><span class="p">);</span>
+    <span class="n">BSDF</span> <span class="o">=</span> <span class="n">material_color</span> <span class="o">*</span> <span class="n">diffuse</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="closures">
+<h2>Closures<a class="headerlink" href="#closures" title="Permalink to this headline">¶</a></h2>
+<p>OSL is different from, for example, RSL or GLSL, in that it does not have a light loop.
+There is no access to lights in the scene,
+and the material must be built from closures that are implemented in the render engine itself.
+This is more limited, but also makes it possible for the render engine to do optimizations and
+ensure all shaders can be importance sampled.</p>
+<p>The available closures in Cycles correspond to the shader nodes and their sockets;
+for more details on what they do and the meaning of the parameters,
+see the <a class="reference internal" href="nodes/shaders.html"><em>shader nodes manual</em></a>.</p>
+<div class="section" id="bsdf">
+<h3>BSDF<a class="headerlink" href="#bsdf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">diffuse(N)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">oren_nayar(N,</span> <span class="pre">roughness)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">diffuse_ramp(N,</span> <span class="pre">colors[8])</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">phong_ramp(N,</span> <span class="pre">exponent,</span> <span class="pre">colors[8])</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">diffuse_toon(N,</span> <span class="pre">size,</span> <span class="pre">smooth)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">glossy_toon(N,</span> <span class="pre">size,</span> <span class="pre">smooth)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">translucent(N)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">reflection(N)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">refraction(N,</span> <span class="pre">ior)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">transparent()</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">microfacet_ggx(N,</span> <span class="pre">roughness)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">microfacet_ggx_aniso(N,</span> <span class="pre">T,</span> <span class="pre">ax,</span> <span class="pre">ay)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">microfacet_ggx_refraction(N,</span> <span class="pre">roughness,</span> <span class="pre">ior)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">microfacet_beckmann(N,</span> <span class="pre">roughness)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">microfacet_beckmann_aniso(N,</span> <span class="pre">T,</span> <span class="pre">ax,</span> <span class="pre">ay)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">microfacet_beckmann_refraction(N,</span> <span class="pre">roughness,</span> <span class="pre">ior)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">ashikhmin_shirley(N,</span> <span class="pre">T,</span> <span class="pre">ax,</span> <span class="pre">ay)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">ashikhmin_velvet(N,</span> <span class="pre">roughness)</span></tt></li>
+</ul>
+</div>
+<div class="section" id="hair">
+<h3>Hair<a class="headerlink" href="#hair" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">hair_reflection(N,</span> <span class="pre">roughnessu,</span> <span class="pre">roughnessv,</span> <span class="pre">T,</span> <span class="pre">offset)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">hair_transmission(N,</span> <span class="pre">roughnessu,</span> <span class="pre">roughnessv,</span> <span class="pre">T,</span> <span class="pre">offset)</span></tt></li>
+</ul>
+</div>
+<div class="section" id="bssrdf">
+<h3>BSSRDF<a class="headerlink" href="#bssrdf" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">bssrdf_cubic(N,</span> <span class="pre">radius,</span> <span class="pre">texture_blur,</span> <span class="pre">sharpness)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">bssrdf_gaussian(N,</span> <span class="pre">radius,</span> <span class="pre">texture_blur)</span></tt></li>
+</ul>
+</div>
+<div class="section" id="volume">
+<h3>Volume<a class="headerlink" href="#volume" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">henyey_greenstein(g)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">absorption()</span></tt></li>
+</ul>
+</div>
+<div class="section" id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">emission()</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">ambient_occlusion()</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">holdout()</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">background()</span></tt></li>
+</ul>
+</div>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>Some object, particle and mesh attributes are available to the built-in getattribute()
+function. UV maps and vertex colors can be retrieved using their name.
+Other attributes are listed below:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">geom:generated</span></tt></dt>
+<dd>Generated texture coordinates</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:uv</span></tt></dt>
+<dd>Default render UV map</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:dupli_generated</span></tt></dt>
+<dd>For instances, generated coordinate from duplicator object</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:dupli_uv</span></tt></dt>
+<dd>For instances, UV coordinate from duplicator object</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:trianglevertices</span></tt></dt>
+<dd>3 vertex coordinates of the triangle</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:numpolyvertices</span></tt></dt>
+<dd>Number of vertices in the polygon (always returns 3 currently)</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:polyvertices</span></tt></dt>
+<dd>Vertex coordinates array of the polygon (always 3 vertices currently)</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:name</span></tt></dt>
+<dd>Name of the object</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:is_curve</span></tt></dt>
+<dd>Is object a strand or not</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:curve_intercept</span></tt></dt>
+<dd>Point along the strand, from root to tip</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:curve_thickness</span></tt></dt>
+<dd>Thickness of the strand</dd>
+<dt><tt class="docutils literal"><span class="pre">geom:curve_tangent_normal</span></tt></dt>
+<dd>Tangent Normal of the strand</dd>
+<dt><tt class="docutils literal"><span class="pre">path:ray_length</span></tt></dt>
+<dd>Ray distance since last hit</dd>
+<dt><tt class="docutils literal"><span class="pre">object:location</span></tt></dt>
+<dd>Object location</dd>
+<dt><tt class="docutils literal"><span class="pre">object:index</span></tt></dt>
+<dd>Object index number</dd>
+<dt><tt class="docutils literal"><span class="pre">object:random</span></tt></dt>
+<dd>Per object random number generated from object index and name</dd>
+<dt><tt class="docutils literal"><span class="pre">material:index</span></tt></dt>
+<dd>Material index number</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:index</span></tt></dt>
+<dd>Particle instance number</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:age</span></tt></dt>
+<dd>Particle age in frames</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:lifetime</span></tt></dt>
+<dd>Total lifespan of particle in frames</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:location</span></tt></dt>
+<dd>Location of the particle</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:size</span></tt></dt>
+<dd>Size of the particle</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:velocity</span></tt></dt>
+<dd>Velocity of the particle</dd>
+<dt><tt class="docutils literal"><span class="pre">particle:angular_velocity</span></tt></dt>
+<dd>Angular velocity of the particle</dd>
+</dl>
+</div>
+<div class="section" id="trace">
+<h2>Trace<a class="headerlink" href="#trace" title="Permalink to this headline">¶</a></h2>
+<p>We support the <tt class="docutils literal"><span class="pre">trace(point</span> <span class="pre">pos,</span> <span class="pre">vector</span> <span class="pre">dir,</span> <span class="pre">...)</span></tt> function, to trace rays from the OSL shader.
+The &#8220;shade&#8221; parameter is not supported currently,
+but attributes can be retrieved from the object that was hit using the <tt class="docutils literal"><span class="pre">getmessage(&quot;trace&quot;,</span> <span class="pre">..)</span></tt> function.
+See the OSL specification for details on how to use this.</p>
+<p>This function can&#8217;t be used instead of lighting;
+the main purpose is to allow shaders to &#8220;probe&#8221; nearby geometry,
+for example to apply a projected texture that can be blocked by geometry,
+apply more &#8220;wear&#8221; to exposed geometry, or make other ambient occlusion-like effects.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../camera/index.html" class="btn btn-neutral float-right" title="Camera"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gpu_rendering.html" class="btn btn-neutral" title="GPU Rendering"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

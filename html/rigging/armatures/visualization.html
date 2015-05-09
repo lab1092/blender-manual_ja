@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Armature visualization &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Rigging" href="../index.html"/>
+        <link rel="next" title="Armature Structure" href="structure.html"/>
+        <link rel="prev" title="Bones" href="bones.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rigging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bones.html">Bones</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Rigging</a> &raquo;</li>
+      
+    <li>Armature visualization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/rigging/armatures/visualization.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="armature-visualization">
+<h1>Armature visualization<a class="headerlink" href="#armature-visualization" title="Permalink to this headline">¶</a></h1>
+<p>We have 4 basic bone visualization: Octahedral, Stick, B-Bone, Envelope and Wire:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayOctahedral.jpg"><img alt="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayOctahedral.jpg" src="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayOctahedral.jpg" style="width: 300px;" /></a>
+<p class="caption">Octahedral bone display.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayStick.jpg"><img alt="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayStick.jpg" src="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayStick.jpg" style="width: 300px;" /></a>
+<p class="caption">Stick bone display.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayBBone.jpg"><img alt="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayBBone.jpg" src="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayBBone.jpg" style="width: 300px;" /></a>
+<p class="caption">B-Bone bone display.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayEnvelope.jpg"><img alt="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayEnvelope.jpg" src="../../_images/Man2.5RiggingBonePrincipalsBoneDisplayEnvelope.jpg" style="width: 300px;" /></a>
+<p class="caption">Envelope bone display.</p>
+</div>
+<div class="section" id="display-panel">
+<h2>Display Panel<a class="headerlink" href="#display-panel" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em>, <em>Edit</em> and <em>Pose</em> modes</div>
+<div class="line">Panel:    <em>Display</em> <em>Object Data</em> context</div>
+</div>
+</div>
+<p>But let&#8217;s first see some general visualization properties of armatures,
+found in the <em>Display</em> panel of the <em>Object data</em> context.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtDisplayPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtDisplayPanel.jpg" src="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtDisplayPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Display panel.</p>
+</div>
+<div class="section" id="bone-types">
+<h3>Bone types<a class="headerlink" href="#bone-types" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingOctahedronEx3DViewEditMode.jpg"><img alt="../../_images/ManRiggingOctahedronEx3DViewEditMode.jpg" src="../../_images/ManRiggingOctahedronEx3DViewEditMode.jpg" style="width: 250px;" /></a>
+<p class="caption">A basic armature in Octahedron visualization, Edit mode.</p>
+<div class="legend">
+Note the 40- rolled Bone.001 bone.</div>
+</div>
+<div class="section" id="octahedral-bone">
+<h4>Octahedral bone<a class="headerlink" href="#octahedral-bone" title="Permalink to this headline">¶</a></h4>
+<p>This is the default visualization, well suited for most of editing tasks. It materializes:</p>
+<ul class="simple">
+<li>The bone root (&#8220;big&#8221; end) and tip (&#8220;small&#8221; end).</li>
+<li>The bone &#8220;size&#8221; (its thickness is proportional to its length).</li>
+<li>The bone roll (as it has a square section).</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingStickEx3DViewPoseMode.jpg"><img alt="../../_images/ManRiggingStickEx3DViewPoseMode.jpg" src="../../_images/ManRiggingStickEx3DViewPoseMode.jpg" style="width: 250px;" /></a>
+<p class="caption">The same armature in Stick visualization, Pose mode.
+Note that Bone.001 roll angle is not visible (except by its XZ axes).</p>
+</div>
+</div>
+<div class="section" id="stick-bone">
+<h4>Stick bone<a class="headerlink" href="#stick-bone" title="Permalink to this headline">¶</a></h4>
+<p>This is the simplest and most non-intrusive visualization.
+It just materializes bones by sticks of constant (and small) thickness,
+so it gives you no information about root and tip, nor bone size or roll angle.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingBBoneEx3DViewEditMode.jpg"><img alt="../../_images/ManRiggingBBoneEx3DViewEditMode.jpg" src="../../_images/ManRiggingBBoneEx3DViewEditMode.jpg" style="width: 250px;" /></a>
+<p class="caption">The same armature in B-Bone visualization, Edit mode.</p>
+</div>
+</div>
+<div class="section" id="b-bone-bone">
+<h4>B-Bone bone<a class="headerlink" href="#b-bone-bone" title="Permalink to this headline">¶</a></h4>
+<p>This visualization shows the curves of &#8220;smooth&#8221; multi-segmented bones;
+see the <tt class="xref doc docutils literal"><span class="pre">bone</span> <span class="pre">page</span></tt> for details.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingEnvelopeEx3DViewPoseMode.jpg"><img alt="../../_images/ManRiggingEnvelopeEx3DViewPoseMode.jpg" src="../../_images/ManRiggingEnvelopeEx3DViewPoseMode.jpg" style="width: 250px;" /></a>
+<p class="caption">The Bone Groups panel.</p>
+</div>
+</div>
+<div class="section" id="envelope-bone">
+<h4>Envelope bone<a class="headerlink" href="#envelope-bone" title="Permalink to this headline">¶</a></h4>
+<p>This visualization materializes the bone deformation influence.
+More on this in the <tt class="xref doc docutils literal"><span class="pre">bone</span> <span class="pre">page</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Names</dt>
+<dd>When enabled, the name of each bone is drawn.</dd>
+<dt>Colors</dt>
+<dd>This is only relevant for <em>Pose</em> mode, and is described in detail <a class="reference internal" href="../posing/visualization.html"><em>there</em></a>.</dd>
+<dt>Axes</dt>
+<dd>When enabled, the (local) axes of each bone are drawn (only relevant for <em>Edit</em> and <em>Pose</em> modes).</dd>
+<dt>X-Ray</dt>
+<dd>When enabled, the bones of the armature will always be drawn on top of the solid objects
+(meshes, surfaces, ...) - i.e. they will always be visible and selectable
+(this is the same option as the one found in the <em>Display</em> panel of the <em>Object data</em> context.
+Very useful when not in <em>Wireframe</em> mode.</dd>
+<dt>Shapes</dt>
+<dd>When enabled, the default standard bone shape is replaced,
+in <em>Object</em> and <em>Pose</em> modes,
+by the shape of a chosen object (see <a class="reference internal" href="#shaped-bones">Shaped Bones</a> for details).</dd>
+<dt>Delay Refresh</dt>
+<dd>When enabled, the bone doesn&#8217;t deform its children when manipulating the bone in pose mode.</dd>
+</dl>
+</div>
+<div class="section" id="shaped-bones">
+<h3>Shaped Bones<a class="headerlink" href="#shaped-bones" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> and <em>Pose</em> modes</div>
+<div class="line">Panel:    <em>Display</em> panel from <em>Bone</em> context.</div>
+</div>
+</div>
+<p>Blender allows you to give to each bone of an armature a specific shape
+(in <em>Object</em> and <em>Pose</em> modes), using another object as &#8220;template&#8221;.
+First of all, you have to enable the <em>Shapes</em> button (<em>Armature</em> panel).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg" src="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Display panel.</p>
+</div>
+<div class="section" id="id1">
+<h4>Attributes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Wireframe</dt>
+<dd>When enabled, bone is displayed in wireframe mode regardles of the viewport drawing mode.
+Useful for non-obstructive custom bone chains.</dd>
+<dt>Hide</dt>
+<dd>Bone is not visible when not in <em>Edit mode</em>.</dd>
+<dt>Custom Shape</dt>
+<dd>Object that defines the custom shape of the selected bone.</dd>
+<dt>Custom At</dt>
+<dd>Bone that defines the display transform of this shape bone</dd>
+</dl>
+<p>To assign a custom shape to a bone, you have to:</p>
+<ul class="simple">
+<li>Switch to <em>Pose</em> mode (<tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt>).</li>
+<li>Select the relevant bone (<tt class="kbd docutils literal"><span class="pre">RMB</span></tt> click on it).</li>
+<li>Go to the <em>Display</em> panel <em>Custom Shape</em> field and select the 3D object previously created in the scene;
+in this example we are using a cube and a cone. Tou can optionally set the <em>At</em> field to another bone.</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel2.jpg"><img alt="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel2.jpg" src="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel2.jpg" style="width: 250px;" /></a>
+<p class="caption">The Display panel.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingBoneShapeEx3DViewObjectMode.jpg"><img alt="../../_images/ManRiggingBoneShapeEx3DViewObjectMode.jpg" src="../../_images/ManRiggingBoneShapeEx3DViewObjectMode.jpg" style="width: 300px;" /></a>
+<p class="caption">The armature with shapes assigned to two bones, in Object mode.
+Note the centers of the Cone and Cube objects.</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingBoneShapeEx3DViewPoseMode.jpg"><img alt="../../_images/ManRiggingBoneShapeEx3DViewPoseMode.jpg" src="../../_images/ManRiggingBoneShapeEx3DViewPoseMode.jpg" style="width: 300px;" /></a>
+<p class="caption">The same armature in Pose mode...</p>
+</div>
+<p>Note that:</p>
+<ul class="simple">
+<li>These shapes will never be rendered - like any bone, they are only visible in 3D views.</li>
+<li>Even if any type of object seems to be accepted by the <em>OB</em> field (meshes, curves, even metas...),
+only meshes really work - all other types just make the bone invisible; nothing is drawn...</li>
+<li>The center of the shape object will be at the <em>root of the bone</em>
+(see the <a class="reference internal" href="bones.html"><em>bone page</em></a> for root/tip).</li>
+<li>The object properties of the shape are ignored
+(i.e. if you make a parallelepiped out of a cube by modifying its dimensions in <em>Object</em> mode,
+you&#8217;ll still have a cube shaped bone...).</li>
+<li>The &#8220;along bone&#8221; axis is the Y one,
+and the shape object is always scaled so that one Blender Unit stretches along the whole bone length.</li>
+<li>If you need to remove the custom shape of the bone,
+just right click in the <em>Custom Shape</em> field and select <em>Reset to default value</em> in the popup menu.</li>
+</ul>
+<p>So to summarize all this, you should use meshes as shape objects,
+with their center at their lower-Y end, and an overall Y length of <strong>1.0</strong> BU.</p>
+</div>
+</div>
+</div>
+<div class="section" id="armature-layers">
+<span id="id2"></span><h2>Armature Layers<a class="headerlink" href="#armature-layers" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em>, <em>Edit</em> and <em>Pose</em> modes</div>
+<div class="line">Panel:    <em>Skeleton</em> panel, <em>Object data</em> context</div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtSkeletonPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtSkeletonPanel.jpg" src="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtSkeletonPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Skeleton panel.</p>
+</div>
+<p>Each armature has 32 &#8220;Armature layers&#8221; which allow you to organize your armature by
+&#8220;regrouping&#8221; sets of bones into layers; this works similar to scene layers
+(those containing your objects). You can then &#8220;move&#8221; a bone to a given layer,
+hide or show one or several layers, etc.</p>
+<div class="section" id="showing-hiding-bone-layers">
+<h3>Showing/hiding bone layers<a class="headerlink" href="#showing-hiding-bone-layers" title="Permalink to this headline">¶</a></h3>
+<p>Only bones in active layers will be visible/editable - but they will always be effective
+(i.e move objects or deform geometry), whether in an active layer or not. To
+(de)activate a layer, you have several options, depending in which mode you are in:</p>
+<ul class="simple">
+<li>In all modes, use the row of small buttons at the top of the <em>Display Options</em> group, <em>Armature</em> panel.
+If you want to enable/disable several layers at once, as usual, hold <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> while clicking...</li>
+<li>In <em>Edit</em> and <em>Pose</em> modes, you can also do this from the <em>3D View</em> s,
+either by using the menu (<em class="menuselection">Armature ‣ Switch Armature Layers</em> or
+<em class="menuselection">Pose ‣ Switch Armature Layers</em>), or the <tt class="kbd docutils literal"><span class="pre">Shift-M</span></tt> shortcut,
+to display a small pop-up dialog containing the same buttons as described above
+(here again, you can use <tt class="kbd docutils literal"><span class="pre">Shift-LMB</span></tt> clicks to (de)select several layers at once).</li>
+</ul>
+</div>
+<div class="section" id="protected-layers">
+<h3>Protected Layers<a class="headerlink" href="#protected-layers" title="Permalink to this headline">¶</a></h3>
+<p>You can lock a given bone layer for all <a class="reference internal" href="../../data_system/linked_libraries.html#proxy-objects"><em>proxies</em></a>
+of your armature, i.e. all bones in this layer won&#8217;t be editable.
+To do so, in the <em>Skeleton</em> panel, <tt class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></tt> click on the relevant button, the layer lock will be enabled.</p>
+<p>Protected layers in proxy are restored to proxy settings on file reload and undo.</p>
+</div>
+</div>
+<div class="section" id="bone-layers">
+<h2>Bone Layers<a class="headerlink" href="#bone-layers" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em>, <em>Edit</em> and <em>Pose</em> modes</div>
+<div class="line">Panel:    <em>Relations</em> panel <em>Bone</em> context</div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg" src="../../_images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Relations panel.</p>
+</div>
+<div class="section" id="moving-bones-between-layers">
+<h3>Moving bones between layers<a class="headerlink" href="#moving-bones-between-layers" title="Permalink to this headline">¶</a></h3>
+<p>Obviously, you have to be in <em>Edit</em> or <em>Pose</em> modes to move bones between
+layers - note that as with objects, bones can lay in several layers at once,
+just use the usual <tt class="kbd docutils literal"><span class="pre">Shift-LMB</span></tt> clicks... First of all,
+you have to select the chosen bone(s)!</p>
+<ul class="simple">
+<li>In the <em>Button</em> window, use the &#8220;layer buttons&#8221; of each selected bone &#8220;sub-panel&#8221; (<em>Armature Bones</em> panel)
+to control in which layer(s) it lays.</li>
+<li>In the <em>3D View</em> window, use the menu (<em class="menuselection">Armature ‣ Move Bone To Layer</em> or
+<em class="menuselection">Pose ‣ Move Bone To Layer</em>) or hit <tt class="kbd docutils literal"><span class="pre">M</span></tt> to show the usual pop-up layers dialog.
+Note that this way, <em>you assign the same layers to all selected bones</em>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="hiding-bones">
+<h2>Hiding Bones<a class="headerlink" href="#hiding-bones" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> and <em>Pose</em> modes</div>
+<div class="line">Panel:    <em>Display</em> panel, <em>Bone</em> context</div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg" src="../../_images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Display panel.</p>
+</div>
+<p>You do not have to use bone layers to show/hide some bones. As with objects,
+vertices or control points, you can use the <tt class="kbd docutils literal"><span class="pre">H</span></tt> key:</p>
+<ul class="simple">
+<li><tt class="kbd docutils literal"><span class="pre">H</span></tt> will hide the selected bone(s).</li>
+<li><tt class="kbd docutils literal"><span class="pre">Shift-H</span></tt> will hide all bones <em>but the selected one(s)</em>.</li>
+<li><tt class="kbd docutils literal"><span class="pre">Alt-H</span></tt> will show all hidden bones.</li>
+</ul>
+<p>You can also use the <em>Hide</em> check button of the <em>Display</em> panel,
+<em>Bone</em> context).</p>
+<p>Note that hidden bones are specific to a mode - i.e.
+you can hide some bones in <em>Edit</em> mode,
+they will still be visible in <em>Pose</em> mode, and vice-versa.
+Hidden bone in <em>Pose</em> mode are also invisible in <em>Object</em> mode.
+And in <em>Edit</em> mode, the bone to hide must be fully selected,
+not just his root or tip...</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structure.html" class="btn btn-neutral float-right" title="Armature Structure"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bones.html" class="btn btn-neutral" title="Bones"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

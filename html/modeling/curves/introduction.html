@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Curves &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Curves" href="index.html"/>
+        <link rel="next" title="Curve Selection" href="selecting.html"/>
+        <link rel="prev" title="Curves" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="index.html">Curves</a> &raquo;</li>
+      
+    <li>Curves</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modeling/curves/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="curves">
+<h1>Curves<a class="headerlink" href="#curves" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<img alt="../../_images/Manual-Part-II-LogoFinal.jpg" src="../../_images/Manual-Part-II-LogoFinal.jpg" />
+<p class="caption">Bird logo made from Bezier curves.</p>
+</div>
+<p>Curves and <a class="reference internal" href="../surfaces/introduction.html"><em>Surfaces</em></a> are particular types of Blender Objects.
+They are expressed by mathematical functions rather than a series of points.</p>
+<p>Blender offers both <a class="reference internal" href="#bezier-curves">Bezier Curves</a> and <a class="reference internal" href="#non-uniform-rational-b-splines-nurbs">Non-Uniform Rational B-Splines (NURBS)</a>.
+Both Bezier curves and NURBS curves and surfaces are defined in terms of a set of &#8220;control points&#8221;
+(or &#8220;control vertices&#8221;) which define a &#8220;control polygon&#8221;.</p>
+<p>Both bezier and NURBs curves are named after their mathematical definitions, and choosing between them
+is often more a matter of how they are computed behind the scenes than how they appear from a modeler&#8217;s
+perspective. Bezier curves are generally more intuitive because they start and end at the
+control points that you set,
+but NURBs curves are more efficient for the computer to calculate when there are many twists and turns in a curve.</p>
+<p>The main advantage to using curves instead of polygonal meshes is that curves are defined by
+less data and so can produce results using less memory and storage space at modeling
+time. However, this procedural approach to surfaces can increase demands at render time.</p>
+<p>Certain modeling techniques, such as
+<tt class="xref doc docutils literal"><span class="pre">extruding</span> <span class="pre">a</span> <span class="pre">profile</span> <span class="pre">along</span> <span class="pre">a</span> <span class="pre">path</span></tt>,
+are possible only using curves. On the other hand, when using curves,
+vertex-level control is more difficult and if fine control is necessary,
+<a class="reference internal" href="../meshes/editing/introduction.html"><em>mesh editing</em></a> may be a better modeling option.</p>
+<p>Bezier curves are the most commonly used curves for designing letters or logos.
+They are also widely used in animation, both as <a class="reference internal" href="../../animation/techs/object/path.html"><em>paths</em></a>
+for objects to move along and as <a class="reference internal" href="../../animation/editors/graph/fcurves.html"><em>F-curves</em></a>
+to change the properties of objects as a function of time.</p>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<p><tt class="xref doc docutils literal"><span class="pre">Create</span> <span class="pre">the</span> <span class="pre">bird</span> <span class="pre">logo</span> <span class="pre">with</span> <span class="pre">Bezier</span> <span class="pre">Curves</span></tt></p>
+<p><tt class="xref doc docutils literal"><span class="pre">Skinning:</span> <span class="pre">Making</span> <span class="pre">a</span> <span class="pre">surface</span> <span class="pre">with</span> <span class="pre">two</span> <span class="pre">or</span> <span class="pre">more</span> <span class="pre">curves</span></tt></p>
+</div>
+<div class="section" id="curve-primitives">
+<h2>Curve Primitives<a class="headerlink" href="#curve-primitives" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_add-curve-menu.jpg" src="../../_images/Modeling_Curves_add-curve-menu.jpg" />
+<p class="caption">Add Curve menu.</p>
+</div>
+<p>In Object mode, the <em>Add Curve</em> menu,
+Blender provides five different curve primitives:</p>
+<dl class="docutils">
+<dt>Bezier Curve</dt>
+<dd>Adds an open 2D Bezier curve with two control points.</dd>
+<dt>Bezier Circle</dt>
+<dd>Adds a closed, circle-shaped 2D Bezier curve (made of four control points).</dd>
+<dt>NURBS Curve</dt>
+<dd>Adds an open 2D NURBS curve, with four control points, with <em>Uniform</em> knots.</dd>
+<dt>NURBS Circle</dt>
+<dd>Adds a closed, circle-shaped 2D NURBS curve (made of eight control points).</dd>
+<dt>Path</dt>
+<dd>Adds a NURBS open 3D curve made of five aligned control points,
+with <em>Endpoint</em> knots and the <em>CurvePath</em> setting enabled.</dd>
+</dl>
+</div>
+<div class="section" id="bezier-curves">
+<h2>Bezier Curves<a class="headerlink" href="#bezier-curves" title="Permalink to this headline">¶</a></h2>
+<p>The main elements used in editing Bezier Curves are the Control Points and Handles. A Segment
+(the actual Curve) is found between two Control Points. In the image below, the Control Points
+can be found in the middle of the pink line while the Handles comprise the extensions from the
+Control Point. By default the arrows on the Segment represents the direction and
+<strong>relative</strong> speed and direction of movement Objects will have when moving along the curve.
+This can be altered by defining a custom <em>Speed</em> Ipo.</p>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_control-points-handles.jpg" src="../../_images/Modeling_Curves_control-points-handles.jpg" />
+<p class="caption">Bezier Curve in Edit mode.</p>
+</div>
+<div class="section" id="editing-bezier-curves">
+<h3>Editing Bezier Curves<a class="headerlink" href="#editing-bezier-curves" title="Permalink to this headline">¶</a></h3>
+<p>A Bezier curve can be edited by moving the locations of the Control Points and Handles.</p>
+<ul class="simple">
+<li>Add a Curve by <tt class="kbd docutils literal"><span class="pre">Shift-A</span></tt> to bring up the <em>Add</em> menu, followed by <em class="menuselection">Curve ‣ Bezier</em>.</li>
+<li>Press <tt class="kbd docutils literal"><span class="pre">Tab</span></tt> to enter <em>Edit mode</em>.</li>
+<li>Select one of the Control Points and move it around.
+Use <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to confirm the new location of the Control Point, or use <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> to cancel.</li>
+<li>Now select one of the Handles and move it around. Notice how this changes the curvature of the curve.</li>
+</ul>
+<p>To add more Control Points</p>
+<ul class="simple">
+<li>Select at least two adjacent Control Points.</li>
+<li>Press <tt class="kbd docutils literal"><span class="pre">W</span></tt> and select <em>Subdivide</em>.</li>
+<li>Optionally, you can press <tt class="kbd docutils literal"><span class="pre">F6</span></tt> immediately after the subdivision to modify the number of subdivisions.</li>
+</ul>
+<p>Note that while in <em>Edit mode</em> you cannot directly select a Segment. To do so,
+select all of the Control Points that make up the Segment you want to move.</p>
+<p>There are four Bezier curve handle types.
+They can be accessed by pressing <tt class="kbd docutils literal"><span class="pre">V</span></tt> and selecting from the list that appears,
+or by pressing the appropriate hotkey combination. Handles can be rotated, moved,
+scaled and shrunk/fattened like any vertex in a mesh.</p>
+<div class="section" id="bezier-curve-handle-types">
+<h4>Bezier Curve Handle Types<a class="headerlink" href="#bezier-curve-handle-types" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Automatic <tt class="kbd docutils literal"><span class="pre">V-A</span></tt></dt>
+<dd><p class="first">This handle has a completely automatic length and direction which is set by Blender to
+ensure the smoothest result.
+These handles convert to <em>Aligned</em> handles when moved.</p>
+<div class="last figure">
+<img alt="../../_images/Modeling_Curves_automatic-handles.jpg" src="../../_images/Modeling_Curves_automatic-handles.jpg" />
+</div>
+</dd>
+<dt>Vector <tt class="kbd docutils literal"><span class="pre">V-V</span></tt></dt>
+<dd><p class="first">Both parts of a handle always point to the previous handle or the next handle which allows
+you to create curves or sections thereof made of straight lines or with sharp corners.
+Vector handles convert to <em>Free</em> handles when moved.</p>
+<div class="last figure">
+<img alt="../../_images/Modeling_Curves_vector-handles.jpg" src="../../_images/Modeling_Curves_vector-handles.jpg" />
+</div>
+</dd>
+<dt>Aligned <tt class="kbd docutils literal"><span class="pre">V-L</span></tt></dt>
+<dd><p class="first">These handles always lie in a straight line, and give a continuous curve without sharp angles.</p>
+<div class="last figure">
+<img alt="../../_images/Modeling_Curves_aligned-handles.jpg" src="../../_images/Modeling_Curves_aligned-handles.jpg" />
+</div>
+</dd>
+<dt>Free <tt class="kbd docutils literal"><span class="pre">V-F</span></tt></dt>
+<dd><p class="first">The handles are independent of each other.</p>
+<div class="last figure">
+<img alt="../../_images/Modeling_Curves_free-handles.jpg" src="../../_images/Modeling_Curves_free-handles.jpg" />
+</div>
+</dd>
+</dl>
+<p>Additionally,
+the <tt class="kbd docutils literal"><span class="pre">V-T</span></tt> shortcut can be used to toggle between Free and Aligned handle types.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="curve-properties">
+<h2>Curve Properties<a class="headerlink" href="#curve-properties" title="Permalink to this headline">¶</a></h2>
+<p>Curve Properties can be set from the <em>Object Data</em> option in the
+<em>Properties Header</em> (shown below in blue).</p>
+<div class="figure">
+<img alt="../../_images/Icon-library_Properties_header-curve.jpg" src="../../_images/Icon-library_Properties_header-curve.jpg" />
+</div>
+<div class="section" id="shape">
+<h3>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_shape-panel.jpg" src="../../_images/Modeling_Curves_shape-panel.jpg" />
+<p class="caption">Curves Shape panel.</p>
+</div>
+<dl class="docutils">
+<dt>2D and 3D Curves</dt>
+<dd>By default, new curves are set to be 3D, which means that Control Points can be placed anywhere in 3D space.
+Curves can also be set to 2D which constrain the Control Points to the Curve&#8217;s local XY axis.</dd>
+<dt>Resolution</dt>
+<dd>The <em>resolution</em> property defines the number of points that are computed between every pair of Control Points.
+Curves can be made more or less smooth by increasing and decreasing the resolution respectively.
+The <em>Preview U</em> setting determines the resolution in the 3D viewport while the <em>Render U</em> setting
+determines the Curve&#8217;s render resolution. If <em>Render U</em> is set to zero (0),
+then the <em>Preview U</em> setting is used for both the 3D viewport and render resolution.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_shape-resolution.jpg" src="../../_images/Modeling_Curves_shape-resolution.jpg" />
+<p class="caption">Curves with a resolution of 3 (left) and 12 (right).</p>
+</div>
+<dl class="docutils">
+<dt>Twisting</dt>
+<dd>A 3D Curve has Control Points that are not located on the Curve&#8217;s local XY plane.
+This gives the Curve a twist which can affect the Curve normals.
+You can alter how the twist of the Curve is calculated by choosing from <em>Minimum,
+Tangent</em> and <em>Z-Up</em> options from the drop-down menu.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_shape-twist.jpg" src="../../_images/Modeling_Curves_shape-twist.jpg" />
+<p class="caption">Curves with a twist of minimum (left) and tangent (right).</p>
+</div>
+<dl class="docutils">
+<dt>Fill</dt>
+<dd>Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling).
+When set to <em>Half</em> (the default) the Curve is displayed as half a cylinder.
+The <em>Fill Deformed</em> option allows you to indicate whether the Curve should be filled before or after
+(default) applying any Shape Keys or Modifiers.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_shape-fill.jpg" src="../../_images/Modeling_Curves_shape-fill.jpg" />
+<p class="caption">Curves with a fill of half (left) and full (right).</p>
+</div>
+<dl class="docutils">
+<dt>Path/Curve-Deform</dt>
+<dd>These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property.
+The <em>Radius, Stretch</em> and <em>Bounds Clamp</em> options control how Objects use the
+Curve and are dealt with in more detail in the appropriate links below.</dd>
+</dl>
+<p><a class="reference internal" href="editing/introduction.html"><em>Read more about Basic Curve Editing</em></a>
+<a class="reference internal" href="../../animation/techs/object/path.html"><em>Read more about Paths</em></a>
+<a class="reference internal" href="editing/advanced.html"><em>Read more about Curve Deform</em></a></p>
+</div>
+<div class="section" id="geometry">
+<h3>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-panel.jpg" src="../../_images/Modeling_Curves_geometry-panel.jpg" />
+<p class="caption">Curves Geometry panel.</p>
+</div>
+<dl class="docutils">
+<dt>Modification</dt>
+<dd><dl class="first last docutils">
+<dt>Offset</dt>
+<dd>By default, text Objects are treated as curves. The Offset option will alter the space between letters.</dd>
+<dt>Extrude</dt>
+<dd>Will extrude the curve along both the positive and negative local Z axes.</dd>
+</dl>
+</dd>
+<dt>Bevel</dt>
+<dd><dl class="first last docutils">
+<dt>Depth</dt>
+<dd>Changes the size of the bevel</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-bevel-depth.jpg" src="../../_images/Modeling_Curves_geometry-bevel-depth.jpg" />
+<p class="caption">A Curve with different Bevel depths applied.</p>
+<div class="legend">
+<dl class="docutils">
+<dt>Resolution</dt>
+<dd>Alters the smoothness of the bevel</dd>
+</dl>
+</div>
+</div>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-bevel-resolution.jpg" src="../../_images/Modeling_Curves_geometry-bevel-resolution.jpg" />
+<p class="caption">A Curve with different resolutions applied.</p>
+</div>
+<dl class="docutils">
+<dt>Taper Object</dt>
+<dd>Tapering a Curve causes it to get thinner towards one end.
+You can also alter the proportions of the Taper throughout the tapered object
+by moving/scaling/rotating the Control Points of the Taper Object.
+The Taper Object can only be another Curve.
+Editing the Handles and Control Points of the Taper Object will cause the original Object to change shape.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-taper.jpg" src="../../_images/Modeling_Curves_geometry-taper.jpg" />
+<p class="caption">A Curve before (left) and after (right) a Bezier Curve Taper Object was applied.</p>
+</div>
+<dl class="docutils">
+<dt>Bevel Object</dt>
+<dd>Beveling a Bezier Curve with a Bezier Curve as the Bevel Object generally gives it the appearance of a plane,
+while using a Bezier Circle as the Bevel Object will give it the appearance of a cylinder.
+The Bevel Object can only be another Curve.
+Editing the Handles and Control Points of the Bevel Object will cause the original Object to change shape.
+Given the options available, it is best to experiment and see the results of this operation.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-bevel.jpg" src="../../_images/Modeling_Curves_geometry-bevel.jpg" />
+<p class="caption">A Curve with the Bevel Object as a Bezier Curve (left) and as a Bezier Circle (right).</p>
+</div>
+<dl class="docutils">
+<dt>Fill Caps</dt>
+<dd>Seals the ends of a beveled Curve.</dd>
+<dt>Map Taper</dt>
+<dd>For Curves using a Taper Object and with modifications to the <em>Start/End Bevel Factor</em>
+the <em>Map Taper</em> option will apply the taper to the beveled part of the Curve (not the whole Curve).</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-map-taper.jpg" src="../../_images/Modeling_Curves_geometry-map-taper.jpg" />
+<p class="caption">A Curve without (left) and with (right) Map Taper applied.</p>
+</div>
+<dl class="docutils">
+<dt>Start Bevel Factor and End Bevel Factor</dt>
+<dd>These options determine where to start the Bevel operation on the Curve being beveled.
+Increasing the <em>Start Bevel Factor</em> to 0.5 will start beveling the Curve 50% of the distance from the start
+of the Curve (in effect shortening the Curve).
+Decreasing the <em>End Bevel Factor</em> by 0.25 will start beveling the Curve 25% of the distance from the end
+of the Curve (again, shortening the Curve).</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_geometry-bevel-start-end-factor.jpg" src="../../_images/Modeling_Curves_geometry-bevel-start-end-factor.jpg" />
+<p class="caption">A Curve with no Bevel factor applied (left),
+with a 50% Start Bevel Factor (middle) and with a 25% End Bevel Factor (right).</p>
+</div>
+<p><a class="reference internal" href="editing/advanced.html"><em>Read more about Advanced Curve Editing</em></a></p>
+</div>
+<div class="section" id="path-animation">
+<h3>Path Animation<a class="headerlink" href="#path-animation" title="Permalink to this headline">¶</a></h3>
+<p>The Path Animation settings can be used to determine how Objects move along a certain path.
+See the link below for further information.</p>
+<p><a class="reference internal" href="../../animation/techs/object/path.html"><em>Read more about utilizing Curves for paths during animation</em></a></p>
+</div>
+<div class="section" id="active-spline">
+<h3>Active Spline<a class="headerlink" href="#active-spline" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_active-spline-panel.jpg" src="../../_images/Modeling_Curves_active-spline-panel.jpg" />
+<p class="caption">Curves Active Spline panel.</p>
+</div>
+<p>The <em>Active Spline</em> panel becomes available during <em>Edit mode</em>.</p>
+<dl class="docutils">
+<dt>Cyclic</dt>
+<dd>Closes the Curve.</dd>
+<dt>Resolution</dt>
+<dd>Alters the smoothness of each segment by changing the number of subdivisions.</dd>
+<dt>Interpolation</dt>
+<dd><dl class="first last docutils">
+<dt>Tilt</dt>
+<dd>Alters how the tilt of a segment is calculated.</dd>
+<dt>Radius</dt>
+<dd>Alters how the radius of a Beveled Curve is calculated.
+The effects are easier to see after Shrinking/Fattening a control point <tt class="kbd docutils literal"><span class="pre">Alt-S</span></tt>.</dd>
+<dt>Smooth</dt>
+<dd>Smooths the normals of the Curve</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="non-uniform-rational-b-splines-nurbs">
+<h2>Non-Uniform Rational B-Splines (NURBS)<a class="headerlink" href="#non-uniform-rational-b-splines-nurbs" title="Permalink to this headline">¶</a></h2>
+<p>One of the major differences between Bezier Objects and NURBS Objects is that Bezier Curves
+are approximations. For example, a Bezier circle is an <em>approximation</em> of a circle,
+whereas a NURBS circle is an <em>exact</em> circle.
+NURBS theory can be a <em>very</em> complicated topic. For an introduction,
+please consult the <a class="reference external" href="http://en.wikipedia.org/wiki/NURBS">Wikipedia page.</a> In practice,
+many of the Bezier curve operations discussed above apply to NURBS curves in the same manner.
+The following text will concentrate only on those aspects that are unique to NURBS curves.</p>
+<div class="section" id="editing-nurbs-curves">
+<h3>Editing NURBS Curves<a class="headerlink" href="#editing-nurbs-curves" title="Permalink to this headline">¶</a></h3>
+<p>A NURBS Curve is edited by moving the location of the Control Points.</p>
+<ul class="simple">
+<li>Place a Curve by <tt class="kbd docutils literal"><span class="pre">Shift-A</span></tt> to bring up the Add menu, followed by <em class="menuselection">Curve ‣ NURBS curve</em>.</li>
+<li>Press <tt class="kbd docutils literal"><span class="pre">Tab</span></tt> to enter <em>Edit mode</em>.</li>
+<li>Select one of the Control Points and move it around.
+Use <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to confirm the new location of the Control Point, or use <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> to cancel.</li>
+<li>If you want to add additional Control Points, select both of them, press <tt class="kbd docutils literal"><span class="pre">W</span></tt> and select <em>Subdivide</em>.
+Press <tt class="kbd docutils literal"><span class="pre">F6</span></tt> immediately after to determine how many subdivisions to make.</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Active Spline<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_nurbs-active-spline-panel.jpg" src="../../_images/Modeling_Curves_nurbs-active-spline-panel.jpg" />
+<p class="caption">NURBS Active Spline panel.</p>
+</div>
+<p>One of the characteristics of a NURBS object is the <em>knot vector</em>. This is a sequence of
+numbers used to determine the influence of the control points on the curve.
+While you cannot edit the knot vectors directly, you can influence them through the
+<em>Endpoint</em> and <em>Bezier</em> options in the Active Spline panel. Note that the
+<em>Endpoint</em> and <em>Bezier</em> settings only apply to open NURBS curves.</p>
+<dl class="docutils">
+<dt>Cyclic</dt>
+<dd>Makes the NURBS curve cyclic.</dd>
+</dl>
+<div class="figure">
+<img alt="../../_images/Modeling_Curves_nurbs-cyclic.jpg" src="../../_images/Modeling_Curves_nurbs-cyclic.jpg" />
+<p class="caption">A NURBS curve with Cyclic applied.</p>
+</div>
+<dl class="docutils">
+<dt>Bezier</dt>
+<dd>Makes the NURBS curve act like a Bezier curve.</dd>
+<dt>Endpoint</dt>
+<dd>Makes the curve contact the end control points. Cyclic must be disabled for this option to work.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Modeling_Curves_nurbs-endpoint.jpg"><img alt="../../_images/Modeling_Curves_nurbs-endpoint.jpg" src="../../_images/Modeling_Curves_nurbs-endpoint.jpg" style="width: 511px;" /></a>
+<p class="caption">A NURBS curve with Endpoint enabled.</p>
+</div>
+<dl class="docutils">
+<dt>Order</dt>
+<dd>The order of the NURBS curve determines the area of influence of the control points over the curve.
+Higher order values means that a single control point has a greater
+influence over a greater relative proportion of the curve.
+The valid range of <em>Order</em> values is 2-6 depending on the number of control points present in the curve.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Modeling_Curves_nurbs-order.jpg"><img alt="../../_images/Modeling_Curves_nurbs-order.jpg" src="../../_images/Modeling_Curves_nurbs-order.jpg" style="width: 511px;" /></a>
+<p class="caption">NURBS curves with orders of 2 (left), 4 (middle) and 6 (right).</p>
+</div>
+</div>
+</div>
+<div class="section" id="path">
+<h2>Path<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above, Curves are often used as <a class="reference internal" href="../../animation/techs/object/path.html"><em>paths</em></a>.
+Any curve can be used as a Path if the <em>Path Animation</em> option is selected.</p>
+<p>The Path option available from the <em>Add Curve</em> menu is identical to a 3D NURBS
+curve, except that you do not have access to the <em>Active Spline</em> panel.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selecting.html" class="btn btn-neutral float-right" title="Curve Selection"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Curves"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

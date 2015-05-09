@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editing UVs &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../../index.html"/>
+        <link rel="up" title="Textures" href="../../index.html"/>
+        <link rel="next" title="Applying Textures" href="applying_image.html"/>
+        <link rel="prev" title="Managing UV Maps" href="layout_management.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Textures</a> &raquo;</li>
+      
+    <li>Editing UVs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../../_sources/render/blender_render/textures/mapping/uv/layout_editing.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="editing-uvs">
+<h1>Editing UVs<a class="headerlink" href="#editing-uvs" title="Permalink to this headline">¶</a></h1>
+<p>After unwrap, you will likely need to arrange the UV maps into something that can be logically
+textured or painted. Your goals for editing are:</p>
+<ul class="simple">
+<li>Stitch some pieces (UV maps) back together</li>
+<li>Minimize wasted space in the image</li>
+<li>Enlarge the &#8216;faces&#8217; where you want more detail</li>
+<li>Re-size/enlarge the &#8216;faces&#8217; that are stretched</li>
+<li>Shrink the &#8216;faces&#8217; that are too grainy and have too much detail</li>
+</ul>
+<p>With a minimum of dead space,
+the most pixels can be dedicated to giving the maximum detail and fineness to the UV Texture.
+A UV face can be as small as a pixel (the little dots that make up an image)
+or as large as an entire image. You probably want to make some major adjustments first,
+and then tweak the layout.</p>
+<div class="section" id="selecting-uvs">
+<h2>Selecting UVs<a class="headerlink" href="#selecting-uvs" title="Permalink to this headline">¶</a></h2>
+<p>Selection tools are available in the <em>Select Menu</em> and Header bar,
+and the shortcuts listed below:</p>
+<dl class="docutils">
+<dt>Border Select ; <tt class="kbd docutils literal"><span class="pre">B</span></tt></dt>
+<dd>Use the box lasso to select UV coordinates.</dd>
+<dt>Select/Deselect All ; <tt class="kbd docutils literal"><span class="pre">A</span></tt></dt>
+<dd>Selects or de-selects all UV coordinates.
+When initially unwrapping, you will want to select All UVs to rotate, scale, and move them around.</dd>
+<dt>Linked UVs:kbd:<cite>Ctrl-L</cite></dt>
+<dd>This menu item selects all UVs that are part of the same UV map.
+Recall that a map is made for every submesh and seamed part of the mesh, and is analogous to a piece of cloth.
+Selecting <em>Linked UVs</em> works similarly to the command in 3D View.
+It will select all UVs that are &#8216;connected&#8217; to currently selected UVs.</dd>
+<dt>Pinned UVs ; <tt class="kbd docutils literal"><span class="pre">Shift-P</span></tt></dt>
+<dd>You can pin UVs so they don&#8217;t move between multiple unwrap operations.
+This menu item selects them all. See Pinning</dd>
+<dt>Border Select Pinned ; <tt class="kbd docutils literal"><span class="pre">Shift-B</span></tt></dt>
+<dd>Use the box lasso to select only pinned UV coordinates.</dd>
+<dt>Unlink Selection ; <tt class="kbd docutils literal"><span class="pre">Alt-L</span></tt></dt>
+<dd>Cuts apart the selected UVs from the map.
+Only those UVs which belong to fully selected faces remain selected following this command.
+As the name implies, this is particularly useful to unlink faces and move them elsewhere.
+The hotkey is analogous to the mesh Separate command.</dd>
+</dl>
+<div class="section" id="selection-modes">
+<h3>Selection Modes<a class="headerlink" href="#selection-modes" title="Permalink to this headline">¶</a></h3>
+<p>Turning on the <em>Sync Selection</em> button in the header causes selection of components
+in the 3D view to sync with their corresponding elements in the UV editor.
+This is off by default.
+These two modes have very different results when transforming components in the UV editor.</p>
+<p>When SyncSelection is <strong>Off</strong> :
+Only selected faces are displayed in the UV editor,
+and the following selection modes are available:</p>
+<ul>
+<li><p class="first"><em>Vertex</em></p>
+<blockquote>
+<div><p>Select individual vertices</p>
+</div></blockquote>
+</li>
+<li><p class="first"><em>Edge</em></p>
+<blockquote>
+<div><p>Select edges</p>
+</div></blockquote>
+</li>
+<li><p class="first"><em>Face</em></p>
+<blockquote>
+<div><p>Select faces</p>
+</div></blockquote>
+</li>
+<li><p class="first"><em>Island</em></p>
+<blockquote>
+<div><blockquote>
+<div><p>Select contiguous groups of Faces</p>
+</div></blockquote>
+<p>The <em>Sticky Selection Mode</em> menu is available in this mode. This controls how UVs are selected:</p>
+<dl class="docutils">
+<dt>Shared Vertex</dt>
+<dd><p class="first last">Selects UVs that share a mesh vertex, even if they are in different UV locations.</p>
+</dd>
+<dt>Shared Location</dt>
+<dd><p class="first last">Selects UVs that are in the same UV location and share a mesh vertex.
+This mode is default and works best in most cases.</p>
+</dd>
+<dt>Disabled</dt>
+<dd><p class="first last">Disables Sticky Selection.
+When you move a UV in this mode, each face owns its own UVs, allowing them to be separated.</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+<p>When <em>Sync Selection</em> is <strong>On</strong> the following can be selected:</p>
+<ul>
+<li><p class="first"><em>Vertex</em></p>
+</li>
+<li><p class="first"><em>Edge</em></p>
+</li>
+<li><p class="first"><em>Face</em></p>
+<blockquote>
+<div><p>In this Mode, selection behaves differently.
+When selecting UVs or Edges, it behave like <em>Shared Vertex</em> mode above.
+When selecting Faces, it behaves as in <em>Disabled Stick Selection</em> above.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="transforming-uvs">
+<h2>Transforming UVs<a class="headerlink" href="#transforming-uvs" title="Permalink to this headline">¶</a></h2>
+<p>UVs can be:</p>
+<ul class="simple">
+<li>Translated <tt class="kbd docutils literal"><span class="pre">G</span></tt></li>
+<li>Rotated <tt class="kbd docutils literal"><span class="pre">R</span></tt></li>
+<li>Scaled <tt class="kbd docutils literal"><span class="pre">S</span></tt></li>
+</ul>
+<p>They can also be hidden or shown using the <tt class="kbd docutils literal"><span class="pre">H</span></tt> and <tt class="kbd docutils literal"><span class="pre">Alt-H</span></tt> respectively,
+the same way as in Edit Mode.</p>
+<div class="section" id="axis-locking">
+<h3>Axis Locking<a class="headerlink" href="#axis-locking" title="Permalink to this headline">¶</a></h3>
+<p>Transformations can be locked to an axis by pressing <tt class="kbd docutils literal"><span class="pre">X</span></tt> or <tt class="kbd docutils literal"><span class="pre">Y</span></tt> after
+one of the transform tools. Also,
+holding the <tt class="kbd docutils literal"><span class="pre">MMB</span></tt> will constrain movement to the X or Y axis.</p>
+</div>
+<div class="section" id="pivot-points">
+<h3>Pivot Points<a class="headerlink" href="#pivot-points" title="Permalink to this headline">¶</a></h3>
+<p>The UV editor has a 2D cursor.
+Its position can be changed by <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> clicking in the UV editor.
+You can also manually adjust its position in the Properties Panel.
+The range by default is from 0 to 256 starting from the lower left corner.
+By enabling <em>Normalized</em> under <em>Coordinates</em>,
+the range changes from 0 to 1.</p>
+<p>The 2D Cursor can be snapped to nearest pixels or to selected elements,
+by selecting <em>UVs Menu</em> under <em>Snap</em>.</p>
+<p>The Pivot Point can be changed to:</p>
+<ul class="simple">
+<li>Bounding Box Center</li>
+<li>Median Point</li>
+<li>2D Cursor Location</li>
+</ul>
+</div>
+<div class="section" id="proportional-editing">
+<h3>Proportional Editing<a class="headerlink" href="#proportional-editing" title="Permalink to this headline">¶</a></h3>
+<p>Proportional Editing is available in UV editing. The controls are the same as in the 3D view.
+See <a class="reference internal" href="../../../../../getting_started/basics/transformations/transform_control/proportional_edit.html"><em>Proportional Editing in 3D</em></a>
+for full reference.</p>
+</div>
+<div class="section" id="snapping">
+<h3>Snapping<a class="headerlink" href="#snapping" title="Permalink to this headline">¶</a></h3>
+<p>Snapping in UV is also similar to
+<a class="reference internal" href="../../../../../getting_started/basics/transformations/transform_control/snap.html"><em>Snapping in 3D</em></a>,
+but only snapping to UVs works, however,
+the <em>Snap to Pixels</em> option in the <em>UVs Menu</em> will force the UVs to snap to the pixels of an image if loaded.</p>
+<p>Additional tools can be found in the <em>UVs Menu</em> under the <em>Snap</em> Submenu:</p>
+<dl class="docutils">
+<dt>Snap Pixels</dt>
+<dd>Moves selection to nearest pixel</dd>
+<dt>Snap to Cursor</dt>
+<dd>Moves selection to 2D cursor location</dd>
+<dt>Snap to Adjacent Unselected</dt>
+<dd>Moves selection to adjacent unselected element</dd>
+</dl>
+</div>
+<div class="section" id="weld-and-align">
+<h3>Weld and Align<a class="headerlink" href="#weld-and-align" title="Permalink to this headline">¶</a></h3>
+<p>the <em>Weld</em> tool, <tt class="kbd docutils literal"><span class="pre">W-1</span></tt> will move selected UVs to their average position</p>
+<p><em>Align</em>, <tt class="kbd docutils literal"><span class="pre">W-2</span></tt>, <tt class="kbd docutils literal"><span class="pre">W-3</span></tt>, and <tt class="kbd docutils literal"><span class="pre">W-4</span></tt>
+will line up selected UVs on the X axis, Y axis, or automatically chosen axis.</p>
+</div>
+<div class="section" id="mirror">
+<h3>Mirror<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h3>
+<p>Components can be mirrored on the Y axis or the X axis. You can select <em>Mirror X</em>
+and <em>Mirror Y</em> from the <em>Snap</em> sub menu in the <em>UV</em> menu.</p>
+<p>You can also use the hotkey <tt class="kbd docutils literal"><span class="pre">Ctrl-M</span></tt> then enter <tt class="kbd docutils literal"><span class="pre">X</span></tt> or <tt class="kbd docutils literal"><span class="pre">Y</span></tt>,
+or hold the <tt class="kbd docutils literal"><span class="pre">MMB</span></tt> and drag in the mirror direction.</p>
+</div>
+<div class="section" id="stitch">
+<h3>Stitch<a class="headerlink" href="#stitch" title="Permalink to this headline">¶</a></h3>
+<p><em>Stitch</em>, <tt class="kbd docutils literal"><span class="pre">V</span></tt>, will join selected UVs that share Vertices.
+You set the tool to limit stitching by distance in the Tool Settings,
+by activating <em>Use Limit</em> and adjusting the <em>Limit Distance</em></p>
+</div>
+<div class="section" id="minimize-stretch">
+<h3>Minimize Stretch<a class="headerlink" href="#minimize-stretch" title="Permalink to this headline">¶</a></h3>
+<p>the <em>Minimize Stretch</em> tool,
+<tt class="kbd docutils literal"><span class="pre">Ctrl-V</span></tt> Reduces UV stretch by minimizing angles. This essentially relaxes the UVs</p>
+</div>
+<div class="section" id="face-mirror-and-rotate-uvs">
+<h3>Face Mirror and Rotate UVs<a class="headerlink" href="#face-mirror-and-rotate-uvs" title="Permalink to this headline">¶</a></h3>
+<p>Recall how the orientation of the UV Texture is relative to each face? Well,
+you might find that, for example, the image is upside down or laying on its side. If so,
+use <em>Face&#8211;&gt;Rotate UVs</em> (in the 3D window in Face Select mode)
+menu to rotate the UVs per face in 90-degree turns.</p>
+<p>The <em>Face&#8211;&gt;Mirror UVs</em> to flips the image over like a pankcake in a pan,
+mirroring the UVs per face and showing you the image &#8216;reversed&#8217;.</p>
+</div>
+</div>
+<div class="section" id="pinning">
+<h2>Pinning<a class="headerlink" href="#pinning" title="Permalink to this headline">¶</a></h2>
+<p>When Unwrapping a model it is sometimes useful to &#8220;Lock&#8221; certain UVs,
+so that parts of a UV layout stay the same shape, and/or in the same place.</p>
+<p>Pinning is done selecting a UV,
+then by selecting <em>Pin</em> from the <em>UVs</em> menu,
+or the shortcut <tt class="kbd docutils literal"><span class="pre">P</span></tt>.
+You can <em>Unpin a UV</em> with the shorctut <tt class="kbd docutils literal"><span class="pre">Alt-P</span></tt></p>
+<p>Pinning is most effective when using the Unwrap method of UV mapping, for organic objects.
+An example is when you are modeling a symmetrical object using the
+<a class="reference internal" href="../../../../../modifiers/generate/mirror.html"><em>Mirror Modifier</em></a>.
+Some of the UVs on the mirror axis may be shared across the mirrored counterparts.
+You could pin the UVs that correspond to the midline, then align them on the X axis,
+and they will stay in that location.</p>
+<p>Pinning also work great with the Live Unwrap tool. If you pin two or more UVs,
+with Live Unwrap on, dragging pinned UVs will interactively unwrap the model.
+This helps with fitting a UV island to a certain shape or region.</p>
+</div>
+<div class="section" id="optimizing-the-uv-layout">
+<h2>Optimizing the UV Layout<a class="headerlink" href="#optimizing-the-uv-layout" title="Permalink to this headline">¶</a></h2>
+<p>When you have unwrapped, possibly using seams,
+your UV layout may be quite disorganized and chaotic.
+You may need to proceed with the following tasks: Orientation of the UV mapping,
+arranging the UV maps, stitching several maps together.</p>
+<p>The next step is to work with the UV layouts that you have created through the unwrap process.
+If you do add faces or subdivide existing faces when a model is already unwrapped,
+Blender will add those new faces for you. In this fashion,
+you can use the UV Texture image to guide additional geometry changes.</p>
+<p>When arranging, keep in mind that the entire window is your workspace,
+but only the UV coordinates within the grid are mapped to the image. So,
+you can put pieces off to the side while you arrange them. Also,
+each UV unwrap is its own linked set of coordinates.</p>
+<p>You can lay them on top of one another, and they will onionskin
+(the bottom one will show through the top one). To grab only one though,
+<tt class="kbd docutils literal"><span class="pre">RMB</span></tt> select one of the UV coordinates,
+and use <em class="menuselection">Select ‣ Linked UVs</em> (<tt class="kbd docutils literal"><span class="pre">Ctrl-L</span></tt>)
+to select connected UVs, not border select because UVs from both will be selected.</p>
+<div class="section" id="combining-uv-maps">
+<h3>Combining UV Maps<a class="headerlink" href="#combining-uv-maps" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Manual-UV-Unwrap-Bad.jpg"><img alt="../../../../../_images/Manual-UV-Unwrap-Bad.jpg" src="../../../../../_images/Manual-UV-Unwrap-Bad.jpg" style="width: 300px;" /></a>
+<p class="caption">Bad Unwrap-Note Ear and Neck</p>
+</div>
+<p>Very often you will unwrap an object, such as the face example we have been using,
+and get it &#8216;mostly right&#8217; but with parts of the mesh that did not unwrap properly,
+or are horribly confusing. The picture to the right shows an initial unwrap of the face using
+the Unwrap from sphere option. The issues are with the ear; it is just a mush of UVs,
+and the neck, it is stretched and folded under. Too much work to clean up.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Manual-UV-Unwrap-Face.jpg"><img alt="../../../../../_images/Manual-UV-Unwrap-Face.jpg" src="../../../../../_images/Manual-UV-Unwrap-Face.jpg" style="width: 300px;" /></a>
+<p class="caption">Unwrap Face Only, without Ear or Neck</p>
+</div>
+<p>We can tell that the ear would unwrap nicely with just a straightforward projection from the
+side view, and the neck with a tubular unwrap. So,
+our general approach will be to unwrap different parts of the object (face, ears, and so on)
+using different unwrap calculations,
+selecting each calculation according to whatever works best for that piece. So let&#8217;s begin:
+We select only the &#8220;face&#8221; faces, unwrap them using the <em>Sphere</em> calculation, and scale and
+rotate them somewhat to fit logically within the image area of the UV/Image Editor window pan.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Manual-UV-Unwrap-Ear.jpg"><img alt="../../../../../_images/Manual-UV-Unwrap-Ear.jpg" src="../../../../../_images/Manual-UV-Unwrap-Ear.jpg" style="width: 300px;" /></a>
+<p class="caption">Unwrap Projection: Ear</p>
+</div>
+<p>Once we&#8217;re satisfied with the face, it&#8217;s time to turn our attention to the ear. First,
+unselect the faces you were working with. Their
+UVs will disappear from the UV/Image Editor, but they are still there, just not shown.
+(To verify this,
+you can select a few faces in 3D view and it will show up in the UV/Image Editor.)</p>
+<p>To work on the ear, in the 3D View, we now select only the &#8220;ear&#8221; faces.
+You can use Vertex Groups to select the ear faces. Selecting sub-meshes is easy too,
+since they are not connected to the rest of the mesh.
+Simply selecting Linked vertices will select that entire submesh. Basically,
+since you are in edit mode, all of the selecting/unselecting features are available to you.</p>
+<p>Now re-unwrap the ear using the <em>Project</em> calculation from side view,
+and scale and rotate them somewhat (discussed in the next section),
+and place them off to the side. You can do this repetitively, using different UV calculations;
+each re-calculation just puts those UVs for the selected faces somewhere else. Choose the
+calculation for each piece that gives you the best fit and most logical layout for subsequent
+painting of that piece.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Manual-UV-Unwrap-All.jpg"><img alt="../../../../../_images/Manual-UV-Unwrap-All.jpg" src="../../../../../_images/Manual-UV-Unwrap-All.jpg" style="width: 300px;" /></a>
+<p class="caption">UV Maps together</p>
+</div>
+<p>When all of the pieces of the mesh have been unwrapped using the various calculations,
+you should end up with something that looks like to the Example to the right.
+All of the sections of the mesh have been mapped,
+and all those maps are laid out in the same UV Texture map. Congratulations! From here,
+it is a simple matter of &#8220;stitching&#8221; (discussed in the next section)
+to construct the entire UV Map as a single map.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Manual-UV-Unwrap-Combo.jpg"><img alt="../../../../../_images/Manual-UV-Unwrap-Combo.jpg" src="../../../../../_images/Manual-UV-Unwrap-Combo.jpg" style="width: 300px;" /></a>
+<p class="caption">UV Maps Arranged and Stitched</p>
+</div>
+<p>When you have completed arranging and stitching, you will end up with a consolidated UV Map,
+like that shown to the right, arranged such that a single image will cover, or paint,
+all of the mesh that needs detailed painting.
+All of the detailed instructions on how to do this are contained in the next section.
+The point of this paragraph is to show you the ultimate goal.
+Note that the mesh shown is Mirrored along the Z axis,
+so the right side of the face is virtual; it is an exact copy of the right,
+so only one set of UVs actually exist. (If more realism is desired,
+the <em>Mirror</em> modifier would be applied, resulting in a physical mirror and a complete head.
+You could then make both side physically different by editing one side and not the other.
+Unwrapping would produce a full set of UVs (for each side)
+and painting could thus be different for each side of the face, which is more realistic.)</p>
+</div>
+<div class="section" id="average-island-scale">
+<h3>Average Island Scale<a class="headerlink" href="#average-island-scale" title="Permalink to this headline">¶</a></h3>
+<p>Using the <em>Average Island Scale</em> tool, shortcut <tt class="kbd docutils literal"><span class="pre">Ctrl-A</span></tt>,
+will scale each UV island so that they are all approximately the same scale.</p>
+</div>
+<div class="section" id="packing-islands">
+<h3>Packing Islands<a class="headerlink" href="#packing-islands" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Pack Islands</em> tool, shortcut <tt class="kbd docutils literal"><span class="pre">Ctrl-P</span></tt>, will uniformly scale,
+then individually transform each Island so that they fill up the UV space as much as possible.
+This is an important tool for efficiently making use of the texture space.</p>
+</div>
+<div class="section" id="constraining-to-image-bounds">
+<h3>Constraining to Image Bounds<a class="headerlink" href="#constraining-to-image-bounds" title="Permalink to this headline">¶</a></h3>
+<p>Turning on <em>Constrain to Image Bounds</em> will prevent UVs from being moved outside the
+0 to 1 UV range.</p>
+<div class="figure">
+<img alt="../../../../../_images/Manual-Part-IV-uv_transform_menu.jpg" src="../../../../../_images/Manual-Part-IV-uv_transform_menu.jpg" />
+<p class="caption">UV Transformation Menu.</p>
+</div>
+</div>
+<div class="section" id="iteration-and-refinement">
+<h3>Iteration and Refinement<a class="headerlink" href="#iteration-and-refinement" title="Permalink to this headline">¶</a></h3>
+<p>At least for common people, we just don&#8217;t &#8220;get it right the first time.&#8221; It takes building on
+an idea and iterating our creative process until we reach that magical milestone called
+&#8220;Done.&#8221; In software development, this is called the Spiral Methodology.</p>
+<p>Applied to Computer Graphics, we cycle between modeling, texturing, animating,
+and then back to making some modifications to mesh, re-UV mapping, tweaking the animation,
+adding a bone or two, finding out we need a few more faces, so back to modeling, etc.
+We continue going round and round like this until we either run out of time, money,
+or patience, or, in some rare cases, are actually happy with our results.</p>
+</div>
+</div>
+<div class="section" id="refining-the-layout">
+<h2>Refining the Layout<a class="headerlink" href="#refining-the-layout" title="Permalink to this headline">¶</a></h2>
+<p>Refinement comes into play when we finally look at our character,
+and realize that we need more detail in a particular spot. For example,
+areas around the eyes might need crow&#8217;s feet, or we need to add a logo to the vest.
+As you start to edit the image,
+you realize that there just aren&#8217;t enough pixels available to paint the detail that you want.</p>
+<p>Your only choice is to expand the size (scale out) that UV face.
+Using the minimize stretch or scale commands,
+you expand the UV faces around the eyes or chest, allocating more pixels to those areas,
+but at the same time taking away pixels (detail) from something else,
+like the back of the head. After refining the UV map,
+you then edit the image so that it looks right and contains the details you want.</p>
+<div class="section" id="reusing-textures">
+<h3>Reusing Textures<a class="headerlink" href="#reusing-textures" title="Permalink to this headline">¶</a></h3>
+<p>Another consideration is the need to conserve resources. Each image file is loaded in memory.
+If you can re-use the same image on different meshes, it saves memory. So, for example,
+you might want to have a generic &#8216;face&#8217; painting, and use that on different characters,
+but alter the UV map and shape and props (sunglasses) to differentiate.</p>
+<p>You might want to have a &#8220;faded blue jeans&#8221; texture,
+and unwrap just the legs of characters to use that image.
+It would be good to have a generic skin image, and use that for character&#8217;s hands, feet, arms,
+legs, and neck. When modeling a fantasy sword,
+a small image for a piece of the sword blade would suffice,
+and you would Reset Unwrap the sword faces to re-use that image down the length of the blade.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="applying_image.html" class="btn btn-neutral float-right" title="Applying Textures"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layout_management.html" class="btn btn-neutral" title="Managing UV Maps"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

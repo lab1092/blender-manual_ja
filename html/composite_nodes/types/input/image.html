@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Image node &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Input Nodes" href="index.html"/>
+        <link rel="next" title="Movie Clip" href="movie_clip.html"/>
+        <link rel="prev" title="Render Layers Node" href="render_layers.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Compositing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node_groups.html">Node Groups</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Composite Nodes</a> &raquo;</li>
+      
+          <li><a href="../index.html">Types of Nodes</a> &raquo;</li>
+      
+          <li><a href="index.html">Input Nodes</a> &raquo;</li>
+      
+    <li>Image node</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/composite_nodes/types/input/image.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="image-node">
+<h1>Image node<a class="headerlink" href="#image-node" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Panel:    <a class="reference internal" href="../../../render/blender_render/materials/nodes/editor.html"><em>Node Editor</em></a> &#8211;&gt;
+<a class="reference internal" href="../../index.html"><em>Node Composition</em></a></div>
+<div class="line">Menu:     <tt class="kbd docutils literal"><span class="pre">Shift-A</span></tt> &#8211;&gt; <a class="reference internal" href="index.html"><em>Input</em></a> &#8211;&gt; Image</div>
+</div>
+</div>
+<div class="figure">
+<img alt="../../../_images/Tutorials-NTR-ComImage.jpg" src="../../../_images/Tutorials-NTR-ComImage.jpg" />
+<p class="caption">Image node</p>
+</div>
+<p>The <em>Image</em> node injects any image <a class="reference internal" href="../../../render/output.html"><em>format that is supported by Blender</em></a>.
+Besides inputting the actual image, this node can also input <em>Alpha</em> and depth (<em>Z</em>) values
+if the image has them. If the image is a MultiLayer format,
+all saved render passes are input. Use this node to input:</p>
+<ul class="simple">
+<li>A single image from a file (such as a JPG picture)</li>
+<li>Part or all of an animation sequence (such as the 30th to 60th frame)</li>
+<li>Part or all of a movie clip (such as an AVI file)</li>
+<li>the image that is currently in the UV/Image Editor (and possibly being painted)</li>
+<li>an image that was loaded in the UV/Image Editor</li>
+</ul>
+<p>Animated image sequences or video files can also be used.
+See <a class="reference internal" href="#animations">Animations</a> below.</p>
+<p>To select an image file or generated image from the UV/Image Editor,
+click on the small arrow selector button to the left of the name and pick an existing image
+(e.g. loaded in the UV editor or elsewhere)
+or click on <em>LOAD NEW</em> to select a file from your hard disk via a file-browser.
+These images can be e.g. previously rendered images, matte paintings, a picture of your cat,
+whatever. Blender really doesn&#8217;t care.</p>
+<p>If the image is part of a sequence,
+manually click the Image Type selector to the right of the name, and select <em>Sequence</em>.
+Additional controls will allow you to define how much of the sequence to pull in
+(see Animations below). If the file is a video file, these controls will automatically appear.</p>
+<div class="section" id="image-channels">
+<h2>Image Channels<a class="headerlink" href="#image-channels" title="Permalink to this headline">¶</a></h2>
+<p>When the image is loaded, the available channels will be shown as sockets on the node.
+As a minimum, the Image, Alpha, and Z channels are made available.
+The picture may or may not have an alpha (transparency) and/or Z (depth) channel,
+depending on the format. If the image format does not support A and/or Z,
+default values are supplied (1.0 for A, 0.0 for Z).</p>
+<dl class="docutils">
+<dt>Alpha/Transparency Channel</dt>
+<dd><ul class="first last simple">
+<li>If a transparency channel is detected, the <em>Alpha</em> output socket will supply it.</li>
+<li>If it does not have an Alpha channel (e.g. JPG images),
+Blender will supply one, setting the whole image to completely opaque
+(an Alpha of 1.00, which will show in a <em>Viewer</em>
+node as white - if connected to the <em>Image</em> input socket).</li>
+</ul>
+</dd>
+<dt>Z/depth Channel</dt>
+<dd><ul class="first last simple">
+<li>If a Z (depth) channel is detected, the <em>Z</em> output socket will supply it.</li>
+<li>If it does not have a Z channel (e.g. JPG or PNG images),
+Blender will supply one, setting the whole image to be at the camera (a depth of 0.00).
+To view the Z-depth channel, use the Map Value to ColorRamp noodle given above in the Render Layer input node
+(see <a class="reference internal" href="render_layers.html#render-layers-z-socket-usage"><em>Using the Z value Socket</em></a> ).</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Formats</p>
+<p class="last">Blender supports many image formats.
+Currently only the OpenEXR image format stores RGB (color), A (alpha), and Z (depth)
+buffer information in a single file, if enabled.</p>
+</div>
+</div>
+<div class="section" id="saving-retrieving-render-passes">
+<h2>Saving/Retrieving Render Passes<a class="headerlink" href="#saving-retrieving-render-passes" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/Manual-Nodes-Input-Multilayer.jpg" src="../../../_images/Manual-Nodes-Input-Multilayer.jpg" />
+</div>
+<p>Blender can save the individual Render Layers and specific passes in a MultiLayer file format,
+which is an extension of the OpenEXR format. In this example,
+we are reading in frames 50 to 100 of a RenderLayer that were generated some time ago.
+The passes that were saved were the Image, Alpha, Z, Specular and AO passes.</p>
+<p>To create a MultiLayer image set when initially rendering, simply disable Do Composite,
+set your Format to MultiLayer,
+enable the Render Layer passes you wish to save over the desired frame range, and Animate.
+Then, in Blender, enable Compositing Nodes and Do Composite,
+and use the Image input node to read in the EXR file. When you do, you will see each of the
+saved passes available as sockets for you to use in your compositing noodle.</p>
+</div>
+<div class="section" id="image-size">
+<h2>Image Size<a class="headerlink" href="#image-size" title="Permalink to this headline">¶</a></h2>
+<p>Size matters - Pay attention to image resolution and color depth when mixing and matching
+images. Aliasing (rough edges), color <em>flatness</em>,
+or distorted images can all be traced to mixing inappropriate resolutions and color depths.</p>
+<p>The compositor can mix images with any size,
+and will only perform operations on pixels where images have an overlap.
+When nodes receive inputs with differently sized Images, these rules apply:</p>
+<ul class="simple">
+<li>The first/top Image input socket defines the output size.</li>
+<li>The composite is centered by default,
+unless a translation has been assigned to a buffer using a <em>Translate</em> node.</li>
+</ul>
+<p>So each node in a composite can operate on different sized images, as defined by its inputs.
+Only the <em>Composite</em> output node has a fixed size,
+as defined by the <em>Scene buttons</em> (Format Panel).
+The <em>Viewer</em> node always shows the size from its input, but when not linked
+(or linked to a value) it shows a small 320x256 pixel image.</p>
+</div>
+<div class="section" id="animations">
+<h2>Animations<a class="headerlink" href="#animations" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Image-anicontrols.jpg" src="../../../_images/Manual-Compositing-Node-Image-anicontrols.jpg" />
+</div>
+<p>To use image sequences or movies within your composition,
+press the face or little film strip button located to the right of the selector. As you click,
+a pop-up will offer you four choices:</p>
+<ul class="simple">
+<li>Generated -</li>
+<li>Sequence - a sequence of frames, each frame in a separate file.</li>
+<li>Movie - a sequence of frames packed into a single <tt class="docutils literal"><span class="pre">.avi</span></tt> or <tt class="docutils literal"><span class="pre">.mov</span></tt> file</li>
+<li>Image - a single frame or still image in a file</li>
+</ul>
+<p>A Movie or Image can be named anything,
+but a Sequence must have a digit sequence somewhere in its filename,
+for example fire0001set.jpg, fire0002set.jpg, fire0003set.jpg and so on.
+The number indicates the frame.</p>
+<p>If a Sequence or Movie is selected, an additional set of controls will appear that allows you
+to select part or all of the sequence. Use these controls to specify which frames,
+out of the original sequence,
+that you want to introduce into the animation you are about to render.
+You can start at the beginning and only use the beginning,
+or even pick out a set of frames from the middle of an existing animation.</p>
+<p>The <em>Frs</em> number button is the number of frames in the sequence that you want to show.
+For example, if you want to show 2 seconds of the animation, and are running 30 fps, you would put 60 here.</p>
+<p>The <em>SFra</em> number button sets the start frame of the animation; namely, at what
+point in the animation that you <em>are going to render</em> do you want this sequence to start
+playing. For example,
+if you want to introduce this clip ten seconds into the composite output,
+you would put 300 here (at 30 fps).</p>
+<p>The <em>First</em> number button sets the first number in the animated sequence name.
+For example, if your images were called &#8220;credits-0001.png&#8221;, &#8220;credits-0002.png&#8221; through
+&#8220;credits-0300.png&#8221; and you wanted to start picking up with frame 20, you&#8217;d put 20 here.</p>
+<p>To have the movie/sequence start over and repeat when it is done,
+press the <em>Cycl</em> ic button. For example, if you were compositing a fan into a room,
+and the fan animation lasted 30 frames, the animation would start over at frame 31, 61, 91,
+and so on, continuously looping. As you scrub from frame to frame,
+to see the actual video frame used for the current frame of animation,
+press the auto button to the right of the <em>Cycl</em> ic button.</p>
+</div>
+<div class="section" id="generated-images">
+<h2>Generated Images<a class="headerlink" href="#generated-images" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Image-Generagedjpg">Using the Nodes to modify a painting in progress in the
+UV/Image window</a>
+Blender features <a class="reference internal" href="../../../render/blender_render/textures/painting/projection.html"><em>Texture Paint</em></a>
+which works in the UV/Image Editor, that allows you to paint on the fly, and the image is kept in memory or saved.
+If sync lock is enabled (the lock icon in the header),
+changes are broadcast throughout Blender as soon as you lift the mouse button.
+One of the places that the image can go is to the Image Input node.
+The example shows a painting session going on in the right-hand UV/Image Editor window for the painting &#8220;Untitled&#8221;.
+Create this image via Image?New in the UV/Image Editor.
+Refer to the texture paint section of the user maual for more info on using Texture Paint.</p>
+<p>In the left-hand window, the Image input node was used to select that &#8220;Untitled&#8221; image.
+Notice that the Image type icon is blank, indicating that it is pulling in a Generated image.
+That image is colorized by the noodle,
+with the result used as a backdrop in the Node Editor Window.</p>
+<p>Using this setup and the Generated Image type is like painting and post-processing as you
+continue painting.
+Changes to either the painting or the post-pro noodle are dynamic and real-time.</p>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p><strong>No Frame Stretching or Compression:</strong>
+If the input animation (avi or frame set) was encoded at a frame rate that is <em>different</em> from your current settings,
+the resultant animation will appear to run faster or slower. Blender Nodes do not adjust input video frame rates.
+Use the scale control inside the <a class="reference internal" href="../../../editors/sequencer/index.html"><em>Video Sequence Editor</em></a> to stretch or compress video
+to the desired speed, and input it here.
+You can incorporate &#8220;Slow-Mo&#8221; into your video.
+To do so, <em>ANIM</em> ate a video segment at 60 frames per second,
+and input it via this node, using Render settings that have an animation frame rate of the normal 30 fps;
+the resulting video will be played at half speed. Do the opposite to mimic Flash running around at hyperspeed.</p>
+<p>AVI (Audio Video Interlaced)
+files are encoded and often compressed using a routine called a <em>Codec</em>. You must have a
+codec installed on your machine and available to Blender that understands and is able to read
+the file, in order for Blender to be able to de-code and extract frames from the file. If you
+get the error message <strong>FFMPEG or unsupported video format</strong> when trying to load
+the file, you need to get a Codec that understands the video file.
+Contact the author of the file and find out how it was encoded. An outside package,
+such as VirtualDub, might help you track this information down.
+Codecs are supplied by video device manufacturers, Microsoft, DivX, and Xvid, among others,
+and can often be downloaded from their web sites for free.</p>
+</div>
+<div class="section" id="splicing-video-sequences-using-nodes">
+<h2>Splicing Video Sequences using Nodes<a class="headerlink" href="#splicing-video-sequences-using-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The above animation controls, coupled with a little mixing,
+is all you need to splice video sequences together. There are many kinds of splices:</p>
+<ul class="simple">
+<li>Cut Splice - literally the ends of the footage are just stuck together</li>
+<li>Fade In - The scene fades in, usually from black</li>
+<li>Fade Out - The scene fades out, usually to black</li>
+<li>Mix - Toward the end of one scene, the images from the next scene meld in as the first scene fades</li>
+<li>Winking and Blinking - fading one cut out while the other fades in, partially or totally through black</li>
+<li>Bumps and Wipes - one cut bumps the other one out of frame, or wipes over it (like from the top left corner down)</li>
+</ul>
+<div class="section" id="cut-splicing-using-nodes">
+<h3>Cut Splicing using Nodes<a class="headerlink" href="#cut-splicing-using-nodes" title="Permalink to this headline">¶</a></h3>
+<p>In the example noodle below, we have two pieces of footage that we want to cut splice together.</p>
+<ul class="simple">
+<li>Magic Monkey - named 0001.png through 0030.png</li>
+<li>Credits - named credits0001.png through credits0030.png</li>
+</ul>
+<p>The editor has reviewed the Credits and thought the first two frames could be thrown away
+(onto the cutting room floor, as they say) along with the last 8,
+leaving 20 frames from the total shot. Not shown in this image, but crucial,
+is that in the Output panel, we set our render output filename to &#8220;Monkey-Credits-&#8221;,
+and our Animation start and end frames to 1 and 50 (30 from the Monkey, 20 from the credits).
+Notice the Time node; it tells the Mix node to use the top image until frame 30, and then,
+at frame 31, changes the Mix factor to 1, which means to use the bottom set of images.</p>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-CutSplice.jpg" src="../../../_images/Manual-Compositing-CutSplice.jpg" />
+<p class="caption">Cut Splice using Nodes</p>
+</div>
+<p>Upon pressing the ANIM button, Blender will composite the animation.
+If you specified an image format for output, for example, PNG, Blender will create 50 files,
+named &#8220;Monkey-Credits-0001.png&#8221; through &#8220;Monkey-Credits-0050.png&#8221;.
+If you specified a movie format as output, such as AVI-JPEG,
+then Blender will create only one file, &#8220;Monkey-Credits-.avi&#8221;, containing all 50 frames.</p>
+<p>Use cut scenes for rapid-fire transition, conveying a sense of energy and excitement,
+and to pack in a lot of action in a short time.
+Try to avoid cutting from a dark scene to a light one, because it&#8217;s hard on the eyes.
+It is very emotionally contrasting, and sometimes humorous and ironic,
+to cut from a very active actor in one scene to a very still actor in another scene,
+a la old Road Runner and Coyote scenes.</p>
+</div>
+<div class="section" id="fade-splicing-using-nodes">
+<h3>Fade Splicing using Nodes<a class="headerlink" href="#fade-splicing-using-nodes" title="Permalink to this headline">¶</a></h3>
+<p>In the previous topic, we saw how to cut from one sequence to another. To fade in or out,
+we simply replace one set of images with a flat color,
+and expand the Time frame for the splice. In the image below, beginning at frame 20,
+we start fading <strong>out</strong> to cyan:</p>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-fadeout.jpg" src="../../../_images/Manual-Compositing-fadeout.jpg" />
+<p class="caption">Fading Out using Nodes</p>
+</div>
+<p>Cyan was chosen because that is the color of the Monkey at that time,
+but you can just as easily choose any color. The image below shows frame 30,
+when we have almost faded completely.</p>
+<p>To fade <strong>in</strong>, change the Mix node and plug the image sequence into the bottom socket,
+and specify a flat color for the top socket.</p>
+</div>
+<div class="section" id="mix-splice-using-nodes">
+<h3>Mix Splice using Nodes<a class="headerlink" href="#mix-splice-using-nodes" title="Permalink to this headline">¶</a></h3>
+<p>To mix, or crossover, from one scene to the next,
+start feeding the second scene in while the first is mixing out. The noodle below shows frame
+25 of a mix crossover special effect to transition from one scene to the next,
+beginning at frame 20 with the transition completed by frame 30. Action continues in the first
+scene as it fades out and is mixed with action that starts in the second scene.</p>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Splice-mix.jpg" src="../../../_images/Manual-Compositing-Splice-mix.jpg" />
+<p class="caption">Mix Splice using Nodes</p>
+</div>
+<p>Use this effect to convey similarities between the two scenes. For example,
+Scene 1 is the robber walking down the street, ending with the camera focusing in on his feet.
+Scene 2 is a cop walking down the street after him,
+starting with his feet and working its way up to reveal that the cop is following the robber.</p>
+</div>
+<div class="section" id="wink-splice-using-nodes">
+<h3>Wink Splice using Nodes<a class="headerlink" href="#wink-splice-using-nodes" title="Permalink to this headline">¶</a></h3>
+<p>A Wink is just like blinking your eyes; one scene fades to black and the other fades in.
+To use Blender to get this effect, build on the Cut and Fade splices discussed above to yield:</p>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Splice-wink.jpg" src="../../../_images/Manual-Compositing-Splice-wink.jpg" />
+<p class="caption">A Wink using Nodes</p>
+</div>
+<p>In the above example, showing frame 27, we have adjusted some parameters to show you the power
+of Blender and how to use its Nodes to achieve just the blended crossover effect you desire:</p>
+<ul class="simple">
+<li>Postfeed: Even though there were only 15 frames of animation in the Toucan strip,
+the cutover (top Time node) does not occur until frame 30.
+Blender continues to put out the last frame of an animation,
+<em>automatically extending it for you</em>, for frames out of the strip&#8217;s range.</li>
+<li>Prefeed: Even though the swirl does not start playing until frame 34,
+Blender supplies the first frame of it for Frames 31 through 33.
+In fact, it supplies this image all the way back to frame 1.</li>
+<li>Partial Fade: Notice the second &#8216;wink&#8217; Time node.
+Like a real wink, it does not totally fade to black; only about 75%.
+When transitioning between scenes where you want some visual carryover,
+use this effect because there is not a break in perceptual sequence.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Multiple Feeds</p>
+<p class="last">The above examples call out two feeds, but by replicating the Input, Time and Mix nodes,
+you can have multiple feeds at any one time;
+just set the Time node to tell the Mixer when to cut over to using it.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="movie_clip.html" class="btn btn-neutral float-right" title="Movie Clip"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="render_layers.html" class="btn btn-neutral" title="Render Layers Node"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

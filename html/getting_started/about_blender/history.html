@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Blender’s History &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="About Blender" href="index.html"/>
+        <link rel="next" title="About Free Software and the GPL" href="license.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Getting Started</a> &raquo;</li>
+      
+          <li><a href="index.html">About Blender</a> &raquo;</li>
+      
+    <li>Blender&#8217;s History</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/getting_started/about_blender/history.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="blender-s-history">
+<h1>Blender&#8217;s History<a class="headerlink" href="#blender-s-history" title="Permalink to this headline">¶</a></h1>
+<p>In 1988 Ton Roosendaal co-founded the Dutch animation studio NeoGeo. NeoGeo quickly became
+the largest 3D animation studio in the Netherlands and one of the leading animation houses in
+Europe. NeoGeo created award-winning productions
+(European Corporate Video Awards 1993 and 1995)
+for large corporate clients such as multi-national electronics company Philips.
+Within NeoGeo Ton was responsible for both art direction and internal software development.
+After careful deliberation Ton decided that the current in-house 3D toolset for NeoGeo was
+too old and cumbersome to maintain, and needed to be rewritten from scratch. In
+1995 this rewrite began and was destined to become the 3D software creation we all know as
+Blender. As NeoGeo continued to refine and improve Blender it became apparent to Ton that
+Blender could be used as a tool for other artists outside of NeoGeo.</p>
+<p>In 1998, Ton decided to found a new company called Not a Number (NaN)
+as a spin-off of NeoGeo to further market and develop Blender.
+At the core of NaN was a desire to create and distribute a compact,
+cross platform 3D application for free. At the time this was a revolutionary concept as most
+commercial 3D applications cost thousands of dollars. NaN hoped to bring professional
+level 3D modeling and animation tools within the reach of the general computing public.
+NaN&#8217;s business model involved providing commercial products and services around Blender. In
+1999 NaN attended its first SIGGRAPH conference in an effort to more widely promote Blender.
+Blender&#8217;s first SIGGRAPH convention was a huge success and gathered a tremendous amount of
+interest from both the press and attendees.
+Blender was a hit and its huge potential confirmed!</p>
+<p>Following the success of the SIGGRAPH conference in early 2000, NaN secured financing of €4.5M from
+venture capitalists. This large inflow of cash enabled NaN to rapidly expand its operations.
+Soon NaN boasted as many as fifty employees working around the world trying to improve and promote Blender.
+In the summer of 2000, Blender 2.0 was released.
+This version of Blender added the integration of a game engine to the 3D application.
+By the end of 2000, the number of users registered on the NaN website surpassed 250,000.</p>
+<p>Unfortunately, NaN&#8217;s ambitions and opportunities didn&#8217;t match the company&#8217;s capabilities and
+the market realities of the time. This over-extension resulted in restarting NaN with new
+investor funding and a smaller company in April 2001.
+Six months later NaN&#8217;s first commercial software product, Blender Publisher was launched.
+This product was targeted at the emerging market of interactive web-based 3D media.
+Due to disappointing sales and the ongoing difficult economic climate,
+the new investors decided to shut down all NaN operations.
+The shutdown also included discontinuing the development of Blender.
+Although there were clearly shortcomings in the then current version of Blender,
+such as a complex internal software architecture,
+unfinished features and a non-standard way of providing the GUI, the enthusiastic support from
+the user community and customers who had purchased Blender Publisher in the past meant that
+Ton couldn&#8217;t justify leaving Blender to fade into insignificance.
+Since restarting a company with a sufficiently large team of developers wasn&#8217;t feasible,
+Ton Roosendaal founded the non-profit organization Blender Foundation in March 2002.</p>
+<p>The Blender Foundation&#8217;s primary goal was to find a way to continue developing and promoting
+Blender as a community-based <a class="reference external" href="http://www.opensource.org/">open source</a> project. In July 2002,
+Ton managed to get the NaN investors to agree to a unique Blender Foundation plan to attempt
+to release Blender as open source. The &#8220;Free Blender&#8221; campaign sought to raise €100,000 so
+that the Foundation could buy the rights to the Blender source code and intellectual property
+rights from the NaN investors and subsequently release Blender to the open source community.
+With an enthusiastic group of volunteers, among them several ex-NaN employees,
+a fund raising campaign was launched to &#8220;Free Blender&#8221;.
+To everyone&#8217;s surprise and delight the campaign reached the €100,000 goal in only seven short weeks.
+On Sunday October 13, 2002,
+Blender was released to the world under the terms of the <a class="reference external" href="http://www.gnu.org/copyleft/gpl">GNU GPL</a>.
+Blender development continues to this day driven by a team of dedicated volunteers from around the
+world led by Blender&#8217;s original creator, Ton Roosendaal.</p>
+<div class="section" id="video-from-blender-1-60-to-2-50">
+<h2>Video: From Blender 1.60 to 2.50<a class="headerlink" href="#video-from-blender-1-60-to-2-50" title="Permalink to this headline">¶</a></h2>
+<iframe src="//player.vimeo.com/video/8567074" style="border: 0; height: 390px; width: 640px">
+</iframe></div>
+<div class="section" id="version-revision-milestones">
+<h2>Version/Revision Milestones<a class="headerlink" href="#version-revision-milestones" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-start">
+<h3>The start!<a class="headerlink" href="#the-start" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1.00 - January 1994: Blender
+<a class="reference external" href="http://code.blender.org/index.php/2013/12/how-blender-started-twenty-years-ago/">in development</a>
+at animation studio NeoGeo.</li>
+<li>1.23 - January 1998: SGI version published on the web, IrisGL.</li>
+<li>1.30 - April 1998: Linux and FreeBSD version, port to OpenGL and X11.</li>
+<li>1.3x - June 1998: NaN founded.</li>
+<li>1.4x - September 1998: Sun and Linux Alpha version released.</li>
+<li>1.50 - November 1998: First Manual published.</li>
+<li>1.60 - April 1999: C-key (new features behind a lock, $95), Windows version released.</li>
+<li>1.6x - June 1999: BeOS and PPC version released.</li>
+<li>1.80 - June 2000: End of C-key, Blender full freeware again.</li>
+<li>2.00 - August 2000: Interactive 3D and real-time engine.</li>
+<li>2.10 - December 2000: New engine, physics, and Python.</li>
+<li>2.20 - August 2001: Character animation system.</li>
+<li>2.21 - October 2001: Blender Publisher launch.</li>
+<li>2.2x - December 2001: Mac OSX version.</li>
+</ul>
+</div>
+<div class="section" id="blender-goes-open-source">
+<h3>Blender goes Open Source<a class="headerlink" href="#blender-goes-open-source" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>13 October 2002: Blender goes Open Source, 1st Blender Conference</strong>.</li>
+<li>2.25 - October 2002:
+<a class="reference external" href="http://download.blender.org/release/Publisher2.25/">Blender Publisher</a> becomes freely available.</li>
+<li>Tuhopuu1 - Oct 2002: The experimental tree of Blender is created, a coder&#8217;s playground.</li>
+<li>2.26 - February 2003: The first true open source Blender release.</li>
+<li>2.27 - May 2003: The second open source Blender release.</li>
+<li>2.28x - July 2003: First of the 2.28x series.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-230/">2.30</a> - October 2003:
+Preview release of the 2.3x UI makeover presented at the 2nd Blender Conference.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-231/">2.31</a> - December 2003:
+Upgrade to stable 2.3x UI project.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-232/">2.32</a> - January 2004:
+Major overhaul of internal rendering capabilities.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-233/">2.33</a> - April 2004:
+Game Engine returns, ambient occlusion, new procedural textures.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-234/">2.34</a> - August 2004:
+Particle interactions, LSCM UV mapping, functional YafRay integration, weighted creases in subdivision surfaces,
+ramp shaders, full OSA, and many many more.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-235a/">2.35</a> - November 2004:
+Another version full of improvements: object hooks, curve deforms and curve tapers,
+particle duplicators and much more.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-236/">2.36</a> - December 2004:
+A stabilization version, much work behind the scene, normal and displacement mapping improvements.</li>
+<li><a class="reference external" href="http://archive.blender.org/development/release-logs/blender-237a/">2.37</a> - June 2005:
+Transformation tools and widgets, softbodies, force fields, deflections,
+incremental subdivision surfaces, transparent shadows, and multi-threaded rendering.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.40">2.40</a> - December 2005:
+Full rework of armature system, shape keys, fur with particles, fluids and rigid bodies.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.41">2.41</a> - January 2006:
+Lots of fixes, and some game engine features.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.42">2.42</a> - July 2006:
+The nodes release, array modifier, vector blur, new physics engine, rendering, lip sync, and many other features.
+This was the release following <a class="reference external" href="http://orange.blender.org/">Project Orange</a>.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.43">2.43</a> - February 2007:
+Multi-resolution meshes, multi-layer UV textures, multi-layer images and multi-pass rendering and baking,
+sculpting, retopology, multiple additional matte, distort and filter nodes, modeling and animation improvements,
+better painting with multiple brushes, fluid particles,
+proxy objects, sequencer rewrite, and post-production UV texturing.</li>
+<li><a class="reference external" href="http://www.blender.org/development/release-logs/blender-244">2.44</a> - May 2007:
+The big news, in addition to two new modifiers and re-awakening the 64-bit OS support, was the addition
+of subsurface scattering, which simulates light scattering beneath the surface of organic and soft objects.</li>
+<li><a class="reference external" href="http://www.blender.org/development/release-logs/blender-245/">2.45</a> - September 2007:
+Serious bug fixes, with some performance issues addressed.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.46">2.46</a> - May 2008:
+The Peach release was the result of a huge effort of over 70 developers providing enhancements to
+provide hair and fur, a new particle system, enhanced image browsing, cloth, a seamless
+and non-intrusive physics cache, rendering improvements in reflections, AO, and render baking, a mesh deform
+modifier for muscles and such, better animation support via armature tools and drawing, skinning,
+constraints and a colorful Action Editor, and much more. It was the release following
+<a class="reference external" href="http://peach.blender.org/">Project Peach</a>.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.47">2.47</a> - August 2008:
+Bugfix release.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.48">2.48</a> - October 2008:
+The Apricot release, cool GLSL shaders, lights and GE improvements, snap, sky simulator, shrinkwrap
+modifier, and Python editing improvements.
+This was the release following <a class="reference external" href="http://apricot.blender.org/">Project Apricot</a>.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.49">2.49</a> - June 2009:
+Node-based textures, armature sketching (called Etch-a-Ton), boolean mesh operation improvements,
+JPEG2000 support, projection painting for direct transfer of images to models, and a significant Python
+script catalogue. GE enhancements included video textures, where you can play movies in-game, upgrades
+to the Bullet physics engine, dome (fish-eye) rendering, and more API GE calls made available.</li>
+</ul>
+</div>
+<div class="section" id="blender-2-5-the-recode">
+<h3>Blender 2.5 - The Recode!<a class="headerlink" href="#blender-2-5-the-recode" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:2.5/Source">2.5x</a> - From 2009 to August 2011:
+This series released four <a class="reference external" href="http://archive.blender.org/development/release-logs/blender-256-beta">pre-version</a>
+(from Alpha 0 in November 2009 to Beta in July 2010) and three stable versions (from 2.57 - April 2011
+- to 2.59 - August 2011). It is one of the most important development projects, with a total refactor of
+the software with new functions, redesign of the internal window manager and event/tool/data handling system,
+and new Python API. The final version of this project was Blender 2.59 in August 2011.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.60">2.60</a> - October 2011:
+Internationalization of the UI, improvements in animation system and the GE, vertex weight groups modifiers,
+3D audio and video, bug fixes, and the UI internationalization.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.61">2.61</a> - December 2011:
+The Cycles renderer was added in trunk, the camera tracker was added, dynamic paint for modifying textures
+with mesh contact/approximation, the Ocean Sim modifier to simulate ocean and foam, new add-ons, bug fixes,
+and more extensions added for the Python API.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.62">2.62</a> - February 2012:
+The <a class="reference external" href="http://carve-csg.com/">Carve</a> library was added to improve boolean operations, support for
+object tracking was added, the Remesh modifier was added, many improvements in the GE, matrices and
+vectors in the Python API were improved, new add-ons, and many bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.63">2.63</a> - April 2012:
+Bmesh was merged to trunk with full support for n-sided polygons, sculpt hiding, a panoramic camera
+for Cycles, mirror ball environment textures and float precision textures, render layer mask layers,
+ambient occlusion and viewport display of background images and render layers, new import and export
+add-ons were added, and 150 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.64">2.64</a> - October 2012:
+Mask editor, improved motion tracker, OpenColorIO, Cycles improvements, sequencer improvements,
+better mesh tools (Inset and Bevel were improved), new keying nodes, sculpt masking, Collada improvements,
+new skin modifier, new compositing nodes backend, and many bugs were fixed.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.65">2.65</a> - December 2012:
+Fire and smoke improvements, anisotropic shader for Cycles, modifier improvements,
+bevel tool now includes rounding,
+new add-ons, and over 200 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.66">2.66</a> - February 2013:
+Dynamic topology, rigid body simulation, improvements in UI and usability (including retina display
+support), Cycles now supports hair, the bevel tool now supports individual vertex bevelling,
+new <a class="reference internal" href="../../modifiers/modify/mesh_cache.html"><em>Mesh Cache</em></a> modifier and the
+new <a class="reference internal" href="../../modifiers/modify/uv_warp.html"><em>UV Warp</em></a> modifier,
+new SPH particle fluid solver. More than 250 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.67">2.67</a> - May 2013:
+Freestyle was added, paint system improvements, subsurface scattering for Cycles, Ceres library in the
+motion tracker, new custom python nodes, new mesh modeling tools, better support for UTF8 text and
+improvements in text editors, new add-ons for 3D printing, over 260 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.68">2.68</a> - July 2013:
+New and improved modeling tools, three new Cycles nodes, big improvements in the motion tracker,
+Python scripts and drivers are disabled by default when loading files for security reasons, and over 280 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.69">2.69</a> - October 2013:
+Even more modeling tools, Cycles improved in many areas, plane tracking is added to the motion tracker,
+better support for FBX import/export, and over 270 bugs fixed.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.70">2.70</a> - March 2014:
+Cycles gets basic volumetric support on the CPU, more improvements to the motion tracker, two new modeling
+modifiers, some UI consistency improvements, and more than 560 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.71">2.71</a> - June 2014:
+Deformation motion blur and fire/smoke support is added to Cycles, UI popups are now draggable,
+performance optimizations for sculpting mode, new interpolation types for animation, many improvements
+to the GE, and over 400 bug fixes.</li>
+<li><a class="reference external" href="http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.72">2.72</a> - October 2014:
+Cycles gets volume and SSS support on the GPU, pie menus are added and tooltips greatly improved,
+the intersection modeling tool is added, new sun beam node for the compositor, Freestyle now works with
+Cycles, texture painting workflow is improved, and more than 220 bug fixes.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="About Free Software and the GPL"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

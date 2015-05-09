@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Line Set &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Parameter Editor" href="index.html"/>
+        <link rel="next" title="Line Style &amp; Modifiers" href="line_style.html"/>
+        <link rel="prev" title="Introduction to Parameter Editor" href="introduction.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../index.html">Freestyle</a> &raquo;</li>
+      
+          <li><a href="index.html">Parameter Editor</a> &raquo;</li>
+      
+    <li>Line Set</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/render/freestyle/parameter_editor/line_set.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="line-set">
+<h1>Line Set<a class="headerlink" href="#line-set" title="Permalink to this headline">¶</a></h1>
+<p>A line set selects, among the lines (edges) detected by Freestyle,
+which ones will be rendered using its attached <a class="reference internal" href="line_style.html"><em>line style</em></a>,
+through various methods.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-2.6-Render-freestyle-BasicEdgeTypeSelectionEx.jpg"><img alt="../../../_images/Manual-2.6-Render-freestyle-BasicEdgeTypeSelectionEx.jpg" src="../../../_images/Manual-2.6-Render-freestyle-BasicEdgeTypeSelectionEx.jpg" style="width: 600px;" /></a>
+<p class="caption">Examples of some basic edge types by LightBWK
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:EdgeType.zip">File:EdgeType.zip</a>)</p>
+</div>
+<div class="section" id="selection-by-visibility">
+<h2>Selection by Visibility<a class="headerlink" href="#selection-by-visibility" title="Permalink to this headline">¶</a></h2>
+<p>There are three choices for selecting edges by visibility.</p>
+<dl class="docutils">
+<dt>Visible</dt>
+<dd>Only lines occluded by no surfaces are rendered.</dd>
+<dt>Hidden</dt>
+<dd>Lines occluded by at least one surface are rendered.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-2.6-Render-Freestyle-Hidden_Edges.jpg"><img alt="../../../_images/Manual-2.6-Render-Freestyle-Hidden_Edges.jpg" src="../../../_images/Manual-2.6-Render-Freestyle-Hidden_Edges.jpg" style="width: 600px;" /></a>
+<p class="caption">Proof of concept of visible and hidden edges by LightBWK
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:HiddenCreaseEdgeMark.zip">Sample .blend</a>)</p>
+</div>
+<dl class="docutils">
+<dt>QI Range</dt>
+<dd>QI stands for <em>Quantitative Invisibility</em>. Lines occluded by a number of surfaces in the given range are rendered.</dd>
+<dt>Start and End</dt>
+<dd>Only with <em>QI Range</em>, min/max number of occluding surfaces for a line to be rendered.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-2.6-Render-Freestyle-QI_Range.jpg"><img alt="../../../_images/Manual-2.6-Render-Freestyle-QI_Range.jpg" src="../../../_images/Manual-2.6-Render-Freestyle-QI_Range.jpg" style="width: 600px;" /></a>
+<p class="caption">QI Range proof of concept demo, Start: 3, End: 7, by LightBWK
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:QI-Range.zip">Sample .blend</a>)</p>
+</div>
+</div>
+<div class="section" id="selection-by-edge-types">
+<h2>Selection by Edge Types<a class="headerlink" href="#selection-by-edge-types" title="Permalink to this headline">¶</a></h2>
+<p>Edge types are basic algorithms for the selection of lines from geometry. When using the
+parameter editor you have to choose at least one edge type in order to get a render output,
+but several edge types can be combined in one line set.
+Edge types can also be excluded from calculation by pressing the <em>X</em> next to them.</p>
+<dl class="docutils">
+<dt>Silhouette</dt>
+<dd>Draws silhouettes around your closed objects; it is often good for organic objects (like Suzanne &amp; Sphere),
+and bad for sharp edges, like a box. It can&#8217;t render open mesh objects like open cylinders and flat planes.
+The output is affected by the <em>Kr Derivative Epsilon</em> viewmap setting.</dd>
+<dt>Crease</dt>
+<dd>Shows only edges whose adjacent faces form an angle greater than the defined viewmap&#8217;s <em>Crease Angle</em>.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-2.6-Render-Freestyle-CreaseConcept.jpg"><img alt="../../../_images/Manual-2.6-Render-Freestyle-CreaseConcept.jpg" src="../../../_images/Manual-2.6-Render-Freestyle-CreaseConcept.jpg" style="width: 600px;" /></a>
+<p class="caption">Crease Angle proof of concept for 121º by LightBWK
+( <a class="reference external" href="http://wiki.blender.org/index.php/File:CreaseAngle.zip">the .blend file</a>)</p>
+</div>
+<dl class="docutils">
+<dt>Border</dt>
+<dd>Border is for open/unclosed edge meshes; an open cylinder has an open edge at the top and bottom,
+and a plane is open all around. Suzanne&#8217;s eye socket is an open edge. All open edges will have lines rendered.
+This depends on the mesh structure.</dd>
+<dt>Edge Marks</dt>
+<dd>Renders marked edges. See
+<a class="reference internal" href="#edge-marks">Edge Marks</a> for details.</dd>
+<dt>Contour</dt>
+<dd>Draws the outer edges and inner open border.</dd>
+<dt>External Contour</dt>
+<dd>Draws the contour lines, but only on the outer edges.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-2.6-Render-Freestyle-ContourVsExternalContour.jpg"><img alt="../../../_images/Manual-2.6-Render-Freestyle-ContourVsExternalContour.jpg" src="../../../_images/Manual-2.6-Render-Freestyle-ContourVsExternalContour.jpg" style="width: 600px;" /></a>
+<p class="caption">Left pair: Contour; Right pair: External Contour</p>
+</div>
+<dl class="docutils">
+<dt>Suggestive Contour</dt>
+<dd>Draws some lines which would form the contour of the mesh if the viewport was shifted.
+Depends on your viewmap settings for <em>Kr Derivative Epsilon</em> and <em>Sphere Radius</em>
+(further information: <a class="reference external" href="http://wiki.blender.org/index.php/File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf">File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf</a>).</dd>
+<dt>Material Boundary</dt>
+<dd>Draws lines where two materials meet on the same object. Must be activated in the viewmap settings.</dd>
+<dt>Ridge &amp; Valley</dt>
+<dd>Draws ridges and valleys. Depends on your <em>Sphere Radius</em> viewmap settings.</dd>
+</dl>
+<div class="section" id="edge-marks">
+<h3>Edge Marks<a class="headerlink" href="#edge-marks" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/Manual-Part26-freestyle-mark-freestyle-edge.jpg" src="../../../_images/Manual-Part26-freestyle-mark-freestyle-edge.jpg" />
+<p class="caption">Select and mark Freestyle edges.</p>
+</div>
+<div class="figure">
+<img alt="../../../_images/Manual-Part26-freestyle-edge-mark.jpg" src="../../../_images/Manual-Part26-freestyle-edge-mark.jpg" />
+<p class="caption">Edge Mark setting in the Line Sets tab.</p>
+</div>
+<p>In edit mode you can mark &#8220;Freestyle Edges&#8221; in the same manner you can mark &#8220;Seams&#8221; for UV
+unwrapping or &#8220;Sharp&#8221; for edge split.
+These marked edges are available to render when you select <em>Edge Mark</em>.</p>
+<p>This is done as follows:</p>
+<ul class="simple">
+<li>Select your mesh and tab into <em>Edit</em> mode.</li>
+<li>Select the edges you want to be marked.</li>
+<li>Press <tt class="kbd docutils literal"><span class="pre">Ctrl-E</span></tt> and select <em>Mark Freestyle Edge</em>.</li>
+</ul>
+<p>Edge marks are useful when you want to draw lines along particular mesh edges.
+The examples below explain the use of edge marks.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-edge-marks-viewport.jpg" src="../../../_images/Manual-Part26-freestyle-edge-marks-viewport.jpg" />
+<p class="caption">Marking Freestyle Edges in edit mode.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-edge-marks-disabled.jpg" src="../../../_images/Manual-Part26-freestyle-edge-marks-disabled.jpg" />
+<p class="caption">Render without Edge Marks.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-edge-marks-enabled.jpg" src="../../../_images/Manual-Part26-freestyle-edge-marks-enabled.jpg" />
+<p class="caption">Render with Edge Marks enabled.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The image on the left shows a sphere in <em>Edit</em> mode.
+The green lines are the edge marks. On the right you see a render without edge marks enabled.</p>
+<p>With edge marks enabled, the previously-marked lines are always rendered.
+You can see the black contour lines and the blue lines that are made with edge marks.</p>
+<p>What are edge marks good for?</p>
+<ul class="simple">
+<li>When you need to render marks on an almost-flat plane, when other edge types can&#8217;t detect any line.</li>
+<li>When you want full control of edge rendering. Often used for edges of squarish shapes.</li>
+<li>Mark the whole base mesh to be rendered for base mesh preview.</li>
+</ul>
+<p>What are edge marks not good for?</p>
+<ul class="simple">
+<li>Round outer edges (use instead <em>Contour</em> / <em>External Contour</em> / <em>Silhouette</em>).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="selection-by-face-marks">
+<h2>Selection by Face Marks<a class="headerlink" href="#selection-by-face-marks" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/Manual-Part26-freestyle-mark-freestyle-face.jpg" src="../../../_images/Manual-Part26-freestyle-mark-freestyle-face.jpg" />
+<p class="caption">Mark Freestyle Faces.</p>
+</div>
+<p>To set a face mark:</p>
+<ul class="simple">
+<li>Select a mesh and tab into <em>Edit</em> mode.</li>
+<li>Select the faces you want to be marked.</li>
+<li>Press <tt class="kbd docutils literal"><span class="pre">Ctrl-F</span></tt> and select <em>Mark Freestyle Face</em>.</li>
+</ul>
+<p>Face marks are useful for removing lines from certain areas of a mesh.</p>
+<p>In this example, two faces of the default cube are marked like the image on the left.
+On the right is a render without face marks activated.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-marks-viewport.jpg" src="../../../_images/Manual-Part26-freestyle-face-marks-viewport.jpg" />
+<p class="caption">Marked Faces.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-marks-disabled.jpg" src="../../../_images/Manual-Part26-freestyle-face-marks-disabled.jpg" />
+<p class="caption">Render Output.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-mark.jpg" src="../../../_images/Manual-Part26-freestyle-face-mark.jpg" />
+<p class="caption">Face mark options.</p>
+</div>
+<p>The line selection can be controlled via inclusion and faces options:</p>
+<dl class="docutils">
+<dt>Inclusive / Exclusive</dt>
+<dd>Whether to include or exclude edges matching defined face mark conditions from the line set.</dd>
+<dt>One Face</dt>
+<dd>(De)select all edges which have one or both neighbor faces marked.</dd>
+<dt>Both Faces</dt>
+<dd>(De)select all edges which have both of their neighbor faces marked.</dd>
+</dl>
+<p>The image below shows the resulting combinations.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-mark-inclusive-one.jpg" src="../../../_images/Manual-Part26-freestyle-face-mark-inclusive-one.jpg" />
+<p class="caption">Inclusive, One Face.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-mark-inclusive-both.jpg" src="../../../_images/Manual-Part26-freestyle-face-mark-inclusive-both.jpg" />
+<p class="caption">Inclusive, Both Faces.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-mark-exclusive-one.jpg" src="../../../_images/Manual-Part26-freestyle-face-mark-exclusive-one.jpg" />
+<p class="caption">Exclusive, One Face.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/Manual-Part26-freestyle-face-mark-exclusive-both.jpg" src="../../../_images/Manual-Part26-freestyle-face-mark-exclusive-both.jpg" />
+<p class="caption">Exclusive, Both Faces.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="selection-by-group">
+<h2>Selection by Group<a class="headerlink" href="#selection-by-group" title="Permalink to this headline">¶</a></h2>
+<p>You can include or exclude objects for line calculation, based on their belonging to a group.</p>
+<dl class="docutils">
+<dt>Group</dt>
+<dd>The name of the object group to use.</dd>
+<dt>Inclusive / Exclusive</dt>
+<dd>Whether to include or exclude lines from those objects in this line set.</dd>
+</dl>
+</div>
+<div class="section" id="selection-by-image-border">
+<h2>Selection by Image Border<a class="headerlink" href="#selection-by-image-border" title="Permalink to this headline">¶</a></h2>
+<p>If enabled,
+Freestyle only takes geometry within the image border into consideration for line calculation.
+This reduces render times but increases continuity problems when geometry is moved out of and
+into camera view.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="line_style.html" class="btn btn-neutral float-right" title="Line Style &amp; Modifiers"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction to Parameter Editor"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

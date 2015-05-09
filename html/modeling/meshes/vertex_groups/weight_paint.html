@@ -1,0 +1,831 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Weight Paint Mode &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Vertex Groups" href="index.html"/>
+        <link rel="next" title="Weight Tools" href="weight_paint_tools.html"/>
+        <link rel="prev" title="Weight Editing" href="weight_edit.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objects/index.html">Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="../index.html">Meshes</a> &raquo;</li>
+      
+          <li><a href="index.html">Vertex Groups</a> &raquo;</li>
+      
+    <li>Weight Paint Mode</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/modeling/meshes/vertex_groups/weight_paint.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="weight-paint-mode">
+<h1>Weight Paint Mode<a class="headerlink" href="#weight-paint-mode" title="Permalink to this headline">¶</a></h1>
+<p>Vertex Groups can potentially have a very large number of associated vertices and thus a large
+number of weights (one weight per assigned vertex). <em>Weight Painting</em> is a method to
+maintain large amounts of weight information in a very intuitive way.
+It is primarily used for rigging meshes,
+where the vertex groups are used to define the relative bone influences on the mesh.
+But we use it also for controlling particle emission, hair density, many modifiers,
+shape keys, etc.</p>
+<p>The basic principle of the method is: the weight information is literally <em>painted</em>
+on top of the Mesh body by using a set of Weight brushes.
+And since painting is always associated with color, we also need to define ...</p>
+<div class="section" id="weight-paint-in-a-nutshell">
+<h2>Weight Paint in a nutshell<a class="headerlink" href="#weight-paint-in-a-nutshell" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-example.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-example.jpg" />
+<p class="caption">Weight Painted Vertex Group</p>
+</div>
+<ul class="simple">
+<li>You enter <em>Weight Paint</em> mode from the Mode Menu (<tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt>).
+The selected Mesh Object is displayed slightly shaded with a rainbow color spectrum.</li>
+<li>The color visualizes the weights associated to each vertex in the active Vertex Group.
+Blue means unweighted; Red means fully weighted.</li>
+<li>You can customize the colors in the weight gradient by enabling <em>Custom Weight Paint Range</em>
+in the <em>System</em> tab of the <em>User Preferences</em>.</li>
+<li>You assign weights to the vertices of the Object by painting on it with weight brushes.
+Starting to paint on a mesh automatically adds weights to the active Vertex Group
+(a new Vertex Group is created if needed).</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Useful Keyboard Shortcuts</p>
+<p>The shortcuts can speed up your weight painting:</p>
+<dl class="last docutils">
+<dt>Weight color picker</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></tt> change current weight value to the weight value of clicked vertex</dd>
+<dt>Resize the brush</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">F</span></tt> then drag to new brush size</dd>
+<dt>Create linear gradient</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">Alt-LMB</span></tt> then drag</dd>
+<dt>Create radial gradient</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">Alt-Ctrl-LMB</span></tt> then drag</dd>
+<dt>Draw a <em>Clipping Border</em></dt>
+<dd><tt class="kbd docutils literal"><span class="pre">Alt-B</span></tt> then drag the clipping border to select the part of the 3D window which shall be kept visible.
+You can then draw only in this part. Press <tt class="kbd docutils literal"><span class="pre">Alt-B</span></tt> again to remove the <em>clipping border</em>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="the-weighting-color-code">
+<h2>The weighting Color Code<a class="headerlink" href="#the-weighting-color-code" title="Permalink to this headline">¶</a></h2>
+<p>Weights are visualized by using a cold/hot color system, such that areas of low influence
+(with weights close to 0.0) are drawn in blue (cold) and areas of high influence
+(with weights close to 1.0) are drawn in red (hot).
+And all in-between influences are drawn in rainbow colors, depending on their value (blue,
+green, yellow, orange, red)</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Blender3D_Weight_Spec.jpg"><img alt="../../../_images/Blender3D_Weight_Spec.jpg" src="../../../_images/Blender3D_Weight_Spec.jpg" style="width: 610px;" /></a>
+<p class="caption">Image 3: The color spectrum and their respective weights.</p>
+</div>
+<p>In addition to the above described color code, Blender has added (as an option)
+a special visual notation for unreferenced vertices: They are drawn in black.
+Thus you can see the referenced areas (drawn in cold/hot colors) and the unreferenced areas
+(in black) at the same time. This is most practical when you look for weighting errors
+(we will get back to this later).</p>
+</div>
+<div class="section" id="brushes">
+<h2>Brushes<a class="headerlink" href="#brushes" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-Weight-Paint-Brush.jpg" src="../../../_images/26-Manual-Modeling-Meshes-Weight-Paint-Brush.jpg" />
+<p class="caption">The Brush panel in the Tool Shelf</p>
+</div>
+<p>Painting needs paint brushes and Blender provides a Brush Panel within the Tool Shelf when it
+operates in <em>Weight Paint Mode</em>. You find predefined Brush Presets when you click on
+the large Brush Icon at the top of the brush Panel.
+And you can make your own presets as needed.
+See below for the available brush presets and to create custom presets.</p>
+<div class="section" id="the-main-brush-properties">
+<h3>The main brush properties<a class="headerlink" href="#the-main-brush-properties" title="Permalink to this headline">¶</a></h3>
+<p>The most important and frequently modified properties are:</p>
+<dl class="docutils">
+<dt>Weight</dt>
+<dd>The weight (color) to be used by the brush.
+However, the weight value is applied to the Vertex Group
+in different ways depending on the selected Brush Blending mode (see below).</dd>
+<dt>Strength</dt>
+<dd>This is the amount of paint to be applied per brush stroke.
+What that means exactly also depends on the Brush Blending mode.</dd>
+<dt>Radius</dt>
+<dd><p class="first">The radius defines the area of influence of the brush.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can also change the Brush radius with a keyboard shortcut while painting.
+Just press <tt class="kbd docutils literal"><span class="pre">F</span></tt> at any time, then drag the mouse to increase/reduce the brush radius.
+Finally click <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to use the new setting.
+Or press the <tt class="kbd docutils literal"><span class="pre">Esc</span></tt> key at any time to return to the current settings.</p>
+</div>
+</dd>
+<dt>Blend mode</dt>
+<dd>The brush Blending mode defines in which way the weight value is applied to the Vertex Group while painting.
+Blender provides 7 different Blending modes:</dd>
+<dt>Mix</dt>
+<dd>In this Blend mode the Weight value defines the <em>target weight</em> that will eventually
+be reached when you paint long enough on the same location of the mesh.
+And the strength determines how many strokes you need to arrive at the target weight.
+Note that for strength = 1.0 the target weight is painted immediately,
+and for Weight = 0.0 the brush just does nothing.</dd>
+<dt>Add</dt>
+<dd>In this blend mode the specified weight value is <em>added</em> to the vertex weights.
+The strength determines which fraction of the weight gets added per stroke.
+However, the brush will not paint weight values above 1.0.</dd>
+<dt>Subtract</dt>
+<dd>In this blend mode the specified weight is <em>subtracted</em> from the vertex weights.
+The strength determines which fraction of the weight gets removed per stroke.
+However the brush will not paint weight values below 0.0.</dd>
+<dt>Lighten</dt>
+<dd>In this blend mode the specified weight value is interpreted
+as the target weight very similar to the Mix Blend mode.
+But only weights below the target weight are affected.
+Weights above the target weight remain unchanged.</dd>
+<dt>Darken</dt>
+<dd>This Blend mode is very similar to the Lighten Blend mode.
+But only weights above the target weight are affected.
+Weights below the target weight remain unchanged.</dd>
+<dt>Multiply</dt>
+<dd>Multiplies the vertex weights with the specified weight value.
+This is somewhat like subtract, but the amount of removed weight is now dependent on the Weight value itself.</dd>
+<dt>Blur</dt>
+<dd>tries to smooth out the weighting of adjacent vertices.
+In this mode the Weight Value is ignored. The strength defines how effectively the blur is applied.</dd>
+</dl>
+</div>
+<div class="section" id="normalize-options">
+<h3>Normalize Options<a class="headerlink" href="#normalize-options" title="Permalink to this headline">¶</a></h3>
+<p>Blender also provides Options regarding the automatic normalizing of all affected Vertex
+groups:</p>
+<dl class="docutils">
+<dt>Auto Normalize</dt>
+<dd>Ensures that all deforming vertex groups add up to 1 while painting. When this option is turned off,
+then all weights of a vertex can have any value between 0.0 and 1.0. However, when Vertex Groups are used as
+Deform Groups for character animation then Blender always interprets the weight values relative to each other.
+That is, Blender always does a normalization over all deform bones. Hence in practice it is not necessary to
+maintain a strict normalization and further normalizing weights should not affect animation at all.</dd>
+<dt>Multi-Paint</dt>
+<dd>Paint on all selected Vertex Groups simultaneously.
+This option is only useful in the context of Armatures,
+where you can select multiple Vertex Groups by selecting multiple Pose bones.</dd>
+</dl>
+</div>
+<div class="section" id="the-brush-stroke-definition">
+<h3>The Brush stroke definition<a class="headerlink" href="#the-brush-stroke-definition" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-weight-paint-stroke.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-stroke.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-stroke.jpg" style="width: 235px;" /></a>
+<p class="caption">Stroke Panel</p>
+</div>
+<dl class="docutils">
+<dt>Stroke Method</dt>
+<dd><dl class="first last docutils">
+<dt>Airbrush</dt>
+<dd>Keep applying paint effect while holding mouse down (spray)</dd>
+<dt>Space</dt>
+<dd>Limit brush application to the distance specified by spacing (see below)</dd>
+<dt>Dots</dt>
+<dd>Apply paint on each mouse move step</dd>
+</dl>
+</dd>
+<dt>Rate (only for Airbrush)</dt>
+<dd>Interval between paints for airbrush</dd>
+<dt>Spacing (only for Space)</dt>
+<dd>Limit brush application to the distance specified by spacing</dd>
+<dt>Jitter</dt>
+<dd>Jitter the position of the brush while painting</dd>
+<dt>Smooth Stroke</dt>
+<dd>Brush lags behind mouse and follows a smoother path</dd>
+<dt>Radius</dt>
+<dd>Minimum distance from last point before stroke continues</dd>
+<dt>Factor</dt>
+<dd>Higher values give a smoother stroke</dd>
+</dl>
+</div>
+<div class="section" id="the-brush-falloff-curve">
+<h3>The brush Falloff curve<a class="headerlink" href="#the-brush-falloff-curve" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-weight-paint-curve.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-curve.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-curve.jpg" style="width: 235px;" /></a>
+<p class="caption">Curve Panel</p>
+</div>
+<p>The brush falloff editor allows you to speciy the characteristics of your brushes to a large
+extent. The usage should be obvious and intuitive.</p>
+</div>
+<div class="section" id="the-brush-appearance">
+<h3>The brush appearance<a class="headerlink" href="#the-brush-appearance" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/26-Manual-Modeling-Meshes-weight-paint-appearance.jpg"><img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-appearance.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-appearance.jpg" style="width: 235px;" /></a>
+<p class="caption">Brush appearance</p>
+</div>
+<dl class="docutils">
+<dt>Show Brush</dt>
+<dd>makes the brush visible as a circle (on by default)</dd>
+<dt>Color setter</dt>
+<dd>To define the color of the brush circle</dd>
+<dt>Custom icon</dt>
+<dd>Allows definition of a custom brush icon</dd>
+</dl>
+</div>
+<div class="section" id="brush-presets">
+<h3>Brush presets<a class="headerlink" href="#brush-presets" title="Permalink to this headline">¶</a></h3>
+<p>Blender provides several Brush presets:</p>
+<ul class="simple">
+<li><strong>Mix, Draw, Brush</strong> : uses the Mix Blending mode to draw the brush weight with varying strength and brush falloff</li>
+<li><strong>Add</strong> : uses the Add Blending mode</li>
+<li><strong>Subtract</strong> : uses the Subtract Blending mode</li>
+<li><strong>Lighten</strong> : uses the Lighten Blending mode</li>
+<li><strong>Darken</strong> : uses the Darken Blending mode</li>
+<li><strong>Multiply</strong> :uses the Multiply Blending mode</li>
+<li><strong>Blur</strong> : uses the Blur Blending mode</li>
+</ul>
+</div>
+<div class="section" id="customizing-brush-color-space">
+<h3>Customizing brush color space<a class="headerlink" href="#customizing-brush-color-space" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-custom-colorband.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-custom-colorband.jpg" />
+<p class="caption">Customizing the Color Band</p>
+</div>
+<p>Blender allows customization of the color range used for the Weight Paint colors.
+You can define the color band as you like; for example, you can make it purely black/white
+(similar to maya Weight painting), and you can even use Alpha values here.</p>
+<p>You find the customizer in the User Properties section, in the System Tab.</p>
+</div>
+</div>
+<div class="section" id="selection-masking">
+<h2>Selection Masking<a class="headerlink" href="#selection-masking" title="Permalink to this headline">¶</a></h2>
+<p>If you have a complex mesh,
+it is sometimes not easy to paint on all vertices in Weight Paint mode.
+Suppose you only want to paint on a small area of the Mesh and keep the rest untouched.
+This is where <em>selection masking</em> comes into play. When this mode is enabled,
+a brush will only paint on the selected verts or faces.
+The option is available from the footer menu bar of the 3D viewport
+(see icons surrounded by the yellow frame):</p>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-select.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-select.jpg" />
+</div>
+<p>You can choose between <em>Face Selection masking</em> (left icon)
+and <em>Vertex selection masking</em> (right icon).</p>
+<p><em>Select</em> mode has some advantages over the default <em>Weight Paint</em> mode:</p>
+<ul class="simple">
+<li>The original mesh edges are drawn, even when modifiers are active.</li>
+<li>You can select faces to restrict painting to the vertices of the selected faces.</li>
+<li>Selecting tools include:</li>
+</ul>
+<div class="section" id="details-about-selecting">
+<h3>Details about selecting<a class="headerlink" href="#details-about-selecting" title="Permalink to this headline">¶</a></h3>
+<p>The following standard selection operations are supported:</p>
+<ul class="simple">
+<li><tt class="kbd docutils literal"><span class="pre">RMB</span></tt> - Single faces. Use <tt class="kbd docutils literal"><span class="pre">Shift-RMB</span></tt> to select multiple.</li>
+<li><tt class="kbd docutils literal"><span class="pre">A</span></tt> - All faces, also to de-select.</li>
+<li><tt class="kbd docutils literal"><span class="pre">B</span></tt> - Block/Box selection.</li>
+<li><tt class="kbd docutils literal"><span class="pre">C</span></tt> - Select with brush.</li>
+<li><tt class="kbd docutils literal"><span class="pre">L</span></tt> - Pick linked (under the mouse cursor).</li>
+<li><tt class="kbd docutils literal"><span class="pre">Ctrl-L</span></tt> - Select linked.</li>
+<li><tt class="kbd docutils literal"><span class="pre">Ctrl-I</span></tt> - Invert selection (<em>Inverse</em>).</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Selecting Deform Groups</p>
+<p class="last">When you are doing weight painting for deform bones (with an Armature),
+you can select a deform group by selecting the corresponding bone.
+However, this Vertex Group selection mode is disabled when Selection Masking is active!</p>
+</div>
+</div>
+<div class="section" id="vertex-selection-masking">
+<h3>Vertex Selection Masking<a class="headerlink" href="#vertex-selection-masking" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-vertex-select.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-vertex-select.jpg" />
+<p class="caption">Vertex Selection masking</p>
+</div>
+<p>In this mode you can select one or more vertices and then paint only on the selection.
+All unselected vertices are protected from unintentional changes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This option can also be toggled with the <tt class="kbd docutils literal"><span class="pre">V</span></tt> key:</p>
+</div>
+</div>
+<div class="section" id="face-selection-masking">
+<h3>Face Selection Masking<a class="headerlink" href="#face-selection-masking" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-face-select.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-face-select.jpg" />
+<p class="caption">Face Selection masking</p>
+</div>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-face-select-hidden.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-face-select-hidden.jpg" />
+<p class="caption">hidden faces</p>
+</div>
+<p>The <em>Face Selection masking</em> allows you to select faces and limit the weight paint
+tool to those faces, very similar to Vertex selection masking.</p>
+</div>
+<div class="section" id="hide-unhide-faces">
+<h3>Hide/Unhide Faces<a class="headerlink" href="#hide-unhide-faces" title="Permalink to this headline">¶</a></h3>
+<p>You also can hide selected faces as in Edit Mode with the keyboard Shortcut <tt class="kbd docutils literal"><span class="pre">H</span></tt>,
+then paint on the remaining visible faces and finally unhide the hidden faces again by using
+<tt class="kbd docutils literal"><span class="pre">Alt-H</span></tt></p>
+</div>
+<div class="section" id="hide-unhide-vertices">
+<h3>Hide/Unhide Vertices<a class="headerlink" href="#hide-unhide-vertices" title="Permalink to this headline">¶</a></h3>
+<p>You cannot directly hide selected faces in vertex mask selection mode.
+However you can use a trick:</p>
+<ul class="simple">
+<li>First go to Face selection mask mode</li>
+<li>Select the areas you want to hide and then hide the faces (as explained above)</li>
+<li>Switch back to Vertex Selection mask mode</li>
+</ul>
+<p>Now the verts belonging to the hidden Faces will remain hidden.</p>
+</div>
+<div class="section" id="the-clipping-border">
+<h3>The Clipping Border<a class="headerlink" href="#the-clipping-border" title="Permalink to this headline">¶</a></h3>
+<p>To constrain the paint area further you can use the <em>Clipping Border</em>.
+Press <tt class="kbd docutils literal"><span class="pre">Alt-B</span></tt> and <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> -drag a rectangular area.
+The selected area will be &#8220;cut out&#8221; as the area of interest.
+The rest of the 3D window gets hidden.</p>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-border-select.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-border-select.jpg" />
+<p class="caption">The Clipping Border is used to select interesting parts for local painting</p>
+</div>
+<p>You make the entire mesh visible again by pressing <tt class="kbd docutils literal"><span class="pre">Alt-B</span></tt> a second time.</p>
+<p>All weight paint tools that use the view respect this clipping, including border select,
+weight gradient and of course brush strokes.</p>
+</div>
+</div>
+<div class="section" id="weight-paint-options">
+<h2>Weight Paint Options<a class="headerlink" href="#weight-paint-options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-options.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-options.jpg" />
+<p class="caption">Weight Paint Options</p>
+</div>
+<p>The Weight Paint Options modify the overall brush behavior:</p>
+<dl class="docutils">
+<dt>Normals</dt>
+<dd>The vertex normal (helps) determine the extent of painting. This causes an effect as if painting with light.</dd>
+<dt>Spray</dt>
+<dd>This option accumulates weights on every mouse move.</dd>
+<dt>Restrict</dt>
+<dd>This option limits the influence of painting to vertices belonging
+(even with weight 0) to the selected vertex group.</dd>
+<dt>X-mirror</dt>
+<dd>Use the X-mirror option for mirrored painting on groups that have symmetrical names,
+like with extension <tt class="docutils literal"><span class="pre">.R</span></tt> / <tt class="docutils literal"><span class="pre">.L</span></tt>, or <tt class="docutils literal"><span class="pre">_R</span></tt> / <tt class="docutils literal"><span class="pre">_L</span></tt>.
+If a group has no mirrored counterpart, it will paint symmetrically on the active group itself.
+You can read more about the naming convention in
+<a class="reference internal" href="../../../rigging/armatures/editing/properties.html"><em>Editing Armatures: Naming conventions</em></a>.
+The convention for armatures/bones apply here as well.</dd>
+<dt>Topology Mirror</dt>
+<dd>Use topology-based mirroring, for when both side of a mesh have matching mirrored topology.</dd>
+<dt>Input Samples</dt>
+<dd>not so sure</dd>
+<dt>Show Zero Weights</dt>
+<dd><ul class="first last simple">
+<li>None</li>
+<li>Active</li>
+<li>All</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Unified Settings:</strong>
+The <em>Size</em>, <em>Strength</em> and <em>Weight</em> of the brush can be set to
+be shared across different brushes, as opposed to per-brush.</p>
+<ul class="simple">
+<li>Spray: to constantly draw (opposed to drawing one stroke per mouse click).</li>
+<li>Restrict: to only paint on vertices which already are weighted in the active weight group.
+(No new weights are created; only existing weights are modified.)</li>
+<li>x-mirror: to draw symmetrically.
+Note the this only works when the character symmetry plane is z-y (character looks into y direction).</li>
+<li>Show Zero weights: To display unreferenced and zero weighted areas in black (by default).</li>
+</ul>
+</div>
+<div class="section" id="weight-paint-tools">
+<h2>Weight Paint Tools<a class="headerlink" href="#weight-paint-tools" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/26-Manual-Modeling-Meshes-weight-paint-tools.jpg" src="../../../_images/26-Manual-Modeling-Meshes-weight-paint-tools.jpg" />
+<p class="caption">Weight Paint Tools</p>
+</div>
+<p>Blender provides a set of helper tools for Weight Painting.
+The tools are located in the weight tools panel.</p>
+<p>The weight paint tools are full described in the
+<a class="reference internal" href="weight_paint_tools.html"><em>Weight Paint Tools</em></a> page</p>
+</div>
+<div class="section" id="weight-painting-for-bones">
+<h2>Weight Painting for Bones<a class="headerlink" href="#weight-painting-for-bones" title="Permalink to this headline">¶</a></h2>
+<p>This is probably the most often used application of weight painting.
+When a bone moves, vertices around the joint should move as well,
+but just a little, to mimic the stretching of the skin around the joint.
+Use a &#8220;light&#8221; weight (10-40%)
+paint on the vertices around the joint so that they move a little when the bone rotates.
+While there are ways to automatically assign weights to an armature
+(see the <a class="reference internal" href="../../../rigging/index.html"><em>Armature section</em></a>),
+you can do this manually. To do this from scratch, refer to the process below.
+To modify automatically assigned weights, jump into the middle of the process where noted:</p>
+<ul class="simple">
+<li>Create an armature.</li>
+<li>Create a mesh that will be deformed when the armature&#8217;s bone(s) move.</li>
+<li>With the mesh selected, create an <em>Armature</em> modifier for your mesh
+(located in the <em>Editing</em> context, <em>Modifiers</em> panel).
+Enter the name of the armature.</li>
+</ul>
+<p><em>Pick up here for modifying automatically assigned weights.</em></p>
+<ul class="simple">
+<li>Select the armature in 3D View, and bring the armature to <em>Pose</em> <strong>mode</strong> (<tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt>,
+or the 3D View window header mode selector).</li>
+<li>Select a desired bone in the armature.</li>
+<li>Select your mesh (using <tt class="kbd docutils literal"><span class="pre">RMB</span></tt>) and change immediately to <em>Weight Paint</em> mode.
+The mesh will be colored according to the weight (degree) that the selected bone movement affects the mesh.
+Initially, it will be all blue (no effect).</li>
+<li>Weight paint to your heart&#8217;s content.
+The mesh around the bone itself should be red (generally)
+and fade out through the rainbow to blue for vertices farther away from the bone.</li>
+</ul>
+<p>You may select a different bone with <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> while weight painting,
+provided the armature was left in <em>Pose</em> mode as described above.
+This will activate the vertex group sharing the name with the selected bone,
+and display related weights. If the mesh skins the bones,
+you will not be able to see the bones because the mesh is painted. If so,
+turn on <em>X-Ray</em> view (<em>Buttons</em> window, <em>Editing</em> context,
+<em>Armature</em> panel). While there on that panel,
+you can also change how the bones are displayed (<em>Octahedron</em>, <em>Stick</em>,
+<em>B-Bone</em>, or <em>Envelope</em>) and enable <em>Draw Names</em> to ensure the
+name of the selected bone matches up to the vertex group.</p>
+<p>If you paint on the mesh, a vertex group is created for the bone.
+If you paint on vertices outside the group,
+the painted vertices are automatically added to the vertex group.</p>
+<p>If you have a symmetrical mesh and a symmetrical armature you can use the option
+<em>X-Mirror</em>.
+Then the mirrored groups with the mirrored weights are automatically created.</p>
+</div>
+<div class="section" id="weight-painting-for-particles">
+<h2>Weight Painting for Particles<a class="headerlink" href="#weight-painting-for-particles" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/Manual-WeightPaint-particles.jpg" src="../../../_images/Manual-WeightPaint-particles.jpg" />
+<p class="caption">Weight painted particle emission.</p>
+</div>
+<p>Faces or vertices with zero weight generate no particles. A weight of 0.
+1 will result in 10% of the amounts of particles.
+This option &#8220;conserves&#8221; the total indicated number of particles, adjusting the distributions
+so that the proper weights are achieved while using the actual number of particles called for.
+Use this to make portions of your mesh hairier than others by weight painting a vertex group,
+and then calling out the name of the vertex group in the <em>VGroup:</em> field
+(<em>Particles</em> panel, <em>Object</em> context).</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="weight_paint_tools.html" class="btn btn-neutral float-right" title="Weight Tools"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="weight_edit.html" class="btn btn-neutral" title="Weight Editing"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

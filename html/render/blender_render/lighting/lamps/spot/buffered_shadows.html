@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spot Buffered Shadows &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../../index.html"/>
+        <link rel="up" title="Spot" href="index.html"/>
+        <link rel="next" title="Spot Volumetric Effects" href="halos.html"/>
+        <link rel="prev" title="Raytraced Shadows" href="raytraced_shadows.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Lighting</a> &raquo;</li>
+      
+          <li><a href="../index.html">Lamps</a> &raquo;</li>
+      
+          <li><a href="index.html">Spot</a> &raquo;</li>
+      
+    <li>Spot Buffered Shadows</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../../_sources/render/blender_render/lighting/lamps/spot/buffered_shadows.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="spot-buffered-shadows">
+<h1>Spot Buffered Shadows<a class="headerlink" href="#spot-buffered-shadows" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/25-Manual-Lighting-Shadow-SpotBufShad.jpg"><img alt="../../../../../_images/25-Manual-Lighting-Shadow-SpotBufShad.jpg" src="../../../../../_images/25-Manual-Lighting-Shadow-SpotBufShad.jpg" style="width: 310px;" /></a>
+<p class="caption">Buffer Shadow enabled for a Spot lamp</p>
+</div>
+<p>Spotlights can use either
+<tt class="xref doc docutils literal"><span class="pre">Raytraced</span> <span class="pre">Shadows</span></tt>
+or buffered shadows.
+Either of the two can provide various extra options.</p>
+<p>Raytraced shadows are generally more accurate,
+with extra capabilities such as transparent shadows, although they are quite slower to render.</p>
+<p>Buffered shadows are more complex to set up and involve more faking,
+but the speed of rendering is a definite advantage.
+Nevertheless, it shares with other lamp types common shadows options described in
+<a class="reference internal" href="../../shadows/properties.html"><em>Shadows Properties</em></a>.</p>
+<div class="section" id="shadow-buffer-types">
+<h2>Shadow Buffer Types<a class="headerlink" href="#shadow-buffer-types" title="Permalink to this headline">¶</a></h2>
+<p>When the <em>Buffer Shadow</em> button is activated,
+the currently selected <em>Spot</em> light generates shadows,
+using a &#8220;shadow buffer&#8221; rather than using raytracing,
+and various extra options and buttons appear in the <em>Shadow</em> panel.</p>
+<dl class="docutils">
+<dt>Buffer Type</dt>
+<dd>There more than one way to generate buffered shadows.
+The shadow buffer generation type controls which generator to use.</dd>
+<dt>There are four shadow generation types, those being:</dt>
+<dd><ul class="first last simple">
+<li>Classical</li>
+<li>Classic-Halfway</li>
+<li>Irregular</li>
+<li>Deep</li>
+</ul>
+</dd>
+</dl>
+<p>For more information on the different shadow generation methods see these links:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.blender.org/development/release-logs/blender-243/irregular-shadow-buffer/">Development Release Logs 2.43: Irregular Shadow Buffer</a></li>
+<li><a class="reference external" href="http://www.blendernation.com/2006/10/15/blender-gets-irregular-shadow-buffers/">Blender Nation: Blender Gets Irregular Shadow Buffers</a></li>
+<li><a class="reference external" href="http://www.blender.org/development/release-logs/blender-243/shadow-buffer-halfway-average/">Development Release Logs 2.43: Shadow Buffer Halfway Average</a></li>
+</ul>
+<div class="section" id="classical-and-classic-halfway">
+<h3>&#8220;Classical&#8221; and &#8220;Classic-Halfway&#8221;<a class="headerlink" href="#classical-and-classic-halfway" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/25-Manual-Lighting-Shadow-SpotBufShad.jpg"><img alt="../../../../../_images/25-Manual-Lighting-Shadow-SpotBufShad.jpg" src="../../../../../_images/25-Manual-Lighting-Shadow-SpotBufShad.jpg" style="width: 310px;" /></a>
+<p class="caption">Buffer Shadowset to Classic-Halfway</p>
+</div>
+<dl class="docutils">
+<dt>Classical</dt>
+<dd><p class="first">A shadow generation which used to be the Blender default and unique method for generation of buffered shadows.
+It used an older way of generating buffered shadows,
+but it could have some problems with accuracy of the generated shadows and can be very
+sensitive to the resolution of the shadow buffer (<em>Shadow Buffer</em> &#8211;&gt; <em>Size</em>),
+different <em>Bias</em> values, and all the self-shadowing issues that brings up.</p>
+<p class="last">The <em>Classical</em> method of generating shadows is obsolete and is really only still present to
+allow for backward compatibility with older versions of Blender.
+In most other cases you will want to use <em>Classic-Halfway</em> instead.</p>
+</dd>
+<dt>Classic-Halfway</dt>
+<dd><p class="first">This shadow buffer type is an improved shadow buffering method and is the default option selected in Blender.
+It works by taking an averaged reading of the first and second nearest Z depth values
+allowing the <em>Bias</em> value to be lowered and yet not suffer as much from self-shadowing issues.</p>
+<p>Not having to increase <em>Bias</em> values helps with shadow accuracy,
+because large <em>Bias</em> values can mean small faces can lose their shadows,
+as well as preventing shadows being overly offset from the larger <em>Bias</em> value.</p>
+<p class="last"><em>Classic-Halfway</em> doesn&#8217;t work very well when faces overlap, and biasing problems can happen.</p>
+</dd>
+</dl>
+<p>Here are now the options specific to these generation methods:</p>
+<dl class="docutils">
+<dt>Size</dt>
+<dd><p class="first">The <em>Size</em> numeric field can have a value from <tt class="docutils literal"><span class="pre">512</span></tt> to <tt class="docutils literal"><span class="pre">10240</span></tt>.
+<em>Size</em> represents the resolution used to create a shadow map.
+This shadow map is then used to determine where shadows lay within a scene.</p>
+<p>As an example, if you have a <em>Size</em> with a value of <tt class="docutils literal"><span class="pre">1024</span></tt>,
+you are indicating that the shadow data will be written to a buffer which will have a square
+resolution of <strong>1024×1024</strong> pixels/samples from the selected spotlight.</p>
+<p>The higher the value of <em>Size</em>, the higher resolution and accuracy of the resultant shadows,
+assuming all other properties of the light and scene are the same,
+although more memory and processing time would be used.
+The reverse is also true - if the <em>Size</em> value is lowered,
+the resultant shadows can be of lower quality,
+but would use less memory and take less processing time to calculate.</p>
+<p>As well as the <em>Size</em> value affecting the quality of generated shadows,
+another property of <em>Spot</em> lamps that affects the quality of their buffered shadows is the
+angle of the spotlights lighted area (given in the <em>Spot Shape</em> panel&#8217;s <em>Size</em> field).</p>
+<p>As the spot shape <em>Size</em> value is increased, the quality of the cast shadows degrades.
+This happens because when the <em>Spot</em> lighted area is made larger (by increasing spot shape <em>Size</em>),
+the shadow buffer area has to be stretched and scaled to fit the size of the new lighted area.</p>
+<p class="last">The <em>Size</em> resolution is not altered to compensate for the change in size of the spotlight,
+so the quality of the shadows degrades. If you want to keep the generated shadows the same quality,
+as you increase the spot shape <em>Size</em> value, you also need to increase the buffer <em>Size</em> value.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The above basically boils down to</p>
+<p class="last">If you have a spotlight that is large you will need to have a larger buffer <em>Size</em> to keep
+the shadows good quality.
+The reverse is true also - the quality of the generated shadows will usually improve
+(up to a point) as the <em>Spot</em> lamp covers a smaller area.</p>
+</div>
+<dl class="docutils">
+<dt>Filter Type</dt>
+<dd><p class="first">The <em>Box</em>, <em>Tent</em>, and <em>Gauss</em> filter types control what filtering algorithm to use to
+anti-alias the buffered shadows.</p>
+<p>They are closely related to the <em>Samples</em> numeric field,
+as when this setting is set to <tt class="docutils literal"><span class="pre">1</span></tt>, shadow filtering is disabled,
+so none of these buttons will have any effect what soever.</p>
+<dl class="docutils">
+<dt>Box</dt>
+<dd>The buffered shadows will be anti-aliased using the &#8220;box&#8221; filtering method.
+This is the original filter used in Blender.
+It is relatively low quality and is used for low resolution renders, as it produces very sharp anti-aliasing.
+When this filter is used,
+it only takes into account oversampling data which falls within a single pixel,
+and doesn&#8217;t take into account surrounding pixel samples.
+It is often useful for images which have sharply angled elements and horizontal/vertical lines.</dd>
+<dt>Tent</dt>
+<dd>The buffered shadows will be anti-aliased using the &#8220;tent&#8221; filtering method.
+It is a simple filter that gives sharp results, an excellent general purpose filtering method.
+This filter also takes into account the sample values of neighboring pixels when
+calculating its final filtering value.</dd>
+<dt>Gauss</dt>
+<dd>The buffered shadows will be anti-aliased using the &#8220;Gaussian&#8221; filtering method.
+It produces a very soft/blurry anti-aliasing. As result, this filter is excellent with high resolution renders.</dd>
+</dl>
+<p class="last">The <tt class="xref doc docutils literal"><span class="pre">Anti-Aliasing</span> <span class="pre">page</span></tt> in the Render chapter will give
+more information on the various filtering/distribution methods and their uses.</p>
+</dd>
+<dt>Samples</dt>
+<dd><p class="first">The <em>Samples</em> numeric field can have a value between <tt class="docutils literal"><span class="pre">1</span></tt> and <tt class="docutils literal"><span class="pre">16</span></tt>.
+It controls the number of samples taken per pixel when calculating shadow maps.</p>
+<p>The higher this value, the more filtered,
+smoothed and anti-aliased the shadows cast by the current lamp will be,
+but the longer they will take to calculate and the more memory they will use.
+The anti-aliasing method used is determined by having one of the <em>Box</em>,
+<em>Tent</em> or <em>Gauss</em> buttons activated (see above).</p>
+<p class="last">Having a <em>Samples</em> value of <tt class="docutils literal"><span class="pre">1</span></tt> is similar to turning off anti-aliasing for buffered shadows.</p>
+</dd>
+<dt>Soft</dt>
+<dd>The <em>Soft</em> numeric field can have a value between <tt class="docutils literal"><span class="pre">1.0</span></tt> and <tt class="docutils literal"><span class="pre">100.0</span></tt>.
+It indicates how wide an area is sampled when doing anti-aliasing on buffered shadows.
+The larger the <em>Soft</em> value,
+the more graduated/soft the area that is anti-aliased/softened on the edge of generated shadows.</dd>
+<dt>Sample Buffers</dt>
+<dd><p class="first">The <em>Sample Buffers</em> setting can be set to values <tt class="docutils literal"><span class="pre">1</span></tt>, <tt class="docutils literal"><span class="pre">4</span></tt> or <tt class="docutils literal"><span class="pre">9</span></tt>,
+and represents the number of shadow buffers that will be used when doing anti-aliasing on buffered shadows.</p>
+<p>This option is used in special cases,
+like very small objects which move and need to generate really small shadows (such as strands).
+It appears that normally, pixel width shadows don&#8217;t anti-alias properly,
+and that increasing <em>Buffer Size</em> doesn&#8217;t help much.</p>
+<p>So this option allows you to have a sort of extra sample pass, done above the regular one
+(the one controlled by the <em>Box</em> / <em>Tent</em> / <em>Gauss</em>, <em>Samples</em> and <em>Soft</em> settings).</p>
+<p>The default <tt class="docutils literal"><span class="pre">1</span></tt> value will disable this option.</p>
+<p class="last">Higher values will produce a smoother anti-aliasing -
+but be careful: using a <em>Sample Buffers</em> of <tt class="docutils literal"><span class="pre">4</span></tt> will require four times as much memory and process time,
+and so on, as Blender will have to compute that number of sample buffers.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="irregular">
+<h3>&#8220;Irregular&#8221;<a class="headerlink" href="#irregular" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/25-Manual-Lighting-Lamps-Spot-Buf-Irregular.jpg"><img alt="../../../../../_images/25-Manual-Lighting-Lamps-Spot-Buf-Irregular.jpg" src="../../../../../_images/25-Manual-Lighting-Lamps-Spot-Buf-Irregular.jpg" style="width: 313px;" /></a>
+<p class="caption">Buffer Shadow set to Irregular</p>
+</div>
+<p><em>Irregular</em> shadow method is used to generate sharp/hard shadows that are placed as accurately as raytraced shadows.
+This method offers very good performance because it can be done as a multi-threaded process.</p>
+<p>This method supports transparent shadows. To do so, you will first need to setup the shadow
+setting for the object which will receive the transparent shadow. (<em>Material</em> &#8211;&gt;
+<em>Shadow</em> &#8211;&gt; <em>Cat Buffer Shadows</em> and <em>Buffer Bias</em>)</p>
+</div>
+<div class="section" id="deep-generation-method">
+<h3>Deep generation method<a class="headerlink" href="#deep-generation-method" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/25-Manual-Lighting-Lamps-Spot-Buf-Deep.jpg"><img alt="../../../../../_images/25-Manual-Lighting-Lamps-Spot-Buf-Deep.jpg" src="../../../../../_images/25-Manual-Lighting-Lamps-Spot-Buf-Deep.jpg" style="width: 313px;" /></a>
+<p class="caption">Buffer Shadow set to Deep</p>
+</div>
+<dl class="docutils">
+<dt>Deep Shadow buffer supports transparency and better filtering , at the cost of more memory usage and processing time</dt>
+<dd><em>Compress</em>: Deep shadow map compression treshold</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="common-options">
+<h2>Common options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
+<p>The following settings are common to all buffered shadow generation method.</p>
+<dl class="docutils">
+<dt>Bias</dt>
+<dd><p class="first">The <em>Bias</em> numeric field can have a value between <tt class="docutils literal"><span class="pre">0.001</span></tt> and <tt class="docutils literal"><span class="pre">5.0</span></tt>.
+<em>Bias</em> is used to add a slight offset distance between an object and the shadows cast by it.
+This is sometimes required because of inaccuracies in the calculation which determines
+weather an area of an object is in shadow or not.</p>
+<p>Making the <em>Bias</em> value smaller results in the distance between the object and its shadow being smaller.
+If the <em>Bias</em> value is too small, an object can get artifacts,
+which can appear as lines and interference patterns on objects.
+This problem is usually called &#8220;self shadowing&#8221;,
+and can usually be fixed by increasing the <em>Bias</em> value, which exists for that purpose!</p>
+<p>Other methods for correcting self shadowing include increasing the size of the <em>Shadow
+Buffer Size</em> or using a different buffer shadow calculation method such as <em>Classic-Halfway</em> or <em>Irregular</em>.</p>
+<p>Self shadowing interference tends to affect curved surfaces more than flat ones,
+meaning that if your scene has a lot of curved surfaces it may be necessary to increase the
+<em>Bias</em> value or <em>Shadow Buffer Size</em> value.</p>
+<p class="last">Having overly large <em>Bias</em> values not only places shadows further away from their casting objects,
+but can also cause objects that are very small to not cast any shadow at all.
+At that point altering <em>Bias</em>, <em>Shadow Buffer Size</em> or <em>Spot Size</em> values,
+among other things, may be required to fix the problem.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Finer Bias tuning</p>
+<p class="last">You can now refine the <em>Bias</em> value independently for each
+<a class="reference internal" href="../../../materials/index.html"><em>Material</em></a>,
+using the <em>Bias</em> slider (<em>Material</em> menu, <em>Shadow</em> panel).
+This value is a factor by which the <em>Bias</em> value of each <em>Spot</em> buffered shadows lamp is multiplied,
+each time its light hits an object using this material.
+The <tt class="docutils literal"><span class="pre">0.0</span></tt> and <tt class="docutils literal"><span class="pre">1.0</span></tt> values are equivalent - they do not alter the lamp&#8217;s <em>Bias</em> original value.</p>
+</div>
+<dl class="docutils">
+<dt>Clip Start &amp; Clip End</dt>
+<dd><p class="first">When a <em>Spot</em> light with buffered shadows is added to a scene,
+an extra line appears on the <em>Spot</em> 3D view representation.</p>
+<p>The start point of the line represents <em>Clip Start</em> &#8216;s value and the end of the line
+represents <em>Clip End</em> &#8216;s value.
+<em>Clip Start</em> can have a value between <tt class="docutils literal"><span class="pre">0.1</span></tt> and <tt class="docutils literal"><span class="pre">1000.0</span></tt>, and <em>Clip End</em>,
+between <tt class="docutils literal"><span class="pre">1.0</span></tt> and <tt class="docutils literal"><span class="pre">5000.0</span></tt>. Both values are represented in Blender Units.</p>
+<p><em>Clip Start</em> indicates the point after which buffered shadows can be present within the <em>Spot</em> light area.
+Any shadow which could be present before this point is ignored and no shadow will be generated.</p>
+<p><em>Clip End</em> indicates the point after which buffered shadows will not be generated within the <em>Spot</em> light area.
+Any shadow which could be present after this point is ignored and no shadow will be generated.</p>
+<p>The area between <em>Clip Start</em> and <em>Clip End</em> will be capable of having buffered shadows generated.</p>
+<p>Altering the <em>Clip Start</em> and <em>Clip End</em> values helps in controlling where shadows can be generated.
+Altering the range between <em>Clip Start</em> and <em>Clip End</em> can help speed up rendering,
+save memory and make the resultant shadows more accurate.</p>
+<p class="last">When using a <em>Spot</em> lamp with buffered shadows,
+to maintain or increase quality of generated shadows,
+it is helpful to adjust the <em>Clip Start</em> and <em>Clip End</em> such that their values closely bound
+around the areas which they want to have shadows generated at.
+Minimizing the range between <em>Clip Start</em> and <em>Clip End</em>,
+minimizes the area shadows are computed in and therefore helps increase shadow quality in
+the more restricted area.</p>
+</dd>
+<dt>Autoclip Start &amp; Autoclip End</dt>
+<dd><p class="first">As well as manually setting <em>Clip Start</em> and <em>Clip End</em> fields to control when buffered shadows start and end,
+it is also possible to have Blender pick the best value independently for each <em>Clip Start</em> and <em>Clip End</em> field.</p>
+<p class="last">Blender does this by looking at where the visible vertices are when viewed from the <em>Spot</em> lamp position.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<p>Any object in Blender can act as a camera in the 3D view. Hence you can select the
+<em>Spot</em> light and switch to a view from its perspective by pressing
+<tt class="kbd docutils literal"><span class="pre">Ctrl-Numpad0</span></tt>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="halos.html" class="btn btn-neutral float-right" title="Spot Volumetric Effects"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="raytraced_shadows.html" class="btn btn-neutral" title="Raytraced Shadows"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

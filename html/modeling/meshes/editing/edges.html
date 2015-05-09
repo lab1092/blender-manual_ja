@@ -1,0 +1,727 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Edges &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Face Tools" href="faces.html"/>
+        <link rel="prev" title="Vertex Tools" href="vertices.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objects/index.html">Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="../index.html">Meshes</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Edges</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/modeling/meshes/editing/edges.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="edges">
+<h1>Edges<a class="headerlink" href="#edges" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="make-edge-face">
+<h2>Make Edge/Face<a class="headerlink" href="#make-edge-face" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Make Edge/Face</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">F</span></tt></div>
+</div>
+</div>
+<p>It will create an edge or some faces, depending on your selection.
+We have already discussed this tool in the
+<tt class="xref doc docutils literal"><span class="pre">editing</span> <span class="pre">basics</span> <span class="pre">page</span></tt>.</p>
+</div>
+<div class="section" id="set-edge-attributes">
+<h2>Set Edge Attributes<a class="headerlink" href="#set-edge-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Edges can have several different attributes that affect how certain other tools affect the
+mesh.</p>
+<div class="section" id="mark-seam-and-clear-seam">
+<h3>Mark Seam and Clear Seam<a class="headerlink" href="#mark-seam-and-clear-seam" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Mark Seam/Clear Seam</em> (or the same options in <em>Edge Specials</em> menu)</div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-E-Numpad1</span></tt> and <tt class="kbd docutils literal"><span class="pre">Ctrl-E-Numpad2</span></tt></div>
+</div>
+</div>
+<p>Seams are a way to create separations, &#8220;islands&#8221;, in UV maps.
+See the <a class="reference internal" href="../../../render/blender_render/textures/mapping/uv.html"><em>UVTexturing section</em></a> for more details.
+These commands set or unset this flag for selected edges.</p>
+</div>
+<div class="section" id="mark-sharp-and-clear-sharp">
+<h3>Mark Sharp and Clear Sharp<a class="headerlink" href="#mark-sharp-and-clear-sharp" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Mark Seam/Clear Seam</em> (or the same options in <em>Edge Specials</em> menu)</div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-E-Numpad1</span></tt> and <tt class="kbd docutils literal"><span class="pre">Ctrl-E-Numpad2</span></tt></div>
+</div>
+</div>
+<p>The <em>Sharp</em> flag is used by the <a class="reference internal" href="../../../modifiers/generate/edge_split.html"><em>EdgeSplit modifier</em></a>,
+which is part of the smoothing technics.
+As seams, it is a property of edges, and these commands set or unset it for selected ones.</p>
+</div>
+<div class="section" id="adjust-bevel-weight">
+<h3>Adjust Bevel Weight<a class="headerlink" href="#adjust-bevel-weight" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Adjust Bevel Weight</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-Shift-E</span></tt></div>
+</div>
+</div>
+<p>This edge property (a value between <strong>0.0</strong> and <strong>1.0</strong>)
+is used by the <a class="reference internal" href="../../../modifiers/generate/bevel.html"><em>Bevel modifier</em></a> to control the bevel intensity of the edges.
+This command enters an interactive mode (a bit like transform tools),
+where by moving the mouse (or typing a value with the keyboard)
+you can set the (average) bevel weight of selected edges.</p>
+</div>
+<div class="section" id="crease-subsurf">
+<h3>Crease SubSurf<a class="headerlink" href="#crease-subsurf" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Crease SubSurf</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Shift-E</span></tt></div>
+</div>
+</div>
+<p>This edge property (a value between <strong>0.0</strong> and <strong>1.0</strong>) is used by the
+<a class="reference internal" href="../../../modifiers/generate/subsurf.html"><em>Subsurf modifier</em></a> to control the sharpness of the edges in the subdivided mesh.
+This command enters an interactive mode (a bit like transform tools),
+where by moving the mouse (or typing a value with the keyboard) you can set the (average)
+crease value of selected edges.
+To clear the crease edge property, enter a value of <strong>-1</strong>.</p>
+</div>
+</div>
+<div class="section" id="edge-slide">
+<h2>Edge Slide<a class="headerlink" href="#edge-slide" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Slide Edge</em> (or the same option in <em>Edge Specials</em> menu)</div>
+<div class="line">Hotkey:   <em class="menuselection">[ctrl][E] ‣ [pad6]</em></div>
+</div>
+</div>
+<p>Slides one or more edges across adjacent faces with a few restrictions involving the selection
+of edges (i.e. the selection must make sense, see below.)</p>
+<dl class="docutils">
+<dt>Even <tt class="kbd docutils literal"><span class="pre">E</span></tt></dt>
+<dd>Forces the edge loop to match the shape of the adjacent edge loop.
+You can flip to the opposite vertex using <tt class="kbd docutils literal"><span class="pre">F</span></tt>. Use <tt class="kbd docutils literal"><span class="pre">Alt-Wheel</span></tt> to change the control edge.</dd>
+<dt>Flip <tt class="kbd docutils literal"><span class="pre">F</span></tt></dt>
+<dd>When Even mode is active, this flips between the two adjacent edge loops the active edge loop will match</dd>
+<dt><tt class="kbd docutils literal"><span class="pre">LMB</span></tt></dt>
+<dd>confirms the tool, and <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> or <tt class="kbd docutils literal"><span class="pre">Esc</span></tt> cancels.</dd>
+</dl>
+<p>This tool has a factor,
+which is displayed in the 3D View footer and in the <em>Tool Shelf</em>
+(after confirmation).
+A numerical value between <tt class="docutils literal"><span class="pre">-1</span></tt> and <tt class="docutils literal"><span class="pre">1</span></tt> can be entered for precision.</p>
+<p>In <em>Proportional</em> mode, <tt class="kbd docutils literal"><span class="pre">Wheel</span></tt>,
+or <tt class="kbd docutils literal"><span class="pre">Left</span></tt> and <tt class="kbd docutils literal"><span class="pre">Right</span></tt> changes the selected edge for calculating a proportion.
+Unlike <em>Percentage</em> mode, <em>Proportional</em></p>
+<p>Holding <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> or <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> control the precision of the sliding.
+<tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> snaps movement to 10% steps per move and <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> snaps movement
+to 1% steps. The default is 5% steps per move.</p>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>By default, the position of vertices on the edge loop move as a percentage of the distance
+between their original position and the adjacent edge loop, regardless of the edges&#8217; lengths.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeSlide1.jpg"><img alt="../../../_images/EdgeSlide1.jpg" src="../../../_images/EdgeSlide1.jpg" style="width: 250px;" /></a>
+<p class="caption">selected edge loop</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeSlide2.jpg"><img alt="../../../_images/EdgeSlide2.jpg" src="../../../_images/EdgeSlide2.jpg" style="width: 250px;" /></a>
+<p class="caption">Repositioned edge loop</p>
+</div>
+<div class="section" id="even-mode">
+<h4>Even mode<a class="headerlink" href="#even-mode" title="Permalink to this headline">¶</a></h4>
+<p><em>Even</em> mode keeps the shape of the selected edge loop the same as one of the edge loops adjacent to it,
+rather than sliding a percentage along each perpendicular edge.</p>
+<p>In <em>Even</em> mode, the tool shows the position along the length of the currently selected edge
+which is marked in yellow, from the vertex that as an enlarged red marker.
+Movement of the sliding edge loop is restricted to this length. As you move the mouse the
+length indicator in the header changes showing where along the length of the edge you are.</p>
+<p>To change the control edge that determines the position of the edge loop,
+use the <tt class="kbd docutils literal"><span class="pre">Alt-Wheel</span></tt> to scroll to a different edge.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeSlide3.jpg"><img alt="../../../_images/EdgeSlide3.jpg" src="../../../_images/EdgeSlide3.jpg" style="width: 250px;" /></a>
+<p class="caption">Even mode enabled</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeSlide4.jpg"><img alt="../../../_images/EdgeSlide4.jpg" src="../../../_images/EdgeSlide4.jpg" style="width: 250px;" /></a>
+<p class="caption">Even mode with flip enabled</p>
+</div>
+<p>Moving the mouse moves the selected edge loop towards or away from the start vertex,
+but the loop line will only move as far as the length of the currently selected edge,
+conforming to the shape of one of the bounding edge loops.</p>
+</div>
+<div class="section" id="limitations-workarounds">
+<h4>Limitations &amp; Workarounds<a class="headerlink" href="#limitations-workarounds" title="Permalink to this headline">¶</a></h4>
+<p>There are restrictions on the type of edge selections that can be operated upon.
+Invalid selections are:</p>
+<dl class="docutils">
+<dt>Loop crosses itself</dt>
+<dd>This means that the tool could not find any suitable faces that were adjacent to the selected edge(s).
+(<em>Loop crosses</em>) is an example that shows this by selecting two edges that share the same face.
+A face cannot be adjacent to itself.</dd>
+<dt>Multiple edge loops</dt>
+<dd>The selected edges are not in the same edge loop, which means they don&#8217;t have a common edge.
+You can minimize this error by always selecting edges end to end or in a &#8220;Chain&#8221;.
+If you select multiple edges just make sure they are connected.
+This will decrease the possibility of getting looping errors.</dd>
+<dt>Border Edge</dt>
+<dd>When a single edge was selected in a single sided object.
+An edge loop can not be found because there is only one face.
+Remember, edge loops are loops that span two or more faces.</dd>
+</dl>
+<p>A general rule of thumb is that if multiple edges are selected they should be connected end to
+end such that they form a continuous chain. This is <em>literally</em> a general rule because you
+can still select edges in a chain that are invalid because some of the edges in the chain are
+in different edge loops.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rotate-edge">
+<h2>Rotate Edge<a class="headerlink" href="#rotate-edge" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Rotate Edge CW / Rotate Edge CCW</em></div>
+<div class="line">Hotkey:   <em class="menuselection">[ctrl][E] ‣ Rotate Edge CW</em>   and <em class="menuselection">[ctrl][E] ‣ Rotate Edge CCW</em></div>
+</div>
+</div>
+<p>Rotating an edge clockwise or counter-clockwise spins an edge between two faces around their
+vertices. This is very useful for restructuring a mesh&#8217;s topology.
+The tool can operate on one explicitly selected edge,
+or on two selected vertices or two selected faces that implicitly share an edge between them.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeFlip1.jpg"><img alt="../../../_images/EdgeFlip1.jpg" src="../../../_images/EdgeFlip1.jpg" style="width: 250px;" /></a>
+<p class="caption">selected edge</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeFlip2.jpg"><img alt="../../../_images/EdgeFlip2.jpg" src="../../../_images/EdgeFlip2.jpg" style="width: 250px;" /></a>
+<p class="caption">Edge, rotated CW</p>
+</div>
+<div class="section" id="using-face-selection">
+<h3>Using Face Selection<a class="headerlink" href="#using-face-selection" title="Permalink to this headline">¶</a></h3>
+<p>To rotate an edge based on faces you must select two faces, (<em>Adjacent selected faces</em>),
+otherwise Blender notifies you with an error message,
+<em>&#8220;ERROR: Could not find any select edges that can be rotated&#8221;</em>. Using either <em>Rotate Edge CW</em>
+or <em>Rotate Edge CCW</em> will produce exactly the same results as if you had
+selected the common edge shown in (<em>Selected edge rotated CW and CCW.</em>).</p>
+</div>
+</div>
+<div class="section" id="delete-edge-loop">
+<h2>Delete Edge Loop<a class="headerlink" href="#delete-edge-loop" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Vertex</em> or <em>Edge</em> select modes)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Delete ‣ Edge Loop</em></div>
+<div class="line">Hotkey:   <em class="menuselection">[X]/[Del] ‣ [g]</em></div>
+</div>
+</div>
+<p><em>Delete Edge Loop</em> allows you to delete a selected edge loop if it is between two other edge loops.
+This will create one face-loop where two previously existed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <em>Edge Loop</em> option is very different to the <em>Edges</em> option,
+even if you use it on edges that look like an edge loop.
+Deleting an edge loop merges the surrounding faces together to preserve the surface of the mesh.
+By deleting a chain of edges, the edges are removed, deleting the surrounding faces as well.
+This will leave holes in the mesh where the faces once were.</p>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>The selected edge loop on the UV Sphere has been deleted and the faces have been merged with
+the surrounding edges. If the edges had been deleted by choosing <em>Edges</em> from the
+(<em>Erase</em> <em>Menu</em>)
+there would be an empty band of deleted faces all the way around the sphere instead.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/DeleteEdgeLoop1.jpg"><img alt="../../../_images/DeleteEdgeLoop1.jpg" src="../../../_images/DeleteEdgeLoop1.jpg" style="width: 300px;" /></a>
+<p class="caption">Selected edge loop</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/DeleteEdgeLoop2.jpg"><img alt="../../../_images/DeleteEdgeLoop2.jpg" src="../../../_images/DeleteEdgeLoop2.jpg" style="width: 300px;" /></a>
+<p class="caption">Edge loop deleted</p>
+</div>
+</div>
+</div>
+<div class="section" id="collapse">
+<h2>Collapse<a class="headerlink" href="#collapse" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Delete ‣ Edge Collapse</em></div>
+<div class="line">Hotkey:   <em class="menuselection">[alt][M] ‣ [pad3]</em></div>
+</div>
+</div>
+<p>This takes a selection of edges and for each edge, merges its two vertices together.
+This is useful for taking a ring of edges and collapsing it,
+removing the face loop it ran through.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Collapse1.jpg"><img alt="../../../_images/Collapse1.jpg" src="../../../_images/Collapse1.jpg" style="width: 300px;" /></a>
+<p class="caption">Selected edge ring</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Collapse2.jpg"><img alt="../../../_images/Collapse2.jpg" src="../../../_images/Collapse2.jpg" style="width: 300px;" /></a>
+<p class="caption">Edge ring collapsed</p>
+</div>
+</div>
+<div class="section" id="edge-split">
+<h2>Edge Split<a class="headerlink" href="#edge-split" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Edge Split</em></div>
+<div class="line">Hotkey:   <em class="menuselection">[Ctrl][E] ‣ Edge Split</em></div>
+</div>
+</div>
+<p><em>Edge split</em> is similar to the rip tool. When two or more touching interior edges,
+or a border edge is selected when using <em>Edge split</em>,
+a hole will be created, and the selected edges are duplicated to form the border of the hole</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeSplit1.jpg"><img alt="../../../_images/EdgeSplit1.jpg" src="../../../_images/EdgeSplit1.jpg" style="width: 300px;" /></a>
+<p class="caption">Selected edges</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/EdgeSplit2.jpg"><img alt="../../../_images/EdgeSplit2.jpg" src="../../../_images/EdgeSplit2.jpg" style="width: 300px;" /></a>
+<p class="caption">Adjacent face moved to reveal hole left by split</p>
+</div>
+</div>
+<div class="section" id="bridge-edge-loops">
+<h2>Bridge Edge Loops<a class="headerlink" href="#bridge-edge-loops" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Edges ‣ Bridge Edge Loops</em></div>
+</div>
+</div>
+<p><em>Bridge Edge Loops</em> connects multiple edge loops with faces.</p>
+<p>Simple example showing 2 closed edge loops.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_simple_before.jpg"><img alt="../../../_images/mesh_bridge_simple_before.jpg" src="../../../_images/mesh_bridge_simple_before.jpg" style="width: 300px;" /></a>
+<p class="caption">Input</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_simple_after.jpg"><img alt="../../../_images/mesh_bridge_simple_after.jpg" src="../../../_images/mesh_bridge_simple_after.jpg" style="width: 300px;" /></a>
+<p class="caption">Bridge result</p>
+</div>
+<p>Example of bridge tool between edge loops with different numbers of vertices.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_uneven_before.jpg"><img alt="../../../_images/mesh_bridge_uneven_before.jpg" src="../../../_images/mesh_bridge_uneven_before.jpg" style="width: 300px;" /></a>
+<p class="caption">Input</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_uneven_after.jpg"><img alt="../../../_images/mesh_bridge_uneven_after.jpg" src="../../../_images/mesh_bridge_uneven_after.jpg" style="width: 300px;" /></a>
+<p class="caption">Bridge result</p>
+</div>
+<p>Example using the bridge tool to punch holes in face selections and connect them.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_faces_before.jpg"><img alt="../../../_images/mesh_bridge_faces_before.jpg" src="../../../_images/mesh_bridge_faces_before.jpg" style="width: 300px;" /></a>
+<p class="caption">Input</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_faces_after.jpg"><img alt="../../../_images/mesh_bridge_faces_after.jpg" src="../../../_images/mesh_bridge_faces_after.jpg" style="width: 300px;" /></a>
+<p class="caption">Bridge result</p>
+</div>
+<p>Example showing how bridge tool can detect multiple loops and loft them in one step.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_multi_before.jpg"><img alt="../../../_images/mesh_bridge_multi_before.jpg" src="../../../_images/mesh_bridge_multi_before.jpg" style="width: 300px;" /></a>
+<p class="caption">Input</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_multi_after.jpg"><img alt="../../../_images/mesh_bridge_multi_after.jpg" src="../../../_images/mesh_bridge_multi_after.jpg" style="width: 300px;" /></a>
+<p class="caption">Bridge result</p>
+</div>
+<p>Example of the subdivision option and surface blending with UV&#8217;s.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_advanced_before.jpg"><img alt="../../../_images/mesh_bridge_advanced_before.jpg" src="../../../_images/mesh_bridge_advanced_before.jpg" style="width: 300px;" /></a>
+<p class="caption">Input</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/mesh_bridge_advanced_after.jpg"><img alt="../../../_images/mesh_bridge_advanced_after.jpg" src="../../../_images/mesh_bridge_advanced_after.jpg" style="width: 300px;" /></a>
+<p class="caption">Bridge result</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faces.html" class="btn btn-neutral float-right" title="Face Tools"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertices.html" class="btn btn-neutral" title="Vertex Tools"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

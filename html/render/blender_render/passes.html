@@ -1,0 +1,650 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Render Passes &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Blender Render Engine" href="index.html"/>
+        <link rel="next" title="Motion Blur" href="motion_blur.html"/>
+        <link rel="prev" title="Render Layers" href="layers.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="index.html">Blender Render Engine</a> &raquo;</li>
+      
+    <li>Render Passes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/render/blender_render/passes.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="render-passes">
+<h1>Render Passes<a class="headerlink" href="#render-passes" title="Permalink to this headline">¶</a></h1>
+<p>Render Passes are necessary because of the different things the Blender Render Engine must
+calculate to give you the final image.
+In each &#8216;pass&#8217; the engine calculates different interactions between objects.</p>
+<div class="section" id="render-passes-in-detail">
+<h2>Render Passes In Detail<a class="headerlink" href="#render-passes-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>Everything you see in a render must be calculated for the final image.
+All interactions between objects in your scene, lighting, cameras, background images,
+world settings, etc.,
+must all be separately calculated in different passes for different reasons,
+such as calculating shadows.</p>
+<p>In a render, every pixel has been calculated several times to make sure it will show the right
+color for the right part of the image.
+Various things that are calculated in a standard render include:</p>
+<ul>
+<li><p class="first"><em>Where are</em> <strong>shadows</strong> <em>cast?</em></p>
+</li>
+<li><p class="first"><em>How is</em> <strong>ambient</strong> <em>light in the environment blocked (</em> <strong>occluded</strong> <em>) by objects in the scene?</em></p>
+</li>
+<li><p class="first"><em>How is light</em> <strong>reflected</strong> <em>off mirrored surfaces?</em>
+Like shadows, lines are calculated, except this time they come from the camera and bounce off mirrored surfaces,
+so that when these lines hit an object, the engine calculates that this is what the camera should see.</p>
+</li>
+<li><dl class="first docutils">
+<dt><em>How is light bent (</em> <strong>refracted</strong> <em>) as is passes through transparent objects?</em></dt>
+<dd><p class="first last">Does it go straight through? Does it bend? If so, at what depth in the object?</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><em>What designated</em> <strong>objects</strong> <em>are in the scene, and what is their outline?</em>
+Should the object appear blurred, or should it appear in sharp focus?</p>
+</li>
+<li><dl class="first docutils">
+<dt><em>How fast is something moving (</em> <strong>velocity</strong> <em>)?</em></dt>
+<dd><p class="first last">Should it appear blurred given our frame rate or is it slow enough to still be focused on properly?</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>How far away from the camera are objects&#8217; surfaces (</em> <strong>Z-depth</strong> <em>)?</em></dt>
+<dd><p class="first last">Can the object&#8217;s surfaces be seen at all, or are they being blocked by another object&#8217;s geometry?</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>Does an object have a</em> <strong>normal</strong> <em>vector (bumpmap)?</em></dt>
+<dd><p class="first last">Do shadows and apparent geometry need to be calculated for any objects?</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><em>Is there any</em> <strong>specularity</strong> <em>?</em> Are objects with textures such as metal shiny at all?</p>
+</li>
+</ul>
+<p>The answer to each of the above questions is an image or map, as shown below:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Manual-Render-RenderPasses-Example.jpg"><img alt="../../_images/Manual-Render-RenderPasses-Example.jpg" src="../../_images/Manual-Render-RenderPasses-Example.jpg" style="width: 600px;" /></a>
+</div>
+<p>Each Render Pass puts out an image or a map. For the purposes of this example,
+a Render Layer was defined to produce all possible outputs. When a Render Layer input-node
+was added to the node diagram and the Render Layer input-node was subsequently associated with
+the Render Layer, all of the layer&#8217;s outputs appeared as connection points on the right-hand
+(output) side of the node.</p>
+<p>Render Passes that produce Images can be directly viewed in a viewer, or,
+if they are the only pass that is rendered, saved as the render image. If the pass is enabled,
+it can be saved in a multilayer OpenEXR format.</p>
+<p>If the Render Pass output is not an image but is a map,
+it needs to be translated into something that we can see. For example, the Z-depth map is an
+array of values that specifies how far away from the camera each pixel is;
+values range between +/-3,000,000 Blender Units or so. The intermediate node you see above,
+between the Render Layer output socket and the Viewer node input socket (such as Map Value)
+does this translation or scaling. You must use that specific kind of translation node to get
+good results if you intend on operating on that map as an image. You must then,
+after making any adjustments,
+run the map back through that node to re-scale it back to the original before saving.</p>
+</div>
+<div class="section" id="selecting-render-passes">
+<h2>Selecting Render Passes<a class="headerlink" href="#selecting-render-passes" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/Manual-RenderLayer-Panel.jpg" src="../../_images/Manual-RenderLayer-Panel.jpg" />
+</div>
+<p>Render Passes are the various distinct outputs that the renderer is able to generate.
+All of the following render outputs are normally combined into a single output known,
+appropriately enough, as the <strong>Combined</strong> output.
+But you can also select any of them to be output as a separate pass. (If you do so, in most
+cases you can choose whether to <em>also</em> continue to include it in the Combined output.)</p>
+<p>Some of these outputs must be enabled and used within your scene
+(and not just selected in the Render Layer panel) in order to show anything. For example,
+if you do not have any lights in your scene,
+or those lights have been set to not cast shadows,
+or objects in the limelight do not have materials which have been set to receive shadows,
+the <strong>Shadow</strong> pass will be blank; there&#8217;s simply nothing to show you.
+If you have not enabled <em>Ambient Occlusion</em> in your World environment settings,
+the <strong>AO</strong> pass will be blank, even if you select it here.</p>
+<p>To save time and disk space, you have to tell Blender each of the passes to render in the Render Layers panel
+(which we first introduced on <a class="reference internal" href="../post_process/layers.html"><em>the previous page</em></a>):</p>
+<dl class="docutils">
+<dt>Combined</dt>
+<dd>This renders everything in the image, even if it&#8217;s not necessary.
+(&#8220;The whole enchilada,&#8221; so to speak.) This is all the options below,
+blended into a single output, <em>except</em> those options which you&#8217;ve indicated should be omitted from this pass,
+as indicated with the camera button.</dd>
+<dt>Z</dt>
+<dd>The Z-depth map; how far away each pixel is from the camera. Used for Depth-Of-Field (DOF).
+The depth map is inverse linear <em>(1/distance)</em> from the camera clip start.</dd>
+<dt>Vector</dt>
+<dd>The direction and speed things are moving. Used with Vector Blur.</dd>
+<dt>Normal</dt>
+<dd>Calculates lighting and apparent geometry for a bumpmap (an image which is used to fake detail on an object)
+or for changing the apparent direction of light falling on an object.</dd>
+<dt>UV</dt>
+<dd>Allows texturing after rendering. See UV node.</dd>
+<dt>Mist</dt>
+<dd>Deliver Mist factor pass.</dd>
+<dt>Object Index</dt>
+<dd>Masks selected objects. See MaskObj node.</dd>
+<dt>Color</dt>
+<dd>The color of materials without shading.</dd>
+<dt>Diffuse</dt>
+<dd>The diffuse shading of materials.</dd>
+<dt>Specular</dt>
+<dd>Specular highlights.</dd>
+<dt>Shadow</dt>
+<dd>Shadows cast. Make sure shadows are cast by your lights (positive or negative), and received by materials.
+To use this pass, mix multiply it with the Diffuse pass.</dd>
+<dt>Emit</dt>
+<dd>Emission pass.</dd>
+<dt>AO</dt>
+<dd>Ambient Occlusion. Make sure it&#8217;s turned on in your environment and that RayTracing is enabled.</dd>
+<dt>Environment</dt>
+<dd>Environment lighting.</dd>
+<dt>Indirect</dt>
+<dd>Indirect lighting pass.</dd>
+<dt>Reflection</dt>
+<dd>Reflection off mirrors and other reflective surfaces (highly waxed white floors, for example).
+Mix Add this pass to Diffuse to use it.</dd>
+<dt>Refraction</dt>
+<dd>Refraction of colors through transparent meshes. Mix Add this pass to the Diffuse pass to use it.</dd>
+</dl>
+<p>When you enable a pass, the appropriate socket on the Render Layers node shows up like magic,
+and can be used as shown in the example above.</p>
+</div>
+<div class="section" id="excluding-render-passes">
+<h2>Excluding Render Passes<a class="headerlink" href="#excluding-render-passes" title="Permalink to this headline">¶</a></h2>
+<p>As we said, the <strong>Combined</strong> output is an amalgam of several outputs which are <em>also</em>
+available separately. When you select one of these outputs,
+they will be provided separately <em>and also</em> included in the Combined pass.</p>
+<p>When you enable the Camera icon that is beside several of the pass options,
+the particular pass will be excluded from the combined pass.
+They will be made available separately <em>but not</em> included in the combined pass.</p>
+</div>
+<div class="section" id="using-render-passes">
+<h2>Using Render Passes<a class="headerlink" href="#using-render-passes" title="Permalink to this headline">¶</a></h2>
+<p>The primary purpose of Render Passes is to enable you to process the various outputs in
+different ways, by constructing networks of render nodes.
+You can achieve many special effects,
+and economize considerably on the render times of complicated scenes,
+by creative and effective use of this facility.
+We&#8217;ll show you a few examples of this in just a moment.</p>
+<p>Quite a bit of information about the typical uses for some of the passes is discussed
+elsewhere:</p>
+<ul class="simple">
+<li>Image: Since this is the main product, all of Blender uses it.</li>
+<li>Alpha: See the <em>AlphaOver</em> node and all of the <em>Matte</em> nodes.</li>
+<li>Z: See the <em>Defocus</em> node.</li>
+<li>Vec: See the <em>Vector Blur</em> node.</li>
+<li>Normal: See the <em>Normal</em> node.</li>
+</ul>
+<div class="section" id="recoloring-shadows">
+<h3>Recoloring Shadows<a class="headerlink" href="#recoloring-shadows" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Manual-Render-RenderPasses-Example2.jpg"><img alt="../../_images/Manual-Render-RenderPasses-Example2.jpg" src="../../_images/Manual-Render-RenderPasses-Example2.jpg" style="width: 300px;" /></a>
+</div>
+<p>Let&#8217;s run the Shadow buffer through a colorization noodle, then recombine it;
+all your shadows will be artificially colored.
+Lots of threads in this noodle are shown to the right, so let&#8217;s walk through it.
+On the left is the Render Layer input node:
+it refers to one of the Render Layers that we have defined for our scene. In the scene,
+we have a reflective ball on a pedestal standing in front of a backdrop. Everything
+(except the ball) is gray. We use a standard four-light rig: backfill placed high,
+two sidefills at ground level, and a key light above and to the left of camera. Suzanne,
+a monkey-shaped geometry, is standing in front of the key light,
+so her shadow is cast into the scene on the floor.
+The ball casts shadows onto the backdrop and floor.</p>
+<p>The output channels of the Render Layer node are determined by which buttons we selected when
+defining our Render Layer.
+The top two viewers show you the image output using the Shadow as the Alpha channel,
+and the node next to it just the Shadow channel. Where the Shadow is dark,
+the image in the left viewer is transparent.
+We have used the Shadow to cut out parts of the image.</p>
+<p>We then take the shadow through an RGB Curve, which is set to magnify just the Blue by 75%;
+so a gray shadow of (R:40, G:40, B:40) becomes (R:40, G:40, B:40x1.75=70).
+That blue-tinged shadow is shown in the bottom viewer. Now we have two options:
+AlphaOver and Mix. For either option:</p>
+<ul class="simple">
+<li>Use the Shadow map as a Factor.</li>
+<li>Feed the Blue Shadow to the Top Socket.</li>
+<li>Feed the core or base image to the Bottom Socket.</li>
+</ul>
+<p>The resulting image is the same in either case; a blue shadow.
+Note that Suzanne&#8217;s reflection is not blue; there&#8217;s a different Render Pass for that.</p>
+<p>You could just as easily swap in another image entirely; for example,
+the shadow map from another render layer.
+You can even take an image from another project entirely and use that instead
+(using the Image Input node), to get a different effect. (For example,
+an effect similar to a <em>Star Wars Episode One</em> movie poster,
+where Anakin Skywalker already casts the shadow of Darth Vader.)</p>
+</div>
+<div class="section" id="compositing-ambient-occlusion">
+<h3>Compositing Ambient Occlusion<a class="headerlink" href="#compositing-ambient-occlusion" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Manual-Render-Passes-AO.jpg"><img alt="../../_images/Manual-Render-Passes-AO.jpg" src="../../_images/Manual-Render-Passes-AO.jpg" style="width: 600px;" /></a>
+</div>
+<p>AO is a geometry-based dirt shader, making corners darker.
+It is separately enabled in the World settings and computed as a separate pass. When enabled,
+it has one of three Modes (<em>Add, Subtract, Both</em>), and variable <em>Energy</em> level
+(which changes the intensity of the shading).
+The third variable is the amount of Ambient light that the material receives.
+If it does not receive any, then ambient occlusion does not affect it.
+Based on these variables, Blender computes an AO pass.
+If you call it out as a separate pass and wish to composite it back into your image,
+you will need to enable the Color and Diffuse pass as well.</p>
+<p>To configure your noodle, consider the example image above.</p>
+<ul class="simple">
+<li>First, depending on the AO mode do one of the following: If AO mode is Add: directly use the AO pass.
+If AO mode is Sub: Calculate AO - 1, or if AO mode is Both: Calculate 2*AO - 1.</li>
+<li>Multiply the output of Step 1 with the AO energy level.</li>
+<li>Multiply the output of Step 2 with the material&#8217;s ambience value.
+If you have materials which receive different ambience light levels (0.5 is the default),
+one would have to create an ambience map based on Object ID.</li>
+<li>Multiply the output of Step 3 with the color pass.</li>
+<li>Add the output of Step 4 to the diffuse pass.</li>
+</ul>
+<p>If shadows, colored ambient light, specularity, reflections, and/or refractions are involved
+they have to be added to the diffuse pass before adding the converted AO pass.</p>
+</div>
+<div class="section" id="vector-blurring-shadows">
+<h3>Vector Blurring Shadows<a class="headerlink" href="#vector-blurring-shadows" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Manual-Nodes-VectorBlur-Shadow.jpg"><img alt="../../_images/Manual-Nodes-VectorBlur-Shadow.jpg" src="../../_images/Manual-Nodes-VectorBlur-Shadow.jpg" style="width: 600px;" /></a>
+</div>
+<p>When using Vector Blur instead of Motion Blur, objects in motion are blurred,
+but objects at rest (with respect to the camera) are not blurred.
+The crossover is the shadow of the object in motion. Above,
+we have a cube in motion across a ground plane.
+If we just ran the combined pass through Vector Blur,
+you can see the result in the lower right-hand corner; the box is blurred,
+but its shadow is sharply in focus, and thus the image does not look realistic.</p>
+<p>Therefore, we need to separate out the diffuse and shadow passes from the floor by creating a
+&#8220;Floor&#8221; render layer. That render layer has Diffuse and Shadow passes enabled,
+and only renders the floor object (layer 2). Another render layer (&#8220;Cube&#8221;)
+renders the Z and Vector passes, and only renders the cube (on layer 1). Using the Blur node,
+we blur the shadow pass, and then combine the diffuse and blurred shadow by multiplying them
+together in a Mix Multiply node; we then have a blurred shadow on a crisp ground plane.
+We can then mix the vector-blurred object to provide a realistic-looking image.</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Render Passes can be manipulated to give you almost complete control over your final image.
+Causing objects to cast shadows that aren&#8217;t really their shadows,
+making objects appear out of focus or sharply in focus like a real camera, manipulating colors
+just for final post-processing or just reconfiguring your render passes to save render time,
+are all things which you might wish to manipulate the render engine for.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="motion_blur.html" class="btn btn-neutral float-right" title="Motion Blur"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layers.html" class="btn btn-neutral" title="Render Layers"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

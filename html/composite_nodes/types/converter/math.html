@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Math Node &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Converter Nodes" href="index.html"/>
+        <link rel="next" title="ColorRamp Node" href="color_ramp.html"/>
+        <link rel="prev" title="Converter Nodes" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Compositing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node_groups.html">Node Groups</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Composite Nodes</a> &raquo;</li>
+      
+          <li><a href="../index.html">Types of Nodes</a> &raquo;</li>
+      
+          <li><a href="index.html">Converter Nodes</a> &raquo;</li>
+      
+    <li>Math Node</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/composite_nodes/types/converter/math.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="math-node">
+<h1>Math Node<a class="headerlink" href="#math-node" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Math.jpg" src="../../../_images/Manual-Compositing-Node-Math.jpg" />
+<p class="caption">Math node</p>
+</div>
+<p>This node performs the selected math operation on an image or buffer.
+All common math functions are supported. If only an image is fed to one Value socket, the math
+function will apply the other Value consistently to every pixel in producing the output Value.
+Select the math function by clicking the up-down selector where the &#8220;Add&#8221; selection is shown.</p>
+<p>The trig functions of Sine, Cosine, Tangent use only the top socket and accept values in
+radians between 0 and 2*pi for one complete cycle.</p>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manual-z-mask">
+<h3>Manual Z-Mask<a class="headerlink" href="#manual-z-mask" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-Compositing-Node-Math_MinMax.jpg"><img alt="../../../_images/Manual-Compositing-Node-Math_MinMax.jpg" src="../../../_images/Manual-Compositing-Node-Math_MinMax.jpg" style="width: 300px;" /></a>
+<p class="caption">Example</p>
+</div>
+<p>This example has one scene input by the top RenderLayer node,
+which has a cube that is about 10 BU from the camera.
+The bottom RenderLayer node inputs a scene (FlyCam)
+with a plane that covers the left half of the view and is 7 BU from the camera.
+Both are fed through their respective Map Value nodes to divide the Z buffer by 20
+(multiply by .05, as shown in the Size field)
+and clamped to be a Min/Max of 0.0/1.0 respectively.</p>
+<p>For the Minimum function,
+the node selects those Z values where the corresponding pixel is closer to the camera;
+so it chooses the Z values for the plane and part of the cube.
+The background has an infinite Z value, so it is clamped to 1.0 (shown as white).
+In the maximum example, the Z values of the cube are greater than the plane,
+so they are chosen for the left side, but the plane (FlyCam) Renderlayer&#8217;s Z are infinite
+(mapped to 1.0) for the right side, so they are chosen.</p>
+</div>
+<div class="section" id="using-sine-function-to-pulsate">
+<h3>Using Sine Function to Pulsate<a class="headerlink" href="#using-sine-function-to-pulsate" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Math_Sine.jpg" src="../../../_images/Manual-Compositing-Node-Math_Sine.jpg" />
+</div>
+<p>This example has a Time node putting out a linear sequence from 0 to 1 over the course of 101
+frames. The green vertical line in the curve widget shows that frame 25 is being put out,
+or a value of .25. That value is multiplied by 2*pi and converted to 1.0 by the Sine function,
+since we all know that Sine(2*pi/4)=Sine(pi/2)=+1.0.</p>
+<p>Since the Sine function can put out values between -1.0 and 1.0,
+the Map Value node scales that to 0.0 to 1.0 by taking the input (-1 to 1), adding 1
+(making 0 to 2), and multiplying the result by one half
+(thus scaling the output between 0 and 1).
+The default ColorRamp converts those values to a grayscale. Thus,
+medium gray corresponds to a 0.0 output by the sine, black to -1.0, and white to 1.0.
+As you can see, Sine(pi/2)=1.0. Like having your own visual color calculator! Animating this
+noodle provides a smooth cyclic sequence through the range of grays.</p>
+<p>Use this function to vary, for example,
+the alpha channel of an image to produce a fading in/out effect.
+Alter the Z channel to move an scene in/out of focus.
+Alter a color channel value to make a color &#8220;pulse&#8221;.</p>
+</div>
+<div class="section" id="brightening-scaling-a-channel">
+<h3>Brightening/Scaling a Channel<a class="headerlink" href="#brightening-scaling-a-channel" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Math_Multiply.jpg" src="../../../_images/Manual-Compositing-Node-Math_Multiply.jpg" />
+</div>
+<p>This example has a Multiply node increasing the luminance channel (Y)
+of the image to make it brighter. Note that you should use a Map Value node with Min() and Max
+() enabled to clamp the output to valid values.
+With this approach you could use a logarithmic function to make a high-dynamic range image.
+For this particular example,
+there is also a Brighten/Contrast node that might give simpler control over brightness.</p>
+</div>
+<div class="section" id="quantize-restrict-color-selection">
+<h3>Quantize/Restrict Color Selection<a class="headerlink" href="#quantize-restrict-color-selection" title="Permalink to this headline">¶</a></h3>
+<p>In this example, we want to restrict the color output to only 256 possible values.
+Possible use of this is to see what the image will look like on an 8-bit cell phone display.
+To do this, we want to restrict the R,
+G and B values of any pixel to be one of a certain value, such that when they are combined,
+will not result in more than 256 possible values. The number of possible values of an output
+is the number of channel values multiplied by each other, or Q = R * G * B.</p>
+<p>Since there are 3 channels and 256 values,
+we have some flexibility how to quantize each channel,
+since there are a lot of combinations of R*G*B that would equal 256. For example,
+if {R,G,B} = {4,4,16}, then 4 * 4 * 16 = 256. Also, {6,6,7} would give 252 possible values.
+The difference in appearance between {4,4,16} and {6,6,7} is that the first set (4,4,
+16} would have fewer shades of red and green, but lots of shades of blue. The set {6,6,
+7} would have a more even distribution of colors.
+To get better image quality with fewer color values,
+give more possible values to the predominant colors in the image.</p>
+</div>
+</div>
+<div class="section" id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Math_ColorBand">Two Approaches to Quantizing to 6 values</a></p>
+<p>To accomplish this quantization of an image to 256 possible values, lets use the set {6,6,7}.
+To split up a continuous range of values between 0 and 1 (the full Red spectrum)
+into 6 values, we need to construct an algorithm or function that takes any input value but
+only puts out 6 possible values, as illustrated by the image to the right.
+We want to include 0 as true black, with five other colors in between.
+The approach shown produces {0,.2,.4,.6,.8,1}. Dividing 1.0 by 5 equals .2,
+which tells us how far apart each quantified value is from the other.</p>
+<p>So, to get good even shading,
+we want to take values that are 0.16 or less and map them to 0.0;
+values between 0.16 and 0.33 get fixed to 0.2;
+colorband values between 0.33 and 0.5 get quantized to 0.4,
+and so on up to values between 0.83 and 1.0 get mapped to 1.0.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Function f(x)</p>
+<p class="last">An algebraic function is made up of primitive mathematical operations
+(add, subtract, multiply, sine, cosine, etc) that operate on an input value to provide a desired output value.</p>
+</div>
+<p><a class="reference external" href="http://wiki.blender.org/index.php/File:Manual-Compositing-Node-Math_spreadsheet">Spreadsheet showing a function</a></p>
+<p>The theory behind this function is scaled truncation.
+Let us suppose we want a math function that takes in a range of values between 0 and 1,
+such as .552, but only outputs a value of 0.0, 0.2, 0.4, etc. We can imagine then that we need
+to get that range 0 to 1 powered up to something 0 to 6 so that we can chop off and make it a
+whole number. So, with six divisions,
+how can we do that? The answer is we multiply the range by 6.
+The output of that first math multiply node is a range of values between 0 and 6.
+To get even divisions, because we are using the rounding function (see documentation above),
+we want any number plus or minus around a whole number will get rounded to that number. So,
+we subtract a half, which shifts everything over. The Round()
+function then makes that range 0 to 5. We then divide by 5 to get back a range of numbers
+between 0 and 1 which can then be combined back with the other color channels. Thus,
+you get the function</p>
+<p>f(x,n)=round[ x*n-1/2 ] /(n-1)</p>
+<p>where n is the number of possible output values, and x is the input pixel color and f(x,n)
+is the output value. There&#8217;s only one slight problem,
+and that is for the value exactly equal to 1, the formula result is 1.2,
+which is an invalid value. This is because the round function is actually a roundup function,
+and exactly 5.5 is rounded up to 6. So, by subtracting .501, we compensate and thus 5.
+499 is rounded to 5. At the other end of the spectrum, pure black, or 0, when .501 subtracted,
+rounds up to 0 since the Round() function does not return a negative number.</p>
+<p>Sometimes using a spreadsheet can help you figure out how to put these nodes together to get
+the result that you want. Stepping you through the formula for n=6 and x=0.70,
+locate the line on the spreadsheet that has the 8-bit value 179 and R value 0.7.
+Multiplying by 6 gives 4.2. Subtracting 1/2 gives 3.7, which rounds up to 4.
+4 divided by 5 = .8. Thus, f(0.7, 6) = 0.8 or an 8-bit value of 204.
+You can see that this same 8-bit value is output for a range of input values.
+Yeah! Geeks Rule! This is how you program Blender to do compositing based on Algebra.
+Thank a Teacher if you understand this.</p>
+<div class="section" id="reality">
+<h3>Reality<a class="headerlink" href="#reality" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Manual-Compositing-Node-Math_Quantize-Red.jpg"><img alt="../../../_images/Manual-Compositing-Node-Math_Quantize-Red.jpg" src="../../../_images/Manual-Compositing-Node-Math_Quantize-Red.jpg" style="width: 650px;" /></a>
+</div>
+<p>To implement this function in Blender, consider the noodle above. First,
+feed the image to the Separate RGB node. For the Red channel,
+we string the math nodes into a function that takes each red color, multiplies (scales)
+it up by the desired number of divisions (6), offsets it by 0.5,
+rounds the value to the nearest whole number, and then divides the image pixel color by 5. So,
+the transformation is {0..1} becomes {0..6}, subtracting centers the medians to {-0.5...5.5}
+and the rounding to the nearest whole number produces {0,1,2,3,4,
+5} since the function rounds down,
+and then dividing by five results in six values {0.0,0.2,0.4,0.6,0.8,1.0}.</p>
+<p>The result is that the output value can only be one of a certain set of values,
+stair-stepped because of the rounding function of the math node noodle.
+Copying this one channel to operate on Green and Blue gives the noodle below.
+To get the 6:6:7, we set the three multiply nodes to {6,6,7} and the divide nodes to {5,5,6}.</p>
+<p>If you make this into a node group, you can easily re-use this setup from project to project.
+When you do, consider using a math node to drive the different values that you would have to
+otherwise set manually, just to error-proof your work.</p>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>Normally, an output render consists of 32- or 24-bit color depth,
+and each pixel can be one of millions of possible colors.
+This noodle example takes each of the Red,
+Green and Blue channels and normalizes them to one of a few values.
+When all three channels are combined back together,
+each color can only be one of 256 possible values.</p>
+<p>While this example uses the Separate/Combine RGB to create distinct colors,
+other Separate/Combine nodes can be used as well. If using the YUV values,
+remember that U and V vary between -0.5 and +0.5,
+so you will have to first add on a half to bring the range between 0 and 1,
+and then after dividing, subtract a half to bring in back into standard range.</p>
+<p>The JPG or PNG image format will store each of the colors according to their image standard
+for color depth (e.g. JPG is 24-bit), but the image will be very very small, since reducing
+color depth and quantizing colors is essentially what the JPEG compression algorithm
+accomplishes.</p>
+<p>You do not have to reduce the color depth of each channel evenly. For example,
+if blue was the dominant color in an image, to preserve image quality,
+you could reduce Red to 2 values, Green to 4, and let the blue take on 256/(2*4) or 32 values.
+If using the HSV, you could reduce the Saturation and Value to 2 values (0 or 1.0)
+by Multiply by 2 and Divide by 2, and restrict the Hue to 64 possible values.</p>
+<p>You can use this noodle to quantize any channel; alpha, speed (vector), z-values, and so forth.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_ramp.html" class="btn btn-neutral float-right" title="ColorRamp Node"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Converter Nodes"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

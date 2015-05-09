@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Smoothing &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Meshes" href="index.html"/>
+        <link rel="next" title="Mesh Clean-up" href="cleanup.html"/>
+        <link rel="prev" title="Weight Tools" href="vertex_groups/weight_paint_tools.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/index.html">Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="index.html">Meshes</a> &raquo;</li>
+      
+    <li>Smoothing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modeling/meshes/smoothing.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="smoothing">
+<h1>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mesh-shading">
+<h2>Mesh Shading<a class="headerlink" href="#mesh-shading" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<caption>Example mesh rendered flat, smoothed using edge split, and using Subdivision Surface.
+Note how edges are rendered differently.
+<a class="reference external" href="http://wiki.blender.org/index.php/:File:25-manual-meshsmooth-example.blend">Sample .blend</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-2rrflat.jpg"><img alt="../../_images/25-manual-meshsmooth-example-2rrflat.jpg" src="../../_images/25-manual-meshsmooth-example-2rrflat.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-05edgesplit.jpg"><img alt="../../_images/25-manual-meshsmooth-example-05edgesplit.jpg" src="../../_images/25-manual-meshsmooth-example-05edgesplit.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-10edgeloops.jpg"><img alt="../../_images/25-manual-meshsmooth-example-10edgeloops.jpg" src="../../_images/25-manual-meshsmooth-example-10edgeloops.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>As seen in the previous sections, polygons are central to Blender. Most objects are
+represented by polygons and truly curved objects are often approximated by polygon meshes.
+When rendering images, you may notice that these polygons appear as a series of small,
+flat faces.</p>
+<p>Sometimes this is a desirable effect, but usually we want our objects to look nice and smooth.
+This section shows you how to visually smooth an object, and how to apply the <em>Auto Smooth</em>
+filter to quickly and easily combine smooth and faceted polygons in the same object.</p>
+<p>The last section on this page shows possibilities for smoothing a mesh&#8217;s geometry,
+not only its appearance.</p>
+<div class="section" id="smooth-shading">
+<h3>Smooth shading<a class="headerlink" href="#smooth-shading" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> and <em>Object</em> mode</div>
+<div class="line">Panel:    <em>Mesh Tools</em> (<em>Editing</em> context)</div>
+<div class="line">Menu:     <em class="menuselection">Mesh ‣ Faces ‣ Shade Smooth / Shade Flat</em></div>
+<div class="line">Hotkey:   <em class="menuselection">[ctrl][F] ‣ Shade Smooth / Shade Flat</em></div>
+</div>
+</div>
+<table border="1" class="docutils">
+<caption>Same mesh smooth shaded</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-shading.jpg"><img alt="../../_images/25-manual-meshsmooth-shading.jpg" src="../../_images/25-manual-meshsmooth-shading.jpg" style="width: 80px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-03rrsmooth.jpg"><img alt="../../_images/25-manual-meshsmooth-example-03rrsmooth.jpg" src="../../_images/25-manual-meshsmooth-example-03rrsmooth.jpg" style="width: 220px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The easiest way is to set an entire object as smooth or faceted by selecting a mesh object,
+and in <em>Object</em> mode, click <em>Smooth</em> in the <em>Tool Shelf</em>.
+This button does not stay pressed;
+it forces the assignment of the &#8220;smoothing&#8221; attribute to each face in the mesh,
+including when you add or delete geometry.</p>
+<p>Notice that the outline of the object is still strongly faceted.
+Activating the smoothing features doesn&#8217;t actually modify the object&#8217;s geometry;
+it changes the way the shading is calculated across the surfaces,
+giving the illusion of a smooth surface. Click the <em>Flat</em> button in the
+<em>Tool Shelf</em> &#8216;s <em>Shading panel</em> to revert the shading back to that shown in
+the first image above.</p>
+<div class="section" id="smoothing-parts-of-a-mesh">
+<h4>Smoothing parts of a mesh<a class="headerlink" href="#smoothing-parts-of-a-mesh" title="Permalink to this headline">¶</a></h4>
+<p>Alternatively, you can choose which edges to smooth by entering <em>Edit mode</em>,
+then selecting some faces and clicking the <em>Smooth</em> button.
+The selected edges are marked in yellow.</p>
+<p>When the mesh is in <em>Edit mode</em>,
+only the selected edges will receive the &#8220;smoothing&#8221; attribute. You can set edges as flat
+(removing the &#8220;smoothing&#8221; attribute)
+in the same way by selecting edges and clicking the <em>Flat</em> button.</p>
+</div>
+</div>
+<div class="section" id="auto-smooth">
+<span id="id1"></span><h3>Auto Smooth<a class="headerlink" href="#auto-smooth" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Panel:    <em>Properties</em> (<em>Object Data</em> context)</div>
+</div>
+</div>
+<table border="1" class="docutils">
+<caption>Example mesh with <em>Auto Smooth</em> enabled</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-04rrautosmooth.jpg"><img alt="../../_images/25-manual-meshsmooth-example-04rrautosmooth.jpg" src="../../_images/25-manual-meshsmooth-example-04rrautosmooth.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-autosmooth.jpg"><img alt="../../_images/25-manual-meshsmooth-autosmooth.jpg" src="../../_images/25-manual-meshsmooth-autosmooth.jpg" style="width: 180px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>It can be difficult to create certain combinations of smooth and solid faces using the above
+techniques alone. Though there are workarounds
+(such as splitting off sets of faces by selecting them and pressing <tt class="kbd docutils literal"><span class="pre">Y</span></tt>),
+there is an easier way to combine smooth and solid faces, by using <em>Auto Smooth</em>.</p>
+<p>Auto smoothing can be enabled in the mesh&#8217;s panel in the <em>Properties</em> window. Angles
+on the model that are smaller than the angle specified in the <em>Angle</em> button will be
+smoothed during rendering (i.e. not in the 3D view)
+when that part of the mesh is set to smooth. Higher values will produce smoother faces,
+while the lowest setting will look identical to a mesh that has been set completely solid.</p>
+<p>Note that a mesh, or any faces that have been set as <em>Flat</em>,
+will not change their shading when <em>Auto Smooth</em> is activated: this allows you extra
+control over which faces will be smoothed and which ones won&#8217;t by overriding the decisions
+made by the <em>Auto Smooth</em> algorithm.</p>
+</div>
+<div class="section" id="edge-split-modifier">
+<h3>Edge Split Modifier<a class="headerlink" href="#edge-split-modifier" title="Permalink to this headline">¶</a></h3>
+<p>With the <a class="reference internal" href="../../modifiers/generate/edge_split.html"><em>Edge Split Modifier</em></a> we get a result
+similar to <em>Auto Smooth</em> with the ability to choose which edges should be split,
+based on angle - those marked as sharp.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-05edgesplit.jpg"><img alt="../../_images/25-manual-meshsmooth-example-05edgesplit.jpg" src="../../_images/25-manual-meshsmooth-example-05edgesplit.jpg" style="width: 200px;" /></a>
+<p class="caption">Edge Split modifier enabled, based on angle</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-07marksharp.jpg"><img alt="../../_images/25-manual-meshsmooth-example-07marksharp.jpg" src="../../_images/25-manual-meshsmooth-example-07marksharp.jpg" style="width: 200px;" /></a>
+<p class="caption">Edges marked as sharp</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-06marksharp.jpg"><img alt="../../_images/25-manual-meshsmooth-example-06marksharp.jpg" src="../../_images/25-manual-meshsmooth-example-06marksharp.jpg" style="width: 200px;" /></a>
+<p class="caption">Resulting render with sharp edge weighting</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="smoothing-the-mesh-geometry">
+<h3>Smoothing the mesh geometry<a class="headerlink" href="#smoothing-the-mesh-geometry" title="Permalink to this headline">¶</a></h3>
+<p>The above techniques do not alter the mesh itself, only the way it is displayed and rendered.
+Instead of just making the mesh look like a smooth surface,
+you can also physically smooth the geometry of the mesh with these tools:</p>
+<div class="section" id="mesh-editing-tools">
+<h4>Mesh editing tools<a class="headerlink" href="#mesh-editing-tools" title="Permalink to this headline">¶</a></h4>
+<p>You can apply one of the following in <em>Edit mode</em>:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="editing/deforming/smooth.html"><em>Smooth</em></a></dt>
+<dd>This relaxes selected components, resulting in a smoother mesh.</dd>
+<dt><a class="reference internal" href="editing/deforming/smooth.html"><em>Laplacian Smooth</em></a></dt>
+<dd>Smooths geometry by offers controls for better preserving larger details.</dd>
+<dt><tt class="xref doc docutils literal"><span class="pre">Subdivide</span> <span class="pre">Smooth</span></tt></dt>
+<dd>Adjusting the <em>smooth</em> parameter after using the <em>subdivide</em>
+tool results in a more organic shape. This is similar to using the subdivide modifier.</dd>
+<dt><a class="reference internal" href="editing/introduction.html"><em>Bevel</em></a></dt>
+<dd>This Bevels selected edged, causing sharp edges to be flattened.</dd>
+</dl>
+</div>
+<div class="section" id="modifiers">
+<h4>Modifiers<a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h4>
+<p>Alternatively,
+you can smooth the mesh non-destructively with one or several of the following modifiers:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="../../modifiers/deform/smooth.html"><em>Smooth Modifier</em></a></dt>
+<dd>Works like the <em>Smooth</em> tool in <em>Edit mode</em>;
+can be applied to specific parts of the mesh using vertex groups.</dd>
+<dt><a class="reference internal" href="../../modifiers/deform/laplacian_smooth.html"><em>Laplactian Smooth Modifier</em></a></dt>
+<dd>Works like the <em>Laplacian Smooth</em> tool in <em>Edit mode</em>;
+can be applied to specific parts of the mesh using vertex groups.</dd>
+<dt><a class="reference internal" href="../../modifiers/generate/bevel.html"><em>Bevel Modifier</em></a></dt>
+<dd>Works like the <em>Bevel</em> tool in <em>Edit mode</em>;
+Bevel can be set to work on an angle threshold, or on edge weight values.</dd>
+<dt><a class="reference internal" href="../../modifiers/generate/subsurf.html"><em>Subdivision Surface Modifier</em></a></dt>
+<dd>Catmull-Clark subdivision produces smooth results. Sharp edges can be defined with
+<tt class="xref doc docutils literal"><span class="pre">subdivision</span> <span class="pre">creases</span></tt>
+or by setting certain edges to &#8220;sharp&#8221; and adding an <a class="reference internal" href="../../modifiers/generate/edge_split.html"><em>EdgeSplit modifier</em></a>
+(set to <em>From Marked As Sharp</em>) before the <em>Subsurf</em> modifier.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-08subsurf.jpg"><img alt="../../_images/25-manual-meshsmooth-example-08subsurf.jpg" src="../../_images/25-manual-meshsmooth-example-08subsurf.jpg" style="width: 150px;" /></a>
+<p class="caption">Subsurf</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-09edgecrease.jpg"><img alt="../../_images/25-manual-meshsmooth-example-09edgecrease.jpg" src="../../_images/25-manual-meshsmooth-example-09edgecrease.jpg" style="width: 150px;" /></a>
+<p class="caption">Using creased edges, and resulting subsurf artifacts</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-10edgeloops.jpg"><img alt="../../_images/25-manual-meshsmooth-example-10edgeloops.jpg" src="../../_images/25-manual-meshsmooth-example-10edgeloops.jpg" style="width: 150px;" /></a>
+<p class="caption">Extra edge loops added</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/25-manual-meshsmooth-example-11edgeloops.jpg"><img alt="../../_images/25-manual-meshsmooth-example-11edgeloops.jpg" src="../../_images/25-manual-meshsmooth-example-11edgeloops.jpg" style="width: 150px;" /></a>
+<p class="caption">3D view showing creased edges (pink) and added edges loops (yellow)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cleanup.html" class="btn btn-neutral float-right" title="Mesh Clean-up"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vertex_groups/weight_paint_tools.html" class="btn btn-neutral" title="Weight Tools"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

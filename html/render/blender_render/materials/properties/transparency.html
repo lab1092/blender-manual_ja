@@ -1,0 +1,1291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Transparency &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Materials" href="../index.html"/>
+        <link rel="next" title="Mirror Reflections" href="mirror.html"/>
+        <link rel="prev" title="Shading" href="shading.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Materials</a> &raquo;</li>
+      
+    <li>Transparency</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/render/blender_render/materials/properties/transparency.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="transparency">
+<h1>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     All Modes</div>
+<div class="line">Panel:    Shading/Material Context &#8211;&gt; Transparency</div>
+</div>
+</div>
+<p>Materials in Blender can be set to be transparent,
+so that light can pass through any objects using the material.
+Transparency is controlled using an &#8220;alpha&#8221; channel, where each pixel has an additional value,
+range 0-1, in addition to its RGB color values. If alpha=0, then the pixel is transparent,
+and the RGB values for the surface contribute nothing to the pixel&#8217;s appearance; for alpha=1,
+the surface is fully opaque,
+and the color of the surface determines the final color of the pixel.</p>
+<div class="figure">
+<img alt="../../../../_images/Doc_2.6_Materials_Properties_Transparency.jpg" src="../../../../_images/Doc_2.6_Materials_Properties_Transparency.jpg" />
+<p class="caption">Transparency Panel</p>
+</div>
+<p>In Blender, there are three ways in which the transparency of a material can be set:
+Mask, Z-Buffer and Ray-trace. Each of these is explained in more detail below.
+The <a class="reference internal" href="preview.html"><em>Material Preview</em></a> option with a sphere object
+gives a good demonstration of the capabilities of these three options.</p>
+<div class="section" id="common-options">
+<h2>Common Options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
+<p>The following property controls are available for all transparency options:</p>
+<dl class="docutils">
+<dt>Alpha</dt>
+<dd>Sets the transparency of the material by setting all pixels in the alpha channel to the given value.</dd>
+<dt>Fresnel</dt>
+<dd>Sets the power of the Fresnel effect.
+The Fresnel effect controls how transparent the material is,
+depending on the angle between the surface normal and the viewing direction.
+Typically, the larger the angle, the more opaque a material becomes
+(this generally occurs on the outline of the object).</dd>
+<dt>Specular -</dt>
+<dd>Controls the alpha/falloff for the specular color.</dd>
+<dt>Blend</dt>
+<dd>Controls the blending between transparent and non-transparent areas. Only used if Fresnel is greater than 0.</dd>
+</dl>
+<p>Mask</p>
+<hr class="docutils" />
+<p>This option simply masks the Background. It uses the alpha channel to mix the color of each
+pixel on the active object plane with the color of the corresponding background pixel,
+according to the alpha channel of the pixel. Thus for alpha = 1,
+the object color is seen - the object is completely opaque; but if alpha = 0,
+only the background is seen - the object is transparent
+(but note that any other object behind the active object disappears).</p>
+<p>This is useful for making textures of solid or semi-transparent objects from photographic
+reference material - a mask is made with alpha opaque for pixels within the object,
+and transparent for pixels outside the object.</p>
+<p>See <a class="reference internal" href=""><em>Mask Transparency</em></a>.</p>
+</div>
+<div class="section" id="z-buffer">
+<h2>Z Buffer<a class="headerlink" href="#z-buffer" title="Permalink to this headline">¶</a></h2>
+<p>This uses the alpha buffer for transparent faces.
+The alpha value of each pixel determines the mix of the basic color of the material,
+and the color of the pixel is determined from the objects/background behind it.
+Only basic settings are available with this option; it does not calculate refractions.</p>
+</div>
+<div class="section" id="raytraced-transparency">
+<h2>Raytraced Transparency<a class="headerlink" href="#raytraced-transparency" title="Permalink to this headline">¶</a></h2>
+<p>Uses ray tracing to calculate refractions. Ray tracing allows for complex refractions,
+falloff, and blurring,
+and is used for simulating the refraction of light rays through a transparent material,
+like a lens.</p>
+<p>Note that the RayTrace option is only available in the Blender Render and Cycles render
+engines, but not in the Game Engine.</p>
+<p>A ray is sent from the camera and travels through the scene until it encounters an object.
+If the first object hit by the ray is non-transparent,
+then the ray takes the color of the object.</p>
+<p>If the object is transparent, then the ray continues its path through it to the next object,
+and so on, until a non-transparent object is finally encountered which gives the whole chain
+of rays its color. Eventually,
+the first transparent object inherits the colors of its background,
+proportional to its <em>Alpha</em> value
+(and the Alpha value of each transparent Material hit in between).</p>
+<p>But while the ray travels through the transparent object,
+it can be deflected from its course according to the Index of Refraction (IOR)
+of the material. When you actually look through a plain sphere of glass,
+you will notice that the background is upside-down and distorted:
+this is all because of the Index of Refraction of glass.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Enable Raytracing</p>
+<p>To get ray-traced transparency, you need to:</p>
+<ul class="last simple">
+<li>enable ray tracing in your Render settings.
+This is done in the Render context &#8211;&gt; Shading Panel. Ray tracing is enabled by default.</li>
+<li>set your Alpha value to something other than 1.0.</li>
+<li>in order for the background material to receive light passing through your transparent object,
+<em>Receive Transparent</em> must be turned on for that material in the Material &#8211;&gt; Shadow panel.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../_images/Manual-2.5-Material-RaytracedTransp-Panel.jpg" src="../../../../_images/Manual-2.5-Material-RaytracedTransp-Panel.jpg" />
+<p class="caption">The Transparency Panel.</p>
+</div>
+<p>In addition to the common options given above, the following property controls are available:</p>
+<dl class="docutils">
+<dt>IOR</dt>
+<dd>Index of Refraction. Sets how much a ray traveling through the material will be refracted,
+hence producing a distorted image of its background. See
+<a class="reference internal" href="#ior-values-for-common-materials">IOR values for Common Materials</a> below.</dd>
+<dt>Filter</dt>
+<dd>Amount of filtering for transparent ray trace. The higher this value,
+the more the base color of the material will show.
+The material will still be transparent but it will start to take on the color of the material.
+Disabled (0.0) by default.</dd>
+<dt>Falloff</dt>
+<dd>How fast light is absorbed as it passes through the material. Gives &#8216;depth&#8217; and &#8216;thickness&#8217; to glass.</dd>
+<dt>Limit</dt>
+<dd>Materials thicker than this are not transparent.
+This is used to control the threshold after which the filter color starts to come into play.</dd>
+<dt>Depth</dt>
+<dd>Sets the maximum number of transparent surfaces a single ray can travel through. There is no typical value.
+Transparent objects outside the <em>Depth</em> range will be rendered pitch black if viewed through the
+transparent object that the <em>Depth</em> is set for. In other words,
+if you notice black areas on the surface of a transparent object,
+the solution is probably to increase its <em>Depth</em> value
+(this is a common issue with ray tracing transparent objects).
+You may also need to turn on transparent shadows on the background object.</dd>
+<dt>Gloss</dt>
+<dd><p class="first">Settings for the glossiness of the material.</p>
+<dl class="last docutils">
+<dt>Amount</dt>
+<dd>The clarity of the refraction. Set this to something lower than zero to get a blurry refraction.</dd>
+<dt>Threshold</dt>
+<dd>Threshold for adaptive sampling.
+If a sample contributes less than this amount (as a percentage), sampling is stopped.</dd>
+<dt>Samples</dt>
+<dd>Number of cone samples averaged for blurry refraction.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="index-of-refraction">
+<h3>Index of Refraction<a class="headerlink" href="#index-of-refraction" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/Manual-2.5-Material-RaytracedTransp-IOR-Examples.jpg" src="../../../../_images/Manual-2.5-Material-RaytracedTransp-IOR-Examples.jpg" />
+<p class="caption">Influence of the IOR of an Object on the distortion of the background:
+spheres of Water, Glass and Diamond (top to bottom).</p>
+</div>
+<p>(<em>Influence of the IOR of an Object on the distortion of the background:
+spheres of Water, Glass and Diamond (top to bottom).</em>).
+There are different values for typical materials: Air is <strong>1.000</strong> (no refraction),
+Alcohol is <strong>1.329</strong>, Glass is <strong>1.517</strong>, Plastic is <strong>1.460</strong>, Water is <strong>1.333</strong> and Diamond is <strong>2.417</strong>.</p>
+</div>
+<div class="section" id="fresnel">
+<h3>Fresnel<a class="headerlink" href="#fresnel" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelExampel.jpg"><img alt="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelExampel.jpg" src="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelExampel.jpg" style="width: 320px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelExampelZTransp.jpg"><img alt="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelExampelZTransp.jpg" src="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelExampelZTransp.jpg" style="width: 320px;" /></a>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>16 pieces of glass rotated in various directions demonstrate the angle-dependent Fresnel effect
+with ray-traced (left) and alpha buffered transparency (right).
+Note that the major difference is the lack of IOR effect in the latter case.
+(Download <a class="reference external" href="http://wiki.blender.org/index.php/:File:Manual25-Material-FresnelExample.blend">.blend</a>.)</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelSettings.jpg"><img alt="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelSettings.jpg" src="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelSettings.jpg" style="width: 320px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelSettingsZTransp.jpg"><img alt="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelSettingsZTransp.jpg" src="../../../../_images/Manual-2.5-Material-RayTraceTransp-FresnelSettingsZTransp.jpg" style="width: 320px;" /></a>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Settings for Fresnel using ray-traced (left) and Z transparency (right).</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Note the specular highlight in the F4 glass tile
+(which is facing midway between the light and the camera); the Fresnel effect can be seen in
+row C and column 6 where the faces are turned away from the camera.</p>
+<p>The amount of Fresnel effect can be controlled by either increasing the <em>Blend</em>
+value or decreasing the <em>Alpha</em> value.</p>
+</div>
+<div class="section" id="depth">
+<h3>Depth<a class="headerlink" href="#depth" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-2.5-Material-Transp-3GlassesExample.jpg"><img alt="../../../../_images/Manual-2.5-Material-Transp-3GlassesExample.jpg" src="../../../../_images/Manual-2.5-Material-Transp-3GlassesExample.jpg" style="width: 640px;" /></a>
+<p class="caption">A simple scene with three glasses on a surface, and three lamps.
+Depth was set to 4, 8, 12, and 14, resulting in render times of 24 sec, 34 sec, 6 min, and 11 min respectively.
+(Download <a class="reference external" href="http://wiki.blender.org/index.php/:File:Manual25-Material-3GlassesExample.blend">.blend</a>.)</p>
+</div>
+<p>Increasing <em>Depth</em> also considerably increases render time.
+Each time a light ray passes through a surface,
+the ray-tracing algorithm is called recursively. In the example above,
+each side of each glass has an exterior and an interior surface.
+Light rays thus have to pass through four surfaces for each glass.</p>
+<p>But not only that, at every point on a surface, some of the light can be reflected,
+or mirrored off the surface in various directions.
+This results in multiple rays needing to be calculated for each point
+(often referred to as a <a class="reference external" href="http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.html">tree of rays</a>).
+In each of the rendered images above there are 640×400=256 000 pixels.
+By increasing <em>Depth</em>, at least one tree of rays is added to each pixel.</p>
+<p>Be kind to your computer. Carefully placing objects in a scene to avoid overlapping
+transparent objects is often an interesting alternative.</p>
+<div class="section" id="hints">
+<h4>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="transparent-shadows">
+<h2>Transparent shadows<a class="headerlink" href="#transparent-shadows" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual25-Material-TranspShadow-Example-NoTraSha.jpg"><img alt="../../../../_images/Manual25-Material-TranspShadow-Example-NoTraSha.jpg" src="../../../../_images/Manual25-Material-TranspShadow-Example-NoTraSha.jpg" style="width: 320px;" /></a>
+<p class="caption">No transparent shadows</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual25-Material-TranspShadow-Example-EnvLight.jpg"><img alt="../../../../_images/Manual25-Material-TranspShadow-Example-EnvLight.jpg" src="../../../../_images/Manual25-Material-TranspShadow-Example-EnvLight.jpg" style="width: 320px;" /></a>
+<p class="caption">No transparent shadows, environment lighting enabled</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha.jpg"><img alt="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha.jpg" src="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha.jpg" style="width: 320px;" /></a>
+<p class="caption">Transparent shadows enabled, alpha set to 0.0</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha2.jpg"><img alt="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha2.jpg" src="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha2.jpg" style="width: 320px;" /></a>
+<p class="caption">As previous, alpha set to 0.25</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha-AO1.jpg"><img alt="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha-AO1.jpg" src="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha-AO1.jpg" style="width: 320px;" /></a>
+<p class="caption">Transparent shadows with ambient occlusion set to multiply, distance 1 (radius of sphere)</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha-AO2.jpg"><img alt="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha-AO2.jpg" src="../../../../_images/Manual25-Material-TranspShadow-Example-TraSha-AO2.jpg" style="width: 320px;" /></a>
+<p class="caption">As previous, distance increased to 2 (diameter of sphere)</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>By default, the shadows of transparent objects are rendered solid black,
+as if the object was not transparent at all. But in reality,
+the more transparent an object is, the lighter its shadow will be.</p>
+<p>In Blender, transparent shadows are set on the materials that receive the shadows from the
+transparent object.
+This is enabled and disabled with the <em>Receive Transparent</em> button,
+in the <em>Material</em> context &#8211;&gt; <em>Shadow</em> panel. The shadow&#8217;s brightness is
+dependent on the <em>Alpha</em> value of the shadow casting material.</p>
+<p>Alternatives to transparent ray-traced shadows can be found in the <em>World</em> context,
+namely the <em>Ambient Occlusion</em>, <em>Environment Lighting</em>,
+and <em>Gather</em> panels. Alternatively, a texture can be used to control the
+<em>Intensity</em> value of the shadow-receiving material.</p>
+</div>
+<div class="section" id="ior-values-for-common-materials">
+<h2>IOR values for Common Materials<a class="headerlink" href="#ior-values-for-common-materials" title="Permalink to this headline">¶</a></h2>
+<p>The following list provides some index of refraction values to use when ray-traced
+transparency is used for various liquids, solids (gems), and gases:</p>
+<dl class="docutils">
+<dt>Acetone</dt>
+<dd><tt class="docutils literal"><span class="pre">1.36</span></tt></dd>
+<dt>Actinolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.618</span></tt></dd>
+<dt>Agalmatolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.550</span></tt></dd>
+<dt>Agate</dt>
+<dd><tt class="docutils literal"><span class="pre">1.544</span></tt></dd>
+<dt>Agate</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Air</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000</span></tt></dd>
+<dt>Alcohol</dt>
+<dd><tt class="docutils literal"><span class="pre">1.329</span></tt></dd>
+<dt>Alcohol, Ethyl (grain)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.36</span></tt></dd>
+<dt>Alexandrite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.745</span></tt></dd>
+<dt>Alexandrite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.750</span></tt></dd>
+<dt>Almandine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.83</span></tt></dd>
+<dt>Aluminum</dt>
+<dd><tt class="docutils literal"><span class="pre">1.44</span></tt></dd>
+<dt>Amber</dt>
+<dd><tt class="docutils literal"><span class="pre">1.545</span></tt></dd>
+<dt>Amblygonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.611</span></tt></dd>
+<dt>Amethyst</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Ammolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.600</span></tt></dd>
+<dt>Anatase</dt>
+<dd><tt class="docutils literal"><span class="pre">2.490</span></tt></dd>
+<dt>Andalusite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.640</span></tt></dd>
+<dt>Anhydrite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.571</span></tt></dd>
+<dt>Apatite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.632</span></tt></dd>
+<dt>Apophyllite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.536</span></tt></dd>
+<dt>Aquamarine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.575</span></tt></dd>
+<dt>Aragonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.530</span></tt></dd>
+<dt>Argon</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000281</span></tt></dd>
+<dt>Asphalt</dt>
+<dd><tt class="docutils literal"><span class="pre">1.635</span></tt></dd>
+<dt>Axinite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.674</span> <span class="pre">-</span> <span class="pre">1.704</span></tt></dd>
+<dt>Axinite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.675</span></tt></dd>
+<dt>Azurite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.730</span></tt></dd>
+<dt>Barite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.636</span></tt></dd>
+<dt>Barytocalcite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.684</span></tt></dd>
+<dt>Beer</dt>
+<dd><tt class="docutils literal"><span class="pre">1.345</span></tt></dd>
+<dt>Benitoite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.757</span></tt></dd>
+<dt>Benzene</dt>
+<dd><tt class="docutils literal"><span class="pre">1.501</span></tt></dd>
+<dt>Beryl</dt>
+<dd><tt class="docutils literal"><span class="pre">1.57</span> <span class="pre">-</span> <span class="pre">1.60</span></tt></dd>
+<dt>Beryl, Red</dt>
+<dd><tt class="docutils literal"><span class="pre">1.570</span> <span class="pre">-</span> <span class="pre">1.598</span></tt></dd>
+<dt>Beryllonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.553</span></tt></dd>
+<dt>Brazilianite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.603</span></tt></dd>
+<dt>Bromine (liq)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.661</span></tt></dd>
+<dt>Bronze</dt>
+<dd><tt class="docutils literal"><span class="pre">1.18</span></tt></dd>
+<dt>Brownite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.567</span></tt></dd>
+<dt>Calcite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.486</span></tt></dd>
+<dt>Calspar</dt>
+<dd><tt class="docutils literal"><span class="pre">1.486</span></tt></dd>
+<dt>Cancrinite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.491</span></tt></dd>
+<dt>Carbon Dioxide (gas)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000449</span></tt></dd>
+<dt>Carbon Disulfide</dt>
+<dd><tt class="docutils literal"><span class="pre">1.628</span></tt></dd>
+<dt>Carbon Tetrachloride</dt>
+<dd><tt class="docutils literal"><span class="pre">1.460</span></tt></dd>
+<dt>Carbonated Beverages</dt>
+<dd><tt class="docutils literal"><span class="pre">1.34</span> <span class="pre">-</span> <span class="pre">1.356</span></tt></dd>
+<dt>Cassiterite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.997</span></tt></dd>
+<dt>Celestite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.622</span></tt></dd>
+<dt>Cerussite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.804</span></tt></dd>
+<dt>Ceylonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.770</span></tt></dd>
+<dt>Chalcedony</dt>
+<dd><tt class="docutils literal"><span class="pre">1.544</span> <span class="pre">-</span> <span class="pre">1.553</span></tt></dd>
+<dt>Chalk</dt>
+<dd><tt class="docutils literal"><span class="pre">1.510</span></tt></dd>
+<dt>Chalybite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.630</span></tt></dd>
+<dt>Chlorine (gas)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000768</span></tt></dd>
+<dt>Chlorine (liq)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.385</span></tt></dd>
+<dt>Chrome Green</dt>
+<dd><tt class="docutils literal"><span class="pre">2.4</span></tt></dd>
+<dt>Chrome Red</dt>
+<dd><tt class="docutils literal"><span class="pre">2.42</span></tt></dd>
+<dt>Chrome Tourmaline</dt>
+<dd><tt class="docutils literal"><span class="pre">1.61</span> <span class="pre">-</span> <span class="pre">1.64</span></tt></dd>
+<dt>Chrome Yellow</dt>
+<dd><tt class="docutils literal"><span class="pre">2.31</span></tt></dd>
+<dt>Chromium</dt>
+<dd><tt class="docutils literal"><span class="pre">2.97</span></tt></dd>
+<dt>Chrysoberyl</dt>
+<dd><tt class="docutils literal"><span class="pre">1.745</span></tt></dd>
+<dt>Chrysoberyl, Cat&#8217;s eye</dt>
+<dd><tt class="docutils literal"><span class="pre">1.746</span> <span class="pre">-</span> <span class="pre">1.755</span></tt></dd>
+<dt>Chrysocolla</dt>
+<dd><tt class="docutils literal"><span class="pre">1.500</span></tt></dd>
+<dt>Chrysoprase</dt>
+<dd><tt class="docutils literal"><span class="pre">1.534</span></tt></dd>
+<dt>Citrine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.532</span> <span class="pre">-</span> <span class="pre">1.554</span></tt></dd>
+<dt>Citrine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.550</span></tt></dd>
+<dt>Clinohumite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.625</span> <span class="pre">-</span> <span class="pre">1.675</span></tt></dd>
+<dt>Clinozoisite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.724</span></tt></dd>
+<dt>Cobalt Blue</dt>
+<dd><tt class="docutils literal"><span class="pre">1.74</span></tt></dd>
+<dt>Cobalt Green</dt>
+<dd><tt class="docutils literal"><span class="pre">1.97</span></tt></dd>
+<dt>Cobalt Violet</dt>
+<dd><tt class="docutils literal"><span class="pre">1.71</span></tt></dd>
+<dt>Colemanite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.586</span></tt></dd>
+<dt>Copper</dt>
+<dd><tt class="docutils literal"><span class="pre">1.10</span></tt></dd>
+<dt>Copper Oxide</dt>
+<dd><tt class="docutils literal"><span class="pre">2.705</span></tt></dd>
+<dt>Coral</dt>
+<dd><tt class="docutils literal"><span class="pre">1.486</span></tt></dd>
+<dt>Coral</dt>
+<dd><tt class="docutils literal"><span class="pre">1.486</span> <span class="pre">-</span> <span class="pre">1.658</span></tt></dd>
+<dt>Cordierite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Corundum</dt>
+<dd><tt class="docutils literal"><span class="pre">1.766</span></tt></dd>
+<dt>Cranberry Juice (25%)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.351</span></tt></dd>
+<dt>Crocoite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.310</span></tt></dd>
+<dt>Crystal</dt>
+<dd><tt class="docutils literal"><span class="pre">2.000</span></tt></dd>
+<dt>Cuprite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.850</span></tt></dd>
+<dt>Danburite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.627</span> <span class="pre">-</span> <span class="pre">1.641</span></tt></dd>
+<dt>Danburite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.633</span></tt></dd>
+<dt>Diamond</dt>
+<dd><tt class="docutils literal"><span class="pre">2.417</span></tt></dd>
+<dt>Diopside</dt>
+<dd><tt class="docutils literal"><span class="pre">1.680</span></tt></dd>
+<dt>Dolomite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.503</span></tt></dd>
+<dt>Dumortierite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.686</span></tt></dd>
+<dt>Ebonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.66</span></tt></dd>
+<dt>Ekanite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.600</span></tt></dd>
+<dt>Elaeolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.532</span></tt></dd>
+<dt>Emerald</dt>
+<dd><tt class="docutils literal"><span class="pre">1.560</span> <span class="pre">-</span> <span class="pre">1.605</span></tt></dd>
+<dt>Emerald Catseye</dt>
+<dd><tt class="docutils literal"><span class="pre">1.560</span> <span class="pre">-</span> <span class="pre">1.605</span></tt></dd>
+<dt>Emerald, Synth flux</dt>
+<dd><tt class="docutils literal"><span class="pre">1.561</span></tt></dd>
+<dt>Emerald, Synth hydro</dt>
+<dd><tt class="docutils literal"><span class="pre">1.568</span></tt></dd>
+<dt>Enstatite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.663</span></tt></dd>
+<dt>Epidote</dt>
+<dd><tt class="docutils literal"><span class="pre">1.733</span></tt></dd>
+<dt>Ethanol</dt>
+<dd><tt class="docutils literal"><span class="pre">1.36</span></tt></dd>
+<dt>Ethyl Alcohol</dt>
+<dd><tt class="docutils literal"><span class="pre">1.36</span></tt></dd>
+<dt>Euclase</dt>
+<dd><tt class="docutils literal"><span class="pre">1.652</span></tt></dd>
+<dt>Fabulite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.409</span></tt></dd>
+<dt>Feldspar, Adventurine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.532</span></tt></dd>
+<dt>Feldspar, Albite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.525</span></tt></dd>
+<dt>Feldspar, Amazonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.525</span></tt></dd>
+<dt>Feldspar, Labradorite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.565</span></tt></dd>
+<dt>Feldspar, Microcline</dt>
+<dd><tt class="docutils literal"><span class="pre">1.525</span></tt></dd>
+<dt>Feldspar, Oligoclase</dt>
+<dd><tt class="docutils literal"><span class="pre">1.539</span></tt></dd>
+<dt>Flourite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.434</span></tt></dd>
+<dt>Formica</dt>
+<dd><tt class="docutils literal"><span class="pre">1.47</span></tt></dd>
+<dt>Garnet, Andradite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.88</span> <span class="pre">-</span> <span class="pre">1.94</span></tt></dd>
+<dt>Garnet, Demantoid</dt>
+<dd><tt class="docutils literal"><span class="pre">1.880</span> <span class="pre">-</span> <span class="pre">1.9</span></tt></dd>
+<dt>Garnet, Demantoid</dt>
+<dd><tt class="docutils literal"><span class="pre">1.880</span></tt></dd>
+<dt>Garnet, Grossular</dt>
+<dd><tt class="docutils literal"><span class="pre">1.738</span></tt></dd>
+<dt>Garnet, Hessonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.745</span></tt></dd>
+<dt>Garnet, Mandarin</dt>
+<dd><tt class="docutils literal"><span class="pre">1.790</span> <span class="pre">-</span> <span class="pre">1.8</span></tt></dd>
+<dt>Garnet, Pyrope</dt>
+<dd><tt class="docutils literal"><span class="pre">1.73</span> <span class="pre">-</span> <span class="pre">1.76</span></tt></dd>
+<dt>Garnet, Rhodolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.740</span> <span class="pre">-</span> <span class="pre">1.770</span></tt></dd>
+<dt>Garnet, Rhodolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.760</span></tt></dd>
+<dt>Garnet, Spessartite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.810</span></tt></dd>
+<dt>Garnet, Tsavorite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.739</span> <span class="pre">-</span> <span class="pre">1.744</span></tt></dd>
+<dt>Garnet, Uvarovite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.74</span> <span class="pre">-</span> <span class="pre">1.87</span></tt></dd>
+<dt>Gaylussite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.517</span></tt></dd>
+<dt>Glass</dt>
+<dd><tt class="docutils literal"><span class="pre">1.51714</span></tt></dd>
+<dt>Glass, Albite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.4890</span></tt></dd>
+<dt>Glass, Crown</dt>
+<dd><tt class="docutils literal"><span class="pre">1.520</span></tt></dd>
+<dt>Glass, Crown, Zinc</dt>
+<dd><tt class="docutils literal"><span class="pre">1.517</span></tt></dd>
+<dt>Glass, Flint, Dense</dt>
+<dd><tt class="docutils literal"><span class="pre">1.66</span></tt></dd>
+<dt>Glass, Flint, Heaviest</dt>
+<dd><tt class="docutils literal"><span class="pre">1.89</span></tt></dd>
+<dt>Glass, Flint, Heavy</dt>
+<dd><tt class="docutils literal"><span class="pre">1.65548</span></tt></dd>
+<dt>Glass, Flint, Lanthanum</dt>
+<dd><tt class="docutils literal"><span class="pre">1.80</span></tt></dd>
+<dt>Glass, Flint, Light</dt>
+<dd><tt class="docutils literal"><span class="pre">1.58038</span></tt></dd>
+<dt>Glass, Flint, Medium</dt>
+<dd><tt class="docutils literal"><span class="pre">1.62725</span></tt></dd>
+<dt>Glycerine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.473</span></tt></dd>
+<dt>Gold</dt>
+<dd><tt class="docutils literal"><span class="pre">0.47</span></tt></dd>
+<dt>Hambergite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.559</span></tt></dd>
+<dt>Hauyne</dt>
+<dd><tt class="docutils literal"><span class="pre">1.490</span> <span class="pre">-</span> <span class="pre">1.505</span></tt></dd>
+<dt>Hauynite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.502</span></tt></dd>
+<dt>Helium</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000036</span></tt></dd>
+<dt>Hematite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.940</span></tt></dd>
+<dt>Hemimorphite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.614</span></tt></dd>
+<dt>Hiddenite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.655</span></tt></dd>
+<dt>Honey, 13% water content</dt>
+<dd><tt class="docutils literal"><span class="pre">1.504</span></tt></dd>
+<dt>Honey, 17% water content</dt>
+<dd><tt class="docutils literal"><span class="pre">1.494</span></tt></dd>
+<dt>Honey, 21% water content</dt>
+<dd><tt class="docutils literal"><span class="pre">1.484</span></tt></dd>
+<dt>Howlite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.586</span></tt></dd>
+<dt>Hydrogen (gas)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000140</span></tt></dd>
+<dt>Hydrogen (liq)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.0974</span></tt></dd>
+<dt>Hypersthene</dt>
+<dd><tt class="docutils literal"><span class="pre">1.670</span></tt></dd>
+<dt>Ice</dt>
+<dd><tt class="docutils literal"><span class="pre">1.309</span></tt></dd>
+<dt>Idocrase</dt>
+<dd><tt class="docutils literal"><span class="pre">1.713</span></tt></dd>
+<dt>Iodine Crystal</dt>
+<dd><tt class="docutils literal"><span class="pre">3.34</span></tt></dd>
+<dt>Iolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.522</span> <span class="pre">-</span> <span class="pre">1.578</span></tt></dd>
+<dt>Iron</dt>
+<dd><tt class="docutils literal"><span class="pre">1.51</span></tt></dd>
+<dt>Ivory</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Jade, Jadeite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.64</span> <span class="pre">-</span> <span class="pre">1.667</span></tt></dd>
+<dt>Jade, Nephrite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.600</span> <span class="pre">-</span> <span class="pre">1.641</span></tt></dd>
+<dt>Jadeite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.665</span></tt></dd>
+<dt>Jasper</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Jet</dt>
+<dd><tt class="docutils literal"><span class="pre">1.660</span></tt></dd>
+<dt>Kornerupine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.665</span></tt></dd>
+<dt>Kunzite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.660</span> <span class="pre">-</span> <span class="pre">1.676</span></tt></dd>
+<dt>Kyanite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.715</span></tt></dd>
+<dt>Labradorite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.560</span> <span class="pre">-</span> <span class="pre">1.572</span></tt></dd>
+<dt>Lapis Gem</dt>
+<dd><tt class="docutils literal"><span class="pre">1.500</span></tt></dd>
+<dt>Lapis Lazuli</dt>
+<dd><tt class="docutils literal"><span class="pre">1.50</span> <span class="pre">-</span> <span class="pre">1.55</span></tt></dd>
+<dt>Lazulite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.615</span></tt></dd>
+<dt>Lead</dt>
+<dd><tt class="docutils literal"><span class="pre">2.01</span></tt></dd>
+<dt>Leucite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.509</span></tt></dd>
+<dt>Magnesite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.515</span></tt></dd>
+<dt>Malachite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.655</span></tt></dd>
+<dt>Meerschaum</dt>
+<dd><tt class="docutils literal"><span class="pre">1.530</span></tt></dd>
+<dt>Mercury (liq)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.62</span></tt></dd>
+<dt>Methanol</dt>
+<dd><tt class="docutils literal"><span class="pre">1.329</span></tt></dd>
+<dt>Milk</dt>
+<dd><tt class="docutils literal"><span class="pre">1.35</span></tt></dd>
+<dt>Moldavite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.500</span></tt></dd>
+<dt>Moonstone</dt>
+<dd><tt class="docutils literal"><span class="pre">1.518</span> <span class="pre">-</span> <span class="pre">1.526</span></tt></dd>
+<dt>Moonstone, Adularia</dt>
+<dd><tt class="docutils literal"><span class="pre">1.525</span></tt></dd>
+<dt>Moonstone, Albite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.535</span></tt></dd>
+<dt>Morganite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.585</span> <span class="pre">-</span> <span class="pre">1.594</span></tt></dd>
+<dt>Natrolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.480</span></tt></dd>
+<dt>Nephrite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.600</span></tt></dd>
+<dt>Nitrogen (gas)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000297</span></tt></dd>
+<dt>Nitrogen (liq)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.2053</span></tt></dd>
+<dt>Nylon</dt>
+<dd><tt class="docutils literal"><span class="pre">1.53</span></tt></dd>
+<dt>Obsidian</dt>
+<dd><tt class="docutils literal"><span class="pre">1.489</span></tt></dd>
+<dt>Oil of Wintergreen</dt>
+<dd><tt class="docutils literal"><span class="pre">1.536</span></tt></dd>
+<dt>Oil, Clove</dt>
+<dd><tt class="docutils literal"><span class="pre">1.535</span></tt></dd>
+<dt>Oil, Lemon</dt>
+<dd><tt class="docutils literal"><span class="pre">1.481</span></tt></dd>
+<dt>Oil, Neroli</dt>
+<dd><tt class="docutils literal"><span class="pre">1.482</span></tt></dd>
+<dt>Oil, Orange</dt>
+<dd><tt class="docutils literal"><span class="pre">1.473</span></tt></dd>
+<dt>Oil, Safflower</dt>
+<dd><tt class="docutils literal"><span class="pre">1.466</span></tt></dd>
+<dt>Oil, vegetable (50- C)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.47</span></tt></dd>
+<dt>Olivine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.670</span></tt></dd>
+<dt>Onyx</dt>
+<dd><tt class="docutils literal"><span class="pre">1.486</span></tt></dd>
+<dt>Opal, Black</dt>
+<dd><tt class="docutils literal"><span class="pre">1.440</span> <span class="pre">-</span> <span class="pre">1.460</span></tt></dd>
+<dt>Opal, Fire</dt>
+<dd><tt class="docutils literal"><span class="pre">1.430</span> <span class="pre">-</span> <span class="pre">1.460</span></tt></dd>
+<dt>Opal, White</dt>
+<dd><tt class="docutils literal"><span class="pre">1.440</span> <span class="pre">-</span> <span class="pre">1.460</span></tt></dd>
+<dt>Oregon Sunstone</dt>
+<dd><tt class="docutils literal"><span class="pre">1.560</span> <span class="pre">-</span> <span class="pre">1.572</span></tt></dd>
+<dt>Oxygen (gas)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000276</span></tt></dd>
+<dt>Oxygen (liq)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.221</span></tt></dd>
+<dt>Padparadja</dt>
+<dd><tt class="docutils literal"><span class="pre">1.760</span> <span class="pre">-</span> <span class="pre">1.773</span></tt></dd>
+<dt>Painite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.787</span></tt></dd>
+<dt>Pearl</dt>
+<dd><tt class="docutils literal"><span class="pre">1.530</span></tt></dd>
+<dt>Periclase</dt>
+<dd><tt class="docutils literal"><span class="pre">1.740</span></tt></dd>
+<dt>Peridot</dt>
+<dd><tt class="docutils literal"><span class="pre">1.635</span> <span class="pre">-</span> <span class="pre">1.690</span></tt></dd>
+<dt>Peristerite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.525</span></tt></dd>
+<dt>Petalite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.502</span></tt></dd>
+<dt>Phenakite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.650</span></tt></dd>
+<dt>Phosgenite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.117</span></tt></dd>
+<dt>Plastic</dt>
+<dd><tt class="docutils literal"><span class="pre">1.460</span></tt></dd>
+<dt>Plexiglas</dt>
+<dd><tt class="docutils literal"><span class="pre">1.50</span></tt></dd>
+<dt>Polystyrene</dt>
+<dd><tt class="docutils literal"><span class="pre">1.55</span></tt></dd>
+<dt>Prase</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Prasiolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Prehnite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.610</span></tt></dd>
+<dt>Proustite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.790</span></tt></dd>
+<dt>Purpurite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.840</span></tt></dd>
+<dt>Pyrite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.810</span></tt></dd>
+<dt>Pyrope</dt>
+<dd><tt class="docutils literal"><span class="pre">1.740</span></tt></dd>
+<dt>Quartz</dt>
+<dd><tt class="docutils literal"><span class="pre">1.544</span> <span class="pre">-</span> <span class="pre">1.553</span></tt></dd>
+<dt>Quartz, Fused</dt>
+<dd><tt class="docutils literal"><span class="pre">1.45843</span></tt></dd>
+<dt>Rhodizite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.690</span></tt></dd>
+<dt>Rhodochrisite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.600</span></tt></dd>
+<dt>Rhodonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.735</span></tt></dd>
+<dt>Rock Salt</dt>
+<dd><tt class="docutils literal"><span class="pre">1.544</span></tt></dd>
+<dt>Rubber, Natural</dt>
+<dd><tt class="docutils literal"><span class="pre">1.5191</span></tt></dd>
+<dt>Ruby</dt>
+<dd><tt class="docutils literal"><span class="pre">1.757</span> <span class="pre">-</span> <span class="pre">1.779</span></tt></dd>
+<dt>Rum, White</dt>
+<dd><tt class="docutils literal"><span class="pre">1.361</span></tt></dd>
+<dt>Rutile</dt>
+<dd><tt class="docutils literal"><span class="pre">2.62</span></tt></dd>
+<dt>Sanidine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.522</span></tt></dd>
+<dt>Sapphire</dt>
+<dd><tt class="docutils literal"><span class="pre">1.757</span> <span class="pre">-</span> <span class="pre">1.779</span></tt></dd>
+<dt>Sapphire, Star</dt>
+<dd><tt class="docutils literal"><span class="pre">1.760</span> <span class="pre">-</span> <span class="pre">1.773</span></tt></dd>
+<dt>Scapolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.540</span></tt></dd>
+<dt>Scapolite, Yellow</dt>
+<dd><tt class="docutils literal"><span class="pre">1.555</span></tt></dd>
+<dt>Scheelite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.920</span></tt></dd>
+<dt>Selenium, Amorphous</dt>
+<dd><tt class="docutils literal"><span class="pre">2.92</span></tt></dd>
+<dt>Serpentine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.560</span></tt></dd>
+<dt>Shampoo</dt>
+<dd><tt class="docutils literal"><span class="pre">1.362</span></tt></dd>
+<dt>Shell</dt>
+<dd><tt class="docutils literal"><span class="pre">1.530</span></tt></dd>
+<dt>Silicon</dt>
+<dd><tt class="docutils literal"><span class="pre">4.24</span></tt></dd>
+<dt>Sillimanite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.658</span></tt></dd>
+<dt>Silver</dt>
+<dd><tt class="docutils literal"><span class="pre">0.18</span></tt></dd>
+<dt>Sinhalite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.699</span></tt></dd>
+<dt>Smaragdite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.608</span></tt></dd>
+<dt>Smithsonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.621</span></tt></dd>
+<dt>Sodalite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.483</span></tt></dd>
+<dt>Sodium Chloride</dt>
+<dd><tt class="docutils literal"><span class="pre">1.544</span></tt></dd>
+<dt>Spessartite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.79</span> <span class="pre">-</span> <span class="pre">1.81</span></tt></dd>
+<dt>Sphalerite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.368</span></tt></dd>
+<dt>Sphene</dt>
+<dd><tt class="docutils literal"><span class="pre">1.885</span></tt></dd>
+<dt>Spinel</dt>
+<dd><tt class="docutils literal"><span class="pre">1.712</span> <span class="pre">-</span> <span class="pre">1.717</span></tt></dd>
+<dt>Spinel, Blue</dt>
+<dd><tt class="docutils literal"><span class="pre">1.712</span> <span class="pre">-</span> <span class="pre">1.747</span></tt></dd>
+<dt>Spinel, Red</dt>
+<dd><tt class="docutils literal"><span class="pre">1.708</span> <span class="pre">-</span> <span class="pre">1.735</span></tt></dd>
+<dt>Spodumene</dt>
+<dd><tt class="docutils literal"><span class="pre">1.650</span></tt></dd>
+<dt>Star Ruby</dt>
+<dd><tt class="docutils literal"><span class="pre">1.76</span> <span class="pre">-</span> <span class="pre">1.773</span></tt></dd>
+<dt>Staurolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.739</span></tt></dd>
+<dt>Steatite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.539</span></tt></dd>
+<dt>Steel</dt>
+<dd><tt class="docutils literal"><span class="pre">2.50</span></tt></dd>
+<dt>Stichtite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.520</span></tt></dd>
+<dt>Strontium Titanate</dt>
+<dd><tt class="docutils literal"><span class="pre">2.410</span></tt></dd>
+<dt>Styrofoam</dt>
+<dd><tt class="docutils literal"><span class="pre">1.595</span></tt></dd>
+<dt>Sugar Solution 30%</dt>
+<dd><tt class="docutils literal"><span class="pre">1.38</span></tt></dd>
+<dt>Sugar Solution 80%</dt>
+<dd><tt class="docutils literal"><span class="pre">1.49</span></tt></dd>
+<dt>Sulphur</dt>
+<dd><tt class="docutils literal"><span class="pre">1.960</span></tt></dd>
+<dt>Synthetic Spinel</dt>
+<dd><tt class="docutils literal"><span class="pre">1.730</span></tt></dd>
+<dt>Taaffeite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.720</span></tt></dd>
+<dt>Tantalite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.240</span></tt></dd>
+<dt>Tanzanite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.690-1.7</span></tt></dd>
+<dt>Teflon</dt>
+<dd><tt class="docutils literal"><span class="pre">1.35</span></tt></dd>
+<dt>Thomsonite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.530</span></tt></dd>
+<dt>Tiger eye</dt>
+<dd><tt class="docutils literal"><span class="pre">1.544</span></tt></dd>
+<dt>Topaz</dt>
+<dd><tt class="docutils literal"><span class="pre">1.607</span> <span class="pre">-</span> <span class="pre">1.627</span></tt></dd>
+<dt>Topaz, Blue</dt>
+<dd><tt class="docutils literal"><span class="pre">1.610</span></tt></dd>
+<dt>Topaz, Imperial</dt>
+<dd><tt class="docutils literal"><span class="pre">1.605</span> <span class="pre">-</span> <span class="pre">1.640</span></tt></dd>
+<dt>Topaz, Pink</dt>
+<dd><tt class="docutils literal"><span class="pre">1.620</span></tt></dd>
+<dt>Topaz, White</dt>
+<dd><tt class="docutils literal"><span class="pre">1.630</span></tt></dd>
+<dt>Topaz, Yellow</dt>
+<dd><tt class="docutils literal"><span class="pre">1.620</span></tt></dd>
+<dt>Tourmaline</dt>
+<dd><tt class="docutils literal"><span class="pre">1.603</span> <span class="pre">-</span> <span class="pre">1.655</span></tt></dd>
+<dt>Tourmaline</dt>
+<dd><tt class="docutils literal"><span class="pre">1.624</span></tt></dd>
+<dt>Tourmaline, Blue</dt>
+<dd><tt class="docutils literal"><span class="pre">1.61</span> <span class="pre">-</span> <span class="pre">1.64</span></tt></dd>
+<dt>Tourmaline, Catseye</dt>
+<dd><tt class="docutils literal"><span class="pre">1.61</span> <span class="pre">-</span> <span class="pre">1.64</span></tt></dd>
+<dt>Tourmaline, Green</dt>
+<dd><tt class="docutils literal"><span class="pre">1.61</span> <span class="pre">-</span> <span class="pre">1.64</span></tt></dd>
+<dt>Tourmaline, Paraiba</dt>
+<dd><tt class="docutils literal"><span class="pre">1.61</span> <span class="pre">-</span> <span class="pre">1.65</span></tt></dd>
+<dt>Tourmaline, Red</dt>
+<dd><tt class="docutils literal"><span class="pre">1.61</span> <span class="pre">-</span> <span class="pre">1.64</span></tt></dd>
+<dt>Tremolite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.600</span></tt></dd>
+<dt>Tugtupite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.496</span></tt></dd>
+<dt>Turpentine</dt>
+<dd><tt class="docutils literal"><span class="pre">1.472</span></tt></dd>
+<dt>Turquoise</dt>
+<dd><tt class="docutils literal"><span class="pre">1.610</span></tt></dd>
+<dt>Ulexite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.490</span></tt></dd>
+<dt>Uvarovite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.870</span></tt></dd>
+<dt>Wardite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.590</span></tt></dd>
+<dt>Variscite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.550</span></tt></dd>
+<dt>Water (0- C)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.33346</span></tt></dd>
+<dt>Water (100- C)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.31766</span></tt></dd>
+<dt>Water (20- C)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.33283</span></tt></dd>
+<dt>Water (gas)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.000261</span></tt></dd>
+<dt>Water (35- C, room temp)</dt>
+<dd><tt class="docutils literal"><span class="pre">1.33157</span></tt></dd>
+<dt>Whisky</dt>
+<dd><tt class="docutils literal"><span class="pre">1.356</span></tt></dd>
+<dt>Willemite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.690</span></tt></dd>
+<dt>Witherite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.532</span></tt></dd>
+<dt>Vivianite</dt>
+<dd><tt class="docutils literal"><span class="pre">1.580</span></tt></dd>
+<dt>Vodka</dt>
+<dd><tt class="docutils literal"><span class="pre">1.363</span></tt></dd>
+<dt>Wulfenite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.300</span></tt></dd>
+<dt>Zincite</dt>
+<dd><tt class="docutils literal"><span class="pre">2.010</span></tt></dd>
+<dt>Zircon</dt>
+<dd><tt class="docutils literal"><span class="pre">1.777</span> <span class="pre">-</span> <span class="pre">1.987</span></tt></dd>
+<dt>Zircon, High</dt>
+<dd><tt class="docutils literal"><span class="pre">1.960</span></tt></dd>
+<dt>Zircon, Low</dt>
+<dd><tt class="docutils literal"><span class="pre">1.800</span></tt></dd>
+<dt>Zirconia, Cubic</dt>
+<dd><tt class="docutils literal"><span class="pre">2.173</span> <span class="pre">-</span> <span class="pre">2.21</span></tt></dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mirror.html" class="btn btn-neutral float-right" title="Mirror Reflections"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shading.html" class="btn btn-neutral" title="Shading"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

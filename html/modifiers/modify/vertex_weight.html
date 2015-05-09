@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vertex Weight Modifiers &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Modifiers" href="../index.html"/>
+        <link rel="next" title="Array Modifier" href="../generate/array.html"/>
+        <link rel="prev" title="UV Warp Modifier" href="uv_warp.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modifiers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_stack.html">The Stack</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modifiers</a> &raquo;</li>
+      
+    <li>Vertex Weight Modifiers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modifiers/modify/vertex_weight.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="vertex-weight-modifiers">
+<h1>Vertex Weight Modifiers<a class="headerlink" href="#vertex-weight-modifiers" title="Permalink to this headline">¶</a></h1>
+<p>The Vertex Weight modifiers work on a vertex group of the affected object,
+by modifying its weights and/or which vertices belong to the vertex group.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">These modifiers do implicit clamping of weight values in the standard <tt class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></tt> range.
+All values below <tt class="docutils literal"><span class="pre">0.0</span></tt> will be set to <tt class="docutils literal"><span class="pre">0.0</span></tt>, and all values above <tt class="docutils literal"><span class="pre">1.0</span></tt> will be set to <tt class="docutils literal"><span class="pre">1.0</span></tt>.</p>
+</div>
+</div></blockquote>
+<p>There are currently three Vertex Weight modifiers:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#vertex-weight-edit-modifier">Vertex Weight Edit Modifier</a></li>
+<li><a class="reference internal" href="#vertex-weight-mix-modifier">Vertex Weight Mix Modifier</a></li>
+<li><a class="reference internal" href="#vertex-weight-proximity-modifier">Vertex Weight Proximity Modifier</a></li>
+</ul>
+<div class="section" id="common-settings">
+<h2>Common Settings<a class="headerlink" href="#common-settings" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVG_mask.jpg"><img alt="../../_images/ManModifiersWeightVG_mask.jpg" src="../../_images/ManModifiersWeightVG_mask.jpg" style="width: 300px;" /></a>
+<p class="caption">The influence/masking part of Vertex Weight modifiers.</p>
+</div>
+<p>The three Vertex Weight modifiers share a few settings, controlling their influence on the affected vertex group.</p>
+<dl class="docutils">
+<dt>Global Influence</dt>
+<dd><blockquote class="first">
+<div>The overall influence of the modifier
+(<tt class="docutils literal"><span class="pre">0.0</span></tt> will leave the vertex group&#8217;s weights untouched, <tt class="docutils literal"><span class="pre">1.0</span></tt> is standard influence).</div></blockquote>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Influence only affects weights, adding/removing of vertices
+to/from vertex group is not prevented by setting this value to <tt class="docutils literal"><span class="pre">0.0</span></tt>.</p>
+</div>
+</dd>
+<dt>Vertex Group Mask</dt>
+<dd>An additional vertex group, the weights of which will be
+multiplied with the global influence value for each vertex.
+If a vertex is not in the masking vertex group, its weight will be not be affected.</dd>
+<dt>Texture</dt>
+<dd><p class="first">An additional texture, the values of which will be multiplied with the global influence value for each vertex.</p>
+<p>This is a standard texture <a class="reference internal" href="../../data_system/datablocks.html"><em>datablock</em></a> control.
+When set, it reveals other settings:</p>
+<dl class="last docutils">
+<dt>Texture Coordinates</dt>
+<dd><p class="first">How the texture is mapped to the mesh.</p>
+<dl class="last docutils">
+<dt>Local</dt>
+<dd>Use local vertex coordinates.</dd>
+<dt>Global</dt>
+<dd>Use vertex coordinates in global space.</dd>
+<dt>Object</dt>
+<dd>Use vertex coordinates in another object&#8217;s space.</dd>
+<dt>UV</dt>
+<dd>Use a UV layer&#8217;s coordinates.</dd>
+</dl>
+</dd>
+<dt>Use Channel</dt>
+<dd><p class="first">Which channel to use as weight factor source/</p>
+<dl class="docutils">
+<dt>Red/Green/Blue/Alpha</dt>
+<dd>One of the color channels&#8217; values.</dd>
+<dt>Intensity</dt>
+<dd>The average of the RGB channels (If RGB = <tt class="docutils literal"><span class="pre">1.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0</span></tt>, value is <tt class="docutils literal"><span class="pre">0.33</span></tt>)</dd>
+<dt>Value</dt>
+<dd>The highest value of the RGB channels (If RGB = <tt class="docutils literal"><span class="pre">1.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0</span></tt>, value is <tt class="docutils literal"><span class="pre">1.0</span></tt>)</dd>
+<dt>Hue</dt>
+<dd>Uses the hue value from the standard color wheel (e.g. blue has a higher hue value than yellow)</dd>
+<dt>Saturation</dt>
+<dd>Uses the saturation value (e.g. pure red&#8217;s value is <tt class="docutils literal"><span class="pre">1.0</span></tt>, gray is <tt class="docutils literal"><span class="pre">0.0</span></tt>)</dd>
+</dl>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All of the channels above are gamma corrected, except for <em>Intensity</em>.</p>
+</div>
+</dd>
+<dt>Object</dt>
+<dd>The object to be used as reference for <em>Object</em> mapping.</dd>
+<dt>UV Layer</dt>
+<dd>The UV layer to be used for <em>UV</em> mapping.</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="viewing-modified-weights">
+<h3>Viewing Modified Weights<a class="headerlink" href="#viewing-modified-weights" title="Permalink to this headline">¶</a></h3>
+<p>You can view the modified weights in <em>Weight Paint</em> mode. This also implies that
+you&#8217;ll have to disable the Vertex Weight modifiers if you want to see the original weights of
+the vertex group you are editing.</p>
+</div>
+</div>
+<div class="section" id="vertex-weight-edit-modifier">
+<h2>Vertex Weight Edit Modifier<a class="headerlink" href="#vertex-weight-edit-modifier" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGEdit.jpg"><img alt="../../_images/ManModifiersWeightVGEdit.jpg" src="../../_images/ManModifiersWeightVGEdit.jpg" style="width: 300px;" /></a>
+<p class="caption">The Vertex Weight Edit modifier panel.</p>
+</div>
+<p>This modifier is intended to edit the weights of one vertex group.</p>
+<p>The general process is the following, for each vertex:</p>
+<ul class="simple">
+<li>[Optional] It does the mapping, either through one of the predefined functions, or a custom mapping curve.</li>
+<li>It applies the influence factor, and optionally the vertex group or texture mask
+(<tt class="docutils literal"><span class="pre">0.0</span></tt> means original weight, <tt class="docutils literal"><span class="pre">1.0</span></tt> means fully mapped weight).</li>
+<li>It applies back the weight to the vertex, and/or it might optionally remove the vertex from the group if its
+weight is below a given threshold, or add it if it&#8217;s above a given threshold.</li>
+</ul>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Vertex Group</dt>
+<dd>The vertex group to affect.</dd>
+<dt>Default Weight</dt>
+<dd>The default weight to assign to all vertices not in the given vertex group.</dd>
+<dt>Falloff Type</dt>
+<dd><p class="first">Type of mapping:</p>
+<dl class="last docutils">
+<dt>Linear</dt>
+<dd>No mapping.</dd>
+<dt>Custom Curve</dt>
+<dd>Allows the user to manually define the mapping using a curve.</dd>
+<dt>Sharp, Smooth, Root and Sphere</dt>
+<dd>These are classical mapping functions, from spikiest to roundest.</dd>
+<dt>Random</dt>
+<dd>Uses a random value for each vertex.</dd>
+<dt>Median Step</dt>
+<dd>Creates binary weights (<tt class="docutils literal"><span class="pre">0.0</span></tt> or <tt class="docutils literal"><span class="pre">1.0</span></tt>), with <tt class="docutils literal"><span class="pre">0.5</span></tt> as cutting value.</dd>
+</dl>
+</dd>
+<dt>Group Add</dt>
+<dd>Adds vertices with a final weight over <em>Add Threshold</em> to the vertex group.</dd>
+<dt>Group Remove</dt>
+<dd>Removes vertices with a final weight below <em>Remove Threshold</em> from the vertex group.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="vertex-weight-mix-modifier">
+<h2>Vertex Weight Mix Modifier<a class="headerlink" href="#vertex-weight-mix-modifier" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGMix.jpg"><img alt="../../_images/ManModifiersWeightVGMix.jpg" src="../../_images/ManModifiersWeightVGMix.jpg" style="width: 300px;" /></a>
+<p class="caption">The Vertex Weight Mix modifier panel.</p>
+</div>
+<p>This modifier mixes a second vertex group (or a simple value) into the affected vertex group,
+using different operations.</p>
+<div class="section" id="id1">
+<h3>Options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Vertex Group A</dt>
+<dd>The vertex group to affect.</dd>
+<dt>Default Weight A</dt>
+<dd>The default weight to assign to all vertices not in the given vertex group.</dd>
+<dt>Vertex Group B</dt>
+<dd>The second vertex group to mix into the affected one. Leave it empty if you only want to mix in a simple value.</dd>
+<dt>Default Weight B</dt>
+<dd>The default weight to assign to all vertices not in the given second vertex group.</dd>
+<dt>Mix Mode</dt>
+<dd><p class="first">How the vertex group weights are affected by the other vertex group&#8217;s weights.</p>
+<dl class="last docutils">
+<dt>Replace weights</dt>
+<dd>Replaces affected weights with the second group&#8217;s weights.</dd>
+<dt>Add to weights</dt>
+<dd>Adds the values of <em>Group B</em> to <em>Group A</em>.</dd>
+<dt>Subtract from weights</dt>
+<dd>Subtracts the values of <em>Group B</em> from <em>Group A</em>.</dd>
+<dt>Multiply weights</dt>
+<dd>Multiplies the values of <em>Group B</em> with <em>Group A</em>.</dd>
+<dt>Divide weights</dt>
+<dd>Divides the values of <em>Group A</em> by <em>Group B</em>.</dd>
+<dt>Difference</dt>
+<dd>Subtracts the smaller of the two values from the larger.</dd>
+<dt>Average</dt>
+<dd>Adds the values together, then divides by 2.</dd>
+</dl>
+</dd>
+<dt>Mix Set</dt>
+<dd><p class="first">Choose which vertices will be affected.</p>
+<dl class="docutils">
+<dt>All vertices</dt>
+<dd>Affects all vertices, disregarding the vertex groups content.</dd>
+<dt>Vertices from group A</dt>
+<dd>Affects only vertices belonging to the affected vertex group.</dd>
+<dt>Vertices from group B</dt>
+<dd>Affects only vertices belonging to the second vertex group.</dd>
+<dt>Vertices from one group</dt>
+<dd>Affects only vertices belonging to at least one of the vertex groups.</dd>
+<dt>Vertices from both groups</dt>
+<dd>Affects only vertices belonging to both vertex groups.</dd>
+</dl>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">When using <em>All vertices</em>, <em>Vertices from group B</em> or <em>Vertices from one group</em>,
+vertices might be added to the affected vertex group.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="vertex-weight-proximity-modifier">
+<h2>Vertex Weight Proximity Modifier<a class="headerlink" href="#vertex-weight-proximity-modifier" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGProximity.jpg"><img alt="../../_images/ManModifiersWeightVGProximity.jpg" src="../../_images/ManModifiersWeightVGProximity.jpg" style="width: 300px;" /></a>
+<p class="caption">The Vertex Weight Proximity modifier panel.</p>
+</div>
+<p>This modifier sets the weights of the given vertex group,
+based on the distance between the object (or its vertices), and another target object (or its geometry).</p>
+<div class="section" id="id2">
+<h3>Options<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Vertex Group</dt>
+<dd>The vertex group to affect.</dd>
+<dt>Target Object</dt>
+<dd>The object from which to compute distances.</dd>
+<dt>Proximity mode</dt>
+<dd><dl class="first last docutils">
+<dt>Object Distance</dt>
+<dd>Use the distance between the modified mesh object and the target object as
+weight for all vertices in the affected vertex group.</dd>
+<dt>Geometry Distance</dt>
+<dd>Use the distance between each vertex and the target object, or its geometry.</dd>
+</dl>
+</dd>
+</dl>
+<p>The <em>Geometry Distance</em> mode has three additional options, <em>Vertex</em>, <em>Edge</em> and
+<em>Face</em>. If you enable more than one of them, the shortest distance will be used. If the target object has no
+geometry (e.g. an empty or camera), it will use the location of the object itself.</p>
+<dl class="docutils">
+<dt>Vertex</dt>
+<dd>This will set each vertex&#8217;s weight from its distance to the nearest vertex of the target object.</dd>
+<dt>Edge</dt>
+<dd>This will set each vertex&#8217;s weight from its distance to the nearest edge of the target object.</dd>
+<dt>Face</dt>
+<dd>This will set each vertex&#8217;s weight from its distance to the nearest face of the target object.</dd>
+<dt>Lowest</dt>
+<dd>Distance mapping to <tt class="docutils literal"><span class="pre">0.0</span></tt> weight.</dd>
+<dt>Highest</dt>
+<dd>Distance mapping to <tt class="docutils literal"><span class="pre">1.0</span></tt> weight.</dd>
+<dt>Falloff Type</dt>
+<dd>Some predefined mapping functions, see <a class="reference internal" href="#vertex-weight-edit-modifier">Vertex Weight Edit Modifier</a>.</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last"><em>Lowest</em> can be set above <em>Highest</em> to reverse the mapping.</p>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-distance-from-a-target-object">
+<h3>Using Distance from a Target Object<a class="headerlink" href="#using-distance-from-a-target-object" title="Permalink to this headline">¶</a></h3>
+<p>As a first example,
+let&#8217;s dynamically control a <em>Wave</em> modifier with a modified vertex group.</p>
+<p>Add a <em>Grid</em> mesh, with many vertices (e.g. a <strong>100×100</strong> vertices),
+and <tt class="docutils literal"><span class="pre">10</span></tt> BU side-length. Switch to <em>Edit</em> mode (<tt class="kbd docutils literal"><span class="pre">Tab</span></tt>),
+and in the <em>Object Data</em> properties, <em>Vertex Groups</em> panel,
+add a vertex group. Assign to it all your mesh&#8217;s vertices (with e.g. a <tt class="docutils literal"><span class="pre">1.0</span></tt> weight).
+Go back to <em>Object</em> mode.</p>
+<p>Then, go to the <em>Modifiers</em> properties,
+and add a <em>Vertex Weight Proximity</em> modifier.
+Set the mode to <em>Object Distance</em>. Select your vertex group,
+and the target object you want (here I used the lamp).</p>
+<p>You will likely have to adjust the linear mapping of the weights produced by the
+<em>Vertex Weight Proximity</em> modifier. To do so, edit <em>Lowest Dist</em> and
+<em>Highest Dist</em> so that the first corresponds to the distance between your target
+object and the vertices you want to have lowest weight,
+and similarly with the second and highest weight...</p>
+<p>Now add a <em>Wave</em> modifier, set it to your liking,
+and use the same vertex group to control it.</p>
+<p>Animate your target object, making it move over the grid. As you can see, the waves are only
+visible around the reference object! Note that you can insert a <em>Vertex Weight Edit</em>
+modifier before the <em>Wave</em> one,
+and use its <em>Custom Curve</em> mapping to get larger/narrower &#8220;wave influence&#8217;s slopes&#8221;.</p>
+<iframe src="//player.vimeo.com/video/30187079" style="border: 0; height: 345px; width: 560px">
+</iframe><p><a class="reference external" href="http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend">The Blender file</a>, <tt class="docutils literal"><span class="pre">TEST_1</span></tt> scene.</p>
+</div>
+<div class="section" id="using-distance-from-a-target-object-s-geometry">
+<h3>Using Distance from a Target Object&#8217;s Geometry<a class="headerlink" href="#using-distance-from-a-target-object-s-geometry" title="Permalink to this headline">¶</a></h3>
+<p>We&#8217;re going to illustrate this with a <em>Displace</em> modifier.</p>
+<p>Add a <strong>10×10</strong> BU <strong>100×100</strong> vertices grid, and in <em>Edit</em> mode,
+add to it a vertex group containing all of its vertices, as above.
+You can even further sub-divide it with a first <em>Subsurf</em> modifier.</p>
+<p>Now add a curve circle, and place it <tt class="docutils literal"><span class="pre">0.25</span></tt> BU above the grid. Scale it up a bit (e.g.
+<tt class="docutils literal"><span class="pre">4.0</span></tt>).</p>
+<p>Back to the grid object, add to it a <em>Vertex Weight Proximity</em> modifier,
+in <em>Geometry Distance</em> mode. Enable <em>Edge</em>
+(if you use <em>Vertex</em> only, and your curve has a low U definition,
+you would get wavy patterns, see (<em>Wavy patterns</em>)).</p>
+<table border="1" class="docutils">
+<caption>Wavy patterns.</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg"><img alt="../../_images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg" src="../../_images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg" style="width: 300px;" /></a>
+<p class="caption">Distance from edges.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupGeometryEX1.0PFWavyWeights.jpg"><img alt="../../_images/ManModifiersWeightVGroupGeometryEX1.0PFWavyWeights.jpg" src="../../_images/ManModifiersWeightVGroupGeometryEX1.0PFWavyWeights.jpg" style="width: 300px;" /></a>
+<p class="caption">Distance from vertices.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Set the <em>Lowest Dist</em> to <tt class="docutils literal"><span class="pre">0.2</span></tt>, and the <em>Highest Dist</em> to <tt class="docutils literal"><span class="pre">2.0</span></tt>,
+to map back the computed distances into the regular weight range.</p>
+<p>Add a third <em>Displace</em> modifier and affect it the texture you like. Now,
+we want the vertices of the grid nearest to the curve circle to remain undisplaced.
+As they will get weights near zero,
+this means that you have to set the <em>Midlevel</em> of the displace to <tt class="docutils literal"><span class="pre">0.0</span></tt>.
+Make it use our affected vertex group,
+and that&#8217;s it! Your nice mountains just shrink to a flat plane near the curve circle.</p>
+<p>As in the previous example,
+you can insert a <em>Vertex Weight Edit</em> modifier before the <em>Displace</em> one,
+and play with the <em>Custom Curve</em> mapping to get a larger/narrower &#8220;valley&#8221;...</p>
+<table border="1" class="docutils">
+<caption><em>Curve Map</em> variations.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg"><img alt="../../_images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg" src="../../_images/ManModifiersWeightVGroupGeometryEX-5.0PF.jpg" style="width: 200px;" /></a>
+<p class="caption">Concave-type mapping curve.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg"><img alt="../../_images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg" src="../../_images/ManModifiersWeightVGroupGeometryEX1.0PF.jpg" style="width: 200px;" /></a>
+<p class="caption">No mapping curve (linear).</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg"><img alt="../../_images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg" src="../../_images/ManModifiersWeightVGroupGeometryEX5.0PF.jpg" style="width: 200px;" /></a>
+<p class="caption">Convex-type mapping curve.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupGeometryEXRemVerts.jpg"><img alt="../../_images/ManModifiersWeightVGroupGeometryEXRemVerts.jpg" src="../../_images/ManModifiersWeightVGroupGeometryEXRemVerts.jpg" style="width: 200px;" /></a>
+<p class="caption">Vertices with a computed weight below 0.1 removed from the vertex group.</p>
+</div>
+<p>You can also add a fifth <em>Mask</em> modifier,
+and enable <em>Vertex Weight Edit</em> &#8216;s <em>Group Remove</em> option,
+with a <em>Remove Threshold</em> of <tt class="docutils literal"><span class="pre">0.1</span></tt>, to see the bottom of your valley disappear.</p>
+<iframe src="//player.vimeo.com/video/30188564" style="border: 0; height: 345px; width: 560px">
+</iframe><p><a class="reference external" href="http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend">The Blender file</a>, <tt class="docutils literal"><span class="pre">TEST_2</span></tt> scene.</p>
+</div>
+<div class="section" id="using-a-texture-and-the-mapping-curve">
+<h3>Using a Texture and the Mapping Curve<a class="headerlink" href="#using-a-texture-and-the-mapping-curve" title="Permalink to this headline">¶</a></h3>
+<p>Here we are going to create a sort of strange alien wave (yes,
+another example with the <em>Wave</em> modifier... but it&#8217;s a highly visual one;
+it&#8217;s easy to see the vertex group effects on it...).</p>
+<p>So as above, add a <strong>100×100</strong> grid. This time, add a vertex group,
+but without assigning any vertex to it - we&#8217;ll do this dynamically.</p>
+<p>Add a first <em>Vertex Weight Mix</em> modifier,
+set the <em>Vertex Group A</em> field with a <em>Default Weight A</em> of <tt class="docutils literal"><span class="pre">0.0</span></tt>,
+and set <em>Default Weight B</em> to <tt class="docutils literal"><span class="pre">1.0</span></tt>.
+Leave the <em>Mix Mode</em> to <em>Replace weights</em>,
+and select <em>All vertices</em> as <em>Mix Set</em>. This way,
+all vertices are affected. As none are in the affected vertex group,
+they all have a default weight of <tt class="docutils literal"><span class="pre">0.0</span></tt>, which is replaced by the second default weight
+(<tt class="docutils literal"><span class="pre">1.0</span></tt>). And all those vertices are also added to the affected vertex group.</p>
+<p>Now, select or create a masking texture - here I chose a default <em>Magic</em> one.
+The values of this texture will control how much of the &#8220;second weight&#8221; (<tt class="docutils literal"><span class="pre">1.0</span></tt>)
+replaces the &#8220;first weight&#8221; (<tt class="docutils literal"><span class="pre">0.0</span></tt>)... In other words, they are taken as weight values!</p>
+<p>You can then select which texture coordinates and channel to use.
+Leave the mapping to the default <em>Local</em> option, and play with the various channels...</p>
+<table border="1" class="docutils">
+<caption>Texture channel variations.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupTexExIntensity.jpg"><img alt="../../_images/ManModifiersWeightVGroupTexExIntensity.jpg" src="../../_images/ManModifiersWeightVGroupTexExIntensity.jpg" style="width: 200px;" /></a>
+<p class="caption">Using intensity.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupTexExRed.jpg"><img alt="../../_images/ManModifiersWeightVGroupTexExRed.jpg" src="../../_images/ManModifiersWeightVGroupTexExRed.jpg" style="width: 200px;" /></a>
+<p class="caption">Using Red.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupTexExSaturation.jpg"><img alt="../../_images/ManModifiersWeightVGroupTexExSaturation.jpg" src="../../_images/ManModifiersWeightVGroupTexExSaturation.jpg" style="width: 200px;" /></a>
+<p class="caption">Using Saturation.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Don&#8217;t forget to add a <em>Wave</em> modifier, and select your vertex group in it!</p>
+<p>You can use the weights created this way directly,
+but if you want to play with the curve mapping,
+you must add the famous <em>Vertex Weight Edit</em> modifier,
+and enable its <em>Custom Curve</em> mapping.</p>
+<p>By default, it&#8217;s a one-to-one linear mapping - in other words,
+it does nothing! Change it to something like in (<em>A customized mapping curve</em>),
+which maps <tt class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">0.5]</span></tt> to <tt class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">0.25]</span></tt> and <tt class="docutils literal"><span class="pre">[0.5,</span>
+<span class="pre">1.0]</span></tt> to <tt class="docutils literal"><span class="pre">[0.75,</span> <span class="pre">1.0]</span></tt>, thus producing nearly only weights below <tt class="docutils literal"><span class="pre">0.25</span></tt>,
+and above <tt class="docutils literal"><span class="pre">0.75</span></tt> : this creates great &#8220;walls&#8221; in the waves...</p>
+<table border="1" class="docutils">
+<caption>Custom mapping curve.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupTexExCMapCurve.jpg"><img alt="../../_images/ManModifiersWeightVGroupTexExCMapCurve.jpg" src="../../_images/ManModifiersWeightVGroupTexExCMapCurve.jpg" style="width: 200px;" /></a>
+<p class="caption">A customized mapping curve.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupTexExRed.jpg"><img alt="../../_images/ManModifiersWeightVGroupTexExRed.jpg" src="../../_images/ManModifiersWeightVGroupTexExRed.jpg" style="width: 200px;" /></a>
+<p class="caption">Custom Mapping disabled.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/ManModifiersWeightVGroupTexExRedCMap.jpg"><img alt="../../_images/ManModifiersWeightVGroupTexExRedCMap.jpg" src="../../_images/ManModifiersWeightVGroupTexExRedCMap.jpg" style="width: 200px;" /></a>
+<p class="caption">Custom Mapping enabled.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<iframe src="//player.vimeo.com/video/30188814" style="border: 0; height: 345px; width: 560px">
+</iframe><p><a class="reference external" href="http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend">The Blender file</a>, <tt class="docutils literal"><span class="pre">TEST_4</span></tt> scene.</p>
+</div>
+</div>
+<div class="section" id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The <a class="reference external" href="http://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev">Development page</a>.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../generate/array.html" class="btn btn-neutral float-right" title="Array Modifier"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="uv_warp.html" class="btn btn-neutral" title="UV Warp Modifier"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Grab/Move &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Transformations" href="index.html"/>
+        <link rel="next" title="Rotate" href="rotate.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Getting Started</a> &raquo;</li>
+      
+          <li><a href="../index.html">Basics</a> &raquo;</li>
+      
+          <li><a href="index.html">Transformations</a> &raquo;</li>
+      
+    <li>Grab/Move</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/getting_started/basics/transformations/grab.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="grab-move">
+<h1>Grab/Move<a class="headerlink" href="#grab-move" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> Mode, <em>Edit</em> Mode, and <em>Pose</em> Mode for the 3D View;
+<em>UV/Image Editor</em> Tools, <em>Sequence Editor</em>, <em>Dopesheet</em>,
+and <em>Graph Editor</em> for other specific types of Grab/Move operation.</div>
+<div class="line">Menu:     Context Sensitive, Object Based &#8211;&gt; <em>Transform</em> &#8211;&gt; <em>Grab/Move</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">G</span></tt> or combinations for specific Axis constraint</div>
+</div>
+</div>
+<p>In Object Mode, the grab/move option lets you translate (move) objects.
+It also lets you translate any elements that make up the object within the 3D space of the active 3D viewport.
+Grab/Move works similarly here as it does
+in the Node Editor, Graph Editor, UV Editor, Sequencer, etc.</p>
+<p>Options and other details will be discussed in their respective sections.</p>
+<div class="figure">
+<img alt="../../../_images/Doc_Blender_26_3D_inter_translate_value_display.jpg" src="../../../_images/Doc_Blender_26_3D_inter_translate_value_display.jpg" />
+<p class="caption">Translation Display</p>
+</div>
+<p>While Grab/Move is active, the amount of change in the X,
+Y and Z co-ordinates is displayed at the bottom left corner of the 3D View window.</p>
+<div class="section" id="d-view">
+<h2>3D View<a class="headerlink" href="#d-view" title="Permalink to this headline">¶</a></h2>
+<p>There are <strong>2</strong> ways to Grab/Move in <em>3D View</em>:</p>
+<ul class="simple">
+<li>Using shortcuts and combinations of shortcuts.</li>
+<li>Using the <em>Transform Widget</em> helper. This can be toggled from the <em>Translation Widget</em> in the header of the 3DView.</li>
+</ul>
+<div class="section" id="transform-widget">
+<h3>Transform Widget<a class="headerlink" href="#transform-widget" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/FAQ-Transform_widget-2.jpg" src="../../../_images/FAQ-Transform_widget-2.jpg" />
+<p class="caption">Translation Widget</p>
+</div>
+<p>In the default installation of Blender, this is the <em>Transform Widget</em>.
+It is active by default. You can use the widget by holding <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> over it and dragging in the 3D view.</p>
+</div>
+<div class="section" id="shortcuts-in-the-3d-view">
+<h3>Shortcuts in the 3D View<a class="headerlink" href="#shortcuts-in-the-3d-view" title="Permalink to this headline">¶</a></h3>
+<p>A quicker way to move objects in 3D space is with the <tt class="kbd docutils literal"><span class="pre">G</span></tt> hotkey.
+Pressing <tt class="kbd docutils literal"><span class="pre">G</span></tt> activates &#8220;Grab/Move&#8221; transformation mode.
+The selected object or data then moves freely according to the mouse pointer&#8217;s location and camera.
+Using this shortcut in combination with specifc shortcuts which specify a chosen axis gives you
+full control over your transformation.</p>
+<dl class="docutils">
+<dt><tt class="kbd docutils literal"><span class="pre">LMB</span></tt></dt>
+<dd>Confirm the move, and leave the object or data at its current location on the screen.</dd>
+</dl>
+<div class="figure">
+<img alt="../../../_images/Doc_blender_26_3D_interaction_trans_basics_grab_mmb.jpg" src="../../../_images/Doc_blender_26_3D_interaction_trans_basics_grab_mmb.jpg" />
+<p class="caption">Axis-Constraint in action</p>
+</div>
+<dl class="docutils">
+<dt><tt class="kbd docutils literal"><span class="pre">MMB</span></tt></dt>
+<dd>Constrain the move to the X, Y or Z axis according to the position of the mouse pointer in the 3D View.
+After pressing the <tt class="kbd docutils literal"><span class="pre">G</span></tt> key, if the <tt class="kbd docutils literal"><span class="pre">MMB</span></tt> is pressed,
+a visual option to constrain the translation will be available,
+showing the three axes in the 3D View space. The axis of choice to confirm the operation
+will depend on the axis about which the <tt class="kbd docutils literal"><span class="pre">MMB</span></tt> is released. At any point during the operation,
+the chosen axis can be changed by hitting <tt class="kbd docutils literal"><span class="pre">X</span></tt>, <tt class="kbd docutils literal"><span class="pre">Y</span></tt>, <tt class="kbd docutils literal"><span class="pre">Z</span></tt> on the keyboard.</dd>
+<dt><tt class="kbd docutils literal"><span class="pre">RMB</span></tt> or <tt class="kbd docutils literal"><span class="pre">Esc</span></tt></dt>
+<dd>Cancel the move, and return the object or data to its original location.</dd>
+</dl>
+<div class="figure">
+<img alt="../../../_images/Doc_blender_26_manual_basic_trans_grab_shift_xyz.jpg" src="../../../_images/Doc_blender_26_manual_basic_trans_grab_shift_xyz.jpg" />
+<p class="caption">Shift+X in action</p>
+</div>
+<dl class="docutils">
+<dt><tt class="kbd docutils literal"><span class="pre">Shift</span></tt> + <tt class="kbd docutils literal"><span class="pre">X</span></tt>/<tt class="kbd docutils literal"><span class="pre">Y</span></tt>/<tt class="kbd docutils literal"><span class="pre">Z</span></tt></dt>
+<dd>This modifying hotkey locks the translation axis,
+allowing the object to move freely on the two axes that aren&#8217;t locked.
+For example, <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> +
+<tt class="kbd docutils literal"><span class="pre">X</span></tt> means the object will translate on the Y and Z axes while remaining at the same point on the X axis.</dd>
+</dl>
+<p><tt class="kbd docutils literal"><span class="pre">Alt</span></tt> + <tt class="kbd docutils literal"><span class="pre">G</span></tt> clears any previous transformation on the object and sets its origin back to the center.
+This only works in Object Mode.</p>
+<p>You can also move an object by clicking and holding <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> on the object to move it.
+To confirm the action, press <tt class="kbd docutils literal"><span class="pre">LMB</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This behavior can be changed using <em>Release Confirms</em> in the <a class="reference internal" href="../../../preferences/editing.html"><em>User Preferences</em></a>,
+so that a single <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> drag can be used to move and confirm.</p>
+</div>
+</div>
+<div class="section" id="controling-grab-move-precision">
+<h3>Controling Grab/Move Precision<a class="headerlink" href="#controling-grab-move-precision" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the Axis constraint options listed above,
+Blender offers options to limit the amount of the transformation in small or predefined steps.</p>
+<dl class="docutils">
+<dt><tt class="kbd docutils literal"><span class="pre">Shift</span></tt></dt>
+<dd>Slow translation mode. While still in the grab mode i.e. after <tt class="kbd docutils literal"><span class="pre">G</span></tt> is pressed,
+holding down <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> reduces how quickly the object moves and allows extra precision.</dd>
+<dt><tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt></dt>
+<dd>This activates <a class="reference internal" href="transform_control/snap.html"><em>snapping</em></a> based on the
+snapping constraint which has been already set. You may not be able to enable every snapping option in all cases.</dd>
+<dt><tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> + <tt class="kbd docutils literal"><span class="pre">Shift</span></tt></dt>
+<dd>Precise snap. This option will move the object with high precision along with the snapping constraint.</dd>
+<dt><tt class="kbd docutils literal"><span class="pre">X</span></tt>/<tt class="kbd docutils literal"><span class="pre">Y</span></tt>/<tt class="kbd docutils literal"><span class="pre">Z</span></tt> + decimal number</dt>
+<dd><p class="first">This option limits the transformation to the specified axis and the decimal number specified
+will be the magnitude of the translation along that axis.
+This decimal number is displayed at the bottom left corner of the 3D view window as it is entered.</p>
+<ul class="last simple">
+<li>Hitting <tt class="kbd docutils literal"><span class="pre">Backspace</span></tt> during number entry and deleting the number removes the numerical
+specification option but the object will remain constrained to the same axis.</li>
+<li>Hitting <tt class="kbd docutils literal"><span class="pre">/</span></tt> during number entry switches the number being entered to its reciprocal, e.g.
+<tt class="kbd docutils literal"><span class="pre">2</span></tt> <tt class="kbd docutils literal"><span class="pre">/</span></tt> results in 0.5 (1/2), <tt class="kbd docutils literal"><span class="pre">2</span></tt> <tt class="kbd docutils literal"><span class="pre">/</span></tt> <tt class="kbd docutils literal"><span class="pre">0</span></tt> results in 0.05 (1/20).</li>
+<li>The axis of movement can be changed at any time during translation by typing <tt class="kbd docutils literal"><span class="pre">X</span></tt>/<tt class="kbd docutils literal"><span class="pre">Y</span></tt>/<tt class="kbd docutils literal"><span class="pre">Z</span></tt>.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="orientations">
+<h2>Orientations<a class="headerlink" href="#orientations" title="Permalink to this headline">¶</a></h2>
+<p>There are 5 standard orientation references for all transformations.
+You can find out more about transform orientations <a class="reference internal" href="transform_control/transform_orientations.html"><em>here</em></a>.</p>
+<div class="figure">
+<img alt="../../../_images/3d_interaction_trans_grab_orientation.png" src="../../../_images/3d_interaction_trans_grab_orientation.png" />
+<p class="caption">Orientation choice menu</p>
+</div>
+<ul class="simple">
+<li>Global (the default)</li>
+<li>Local</li>
+<li>Normal</li>
+<li>Gimbal</li>
+<li>View</li>
+</ul>
+<p>Each mode is a co-ordinate system in which transformations can be carried out.
+These orientations can be chosen from the pop-up menu to the side of the controls which toggle
+and select the transformation manipulator widgets.</p>
+<p>If you have changed the orientation to something other than Global,
+you can hotkey your chosen axis of orientation by hitting the relevant axis modifying hotkey
+<strong>twice</strong> instead of just once. Hitting the axis modifying hotkey three times reverts back to Global orientation.</p>
+<blockquote>
+<div><ul class="simple">
+<li>The <tt class="kbd docutils literal"><span class="pre">G</span></tt> hotkey followed by <tt class="kbd docutils literal"><span class="pre">xx</span></tt> or <tt class="kbd docutils literal"><span class="pre">yy</span></tt> or
+<tt class="kbd docutils literal"><span class="pre">zz</span></tt> allows you to translate the object in the object&#8217;s Local axis by default,
+or on an axis of the selected orientation if the transform orientation is not set to Global.
+This modifying hotkey combination can be followed with numbers as described in the previous section.</li>
+<li>The <tt class="kbd docutils literal"><span class="pre">G</span></tt> hotkey followed by <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> and <tt class="kbd docutils literal"><span class="pre">xx</span></tt> or <tt class="kbd docutils literal"><span class="pre">yy</span></tt> or
+<tt class="kbd docutils literal"><span class="pre">zz</span></tt> will lock the object&#8217;s translation on a single Local axis by default,
+or on an axis of the selected orientation if the transform orientation is not set to Global.
+Locking one axis means the selected object moves freely on the other two axes.</li>
+</ul>
+</div></blockquote>
+<div class="figure">
+<img alt="../../../_images/3d_interaction_trans_grab_xyz_number.png" src="../../../_images/3d_interaction_trans_grab_xyz_number.png" />
+<p class="caption">Numerical Entry Display</p>
+</div>
+</div>
+<div class="section" id="other-editor-windows">
+<h2>Other Editor Windows<a class="headerlink" href="#other-editor-windows" title="Permalink to this headline">¶</a></h2>
+<p>In other editors such as the UV/Image Editor, Sequence Editor, Dopesheet and Graph Editor,
+the Grab/Move Operations are used to move objects or elements -
+the difference from 3D View is that only two axes are used - usually <strong>X</strong> and <strong>Y</strong>.
+You can use many of the same Grab/Move hotkeys after <tt class="kbd docutils literal"><span class="pre">G</span></tt>
+(such as <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> or <tt class="kbd docutils literal"><span class="pre">X</span></tt>)
+in other editor windows and they will work much the same way as they do in 3D View.
+Rotating and scaling also work in certain editors as well.</p>
+</div>
+<div class="section" id="python-scripting">
+<h2>Python Scripting<a class="headerlink" href="#python-scripting" title="Permalink to this headline">¶</a></h2>
+<p>You can use Python Scripting in Blender to Grab/Move Objects or elements to a specific location,
+either using the Python interactive console or running a Python script in the Text Editor Window.</p>
+<p>Getting the location vector for current object <tt class="docutils literal"><span class="pre">bpy.context.scene.objects.active.location</span></tt>
+returns you the location vector for the active object in the scene.
+You can assign a different value to the location vector to change the position of the object.</p>
+<p>Operator for translating active object and its syntax:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="o">&lt;</span><span class="n">DX</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">DY</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">DZ</span><span class="o">&gt;</span><span class="p">),</span> <span class="n">constraint_axis</span><span class="o">=</span><span class="p">(</span><span class="o">&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="o">&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">),</span> <span class="n">constraint_orientation</span><span class="o">=</span><span class="s">&#39;&lt;ORIENTATION NAME&gt;&#39;</span><span class="p">,</span> <span class="n">mirror</span><span class="o">=&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="n">proportional</span><span class="o">=</span><span class="s">&#39;&lt;ENABLE?DISABLE&gt;&#39;</span><span class="p">,</span> <span class="n">proportional_edit_falloff</span><span class="o">=</span><span class="s">&#39;&lt;FALLOFF TYPE&gt;&#39;</span><span class="p">,</span>
+<span class="n">proportional_size</span><span class="o">=&lt;</span><span class="n">INT</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">snap</span><span class="o">=&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">snap_target</span><span class="o">=</span><span class="s">&#39;&lt;SNAP TARGET&gt;&#39;</span><span class="p">,</span> <span class="n">snap_point</span><span class="o">=&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="n">snap_align</span><span class="o">=&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">snap_normal</span><span class="o">=&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">texture_space</span><span class="o">=&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">release_confirm</span><span class="o">=&lt;</span><span class="nb">bool</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Moving an object in Object mode changes the object&#8217;s origin.
+Moving the object&#8217;s vertices/edges/faces in Edit Mode doesn&#8217;t change the object&#8217;s origin.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rotate.html" class="btn btn-neutral float-right" title="Rotate"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

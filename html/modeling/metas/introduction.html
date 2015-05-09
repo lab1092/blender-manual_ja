@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Meta Objects &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Metas" href="index.html"/>
+        <link rel="next" title="Editing Metas" href="editing.html"/>
+        <link rel="prev" title="Metas" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="index.html">Metas</a> &raquo;</li>
+      
+    <li>Meta Objects</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modeling/metas/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="meta-objects">
+<h1>Meta Objects<a class="headerlink" href="#meta-objects" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> or <em>Edit</em> modes</div>
+<div class="line">Menu:     <em class="menuselection">Add ‣ Meta</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Shift-A</span></tt></div>
+</div>
+</div>
+<p>Meta objects are <em>implicit surfaces</em>,
+meaning that they are <em>not</em> <em>explicitly</em> defined by vertices (as meshes are)
+or control points (as surfaces are): they exist <em>procedurally</em>.
+Meta objects are literally mathematical formulas that are calculated on-the-fly by Blender.</p>
+<p>A very distinct visual characteristic of metas is that they are fluid <em>mercurial</em>,
+or <em>clay-like</em> forms that have a &#8220;rounded&#8221; shape. Furthermore,
+when two meta objects get close to one another, they begin to interact with one another.
+They &#8220;blend&#8221; or &#8220;merge&#8221;, as water droplets do, especially in zero-g (which, by the way, makes
+them very handy for modeling streams of water when you don&#8217;t want to do a fluid simulation).
+If they subsequently move away from one another, they restore their original shape.</p>
+<p>Each of these is defined by its own underlying mathematical structure
+(<a class="reference internal" href="#technical-details">Technical Details</a>), and you can at any time switch between them using the <em>Active Element</em> panel.</p>
+<p>Typically <em>Meta</em> objects are used for special effects or as a basis for modeling.
+For example, you could use a collection of metas to form the initial shape of your model and
+then convert it to another object type (well, only meshes are available...)
+for further modeling. Meta objects are also very efficient for ray-tracing.</p>
+<p>Note that <em>Meta</em> objects have a slightly different behavior in <em>Object</em> mode.</p>
+<div class="section" id="primitives">
+<h2>Primitives<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h2>
+<p>There are five predefined meta &#8220;primitives&#8221; (or configurations)
+available in the <em class="menuselection">Add ‣ Meta</em> sub-menu:</p>
+<dl class="docutils">
+<dt>Meta Ball</dt>
+<dd>adds a meta with a point underlying structure.</dd>
+<dt>Meta Tube</dt>
+<dd>adds a meta with a line segment underlying structure.</dd>
+<dt>Meta Plane</dt>
+<dd>adds a meta with a planar underlying structure.</dd>
+<dt>Meta Ellipsoid</dt>
+<dd>adds a meta with an ellipsoidal underlying structure.</dd>
+<dt>Meta Cube</dt>
+<dd>adds a meta with a volumetric cubic underlying structure.</dd>
+</dl>
+<div class="section" id="visualization">
+<h3>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h3>
+<p>In Object mode, the calculated mesh is shown, along with a black &#8220;selection ring&#8221; (becoming pink when selected).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/MetaInfluenceAndSelection.jpg"><img alt="../../_images/MetaInfluenceAndSelection.jpg" src="../../_images/MetaInfluenceAndSelection.jpg" style="width: 350px;" /></a>
+<p class="caption">Meta Ball example.</p>
+</div>
+<p>In <em>Edit</em> mode (<em>Meta Ball</em> <em>example</em>), a meta is drawn as a mesh (either shaded or as black wireframe,
+but without any vertex of course), with two colored circles: a red one for selection (pink when selected),
+and a green one for a direct control of the meta&#8217;s stiffness (light green when active).
+Note that except for the <em>Scale</em> (<tt class="kbd docutils literal"><span class="pre">S</span></tt>) transformation,
+having the green circle highlighted is equivalent to having the red one.</p>
+</div>
+<div class="section" id="meta-ball-options">
+<h3>Meta Ball Options<a class="headerlink" href="#meta-ball-options" title="Permalink to this headline">¶</a></h3>
+<p>All Meta objects in a scene interact with each other.
+The settings in the <em>MetaBall</em> section apply to all meta objects.
+In <em>Edit</em> mode,
+the <em>Active Element</em> panel appears for editing individual meta elements.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/MetaPropertiesObjectMode.jpg"><img alt="../../_images/MetaPropertiesObjectMode.jpg" src="../../_images/MetaPropertiesObjectMode.jpg" style="width: 300px;" /></a>
+<p class="caption">global meta properties.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/MetaPropertiesEditMode.jpg"><img alt="../../_images/MetaPropertiesEditMode.jpg" src="../../_images/MetaPropertiesEditMode.jpg" style="width: 300px;" /></a>
+<p class="caption">individual meta properties.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="resolution">
+<h2>Resolution<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Resolution</em> controls the resolution of the resultant mesh as generated by the</p>
+<dl class="docutils">
+<dt>Meta</dt>
+<dd>object.</dd>
+<dt>View</dt>
+<dd>The 3D View resolution of the generated mesh. The range is from <strong>0.05</strong> (finest) to <strong>1.0</strong> (coarsest).</dd>
+<dt>Render</dt>
+<dd>The rendered resolution of the generated mesh. The range is from <strong>0.05</strong> (finest) to <strong>1.0</strong> (coarsest).</dd>
+</dl>
+<p>One way to see the underlying mathematical structure is to lower the <em>Resolution</em>,
+increase the <em>Threshold</em> and set the <em>Stiffness</em> (see below)
+a fraction above the <em>Threshold</em>. (<em>Underlying structure</em>) is a (<em>Meta cube</em>)
+with the above mentioned configuration applied as follows:
+<em>Resolution</em> of <strong>0.410</strong>,
+<em>Threshold</em> of <strong>5.0</strong> and <em>Stiffness</em> a fraction above at <strong>5.01</strong>.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/MetaUnderlyingStructure.jpg"><img alt="../../_images/MetaUnderlyingStructure.jpg" src="../../_images/MetaUnderlyingStructure.jpg" style="width: 600px;" /></a>
+<p class="caption">Left: Underlying structure, Right: the shape.</p>
+</div>
+<p>You can clearly see the underlying cubic structure that gives the meta cube its shape.</p>
+</div>
+<div class="section" id="threshold-influence">
+<h2>Threshold (Influence)<a class="headerlink" href="#threshold-influence" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> or <em>Edit</em> modes</div>
+<div class="line">Panel:    <em>MetaBall</em> (<em>Editing</em> context)</div>
+</div>
+</div>
+<p><em>Threshold</em> defines how much a meta&#8217;s surface &#8220;influences&#8221; other metas.
+It controls the <em>field level</em> at which the surface is computed.
+The setting is global to a group of <em>Meta</em> objects.
+As the threshold increases, the influence that each meta has on each other increases.</p>
+<p>There are two types of influence: <strong>positive</strong> or <strong>negative</strong>. The type can be toggled on
+the <em>Active Element</em> panel while in <em>Edit</em> mode,
+using the <em>Negative</em> button.
+You could think of <strong>positive</strong> as attraction and <strong>negative</strong> as repulsion of meshes.
+A negative meta will push away or repel the meshes of positive <em>Meta</em> objects.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/MetaIntersection.jpg"><img alt="../../_images/MetaIntersection.jpg" src="../../_images/MetaIntersection.jpg" style="width: 400px;" /></a>
+<p class="caption">Positive.</p>
+</div>
+<p>A <em>positive</em> influence is defined as an attraction,
+meaning the meshes will stretch towards each other as the <em>rings of influence</em> intersect.
+(<em>Positive</em>)
+shows two meta balls&#8217; <em>rings of influence</em> intersecting with a <em>positive</em> influence.</p>
+<p>Notice how the meshes have pulled towards one another.
+The area circled in white shows the green <em>influence</em> rings intersecting.</p>
+</div>
+<div class="section" id="update">
+<h2>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p>While transforming metas (grab/move, scale, etc.), you have four &#8220;modes&#8221; of visualization,
+located in the <em>Update</em> buttons group of the <em>MetaBall</em> panel:</p>
+<dl class="docutils">
+<dt>Always</dt>
+<dd>fully draw the meta during transformations.</dd>
+<dt>Half Res</dt>
+<dd>During transformations, draw the meta at half its <em>Wiresize</em> resolution.</dd>
+<dt>Fast</dt>
+<dd>Do not show meta mesh during transformations.</dd>
+<dt>Never</dt>
+<dd>Never show meta mesh (not a very recommended option, as the meta is only visible at render time!).</dd>
+</dl>
+<p>This should help you if you experience difficulties (metas are quite compute-intensive...),
+but with modern computers, this shouldn&#8217;t happen, unless you use many metas,
+or very high resolutions...</p>
+<div class="section" id="meta-structure">
+<h3>Meta Structure<a class="headerlink" href="#meta-structure" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="technical-details">
+<h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<p>A more formal definition of a meta object can be given as a <em>directing structure</em> which can
+be seen as the source of a static field. The field can be either positive or negative and
+hence the field generated by neighboring directing structures can attract or repel.</p>
+<p>The implicit surface is defined as the surface where the 3D field generated by all the
+directing structures assume a given value. For example a meta ball,
+whose directing structure is a point, generates an isotropic (i.e.
+identical in all directions) field around it and the surfaces at constant field value are
+spheres centered at the directing point.</p>
+<p><em>Meta</em> objects are nothing more than mathematical formulae that perform logical operations on one another
+(AND, OR), and that can be added and subtracted from each other.
+This method is also called <strong>Constructive Solid Geometry</strong> (CSG).
+Because of its mathematical nature, CSG uses little memory, but requires lots of processing power to compute.</p>
+</div>
+<div class="section" id="underlying-structure">
+<h2>Underlying Structure<a class="headerlink" href="#underlying-structure" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Panel:    <em>MetaBall tools</em> (<em>Editing</em> context), <em>Transform Properties</em></div>
+</div>
+</div>
+<p>Blender has five types of metas, each determined by its underlying (or directing) structure.
+In <em>Edit</em> mode, you can change this structure,
+either using the relevant buttons in the <em>MetaBall tools</em> panel,
+or the drop-down list in the <em>Transform Properties</em> panel (<tt class="kbd docutils literal"><span class="pre">N</span></tt>).
+Depending on the structure, you might have additional parameters,
+located in both <em>Transform Properties</em> and <em>MetaBall tools</em> panels.</p>
+<dl class="docutils">
+<dt>Ball (point, zero-dimensional structure)</dt>
+<dd>This is the simplest meta, without any additional setting. As it is just a point,
+it generates an isotropic field, yielding a spherical surface
+(this is why it is called <em>Meta Ball</em> or <em>Ball</em> in Blender).</dd>
+<dt>Tube (straight line, uni-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a straight line of a given length.
+This gives a cylindrical surface, with rounded closed ends. It has one additional parameter:</p>
+<dl class="last docutils">
+<dt>dx</dt>
+<dd>The length of the line (and hence of the tube - defaults to <strong>1.0</strong>).</dd>
+</dl>
+</dd>
+<dt>Plane (rectangular plane, bi-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a rectangular plane.
+This gives a parallelepipedal surface, with a fixed thickness,
+and rounded borders. It has two additional parameters:</p>
+<dl class="docutils">
+<dt>dx, dy</dt>
+<dd>The length, width of the rectangle (defaults to <strong>1.0</strong>).</dd>
+</dl>
+<p class="last">Note that by default, the plane is a square.</p>
+</dd>
+<dt>Elipsoid (ellipsoidal volume, tri-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by an ellipsoidal volume.
+This gives an ellipsoidal surface. It has three additional parameters:</p>
+<dl class="docutils">
+<dt>dx, dy, dz</dt>
+<dd>The length, width, height of the ellipsoid (defaults to <strong>1.0</strong>).</dd>
+</dl>
+<p class="last">Note that by default, the volume is a sphere, producing a spherical meta, as the <em>Ball</em> option...</p>
+</dd>
+<dt>Cube (parallelepipedal volume, tri-dimensional structure)</dt>
+<dd><p class="first">This is a meta which surface is generated by the field produced by a parallelepipedal volume.
+This gives a parallelepipedal surface, with rounded edges.
+As you might have guessed, it has three additional parameters:</p>
+<dl class="docutils">
+<dt>dx, dy, dz</dt>
+<dd>The length, width, height of the parallelepiped (defaults to <strong>1.0</strong>).</dd>
+</dl>
+<p class="last">Note that by default, the volume is a cube.</p>
+</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/MetaPrimitives.jpg"><img alt="../../_images/MetaPrimitives.jpg" src="../../_images/MetaPrimitives.jpg" style="width: 600px;" /></a>
+<p class="caption">the 5 meta primitives.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Editing Metas"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Metas"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

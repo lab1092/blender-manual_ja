@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Visualization &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Rigging" href="../index.html"/>
+        <link rel="next" title="Editing Poses" href="editing.html"/>
+        <link rel="prev" title="Posing" href="../posing.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rigging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posing.html">Posing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Rigging</a> &raquo;</li>
+      
+    <li>Visualization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/rigging/posing/visualization.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="visualization">
+<h1>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h1>
+<p>We talk in <a class="reference internal" href="../armatures/visualization.html"><em>this page</em></a>
+about the armature visualization options available in all modes (the visualization types, the bones&#8217; shapes, etc.).</p>
+<p>In <em>Pose</em> mode, you have extra features,
+<a class="reference internal" href="#colors">Colors</a> to help you visually categorize your bones,
+<a class="reference internal" href="#ghosts">Ghosts</a> and
+<a class="reference internal" href="#motion-paths">Motion Paths</a> to help you visualize armatures&#8217; animations.</p>
+<div class="section" id="colors">
+<h2>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h2>
+<p>In <em>Pose</em> mode, the bones can have different colors,
+following two different processes, controlled by the <em>Color</em> button
+(<em>Armature</em> panel, <em>Editing</em> context):</p>
+<ul class="simple">
+<li>When it is disabled,
+bones are colored based on their &#8220;state&#8221; (i.e. if they use constraints, if they are posed, etc.).</li>
+<li>When it is enabled,
+bones are colored depending on which bone group they belong to (or as above if they belong to no group).</li>
+</ul>
+<p>You can also mix both coloring methods, see <a class="reference internal" href="#coloring-from-bone-group">Coloring from Bone Group</a> below
+).</p>
+<div class="section" id="coloring-from-bone-state">
+<h3>Coloring from Bone State<a class="headerlink" href="#coloring-from-bone-state" title="Permalink to this headline">¶</a></h3>
+<p>This is the default and oldest way - there are six different color codes,
+ordered here by precedence (i.e. the bone will be of the color of the topmost valid state):</p>
+<ul class="simple">
+<li><strong>Purple</strong>: The <tt class="xref doc docutils literal"><span class="pre">Stride</span> <span class="pre">Root</span> <span class="pre">bone</span></tt>.</li>
+<li><strong>Orange</strong>: A bone with a targetless Solver constraint.</li>
+<li><strong>Yellow</strong>: A bone with an <a class="reference internal" href="../constraints/tracking/ik_solver.html"><em>IK Solver constraint</em></a>.</li>
+<li><strong>Green</strong>: A bone with any other kind of constraint.</li>
+<li><strong>Blue</strong>: A bone that is posed (i.e. has keyframes).</li>
+<li><strong>Gray</strong>: Default state.</li>
+</ul>
+</div>
+<div class="section" id="coloring-from-bone-group">
+<h3>Coloring from Bone Group<a class="headerlink" href="#coloring-from-bone-group" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Doc26-rigging-boneGroups.jpg"><img alt="../../_images/Doc26-rigging-boneGroups.jpg" src="../../_images/Doc26-rigging-boneGroups.jpg" style="width: 250px;" /></a>
+<p class="caption">The Bone Groups panel with a bone group (default colors).</p>
+</div>
+<p>The bone groups panel is available in the Object data editor for an armature.
+Bone groups facilitate the coloring (theming) of multiple bones.
+Bone groups are managed mostly in the <em>Buttons</em> window, <em>Editing</em> context.</p>
+<p>To create a new bone group,
+click on the <em>Add Group</em> button in the <em>Bone Groups:</em> buttons set
+(<em>Link and Materials</em> panel). Once created,
+you can use the top row of controls to select another group in the drop-down list
+(&#8220;arrows&#8221; button), rename the current group (text field), or delete it (&#8220;X&#8221; button).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Doc26-rigging-boneGroups-assign.jpg"><img alt="../../_images/Doc26-rigging-boneGroups-assign.jpg" src="../../_images/Doc26-rigging-boneGroups-assign.jpg" style="width: 250px;" /></a>
+<p class="caption">The Bone Group drop-down list of a bone sub-panel.</p>
+</div>
+<p>To assign a selected bone to a given bone group you can do one of the following:</p>
+<ul class="simple">
+<li>In the Bone Groups, select an existing group, and click <em>Assign</em></li>
+<li>In the Relations section of the <em>Bones</em> panel), use the <em>Bone Group</em> drop-down list to select the chosen one.</li>
+</ul>
+<p>In the 3D views, using the <em class="menuselection">Pose ‣ Bone Groups</em> menu entries,
+and/or the <em>Bone Groups</em> pop-up menu (<tt class="kbd docutils literal"><span class="pre">Ctrl-G</span></tt>), you can:</p>
+<dl class="docutils">
+<dt>Assign to New Group</dt>
+<dd>Assigns selected bones to a new bone group</dd>
+<dt>Assign to Group</dt>
+<dd>Assigns selected bones to the selected Bone Groups</dd>
+<dt>Remove Selected from Bone Groups</dt>
+<dd>Removes selected bones from all bone groups</dd>
+<dt>Remove Bone Group</dt>
+<dd>Removes the active bone group</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Doc26-rigging-boneGroups-colors.jpg"><img alt="../../_images/Doc26-rigging-boneGroups-colors.jpg" src="../../_images/Doc26-rigging-boneGroups-colors.jpg" style="width: 300px;" /></a>
+<p class="caption">The Bone Color Set list of the bone group, and the color swatch of the chosen color theme.</p>
+</div>
+<p>You can also assign a &#8220;color theme&#8221; to a group (each bone will have these colors).
+Remember you have to enable the <em>Colors</em> button (<em>Armature</em> panel)
+to see these colors. Use the <em>Bone Color Set</em> drop-down list to select:</p>
+<ul class="simple">
+<li>The default (gray) colors (<em>Default Colors</em>).</li>
+<li>One of the twenty Blender presets (<em>nn - Theme Color Set</em>), common to all groups.</li>
+<li>A custom set of colors (<em>Custom Set</em>), which is specific to each group.</li>
+</ul>
+<p>Below this list, you have three color swatches and a button.</p>
+<ul class="simple">
+<li>The first swatch is the color of unselected bones.</li>
+<li>The second swatch is the outline color of selected bones.</li>
+<li>The third swatch is the outline color of the active bone.</li>
+</ul>
+<p>As soon as you click on a swatch (to change the color,
+through the standard color editing dialog),
+you are automatically switched to the <em>Custom Set</em> option.</p>
+</div>
+</div>
+<div class="section" id="ghosts">
+<h2>Ghosts<a class="headerlink" href="#ghosts" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Pose</em> mode</div>
+<div class="line">Panel:    <em>Visualisations</em></div>
+</div>
+</div>
+<table border="1" class="docutils">
+<caption>Ghosts examples.</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Armature_ghost_arround_current.jpg"><img alt="../../_images/Armature_ghost_arround_current.jpg" src="../../_images/Armature_ghost_arround_current.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../_images/Manual-PartIX-ie_ghost.jpg"><img alt="../../_images/Manual-PartIX-ie_ghost.jpg" src="../../_images/Manual-PartIX-ie_ghost.jpg" style="width: 200px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you are a bit familiar with traditional cartoon creation,
+you might know that drawing artists use tracing paper heavily,
+to see several frames preceding the one they are working on.
+This allows them to visualize the overall movement of their character,
+without having to play it back... Well,
+Blender features something very similar for armatures in <em>Pose</em> mode: the &#8220;ghosts&#8221;.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtGhostPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtGhostPanel.jpg" src="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtGhostPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Ghost panel showing the different options associated with different modes.</p>
+</div>
+<p>The ghosts are simply black drawings (more or less opaque)
+of the bones&#8217; outlines as they are at certain frames.</p>
+<p>The ghosts settings are found in the <em>Visualisations</em> panel
+(<em>Editing</em> context), only available in <em>Pose</em> mode.
+You have three different types of ghosts, sharing more or less the same options:</p>
+<dl class="docutils">
+<dt>Around Current Frame</dt>
+<dd><p class="first">This will display a given number of ghosts before and after the current frame.
+The ghosts are shaded from opaque at the current frame, to transparent at the most distant frames.
+It has three options:</p>
+<dl class="last docutils">
+<dt>Range</dt>
+<dd>This numeric field specifies how many ghosts you&#8217;ll have on both &#8220;sides&#8221;
+(i.e. a value of <strong>5</strong> will give you ten ghosts, five before the current frame, and five after).</dd>
+<dt>Step</dt>
+<dd>This numeric field specifies whether you have a ghost for every frame
+(the default <strong>1</strong> value), or one each two frames, each three frames, etc.</dd>
+<dt>Selected Only</dt>
+<dd>When enabled, you will only see the ghosts of selected bones
+(otherwise, every bone in the armatures has ghosts...)</dd>
+</dl>
+</dd>
+<dt>In Range</dt>
+<dd><p class="first">This will display the ghosts of the armature&#8217;s bones inside a given range of frames.
+The ghosts are shaded from transparent for the first frame, to opaque at the last frame. It has four options:</p>
+<dl class="last docutils">
+<dt>Start</dt>
+<dd>This numeric field specifies the starting frame of the range (exclusive).
+Note that unfortunately, it cannot take a null or negative value -
+which means you can only see ghosts starting from frame <strong>2</strong> included...</dd>
+<dt>End</dt>
+<dd>This numeric field specifies the ending frame of the range, and cannot take a value below <em>GSta</em> one.</dd>
+<dt>Step</dt>
+<dd>Same as above.</dd>
+</dl>
+</dd>
+<dt>On Keyframes</dt>
+<dd>This is very similar to the <em>In Range</em> option, but there are ghosts only for keyframes in the armature animation
+(i.e. frames at which you keyed one or more of the bones).
+So it has the same options as above, except for the <em>GStep</em> one (as only keyframes generate ghosts).
+Oddly, the shading of ghosts is reversed compared to <em>In Range</em> - from opaque for the first keyframe,
+to transparent for the last keyframe.</dd>
+</dl>
+<p>Finally, these ghosts are also active when playing the animation (<tt class="kbd docutils literal"><span class="pre">Alt-A</span></tt>)
+- this is only useful with the <em>Around Current Frame</em> option, of course...</p>
+<p>Note also that there is no &#8220;global switch&#8221; to disable this display feature - to do so,
+you have to either set <em>Ghost</em> to <strong>0</strong>
+(for <em>Around Current Frame</em> option),
+or the same frame number in both <em>GSta</em> and <em>GEnd</em>
+(for the two other ghosts types).</p>
+</div>
+<div class="section" id="motion-paths">
+<h2>Motion Paths<a class="headerlink" href="#motion-paths" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Pose</em> mode</div>
+<div class="line">Panel:    <em>Visualisations</em></div>
+<div class="line">Menu:     <em class="menuselection">Pose ‣ Motion Paths ‣ ...</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">W-3</span></tt>, <tt class="kbd docutils literal"><span class="pre">W-4</span></tt></div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ManRiggingPosingMotionPathsEx.jpg"><img alt="../../_images/ManRiggingPosingMotionPathsEx.jpg" src="../../_images/ManRiggingPosingMotionPathsEx.jpg" style="width: 250px;" /></a>
+<p class="caption">A motion paths example.</p>
+</div>
+<p>This feature allows you to visualize as curves the paths of bones&#8217; ends (either their tips,
+by default, or their roots).</p>
+<p>Before we look at its options (all regrouped in the same <em>Visualisations</em> panel,
+in the <em>Editing</em> context), let&#8217;s first see how to display/hide these paths.
+Unlike <a class="reference internal" href="#ghosts">Ghosts</a>, you have to do it manually -
+and you have to first select the bones you want to show/hide the motion paths. Then,</p>
+<ul class="simple">
+<li>To show the paths (or update them, if needed),
+click on the <em>Calculate Path</em> button of the <em>Visualisations</em> panel, or,
+in the 3D views, select the <em class="menuselection">Pose ‣ Motion Paths ‣ Calculate Paths</em> menu entry
+(or use the <em>Specials</em> pop-up menu, <tt class="kbd docutils literal"><span class="pre">W-3</span></tt>).</li>
+<li>To hide the paths, click on the <em>Clear Paths</em> button, or,
+in the 3D views, do <em class="menuselection">Pose ‣ Motion Paths ‣ Clear All Paths</em>, or <tt class="kbd docutils literal"><span class="pre">W-4</span></tt>.</li>
+</ul>
+<p>Remember: only selected bones and their paths are affected by these actions!</p>
+<p>The paths are drawn in a light shade of gray for unselected bones,
+and a slightly blueish gray for selected ones.
+Each frame is materialized by a small white dot on the paths.</p>
+<p>As with ghosts, the paths are automatically updated when you edit your poses/keyframes,
+and they are also active during animation playback (<tt class="kbd docutils literal"><span class="pre">Alt-A</span></tt>,
+only useful when the <em>Around Current Frame</em> option is enabled).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtMotionPathsPanel.jpg"><img alt="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtMotionPathsPanel.jpg" src="../../_images/Man2.5RiggingEditingObjectDataPropertyCxtMotionPathsPanel.jpg" style="width: 250px;" /></a>
+<p class="caption">The Motion Paths Panel showing options for the different modes</p>
+</div>
+<p>And now, the paths options:</p>
+<dl class="docutils">
+<dt>Around Frame</dt>
+<dd>Around Frame, Display Paths of poses within a fixed number of frames around the current frame.
+When you enable this button, you get paths for a given number of frames before and after the current one
+(again, as with ghosts).</dd>
+<dt>In Range</dt>
+<dd>In Range, Display Paths of poses within specified range.</dd>
+<dt>Display Range</dt>
+<dd><dl class="first last docutils">
+<dt>Before/After</dt>
+<dd>Number of frames to show before and after the current frame
+(only for &#8216;Around Current Frame&#8217; Onion-skinning method)</dd>
+<dt>Start/End</dt>
+<dd>Starting and Ending frame of range of paths to display/calculate
+(not for &#8216;Around Current Frame&#8217; Onion-skinning method)</dd>
+<dt>Step</dt>
+<dd>This is the same as the <em>GStep</em> for ghosts -
+it allows you to only display on the path one frame for each <em>n</em> ones.
+Mostly useful when you enable the frame number display (see below), to avoid cluttering the 3D views.</dd>
+</dl>
+</dd>
+<dt>Frame Numbers</dt>
+<dd>When enabled, a small number appears next to each frame dot on the path,
+which is of course the number of the corresponding frame.</dd>
+<dt>Keyframes</dt>
+<dd>When enabled, big yellow square dots are drawn on motion paths, materializing the keyframes of their bones
+(i.e. only the paths of keyed bones at a given frame get a yellow dot at this frame).</dd>
+<dt>Keyframe Nums</dt>
+<dd>When enabled, you&#8217;ll see the numbers of the displayed keyframes -
+so this option is obviously only valid when <em>Show Keys</em> is enabled.</dd>
+</dl>
+<ul>
+<li><dl class="first docutils">
+<dt>Non-Grouped Keyframes</dt>
+<dd><p class="first last">For bone motion paths, search whole Action for keyframes instead of in group with matching name only (is slower)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="docutils">
+<dt>Calculate</dt>
+<dd><dl class="first last docutils">
+<dt>Start / End</dt>
+<dd>These are the start/end frames of the range in which motion paths are drawn.
+<em>You have to</em> <em>Calculate Paths</em> <em>again when you modify this setting</em>, to update the paths in the 3D views.
+Note that unlike with ghosts, the start frame is <em>inclusive</em>
+(i.e. if you set <em>PSta</em> to <strong>1</strong>, you&#8217;ll really see the frame <strong>1</strong> as starting point of the paths...).</dd>
+<dt>Bake Location</dt>
+<dd>By default, you get the tips&#8217; paths.
+By changing this setting to Tails, you&#8217;ll get the paths of the bone&#8217;s roots
+(remember that in Blender UI, bones&#8217; roots are called &#8220;heads&#8221;...).
+<em>You have to</em> <em>Calculate Paths</em> <em>again when you modify this setting</em>,
+to update the paths in the 3D views.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Editing Poses"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../posing.html" class="btn btn-neutral" title="Posing"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

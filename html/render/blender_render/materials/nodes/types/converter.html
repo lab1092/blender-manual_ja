@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Material Convertor Nodes &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../../index.html"/>
+        <link rel="up" title="Materials" href="../../index.html"/>
+        <link rel="next" title="Options" href="../../options.html"/>
+        <link rel="prev" title="Material Vector Nodes" href="vector.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Materials</a> &raquo;</li>
+      
+    <li>Material Convertor Nodes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../../_sources/render/blender_render/materials/nodes/types/converter.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="material-convertor-nodes">
+<h1>Material Convertor Nodes<a class="headerlink" href="#material-convertor-nodes" title="Permalink to this headline">¶</a></h1>
+<p>As the name implies, these nodes convert the colors in the material in some way.</p>
+<div class="section" id="colorramp-node">
+<h2>ColorRamp Node<a class="headerlink" href="#colorramp-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-ColorRamp.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-ColorRamp.jpg" />
+<p class="caption">ColorRamp node</p>
+</div>
+<p>The ColorRamp Node is used for mapping values to colors with the use of a gradient.
+It works exactly the same way as a
+<a class="reference internal" href="../../properties/ramps.html"><em>Colorband for textures and materials</em></a>,
+using the Factor value as a slider or index to the color ramp shown,
+and outputting a color value and an alpha value from the output sockets.</p>
+<p>By default,
+the ColorRamp is added to the node map with two colors at opposite ends of the spectrum.
+A completely black black is on the left
+(Black as shown in the swatch with an Alpha value of 1.00)
+and a whitewash white is on the right.</p>
+<p>To select a color, <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> click on the thin vertical line/band within the colorband.
+The example picture shows the black color selected, as it is highlighted white.
+The settings for the color are shown above the colorband as (left to right): color swatch,
+Alpha setting, and interpolation type.</p>
+<div class="section" id="inputs">
+<h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Fac:</dt>
+<dd>Factor. The degree of node&#8217;s influence in node tree. The value can be provided by another node or set manually.</dd>
+</dl>
+</div>
+<div class="section" id="outputs">
+<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Color</dt>
+<dd>Value of the color, combined by the node.</dd>
+<dt>Alpha</dt>
+<dd>Value of the alpha, combined by the node.</dd>
+</dl>
+</div>
+<div class="section" id="controls">
+<h3>Controls<a class="headerlink" href="#controls" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Addpoint-Buticon.jpg" src="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Addpoint-Buticon.jpg" />
+<p class="caption">Add a new mark to the center of the colorband with the default color (neutral gray).</p>
+</div>
+<div class="figure">
+<img alt="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Deletepoint-Buticon.jpg" src="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Deletepoint-Buticon.jpg" />
+<p class="caption">Remove the currently selected mark from the colorband.</p>
+</div>
+<div class="figure">
+<img alt="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Flip-Buticon.jpg" src="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Flip-Buticon.jpg" />
+<p class="caption">Flip the colorband.</p>
+</div>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-ColorRamp-Interpolation.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-ColorRamp-Interpolation.jpg" />
+<p class="caption">Modes of interpolation between marker&#8217;s values color ramp</p>
+</div>
+<dl class="docutils">
+<dt>Interpolation</dt>
+<dd><p class="first">Various modes of interpolation between marker&#8217;s values can be chosen in the Interpolation menu:</p>
+<dl class="last docutils">
+<dt>Ease</dt>
+<dd>Ease by quadratic equation.</dd>
+<dt>Cardinal</dt>
+<dd>Cardinal.</dd>
+<dt>Linear</dt>
+<dd>Linear (default). A smooth, consistent transition between colors.</dd>
+<dt>B-Spline</dt>
+<dd>B-Spline.</dd>
+<dt>Constant</dt>
+<dd>Constant.</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-Colorband.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-Colorband.jpg" />
+<p class="caption">Colorband</p>
+</div>
+<dl class="docutils">
+<dt>Colorband</dt>
+<dd>Contain a gradient through a sequence of many colors (with alpha),
+each color acting across a certain position in the spectrum.</dd>
+</dl>
+<div class="figure">
+<img alt="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Numberpoint-Buticon.jpg" src="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Numberpoint-Buticon.jpg" />
+<p class="caption">The number of the active mark.</p>
+</div>
+<div class="figure">
+<img alt="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Pospoint-Buticon.jpg" src="../../../../../_images/26-Material-Convertor-Node-ColorRamp-Pospoint-Buticon.jpg" />
+<p class="caption"><em>Pos</em>. The position of the active color mark in the colorband (range 0.0–1.0).
+The position of the color marks can also be changed by <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> dragging them in the colorband.</p>
+</div>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-ColorSwatch.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-ColorSwatch.jpg" />
+<p class="caption">Color swatch to color selection for a mark</p>
+</div>
+<dl class="docutils">
+<dt>Color <em>Selector</em></dt>
+<dd>Allows set color and alpha values for each marker.</dd>
+</dl>
+<p>See more details about node controls&#8217; functions <a class="reference internal" href="../../properties/ramps.html"><em>here</em></a>.</p>
+</div>
+</div>
+<div class="section" id="rgb-to-bw-node">
+<h2>RGB to BW Node<a class="headerlink" href="#rgb-to-bw-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-RGB-to-BW.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-RGB-to-BW.jpg" />
+<p class="caption">RGB to BW node</p>
+</div>
+<p>This node converts a color image to black-and-white.</p>
+<div class="section" id="id1">
+<h3>Inputs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Color:</dt>
+<dd>Input color value. Includes a color swatch, allowing you to select the color directly on the node.</dd>
+</dl>
+</div>
+<div class="section" id="id2">
+<h3>Outputs<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Value</dt>
+<dd>Black-and-white value of the input color, converted by the node.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="math-node">
+<h2>Math Node<a class="headerlink" href="#math-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-Math.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-Math.jpg" />
+<p class="caption">Math node</p>
+</div>
+<p>This node performs the selected math operation on an image or buffer.
+All common math functions are supported. If only an image is fed to one Value socket, the math
+function will apply the other Value consistently to every pixel in producing the output Value.
+Select the math function by clicking the up-down selector where the &#8220;Add&#8221; selection is shown.</p>
+<div class="section" id="id3">
+<h3>Inputs<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Value</dt>
+<dd>Input value 1 (upper). The value can be provided by another node or set manually.</dd>
+<dt>Value</dt>
+<dd>Input value 2 (lower). The value can be provided by another node or set manually.</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h3>Outputs<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Value</dt>
+<dd>Output value, converted by the node.</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h3>Controls<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Clamp</dt>
+<dd>Clamps the result between 0 and 1.</dd>
+<dt>Operation</dt>
+<dd><p class="first">Selector the math function for conversion.</p>
+<dl class="last docutils">
+<dt>Add</dt>
+<dd>Add the two inputs</dd>
+<dt>Subtract</dt>
+<dd>Subtract input 2 from input 1</dd>
+<dt>Multiply</dt>
+<dd>Multiply the two inputs</dd>
+<dt>Divide</dt>
+<dd>Divide input 1 by input 2</dd>
+<dt>Sine</dt>
+<dd>The sine of input 1 (degrees)</dd>
+<dt>Cosine</dt>
+<dd>The cosine of input 1 (degrees)</dd>
+<dt>Tangent</dt>
+<dd>The tangent of input 1 (degrees)</dd>
+<dt>Arcsine</dt>
+<dd>The arcsine (inverse sine) of input 1 (degrees)</dd>
+<dt>Arccosine</dt>
+<dd>The arccosine (inverse cosine) of input 1 (degrees)</dd>
+<dt>Arctangent</dt>
+<dd>The arctangent (inverse tangent) of input 1 (degrees)</dd>
+<dt>Power</dt>
+<dd>Input 1 to the power of input 2 (input1^input2)</dd>
+<dt>Logarithm</dt>
+<dd>Log base input 2 of input 1</dd>
+<dt>Minimum</dt>
+<dd>The minimum of input 1 and input 2</dd>
+<dt>Maximum</dt>
+<dd>The maximum of input 1 and input 2</dd>
+<dt>Round</dt>
+<dd>Rounds input 1 to the nearest integer</dd>
+<dt>Less Than</dt>
+<dd>Test if input 1 is less than input 2, returns 1 for true, 0 for false</dd>
+<dt>Greater Than</dt>
+<dd>Test if input 1 is greater than input 2, returns 1 for true, 0 for false</dd>
+<dt>Modulo</dt>
+<dd>Division of input 1 by input 2 with remainder.</dd>
+<dt>Absolute</dt>
+<dd>Always return non-negative value from any operation input 2 between input 1.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="vector-math-node">
+<h2>Vector Math Node<a class="headerlink" href="#vector-math-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-VectorMath.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-VectorMath.jpg" />
+<p class="caption">Vector Math node</p>
+</div>
+<p>This node performs the selected math operation on vectors.
+Select the math function by clicking the up-down selector where the &#8220;Add&#8221; selection is shown.</p>
+<div class="section" id="id6">
+<h3>Inputs<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Vector</dt>
+<dd>Input vector 1 (upper). The value can be provided by another node or set manually.</dd>
+<dt>Vector</dt>
+<dd>Input vector 2 (lower). The value can be provided by another node or set manually.</dd>
+</dl>
+</div>
+<div class="section" id="id7">
+<h3>Outputs<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Vector</dt>
+<dd>Output vector, converted by the node.</dd>
+<dt>Value</dt>
+<dd>Output value, converted by the node.</dd>
+</dl>
+</div>
+<div class="section" id="id8">
+<h3>Controls<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Operation</dt>
+<dd><p class="first">Selector the math function for conversion.</p>
+<dl class="last docutils">
+<dt>Add</dt>
+<dd>Adding input 1 and 2.</dd>
+<dt>Subtract</dt>
+<dd>Subtracting input 1 and 2.</dd>
+<dt>Average</dt>
+<dd>Averaging input 1 and 2.</dd>
+<dt>Dot Product</dt>
+<dd>Algebraic operation that takes two equal-length sequences of vectors 1 and 2 and returns a single number.
+Result - scalar.</dd>
+<dt>Cross Product</dt>
+<dd>Geometric binary operation on two vectors 1 and 2 in three-dimensional space.
+It results in a vector which is perpendicular to both and therefore normal to the plane containing them.
+Result - vector.</dd>
+<dt>Normalize</dt>
+<dd>Normalizing input 1 and 2.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="squeeze-value-node">
+<h2>Squeeze Value Node<a class="headerlink" href="#squeeze-value-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-SqueezeValue.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-SqueezeValue.jpg" />
+<p class="caption">Squeeze Value node</p>
+</div>
+<p>This node is used primarily in conjunction with the Camera Data node used.
+The camera data generate large output values,
+both in terms of the depth information as well as the extent in the width.
+With the squeeze Node high output values to an acceptable material for the node degree,
+ie to values between 0.0 - 1.0 scaled down.</p>
+<div class="section" id="id9">
+<h3>Inputs<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Value</dt>
+<dd>Any numeric value. The value can be provided by another node or set manually.</dd>
+<dt>Width</dt>
+<dd>Determines the curve between sharp S-shaped (width = 1) and stretched (Width = 0.1).
+Negative values reverse the course. The value can be provided by another node or set manually.</dd>
+<dt>Center</dt>
+<dd>The center of the output value range.
+This input value is replaced by the output value of 0.5.
+The value can be provided by another node or set manually.</dd>
+</dl>
+</div>
+<div class="section" id="id10">
+<h3>Outputs<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Value</dt>
+<dd>A value between 0 and 1, converted by the node.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="separate-rgb-node">
+<h2>Separate RGB Node<a class="headerlink" href="#separate-rgb-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-SeparateRGB.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-SeparateRGB.jpg" />
+<p class="caption">Separate RGB node</p>
+</div>
+<p>This node separates an image into its red, green, blue channels - traditional primary colors,
+also broadcast directly to most computer monitors.</p>
+<div class="section" id="id11">
+<h3>Inputs<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Image</dt>
+<dd>Input color value. Includes a color swatch, allowing you to select the color directly on the node.</dd>
+</dl>
+</div>
+<div class="section" id="id12">
+<h3>Outputs<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>R</dt>
+<dd>Value of the red color channel, separated out by the node.</dd>
+<dt>G</dt>
+<dd>Value of the green color channel, separated out by the node.</dd>
+<dt>B</dt>
+<dd>Value of the blue color channel, separated out by the node.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="combine-rgb-node">
+<h2>Combine RGB Node<a class="headerlink" href="#combine-rgb-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-CombineRGB.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-CombineRGB.jpg" />
+<p class="caption">Combine RGB node</p>
+</div>
+<p>This node combines a color (image) from separated red, green, blue channels.</p>
+<div class="section" id="id13">
+<h3>Inputs<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>R</dt>
+<dd>Input value of red color channel. The value can be provided by another node or set manually.</dd>
+<dt>G</dt>
+<dd>Input value of green color channel. The value can be provided by another node or set manually.</dd>
+<dt>B</dt>
+<dd>Input value of blue color channel. The value can be provided by another node or set manually.</dd>
+</dl>
+</div>
+<div class="section" id="id14">
+<h3>Outputs<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Image</dt>
+<dd>Output value of the color, combined by the node.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="separate-hsv-node">
+<h2>Separate HSV Node<a class="headerlink" href="#separate-hsv-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-SeparateHSV.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-SeparateHSV.jpg" />
+<p class="caption">Separate HSV node</p>
+</div>
+<p>This node separates an image into image maps for the hue, saturation, value channels.
+Three values, often considered as more intuitive than the RGB system
+(nearly only used on computers)</p>
+<p>Use and manipulate the separated channels for different purposes; i.e.
+to achieve some compositing/color adjustment result. For example,
+you could expand the Value channel (by using the multiply node)
+to make all the colors brighter. You could make an image more relaxed by diminishing
+(via the divide or map value node) the Saturation channel.
+You could isolate a specific range of colors
+(by clipping the Hue channel via the Colorramp node) and change their color
+(by the Add/Subtract mix node).</p>
+<div class="section" id="id15">
+<h3>Inputs<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Color</dt>
+<dd>Input color value. Includes a color swatch, allowing you to select the color directly on the node.</dd>
+</dl>
+</div>
+<div class="section" id="id16">
+<h3>Outputs<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>H</dt>
+<dd>Value of the <strong>hue</strong> color channel, separated out by the node (choose a color of the rainbow).</dd>
+<dt>S</dt>
+<dd>Value of the saturation color channel,
+separated out by the node (the <em>quantity</em> of hue in the color
+(from desaturate - shade of gray - to saturate - brighter colors)).</dd>
+<dt>V</dt>
+<dd>Value of the value color channel,
+separated out by the node (the <strong>luminosity</strong> of the color
+(from &#8216;no light&#8217; - black - to &#8216;full light&#8217; - &#8216;full&#8217; color, or white if Saturation is 0.0)).</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="combine-hsv-node">
+<h2>Combine HSV Node<a class="headerlink" href="#combine-hsv-node" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../../_images/26-Manual-Material-Convertor-Node-CombineHSV.jpg" src="../../../../../_images/26-Manual-Material-Convertor-Node-CombineHSV.jpg" />
+<p class="caption">Combine HSV node</p>
+</div>
+<p>This node combines a color from separated hue, saturation, value color channels.</p>
+<div class="section" id="id17">
+<h3>Inputs<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>H</dt>
+<dd>Input value of hue color channel. The value can be provided by another node or set manually.</dd>
+<dt>S</dt>
+<dd>Input value of saturation color channel. The value can be provided by another node or set manually.</dd>
+<dt>V</dt>
+<dd>Input value of value color channel. The value can be provided by another node or set manually.</dd>
+</dl>
+</div>
+<div class="section" id="id18">
+<h3>Outputs<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Color</dt>
+<dd>Output value of the color, combined by the node.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../options.html" class="btn btn-neutral float-right" title="Options"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector.html" class="btn btn-neutral" title="Material Vector Nodes"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

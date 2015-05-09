@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Textures &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Blender Render Engine" href="../index.html"/>
+        <link rel="next" title="Introduction to Textures" href="introduction.html"/>
+        <link rel="prev" title="Halo Rendering" href="../materials/special_effects/halo.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../index.html">Blender Render Engine</a> &raquo;</li>
+      
+    <li>Textures</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/render/blender_render/textures/index.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="textures">
+<span id="textures-index"></span><h1>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Textures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#material-textures">Material Textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#world-textures">World Textures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#description">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#brush-textures">Brush Textures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assigning_a_texture.html">Assigning a Texture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_texture.html#choosing-the-texture-context">Choosing the Texture context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_texture.html#choosing-the-texture-data-type">Choosing the Texture data type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_texture.html#textures-slots">Textures Slots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_texture.html#creating-a-new-texture-datablock-in-a-new-texture-slot">Creating a new Texture Datablock in a new Texture Slot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_texture.html#creating-a-new-texture-datablock-in-a-non-empty-slot">Creating a new Texture Datablock in a non-empty slot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assigning_a_texture.html#sharing-a-texture-datablock-in-a-non-empty-slot">Sharing a Texture Datablock in a non-empty slot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Textures common options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="options.html#textures-stack">Textures Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#texture-datablock">Texture Datablock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#texture-type">Texture Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#preview">Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#colors">Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#mapping">Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options.html#influence">Influence</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uv_image_editor.html">UV Image Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">Texture types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural.html">Procedural Textures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural.html#common-options">Common options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="types/procedural.html#noise-basis">Noise Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/procedural.html#nabla">Nabla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural.html#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/blend.html">Procedural textures: Blend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/blend.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/clouds.html">Procedural textures: Clouds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/clouds.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/clouds.html#technical-details">Technical Details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/distorted_noise.html">Procedural textures: Distorted Noise</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/distorted_noise.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/magic.html">Procedural textures: Magic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/magic.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/marble.html">Procedural textures: Marble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/marble.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/musgrave.html">Procedural textures: Musgrave</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/musgrave.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/noise.html">Procedural textures: Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/stucci.html">Procedural textures: Stucci</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/stucci.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/voronoi.html">Procedural textures: Voronoi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/voronoi.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/voronoi.html#technical-details">Technical Details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/procedural/wood.html">Procedural textures: Wood</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/wood.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/procedural/wood.html#technical-details">Technical Details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/image.html">Image Textures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/image.html#about-image-based-texturing">About Image Based Texturing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#workflow">Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#using-images-and-materials">Using Images and Materials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/image.html#creating-an-image-texture">Creating an Image Texture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/image.html#layering-uv-textures">Layering UV Textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/image.html#mix-and-match-materials">Mix and Match Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/image.html#using-alpha-transparency">Using Alpha Transparency</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#uv-textures-vs-procedural-textures">UV Textures vs. Procedural Textures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="types/image.html#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#image-sampling">Image Sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/image.html#image-mapping">Image Mapping</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/video.html">Video Textures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/video.html#options">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="types/video.html#image">Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes.html">Texture Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes.html#using-texture-nodes">Using Texture Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes.html#using-multiple-outputs">Using Multiple Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/editor.html">Node Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/input.html">Input Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/input.html#coordinates">Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/input.html#texture-node">Texture Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/input.html#image-node">Image Node</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/output.html">Output Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/output.html#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/output.html#viewer">Viewer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/color.html">Texture Color Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/color.html#mix">Mix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/color.html#rgb-curves">RGB Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/color.html#invert">Invert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/color.html#hue-saturation-value">Hue Saturation Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/color.html#combine-and-separate-rgb">Combine and Separate RGB</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/patterns.html">Pattern Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/patterns.html#checker">Checker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/patterns.html#bricks">Bricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/textures.html">Texture Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#common-options">Common Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#voronoi">Voronoi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#blend">Blend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#magic">Magic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#marble">Marble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#clouds">Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#musgrave">Musgrave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#noise">Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#stucci">Stucci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/textures.html#distorted-noise">Distorted Noise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/converter.html">Texture Convertor Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/converter.html#colorramp-node">ColorRamp Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/converter.html#rgb-to-bw-node">RGB to BW Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/converter.html#value-to-normal">Value to Normal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/converter.html#distance">Distance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/nodes/distort.html">Distort Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/distort.html#rotate">Rotate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/distort.html#translate">Translate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/distort.html#scale">Scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/nodes/distort.html#at">At</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/volume.html">Volume Textures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/volume/voxel_data.html">Voxel Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/volume/voxel_data.html#settings">Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/volume/point_density.html">Point Density Texture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/volume/point_density.html#options">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="types/volume/point_density.html#turbulence">Turbulence</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="types/ocean.html">Ocean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="painting.html">Texture Painting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="painting.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting.html#texture-preview">Texture Preview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting.html#brushes-settings">Brushes Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="painting.html#brush">Brush</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="painting.html#types-of-brushes">Types of brushes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="painting.html#texture">Texture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="painting.html#stroke">Stroke</a></li>
+<li class="toctree-l3"><a class="reference internal" href="painting.html#curve">Curve</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="painting.html#paint-options">Paint options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="painting.html#overlay">Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="painting.html#appearance">Appearance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="painting.html#saving">Saving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting.html#using-an-external-image-editor">Using an External Image Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="painting/projection.html">Projection Texture Painting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="painting/projection.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="painting/projection.html#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Texture Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping.html#coordinates">Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping.html#projection">Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping.html#inheriting-coordinates-from-the-parent-object">Inheriting coordinates from the parent object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping.html#coordinate-offset-scaling-and-transformation">Coordinate Offset, Scaling and Transformation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/environment.html">Environment Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping/environment.html#options">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/environment.html#environment-map-sampling">Environment Map Sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/environment.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/environment.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/uv.html">UV Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv.html#uvs-explained">UVs Explained</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv.html#cartography-example">Cartography Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv.html#half-sphere-example">Half-Sphere Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv.html#the-uv-editor">The UV Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv.html#advantages-of-uvs">Advantages of UVs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/uv_image_editor.html">UV Image Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/uv/unwrapping.html">UV Mapping a Mesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/unwrapping.html#about-uvs">About UVs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/unwrapping.html#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#workflow">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/unwrapping.html#mapping-types">Mapping Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/unwrapping.html#basic-mapping">Basic Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#cube">Cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#cylinder-and-sphere">Cylinder and Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#project-from-view">Project From View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#resetting-uvs">Resetting UVs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/unwrapping.html#advanced-mapping">Advanced Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#unwrapping-using-seams">Unwrapping Using Seams</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mapping/uv/unwrapping.html#marking-seams">Marking Seams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mapping/uv/unwrapping.html#unwrap">Unwrap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#smart-uv-project">Smart UV Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#lightmap">Lightmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/unwrapping.html#follow-active-quads">Follow Active Quads</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/uv/layout_management.html">Managing UV Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_management.html#transferring-uv-maps">Transferring UV Maps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_management.html#workflow">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_management.html#multiple-uv-maps">Multiple UV Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_management.html#uv-textures-list">UV Textures List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/uv/layout_editing.html">Editing UVs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_editing.html#selecting-uvs">Selecting UVs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#selection-modes">Selection Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_editing.html#transforming-uvs">Transforming UVs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#axis-locking">Axis Locking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#pivot-points">Pivot Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#proportional-editing">Proportional Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#snapping">Snapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#weld-and-align">Weld and Align</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#mirror">Mirror</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#stitch">Stitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#minimize-stretch">Minimize Stretch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#face-mirror-and-rotate-uvs">Face Mirror and Rotate UVs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_editing.html#pinning">Pinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_editing.html#optimizing-the-uv-layout">Optimizing the UV Layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#combining-uv-maps">Combining UV Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#average-island-scale">Average Island Scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#packing-islands">Packing Islands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#constraining-to-image-bounds">Constraining to Image Bounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#iteration-and-refinement">Iteration and Refinement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/layout_editing.html#refining-the-layout">Refining the Layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/layout_editing.html#reusing-textures">Reusing Textures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapping/uv/applying_image.html">Applying Textures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/applying_image.html#exporting-uv-layout-image">Exporting UV Layout Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/applying_image.html#applying-textures-to-uvs">Applying Textures to UVs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#use-uv-coordinates">Use UV Coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#id1">Face Textures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/applying_image.html#loading-and-saving-images">Loading and Saving Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#replacing-the-active-image">Replacing the active Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#new-images">New Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#using-the-test-grid">Using the Test Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#image-settings">Image Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mapping/uv/applying_image.html#saving-images">Saving Images</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/applying_image.html#modifying-your-image-texture">Modifying your Image Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping/uv/applying_image.html#packing-images-inside-the-blend-file">Packing Images inside the Blend file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="influence.html">Influence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="influence/material.html">Material Textures Influence</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="influence/material.html#surface-and-wire-materials">Surface and Wire materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="influence/material.html#diffuse">Diffuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="influence/material.html#specular">Specular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="influence/material.html#shading">Shading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="influence/material.html#geometry">Geometry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="influence/material.html#other-controls">Other Controls</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="influence/material.html#volume-materials">Volume materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="influence/material.html#halo-materials">Halo materials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="influence/material/blending_modes.html">Texture Blending Modes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="influence/material/bump_and_normal.html">Bump and Normal Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="influence/material/bump_and_normal.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="influence/material/bump_and_normal.html#workflow">Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="influence/material/displacement.html">Displacement Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="influence/material/displacement.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="influence/material/displacement.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="influence/material/displacement.html#hints">Hints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="influence/world.html">World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="influence/particles.html">Particles</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction to Textures"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../materials/special_effects/halo.html" class="btn btn-neutral" title="Halo Rendering"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

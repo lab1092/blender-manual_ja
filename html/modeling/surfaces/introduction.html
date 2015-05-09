@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Surfaces &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Surfaces" href="index.html"/>
+        <link rel="next" title="Surface Selection" href="editing.html"/>
+        <link rel="prev" title="Surfaces" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="index.html">Surfaces</a> &raquo;</li>
+      
+    <li>Surfaces</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modeling/surfaces/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="surfaces">
+<h1>Surfaces<a class="headerlink" href="#surfaces" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<img alt="../../_images/Blender2.5NurbsSurface.jpg" src="../../_images/Blender2.5NurbsSurface.jpg" />
+<p class="caption">Surface.</p>
+</div>
+<p>Curves are 2D objects, and surfaces are their 3D extension. Note however that in Blender,
+you only have NURBS surfaces, no Bézier (you have the <em>Bezier</em> knot type, though;
+see below), nor polygonal (but for these, you have meshes!).
+Even though curves and surfaces share the same object type (with texts also...),
+they are not the same thing; for example,
+you cannot have in the same object both curves and surfaces.</p>
+<p>As surfaces are 2D, they have two interpolation axes, U (as for curves) and V.
+It is important to understand that <em>you can control the interpolation rules (knot, order,
+resolution) independently for each of these two dimensions</em>
+(the <em>U</em> and <em>V</em> fields for all these settings, of course).</p>
+<p>You may ask yourself &#8220;but the surface appears to be 3D, why is it only 2D?&#8221;.
+In order to be 3D, the object needs to have &#8220;Volume,&#8221; and a surface, even when it is closed,
+doesn&#8217;t have volume; it is infinitely thin.
+If it had a volume the surface would have a thickness (its third dimension). Hence,
+it&#8217;s only a 2D object, and has only two interpolation dimensions or axes or coordinates
+(if you know a bit of math, think of non-euclidean geometry - well,
+surfaces are just non-euclidean 2D planes...). To take a more &#8220;real life&#8221; example,
+you can roll a sheet of paper to create a cylinder; well, even if it &#8220;draws&#8221; a volume,
+the sheet itself will remain a (nearly...) 2D object!</p>
+<p>In fact, surfaces are very similar to the results you get when
+<a class="reference internal" href="../curves/editing/advanced.html"><em>extruding a curve</em></a>
+(by the way, I think it should be possible to convert an extruded curve to a surface,
+at least when only made of NURBS - but Blender cannot do it currently...).</p>
+<div class="section" id="finding-surface-tools">
+<h2>Finding Surface Tools<a class="headerlink" href="#finding-surface-tools" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/NurbsSurfaceTools.jpg" src="../../_images/NurbsSurfaceTools.jpg" />
+<p class="caption">Surface Tools.</p>
+</div>
+<p>The panels of the <em>Editing</em> context are the same as for <a class="reference internal" href="../curves/introduction.html"><em>curves</em></a>,
+just with fewer options... And as usual, you have the <em>Select</em> and <em>Surface</em>
+menus in the 3D view headers, and the <em>Specials</em> (<tt class="kbd docutils literal"><span class="pre">W</span></tt>) pop-up one.</p>
+</div>
+<div class="section" id="visualization">
+<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<p>There is nearly no difference from NURBS curves,
+except that the <tt class="docutils literal"><span class="pre">U</span></tt> direction is indicated by yellow grid lines,
+and the <tt class="docutils literal"><span class="pre">V</span></tt> one is materialized by pink grid lines, as you can see in
+(<em>Surface</em>).</p>
+<p>You can <tt class="xref doc docutils literal"><span class="pre">hide</span> <span class="pre">and</span> <span class="pre">reveal</span></tt> control points just as with curves,
+and you have the same draw options in the <tt class="xref doc docutils literal"><span class="pre">Curve</span> <span class="pre">Tools</span></tt> panel.</p>
+</div>
+<div class="section" id="surface-structure">
+<h2>Surface Structure<a class="headerlink" href="#surface-structure" title="Permalink to this headline">¶</a></h2>
+<p>Many of the concepts from <a class="reference internal" href="../curves/introduction.html"><em>curves</em></a>,
+especially <tt class="xref doc docutils literal"><span class="pre">NURBS</span></tt> ones,
+carry directly over to NURBS surfaces,
+such as control points, <em>Order</em>, <em>Weight</em>, <em>Resolution</em>, etc.
+Here we will just talk about the differences.</p>
+<p>It is very important to understand the difference between NURBS curves and NURBS surfaces:
+the first one has one dimension, the latter has two.
+Blender internally treats NURBS surfaces and NURBS curves completely differently. There are
+several attributes that separate them but the most important is that a NURBS curve has a
+single interpolation axis (U) and a NURBS surface has two interpolation axes (U and V).</p>
+<p>However, you can have &#8220;2D&#8221; surfaces made of curves
+(using the <a class="reference internal" href="../curves/editing/advanced.html"><em>extrusion tools</em></a>,
+or, to a lesser extent, the filling of closed 2D curves. And you can have &#8220;1D&#8221; curves made of surfaces,
+like a NURBS surface with only one row (either in U or V direction) of control points produces only a curve...</p>
+<p>Visually you can tell which is which by entering <em>Edit</em> mode and looking at the 3D window&#8217;s header:
+either the header shows <em>Surface</em> or <em>Curve</em> as one of the menu choices. Also,
+you can <a class="reference internal" href="../curves/editing/advanced.html"><em>extrude</em></a> a whole NURBS surface curve to create a surface,
+but you can&#8217;t with a simple NURBS curve (we talk here about the &#8220;standard&#8221; <em>Extrude</em> tool,
+the one activated with the <em>E</em> shortcut, not the quite-specific curve extrusion tools - yes, I know,
+it&#8217;s not easy to follow...).</p>
+<div class="section" id="control-points-rows-and-grid">
+<h3>Control Points, Rows and Grid<a class="headerlink" href="#control-points-rows-and-grid" title="Permalink to this headline">¶</a></h3>
+<p>Control points for NURBS surfaces are the same as for NURBS curves. However,
+their layout is quite constraining. The concept of &#8220;segment&#8221; disappears,
+replaced by &#8220;rows&#8221; and the overall &#8220;grid&#8221;.</p>
+<p>A &#8220;row&#8221; is a set of control points forming one &#8220;line&#8221; in one interpolation direction
+(a bit similar to <tt class="xref doc docutils literal"><span class="pre">edge</span> <span class="pre">loops</span></tt> for meshes).
+So you have &#8220;U-rows&#8221; and &#8220;V-rows&#8221; in a NURBS surface.
+The key point is that <em>all rows of a given type (U or V) have the same number of control points</em>.
+Each control point belongs to exactly one U-row and one V-row.</p>
+<p>All this forms a &#8220;grid&#8221;, or &#8220;cage&#8221;, the shape of which controls the shape of the NURBS surface.
+A bit like a <a class="reference internal" href="../../modifiers/deform/lattice.html"><em>lattice</em></a> ...</p>
+<p>This is very important to grasp: you cannot add a single control point to a NURBS surface;
+you have to add a whole U- or V-row at once (in practice,
+you will usually use the Extrude tool, or perhaps the Duplicate one, to add those...),
+containing exactly the same number of points as the others. This also means that you will only
+be able to &#8220;merge&#8221; different pieces of surfaces if at least one of their rows match together.</p>
+</div>
+<div class="section" id="surface-resolution">
+<h3>Surface Resolution<a class="headerlink" href="#surface-resolution" title="Permalink to this headline">¶</a></h3>
+<p>Just like <tt class="xref doc docutils literal"><span class="pre">NURBS</span> <span class="pre">curves</span></tt>, <em>Resolution</em> controls the detail of the surface.
+The higher the <em>Resolution</em> the more detailed and smoother the surface is.
+The lower the <em>Resolution</em> the rougher the surface. However, here you have two resolution settings,
+one for each interpolation axis (U and V). Note that unlike with curves, you have only one resolution
+(the <em>Resol U</em> and <em>V</em> fields, in the <em>Curve Tools</em> panel)...</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../_images/NurbsSurface1Resolution.jpg" src="../../_images/NurbsSurface1Resolution.jpg" />
+<p class="caption">Resolution 1x1.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../_images/NurbsSurface3Resolution.jpg" src="../../_images/NurbsSurface3Resolution.jpg" />
+<p class="caption">Resolution 3x3.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>(<em>Resolution 1x1</em>) is an example of a surface resolution of 3 for both <tt class="docutils literal"><span class="pre">U</span></tt> and <tt class="docutils literal"><span class="pre">V</span></tt>. (<em>Resolution 3x3 surface</em>)
+is an example of a surface resolution of 12 for both <tt class="docutils literal"><span class="pre">U</span></tt> and <tt class="docutils literal"><span class="pre">V</span></tt>.</p>
+<div class="figure">
+<img alt="../../_images/NurbsSurfaceResoltion.jpg" src="../../_images/NurbsSurfaceResoltion.jpg" />
+<p class="caption">Resolution panel.</p>
+</div>
+<p>You can adjust the resolution separately for both preview and render,
+to not slow things down in the viewport, but still get good render results.</p>
+</div>
+<div class="section" id="closed-and-open-surfaces">
+<h3>Closed and Open Surfaces<a class="headerlink" href="#closed-and-open-surfaces" title="Permalink to this headline">¶</a></h3>
+<p>Like curves, surfaces can be closed (cyclical) or open, independently in both directions,
+allowing you to easily create a tube, donut or sphere shape,
+and they can be drawn as &#8220;solids&#8221; in <em>Edit</em> mode.
+This makes working with surfaces quite easy.</p>
+</div>
+<div class="section" id="knots">
+<h3>Knots<a class="headerlink" href="#knots" title="Permalink to this headline">¶</a></h3>
+<p>Just like with <tt class="xref doc docutils literal"><span class="pre">NURBS</span> <span class="pre">curves</span></tt>, NURBS surfaces have two knot vectors,
+one for each U and V axis. Here again, they can be one of <em>Uniform</em>, <em>Endpoint</em>,
+or <em>Bezier</em>, with the same properties as for curves. And as with curves, only open surfaces
+(in the relevant direction) are affected by this setting...</p>
+<div class="figure">
+<img alt="../../_images/Manual-Part-II-Surfaces-Endpoint-U-Ex.jpg" src="../../_images/Manual-Part-II-Surfaces-Endpoint-U-Ex.jpg" />
+<p class="caption">Endpoint U.</p>
+</div>
+<p>In (<em>Endpoint U</em>), the U interpolation axis is labeled as <tt class="docutils literal"><span class="pre">U</span></tt> and the V
+interpolation axis is labeled as <tt class="docutils literal"><span class="pre">V</span></tt>. The <tt class="docutils literal"><span class="pre">U</span></tt> &#8216;s interpolation axis has
+been set to <em>Endpoint</em> and as such the surface now extends to the outer edges from
+<tt class="docutils literal"><span class="pre">E1</span></tt> to <tt class="docutils literal"><span class="pre">E2</span></tt> along the <tt class="docutils literal"><span class="pre">U</span></tt> interpolation axis.</p>
+<p>To cause the surface to extend to all edges you would set the <tt class="docutils literal"><span class="pre">V</span></tt> &#8216;s axis to
+<em>Endpoint</em> as well.</p>
+</div>
+<div class="section" id="order">
+<h3>Order<a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
+<p>One more time, this property is the same as with <tt class="xref doc docutils literal"><span class="pre">NURBS</span> <span class="pre">Curves</span></tt>;
+it specifies how much the control points are taken into account for calculating the curve of the surface shape.
+For high <em>Orders</em>, (<em>1</em>), the surface pulls away from the control points,
+creating a smoother surface - assuming that the
+<a class="reference internal" href="#surface-resolution">Surface Resolution</a> is high enough. For lowest <em>Orders</em>, (<em>2</em>), the surface follows the control points,
+creating a surface that tends to follow the grid cage.</p>
+<div class="figure">
+<img alt="../../_images/NurbsSurfaceOrderExample.jpg" src="../../_images/NurbsSurfaceOrderExample.jpg" />
+<p class="caption">Order 2 and order 4 surface.</p>
+</div>
+<p>For illustration purposes, in both (<em>Order 4 surface</em>) and (<em>Order 2 surface</em>),
+the knot vectors were set to <em>Endpoint</em>, causing the surface to extend to all edges.</p>
+<p>You can set independently the order for each interpolation axis, and like curves,
+it cannot be lower than <strong>2</strong>,
+and higher than <strong>6</strong> or the number of control points on the relevant axis.</p>
+</div>
+<div class="section" id="weight">
+<h3>Weight<a class="headerlink" href="#weight" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/NurbsSurfaceWeightExample.jpg"><img alt="../../_images/NurbsSurfaceWeightExample.jpg" src="../../_images/NurbsSurfaceWeightExample.jpg" style="width: 600px;" /></a>
+<p class="caption">Surface Weight 5.</p>
+</div>
+<p>Guess what? Yes, it works exactly like <tt class="xref doc docutils literal"><span class="pre">NURBS</span> <span class="pre">Curves</span></tt> ! <em>Weight</em> specifies
+how much each control point &#8220;pulls&#8221; on the curve.</p>
+<p>In (<em>Surface Weight 5</em>), a single control point, labeled <tt class="docutils literal"><span class="pre">C</span></tt>,
+has had its <em>Weight</em> set to <strong>5.0</strong> while all others are at their default of <strong>1.
+0</strong>. As you can see, that control point <em>pulls</em> the surface towards it.</p>
+<p>If all the control points have the same <em>Weight</em> then each effectively cancels each
+other out. It is the difference in the weights that cause the surface to move towards or away
+from a control point.</p>
+<p>The <em>Weight</em> of any particular control point is visible in the
+<tt class="xref doc docutils literal"><span class="pre">Transform</span> <span class="pre">Properties</span> <span class="pre">panel</span></tt>
+(<tt class="kbd docutils literal"><span class="pre">N</span></tt>), <em>in the</em> <em>W</em> <em>field</em> (and not the <em>Weight</em> field...).</p>
+<div class="section" id="preset-weights">
+<h4>Preset Weights<a class="headerlink" href="#preset-weights" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/NurbsSurfaceSphere.jpg"><img alt="../../_images/NurbsSurfaceSphere.jpg" src="../../_images/NurbsSurfaceSphere.jpg" style="width: 250px;" /></a>
+<p class="caption">A sphere surface.</p>
+</div>
+<p>NURBS can create pure shapes such as circles, cylinders, and spheres
+(note that a Bézier circle is not a pure circle). To create pure circles, globes,
+or cylinders, you must set to specific values the weights of the control points - some of
+which are provided as presets in the <em>Curve Tools</em> panel (lower right corner).
+This is not intuitive, and you should read more on NURBS before trying this.</p>
+<p>We saw with 1D <tt class="xref doc docutils literal"><span class="pre">NURBS</span> <span class="pre">curves</span></tt> how to create a circle;
+let&#8217;s see how to create a sphere with 2D surfaces.
+It is the same principle - you&#8217;ll note that the four different weights needed for creating a sphere
+(<strong>1.0</strong>, <strong>0.707</strong> = <tt class="docutils literal"><span class="pre">sqrt(0.5)</span></tt>, <strong>0.354</strong> = <tt class="docutils literal"><span class="pre">sqrt(2)/4</span></tt>, and <strong>0.25</strong>)
+are the four presets available in the <tt class="xref doc docutils literal"><span class="pre">Curve</span> <span class="pre">Tools</span></tt> panel...</p>
+</div>
+</div>
+<div class="section" id="primitives">
+<h3>Primitives<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h3>
+<p>To help get started in creating surfaces there are four preset NURBS surfaces,
+found in the <em class="menuselection">Add ‣ Surface</em> menu: <em>NURBS Surface</em>, <em>NURBS Tube</em>,
+<em>NURBS Sphere</em> and <em>NURBS Torus</em>.</p>
+<div class="figure">
+<img alt="../../_images/NurbsPrimitives.jpg" src="../../_images/NurbsPrimitives.jpg" />
+<p class="caption">NURBS surface primitives.</p>
+</div>
+<p>There are also two preset NURBS surface curves (with only one control point on each V-row):
+<em>NURBS Curve</em> and <em>NURBS Circle</em>.</p>
+<div class="figure">
+<img alt="../../_images/NurbsCurvePrimitives.jpg" src="../../_images/NurbsCurvePrimitives.jpg" />
+<p class="caption">NURBS curve primitives.</p>
+</div>
+<p>Note how a circle NURBS surface is never filled, unlike its &#8220;real&#8221; curve counterpart...</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Surface Selection"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Surfaces"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

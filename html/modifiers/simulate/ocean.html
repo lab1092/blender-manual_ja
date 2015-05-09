@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ocean Simulation &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Modifiers" href="../index.html"/>
+        <link rel="next" title="Particle Instance Modifier" href="particle_instance.html"/>
+        <link rel="prev" title="Explode Modifier" href="explode.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modifiers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#deform">Deform</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modifiers</a> &raquo;</li>
+      
+    <li>Ocean Simulation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modifiers/simulate/ocean.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="ocean-simulation">
+<h1>Ocean Simulation<a class="headerlink" href="#ocean-simulation" title="Permalink to this headline">¶</a></h1>
+<p>Blender&#8217;s ocean simulation tools take the form of a modifier, to simulate and generate a deforming ocean surface,
+and associated texture, used to render the simulation data.</p>
+<p>Ported from the open source Houdini Ocean Toolkit, it is intended to simulate deep ocean waves and foam.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Ocean_modifier.jpg"><img alt="../../_images/Ocean_modifier.jpg" src="../../_images/Ocean_modifier.jpg" style="width: 240px;" /></a>
+<p class="caption">Ocean Modifier Panel</p>
+</div>
+<div class="section" id="geometry-options">
+<h3>Geometry Options<a class="headerlink" href="#geometry-options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Geometry</dt>
+<dd><dl class="first last docutils">
+<dt>Generate</dt>
+<dd><p class="first">Creates a tiled mesh grid that exactly corresponds with the resolution of the simulation data</p>
+<p class="last">When generating a mesh surface, the existing mesh object is completely overridden with the ocean grid.
+A UV channel is also added, mapping the <tt class="docutils literal"><span class="pre">0.0</span> <span class="pre">-</span> <span class="pre">1.0</span></tt> UV space to the simulation grid.</p>
+</dd>
+<dt>Displace</dt>
+<dd>Uses the existing geometry rather than replacing it. Vertices are displaced along the local Z-axis.</dd>
+</dl>
+</dd>
+<dt>Repeat X, Repeat Y</dt>
+<dd>When generating a mesh surface, controls the number of times the grid is tiled in X and Y directions.
+UVs for these tiled mesh areas continue outside of the <tt class="docutils literal"><span class="pre">0.0</span> <span class="pre">-</span> <span class="pre">1.0</span></tt> UV space.</dd>
+</dl>
+</div>
+<div class="section" id="simulator-options">
+<h3>Simulator Options<a class="headerlink" href="#simulator-options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Time</dt>
+<dd>The time at which the ocean surface is being evaluated.
+To make an animated ocean, you will need to insert keyframes (<tt class="kbd docutils literal"><span class="pre">RMB</span></tt>) and animate this time value -
+the speed that the time value is changing will determine the speed of the wave animation</dd>
+<dt>Depth</dt>
+<dd>The constant depth of the ocean floor under the simulated area.
+Lower values simulate shallower waters by producing
+higher frequency details and smaller waves.</dd>
+<dt>Random Seed</dt>
+<dd>A different seed will produce a different simulation result.</dd>
+<dt>Resolution</dt>
+<dd><p class="first">The main control of quality vs speed in the simulation engine.
+This determines the resolution of the internal 2D grids generated by the simulation.</p>
+<p>The internal grids are powers of two of the resolution value,
+so a resolution value of <tt class="docutils literal"><span class="pre">16</span></tt> will create simulation data of size <tt class="docutils literal"><span class="pre">256</span> <span class="pre">x</span> <span class="pre">256</span></tt>.
+The higher the resolution, the more detail will be produced, but the slower it will be to calculate.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When using the &#8216;Generate&#8217; modifier geometry option,
+this resolution value also determines the resolution of the generated mesh surface,
+equal to the resolution of the internal simulation data.</p>
+</div>
+</dd>
+<dt>Size</dt>
+<dd>A simple scaling factor that does not affect the height of the waves or behavior of the simulation.</dd>
+<dt>Spatial Size</dt>
+<dd>The width of the ocean surface area being simulated, in meters.
+This also determines the size of the generated mesh, or the displaced area, in Blender units.
+Of course you can scale the object with ocean modifier in object mode to tweak the apparent size in your scene.</dd>
+</dl>
+</div>
+<div class="section" id="wave-options">
+<h3>Wave Options<a class="headerlink" href="#wave-options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Choppiness</dt>
+<dd>The choppiness of the wave peaks.
+With a choppiness of 0, the ocean surface is only displaced up and down in the Z direction,
+but with higher choppiness, the waves are also displaced laterally in X and Y, to create sharper wave peaks.</dd>
+<dt>Scale</dt>
+<dd>An overall scale control for the amplitude of the waves.
+It approximates the height or depth of the waves above or below zero.
+Rather than just scaling the ocean object in Z, it scales all aspects of the simulation,
+displacement in X and Y, and corresponding foam and normals too.</dd>
+<dt>Alignment</dt>
+<dd>The directionality of the wave shapes due to wind.
+At a value of 0, the wind and waves are randomly, uniformly oriented.
+With higher Alignment values, the wind is blowing in a more constant direction,
+making the waves appear more compressed and aligned to a single direction.</dd>
+<dt>Direction</dt>
+<dd>When using Alignment, the direction in degrees that the waves are aligned to.</dd>
+<dt>Damping</dt>
+<dd>When using Alignment, amount that inter-reflected waves are damped out.
+This has the effect of making the wave motion more directional (not just the wave shape).
+With damping of 0.0, waves are reflected off each other every direction, with damping of 1.0,
+these inter-reflected waves are damped out, leaving only waves traveling in the direction of the wind.</dd>
+<dt>Smallest Wave</dt>
+<dd>A minimum limit for the size of generated waves.
+Acts similarly to a low-pass filter, removing higher frequency wave detail.</dd>
+<dt>Wind Velocity</dt>
+<dd>Wind speed in meters/second. With a low velocity, waves are restricted to smaller surface waves.</dd>
+</dl>
+</div>
+<div class="section" id="simulation-data-generation-options">
+<h3>Simulation Data Generation Options<a class="headerlink" href="#simulation-data-generation-options" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Ocean_foam_layer_name.jpg"><img alt="../../_images/Ocean_foam_layer_name.jpg" src="../../_images/Ocean_foam_layer_name.jpg" style="width: 240px;" /></a>
+<p class="caption">Using foam vertex colors with a named data layer</p>
+</div>
+<p>By default, the simulator only generates displacement data,
+since it takes the least amount of work and gives the fastest feedback.
+Additional simulation data can be generated for rendering as well.</p>
+<dl class="docutils">
+<dt>Generate Normals</dt>
+<dd>Simulates additional normal map data.
+This can be used by the Ocean texture, when mapped to Normals,
+as a bump map, and enables generating normal map image sequences when baking.</dd>
+<dt>Generate Foam</dt>
+<dd>Simulates additional foam data.
+This can be retrieved by the Ocean texture for use in texturing (perhaps as a mask),
+and enables generating foam map image sequences when baking.</dd>
+<dt>Coverage</dt>
+<dd>Tweaks the amount of foam covering the waves, negative values will reduce the amount of foam
+(leaving only the topmost peaks), positive values will add it. Typically ranges from <tt class="docutils literal"><span class="pre">-1.0</span></tt> to <tt class="docutils literal"><span class="pre">1.0</span></tt></dd>
+<dt>Foam Data Layer Name</dt>
+<dd>Optional name for the vertex data layer,
+used by the Ocean modifier to store foam maps as vertex colors.
+This is required for accessing the foam data in the renderer.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="baking">
+<h2>Baking<a class="headerlink" href="#baking" title="Permalink to this headline">¶</a></h2>
+<p>Rather than simulating the ocean data live, the ocean data can be baked to disk.
+When a simulation is baked, the simulator engine is completely bypassed,
+and the modifier/texture retrieves all information from the baked files.</p>
+<p>Baking can be advantageous for a few reasons:</p>
+<ul class="simple">
+<li>It&#8217;s faster to use the stored data rather than re-calculating it</li>
+<li>Allows rendering ocean data in external renderers</li>
+<li>Enables more advanced foam maps</li>
+</ul>
+<div class="section" id="data-files">
+<h3>Data Files<a class="headerlink" href="#data-files" title="Permalink to this headline">¶</a></h3>
+<p>Simulation data is stored in disk as sequences of OpenEXR image maps, one for each of displacement,
+normal and foam (if enabled to be generated). Upon loading the data from these baked files,
+when a frame of the bake sequence is read from disk, it is cached in memory.
+This means that accessing loaded frames subsequent times is fast,
+not incurring the overhead of disk access.</p>
+<p>Since these baked files are plain OpenEXRs,
+they can also be opened and rendered in any other application or renderer that supports them.</p>
+</div>
+<div class="section" id="baking-foam">
+<h3>Baking Foam<a class="headerlink" href="#baking-foam" title="Permalink to this headline">¶</a></h3>
+<p>Baking also provides improved foam capabilities. When simulating live,
+the ocean simulator retrieves data for that current frame only. In the case of the foam map,
+this represents the tips of wave crests for that given frame. In reality,
+after foam is created by wave interactions,
+it remains sitting on the top of the wave surface for a while, as it dissipates. With baking,
+it&#8217;s possible to approximate that behaviour, by accumulating foam from previous frames,
+leaving it remaining on the surface.</p>
+<iframe src="//player.vimeo.com/video/17517981" style="border: 0; height: 286px; width: 500px">
+</iframe></div>
+<div class="section" id="baking-options">
+<h3>Baking Options<a class="headerlink" href="#baking-options" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Start, End</dt>
+<dd>Frames of the simulation to bake (inclusive).
+The start and end frames of the bake are repeated when accessing frames outside the baked range.</dd>
+<dt>Cache Path</dt>
+<dd>Folder to store the baked EXR files in.
+The sequences will be in the form <tt class="docutils literal"><span class="pre">disp_####.exr</span></tt>, <tt class="docutils literal"><span class="pre">normal_####.exr</span></tt>,
+and <tt class="docutils literal"><span class="pre">foam_####.exr</span></tt> where <tt class="docutils literal"><span class="pre">####</span></tt> is the four digit frame number.
+If the cache path folder does not exist, it will be created.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="simulation-internals">
+<h2>Simulation Internals<a class="headerlink" href="#simulation-internals" title="Permalink to this headline">¶</a></h2>
+<p>The simulator itself uses FFT methods to generate 2D grids of simulation information internally,
+very similar to 2D texture maps.
+The simulator can generate three types of data - displacement, normals,
+and extra data that is used to calculate wave crest intersections (i.e. foam).
+After simulation, these maps are used to displace the ocean surface geometry in 3D,
+and also can be used for shading via the Ocean texture. The internal simulation engine is
+multi threaded with OpenMP to take advantage of multiple cores.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<iframe src="//player.vimeo.com/video/18911131" style="border: 0; height: 286px; width: 500px">
+</iframe><p>Simulated and baked to image maps in Blender, rendered in 3Delight.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="particle_instance.html" class="btn btn-neutral float-right" title="Particle Instance Modifier"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="explode.html" class="btn btn-neutral" title="Explode Modifier"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,832 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Text Objects &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Text" href="index.html"/>
+        <link rel="next" title="Text Editing" href="editing.html"/>
+        <link rel="prev" title="Text" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="index.html">Text</a> &raquo;</li>
+      
+    <li>Text Objects</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modeling/texts/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="text-objects">
+<h1>Text Objects<a class="headerlink" href="#text-objects" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode (<em>Text</em>)</div>
+<div class="line">Panel:    <em>Curve and Surface</em>, <em>Font</em> and <em>Char</em> (<em>Editing</em> context)</div>
+<div class="line">Menu:     <em class="menuselection">Add ‣ Text</em></div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Manual-Part-II-TextSamples.jpg"><img alt="../../_images/Manual-Part-II-TextSamples.jpg" src="../../_images/Manual-Part-II-TextSamples.jpg" style="width: 400px;" /></a>
+<p class="caption">Text Examples.</p>
+</div>
+<p><em>Text</em> objects are exactly what they sound like: they contain some text.
+They share the same object type as curves and surfaces,
+as modern fonts (OpenType, TrueType, etc.) are vectorial, made of curves (generally Béziers).</p>
+<p>Blender uses a &#8220;Font System&#8221; to manage mapping &#8220;letter codes &#8211;&gt; objects representing them in 3D
+views&#8221;. This implies that not only does the font system have its own <em>built-in</em> font,
+but it can use external fonts too, including <em>PostScript Type 1</em>,
+<em>OpenType</em> and <em>TrueType</em> fonts. And last but not least,
+it can use any objects existing in the current .blend file as letters...</p>
+<p>Texts in Bender allow you to create/render 2D or 3D text, shaded as you want,
+with various advanced layout options (like justifying and frames), as we will see below.
+By default, letters are just flat filled surfaces, exactly like any closed 2D curve.
+But you can of course extrude them... And texts can follow other curves.</p>
+<p>Of course, once you are happy with the shape of your text, you can convert it
+(with <tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt>, in <em>Object</em> mode), either to a curve,
+or directly to a mesh,
+allowing you to use all the powerful features of these types of objects on it...</p>
+<p>(<em>Text Examples</em>) shows some examples of various fonts in action,
+including the &#8220;blue&#8221; font that has been applied to a curve path.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A maximum of <tt class="docutils literal"><span class="pre">50000</span></tt> characters is allowed per text object; however,
+be forewarned that the more characters a single text object has,
+the slower the object will respond interactively.</p>
+<p>As you can see when you switch between <em>Object</em> and <em>Edit</em> modes,
+the <em>Font</em> panel remains the same. This means that its settings can be applied
+equally in both modes ... and this implies that you cannot apply them to just a part of the
+mesh. So font, size, and so on, are common to all letters in a <em>Text</em> object.
+There is just one exception:
+the <em>Bold</em> / <em>Italic</em> buttons control properties specific to each letter
+(this is a way to use up to four different fonts in a text).</p>
+<p class="last">For optimum resource usage, only characters that are being used consume memory
+(rather than the entire character set).</p>
+</div>
+<div class="section" id="editing-text">
+<h2>Editing Text<a class="headerlink" href="#editing-text" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Hotkey:   see below</div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/2.5_Manual-Part-II-Modelling-Text-Create-Ex.jpg"><img alt="../../_images/2.5_Manual-Part-II-Modelling-Text-Create-Ex.jpg" src="../../_images/2.5_Manual-Part-II-Modelling-Text-Create-Ex.jpg" style="width: 300px;" /></a>
+<p class="caption">Text in Edit mode.</p>
+</div>
+<p>Editing text is quite different from other object types in Blender, and happens mainly in two areas.
+First, the 3D view, of course, where you type your text, and have a few shortcuts, e.g. for applying
+styles (see <a class="reference internal" href="#character">Character</a>) - note however that most Blender hotkeys you know in <em>Edit</em>
+mode do not exist for texts! The second place is the <em>Button</em> window
+(<em>Editing</em> context), especially the <em>Font</em> panel.</p>
+<p>The menu of the 3D view header has nearly no use,
+and there is no <em>Specials</em> menu... You have no transform nor mirror tools, and so on.
+However, you can apply to texts the same modifiers as for curves.</p>
+<p>Editing <em>Text</em> is similar to using a standard text editor but is not as
+full-featured and has some differences:</p>
+<dl class="docutils">
+<dt>Exit <em>Edit</em> mode</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">Tab</span></tt> doesn&#8217;t insert a tab character in the text,
+but rather enters and exits <em>Edit</em> mode, as with other object types.</dd>
+<dt>Copy</dt>
+<dd>To copy text to the buffer, use <tt class="kbd docutils literal"><span class="pre">Ctrl-C</span></tt> or the <em>Copy</em> button in the tool shelf.</dd>
+<dt>Cut and Copy</dt>
+<dd>To cut and copy text to the buffer, use <tt class="kbd docutils literal"><span class="pre">Ctrl-X</span></tt> or the <em>Cut</em> button in the tool shelf.</dd>
+<dt>Paste</dt>
+<dd>To paste text from the buffer, use <tt class="kbd docutils literal"><span class="pre">Ctrl-V</span></tt> or the <em>Paste</em> button in the tool shelf.</dd>
+<dt>Delete all text</dt>
+<dd>To completely erase or delete all text, use <tt class="kbd docutils literal"><span class="pre">Ctrl-Backspace</span></tt>.</dd>
+<dt>Home/End</dt>
+<dd><tt class="kbd docutils literal"><span class="pre">Home</span></tt> and <tt class="kbd docutils literal"><span class="pre">End</span></tt> move the cursor to the beginning and end of a line respectively.</dd>
+<dt>Next/Previous word</dt>
+<dd>To move the cursor on a word&#8217;s boundary, use <tt class="kbd docutils literal"><span class="pre">Ctrl-Left</span></tt> or <tt class="kbd docutils literal"><span class="pre">Ctrl-Right</span></tt>.</dd>
+</dl>
+<p>The text buffer does not communicate with the desktop. It only works within Blender.
+To insert text from outside Blender, see <a class="reference internal" href="#inserting-text">Inserting Text</a> below.</p>
+<div class="section" id="inserting-text">
+<h3>Inserting Text<a class="headerlink" href="#inserting-text" title="Permalink to this headline">¶</a></h3>
+<p>You can insert text in three different ways: from the internal text buffer
+(<a class="reference internal" href="#editing-text">Editing Text</a>), or from a text file.</p>
+<p>To load text from a text file, use the <em class="menuselection">Text ‣ Paste File</em> tool.
+This will bring up a <em>File Browser</em> window for navigating to a valid UTF-8 file.
+As usual, be careful that the file doesn&#8217;t have too many characters,
+as interactive response will slow down.</p>
+<div class="section" id="special-characters">
+<h4>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Text ‣ Special Characters</em></div>
+</div>
+</div>
+<p>If you need special characters (such as accented chars, which aren&#8217;t on your keyboard)
+you can produce many of them using a combination of two other characters. To do so,
+type the main char, press <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>,
+and then press the desired &#8220;modifier&#8221; to produce the special character.
+Some examples are given below:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><tt class="kbd docutils literal"><span class="pre">A</span></tt>, <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>, <tt class="kbd docutils literal"><span class="pre">~</span></tt></td>
+<td>ã</td>
+<td><tt class="kbd docutils literal"><span class="pre">A</span></tt>, <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>, <tt class="kbd docutils literal"><span class="pre">'</span></tt></td>
+<td>á</td>
+<td><tt class="kbd docutils literal"><span class="pre">A</span></tt>, <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>, <tt class="kbd docutils literal"><span class="pre">`</span></tt></td>
+<td>à</td>
+</tr>
+<tr class="row-even"><td><tt class="kbd docutils literal"><span class="pre">A</span></tt>, <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>, <tt class="kbd docutils literal"><span class="pre">O</span></tt></td>
+<td>å</td>
+<td><tt class="kbd docutils literal"><span class="pre">E</span></tt>, <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>, <tt class="kbd docutils literal"><span class="pre">&quot;</span></tt></td>
+<td>ë</td>
+<td><tt class="kbd docutils literal"><span class="pre">O</span></tt>, <tt class="kbd docutils literal"><span class="pre">Alt-Backspace</span></tt>, <tt class="kbd docutils literal"><span class="pre">/</span></tt></td>
+<td>ø</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="convert-text-to-text-object">
+<h4>Convert text to text object<a class="headerlink" href="#convert-text-to-text-object" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/ConvertTextToTextObject.jpg"><img alt="../../_images/ConvertTextToTextObject.jpg" src="../../_images/ConvertTextToTextObject.jpg" style="width: 250px;" /></a>
+</div>
+<p>An easy way to get text into Blender is to type it in <a class="reference internal" href="../../extensions/python/text_editor.html"><em>The Text Editor</em></a>.
+It is suggested to do this with a
+<tt class="xref doc docutils literal"><span class="pre">split</span> <span class="pre">window</span></tt>
+as you will be able to see the 3D view port and text editor at the same time.
+In the <em>Text Editor</em> select <em>Text &gt; Create Text Block</em>. Then begin typing.
+When finished, select <em>Edit &gt;&gt; Text to 3D Object &gt;&gt; One Object</em> or <em>One Object per Line</em> depending on your needs.
+It is also possible to load a text file via <em>Text &gt;&gt; Open Text Block</em>
+which can be useful for importing large amounts of text at once.</p>
+</div>
+<div class="section" id="d-mesh">
+<h4>3D Mesh<a class="headerlink" href="#d-mesh" title="Permalink to this headline">¶</a></h4>
+<p>It is possible to convert a Text Object to a 3D Mesh object.
+This can be useful so that you may edit the vertices in <em>Edit Mode</em>,
+but you will lose the ability to edit the text itself.
+To do this, go to <em>Object Mode</em> and select your Text Object.
+Press <tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt> and select <em>Mesh From Curve/Meta/Surf/Text</em>.
+Now you can return to <em>Edit Mode</em> and manually edit the vertices.
+They are usually a bit messy, so it may be useful to use a <em>Limited Dissolve</em> deletion or <em>Remesh</em> Object
+<a class="reference internal" href="../../modifiers/index.html"><em>Modifier</em></a> at a low threshold to clean up your mesh.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/TextObjectFromText.jpg"><img alt="../../_images/TextObjectFromText.jpg" src="../../_images/TextObjectFromText.jpg" style="width: 500px;" /></a>
+<p class="caption">left normal text, right the made text object.</p>
+</div>
+</div>
+</div>
+<div class="section" id="text-selection">
+<h3>Text Selection<a class="headerlink" href="#text-selection" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/2.5_Manual-Part-II-Modelling-Text-Create-Ex.jpg"><img alt="../../_images/2.5_Manual-Part-II-Modelling-Text-Create-Ex.jpg" src="../../_images/2.5_Manual-Part-II-Modelling-Text-Create-Ex.jpg" style="width: 200px;" /></a>
+<p class="caption">Text in Edit mode.</p>
+</div>
+<p>In <em>Edit</em> mode, your text has a white cursor, and as in any text editor,
+it determines where new chars will be inserted! You move this cursor with the arrow keys or
+<tt class="kbd docutils literal"><span class="pre">PageUp</span></tt> / <tt class="kbd docutils literal"><span class="pre">PageDown</span></tt> and <tt class="kbd docutils literal"><span class="pre">Home</span></tt> / <tt class="kbd docutils literal"><span class="pre">End</span></tt> keys.</p>
+<p>Hold <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> while using the arrow keys to select a part of the text.
+You can use it to specify different materials, the normal/bold/italic state,
+and not much more...</p>
+</div>
+</div>
+<div class="section" id="formatting-text">
+<h2>Formatting Text<a class="headerlink" href="#formatting-text" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fonts">
+<h3>Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Panel:    <em>Font</em> (<em>Editing</em> context)</div>
+</div>
+</div>
+<p>The <em>Font</em> panel has several options for changing the look of characters.</p>
+<div class="section" id="loading-and-changing-fonts">
+<h4>Loading and Changing Fonts<a class="headerlink" href="#loading-and-changing-fonts" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<img alt="../../_images/2.5_Manual-Part-II-Text-Load-Ex.jpg" src="../../_images/2.5_Manual-Part-II-Text-Load-Ex.jpg" />
+<p class="caption">Loading a Type 1 font file.</p>
+</div>
+<p>Blender comes with a <em>built-in</em> font by default and is displayed in each of the four font
+style choosers.
+The <em>built-in</em> font is always present and shows in this list as <tt class="docutils literal"><span class="pre">Bfont</span></tt>.
+The first icon contains a drop-down list displaying currently loaded fonts.
+Select one for each font style.</p>
+<p>To load a different <em>Font</em>, click one of the <em>Load</em> buttons in the
+<em>Font</em> panel and navigate to a <em>valid</em> font.
+The <em>File Browser</em> window will give all valid fonts a capital F icon,
+as seen in <em>Loading a Type 1 font file.</em></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Unix note</p>
+<p class="last">Fonts are typically located under <tt class="docutils literal"><span class="pre">/usr/lib/fonts</span></tt>, or some variant like <tt class="docutils literal"><span class="pre">/usr/lib/X11/fonts</span></tt>, but not always.
+They may be in other locations as well,
+such as <tt class="docutils literal"><span class="pre">/usr/share/local</span></tt> or <tt class="docutils literal"><span class="pre">/usr/local/share</span></tt>, and possibly related sub-trees.</p>
+</div>
+<p>If you select a font that Blender can&#8217;t understand,
+you will get the error <tt class="docutils literal"><span class="pre">Not</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">font</span></tt>.</p>
+<p>Remember the same font will be applied to all chars with same style in a text,
+but that a separate font is required for each style. For example,
+you will need to load an <em>Italics</em> font in order to make characters or words italic. Once
+the font is loaded you can apply that font &#8220;Style&#8221; to the selected characters or the whole
+object. In all,
+you would need to load a minimum of four different types of fonts to represent each style
+(<strong>Normal</strong>, <strong>Italics</strong>, <strong>Bold</strong>, <strong>Bold-Italics</strong>).</p>
+<p>It is important to understand that Blender does not care what font you load for &#8220;normal&#8221;,
+&#8220;bold&#8221;, etc., styles. This is how you can have up to four different fonts in use in the same
+text - but you have to choose between different styles of a same font, or different fonts.
+Blender has a number of typographic controls for changing the style and layout of text,
+found in the <em>Font</em> panel.</p>
+</div>
+<div class="section" id="size-and-shear">
+<h4>Size and Shear<a class="headerlink" href="#size-and-shear" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Size</dt>
+<dd>Controls the size of the whole text (no way to control each char size independently).
+Note however that chars with different fonts (different styles, see below) might have different visible sizes.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/TextShear.jpg"><img alt="../../_images/TextShear.jpg" src="../../_images/TextShear.jpg" style="width: 300px;" /></a>
+<p class="caption">shear: &#8216;blender&#8217; has a shear value of 1,
+&#8216;2.59&#8217; a shear value of 0</p>
+</div>
+<dl class="docutils">
+<dt>Shear</dt>
+<dd>Controls the inclination of the whole text.
+Even if this seems similar to italics style, <em>this is not the same thing</em> !</dd>
+</dl>
+</div>
+<div class="section" id="objects-as-fonts">
+<h4>Objects as Fonts<a class="headerlink" href="#objects-as-fonts" title="Permalink to this headline">¶</a></h4>
+<p>You can also &#8220;create&#8221; your own &#8220;font&#8221; inside Blender! This is quite a complex process,
+so let&#8217;s detail it:</p>
+<ul class="simple">
+<li>First, you must create your chars. Each char is an object <em>of any type</em> (mesh, curve, meta...).
+They all must have a name following the schema:
+<tt class="docutils literal"><span class="pre">common</span> <span class="pre">prefix</span></tt> followed by the <tt class="docutils literal"><span class="pre">char</span> <span class="pre">name</span></tt> (e.g. <tt class="docutils literal"><span class="pre">ft.a</span></tt>, <tt class="docutils literal"><span class="pre">ft.b</span></tt>, etc.).</li>
+<li>Then, for the <em>Text</em> object, you must enable the <em>Dupli Verts</em> button
+(<em>Object</em> context - <em>Anim Settings</em> panel).</li>
+<li>Back in <em>Editing</em> context, in the <em>Font</em> panel,
+fill the <em>Ob Family</em> field with the <em>common prefix</em> of your &#8220;font&#8221; objects.</li>
+</ul>
+<p>Now, each time a char in your text matches the <em>suffix part</em> of a &#8220;font&#8221; object&#8217;s name,
+this object is duplicated on this char. <em>The original chars remain visible</em>. The objects are
+duplicated so that their center is positioned at the <em>lower right corner</em> of the
+corresponding chars.</p>
+</div>
+<div class="section" id="text-on-curve">
+<h4>Text on Curve<a class="headerlink" href="#text-on-curve" title="Permalink to this headline">¶</a></h4>
+<p>With the <a class="reference internal" href="../../modifiers/deform/curve.html"><em>curve modifier</em></a> you can let text follow a curve.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/2.5_Manual-Part-II-Text-Curved-LowRes-Ex.jpg"><img alt="../../_images/2.5_Manual-Part-II-Text-Curved-LowRes-Ex.jpg" src="../../_images/2.5_Manual-Part-II-Text-Curved-LowRes-Ex.jpg" style="width: 200px;" /></a>
+<p class="caption">Text on curve.</p>
+</div>
+<p>In (<em>Text on curve</em>) you can see a text deformed by a curve (a 2D Bézier circle).</p>
+<p>To apply the curve modifier, the text object first has to be converted to a mesh,
+using <tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt> and click mesh.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a Text on Curve feature,
+but the curve modifier offers more options.</p>
+</div>
+</div>
+<div class="section" id="underline">
+<h4>Underline<a class="headerlink" href="#underline" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Underline</dt>
+<dd><p class="first">Toggled with the <em>Underline</em> button before typing.
+Text can also be set to Underlined by selecting it then using the <em>Underline</em> button in the Tool Shelf.</p>
+<dl class="last docutils">
+<dt>Position</dt>
+<dd>This allows you to shift vertically the position of the underline.</dd>
+<dt>Thickness</dt>
+<dd>This controls the thickness of the underline.</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/TextFontSettings.jpg"><img alt="../../_images/TextFontSettings.jpg" src="../../_images/TextFontSettings.jpg" style="width: 300px;" /></a>
+<p class="caption">check a character option to, for example, type bold text</p>
+</div>
+</div>
+<div class="section" id="character">
+<h4>Character<a class="headerlink" href="#character" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/2.5_Manual-Part-II-Text-Bold-Ex.jpg"><img alt="../../_images/2.5_Manual-Part-II-Text-Bold-Ex.jpg" src="../../_images/2.5_Manual-Part-II-Text-Bold-Ex.jpg" style="width: 300px;" /></a>
+<p class="caption">Bold text.</p>
+</div>
+<dl class="docutils">
+<dt>Bold</dt>
+<dd>Toggled with the <em>Bold</em> button before typing.
+Text can also be set to Bold by selecting it then using the <em>Bold</em> button in the Tool Shelf.</dd>
+<dt>Italics</dt>
+<dd>Toggled with the <em>Italic</em> button before typing.
+Text can also be set to Italic by selecting it then using the <em>Italic</em> button in the Tool Shelf.</dd>
+<dt>Underline</dt>
+<dd>Enables underlining, as controlled by the Underline settings above.</dd>
+<dt>Small Caps</dt>
+<dd>type small capital text.</dd>
+</dl>
+<p>Blender&#8217;s <em>Bold</em> and <em>Italic</em> buttons don&#8217;t work the same way as other applications,
+as they also serve as placeholders for you to load up other fonts manually,
+which get applied when you define the corresponding style; see <a class="reference internal" href="#fonts">Fonts</a>.</p>
+<p>To apply the Bold/Italics/Underline attribute to a set of characters, you either turn on
+<em>Bold</em> / <em>Italics</em> / <em>Underline</em> prior to typing characters,
+or highlight (select) first and then toggle Bold/Italics/Underline.</p>
+</div>
+<div class="section" id="setting-case">
+<h4>Setting Case<a class="headerlink" href="#setting-case" title="Permalink to this headline">¶</a></h4>
+<p>You can change the text case by selecting it then clicking the <em>To Upper</em> or
+<em>To Lower</em> in the tool shelf.</p>
+<p>Enable the <em>Small Caps</em> option to type characters as small caps.</p>
+<p>The size of the <em>Small Caps</em> can be changed with the <em>Small Caps Scale</em>
+setting. Note that the <em>Small Caps Scale</em> is applied the same to all <em>Small Caps</em> formatted characters.</p>
+</div>
+</div>
+<div class="section" id="paragraph">
+<h3>Paragraph<a class="headerlink" href="#paragraph" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Paragraph</em> Panel has settings for the alignment and spacing of text.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/TextParagraphSettings.jpg"><img alt="../../_images/TextParagraphSettings.jpg" src="../../_images/TextParagraphSettings.jpg" style="width: 300px;" /></a>
+<p class="caption">the paragraph tab</p>
+</div>
+<div class="section" id="align">
+<h4>Align<a class="headerlink" href="#align" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Left</dt>
+<dd>Aligns text to left of frames when using them,
+else uses the center point of the <em>Text</em> object as the starting point of the text (which grows to the right).</dd>
+<dt>Center</dt>
+<dd>Centers text in the frames when using them,
+else uses the center point of the <em>Text</em> object as the mid-point of the text
+(which grows equally to the left and right).</dd>
+<dt>Right</dt>
+<dd>Aligns text to right of frames when using them,
+else uses the center point of the <em>Text</em> object as the ending point of the text (which grows to the left).</dd>
+<dt>Justify</dt>
+<dd>Only flushes a line when it is <strong>terminated</strong> by a wordwrap (<strong>not</strong> by <tt class="kbd docutils literal"><span class="pre">Return</span></tt>),
+it uses <em>whitespace</em> instead of <em>character spacing</em> (kerning) to fill lines.</dd>
+<dt>Flush</dt>
+<dd><strong>Always</strong> flushes the line, even when it&#8217;s still being entered;
+it uses character spacing (kerning) to fill lines.</dd>
+</dl>
+<p>Both <em>Justify</em> and <em>Flush</em> only work within frames.</p>
+</div>
+<div class="section" id="spacing">
+<h4>Spacing<a class="headerlink" href="#spacing" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Character</dt>
+<dd>A factor by which space between each character is scaled in width</dd>
+<dt>Word</dt>
+<dd>A factor by which whitespace between words is scaled in width.
+You can also control it by pressing <tt class="kbd docutils literal"><span class="pre">Alt-Left</span></tt> or <tt class="kbd docutils literal"><span class="pre">Alt-Right</span></tt>
+to decrease/increase spacing by steps of <tt class="docutils literal"><span class="pre">0.1</span></tt>.</dd>
+<dt>Line</dt>
+<dd>A factor by which the vertical space between lines is scaled.</dd>
+</dl>
+</div>
+<div class="section" id="offset">
+<h4>Offset<a class="headerlink" href="#offset" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>X offset and Y offset</dt>
+<dd>Well, these settings control the X and Y offset of the text, regarding its &#8220;normal&#8221; positioning. Note that with
+frames (see <a class="reference internal" href="editing.html"><em>Text Boxes</em></a>), it applies to all frames&#8217; content...</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="shape">
+<h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> or <em>Edit</em> modes</div>
+<div class="line">Panel:    <em>Curve and Surface</em> (<em>Editing</em> context)</div>
+</div>
+</div>
+<p>As you can see in the <em>Curve and Surface</em> panel,
+texts have most of the same options as curves.</p>
+<div class="section" id="resolution">
+<h3>Resolution<a class="headerlink" href="#resolution" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Preview</dt>
+<dd>the <tt class="xref doc docutils literal"><span class="pre">resolution</span></tt> in the viewport.</dd>
+<dt>Render</dt>
+<dd>the <tt class="xref doc docutils literal"><span class="pre">resolution</span></tt> on the render.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/TextShapeSettings.jpg"><img alt="../../_images/TextShapeSettings.jpg" src="../../_images/TextShapeSettings.jpg" style="width: 300px;" /></a>
+<p class="caption">the shape settings</p>
+</div>
+<dl class="docutils">
+<dt>Fast Editing</dt>
+<dd>disables curve filling while in edit mode.</dd>
+</dl>
+</div>
+<div class="section" id="fill">
+<h3>Fill<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h3>
+<p>The fill options control how the text curves are filled in when text is <em>Extruded</em>
+or <em>Beveled</em> in the <em>Geometry</em> Panel.</p>
+<dl class="docutils">
+<dt>Front</dt>
+<dd>Fills in the front side of the surface.</dd>
+<dt>Back</dt>
+<dd>Fills in the back side of the surface.</dd>
+<dt>Fill Deformed</dt>
+<dd>Fills the curves after applying shape keys and modifiers.</dd>
+</dl>
+</div>
+<div class="section" id="textures">
+<h3>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../_images/TextTextureSettings.jpg" src="../../_images/TextTextureSettings.jpg" />
+<p class="caption">Texture Settings</p>
+</div>
+<dl class="docutils">
+<dt>Use UV for Mapping</dt>
+<dd>Use UV values as generated texture coordinates.</dd>
+<dt>Auto Texture Space</dt>
+<dd>Adjusts the active object&#8217;s texture space automatically when transforming object.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="geometry">
+<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<p>Text objects have all the <tt class="xref doc docutils literal"><span class="pre">curves</span> <span class="pre">extrusion</span> <span class="pre">features</span></tt>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="Text Editing"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Text"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

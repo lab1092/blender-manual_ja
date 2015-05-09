@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The VideoTexture module: bge.texture &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Python API" href="index.html"/>
+        <link rel="next" title="Standalone Player" href="../blender_player.html"/>
+        <link rel="prev" title="Bullet physics Python API" href="bullet_physics.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Game Engine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">Performance</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Game Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Python API</a> &raquo;</li>
+      
+    <li>The VideoTexture module: bge.texture</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/game_engine/python_api/videotexture.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="the-videotexture-module-bge-texture">
+<h1>The VideoTexture module: bge.texture<a class="headerlink" href="#the-videotexture-module-bge-texture" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">bge.texture</span></tt> module allows you to manipulate textures during the game.
+Several sources for texture are possible: video files, image files, video capture,
+memory buffer, camera render or a mix of that.
+The video and image files can be loaded from the internet using an URL instead of a file name.
+In addition, you can apply filters on the images before sending them to the GPU,
+allowing video effect: blue screen, color band, gray, normal map.
+<tt class="docutils literal"><span class="pre">bge.texture</span></tt> uses FFmpeg to load images and videos.
+All the formats and codecs that FFmpeg supports are supported by <tt class="docutils literal"><span class="pre">bge.texture</span></tt>,
+including but not limited to:</p>
+<ul class="simple">
+<li>AVI</li>
+<li>Ogg</li>
+<li>Xvid</li>
+<li>Theora</li>
+<li>dv1394 camera</li>
+<li>video4linux capture card (this includes many webcams)</li>
+<li>videoForWindows capture card (this includes many webcams)</li>
+<li>JPG</li>
+</ul>
+<div class="section" id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>The principle is simple: first you identify an existing texture by object and name,
+then you create a new texture with dynamic content and swap the two textures in the GPU.
+The GE is not aware of the substitution and continues to display the object as always,
+except that you are now in control of the texture. At the end,
+the new texture is deleted and the old texture restored.</p>
+<p>The present page is a guide to the <tt class="docutils literal"><span class="pre">bge.texture</span></tt> module with simple examples.</p>
+</div>
+<div class="section" id="game-preparation">
+<h2>Game preparation<a class="headerlink" href="#game-preparation" title="Permalink to this headline">¶</a></h2>
+<p>Before you can use the thing <tt class="docutils literal"><span class="pre">bge.texture</span></tt> module,
+you must have objects with textures applied appropriately.</p>
+<p>Imagine you want to have a television showing live broadcast programs in the game. You will
+create a television object and UV-apply a different texture at the place of the screen, for example <tt class="docutils literal"><span class="pre">tv.png</span></tt>.
+What this texture looks like is not important;
+probably you want to make it dark grey to simulate power-off state.
+When the television must be turned on, you create a dynamic texture from a video capture card
+and use it instead of <tt class="docutils literal"><span class="pre">tv.png</span></tt>: the TV screen will come to life.</p>
+<p>You have two ways to define textures that <tt class="docutils literal"><span class="pre">bge.texture</span></tt> can grab:</p>
+<ul class="simple">
+<li>Simple UV texture.</li>
+<li>Blender material with image texture channel.</li>
+</ul>
+<p>Because <tt class="docutils literal"><span class="pre">bge.texture</span></tt> works at texture level,
+it is compatible with all GE fancy texturing features: GLSL, multi-texture, custom shaders,
+etc.</p>
+</div>
+<div class="section" id="first-example">
+<h2>First example<a class="headerlink" href="#first-example" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s assume that we have a game object with one or more faces assigned to a material/image on
+which we want to display a video.</p>
+<p>The first step is to create a <tt class="docutils literal"><span class="pre">Texture</span></tt> object.
+We will do it in a script that runs once. It can be at the start of the game,
+the video is only played when you refresh the texture; we&#8217;ll come to that later. The script is
+normally attached to the object on which we want to display the video so that we can easily
+retrieve the object reference:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">bge.texture</span>
+
+<span class="n">contr</span> <span class="o">=</span> <span class="n">GameLogic</span><span class="o">.</span><span class="n">getCurrentController</span><span class="p">()</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">contr</span><span class="o">.</span><span class="n">owner</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">GameLogic</span><span class="p">,</span> <span class="s">&#39;video&#39;</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>The check on <tt class="docutils literal"><span class="pre">video</span></tt> attribute is just a trick to make sure we create the texture only once.</p>
+<div class="section" id="find-material">
+<h3>Find material<a class="headerlink" href="#find-material" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">matID</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">materialID</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s">&#39;IMvideo.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">bge.texture.materialID()</span></tt>
+is a handy function to retrieve the object material that is using <tt class="docutils literal"><span class="pre">video.png</span></tt> as texture.
+This method will work with Blender material and UV texture.
+In case of UV texture, it grabs the internal material corresponding to the faces that are assigned to this texture.
+In case of Blender material,
+it grabs the material that has an image texture channel matching the name as first channel.</p>
+<p>The <tt class="docutils literal"><span class="pre">IM</span></tt> prefix indicates that we&#8217;re searching for a texture name but we can also
+search for a material by giving the <tt class="docutils literal"><span class="pre">MA</span></tt> prefix. For example,
+if we want to find the material called <tt class="docutils literal"><span class="pre">VideoMat</span></tt> on this object, the code becomes:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">matID</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">materialID</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s">&#39;MAVideoMat&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-texture">
+<h3>Create texture<a class="headerlink" href="#create-texture" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">bge.texture.Texture</span></tt> is the class that creates the <tt class="docutils literal"><span class="pre">Texture</span></tt> object that loads the dynamic texture on the GPU.
+The constructor takes one mandatory and three optional arguments:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">gameObj</span></tt></dt>
+<dd>The game object.</dd>
+<dt><tt class="docutils literal"><span class="pre">materialID</span></tt></dt>
+<dd>Material index as returned by <tt class="docutils literal"><span class="pre">bge.texture.materialID()</span></tt>, 0 = first material by default.</dd>
+<dt><tt class="docutils literal"><span class="pre">textureID</span></tt></dt>
+<dd>Texture index in case of multi-texture channel, 0 = first channel by default.
+In case of UV texture, this parameter should always be 0.</dd>
+<dt><tt class="docutils literal"><span class="pre">textureObj</span></tt></dt>
+<dd>Reference to another <tt class="docutils literal"><span class="pre">Texture</span></tt> object of which we want to reuse the texture.
+If we use this argument,
+we should not create any source on this texture and there is no need to refresh it either:
+the other <tt class="docutils literal"><span class="pre">Texture</span></tt> object will provide the texture for both materials/textures.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">matID</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-texture-persistent">
+<h3>Make texture persistent<a class="headerlink" href="#make-texture-persistent" title="Permalink to this headline">¶</a></h3>
+<p>Note that we have assigned the object to a <tt class="docutils literal"><span class="pre">GameLogic</span></tt>, <tt class="docutils literal"><span class="pre">video</span></tt>
+attribute that we create for the occasion.
+The reason is that the <tt class="docutils literal"><span class="pre">Texture</span></tt> object must be persistent across the game scripts.
+A local variable would be deleted at the end of the script and the GPU texture deleted at the
+same time. <tt class="docutils literal"><span class="pre">GameLogic</span></tt> module object is a handy place to store persistent objects.</p>
+</div>
+<div class="section" id="create-a-source">
+<h3>Create a source<a class="headerlink" href="#create-a-source" title="Permalink to this headline">¶</a></h3>
+<p>Now we have a <tt class="docutils literal"><span class="pre">Texture</span></tt> object but it can&#8217;t do anything because it does not have
+any source. We must create a source object from one of the possible sources available in
+<tt class="docutils literal"><span class="pre">bge.texture</span></tt>:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">VideoFFmpeg</span></tt></dt>
+<dd>Moving pictures.
+Video file, video capture, video streaming.</dd>
+<dt><tt class="docutils literal"><span class="pre">ImageFFmpeg</span></tt></dt>
+<dd>Still pictures.
+Image file, image on web.</dd>
+<dt><tt class="docutils literal"><span class="pre">ImageBuff</span></tt></dt>
+<dd>Image from application memory.
+For computer generated images, drawing applications.</dd>
+<dt><tt class="docutils literal"><span class="pre">ImageViewport</span></tt></dt>
+<dd>Part or whole of the viewport (=rendering of the active camera displayed on screen).</dd>
+<dt><tt class="docutils literal"><span class="pre">ImageRender</span></tt></dt>
+<dd>Render of a non active camera.</dd>
+<dt><tt class="docutils literal"><span class="pre">ImageMix</span></tt></dt>
+<dd>A mix of 2 or more of the above sources.</dd>
+</dl>
+<p>In this example we use a simple video file as source.
+The <tt class="docutils literal"><span class="pre">VideoFFmpeg</span></tt> constructor takes a file name as argument.
+To avoid any confusion with the location of the file, we will use <tt class="docutils literal"><span class="pre">GameLogic.expandPath</span>
+<span class="pre">()</span></tt> to build an absolute file name,
+assuming the video file is in the same directory as the blend file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">movie</span> <span class="o">=</span> <span class="n">GameLogic</span><span class="o">.</span><span class="n">expandPath</span><span class="p">(</span><span class="s">&#39;//trailer_400p.ogg&#39;</span><span class="p">)</span>
+<span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">VideoFFmpeg</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We create the video source object and assign it to the <tt class="docutils literal"><span class="pre">Texture</span></tt> object
+<tt class="docutils literal"><span class="pre">source</span></tt> attribute to set the source and make it persistent:
+as the <tt class="docutils literal"><span class="pre">Texture</span></tt> object is persistent, the source object will also be persistent.</p>
+<p>Note that we can change the <tt class="docutils literal"><span class="pre">Texture</span></tt> source at any time.
+Suppose we want to switch between two movies during the game. We can do the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GameLogic</span><span class="o">.</span><span class="n">mySources</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">VideoFFmpeg</span><span class="p">(</span><span class="s">&#39;movie1.avi&#39;</span><span class="p">)</span>
+<span class="n">GameLogic</span><span class="o">.</span><span class="n">mySources</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">VideoFFmpeg</span><span class="p">(</span><span class="s">&#39;movie2.avi&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And then assign (and reassign) the source during the game:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">GameLogic</span><span class="o">.</span><span class="n">mySources</span><span class="p">[</span><span class="n">movieSel</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup-the-source">
+<h3>Setup the source<a class="headerlink" href="#setup-the-source" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">VideoFFmpeg</span></tt> source has several attributes to control the movie playback:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">range</span></tt></dt>
+<dd>[start,stop] (<em>floats</em>).
+Set the start and stop time of the video playback, expressed in seconds from beginning.
+By default the entire video.</dd>
+<dt><tt class="docutils literal"><span class="pre">repeat</span></tt></dt>
+<dd>(<em>integer</em>).
+Number of video replay, -1 for infinite.</dd>
+<dt><tt class="docutils literal"><span class="pre">framerate</span></tt></dt>
+<dd>(<em>float</em>).
+Relative frame rate, &lt;1.0 for slow, &gt;1.0 for fast.</dd>
+<dt><tt class="docutils literal"><span class="pre">scale</span></tt></dt>
+<dd>(<em>bool</em>).
+Set to True to activate fast nearest neighbour scaling algorithm.
+Texture width and height must be a power of 2.
+If the video picture size is not a power of 2, rescaling is required.
+By default <tt class="docutils literal"><span class="pre">bge.texture</span></tt> uses the precise but slow <tt class="docutils literal"><span class="pre">gluScaleImage()</span></tt> function.
+Best is to rescale the video offline so that no scaling is necessary at runtime!</dd>
+<dt><tt class="docutils literal"><span class="pre">flip</span></tt></dt>
+<dd>(<em>bool</em>).
+Set to True if the image must be vertically flipped.
+FFmpeg always delivers the image upside down, so this attribute is set to True by default.</dd>
+<dt><tt class="docutils literal"><span class="pre">filter</span></tt></dt>
+<dd>Set additional filter on the video before sending to GPU.
+Assign to one of <tt class="docutils literal"><span class="pre">bge.texture</span></tt> filter object.
+By default the image is send unchanged to the GPU.
+If an alpha channel is present in the video, it is automatically loaded and sent to the GPU as well.</dd>
+</dl>
+<p>We will simply set the <tt class="docutils literal"><span class="pre">scale</span></tt> attribute to True because the <tt class="docutils literal"><span class="pre">gluScaleImage</span>
+<span class="pre">()</span></tt> is really too slow for real time video.
+In case the video dimensions are already a power of 2, it has no effect.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="play-the-video">
+<h3>Play the video<a class="headerlink" href="#play-the-video" title="Permalink to this headline">¶</a></h3>
+<p>We are now ready to play the video:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Video playback is not a background process: it happens only when we refresh the texture.
+So we must have another script that runs on every frame and calls the <tt class="docutils literal"><span class="pre">refresh</span>
+<span class="pre">()</span></tt> method of the <tt class="docutils literal"><span class="pre">Texture</span></tt> object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">GameLogic</span><span class="p">,</span> <span class="s">&#39;video&#39;</span><span class="p">):</span>
+<span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the video source is stopped, <tt class="docutils literal"><span class="pre">refresh()</span></tt> has no effect.
+The argument of <tt class="docutils literal"><span class="pre">refresh</span>
+<span class="pre">()</span></tt> is a flag that indicates if the texture should be recalculated on next refresh.
+For video playback, you definitively want to set it to True.</p>
+</div>
+<div class="section" id="checking-video-status">
+<h3>Checking video status<a class="headerlink" href="#checking-video-status" title="Permalink to this headline">¶</a></h3>
+<p>Video source classes (such as VideoFFMpeg) have an attribute <tt class="docutils literal"><span class="pre">status</span></tt>.
+If video is playing, its value is 2, if it&#8217;s stopped, it&#8217;s 3. So in our example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+<span class="c">#video has stopped</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="advanced-work-flow">
+<h3>Advanced work flow<a class="headerlink" href="#advanced-work-flow" title="Permalink to this headline">¶</a></h3>
+<p>True argument in <tt class="docutils literal"><span class="pre">Texture.refresh()</span></tt> method simply invalidates the image buffer
+after sending it to the GPU so that on next frame, a new image will be loaded from the source.
+It has the side effect of making the image unavailable to Python.
+You can also do it manually by calling the <tt class="docutils literal"><span class="pre">refresh</span>
+<span class="pre">()</span></tt> method of the source directly.</p>
+<p>Here are some possible advanced work flow:</p>
+<ul class="simple">
+<li>Use the image buffer in python (doesn&#8217;t effect the Texture):</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">image</span>
+<span class="c"># image is a binary string buffer of row major RGBA pixels</span>
+<span class="c"># ... use image</span>
+<span class="c"># invalidates it for next frame</span>
+<span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Load image from source for python processing wihtout download to GPU:</li>
+<li>note that we don&#8217;t even call refresh on the Texture</li>
+<li>we could also just create a source object without a Texture object</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">image</span> <span class="o">=</span> <span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">image</span>
+<span class="c"># ... use image</span>
+<span class="n">GameLogic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>If you have more than 1 material on the mesh and you want to modify a texture of one particular material,
+get its ID</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">matID</span> <span class="o">=</span> <span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">materialID</span><span class="p">(</span><span class="n">gameobj</span><span class="p">,</span> <span class="s">&quot;MAmat.001&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GLSL material can have more than 1 texture channel,
+identify the texture by the texture slot where it is defined, here 2</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">tex</span><span class="o">=</span><span class="n">bge</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">gameobj</span><span class="p">,</span> <span class="n">matID</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="advanced-demos">
+<h2>Advanced demos<a class="headerlink" href="#advanced-demos" title="Permalink to this headline">¶</a></h2>
+<p>Here is a <a class="reference external" href="http://www.graphicall.org/ftp/ben2610/VideoTextureDemo2video.blend">demo</a>
+that demonstrates the use of two videos alternatively on the same texture.
+Note that it requires an additional video file which is the elephant dream teaser.
+You can replace with another other file that you want to run the demo.</p>
+<p>Here is a <a class="reference external" href="http://www.graphicall.org/ftp/ben2610/VideoTextureDemo2videoMix.blend">demo</a>
+that demonstrates the use of the <tt class="docutils literal"><span class="pre">ImageMix</span></tt> source.
+<tt class="docutils literal"><span class="pre">ImageMix</span></tt> is a source that needs sources,
+which can be any other <tt class="docutils literal"><span class="pre">Texture</span></tt> source, like <tt class="docutils literal"><span class="pre">VideoFFmpeg</span></tt>,
+<tt class="docutils literal"><span class="pre">ImageFFmpeg</span></tt> or <tt class="docutils literal"><span class="pre">ImageRender</span></tt>. You set them with <tt class="docutils literal"><span class="pre">setSource</span>
+<span class="pre">()</span></tt> and their relative weight with <tt class="docutils literal"><span class="pre">setWeight()</span></tt>.
+Pay attention that the weight is a short number between 0 and 255,
+and that the sum of all weights should be 255.
+<tt class="docutils literal"><span class="pre">ImageMix</span></tt> makes a mix of all the sources according to their weights.
+The sources must all have the same image size
+(after reduction to the nearest power of 2 dimension). If they don&#8217;t,
+you get a Python error on the console.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../blender_player.html" class="btn btn-neutral float-right" title="Standalone Player"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bullet_physics.html" class="btn btn-neutral" title="Bullet physics Python API"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

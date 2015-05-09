@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Drawing With Grease Pencil &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="up" title="Grease Pencil" href="index.html"/>
+        <link rel="next" title="Layers" href="layers_and_animation.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Grease Pencil</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Grease Pencil</a> &raquo;</li>
+      
+    <li>Drawing With Grease Pencil</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/grease_pencil/drawing.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="drawing-with-grease-pencil">
+<h1>Drawing With Grease Pencil<a class="headerlink" href="#drawing-with-grease-pencil" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Enable the <em>Grease Pencil</em> by clicking <em>Draw, Line, Poly or Erase</em> from the Toolshelf (<tt class="kbd docutils literal"><span class="pre">T</span></tt>).
+A new layer will be automatically added for you to draw on.</li>
+<li>A new layer can be added from the <em>Grease Pencil Properties panel</em>.
+This panel can also be used to customize the color, opacity and thickness of the pencil lines.
+Changes to these settings will affect all strokes on the current layer.</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/ManualSketchingGreasePencil.jpg"><img alt="../_images/ManualSketchingGreasePencil.jpg" src="../_images/ManualSketchingGreasePencil.jpg" style="width: 500px;" /></a>
+<p class="caption">Grease Pencil Tool Shelf and Properties Panel.</p>
+</div>
+<p><em>Grease Pencil</em> sketches can be converted to editable geometry and used to aid the animation process.</p>
+<ul class="simple">
+<li><a class="reference internal" href="layers_and_animation.html"><em>Read more about Layers and Animation</em></a></li>
+<li><a class="reference internal" href="converting_to_geometry.html"><em>Read more about Converting sketches to geometry</em></a></li>
+</ul>
+<div class="section" id="drawing">
+<h2>Drawing<a class="headerlink" href="#drawing" title="Permalink to this headline">¶</a></h2>
+<p>The Toolshelf provides a number of options for drawing with the <em>Grease Pencil</em> which are detailed below.
+The Toolshelf can be seen in the screenshot <em>Grease Pencil Tool Shelf and Properties Panel</em> above.</p>
+<div class="section" id="grease-pencil-mode-and-shortcut-summary">
+<h3>Grease Pencil Mode and Shortcut Summary<a class="headerlink" href="#grease-pencil-mode-and-shortcut-summary" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Draw <tt class="kbd docutils literal"><span class="pre">D-LMB</span></tt></dt>
+<dd>Draw a new stroke (multiple short, connected lines). The stroke will finish when you release the mouse button.</dd>
+<dt>Line <tt class="kbd docutils literal"><span class="pre">Ctrl-D-LMB</span></tt></dt>
+<dd>Draw a new line in rubber band mode. The line will finish when you release the mouse button.</dd>
+<dt>Poly <tt class="kbd docutils literal"><span class="pre">Ctrl-D-RMB</span></tt></dt>
+<dd>Draw connected lines by clicking at various points. Lines will be automatically added to connect the two points.</dd>
+<dt>Erase <tt class="kbd docutils literal"><span class="pre">D-RMB</span></tt></dt>
+<dd>Erases segments of strokes that fall within the radius of the eraser &#8220;brush&#8221;.
+The erasing will continue until the mouse button is released.
+If begun with <em>Erase</em>, either <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> or <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> will erase strokes.
+The size of the eraser &#8220;brush&#8221; can be controlled with <tt class="kbd docutils literal"><span class="pre">Wheel</span></tt> or
+(<tt class="kbd docutils literal"><span class="pre">NumpadPlus</span></tt>, <tt class="kbd docutils literal"><span class="pre">NumpadMinus</span></tt>) keys (while still holding <tt class="kbd docutils literal"><span class="pre">RMB</span></tt>).</dd>
+</dl>
+</div>
+<div class="section" id="sketching-sessions">
+<h3>Sketching Sessions<a class="headerlink" href="#sketching-sessions" title="Permalink to this headline">¶</a></h3>
+<p>A Sketching Session allows for rapid sketching with the <em>Grease Pencil</em> when
+multiple strokes are desired. With this option set,
+a sketching session starts when a <em>Grease Pencil</em> stroke is made.
+The type of session (Draw, Line, Poly, Erase)
+is determined by the first stroke made which can be done via hotkeys or the Toolshelf.
+Use <tt class="kbd docutils literal"><span class="pre">Esc</span></tt> or <tt class="kbd docutils literal"><span class="pre">Return</span></tt> to exit the sketching session. Note that in a Erase
+Sketching Session both <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> or <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> can be used once the session has
+started.</p>
+</div>
+</div>
+<div class="section" id="appearance-settings">
+<h2>Appearance Settings<a class="headerlink" href="#appearance-settings" title="Permalink to this headline">¶</a></h2>
+<p>Set the color, line width and other aspects of the grease pencil&#8217;s appearance in the
+<em>Grease Pencil Panel</em> of the <em>Properties</em> shelf (<tt class="kbd docutils literal"><span class="pre">N</span></tt>) shown here.</p>
+<div class="figure">
+<img alt="../_images/grease_pencil_drawing_properties.jpg" src="../_images/grease_pencil_drawing_properties.jpg" />
+<p class="caption">Grease pencil properties</p>
+</div>
+<p>There are separate settings for each layer with those of the active layer shown in the panel.
+All the strokes on a layer (not just those made after a particular change)
+are affected by that layer&#8217;s grease pencil properties.</p>
+<dl class="docutils">
+<dt>Stroke</dt>
+<dd>Sets the line color and opacity.</dd>
+<dt>Fill</dt>
+<dd>Sets the color of the interior space enclosed by the strokes.
+Increase the opacity from zero to make the fill visible.
+Fill works best on convex shapes.</dd>
+<dt>Thickness</dt>
+<dd>Width of the line strokes.</dd>
+<dt>X-Ray</dt>
+<dd>Makes the lines visible when they pass behind other objects in the scene.</dd>
+<dt>Volumetric Strokes</dt>
+<dd>Draw strokes as a series of filled spheres, resulting in an interesting volumetric effect.
+Get best results with partial opacity and large stroke widths.</dd>
+</dl>
+</div>
+<div class="section" id="drawing-settings">
+<h2>Drawing Settings<a class="headerlink" href="#drawing-settings" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../_images/3D-interaction_Sketching_Drawing_grease-pencil-drawing-settings-panel.jpg" src="../_images/3D-interaction_Sketching_Drawing_grease-pencil-drawing-settings-panel.jpg" />
+<p class="caption">Grease Pencil Drawing Settings.</p>
+</div>
+<p>In the <em>Grease Pencil Panel</em> of the <em>Tool</em> shelf (<tt class="kbd docutils literal"><span class="pre">T</span></tt>)
+there are several choices for <em>Drawing Settings</em>.</p>
+<dl class="docutils">
+<dt>View</dt>
+<dd>New strokes are locked to the view.</dd>
+<dt>Cursor <em>(3D view only)</em></dt>
+<dd>New strokes are drawn in 3D-space,
+with position determined by the 3D cursor and the view rotation at the time of drawing.
+<em>Cursor</em> is available as an option in the <em>UV/Image Editor</em>
+but it functions identically to the <em>View</em> option.</dd>
+<dt>Surface <em>(3D view only)</em></dt>
+<dd>New strokes are drawn in 3D-space, with their position projected onto the first visible surface.</dd>
+<dt>Stroke <em>(3D view only)</em></dt>
+<dd>New strokes are drawn in 3D-space, with their position projected onto existing visible strokes.
+Note that strokes created with <em>View</em> are not in 3D-space and are not considered for this projection.</dd>
+</dl>
+<p>Enabling the <em>Only Endpoints</em> setting applies the drawing setting only to the
+endpoints of the stroke. The part of the stroke between the endpoints is adjusted to lie on a
+plane passing through the endpoints.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/3D-interaction_Sketching_Drawing_grease-pencil-drawing-settings.jpg"><img alt="../_images/3D-interaction_Sketching_Drawing_grease-pencil-drawing-settings.jpg" src="../_images/3D-interaction_Sketching_Drawing_grease-pencil-drawing-settings.jpg" style="width: 500px;" /></a>
+<p class="caption">The effect of different Drawing Settings on Grease Pencil strokes.</p>
+</div>
+</div>
+<div class="section" id="editing">
+<h2>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+<p>These tools let you move and reshape grease pencil strokes after they have been drawn.</p>
+<p>Open the Grease Pencil tab on the Toolshelf (<tt class="kbd docutils literal"><span class="pre">T</span></tt>).
+Look for the tools in the Edit Strokes panel shown here:</p>
+<div class="figure">
+<img alt="../_images/grease_pencil_drawing_edit_strokes_panel.jpg" src="../_images/grease_pencil_drawing_edit_strokes_panel.jpg" />
+<p class="caption">Edit panel with grease pencil strokes.</p>
+</div>
+<p>The basic steps are:</p>
+<ul class="simple">
+<li>enter the grease pencil edit mode</li>
+<li>select some strokes</li>
+<li>move and reshape them</li>
+</ul>
+<div class="section" id="edit-mode">
+<h3>Edit Mode<a class="headerlink" href="#edit-mode" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em>Enable Editing</em> (<tt class="kbd docutils literal"><span class="pre">D-Tab</span></tt> )</dt>
+<dd>Enters or exits the edit mode.</dd>
+</dl>
+<p>While in the grease pencil editing mode,
+Blender redirects the common editing keys to operate on the grease pencil layer instead of the 3D scene components.</p>
+</div>
+<div class="section" id="select">
+<h3>Select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h3>
+<p>Grease pencil strokes are formed from a series of connected vertex points.
+To make changes, first select points on the strokes that you want to edit.
+You can only select points on the active layer.
+The selected points are highlighted as in the image above.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Set the layer&#8217;s <em>Stroke Thickness</em> to 1 to make the points more visible.</p>
+</div>
+<p>Use the mouse to select the points, or one of the selection buttons in the panel as detailed in
+<a class="reference internal" href="../modeling/meshes/selecting/basics.html"><em>Basic Selection</em></a>.</p>
+<p>Various selection functions similar to those available when editing meshes can be used:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><th class="stub">Select All</th>
+<td><tt class="kbd docutils literal"><span class="pre">A</span></tt></td>
+</tr>
+<tr class="row-even"><th class="stub">Border Select</th>
+<td><tt class="kbd docutils literal"><span class="pre">B</span></tt></td>
+</tr>
+<tr class="row-odd"><th class="stub">Circle Select</th>
+<td><tt class="kbd docutils literal"><span class="pre">C</span></tt></td>
+</tr>
+<tr class="row-even"><th class="stub">Select Linked</th>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl-L</span></tt></td>
+</tr>
+<tr class="row-odd"><th class="stub">Select More</th>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></tt></td>
+</tr>
+<tr class="row-even"><th class="stub">Select Less</th>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></tt></td>
+</tr>
+<tr class="row-odd"><th class="stub">Select Stroke</th>
+<td><tt class="kbd docutils literal"><span class="pre">Alt-LMB</span></tt></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="edit">
+<h3>Edit<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em>Delete</em> (<tt class="kbd docutils literal"><span class="pre">X</span></tt>)</dt>
+<dd><p class="first">Choose from:</p>
+<ul class="last simple">
+<li>Points - delete the selected points, leaving a gap in the stroke</li>
+<li>Dissolve - reconnect the ends so there is no gap in the stroke</li>
+<li>Strokes - delete the entire stroke containing any selected points</li>
+<li>Frame - delete a frame when doing <a class="reference internal" href="layers_and_animation.html"><em>Animation of the Sketches</em></a>.</li>
+</ul>
+</dd>
+<dt><em>Duplicate</em> (<tt class="kbd docutils literal"><span class="pre">Shift-D</span></tt>)</dt>
+<dd>Make a copy of the selected points at the same location. Use the mouse to <em>Translate</em> them into position.
+<tt class="kbd docutils literal"><span class="pre">LMB</span></tt> places them at their new position.
+<tt class="kbd docutils literal"><span class="pre">RMB</span></tt> cancels and removes the duplicates.</dd>
+<dt><em>Translate</em> (<tt class="kbd docutils literal"><span class="pre">G</span></tt>) <em>Rotate</em> (<tt class="kbd docutils literal"><span class="pre">R</span></tt>) <em>Scale</em> (<tt class="kbd docutils literal"><span class="pre">S</span></tt>)</dt>
+<dd>Move the selected points with the mouse.
+<tt class="kbd docutils literal"><span class="pre">LMB</span></tt> places them at their new position.
+Refine these operations with
+<em>Pivot Center</em>,
+<em>View</em> or <em>Global</em> transform orientations,
+snap to <em>Increment</em> and
+<em>Proportional Editing</em>
+detailed in the general <a class="reference internal" href="../getting_started/basics/transformations/index.html"><em>Transformations Instructions</em></a>.</dd>
+<dt><em>Mirror</em> (<tt class="kbd docutils literal"><span class="pre">Ctrl-M</span></tt>) <em>Bend</em> (<tt class="kbd docutils literal"><span class="pre">Shift-W</span></tt>) <em>Shear</em> (<tt class="kbd docutils literal"><span class="pre">Shift-Ctrl-Alt-S</span></tt>) <em>To Sphere</em> (<tt class="kbd docutils literal"><span class="pre">Shift-Alt-S</span></tt>)</dt>
+<dd>These are similar to the equivalent mesh operations detailed in
+<a class="reference internal" href="../modeling/meshes/editing/deforming/index.html"><em>Deforming Instructions</em></a>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="sensitivity-when-drawing">
+<h2>Sensitivity When Drawing<a class="headerlink" href="#sensitivity-when-drawing" title="Permalink to this headline">¶</a></h2>
+<p>The default settings for the sensitivity of mouse/stylus movement when drawing have been set
+to reduce jitter while still allowing fine movement. However, if these are not appropriate
+they can be altered in <em class="menuselection">User Preferences window ‣ Editing ‣ Grease Pencil</em>.</p>
+<dl class="docutils">
+<dt>Manhattan Distance</dt>
+<dd>The minimum number of pixels the mouse should have moved either
+horizontally or vertically before the movement is recorded.
+Decreasing this should work better for curvy lines.</dd>
+<dt>Euclidean Distance</dt>
+<dd>The minimum distance that the mouse should have traveled before movement is recorded.</dd>
+<dt>Eraser Radius</dt>
+<dd>The size of the eraser &#8220;brush&#8221;.</dd>
+<dt>Smooth Stroke</dt>
+<dd>This turns on the post-processing step of smoothing the stroke to remove jitter.
+It is only relevant when not drawing straight lines. By default this is enabled.
+It should be noted that it can often cause &#8220;shrinking&#8221; of drawings,
+and may be turned off if the results are not desirable.</dd>
+<dt>Simplify Stroke</dt>
+<dd>This turns on the post-processing step of simplifying the stroke to remove about half of current points in it.
+It is only relevant when not drawing straight lines. By default this is disabled.
+As with <em>Smooth Stroke</em>, it can often cause &#8220;shrinking&#8221; of drawings,
+and loss of precision, accuracy and smoothness.</dd>
+</dl>
+<div class="section" id="additional-notes-for-tablet-users">
+<h3>Additional Notes For Tablet Users<a class="headerlink" href="#additional-notes-for-tablet-users" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The thickness of a stroke at a particular point is affected
+by the pressure used when drawing that part of the stroke.</li>
+<li>The &#8220;eraser&#8221; end of the stylus can be used to erase strokes.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layers_and_animation.html" class="btn btn-neutral float-right" title="Layers"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

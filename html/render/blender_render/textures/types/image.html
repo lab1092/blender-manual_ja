@@ -1,0 +1,1102 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Image Textures &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Textures" href="../index.html"/>
+        <link rel="next" title="Video Textures" href="video.html"/>
+        <link rel="prev" title="Procedural textures: Wood" href="procedural/wood.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Textures</a> &raquo;</li>
+      
+    <li>Image Textures</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/render/blender_render/textures/types/image.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="image-textures">
+<h1>Image Textures<a class="headerlink" href="#image-textures" title="Permalink to this headline">¶</a></h1>
+<p>The term <em>Image Texture</em> simply means that a graphic image - a pixel grid
+composed of R, G, B,
+and sometimes Alpha values - is used as the input source to the texture.
+As with other types of textures, this information can be used in a number of ways,
+not only as a simple &#8220;decal&#8221;.</p>
+<p>When the Texture Type <em>Image or Movie</em> is selected, three new panels present
+themselves allowing us to control most aspects of how image textures are applied:
+<em>Image</em>, <em>Image Sampling</em>, and <em>Image Mapping</em>.</p>
+<div class="section" id="about-image-based-texturing">
+<h2>About Image Based Texturing<a class="headerlink" href="#about-image-based-texturing" title="Permalink to this headline">¶</a></h2>
+<p>Texture images take up precious memory space,
+often being loaded into a special video memory bank that is very fast and very expensive,
+so it is often very small. So, keep the images as small as possible.
+A 64x64 image takes up only one fourth the memory of a 128x128 image.</p>
+<p>For photo-realistic rendering of objects in animations, often larger image textures are used,
+because the object might be zoomed in on in camera moves. In general, you want to use a
+texture sized proportionally to the number of pixels that it will occupy in the final render.
+Ultimately, you only have a certain amount of physical RAM to hold an image texture and the
+model and to provide work space when rendering your image.</p>
+<p>For the most efficient memory usage, image textures should be square,
+with dimensions as powers of 2, such as 32x32, 64x64, 128x128, 256x256, 1024x1024, 2048x2048,
+and 4096x4096.</p>
+<p>If you can re-use images across different meshes, this greatly reduces memory requirements.
+You can re-use images if you map those areas of the meshes that &#8220;look alike&#8221; to a layout that
+uses the common image. In the overview below,
+the left image is re-used for both the sphere and a portion of the monkey.
+The monkey uses two layouts, one which has one UV map of a few faces,
+and another that has three maps.</p>
+<div class="figure">
+<img alt="../../../../_images/Manual-UV-Overview.jpg" src="../../../../_images/Manual-UV-Overview.jpg" />
+<p class="caption">How all the parts of UV Texturing work together</p>
+</div>
+<p>When using file textures, it is very important that you have
+<a class="reference internal" href="../mapping/uv/unwrapping.html"><em>Mapped the UVs</em></a>
+of the mesh, and they are laid out appropriately.</p>
+<p>You don&#8217;t have to UV map the <em>entire</em> mesh.
+The sphere above on the left has some faces mapped,
+but other faces use procedural materials and textures.
+Only use UV Textures for those portions of your mesh where you want very graphic,
+precise detail. For example,
+a model of a vase only needs UV Texture for the rim where decorative artwork is incorporated.
+A throw pillow does not need a different image for the back as the front;
+in fact many throw pillows have a fabric (procedural material) back.</p>
+<p>As another example, you should UV map both eyes of a head to the same image
+(unless you want one bloodshot and the other clear).
+Mapping both sides of a face to the same image might not be advisable,
+because the location of freckles and skin defects are not symmetrical.
+You could of course change the UV map for one side of the face to slightly offset,
+but it might be noticeable.
+Ears are another example where images or section of an images can be mapped to similar faces.</p>
+<div class="section" id="workflow">
+<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
+<p>The process consists of the following steps.</p>
+<ul class="simple">
+<li>Create the Mesh. <a class="reference internal" href="../mapping/uv/unwrapping.html"><em>Unwrap</em></a> it into one or more
+<a class="reference internal" href="../mapping/uv/layout_management.html"><em>UV Layouts</em></a>.</li>
+<li>Create one or more Materials for the Mesh.</li>
+<li>Create one or more images for each UV Layout and aspect of the texture. Either
+- paint directly on the mesh using Texture Paint in the 3D window,
+- load and/or edit an image in the UV Editor window, or
+- Bake the existing materials into an image for the UV Editor window.</li>
+<li>Apply those images as UV Textures to the mesh to affect one or more aspects of the mesh.
+This is done by using one or more of the numerous Map To options. For example,
+- map to Color to affect the diffuse coloring of the mesh,
+- map to Nor to affect the normal direction to give the surface a bumpy or creased look, or
+- map to Spec (specularity) to make certain areas look shiny and oily.</li>
+<li>Layer the Textures to create a convincing result.</li>
+</ul>
+</div>
+<div class="section" id="using-images-and-materials">
+<h3>Using Images and Materials<a class="headerlink" href="#using-images-and-materials" title="Permalink to this headline">¶</a></h3>
+<p>To use an image as the color and alpha (transparency) of the texture, you can create an image
+in an external paint program and tell the UV/Image Editor to Open that file as the texture,
+or you can create a New image and save it as the texture.</p>
+<p>If you want to start off by creating an image using an external paint program,
+you will want to save an outline of your UV faces by using the <em>Save UV Face Layout</em> tool located in the UVs menu.
+This is discussed
+<tt class="xref doc docutils literal"><span class="pre">here</span></tt>.</p>
+<div class="section" id="creating-an-image-texture">
+<h4>Creating an Image Texture<a class="headerlink" href="#creating-an-image-texture" title="Permalink to this headline">¶</a></h4>
+<p>To create an image within Blender,
+you have to first create a <a class="reference internal" href="../mapping/uv/applying_image.html"><em>New Blank</em></a>
+Image with a uniform color or test grid.
+After that, you can color the image using the:</p>
+<ul class="simple">
+<li>Vertex colors as the basis for an image</li>
+<li>Render Bake image based on how the mesh looks in the scene</li>
+</ul>
+<p>After you have created your image,
+you can modify it using Blender&#8217;s built-in <a class="reference internal" href="../painting.html"><em>Texture Paint</em></a>
+or any external image painting program.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>See Texture in 3D View but does not Render</p>
+<p class="last">You may be able to see the texture in Textured display mode in the 3D View;
+this is all that is required to have textures show up in Blender&#8217;s Game Engine. Rendering, however,
+requires a material.
+You must have a <em>Face Textures</em> material assigned to the mesh for it to render using the UV Texture.
+In the Material settings, ADD NEW material to a selected object and enable <em>Face Textures</em>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>There may be one UV Layout for the face of a character, and another for their clothes. Now,
+to texture the clothes, you need to create an image at least for the Color of the clothes, and
+possible a &#8220;bump&#8221; texture to give the fabric the appearance of some weave by creating a
+different image for the Normal of the clothes. Where the fabric is worn,
+for example at the elbows and knees, the sheen, or Specularity, of the fabric will vary and
+you will want a different image that tells Blender how to vary the Specularity.
+Where the fabric is folded over or creased,
+you want another image that maps Displacement to the mesh to physically deform the mesh.
+Each of these are examples of applying an image as a texture to the mesh.</p>
+<p>As another example, the face is the subject of many questions and tutorials. In general,
+you will want to create a Material that has the basic skin color, appropriate shaders,
+and sub-surface scattering. Then you will want to layer on additional UV Textures for:</p>
+<ul class="simple">
+<li>Freckle map for Color and Normal aspects</li>
+<li>Subdermal veins and tendons for Displacement</li>
+<li>Creases and Wrinkles and skin cell stratification for Normal</li>
+<li>Makeup images for Color</li>
+<li>Oily maps for Specularity</li>
+<li>For a zombie, Alpha transparency where the flesh has rotted away <em>(ewwww....)</em></li>
+<li>Under chin and inside nostrils that receive less Ambient light</li>
+<li>Thin skin is more translucent, so a map is needed for that</li>
+</ul>
+<p>Each image is mapped by using another Texture Channel.
+Each of these maps are images which are applied to the different aspects (Color, Normal,
+Specularity) of the image. Tileable images can be repeated to give a smaller,
+denser pattern by using the Texture controls for repeat or size.</p>
+<div class="section" id="layering-uv-textures">
+<h4>Layering UV Textures<a class="headerlink" href="#layering-uv-textures" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-UV-Layer_One.jpg"><img alt="../../../../_images/Manual-UV-Layer_One.jpg" src="../../../../_images/Manual-UV-Layer_One.jpg" style="width: 300px;" /></a>
+<p class="caption">Base UV Texture</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-UV-Layer-Two.jpg"><img alt="../../../../_images/Manual-UV-Layer-Two.jpg" src="../../../../_images/Manual-UV-Layer-Two.jpg" style="width: 300px;" /></a>
+<p class="caption">Layered UV Texture</p>
+</div>
+<p>Great textures are formed by layering images on top of one another.
+You start with a base layer, which is the base paint. Each successive layer on top of that is
+somewhat transparent to let the bottom layers show through,
+but opaque where you want to add on to details.</p>
+<p>To avoid massive confusion, all image textures for a mesh usually use the same UV map.
+If you do, each image will line up with the one below it,
+and they will layer on top of one another like the examples shown to the right. To do this,
+just create one UV Texture (map) as described in this section. Then,
+create material image textures as described in the procedural materials section.
+Instead of mapping to Original Coordinates (OrCo), map to UV.</p>
+<p>Use that map name repeatedly in the Material&#8211;&gt;Textures&#8211;&gt;Map Input panel by selecting UV and
+typing the name in the text field. In the example to the right,
+our UV Texture is called &#8220;Head&#8221; (you may have to expand the image to see the panel settings).
+Then, the image texture shown will be mapped using the UV coordinates.
+In the &#8220;Base UV Texture&#8221; example to the right, the face has two textures UV mapped;
+one for a base color, and another for spots, blemishes and makeup.</p>
+<p>Both textures use the same UV Texture map as their Map Input, and both affect Color.
+The Makeup texture is transparent except where there is color,
+so that the base color texture shows through.
+Note that the colors were too strong on the image,
+so they amount of Col affects is turned down to 60% in the second layer (the blemish layer).</p>
+<p>Normally, we think of image textures affecting the color of a mesh. Realism and
+photo-realistic rendering is a combination of many different ways that light interacts with
+the surface of the mesh. The image texture can be Mapped To not only color,
+but also <em>Normal</em> (bumpiness)
+or <em>Reflection</em> or any of the other attributes specified in the Map To panel.</p>
+<p>If you paint a grey-scale image (laid out according to the UV Layout)
+with white where the skin is oily and shiny, and dark where it is not,
+you would map that input image according to the UV Layout, but have it affect Specularity
+(not color).</p>
+<p>To make portions of a mesh transparent and thus reveal another mesh surface underneath,
+you would paint a grey-scale image with black where you want the texture transparent,
+map input to UV, and map it to Alpha (not color). To make portions of a mesh,
+like a piece of hot metal, appear to glow, you would use a grey-scale image mapped to Emit.</p>
+<p>Believe it or not, this is only &#8220;the tip of the iceberg!&#8221; If everything that&#8217;s been described
+here just isn&#8217;t enough for you, the <em>texture nodes</em> feature,
+introduced in recent versions of Blender,
+enables you to layer and combine textures in almost any way you can imagine.</p>
+</div>
+<div class="section" id="mix-and-match-materials">
+<h4>Mix and Match Materials<a class="headerlink" href="#mix-and-match-materials" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<img alt="../../../../_images/Manual-UV-MixMat.jpg" src="../../../../_images/Manual-UV-MixMat.jpg" />
+</div>
+<p>You can mix and match procedural materials and textures, vertex paint,
+and UV textures onto the same mesh.</p>
+<p>The image to the right has a world with a red ambient light.
+The material has both VCol Paint and Face Textures enabled,
+and receives half of ambient light. A weak cloud texture affects color, mixing in a tan color.
+The right vertices are vertex painted yellow and the left is unpainted procedural gray.
+The UV Texture is a stock arrow image from the public domain texture CD.
+Scene lighting is a white light off to the right.
+From this information and the User Manual thus far,
+you should now be able to recreate this image.</p>
+<p>You can also assign <a class="reference internal" href="../../materials/multiple_materials.html"><em>multiple materials</em></a>
+to the mesh based on which faces you want to be procedural and which you want to be texture-mapped.
+Just don&#8217;t UV map the faces you want to be procedural.</p>
+<p>You can use UV Textures and VertexPaint (<tt class="kbd docutils literal"><span class="pre">V</span></tt> in the 3D View window) simultaneously,
+if both are enabled in the Material settings.
+The vertex colors are used to modulate the brightness or color of the UV image texture:</p>
+<ul class="simple">
+<li>UV Texture is at the base <em>(Face Textures)</em></li>
+<li>Vertex paint affects its colors, then</li>
+<li>Procedural textures are laid on top of that,</li>
+<li>Area lights shine on the surface, casting shadows and what not, and finally</li>
+<li>Ambient light lights it up.</li>
+</ul>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-Part-IV-uv04.jpg"><img alt="../../../../_images/Manual-Part-IV-uv04.jpg" src="../../../../_images/Manual-Part-IV-uv04.jpg" style="width: 550px;" /></a>
+<p class="caption">Vertex colors modulate texture.</p>
+</div>
+<p>A UV Layout can only have one image, although you can tile and animate the image.
+Since a layout is a bunch of arranged UV Maps, and a UV Map maps many mesh faces,
+a face can therefore only have one UV Texture image,
+and the UV coordinates for that face must fit entirely on the image.
+If you want a face to have multiple images, split the face into parts,
+and assign each part its own image. <em>(Or</em> you can get fancy with Nodes,
+but that&#8217;s another story ...)</p>
+</div>
+<div class="section" id="using-alpha-transparency">
+<h4>Using Alpha Transparency<a class="headerlink" href="#using-alpha-transparency" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-UV-Alpha.jpg"><img alt="../../../../_images/Manual-UV-Alpha.jpg" src="../../../../_images/Manual-UV-Alpha.jpg" style="width: 200px;" /></a>
+<p class="caption">Alpha UV Textures</p>
+</div>
+<p>Alpha 0.0 (transparent) areas of a UV Image render as black.
+Unlike a procedural texture, they do not make the base material transparent,
+since UV Textures do not operate on the base procedural material.
+The UV texture overrides any procedural color underneath.
+Procedural Textures are applied on top of UV Textures,
+so a procedural image texture would override any UV Texture. Transparent (black)
+areas of a procedural texture mapped to alpha operate on top of anything else,
+making the object transparent in those places.
+The only thing that modulates visible parts of a UV Texture are the Vertex Colors.
+In the example to the right,
+the finger image is transparent at the cuff and top of the finger and is used as a UV Texture.
+All three balls have a base material of blue and a marbling texture.
+The base material color is not used whenever Face Textures is enabled.</p>
+<p>The top left ball has not had any vertex painting,
+and the finger is mapped to the middle band, and the texture is mapped to a pink color.
+As you can see, the base material has VCol Paint and Face Textures enabled;
+the base color blue is not used, but the texture is. With no vertex painting,
+there is nothing to modulate the UV Texture colors, so the finger shows as white.
+Transparent areas of the UV Image show as black.</p>
+<p>The top right ball has had a pink vertex color applied to the vertical band of faces
+(in the 3D View window, select the faces in UV Paint mode, switch to Vertex Paint mode,
+pick a pink color, and <em>Paint&#8211;&gt;Set Vertex Colors</em>).
+The finger is mapped to the middle vertical band of faces,
+and VCol and Face Textures are enabled.
+The texture is mapped to Alpha black and multiplies the base material alpha value which is <tt class="docutils literal"><span class="pre">1.0</span></tt>.
+Thus, white areas of the texture are <tt class="docutils literal"><span class="pre">1.0</span></tt>, and <tt class="docutils literal"><span class="pre">1.0</span></tt> times <tt class="docutils literal"><span class="pre">1.0</span></tt> is <tt class="docutils literal"><span class="pre">1.0</span></tt>
+(last time I checked, at least),
+so that area is opaque and shows. Black areas of the procedural texture, <tt class="docutils literal"><span class="pre">0.0</span></tt>,
+multiply the base material to be transparent. As you can see, the unmapped faces
+(left and right sides of the ball) show the vertex paint (none, which is gray)
+and the painted ones show pink, and the middle stripe that is both painted and mapped change
+the white UV Texture areas to pink.
+Where the procedural texture says to make the object transparent,
+the green background shows through.
+Transparent areas of the UV Texture insist on rendering black.</p>
+<p>The bottom ball uses multiple materials. Most of the ball (all faces except the middle band)
+is a base material that does not have Face Textures (nor Vertex Color Paint - VCol Paint)
+enabled. Without it enabled,
+the base blue material color shows and the pink color texture is mixed on top.
+The middle band is assigned a new material (2 Mat 2)
+that <em>does</em> have vertex paint and Face Textures enabled.
+The middle band of faces were vertex painted yellow,
+so the white parts of the finger are yellow. Where the pink texture runs over the UV texture,
+the mixed color changes to green, since pink and yellow make a green.</p>
+<p>If you want the two images to show through one another, and mix together,
+you need to use Alpha. The base material can have an image texture with an Alpha setting,
+allowing the underlying UV Texture to show through.</p>
+<p>To overlay multiple UV images, you have several options:</p>
+<ul class="simple">
+<li>Create multiple UV Textures which map the same,
+and then use different images (with Alpha) and blender will overlay them automatically.</li>
+<li>Use the <a class="reference internal" href="../../../../composite_nodes/index.html"><em>Composite Nodes</em></a> to combine the two images via the AlphaOver node,
+creating and saving the composite image. Open that composited image as the UV Texture.</li>
+<li>Use an external paint program to alpha overlay the images and save the file,
+and load it as the face&#8217;s UV Texture</li>
+<li>Define two objects, one just inside the other.
+The inner object would have the base image,
+and the outer image the overlaid image with a material alpha less than one (1.0).</li>
+<li>Use the <a class="reference internal" href="../../materials/nodes.html"><em>Material nodes</em></a>
+to combine the two images via the AlphaOver or Mix node,
+thus creating a third noded material that you use as the material for the face.
+Using this approach, you will not have to UV map;
+simply assign the material to the face using the Multiple Materials</li>
+</ul>
+</div>
+</div>
+<div class="section" id="uv-textures-vs-procedural-textures">
+<h3>UV Textures vs. Procedural Textures<a class="headerlink" href="#uv-textures-vs-procedural-textures" title="Permalink to this headline">¶</a></h3>
+<p>A Material Texture, that has a Map Input of UV,
+and is an image texture that is mapped to Color, is equivalent to a UV Texture.
+It provides much more flexibility, because it can be sized and offset, and the degree to which
+it affects the color of your object can be controlled in the Map To panel. In addition,
+you can have different images for each texture channel; one for color, one for alpha,
+one for normals, one for specularity, one for reflectivity, <em>etc.</em> Procedural textures,
+like Clouds, are INCREDIBLY simple and useful for adding realism and details to an image.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>UV Texture</strong></th>
+<th class="head"><strong>Procedural Texture</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Image maps to precise coordinates on the selected faces of the mesh</td>
+<td>Pattern is generated dynamically, and is mapped to the entire mesh (or portion covered by that material)</td>
+</tr>
+<tr class="row-odd"><td>The Image maps once to a range of mesh faces specifically selected</td>
+<td>Maps once to all the faces to which that material is assigned; either the whole mesh or a portion</td>
+</tr>
+<tr class="row-even"><td>Image is mapped once to faces.</td>
+<td>Size XYZ in the MapInput allows tiling the texture many times across faces.
+Number of times depends on size of mesh</td>
+</tr>
+<tr class="row-odd"><td>Affect the color and the alpha of the object.</td>
+<td>Can also affect normals (bumpiness), reflectivity, emit, displacement,
+and a dozen other aspects of the mesh&#8217;s appearance; can even warp or stencil subsequent textures.</td>
+</tr>
+<tr class="row-even"><td>Can have many for a mesh</td>
+<td>Can be layered, up to 10 textures can be applied, layering on one another.
+Many mix methods for mixing multiple channels together.</td>
+</tr>
+<tr class="row-odd"><td>Any Image type (still, video, rendered). Preset test grid available</td>
+<td>Many different presents: clouds, wood grain, marble, noise, and even magic.</td>
+</tr>
+<tr class="row-even"><td>Provides the UV layout for animated textures</td>
+<td>Noise is the only animated procedural texture</td>
+</tr>
+<tr class="row-odd"><td>Takes very limited graphics memory</td>
+<td>Uses no or little memory; instead uses CPU compute power</td>
+</tr>
+</tbody>
+</table>
+<p>So, in a sense, a single UV texture for a mesh is simpler but more limited than using multiple textures
+(mapped to UV coordinates), because they do one specific thing very well:
+adding image details to a range of faces of a mesh. They work together if the procedural
+texture maps to the UV coordinates specified in your layout. As discussed earlier, you can map
+multiple UV textures to different images using the UV Coordinate mapping system in the Map
+Input panel.</p>
+</div>
+</div>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="image">
+<h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Textures-Image-panel.jpg"><img alt="../../../../_images/25-Manual-Textures-Image-panel.jpg" src="../../../../_images/25-Manual-Textures-Image-panel.jpg" style="width: 306px;" /></a>
+<p class="caption">Image panel</p>
+</div>
+<p>In the <em>Image Sampling</em> panel we tell Blender which source file to use.
+Image or Movie Datablock:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Browse</dt>
+<dd>Select an image or video among linked to the .blend file</dd>
+<dt>Name field</dt>
+<dd>Internal name of image</dd>
+<dt>F</dt>
+<dd>Create a fake user for the image texture</dd>
+<dt>+</dt>
+<dd>Replace active texture with a new one</dd>
+<dt>Folder</dt>
+<dd>Browse for an image on your computer</dd>
+<dt>X</dt>
+<dd>Unlink this image or movie.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Source:</dt>
+<dd><p class="first">Where the image come from. What kind of source file to use.</p>
+<dl class="last docutils">
+<dt>Generated</dt>
+<dd>Generated image in Blender.</dd>
+<dt>Movie</dt>
+<dd>Movie file.</dd>
+<dt>Image Sequence</dt>
+<dd>Multiple image files as a sequence.</dd>
+<dt>Single Image</dt>
+<dd>Single image file.</dd>
+</dl>
+</dd>
+<dt>File for Image or Movie texture:</dt>
+<dd><p class="first">See about supported <a class="reference internal" href="../../../../data_system/files/formats.html"><em>Image</em></a> formats.</p>
+<dl class="last docutils">
+<dt>Pack image</dt>
+<dd>Embed image into current .blend file</dd>
+<dt>Path</dt>
+<dd>Path to file</dd>
+<dt>File Browser</dt>
+<dd>Find a file on your computer.
+Hold <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> to open the selected file and <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> to browse a containing directory.</dd>
+<dt>Reload</dt>
+<dd>Reloads the file. Useful when an image has been rework in an external application.</dd>
+</dl>
+</dd>
+<dt>Input Color Space</dt>
+<dd><p class="first">Color space of the image or movie on disk</p>
+<dl class="last docutils">
+<dt>XYZ</dt>
+<dd>XYZ space.</dd>
+<dt>VD16</dt>
+<dd>The simple video conversion from a gamma 2.2 sRGB space.</dd>
+<dt>sRGB</dt>
+<dd>Standart RGB display space.</dd>
+<dt>Raw</dt>
+<dd>Raw space.</dd>
+<dt>Non-Color</dt>
+<dd>Color space used for images which contains non-color data (i.e. normal maps).</dd>
+<dt>Linear ACES</dt>
+<dd>ACES linear space.</dd>
+<dt>Linear</dt>
+<dd>709 (full range). Blender native linear space.</dd>
+<dt>View as Render</dt>
+<dd>Apply render part of display transformation when displaying this image on the screen.</dd>
+</dl>
+</dd>
+<dt>Use Alpha</dt>
+<dd><p class="first">Use the alpha channel information from the image or make image fully opaque</p>
+<dl class="last docutils">
+<dt>Straight</dt>
+<dd>Transparent RGB and alpha pixels are unmodified.</dd>
+<dt>Premultiplied</dt>
+<dd>Transparent RGB pixels of an image are multiplied by the image&#8217;s alpha value.</dd>
+</dl>
+</dd>
+<dt>Fields</dt>
+<dd><p class="first">Work with field images. Video frames consist of two different images (fields) that are merged.
+This option ensures that when <em>Fields</em> are rendered,
+the correct field of the image is used in the correct field of the rendering.
+<em>MIP Mapping</em> cannot be combined with <em>Fields</em>.</p>
+<dl class="last docutils">
+<dt>Upper First</dt>
+<dd>Order of video fields - upper field first.</dd>
+<dt>Lower First</dt>
+<dd>Order of video fields - lower field first.</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/26-Manual-Textures-Image-panel-Generated.jpg"><img alt="../../../../_images/26-Manual-Textures-Image-panel-Generated.jpg" src="../../../../_images/26-Manual-Textures-Image-panel-Generated.jpg" style="width: 306px;" /></a>
+<p class="caption">Image panel for Generated source of Image texture</p>
+</div>
+<p>For <em>Generated</em> source there are the specific options:
+<em>X</em> and <em>Y</em> size</p>
+<blockquote>
+<div>Width and height of image to be generated.</div></blockquote>
+<dl class="docutils">
+<dt>Generated Image Type</dt>
+<dd><p class="first">Which kind of image to be generated</p>
+<dl class="last docutils">
+<dt>Blank</dt>
+<dd>Generate a blank image.</dd>
+<dt>UV Grid</dt>
+<dd>Generated grid to test UV mappings.</dd>
+<dt>Color Grid</dt>
+<dd>Generated improved UV grid to test UV mappings.</dd>
+</dl>
+</dd>
+<dt>Float Buffer</dt>
+<dd>Generate floating point buffer.</dd>
+</dl>
+<p>About specific options for <strong>movie</strong> and <strong>image sequence</strong> source.
+see <a class="reference internal" href="video.html"><em>here</em></a></p>
+</div>
+<div class="section" id="image-sampling">
+<h3>Image Sampling<a class="headerlink" href="#image-sampling" title="Permalink to this headline">¶</a></h3>
+<p>In the <em>Image Sampling</em> panel we can control how the information is retrieved from the image.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-PartIV-Bahnhofstrasse.jpg"><img alt="../../../../_images/Manual-PartIV-Bahnhofstrasse.jpg" src="../../../../_images/Manual-PartIV-Bahnhofstrasse.jpg" style="width: 120px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-PartIV-Map_To_Eingabewerte.jpg"><img alt="../../../../_images/Manual-PartIV-Map_To_Eingabewerte.jpg" src="../../../../_images/Manual-PartIV-Map_To_Eingabewerte.jpg" style="width: 100px;" /></a>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Background image</td>
+<td>Foreground image</td>
+</tr>
+</tbody>
+</table>
+<p>The two images presented here are used to demonstrate the different image options.
+The <em>background image</em> is an ordinary JPG-file,
+the <em>foreground image</em> is a PNG-file with various alpha and greyscale values.
+The vertical bar on the right side of the foreground image is an Alpha blend,
+the horizontal bar has 50% alpha.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-PartIV-UseAlpha.jpg"><img alt="../../../../_images/Manual-PartIV-UseAlpha.jpg" src="../../../../_images/Manual-PartIV-UseAlpha.jpg" style="width: 150px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-PartIV-CalcAlpha.jpg"><img alt="../../../../_images/Manual-PartIV-CalcAlpha.jpg" src="../../../../_images/Manual-PartIV-CalcAlpha.jpg" style="width: 150px;" /></a>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Foreground image with <em>Use</em> alpha. The alpha values of the pixels are evaluated</td>
+<td>Foreground image with <em>Calculate</em> alpha</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Alpha</dt>
+<dd><p class="first">Options related to transparency</p>
+<dl class="last docutils">
+<dt>Use</dt>
+<dd>Works with PNG and TGA files since they can save transparency information (Foreground Image with UseAlpha).
+Where the alpha value in the image is less than 1.0,
+the object will be partially transparent and stuff behind it will show.</dd>
+<dt>Calculate</dt>
+<dd>Calculate an alpha based on the RGB values of the Image.
+Black (0,0,0) is transparent, white (1,1,1) opaque.
+Enable this option if the image texture is a mask.
+Note that mask images can use shades of gray that translate to semi-transparency,
+like ghosts, flames, and smoke/fog.</dd>
+<dt>Invert</dt>
+<dd>Reverses the alpha value.
+Use this option if the mask image has white where you want it transparent and vice-versa.</dd>
+</dl>
+</dd>
+<dt>Flip X/Y Axis</dt>
+<dd>Rotates the image 90 degrees counterclockwise when rendered.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Textures-ImageSampling-panel.jpg"><img alt="../../../../_images/25-Manual-Textures-ImageSampling-panel.jpg" src="../../../../_images/25-Manual-Textures-ImageSampling-panel.jpg" style="width: 306px;" /></a>
+<p class="caption">Image Sampling panel</p>
+</div>
+<dl class="docutils">
+<dt>Normal Map</dt>
+<dd><p class="first">This tells Blender that the image is to be used to create the illusion of a bumpy surface,
+with each of the three RGB channels controlling how to fake a shadow from a surface irregularity.
+Needs specially prepared input pictures.
+See <a class="reference internal" href="../influence/material/bump_and_normal.html"><em>Bump and Normal Maps</em></a>.</p>
+<dl class="last docutils">
+<dt>Normal Map Space:</dt>
+<dd><em>Tangent</em>:
+<em>Object</em>:
+<em>World</em>:
+<em>Camera</em>:</dd>
+</dl>
+</dd>
+<dt>Derivative Map</dt>
+<dd>Use red and green as derivative values.</dd>
+<dt>MIP Map</dt>
+<dd><p class="first"><a class="reference external" href="http://en.wikipedia.org/wiki/Mipmap">MIP Maps</a> are pre-calculated, smaller,
+filtered Textures for a certain size. A series of pictures is generated, each half the size of the former one.
+This optimizes the filtering process. By default, this option is enabled and speeds up rendering
+(especially useful in the game engine). When this option is OFF, you generally get a sharper image,
+but this can significantly increase calculation time if the filter dimension (see below) becomes large.
+Without MIP Maps you may get varying pictures from slightly different camera angles,
+when the Textures become very small. This would be noticeable in an animation.</p>
+<dl class="last docutils">
+<dt>MIP Map Gaussian filter</dt>
+<dd>Used in conjunction with MIP Map, it enables the MIP Map to be made smaller based on color similarities.
+In the game engine, you want your textures, especially your MIP Map textures,
+to be as small as possible to increase rendering speed and frame rate.</dd>
+</dl>
+</dd>
+</dl>
+<table border="1" class="docutils">
+<caption>Enlarged Image texture without and with <em>Interpolation</em></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-PartIV-ImageTextur-Linien.jpg"><img alt="../../../../_images/Manual-PartIV-ImageTextur-Linien.jpg" src="../../../../_images/Manual-PartIV-ImageTextur-Linien.jpg" style="width: 160px;" /></a>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../../_images/Manual-PartIV_ImageTexturInterPol-Linien.jpg"><img alt="../../../../_images/Manual-PartIV_ImageTexturInterPol-Linien.jpg" src="../../../../_images/Manual-PartIV_ImageTexturInterPol-Linien.jpg" style="width: 160px;" /></a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Interpolation</dt>
+<dd>This option interpolates the pixels of an image.
+This becomes visible when you enlarge the picture. By default, this option is on.
+Turn this option OFF to keep the individual pixels visible and if they are correctly anti-aliased.
+This last feature is useful for regular patterns, such as lines and tiles;
+they remain &#8216;sharp&#8217; even when enlarged considerably.
+When you enlarge this 10x10 pixel Image</dd>
+</dl>
+<div class="figure">
+<img alt="../../../../_images/Manual-PartIV-Linien.jpg" src="../../../../_images/Manual-PartIV-Linien.jpg" />
+</div>
+<p>the difference with and without <em>Interpolation</em> is clearly visible.
+Turn this image off if you are using digital photos to preserve crispness.</p>
+<dl class="docutils">
+<dt>Filter</dt>
+<dd><p class="first">The filter size used in rendering, and also by the options <em>MipMap</em> and <em>Interpolation</em>.
+If you notice gray lines or outlines around the textured object, particularly where the image is transparent,
+turn this value down from 1.0 to 0.1 or so.</p>
+<dl class="last docutils">
+<dt>Texture Filter Type</dt>
+<dd><p class="first">Texture filter to use for image sampling.
+Just like a <em>pixel</em> represents a <em>pic</em> ture <em>el</em> ement, a <em>texel</em> represents a <em>tex</em> ture <em>el</em> ement.
+When a texture (2D texture space) is mapped onto a 3D model (3D model space),
+different algorithms can be used to compute a value for each pixel based on samplings from several texels.</p>
+<dl class="last docutils">
+<dt>Box</dt>
+<dd>A fast and simple nearest-neighbor interpolation known as Monte Carlo integration</dd>
+<dt>EWA</dt>
+<dd><p class="first"><strong>E</strong> lliptical <strong>W</strong> eighted <strong>A</strong> verage - one of the most efficient direct
+convolution algorithms developed by Paul Heckbert and Ned Greene in the 1980s.
+For each texel, EWA samples, weights, and accumulates texels within an elliptical
+footprint and then divides the result by the sum of the weights.</p>
+<dl class="last docutils">
+<dt>Eccentricity</dt>
+<dd>Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower</dd>
+</dl>
+</dd>
+<dt>FELINE</dt>
+<dd><p class="first">FELINE (<strong>F</strong> ast <strong>E</strong> lliptical <strong>Line</strong> s),
+uses several isotropic probes at several points along a line in texture space to produce an anisotropic
+filter to reduce aliasing artifacts without considerably increasing rendering time.</p>
+<dl class="last docutils">
+<dt>Probes</dt>
+<dd>Number of probes to use. An integer between 1 and 256.
+Further reading: McCormack, J; Farkas, KI; Perry, R; Jouppi, NP (1999)
+<a class="reference external" href="http://www.hpl.hp.com/techreports/Compaq-DEC/WRL-99-1.pdf">Simple and Table Feline: Fast Elliptical Lines for Anisotropic Texture Mapping</a>,
+WRL</dd>
+</dl>
+</dd>
+<dt>Area</dt>
+<dd><p class="first">Area filter to use for image sampling</p>
+<dl class="last docutils">
+<dt>Eccentricity</dt>
+<dd>Maximum Eccentricity. Higher values give less blur at distant/oblique angles, but is slower</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Filter Size</dt>
+<dd>The filter size used by MIP Map and Interpolation</dd>
+<dt>Minimum Filter Size</dt>
+<dd>Use Filter Size as a minimal filter value in pixels</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="image-mapping">
+<h3>Image Mapping<a class="headerlink" href="#image-mapping" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/25-Manual-Textures-ImageMapping-panel.jpg"><img alt="../../../../_images/25-Manual-Textures-ImageMapping-panel.jpg" src="../../../../_images/25-Manual-Textures-ImageMapping-panel.jpg" style="width: 306px;" /></a>
+<p class="caption">Image Mapping panel</p>
+</div>
+<p>In the <em>Image Mapping</em> panel,
+we can control how the image is mapped or projected onto the 3D model.</p>
+<p>Extension:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Extend</dt>
+<dd>Outside the image the colors of the edges are extended</dd>
+<dt>Clip</dt>
+<dd>Clip to image size and set exterior pixels as transparent.
+Outside the image, an alpha value of 0.0 is returned.
+This allows you to &#8216;paste&#8217; a small logo on a large object.</dd>
+<dt>Clip Cube</dt>
+<dd>Clips to cubic-shaped area around the images and sets exterior pixels as transparent.
+The same as Clip, but now the &#8216;Z&#8217; coordinate is calculated as well.
+An alpha value of 0.0 is returned outside a cube-shaped area around the image.</dd>
+<dt>Repeat</dt>
+<dd><p class="first">The image is repeated horizontally and vertically</p>
+<dl class="last docutils">
+<dt>Repeat</dt>
+<dd>X/Y repetition multiplier</dd>
+<dt>Mirror</dt>
+<dd>Mirror on X/Y axes. This buttons allow you to map the texture as a mirror, or automatic flip of the image,
+in the corresponding X and/or Y direction.</dd>
+</dl>
+</dd>
+<dt>Checker</dt>
+<dd><p class="first">Checkerboards quickly made.
+You can use the option <em>size</em> on the <em>Mapping</em> panel as well to create the desired number of checkers.</p>
+<dl class="last docutils">
+<dt>Even / Odd</dt>
+<dd>Set even/odd tiles</dd>
+<dt>Distance</dt>
+<dd>Governs the distance between the checkers in parts of the texture size</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Crop Minimum / Crop Maximum</dt>
+<dd>The offset and the size of the texture in relation to the texture space.
+Pixels outside this space are ignored.
+Use these to crop, or choose a portion of a larger image to use as the texture.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="video.html" class="btn btn-neutral float-right" title="Video Textures"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="procedural/wood.html" class="btn btn-neutral" title="Procedural textures: Wood"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

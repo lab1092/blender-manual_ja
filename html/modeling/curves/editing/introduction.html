@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Curve Editing &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Advanced" href="advanced.html"/>
+        <link rel="prev" title="Editing" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="../index.html">Curves</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Curve Editing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/modeling/curves/editing/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="curve-editing">
+<h1>Curve Editing<a class="headerlink" href="#curve-editing" title="Permalink to this headline">¶</a></h1>
+<p>This page covers the basics of curve editing. Curve basics,
+selecting and advanced editing are covered in the following pages:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../introduction.html"><em>Curve basics</em></a></li>
+<li><a class="reference internal" href="../selecting.html"><em>Curve Selecting</em></a></li>
+<li><a class="reference internal" href="advanced.html"><em>Advanced Curve Editing</em></a></li>
+</ul>
+<div class="section" id="curve-display">
+<h2>Curve Display<a class="headerlink" href="#curve-display" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="display-options">
+<h3>Display Options<a class="headerlink" href="#display-options" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../_images/Editing_Curves_curve-display-panel.jpg" src="../../../_images/Editing_Curves_curve-display-panel.jpg" />
+<p class="caption">Curve Display panel</p>
+</div>
+<p>When in Edit mode, the Properties Shelf (<tt class="kbd docutils literal"><span class="pre">N</span></tt>) contains options in the
+<em>Curve Display</em> panel for how curves are displayed in the 3D viewport.</p>
+<dl class="docutils">
+<dt>Handles</dt>
+<dd>Toggles the display of Bezier handles while in edit mode. This does not affect the appearance of the curve itself.</dd>
+<dt>Normals</dt>
+<dd>Toggles the display of Curve Normals.</dd>
+<dt>Normal Size</dt>
+<dd>Sets the display scale of curve normals.</dd>
+</dl>
+</div>
+<div class="section" id="hiding-elements">
+<h3>Hiding Elements<a class="headerlink" href="#hiding-elements" title="Permalink to this headline">¶</a></h3>
+<p>When in <em>Edit</em> mode, you can hide and reveal elements from the display.
+This can be useful in complex models with many elements on the Screen.</p>
+<dl class="docutils">
+<dt>Hide Selected elements</dt>
+<dd>Use <tt class="kbd docutils literal"><span class="pre">H</span></tt>, or the <em class="menuselection">Curve ‣ Show/Hide ‣ Hide Selected</em> menu option from the 3D window header.</dd>
+<dt>Show Hidden elements</dt>
+<dd>Use <tt class="kbd docutils literal"><span class="pre">Alt-H</span></tt>, or the
+<em class="menuselection">Curve ‣ Show/Hide ‣ Show Hidden</em> menu option from the 3D window header.</dd>
+<dt>Hide Unselected elements</dt>
+<dd>Use <tt class="kbd docutils literal"><span class="pre">Shift-H</span></tt>,
+or the <em class="menuselection">Curve ‣ Show/Hide ‣ Hide Unselected</em> menu option from the 3D window header.</dd>
+</dl>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="basic-curve-editing-translation-rotation-scale">
+<h2>Basic Curve Editing (translation, rotation, scale)<a class="headerlink" href="#basic-curve-editing-translation-rotation-scale" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Transform ‣ Grab/Move, Rotate, Scale, ...</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">G</span></tt> / <tt class="kbd docutils literal"><span class="pre">R</span></tt> / <tt class="kbd docutils literal"><span class="pre">S</span></tt></div>
+</div>
+</div>
+<p>Like other elements in Blender, Curve control points can be grabbed/moved (<tt class="kbd docutils literal"><span class="pre">G</span></tt>),
+rotated (<tt class="kbd docutils literal"><span class="pre">R</span></tt>) or scaled (<tt class="kbd docutils literal"><span class="pre">S</span></tt>)
+as described in the <a class="reference internal" href="../../../getting_started/basics/transformations/introduction.html"><em>Basic Transformations</em></a> section.
+When in <em>Edit</em> mode, <a class="reference internal" href="../../../getting_started/basics/transformations/transform_control/proportional_edit.html"><em>proportional editing</em></a>
+is also available for transformation actions.</p>
+</div>
+<div class="section" id="snapping">
+<h2>Snapping<a class="headerlink" href="#snapping" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Panel:    <em>Curve Tools</em> (<em>Editing</em> context)</div>
+</div>
+</div>
+<p><a class="reference internal" href="../../../getting_started/basics/transformations/transform_control/snap.html"><em>Mesh snapping</em></a>
+also works with curve components.
+Both control points and their handles will be affected by snapping,
+except for within itself (other components of the active curve).
+Snapping works with 2D curves but points will be constrained to the local XY axes.</p>
+</div>
+<div class="section" id="deforming-tools">
+<h2>Deforming Tools<a class="headerlink" href="#deforming-tools" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Transform</em></div>
+</div>
+</div>
+<p>The <em>To Sphere</em>, <em>Shear</em>, <em>Wrap</em> and <em>Push/Pull</em> transform tools are described in the
+<a class="reference internal" href="../../../getting_started/basics/transformations/introduction.html"><em>Transformations</em></a> sections.
+The two other tools, <em>Tilt</em> and <em>Shrink/Fatten Radius</em> are related to
+<a class="reference internal" href="advanced.html"><em>Curve Extrusion</em></a>.</p>
+<div class="section" id="smoothing">
+<h3>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Hotkey:   <em class="menuselection">[W][] ‣ smooth</em></div>
+</div>
+</div>
+<p>Curve smoothing is available through the specials menu. For Bézier curves, this smoothing
+operation currently only smooths the positions of control points and not their tangents.
+End points are also constrained when smoothing.</p>
+</div>
+</div>
+<div class="section" id="mirror">
+<h2>Mirror<a class="headerlink" href="#mirror" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Mirror</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-M</span></tt></div>
+</div>
+</div>
+<p>The <em>Mirror</em> tool is also available, behaving exactly as with
+<a class="reference internal" href="../../meshes/editing/deforming/mirror.html"><em>mesh vertices</em></a>,</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="set-bezier-handle-type">
+<h2>Set Bézier Handle Type<a class="headerlink" href="#set-bezier-handle-type" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Panel:    <em class="menuselection">Curve Tools ‣ Handles</em></div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Control Points ‣ Set Handle Type</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">V</span></tt></div>
+</div>
+</div>
+<p>Handle types are a property of <a class="reference internal" href="../introduction.html"><em>Bézier curves.</em></a> and can be used to alter features of the curve.
+For example, switching to <em>Vector handles</em> can be used to create curves with sharp corners.
+Read the <a class="reference internal" href="../introduction.html"><em>Bézier curves</em></a> page for more details.</p>
+</div>
+<div class="section" id="extending-curves">
+<h2>Extending Curves<a class="headerlink" href="#extending-curves" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Extrude</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></tt> or <tt class="kbd docutils literal"><span class="pre">E</span></tt></div>
+</div>
+</div>
+<p>Once a curve is created you can add new segments (in fact,
+new control points defining new segments), either by extruding,
+or placing new handles with <tt class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></tt> clicks.
+Each new segment is added to one end of the curve.
+A new segment will only be added if a single vertex, or handle,
+at one end of the curve is selected. If two or more control points are selected,
+a new Bézier closed curve is started.</p>
+</div>
+<div class="section" id="subdivision">
+<h2>Subdivision<a class="headerlink" href="#subdivision" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Panel:    <em>Curve Tools</em> (<em>Editing</em> context)</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Segments ‣ Subdivide</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">W</span></tt></div>
+</div>
+</div>
+<p>Curve subdivision simply subdivides all selected segments by adding one or more control points
+between the selected segments. To control the number of cuts,
+press <tt class="kbd docutils literal"><span class="pre">W</span></tt> to make a single subdivision.
+Then press <tt class="kbd docutils literal"><span class="pre">F6</span></tt> to bring up the <em>Number of Cuts</em> menu.</p>
+</div>
+<div class="section" id="duplication">
+<h2>Duplication<a class="headerlink" href="#duplication" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Duplicate</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Shift-D</span></tt></div>
+</div>
+</div>
+<p>This command duplicates the selected control points,
+along with the curve segments implicitly selected (if any).
+The copy is selected and placed in <em>Grab</em> mode, so you can move it to another place.</p>
+</div>
+<div class="section" id="joining-curve-segments">
+<h2>Joining Curve Segments<a class="headerlink" href="#joining-curve-segments" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Make Segment</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">F</span></tt></div>
+</div>
+</div>
+<p>Two open curves can be combined into one by creating a segment between the two curves.
+To join two separated curves,
+select one end control point from each curve then press <tt class="kbd docutils literal"><span class="pre">F</span></tt>.
+The two curves are joined by a segment to become a single curve.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Editing_Curves_two-curves-joined.jpg"><img alt="../../../_images/Editing_Curves_two-curves-joined.jpg" src="../../../_images/Editing_Curves_two-curves-joined.jpg" style="width: 600px;" /></a>
+<p class="caption">Curves before and after joining</p>
+</div>
+<p>Additionally, you can close a curve by joining the endpoints but note that you can only join
+curves of the same type (i.e. Bézier with Bézier, NURBS with NURBS)</p>
+</div>
+<div class="section" id="separating-curves">
+<h2>Separating Curves<a class="headerlink" href="#separating-curves" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Separate</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">P</span></tt></div>
+</div>
+</div>
+<p>Curve objects that are made of multiple distinct curves can be separated into their own
+objects by selecting the desired segments and pressing <tt class="kbd docutils literal"><span class="pre">P</span></tt>. Note,
+if there is only one curve in a Curve object,
+pressing <tt class="kbd docutils literal"><span class="pre">P</span></tt> will create a new Curve object with no control points.</p>
+</div>
+<div class="section" id="deleting-elements">
+<h2>Deleting Elements<a class="headerlink" href="#deleting-elements" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Delete...</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">X</span></tt> or <tt class="kbd docutils literal"><span class="pre">Delete</span></tt></div>
+</div>
+</div>
+<p>The <em>Erase</em> pop-up menu of curves offers you three options:</p>
+<dl class="docutils">
+<dt>Selected</dt>
+<dd>This will delete the selected control points, <em>without</em> breaking the curve (i.e.
+the adjacent points will be directly linked, joined, once the intermediary ones are deleted).
+Remember that NURBS order cannot be higher than its number of control points,
+so it might decrease when you delete some control point.
+Of course, when only one point remains, there is no more visible curve,
+and when all points are deleted, the curve itself is deleted.</dd>
+<dt>Segment</dt>
+<dd>This option is somewhat the opposite to the preceding one, as it will cut the curve,
+without removing any control points, by erasing one selected segment.
+This option always removes <em>only one segment</em> (the last &#8220;selected&#8221; one),
+even when several are in the selection.
+So to delete all segments in your selection, you&#8217;ll have to repetitively use the same erase option...</dd>
+<dt>All</dt>
+<dd>As with meshes, this deletes everything in the object!</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Editing_Curves_delete-selected.jpg"><img alt="../../../_images/Editing_Curves_delete-selected.jpg" src="../../../_images/Editing_Curves_delete-selected.jpg" style="width: 300px;" /></a>
+<p class="caption">Deleting Curve Selected</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Editing_Curves_delete-segment.jpg"><img alt="../../../_images/Editing_Curves_delete-segment.jpg" src="../../../_images/Editing_Curves_delete-segment.jpg" style="width: 300px;" /></a>
+<p class="caption">Deleting Curve segments</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="opening-and-closing-a-curve">
+<h2>Opening and Closing a Curve<a class="headerlink" href="#opening-and-closing-a-curve" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Toggle Cyclic</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt></div>
+</div>
+</div>
+<p>This toggles between an open curve and closed curve (Cyclic).
+Only curves with at least one selected control point will be closed/open.
+The shape of the closing segment is based on the start and end handles for Bézier curves,
+and as usual on adjacent control points for NURBS.
+The only time a handle is adjusted after closing is if the handle is an <em>Auto</em> one.
+(<em>Open curve</em>) and (<em>Closed curve</em>) is the same Bézier curve open and closed.</p>
+<p>This action only works on the original starting control-point or the last control-point added.
+Deleting a segment(s) doesn&#8217;t change how the action applies;
+it still operates only on the starting and last control-points. This means that
+<tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt> may actually join two curves instead of closing a single curve! Remember
+that when a 2D curve is closed, it creates a renderable flat face.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Editing_Curves_open-closed-cyclic.jpg"><img alt="../../../_images/Editing_Curves_open-closed-cyclic.jpg" src="../../../_images/Editing_Curves_open-closed-cyclic.jpg" style="width: 400px;" /></a>
+<p class="caption">Open and Closed curves.</p>
+</div>
+</div>
+<div class="section" id="switch-direction">
+<h2>Switch Direction<a class="headerlink" href="#switch-direction" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ Segments ‣ Switch Direction</em>,
+<em class="menuselection">Specials ‣ Switch Direction</em></div>
+<div class="line">Hotkey:   <em class="menuselection">[W] ‣ [pad2]</em></div>
+</div>
+</div>
+<p>This command will &#8220;reverse&#8221; the direction of any curve with at least one selected element (i.
+e. the start point will become the end one, and <em>vice versa</em>).
+This is mainly useful when using a curve as path, or using the bevel and taper options.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="converting-tools">
+<h2>Converting Tools<a class="headerlink" href="#converting-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="converting-curve-type">
+<h3>Converting Curve Type<a class="headerlink" href="#converting-curve-type" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Panel:    Curve Tools &#8211;&gt; Set Spline type</div>
+</div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Editing_Curves_set-spline-type.jpg"><img alt="../../../_images/Editing_Curves_set-spline-type.jpg" src="../../../_images/Editing_Curves_set-spline-type.jpg" style="width: 150px;" /></a>
+<p class="caption">Set Spline Type button</p>
+</div>
+<p>You can convert splines in a curve object between Bézier, NURBS, and Poly curves.
+Press <tt class="kbd docutils literal"><span class="pre">T</span></tt> to bring up the Toolshelf.
+Clicking on the <em>Set Spline Type</em> button will allow you to select the Spline type
+(Poly, Bézier or NURBS).</p>
+<p>Note, this is not a &#8220;smart&#8221; conversion, i.e. Blender does not try to keep the same shape,
+nor the same number of control points. For example, when converting a NURBS to a Bézier,
+each group of three NURBS control points become a unique Bézier one
+(center point and two handles).</p>
+</div>
+<div class="section" id="convert-curve-to-mesh">
+<h3>Convert Curve to Mesh<a class="headerlink" href="#convert-curve-to-mesh" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Object ‣ Convert to</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt></div>
+</div>
+</div>
+<p>There is also an &#8220;external&#8221; conversion, from curve to mesh,
+that only works in <em>Object</em> mode.
+It transforms a <em>Curve</em> object in a <em>Mesh</em> one,
+using the curve resolution to create edges and vertices.
+Note that it also keeps the faces and volumes created by closed and extruded curves.</p>
+</div>
+<div class="section" id="convert-mesh-to-curve">
+<h3>Convert Mesh to Curve<a class="headerlink" href="#convert-mesh-to-curve" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Object</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Object ‣ Convert to</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Alt-C</span></tt></div>
+</div>
+</div>
+<p>Mesh objects that consist of a series of connected vertices can be converted into curve
+objects. The resulting curve will be a Poly curve type,
+but can be converted to have smooth segments as described above.</p>
+</div>
+</div>
+<div class="section" id="curve-parenting">
+<h2>Curve Parenting<a class="headerlink" href="#curve-parenting" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-P</span></tt></div>
+</div>
+</div>
+<p>You can make other selected objects
+<tt class="xref doc docutils literal"><span class="pre">children</span></tt> of one or three control points
+<tt class="kbd docutils literal"><span class="pre">Ctrl-P</span></tt>, as with mesh objects.</p>
+<p>Select either 1 or 3 control points,
+then <tt class="kbd docutils literal"><span class="pre">Ctrl-RMB</span></tt> another object and use <tt class="kbd docutils literal"><span class="pre">Ctrl-P</span></tt> to make a vertex parent.</p>
+</div>
+<div class="section" id="hooks">
+<h2>Hooks<a class="headerlink" href="#hooks" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">Curve ‣ control points ‣ hooks</em></div>
+<div class="line">Hotkey:   <tt class="kbd docutils literal"><span class="pre">Ctrl-H</span></tt></div>
+</div>
+</div>
+<p><a class="reference internal" href="../../../modifiers/deform/hooks.html"><em>Hooks</em></a> can be added to control one or more points with other objects.</p>
+</div>
+<div class="section" id="set-goal-weight">
+<h2>Set Goal Weight<a class="headerlink" href="#set-goal-weight" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit</em> mode</div>
+<div class="line">Menu:     <em class="menuselection">W ‣ Set Goal Weight</em></div>
+</div>
+</div>
+<dl class="docutils">
+<dt>Set Goal Weight</dt>
+<dd>This sets the &#8220;goal weight&#8221; of selected control points, which is used when a curve has Soft
+Body physics, forcing the curve to &#8220;stick&#8221; to their original positions, based on the weight.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advanced.html" class="btn btn-neutral float-right" title="Advanced"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Editing"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

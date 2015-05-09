@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Screw Tool &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Duplicating" href="index.html"/>
+        <link rel="next" title="Subdividing" href="../subdividing/index.html"/>
+        <link rel="prev" title="Spin" href="spin.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Modeling</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../objects/index.html">Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Modeling</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Meshes</a> &raquo;</li>
+      
+          <li><a href="../index.html">Editing</a> &raquo;</li>
+      
+          <li><a href="index.html">Duplicating</a> &raquo;</li>
+      
+    <li>Screw Tool</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/modeling/meshes/editing/duplicating/screw.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="screw-tool">
+<h1>Screw Tool<a class="headerlink" href="#screw-tool" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     <em>Edit Mode</em></div>
+<div class="line">Panel:    <em>Edit Mode</em> &#8211;&gt; <em>Mesh Tools</em> (shortcut <tt class="kbd docutils literal"><span class="pre">T</span></tt>) &#8211;&gt; Add &#8211;&gt; Screw Button</div>
+</div>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Screw</em> Tool is an effective way to revolve a profile,
+giving similar results to what you would expect from a lathe,
+with the option to offset the operation to give a screw effect.</p>
+<p>You can see some examples of Meshes generated with the <em>Screw</em> tool in Fig.
+1 - Wood Screw tip done with the screw tool and Fig. 2 - Spring done with the screw tool.</p>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Example_Shell)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Example_Shell)_(GBAFN).jpg" />
+<p class="caption">Fig. 1 - Wood Screw tip done with the screw tool</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Example_Spring)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Example_Spring)_(GBAFN).jpg" />
+<p class="caption">Fig. 2- Spring done with the screw tool</p>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Screw</em> tool combines a repetitive <em>Spin</em> with a translation,
+to generate a screw-like, or spiral-shaped, object. Use this tool to create screws, springs,
+or shell-shaped structures (Sea shells, Wood Screw Tips, Special profiles, etc).</p>
+<p>The main difference between the Screw Tool and the <a class="reference internal" href="../../../../modifiers/generate/screw.html"><em>Screw Modifier</em></a> is that the
+Screw Tool can calculate the angular progressions using the basic profile angle automatically or adjusting the Axis
+angular vector without using a second modifier (for example, using the Screw Modifier with a Bevel Modifier,
+Curve Modifier, etc...), resulting in a much cleaner approach for vertex distribution and usage.</p>
+<p>This tool works using open or closed profiles, as well as profiles closed with faces.
+You can use profiles like an open-edge part that is a part of a complete piece,
+as well as a closed circle or a half-cut sphere, which will also close the profile end.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>This tool works only with Meshes.</li>
+<li>In <em>Edit Mode</em>, the button for the <em>Screw</em> tool operation is located in the <em>Mesh Tools</em> Panel,
+(shortcut <tt class="kbd docutils literal"><span class="pre">T</span></tt>) &#8211;&gt; Add &#8211;&gt; Screw Button.</li>
+<li>To use this tool, you need to create at least one open profile or line to be used as a vector for the height,
+angular vector and to give Blender a direction.</li>
+<li>The <em>Screw</em> function uses two points given by the open line to create an initial vector to calculate the height
+and basic angle of the translation vector that is added to the &#8220;Spin&#8221; for each full rotation (see examples below).
+If the vector is created with only two vertices at the same <strong>X</strong>, <strong>Y</strong> and <strong>Z</strong> location
+(which won&#8217;t give Blender a vector value for height), this will create a normal &#8220;Spin&#8221;.</li>
+<li>Having at least one vector line,
+you can add other closed support profiles that will follow this vector during the extrusions (See limitations).</li>
+<li>The direction of the extrusions is calculated by two determinant factors,
+your point of view in Global Space and the position of your cursor in the 3DView Space using Global coordinates.</li>
+<li>The profile and the vector must be fully selected in <em>Edit Mode</em> before you click the <em>Screw Button</em>
+(See Limitations.)</li>
+<li>When you have the vector for the open profile and the other closed profiles selected, click the <em>Screw</em> Button.</li>
+</ul>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>There are strict conditions about your profile selection when you want to use this tool.
+You must have at least one open line or open profile,
+giving Blender the starting Vector for extrusion, angular vector and height. (e.g.
+a simple edge, a half circle, etc...).
+You need only to ensure that at least one reference line has two &#8220;free&#8221; ends.
+If two open Lines are given, Blender won&#8217;t determine which of them is the vector,
+and will then show you an error message,
+<em>&#8220;You have to select a string of connected vertices too&#8221;</em>.
+You need to select all of the profile vertices that will participate in the <em>Screw</em>
+Tool operation; if they are not properly selected,
+Blender will also show you the same message.</p>
+<p>Note that the open line is always extruded, so if you only use it to &#8220;guide&#8221; the screw,
+you will have to delete it after the tool completion (use linked-selection,
+<tt class="kbd docutils literal"><span class="pre">Ctrl-L</span></tt>, to select the whole extrusion of the open line).</p>
+<p>If there is any problem with the selection or profiles,
+the tool will warn you with the error message:
+<em>&#8220;You have to select a string of connected vertices too&#8221;</em> as seen in Fig. 3 and 4,
+both in the info Window and at the place where you clicked to start performing the operation
+(when you click the Screw Button).</p>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Error_Message_Info_Window)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Error_Message_Info_Window)_(GBAFN).jpg" />
+<p class="caption">Fig. 3 - Screw Error message in the Header of the Info Window</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Error_Message_Screw_Tool)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Error_Message_Screw_Tool)_(GBAFN).jpg" />
+<p class="caption">Fig. 4 - Error message when clicking in the Screw Tool with an incorrect or bad selection</p>
+</div>
+<p>You may have as many profiles as you like (like circles, squares, and so on)
+- Note that not all vertices in a profile need to be in the same plane,
+even if this is the most common case. You may also have other, more complex,
+selected closed islands, but they have to be closed profiles because Blender will seek for
+only one open profile for the translation, height and angular vector.
+Some closed meshes that overlap themselves may not screw correctly (for example:
+Half UVsphere = OK,
+more than half = could cause the Screw Tool to have wrong behavior or errors),
+and profiles that are closed with faces (like a cone or half sphere)
+will be closed automatically at their ends, like if you were extruding a region.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>Simple way to not result in error</p>
+<p class="last">Only one open Profile, all of the others can be closed, avoid volumes and some profiles closed with faces...</p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Mesh_Tools_Panel_Screw_Tool)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Mesh_Tools_Panel_Screw_Tool)_(GBAFN).jpg" />
+<p class="caption">Fig. 5 - Screw Tool in the Mesh Tools Panel (Edit Mode)</p>
+</div>
+<p>This tool is an interactive and modal tool, and only works in the <em>Edit Mode</em>.</p>
+<p>Once you click in the <em>Screw</em> tool in the Mesh Tools Panel,
+Blender will enter in the <em>Screw</em> interactive mode, and the Operator Panel at the
+end of the Mesh Tools Panel will be replaced so you can adjust the values explained below.
+To show the Mesh Tools Panel,
+use the shortcut <tt class="kbd docutils literal"><span class="pre">T</span></tt> in the Edit Mode of the 3D View Window.</p>
+<p>(See Fig. 5 - Screw Tool in the Mesh Tools Panel (Edit Mode), red box)</p>
+<p>Once you perform any other operation,
+Blender leaves the interactive mode and accepts all of the values. Because it&#8217;s modal, you
+can&#8217;t return to the interactive mode after completing/leaving the operation or changing from
+<em>Edit Mode</em> to <em>Object Mode</em>.
+If you want to restart the operation from its beginning,
+you can hit <tt class="kbd docutils literal"><span class="pre">Ctrl-Z</span></tt> at any time in <em>Edit Mode</em>.</p>
+<ul class="simple">
+<li>The basic location of the cursor at the point of view (using Global coordinates)
+will determine around which axis the selection is extruded and spun at first
+(See Fig. 6 - Cursor Basic Location - Transform Panel).
+Blender will copy your cursor location coordinates to the
+values present in the <em>Center</em> values of the <em>Screw</em> interactive Panel.
+Depending on the Global View position, Blender will automatically add a value of <strong>1</strong> to one of the Axis Vectors,
+giving the profiles a starting direction for the Screw Operation and also giving a direction for the extrusions.
+(See examples below.)</li>
+<li>The position of the 3D cursor will be the starting center of the rotation.
+Subsequent operations (e.g. pressing the Screw button again), will start from the last selected element.
+Continuous operations without changing the selection will repeat the operation continuously from the last point.</li>
+</ul>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Cursor_Basic_Location)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Cursor_Basic_Location)_(GBAFN).jpg" />
+<p class="caption">Fig. 6 - Cursor Basic Location - Transform Panel</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Interactive_Panel)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Interactive_Panel)_(GBAFN).jpg" />
+<p class="caption">Fig. 7 - Screw Interactive Panel - Mesh Tools Panel (Edit Mode)</p>
+</div>
+<dl class="docutils">
+<dt>Center</dt>
+<dd>These numeric fields specify the center of the spin. When the tool is called for the first time,
+it will copy the <tt class="docutils literal"><span class="pre">X</span></tt>, <tt class="docutils literal"><span class="pre">Y</span></tt> and <tt class="docutils literal"><span class="pre">Z</span></tt> location (Global Coordinates)
+of the cursor presently in the 3D View to start the operation.
+You can specify the cursor coordinates using the Transform Panel in 3D View,
+using shortcut <tt class="kbd docutils literal"><span class="pre">T</span></tt> to toggle the Panel, and typing in the 3D Cursor Location coordinates.
+You can adjust these coordinates interactively and
+specify another place for the spin center during the interactive session.
+(See Fig. 7 - Screw Interactive Panel - Mesh Tools Panel (Edit Mode))</dd>
+<dt>Steps</dt>
+<dd>This numeric field specifies how many extrusion(s) will be done for each <tt class="docutils literal"><span class="pre">360</span></tt> turn.
+The steps are evenly distributed by dividing <tt class="docutils literal"><span class="pre">360</span></tt> by the number of steps given. The minimum value is <tt class="docutils literal"><span class="pre">3</span></tt>;
+the maximum is <tt class="docutils literal"><span class="pre">256</span></tt> (See Fig. 7)</dd>
+<dt>Turns:</dt>
+<dd>This numeric field specifies how many turns will be executed.
+Blender will add a new full <tt class="docutils literal"><span class="pre">360</span></tt> turn for each incremental number specified here.
+The minimum value is <tt class="docutils literal"><span class="pre">1</span></tt>; the maximum is <tt class="docutils literal"><span class="pre">256</span></tt>. (See Fig. 7)</dd>
+<dt>Axis</dt>
+<dd>These <tt class="docutils literal"><span class="pre">3</span></tt> numeric fields vary from <tt class="docutils literal"><span class="pre">-1.0</span></tt> to <tt class="docutils literal"><span class="pre">1.0</span></tt> and are clamped above those limits.
+These values correspond to angular vectors from <tt class="docutils literal"><span class="pre">-90</span></tt> to <tt class="docutils literal"><span class="pre">90</span></tt> degrees. Depending on the position where you
+started your cursor location and Object operation in the viewport and its axis positions in Global View space and
+coordinates, Blender will give the proper Axis vector a value of <tt class="docutils literal"><span class="pre">1</span></tt>, giving the angular vector of the profile
+a starting direction and giving the extrusions a starting direction based on your view. Blender will let you
+adjust your axis angular vectors and you can tweak your object such that you can revert the direction of the screw
+operation (by reverting the angular vector of the height),
+meaning you can revert the clockwise and counterclockwise direction of some operations,
+and also adjust the angular vectors of your profile, bending it accordingly. (See Fig. 7)</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-spring-example">
+<h3>The Spring example<a class="headerlink" href="#the-spring-example" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Circle_Moved_X_-3BU)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Circle_Moved_X_-3BU)_(GBAFN).jpg" />
+<p class="caption">Fig. 8 - Circle placed at X -3,0,0</p>
+</div>
+<ul class="simple">
+<li>Open Blender and delete the default Cube.</li>
+<li>Change from perspective to orthographic view using shortcut <tt class="kbd docutils literal"><span class="pre">Numpad5</span></tt>.</li>
+<li>Change your view from <em>User Ortho</em> to <em>Front Ortho</em>, using the shortcut <tt class="kbd docutils literal"><span class="pre">Numpad1</span></tt>.
+You will see the X (red) and Z (blue) coordinate lines.</li>
+<li>In case you have moved your cursor by clicking anywhere in the screen, again place your cursor at the Center,
+using the shortcut <tt class="kbd docutils literal"><span class="pre">Shift-S</span></tt> choosing <em>Cursor to Center</em> or the Transform Panel,
+placing your cursor at <tt class="docutils literal"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></tt> typing directly into the Cursor 3D Location.</li>
+<li>Add a circle using shortcut <tt class="kbd docutils literal"><span class="pre">Shift-A</span></tt> and choosing &#8211;&gt; Mesh &#8211;&gt; Circle.</li>
+<li>Rotate this circle using the shortcut <tt class="kbd docutils literal"><span class="pre">R-X</span></tt> and typing <tt class="docutils literal"><span class="pre">90</span></tt> and <tt class="kbd docutils literal"><span class="pre">Return</span></tt>.</li>
+<li>Apply the Rotation using <tt class="kbd docutils literal"><span class="pre">Ctrl-A</span></tt> and choosing <em>Rotation</em></li>
+<li>Grab and move this circle to the left <tt class="docutils literal"><span class="pre">3</span></tt> Blender Units on the <tt class="docutils literal"><span class="pre">X</span></tt> Axis;
+you can use the shortcut <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> while grabbing with the mouse using the standard transform widgets
+(clicking on the red arrow shown with the object and grabbing while using shortcut
+<tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> until the down left info in the 3D View marks <tt class="docutils literal"><span class="pre">D.</span> <span class="pre">-3.0000</span> <span class="pre">(3.0000)</span> <span class="pre">Global</span></tt> ),
+or press the shortcut <tt class="kbd docutils literal"><span class="pre">G-X</span></tt> and typing <tt class="docutils literal"><span class="pre">-3</span></tt> and <tt class="kbd docutils literal"><span class="pre">Return</span></tt>.
+You can use the Transform Panel (toggled with the shortcut <tt class="kbd docutils literal"><span class="pre">T</span></tt> ,
+and type <tt class="docutils literal"><span class="pre">-3</span></tt> and <tt class="kbd docutils literal"><span class="pre">Return</span></tt> in the Location too.
+(See the Fig. 8 - Circle placed at X -3,0,0).</li>
+<li>You will have to scale your circle using the shortcut <tt class="kbd docutils literal"><span class="pre">S</span></tt> and typing <strong>.5</strong>, then <tt class="kbd docutils literal"><span class="pre">Return</span></tt>.</li>
+<li>Now enter <em>Edit Mode</em> using shortcut <tt class="kbd docutils literal"><span class="pre">Tab</span></tt>.</li>
+<li>De-select all vertices using the shortcut <tt class="kbd docutils literal"><span class="pre">A</span></tt>.</li>
+</ul>
+<p>Now we will create a height vector for Blender:</p>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Spring_Profile_Ready)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Spring_Profile_Ready)_(GBAFN).jpg" />
+<p class="caption">Fig. 9 - Profile and vector created</p>
+</div>
+<ul class="simple">
+<li>Press <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> and Left click <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> near the circle,
+in more or less at the light grey line of the square above the circle,
+and, while still pressing <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt>, Left Click <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> again in the grey line below the circle.
+You have created two vertices and an Edge, which Blender will use as the first height and angle vector.</li>
+<li>Now, in the Transform Panel, in the median, clicking in the Global coordinates,
+for the <strong>X</strong>, <strong>Y</strong>, and <strong>Z</strong> coordinates, put <strong>(-2, 0, -1)</strong>.</li>
+<li>Right Click <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> in the other vertex,
+and again, type its coordinates for <strong>X</strong>, <strong>Y</strong> and <strong>Z</strong> to <strong>(-2, 0, 1)</strong>.
+This will create a straight vertical line with 2 Blender units of Height.</li>
+<li>De-select and select everything again with the shortcut <tt class="kbd docutils literal"><span class="pre">A</span></tt>.
+(See Fig. 9 - Profile and vector created)</li>
+<li>Place again your cursor at the center. (Repeat step 2)</li>
+<li>At this point, we will save this Blender file to recycle the
+Spring for another exercise; click with <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> in <em>File</em>,
+it is placed at the header of the Info Window, (At the top left side), and choose <em>Save as</em>.
+Our suggestion is to name it <em>Screw Spring Example.blend</em> and click in <em>Save as Blender file</em>.
+You can also use the shortcut <tt class="kbd docutils literal"><span class="pre">Shift-Ctrl-S</span></tt>
+to open the File Browser Window in order to save your Blender file.</li>
+<li>Click Screw and adjust the Steps and Turns as you like and we have a nice spring,
+but now here comes the interesting part!</li>
+</ul>
+</div>
+<div class="section" id="clockwise-and-counterclockwise-using-the-spring-example">
+<h3>Clockwise and Counterclockwise using the Spring Example<a class="headerlink" href="#clockwise-and-counterclockwise-using-the-spring-example" title="Permalink to this headline">¶</a></h3>
+<p>Still in the interactive session of the <em>Screw Tool</em>,
+you will see that the <strong>Z</strong> Axis Value of the <em>Screw</em> Panel is set to <strong>1.000</strong>.
+Left click <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> in the middle of the Value and set this value to <strong>-1.000</strong>.
+At first, the Spring was being constructed in a Counterclockwise direction,
+and you reverted the operation <strong>180</strong> degrees in the <strong>Z</strong> Axis. This is because you have
+changed the angular vector of the height you have given to Blender to the opposite direction
+(remember, <strong>-90</strong> to <strong>90</strong> = <strong>180</strong> degrees ?). See Fig.
+10 - Counterclockwise direction and Fig. 11 - Flipped to Clockwise direction.</p>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Spring_Counterclockwise)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Spring_Counterclockwise)_(GBAFN).jpg" />
+<p class="caption">Fig. 10 - Counterclockwise direction</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Spring_Clockwise)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Spring_Clockwise)_(GBAFN).jpg" />
+<p class="caption">Fig. 11 - Flipped to Clockwise direction.</p>
+</div>
+<p>It&#8217;s also important to note that this vector is related to the same height vector axis used
+for the extrusion and we have created a parallel line with the <strong>Z</strong> Axis, so, the
+sensibility of this vector is in practical sense reactive only to negative and positive values
+because it&#8217;s aligned with the extrusion axis. Blender will clamp the positive and negative to
+its maximum values to make the extrusion follow a direction,
+even if the profile starts reverted. The same rule applies to other Global axes when creating
+the Object for the <em>Screw</em> Tool;
+this means if you create your Object using the Top View
+(Shortcut <tt class="kbd docutils literal"><span class="pre">Numpad7</span></tt> with a straight parallel line following another axis
+(for the Top View, the <strong>Y Axis</strong>), the vector that gives the height for extrusion will also
+change abruptly from negative to positive and vice versa to give the extrusion a direction,
+and you will have to tweak the corresponding Axis accordingly to achieve the Clockwise and
+Counterclockwise effect.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Vectors that aren&#8217;t parallel with Blender Axis</p>
+<p class="last">The high sensibility for the vector doesn&#8217;t apply to vectors that give the Screw Tool a starting angle (Ex:
+any non-parallel vector),
+meaning Blender won&#8217;t need to clamp the values to stabilize a direction for the extrusion, as the inclination of
+the vector will be clear for Blender and you will have the full degree of freedom to change the vectors. Our
+example is important because it only changes the direction of the profile without the tilt and/or bending effect,
+as there is only one direction for the extrusion, parallel to one of the Blender Axes</p>
+</div>
+</div>
+<div class="section" id="bending-the-profiles-using-the-spring-example">
+<h3>Bending the Profiles using the Spring Example<a class="headerlink" href="#bending-the-profiles-using-the-spring-example" title="Permalink to this headline">¶</a></h3>
+<p>Still using the Spring Example, we can change the remaining vector for the angles that aren&#8217;t
+related to the extrusion Axis of our Spring, thus bending our spring with the remaining
+vectors and creating a profile that will also open and/or close because of the change in
+starting angular vector values. What we are really doing is changing the starting angle of the
+profile prior to the extrusions. It means that Blender will connect each of the circles
+inclined with the vector you have given.
+Below we show two bent Meshes using the Axis vectors and the Spring example. See Fig.
+12 and Fig. 13. These two Meshes generated with the <em>Screw</em> tool were created using
+the Top Ortho View.</p>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Angular_Vector_Example_1)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Angular_Vector_Example_1)_(GBAFN).jpg" />
+<p class="caption">Fig. 12 - Bended Mesh, Example 1 - The Axis will give the profile a starting vector angle</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Angular_Vector_Example_2)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Angular_Vector_Example_2)_(GBAFN).jpg" />
+<p class="caption">Fig. 13 - Bended Mesh Example 2 - The vector angle is maintained along the extrusions</p>
+</div>
+</div>
+<div class="section" id="creating-perfect-screw-spindles">
+<h3>Creating perfect Screw Spindles<a class="headerlink" href="#creating-perfect-screw-spindles" title="Permalink to this headline">¶</a></h3>
+<p>Using the Spring Example, it&#8217;s easy to create perfect Screw Spindles
+(like the ones present in normal screws that we can buy in hardware stores).
+Perfect Screw Spindles use a profile with the same height as its vector, and the beginning and
+ending vertex of the profile are placed at a straight parallel line with the axis of
+extrusion. The easiest way of achieving this effect is to create a simple profile where the
+beginning and ending vertices create a straight parallel line. Blender won&#8217;t take into account
+any of the vertices present in the middle but those two to take its angular vector,
+so the spindles of the screw (which are defined by the turns value)
+will assembly perfectly with each other.</p>
+<ul class="simple">
+<li>Open Blender and click in <em>File</em> located at the header of the Info Window again,
+choose <em>Open Recent</em> and the file we saved for this exercise.
+All of the things will be placed exactly the way you saved before.
+Choose the last saved Blender file; in the last exercise,
+we gave it the name <em>Screw Spring Example.blend</em>.</li>
+<li>Press the shortcut <tt class="kbd docutils literal"><span class="pre">A</span></tt> to de-select all vertices.</li>
+<li>Press the shortcut <tt class="kbd docutils literal"><span class="pre">B</span></tt>, and Blender will change the cursor; you&#8217;re now in border selection mode.</li>
+<li>Open a box that selects all of the circle vertices except the
+two vertices we used to create the height of the extrusions in the last example.</li>
+<li>Use the shortcut <tt class="kbd docutils literal"><span class="pre">X</span></tt> to delete them.</li>
+<li>Press the shortcut <tt class="kbd docutils literal"><span class="pre">A</span></tt> to select the remaining vertices.</li>
+<li>Press the shortcut <tt class="kbd docutils literal"><span class="pre">W</span></tt> for the <em>Specials Menu</em>, and select <em>Subdivide</em></li>
+<li>Now, click with the Right Mouse button at the middle vertex.</li>
+<li>Grab this vertex using the shortcut <tt class="kbd docutils literal"><span class="pre">G-X</span></tt>, type <strong>-1</strong> and <tt class="kbd docutils literal"><span class="pre">Return</span></tt>.
+See Fig. 14 - Profile for a perfect screw spindle.</li>
+<li>At this point, we will save this Blender file to recycle the generated Screw for another exercise;
+click with <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> in <em>File</em> &#8211;
+it is in the header of the Info Window (at the top left side), and choose <em>Save as</em>.
+Our suggestion is to name it <em>Screw Hardware Example.blend</em> and click in <em>Save as Blender file</em>.
+You can also use the shortcut <tt class="kbd docutils literal"><span class="pre">Shift-Ctrl-S</span></tt> to open the
+File Browser Window in order to save your Blender file.</li>
+<li>Press shortcut <tt class="kbd docutils literal"><span class="pre">A</span></tt> twice to de-select and select all vertices again.</li>
+<li>Now press Screw.</li>
+<li>Change Steps and Turns as you like. Fig. 15 - Generated Mesh - Shows you an example of the results.</li>
+</ul>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Perfect_Spindle_Profile)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Perfect_Spindle_Profile)_(GBAFN).jpg" />
+<p class="caption">Fig. 14 - Profile for a perfect screw spindle.
+The starting and ending vertices are forming a parallel line with the Blender Axis</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Generated_Perfect_Spindle)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Screw_Generated_Perfect_Spindle)_(GBAFN).jpg" />
+<p class="caption">Fig. 15 - Generated Mesh. You can use this technique to perform normal screw modeling.</p>
+</div>
+<p>Here, in Fig. 16 and Fig. 17, we show you an example using a different profile,
+but maintaining the beginning and ending vertices at the same position.
+The generated mesh looks like a medieval ramp!</p>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Ramp_Like_Profile)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Ramp_Like_Profile)_(GBAFN).jpg" />
+<p class="caption">Fig. 16 - Profile with starting and ending vertices forming a parallel line with the Blender Axis</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Ramp_Like_Generated)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Ramp_Like_Generated)_(GBAFN).jpg" />
+<p class="caption">Fig. 17 - Generated Mesh with the profile at the left. We have inclined the visualization a bit.</p>
+</div>
+<p>As you can see, the Screw spindles are perfectly assembled with each other,
+and they follow a straight line from top to bottom.
+You can also change the Clockwise and Counterclockwise direction using this example,
+to create right and left screw spindles. At this point,
+you can give the screw another dimension, changing the Center of the Spin Extrusion, making it
+more suitable to your needs or calculating a perfect screw and merging its vertices with a
+cylinder, modeling its head, etc.</p>
+</div>
+<div class="section" id="a-screw-tip">
+<h3>A Screw Tip<a class="headerlink" href="#a-screw-tip" title="Permalink to this headline">¶</a></h3>
+<p>As we have explained before,
+the <em>Screw</em> tool generates clean and simple meshes to deal with; they are light,
+well-connected and are created with very predictable results.
+This is due to the Blender calculations taking into account not only the height of the vector,
+but also its starting angle. It means that Blender will connect the vertices with each other
+in a way that they follow a continuous cycle along the extruded generated profile.</p>
+<p>In this example, you will learn how to create a simple Screw Tip
+(like the ones we use for wood; we have shown an example at the beginning of this page).
+To make this new example as short as possible, we will recycle our last example (again).</p>
+<ul class="simple">
+<li>Open Blender and click in <em>File</em> located in the header of the Info Window again;
+choose <em>Open Recent</em> and the file we saved for this exercise.
+All of the things will be placed exactly the way you saved before.
+Choose the last saved Blender file; in the last exercise, we gave it the name <em>Screw Hardware Example.blend</em>.</li>
+<li>Grab the upper vertex and move a bit to the left, but no more than you have moved your last vertex.
+(See Fig. 18 - Profile With Starting Vector Angle)</li>
+<li>Press the shortcut <tt class="kbd docutils literal"><span class="pre">A</span></tt> twice to de-select and select all.</li>
+<li>Press the shortcut <tt class="kbd docutils literal"><span class="pre">Shift-S</span></tt> and select <em>Cursor to Center</em></li>
+<li>Press Screw.</li>
+</ul>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Profile_With_Vector_Angle)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Profile_With_Vector_Angle)_(GBAFN).jpg" />
+<p class="caption">Fig. 18 - Profile With Starting Vector Angle</p>
+</div>
+<div class="figure">
+<img alt="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Generated_With_Base_Vector_Angle)_(GBAFN).jpg" src="../../../../_images/(Doc_26x_Modeling_Mesh_Screw)_(Generated_With_Base_Vector_Angle)_(GBAFN).jpg" />
+<p class="caption">Fig. 19 - Generated Mesh with the Profile</p>
+</div>
+<p>As you can see in Fig. 19, Blender follows the basic angular vector of the profile, and the
+profile basic angle determines whether the extruded subsequent configured turns will open or
+close the resulting mesh following this angle. The vector of the extrusion angle is determined
+by the starting and ending Vertex of the profile.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../subdividing/index.html" class="btn btn-neutral float-right" title="Subdividing"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spin.html" class="btn btn-neutral" title="Spin"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

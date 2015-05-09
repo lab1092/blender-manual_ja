@@ -1,0 +1,596 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Integrator &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Render Settings" href="index.html"/>
+        <link rel="next" title="Light Paths" href="light_paths.html"/>
+        <link rel="prev" title="Render Settings" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../index.html">Cycles Render Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Render Settings</a> &raquo;</li>
+      
+    <li>Integrator</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/render/cycles/settings/integrator.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="integrator">
+<h1>Integrator<a class="headerlink" href="#integrator" title="Permalink to this headline">¶</a></h1>
+<p>The integrator is the rendering algorithm used to compute the lighting.
+Cycles currently supports a path tracing integrator with direct light sampling.
+It works well for various lighting setups,
+but is not as suitable for caustics and some other complex lighting situations.</p>
+<p>Rays are traced from the camera into the scene,
+bouncing around until they find a light source such as a lamp, an object emitting light,
+or the world background. To find lamps and surfaces emitting light,
+both indirect light sampling (letting the ray follow the surface BSDF)
+and direct light sampling (picking a light source and tracing a ray towards it) are used.</p>
+<div class="section" id="scene-settings">
+<h2>Scene Settings<a class="headerlink" href="#scene-settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sampling">
+<h3>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h3>
+<p>There are two integrator modes that can be used: path tracing and branched path tracing.
+The <strong>path tracing integrator</strong> is a pure path tracer;
+at each hit it will bounce light in one direction and pick one light to receive lighting from.
+This makes each individual sample faster to compute,
+but will typically require more samples to clean up the noise.</p>
+<dl class="docutils">
+<dt>Render Samples</dt>
+<dd>Number of paths to trace for each pixel in the final render. As more samples are taken,
+the solution becomes less noisy and more accurate.</dd>
+<dt>Preview Samples</dt>
+<dd>Number of samples for viewport rendering.</dd>
+</dl>
+<p>The <strong>branched path tracing integrator</strong> (formerly called non-progressive integrator)
+is similar, but at the first hit it will split the path for different surface components and
+will take all lights into account for shading instead of just one.
+This makes each sample slower, but will reduce noise,
+especially in scenes dominated by direct or one-bounce lighting.
+To get the same number of diffuse samples as in the path tracing integrator, note that e.g.
+250 path tracing samples = 10 AA samples x 25 diffuse samples.
+The Sampling panel shows this total number of samples.</p>
+<dl class="docutils">
+<dt>AA Render Samples</dt>
+<dd>Number of samples to take for each pixel in the final render. More samples will improve antialiasing.</dd>
+<dt>AA Preview Samples</dt>
+<dd>Number of samples for viewport rendering.</dd>
+<dt>Diffuse Samples</dt>
+<dd>Number of diffuse bounce samples to take for each AA sample.</dd>
+<dt>Glossy Samples</dt>
+<dd>Number of glossy bounce samples to take for each AA sample.</dd>
+<dt>Transmission Samples</dt>
+<dd>Number of transmission bounce samples to take for each AA sample.</dd>
+<dt>AO Samples</dt>
+<dd>Number of ambient occlusion samples to take for each AA sample.</dd>
+<dt>Mesh Light Samples</dt>
+<dd>Number of mesh light samples to take for each AA sample.</dd>
+<dt>Subsurface Samples</dt>
+<dd>Number of subsurface scattering samples to take for each AA sample.</dd>
+</dl>
+<p>For both integrators the noise pattern can be controlled.</p>
+<dl class="docutils">
+<dt>Seed</dt>
+<dd>Random number generator seed; each different value gives a different noise pattern.</dd>
+</dl>
+</div>
+<div class="section" id="bounces">
+<h3>Bounces<a class="headerlink" href="#bounces" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Max Bounces</dt>
+<dd>Maximum number of light bounces. For best quality, this should be set to the maximum. However, in practice,
+it may be good to set it to lower values for faster rendering.
+Setting it to maximum 1 bounce results in direct lighting.</dd>
+<dt>Min Bounces</dt>
+<dd>Minimum number of light bounces for each path,
+after which the integrator uses Russian Roulette to terminate paths that contribute less to the image.
+Setting this higher gives less noise, but may also increase render time considerably. For a low number of bounces,
+it&#8217;s strongly recommended to set this equal to the maximum number of bounces.</dd>
+<dt>Diffuse Bounces</dt>
+<dd>Maximum number of diffuse bounces.</dd>
+<dt>Glossy Bounces</dt>
+<dd>Maximum number of glossy bounces.</dd>
+<dt>Transmission Bounces</dt>
+<dd>Maximum number of transmission bounces.</dd>
+</dl>
+</div>
+<div class="section" id="transparency">
+<h3>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Transparency Max</dt>
+<dd>Maximum number of transparency bounces.</dd>
+<dt>Transparency Min</dt>
+<dd>Minimum number of transparency bounces, after which Russian Roulette termination is used.</dd>
+<dt>Transparent Shadows</dt>
+<dd>For direct light sampling,
+use transparency of surfaces in between to produce shadows affected by transparency of those surfaces.</dd>
+</dl>
+</div>
+<div class="section" id="tricks">
+<h3>Tricks<a class="headerlink" href="#tricks" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils" id="render-cycles-integrator-no-caustics">
+<dt>No Caustics</dt>
+<dd>While in principle path tracing supports rendering of caustics with a sufficient number of samples,
+in practice it may be inefficient to the point that there is just too much noise.
+This option makes it possible to disable them entirely.</dd>
+</dl>
+<dl class="docutils" id="render-cycles-integrator-filter-glossy">
+<dt>Filter Glossy</dt>
+<dd><p class="first">When using a value higher than 0.0, this will blur glossy reflections after blurry bounces,
+to reduce noise at the cost of accuracy. 1.0 is a good starting value to tweak.</p>
+<p>Some light paths have a low probability of being found while contributing much light to the pixel.
+As a result these light paths will be found in some pixels and not in others, causing fireflies. An example of
+such a difficult path might be a small light that is causing a small specular highlight on a sharp glossy
+material, which we are seeing through a rough glossy material.
+In fact in such a case we practically have a caustic.</p>
+<p class="last">With path tracing it is difficult to find the specular highlight,
+but if we increase the roughness on the material, the highlight gets bigger and softer, and so easier to find.
+Often this blurring will hardly be noticeable, because we are seeing it through a blurry material anyway,
+but there are also cases where this will lead to a loss of detail in lighting.</p>
+</dd>
+</dl>
+<dl class="docutils" id="render-cycles-integrator-clamp-samples">
+<dt>Clamp Samples</dt>
+<dd><p class="first">This option will clamp all samples to a maximum intensity they can contribute to the pixel,
+again to reduce noise at the cost of accuracy. With value 0.0 this option is disabled;
+lower values clamp more light away.</p>
+<p class="last">If the image has fireflies, there will be samples that contribute very high values to pixels,
+and this option provides a way to limit that. However note that as you clamp out such values,
+bright colors in other places where there is no noise will be lost as well.
+So this is a balance between reducing the noise and keeping the image from losing its intended bright colors.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="motion-blur">
+<h3>Motion Blur<a class="headerlink" href="#motion-blur" title="Permalink to this headline">¶</a></h3>
+<p>Camera and object motion blur rendering can be enabled per scene,
+and affects all render layers. This will take the camera and object motion into account to
+blur objects along 3 points through the previous, current and next frame.
+Currently scale motion is not supported,
+only object transformations like translation and rotation.
+Viewport rendering currently will not show motion blur.</p>
+<p>If there are particles or other physics system in a scene,
+be sure to bake them before rendering,
+otherwise you might not get correct or consistent motion.</p>
+<dl class="docutils">
+<dt>Shutter</dt>
+<dd>Time between frames over which motion blur is computed. Shutter time 1.0 blurs over the length of 1 frame,
+2.0 over the length of two frames, from the previous to the next.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="material-settings">
+<span id="render-cycles-integrator-material-settings"></span><h2>Material Settings<a class="headerlink" href="#material-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multiple Importance Sample</dt>
+<dd><p class="first">By default objects with emitting materials use both direct and indirect light sampling methods,
+but in some cases it may lead to less noise overall to disable direct light sampling for some materials.
+This can be done by disabling the <em>Multiple Importance Sample</em> option.
+This is especially useful on large objects that emit little light compared to other light sources.</p>
+<p class="last">This option will only have an influence if the material contains an emission node;
+it will be automatically disabled otherwise.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="world-settings">
+<span id="render-cycles-integrator-world-settings"></span><h2>World Settings<a class="headerlink" href="#world-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multiple Importance Sample</dt>
+<dd>By default lighting from the world is computed solely with indirect light sampling.
+However for more complex environment maps this can be too noisy,
+as sampling the BSDF may not easily find the highlights in the environment map image. By enabling this option,
+the world background will be sampled as a lamp, with lighter parts automatically given more samples.</dd>
+<dt>Map Resolution</dt>
+<dd>When Multiple Importance Sample is enabled, this specifies the size of the importance map
+(resolution x resolution). Before rendering starts,
+an importance map is generated by &#8220;baking&#8221; a grayscale image from the world shader. This will then be used to
+determine which parts of the background are light and so should receive more samples than darker parts.
+Higher resolutions will result in more accurate sampling but take more setup time and memory.</dd>
+</dl>
+</div>
+<div class="section" id="lamp-settings">
+<h2>Lamp Settings<a class="headerlink" href="#lamp-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Multiple Importance Sample</dt>
+<dd>By default lamps use only direct light sampling. For area lights and sharp glossy reflections, however,
+this can be noisy,
+and enabling this option will enable indirect light sampling to be used in addition to reduce noise.</dd>
+<dt>Samples</dt>
+<dd>For the branch path tracing integrator, this specifies the number of direct light samples per AA sample.
+Point lamps might need only one sample, while area lamps typically need more.</dd>
+</dl>
+</div>
+<div class="section" id="volume-render-settings">
+<h2>Volume Render Settings<a class="headerlink" href="#volume-render-settings" title="Permalink to this headline">¶</a></h2>
+<p>The scene has these settings:</p>
+<dl class="docutils">
+<dt>Step Size</dt>
+<dd>Distance between volume shader samples when rendering the volume.
+Lower values give more accurate and detailed results but also increased render time.</dd>
+<dt>Max Steps</dt>
+<dd>Maximum number of steps through the volume before giving up,
+to protect from extremely long render times with big objects or small step sizes.</dd>
+</dl>
+<p>The world and materials have the following setting:</p>
+<dl class="docutils">
+<dt>Homogeneous Volume</dt>
+<dd>Assume volume has the same density everywhere (not using any textures), for faster rendering.
+For example absorption in a glass object would typically not have any textures,
+and by knowing this we can avoid taking small steps to sample the volume shader.</dd>
+<dt>Sampling Method</dt>
+<dd>Options are &#8220;Multiple Importance&#8221;, &#8220;Distance&#8221; or &#8220;Equiangular&#8221;.
+If you&#8217;ve got a pretty dense volume that&#8217;s lit from far away then distance sampling is usually more efficient.
+If you&#8217;ve got a light inside or near the volume then equiangular sampling is better.
+If you have a combination of both, then the multiple importance sampling will be better.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="light_paths.html" class="btn btn-neutral float-right" title="Light Paths"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Render Settings"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

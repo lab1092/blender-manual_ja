@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Boolean Modifier &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
+        <link rel="up" title="Modifiers" href="../index.html"/>
+        <link rel="next" title="Build Modifier" href="build.html"/>
+        <link rel="prev" title="Bevel Modifier" href="bevel.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modifiers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#modify">Modify</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Modifiers</a> &raquo;</li>
+      
+    <li>Boolean Modifier</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/modifiers/generate/booleans.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="boolean-modifier">
+<h1>Boolean Modifier<a class="headerlink" href="#boolean-modifier" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The Boolean modifier performs operations on meshes that are otherwise too complex
+to achieve with as few steps by editing meshes manually, meaning you can achieve results
+with little effort to make mesh operations like Unions, Differences and Intersections.</p>
+<p>The Boolean modifier uses one of three Boolean operations (<em>Difference</em>
+(negation), <em>Union</em> (conjunction), and <em>Intersect</em> (disjunction))
+to create a single compound object out of two mesh objects.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Union_Intersect_Difference_Examples)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Union_Intersect_Difference_Examples)_(GBAFN).jpg" />
+<p class="caption">Fig. 1 - The Union, Intersection and Difference between a Cube and a UV Sphere,
+with the modifier applied to the Sphere and using the cube as target. (Detail, Union is using Ngons).</p>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The Boolean modifier can only be used on mesh objects.</p>
+<p>It performs one of the three Boolean Operations for the faces of open or closed volumes that
+creates a complete topology in the faces it&#8217;s being used. This means that this modifier will
+only work properly for the intersection of faces of the two meshes that will result in another
+closed loop of edges (filled with faces), creating a new resulting face topology.</p>
+<p>The Boolean modifier is non-destructive for the target; it uses the topology of the target to make the calculations,
+but you will still have the target in the scene. In normal conditions, using face normals pointed outside,
+when you apply the Boolean modifier operation, the modified mesh will receive changes in topology,
+and you will have to move or hide the target to see the resulting mesh.
+The only exception is when you are using inverted normals;
+in this case, depending on the calculations, you will also change the topology of the target.
+You can see one example of a target being modified in the
+<a class="reference internal" href="#boolean-materials"><em>Materials</em></a> section in this page, see Fig. 7 and 8.</p>
+<p>The results of the mesh operation will only be shown in Object Mode of the 3D View.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The Boolean modifier works with open and closed volumes.</li>
+<li>The Boolean modifier doesn&#8217;t work on edges without faces.</li>
+<li>The target topology determines the new topology of the modified mesh.</li>
+<li>The face normals are taken into account for the calculations.</li>
+<li>Whether faces are marked for smooth or flat for shading doesn&#8217;t affect the calculations of this modifier.
+(See Fig. 28 and 29.)</li>
+<li>The line at which this modifier is calculated is delimited by the first tangential contact
+between faces of the modified mesh and target.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>This is a dynamic real-time modifier!</p>
+<p class="last">If you have marked your Objects to show the Edges
+(in Properties Window, Object context, Display panel, enable <em>Wire</em>),
+you will see the Edge creation process while you&#8217;re moving your Objects. Depending on your mesh topology,
+you can also enable X-Ray and Transparency and see the topology being created in real time.</p>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Using the default Blender install, with the desired mesh Object selected,
+go to the <em>Properties Window</em> which is located at the right of your Blender Screen,
+below the Outliner. Click on the Modifiers Context, which is represented by a wrench (see Fig.
+2 - The Boolean modifier; the wrench is highlighted in blue). Then, click on the <em>Add Modifier</em>
+Button and Blender will show you a list of all of the available Modifiers.
+The Boolean modifier is located on the third row in the <em>Generate</em> Column.</p>
+<p>You can also click on the <em>Add Modifier</em> Button and use <tt class="kbd docutils literal"><span class="pre">N</span></tt> to add the
+Boolean modifier,
+or use Blender search with the shortcut <tt class="kbd docutils literal"><span class="pre">Spacebar</span></tt> and type &#8220;Add Modifier&#8221;,
+click on <em>Add Modifier</em> and press <tt class="kbd docutils literal"><span class="pre">N</span></tt>.</p>
+<p>When you add the Boolean modifier for an Object,
+Blender will need a second Object to perform the operation. You can use open or closed Meshes,
+as long as they have faces for calculations.</p>
+<p>You can add one or more modifiers of this type for an Object but you can only apply one
+operation for the Boolean modifier at a time.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Boolean_Modifier_Options)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Boolean_Modifier_Options)_(GBAFN).jpg" />
+<p class="caption">Fig. 2 - The Boolean Modifier</p>
+</div>
+<div class="section" id="operations">
+<h3>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Operation</dt>
+<dd><p class="first">Which boolean operation will be used.</p>
+<dl class="last docutils">
+<dt>Difference</dt>
+<dd><p class="first">The modified mesh is subtracted from the target mesh.</p>
+<ul class="last simple">
+<li>If the target Mesh has inverted normals, Blender will Intersect the modified mesh.</li>
+<li>If the modified Mesh has inverted normals, Blender will add both meshes (Union).</li>
+<li>If both Meshes use inverted normals, Blender will Intersect the target Mesh.</li>
+</ul>
+</dd>
+<dt>Union</dt>
+<dd><p class="first">The target mesh is added to the modified mesh.</p>
+<ul class="last simple">
+<li>If the target Mesh has inverted normals, Blender will Intersect the target Mesh.</li>
+<li>If the modified Mesh has inverted normals, Blender will subtract the target Mesh.</li>
+<li>If both Meshes use inverted normals, Blender will Intersect the modified Mesh.</li>
+</ul>
+</dd>
+<dt>Intersect</dt>
+<dd><p class="first">The target mesh is subtracted from the modified mesh.</p>
+<ul class="last simple">
+<li>If the target Mesh has inverted normals, Blender will subtract the target Mesh.</li>
+<li>If the modified Mesh has inverted normals, Blender will intersect the target Mesh.</li>
+<li>If both Meshes use inverted normals, Blender will add both meshes (Union).</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>Object</dt>
+<dd>The name of the target mesh object.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="materials">
+<span id="boolean-materials"></span><h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<p>The Boolean modifier preserves the Materials of the participant Meshes,
+including their basic textures and mappings, and the modified mesh will receive its first
+active material index assigned to its new topology (the first active material).</p>
+<p>The only exception is the difference operation when the normals of the target and modified
+mesh are inverted (Fig 7 and 8). In this case, Blender will project the textures in an
+inverted direction over the target using the center contact of the meshes as a pivot and the
+resulting mesh will have the modified mesh subtracted from the target.
+For complex target meshes in some particular cases,
+you may have to reassign materials to faces because Blender will use the possible projection,
+and this may result in a sub-optimal texture assignment.</p>
+<p>Below, some examples are shown to exemplify how materials work with the Boolean modifier;
+we took the cube as the modified mesh, and the icosphere as the target with one material
+(white). We added four different indexes to one of the faces of the cube,
+leaving another basic material in the other faces. Fig.
+3 shows how the Boolean modifier interacts with the materials.
+Figs. 4, 5 and 6 show three different Boolean operations applied to the modified mesh.
+The meshes used have normals pointed outwards (Normal meshes).
+See their captions for more information.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Base)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Base)_(GBAFN).jpg" />
+<p class="caption">Fig. 3 - Cube with Multi-Material Mesh (modified) and Icosphere (target) with basic Material</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Union)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Union)_(GBAFN).jpg" />
+<p class="caption">Fig. 4 - Union - The first active Material of the Cube
+is added to the new topology; other materials remain in the old topology</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Difference)_(GBAFN)_.jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Difference)_(GBAFN)_.jpg" />
+<p class="caption">Fig. 5 - Difference - The Icosphere was subtracted from the Cube;
+the new topology has received the first active Material of the Cube</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Intersect)_(GBAFN)_.jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Intersect)_(GBAFN)_.jpg" />
+<p class="caption">Fig. 6 - Intersect - The resulting Mesh was copied and rotated 180- -
+You can see the first active material of the cube in the back face (new topology);
+the front face received the 4 basic materials of the cube.</p>
+</div>
+<p>In our last examples (Figs. 7 and 8) of how the Boolean modifier works with Materials,
+we have inverted normals for both the target (Icosphere) and modified mesh (Cube).
+As we said before, this is an exception rather than the rule.
+As you can see, the target received the materials of the modified mesh.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Inverted_Normals_Back)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Inverted_Normals_Back)_(GBAFN).jpg" />
+<p class="caption">Fig. 7 - Front of the target with the modified mesh materials</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Inverted_Normals_Front)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Multi_Materials_Example_Inverted_Normals_Front)_(GBAFN).jpg" />
+<p class="caption">Fig. 8 - Back of the target with the modified mesh materials</p>
+</div>
+<div class="section" id="uv-mappings">
+<h3>UV Mappings<a class="headerlink" href="#uv-mappings" title="Permalink to this headline">¶</a></h3>
+<p>When you map UV Images to your target, Blender will add a map for each of the faces of the target.
+When you apply the Boolean modifier, Blender will follow the UV maps already assigned to the faces
+of the target topology that will be the result of the operation on the modified mesh.
+Blender will also use the same image mapped to the target faces in the modified mesh.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Depending on the way you have assigned textures to the faces during the UV unwrap,
+and the complexity of your meshes, the boolean operation may generate imperfect UVs for the new faces.</p>
+</div>
+<p>Below we have four Images, a UV sphere mapped with a test grid tinted blue and the other face tinted in purple,
+one face of the cube tinted in a light orange and the other faces using the normal test grid.
+Fig. 9 shows the operation at the start (difference), and on the right (Fig. 10),
+the resulting mesh. In Figs. 11 and 12 we show the unwrap in the Blender UV/Image Editor Window.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Boolean_Difference_Operation_Op_Start)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Boolean_Difference_Operation_Op_Start)_(GBAFN).jpg" />
+<p class="caption">Fig. 9 - A UV Sphere and a Cube with different UV Maps</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Boolean_Difference_Operation_Applied)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Boolean_Difference_Operation_Applied)_(GBAFN).jpg" />
+<p class="caption">Fig. 10 - Difference operation applied</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Map_Face_Modified_Mesh)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Map_Face_Modified_Mesh)_(GBAFN).jpg" />
+<p class="caption">Fig. 11 - Faces of the modified mesh mapped</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Map_Face_Modified_Mesh_New_Topology)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(UV_Map_Face_Modified_Mesh_New_Topology)_(GBAFN).jpg" />
+<p class="caption">Fig. 12 - New topology mapped and UV faces assigned; we have another image assigned to the purple tinted faces.</p>
+</div>
+</div>
+</div>
+<div class="section" id="other-modifiers">
+<h2>Other Modifiers<a class="headerlink" href="#other-modifiers" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Error_Message_Boolean_Operation)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Error_Message_Boolean_Operation)_(GBAFN).jpg" />
+<p class="caption">Fig. 13 - Boolean modifier with error message</p>
+</div>
+<p>The Boolean modifier calculation is performed using the target modified mesh
+topology and dimensions. Other modifiers added to the modified mesh are bypassed.
+It means that if a target is using another modifier, like subsurf,
+the resulting topology for the modified mesh will take into account the subsurf of the target;
+but for the modified mesh, the basic topology is used anyway (see examples).</p>
+<p>If you add subsurf to the modified mesh with a Boolean modifier,
+Blender will visually add the subsurf for the modified mesh, but not for its calculations;
+it will only take into account its basic mesh topology.
+If you want to have a subsurf added to the modified mesh, you have to apply the subsurf to the
+Boolean modified mesh before applying the Boolean operation.</p>
+<p>The Boolean modifier can be added together with other modifiers in the modified mesh,
+but depending on the modifier,
+the calculations can&#8217;t be done and/or the modifier cannot execute.
+When the modifier cannot execute,
+it will show the message <tt class="docutils literal"><span class="pre">&quot;Cannot</span> <span class="pre">execute</span> <span class="pre">boolean</span> <span class="pre">operation&quot;</span></tt> (see Fig. 13),
+and when the modifier cannot be applied to the mesh,
+Blender will show the message <tt class="docutils literal"><span class="pre">&quot;Modifier</span> <span class="pre">is</span> <span class="pre">disabled,</span> <span class="pre">Skipping</span> <span class="pre">Apply.&quot;</span></tt>.
+In this case, you either have to remove some modifiers or apply the necessary ones.</p>
+<p>The most common case is when you add or copy a Boolean modifier to use the
+modified mesh in conjunction with another target later; Blender will place the warning in the
+subsequent Boolean modifiers in the stack depending on the operation,
+because you may be creating concurrent Boolean operations for the same modified mesh,
+which in most cases is impossible to execute depending on the chosen target. In this case, you
+can apply the first Boolean modifier of the stack for the target and then use the
+other Boolean modifier(s) in the stack for subsequent operations.</p>
+<p>Also, if some other modifiers are placed above this modifier and you click on Apply,
+Blender will warn you with the message <tt class="docutils literal"><span class="pre">&quot;Applied</span> <span class="pre">Modifier</span> <span class="pre">was</span> <span class="pre">not</span> <span class="pre">first,</span>
+<span class="pre">results</span> <span class="pre">may</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">as</span> <span class="pre">expected&quot;</span></tt>. The best usage scenario for this modifier is to
+prepare your modified mesh and target to work with the Boolean modifier.</p>
+<p>When the Boolean modifier is the first of the stack and is applied, the other Modifiers will
+act over the resulting meshes using the resulting topology and will remain in the modifiers
+stack.</p>
+<p>Below are two images: one with the subsurf added to the target (Fig. 14),
+and another with the resulting topology (Fig. 15).</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Subsurf_Added_To_The_Target)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Subsurf_Added_To_The_Target)_(GBAFN).jpg" />
+<p class="caption">Fig. 14 - The Subsurf is only added to the target (Icosphere), not applied</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Mesh_Subsurf_Added_To_The_Target)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Mesh_Subsurf_Added_To_The_Target)_(GBAFN).jpg" />
+<p class="caption">Fig. 15 - The resulting topology. The Subsurf added to the target was taken into account</p>
+</div>
+<p>As you can see, the added (not applied) subsurf to the target was taken into consideration.
+The topology of the Icosphere with subsurf (Level 2) was completely transferred to the modified mesh.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>The target topology determines the resulting topology</p>
+<p class="last">The target topology determines the results of the Boolean modifier operation.
+It means that any modifier added to the target which modifies its topology
+will affect the resulting mesh of the operation.</p>
+</div>
+</div>
+<div class="section" id="concurrent-operations">
+<h2>Concurrent Operations<a class="headerlink" href="#concurrent-operations" title="Permalink to this headline">¶</a></h2>
+<p>For the modified meshes, you can only apply one operation at a time, but you can use the same
+target for other modified meshes and use modified meshes as a target for other meshes as well.
+Also, you can copy or add the same modifier to the modifiers stack as many times as you wish
+to suit the number of operations you need,
+but be aware that if you choose concurrent targets which are, at the same time,
+modified meshes pointing to each other, you can cause Blender to crash with closed loops!</p>
+<div class="section" id="hints">
+<h3>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h3>
+<p>Be aware that other modifiers and their stack position could cause this modifier to fail in
+certain circumstances.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The best way to work with this modifier when you need to make lots of sequential operations
+of the same modifier is to define the target at the time you need to apply the changes to the topology.</p>
+</div>
+</div>
+</div>
+<div class="section" id="face-normals">
+<h2>Face Normals<a class="headerlink" href="#face-normals" title="Permalink to this headline">¶</a></h2>
+<p>When using the Boolean modifier,
+Blender will use the face normal directions to calculate the three Boolean operations.
+The direction of the normals will define the result of the three available operations.
+When one of the participants has inverted normals,
+you&#8217;re in fact multiplying the operation by <tt class="docutils literal"><span class="pre">-1</span></tt> and inverting the calculation order.
+You can, at any time, select your modified mesh,
+enter Edit Mode and flip the normals to change the behavior of the Boolean modifier.
+See <em>Tips for Fixing Mixed Normals</em> below.</p>
+<p>Blender also cannot perform any optimal Boolean operation when one or more of the
+mesh Normals of the participants that are touching has outwards/inwards normals mixed.</p>
+<p>This means you can use the normals of the meshes pointed completely towards the inside or
+outside of your participants in the operation, but you cannot mix normals pointed inwards and
+outwards for the faces of the topology used for calculations. In this case,
+Blender will enable the modifier and you may apply the modifier, but with bad to no effects.
+We made some examples with a cube and an icosphere showing the results.</p>
+<p>See Fig. 16 and 17 - All face normals are pointing outwards (Normal meshes).</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Pointing_Outwards)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Pointing_Outwards)_(GBAFN).jpg" />
+<p class="caption">Fig. 16 - Faces with normals pointing outwards</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Difference_Normals_Pointing_Outwards)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Difference_Normals_Pointing_Outwards)_(GBAFN).jpg" />
+<p class="caption">Fig. 17 - Normal Boolean modifier operation (Difference operation)</p>
+</div>
+<p>See Fig. 18 and 19 - All face normals are pointing inwards (Meshes with inverted normals)</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Pointing_Inwards)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Pointing_Inwards)_(GBAFN).jpg" />
+<p class="caption">Fig. 18 - Faces with normals pointing inwards</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Intersection_Normals_Pointing_Inwards)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Intersection_Normals_Pointing_Inwards)_(GBAFN).jpg" />
+<p class="caption">Fig. 19 - Normal Boolean modifier operation (Intersection operation)</p>
+</div>
+<p>Now, let&#8217;s see what happens when the normal directions are mixed for one of the
+participants in the Boolean modifier operation.
+In Fig. 20 - Face normals mixed, pointed to different directions and 21 - Resulting operation,
+you can see that the modifier has bad effects when applied, leaving faces opened:</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Mixed_Inwards_Outwards)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Normals_Mixed_Inwards_Outwards)_(GBAFN).jpg" />
+<p class="caption">Fig. 20 - Face normals mixed, pointed to different directions</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Mesh_Normals_Mixed)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Mesh_Normals_Mixed)_(GBAFN).jpg" />
+<p class="caption">Fig. 21 - Resulting operation, Modifier has bad effect when applied, leaving faces opened</p>
+</div>
+<p>As you can see, the normal directions can be pointing to any of the Mesh sides,
+but can&#8217;t be mixed in opposite directions for the faces of the participants.
+The Library can&#8217;t determine properly what&#8217;s positive and negative for the operation, so the
+results will be bad or you will have no effect when using the Boolean modifier
+operation.</p>
+<div class="section" id="tip-for-fixing-mixed-normals">
+<h3>Tip for Fixing Mixed Normals<a class="headerlink" href="#tip-for-fixing-mixed-normals" title="Permalink to this headline">¶</a></h3>
+<p>You can fix mixed normals by recalculating them outside or inside;
+here we also give you a small hint on how to do this prior to Boolean modifier usage:</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_Display_Transform_Panel)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_Display_Transform_Panel)_(GBAFN).jpg" />
+<p class="caption">Fig. 22 - Mesh Display in the Transform Panel</p>
+</div>
+<p>To show the normals of the faces, you can open the Transform Panel, find the Mesh display tab,
+and click on the small cube without the orange dot. (See Fig. 22 - Mesh Display in the Transform Panel.)
+You can also change the height of the axis that points the direction of the normal.
+The default is <tt class="docutils literal"><span class="pre">0.1</span></tt>.</p>
+<p>When some normal directions are mixed pointing inwards and outwards, you can recalculate them to the inside
+using <tt class="kbd docutils literal"><span class="pre">Ctrl-Shift-N</span></tt> and to outside using <tt class="kbd docutils literal"><span class="pre">Ctrl-N</span></tt>.
+If the normals still get mixed due to Mesh complexities,
+you can change to Face selection Mode while in Edit Mode using <tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt> and choosing <em>Face Mode</em>.
+Then select the faces that are pointing in the wrong direction using <tt class="kbd docutils literal"><span class="pre">Shift-RMB</span></tt> and use the <em>Mesh</em> Menu entry
+in the Header of the 3D View, go to <em>Normals</em> and choose <em>Flip Normals</em>:</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Recalculate_Normals_Menu_Mesh_Edit_Mode)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Recalculate_Normals_Menu_Mesh_Edit_Mode)_(GBAFN).jpg" />
+<p class="caption">Fig. 23 - Recalculate and Flip Normals in Mesh Menu Entry - 3D View</p>
+</div>
+</div>
+</div>
+<div class="section" id="empty-or-duplicated-faces">
+<h2>Empty or Duplicated Faces<a class="headerlink" href="#empty-or-duplicated-faces" title="Permalink to this headline">¶</a></h2>
+<p>This modifier doesn&#8217;t work when the modified and/or the target mesh uses empty faces in the
+topology used for calculations. If the modifier faces a situation where you have empty faces mixed with normal faces,
+the modifier will try, as much as possible, to connect the faces and apply the operation.
+For situations where you have two concurrent faces at the same position,
+the modifier will operate on the target mesh using both faces,
+but the resulting normals will get messed. To avoid duplicated faces,
+you can remove doubles for the vertices before recalculating the normals outside or inside.
+The button for remove doubles is located in the <em>Mesh Tools</em> Panel in the 3D View, while in Edit Mode.</p>
+<p>The best usage scenario for this modifier is when you have clean meshes with faces pointing
+clearly to a direction (inwards/outwards)</p>
+<p>Below we show an example of meshes with open faces mixed with normal faces being used to create a new topology.
+In this example, a difference between the cube and the icosphere is applied,
+but Blender connected a copy of the icosphere to the Cube mesh, trying to apply what was possible.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_With_Mixed_Empty_Faces)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_With_Mixed_Empty_Faces)_(GBAFN).jpg" />
+<p class="caption">Fig. 24 - Mesh with two empty faces mixed with normal faces</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_With_Mixed_Empty_Faces_Result)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Mesh_With_Mixed_Empty_Faces_Result)_(GBAFN).jpg" />
+<p class="caption">Fig. 25 - Result of a difference operation applied - Blender connected what was possible.</p>
+</div>
+</div>
+<div class="section" id="open-volumes">
+<h2>Open Volumes<a class="headerlink" href="#open-volumes" title="Permalink to this headline">¶</a></h2>
+<p>The Boolean modifier permits you to use open meshes or non-closed volumes
+(not open faces).</p>
+<p>When using open meshes or non-closed volumes, the Boolean modifier won&#8217;t perform
+any operation in faces that don&#8217;t create a new topology filled with faces using the faces of
+the target.</p>
+<p>See Fig. 26 and Fig. 27 - Resulting operation using two non-closed volumes with faces forming a new topology.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Complete_Face_Shape)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Complete_Face_Shape)_(GBAFN).jpg" />
+<p class="caption">Fig. 26 - Non-closed volumes forming a new topology</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Complete_Face_Shape)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Complete_Face_Shape)_(GBAFN).jpg" />
+<p class="caption">Fig. 27 - Resulting operation using two open volumes performing a new closed topology</p>
+</div>
+<p>Now, let&#8217;s see what happens when we use meshes that are partially open,
+incomplete, or meshes that aren&#8217;t forming a new topology.</p>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Incomplete_Face_Shape)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Incomplete_Face_Shape)_(GBAFN).jpg" />
+<p class="caption">Fig. 28 - Open volumes that aren&#8217;t forming a new topology.</p>
+</div>
+<div class="figure">
+<img alt="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Incomplete_Face_Shape)_(GBAFN).jpg" src="../../_images/(Doc_26x_Modifier_Generate_Boolean)_(Resulting_Incomplete_Face_Shape)_(GBAFN).jpg" />
+<p class="caption">Fig. 29 - Resulting operation using two open volumes that aren&#8217;t forming a new topology.</p>
+</div>
+<p>As you can see in Fig. 28, the faces of one participant in the Boolean operation
+gives incomplete information to the modifier; the result is shown in Fig.
+29 - Resulting operation using two open volumes that aren&#8217;t forming a new topology. The
+resulting edges get messy and there is not enough information to create faces for the
+resulting Mesh. This example uses a smooth shaded UVsphere cut in half. As explained before,
+the shading (smooth/flat) doesn&#8217;t affect the calculations of the modifier.</p>
+</div>
+<div class="section" id="useful-links">
+<h2>Useful Links<a class="headerlink" href="#useful-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://code.google.com/p/carve/">Carve Developement Home</a> - GPLv2 C++ source at Google Code</li>
+<li><a class="reference external" href="http://carve-csg.com/">Carve library</a> - Homepage for the Carve Library project.</li>
+<li><a class="reference external" href="https://github.com/MadMinstrel/blender-sculpt-tools">Sculpt Tools</a> -
+Link for a Blender Add-on - This add-on uses another approach to use the Boolean operations,
+when you select two or more objects, the active one becomes the modified mesh and all the others becomes a target.
+This add-on will add the Boolean modifier and apply it to the meshes automatically.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="build.html" class="btn btn-neutral float-right" title="Build Modifier"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bevel.html" class="btn btn-neutral" title="Bevel Modifier"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

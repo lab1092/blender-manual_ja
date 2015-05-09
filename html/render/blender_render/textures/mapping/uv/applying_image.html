@@ -1,0 +1,692 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Applying Textures &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../../index.html"/>
+        <link rel="up" title="Textures" href="../../index.html"/>
+        <link rel="next" title="Influence" href="../../influence.html"/>
+        <link rel="prev" title="Editing UVs" href="layout_editing.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Textures</a> &raquo;</li>
+      
+    <li>Applying Textures</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../../_sources/render/blender_render/textures/mapping/uv/applying_image.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="applying-textures">
+<h1>Applying Textures<a class="headerlink" href="#applying-textures" title="Permalink to this headline">¶</a></h1>
+<p>Sooner or later, you may want to use an image texture on your model.
+If you are using an external application, you need to know where on the mesh you are painting.
+You may also need to test your UV mapping with a test image.
+This section covers how to export an outline of your UV map,
+and how to load images into the UV editor.</p>
+<div class="section" id="exporting-uv-layout-image">
+<h2>Exporting UV Layout Image<a class="headerlink" href="#exporting-uv-layout-image" title="Permalink to this headline">¶</a></h2>
+<p>As a way of communicating to an artist who is painting your UV Texture for you,
+Blender has a tool called <em>Save UV Face Layout</em>
+(located in the UV/Image Editor Window, UVs&#8211;&gt;Save UV Face Layout)
+that saves an image as a Targa (.tga), EPS, or an SVG format for the object you have selected.</p>
+<p>The image is an outline of the UV face mapping.
+Activating the tool brings up the File Browser Window with options for saving the layout:</p>
+<div class="figure">
+<img alt="../../../../../_images/Doc26-textures-uv-layout-export.jpg" src="../../../../../_images/Doc26-textures-uv-layout-export.jpg" />
+<p class="caption">Export options</p>
+</div>
+<dl class="docutils">
+<dt>All UVs</dt>
+<dd>if disabled, then only the UV faces selected will be outlined</dd>
+<dt>Modified</dt>
+<dd>Export UVs from the modified mesh.</dd>
+<dt>Format</dt>
+<dd>Select the type of image file to save (.png, .eps, .svg)</dd>
+<dt>Size</dt>
+<dd>select the size of the image in pixels. The image be square.</dd>
+<dt>Fill Opacity</dt>
+<dd>Set the opacity of the fill</dd>
+</dl>
+<p>The image will be lines defining the UV edges that are within the image area of the UV mapping
+area. Edges outside the boundary, even if selected, will not be shown in the saved graphic.</p>
+<p>The artist will use this as a transparent layer in their paint program as a guide when
+painting your texture. The example below shows Blender in the background,
+and the Gimp working on the texture, using the saved layout as a guide.
+Note that targa format supports the Alpha channel,
+so you can paint transparent areas of the mesh.</p>
+<p>For using images as textures, see the page on <a class="reference internal" href="../../types/image.html"><em>Image Textures</em></a></p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-layout.jpg"><img alt="../../../../../_images/Doc26-textures-uv-layout.jpg" src="../../../../../_images/Doc26-textures-uv-layout.jpg" style="width: 250px;" /></a>
+<p class="caption">A uv layout in the uv editor</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-layout2.jpg"><img alt="../../../../../_images/Doc26-textures-uv-layout2.jpg" src="../../../../../_images/Doc26-textures-uv-layout2.jpg" style="width: 250px;" /></a>
+<p class="caption">A snapshot of the uv layout to be used in an image editor</p>
+</div>
+</div>
+<div class="section" id="applying-textures-to-uvs">
+<span id="face-textures"></span><h2>Applying Textures to UVs<a class="headerlink" href="#applying-textures-to-uvs" title="Permalink to this headline">¶</a></h2>
+<p>The UV/Image Editor allows you to map textures directly to the mesh faces.
+The 3D View window shows you the object being textured.
+If you set this window into Textured viewport shading,
+you will immediately see any changes made in the UV/Image Editor window in this window,
+and vice versa.</p>
+<p>You can edit and load images,
+and even play a game in the Blender Game Engine with UV textures for characters and object,
+without a material, and still see them in the 3D window.
+This is because no &#8216;real&#8217; rendering is taking place; it is all just viewport shading.
+If you were to apply an image to UVs then render, the texture would not show up by default</p>
+<p>To render an image however, you must</p>
+<ul class="simple">
+<li>create a Material for the object, and</li>
+<li>tell Blender to use the UV Textures on faces when rendering.</li>
+</ul>
+<p>To create a Material, you have to click <em>Add New</em> Material in the Shading context.</p>
+<p>There are two ways to tell Blender to use the UV Texture when rendering:
+the Proper way and the Quick Way:</p>
+<div class="section" id="use-uv-coordinates">
+<h3>Use UV Coordinates<a class="headerlink" href="#use-uv-coordinates" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../../_images/Doc26-textures-uv-coords.jpg" src="../../../../../_images/Doc26-textures-uv-coords.jpg" />
+<p class="caption">A texture setup to map using its UV coordinates</p>
+</div>
+<p>In the Texture channel panel,
+Add a New Texture and define the texture as an image and load the image you want to use.
+In the Mapping section, choose UV from the Coordinates menu, and select the UV layer to use.</p>
+<p>Make sure it is mapped to Color in the Influence section as well
+(it will be mapped to Color by default, and the UV Texture is named &#8220;UVTex&#8221; by default).
+If the image has an alpha channel and you want to use it,
+click &#8220;UseAlpha&#8221; in the Map Image panel.</p>
+<p>Full details of using Image textures are on the
+<a class="reference internal" href="../../types/image.html"><em>Image Textures</em></a> page.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Material is Required for Rendering</p>
+<p class="last">You can perform UV Texturing on a mesh within Blender without assigning a material,
+and you will even see it in your 3D View in textured viewport mode. However, when you render,
+you will just get a default gray if the object does not have a Material assigned.
+You will get a black if you do not load an image. If you do not create a texture that uses the image,
+or enable <em>Face Texture</em>, your object will render according to the procedural material settings.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Face Textures<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../../_images/Doc26-textures-uv-layout-facetex.jpg" src="../../../../../_images/Doc26-textures-uv-layout-facetex.jpg" />
+<p class="caption">The Material panel with activated Face Textures button.</p>
+</div>
+<p>An alternate way is to set up a Face Textures Material as shown. To do so,
+with the buttons window displayed, press <tt class="kbd docutils literal"><span class="pre">F5</span></tt> to display the Shader Buttons.
+In the Buttons window, Material settings, click <em>ADD NEW</em> material.</p>
+<p>On the Options panel, enable <em>Face Textures</em>. This way is quick,
+but bypasses the normal rendering system for fast results,
+but results which do not respect transparency and proper shading.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="loading-and-saving-images">
+<h2>Loading and Saving Images<a class="headerlink" href="#loading-and-saving-images" title="Permalink to this headline">¶</a></h2>
+<p>In the UV editor, you can assign certain faces certain textures. To do so,
+first you need an image to work with.
+In the <em>Image Menu</em> you can open an image file with the <em>File Browser</em>.
+If you have images in the file already, that you want to use,
+click the <em>Browse</em> button in the <em>Header</em>,
+or make a new texture by clicking the <em>New</em> button.</p>
+<p>In a team environment, or if you are using an external paint program to edit the image while
+the .blend file is active, and the file is updated and re-saved, use the UV/Image Editor to
+<em>Image&#8211;&gt;Reload</em> it and see the latest and greatest in Blender. Also,
+use Reload if you have mapped more faces to an image,
+and the 3D View will be updated with the latest image mapping back to faces.</p>
+<p>If you move the image file, Blender may not be able to find it,
+and you will have to <em>Image&#8211;&gt;Replace</em> it.
+Use this option to map a UV layout to a different image altogether.</p>
+<div class="section" id="replacing-the-active-image">
+<h3>Replacing the active Image<a class="headerlink" href="#replacing-the-active-image" title="Permalink to this headline">¶</a></h3>
+<p>Recall that each face gets coordinates and a link to an image.
+To map a face to a different image, simply select that face (or faces) and use the UV/Image
+Editor window Image}} menu to <em>Replace</em> the current image with an existing file
+(such as a JPG or PNG file).</p>
+</div>
+<div class="section" id="new-images">
+<h3>New Images<a class="headerlink" href="#new-images" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-layout-testGrid.jpg"><img alt="../../../../../_images/Doc26-textures-uv-layout-testGrid.jpg" src="../../../../../_images/Doc26-textures-uv-layout-testGrid.jpg" style="width: 200px;" /></a>
+<p class="caption">The new Image dialogue</p>
+</div>
+<p>When you select <em>New Image</em> you are presented with several options. This
+<em>Generated</em> image can also be modified afterward in the <em>Properties Panel</em>:</p>
+<dl class="docutils">
+<dt>Image Name</dt>
+<dd>Set the name if the generated image</dd>
+<dt>Width and Height</dt>
+<dd>Set the size if the image in pixels</dd>
+<dt>Color</dt>
+<dd>Sets the default fill color if creating a blank image.</dd>
+<dt>Alpha</dt>
+<dd>Adds an alpha channel to the image</dd>
+<dt>Generated Type</dt>
+<dd><p class="first">The type of image to generate:</p>
+<dl class="last docutils">
+<dt>UV Grid</dt>
+<dd>Creates a checkerboard pattern with a colored + in each square.</dd>
+<dt>Color Grid</dt>
+<dd>Creates a UV Test Grid, which is useful for testing how UVs have been mapped, and to reduce stretching.
+There are two types available, which can be set after the image has been created.</dd>
+<dt>Blank</dt>
+<dd>Generates a blank image of the specified color.</dd>
+</dl>
+</dd>
+<dt>32 bit</dt>
+<dd>Creates a 32 bit image. This is a larger file size,
+but holds much more color information than the standard 8 bit image. For close ups and large gradients,
+it may be better to use a 32 bit image.</dd>
+</dl>
+</div>
+<div class="section" id="using-the-test-grid">
+<h3>Using the Test Grid<a class="headerlink" href="#using-the-test-grid" title="Permalink to this headline">¶</a></h3>
+<p>Use the UV Test Grid option to check for undue stretching or distortion of faces. If your
+image is a base uniform pattern and you want the application of that image to your model to
+look like cloth, you do NOT want any stretching
+(unless you want the cloth to look like spandex).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-layout-testGrid2.jpg"><img alt="../../../../../_images/Doc26-textures-uv-layout-testGrid2.jpg" src="../../../../../_images/Doc26-textures-uv-layout-testGrid2.jpg" style="width: 200px;" /></a>
+<p class="caption">The test grid applied to the UVs</p>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-layout-testGrid3.jpg"><img alt="../../../../../_images/Doc26-textures-uv-layout-testGrid3.jpg" src="../../../../../_images/Doc26-textures-uv-layout-testGrid3.jpg" style="width: 200px;" /></a>
+<p class="caption">A preview of the texture on the geometry</p>
+</div>
+<p>When you render, the mesh will have the test grid as its colors,
+and the UV Texture will be the size image you specified.
+You can save the UV image using the Image&#8211;&gt;Save menu.</p>
+</div>
+<div class="section" id="image-settings">
+<h3>Image Settings<a class="headerlink" href="#image-settings" title="Permalink to this headline">¶</a></h3>
+<p>When an image has been loaded or created in the UV editor,
+an additional section appears in the <em>Properties Panel</em>.
+The first row of buttons allow you to:</p>
+<ul class="simple">
+<li>Browse for an image</li>
+<li>Change the image name</li>
+<li>Set as <em>Fake User</em></li>
+<li>Create a <em>New Image</em></li>
+<li><em>Open</em> an image</li>
+<li><em>Unlink Datablock</em></li>
+</ul>
+<p>Select the image type in the <em>Source</em> menu. Each has different options:</p>
+<dl class="docutils">
+<dt>Generated</dt>
+<dd><p class="first">Generates a new image:</p>
+<p>Width and Height of image in pixels</p>
+<dl class="last docutils">
+<dt>Blank</dt>
+<dd>Creates a Blank image</dd>
+<dt>UV grid</dt>
+<dd>Creates a checkerboard pattern with colored plus symbols in each square.</dd>
+<dt>Color Grid</dt>
+<dd>Creates a more complex colored grid with letters and numbers denoting locations in the grid.</dd>
+</dl>
+</dd>
+<dt>File</dt>
+<dd><p class="first">Use for loading image files:</p>
+<dl class="last docutils">
+<dt>Fields</dt>
+<dd>Use if image is made of fields. You can set it to use <em>Upper First</em> or Lower First</dd>
+<dt>Premultiply</dt>
+<dd>Converts RGB from key alpha to premultiplied alpha.</dd>
+</dl>
+</dd>
+<dt>Movie and Sequence</dt>
+<dd><dl class="first last docutils">
+<dt>Frames</dt>
+<dd>Set the number of frames to use</dd>
+<dt>Start</dt>
+<dd>Set the starting frame of the movie/sequence</dd>
+<dt>Offset</dt>
+<dd>Offset the number of frame used in the animation</dd>
+<dt>Fields</dt>
+<dd>Set the number fields per rendered frame to use(2 fields is 1 frame)</dd>
+<dt>Auto Refresh</dt>
+<dd>Always refresh images on frame changes.</dd>
+<dt>Cyclic</dt>
+<dd>Cycle the images in a movie/sequence.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="saving-images">
+<h3>Saving Images<a class="headerlink" href="#saving-images" title="Permalink to this headline">¶</a></h3>
+<p>Images can be saved to external files if they were created or edited in Blender with tools in
+the <em>Image</em> menu. If images are already files, use the <em>Save</em> command
+(<tt class="kbd docutils literal"><span class="pre">Alt-S</span></tt>). You can also <em>Save As</em> (<tt class="kbd docutils literal"><span class="pre">F3</span></tt>)
+if the image was generated or you want to save as a different name.
+Using <em>Save as Copy</em>, (<tt class="kbd docutils literal"><span class="pre">F3</span></tt>) will save the file to a specified name,
+but will keep the old one open in the Image editor.</p>
+</div>
+</div>
+<div class="section" id="modifying-your-image-texture">
+<h2>Modifying your Image Texture<a class="headerlink" href="#modifying-your-image-texture" title="Permalink to this headline">¶</a></h2>
+<p>To modify your new Texture, you can:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../../../workflows/bake.html"><em>Render Bake</em></a> an image based on how the mesh looks<ul>
+<li>The Render Bake feature provides several tools to replace the current image
+based on a render of <a class="reference internal" href="../../../materials/special_effects/vertex_paint.html"><em>Vertex Paint</em></a> colors,
+Normals (bumps), Procedural materials, textures and lighting, and ambient occlusion.</li>
+</ul>
+</li>
+<li>Paint using <a class="reference internal" href="../../painting.html"><em>Texture Paint</em></a>.<ul>
+<li>Use the UV/Image Editor menu <em>Image</em> &#8211;&gt; <em>New</em>. Then start painting your mesh with</li>
+</ul>
+</li>
+<li>Use external software to create an image<ul>
+<li>Using your favorite image painting program, you could use an exported UV layout to create a texture.
+Then save your changes, and back in Blender, use the Image&#8211;&gt;Open menu command to load it as your UV image
+for the mesh in Face Select Mode for the desired (and active) UV Texture layer.
+Using the <em>Edit Externally</em> tool in the <em>Image</em> menu, Blender will open an image editor,
+as specified in the <em>User Preferences</em> and load in the image to be edited.</li>
+</ul>
+</li>
+<li>Use the &#8220;projection painting&#8221; feature of recent versions of Blender</li>
+<li>Use the Bake uV-Textures to Vertex Colors add-on to create an image from vertex colors</li>
+<li>Some combination of the above.</li>
+</ul>
+<p>The first three options, (UV Painter, Render Bake, and Texture Baker)
+replace the image with an image that they create.
+Texture paint and external software can be used to add or enhance the image.
+Regardless of which method you use, ultimately you must either</p>
+<ul class="simple">
+<li>save your texture in a separate image file (for example JPG for colors, PNG with RGBA for alpha),</li>
+<li>pack the image inside the blend file (UV/Image Editor Image&#8211;&gt;Pack as PNG),</li>
+<li>or do both.</li>
+</ul>
+<p>The advantage to saving as a separate file is that you can easily switch textures just by
+copying other image files over it, and you can use external editing programs to work on it.
+The advantage of packing is that your whole project is kept in the .blend file,
+and that you only have to manage one file.</p>
+<p>You can invert the colors of an image by selecting the <em>Invert</em> menu.
+in the <em>Image</em> menu</p>
+</div>
+<div class="section" id="packing-images-inside-the-blend-file">
+<h2>Packing Images inside the Blend file<a class="headerlink" href="#packing-images-inside-the-blend-file" title="Permalink to this headline">¶</a></h2>
+<p>If you pack your .blend file,
+the current version of all UV Texture images are packed into the file.
+If those files later change, the updates will not be automatically re-packed;
+the old version of the image is what will be used. To update,
+you will have to re-pack or reload.</p>
+<p>To pack an image, select <em>Pack Image</em> from the <em>Image</em> menu. To Unpack,
+select this option again and select <em>Remove Pack</em>.</p>
+<p>The File&#8211;&gt;Append function automatically goes into <tt class="docutils literal"><span class="pre">.blend</span></tt> files and shows you the image textures packed in it.
+The public domain Blender Texture CD is also a great resource,
+and there are many other sources of public domain (and licensed) textures. All textures on the
+Elephants Dream CD are liberally licensed under
+<a class="reference external" href="http://creativecommons.org/licenses/by/2.5/">CC-BY 2.5</a>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../influence.html" class="btn btn-neutral float-right" title="Influence"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layout_editing.html" class="btn btn-neutral" title="Editing UVs"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

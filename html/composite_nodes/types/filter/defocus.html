@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Defocus &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Filter Nodes" href="index.html"/>
+        <link rel="next" title="Glare" href="glare.html"/>
+        <link rel="prev" title="Vector (Motion) Blur Node" href="vector_blur.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Compositing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../node_groups.html">Node Groups</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Composite Nodes</a> &raquo;</li>
+      
+          <li><a href="../index.html">Types of Nodes</a> &raquo;</li>
+      
+          <li><a href="index.html">Filter Nodes</a> &raquo;</li>
+      
+    <li>Defocus</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/composite_nodes/types/filter/defocus.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="defocus">
+<h1>Defocus<a class="headerlink" href="#defocus" title="Permalink to this headline">¶</a></h1>
+<p>This single node can be used to emulate depth of field using a postprocessing method.
+It can also be used to blur the image in other ways,
+not necessarily based on &#8216;depth&#8217; by connecting something other than a Zbuffer. In essence,
+this node blurs areas of an image based on the input zbuffer map/mask.</p>
+<div class="section" id="camera-settings">
+<h2>Camera Settings<a class="headerlink" href="#camera-settings" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Defocus_Camera_settings.jpg" src="../../../_images/Manual-Compositing-Node-Defocus_Camera_settings.jpg" />
+<p class="caption">DofDist setting for the camera.</p>
+</div>
+<p>The <em>Defocus</em> node uses the actual camera data in your scene if supplied by a
+<em>RenderLayer</em> node.</p>
+<p>To set the point of focus, the camera now has a <em>Distance</em> parameter,
+which is shorthand for Depth of Field Distance.
+Use this camera parameter to set the focal plane of the camera
+(objects Depth of Field Distance away from the camera are in focus).
+Set <em>Distance</em> in the main <em>Camera</em> edit panel;
+the button is right below the <em>Depth of Field</em>.</p>
+<p>To make the focal point visible, enable the camera <em>Limits</em> option,
+the focal point is then visible as a yellow cross along the view direction of the camera.</p>
+</div>
+<div class="section" id="node-inputs">
+<h2>Node Inputs<a class="headerlink" href="#node-inputs" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Defocus.jpg" src="../../../_images/Manual-Compositing-Node-Defocus.jpg" />
+<p class="caption">Defocus node</p>
+</div>
+<p>The node requires two inputs, an image and a zbuffer,
+the latter does not need to be an actual zbuffer, but can also be another (grayscale)
+image used as mask, or a single value input, for instance from a time node,
+to vary the effect over time.</p>
+</div>
+<div class="section" id="node-setting">
+<h2>Node Setting<a class="headerlink" href="#node-setting" title="Permalink to this headline">¶</a></h2>
+<p>The settings for this node are:</p>
+<dl class="docutils">
+<dt>Bokeh Type menu</dt>
+<dd>Here you set the number of iris blades of the virtual camera&#8217;s diaphragm.
+It can be set to emulate a perfect circle
+(<em>Disk</em>) or it can be set to have 3 (<em>Triangle</em>), 4 (<em>Square</em>), 5
+(<em>Pentagon</em>), 6 (<em>Hexagon</em>), 7 (<em>Heptagon</em>) or 8 blades
+(<em>Octagon</em>). The reason it does not go any higher than 8 is that from that point on the result tends to
+be indistinguishable from a <em>Disk</em> shape anyway.</dd>
+<dt>Rotate</dt>
+<dd>This button is not visible if the <em>Bokeh Type</em> is set to <em>Disk</em>.
+It can be used to add an additional rotation offset to the Bokeh shape. The value is the angle in degrees.</dd>
+<dt>Gamma Correct</dt>
+<dd>Exactly the same as the <em>Gamma</em> option in Blender&#8217;s general <em>Blur</em> node
+(see <a class="reference internal" href="blur_node.html"><em>Blur Node</em></a>).
+It can be useful to further brighten out of focus parts in the image, accentuating the Bokeh effect.</dd>
+</dl>
+<div class="figure">
+<img alt="../../../_images/Manual-Compositing-Node-Defocus-WithZ.jpg" src="../../../_images/Manual-Compositing-Node-Defocus-WithZ.jpg" />
+<p class="caption">Defocus node using Z-Buffer</p>
+</div>
+<dl class="docutils">
+<dt>fStop</dt>
+<dd>This is the most important parameter to control the amount of focal blur:
+it simulates the aperture <em>f</em> of a real lens(&#8216; iris) - without modifying the luminosity of the picture,
+however! As in a real camera, the <em>smaller</em> this number is, the more-open the lens iris is,
+and the <em>shallower</em> the depth-of-field will be. The default value 128 is assumed to be infinity:
+everything is in perfect focus. Half the value will double the amount of blur.
+This button is not available if <em>No zbuffer</em> is enabled.</dd>
+<dt>Maxblur</dt>
+<dd>Use this to limit the amount of blur of the most out of focus parts of the image.
+The value is the maximum blur radius allowed.
+This can be useful since the actual blur process can sometimes be very slow. (The more blur, the slower it gets.)
+So, setting this value can help bring down processing times,
+like for instance when the world background is visible, which in general tends to be the point of maximum blur
+(not always true, objects very close to the lens might be blurred even more).
+The default value of 0 means there is no limit to the maximum blur amount.</dd>
+<dt>BThreshold</dt>
+<dd>The defocus node is not perfect: some artifacts may occur.
+One such example is in-focus objects against a blurred background,
+which have a tendency to bleed into the edges of the sharp object.
+The worst-case scenario is an object in-focus against the very distant world background:
+the differences in distance are very large and the result can look quite bad.
+The node tries to prevent this from occurring by testing that the blur difference between pixels is not too large,
+the value set here controls how large that blur difference may be to consider it &#8216;safe.&#8217; This is all probably
+quite confusing, and fortunately, in general, there is no need to change the default setting of 1.
+Only try changing it if you experience problems around any in-focus object.</dd>
+<dt>Preview</dt>
+<dd>As already mentioned, processing can take a long time. So to help make editing parameters somewhat &#8216;interactive&#8217;,
+there is a preview mode which you can enable with this button.
+Preview mode will render the result using a limited amount of (quasi)random samples,
+which is a <em>lot</em> faster than the &#8216;perfect&#8217; mode used otherwise. The sampling mode also tends to produce grainy,
+noisy pictures (though the more samples you use, the less noisy the result). This option is on by default.
+Play around with the other parameters until you are happy with the results,
+and only then disable the preview mode for the final render.</dd>
+<dt>Samples</dt>
+<dd>Only visible when <em>Preview</em> is set. Sets the amount of samples to use to sample the image. The higher,
+the smoother the image, but also the longer the processing time. For preview,
+the default of 16 samples should be sufficient and is also the fastest.</dd>
+<dt>No zbuffer</dt>
+<dd>Sometimes you might want to have more control to blur the image. For instance,
+you may want to only blur one object while leaving everything else alone (or the other way around),
+or you want to blur the whole image uniformly all at once.
+The node therefore allows you to use something other than an actual zbuffer as the <em>Z</em> input.
+For instance, you could connect an image node and use a grayscale image where the color designates how much to
+blur the image at that point, where white is maximum blur and black is no blur. Or,
+you could use a Time node to uniformly blur the image,
+where the time value controls the maximum blur for that frame.
+It may also be used to obtain a possibly slightly-better DoF blur,
+by using a fake depth shaded image instead of a zbuffer. (A typical method to create the fake depth shaded image
+is by using a linear blend texture for all objects in the scene or by using the &#8216;fog/mist&#8217; fake depth shading
+method.) This also has the advantage that the fake depth image can have anti-aliasing,
+which is not possible with a real zbuffer.
+<em>No zbuffer</em> will be enabled automatically whenever you connect a node that is not image based
+(e.g. time node/value node/etc).</dd>
+<dt>Zscale</dt>
+<dd>Only visible when <em>No zbuffer</em> enabled. When <em>No zbuffer</em> is used,
+the input is used directly to control the blur radius.
+And since usually the value of a texture is only in the numeric range 0.0 to 1.0,
+its range is too narrow to control the blur properly. This parameter can be used to expand the range of the input
+(or for that matter, narrow it as well, by setting it to a value less than one). So for <em>No zbuffer</em>,
+this parameter therefore then becomes the main blur control
+(similar to <em>fStop</em> when you <em>do</em> use a zbuffer).</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="figure" style="width: 200px">
+<a class="reference internal image-reference" href="../../../_images/Manual-Node-Defocus-example.jpg"><img alt="../../../_images/Manual-Node-Defocus-example.jpg" src="../../../_images/Manual-Node-Defocus-example.jpg" style="width: 200px;" /></a>
+</div>
+<p>In this <a class="reference external" href="http://wiki.blender.org/uploads/7/79/Doftest.blend">blend file example</a>, the ball
+array image is blurred as if it was taken by a camera with a f-stop of 2.8 resulting in a
+farily narrow depth of field centered on 7.5 blender units from the camera.
+As the balls receed into the distance, they get blurrier.</p>
+</div>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Preview</dt>
+<dd>In general, use preview mode, change parameters to your liking,
+only then disable preview mode for the final render.
+This node is compute intensive, so watch your console window,
+and it will give you status as it computes each render scan line.</dd>
+<dt>Edge Artifacts</dt>
+<dd>For minimum artifacts, try to setup your scene such that differences in distances between two objects that may
+visibly overlap at some point are not too large.</dd>
+<dt>&#8220;Focus Pull&#8221;</dt>
+<dd><p class="first">Keep in mind that this is not &#8216;real&#8217; DoF, only a post-processing simulation.
+Some things cannot be done which would be no problem for real DoF at all.
+A typical example is a scene with some object very close to the camera,
+and the camera focusing on some point far behind it. In the real world, using shallow depth of field,
+it is not impossible for nearby objects to become completely invisible,
+in effect allowing the camera to see &#8216;behind&#8217; it.
+Hollywood cinematographers use this visual characteristic to
+good effect to achieve the popular &#8220;focus pull&#8221; effect,
+where the focus shifts from a nearby to a distant object, such that the &#8220;other&#8221; object all but disappears.
+Well, this is simply not possible to do with the current post-processing method in a single pass.
+If you really want to achieve this effect, quite satisfactorily, here&#8217;s how:</p>
+<ul class="last simple">
+<li>Split up your scene into &#8220;nearby&#8221; and &#8220;far&#8221; objects, and render them in two passes.</li>
+<li>Now, combine the two the two results, each with their own &#8220;defocus&#8221; nodes driven by the same Time node,
+but with one of them inverted. (e.g. using a &#8220;Map Value&#8221; node with a Size of -1.)
+As the defocus of one increases,
+the defocus on the other decreases at the same rate, creating a smooth transition.</li>
+</ul>
+</dd>
+<dt>Aliasing at Low f-Stop Values</dt>
+<dd><p class="first">At very low values, less than 5,
+the node will start to remove any oversampling and bring the objects at DoFDist very sharply into focus.
+If the object is against a constrasting background, this may lead to visible stairstepping (aliasing)
+which OSA is designed to avoid. If you run into this problem:</p>
+<ul class="last simple">
+<li>Do your own OSA by rendering at twice the intended size and then scaling down,
+so that adjacent pixels are blurred togther</li>
+<li>Use the blur node with a setting of 2 for x and y</li>
+<li>Set DoFDist off by a little, so that the object in focus is blurred by the tiniest bit.</li>
+<li>Use a higher f-Stop, which will start the blur,
+and then use the Z socket to a Map Value to a Blur node to enhance the blur effect.</li>
+<li>Rearrange the objects in your scene to use a lower-contrast background</li>
+</ul>
+</dd>
+<dt>No ZBuffer</dt>
+<dd>A final word of warning, since there is no way to detect if an actual zbuffer is connected to the node,
+be VERY careful with the <em>No ZBuffer</em> switch. If the <em>Zscale</em> value happens to be large,
+and you forget to set it back to some low value,
+the values may suddenly be interpreted as huge blur-radius values that will cause processing times to explode.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="glare.html" class="btn btn-neutral float-right" title="Glare"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector_blur.html" class="btn btn-neutral" title="Vector (Motion) Blur Node"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

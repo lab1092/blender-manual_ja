@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lighting Rigs &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
+        <link rel="up" title="Lamps" href="index.html"/>
+        <link rel="next" title="Environment Lighting" href="../ambient_light.html"/>
+        <link rel="prev" title="Sun: Sky &amp; Atmosphere" href="sun/sky_and_atmosphere.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../index.html">Lighting</a> &raquo;</li>
+      
+          <li><a href="index.html">Lamps</a> &raquo;</li>
+      
+    <li>Lighting Rigs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../_sources/render/blender_render/lighting/lamps/lighting_rigs.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="lighting-rigs">
+<h1>Lighting Rigs<a class="headerlink" href="#lighting-rigs" title="Permalink to this headline">¶</a></h1>
+<p>A rig is a standard setup and combination of objects; there can be lighting rigs,
+or armature rigs, etc.
+A rig provides a basic setup and allows you to start from a known point and go from there.
+Different rigs are used for different purposes and emulate different conditions;
+the rig you start with depends on what you want to convey in your scene.
+Lighting can be very confusing, and the defaults do not give good results. Further,
+very small changes can have a dramatic effect on the mood and colors.</p>
+<p>In all the lighting rigs,
+the default camera is always positioned nearly <tt class="docutils literal"><span class="pre">15</span></tt> degrees off dead-on, about <strong>25 BU</strong>
+(Blender Units) back and <strong>9 BU</strong> to the side of the subject, at eye level,
+and uses a long lens (<strong>80mm</strong>). Up close, a <strong>35mm</strong> lens will distort the image.
+A long lens takes in more of the scene.
+A dead-on camera angle is too dramatic and frames too wide a scene to take in.
+So now you know; next time you go to a play, sit off-center and you won&#8217;t miss the action
+happening on the sidelines and will have a greater appreciation for the depth of the set.
+Anyway, enough about camera angles; this is about lighting.</p>
+<div class="section" id="environment-or-ambient-only">
+<h2>Environment or Ambient Only<a class="headerlink" href="#environment-or-ambient-only" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-EL.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-EL.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-EL.jpg" style="width: 300px;" /></a>
+<p class="caption">Environment (Ambient) lighting only.</p>
+</div>
+<p>In the <em>World</em> context, there is a panel <em>Environment Lighting</em>,
+where you enable environment or ambient lighting of your scene. Ambient light is the scattered
+light that comes from sunlight being reflected off every surface it hits, hitting your object,
+and traveling to camera.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-AO.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-AO.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-AO.jpg" style="width: 256px;" /></a>
+<p class="caption">Ambient occlusion.</p>
+</div>
+<p>Ambient light illuminates, in a perfectly balanced, shadeless way, without casting shadows.
+You can vary the intensity of the ambient light across your scene via
+<a class="reference internal" href="../ambient_occlusion.html"><em>ambient occlusion</em></a>. The ambient color is a sunny white.</p>
+</div>
+<div class="section" id="single-rig">
+<h2>Single Rig<a class="headerlink" href="#single-rig" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-01.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-01.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-01.jpg" style="width: 300px;" /></a>
+<p class="caption">Standard Spot light rig.</p>
+</div>
+<p>The sole, or key, spot light rig provides a dramatic, showy,
+yet effective illumination of one object or a few objects close together.
+It is a single <em>Spot</em> light, usually with a hard edge.
+Halos are enabled in this render to remind you of a smoky nightclub scene.
+It is placed above and directly in front of the subject;
+in this case <strong>10 BU</strong> in front and <strong>10 BU</strong> high, just like a stage,
+it shines down at about a <tt class="docutils literal"><span class="pre">40</span></tt> degrees angle. We use quadratic attenuation.</p>
+<p>You can make the spot wider by increasing <em>Size Spot Shape</em> and softening the edge
+by increasing <em>Blend Spot Shape</em>, and parent it to the main actor,
+so that the spot follows him as he moves around. Objects close to the main actor will
+naturally be more lit and your viewer will pay attention to them.</p>
+<p>Moving this spot directly overhead and pointing down gives the interrogation effect.
+At the opposite end of the show-off emotional spectrum is one soft candlelight
+(<em>Point</em> lamp, short falloff <em>Distance</em>, yellow light)
+placed really up close to the subject, dramatizing the fearful &#8220;lost in the darkness&#8221; effect.</p>
+<p>Somewhere in the macabre spectrum is a hard spot on the floor shining upward. For fun,
+grab a flashlight, head into the bathroom and close the door.
+Turn out the light and hold the flashlight under your chin, pointing up.
+Look in the mirror and turn it on. Ghoulies! Don&#8217;t blame me for nightmares,
+and I hope you get the point: lighting, <strong>even with a single light, varying the intensity,
+location and direction, changes everything</strong> in a scene.</p>
+<p>Use this rig, with <em>Environment Lighting</em> light
+(and props receiving and being lit by ambient light in their material settings)
+for scenes that feature one main actor or a product being spotlighted.
+Do not use this rig for big open spaces or to show all aspects of a model.</p>
+</div>
+<div class="section" id="two-point-rig">
+<h2>Two-Point Rig<a class="headerlink" href="#two-point-rig" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-02.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-02.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-02.jpg" style="width: 300px;" /></a>
+<p class="caption">Standard two-point light rig.</p>
+</div>
+<p>The two-point lighting rig provides a balanced illumination of an object.
+Shown to the right are the views of the standard two-point lighting rig.
+It is called the two-point because there are two points of light. The standard two-point
+lighting rig provides a balanced illumination of untextured objects hanging out there in 3D
+space. This rig is used in real studios for lighting a product, especially a glossy one.</p>
+<p>Both lights are almost the same but do different things. Both emulate very wide,
+soft light by being <em>Hemi</em>. In real life,
+these lights bounce light off the inside of a silver umbrella.</p>
+<p>Notice how we use low <em>Energy</em> to bring out the dimensionality of the sphere;
+I can&#8217;t stress that enough. Hard, bright lights actually flatten it and make you squint.
+Soft lights allow your eye to focus. We disable specular for right <em>Hemi</em>,
+so we don&#8217;t get that shiny forehead or nose.</p>
+<p>The lamp on the left however, lets it be known that it is there by enabling specular;
+specular flare is that bright spot that is off center above midline on the sphere.</p>
+<p>Use this rig to give even illumination of a scene, where there is no main focus.
+The <em>Hemi</em> &#8216;s will light up background objects and props,
+so <em>Environment Lighting</em> is not that important.
+At the opposite end of the lighting spectrum, two narrow <em>Spot</em> lights at higher
+power with a hard edge gives a &#8220;This is the Police, come out with your hands up&#8221; kind of look,
+as if the subject is caught in the crossfire.</p>
+</div>
+<div class="section" id="three-point-rigs">
+<h2>Three-Point Rigs<a class="headerlink" href="#three-point-rigs" title="Permalink to this headline">¶</a></h2>
+<p>The standard three-point lighting rig is the most common illumination of objects and scenes
+bar none. If you want to show off your model, use this rig. As you can see,
+the untextured unmaterialized sphere seems to come out at you.
+There are multiple thesis on this rig, and you will use one of two:</p>
+<ul class="simple">
+<li>Studio - used in a real studio to film in front of a green screen or backdrop.
+Use this rig when you are rendering your CG objects to alpha into the scene so that the
+lighting on the actors <em>and</em> your CG objects is the same.</li>
+<li>Standard - used in real life to light actors on a set,
+and gives some backlighting to highlight the sides of actors, making them stand out more and giving them depth.</li>
+</ul>
+<div class="section" id="studio-rig">
+<h3>Studio rig<a class="headerlink" href="#studio-rig" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-03a-Studio.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-03a-Studio.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-03a-Studio.jpg" style="width: 300px;" /></a>
+<p class="caption">Studio three-point light rig.</p>
+</div>
+<p>Shown to the right are the &#8220;Studio&#8221; top, front,
+and side views of the standard three-point lighting rig. It changes the dynamics of the scene,
+by making a brighter &#8220;key&#8221; light give some highlights to the object,
+while two side &#8220;fill&#8221; lights soften the shadows created by the key light.</p>
+<p>In the studio, use this rig to film a talking head (actor) in front of a green screen,
+or with multiple people, keeping the key light on the main actor.
+This rig is also used to light products from all angles,
+and the side fill lights light up the props.</p>
+<p>The key light is the <em>Area</em> light placed slightly above and to the left of the
+camera. It allows the specular to come out. It is about <strong>30 BU</strong> back from the subject,
+and travels with the camera. A little specular shine lets you know there&#8217;s a light there,
+and that you&#8217;re not looking at a ghost. In real life, it is a spot with baffles, or blinders,
+that limit the area of the light.</p>
+<p>The two sidelights are reduced to only fill; each of them are <em>Hemi</em> lights placed
+<strong>20 BU</strong> to the side and <strong>5 BU</strong> in front of the subject, at ground level.
+They don&#8217;t cause a spotshine on the surface by disabling specular, and at ground level,
+light under the chin or any horizontal surfaces,
+countering the shadows caused by the key light.</p>
+<p>Use this rig to give balanced soft lighting that also highlights your main actor or object.
+It combines the best of both the single rig and the two-point rig,
+providing balanced illumination and frontal highlights. For a wide scene,
+you may have to pull the sidelights back to be more positioned like the two-point rig.</p>
+</div>
+<div class="section" id="standard-rig">
+<h3>Standard Rig<a class="headerlink" href="#standard-rig" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-03b-Standart.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-03b-Standart.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-03b-Standart.jpg" style="width: 300px;" /></a>
+<p class="caption">Standard three-point light rig.</p>
+</div>
+<p>Without a curtain in back of your main subject, you have depth to work with.
+The left fill light has been moved behind the subject (so it is now called a backlight)
+and is just off-camera, while the right side fill light remains the same. The keylight gives
+you specular reflection so you can play with specularity and hardness in your object&#8217;s
+material settings. The key light gives that &#8220;in-the-spotlight&#8221; feel, highlighting the subject,
+while the backlight gives a crisp edge to the subject against the background.
+This helps them stand out.</p>
+<p>In this rig, the key light is a fairly bright spot light.
+Use a slighter tinge of yellow because the light is so bright;
+it is the only light for that side.
+The other sidelight has been moved in back and raised to eye (camera) level.
+You need to cut the energy of the backlight in half,
+or when it is added to the remaining sidelight,
+it will light up the side too much and call too much attention to itself.
+You can vary the angle and height of the backlight to mimic a sun lighting up the objects.</p>
+<p>Use this rig in normal 3D animations to light the main actor.
+Use this rig especially if you have transparent objects (like glass)
+so that there is plenty of light to shine through them to the camera. The tricky part here is
+balancing the intensities of the lights so that no one light competes with or overpowers the
+others, while making sure all three work together as a team.</p>
+</div>
+</div>
+<div class="section" id="four-point-rig">
+<h2>Four-point Rig<a class="headerlink" href="#four-point-rig" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../_images/27x-Manual-Lighting-Rigs-04.jpg"><img alt="../../../../_images/27x-Manual-Lighting-Rigs-04.jpg" src="../../../../_images/27x-Manual-Lighting-Rigs-04.jpg" style="width: 300px;" /></a>
+<p class="caption">Four-point light rig.</p>
+</div>
+<p>The four-point lighting rig provides a better simulation of outside lighting,
+by adding a <em>Sun</em> lamp <tt class="docutils literal"><span class="pre">30</span></tt> Blender Units above, <tt class="docutils literal"><span class="pre">10</span></tt> to the side,
+and <strong>15 BU</strong> behind the subject.
+This sunlight provides backlighting and fills the top of the subject;
+even producing an intentional glare on the top of their head,
+telling you there is a sun up there. Notice it is colored yellow,
+which balances out the blue sidelights.</p>
+<p>Changing the key light to a <em>Spot</em>, select <em>Inverse Square</em>, disable
+<em>Specular</em> and pure white light combines with and softens the top sun flare while
+illuminating the face, resulting in a bright sunshine effect.
+Two lights above means sharper shadows as well,
+so you might want to adjust the side fill lights. In this picture,
+they are still <em>Hemi</em>, disable <em>Specular</em>.</p>
+<p>Use this rig when the camera will be filming from behind the characters,
+looking over their shoulder or whatnot, because the sun provides the backlight there.
+Also use this rig when you have transparent objects,
+so there is light to come through the objects to the camera.</p>
+<p>Another spot for the fill light is shining up onto the main actor&#8217;s face,
+illuminating the underside of his chin and neck.
+This gets rid of a sometimes ugly shadow under the chin, which if not corrected,
+can make the actor look fat or like they have a double chin; otherwise distracting.
+It evens out the lighting of the face.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>If you run into a problem with your render, where there are really bright areas,
+or really dark ones, or strange shadows, or lines on your objects,
+here is what I suggest you do:</p>
+<ul class="simple">
+<li>First, try deactivating all materials
+(create a default, gray one, and enter its name in the <em>Mat</em> field, <em>Layer</em> panel,
+<em>Render Layers</em> context - to get back all your normal materials, just erase this text field!).
+See if you get those problems with just grayness objects. If you don&#8217;t have the problem anymore,
+that should tell you that you&#8217;ve got a materials-interacting-with-light problem.
+Check the material settings, especially ambient,
+reflection and all those little buttons and sliders in the <em>Material</em> context.
+You can set some lights to affect only certain materials,
+so if there&#8217;s an issue with only a few objects being really bright, start with those.</li>
+<li>Then start &#8220;killing&#8221; lights (e.g. moving them to an unused layer);
+regress all the way back to one light, make sure it&#8217;s smooth,
+then add them in one by one. As they add together, reduce power in the tested ones so they merge cleanly,
+or consider not adding it at all, or, especially, reduce the energy of the lamp you just introduced.</li>
+<li>You can also set lights to only light objects on a layer, so again, if some of the gray spheres have weirdness,
+check for that as well. Again, you may have done some of this accidentally,
+so sometimes deleting the light and re-adding it with defaults helps you reset to a known-good situation.</li>
+<li>Negative lights can be very tricky, and make your model blotchy,
+so pay special attention to your use of those special lights.
+Shadow-only lights can throw off the look of the scene as well.
+Overly textured lights can make your scene have random weird colors.
+Don&#8217;t go too far off a slight tinge of blue or yellow or shades of white,
+or your material may show blue in the <em>Material</em> context but render green, and you will be very confused.</li>
+<li>Look at your environment settings
+<em>World</em> context: <em>Horizon</em>, <em>Zenith</em>, and <em>Environment Lighting</em>.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ambient_light.html" class="btn btn-neutral float-right" title="Environment Lighting"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sun/sky_and_atmosphere.html" class="btn btn-neutral" title="Sun: Sky &amp; Atmosphere"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

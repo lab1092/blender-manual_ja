@@ -1,0 +1,794 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>UV Mapping a Mesh &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../../../index.html"/>
+        <link rel="up" title="Textures" href="../../index.html"/>
+        <link rel="next" title="Managing UV Maps" href="layout_management.html"/>
+        <link rel="prev" title="UV Image Editor" href="../uv_image_editor.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Rendering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">Render</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Textures</a> &raquo;</li>
+      
+    <li>UV Mapping a Mesh</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../../../_sources/render/blender_render/textures/mapping/uv/unwrapping.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="uv-mapping-a-mesh">
+<h1>UV Mapping a Mesh<a class="headerlink" href="#uv-mapping-a-mesh" title="Permalink to this headline">¶</a></h1>
+<p>The first step is to unwrap your mesh. You want to unwrap when you feel your mesh is complete
+with respect to the number of faces it needs to have.
+If you do add faces or subdivide existing faces when a model is already unwrapped,
+Blender will add those new faces for you,
+but you may need to do additional mapping or editing. In this fashion,
+you can use the UV Texture image to guide additional geometry changes.</p>
+<p>This section covers techniques for Mapping Uvs.
+The next sections cover <a class="reference internal" href="layout_editing.html"><em>Editing UVs</em></a>,
+followed by methods of <a class="reference internal" href="layout_management.html"><em>Managing UV Layouts</em></a>,
+and <a class="reference internal" href="applying_image.html"><em>Applying Images to UVs</em></a>.</p>
+<div class="section" id="about-uvs">
+<h2>About UVs<a class="headerlink" href="#about-uvs" title="Permalink to this headline">¶</a></h2>
+<p>Every point in the UV map corresponds to a vertex in the mesh.
+The lines joining the UVs correspond to edges in the mesh.
+Each face in the UV map corresponds to a mesh face.</p>
+<p>Each face of a mesh can have many UV Textures.
+Each UV Texture can have an individual image assigned to it.
+When you unwrap a face to a UV Texture in the UV/Image Editor, each face of the mesh is
+automatically assigned <em>four UV coordinates:</em> These coordinates define the way an image or a
+texture is mapped onto the face. These are 2D coordinates, which is why they&#8217;re called UV,
+to distinguish them from XYZ coordinates.
+These coordinates can be used for rendering or for real-time OpenGL display as well.</p>
+<p>Every face in Blender can have a link to a different image.
+The UV coordinates define how this image is mapped onto the face.
+This image then can be rendered or displayed in real time. A 3D window has to be in &#8220;Face
+Select&#8221; mode to be able to assign Images or change UV coordinates of the active Mesh Object.
+This allows a face to participate in many UV Textures.
+A face at the hairline of a character might participate in the facial UV Texture,
+<em>and</em> in the scalp/hair UV Texture.</p>
+<p>These are described more fully in the next sections.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Manual-uvunwrapping-25x-screenlayout.jpg"><img alt="../../../../../_images/Manual-uvunwrapping-25x-screenlayout.jpg" src="../../../../../_images/Manual-uvunwrapping-25x-screenlayout.jpg" style="width: 320px;" /></a>
+<p class="caption">UV Editing screen layout</p>
+</div>
+<p>By default, meshes are not created with UVs. First you must map the faces, then
+you can <a class="reference internal" href="layout_editing.html"><em>edit them</em></a>. The process of
+unwrapping your model is done within Edit Mode in the 3D View window. This
+process creates one or more UV Islands in the
+<a class="reference internal" href="../uv_image_editor.html"><em>UV/Image Editor window</em></a>.</p>
+<p>To begin, choose the <em>UV Editing</em> <a class="reference internal" href="../../../../../getting_started/basics/interface/screens.html"><em>screen layout</em></a>
+from the selection list at the top of your screen in the User Preferences
+window header. This sets one of the panes to show you the UV/Image Editor
+window (<tt class="kbd docutils literal"><span class="pre">Shift-F10</span></tt>), and the other pane to the 3D window (<tt class="kbd docutils literal"><span class="pre">Shift-F5</span></tt>).</p>
+<p>Enter edit mode, as all unwrapping is done in Edit mode. You can be in vertex,
+face, or edge selection mode.</p>
+<div class="section" id="workflow">
+<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<img alt="../../../../../_images/Manual-25-uv-unwrap-method.jpg" src="../../../../../_images/Manual-25-uv-unwrap-method.jpg" />
+<p class="caption">Choosing the unwrapping method</p>
+</div>
+<p>The process for unwrapping is straightforward, but there are tons of options available,
+each of which dramatically affect the outcome of the unwrap.
+By understanding the meaning behind the options, you will become more efficient at unwrapping.
+The process is:</p>
+<ul class="simple">
+<li>Mark Seams if necessary</li>
+<li>Select all of the mesh components</li>
+<li>Select a UV mapping method from the UV Unwrap menu</li>
+<li>Adjust the unwrap settings</li>
+<li>Add a test image to see if there will be any distortion.
+See <a class="reference internal" href="applying_image.html"><em>Applying Images to UVs</em></a></li>
+<li>Adjust UVs in the UV editor.
+See <a class="reference internal" href="layout_editing.html"><em>Editing UVs</em></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mapping-types">
+<h2>Mapping Types<a class="headerlink" href="#mapping-types" title="Permalink to this headline">¶</a></h2>
+<p>Blender offers several ways of mapping UVs.
+The simpler projection methods use formulas that map 3d space onto 2d space,
+by interpolating the position of points toward a point/axis/plane through a surface.
+The more advanced methods can be used with more complex models, and have more specific uses.</p>
+<p>Basic:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a class="reference internal" href="#cube">Cube</a></dt>
+<dd>Maps the mesh onto the faces of a cube, which is then unfolded.</dd>
+<dt><a class="reference internal" href="#cylinder-and-sphere"><em>Sphere</em></a></dt>
+<dd>Projects the UVs onto a spherical shape. Useful only for spheres or spherical shapes, like eyes, planets, etc.</dd>
+<dt><a class="reference internal" href="#cylinder-and-sphere"><em>Cylinder</em></a></dt>
+<dd>Projects UVs onto a cylindrical surface.</dd>
+<dt><a class="reference internal" href="#project-from-view">Project from View</a></dt>
+<dd>Takes the current view in the 3D viewport and flattens it as it appears.</dd>
+</dl>
+</div></blockquote>
+<p>Advanced:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><a class="reference internal" href="#unwrap-using-seams"><em>Unwrap</em></a></dt>
+<dd>Useful for organic shapes. Smooths the mesh into a flat surface by cutting along seams.</dd>
+<dt><a class="reference internal" href="#smart-uv-project">Smart UV Project</a></dt>
+<dd>Breaks the mesh into islands based on an angle threshold.</dd>
+<dt><a class="reference internal" href="#lightmap-pack"><em>Lightmap Pack</em></a></dt>
+<dd>Separates each face and packs them onto the UV grid.</dd>
+<dt><a class="reference internal" href="#follow-active-quads">Follow Active Quads</a></dt>
+<dd>Follow UV from active quads along continuous face loops.</dd>
+</dl>
+</div></blockquote>
+<p>You can also <a class="reference internal" href="#reset-uvs"><em>reset UVs</em></a>, which maps each face to fill the UV grid,
+giving each face the same mapping.</p>
+<p>If we were to use an image that was tileable,
+the surface would be covered in a smooth repetition of that image,
+with the image skewed to fit the shape of each individual face.
+Use this unwrapping option to reset the map and undo any unwrapping (go back to the start).</p>
+</div>
+<div class="section" id="basic-mapping">
+<h2>Basic Mapping<a class="headerlink" href="#basic-mapping" title="Permalink to this headline">¶</a></h2>
+<p>Based on the fundamental geometry of the object, and how it is being viewed,
+the <em>Mesh&#8211;&gt;UV Unwrap&#8211;&gt;Cube, Cylinder,
+and Sphere</em> UV Calculations attempt to unfold the faces for you as an initial best fit.
+Here, the view from the 3D window is especially important.
+Also, the settings for cube size or cylinder radius (Editing buttons, UV Calculation panel)
+should be set (in Blender units) to encompass the object.</p>
+<p>The following settings are common for the Cube, Cylinder, and Sphere mappings:</p>
+<dl class="docutils">
+<dt>Correct Aspect</dt>
+<dd>Map UVs taking image aspect ratios into consideration.
+If an image has already been mapped to the texture space that is non-square,
+the projection will take this into account and distort the mapping to appear correct.</dd>
+<dt>Clip to Bounds</dt>
+<dd>Any UVs that lie outside the 0 to 1 range will be clipped to that range
+by being moved to the UV space border it is closest to.</dd>
+<dt>Scale to Bounds</dt>
+<dd>If the UV map is larger than the 0 to 1 range, the entire map will be scaled to fit inside.</dd>
+</dl>
+<div class="section" id="cube">
+<h3>Cube<a class="headerlink" href="#cube" title="Permalink to this headline">¶</a></h3>
+<p>Cube mapping projects s mesh onto six separate planes, creating 6 UV islands.
+In the UV editor, these will appear overlapped, but can be moved.
+See <a class="reference internal" href="layout_editing.html"><em>Editing UVs</em></a>.</p>
+<dl class="docutils">
+<dt>Cube Size</dt>
+<dd>Set the size of the cube to be projected onto.</dd>
+</dl>
+</div>
+<div class="section" id="cylinder-and-sphere">
+<span id="id1"></span><h3>Cylinder and Sphere<a class="headerlink" href="#cylinder-and-sphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-sphereProjection.jpg"><img alt="../../../../../_images/Doc26-textures-uv-sphereProjection.jpg" src="../../../../../_images/Doc26-textures-uv-sphereProjection.jpg" style="width: 250px;" /></a>
+<p class="caption">Using a Mercator image with a Sphere Projection</p>
+</div>
+<p>Cylindrical and Spherical mappings have the same settings. The difference is that a
+cylindrical mapping projects the UVs on a plan toward the cylinder shape,
+while a spherical map takes into account the sphere&#8217;s curvature,
+and each latitude line becomes evenly spaced.</p>
+<p>Normally, to unwrap a cylinder (tube) as if you slit it lengthwise and folded it flat,
+Blender wants the view to be vertical, with the tube standing &#8216;up&#8217;.
+Different views will project the tube onto the UV map differently, skewing the image if used.
+However you can set the axis on which the calculation is done manually.
+This same idea works for the sphere mapping:</p>
+<p>Recall the opening cartographer&#8217;s approaching to mapping the world? Well,
+you can achieve the same here when unwrapping a sphere from different perspectives. Normally,
+to unwrap a sphere, view the sphere with the poles at the top and bottom. After unwrapping,
+Blender will give you a Mercator projection;
+the point at the equator facing you will be in the middle of the image.
+A polar view will give a very different but common projection map. Using a Mercator projection
+map of the earth as the UV image will give a very nice planet mapping onto the sphere.</p>
+<dl class="docutils">
+<dt>Direction</dt>
+<dd><dl class="first last docutils">
+<dt>View on Poles</dt>
+<dd>Use when viewing from the top (at a pole) by using an axis that is straight down from the view</dd>
+<dt>View on Equator</dt>
+<dd>Use if view is looking at the equator, by using a vertical axis</dd>
+<dt>Align to Object</dt>
+<dd>Uses the object&#8217;s transform to calculate the axis</dd>
+</dl>
+</dd>
+<dt>Align</dt>
+<dd><p class="first">Select which axis is up</p>
+<dl class="last docutils">
+<dt>Polar ZX</dt>
+<dd>Polar 0 is on the x axis</dd>
+<dt>Polar ZY</dt>
+<dd>Polar 0 is on the y axis</dd>
+</dl>
+</dd>
+<dt>Radius</dt>
+<dd>The radius of the cylinder to use</dd>
+</dl>
+</div>
+<div class="section" id="project-from-view">
+<h3>Project From View<a class="headerlink" href="#project-from-view" title="Permalink to this headline">¶</a></h3>
+<p>In the 3D window, the <em>Face&#8211;&gt;Unwrap UVs&#8211;&gt;Project from View</em> option maps the face as
+seen through the view of the 3D window it was selected from.
+It is almost like you had x-ray vision or squashed the mesh flat as a pancake onto the UV map.
+Use this option if you are using a picture of a real object as a UV Texture for an object that
+you have modeled. You will get some stretching in areas where the model recedes away from you.</p>
+<p>Using <em>Project from View (Bounds)</em> will do the same as above,
+but scales the UVs to the bounds of the UV space.</p>
+</div>
+<div class="section" id="resetting-uvs">
+<span id="reset-uvs"></span><h3>Resetting UVs<a class="headerlink" href="#resetting-uvs" title="Permalink to this headline">¶</a></h3>
+<p>In the 3D window,
+<em>Face&#8211;&gt;Unwrap&#8211;&gt;Reset</em> maps each selected face to the same area of the image,
+as previously discussed. To map all the faces of an object (a cube, for example)
+to the same image, select all the faces of the cube,
+and unwrap them using the Reset menu option.</p>
+</div>
+</div>
+<div class="section" id="advanced-mapping">
+<h2>Advanced Mapping<a class="headerlink" href="#advanced-mapping" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="unwrapping-using-seams">
+<span id="unwrap-using-seams"></span><h3>Unwrapping Using Seams<a class="headerlink" href="#unwrapping-using-seams" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-unwrap-seam-simple.jpg"><img alt="../../../../../_images/Doc26-textures-uv-unwrap-seam-simple.jpg" src="../../../../../_images/Doc26-textures-uv-unwrap-seam-simple.jpg" style="width: 300px;" /></a>
+<p class="caption">Simple Seam on a Cylinder</p>
+</div>
+<p>For many cases, using the Unwrap calculations of Cube, Cylinder, Sphere,
+or best fit will produce a good UV layout. However, for more complex meshes,
+especially those with lots of indentations, you may want to define a <strong>seam</strong> to limit and
+guide any of the unwrapping processes discussed above.</p>
+<p>Just like in sewing, a seam is where the ends of the image/cloth are sewn together.
+In unwrapping, the mesh is unwrapped at the seams.
+Think of this method as peeling an orange or skinning an animal.
+You make a series of cuts in the skin, then peel it off. You could then flatten it out,
+applying some amount of stretching. These cuts are the same as seams.</p>
+<p>When using this method, you need to be aware of how much stretching there is.
+The more seams there are, the less stretching there is,
+but this is often an issue for the texturing process.
+It&#8217;s a good idea to have as few seams as possible while having the least amount of stretching.
+Try to hide seams where they will not be seen. In productions where 3d Paint is used,
+this becomes less of an issue, as projection painting can easily deal with seams,
+as opposed to 2d texturing, where it is difficult to match the edges of different UV islands.</p>
+<p>The workflow is the following:</p>
+<ul class="simple">
+<li>Create seams.
+A seam is marked in Edit mode by selecting edges to make the seam and then issuing the command to Mark Seam.</li>
+<li>Unwrap</li>
+<li>Adjust seams and repeat</li>
+<li>Manually adjust UVs. See the next section on Editing UVs.</li>
+</ul>
+<div class="section" id="marking-seams">
+<h4>Marking Seams<a class="headerlink" href="#marking-seams" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-unwrap-seams.jpg"><img alt="../../../../../_images/Doc26-textures-uv-unwrap-seams.jpg" src="../../../../../_images/Doc26-textures-uv-unwrap-seams.jpg" style="width: 250px;" /></a>
+<p class="caption">Seamed Suzanne</p>
+</div>
+<p>To add an edge to a seam,
+simply select the edge and <tt class="kbd docutils literal"><span class="pre">Ctrl-E</span></tt> <em>Mark Seam</em>.
+To take an edge out of a seam, select it, <tt class="kbd docutils literal"><span class="pre">Ctrl-E</span></tt> and <em>Clear Seam</em>.</p>
+<p>In the example to the right, the back-most edge of the cylinder was selected as the seam
+(to hide the seam), and the default unwrap calculation was used.
+In the UV/Image Editor window, you can see that all the faces are nicely unwrapped,
+just as if you cut the seam with a scissors and spread out the fabric.</p>
+<p>When marking seams, you can use the <em>Select&#8211;&gt;Linked Faces</em> or <tt class="kbd docutils literal"><span class="pre">Ctrl-L</span></tt> in
+Face Select Mode to check your work.
+This menu option selects all faces connected to the selected one, up to a seam.
+If faces outside your intended seam are selected, you know that your seam is not continuous.
+You do not need continuous seams, however, as long as they resolve regions that may stretch.</p>
+<p>Just as there are many ways to skin a cat,
+there are many ways to go about deciding where seams should go. In general though,
+you should think as if you were holding the object in one hand,
+and a pair of sharp scissors in the other,
+and you want to cut it apart and spread it on the table with as little tearing as possible.
+Note that we seamed the outside edges of her ears, to separate the front from the back.
+Her eyes are disconnected sub-meshes, so they are automatically unwrapped by themselves.
+A seam runs along the back of her head vertically,
+so that each side of her head is flattened out.</p>
+<p>Another use for seams is to limit the faces unwrapped. For example, when texturing a head, you
+don&#8217;t really need to texture the scalp on the top and back of the head since it will be
+covered in hair. So define a seam at the hairline. Then, when you select a frontal face,
+and then select linked faces before unwrapping,
+the select will only go up to the hairline seam, and the scalp will not be unwrapped.</p>
+<p>When unwrapping anything that is bilateral, like a head or a body,
+seam it along the mirror axis. For example,
+cleave a head or a whole body right down the middle in front view. When you unwrap,
+you will be able to overlay both halves onto the same texture space,
+so that the image pixels for the right hand will be shared with the left;
+the right side of the face will match the left, etc.</p>
+<p>Finally, remember that you <em>don&#8217;t</em> have to come up with &#8220;one unwrapping that works perfectly
+for everything everywhere.&#8221; As we&#8217;ll discuss later,
+you can easily have multiple UV unwrappings,
+using different approaches in different areas of your mesh.</p>
+</div>
+<div class="section" id="unwrap">
+<h4>Unwrap<a class="headerlink" href="#unwrap" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-unwrap-unwrap.jpg"><img alt="../../../../../_images/Doc26-textures-uv-unwrap-unwrap.jpg" src="../../../../../_images/Doc26-textures-uv-unwrap-unwrap.jpg" style="width: 300px;" /></a>
+<p class="caption">Result of unwrapping Suzanne</p>
+</div>
+<p>Begin by selecting all faces to be unwrapped in the 3D View. With our faces selected,
+it is now time to unwrap them.
+In the 3D View, select <em class="menuselection">Mesh ‣ UV Unwrap ‣ Unwrap</em> or
+<tt class="kbd docutils literal"><span class="pre">U</span></tt> and select Unwrap.</p>
+<p>You can also do this from the UV/Image Editor window with command <em class="menuselection">UVs ‣ Unwrap</em> or <tt class="kbd docutils literal"><span class="pre">E</span></tt>.
+This method will unwrap all of the faces and reset previous work. The
+UVs menu will appear in the UV/Image Editor window after unwrapping has been performed once.</p>
+<p>This tool unwraps the faces of the object to provide the
+&#8216;best fit&#8217; scenario based on how the faces are connected and will fit within the image,
+and takes into account any seams within the selected faces.
+If possible, each selected face gets its own different area of the image and is not overlapping any other faces UV&#8217;s.
+If all faces of an object are selected, then each face is mapped to some portion of the image.</p>
+<p>Blender has two ways of calculating the unwrapping.
+They can be selected in the tool setting in the tool panel in the 3D View.</p>
+<dl class="docutils">
+<dt>Angle Based</dt>
+<dd>This method gives a good 2d representation of a mesh.</dd>
+<dt>Conformal</dt>
+<dd>Uses LSCM (Least Squared Conformal Mapping). This usually gives a less accurate UV mapping than Angle Based,
+but works better for simpler objects.</dd>
+<dt>Fill Holes</dt>
+<dd>Activating Fill Holes will prevent overlapping from occurring and better represent any holes in the UV regions.</dd>
+<dt>Correct Aspect</dt>
+<dd>Map UVs taking image aspect into account</dd>
+<dt>Use Subsurf Modifier</dt>
+<dd>Map UVs taking vertex position after subsurf modifier into account</dd>
+<dt>Margin</dt>
+<dd>Space between UV islands</dd>
+</dl>
+<p><strong>This point is crucial to understanding mapping</strong> later on:
+a face&#8217;s UV image texture only has to use <em>part</em> of the image, not the <em>whole</em> image.
+Also, portions of the same image can be shared by multiple faces.
+A face can be mapped to less and less of the total image.</p>
+</div>
+</div>
+<div class="section" id="smart-uv-project">
+<h3>Smart UV Project<a class="headerlink" href="#smart-uv-project" title="Permalink to this headline">¶</a></h3>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../../../_images/Doc26-textures-uv-unwrap-smartProject.jpg"><img alt="../../../../../_images/Doc26-textures-uv-unwrap-smartProject.jpg" src="../../../../../_images/Doc26-textures-uv-unwrap-smartProject.jpg" style="width: 250px;" /></a>
+<p class="caption">Smart UV project on a cube</p>
+</div>
+<p>Smart UV Project, (previously called the Archimapper)
+gives you fine control over how automatic seams should be created,
+based on angular changes in your mesh.
+This method is good for simple and complex geometric forms,
+such as mechanical objects or architecture.</p>
+<p>This function examines the shape of your object,
+the faces selected and their relation to one another,
+and creates a UV map based on this information and settings that you supply.</p>
+<p>In the example to the right,
+the Smart Mapper mapped all of the faces of a cube to a neat arrangement of 3 sides on top,
+3 sides on the bottom, for all six sides of the cube to fit squarely,
+just like the faces of the cube.</p>
+<p>For more complex mechanical objects, this tool can very quickly and easily create a very
+logical and straightforward UV layout for you.</p>
+<p>The Tool Settings panel in the Tool Shelf allows the fine control over how the mesh is
+unwrapped:</p>
+<dl class="docutils">
+<dt>Angle Limit</dt>
+<dd>This controls how faces are grouped: a higher limit will lead to many small groups but less distortion,
+while a lower limit will create fewer groups at the expense of more distortion.</dd>
+<dt>Island Margin</dt>
+<dd>This controls how closely the UV islands are packed together.
+A higher number will add more space in between islands.</dd>
+<dt>Area Weight</dt>
+<dd>Weight projection&#8217;s vector by faces with larger areas</dd>
+</dl>
+</div>
+<div class="section" id="lightmap">
+<span id="lightmap-pack"></span><h3>Lightmap<a class="headerlink" href="#lightmap" title="Permalink to this headline">¶</a></h3>
+<p>Lightmap Pack takes each of a mesh&#8217;s faces, or selected faces,
+and packs them into the UV bounds. Lightmaps are used primarily in gaming contexts,
+where lighting information is baked onto texture maps,
+when it is essential to utilize as much UV space as possible.
+It can also work on several meshes at once.
+It has several options that appear in the Tool Shelf:</p>
+<p>You can set the tool to map just <em>Selected Faces</em> or <em>All Faces</em> if
+working with a single mesh.</p>
+<p>The <em>Selected Mesh Object</em> option works on multiple meshes. To use this,
+in <em>Object Mode</em> select several mesh objects,
+then go into <em>Edit Mode</em> and activate the tool.</p>
+<dl class="docutils">
+<dt>Share Tex Space</dt>
+<dd>This is useful if mapping more than one mesh.
+It attempts to fit all of the objects&#8217; faces in the UV bounds without overlapping.</dd>
+<dt>New UV Layer</dt>
+<dd>If mapping multiple meshes, this option creates a new UV layer for each mesh.
+See <a class="reference internal" href="layout_management.html"><em>Managing the Layout</em></a>.</dd>
+<dt>New Image</dt>
+<dd><p class="first">Assigns new images for every mesh, but only one if <em>Shared Tex Space</em> is enabled.</p>
+<dl class="last docutils">
+<dt>Image Size</dt>
+<dd>Set the size of the new image.</dd>
+</dl>
+</dd>
+<dt>Pack Quality</dt>
+<dd>Pre-packing before the more complex Box packing.</dd>
+<dt>Margin</dt>
+<dd>This controls how closely the UV islands are packed together.
+A higher number will add more space in between islands.</dd>
+</dl>
+</div>
+<div class="section" id="follow-active-quads">
+<h3>Follow Active Quads<a class="headerlink" href="#follow-active-quads" title="Permalink to this headline">¶</a></h3>
+<p>The <em>Face&#8211;&gt;Unwrap&#8211;&gt;Follow Active Quads</em> takes the selected faces and lays them out
+by following continuous face loops, even if the mesh face is irregularly shaped.
+Note that it does not respect the image size,
+so you may have to scale them all down a bit to fit the image area.</p>
+<p>Edge Length Mode:</p>
+<dl class="docutils">
+<dt>Even</dt>
+<dd>Space all UVs evenly.</dd>
+<dt>Length</dt>
+<dd>Average space UV&#8217;s edge length of each loop.</dd>
+</dl>
+<p>Please note that it is the shape of the active quad in UV space that is being followed,
+not its shape in 3d space. To get a clean 90-degree unwrap make sure the active quad is a
+rectangle in UV space before using &#8220;Follow active quad&#8221;.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layout_management.html" class="btn btn-neutral float-right" title="Managing UV Maps"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../uv_image_editor.html" class="btn btn-neutral" title="UV Image Editor"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

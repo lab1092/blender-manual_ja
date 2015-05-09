@@ -1,0 +1,810 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Skeleton Sketching &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Blender Reference Manual" href="../../../index.html"/>
+        <link rel="up" title="Rigging" href="../../index.html"/>
+        <link rel="next" title="Armature Templating" href="templating.html"/>
+        <link rel="prev" title="Editing Bone Properties" href="properties.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/info.html">Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/properties/index.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../physics/performances.html">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Rigging</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/timeline.html">The Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/editor.html">Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_controls.html">Node Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/usage.html">Using Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/node_groups.html">Node Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preferences/system.html">System preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Rigging</a> &raquo;</li>
+      
+    <li>Skeleton Sketching</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/rigging/armatures/editing/sketching.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="skeleton-sketching">
+<h1>Skeleton Sketching<a class="headerlink" href="#skeleton-sketching" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<img alt="../../../_images/Doc26-boneSketch.jpg" src="../../../_images/Doc26-boneSketch.jpg" />
+<p class="caption">The Bone Sketching panel in its default (inactive) state.</p>
+</div>
+<p>If you think that creating a whole rig by hand, bone after bone, is quite boring, be happy:
+some Blender developers had the same feeling, and created the Skeleton Sketching tool,
+formerly the Etch-a-ton tool, which basically allows you to &#8220;draw&#8221; (sketch)
+whole chains of bones at once.</p>
+<p>Skeleton Sketching is obviously only available in <em>Edit</em> mode, in the 3D views. You
+control it through its <em>Skeleton Sketching</em> panel in the <em>Transform panel</em>,
+which you can open with <tt class="kbd docutils literal"><span class="pre">N</span></tt>. Use mouse (<tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to draw strokes,
+and <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> for gestures. Showing its tool panel won&#8217;t enable sketching - <em>you must
+tick the checkbox next to</em> <em>Skeleton Sketching</em> <em>to start drawing bone chains</em>
+(otherwise, you remain in the standard <em>Edit</em> mode...).</p>
+<p>Sketching is done in two steps:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#drawing-chains">Drawing Chains</a> (called &#8220;strokes&#8221;). Each stroke corresponds to a chain of bones.</li>
+<li><a class="reference internal" href="#converting-to-bones">Converting to Bones</a>, using different methods.</li>
+</ul>
+<p><strong>The point of view is important</strong>, as it determines the future bones&#8217; roll angle:
+the Z axis of a future bone will be aligned with the view Z axis of the 3D view in
+which you draw its &#8220;parent&#8221; stroke (unless you use the* <em>Template</em> converting method...).
+Strokes are drawn in the current view plane passing through the 3D cursor,
+but you can create somewhat &#8220;3D&#8221; strokes using the* <em>Adjust</em> drawing option in different views (see below).</p>
+<p>If you enable the small* <em>Quick Sketch</em> option, the two steps are merged into one:
+once you have finalized the drawing of a stroke (see <a class="reference internal" href="#drawing-chains">Drawing Chains</a>),
+it is immediately converted to bones (using the current active method) and deleted.
+This option makes bone sketching quick and efficient, but you lose all the advanced stroke editing possibilities.</p>
+<p><strong>Sketches are not saved into Blender files</strong>,
+so you can&#8217;t interrupt a sketching session without losing all your work!
+Note also that the* sketching is common to the whole Blender session, i.e.
+there is only one set of strokes (one sketch) in Blender, and not one per armature, or even per file...</p>
+<div class="section" id="drawing-chains">
+<h2>Drawing Chains<a class="headerlink" href="#drawing-chains" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-strokes.jpg"><img alt="../../../_images/Doc26-boneSketch-strokes.jpg" src="../../../_images/Doc26-boneSketch-strokes.jpg" style="width: 500px;" /></a>
+<p class="caption">Strokes example. From top to bottom:
+A selected polygonal stroke of four straight segments, oriented from left to right.
+An unselected free stroke of two segments, oriented from left to right.
+A mixed stroke, with one straight segment between two free ones, right to left.</p>
+</div>
+<p>So, each stroke you draw will be a chain of bones, oriented from the starting point
+(the reddest or most orange part of the stroke) to its end (its whitest part).
+A stroke is made of several segments, delimited by small black dots - there will be at least one bone per segment
+(except with the* <em>Template</em> conversion method,
+see <a class="reference internal" href="templating.html"><em>next page</em></a>),
+so all black points represents future bones&#8217; ends.
+There are two types of segments, which can be mixed together:</p>
+<div class="section" id="straight-segments">
+<h3>Straight Segments<a class="headerlink" href="#straight-segments" title="Permalink to this headline">¶</a></h3>
+<p>To create a straight segment, click* <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> <em>at its starting point.
+Then move the mouse cursor,
+without pressing any button - a dashed red line represents the future segment.
+Click</em> <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> again to finalize it.
+Each straight segment of a stroke will always create one and only one bone,
+whatever convert algorithm you use (except for the* <em>Template</em> conversion method).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx1.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx1.jpg" src="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx1.jpg" style="width: 200px;" /></a>
+<p class="caption">The first segment has been started ([lmb] click) and the mouse moved to its end point.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx2.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx2.jpg" src="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx2.jpg" style="width: 200px;" /></a>
+<p class="caption">The first segment has been finalized by a second [lmb] click, which also started a new segment...</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx3.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx3.jpg" src="../../../_images/ManRiggingSketchingDrawingPolyStrokeEx3.jpg" style="width: 200px;" /></a>
+<p class="caption">Repeating these steps, we now have a four-segment polygonal stroke.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="free-segments">
+<h3>Free Segments<a class="headerlink" href="#free-segments" title="Permalink to this headline">¶</a></h3>
+<p>To create a free (curved) segment, click* and hold <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> at its starting point.
+Then draw your segment by moving the mouse cursor - as in any paint program! Release
+<tt class="kbd docutils literal"><span class="pre">LMB</span></tt> to finalize the segment - you will then be creating a new straight segment,
+so if you would rather start a new free segment, you must immediately re-press <tt class="kbd docutils literal"><span class="pre">LMB</span></tt>.
+The free segments of a stroke will create different number of bones, in different manners,
+depending on the conversion method used. The future bones&#8217; ends for the current selected method are
+represented by small green dots for each one of those segments, for the selected strokes only.
+The free segment drawing uses the same* <em>Manhattan Dist</em>
+setting as the <a class="reference internal" href="../../../grease_pencil/introduction.html"><em>grease pencil tool</em></a>
+(<em>User Preferences</em> <em>window,</em> <em>Edit Methods</em> &#8220;panel&#8221;, <em>Grease Pencil</em> group)
+to control where and when to add a new point to the segment - so if you feel your free segments are too detailed,
+raise this value a bit, and if you find them too jagged, lower it.</p>
+<table border="1" class="docutils">
+<caption>Drawing free segments example.</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx1.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx1.jpg" src="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx1.jpg" style="width: 300px;" /></a>
+<p class="caption">While drawing a first free segment ([lmb] click and drag).</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx2.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx2.jpg" src="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx2.jpg" style="width: 300px;" /></a>
+<p class="caption">The first free segment finalized (releasing [lmb]).</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx3.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx3.jpg" src="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx3.jpg" style="width: 300px;" /></a>
+<p class="caption">If you now move the mouse without pressing [lmb] again, you&#8217;ll create a straight segment...</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx4.jpg"><img alt="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx4.jpg" src="../../../_images/ManRiggingSketchingDrawingFreeStrokeEx4.jpg" style="width: 300px;" /></a>
+<p class="caption">But if you immediately click again and drag [lmb], you&#8217;ll instead start a new free segment.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You finalize a whole stroke by clicking* <tt class="kbd docutils literal"><span class="pre">RMB</span></tt>. You can cancel the stroke you are drawing by hitting <tt class="kbd docutils literal"><span class="pre">Esc</span></tt>.
+You can also snap strokes to underlying meshes by holding* <tt class="kbd docutils literal"><span class="pre">Ctrl</span></tt> while drawing. By the way,
+the <em>Peel Objects</em> <em>button at the bottom of the</em> <em>Bone Sketching</em> panel is the same thing as the
+&#8220;monkey&#8221; button of the snapping header bar controls shown when* <em>Volume</em> snap element is selected - see the
+<tt class="xref doc docutils literal"><span class="pre">snap</span> <span class="pre">to</span> <span class="pre">mesh</span></tt> page for details.</p>
+</div>
+</div>
+<div class="section" id="selecting-strokes">
+<h2>Selecting Strokes<a class="headerlink" href="#selecting-strokes" title="Permalink to this headline">¶</a></h2>
+<p>A stroke can be selected (materialized by a solid red-to-white line), or not
+(shown as a orange-to-white line) - see (Strokes example) above. As usual,
+you select a stroke by clicking* <tt class="kbd docutils literal"><span class="pre">RMB</span></tt> on it,
+you add one to/remove one from the current selection with a* <tt class="kbd docutils literal"><span class="pre">Shift-RMB</span></tt> <em>click,
+and</em> <tt class="kbd docutils literal"><span class="pre">A</span></tt> (de)selects all strokes...</p>
+</div>
+<div class="section" id="deleting">
+<h2>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">¶</a></h2>
+<p>Hitting* <tt class="kbd docutils literal"><span class="pre">X</span></tt> or clicking on the <em>Delete</em> button (<em>Bone Sketching</em> panel)
+deletes the selected strokes (be careful, no warning/confirmation pop-up menu here).
+See also <a class="reference internal" href="#gestures">Gestures</a>.</p>
+</div>
+<div class="section" id="modifying-strokes">
+<h2>Modifying Strokes<a class="headerlink" href="#modifying-strokes" title="Permalink to this headline">¶</a></h2>
+<p>You can adjust, or &#8220;redraw&#8221; your strokes by enabling the <em>Overdraw Sketching</em> <em>option
+of the</em> <em>Bone Sketching</em> panel. This will modify the behavior of the strokes drawing
+(i.e. <tt class="kbd docutils literal"><span class="pre">LMB</span></tt> clicks and/or hold): when you draw, you won&#8217;t create a new stroke,
+but rather modify the nearest one.
+The part of the old stroke that will be replaced by the new one are drawn in gray.
+This option does not take into account stroke selection, i.e.
+all strokes can be modified this way,
+not just the selected ones... Note also that even if it is enabled,
+when you draw too far away from any other existing stroke, you won&#8217;t modify any of them,
+but rather create a new one, as if* <em>Overdraw Sketching</em> was disabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-overdraw.jpg"><img alt="../../../_images/Doc26-boneSketch-overdraw.jpg" src="../../../_images/Doc26-boneSketch-overdraw.jpg" style="width: 350px;" /></a>
+<p class="caption">Adjusting a stroke: the gray part of the &#8220;unselected&#8221; (orange)
+stroke will be replaced by the currently drawn &#8220;replacement&#8221;.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-overdraw2.jpg"><img alt="../../../_images/Doc26-boneSketch-overdraw2.jpg" src="../../../_images/Doc26-boneSketch-overdraw2.jpg" style="width: 350px;" /></a>
+<p class="caption">Stroke adjusted.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Adjusting stroke example.</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Finally, note that there is no undo/redo for sketch drawing...</p>
+</div>
+<div class="section" id="gestures">
+<h2>Gestures<a class="headerlink" href="#gestures" title="Permalink to this headline">¶</a></h2>
+<p>There quite a few things about strokes editing that are only available through gestures.
+Gestures are started by clicking and holding
+FIXME(Template Unsupported: Shortcut/Keypress; {{Shortcut/Keypress|shift}}) <tt class="kbd docutils literal"><span class="pre">LMB</span></tt>
+(when you are not already drawing a stroke), and materialized by blue-to-white lines.
+A gesture can affect several strokes at once.</p>
+<p>There is no direct way to cancel a gesture once you&#8217;ve started &#8220;drawing&#8221; it.
+So the best thing to do, if you change your mind (or made a &#8220;false move&#8221;),
+is to continue to draw until you get a disgusting scribble,
+crossing your stroke several times - in short,
+something that the gesture system would never recognize!</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingCancelingGestureEx1.jpg" src="../../../_images/ManRiggingSketchingCancelingGestureEx1.jpg" />
+<p class="caption">Damn! I didn&#8217;t want to cut this stroke here!</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingCancelingGestureEx2.jpg" src="../../../_images/ManRiggingSketchingCancelingGestureEx2.jpg" />
+<p class="caption">Let&#8217;s doodle a bit...</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingCancelingGestureEx3.jpg" src="../../../_images/ManRiggingSketchingCancelingGestureEx3.jpg" />
+<p class="caption">Phew! That was close, but the stroke is still in one piece.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="cut">
+<h3>Cut<a class="headerlink" href="#cut" title="Permalink to this headline">¶</a></h3>
+<p>To* <strong>cut</strong> a segment (i.e. add a new black dot inside it, making two segments out of one),
+&#8220;draw&#8221; a straight line crossing the chosen segment where you want to split it.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingCutGestureEx1.jpg" src="../../../_images/ManRiggingSketchingCutGestureEx1.jpg" />
+<p class="caption">Gesture.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingCutGestureEx2.jpg" src="../../../_images/ManRiggingSketchingCutGestureEx2.jpg" />
+<p class="caption">Result.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="delete">
+<h3>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h3>
+<p>To* <strong>delete</strong> a stroke, draw a &#8220;V&#8221; crossing the stroke to delete twice.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingDeleteGestureEx1.jpg" src="../../../_images/ManRiggingSketchingDeleteGestureEx1.jpg" />
+<p class="caption">Gesture.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingDeleteGestureEx2.jpg" src="../../../_images/ManRiggingSketchingDeleteGestureEx2.jpg" />
+<p class="caption">Result.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="reverse">
+<h3>Reverse<a class="headerlink" href="#reverse" title="Permalink to this headline">¶</a></h3>
+<p>To <strong>reverse</strong> a stroke (i.e. the future chain of bones will be reversed),
+draw a &#8220;C&#8221; crossing twice the stroke to reverse.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingReverseGestureEx1.jpg" src="../../../_images/ManRiggingSketchingReverseGestureEx1.jpg" />
+<p class="caption">Gesture.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="../../../_images/ManRiggingSketchingReverseGestureEx2.jpg" src="../../../_images/ManRiggingSketchingReverseGestureEx2.jpg" />
+<p class="caption">Result.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="converting-to-bones">
+<h2>Converting to Bones<a class="headerlink" href="#converting-to-bones" title="Permalink to this headline">¶</a></h2>
+<p>Once you have one or more selected strokes, you can convert them to bones, using either the* <em>Convert</em>
+button of the <em>Bone Sketching</em> panel, or the corresponding gesture
+(see <a class="reference internal" href="#gestures">Gestures</a>).
+Each selected stroke will generate a chain of bones, oriented from its reddest end to its whitest one.
+Note that converting a stroke does not delete it.</p>
+<p>There are four different conversion methods - three &#8220;simple&#8221; ones, and one more advanced and complex,
+<em>Template</em>, that reuses bones from the same armature or from another
+one as a template for the strokes to convert, and which is detailed in
+<a class="reference internal" href="templating.html"><em>the next page</em></a>.
+Anyway, remember that* straight segments are always converted to one and only one bone
+(except for the <em>Template</em> conversion method),
+and that the future bones&#8217; ends are shown as green dots on selected free segments.</p>
+<p>Remember also that the roll rotation of the created bones has been set during their &#8220;parent&#8221; stroke drawing
+(except for the <em>Template</em> conversion method) - their Z axis will be aligned with the view
+Z axis of the active 3D view at draw time.</p>
+<div class="section" id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<p>With this method,
+each free segment of the selected strokes will be uniformly divided in <tt class="docutils literal"><span class="pre">n</span></tt> parts
+(set in <em>Num</em> numeric field), i.e. will give <tt class="docutils literal"><span class="pre">n</span></tt> bones.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert.jpg"><img alt="../../../_images/Doc26-boneSketch-convert.jpg" src="../../../_images/Doc26-boneSketch-convert.jpg" style="width: 300px;" /></a>
+<p class="caption">The Fixed conversion settings and its preview on selected strokes.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert2.jpg"><img alt="../../../_images/Doc26-boneSketch-convert2.jpg" src="../../../_images/Doc26-boneSketch-convert2.jpg" style="width: 300px;" /></a>
+<p class="caption">The Fixed conversion result.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="adaptative">
+<h3>Adaptative<a class="headerlink" href="#adaptative" title="Permalink to this headline">¶</a></h3>
+<p>With this method, each free segment of the selected strokes will create as many bones as
+necessary to follow its shape closely enough - this &#8220;closely enough&#8221; parameter being set by
+the <em>Thres</em> hold numeric field; higher values giving more bones,
+following more closely the segments&#8217; shape.
+So the more twisted a free segment, the more bones it will generate.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert3.jpg"><img alt="../../../_images/Doc26-boneSketch-convert3.jpg" src="../../../_images/Doc26-boneSketch-convert3.jpg" style="width: 300px;" /></a>
+<p class="caption">The Adaptative conversion settings and its preview on selected strokes.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert4.jpg"><img alt="../../../_images/Doc26-boneSketch-convert4.jpg" src="../../../_images/Doc26-boneSketch-convert4.jpg" style="width: 300px;" /></a>
+<p class="caption">The Adaptative conversion result.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="length">
+<h3>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h3>
+<p>With this method,
+each free segment of the selected strokes will create as many bones as necessary,
+so that none of them is longer than the <em>Length</em> numeric field value
+(in Blender Units).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert5.jpg"><img alt="../../../_images/Doc26-boneSketch-convert5.jpg" src="../../../_images/Doc26-boneSketch-convert5.jpg" style="width: 200px;" /></a>
+<p class="caption">The Length conversion settings and its preview on selected strokes.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert6.jpg"><img alt="../../../_images/Doc26-boneSketch-convert6.jpg" src="../../../_images/Doc26-boneSketch-convert6.jpg" style="width: 200px;" /></a>
+<p class="caption">Using a larger length value.</p>
+</div>
+</td>
+<td><div class="first last figure">
+<a class="reference internal image-reference" href="../../../_images/Doc26-boneSketch-convert7.jpg"><img alt="../../../_images/Doc26-boneSketch-convert7.jpg" src="../../../_images/Doc26-boneSketch-convert7.jpg" style="width: 200px;" /></a>
+<p class="caption">The Length conversion result.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="retarget">
+<h3>Retarget<a class="headerlink" href="#retarget" title="Permalink to this headline">¶</a></h3>
+<p>Retarget template bone chain to stroke.</p>
+<dl class="docutils">
+<dt>Template</dt>
+<dd>Template armature that will be retargeted to the stroke.
+This is a more complex topic, detailed in its <a class="reference internal" href="templating.html"><em>own page</em></a>.</dd>
+<dt>Retarget roll mode</dt>
+<dd><dl class="first last docutils">
+<dt>None</dt>
+<dd>Don&#8217;t adjust roll.</dd>
+<dt>View</dt>
+<dd>Roll bones to face the view.</dd>
+<dt>Joint</dt>
+<dd>Roll bone to original joint plane offset.</dd>
+</dl>
+</dd>
+<dt>Autoname</dt>
+<dd>...</dd>
+<dt>Number</dt>
+<dd>...</dd>
+<dt>Side</dt>
+<dd>...</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="templating.html" class="btn btn-neutral float-right" title="Armature Templating"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="properties.html" class="btn btn-neutral" title="Editing Bone Properties"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
