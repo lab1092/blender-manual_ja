@@ -23,7 +23,7 @@ Add a New Camera
    | Hotkey:   :kbd:`Shift-A` to add new.
 
 
-In *Object* mode simply press :kbd:`Shift-A` and in the popup menu,
+In *Object* mode simply press :kbd:`Shift-A` and in the pop-up menu,
 choose :menuselection:`Add --> Camera`.
 
 The default scene in Blender includes a camera,
@@ -41,7 +41,7 @@ Changing the Active Camera
    | Hotkey:   :kbd:`Ctrl-Numpad0`
 
 
-.. figure:: /images/Manual-CameraView-ActiveCamera.jpg
+.. figure:: /images/CameraView-ActiveCamera.jpg
 
    Active camera (left one).
 
@@ -92,7 +92,7 @@ See :doc:`Camera Lens </render/camera/lens>` for details.
 Camera
 ------
 
-.. figure:: /images/Manual-Camera-presets-panel.jpg
+.. figure:: /images/Camera-presets-panel.jpg
 
    Camera Presets panel.
 
@@ -111,7 +111,7 @@ Sensor size
 Depth of Field
 --------------
 
-.. figure:: /images/Manual-Camera-dof-panel.jpg
+.. figure:: /images/Camera-dof-panel.jpg
 
    Camera Depth of Field Panel
 
@@ -146,7 +146,7 @@ Viewport F-stop
 Display
 -------
 
-.. figure:: /images/Manual-Camera-display-panel.jpg
+.. figure:: /images/Camera-display-panel.jpg
 
    Camera Display panel
 
@@ -160,7 +160,7 @@ Mist
    in the :doc:`Mist section </render/blender_render/world/mist>`.
 
 
-.. figure:: /images/Manual-Camera-camera-view.jpg
+.. figure:: /images/Camera-camera-view.jpg
 
    Camera view displaying safe areas, sensor and name
 
@@ -207,7 +207,7 @@ Harmonious Triangle B
 Safe Areas
 ^^^^^^^^^^^^^^^^^^
 
-When this is enabled, extra dotted frames are drawn when in camera view, delimiting the area considered as 
+When this is enabled, extra dotted frames are drawn when in camera view, delimiting the area considered as
 "safe" for important elements. :doc:`More information about them in the safe areas section
 </editors/sequencer/safe_areas>`.
 
@@ -267,7 +267,7 @@ Vertical Pan or Pitch
    This is just a rotation along the local X-axis. Press :kbd:`R` to enter object rotation mode, then :kbd:`X` twice
    (the first press selects the *global* axis - pressing the same letter a second time selects the *local* axis -
    this works with any axis;
-   see the :doc:`axis locking page </getting_started/basics/transformations/transform_control/axis_locking>`).
+   see the :doc:`axis locking page </editors/3dview/transform/transform_control/axis_locking>`).
 Horizontal Pan or Yaw
    This corresponds to a rotation around the camera's local Y axis... Yes, that's it, press :kbd:`R`,
    and then :kbd:`Y` twice!
@@ -282,6 +282,6 @@ Aiming the camera in Flymode
 ----------------------------
 
 When you are in *Camera* view,
-the :doc:`fly mode </getting_started/basics/navigating#fly_mode>` actually moves your active camera...
+the :doc:`fly mode </editors/3dview/navigate#fly_mode>` actually moves your active camera...
 
 .. youtube:: bTRrHNn-d4w

@@ -48,7 +48,7 @@ Polygon strands:
 Strands Shading
 ===============
 
-.. figure:: /images/Doc_2.6_Materials_Properties_Strands.jpg
+.. figure:: /images/materials_properties_strands.jpg
 
    Image 1: Strands Panel.
 
@@ -95,7 +95,7 @@ Shape
    A negative value will make the strand narrower (spiky), a positive value will make it fatter.
 
 
-.. figure:: /images/Blender3D_StrandShapes.jpg
+.. figure:: /images/StrandShapes.jpg
 
 Width Fade
    To fade out along the width of the strand.
@@ -123,12 +123,12 @@ Surface Diffuse
 Texturing along the Strand
 ==========================
 
-.. figure:: /images/Doc_2.6_Materials_Texture_Mapping.jpg
+.. figure:: /images/materials_texture_mapping.jpg
 
    Image 4: Fading a strand to alpha...
 
 
-.. figure:: /images/Blender3D_StrandRenderFade.jpg
+.. figure:: /images/StrandRenderFade.jpg
 
    Image 5: ...And the render result.
 
@@ -148,7 +148,7 @@ hairs tend to get too shiny.
 Strand render Simplification
 ============================
 
-.. figure:: /images/Blender3D_StrandRenderSimplification.jpg
+.. figure:: /images/StrandRenderSimplification.jpg
 
    Image 5: Strand render child simplification.
 

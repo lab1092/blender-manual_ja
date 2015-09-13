@@ -48,7 +48,7 @@ These are described more fully in the next sections.
 Getting Started
 ***************
 
-.. figure:: /images/Manual-uvunwrapping-25x-screenlayout.jpg
+.. figure:: /images/uvunwrapping-screenlayout.jpg
    :width: 320px
 
    UV Editing screen layout
@@ -60,7 +60,7 @@ unwrapping your model is done within Edit Mode in the 3D View window. This
 process creates one or more UV Islands in the
 :doc:`UV/Image Editor window </render/blender_render/textures/mapping/uv_image_editor>`.
 
-To begin, choose the *UV Editing* :doc:`screen layout </getting_started/basics/interface/screens>`
+To begin, choose the *UV Editing* :doc:`screen layout </interface/screens>`
 from the selection list at the top of your screen in the User Preferences
 window header. This sets one of the panes to show you the UV/Image Editor
 window (:kbd:`Shift-F10`), and the other pane to the 3D window (:kbd:`Shift-F5`).
@@ -71,11 +71,6 @@ face, or edge selection mode.
 
 Workflow
 ========
-
-.. figure:: /images/Manual-25-uv-unwrap-method.jpg
-
-   Choosing the unwrapping method
-
 
 The process for unwrapping is straightforward, but there are tons of options available,
 each of which dramatically affect the outcome of the unwrap.
@@ -176,7 +171,7 @@ Cube Size
 Cylinder and Sphere
 ===================
 
-.. figure:: /images/Doc26-textures-uv-sphereProjection.jpg
+.. figure:: /images/textures-uv-sphereProjection.jpg
    :width: 250px
 
    Using a Mercator image with a Sphere Projection
@@ -254,7 +249,7 @@ Advanced Mapping
 Unwrapping Using Seams
 ======================
 
-.. figure:: /images/Doc26-textures-uv-unwrap-seam-simple.jpg
+.. figure:: /images/textures-uv-unwrap-seam-simple.jpg
    :width: 300px
 
    Simple Seam on a Cylinder
@@ -292,7 +287,7 @@ The workflow is the following:
 Marking Seams
 -------------
 
-.. figure:: /images/Doc26-textures-uv-unwrap-seams.jpg
+.. figure:: /images/textures-uv-unwrap-seams.jpg
    :width: 250px
 
    Seamed Suzanne
@@ -346,7 +341,7 @@ using different approaches in different areas of your mesh.
 Unwrap
 ------
 
-.. figure:: /images/Doc26-textures-uv-unwrap-unwrap.jpg
+.. figure:: /images/textures-uv-unwrap-unwrap.jpg
    :width: 300px
 
    Result of unwrapping Suzanne
@@ -396,7 +391,7 @@ A face can be mapped to less and less of the total image.
 Smart UV Project
 ================
 
-.. figure:: /images/Doc26-textures-uv-unwrap-smartProject.jpg
+.. figure:: /images/textures-uv-unwrap-smartProject.jpg
    :width: 250px
 
    Smart UV project on a cube

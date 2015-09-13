@@ -22,7 +22,7 @@ making it quite useful for creators of game content.
 Options
 =======
 
-.. figure:: /images/Reference-Panels-Modifier-EdgeSplit-2.5.jpg
+.. figure:: /images/Reference-Panels-Modifier-EdgeSplit.jpg
 
    Edge Split modifier.
 
@@ -46,7 +46,7 @@ Sharp Edges
 Examples
 ========
 
-.. figure:: /images/Manual-Modifier-EdgeSplit-Example01.jpg
+.. figure:: /images/Modifier-EdgeSplit-Example01.jpg
    :width: 600px
 
    Edge Split modifier output with From Marked As Sharp selected.

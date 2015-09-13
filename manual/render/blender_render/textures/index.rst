@@ -25,10 +25,6 @@
    types/image.rst
    types/video.rst
    types/nodes.rst
-   types/nodes/editor.rst
-   types/nodes/node_controls.rst
-   types/nodes/usage.rst
-   types/nodes/node_groups.rst
    types/nodes/input.rst
    types/nodes/output.rst
    types/nodes/color.rst
@@ -45,7 +41,6 @@
    mapping.rst
    mapping/environment.rst
    mapping/uv.rst
-   mapping/uv_image_editor.rst
    mapping/uv/unwrapping.rst
    mapping/uv/layout_management.rst
    mapping/uv/layout_editing.rst

@@ -50,22 +50,22 @@ Instead let's see what SSS does to a distinct light point.
 
 .. list-table::
 
-   * - .. figure:: /images/25-Manual-Materials-SSS.jpg
+   * - .. figure:: /images/Materials-SSS.jpg
           :width: 300px
 
           Image 3a: No SSS.
 
-     - .. figure:: /images/25-Manual-Materials-SSS1.jpg
+     - .. figure:: /images/Materials-SSS1.jpg
           :width: 300px
 
           Image 3b: Small SSS radius.
 
-   * - .. figure:: /images/25-Manual-Materials-SSS2.jpg
+   * - .. figure:: /images/Materials-SSS2.jpg
           :width: 300px
 
           Image 3c: SSS radius enlarged.
 
-     - .. figure:: /images/25-Manual-Materials-SSS3.jpg
+     - .. figure:: /images/Materials-SSS3.jpg
           :width: 300px
 
           Image 3d: SSS with very large red radius value.
@@ -93,7 +93,7 @@ its light is evenly distributed over the whole object.
 Enabling Subsurface Scattering
 ==============================
 
-.. figure:: /images/Manual25-Material-SSSPanel.jpg
+.. figure:: /images/Material-SSSPanel.jpg
 
    Image 4: The SSS Panel. SSS is already enabled.
 
@@ -102,7 +102,7 @@ Enabling Subsurface Scattering
 - Accessible at the top are various presets.
   Add new or remove old presets by clicking the *+* and *-* buttons.
   When you select a preset,
-  the *Radius* values, the *RGB Radius* and the *IOR* are set for you.
+  the *Radius* values, the *RGB Radius* and the :term:`IOR` are set for you.
   The remaining options are not set (because they are mostly dependent on the size of your object).
 
 *SubSurface Scattering* doesn't need ray tracing.
@@ -116,13 +116,12 @@ Options
 The numeric sliders control how the light is scattered:
 
 IOR
-   The *Index Of Refraction* value determines the falloff of incident light.
+   The :term:`Index Of Refraction` value determines the falloff of incident light.
    Higher values means that light falls off faster.
    The effect is quite subtle and changes the distribution function only a little bit.
    By the examination of many different materials, values of **1.3** to **1.5**
-   have been found to work well for most materials. If you know the exact material you are trying to simulate, see
-   :doc:`our IOR table </render/blender_render/materials/properties/transparency#ior_values_for_common_materials>`.
-
+   have been found to work well for most materials.
+   If you know the exact material you are trying to simulate, see :ref:`transparency_ior_common`.
 Scale
    The scale of your object, in Blender units, across which you want the scattering effect to take place.
    Scale *1.0* means **1** Blender unit equals **1** millimeter,
@@ -131,7 +130,7 @@ Scale
    just use the formula: (size in blender units)/(real world size in millimeters)=scale.
 
 
-.. figure:: /images/Manual-25-Material-SSS-Swatch.jpg
+.. figure:: /images/Material-SSS-Swatch.jpg
    :width: 90px
 
    The SSS Color Swatch
@@ -220,27 +219,27 @@ Skin
 .. list-table::
       Increasing SSS scale (`.blend <http://wiki.blender.org/index.php/:File:MH-SSS-head-001.blend>`__)
 
-   * - .. figure:: /images/Manual-25-Material-SSS-MH-Head-1.jpg
+   * - .. figure:: /images/Material-SSS-MH-Head-1.jpg
           :width: 100px
 
           1
 
-     - .. figure:: /images/Manual-25-Material-SSS-MH-Head-2.jpg
+     - .. figure:: /images/Material-SSS-MH-Head-2.jpg
           :width: 100px
 
           2
 
-     - .. figure:: /images/Manual-25-Material-SSS-MH-Head-3.jpg
+     - .. figure:: /images/Material-SSS-MH-Head-3.jpg
           :width: 100px
 
           3
 
-     - .. figure:: /images/Manual-25-Material-SSS-MH-Head-4.jpg
+     - .. figure:: /images/Material-SSS-MH-Head-4.jpg
           :width: 100px
 
           4
 
-     - .. figure:: /images/Manual-25-Material-SSS-MH-Head-5.jpg
+     - .. figure:: /images/Material-SSS-MH-Head-5.jpg
           :width: 100px
 
           5

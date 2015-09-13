@@ -12,7 +12,7 @@ diffraction and sub-surface scattering. Typical materials might be brass, skin, 
 or linen.
 
 
-.. figure:: /images/Doc_2.6_Materials_Demo.jpg
+.. figure:: /images/materials_demo.jpg
    :width: 320px
 
    Various basic materials (single, multiple material, transparency, vertex paint).
@@ -53,7 +53,7 @@ The surface properties and incident light angle tell us how much of that light w
 reflected back along the incident viewing angle *(Rendering engine basic principle)*.
 
 
-.. figure:: /images/Manual-Part-III-MatGen01.jpg
+.. figure:: /images/MatGen01.jpg
 
    Rendering engine basic principle.
 

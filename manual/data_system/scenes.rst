@@ -18,9 +18,9 @@ To add a scene, click on the scene list button, and select *Add New*.
 While you are adding a new scene, you have these options:
 
 
-.. figure:: /images/Manual-Part-I-Interface-Scene-AddButton-Dialog.jpg
+.. figure:: /images/Interface-Scene-AddButton-Dialog.jpg
 
-   Add scene popup menu.
+   Add scene pop-up menu.
 
 
 Empty

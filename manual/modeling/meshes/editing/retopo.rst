@@ -1,6 +1,7 @@
 
-.. NOTE: This page could document a workflow which is handled by tools documented elsewhere.
-         it could also be completely removed.
+.. NOTE::
+   This page could document a workflow which is handled by tools documented elsewhere.
+   it could also be completely removed.
 
 
 **************
@@ -22,7 +23,7 @@ in the view's Z-axis.
 
 This allows you to model freely, without concern for form, and to focus on topology
 
-See :doc:`Snapping </getting_started/basics/transformations/transform_control/snap>`
+See :doc:`Snapping </editors/3dview/transform/transform_control/snap>`
 
 
 Shrinkwrap Modifier

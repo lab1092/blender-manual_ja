@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,10 +30,12 @@
   
     <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
   
+
+  
     <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
         <link rel="up" title="Cycles Render Engine" href="index.html"/>
         <link rel="next" title="Open Shading Language" href="osl.html"/>
-        <link rel="prev" title="Experimental Features" href="experimental_features.html"/> 
+        <link rel="prev" title="Features" href="features.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -47,9 +49,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        
+          <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -59,8 +64,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul>
+          
+          
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
@@ -98,21 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
@@ -159,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/index.html">Animation Editors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
@@ -184,6 +176,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
@@ -257,6 +264,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
@@ -279,6 +290,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -313,7 +325,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="gpu-rendering">
 <span id="render-cycles-gpu-rendering"></span><h1>GPU Rendering<a class="headerlink" href="#gpu-rendering" title="Permalink to this headline">¶</a></h1>
@@ -324,10 +336,9 @@ graphics card for rendering, instead of the CPU.
 This can speed up rendering, because modern GPUs are designed to do quite a lot of number crunching.
 On the other hand, they also have some limitations in rendering complex scenes, due to more limited memory,
 and issues with interactivity when using the same graphics card for display and rendering.</p>
-<p>Cycles has two GPU rendering modes: through CUDA,
-which is the preferred method for NVidia graphics cards; and OpenCL,
-which is intended to support rendering on AMD/ATI graphics cards.
-The implementation of OpenCL is only in an experimental stage and disabled in official builds.</p>
+<p>Cycles has two GPU rendering modes: <strong>CUDA</strong>,
+which is the preferred method for NVIDIA graphics cards; and <strong>OpenCL</strong>,
+which supports rendering on AMD graphics cards.</p>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
@@ -336,26 +347,34 @@ select the Compute Device(s) to use. Next, for each scene,
 you can configure to use CPU or GPU rendering in the Render properties.</p>
 <div class="section" id="cuda">
 <h3>CUDA<a class="headerlink" href="#cuda" title="Permalink to this headline">¶</a></h3>
-<p>NVidia <abbr title="Compute Unified Device Architecture">CUDA</abbr> is supported for GPU
-rendering with <strong>NVidia graphics cards</strong>.
+<p>NVIDIA <abbr title="Compute Unified Device Architecture">CUDA</abbr> is supported for GPU
+rendering with <strong>NVIDIA graphics cards</strong>.
 We support graphics cards starting from GTX 4xx (computing capability 2.0).</p>
-<p>Cycles requires recent drivers to be installed, on all operating systems.
-Be sure to download the Blender version matching your operating system; that is,
-download 64-bit Blender for 64-bit operating systems.</p>
-<p><a class="reference external" href="http://www.nvidia.com/object/cuda_gpus.htm">List of CUDA cards with shader model</a></p>
+<p>Cycles requires recent NVIDIA drivers to be installed, on all operating systems.</p>
+<p><a class="reference external" href="http://www.NVIDIA.com/object/cuda_gpus.htm">List of CUDA cards with shader model</a></p>
+</div>
+<div class="section" id="opencl">
+<h3>OpenCL<a class="headerlink" href="#opencl" title="Permalink to this headline">¶</a></h3>
+<p><abbr title="Open Computing Language">OpenCL</abbr> is supported for GPU
+rendering with <strong>AMD graphics cards</strong>.
+We only support graphics cards with <abbr title="Graphics Core Next">GCN</abbr> architecture (HD 7xxx and above).
+Not all HD 7xxx cards are GCN cards though, you can check if your card is
+<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units">here</a>.</p>
+<p>Cycles requires recent AMD drivers to be installed, on all operating systems.</p>
 </div>
 </div>
-<div class="section" id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>The maximum amount of individual textures is limited to 95 byte-image textures (PNG, JPEG, ..)
+<div class="section" id="supported-features-and-limitations">
+<h2>Supported Features and Limitations<a class="headerlink" href="#supported-features-and-limitations" title="Permalink to this headline">¶</a></h2>
+<p>For an overview of supported features, check the comparison in the
+<a class="reference internal" href="features.html"><em>Features</em></a>.</p>
+<dl class="docutils">
+<dt>CUDA:</dt>
+<dd>The maximum amount of individual textures is limited to 95 byte-image textures (PNG, JPEG, ..)
 and 5 float-image textures (OpenEXR, 16 bit TIFF, ..) on GTX 4xx/5xx cards,
-and 145 byte-image textures and 5 float-image textures on GTX6xx cards and above.</li>
-<li><a class="reference internal" href="osl.html"><em>Open shading language</em></a> (OSL) is only supported by CPU.</li>
-<li>Smoke/Fire rendering is not supported on GPU.</li>
-<li>The <a class="reference internal" href="nodes/shaders.html#cycles-shader-sss"><em>SSS shader</em></a> is only supported
-in the <a class="reference internal" href="experimental_features.html"><em>Experimental Feature Set</em></a>.</li>
-</ul>
+and 145 byte-image textures and 5 float-image textures on GTX6xx cards and above.</dd>
+<dt>OpenCL:</dt>
+<dd>No support for HDR (float) textures at the moment.</dd>
+</dl>
 </div>
 <div class="section" id="frequently-asked-questions">
 <h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
@@ -389,12 +408,11 @@ but this will not be added soon.</p>
 <p>No, each GPU can only access its own memory.</p>
 </div>
 <div class="section" id="what-renders-faster-nvidia-or-amd-cuda-or-opencl">
-<h3>What renders faster, NVidia or AMD, CUDA or OpenCL?<a class="headerlink" href="#what-renders-faster-nvidia-or-amd-cuda-or-opencl" title="Permalink to this headline">¶</a></h3>
-<p>Currently NVidia with CUDA is rendering faster. There is no fundamental reason why this should
+<h3>What renders faster, NVIDIA or AMD, CUDA or OpenCL?<a class="headerlink" href="#what-renders-faster-nvidia-or-amd-cuda-or-opencl" title="Permalink to this headline">¶</a></h3>
+<p>Currently NVIDIA with CUDA is rendering faster. There is no fundamental reason why this should
 be so - we don&#8217;t use any CUDA - specific features - but the compiler appears to be more mature,
 and can better support big kernels.
-OpenCL support is still being worked on and has not been optimized as much,
-because we haven&#8217;t had the full kernel working yet.</p>
+OpenCL support is still in an early stage and has not been optimized as much.</p>
 </div>
 </div>
 <div class="section" id="error-messages">
@@ -402,7 +420,7 @@ because we haven&#8217;t had the full kernel working yet.</p>
 <div class="section" id="unsupported-gnu-version-gcc-4-7-and-up-are-not-supported">
 <h3>Unsupported GNU version! gcc 4.7 and up are not supported!<a class="headerlink" href="#unsupported-gnu-version-gcc-4-7-and-up-are-not-supported" title="Permalink to this headline">¶</a></h3>
 <p>On Linux, depending on your GCC version you might get this error.</p>
-<p>If so, delete the following line in /usr/local/cuda/include/host_config.h</p>
+<p>If so, delete the following line in <code class="docutils literal"><span class="pre">/usr/local/cuda/include/host_config.h</span></code></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#error -- unsupported GNU version! gcc 4.7 and up are not supported!</span>
 </pre></div>
 </div>
@@ -443,10 +461,10 @@ See the above answer for solutions.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="osl.html" class="btn btn-neutral float-right" title="Open Shading Language"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="osl.html" class="btn btn-neutral float-right" title="Open Shading Language">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="experimental_features.html" class="btn btn-neutral" title="Experimental Features"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="features.html" class="btn btn-neutral" title="Features"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -459,7 +477,8 @@ See the above answer for solutions.</p>
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -475,7 +494,7 @@ See the above answer for solutions.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.1',
+            VERSION:'2.75',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -52,6 +52,11 @@ Be sure to check the :doc:`Writing Style Guide </about/writing_style_guide>`
 for conventions and :doc:`Markup Style Guide </about/markup_style_guide>`
 to learn how to write in the reStructuredText markup language.
 
+If you are going to add or overhaul a section, be sure to check carefully that it doesn't already exist.
+In some places the docs are so disorganized that sections may be duplicated or in a strange location.
+In the case that you find a duplicate or out of place section, `create a task <https://developer.blender.org/maniphest/task/create/?project=53>`
+explaining the issue, and optionally include a revision (actual changes).
+
 To **view** your changes, build the manual :doc:`as instructed </about/install/index>`.
 Keep in mind that you can also build only the chapter you just edited to view it quickly.
 Open the generated ``.html`` files inside the ``build/html`` folder using your web browser,
@@ -88,7 +93,7 @@ In order to submit a patch, follow this process:
 #. After submitting the diff, you'll be asked to "Create a new Revision"
    before you can add a title and description of your changes.
 #. If you know who the Section Owner
-   (see *Documentation Team* `here <https://developer.blender.org/project/view/53/>`__) of that chapter is,
+   (see *Documentation Team* `here <https://developer.blender.org/project/profile/53>`__) of that chapter is,
    assign them as the *Reviewer* and they'll be notified of your patch.
    If you can't find out who that is (or there is no one),
    instead mail the `bf-docboard <http://lists.blender.org/mailman/listinfo/bf-docboard>`__ mailing list,

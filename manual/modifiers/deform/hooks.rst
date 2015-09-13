@@ -3,7 +3,7 @@
 Hook Modifier
 *************
 
-.. figure:: /images/25-Manual-Modifiers-Hook-example1.jpg
+.. figure:: /images/Modifiers-Hook-example1.jpg
 
    Two spheres used as Hooks to deform a subdivided cube.
 
@@ -13,7 +13,7 @@ The Hook modifier is used to deform a *Mesh*, *Curve* a *Lattice* using another 
 
 As the hook moves, it pulls vertices from the mesh with it.
 You can think of it as animated
-:doc:`proportional editing </getting_started/basics/transformations/transform_control/proportional_edit>`.
+:doc:`proportional editing </editors/3dview/transform/transform_control/proportional_edit>`.
 
 While hooks do not give you the fine control over vertices movement that shape keys do,
 they have the advantage that you can grab vertices directly for manipulation.
@@ -22,7 +22,7 @@ they have the advantage that you can grab vertices directly for manipulation.
 Options
 =======
 
-.. figure:: /images/25-Manual-Modifiers-Hook.jpg
+.. figure:: /images/Modifiers-Hook.jpg
 
    Hook modifier
 

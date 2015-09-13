@@ -38,7 +38,7 @@ Add Menu
 
 
 In the 3D view,
-:kbd:`Shift-A`:menuselection:`popup --> Bone` to add a new bone to your armature.
+:kbd:`Shift-A`:menuselection:`pop-up --> Bone` to add a new bone to your armature.
 
 This bone will be:
 
@@ -69,12 +69,12 @@ so you can place them to your liking. See (*Extrusion example*).
 .. list-table::
    Extrusion example
 
-   * - .. figure:: /images/ManRiggingBoneSelectExEditModeThreeBoneEnds.jpg
+   * - .. figure:: /images/RiggingBoneSelectExEditModeThreeBoneEnds.jpg
           :width: 300px
 
           An armature with three selected tips.
 
-     - .. figure:: /images/ManRiggingBoneExtrudeExEditMode.jpg
+     - .. figure:: /images/RiggingBoneExtrudeExEditMode.jpg
           :width: 300px
 
           The three extruded bones.
@@ -82,43 +82,43 @@ so you can place them to your liking. See (*Extrusion example*).
 
 You also can use the rotating/scaling extrusions,
 as explained for meshes :doc:`here </modeling/meshes/tools/add_divide#extrusion>`,
-by hitting respectively :kbd:`E-R` and :kbd:`E-S` -
-as well as :doc:`locked </getting_started/basics/transformations/transform_control/axis_locking>`
+by pressing respectively :kbd:`E-R` and :kbd:`E-S` -
+as well as :doc:`locked </editors/3dview/transform/transform_control/axis_locking>`
 extrusion along a global or local axis.
 
 
 .. list-table::
    Mirror extrusion example
 
-   * - .. figure:: /images/ManRiggingBoneMirrorExtrudeExEditMode1.jpg
+   * - .. figure:: /images/RiggingBoneMirrorExtrudeExEditMode1.jpg
           :width: 200px
 
           A single selected bone's tip.
 
-     - .. figure:: /images/ManRiggingBoneMirrorExtrudeExEditMode2.jpg
+     - .. figure:: /images/RiggingBoneMirrorExtrudeExEditMode2.jpg
           :width: 200px
 
           The two mirror-extruded bones.
 
 
-Bones have an extra "mirror extruding" tool, called by hitting :kbd:`Shift-E`.
+Bones have an extra "mirror extruding" tool, called by pressing :kbd:`Shift-E`.
 By default, it behaves exactly like the standard extrusion.
 But once you have enabled the X-Axis mirror editing option (see
 `X-Axis Mirror Editing`_),
-each extruded tip will produce *two new bones*, having the same name except for a leading "_L/_R" code
+each extruded tip will produce *two new bones*, having the same name except for the ``_L``/``_R`` suffix
 (for left/right, see the :doc:`next page </rigging/armatures/editing/properties#naming_conventions>`).
-The "_L" bone behaves like the single one produced by the default extrusion -
+The ``_L`` bone behaves like the single one produced by the default extrusion -
 you can grab/rotate/scale it exactly the same way.
-The "_R" bone is its mirror counterpart (along the armature's local X axis), see (*Mirror extrusion example*).
+The ``_R`` bone is its mirror counterpart (along the armature's local X axis), see (*Mirror extrusion example*).
 
 
 .. warning::
 
-   Note that exactly as in mesh editing,
-   if you press :kbd:`Esc` right after you have pressed :kbd:`E`,
-   the extruded bones will be there but their length will be zero,
-   so very likely this will give you some headaches. If you realize the problem immediately,
-   you can undo by pressing :kbd:`Ctrl-Z`.
+   Cancelling the extrude action causes the newly created bones to snap back to the source position,
+   *(creating zero length bones)*.
+   These will be removed when exiting editmode, however they can cause confusion and it's
+   unlikely you want to keep them.
+   If you realize the problem immediately undo the extrude action.
 
 In case you're wondering, you cannot just press :kbd:`X` to solve this as you would in mesh editing,
 because extrusion selects the newly created tips, and as explained below the delete command ignores bones' ends.
@@ -147,7 +147,7 @@ About the new bone's tip:
 The position of the root and the parenting of the new bone depends on the active element:
 
 
-.. figure:: /images/ManRiggingMouseClickBone.jpg
+.. figure:: /images/RiggingMouseClickBone.jpg
    :width: 300px
 
    Ctrl-clicking when the active element is a bone
@@ -160,7 +160,7 @@ If the active element is a **bone**
   (check the outliner in *Ctrl-clicking when the active element is a bone*).
 
 
-.. figure:: /images/ManRiggingMouseClickTail.jpg
+.. figure:: /images/RiggingMouseClickTail.jpg
    :width: 300px
 
    Ctrl-clicking when the active element is a tip
@@ -173,7 +173,7 @@ If the active element is a **tip** :
   (check the outliner in *Ctrl-clicking when the active element is a tip*).
 
 
-.. figure:: /images/ManRiggingMouseClickHead.jpg
+.. figure:: /images/RiggingMouseClickHead.jpg
    :width: 300px
 
    Ctrl-clicking when the active element is a disconnected root
@@ -188,7 +188,7 @@ If the active element is a **disconnected root** :
 And hence the new bone will **not** be connected to any bone.
 
 
-.. figure:: /images/ManRiggingMouseClickHeadConnected.jpg
+.. figure:: /images/RiggingMouseClickHeadConnected.jpg
    :width: 300px
 
    Ctrl-clicking when the active element is a connected root
@@ -232,12 +232,12 @@ If you have one root and one tip selected, the new bone:
 .. list-table::
    Fill between a tip and a root
 
-   * - .. figure:: /images/ManRiggingFillTailHead.jpg
+   * - .. figure:: /images/RiggingFillTailHead.jpg
           :width: 300px
 
           Active tip on the left
 
-     - .. figure:: /images/ManRiggingFillTailHead2.jpg
+     - .. figure:: /images/RiggingFillTailHead2.jpg
           :width: 300px
 
           Active tip on the right
@@ -253,12 +253,12 @@ If you have two tips selected, the new bone:
 .. list-table::
    Fill between tips
 
-   * - .. figure:: /images/ManRiggingFillTailTailLeft.jpg
+   * - .. figure:: /images/RiggingFillTailTailLeft.jpg
           :width: 300px
 
           3D cursor on the left
 
-     - .. figure:: /images/ManRiggingFillTailTailRight.jpg
+     - .. figure:: /images/RiggingFillTailTailRight.jpg
           :width: 300px
 
           3D cursor on the right
@@ -280,12 +280,12 @@ new bone's root moves to the tip of the parent bone.
 .. list-table::
    Fill between roots
 
-   * - .. figure:: /images/ManRiggingFillHeadHead.jpg
+   * - .. figure:: /images/RiggingFillHeadHead.jpg
           :width: 300px
 
           Before UI update (3D cursor on the left)
 
-     - .. figure:: /images/ManRiggingFillHeadHeadCorrect.jpg
+     - .. figure:: /images/RiggingFillHeadHeadCorrect.jpg
           :width: 300px
 
           After UI update, correct visualization
@@ -298,12 +298,12 @@ end to the 3D cursor position, and it won't parent it to any bone in the armatur
 .. list-table::
    Fill with only one bone end selected
 
-   * - .. figure:: /images/ManRiggingFillTail.jpg
+   * - .. figure:: /images/RiggingFillTail.jpg
           :width: 300px
 
           Fill with only one tip selected
 
-     - .. figure:: /images/ManRiggingFillHead.jpg
+     - .. figure:: /images/RiggingFillHead.jpg
           :width: 300px
 
           Fill with only one root selected
@@ -350,12 +350,12 @@ its copy will be parented **but not connected** to the unselected bone
 .. list-table::
    Duplication example
 
-   * - .. figure:: /images/ManRiggingBoneSelectExEditModeThreeBonesSixEnds.jpg
+   * - .. figure:: /images/RiggingBoneSelectExEditModeThreeBonesSixEnds.jpg
           :width: 300px
 
           An armature with three selected bones and a selected single root.
 
-     - .. figure:: /images/ManRiggingBoneDuplicateExEditMode.jpg
+     - .. figure:: /images/RiggingBoneDuplicateExEditMode.jpg
           :width: 300px
 
           The three duplicated bones. Note that the selected chain is preserved in the copy,
@@ -398,12 +398,12 @@ to avoid deforming the whole armature.
 .. list-table::
    Deletion example
 
-   * - .. figure:: /images/ManRiggingBoneDeleteExEditMode1.jpg
+   * - .. figure:: /images/RiggingBoneDeleteExEditMode1.jpg
           :width: 300px
 
           An armature with two selected bones, just before deletion.
 
-     - .. figure:: /images/ManRiggingBoneDeleteExEditMode2.jpg
+     - .. figure:: /images/RiggingBoneDeleteExEditMode2.jpg
           :width: 300px
 
           The two bones have been deleted. Note that Bone.002,
@@ -442,23 +442,23 @@ differently depending in which chain is the edited bone
 .. list-table::
    Merge example
 
-   * - .. figure:: /images/ManRiggingBoneMergeExEditMode1.jpg
+   * - .. figure:: /images/RiggingBoneMergeExEditMode1.jpg
           :width: 300px
 
           An armature with a selected chain, and a single selected bone, just before merging.
 
-     - .. figure:: /images/ManRiggingBoneMergeExEditMode2.jpg
+     - .. figure:: /images/RiggingBoneMergeExEditMode2.jpg
           :width: 300px
 
           Bones Bone, Bone.001 and Bone.002 have been merged in Bone.006,
           whereas Bone.005 wasn't modified. Note Bone.003, connected to Bone.006 but not yet "really" connected.
 
-   * - .. figure:: /images/ManRiggingBoneMergeExEditMode3.jpg
+   * - .. figure:: /images/RiggingBoneMergeExEditMode3.jpg
           :width: 300px
 
           Bone.004 has been rotated, and hence the tip of Bone.006 was moved to the root of Bone.003.
 
-     - .. figure:: /images/ManRiggingBoneMergeExEditMode4.jpg
+     - .. figure:: /images/RiggingBoneMergeExEditMode4.jpg
           :width: 300px
 
           The tip of Bone.006 has been translated, and hence the root of Bone.003 was moved to the tip of `Bone.006`
@@ -481,27 +481,27 @@ the bones created from a subdivision always form a connected chain of bones.
 
 To create two bones out of each selected bone:
 
-- press :kbd:`W`:menuselection:`popup --> Subdivide`, same as :kbd:`W-1`, or
+- press :kbd:`W`:menuselection:`pop-up --> Subdivide`, same as :kbd:`W-1`, or
 - select :menuselection:`Armature --> Subdivide` from the header menu
 
 To create an arbitrary number of bones from each selected bone:
 
-- press :kbd:`W`:menuselection:`popup --> Subdivide Multi`, same as :kbd:`W-2`, or
+- press :kbd:`W`:menuselection:`pop-up --> Subdivide Multi`, same as :kbd:`W-2`, or
 - select :menuselection:`Armature --> Subdivide Multi` from the header menu, an
 
-Then specify the number of cuts you want in the popup. As in mesh editing,
+Then specify the number of cuts you want in the pop-up. As in mesh editing,
 if you set ``n`` cuts, you'll get ``n+1`` bones for each selected bone.
 
 
 .. list-table::
    Subdivision example
 
-   * - .. figure:: /images/ManRiggingBoneSubdivideExEditMode1.jpg
+   * - .. figure:: /images/RiggingBoneSubdivideExEditMode1.jpg
           :width: 300px
 
           An armature with one selected bone, just before multi-subdivision.
 
-     - .. figure:: /images/ManRiggingBoneSubdivideExEditMode2.jpg
+     - .. figure:: /images/RiggingBoneSubdivideExEditMode2.jpg
           :width: 300px
 
           The selected bone has been "cut" two times, giving three sub-bones.
@@ -516,7 +516,7 @@ You can prevent a bone from being transformed in *Edit mode* in several ways:
   in the *Transform Properties* panel (:kbd:`N` in a 3D view);
 - all bones can be locked clicking on the *Lock* button
   of their sub-panels in the *Armature Bones* panel;
-- press :kbd:`Shift-W`:menuselection:`popup --> Toggle Settings --> Locked`
+- press :kbd:`Shift-W`:menuselection:`pop-up --> Toggle Settings --> Locked`
 - select :menuselection:`Armature --> Bone Settings --> Toggle a Setting`).
 
 *If the root of a locked bone is connected to the tip of an unlocked bone,

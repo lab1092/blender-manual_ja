@@ -48,7 +48,7 @@ But with a child mesh, another *Create Vertex Groups?* menu appears,
 with the following options - all regarding the "vertex groups" skinning method:
 
 
-.. figure:: /images/Doc26-rigging-armature-parent.jpg
+.. figure:: /images/rigging-armature-parent.jpg
 
    Set Parent menu
 
@@ -70,7 +70,7 @@ Automatic Weights
    with vertices assigned and weighted using the newer "bone heat" algorithm.
 
 
-.. figure:: /images/Doc26-rigging-armature-modifier.jpg
+.. figure:: /images/rigging-armature-modifier.jpg
    :width: 250px
 
    The Armature modifier.
@@ -123,32 +123,32 @@ Preserve Volume (Armature modifier)
 .. list-table::
    Example of *Quaternion* option effects.
 
-   * - .. figure:: /images/ManRiggingSkinningQuaternionOptExInitState.jpg
+   * - .. figure:: /images/RiggingSkinningQuaternionOptExInitState.jpg
           :width: 200px
 
           Initial state.
 
-     - .. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat100Deg.jpg
+     - .. figure:: /images/RiggingSkinningQuaternionOptExNoQuat100Deg.jpg
           :width: 200px
 
           100- rotation, Preserve Volume disabled.
 
-     - .. figure:: /images/ManRiggingSkinningQuaternionOptExNoQuat180Deg.jpg
+     - .. figure:: /images/RiggingSkinningQuaternionOptExNoQuat180Deg.jpg
           :width: 200px
 
           180- rotation, Preserve Volume disabled.
 
-   * - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat100Deg.jpg
+   * - .. figure:: /images/RiggingSkinningQuaternionOptExQuat100Deg.jpg
           :width: 200px
 
           100- rotation, Preserve Volume enabled.
 
-     - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1799Deg.jpg
+     - .. figure:: /images/RiggingSkinningQuaternionOptExQuat1799Deg.jpg
           :width: 200px
 
           179.9- rotation, Preserve Volume enabled.
 
-     - .. figure:: /images/ManRiggingSkinningQuaternionOptExQuat1801Deg.jpg
+     - .. figure:: /images/RiggingSkinningQuaternionOptExQuat1801Deg.jpg
           :width: 200px
 
           180.1- rotation, Preserve Volume enabled.
@@ -164,7 +164,7 @@ Preserve Volume (Armature modifier)
 Bone Deform Options
 ===================
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtDeformPanel.jpg
+.. figure:: /images/RiggingEditingBoneCxtDeformPanel.jpg
    :width: 250px
 
    Bone Deform Options
@@ -182,7 +182,7 @@ Deform
 Envelope
 --------
 
-.. figure:: /images/ManRiggingEnvelopePrinciples3DViewEditMode.jpg
+.. figure:: /images/RiggingEnvelopePrinciples3DViewEditMode.jpg
    :width: 200px
 
    Bone influence areas for envelopes method.
@@ -270,7 +270,7 @@ To automatically weight multiple bones, you can simply
 
 - :kbd:`Ctrl-Tab` out of Weight Paint Mode
 - Select the Armature. It should be in Pose mode. If it isn't, go :kbd:`Ctrl-Tab`
-- Select multiple bones :kbd:`Shift-LMB` or hit 'a' (maybe twice).
+- Select multiple bones :kbd:`Shift-LMB` or press :kbd:`A` (once or twice).
 - Select Mesh again
 - If not in weight paint already, toggle back into :kbd:`Ctrl-Tab`
 - Use the :kbd:`W` menu to automatic weight. This will weight all the bones you selected in Pose Mode.
@@ -279,22 +279,22 @@ To automatically weight multiple bones, you can simply
 .. list-table::
    Example of vertex groups skinning method.
 
-   * - .. figure:: /images/ManRiggingSkinningVertexGroupsExArmWeights.jpg
+   * - .. figure:: /images/RiggingSkinningVertexGroupsExArmWeights.jpg
           :width: 150px
 
           The weights of the arm vertex group.
 
-     - .. figure:: /images/ManRiggingSkinningVertexGroupsExForearmWeights.jpg
+     - .. figure:: /images/RiggingSkinningVertexGroupsExForearmWeights.jpg
           :width: 150px
 
           The weights of the forearm vertex group.
 
-   * - .. figure:: /images/ManRiggingSkinningVertexGroupsExResult.jpg
+   * - .. figure:: /images/RiggingSkinningVertexGroupsExResult.jpg
           :width: 150px
 
           The result when posing the armature.
 
-     - .. figure:: /images/ManRiggingSkinningVertexGroupsExEnvelopesResult.jpg
+     - .. figure:: /images/RiggingSkinningVertexGroupsExEnvelopesResult.jpg
           :width: 150px
 
           The same pose, but using envelopes method rather that vertex groups.

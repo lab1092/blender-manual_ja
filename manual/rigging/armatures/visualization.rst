@@ -6,25 +6,25 @@ Armature visualization
 We have 4 basic bone visualization: Octahedral, Stick, B-Bone, Envelope and Wire:
 
 
-.. figure:: /images/Man2.5RiggingBonePrincipalsBoneDisplayOctahedral.jpg
+.. figure:: /images/RiggingBonePrincipalsBoneDisplayOctahedral.jpg
    :width: 300px
 
    Octahedral bone display.
 
 
-.. figure:: /images/Man2.5RiggingBonePrincipalsBoneDisplayStick.jpg
+.. figure:: /images/RiggingBonePrincipalsBoneDisplayStick.jpg
    :width: 300px
 
    Stick bone display.
 
 
-.. figure:: /images/Man2.5RiggingBonePrincipalsBoneDisplayBBone.jpg
+.. figure:: /images/RiggingBonePrincipalsBoneDisplayBBone.jpg
    :width: 300px
 
    B-Bone bone display.
 
 
-.. figure:: /images/Man2.5RiggingBonePrincipalsBoneDisplayEnvelope.jpg
+.. figure:: /images/RiggingBonePrincipalsBoneDisplayEnvelope.jpg
    :width: 300px
 
    Envelope bone display.
@@ -44,7 +44,7 @@ But let's first see some general visualization properties of armatures,
 found in the *Display* panel of the *Object data* context.
 
 
-.. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtDisplayPanel.jpg
+.. figure:: /images/RiggingEditingObjectDataPropertyCxtDisplayPanel.jpg
    :width: 250px
 
    The Display panel.
@@ -53,7 +53,7 @@ found in the *Display* panel of the *Object data* context.
 Bone types
 ==========
 
-.. figure:: /images/ManRiggingOctahedronEx3DViewEditMode.jpg
+.. figure:: /images/RiggingOctahedronEx3DViewEditMode.jpg
    :width: 250px
 
    A basic armature in Octahedron visualization, Edit mode.
@@ -71,7 +71,7 @@ This is the default visualization, well suited for most of editing tasks. It mat
 - The bone roll (as it has a square section).
 
 
-.. figure:: /images/ManRiggingStickEx3DViewPoseMode.jpg
+.. figure:: /images/RiggingStickEx3DViewPoseMode.jpg
    :width: 250px
 
    The same armature in Stick visualization, Pose mode.
@@ -86,7 +86,7 @@ It just materializes bones by sticks of constant (and small) thickness,
 so it gives you no information about root and tip, nor bone size or roll angle.
 
 
-.. figure:: /images/ManRiggingBBoneEx3DViewEditMode.jpg
+.. figure:: /images/RiggingBBoneEx3DViewEditMode.jpg
    :width: 250px
 
    The same armature in B-Bone visualization, Edit mode.
@@ -99,7 +99,7 @@ This visualization shows the curves of "smooth" multi-segmented bones;
 see the :doc:`bone page </rigging/armatures/bones#bones_rigidity>` for details.
 
 
-.. figure:: /images/ManRiggingEnvelopeEx3DViewPoseMode.jpg
+.. figure:: /images/RiggingEnvelopeEx3DViewPoseMode.jpg
    :width: 250px
 
    The Bone Groups panel.
@@ -149,7 +149,7 @@ Blender allows you to give to each bone of an armature a specific shape
 First of all, you have to enable the *Shapes* button (*Armature* panel).
 
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg
+.. figure:: /images/RiggingEditingBoneCxtDisplayPanel.jpg
    :width: 250px
 
    The Display panel.
@@ -180,20 +180,20 @@ To assign a custom shape to a bone, you have to:
   in this example we are using a cube and a cone. Tou can optionally set the *At* field to another bone.
 
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtDisplayPanel2.jpg
+.. figure:: /images/RiggingEditingBoneCxtDisplayPanel2.jpg
    :width: 250px
 
    The Display panel.
 
 
-.. figure:: /images/ManRiggingBoneShapeEx3DViewObjectMode.jpg
+.. figure:: /images/RiggingBoneShapeEx3DViewObjectMode.jpg
    :width: 300px
 
    The armature with shapes assigned to two bones, in Object mode.
    Note the centers of the Cone and Cube objects.
 
 
-.. figure:: /images/ManRiggingBoneShapeEx3DViewPoseMode.jpg
+.. figure:: /images/RiggingBoneShapeEx3DViewPoseMode.jpg
    :width: 300px
 
    The same armature in Pose mode...
@@ -212,7 +212,7 @@ Note that:
 - The "along bone" axis is the Y one,
   and the shape object is always scaled so that one Blender Unit stretches along the whole bone length.
 - If you need to remove the custom shape of the bone,
-  just right click in the *Custom Shape* field and select *Reset to default value* in the popup menu.
+  just right click in the *Custom Shape* field and select *Reset to default value* in the pop-up menu.
 
 So to summarize all this, you should use meshes as shape objects,
 with their center at their lower-Y end, and an overall Y length of **1.0** BU.
@@ -229,7 +229,7 @@ Armature Layers
    | Panel:    *Skeleton* panel, *Object data* context
 
 
-.. figure:: /images/Man2.5RiggingEditingObjectDataPropertyCxtSkeletonPanel.jpg
+.. figure:: /images/RiggingEditingObjectDataPropertyCxtSkeletonPanel.jpg
    :width: 250px
 
    The Skeleton panel.
@@ -277,7 +277,7 @@ Bone Layers
    | Panel:    *Relations* panel *Bone* context
 
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg
+.. figure:: /images/RiggingEditingBoneCxtRelationsPanel.jpg
    :width: 250px
 
    The Relations panel.
@@ -294,7 +294,7 @@ you have to select the chosen bone(s)!
 - In the *Button* window, use the "layer buttons" of each selected bone "sub-panel" (*Armature Bones* panel)
   to control in which layer(s) it lays.
 - In the *3D View* window, use the menu (:menuselection:`Armature --> Move Bone To Layer` or
-  :menuselection:`Pose --> Move Bone To Layer`) or hit :kbd:`M` to show the usual pop-up layers dialog.
+  :menuselection:`Pose --> Move Bone To Layer`) or press :kbd:`M` to show the usual pop-up layers dialog.
   Note that this way, *you assign the same layers to all selected bones*.
 
 
@@ -308,7 +308,7 @@ Hiding Bones
    | Panel:    *Display* panel, *Bone* context
 
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtDisplayPanel.jpg
+.. figure:: /images/RiggingEditingBoneCxtDisplayPanel.jpg
    :width: 250px
 
    The Display panel.

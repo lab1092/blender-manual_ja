@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Arguments &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="up" title="Advanced" href="index.html"/>
+        <link rel="next" title="Troubleshooting" href="../troubleshooting/index.html"/>
+        <link rel="prev" title="Advanced" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/basics/index.html">Basics</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editors/info.html">Info Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/outliner.html">Outliner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/properties/index.html">Properties Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/node_editor/index.html">Node Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/sequencer/index.html">Video Sequence Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/timeline.html">Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/3dview/index.html">3D View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/index.html">Animation Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/timeline.html">Timeline Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph.html">Graph Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph/fcurves.html">F-Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/graph/fmodifiers.html">F-Curve Modifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet.html">The Dopesheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/dopesheet.html">Dope Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/action.html">Action Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/shapekey.html">Shape Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/dopesheet/greasepencil.html">Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/editors/nla.html">Non-Linear Animation Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/baking.html">Baking Physics Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../motion_tracking/index.html">Motion Tracking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motion_tracking/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motion_tracking/index.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motion_tracking/index.html#manual">Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extensions/index.html">Extending Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/introduction.html">Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python.html">Blender, Python Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/intro_to_python.html">Why another Python tutorial?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/console.html">The Console Editor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/text_editor.html">The Text Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/faq.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/security.html">Scripting &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/python/references.html">Blender&#8217;s Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System Preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Advanced</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Command Line Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Advanced</a> &raquo;</li>
+      
+    <li>Command Line Arguments</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/advanced/command_line.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="command-line-arguments">
+<h1>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h1>
+<p>Blender 2.75 Usage: blender [args ...] [file] [args ...]</p>
+<div class="section" id="render-options">
+<h2>Render Options<a class="headerlink" href="#render-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-b</span></code>, <code class="docutils literal"><span class="pre">--background</span></code></dt>
+<dd>Run in background (often used for UI-less rendering)</dd>
+<dt><code class="docutils literal"><span class="pre">-a</span></code>, <code class="docutils literal"><span class="pre">--render-anim</span></code></dt>
+<dd>Render frames from start to end (inclusive)</dd>
+<dt><code class="docutils literal"><span class="pre">-S</span></code>, <code class="docutils literal"><span class="pre">--scene</span></code> &lt;name&gt;</dt>
+<dd>Set the active scene &lt;name&gt; for rendering</dd>
+<dt><code class="docutils literal"><span class="pre">-f</span></code>, <code class="docutils literal"><span class="pre">--render-frame</span></code> &lt;frame&gt;</dt>
+<dd>Render frame &lt;frame&gt; and save it.
++&lt;frame&gt; start frame relative, -&lt;frame&gt; end frame relative.</dd>
+<dt><code class="docutils literal"><span class="pre">-s</span></code>, <code class="docutils literal"><span class="pre">--frame-start</span></code> &lt;frame&gt;</dt>
+<dd>Set start to frame &lt;frame&gt; (use before the -a argument)</dd>
+<dt><code class="docutils literal"><span class="pre">-e</span></code>, <code class="docutils literal"><span class="pre">--frame-end</span></code> &lt;frame&gt;</dt>
+<dd>Set end to frame &lt;frame&gt; (use before the -a argument)</dd>
+<dt><code class="docutils literal"><span class="pre">-j</span></code>, <code class="docutils literal"><span class="pre">--frame-jump</span></code> &lt;frames&gt;</dt>
+<dd>Set number of frames to step forward after each rendered frame</dd>
+<dt><code class="docutils literal"><span class="pre">-o</span></code>, <code class="docutils literal"><span class="pre">--render-output</span></code> &lt;path&gt;</dt>
+<dd><p class="first">Set the render path and file name.
+Use <code class="docutils literal"><span class="pre">//</span></code> at the start of the path to render relative to the blend file.</p>
+<p>The <code class="docutils literal"><span class="pre">#</span></code> characters are replaced by the frame number, and used to define zero padding.
+* <code class="docutils literal"><span class="pre">ani_##_test.png</span></code> becomes <code class="docutils literal"><span class="pre">ani_01_test.png</span></code>
+* <code class="docutils literal"><span class="pre">test-######.png</span></code> becomes <code class="docutils literal"><span class="pre">test-000001.png</span></code></p>
+<p>When the filename does not contain <code class="docutils literal"><span class="pre">#</span></code>, The suffix <code class="docutils literal"><span class="pre">####</span></code> is added to the filename.</p>
+<p>The frame number will be added at the end of the filename, eg:</p>
+<div class="highlight-sh"><div class="highlight"><pre>blender -b foobar.blend -o //render_ -F PNG -x <span class="m">1</span> -a
+</pre></div>
+</div>
+<p class="last"><code class="docutils literal"><span class="pre">//render_</span></code> becomes <code class="docutils literal"><span class="pre">//render_####</span></code>, writing frames as <code class="docutils literal"><span class="pre">//render_0001.png</span></code></p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">-E</span></code>, <code class="docutils literal"><span class="pre">--engine</span></code> &lt;engine&gt;</dt>
+<dd>Specify the render engine
+use -E help to list available engines</dd>
+<dt><code class="docutils literal"><span class="pre">-t</span></code>, <code class="docutils literal"><span class="pre">--threads</span></code> &lt;threads&gt;</dt>
+<dd>Use amount of &lt;threads&gt; for rendering and other operations
+[1-64], 0 for systems processor count.</dd>
+</dl>
+</div>
+<div class="section" id="format-options">
+<h2>Format Options<a class="headerlink" href="#format-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-F</span></code>, <code class="docutils literal"><span class="pre">--render-format</span></code> &lt;format&gt;</dt>
+<dd><dl class="first last docutils">
+<dt>Set the render format, Valid options are...</dt>
+<dd>TGA IRIS JPEG MOVIE IRIZ RAWTGA
+AVIRAW AVIJPEG PNG BMP FRAMESERVER</dd>
+<dt>(formats that can be compiled into blender, not available on all systems)</dt>
+<dd>HDR TIFF EXR MULTILAYER MPEG AVICODEC QUICKTIME CINEON DPX DDS</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal"><span class="pre">-x</span></code>, <code class="docutils literal"><span class="pre">--use-extension</span></code> &lt;bool&gt;</dt>
+<dd>Set option to add the file extension to the end of the file</dd>
+</dl>
+</div>
+<div class="section" id="animation-playback-options">
+<h2>Animation Playback Options<a class="headerlink" href="#animation-playback-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-a</span></code> &lt;options&gt; &lt;file(s)&gt;</dt>
+<dd><dl class="first last docutils">
+<dt>Playback &lt;file(s)&gt;, only operates this way when not running in background.</dt>
+<dd>-p &lt;sx&gt; &lt;sy&gt;   Open with lower left corner at &lt;sx&gt;, &lt;sy&gt;
+-m      Read from disk (Don&#8217;t buffer)
+-f &lt;fps&gt; &lt;fps-base&gt;      Specify FPS to start with
+-j &lt;frame&gt;   Set frame step to &lt;frame&gt;
+-s &lt;frame&gt;   Play from &lt;frame&gt;
+-e &lt;frame&gt;   Play until &lt;frame&gt;</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="window-options">
+<h2>Window Options<a class="headerlink" href="#window-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-w</span></code>, <code class="docutils literal"><span class="pre">--window-border</span></code></dt>
+<dd>Force opening with borders (default)</dd>
+<dt><code class="docutils literal"><span class="pre">-W</span></code>, <code class="docutils literal"><span class="pre">--window-borderless</span></code></dt>
+<dd>Force opening without borders</dd>
+<dt><code class="docutils literal"><span class="pre">-p</span></code>, <code class="docutils literal"><span class="pre">--window-geometry</span></code> &lt;sx&gt; &lt;sy&gt; &lt;w&gt; &lt;h&gt;</dt>
+<dd>Open with lower left corner at &lt;sx&gt;, &lt;sy&gt; and width and height as &lt;w&gt;, &lt;h&gt;</dd>
+<dt><code class="docutils literal"><span class="pre">-con</span></code>, <code class="docutils literal"><span class="pre">--start-console</span></code></dt>
+<dd>Start with the console window open (ignored if -b is set), (Windows only)</dd>
+<dt><code class="docutils literal"><span class="pre">--no-native-pixels</span></code></dt>
+<dd>Do not use native pixel size, for high resolution displays (MacBook <code class="docutils literal"><span class="pre">Retina</span></code>)</dd>
+</dl>
+</div>
+<div class="section" id="game-engine-specific-options">
+<h2>Game Engine Specific Options<a class="headerlink" href="#game-engine-specific-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-g</span></code> Game Engine specific options</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-g <var>fixedtime</var></span></kbd></td>
+<td>Run on 50 hertz without dropping frames</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-g <var>vertexarrays</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Use Vertex Arrays for rendering (usually faster)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-g <var>nomipmap</var></span></kbd></td>
+<td>No Texture Mipmapping</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-g <var>linearmipmap</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Linear Texture Mipmapping instead of Nearest (default)</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="python-options">
+<h2>Python Options<a class="headerlink" href="#python-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-y</span></code>, <code class="docutils literal"><span class="pre">--enable-autoexec</span></code></dt>
+<dd>Enable automatic Python script execution</dd>
+<dt><code class="docutils literal"><span class="pre">-Y</span></code>, <code class="docutils literal"><span class="pre">--disable-autoexec</span></code></dt>
+<dd>Disable automatic Python script execution (pydrivers &amp; startup scripts), (default).</dd>
+<dt><code class="docutils literal"><span class="pre">-P</span></code>, <code class="docutils literal"><span class="pre">--python</span></code> &lt;filename&gt;</dt>
+<dd>Run the given Python script file</dd>
+<dt><code class="docutils literal"><span class="pre">--python-text</span></code> &lt;name&gt;</dt>
+<dd>Run the given Python script text block</dd>
+<dt><code class="docutils literal"><span class="pre">--python-expr</span></code> &lt;expression&gt;</dt>
+<dd>Run the given expression as a Python script</dd>
+<dt><code class="docutils literal"><span class="pre">--python-console</span></code></dt>
+<dd>Run blender with an interactive console</dd>
+<dt><code class="docutils literal"><span class="pre">--addons</span></code></dt>
+<dd>Comma separated list of addons (no spaces)</dd>
+</dl>
+</div>
+<div class="section" id="debug-options">
+<h2>Debug Options<a class="headerlink" href="#debug-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-d</span></code>, <code class="docutils literal"><span class="pre">--debug</span></code></dt>
+<dd><p class="first">Turn debugging on</p>
+<ul class="last simple">
+<li>Enables memory error detection</li>
+<li>Disables mouse grab (to interact with a debugger in some cases)</li>
+<li>Keeps Python&#8217;s <code class="docutils literal"><span class="pre">sys.stdin</span></code> rather than setting it to None</li>
+</ul>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-value</span></code> &lt;value&gt;</dt>
+<dd>Set debug value of &lt;value&gt; on startup</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-events</span></code></dt>
+<dd>Enable debug messages for the event system</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-ffmpeg</span></code></dt>
+<dd>Enable debug messages from FFmpeg library</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-handlers</span></code></dt>
+<dd>Enable debug messages for event handling</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-libmv</span></code></dt>
+<dd>Enable debug messages from libmv library</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-cycles</span></code></dt>
+<dd>Enable debug messages from Cycles</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-memory</span></code></dt>
+<dd>Enable fully guarded memory allocation and debugging</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-jobs</span></code></dt>
+<dd>Enable time profiling for background jobs.</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-python</span></code></dt>
+<dd>Enable debug messages for Python</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-depsgraph</span></code></dt>
+<dd>Enable debug messages from dependency graph</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-depsgraph-no-threads</span></code></dt>
+<dd>Switch dependency graph to a single threaded evlauation</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-gpumem</span></code></dt>
+<dd>Enable GPU memory stats in status bar</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-wm</span></code></dt>
+<dd>Enable debug messages for the window manager, also prints every operator call</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-all</span></code></dt>
+<dd>Enable all debug messages (excludes libmv)</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-fpe</span></code></dt>
+<dd>Enable floating point exceptions</dd>
+<dt><code class="docutils literal"><span class="pre">--disable-crash-handler</span></code></dt>
+<dd>Disable the crash handler</dd>
+</dl>
+</div>
+<div class="section" id="misc-options">
+<h2>Misc Options<a class="headerlink" href="#misc-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">--factory-startup</span></code></dt>
+<dd>Skip reading the startup.blend in the users home directory</dd>
+<dt><code class="docutils literal"><span class="pre">--env-system-datafiles</span></code></dt>
+<dd>Set the <code class="docutils literal"><span class="pre">BLENDER_SYSTEM_DATAFILES</span></code> environment variable</dd>
+<dt><code class="docutils literal"><span class="pre">--env-system-scripts</span></code></dt>
+<dd>Set the <code class="docutils literal"><span class="pre">BLENDER_SYSTEM_SCRIPTS</span></code> environment variable</dd>
+<dt><code class="docutils literal"><span class="pre">--env-system-python</span></code></dt>
+<dd>Set the <code class="docutils literal"><span class="pre">BLENDER_SYSTEM_PYTHON</span></code> environment variable</dd>
+<dt><code class="docutils literal"><span class="pre">-nojoystick</span></code></dt>
+<dd>Disable joystick support</dd>
+<dt><code class="docutils literal"><span class="pre">-noglsl</span></code></dt>
+<dd>Disable GLSL shading</dd>
+<dt><code class="docutils literal"><span class="pre">-noaudio</span></code></dt>
+<dd>Force sound system to None</dd>
+<dt><code class="docutils literal"><span class="pre">-setaudio</span></code></dt>
+<dd>Force sound system to a specific device
+NULL SDL OPENAL JACK</dd>
+<dt><code class="docutils literal"><span class="pre">-h</span></code>, <code class="docutils literal"><span class="pre">--help</span></code></dt>
+<dd>Print this help text and exit</dd>
+<dt><code class="docutils literal"><span class="pre">-R</span></code></dt>
+<dd>Register .blend extension, then exit (Windows only)</dd>
+<dt><code class="docutils literal"><span class="pre">-r</span></code></dt>
+<dd>Silently register .blend extension, then exit (Windows only)</dd>
+<dt><code class="docutils literal"><span class="pre">-v</span></code>, <code class="docutils literal"><span class="pre">--version</span></code></dt>
+<dd>Print Blender version and exit</dd>
+<dt><code class="docutils literal"><span class="pre">--</span></code></dt>
+<dd>Ends option processing, following arguments passed unchanged. Access via Python&#8217;s <code class="docutils literal"><span class="pre">sys.argv</span></code></dd>
+</dl>
+</div>
+<div class="section" id="other-options">
+<h2>Other Options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">/?</span></code></dt>
+<dd>Print this help text and exit (windows only)</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-freestyle</span></code></dt>
+<dd>Enable debug/profiling messages from Freestyle rendering</dd>
+<dt><code class="docutils literal"><span class="pre">--debug-gpu</span></code></dt>
+<dd>Enable gpu debug context and information for OpenGL 4.3+.</dd>
+<dt><code class="docutils literal"><span class="pre">--disable-abort-handler</span></code></dt>
+<dd>Disable the abort handler</dd>
+<dt><code class="docutils literal"><span class="pre">--enable-new-depsgraph</span></code></dt>
+<dd>Use new dependency graph</dd>
+<dt><code class="docutils literal"><span class="pre">--verbose</span></code> &lt;verbose&gt;</dt>
+<dd>Set logging verbosity level.</dd>
+</dl>
+</div>
+<div class="section" id="experimental-features">
+<h2>Experimental features<a class="headerlink" href="#experimental-features" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">--enable-new-depsgraph</span></code></dt>
+<dd>Use new dependency graph</dd>
+</dl>
+</div>
+<div class="section" id="argument-parsing">
+<h2>Argument Parsing<a class="headerlink" href="#argument-parsing" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Arguments must be separated by white space, eg:</p>
+<div class="highlight-sh"><div class="highlight"><pre>blender -ba test.blend
+</pre></div>
+</div>
+<p>...will ignore the <code class="docutils literal"><span class="pre">a</span></code></p>
+<div class="highlight-sh"><div class="highlight"><pre>blender -b test.blend -f8
+</pre></div>
+</div>
+<p>...will ignore <code class="docutils literal"><span class="pre">8</span></code> because there is no space between the <code class="docutils literal"><span class="pre">-f</span></code> and the frame value</p>
+</div></blockquote>
+</div>
+<div class="section" id="argument-order">
+<h2>Argument Order<a class="headerlink" href="#argument-order" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Arguments are executed in the order they are given. eg:</p>
+<div class="highlight-sh"><div class="highlight"><pre>blender --background test.blend --render-frame <span class="m">1</span> --render-output <span class="s1">&#39;/tmp&#39;</span>
+</pre></div>
+</div>
+<p>...will not render to <code class="docutils literal"><span class="pre">/tmp</span></code> because <code class="docutils literal"><span class="pre">--render-frame</span> <span class="pre">1</span></code> renders before the output path is set</p>
+<div class="highlight-sh"><div class="highlight"><pre>blender --background --render-output /tmp test.blend --render-frame 1
+</pre></div>
+</div>
+<p>...will not render to <code class="docutils literal"><span class="pre">/tmp</span></code> because loading the blend file overwrites the render output that was set</p>
+<div class="highlight-sh"><div class="highlight"><pre>blender --background test.blend --render-output /tmp --render-frame 1
+</pre></div>
+</div>
+<p>...works as expected.</p>
+</div></blockquote>
+</div>
+<div class="section" id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">BLENDER_USER_CONFIG:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Directory for user configuration files.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">BLENDER_USER_SCRIPTS:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Directory for user scripts.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">BLENDER_SYSTEM_SCRIPTS:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Directory for system wide scripts.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">BLENDER_USER_DATAFILES:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Directory for user data files (icons, translations, ..).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">BLENDER_SYSTEM_DATAFILES:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Directory for system wide data files.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">BLENDER_SYSTEM_PYTHON:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Directory for system python libraries.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">TEMP:</th><td class="field-body">Store temporary files here.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TMP:</th><td class="field-body">or $TMPDIR           Store temporary files here.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">SDL_AUDIODRIVER:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">LibSDL audio driver - alsa, esd, dma.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">PYTHONHOME:</th><td class="field-body">Path to the python directory, eg. /usr/lib/python.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../troubleshooting/index.html" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Advanced"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.75',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

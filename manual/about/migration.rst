@@ -79,7 +79,7 @@ Automate Edits
    Tasks such as running a spell-checker, on the entire manual wasn't really possible with MediaWiki.
 Project Management
    While this isn't directly a feature of Sphinx, using version-control
-   means we can integrate a `project management system <https://developer.blender.org/project/view/53/>`__
+   means we can integrate a `project management system <https://developer.blender.org/project/profile/53>`__
    (Phabricator in this case).
 
    This means we can have a central place to track issues, set goals for releases and assign tasks.
@@ -103,12 +103,15 @@ Barrier of Entry
 Increasing the barrier of entry isn't something to be taken lightly,
 however its our opinion that the trade-off is worthwhile.
 
-The short term benefit of quick & easy editing,
+The short term benefit of quick & easy editing with the Wiki,
 has to be weighed against the long term benefits of using a system better suited
 to collaboratively writing a document.
 
-We've also observed that drive-by edits often aren't such good quality,
-adding redundant text and even mis-information in some cases.
+We've observed the quality of drive-by edits varies a lot,
+sometimes adding redundant text and even mis-information at times.
+
+Often, low quality content would stay un-edited or incomplete,
+instead of being improved by others or removed.
 
 
 Conclusion

@@ -7,7 +7,7 @@ The *Properties (or Buttons) Window* shows several *Contexts*,
 which can be chosen via the icon row in the header (see *Context button example*).
 
 
-.. figure:: /images/Manual-Interface-Contexts-HeaderButtons-25.jpg
+.. figure:: /images/Interface-Contexts-HeaderButtons-25.jpg
    :align: center
 
    Context button example
@@ -16,21 +16,21 @@ which can be chosen via the icon row in the header (see *Context button example*
 The number and type of buttons changes with the selected Context so that only useful buttons
 show up. The order of these buttons follows a hierarchy which is detailed below:
 
-.. |Btn_Render-25| image:: /images/Manual-Interface-Contexts-Btn_Render-25.jpg
-.. |Btn_Scene-25| image:: /images/Manual-Interface-Contexts-Btn_Scene-25.jpg
-.. |Btn_World-25| image:: /images/Manual-Interface-Contexts-Btn_World-25.jpg
-.. |Btn_Object-25| image:: /images/Manual-Interface-Contexts-Btn_Object-25.jpg
-.. |Btn_Constraints-25| image:: /images/Manual-Interface-Contexts-Btn_Constraints-25.jpg
-.. |Btn_Modifiers-25| image:: /images/Manual-Interface-Contexts-Btn_Modifiers-25.jpg
-.. |Btn_ObjectData-25| image:: /images/Manual-Interface-Contexts-Btn_ObjectData-25.jpg
-.. |Btn_Material-25| image:: /images/Manual-Interface-Contexts-Btn_Material-25.jpg
-.. |Btn_Texture-25| image:: /images/Manual-Interface-Contexts-Btn_Texture-25.jpg
-.. |Btn_Particles-25| image:: /images/Manual-Interface-Contexts-BtnParticles-25.jpg
-.. |Btn_Physics-25| image:: /images/Manual-Interface-Contexts-Btn_Physics-25.jpg
+.. |Btn_Render-25| image:: /images/Interface-Contexts-Btn_Render-25.jpg
+.. |Btn_Scene-25| image:: /images/Interface-Contexts-Btn_Scene-25.jpg
+.. |Btn_World-25| image:: /images/Interface-Contexts-Btn_World-25.jpg
+.. |Btn_Object-25| image:: /images/Interface-Contexts-Btn_Object-25.jpg
+.. |Btn_Constraints-25| image:: /images/Interface-Contexts-Btn_Constraints-25.jpg
+.. |Btn_Modifiers-25| image:: /images/Interface-Contexts-Btn_Modifiers-25.jpg
+.. |Btn_ObjectData-25| image:: /images/Interface-Contexts-Btn_ObjectData-25.jpg
+.. |Btn_Material-25| image:: /images/Interface-Contexts-Btn_Material-25.jpg
+.. |Btn_Texture-25| image:: /images/Interface-Contexts-Btn_Texture-25.jpg
+.. |Btn_Particles-25| image:: /images/Interface-Contexts-BtnParticles-25.jpg
+.. |Btn_Physics-25| image:: /images/Interface-Contexts-Btn_Physics-25.jpg
 
 - |Btn_Render-25| :doc:`Render </render/index>`:
   Everything related to render output (dimensions, anti-aliasing, performance etc).
-- |Btn_Scene-25| :doc:`Scene </getting_started/basics/interface/scenes>`:
+- |Btn_Scene-25| :doc:`Scene </interface/scenes>`:
   Gravity in the scene, units and other general information.
 - |Btn_World-25| :doc:`World </render/blender_render/world/index>`:
   Environmental lighting, sky, mist and Ambient Occlusion.
@@ -55,6 +55,6 @@ show up. The order of these buttons follows a hierarchy which is detailed below:
 - |Btn_Physics-25| :doc:`Physics </physics/index>`:
   Properties relating to Cloth, Force Fields, Collision, Fluid and Smoke Simulation.
 
-The :doc:`Buttons </getting_started/basics/interface/buttons_and_controls>`
-in each context are grouped into :doc:`Panels </getting_started/basics/interface/panels>`.
+The :doc:`Buttons </interface/buttons_and_controls>`
+in each context are grouped into :doc:`Panels </interface/panels>`.
 

@@ -21,7 +21,7 @@ and because we can keep rays relatively coherent to use an on-demand image cache
 compared to e.g. bidirectional path tracing.
 
 
-.. figure:: /images/Manual_cycles_light_path_rays.jpg
+.. figure:: /images/cycles_light_path_rays.png
 
 We do the inverse of what reality does,
 tracing light rays from the camera into the scene and onto lights,
@@ -265,6 +265,8 @@ with the second render using a mesh light positioned in the window.
           :width: 180px
 
 
+In newer versions, :doc:`light portals </render/cycles/world>` provide a better solution.
+
 Clamp Fireflies
 ---------------
 
@@ -280,7 +282,7 @@ which might be useful to preserve for camera effects such as bloom or glare.
    * - .. figure:: /images/Cycles_noise_noclamp.jpg
           :width: 180px
 
-     - .. figure:: /images/Cycles_noise_clamp_4.0.jpg
+     - .. figure:: /images/cycles_noise_clamp_4.jpg
           :width: 180px
 
 

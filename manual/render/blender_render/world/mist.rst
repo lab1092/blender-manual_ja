@@ -15,7 +15,7 @@ the further the object is away from the camera the less it's alpha value will be
 Option
 ======
 
-.. figure:: /images/25-Manual-World-MistPanel.jpg
+.. figure:: /images/World-MistPanel.jpg
    :width: 305px
 
    Mist panel
@@ -30,14 +30,6 @@ Start
 Depth
    The distance from *Start* of the mist, that it fades in over.
    Objects further from the camera than *Start+Depth* are completely hidden by the mist.
-
-
-.. figure:: /images/25-Manual-World-MistFalloff.jpg
-   :width: 197px
-
-   Mist Falloff popup menu
-
-
 Height
    Makes the mist intensity decrease with height, for a more realistic effect.
    If greater than 0, it sets, in Blender units,
@@ -68,7 +60,7 @@ this can sometimes cause objects to be partially transparent when they shouldn't
 One workaround is to set the Mist settings as desired, but turn Mist off.
 The Mist data is still available for compositing even though it is off.
 Use :doc:`Do Composite </composite_nodes/index>`
-and the :doc:`Nodes Editor </composite_nodes/editor>` to feed the Mist pass to an
+and the :doc:`Node Editor </editors/node_editor/index>` to feed the Mist pass to an
 :doc:`AlphaOver </composite_nodes/types/color/alpha_over>` to blend the background color
 (or a render layer with just the sky) with the rendered image.
 This produces the mist effect but since Mist is off the object transparency (or lack of) is preserved.
@@ -77,7 +69,7 @@ This produces the mist effect but since Mist is off the object transparency (or 
 Examples
 ========
 
-.. figure:: /images/25-Manual-World-Mist-Example1.jpg
+.. figure:: /images/World-Mist-Example1.jpg
 
    Mist example
 

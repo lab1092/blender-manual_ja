@@ -3,15 +3,10 @@
 Introduction
 ************
 
-.. figure:: /images/Physic_types.jpg
-
-   Image 1: Physics types.
-
-
 The movement of particles may be controlled in a multitude of ways.
 With particles physics: there are five different systems:
 
-None
+None (`No Physics`_)
    It doesn't give the particles any motion, which makes them belong to no physics system.
 :doc:`Newtonian </physics/particles/physics/newtonian>`
    Movement according to physical laws.
@@ -139,7 +134,6 @@ Size
    Sets the size of the particles.
 Random Size
    Give the particles a random size variation.
-
 Mass
    Specify the mass of the particles.
 Multiply mass with particle size
@@ -152,8 +146,7 @@ No Physics
 At first a Physics type that makes the particles do nothing could seem a bit strange,
 but it can be very useful at times.
 None physics make the particles stick to their emitter their whole life time. The initial
-velocities here are for example used to give a velocity to particles that are effected
-(or affected?)
+velocities here are for example used to give a velocity to particles that are affected
 by a harmonic effector with this physics type when the effect of the effector ends.
 
 Moreover, it can be very convenient to have particles at disposal
@@ -190,4 +183,3 @@ Amount
 You can give particle systems up to 2 force fields. By default they do not have any.
 Choose an effector type from the dropdowns to enable them.
 Settings are described on the :doc:`Force Field Page </physics/force_fields>`.
-

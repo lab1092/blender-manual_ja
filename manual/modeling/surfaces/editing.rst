@@ -61,7 +61,7 @@ Control Point Row
 This option works a bit like
 :doc:`edge loop selection </modeling/meshes/selecting/introduction#edge_loop_selection>` for meshes,
 inasmuch it selects a whole :doc:`row </modeling/surfaces#control_points,_rows_and_grid>` of control points,
-based on the active (the last selected) one. The first time you hit :kbd:`Shift-R`,
+based on the active (the last selected) one. The first time you press :kbd:`Shift-R`,
 the V-row passing through (containing) the active point will be *added to the current selection*.
 If you use again this shortcut, you will toggle between the U- and V-row of this point,
 *removing everything else from the selection*.
@@ -120,10 +120,10 @@ Basic Surface Editing (translation, rotation, scale)
 
 Once you have a selection of one or more control points,
 you can grab/move (:kbd:`G`), rotate (:kbd:`R`) or scale (:kbd:`S`) them, like many other things in Blender,
-as described in the :doc:`Manipulation in 3D Space </getting_started/basics/transformations/introduction>` section.
+as described in the :doc:`Manipulation in 3D Space </editors/3dview/transform/introduction>` section.
 
 You also have in *Edit* mode an extra option when using these basic manipulations: the
-:doc:`proportional editing </getting_started/basics/transformations/transform_control/proportional_edit>`.
+:doc:`proportional editing </editors/3dview/transform/transform_control/proportional_edit>`.
 
 
 Advanced Transform Tools

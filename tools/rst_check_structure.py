@@ -84,7 +84,7 @@ def warn_images(fn, data_src):
                  # figure/image::
                  "(figure|image)\:\:"
                  # image path
-                 "\s+/images/(.*\.(png|gif|jpg))",l)
+                 "\s+/images/(.*\.(png|gif|jpg|svg))",l)
         if match:
             img_refs.append(match.string[match.start(3) : match.end(3)])
 
@@ -102,19 +102,26 @@ def warn_images_post():
     img_files_set = set([f for f in os.listdir(imgpath)])
     img_refs_set = set(warn_images.img_refs)
 
-    print("\nLIST OF UNUSED IMAGES:")
-    print("======================")
-    l1 = [fn for fn in img_files_set - img_refs_set]
-    l1.sort()
-    for fn in l1:
+    print("\n"
+          "LIST OF UNUSED IMAGES:\n"
+          "======================")
+    for fn in sorted(img_files_set - img_refs_set):
+        print(" svn rm --force 'manual/images/%s'" % fn)
+
+    print("LIST OF MISSING IMAGES:\n"
+          "=======================")
+    for fn in sorted(img_refs_set - img_files_set):
         print(fn)
 
-    print("\nLIST OF MISSING IMAGES:")
-    print("=======================")
-    l2 = [fn for fn in img_refs_set - img_files_set]
-    l2.sort()
-    for fn in l2:
-        print(fn)
+    if len(img_files_set) != len(set([fn.lower() for fn in img_files_set])):
+        img_files_set_lower = set()
+        print("LIST OF CASE-COLLIDING IMAGES:\n"
+              "==============================")
+        for fn in sort(img_files_set):
+            fn_lower = fn.lower()
+            if fn_lower in img_files_set_lower:
+                print(fn)
+            img_files_set_lower.add(fn_lower)
 
 
 # define the operations to call
@@ -149,4 +156,3 @@ if __name__ == "__main__":
     else:
         print_help()
         print("No arguments passed")
-

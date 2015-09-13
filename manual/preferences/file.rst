@@ -7,7 +7,7 @@ The *File Preferences* tab allows you to configure auto-save preferences and set
 .blend files, rendered images, and more.
 
 
-.. figure:: /images/Manual-Interface-Configuration-File-UserPreferencesFile.jpg
+.. figure:: /images/Interface-Configuration-File-UserPreferencesFile.jpg
    :width: 650px
 
 
@@ -86,17 +86,17 @@ Save & Load
 ===========
 
 Relative Paths
-   By default, external files use a :doc:`relative path </data_system/files/relative_paths>`. 
+   By default, external files use a :doc:`relative path </data_system/files/relative_paths>`.
 Compress File
    Compress ``.blend`` file when saving.
 Load UI
    Default setting is to load the Window layout
-   (the :doc:`Screens </getting_started/basics/interface/screens>`) of the saved file.
+   (the :doc:`Screens </interface/screens>`) of the saved file.
    This can be changed individually when loading a file from the
    *Open Blender File* panel of the *File Browser* window.
 
 
-.. figure:: /images/Manual-Interface-Configuration-File-filefilter-25.jpg
+.. figure:: /images/Interface-Configuration-File-filefilter-25.jpg
 
    File extension filter
 
@@ -129,5 +129,5 @@ Auto Save Temporary File
 Timer
    Time to wait between automatic saves.
 
-:doc:`Read more about Auto Save options </getting_started/basics/undo_and_redo#save_and_auto_save>`
+:doc:`Read more about Auto Save options </interface/undo_and_redo#save_and_auto_save>`
 

@@ -6,7 +6,7 @@ Displaying and Saving Images
 Rendering still images is fairly simple.
 :doc:`Rendering Animations </render/workflows/animations>` is a bit more complex and is covered in the next sections.
 
-To render an image from the active camera, in the Render Panel, hit the big *Render* button.
+To render an image from the active camera, in the Render Panel, press the *Render* button.
 By default the 3D view is replaced with the UV/Image Editor and the render appears.
 
 
@@ -148,5 +148,5 @@ The following table shows the available hotkeys for the animation player:
      - Slow down playback.
    * - :kbd:`Plus`
      - Speed up playback.
-   
+
 A external player can be used instead by selecting it in the :doc:`User Preferences </preferences/file>`.

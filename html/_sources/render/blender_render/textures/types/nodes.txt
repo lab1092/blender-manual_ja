@@ -27,10 +27,10 @@ Using Texture Nodes
 ===================
 
 To use texture nodes with the current texture,
-open a :doc:`Node Editor window </render/blender_render/textures/types/nodes/editor>`,
+open a :doc:`Node Editor window </editors/node_editor/editor>`,
 set it to *Texture* mode by clicking the "Texture" icon (
 
-.. figure:: /images/26-Manual-Selector-Node-Btn-Texture.jpg
+.. figure:: /images/Selector-Node-Btn-Texture.jpg
 
    Texture
 
@@ -47,7 +47,7 @@ you can create as many Outputs as you like in your node setup. (Other types of n
 as you may recall, are limited to only one Output node.) See the next section for details.
 
 For instructions on how to add, remove and manipulate the nodes in the tree,
-see the :doc:`Node Editor manual </render/blender_render/materials/nodes/editor>`.
+see the :doc:`Node Editor manual </editors/node_editor/editor>`.
 
 
 Using Multiple Outputs

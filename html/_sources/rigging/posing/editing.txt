@@ -6,7 +6,7 @@
 Editing Poses
 *************
 
-.. figure:: /images/Doc26-rigging-poseTools.jpg
+.. figure:: /images/rigging-poseTools.jpg
    :width: 100px
 
    Pose Tools
@@ -34,7 +34,7 @@ with a few specificities:
 - You can only select *whole bones* in *Pose* mode, not roots/tips...
 
 
-.. figure:: /images/Doc26-rigging-selectGrouped.jpg
+.. figure:: /images/rigging-selectGrouped.jpg
 
    The Select Grouped pop-up menu.
 
@@ -58,7 +58,7 @@ in *Pose* mode, each bone has a scale of **1.0**, and null rotation and position
 :kbd:`N`).
 
 
-.. figure:: /images/Doc26-rigging-pose-localRotate.jpg
+.. figure:: /images/rigging-pose-localRotate.jpg
    :width: 250px
 
    An example of locally-Y-axis locked rotation, with two bones selected.
@@ -161,7 +161,7 @@ Copy/Paste Pose
      :menuselection:`Pose --> Paste Pose`, :menuselection:`Pose --> Paste Flipped Pose`
 
 
-.. figure:: /images/Doc26-rigging-copyPastePose.jpg
+.. figure:: /images/rigging-copyPastePose.jpg
 
    Copy and paste pose buttons in the 3D View header in Pose mode.
 
@@ -197,28 +197,28 @@ Here are important points:
 .. list-table::
 
    * - Examples of pose copy/paste.
-     - .. figure:: /images/ManRiggingPosingCopyPoseExRestArmaOrg.jpg
+     - .. figure:: /images/RiggingPosingCopyPoseExRestArmaOrg.jpg
 
           The rest position of our original armature.
-     - .. figure:: /images/ManRiggingPosingCopyPoseExRestArmaDest.jpg
+     - .. figure:: /images/RiggingPosingCopyPoseExRestArmaDest.jpg
 
           The rest position of our destination armature.
-   * - .. figure:: /images/ManRiggingPosingCopyPoseExPose1ArmaOrg.jpg
+   * - .. figure:: /images/RiggingPosingCopyPoseExPose1ArmaOrg.jpg
 
           The first copied pose (note that only forearm and finger2_a are selected and hence copied).
-     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedPose1ArmaDest.jpg
+     - .. figure:: /images/RiggingPosingCopyPoseExPastedPose1ArmaDest.jpg
 
           ...pasted on the destination armature...
-     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedMirrPose1ArmaDest.jpg
+     - .. figure:: /images/RiggingPosingCopyPoseExPastedMirrPose1ArmaDest.jpg
 
           ...and mirror-pasted on the destination armature.
-   * - .. figure:: /images/ManRiggingPosingCopyPoseExPose2ArmaOrg.jpg
+   * - .. figure:: /images/RiggingPosingCopyPoseExPose2ArmaOrg.jpg
 
           The same pose as above is copied, but this time with all bones selected, ...
-     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedPose2ArmaDest.jpg
+     - .. figure:: /images/RiggingPosingCopyPoseExPastedPose2ArmaDest.jpg
 
           ...pasted on the destination armature...
-     - .. figure:: /images/ManRiggingPosingCopyPoseExPastedMirrPose2ArmaDest.jpg
+     - .. figure:: /images/RiggingPosingCopyPoseExPastedMirrPose2ArmaDest.jpg
 
           ...and mirror-pasted on the destination armature.
 
@@ -238,17 +238,17 @@ By default, children bones inherit:
 .. list-table::
    Examples of transforming parented/connected bones.
 
-   * - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExBasis.jpg
+   * - .. figure:: /images/RiggingPosingRelatioshipsAndTransformExBasis.jpg
           :width: 200px
 
           The armature in its rest position.
 
-     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExMonoRotation.jpg
+     - .. figure:: /images/RiggingPosingRelatioshipsAndTransformExMonoRotation.jpg
           :width: 200px
 
           Rotation of a root bone.
 
-     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExScalingChains.jpg
+     - .. figure:: /images/RiggingPosingRelatioshipsAndTransformExScalingChains.jpg
           :width: 200px
 
           Scaling of a root bone.
@@ -258,7 +258,7 @@ Exactly like standard children objects. You can modify this behavior on a per-bo
 using their sub-panels in the *Armature Bones* panel:
 
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg
+.. figure:: /images/RiggingEditingBoneCxtRelationsPanel.jpg
    :width: 200px
 
    The Armature Bones panel in Pose mode.
@@ -279,17 +279,17 @@ all its descendants* will no longer be affected when you scale one of its ancest
 .. list-table::
    Examples of transforming parented/connected bones with** *Inherit Rotation* disabled.
 
-   * - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBone.jpg
+   * - .. figure:: /images/RiggingPosingRelatioshipsAndTransformExHingeBone.jpg
           :width: 200px
 
           The yellow outlined Inherit Rotation disabled bone in the armature.
 
-     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInRotation.jpg
+     - .. figure:: /images/RiggingPosingRelatioshipsAndTransformExHingeBoneInRotation.jpg
           :width: 200px
 
           Rotation of a bone with a Inherit Rotation disabled bone among its descendants.
 
-     - .. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExHingeBoneInScaling.jpg
+     - .. figure:: /images/RiggingPosingRelatioshipsAndTransformExHingeBoneInScaling.jpg
           :width: 200px
 
           Scaling of a bone with a Inherit Rotation disabled bone among its descendants.
@@ -298,7 +298,7 @@ all its descendants* will no longer be affected when you scale one of its ancest
 Connected bones have another specificity: they cannot be translated. Indeed,
 as their root must be at their parent's tip, if you don't move the parent,
 you cannot move the child's root, but only its tip - which leads us to a child rotation.
-This is exactly what happens - when you hit :kbd:`G` with a connected bone selected,
+This is exactly what happens - when you press :kbd:`G` with a connected bone selected,
 Blender automatically switches to rotation operation.
 
 Bones relationships also have important consequences on how selections of multiple bones
@@ -308,7 +308,7 @@ possible ones below - but this should anyway give you a good idea of the problem
 - Non-related selected bones are transformed independently, as usual.
 
 
-.. figure:: /images/ManRiggingPosingRelatioshipsAndTransformExMultiScaling.jpg
+.. figure:: /images/RiggingPosingRelatioshipsAndTransformExMultiScaling.jpg
    :width: 200px
 
    Scaling bones, some of them related.
@@ -324,7 +324,7 @@ possible ones below - but this should anyway give you a good idea of the problem
 - When connected and unconnected bones are selected,
   and you start a grab operation, only the unconnected bones are affected.
 - When a child connected hinge bone is in the selection,
-  and the "most parent" selected one is connected, when you hit :kbd:`G`,
+  and the "most parent" selected one is connected, when you press :kbd:`G`,
   nothing happens - Blender remains in grab operation, which of course has no effect on a connected bone.
   This might be a bug, in fact, as I see no reason for this behavior...
 

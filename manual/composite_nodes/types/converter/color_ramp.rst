@@ -21,7 +21,7 @@ Alpha setting, and interpolation type.
 
 To change the hue of the selected color in the colorband,
 :kbd:`LMB` click on the swatch,
-and use the popup color picker control to select a new color.
+and use the pop-up color picker control to select a new color.
 Press :kbd:`Return` to set that color.
 
 To add colors,
@@ -50,7 +50,7 @@ allows some of the background to show through.
 The example map below shows how to use the Color Ramp node to do this:
 
 
-.. figure:: /images/Manual-Compositing-ColorRamp_alpha.jpg
+.. figure:: /images/Compositing-ColorRamp_alpha.jpg
 
    Using the ColorRamp node to create an alpha mask
 
@@ -80,7 +80,7 @@ The real power of ColorRamp is that multiple colors can be added to the color sp
 This example compositing map takes a boring BW image and makes it a flaming swirl!
 
 
-.. figure:: /images/Manual-Compositing-ColorRamp_Colorize.jpg
+.. figure:: /images/Compositing-ColorRamp_Colorize.jpg
 
 In this example, we have mapped the shades of gray in the input image to three colors, blue,
 yellow, and red, all fully opaque (Alpha of 1.00). Where the image is black,

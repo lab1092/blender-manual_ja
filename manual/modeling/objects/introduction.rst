@@ -14,7 +14,7 @@
 Object Mode
 ***********
 
-.. figure:: /images/Manual-2.5-Part-II-ObjectMode-Selected-Ex.jpg
+.. figure:: /images/ObjectMode-Selected-Ex.jpg
    :width: 400px
 
    Selected object in 3D View: (1) Solid shading, (2) Wireframe shading.
@@ -78,7 +78,7 @@ However, not all of these transformations have an effect on all objects. For exa
 scaling a force field will not increase its effect.
 
 
-.. figure:: /images/Manual-2.5-Part-II-EditMode.jpg
+.. figure:: /images/EditMode.jpg
 
    Edit Mode button.
 
@@ -109,7 +109,7 @@ Object Centers
 Each object has an origin point. The location of this point determines where the object is located in 3D space.
 When an object is selected, a small circle appears, denoting the origin point.
 The location of the origin point is important when translating, rotating or scaling an object.
-See :doc:`Pivot Points </getting_started/basics/transformations/transform_control/pivot_point/index>` for more.
+See :doc:`Pivot Points </editors/3dview/transform/transform_control/pivot_point/index>` for more.
 
 
 Moving Object Centers

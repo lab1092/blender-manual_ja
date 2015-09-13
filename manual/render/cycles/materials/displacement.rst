@@ -4,18 +4,17 @@
 Displacement
 ************
 
-*Implementation not finished yet, marked as an* :doc:`experimental feature </render/cycles/experimental_features>`.
+*Implementation not finished yet, marked as an* :doc:`experimental feature </render/cycles/features>`.
 
 The shape of the surface and the volume inside its mesh may be altered by the displacement
 shaders. This way, textures can then be used to make the mesh surface more detailed.
 
 
 Type
-
-----
-
+====
 
 .. figure:: /images/Selection_017.jpg
+   :align: right
 
 Depending on the settings, the displacement may be virtual,
 only modifying the surface normals to give the impression of displacement,
@@ -38,12 +37,11 @@ Displacement + Bump
 Subdivision
 ===========
 
+*Implementation not finished yet, marked as an* :doc:`experimental feature </render/cycles/features>`.
+
 .. figure:: /images/cycles_manual_materials_displacementbump.jpg
 
    Bump Mapped Displacement
-
-
-*Implementation not finished yet, marked as :doc:`experimental features </render/cycles/experimental_features>`*
 
 When using *True Displacement* or *Displacement + Bump* and enabling *Use Subdivision*
 you can reduce the **Dicing Rate** to subdivide the mesh.
@@ -52,7 +50,7 @@ This only affects the render and does not show in the viewport
 Displacement can also be done manually by use of the Displacement Modifier.
 
 
-.. figure:: /images/Manual-Cycles-Displacement-Dicing.jpg
+.. figure:: /images/Cycles-Displacement-Dicing.jpg
    :width: 567px
 
    Subdivision Off - On, Dicing Rate 1.0 - 0.3 - 0.05 (Monkeys look identical in viewport, no modifiers)

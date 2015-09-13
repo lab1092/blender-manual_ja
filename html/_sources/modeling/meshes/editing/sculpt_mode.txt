@@ -27,12 +27,12 @@ to sculpt mode specific panels. The panels in the toolbar will be *Brush*,
 Also a red circle will appear that follows the location of the cursor in the 3d view.
 
 
-.. figure:: /images/2.5_Sculpt_mode_drop_down.jpg
+.. figure:: /images/sculpt_mode_drop_down.jpg
 
    Sculpt Mode Dropdown.
 
 
-.. figure:: /images/2.5_Sculpt_brush_circle.jpg
+.. figure:: /images/sculpt_brush_circle.jpg
 
    The cursor in Sculpt Mode.
 
@@ -313,7 +313,7 @@ It is sometimes useful to isolate parts of a mesh to sculpt on. To hide a part o
 press :kbd:`H` then click & drag around the part you want to hide.
 To reveal a hidden part of a mesh,
 press :kbd:`Shift-H` then click & drag around the part you want to reveal.
-To reveal all hidden parts, just hit :kbd:`Alt-H`.
+To reveal all hidden parts, just press :kbd:`Alt-H`.
 
 
 .. figure:: /images/Hide_before_and_after.jpg

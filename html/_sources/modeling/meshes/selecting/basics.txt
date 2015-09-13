@@ -78,17 +78,17 @@ If any object that was last active appears in the group it will become selected 
 
 .. list-table::
 
-   * - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect1.jpg
+   * - .. figure:: /images/Modeling-Meshes-Selection-Borderselect1.jpg
           :width: 200px
 
           Start
 
-     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect2.jpg
+     - .. figure:: /images/Modeling-Meshes-Selection-Borderselect2.jpg
           :width: 200px
 
           Selecting
 
-     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Borderselect3.jpg
+     - .. figure:: /images/Modeling-Meshes-Selection-Borderselect3.jpg
           :width: 200px
 
           Complete
@@ -125,12 +125,12 @@ or the :kbd:`Wheel`.
 .. list-table::
    Circle Region Select
 
-   * - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Circularselect1.jpg
+   * - .. figure:: /images/Modeling-Meshes-Selection-Circularselect1.jpg
           :width: 300px
 
           Before
 
-     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Circularselect2.jpg
+     - .. figure:: /images/Modeling-Meshes-Selection-Circularselect2.jpg
           :width: 300px
 
           After
@@ -147,7 +147,7 @@ For *Faces* select mode,
 the circle must intersect the face indicators usually represented by small pixel squares;
 one at the center of each face.
 
-To exit from this tool, click :kbd:`RMB`, or hit the :kbd:`Esc` key.
+To exit from this tool, click :kbd:`RMB`, or press the :kbd:`Esc` key.
 
 
 Lasso region
@@ -167,17 +167,17 @@ To deselect, use :kbd:`Ctrl-Shift-LMB` while dragging.
 .. list-table::
    Lasso selection
 
-   * - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect1.jpg
+   * - .. figure:: /images/Modeling-Meshes-Selection-Lassoselect1.jpg
           :width: 200px
 
           Start
 
-     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect2.jpg
+     - .. figure:: /images/Modeling-Meshes-Selection-Lassoselect2.jpg
           :width: 200px
 
           Selecting
 
-     - .. figure:: /images/25-Manual-Modeling-Meshes-Selection-Lassoselect3.jpg
+     - .. figure:: /images/Modeling-Meshes-Selection-Lassoselect3.jpg
           :width: 200px
 
           Complete

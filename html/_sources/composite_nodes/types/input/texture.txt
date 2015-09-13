@@ -6,7 +6,7 @@ Texture Node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` -->
+   | Panel:    :doc:`Node Editor </editors/node_editor/editor>` -->
                :doc:`Node Composition </composite_nodes/index>`
    | Menu:     :kbd:`Shift-A` --> :doc:`Input </composite_nodes/types/input/index>` --> Texture
 
@@ -48,7 +48,7 @@ Texture nodes can output a straight black-and-white *Value* image
 Example
 =======
 
-.. figure:: /images/Manual-Compositing-Input-Texture.jpg
+.. figure:: /images/Compositing-Input-Texture.jpg
 
 In the example above, we want to simulate some red plasma gas out there in space. So, we fog
 up an image taken from the Hubble telecscope of Orion and take the ever-so-useful Cloud

@@ -18,13 +18,20 @@ simply run:
 
 
 .. note::
-   
+
    Arguments are executed in the order they are given!
+
    The following command won't work, since the output and extension is set after blender is told to render:
 
    .. code-block:: sh
 
       blender -b file.blend -a -x 1 -o //render
+
+   The following command will behave as expected.
+
+   .. code-block:: sh
+
+      blender -b file.blend -x 1 -o //render -a
 
    **Always position** ``-f`` **or** ``-a`` **as the last arguments.**
 
@@ -39,24 +46,29 @@ How to actually execute Blender from the command line depends on the platform an
 have installed Blender. Here are basic instructions for the different platforms.
 
 
-Windows
--------
+Linux
+-----
 
-Open the Command Prompt, go to the directory where Blender is installed,
-and then run the blender command.
+Open a terminal, then go to the directory where Blender is installed,
+and run the blender command like this.
 
-.. code-block:: bat
+.. code-block:: sh
 
-   cd c:\<blender installation directory>
+   cd <blender installation directory>
+   ./blender
+
+If you have Blender installed in your ``PATH``
+(usually when Blender is installed through a distribution package), you can simply run:
+
+.. code-block:: sh
+
    blender
-
-You can also add the Blender folder to your system ``PATH`` so that do you do not have to change to it each time. 
 
 
 Mac OS X
 --------
 
-Open the Terminal application, go to the directory where Blender is installed,
+Open the terminal application, go to the directory where Blender is installed,
 and run the executable within the app bundle, with commands like this:
 
 .. code-block:: sh
@@ -79,24 +91,18 @@ If you then open a new terminal, the following command will work:
    blender
 
 
-Linux
------
+Windows
+-------
 
-Open a terminal, then go to the directory where Blender is installed,
-and run the blender command like this.
+Open the Command Prompt, go to the directory where Blender is installed,
+and then run the blender command.
 
-.. code-block:: sh
+.. code-block:: bat
 
-   cd <blender installation directory>
-   ./blender
-
-If you have Blender installed in your ``PATH``
-(usually when Blender is installed through a distribution package),
-you may be able to simply do this:
-
-.. code-block:: sh
-
+   cd c:\<blender installation directory>
    blender
+
+You can also add the Blender folder to your system ``PATH`` so that do you do not have to change to it each time.
 
 
 Examples
@@ -123,7 +129,7 @@ Single Image
 
 .. code-block:: sh
 
-   blender -b file.blend -o /project/renders/frame_##### -F EXR -f -5
+   blender -b file.blend -o /project/renders/frame_##### -F EXR -f -2
 
 ``-o /project/renders/frame_#####``
    Path of where to save the rendered image, using 5 padded zeros for the frame number.
@@ -132,9 +138,9 @@ Single Image
 ``-f -2``
    Render only the second last frame.
 
-.. warning:: Arguments are case sensitive! ``-F`` and ``-f`` are not the same.
+.. warning::
 
-   
+   Arguments are case sensitive! ``-F`` and ``-f`` are not the same.
 
 
 Animation

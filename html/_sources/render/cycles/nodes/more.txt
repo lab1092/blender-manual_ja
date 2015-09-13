@@ -106,9 +106,7 @@ Reflection
 
 
 Bump
-
-----
-
+====
 
 Generate a perturbed normal from a height texture, for bump mapping. The height value will be
 sampled at the shading point and two nearby points on the surface to determine the local
@@ -310,7 +308,7 @@ you can use the same setup, mixing between a diffuse and glossy BSDF. By using t
 the blending factor you're specifying that any light which is refracted through the glossy
 coating layer would hit the diffuse base and be reflected off that.
 
-IOR input
+:term:`IOR` input
    Index of refraction of the material being entered.
 Fresnel output
    Fresnel weight,

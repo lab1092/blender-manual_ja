@@ -12,7 +12,7 @@ possibilities that will be the foundation for all our models.
 Vertices
 ========
 
-.. figure:: /images/25-Manual-Mesh-Structures-CubeExample.jpg
+.. figure:: /images/Mesh-Structures-CubeExample.jpg
 
    Vertex example
 
@@ -73,7 +73,7 @@ select three or four suitable vertices and press :kbd:`F`.
 Loops
 =====
 
-.. figure:: /images/25-Manual-mesh-structures-edge-and-face-loops.jpg
+.. figure:: /images/mesh-structures-edge-and-face-loops.jpg
 
    Edge and Face Loops
 
@@ -91,8 +91,7 @@ In the image above, loops that do not end in poles are cyclic (``1`` and ``3``).
 They start and end at the same vertex and divide the model into two partitions.
 Loops can be a quick and powerful tool to work with specific,
 continuous regions of a mesh and are a prerequisite for organic character animation.
-For a detailed description of how to work with loops in Blender,
-please refer to the Manual page on
+For a detailed description of how to work with loops in Blender, see:
 :doc:`Edge and Face Tools </modeling/meshes/selecting/introduction#advanced_selection_tools>`.
 
 

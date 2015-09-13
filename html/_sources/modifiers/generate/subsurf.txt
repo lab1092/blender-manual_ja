@@ -34,7 +34,7 @@ You can see the difference between the two in the grid image to the right.
 Options
 =======
 
-.. figure:: /images/25-Manual-Modifiers-Subsurf.jpg
+.. figure:: /images/Modifiers-Subsurf.jpg
 
    Modifier's panel
 
@@ -79,7 +79,7 @@ Options:
       <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__.
 
 
-   .. figure:: /images/Manual-Modifiers-Generate-Subsurf-SubdivideUVs.jpg
+   .. figure:: /images/Modifiers-Generate-Subsurf-SubdivideUVs.jpg
 
       Subdivide UVs on and off -- see the
       `.blend <http://wiki.blender.org/index.php/Media:Manual-Modifiers-Generate-Subsurf-SubdivideUVsExample.blend>`__
@@ -123,7 +123,7 @@ prettiness.
 Order of the Modifier Stack
 ===========================
 
-.. figure:: /images/Manual-Modifiers-Generate-Subsurf_OrderOfExecution.jpg
+.. figure:: /images/Modifiers-Generate-Subsurf_OrderOfExecution.jpg
 
    Notice that the Armature Modifier before the Subsurf comes out much better in this case.
    Also, the Mirror before the Subsurf is clearly correct compared to the other way around.
@@ -228,14 +228,14 @@ Blender's subdivision system produces nice smooth subsurfed meshes, but any subs
 shares the overall normal orientation of that original face.
 
 
-.. figure:: /images/Manual-Part-II-SubSurf05b.jpg
+.. figure:: /images/SubSurf05b.jpg
    :width: 300px
 
    Fig. 1: Solid view of subsurfed meshes with inconsistent normals (top) and consistent normals (bottom).
    Note the ugly dark areas that appear.
 
 
-.. figure:: /images/Manual-Part-II-SubSurf05a.jpg
+.. figure:: /images/SubSurf05a.jpg
    :width: 300px
 
    Fig. 2: Side view of the above meshes' normals, with random normals (top) and with coherent normals (bottom).
@@ -249,7 +249,7 @@ Abrupt normal changes can produce ugly black gouges (See:
 A quick way to fix this (one which works 90% of the time)
 is to use Blender's "Recalculate Normals" operation: In Edit Mode,
 select all with :kbd:`A`,
-then hit :kbd:`Ctrl-N` to recalculate the normals to point outside.
+then press :kbd:`Ctrl-N` to recalculate the normals to point outside.
 If you still have some ugly black gougesyou will have to manually flip some normals.
 To do this (still in Edit Mode),
 use the :menuselection:`Specials --> Flip Normals` functionality (shortcut: :kbd:`W`,

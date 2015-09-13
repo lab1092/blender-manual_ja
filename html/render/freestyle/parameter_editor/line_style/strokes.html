@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,10 +30,12 @@
   
     <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
   
+
+  
     <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
         <link rel="up" title="Parameter Editor" href="../index.html"/>
-        <link rel="next" title="Thickness" href="thickness.html"/>
-        <link rel="prev" title="Geometry" href="geometry.html"/> 
+        <link rel="next" title="Color" href="color.html"/>
+        <link rel="prev" title="Line Style &amp; Modifiers" href="../line_style.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -47,9 +49,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+        
+          <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -59,8 +64,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul>
+          
+          
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
@@ -98,21 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
@@ -159,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/index.html">Animation Editors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
@@ -184,6 +176,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
@@ -257,6 +264,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
@@ -279,6 +290,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -315,13 +327,13 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="stroke">
 <h1>Stroke<a class="headerlink" href="#stroke" title="Permalink to this headline">¶</a></h1>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Stroke_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Stroke_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Stroke_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Stroke Line Style</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Stroke_UI.jpg"><img alt="../../../../_images/render-freestyle-Stroke_UI.jpg" src="../../../../_images/render-freestyle-Stroke_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Stroke Line Style</span></p>
 </div>
 <p>Strokes are the final rendered lines. Yet you can tweaks them, for example,
 by removing the ones longer/shorter than some threshold,
@@ -343,9 +355,9 @@ It is only really useful if you use some random-driven modifiers in the line sty
 </dl>
 <p>Chaining can also be turned off to render each line separately,
 which can be useful for line styles which depend on accurate representation of the line set.</p>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Chaining_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Chaining_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Chaining_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Chaining</p>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Chaining_UI.jpg"><img alt="../../../../_images/render-freestyle-Chaining_UI.jpg" src="../../../../_images/render-freestyle-Chaining_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Chaining</span></p>
 </div>
 </div>
 <div class="section" id="splitting">
@@ -357,9 +369,9 @@ which can be useful for line styles which depend on accurate representation of t
 <dt>Min 2D Angle and Max 2D Angle</dt>
 <dd>Splits chains of feature edges when they make a 2D angle above (or below) a minimum (or maximum) threshold.</dd>
 </dl>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Splitting_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Splitting_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Splitting_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Splitting</p>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Splitting_UI.jpg"><img alt="../../../../_images/render-freestyle-Splitting_UI.jpg" src="../../../../_images/render-freestyle-Splitting_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Splitting</span></p>
 </div>
 <dl class="docutils">
 <dt>2D Length</dt>
@@ -371,22 +383,22 @@ which can be useful for line styles which depend on accurate representation of t
 </div>
 <div class="section" id="selection">
 <h2>Selection<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h2>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Selection_Length_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Selection_Length_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Selection_Length_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Selection</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Selection_Length_UI.jpg"><img alt="../../../../_images/render-freestyle-Selection_Length_UI.jpg" src="../../../../_images/render-freestyle-Selection_Length_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Selection</span></p>
 </div>
 <p>You can also choose to only select (i.e. render)
 chains longer than <em>Min 2D Length</em> and/or shorter than <em>Max 2D Length</em>.</p>
-<p>Caps</p>
-<hr class="docutils" />
+<div class="section" id="caps">
+<h3>Caps<a class="headerlink" href="#caps" title="Permalink to this headline">¶</a></h3>
 <p>You can choose between three types of line caps:</p>
 <dl class="docutils">
 <dt>Butt</dt>
 <dd>Flat cap, exactly at the point the line ends.</dd>
 </dl>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Caps_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Caps_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Caps_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Line tip caps</p>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Caps_UI.jpg"><img alt="../../../../_images/render-freestyle-Caps_UI.jpg" src="../../../../_images/render-freestyle-Caps_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Line tip caps</span></p>
 </div>
 <dl class="docutils">
 <dt>Round</dt>
@@ -396,11 +408,12 @@ chains longer than <em>Min 2D Length</em> and/or shorter than <em>Max 2D Length<
 the drawn end of the line is slightly extended compared to its computed value).</dd>
 </dl>
 </div>
+</div>
 <div class="section" id="dashed-line">
 <h2>Dashed Line<a class="headerlink" href="#dashed-line" title="Permalink to this headline">¶</a></h2>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Dashes_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Dashes_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Dashes_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Dashes Line UI</p>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Dashes_UI.jpg"><img alt="../../../../_images/render-freestyle-Dashes_UI.jpg" src="../../../../_images/render-freestyle-Dashes_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Dashes Line UI</span></p>
 </div>
 <p>By enabling the <em>Dashed Line</em> check box,
 you can specify three pairs of dash and gap lengths.
@@ -409,8 +422,7 @@ while gap values specify intervals between two dashes.</p>
 <p>If a zero gap is specified,
 then the corresponding dash is ignored even if it has a non-zero value.</p>
 <p>Dashes are treated as separate strokes, meaning that you can apply line caps,
-as well as color, alpha and thickness modifiers.
-..    Comment: &lt;!&#8211;The image below shows a few examples of dashed lines on the default cube.&#8211;&gt; .</p>
+as well as color, alpha and thickness modifiers.</p>
 </div>
 </div>
 
@@ -420,10 +432,10 @@ as well as color, alpha and thickness modifiers.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="thickness.html" class="btn btn-neutral float-right" title="Thickness"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="color.html" class="btn btn-neutral float-right" title="Color">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="geometry.html" class="btn btn-neutral" title="Geometry"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../line_style.html" class="btn btn-neutral" title="Line Style &amp; Modifiers"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -436,7 +448,8 @@ as well as color, alpha and thickness modifiers.
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -452,7 +465,7 @@ as well as color, alpha and thickness modifiers.
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'0.1',
+            VERSION:'2.75',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

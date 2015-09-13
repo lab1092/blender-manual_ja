@@ -30,15 +30,13 @@ include the Gravity constant and some important engine performance tweaks.
 Object Physics
 ==============
 
-.. figure:: /images/Manual-BGE-Physics-PropertiesTabs.jpg
+.. figure:: /images/BGE-Physics-PropertiesTabs.jpg
 
 
 .. _game_engine-physics-types:
 
 Physics Type
 ============
-
-.. figure:: /images/Manual-BGE-Physics-PhysicsType.png
 
 :doc:`No Collision </game_engine/physics/object/no_collision>`
    Is not affected by the simulation nor affects other objects.
@@ -99,7 +97,7 @@ Your options include:
 Visualizing Physics
 ===================
 
-.. figure:: /images/Manual-BGE-Physics-Visualization.jpg
+.. figure:: /images/BGE-Physics-Visualization.jpg
 
 Go to :menuselection:`Game --> Show Physics Visualization` to show lines representing various attributes
 of the Bullet representation of your objects.
@@ -125,38 +123,23 @@ Also note that you can see how the Bullet triangulation is working
 If you want finer-grained control over the display options,
 you can add this as a Python Controller and uncomment whichever pieces you want to see:
 
-::
 
+.. code-block:: python
 
    import bge
    debugs = (
-   #bge.constraints.DBG_DRAWWIREFRAME, # Draw wireframe in debug.
-   bge.constraints.DBG_DRAWAABB, # Draw Axis Aligned Bounding Box in debug.
-   #bge.constraints.DBG_DRAWFREATURESTEXT, # Draw freatures text in debug.
-   #bge.constraints.DBG_DRAWCONTACTPOINTS, # Draw contact points in debug.
-   #bge.constraints.DBG_NOHELPTEXT, # Debug without help text.
-   #bge.constraints.DBG_DRAWTEXT, # Draw text in debug.
-   #bge.constraints.DBG_PROFILETIMINGS, # Draw profile timings in debug.
-   #bge.constraints.DBG_ENABLESATCOMPARISION, # Enable sat comparision in debug.
-   #bge.constraints.DBG_DISABLEBULLETLCP, # Disable Bullet LCP.
-   #bge.constraints.DBG_ENABLECCD, # Enable Continous Colision Detection in debug.
-   #bge.constraints.DBG_DRAWCONSTRAINTS, # Draw constraints in debug.
-   #bge.constraints.DBG_DRAWCONSTRAINTLIMITS, # Draw constraint limits in debug.
-   #bge.constraints.DBG_FASTWIREFRAME, # Draw a fast wireframe in debug.
-   #bge.constraints.POINTTOPOINT_CONSTRAINT,
-   #bge.constraints.LINEHINGE_CONSTRAINT,
-   #bge.constraints.ANGULAR_CONSTRAINT,
-   #bge.constraints.CONETWIST_CONSTRAINT,
-   #bge.constraints.VEHICLE_CONSTRAINT,
-   )
+       bge.constraints.DBG_DRAWAABB,
+       )
    for d in debugs:
-   bge.constraints.setDebugMode(d)
+      bge.constraints.setDebugMode(d)
+
+For all debug modes, API docs for ``bge.constraints``.
 
 
 Show Framerate and Profile
 --------------------------
 
-.. figure:: /images/Manual-BGE-Physics_ProfileStats.jpg
+.. figure:: /images/BGE-Physics_ProfileStats.jpg
 
    A shot of `Manual-BGE-Physics-DancingSticks.blend
    <http://wiki.blender.org/index.php/Media:Manual-BGE-Physics-DancingSticks.blend>`__ with
@@ -271,14 +254,14 @@ This means that the result is completely deterministic
 new objects that are added to the physics simulation after it was recorded.
 This may, or not, be desired according to the situation.
 
-.. figure:: /images/Manual-BGE-Physics-RecordAnimation.jpg
+.. figure:: /images/BGE-Physics-RecordAnimation.jpg
 
    Menu to record Keyframes to the Dopesheet.
 
 All you have to do to achieve this effect is go to the Info Editor
 (the bar at the top of the window) :menuselection:`Game --> Record Animation`,
 and it will lock away your keyframes for use in *Blender Render* mode.
-You can go back to the 3D view and hit :kbd:`Alt-A` to play it back,
+You can go back to the 3D view and press :kbd:`Alt-A` to play it back,
 or :kbd:`Ctrl-F12` to render it out as an animation.
 
 Note that you can also use Game Logic Bricks and scripting. Everything will be recorded.
@@ -287,7 +270,7 @@ Note that you can also use Game Logic Bricks and scripting. Everything will be r
 Keyframe Clean-up
 -----------------
 
-.. figure:: /images/Manual-BGE-Physics-DopeSheetFull.jpg
+.. figure:: /images/BGE-Physics-DopeSheetFull.jpg
 
    Resulting recorded animation
 
@@ -296,7 +279,7 @@ Pressing :kbd:`O` while in the *DopeSheet* will remove all superfluous keyframes
 Unwanted channels can also be removed.
 
 
-.. figure:: /images/Manual-BGE-Physics-DopeSheetCleaned.jpg
+.. figure:: /images/BGE-Physics-DopeSheetCleaned.jpg
 
    Cleaned up recording
 

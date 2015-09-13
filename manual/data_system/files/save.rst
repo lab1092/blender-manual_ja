@@ -11,9 +11,9 @@ Saving Files
 
 There are a number of slightly different methods you can use to save your blend file to your hard drive:
 
-Save (:kbd:`Ctrl-S`, :kbd:`F2`, :kbd:`Ctrl-W`)
+Save (:kbd:`Ctrl-S`, :kbd:`Ctrl-W`)
    Save an existing blend file over itself.
-Save As (:kbd:`Ctrl-Shift-S`)
+Save As (:kbd:`Ctrl-Shift-S`, :kbd:`F2`)
    Choose a file to save the blend to.
 Save Copy (:kbd:`Ctrl-Alt-S`)
    Choose a file to save the blend to, but return to editing the original file upon completion.
@@ -30,7 +30,7 @@ Save Versions
 =============
 
 Depending on the number of
-:doc:`Save Versions </getting_started/basics/undo_and_redo#save_and_auto_save>` you have set,
+:doc:`Save Versions </interface/undo_and_redo#save_and_auto_save>` you have set,
 all existing files with the same name will be rotated to a ``.blend#`` file extension,
 where ``#`` is ``1``, ``2``, ``3``, etc.
 
@@ -44,7 +44,6 @@ or accidentally saved over the wrong file.
    Use the **plus**/**minus** buttons to the right of the file name,
    or :kbd:`NumpadPlus`/:kbd:`NumpadMinus` to increase/decrease a number at the end of the file name
    (e.g. changing ``file_01.blend`` to ``file_02.blend``).
-
 
 
 Options

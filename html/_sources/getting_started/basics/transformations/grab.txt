@@ -19,7 +19,7 @@ in the Node Editor, Graph Editor, UV Editor, Sequencer, etc.
 Options and other details will be discussed in their respective sections.
 
 
-.. figure:: /images/Doc_Blender_26_3D_inter_translate_value_display.jpg
+.. figure:: /images/3D_inter_translate_value_display.jpg
 
    Translation Display
 
@@ -58,7 +58,7 @@ full control over your transformation.
 :kbd:`LMB`
    Confirm the move, and leave the object or data at its current location on the screen.
 
-.. figure:: /images/Doc_blender_26_3D_interaction_trans_basics_grab_mmb.jpg
+.. figure:: /images/3D_interaction_trans_basics_grab_mmb.jpg
 
    Axis-Constraint in action
 
@@ -68,12 +68,12 @@ full control over your transformation.
    a visual option to constrain the translation will be available,
    showing the three axes in the 3D View space. The axis of choice to confirm the operation
    will depend on the axis about which the :kbd:`MMB` is released. At any point during the operation,
-   the chosen axis can be changed by hitting :kbd:`X`, :kbd:`Y`, :kbd:`Z` on the keyboard.
+   the chosen axis can be changed by pressing :kbd:`X`, :kbd:`Y`, :kbd:`Z` on the keyboard.
 
 :kbd:`RMB` or :kbd:`Esc`
    Cancel the move, and return the object or data to its original location.
 
-.. figure:: /images/Doc_blender_26_manual_basic_trans_grab_shift_xyz.jpg
+.. figure:: /images/basic_trans_grab_shift_xyz.jpg
 
    Shift+X in action
 
@@ -152,13 +152,13 @@ If you have changed the orientation to something other than Global,
 you can hotkey your chosen axis of orientation by hitting the relevant axis modifying hotkey
 **twice** instead of just once. Hitting the axis modifying hotkey three times reverts back to Global orientation.
 
-   - The :kbd:`G` hotkey followed by :kbd:`xx` or :kbd:`yy` or
-     :kbd:`zz` allows you to translate the object in the object's Local axis by default,
+   - The :kbd:`G` hotkey followed by :kbd:`X-X` or :kbd:`Y-Y` or
+     :kbd:`Z-Z` allows you to translate the object in the object's Local axis by default,
      or on an axis of the selected orientation if the transform orientation is not set to Global.
      This modifying hotkey combination can be followed with numbers as described in the previous section.
 
-   - The :kbd:`G` hotkey followed by :kbd:`Shift` and :kbd:`xx` or :kbd:`yy` or
-     :kbd:`zz` will lock the object's translation on a single Local axis by default,
+   - The :kbd:`G` hotkey followed by :kbd:`Shift` and :kbd:`X-X` or :kbd:`Y-Y` or
+     :kbd:`Z-Z` will lock the object's translation on a single Local axis by default,
      or on an axis of the selected orientation if the transform orientation is not set to Global.
      Locking one axis means the selected object moves freely on the other two axes.
 
@@ -177,27 +177,6 @@ You can use many of the same Grab/Move hotkeys after :kbd:`G`
 (such as :kbd:`Shift` or :kbd:`X`)
 in other editor windows and they will work much the same way as they do in 3D View.
 Rotating and scaling also work in certain editors as well.
-
-
-Python Scripting
-================
-
-You can use Python Scripting in Blender to Grab/Move Objects or elements to a specific location,
-either using the Python interactive console or running a Python script in the Text Editor Window.
-
-Getting the location vector for current object ``bpy.context.scene.objects.active.location``
-returns you the location vector for the active object in the scene.
-You can assign a different value to the location vector to change the position of the object.
-
-Operator for translating active object and its syntax:
-
-.. code-block:: python
-
-   bpy.ops.transform.translate(value=(<DX>, <DY>, <DZ>), constraint_axis=(<bool>,
-   <bool>,<bool>), constraint_orientation='<ORIENTATION NAME>', mirror=<bool>,
-   proportional='<ENABLE?DISABLE>', proportional_edit_falloff='<FALLOFF TYPE>',
-   proportional_size=<INT>, snap=<bool>, snap_target='<SNAP TARGET>', snap_point=<x,y,z>,
-   snap_align=<bool>, snap_normal=<x,y,z>, texture_space=<bool>, release_confirm=<bool>)
 
 
 Hints

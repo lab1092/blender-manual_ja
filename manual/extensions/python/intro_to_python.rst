@@ -12,9 +12,6 @@ This page exists for two reasons.
 
 - To introduce Programming using Python 3.x quickly and efficiently.
 - And most importantly teach inside of Blender's Console, so you can learn in context.
-- See
-
-`External links`_ below
 
 
 What is Programming?
@@ -55,12 +52,12 @@ Following is a video that shows how you can switch to the interpreter.
 
 .. youtube:: Ge2Kwy5EGE0
 
-.. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Console-Default-Console.jpg
+.. figure:: /images/Extensions-Python-Console-Default-Console.jpg
    :width: 600px
 
 
 You can start typing Python commands,
-expressions and statements at the interpreter prompt **>>>**
+expressions and statements at the interpreter prompt: ``>>>``
 
 
 Hello World
@@ -71,7 +68,7 @@ Let's get started with the classical "Hello World" program.
 Type the following print statement at the interpreter prompt and press :kbd:`Return` key.
 
 
-.. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Tutorial-Hello-World.jpg
+.. figure:: /images/Extensions-Python-Tutorial-Hello-World.jpg
 
 Let's break down the above statement.
 
@@ -99,24 +96,9 @@ By doing so we are repeating the string by the count specified by *number*
 - ***** is the multiplication operator in Python
 
 
-.. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Tutorial-Hello-World2.jpg
+.. figure:: /images/Extensions-Python-Tutorial-Hello-World2.jpg
 
 .. note::
 
    Check out :doc:`all the above examples in one place </extensions/python/intro_to_python>`
 
-
-External links
-==============
-
-Webpages
---------
-
-- http://www.sthurlow.com/python/
-
-
-Video Tutorials
----------------
-
-- If you want to learn Python programming in general, have a look at
-  `these tutorials <https://www.youtube.com/watch?list=PLEA1FEF17E1E5C0DA&v=4Mf0h3HphEA>`__.

@@ -27,20 +27,19 @@ The `Scripts Catalog <http://wiki.blender.org/index.php/Extensions:2.6/Py/Script
 an index of Add-ons that are included with Blender as well as listing a number of external Add-ons.
 
 
-
 Enabling and Disabling
 ======================
 
 Enable and disable and add-on by checking or unchecking the box on the right of the add-on you chose,
 as shown on the figure.
 
-.. figure:: /images/Manual-Extensions-Python-Addons-EnabledAddOn.jpg
+.. figure:: /images/Extensions-Python-Addons-EnabledAddOn.jpg
 
    Enabling an Add-on
 
 The add-on functionality should be immediately available.
 If the Add-on does not activate when enabled,
-check the :doc:`Console window </getting_started/basics/interface/window_system/console_window>`
+check the :doc:`Console window </interface/window_system/console_window>`
 for any errors that may have occurred.
 
 

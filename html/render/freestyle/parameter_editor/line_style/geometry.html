@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,10 +30,12 @@
   
     <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
   
+
+  
     <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
         <link rel="up" title="Parameter Editor" href="../index.html"/>
-        <link rel="next" title="Stroke" href="strokes.html"/>
-        <link rel="prev" title="Color" href="color.html"/> 
+        <link rel="next" title="Python Scripting Mode" href="../../python.html"/>
+        <link rel="prev" title="Thickness" href="thickness.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -47,9 +49,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+        
+          <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -59,8 +64,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul>
+          
+          
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
@@ -98,21 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
@@ -159,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/index.html">Animation Editors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
@@ -184,6 +176,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
@@ -257,6 +264,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
@@ -279,6 +290,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -315,13 +327,13 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="geometry">
 <h1>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h1>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_UI.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_UI.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_UI.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Geometry Overall UI</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_UI.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_UI.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_UI.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Line Style Geometry Overall UI</span></p>
 </div>
 <p>In this tab you control the geometry of your strokes.</p>
 <div class="section" id="modifiers">
@@ -336,9 +348,8 @@ in various ways.</p>
 <h3>2D Offset<a class="headerlink" href="#d-offset" title="Permalink to this headline">¶</a></h3>
 <p>The <em>2D Offset</em> modifier adds some two-dimensional offsets to the stroke backbone
 geometry. It has two sets of independent options/effects:</p>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_2D_Offset.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_2D_Offset.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_2D_Offset.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s 2D Offset modifier</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_2D_Offset.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_2D_Offset.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_2D_Offset.jpg" style="width: 300px;" /></a>
 </div>
 <dl class="docutils">
 <dt>Start and End</dt>
@@ -352,13 +363,12 @@ the middle of the stroke, 25 pixels along its own normal, and the end point isn&
 </div>
 <div class="section" id="d-transform">
 <h3>2D Transform<a class="headerlink" href="#d-transform" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_2D_Transform.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_2D_Transform.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_2D_Transform.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s 2D Transform modifier</p>
-</div>
 <p>The <em>2D Transform</em> modifier applies two-dimensional scaling and/or rotation to the
 stroke backbone geometry. Scale is applied before rotation.</p>
 <p>The center (pivot point) of these 2D transformations can be:</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_2D_Transform.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_2D_Transform.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_2D_Transform.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Stroke Center</dt>
 <dd>The median point of the stroke.</dd>
@@ -368,7 +378,7 @@ stroke backbone geometry. Scale is applied before rotation.</p>
 <dd>The end point of the stroke.</dd>
 <dt>Stroke Point Parameter</dt>
 <dd>The <em>Stroke Point Parameter</em> factor controls where along the stroke the pivot point is
-(<tt class="docutils literal"><span class="pre">0.0</span></tt> means start point; <tt class="docutils literal"><span class="pre">1.0</span></tt> end point).</dd>
+(<code class="docutils literal"><span class="pre">0.0</span></code> means start point; <code class="docutils literal"><span class="pre">1.0</span></code> end point).</dd>
 <dt>Absolute 2D Point</dt>
 <dd>The <em>Pivot X</em> and <em>Pivot Y</em> allows you to define the position of the pivot point in the final
 render (from the bottom left corner). <strong>WARNING</strong> : Currently,
@@ -378,17 +388,16 @@ you have to take into account the <em>real</em> render size, i.e. resolution <st
 <dt>Rotation Angle</dt>
 <dd>The rotation angle.</dd>
 </dl>
-<div class="figure">
+<div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../../../_images/2D_Transform.jpg"><img alt="../../../../_images/2D_Transform.jpg" src="../../../../_images/2D_Transform.jpg" style="width: 400px;" /></a>
-<p class="caption">2D Transform modifier
-<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Three_Contours.zip">File:Toycar_Three_Contours.zip</a></p>
+<p class="caption"><span class="caption-text">2D Transform modifier
+<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Three_Contours.zip">File:Toycar_Three_Contours.zip</a></span></p>
 </div>
 </div>
 <div class="section" id="backbone-stretcher">
 <h3>Backbone Stretcher<a class="headerlink" href="#backbone-stretcher" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Backbone_Stretcher.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Backbone_Stretcher.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Backbone_Stretcher.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Backbone Stretcher modifier</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Backbone_Stretcher.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Backbone_Stretcher.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Backbone_Stretcher.jpg" style="width: 300px;" /></a>
 </div>
 <p>The <em>Backbone Stretcher</em> modifier stretches (adds some length to)
 the beginning and end of the stroke.</p>
@@ -399,31 +408,29 @@ the beginning and end of the stroke.</p>
 </div>
 <div class="section" id="bezier-curve">
 <h3>Bezier Curve<a class="headerlink" href="#bezier-curve" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Bezier_Curve.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Bezier_Curve.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Bezier_Curve.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Bezier Curve modifier</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Bezier_Curve.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Bezier_Curve.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Bezier_Curve.jpg" style="width: 300px;" /></a>
 </div>
 <p>The <em>Bezier Curve</em> modifier replaces the stroke by a Bezier approximation of it.</p>
 <dl class="docutils">
 <dt>Error</dt>
 <dd>The maximum distance allowed between the new Bezier curve and the original stroke.</dd>
 </dl>
-<div class="figure">
+<div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="../../../../_images/toycar_bezier.jpg"><img alt="../../../../_images/toycar_bezier.jpg" src="../../../../_images/toycar_bezier.jpg" style="width: 400px;" /></a>
-<p class="caption">Bezier Curve modifier demo by T.K.
-<a class="reference external" href="http://wiki.blender.org/index.php/File:toycar_bezier.zip">File:toycar_bezier.zip</a></p>
+<p class="caption"><span class="caption-text">Bezier Curve modifier demo by T.K.
+<a class="reference external" href="http://wiki.blender.org/index.php/File:toycar_bezier.zip">File:toycar_bezier.zip</a></span></p>
 </div>
 </div>
 <div class="section" id="blueprint">
 <h3>Blueprint<a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Blueprint.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Blueprint.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Blueprint.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Blueprint modifier</p>
-</div>
 <p>The <em>Blueprint</em> modifier produces blueprint-like strokes using either circular,
 elliptical, or square contours. A blueprint here refers to those lines drawn at the beginning
 of free-hand drawing to capture the silhouette of objects with a simple shape such as circles,
 ellipses and squares.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Blueprint.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Blueprint.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Blueprint.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Shape</dt>
 <dd>Which base shapes to use for this blueprint: <em>Circles</em>, <em>Ellipses</em> or <em>Squares</em>.</dd>
@@ -444,12 +451,11 @@ handy here, to avoid the noise generated by small strokes...</p>
 </div>
 <div class="section" id="guiding-lines">
 <h3>Guiding Lines<a class="headerlink" href="#guiding-lines" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Guiding_Lines.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Guiding_Lines.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Guiding_Lines.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Guiding Lines modifier</p>
-</div>
 <p>The <em>Guiding Lines</em> modifier replaces a stroke by a straight line connecting both of
 its ends.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Guiding_Lines.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Guiding_Lines.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Guiding_Lines.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Offset</dt>
 <dd>Offset the start and end points along the original stroke, before generating the new straight one.</dd>
@@ -458,19 +464,22 @@ its ends.</p>
 because shorter strokes are more likely to be well approximated by straight lines. Therefore,
 it is recommended to use this modifier together with one of the splitting options
 (by 2D angle or by 2D length) from the <em>Strokes</em> panel.</p>
-<div class="figure">
+<div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../../../../_images/Toycar_Guiding_Line.jpg"><img alt="../../../../_images/Toycar_Guiding_Line.jpg" src="../../../../_images/Toycar_Guiding_Line.jpg" style="width: 400px;" /></a>
-<p class="caption">Guiding Lines modifier Demo by T.K.
-<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Guiding_Line.zip">File:Toycar_Guiding_Line.zip</a></p>
+<p class="caption"><span class="caption-text">Guiding Lines modifier Demo by T.K.
+<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Guiding_Line.zip">File:Toycar_Guiding_Line.zip</a></span></p>
 </div>
 </div>
 <div class="section" id="perlin-noise-1d">
 <h3>Perlin Noise 1D<a class="headerlink" href="#perlin-noise-1d" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Perlin_Noise_1D.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Perlin_Noise_1D.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Perlin_Noise_1D.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Perlin Noise 1D modifier</p>
+<p>The <em>Perlin Noise 1D</em> modifier adds one-dimensional Perlin noise to the stroke. The curvilinear abscissa (value between
+0 and 1 determined by a point&#8217;s position relative to the first and last point of a stroke) is used as the input to the
+noise function to generate noisy displacements.</p>
+<p>This means that this modifier will give an identical result for two strokes with the same length and sampling
+interval.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Perlin_Noise_1D.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Perlin_Noise_1D.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Perlin_Noise_1D.jpg" style="width: 300px;" /></a>
 </div>
-<p>The <em>Perlin Noise 1D</em> modifier adds one-dimensional Perlin noise to the stroke.</p>
 <dl class="docutils">
 <dt>Frequency</dt>
 <dd>How dense the noise is (kind of a scale factor along the stroke).</dd>
@@ -481,26 +490,24 @@ it is recommended to use this modifier together with one of the splitting option
 <dt>Octaves</dt>
 <dd>The &#8220;level of detail&#8221; of the noise.</dd>
 <dt>Angle</dt>
-<dd>In which direction the noise is applied (<tt class="docutils literal"><span class="pre">0.0</span></tt> is fully horizontal).</dd>
+<dd>In which direction the noise is applied (<code class="docutils literal"><span class="pre">0.0</span></code> is fully horizontal).</dd>
 </dl>
 </div>
 <div class="section" id="perlin-noise-2d">
 <h3>Perlin Noise 2D<a class="headerlink" href="#perlin-noise-2d" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Perlin_Noise_2D.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Perlin_Noise_2D.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Perlin_Noise_2D.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Perlin Noise 2D modifier</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Perlin_Noise_2D.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Perlin_Noise_2D.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Perlin_Noise_2D.jpg" style="width: 300px;" /></a>
 </div>
-<p>The <em>Perlin Noise 2D</em> modifier adds one-dimensional Perlin noise to the stroke.</p>
+<p>The <em>Perlin Noise 2D</em> modifier adds one-dimensional Perlin noise to the stroke.  The modifier generates noisy
+displacements using 2D coordinates of stroke vertices as the input of the noise generator.</p>
 <p>Its settings are exactly the same as the <em>Perlin Noise 1D</em> modifier.</p>
-<p>TODO: What&#8217;s the difference between those two modifiers?</p>
 </div>
 <div class="section" id="polygonization">
 <h3>Polygonization<a class="headerlink" href="#polygonization" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Polygonization.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Polygonization.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Polygonization.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Polygonization modifier</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Polygonization.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Polygonization.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Polygonization.jpg" style="width: 300px;" /></a>
 </div>
-<p>The <em>Poligonization</em> modifier simplifies strokes as much as possible
+<p>The <em>Polygonization</em> modifier simplifies strokes as much as possible
 (in other words, it transforms smooth strokes into jagged polylines).</p>
 <dl class="docutils">
 <dt>Error</dt>
@@ -510,12 +517,11 @@ it is recommended to use this modifier together with one of the splitting option
 </div>
 <div class="section" id="sampling">
 <h3>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Sampling.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Sampling.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Sampling.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Sampling modifier</p>
-</div>
 <p>The <em>Sampling</em> modifier changes the definition, precision of the stroke,
 for the following modifiers.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Sampling.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Sampling.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Sampling.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Sampling</dt>
 <dd>The smaller this value, the more precise are the strokes.
@@ -524,11 +530,10 @@ Be careful; too small values will require a huge amount of time and memory durin
 </div>
 <div class="section" id="sinus-displacement">
 <h3>Sinus Displacement<a class="headerlink" href="#sinus-displacement" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Sinus_Displacement.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Sinus_Displacement.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Sinus_Displacement.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Sinus Displacement modifier</p>
-</div>
 <p>The <em>Sinus Displacement</em> modifier adds a sinusoidal displacement to the stroke.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Sinus_Displacement.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Sinus_Displacement.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Sinus_Displacement.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Wavelength</dt>
 <dd>How wide the undulations are along the stroke.</dd>
@@ -537,20 +542,19 @@ Be careful; too small values will require a huge amount of time and memory durin
 <dt>Phase</dt>
 <dd>Allows &#8220;offsetting&#8221; (&#8220;moving&#8221;) the undulations along the stroke.</dd>
 </dl>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Toycar_Sinus_Displacement.jpg"><img alt="../../../../_images/Toycar_Sinus_Displacement.jpg" src="../../../../_images/Toycar_Sinus_Displacement.jpg" style="width: 400px;" /></a>
-<p class="caption">Sinus Displacement modifier demo by T.K.
-<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Sinus.zip">File:Toycar_Sinus.zip</a></p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/Toycar_Sinus_Displacement.jpg"><img alt="../../../../_images/Toycar_Sinus_Displacement.jpg" src="../../../../_images/Toycar_Sinus_Displacement.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Sinus Displacement modifier demo by T.K.
+<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Sinus.zip">File:Toycar_Sinus.zip</a></span></p>
 </div>
 </div>
 <div class="section" id="spatial-noise">
 <h3>Spatial Noise<a class="headerlink" href="#spatial-noise" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Spatial_Noise.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Spatial_Noise.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Spatial_Noise.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Spatial Noise modifier</p>
+<p>The <em>Spatial Noise</em> modifier adds some spatial noise to the stroke.  Spatial noise displacements are added in the normal
+direction (i.e., the direction perpendicular to the tangent line) evaluated at each stroke vertex.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Spatial_Noise.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Spatial_Noise.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Spatial_Noise.jpg" style="width: 300px;" /></a>
 </div>
-<p>The <em>Spatial Noise</em> modifier adds some spatial noise to the stroke.</p>
-<p>TODO: definition of &#8220;spatial noise&#8221;!</p>
 <dl class="docutils">
 <dt>Amplitude</dt>
 <dd>How much the noise distorts the stroke.</dd>
@@ -567,14 +571,28 @@ otherwise they are completely independent. Disabling this setting gives a more &
 </div>
 <div class="section" id="tip-remover">
 <h3>Tip Remover<a class="headerlink" href="#tip-remover" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Tip_Remover.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Tip_Remover.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Geometry_Tip_Remover.jpg" style="width: 200px;" /></a>
-<p class="caption">Line Style Geometry&#8217;s Tip Remover modifier</p>
-</div>
 <p>The <em>Tip Remover</em> modifier removes a piece of the stroke at its beginning and end.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Geometry_Tip_Remover.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Geometry_Tip_Remover.jpg" src="../../../../_images/render-freestyle-Line_Style_Geometry_Tip_Remover.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Tip Length</dt>
 <dd>Length of stroke to remove at both of its tips.</dd>
+</dl>
+</div>
+<div class="section" id="simplification">
+<h3>Simplification<a class="headerlink" href="#simplification" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_simplification.png"><img alt="../../../../_images/render_freestyle_simplification.png" src="../../../../_images/render_freestyle_simplification.png" style="width: 600px;" /></a>
+</div>
+<p>The <em>Simplification</em> modifier merges stroke vertices that lie close to one another, like the <em>Decimate</em> modifier for
+meshes.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_ui_geometry_simplification.png"><img alt="../../../../_images/render_freestyle_ui_geometry_simplification.png" src="../../../../_images/render_freestyle_ui_geometry_simplification.png" style="width: 300px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Tolerance</dt>
+<dd>Measure for how close points have te to each other to be merged. A higher tolerance means more vertices are merged.</dd>
 </dl>
 </div>
 </div>
@@ -586,10 +604,10 @@ otherwise they are completely independent. Disabling this setting gives a more &
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="strokes.html" class="btn btn-neutral float-right" title="Stroke"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../python.html" class="btn btn-neutral float-right" title="Python Scripting Mode">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="color.html" class="btn btn-neutral" title="Color"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="thickness.html" class="btn btn-neutral" title="Thickness"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -602,7 +620,8 @@ otherwise they are completely independent. Disabling this setting gives a more &
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -618,7 +637,7 @@ otherwise they are completely independent. Disabling this setting gives a more &
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'0.1',
+            VERSION:'2.75',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

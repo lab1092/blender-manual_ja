@@ -3,7 +3,7 @@
 Armature Structure
 ******************
 
-.. figure:: /images/Manual-Part-I-Quick51.jpg
+.. figure:: /images/Quick51.jpg
    :width: 250px
 
    The very basic armature of the
@@ -20,7 +20,7 @@ which create some sort of "limbs" in your armature, as detailed in `Chains of Bo
 Chains of Bones
 ===============
 
-.. figure:: /images/ManRiggingChainEx3DViewEditMode.jpg
+.. figure:: /images/RiggingChainEx3DViewEditMode.jpg
    :width: 250px
 
    An armature with two chains of bones.
@@ -59,7 +59,7 @@ This is detailed in the :doc:`editing pages </rigging/armatures/editing/properti
 but let us have a quick look at this important feature.
 
 
-.. figure:: /images/Man2.5RiggingEditingBoneCxtRelationsPanel.jpg
+.. figure:: /images/RiggingEditingBoneCxtRelationsPanel.jpg
    :width: 250px
 
    The Armature Bones panel with two bones selected, and their Child of settings highlighted.

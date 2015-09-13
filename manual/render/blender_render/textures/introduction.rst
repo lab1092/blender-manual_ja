@@ -37,7 +37,7 @@ Blender allows the user to apply *textures* which can modify the reflectivity, s
 roughness and other surface qualities of a material.
 
 
-.. figure:: /images/Manual-Textures-Layers.jpg
+.. figure:: /images/Textures-Layers.jpg
    :width: 320px
 
    Textures Layer on base Material
@@ -58,7 +58,7 @@ The layers, if you will, are:
 - These two textures are **mixed** with the base material to provide the net effect: a cube of purplish-brown fog.
 
 
-.. figure:: /images/Manual-Part-IV-SomeMetal.jpg
+.. figure:: /images/SomeMetal.jpg
    :width: 320px
 
    Some Metal Textures
@@ -162,7 +162,7 @@ Image textures can be loaded into blender. These images can then be applied to a
 that has been unwrapped and assigned an image of user defined size.
 
 
-.. figure:: /images/Doc-2.6-Materials-Textures-Painting-Brush-Options.jpg
+.. figure:: /images/materials-textures-painting-brush-options.jpg
    :width: 320px
 
    Applied Brush texture in different painting modes

@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,10 +30,12 @@
   
     <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
   
+
+  
     <link rel="top" title="Blender Reference Manual" href="../../../../index.html"/>
         <link rel="up" title="Parameter Editor" href="../index.html"/>
-        <link rel="next" title="Python Scripting Mode" href="../../python.html"/>
-        <link rel="prev" title="Stroke" href="strokes.html"/> 
+        <link rel="next" title="Geometry" href="geometry.html"/>
+        <link rel="prev" title="Alpha" href="alpha.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -47,9 +49,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+        
+          <a href="../../../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -59,8 +64,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul>
+          
+          
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/about_blender/index.html">About Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../getting_started/installing_blender/index.html">Installing Blender</a></li>
@@ -98,21 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/empties.html">Empties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/groups.html">Group Instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../modeling/scripts.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../modifiers/index.html">Modifiers</a><ul>
@@ -159,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/keying_sets.html">Keying Sets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/markers.html">Markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/index.html">Animation Editors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/timeline.html">The Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph.html">Graph Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/editors/graph/fcurves.html">F-Curves</a></li>
@@ -184,6 +176,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/camera.html">Animating Cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Rendering</a><ul class="current">
@@ -257,6 +264,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../preferences/system.html">System preferences</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/startup.html">Startup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../troubleshooting/3d_view.html">3D Viewport</a></li>
@@ -279,6 +290,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -315,15 +327,14 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="thickness">
 <h1>Thickness<a class="headerlink" href="#thickness" title="Permalink to this headline">¶</a></h1>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Thickness UI</p>
-</div>
 <p>In this tab you control the thickness of your strokes.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Thickness.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Thickness.jpg" src="../../../../_images/render-freestyle-Line_Style_Thickness.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Base Thickness</dt>
 <dd>The base thickness for this line style.</dd>
@@ -337,7 +348,7 @@
 <dt>Outside</dt>
 <dd>The strokes are drawn outside the object boundary.</dd>
 <dt>Relative</dt>
-<dd>This allows you to specify the relative position by a number between <strong>0.0</strong> (inside) and <strong>1.0</strong> (outside),
+<dd>This allows you to specify the relative position by a number between <code class="docutils literal"><span class="pre">0.0</span></code> (inside) and <code class="docutils literal"><span class="pre">1.0</span></code> (outside),
 in the <em>Thickness Ratio</em> numeric field just below.</dd>
 </dl>
 </dd>
@@ -359,55 +370,52 @@ they are applied from top to bottom.</p>
 </dl>
 <div class="section" id="along-stroke">
 <h3>Along Stroke<a class="headerlink" href="#along-stroke" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Along_Stroke.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Along_Stroke.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Along_Stroke.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Thickness&#8217;s Along Stroke modifier</p>
-</div>
 <p>The <em>Along Stroke</em> modifier alters the base thickness with a new one from either a
 linear progression or a custom curve, mapped along each stroke&#8217;s length. In other words,
 it applies the selected progression along each stroke.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Thickness_Along_Stroke.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Thickness_Along_Stroke.jpg" src="../../../../_images/render-freestyle-Line_Style_Thickness_Along_Stroke.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <strong>0.0</strong> to <strong>1.0</strong>, which may be inverted with the <em>Invert</em> option),
+<dd>Either a linear progression (from <code class="docutils literal"><span class="pre">0.0</span></code> to <code class="docutils literal"><span class="pre">1.0</span></code> which may be inverted with the <em>Invert</em> option),
 or a custom mapping curve.</dd>
 </dl>
 </div>
 <div class="section" id="calligraphy">
 <h3>Calligraphy<a class="headerlink" href="#calligraphy" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Calligraphy.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Calligraphy.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Calligraphy.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Thickness&#8217;s Calligraphy modifier</p>
-</div>
 <p>The <em>Calligraphy</em> modifier mimics some broad and flat pens for calligraphy.
 It generates different thickness based on the orientation of the stroke.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Thickness_Calligraphy.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Thickness_Calligraphy.jpg" src="../../../../_images/render-freestyle-Line_Style_Thickness_Calligraphy.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Orientation</dt>
 <dd>The angle (orientation) of the virtual drawing tool, from the vertical axis of the picture.
-For example, an angle of <tt class="docutils literal"><span class="pre">0.0</span></tt> mimics a pen aligned with the vertical axis, hence the thickest
+For example, an angle of <code class="docutils literal"><span class="pre">0.0</span></code> mimics a pen aligned with the vertical axis, hence the thickest
 strokes will be the vertical ones, and the thinnest, the horizontal ones.</dd>
 <dt>Min Thickness and Max Thickness</dt>
 <dd>The minimum and maximum generated thickness (as explained above,
 minimum is used when the stroke&#8217;s direction is perpendicular to the main <em>Orientation</em>, and maximum,
 when aligned with it).</dd>
 </dl>
-<div class="figure">
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../../../_images/Toycar_Calligraphy.jpg"><img alt="../../../../_images/Toycar_Calligraphy.jpg" src="../../../../_images/Toycar_Calligraphy.jpg" style="width: 400px;" /></a>
-<p class="caption">Calligraphy modifier demo by T.K.
-<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Calligraphy.zip">File:Toycar_Calligraphy.zip</a></p>
+<p class="caption"><span class="caption-text">Calligraphy modifier demo by T.K.
+<a class="reference external" href="http://wiki.blender.org/index.php/File:Toycar_Calligraphy.zip">File:Toycar_Calligraphy.zip</a></span></p>
 </div>
 </div>
 <div class="section" id="distance-from-camera">
 <h3>Distance from Camera<a class="headerlink" href="#distance-from-camera" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Distance_From_Camera.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Distance_From_Camera.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Distance_From_Camera.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Thickness&#8217;s Distance From Camera modifier</p>
-</div>
 <p>The <em>Distance from Camera</em> modifier alters the base thickness with a new one from
 either a linear progression or a custom curve,
 using the distance to the active camera as the parameter.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Thickness_Distance_From_Camera.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Thickness_Distance_From_Camera.jpg" src="../../../../_images/render-freestyle-Line_Style_Thickness_Distance_From_Camera.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <strong>0.0</strong> to <strong>1.0</strong>, which may be inverted with the <em>Invert</em> option),
+<dd>Either a linear progression (from <code class="docutils literal"><span class="pre">0.0</span></code> to <code class="docutils literal"><span class="pre">1.0</span></code> which may be inverted with the <em>Invert</em> option),
 or a custom mapping curve.</dd>
 <dt>Range Min and Range Max</dt>
 <dd>The limits of the mapping from &#8220;distance to camera&#8221; to &#8220;thickness in mapping&#8221;.
@@ -421,18 +429,17 @@ These values are in the current scene&#8217;s units, not in pixels!</dd>
 </div>
 <div class="section" id="distance-from-object">
 <h3>Distance from Object<a class="headerlink" href="#distance-from-object" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Distance_From_Object.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Distance_From_Object.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Distance_From_Object.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Thickness&#8217;s Distance from Object modifier</p>
-</div>
 <p>The <em>Distance from Object</em> modifier alters the base thickness with a new one from
 either a linear progression or a custom curve,
 using the distance to a given object as parameter.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Thickness_Distance_From_Object.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Thickness_Distance_From_Object.jpg" src="../../../../_images/render-freestyle-Line_Style_Thickness_Distance_From_Object.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Target</dt>
 <dd>The object to measure distance from.</dd>
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <strong>0.0</strong> to <strong>1.0</strong>, which may be inverted with the <em>Invert</em> option),
+<dd>Either a linear progression (from <code class="docutils literal"><span class="pre">0.0</span></code> to <code class="docutils literal"><span class="pre">1.0</span></code> which may be inverted with the <em>Invert</em> option),
 or a custom mapping curve.</dd>
 <dt>Range Min and Range Max</dt>
 <dd>The limits of the mapping from &#8220;distance to object&#8221; to &#8220;alpha in mapping&#8221;.
@@ -446,22 +453,103 @@ These values are in the current scene&#8217;s units, not in pixels!</dd>
 </div>
 <div class="section" id="material">
 <h3>Material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h3>
-<div class="figure">
-<a class="reference internal image-reference" href="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Material.jpg"><img alt="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Material.jpg" src="../../../../_images/Manual-2.6-Render-Freestyle-Line_Style_Thickness_Material.jpg" style="width: 300px;" /></a>
-<p class="caption">Line Style Thickness&#8217;s Material modifier</p>
-</div>
 <p>The <em>Material</em> modifier alters the base thickness with a new one taken from the
 current material under the stroke.</p>
 <p>You can use various properties of the materials, among which some are multi-components (i.e.
 give RGB results). In that case, the mean value will be used.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render-freestyle-Line_Style_Thickness_Material.jpg"><img alt="../../../../_images/render-freestyle-Line_Style_Thickness_Material.jpg" src="../../../../_images/render-freestyle-Line_Style_Thickness_Material.jpg" style="width: 300px;" /></a>
+</div>
 <dl class="docutils">
 <dt>Mapping</dt>
-<dd>Either a linear progression (from <strong>0.0</strong> to <strong>1.0</strong>, which may be inverted with the <em>Invert</em> option),
+<dd>Either a linear progression (from <code class="docutils literal"><span class="pre">0.0</span></code> to <code class="docutils literal"><span class="pre">1.0</span></code> which may be inverted with the <em>Invert</em> option),
 or a custom mapping curve. Note the linear non-inverted option is equivalent to &#8220;do nothing&#8221;,
 as original values from materials are already in the [0.0, 1.0] range...</dd>
 </dl>
 <p>If used with the <em>Split by Material</em> option in the <em>Stroke</em> tab,
 the result will not be blurred between materials along the strokes.</p>
+</div>
+<div class="section" id="noise">
+<h3>Noise<a class="headerlink" href="#noise" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_geometry_simplification.png"><img alt="../../../../_images/render_freestyle_geometry_simplification.png" src="../../../../_images/render_freestyle_geometry_simplification.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Effect generated with a noise thickness modifier using asymmetric thickness.</span></p>
+</div>
+<p>The <em>Noise</em> modifier uses a pseudo-random number generator to variably distribute thickness along the stroke.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_ui_thickness_noise.png"><img alt="../../../../_images/render_freestyle_ui_thickness_noise.png" src="../../../../_images/render_freestyle_ui_thickness_noise.png" style="width: 300px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Min Thickness and Max Thickness</dt>
+<dd>The minimum and maximum assigned thickness.</dd>
+<dt>Asymmetric</dt>
+<dd>Allows the thickness to be distributed unevenly at every point. Internally, the stroke is represented as a
+backbone with a thickness to the right and left side. All other thickness shaders make sure that the left
+and right thickness values are equal. For the Noise shader however, a meaningful (and good-looking) result
+can be created by assigning different values to either side of the backbone.</dd>
+</dl>
+</div>
+<div class="section" id="tangent">
+<h3>Tangent<a class="headerlink" href="#tangent" title="Permalink to this headline">¶</a></h3>
+<p>This modifier bases its effect on the traveling direction of the stroke evaluated at the stroke&#8217;s vertices.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_ui_thickness_tangent.png"><img alt="../../../../_images/render_freestyle_ui_thickness_tangent.png" src="../../../../_images/render_freestyle_ui_thickness_tangent.png" style="width: 300px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Min Thickness and Max Thickness</dt>
+<dd>The minimum and maximum assigned thickness.</dd>
+<dt>Mapping</dt>
+<dd>Either a linear progression (from <em>Min Thickness</em> to <em>Max Thickness</em>, which may be inverted with the
+<em>Invert</em> option), or a custom mapping curve (on the same range).</dd>
+<dt>Min Angle and Max Angle</dt>
+<dd>The range of input values to the mapping. Out-of-range input values will be clamped by the Min and Max angles
+and their corresponding thickness values.</dd>
+</dl>
+</div>
+<div class="section" id="d-curvature">
+<h3>3D Curvature<a class="headerlink" href="#d-curvature" title="Permalink to this headline">¶</a></h3>
+<p>A modifier based on radial curvatures of the underlying 3D surface.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Curvature">curvature</a> of a 2D curve at a point is a measure of how quickly the curve turns at the
+point.  The quicker the turn is, the larger the curvature is at the point.  The curvature is zero if the curve is a
+straight line.  Radial curvatures are those computed for a 2D curve that appears at the cross-section between the 3D
+surface and a plane defined by the view point (camera location) and the normal direction of the surface at the point.</p>
+<p>For radial curvatures to be calculated (and therefore for this modifier to have any effect), the <em>Face Smoothness</em>
+option has to be turned on and the object needs to have <em>Smooth Shading</em>.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_ui_thickness_curvature3d.png"><img alt="../../../../_images/render_freestyle_ui_thickness_curvature3d.png" src="../../../../_images/render_freestyle_ui_thickness_curvature3d.png" style="width: 300px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Min Thickness and Max Thickness</dt>
+<dd>The minimum and maximum assigned thickness.</dd>
+<dt>Mapping</dt>
+<dd>Either a linear progression (from <em>Min Thickness</em> to <em>Max Thickness</em>, which may be inverted with the <em>Invert</em>
+option), or a custom mapping curve (on the same range).</dd>
+<dt>Min Curvature and Max Curvature</dt>
+<dd>The limits of the mapping of the Min and Max Thickness.
+If the current point of the stroke is at <em>Min Curvature</em> or less from the target,
+it will take the start thickness of the mapping, and conversely,
+if it is at <em>Max Curvature</em> or more from the target, it will take the end thickness of the mapping.</dd>
+</dl>
+</div>
+<div class="section" id="crease-angle">
+<h3>Crease Angle<a class="headerlink" href="#crease-angle" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_thickness_crease_angle.png"><img alt="../../../../_images/render_freestyle_thickness_crease_angle.png" src="../../../../_images/render_freestyle_thickness_crease_angle.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Crease Angle modifier demo by T.K.
+<a class="reference external" href="http://wiki.blender.org/uploads/b/b4/Render_freestyle_modifier_crease_angle.blend">File:Render_freestyle_modifier_crease_angle.blend</a></span></p>
+</div>
+<p>A modifier based on the Crease Angle (angle between two adjacent faces). If a stroke segment doesn&#8217;t lie on a crease
+(i.e., the edge doesn&#8217;t have the <a class="reference external" href="http://www.blender.org/api/blender_python_api_2_74_release/freestyle.types.html#freestyle.types.Nature">Crease Angle nature</a>),
+its thickness value is not touched by this modifier.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../../../_images/render_freestyle_ui_thickness_crease_angle.png"><img alt="../../../../_images/render_freestyle_ui_thickness_crease_angle.png" src="../../../../_images/render_freestyle_ui_thickness_crease_angle.png" style="width: 300px;" /></a>
+</div>
+<dl class="docutils">
+<dt>Min Thickness and Max Thickness</dt>
+<dd>The minimum and maximum assigned thickness.</dd>
+<dt>Mapping</dt>
+<dd>Either a linear progression (from <em>Min Thickness</em> to <em>Max Thickness</em>, which may be inverted with the <em>Invert</em>
+option), or a custom mapping curve (on the same range).</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -472,10 +560,10 @@ the result will not be blurred between materials along the strokes.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../python.html" class="btn btn-neutral float-right" title="Python Scripting Mode"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="geometry.html" class="btn btn-neutral float-right" title="Geometry">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="strokes.html" class="btn btn-neutral" title="Stroke"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="alpha.html" class="btn btn-neutral" title="Alpha"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -488,7 +576,8 @@ the result will not be blurred between materials along the strokes.</p>
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -504,7 +593,7 @@ the result will not be blurred between materials along the strokes.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'0.1',
+            VERSION:'2.75',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

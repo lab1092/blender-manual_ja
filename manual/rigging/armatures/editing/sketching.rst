@@ -6,7 +6,7 @@
 Skeleton Sketching
 ******************
 
-.. figure:: /images/Doc26-boneSketch.jpg
+.. figure:: /images/boneSketch.jpg
 
    The Bone Sketching panel in its default (inactive) state.
 
@@ -48,7 +48,7 @@ there is only one set of strokes (one sketch) in Blender, and not one per armatu
 Drawing Chains
 ==============
 
-.. figure:: /images/Doc26-boneSketch-strokes.jpg
+.. figure:: /images/boneSketch-strokes.jpg
    :width: 500px
 
    Strokes example. From top to bottom:
@@ -78,17 +78,17 @@ whatever convert algorithm you use (except for the* *Template* conversion method
 
 .. list-table::
 
-   * - .. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx1.jpg
+   * - .. figure:: /images/RiggingSketchingDrawingPolyStrokeEx1.jpg
           :width: 200px
 
-          The first segment has been started ([lmb] click) and the mouse moved to its end point.
+          The first segment has been started (:kbd:`LMB` click) and the mouse moved to its end point.
 
-     - .. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx2.jpg
+     - .. figure:: /images/RiggingSketchingDrawingPolyStrokeEx2.jpg
           :width: 200px
 
-          The first segment has been finalized by a second [lmb] click, which also started a new segment...
+          The first segment has been finalized by a second :kbd:`LMB` click, which also started a new segment...
 
-     - .. figure:: /images/ManRiggingSketchingDrawingPolyStrokeEx3.jpg
+     - .. figure:: /images/RiggingSketchingDrawingPolyStrokeEx3.jpg
           :width: 200px
 
           Repeating these steps, we now have a four-segment polygonal stroke.
@@ -113,32 +113,32 @@ raise this value a bit, and if you find them too jagged, lower it.
 .. list-table::
    Drawing free segments example.
 
-   * - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx1.jpg
+   * - .. figure:: /images/RiggingSketchingDrawingFreeStrokeEx1.jpg
           :width: 300px
 
-          While drawing a first free segment ([lmb] click and drag).
+          While drawing a first free segment (:kbd:`LMB` click and drag).
 
-     - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx2.jpg
+     - .. figure:: /images/RiggingSketchingDrawingFreeStrokeEx2.jpg
           :width: 300px
 
-          The first free segment finalized (releasing [lmb]).
+          The first free segment finalized (releasing :kbd:`LMB`).
 
-   * - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx3.jpg
+   * - .. figure:: /images/RiggingSketchingDrawingFreeStrokeEx3.jpg
           :width: 300px
 
-          If you now move the mouse without pressing [lmb] again, you'll create a straight segment...
+          If you now move the mouse without pressing :kbd:`LMB` again, you'll create a straight segment...
 
-     - .. figure:: /images/ManRiggingSketchingDrawingFreeStrokeEx4.jpg
+     - .. figure:: /images/RiggingSketchingDrawingFreeStrokeEx4.jpg
           :width: 300px
 
-          But if you immediately click again and drag [lmb], you'll instead start a new free segment.
+          But if you immediately click again and drag :kbd:`LMB` you'll instead start a new free segment.
 
 
-You finalize a whole stroke by clicking* :kbd:`RMB`. You can cancel the stroke you are drawing by hitting :kbd:`Esc`.
+You finalize a whole stroke by clicking* :kbd:`RMB`. You can cancel the stroke you are drawing by pressing :kbd:`Esc`.
 You can also snap strokes to underlying meshes by holding* :kbd:`Ctrl` while drawing. By the way,
 the *Peel Objects* *button at the bottom of the* *Bone Sketching* panel is the same thing as the
 "monkey" button of the snapping header bar controls shown when* *Volume* snap element is selected - see the
-:doc:`snap to mesh </getting_started/basics/transformations/transform_control/snap#snap_element>` page for details.
+:doc:`snap to mesh </editors/3dview/transform/transform_control/snap#snap_element>` page for details.
 
 
 Selecting Strokes
@@ -176,13 +176,13 @@ but rather create a new one, as if* *Overdraw Sketching* was disabled.
 
 .. list-table::
 
-   * - .. figure:: /images/Doc26-boneSketch-overdraw.jpg
+   * - .. figure:: /images/boneSketch-overdraw.jpg
           :width: 350px
 
           Adjusting a stroke: the gray part of the "unselected" (orange)
           stroke will be replaced by the currently drawn "replacement".
 
-     - .. figure:: /images/Doc26-boneSketch-overdraw2.jpg
+     - .. figure:: /images/boneSketch-overdraw2.jpg
           :width: 350px
 
           Stroke adjusted.
@@ -212,15 +212,15 @@ something that the gesture system would never recognize!
 
 .. list-table::
 
-   * - .. figure:: /images/ManRiggingSketchingCancelingGestureEx1.jpg
+   * - .. figure:: /images/RiggingSketchingCancelingGestureEx1.jpg
 
           Damn! I didn't want to cut this stroke here!
 
-     - .. figure:: /images/ManRiggingSketchingCancelingGestureEx2.jpg
+     - .. figure:: /images/RiggingSketchingCancelingGestureEx2.jpg
 
           Let's doodle a bit...
 
-     - .. figure:: /images/ManRiggingSketchingCancelingGestureEx3.jpg
+     - .. figure:: /images/RiggingSketchingCancelingGestureEx3.jpg
 
           Phew! That was close, but the stroke is still in one piece.
 
@@ -240,11 +240,11 @@ To* **cut** a segment (i.e. add a new black dot inside it, making two segments o
 
 .. list-table::
 
-   * - .. figure:: /images/ManRiggingSketchingCutGestureEx1.jpg
+   * - .. figure:: /images/RiggingSketchingCutGestureEx1.jpg
 
           Gesture.
 
-     - .. figure:: /images/ManRiggingSketchingCutGestureEx2.jpg
+     - .. figure:: /images/RiggingSketchingCutGestureEx2.jpg
 
           Result.
 
@@ -256,11 +256,11 @@ To* **delete** a stroke, draw a "V" crossing the stroke to delete twice.
 
 .. list-table::
 
-   * - .. figure:: /images/ManRiggingSketchingDeleteGestureEx1.jpg
+   * - .. figure:: /images/RiggingSketchingDeleteGestureEx1.jpg
 
           Gesture.
 
-     - .. figure:: /images/ManRiggingSketchingDeleteGestureEx2.jpg
+     - .. figure:: /images/RiggingSketchingDeleteGestureEx2.jpg
 
           Result.
 
@@ -273,11 +273,11 @@ draw a "C" crossing twice the stroke to reverse.
 
 .. list-table::
 
-   * - .. figure:: /images/ManRiggingSketchingReverseGestureEx1.jpg
+   * - .. figure:: /images/RiggingSketchingReverseGestureEx1.jpg
 
           Gesture.
 
-     - .. figure:: /images/ManRiggingSketchingReverseGestureEx2.jpg
+     - .. figure:: /images/RiggingSketchingReverseGestureEx2.jpg
 
           Result.
 
@@ -313,12 +313,12 @@ each free segment of the selected strokes will be uniformly divided in ``n`` par
 
 .. list-table::
 
-   * - .. figure:: /images/Doc26-boneSketch-convert.jpg
+   * - .. figure:: /images/boneSketch-convert.jpg
           :width: 300px
 
           The Fixed conversion settings and its preview on selected strokes.
 
-     - .. figure:: /images/Doc26-boneSketch-convert2.jpg
+     - .. figure:: /images/boneSketch-convert2.jpg
           :width: 300px
 
           The Fixed conversion result.
@@ -335,12 +335,12 @@ So the more twisted a free segment, the more bones it will generate.
 
 .. list-table::
 
-   * - .. figure:: /images/Doc26-boneSketch-convert3.jpg
+   * - .. figure:: /images/boneSketch-convert3.jpg
           :width: 300px
 
           The Adaptative conversion settings and its preview on selected strokes.
 
-     - .. figure:: /images/Doc26-boneSketch-convert4.jpg
+     - .. figure:: /images/boneSketch-convert4.jpg
           :width: 300px
 
           The Adaptative conversion result.
@@ -356,17 +356,17 @@ so that none of them is longer than the *Length* numeric field value
 
 .. list-table::
 
-   * - .. figure:: /images/Doc26-boneSketch-convert5.jpg
+   * - .. figure:: /images/boneSketch-convert5.jpg
           :width: 200px
 
           The Length conversion settings and its preview on selected strokes.
 
-     - .. figure:: /images/Doc26-boneSketch-convert6.jpg
+     - .. figure:: /images/boneSketch-convert6.jpg
           :width: 200px
 
           Using a larger length value.
 
-     - .. figure:: /images/Doc26-boneSketch-convert7.jpg
+     - .. figure:: /images/boneSketch-convert7.jpg
           :width: 200px
 
           The Length conversion result.

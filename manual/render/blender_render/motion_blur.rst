@@ -4,8 +4,8 @@ Motion Blur
 ***********
 
 Blender's animations are by default rendered as a sequence of *perfectly still* images.
-While great for stop-motion and time-lapses, this is unrealistic, since fast-moving 
-objects do appear to be blurred in the direction of motion,  
+While great for stop-motion and time-lapses, this is unrealistic, since fast-moving
+objects do appear to be blurred in the direction of motion,
 both in a movie frame and in a photograph from a real-world camera.
 
 Blender has two ways to achieve motion blur:
@@ -43,7 +43,7 @@ Vector Blur
 :doc:`Vector Blur </composite_nodes/types/filter/vector_blur>`
 is faster but sometimes has unwanted side-effects which are sometimes difficult to avoid.
 
-Vector blur is a process done in compositing (post-render time), by rendering the 
+Vector blur is a process done in compositing (post-render time), by rendering the
 scene without any blur, plus a pass that has movement information for each pixel.
 This information is a vector map which describes a 2d or 3d direction and magnitude.
 The compositor uses that data to blur each pixel in the given direction.
@@ -60,18 +60,18 @@ The scale beneath the cube helps in appreciating the movement of 1 Blender unit.
 
 .. list-table::
 
-   * - .. figure:: /images/Manual-Part-XI-MBlur02.jpg
+   * - .. figure:: /images/MBlur02.jpg
           :width: 320px
 
           Image 1. Frame 1 of moving cube without Motion Blur.
 
-     - .. figure:: /images/Manual-Part-XI-MBlur03.jpg
+     - .. figure:: /images/MBlur03.jpg
           :width: 320px
 
           Image 2. Frame 2 of moving cube without Motion Blur.
 
 
-.. figure:: /images/Manual-Part-XI-MBlur04.jpg
+.. figure:: /images/MBlur04.jpg
    :width: 320px
 
 
@@ -84,10 +84,10 @@ A value greater than 1 is physically impossible in a real-world camera, but can 
 
 .. list-table::
 
-   * - .. figure:: /images/Manual-Part-XI-MBlur05.jpg
+   * - .. figure:: /images/MBlur05.jpg
           :width: 320px
 
-     - .. figure:: /images/Manual-Part-XI-MBlur06.jpg
+     - .. figure:: /images/MBlur06.jpg
           :width: 320px
 
 

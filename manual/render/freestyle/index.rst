@@ -8,8 +8,9 @@
    :maxdepth: 2
 
    introduction.rst
+   core.rst
+   viewmap.rst
    parameter_editor/index.rst
    python.rst
-   viewmap.rst
-   core.rst
+   export_svg.rst
    links.rst

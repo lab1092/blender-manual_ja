@@ -11,7 +11,7 @@ Randomize Transform
    | Menu:     :menuselection:`Object --> Transform --> Randomize Transform`
 
 
-.. figure:: /images/Doc26-transform-randomize.jpg
+.. figure:: /images/transform-randomize.jpg
 
    Randomize transform options
 
@@ -29,7 +29,7 @@ Random Seed
 
 Transform Delta
    Randomize Delta Transform values instead of regular transform.
-   See :doc:`Delta Transforms </getting_started/basics/transformations/transform_control/transform_properties#delta_transform>`.
+   See :doc:`Delta Transforms </editors/3dview/transform/transform_control/transform_properties#delta_transform>`.
 
 Randomize Location
    Randomize Location vales

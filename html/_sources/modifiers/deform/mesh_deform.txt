@@ -10,7 +10,7 @@ to act as a deformation cage around another mesh.
 Options
 =======
 
-.. figure:: /images/25-Manual-Modifiers-MeshDeform.jpg
+.. figure:: /images/Modifiers-MeshDeform.jpg
 
    Mesh Deform modifier
 
@@ -69,6 +69,15 @@ Dynamic
 
    It is deactivated by default to save memory and processing time when binding...
    Like with *Precision*, this setting is unavailable once a cage has been bound.
+
+
+.. warning::
+
+   Significant changes to the entire change mesh *(such as rotating the cage upside down)*
+   can cause noticable artifacts.
+
+   These can be reduced by binding with a higher *Precision*,
+   however it is a known limitation with this modifier and can't be avoided entirely.
 
 
 Hints

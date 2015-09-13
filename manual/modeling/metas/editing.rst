@@ -60,7 +60,7 @@ As you can see, the *green ring* radius is different for each of them.
 Negative Influence
 ==================
 
-.. figure:: /images/2.5_Manual-Part-II-MetaObject-Metaball-Negative-Ex.jpg
+.. figure:: /images/metaobject-metaball-negative-ex.jpg
    :width: 630px
 
    Negative.
@@ -92,7 +92,7 @@ the *Hide* toggle button in the *MetaBall tools*,
 or the :menuselection:`Metaball --> Hide MetaElems --> Hide Selected` menu option.
 
 To hide everything but the current selection,
-hit :kbd:`Shift-H` or use :menuselection:`Metaball --> Hide MetaElems --> Hide Deselected`.
+press :kbd:`Shift-H` or use :menuselection:`Metaball --> Hide MetaElems --> Hide Deselected`.
 
 To reveal what was hidden, use :kbd:`Alt-H`,
 or the relevant option in the same :menuselection:`Metaball --> Hide MetaElems` menu.
@@ -141,7 +141,7 @@ the *family* part of ``MetaPlane.001`` is ``MetaPlane``.
 Each meta object in the same "family" is associated with one another as discussed below.
 
 
-.. figure:: /images/2.5_Manual-Part-II-MetaObject-Base-Ex.jpg
+.. figure:: /images/metaobject-base-ex.jpg
    :width: 300px
 
    Meta ball base.
@@ -172,7 +172,7 @@ For example, in the example (*Meta ball base*), only the lower sphere (the paren
 and you see that both the parent's mesh *and* all of the children's meshes are now highlighted.
 
 
-.. figure:: /images/2.5_Manual-Part-II-MetaObject-Base-Scale-Ex.jpg
+.. figure:: /images/metaobject-base-scale-ex.jpg
    :width: 300px
 
    Scaling the "base".

@@ -19,11 +19,6 @@ rotation or scaling of the parent also affects the children.
 Parenting objects
 =================
 
-.. figure:: /images/26-Manual-Modeling-Objects-Parenting-SetParentPopUp.jpg
-
-   Set Parent To pop-up menu
-
-
 To parent objects, select at least two objects (select the *Child Objects* first,
 and select the *Parent Object* last), and press :kbd:`Ctrl-P`. The *Set Parent To*
 dialog will pop up allowing you to select from one of several possible different
@@ -36,7 +31,7 @@ If you selected multiple objects before selecting the parent,
 they will all be children of the parent and will be at the same level of the hierarchy
 (they are "siblings").
 
-The *Set Parent To* popup dialog is context sensitive, which means the number of entries it
+The *Set Parent To* pop-up dialog is context sensitive, which means the number of entries it
 displays can change depending on what objects are selected when the :kbd:`Ctrl-P`
 shortcut is used.
 
@@ -88,8 +83,7 @@ Assume that we have a scene consisting of 3 objects,
 those being 2 Empty Objects named "EmptyA" and "EmptyB", and a Monkey object. See figure 1.
 
 
-.. figure:: /images/Parent_-_Object_(Keep_Transform)_-_A.jpg
-   :width: 800px
+.. figure:: /images/Parent-Object_Keep_Transform-A.jpg
 
    Figure 1 - Scene with 2 Empties and a Monkey, no parenting currently active.
 
@@ -98,7 +92,7 @@ Figure 1 shows the 3 objects with no parenting relationships active on them.
 
 If you select the Monkey object by :kbd:`RMB` click and then :kbd:`Shift-RMB`
 click "EmptyA" object and press :kbd:`Ctrl-P` and then select *Object* from the *Set
-Parent To* popup dialog box.
+Parent To* pop-up dialog box.
 This will result in "EmptyA" object being the *Parent Object* of the Monkey object. With
 only "EmptyA" selected rotating/scaling/moving it will result in the Monkey object being
 altered respectively.
@@ -107,8 +101,7 @@ Scale the "EmptyA" object, so that the Monkey becomes smaller and moves to the l
 See figure 2.
 
 
-.. figure:: /images/Parent_-_Object_(Keep_Transform)_-_B.jpg
-   :width: 800px
+.. figure:: /images/Parent-Object_Keep_Transform-B.jpg
 
    Figure 2 - Scene with Monkey object being the Child Object of "EmptyA".
    "EmptyA" has been scaled resulting in the Monkey also being scaled and moved to the left.
@@ -116,14 +109,13 @@ See figure 2.
 
 If you select only the Monkey object by :kbd:`RMB` click and then :kbd:`Shift-RMB`
 click "EmptyB" object and press :kbd:`Ctrl-P` and select *Object* from the *Set
-Parent To* popup dialog box.
+Parent To* pop-up dialog box.
 This will result in "EmptyB" object being the *Parent Object* of the Monkey object.
 Notice that when you change the parent of the Monkey the scale of the Monkey changed.
 See figure 3.
 
 
-.. figure:: /images/Parent_-_Object_(Keep_Transform)_-_C.jpg
-   :width: 800px
+.. figure:: /images/Parent-Object_Keep_Transform-C.jpg
 
    Figure 3 - Scene with Monkey object having its a parent changed
    from "EmptyA" to "EmptyB" and the resulting change in scale.
@@ -142,8 +134,7 @@ would keep its scale information it obtained from the old parent "EmptyA" when i
 to the new parent "EmptyB"; See Figure 4.
 
 
-.. figure:: /images/Parent_-_Object_(Keep_Transform)_-_D.jpg
-   :width: 800px
+.. figure:: /images/Parent-Object_Keep_Transform-D.jpg
 
    Figure 4 - Scene with Monkey object having its a parent changed
    from "EmptyA" to "EmptyB" using 'Object (Keep Transform)' parent method.
@@ -171,7 +162,6 @@ You are then able to move the Armature Bones and the Mesh Object will deform. Se
 
 
 .. figure:: /images/SQ-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform.jpg
-   :width: 800px
 
    Figure 5 - Armature Object Bone associated with another Mesh Object, as the bone move the Mesh deforms similarly.
 
@@ -192,11 +182,10 @@ between an Armature Object and it's Child Objects.
 To use Armature Deform Parenting you must first select all the Child Objects that will be
 influenced by the Armature and then lastly select the Armature Object itself. Once all the
 Child Objects and the Armature Object are selected press :kbd:`Ctrl-P` and select
-Armature Deform in the Set Parent To popup dialog. See figure 6.
+Armature Deform in the Set Parent To pop-up dialog. See figure 6.
 
 
 .. figure:: /images/SR-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform.jpg
-   :width: 800px
 
    Figure 6 - Set Parent To dialog with Armature Deform Parenting option highlighted.
 
@@ -225,7 +214,6 @@ See figure 7.
 
 
 .. figure:: /images/SS-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform.jpg
-   :width: 800px
 
    Figure 7 - Properties Editor > Object Data Context > Vertex Groups Panel with Assign Button
    and influence Weight Slider highlighted.
@@ -238,7 +226,6 @@ See figure 8.
 
 
 .. figure:: /images/ST-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform.jpg
-   :width: 800px
 
    Figure 8 - 3D View Editor Header > Mode Select Button] set to Pose Mode,
    with Armature Bone highlighted in Cyan and effecting the Mesh Object
@@ -266,8 +253,7 @@ the Armature Parent Object the Cube will get 3 new Vertex Groups created on it c
 BoneB and BoneC. Notice that each Vertex Group is empty. See figure 21.
 
 
-.. figure:: /images/TG-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Empty_Groups.blend.jpg
-   :width: 800px
+.. figure:: /images/3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Empty_Groups-blend.jpg
 
    Figure 21 - Cube in Edit Mode showing the 3 created Vertex Groups after it was parented
    using Armature Deform With Empty Groups to an Armature with 3 Bones named BoneA,
@@ -304,8 +290,7 @@ If it is the selected bone is a Deforming Bone, otherwise it is a Control Bone.
 See figure 22.
 
 
-.. figure:: /images/TH-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Empty_Groups.blend.jpg
-   :width: 800px
+.. figure:: /images/3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Empty_Groups-blend.jpg
 
    Figure 22 - 3 Bone Armature in Edit Mode with 2nd bone selected with [Properties Editor >
    Bone Context > Deform Panel] displayed an ticked, indicating the bone is a Deforming Bone.
@@ -332,7 +317,7 @@ neither will you have to assign Influences Weights to those Vertex Groups, Blend
 To activate Armature Deform With Automatic Weights you must be in Object Mode or Pose Mode,
 then select all the Child Objects (usually Mesh Object Types) and lastly select the Armature Object;
 Once done press :kbd:`Ctrl-P` and select the Armature Deform With Automatic Weights from the
-Set Parent To popup dialog.
+Set Parent To pop-up dialog.
 
 This method of parenting is certainly easier setup but it can often lead to Armatures which do not deform Child
 Objects in ways you would want, as Blender can get a little confused when it comes to determining which Bones should
@@ -357,7 +342,6 @@ parenting are calculated entirely visually using Bone Envelopes. See figure 28.
 
 
 .. figure:: /images/TN-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Envelope_Weights.jpg
-   :width: 800px
 
    Figure 28 - Single Armature Bone in Edit Mode with Envelope Weight display enabled.
    The gray volume around the bone is the Bone Envelope.
@@ -372,7 +356,6 @@ Any vertices outside the Bone Evelope volume will not be influenced. See figure 
 
 
 .. figure:: /images/TO-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Envelope_Weights.jpg
-   :width: 800px
 
    Figure 29 - 2 sets of Armatures each with 3 bones,
    the first set has all vertices inside the Bone Envelope, the second did not.
@@ -387,7 +370,6 @@ See figure 30.
 
 
 .. figure:: /images/TP-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Envelope_Weights.jpg
-   :width: 800px
 
    Figure 30 - Single Armature Bone with various different Bone Evelope sizes.
 
@@ -399,7 +381,6 @@ field] then enter a new value into it. See figure 31.
 
 
 .. figure:: /images/TQ-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Envelope_Weights.jpg
-   :width: 800px
 
    Figure 31 - [Properties Editor > Bone Context > Deform Panel > Envelope Section > Distance field] highlighted.
 
@@ -414,7 +395,6 @@ See figure 32.
 
 
 .. figure:: /images/TR-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Envelope_Weights.jpg
-   :width: 800px
 
    Figure 32 - 4 Armature Bones all using Envelope Weight.
    The 1st with a default radius value, the 3 others with differing Tail, Head and Body radius values.
@@ -426,7 +406,6 @@ the Tail and Head fields. See figure 33.
 
 
 .. figure:: /images/TS-3DViewEditorHeader-ObjectMenu-Parent-Armature_Deform_With_Envelope_Weights.jpg
-   :width: 800px
 
    Figure 33 - [Properties Editor > Bone Context > Deform Panel > Radius Section] head and tail fields highlighted.
 
@@ -440,7 +419,7 @@ the Tail and Head fields. See figure 33.
    the Bone Envelope volume at the time of parenting, at which point it creates the required
    named Vertex Groups and assigns vertices to them as required. If you want any vertices to
    take account of the new Bone Envelope volume size you will have carry out the Armature Deform
-   With Envelope Weights parenting again; In fact all parenting used in the Set Parent To popup
+   With Envelope Weights parenting again; In fact all parenting used in the Set Parent To pop-up
    dialog which tries to automatically assign vertices to Vertex Groups works like this.
 
 
@@ -453,7 +432,6 @@ if the specific bone it is the Child Object of moves. See figure 34.
 
 
 .. figure:: /images/TU-3DViewEditorHeader-ObjectMenu-Parent-BoneParenting.jpg
-   :width: 800px
 
    Figure 34 - 3 pictures of Armatures with 4 Bones,
    with the 2nd bone being the Bone Parent of the Child Object Cube.
@@ -464,7 +442,7 @@ if the specific bone it is the Child Object of moves. See figure 34.
 To use Bone Parenting, you must first select all the Child Objects you wish to parent to a specific Armature Bone,
 then :kbd:`Shift-RMB` select the Armature Object and switch it into Pose Mode and then select the
 specific bone you wish to be the Parent Bone by :kbd:`RMB` selecting it.
-Once done press :kbd:`Ctrl-P` and select Bone from the Set Parent To popup dialog.
+Once done press :kbd:`Ctrl-P` and select Bone from the Set Parent To pop-up dialog.
 
 Now transforming that bone in Pose Mode will result in the Child Objects also transforming.
 
@@ -482,7 +460,6 @@ See figure 37.
 
 
 .. figure:: /images/TX-3DViewEditorHeader-ObjectMenu-Parent-BoneParenting.jpg
-   :width: 800px
 
    Figure 37 - [Single Armature Bone which has a Child Object cube parented to it using Bone parenting.
    1st picture shows the position of the cube and armature before the bone is moved in Edit Mode.
@@ -495,7 +472,6 @@ the Child Objects will not move to the new location of the Pose Bone. See figure
 
 
 .. figure:: /images/TY-3DViewEditorHeader-ObjectMenu-Parent-BoneRelativeParenting.jpg
-   :width: 800px
 
    Figure 38 - [Single Armature Bone which has a Child Object cube parented to it using Bone Relative parenting.
    1st picture shows the position of the cube and armature before the bone is moved in Edit Mode.
@@ -520,7 +496,7 @@ In *Object* mode, select the child/children and then the parent object.
 that defines a single point, or select three vertices that define an area
 (the three vertices do not have to form a complete face;
 they can be any three vertices of the parent object),
-and then hit :kbd:`Ctrl-P` and confirm.
+and then press :kbd:`Ctrl-P` and confirm.
 
 At this point, if a single vertex was selected,
 a relationship/parenting line will be drawn from the vertex to the child/children. If three
@@ -541,7 +517,6 @@ The nearest vertices will be used from each object which is typically what you w
 
 
 .. figure:: /images/parent_vertex_object_mode_example.jpg
-   :width: 800px
 
    See:
 
@@ -578,11 +553,6 @@ Use the *Outliner* view to verify that the child object is still parented.
 Remove relationship/Clear Parent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /images/25-Manual-Modeling-Objects-Parenting-ClearParentPopUp.jpg
-
-   Clear Parent pop-up menu
-
-
 You can *remove* a parent-child relationship via :kbd:`Alt-P`
 
 The menu contains:
@@ -605,7 +575,7 @@ Clear Parent Inverse
 Hints
 -----
 
-.. figure:: /images/25-Manual-Modeling-Objects-Parenting-Exampel2-Outliner.jpg
+.. figure:: /images/Modeling-Objects-Parenting-Exampel2-Outliner.jpg
 
    Outliner view
 
@@ -633,7 +603,7 @@ press :kbd:`P` then select one of the following.
 Options
 -------
 
-.. figure:: /images/25-Manual-Modeling-Objects-Parenting-Exampel-SuzDissect.jpg
+.. figure:: /images/Modeling-Objects-Parenting-Exampel-SuzDissect.jpg
 
    Suzanne dissected neatly
 
@@ -646,10 +616,12 @@ By Material
    Creates separate mesh objects for each material.
 
 
+.. _grouping-objects:
+
 Grouping objects
 ================
 
-.. figure:: /images/25-Manual-Modeling-Objects-Parenting-Exampel-GroupedObj.jpg
+.. figure:: /images/Modeling-Objects-Parenting-Exampel-GroupedObj.jpg
 
    Grouped objects
 
@@ -668,7 +640,7 @@ Creating a Group
    :kbd:`Ctrl-G` creates a new group and adds the selected object(s) to it.
 
 
-.. figure:: /images/25-Manual-Modeling-Objects-Grouping-ObjProp.jpg
+.. figure:: /images/Modeling-Objects-Grouping-ObjProp.jpg
 
    Naming a Group
 

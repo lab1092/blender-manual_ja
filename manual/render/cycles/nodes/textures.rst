@@ -7,7 +7,7 @@ Texture Nodes
 Image Texture
 =============
 
-.. figure:: /images/Manual_cycles_nodes_tex_image.jpg
+.. figure:: /images/cycles_nodes_tex_image.jpg
    :width: 200px
 
    Image texture from `GoodTextures.com <http://www.goodtextures.com/>`__
@@ -19,9 +19,14 @@ Image Datablock
    Image datablock used as the image source. Currently not all images supported by Blender can be used by Cycles.
    In particular, generated, packed images or animations are not supported currently.
 Projection
-   Projection to use for mapping the textures. *Flat* will use the XY coordinates for mapping.
-   Box will map the image to the 6 sides of a virtual box, based on the normal, using XY,
-   YZ and XYZ coordinates depending on the side.
+   Projection to use for mapping the textures.
+
+   - *Flat* will use the XY coordinates for mapping.
+   - *Box* will map the image to the 6 sides of a virtual box, based on the normal,
+     using XY, YZ and XYZ coordinates depending on the side.
+   - *Sphere* will map the image to the sphere using Z axis as central.
+   - *Tube* will map the tube to the sphere using Z axis as central.
+
 Projection Blend
    For Box mapping, the amount to blend between sides of the box,
    to get rid of sharp transitions between the different sides.
@@ -31,6 +36,13 @@ Color Space
    Type of data that the image contains, either Color or Non-Color Data.
    For most color textures the default of Color should be used, but in case of e.g. a bump or alpha map,
    the pixel values should be interpreted as Non-Color Data, to avoid doing any unwanted color space conversions.
+Extension Type
+   Extension type defines how the image is extrapolated past the original bounds:
+
+   - *Repeat* will repeat the image horizontally and vertically giving tiled-looking result.
+   - *Extend* will extend the image by repeating pixels on it's edges.
+   - *Clip* will set all the extended pixels values to transparent black.
+
 Vector input
    Texture coordinate for texture lookup. If this socket is left unconnected,
    UV coordinates from the active UV render layer are used.
@@ -44,7 +56,7 @@ Alpha output
 Environment Texture
 ===================
 
-.. figure:: /images/Manual_cycles_nodes_tex_environment.jpg
+.. figure:: /images/cycles_nodes_tex_environment.jpg
    :width: 200px
 
    HDR image from `OpenFootage.net <http://www.openfootage.net/?p=986>`__
@@ -74,7 +86,7 @@ Alpha output
 Sky Texture
 ===========
 
-.. figure:: /images/Manual_cycles_nodes_tex_sky.jpg
+.. figure:: /images/cycles_nodes_tex_sky.jpg
    :width: 200px
 
    Sky Texture
@@ -100,7 +112,7 @@ Color output
 Noise Texture
 =============
 
-.. figure:: /images/Manual_cycles_nodes_tex_noise.jpg
+.. figure:: /images/cycles_nodes_tex_noise.jpg
    :width: 200px
 
    Noise Texture with high detail
@@ -126,7 +138,7 @@ Fac output
 Wave Texture
 ============
 
-.. figure:: /images/Manual_cycles_nodes_tex_wave.jpg
+.. figure:: /images/cycles_nodes_tex_wave.jpg
    :width: 200px
 
    Default wave texture
@@ -158,12 +170,12 @@ Voronoi Texture
 
 .. list-table::
 
-   * - .. figure:: /images/Manual_cycles_nodes_tex_voronoi_intensity.jpg
+   * - .. figure:: /images/cycles_nodes_tex_voronoi_intensity.jpg
           :width: 200px
 
           Voronoi texture, type: Intensity
 
-     - .. figure:: /images/Manual_cycles_nodes_tex_voronoi_cells.jpg
+     - .. figure:: /images/cycles_nodes_tex_voronoi_cells.jpg
           :width: 200px
 
           Voronoi texture, type: Cells
@@ -192,12 +204,12 @@ Advanced procedural noise texture. Note that it often needs some adjustments
 
 .. list-table::
 
-   * - .. figure:: /images/Manual_cycles_nodes_tex_musgrave_nodes.jpg
+   * - .. figure:: /images/cycles_nodes_tex_musgrave_nodes.jpg
           :width: 200px
 
           Nodes for the image to the right
 
-     - .. figure:: /images/Manual_cycles_nodes_tex_musgrave.jpg
+     - .. figure:: /images/cycles_nodes_tex_musgrave.jpg
           :width: 200px
 
           Remapped Musgrave texture such that most values are visible
@@ -229,7 +241,7 @@ Fac output
 Gradient Texture
 ================
 
-.. figure:: /images/Manual_cycles_nodes_tex_gradient.jpg
+.. figure:: /images/cycles_nodes_tex_gradient.jpg
    :width: 200px
 
    Gradient texture using object coordinates
@@ -252,7 +264,7 @@ Fac output
 Magic Texture
 =============
 
-.. figure:: /images/Manual_cycles_nodes_tex_magic.jpg
+.. figure:: /images/cycles_nodes_tex_magic.jpg
    :width: 200px
 
    Magic texture: Depth 10, Distortion 2.0
@@ -276,7 +288,7 @@ Fac output
 Checker Texture
 ===============
 
-.. figure:: /images/Manual_cycles_nodes_tex_checker.jpg
+.. figure:: /images/cycles_nodes_tex_checker.jpg
    :width: 200px
 
    Default Checker texture
@@ -300,7 +312,7 @@ Fac output
 Brick Texture
 =============
 
-.. figure:: /images/Manual_cycles_nodes_tex_brick.jpg
+.. figure:: /images/cycles_nodes_tex_brick.jpg
    :width: 200px
 
    Brick texture: Colors changed, Squash 0.62, Squash Frequency 3.

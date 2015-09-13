@@ -3,7 +3,7 @@
 Video Textures
 **************
 
-.. figure:: /images/Doc-26-Manual-Textures-Video-Example.jpg
+.. figure:: /images/Textures-Video-Example.jpg
    :width: 700px
 
    Video texture
@@ -20,7 +20,7 @@ Options
 Image
 -----
 
-.. figure:: /images/Doc-26-Manual-Textures-Video-Imagepanel.jpg
+.. figure:: /images/Textures-Video-Imagepanel.jpg
    :width: 400px
 
    Image panel for video texture
@@ -30,9 +30,9 @@ Source
    For video texture the kind of source file to use is
 
    Movie
-      See about supported :doc:`Movie </data_system/files/formats#movie_formats>` formats.
+      See about supported :doc:`Movie </data_system/files/video_formats>` formats.
    Image Sequence
-      See about supported :doc:`Image </data_system/files/formats#image_formats>` formats.
+      See about supported :doc:`Image </data_system/files/image_formats>` formats.
       To load image sequence in any of the supported image
       file formats first click on the first frame and then Accept.
       Then change the Source to Image Sequence, and enter the ending frame number of this sequence.

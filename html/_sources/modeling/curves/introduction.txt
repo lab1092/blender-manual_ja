@@ -3,7 +3,7 @@
 Curves
 ******
 
-.. figure:: /images/Manual-Part-II-LogoFinal.jpg
+.. figure:: /images/LogoFinal.jpg
 
    Bird logo made from Bezier curves.
 
@@ -67,6 +67,8 @@ NURBS Circle
 Path
    Adds a NURBS open 3D curve made of five aligned control points,
    with *Endpoint* knots and the *CurvePath* setting enabled.
+
+.. _curves_bezier:
 
 
 Bezier Curves

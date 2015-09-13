@@ -13,13 +13,19 @@
 Overview of the Sequence Editor
 *******************************
 
+.. figure:: /images/sequencer_modes_screen_layout.jpg
+   :width: 300px
+
+   Default Video Editing screen layout.
+
+
 Blender's Video Sequence Editor is a flexible workbench for editing your video footage.
 It is used to review your footage, and glue many sequences of your movie together.
 It offers a number of built-in and plug-in effects to transition from sequence to sequence,
 providing advanced hollywood-style effects for a professional looking video.
 
 
-.. figure:: /images/2.5_Manual-VSE-header.jpg
+.. figure:: /images/vse-header.jpg
    :width: 400px
 
    Video Sequence Editor in Sequence display mode
@@ -39,7 +45,7 @@ In the x direction, seconds of animation or frames of animation
 (see the Reference for more info).
 
 
-.. figure:: /images/2.5_Manual-VSE-DoSequence.jpg
+.. figure:: /images/vse-dosequence.jpg
 
    Sequence Output Enabled
 
@@ -156,7 +162,7 @@ Click :kbd:`LMB` to validate, or :kbd:`RMB` to cancel the modification.
    effect.
 
 
-.. figure:: /images/Manual-VSE-sample.jpg
+.. figure:: /images/VSE-sample.jpg
 
 If you scroll up the workspace, you will see an information channel
 (at vertical location channel 0) that gives you some helpful hints about the active strip.
@@ -170,7 +176,7 @@ Add Scene
 ---------
 
 You can add the virtual image output of a Scene in your current .blend file as well.
-Select the scene from the popup list,
+Select the scene from the pop-up list,
 and a strip will be added and rubberbanded to your mouse just like a movie or image.
 The strip length will be determined based on the animation settings in that scene
 (not the current scene, unless the VSE is operating in the same scene).
@@ -199,7 +205,7 @@ Please refer to :doc:`the Audio Sequences section </editors/sequencer/audio>` fo
 Adding Effects
 ==============
 
-.. figure:: /images/Manual-VSE-SFX.jpg
+.. figure:: /images/VSE-SFX.jpg
 
    Available Built-in Effects
 
@@ -657,7 +663,7 @@ Editing Strips
 
 .. note:: Multiple selection
 
-   You can select several (handles of) strips by :kbd:`Shift-RMB` -clicking: when you'll hit :kbd:`G`,
+   You can select several (handles of) strips by :kbd:`Shift-RMB` clicking: when you press :kbd:`G`,
    everything that's selected will move with your mouse - this means that,
    for example, you can at the same time move a strip, shorten two others, and extend a forth one.
 
@@ -681,9 +687,9 @@ K cuts them in two. Use Cut to trim off roll-ups or lead-ins, or roll-downs or e
 
    For example, imagine that you have a strip of **50** frames,
    and that you want to delete the first ten ones.
-   You have to go to the **11** :sup:`th` frame, and hit :kbd:`K`;
+   You have to go to the ``11`` :sup:`th` frame, and press :kbd:`K`;
    the cut 'divides' your strip in two parts. You now can select the first small part
-   (frames **1** to **10**), and delete it hitting :kbd:`X`.
+   (frames ``1`` to ``10``), and delete it press :kbd:`X`.
 
    You might think that you have really erased the frames **1** to **10**,
    but there are still there, 'winded', as in a film reel, under your frame **11** :

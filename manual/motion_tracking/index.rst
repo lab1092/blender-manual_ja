@@ -9,7 +9,7 @@ Introduction
 Blender's motion tracker supports a couple of very powerful tools for 2D tracking and 3D motion tracking,
 including camera tracking and object tracking, as well as some special features like the plane track for compositing.
 Tracks can also be used to move and deform masks for rotoscoping in the Mask Editor,
-which is available as a special mode in the Movie Clip Editor. 
+which is available as a special mode in the Movie Clip Editor.
 
 It's ready to be used in production,
 as validated for example by the open movie `"Tears of Steel" <http://tearsofsteel.org>`__ by the Blender Foundation.
@@ -47,7 +47,7 @@ the exact value of the focal length and the "strength" of distortion are needed.
 Currently, focal length can be automatically obtained only from the camera's settings or from
 the EXIF information. There are some tools which can help to find approximate values to compensate for distortion.
 There are also fully manual tools where you can use a grid which is getting affected by distortion model and deformed
-cells defines straight lines in the footage. 
+cells defines straight lines in the footage.
 
 You can also use the grease pencil for this - just draw a line which should be straight on the footage using poly
 line brush and adjust the distortion values to make the grease pencil match lines on the footage.
@@ -61,11 +61,10 @@ Camera and object motion solving
 
 Blender not only supports the solving of camera motion, including tripod shots,
 but also the solving of object motion in relation to the motion of the camera.
-In addition to that there is the Plane Track, which solves the motion of all markers on one plane. 
+In addition to that there is the Plane Track, which solves the motion of all markers on one plane.
 
 There are also plans to add more tools in the future, for example more automatic tracking and solving,
-multi-camera solving and constrained solutions. 
-
+multi-camera solving and constrained solutions.
 
 
 Basic tools for scene orientation and stabilization
@@ -110,7 +109,7 @@ so that's why it's given this more abstract name, rather than motion tracking.
 This editor can be found in the list of editor types.
 
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_type_menu.jpg
+.. figure:: /images/movie_tracking_clip_editor_type_menu.jpg
    :width: 120px
 
    Editor type menu
@@ -119,7 +118,7 @@ This editor can be found in the list of editor types.
 When you switch to Movie Clip Editor window, the interface changes in the following way.
 
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_space_ui.jpg
+.. figure:: /images/movie_tracking_clip_editor_space_ui.jpg
    :width: 300px
 
    Movie Clip Editor interface
@@ -141,7 +140,7 @@ So, when a movie clip is loaded into the clip editor,
 extra panels are displayed in the interface.
 
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_clip_opened_ui.jpg
+.. figure:: /images/movie_tracking_clip_editor_clip_opened_ui.jpg
    :width: 300px
 
    Movie Clip Editor with opened clip
@@ -163,7 +162,7 @@ currently displayed tool category can be changed using the Mode menu which is in
 header.
 
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_mode_menu.jpg
+.. figure:: /images/movie_tracking_clip_editor_mode_menu.jpg
    :width: 300px
 
    Movie Clip Editor mode menu
@@ -316,7 +315,7 @@ This makes the stroke easy to notice on all kinds of movies.
 Objects Panel
 ^^^^^^^^^^^^^
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_objects_panel.jpg
+.. figure:: /images/movie_tracking_clip_editor_objects_panel.jpg
    :width: 130px
 
    Objects Panel in clip editor
@@ -345,7 +344,7 @@ refining of camera intrinsics happens when solving camera motion only.
 Track Panel
 ^^^^^^^^^^^
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_track_panel.jpg
+.. figure:: /images/movie_tracking_clip_editor_track_panel.jpg
    :width: 130px
 
    Track Panel in clip editor
@@ -605,7 +604,7 @@ All sliders are self-explanatory.
 Proxy / Timecode Panel
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_proxy_timecode_panel.jpg
+.. figure:: /images/movie_tracking_clip_editor_proxy_timecode_panel.jpg
    :width: 130px
 
    Proxy / Timecode Panel in clip editor
@@ -646,7 +645,7 @@ and render undistorted is enabled, undistortion will happen automatically on fra
 Tools available in reconstruction mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /images/Manual_movie_tracking_clip_editor_2d_stabilization_panel.jpg
+.. figure:: /images/movie_tracking_clip_editor_2d_stabilization_panel.jpg
    :width: 130px
 
    Proxy / 2D Stabilization Panel in clip editor

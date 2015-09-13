@@ -11,45 +11,44 @@ interface. The different types of controls are described below.
 Operation Buttons
 =================
 
-.. figure:: /images/Manual-Part-I-ConceptButtons2_25.jpg
+.. figure:: /images/ConceptButtons2.jpg
    :align: right
 
    Operation button
 
 
 These are buttons that perform an operation when clicked with :kbd:`LMB`.
-They can be identified by their gray color in the default Blender scheme.
-
-Pressing :kbd:`Ctrl-C` over these buttons copies their python command into the clipboard
-which can be used in the python console or in the text editor when writing scripts.
+They can be identified by their gray color in the default color scheme.
 
 
 Toggle Buttons
 ==============
 
-.. figure:: /images/Manual-Part-I-ConceptButtons1_1_25.jpg
+.. figure:: /images/ConceptButtons1_1.jpg
    :align: right
 
    Toggle buttons
 
 
-Toggle buttons consist of tick boxes.
-Clicking this type of button will toggle a state but will not perform any operation. In some
-cases the button is attached to a number button to control the influence of the property.
+Toggle buttons are typically displayed as check boxes.
+Clicking this type of button will toggle a state but will not perform any operation.
 
 
-- To change many toggle buttons at once, you can :kbd:`LMB` drag over multiple buttons,
-  This works for check-boxes, toggles in the outliner and layer buttons.
+Toggle Drag
+-----------
+
+To change many toggle buttons at once, you can :kbd:`LMB` drag over multiple buttons,
+This works for check-boxes, toggles in the outliner and layer buttons.
 
   .. note::
 
-     For layer buttons its often useful to hold :kbd:`Shift` at the same time,
+     For layer buttons (a type of toggle button) it is often useful to hold :kbd:`Shift` at the same time,
      to set or clear many layers at once.
 
 Radio Buttons
 =============
 
-.. figure:: /images/Manual-Part-I-ConceptButtons1_25.jpg
+.. figure:: /images/ConceptButtons1.jpg
    :align: right
 
    Radio buttons
@@ -61,7 +60,7 @@ Radio buttons are used to choose from a small selection of "mutually exclusive" 
 Number Buttons
 ==============
 
-.. figure:: /images/Manual-Part-I-ConceptButtons3_25.jpg
+.. figure:: /images/ConceptButtons3.jpg
    :align: right
 
    Number buttons
@@ -69,14 +68,13 @@ Number Buttons
 
 Number buttons can be identified by their labels,
 which in most cases contains the name and a colon followed by a number.
-Number buttons are handled in several ways:
+Number buttons can be edited in several ways:
 
 
 Incremental Steps
    To change the value in steps, click :kbd:`LMB` on the small triangles on the sides of the button.
 Dragging
    To change the value in a wider range, hold down :kbd:`LMB` and drag the mouse to the left or right.
-
 Text Input
    Press :kbd:`LMB` or :kbd:`Return` to edit the value as a text field.
 
@@ -84,6 +82,21 @@ Text Input
 
    - Press :kbd:`Return` to apply the change.
    - Press :kbd:`Esc` will cancel the value.
+
+
+Multi-Value Editing
+-------------------
+
+.. figure:: /images/ui_multi_value_edit.png
+   :align: right
+
+   Multi-value-editing
+
+It's often useful to edit multiple values at once (object scale or render resolution for example).
+
+This can be done by clicking on the button and dragging vertically to include buttons above/below.
+
+After the vertical motion you can drag from side to side, or release the :kbd:`LMB` to type in a value.
 
 
 Expressions
@@ -105,73 +118,173 @@ units need to be set in the scene settings (Metric or Imperial).
 
 Examples of valid units include:
 
-- ``1cm``
-- ``1m 3mm``
-- ``1m, 3mm``
-- ``2ft``
-- ``3ft/0.5km``
-- ``2.2mm + 5' / 3" - 2yards``
+
+.. hlist::
+   :columns: 2
+
+   - ``1cm``
+   - ``1m 3mm``
+   - ``1m, 3mm``
+   - ``2ft``
+   - ``3ft/0.5km``
+   - ``2.2mm + 5' / 3" - 2yards``
 
 *Note that the commas are optional.
-Also notice how you can mix between metric and imperial even though the display can only show one at a time.*
+Notice how you can mix between metric and imperial even though the display can only show one at a time.*
+
+
+Unit Names
+^^^^^^^^^^
+
+.. note to authors, normally we would avoid documenting long lists of values
+   however, this isn't displayed anywhere else.
+
+Unit names have can be used with both long and short forms,
+here are listed recognized unit names you can use.
+
+Plurals of the names are recognized too, so ``meter`` and ``meters`` can both be used.
+
+.. list-table:: Imperial Units
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Full Name
+     - Short Name(s)
+     - Scale of a Meter
+   * - thou
+     - ``mil``
+     - 0.0000254
+   * - inch
+     - ``"``, ``in``
+     - 0.0254
+   * - foot, feet
+     - ``'``, ``ft``
+     - 0.0254
+   * - yard
+     - ``yd``
+     - 0.9144
+   * - chain
+     - ``ch``
+     - 20.1168
+   * - furlong
+     - ``fur``
+     - 201.168
+   * - mile
+     - ``mi``, ``m``
+     - 1609.344
+
+.. list-table:: Metric Units
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Full Name
+     - Short Name(s)
+     - Scale of a Meter
+   * - micrometer
+     - ``um``
+     - 0.000001
+   * - millimeter
+     - ``mm``
+     - 0.001
+   * - centimeter
+     - ``cm``
+     - 0.01
+   * - decimeter
+     - ``dm``
+     - 0.1
+   * - meter
+     - ``m``
+     - 1.0
+   * - dekameter
+     - ``dam``
+     - 10.0
+   * - hectometer
+     - ``hm``
+     - 100.0
+   * - kilometer
+     - ``km``
+     - 1000.0
 
 
 Menu Buttons
 ============
 
-.. figure:: /images/Manual-Part-I-ConceptButtons4_25.jpg
+Blender uses a variety of different menus for accessing options, tools and selecting data-blocks.
+
+Menu Shortcuts
+--------------
+
+- Arrow keys can be used to navigate.
+- Each menu item has an underlined character which can be pressed to activate it.
+- Number keys or num-pad can be used to access menu items.
+  (Where :kbd:`1` is the first menu item, :kbd:`2` the second... etc).
+- Press :kbd:`Return` to activate the selected menu item.
+- Press :kbd:`Esc` to cancel the menu.
+
+
+Header Menus
+------------
+
+Header menus are used to configure the editor and access tools.
+
+ .. figure:: /images/interface_header_collapse-menu.png
    :align: right
 
-   Datablock link buttons
+   Example of a collapsed menu.
+
+To save space, its possible to collapse all header menus into a single icon.
+
+Right-click on any of the header menus :menuselection:`Header --> Collapse Menus`
 
 
-Use the Menu buttons to work with items on dynamically created lists.
-Menu buttons are principally used to link DataBlocks to each other.
-DataBlocks are items like Meshes, Objects, Materials, Textures, and so on.
-Linking a Material to an Object will assign that material to the selected Objects.
+
+Pop-Up Menus
+------------
+
+Pop-up menus are displayed as regular buttons, showing a range of options.
+For example, the *Add Modifier* button will produce a menu with all of the available modifiers.
 
 
-.. figure:: /images/Manual-Part-I-ConceptButtons4_1_25.jpg
-   :align: right
-
-   Datablock link menu with search
-
-
-- The first button (with an icon of the DataBlock type) opens a menu that lets you select the DataBlock to
-  link by clicking :kbd:`LMB` on the requested item. This list has a search box at the bottom.
-- The second button displays the name of the linked DataBlock and lets you edit it after clicking :kbd:`LMB`.
-- The "+" button duplicates the current DataBlock and applies it.
-- The "X" button clears the link.
-
-Sometimes there is a list of applied DataBlocks
-(such as a list of materials used on the object). See *DataBlock link buttons* above.
-
-
-- To select a datablock, click :kbd:`LMB` on it.
-- To add a new section (e.g. material, or particle system),
-  click :kbd:`LMB` on the "+" button to the right of the list.
-- To remove a section, click :kbd:`LMB` on the "-" to the right of the list.
-
-
-Another type of a Menu button block will show a static list with a range of options.
-For example, the Add Modifier button will produce a menu with all of the available modifiers.
-
-
-.. figure:: /images/Manual-Part-I-ConceptButtons4_menue_25.jpg
+.. figure:: /images/ConceptButtons4_menue.jpg
    :align: center
 
    Modifier options
 
 
-.. note:: Unlinked objects
+Data-Block Menus
+----------------
 
-   Unlinked data is *not* **lost until you quit Blender**. This is a powerful Undo feature.
-   If you delete an object the material assigned to it becomes unlinked, but is still there! You
-   just have to re-link it to another object or supply it with a "Fake User" (i.e.
-   by clicking that option in the corresponding DataBlock in the datablock-view of the Outliner).
+Menu buttons are used link data-blocks to each other.
+data-blocks are items like *Meshes*, *Objects*, *Materials*, *Textures*, and so on.
 
-   :doc:`Read more about Fake User </data_system/introduction>`
+These menu's may show a preview and allow you to search by name since its common all items wont fit in the list.
 
+.. figure:: /images/ConceptButtons4_1.jpg
+   :align: right
+
+   Datablock link menu with search
+
+
+   - The first button (with an icon of the data-block type) opens up a menu to select an item
+     by clicking :kbd:`LMB`.
+   - The second button displays the name of the linked data-block which can be edited as a regular text field.
+   - The "+" button duplicates the current data-block and applies it.
+   - The "X" button clears the link.
+
+Sometimes there is a list of applied data-blocks
+(such as a list of materials used on the object). See *data-block link buttons* above.
+
+.. figure:: /images/ConceptButtons4.jpg
+   :align: right
+
+   Datablock link buttons
+
+   - To select a datablock, click :kbd:`LMB` on it.
+   - To add a new section (e.g. material, or particle system),
+     click :kbd:`LMB` on the "+" button to the right of the list.
+   - To remove a section, click :kbd:`LMB` on the "-" to the right of the list.
+
+For details on the behavior of linking data see :doc:`data-block </data_system/datablocks>`.
 
 
 Common Shortcuts
@@ -184,20 +297,32 @@ While Hovering
    *When the cursor is held over a button*
 
    - :kbd:`Ctrl-C` - copy the value of the button.
+
+     .. note::
+
+        Pressing :kbd:`Ctrl-C` over any `Operation Buttons`_ copies their Python command into the clipboard
+        which can be used in the Python console or in the text editor when writing scripts.
+
+
    - :kbd:`Ctrl-V` - paste the value of the button.
    - :kbd:`RMB` - open the context menu.
-   - :kbd:`Backspace` - set the value to zero.
+   - :kbd:`Backspace` - cleare the value (sets to zero or clears a text field).
    - :kbd:`Minus` - negate number values (multiply by ``-1.0``).
-   - :kbd:`Alt-Wheel` - changes the value incremental steps.
+   - :kbd:`Ctrl-Wheel` - changes the value incremental steps.
 
-     This also works for dropdowns and checkboxes buttons, it will cycle values.
+     For pop-up option menus buttons this cycles the value.
 
    Animation:
 
    - :kbd:`I` - insert a keyframe.
+   - :kbd:`Alt-I` - clear the keyframe.
+   - :kbd:`Alt-Shift-I` - clear all keyframes.
    - :kbd:`D` - assign a driver.
+   - :kbd:`Alt-D` - clear the driver.
+   - :kbd:`K` - add a keying set.
+   - :kbd:`Alt-K` - clear the keying-set.
 
-While Dragging
+While Dragging Numbers
    - :kbd:`Ctrl` - while dragging snap the discrete steps.
    - :kbd:`Shift` - gives finer control over the value.
 

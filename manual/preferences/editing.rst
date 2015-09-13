@@ -6,7 +6,7 @@ Editing
 These preferences control how several tools will interact with your input.
 
 
-.. figure:: /images/Manual-Interface-Configuration-Editing-EditingUserPreferences.jpg
+.. figure:: /images/Interface-Configuration-Editing-EditingUserPreferences.jpg
    :width: 640px
 
 
@@ -57,13 +57,14 @@ Undo
 ====
 
 Global Undo
-   Works by keeping a full copy of the file in memory (thus needing more memory).
+   This enables Blender to save actions done when you are **not** in *Edit Mode*.
+   For example, duplicating Objects, changing panel settings or switching between modes.
 Step
    Number of Undo steps available.
 Memory Limit
    Maximum memory usage in Mb (0 is unlimited).
 
-:doc:`Read more about Undo and Redo options </getting_started/basics/undo_and_redo>`
+:doc:`Read more about Undo and Redo options </interface/undo_and_redo>`
 
 
 Grease Pencil

@@ -13,10 +13,9 @@ This can speed up rendering, because modern GPUs are designed to do quite a lot 
 On the other hand, they also have some limitations in rendering complex scenes, due to more limited memory,
 and issues with interactivity when using the same graphics card for display and rendering.
 
-Cycles has two GPU rendering modes: through CUDA,
-which is the preferred method for NVidia graphics cards; and OpenCL,
-which is intended to support rendering on AMD/ATI graphics cards.
-The implementation of OpenCL is only in an experimental stage and disabled in official builds.
+Cycles has two GPU rendering modes: **CUDA**,
+which is the preferred method for NVIDIA graphics cards; and **OpenCL**,
+which supports rendering on AMD graphics cards.
 
 
 Configuration
@@ -31,31 +30,47 @@ CUDA
 ----
 
 
-NVidia :abbr:`CUDA (Compute Unified Device Architecture)` is supported for GPU
-rendering with **NVidia graphics cards**.
+NVIDIA :abbr:`CUDA (Compute Unified Device Architecture)` is supported for GPU
+rendering with **NVIDIA graphics cards**.
 We support graphics cards starting from GTX 4xx (computing capability 2.0).
 
-Cycles requires recent drivers to be installed, on all operating systems.
-Be sure to download the Blender version matching your operating system; that is,
-download 64-bit Blender for 64-bit operating systems.
+Cycles requires recent NVIDIA drivers to be installed, on all operating systems.
 
-`List of CUDA cards with shader model <http://www.nvidia.com/object/cuda_gpus.htm>`__
+`List of CUDA cards with shader model <http://www.NVIDIA.com/object/cuda_gpus.htm>`__
 
 
-Limitations
-===========
 
-- The maximum amount of individual textures is limited to 95 byte-image textures (PNG, JPEG, ..)
-  and 5 float-image textures (OpenEXR, 16 bit TIFF, ..) on GTX 4xx/5xx cards,
-  and 145 byte-image textures and 5 float-image textures on GTX6xx cards and above. 
-- :doc:`Open shading language </render/cycles/osl>` (OSL) is only supported by CPU.
-- Smoke/Fire rendering is not supported on GPU.
-- The :ref:`SSS shader <cycles_shader_sss>` is only supported
-  in the :doc:`Experimental Feature Set </render/cycles/experimental_features>`.
+OpenCL
+------
+
+
+:abbr:`OpenCL (Open Computing Language)` is supported for GPU
+rendering with **AMD graphics cards**.
+We only support graphics cards with :abbr:`GCN (Graphics Core Next)` architecture (HD 7xxx and above).
+Not all HD 7xxx cards are GCN cards though, you can check if your card is
+`here <https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units>`__.
+
+Cycles requires recent AMD drivers to be installed, on all operating systems.
+
+
+Supported Features and Limitations
+==================================
+
+For an overview of supported features, check the comparison in the 
+:doc:`Features </render/cycles/features>`.
+  
+CUDA:
+   The maximum amount of individual textures is limited to 95 byte-image textures (PNG, JPEG, ..)
+   and 5 float-image textures (OpenEXR, 16 bit TIFF, ..) on GTX 4xx/5xx cards,
+   and 145 byte-image textures and 5 float-image textures on GTX6xx cards and above.
+
+OpenCL:
+   No support for HDR (float) textures at the moment.
 
 
 Frequently Asked Questions
 ==========================
+
 
 Why is Blender unresponsive during rendering?
 ---------------------------------------------
@@ -96,25 +111,25 @@ Would multiple GPUs increase available memory?
 No, each GPU can only access its own memory.
 
 
-What renders faster, NVidia or AMD, CUDA or OpenCL?
+What renders faster, NVIDIA or AMD, CUDA or OpenCL?
 ---------------------------------------------------
 
-Currently NVidia with CUDA is rendering faster. There is no fundamental reason why this should
+Currently NVIDIA with CUDA is rendering faster. There is no fundamental reason why this should
 be so - we don't use any CUDA - specific features - but the compiler appears to be more mature,
 and can better support big kernels.
-OpenCL support is still being worked on and has not been optimized as much,
-because we haven't had the full kernel working yet.
+OpenCL support is still in an early stage and has not been optimized as much.
 
 
 Error Messages
 ==============
+
 
 Unsupported GNU version! gcc 4.7 and up are not supported!
 ----------------------------------------------------------
 
 On Linux, depending on your GCC version you might get this error.
 
-If so, delete the following line in /usr/local/cuda/include/host_config.h
+If so, delete the following line in ``/usr/local/cuda/include/host_config.h``
 
 ::
 

@@ -23,8 +23,8 @@ Concise
    so keep the text concise and relevant to the topic at hand.
 Maintainable
    Keep in mind that Blender has frequent releases,
-   so try to write content that won.t have to be redone 
-   the moment some small change is made. 
+   so try to write content that won.t have to be redone
+   the moment some small change is made.
    This also helps a small documentor community to maintain the manual.
 
 
@@ -39,7 +39,7 @@ Rules of thumb:
 - *Spell checking is strongly recommended.*
 - Use American English (eg: modeling and not modelling, color and not colour).
 - Take care about grammar, appropriate wording and use simple English.
-- Keep Sentences short and clear, resulting in text that is easy to read, objective and to the point. 
+- Keep Sentences short and clear, resulting in text that is easy to read, objective and to the point.
 - Including why or how an option might be useful is a good idea.
 - If you are unsure about how a feature works, ask someone else or find out who developed it and ask them.
 
@@ -89,4 +89,87 @@ To be avoided:
   As a last resort you can add comment (which is not shown in the html page, but useful for other editors): ::
 
      .. TODO, how does this tool work? ask Joe Blogg's
+
+
+Glossary
+--------
+
+This section is specifically about the :doc:`Glossary </glossary/index>` section,
+where we define common terms in Blender and computer-graphics.
+
+Rules of thumb:
+
+- Define the term before providing any further information.
+- Avoid using constructs such as *"It is"* or *"xyz is"* before the definition.
+- Avoid repeating the term immediately or using it in the definition.
+- Avoid adding terms not found in Blender's interface or the manual.
+- Avoid overly long entries.
+  If an explanation of a complex term is needed, supplement with external links.
+- Avoid duplicating documentation;
+  if explaining the term is the primary focus of another section of the manual
+  (e.g. if the term is the name of a tool),
+  either just link to that section, or avoid creating a glossary entry entirely.
+- URL references are to be added at the end, formatted as follows, eg:
+
+  .. code-block:: rst
+
+     See also `OpenGL <http://en.wikipedia.org/wiki/OpenGL>`__ on Wikipedia.
+
+
+Examples
+^^^^^^^^
+
+This entry:
+
+.. code-block:: rst
+
+   Displacement Mapping
+      Uses a greyscale heightmap, like Bump Mapping,
+      but the image is used to physically move the vertices of the mesh at render time.
+      This is of course only useful if the mesh has large amounts of vertices.
+
+Would be written like this instead, putting a definition first:
+
+.. code-block:: rst
+
+   Displacement Mapping
+      Method for distorting vertices based on an image.
+      Similar to Bump Mapping, but instead operates on the mesh's actual geometry.
+      This relies on the mesh having enough geometry.
+
+----
+
+This entry:
+
+.. code-block:: rst
+
+   Doppler Effect
+      The Doppler effect is the change in pitch that occurs
+      when a sound has a velocity relative to the listener.
+
+Would be written more like this, avoiding the immediate repetition of the term:
+
+.. code-block:: rst
+
+   Doppler Effect
+      Perceived change in pitch that occurs
+      when the source of a sound is moving relative to the listener.
+
+----
+
+This entry:
+
+.. code-block:: rst
+
+   Curve
+      It’s a class of objects.
+      In Blender there are Bézier curves and NURBS curves.
+
+Would be written more like this, avoiding the *"it's"*:
+
+.. code-block:: rst
+
+   Curve
+      A type of object defined in terms of a line interpolated between Control Vertices.
+      *Available types of curves include Bézier and NURBS.*
 

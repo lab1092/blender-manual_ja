@@ -19,38 +19,16 @@ For locally extracted Blender distributions, the user configuration and data run
 kept in the same sub-directory, allowing multiple Blender versions to run without conflict,
 ignoring the **USER** and **SYSTEM** files.
 
+.. note::
+
+   You may need to have the "show hidden files" option checked in your file browser settings.
+
+
 Here are the default locations for each system:
 
 
-OSX
-===
-
-LOCAL
-   .. parsed-literal:: ./|BLENDER_VERSION|/
-USER
-   .. parsed-literal:: /Users/{user}/Library/Application Support/Blender/|BLENDER_VERSION|/
-SYSTEM
-   .. parsed-literal:: /Library/Application Support/Blender/|BLENDER_VERSION|/
-
-.. note::
-   OSX stores the Blender binary in ``./blender.app/Contents/MacOS/blender``,
-   so the local path to data & config is:
-   .. parsed-literal:: ./blender.app/Contents/MacOS/|BLENDER_VERSION|/
-
-
-Windows
-=======
-
-LOCAL
-   .. parsed-literal:: .\\\ |BLENDER_VERSION|\\.
-USER
-   .. parsed-literal:: C:\\Documents and Settings\\{username}\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
-SYSTEM
-   .. parsed-literal:: C:\\Documents and Settings\\All Users\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
-
-
-Unix (Linux/BSD/Solaris)
-========================
+Linux
+=====
 
 LOCAL
    .. parsed-literal:: ./|BLENDER_VERSION|/
@@ -65,9 +43,37 @@ SYSTEM
    used for self contained bundles distributed by official blender.org builds.
 
 .. note::
-   The USER path will use ``$XDG_CONFIG_HOME`` if its set:
+   The **USER** path will use ``$XDG_CONFIG_HOME`` if its set:
 
    .. parsed-literal:: $XDG_CONFIG_HOME/blender/|BLENDER_VERSION|/
+
+
+OSX
+===
+
+LOCAL
+   .. parsed-literal:: ./|BLENDER_VERSION|/
+USER
+   .. parsed-literal:: /Users/$USER/Library/Application Support/Blender/|BLENDER_VERSION|/
+SYSTEM
+   .. parsed-literal:: /Library/Application Support/Blender/|BLENDER_VERSION|/
+
+.. note::
+   OSX stores the Blender binary in ``./blender.app/Contents/MacOS/blender``,
+   so the local path to data & config is:
+
+   .. parsed-literal:: ./blender.app/Contents/MacOS/|BLENDER_VERSION|/
+
+
+Windows
+=======
+
+LOCAL
+   .. parsed-literal:: .\\\ |BLENDER_VERSION|\\.
+USER
+   .. parsed-literal:: C:\\Documents and Settings\\$USERNAME\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
+SYSTEM
+   .. parsed-literal:: C:\\Documents and Settings\\All Users\\AppData\\Roaming\\Blender Foundation\\Blender\\\ |BLENDER_VERSION|\\
 
 
 Path Layout
@@ -81,11 +87,13 @@ for example.
 
 ``./autosave/ ...``
    Autosave blend file location. *Windows only, temp directory used for other systems.*
-   Search order: **LOCAL, USER**.
+
+   Search order: ``LOCAL, USER``.
 
 ``./config/ ...``
    Defaults & session info.
-   Search order: **LOCAL, USER**.
+
+   Search order: ``LOCAL, USER``.
 
 ``./config/startup.blend``
    Default file to load on startup.
@@ -101,6 +109,7 @@ for example.
 
 ``./datafiles/ ...``
    Runtime files.
+
    Search order: ``LOCAL, USER, SYSTEM``
 
 ``./datafiles/locale/{language}/``
@@ -114,6 +123,7 @@ for example.
 
 ``./scripts/ ...``
    Python scripts for the user interface and tools.
+
    Search order: ``LOCAL, USER, SYSTEM``.
 
 ``./scripts/addons/*.py``
@@ -144,5 +154,6 @@ for example.
 
 ``./python/ ...``
    Bundled Python distribution, only necessary when the system Python installation is absent or incompatible.
+
    Search order: ``LOCAL, SYSTEM``.
 

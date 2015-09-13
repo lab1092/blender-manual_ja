@@ -3,7 +3,7 @@
 Luminance Key Node
 ******************
 
-.. figure:: /images/2.5_Luminance_node.jpg
+.. figure:: /images/luminance_node.jpg
 
    Luminance Key node
 
@@ -32,7 +32,7 @@ keyed selection and a black and white *Matte* (i.e the alpha mask).
 Example
 =======
 
-.. figure:: /images/Manual-Composting-LumaKey_ex.jpg
+.. figure:: /images/Composting-LumaKey_ex.jpg
    :width: 300px
 
    Using Luma Key...with a twist

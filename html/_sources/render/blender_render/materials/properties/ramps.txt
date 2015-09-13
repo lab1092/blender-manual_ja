@@ -36,17 +36,17 @@ Blender materials.
 Options
 -------
 
-.. figure:: /images/Manual-2.5-Material-RampsPanel.jpg
+.. figure:: /images/Material-RampsPanel.jpg
 
    Ramps Panel
 
 
-In Blender 2.5, the separate *Ramp* panels for the *Diffuse* shader and the
+The separate *Ramp* panels for the *Diffuse* shader and the
 *Specular* shader respectively can be toggled on and off using the
 
-.. figure:: /images/Manual-2.5-Material-RampsButton.jpg
+.. figure:: /images/Material-RampsButton.jpg
 
- button.
+   button.
 
 By default the Ramp panel opens with two colors; the first stop (*0*)
 is black and transparent (Alpha=0) and the second stop (*1*) is white and opaque
@@ -55,21 +55,15 @@ is black and transparent (Alpha=0) and the second stop (*1*) is white and opaque
 The position of the color stop markers can be altered by either
 (1) dragging the stop marker in the colorband or (2) by changing the *Pos* value in the
 
-.. figure:: /images/Manual-2.5-Material-Ramps-StopPos.jpg
+.. figure:: /images/Material-Ramps-StopPos.jpg
 
- box.
+   box.
 
 Color and alpha values for each marker can be set by clicking the
 
-.. figure:: /images/Manual-2.5-Material-Ramps-ColorAlpha.jpg
+.. figure:: /images/Material-Ramps-ColorAlpha.jpg
 
- box.
-
-
-.. figure:: /images/Manual-2.5-Material-Ramps-Input.jpg
-
-   Input popup menu
-
+   box.
 
 Input
    The input menu contains the following options for defining the gradient:
@@ -89,9 +83,9 @@ Input
       Using alpha values here is most useful for tweaking a finishing touch to a material.
 
 
-.. figure:: /images/Manual-2.5-Material-Ramps-BlendMenu.jpg
+.. figure:: /images/Material-Ramps-BlendMenu.jpg
 
-   Blend popup menu
+   Blend pop-up menu
 
 
 Blend
@@ -137,7 +131,7 @@ F
    and in the colorband, the active mark is displayed as a dashed line.
    Another marker can be selected (1) using the arrows in the
 
-.. figure:: /images/Manual-2.5-Material-Ramps-MarkerSelectSlider.jpg
+.. figure:: /images/Material-Ramps-MarkerSelectSlider.jpg
 
  slider, (2) by clicking on the number being displayed and entering a number of a color mark,
  or (3) by :kbd:`LMB` clicking a marker in the colorband.
@@ -159,9 +153,9 @@ active mark. :kbd:`LMB` click it to display a color picker in which values for c
 (*RGB*) and transparency (*Alpha*) can be set.
 
 
-.. figure:: /images/Manual-2.5-Material-Ramps-InterpolationMenu.jpg
+.. figure:: /images/Material-Ramps-InterpolationMenu.jpg
 
-   Interpolation popup menu
+   Interpolation pop-up menu
 
 
 Interpolation

@@ -30,7 +30,6 @@ the petals in a flower).
    In `this .blend <http://wiki.blender.org/index.php/:File:Manual-2.5-DupliVerts-Examples.blend>`__,
    the first example, a monkey parented to a circle is on layer 1;
    while a tentacle parented to an icosphere is on layer 2.
-   The files was made using Blender 2.55.1 (r33567).
 
 
 DupliVerts as an Arranging Tool
@@ -39,7 +38,7 @@ DupliVerts as an Arranging Tool
 Setup
 -----
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example01-1start.jpg
+.. figure:: /images/Dupliverts-Example01-1start.jpg
 
    A monkey head and a circle
 
@@ -51,7 +50,7 @@ the origin of the coordinate system as our base object and a circle at the same 
 our parent mesh.
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example01-2dupliverted.jpg
+.. figure:: /images/Dupliverts-Example01-2dupliverted.jpg
 
    Dupliverted monkeys
 
@@ -89,7 +88,7 @@ objects.
 Orientation
 -----------
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example01-3Orientation.jpg
+.. figure:: /images/Dupliverts-Example01-3Orientation.jpg
 
    Orientation enabled, orientation +Y
 
@@ -105,17 +104,17 @@ To change the orientation of the duplicated objects, select the base object and 
 Output of various orientations:
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example01-4negY.jpg
+.. figure:: /images/Dupliverts-Example01-4negY.jpg
 
    Negative Y
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example01-5posX.jpg
+.. figure:: /images/Dupliverts-Example01-5posX.jpg
 
    Positive X
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example01-6posZ.jpg
+.. figure:: /images/Dupliverts-Example01-6posZ.jpg
 
    Positive Z, up X
 
@@ -141,17 +140,17 @@ was adapted to the vertex normals of the parent mesh
 (in this case the tentacle was rotated -90- about the X axis in edit mode).
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example02-1Tentacle.jpg
+.. figure:: /images/Dupliverts-Example02-1Tentacle.jpg
 
    A simple tentacle set to smooth
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example02-2NoRot.jpg
+.. figure:: /images/Dupliverts-Example02-2NoRot.jpg
 
    Tentacle dupliverted onto the parent mesh
 
 
-.. figure:: /images/Manual-2.5-Dupliverts-Example02-3Rot.jpg
+.. figure:: /images/Dupliverts-Example02-3Rot.jpg
 
    Rotation enabled to align duplicates
 

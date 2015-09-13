@@ -15,7 +15,7 @@ Bevel
    | Menu (vertex-only):    :menuselection:`Mesh --> Vertices --> Bevel` or :menuselection:`[Ctrl][V] --> Bevel`
    | Hotkey (vertex-only):  :kbd:`Shift-Ctrl-B`
 
-.. figure:: /images/Manual-PartII-Bevel-Cubes.jpg
+.. figure:: /images/Bevel-Cubes.jpg
 
    With bevel and without bevel.
 
@@ -48,7 +48,7 @@ It will recognize any edges included in a vertex or face selection as well,
 and perform the bevel the same as if those edges were explicitly selected.
 In "vertex only" mode, the *Bevel* tool works on selected vertices instead of edges.
 The *Bevel* tool smooths the edges and/or "corners" (vertices)
-by replacing them with faces making smooth profiles with a specified number of *segments* 
+by replacing them with faces making smooth profiles with a specified number of *segments*
 (see the options below for details about the bevel algorithm).
 
 Use :kbd:`Ctrl-B` or a method listed above to run the tool.

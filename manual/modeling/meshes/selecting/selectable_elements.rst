@@ -27,8 +27,8 @@ Select Modes
 You have two ways to switch between select modes:
 
 
-Select Mode popup
------------------
+Select Mode pop-up
+------------------
 
 .. admonition:: Reference
    :class: refbox
@@ -41,20 +41,20 @@ In *Edit* mode there are three different select modes for meshes; see
 (*Select Mode* *menu*).
 
 
-.. figure:: /images/Manual-Part-II-EditModeMenu_2.5.jpg
+.. figure:: /images/EditModeMenu.jpg
 
    Select Mode menu.
 
 
 :menuselection:`Select Mode --> Vertices`
-   Press :kbd:`Ctrl-Tab` and select *Vertices* from the popup menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad1`.
+   Press :kbd:`Ctrl-Tab` and select *Vertices* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad1`.
    The selected vertices are drawn in yellow and unselected vertices are drawn in a pink color.
 :menuselection:`Select Mode --> Edges`
-   Press :kbd:`Ctrl-Tab` and select *Edges* from the popup menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad2`.
+   Press :kbd:`Ctrl-Tab` and select *Edges* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad2`.
    In this mode the vertices are not drawn.
    Instead the selected edges are drawn in yellow and unselected edges are drawn in a black color.
 :menuselection:`Select Mode --> Faces`
-   Press :kbd:`Ctrl-Tab` and select *Faces* from the popup menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad3`.
+   Press :kbd:`Ctrl-Tab` and select *Faces* from the pop-up menu, or press :kbd:`Ctrl-Tab`:kbd:`Numpad3`.
    In this mode the faces are drawn with a selection point in the middle which is used for selecting a face.
    Selected faces are drawn in yellow with the selection point in orange, unselected faces are drawn in black.
 
@@ -74,7 +74,7 @@ Select Mode header widgets
    | Panel:    Header of the *3D View*
 
 
-.. figure:: /images/Manual-Part-II-EditModeButtonsLabeled_2.5.jpg
+.. figure:: /images/EditModeButtonsLabeled.jpg
 
    Edit mode select mode buttons.
 
@@ -113,22 +113,22 @@ for examples of the different modes.
 
 .. list-table::
 
-   * - .. figure:: /images/Manual-Part-II-EditModeVerticeModeExample_2.5.jpg
+   * - .. figure:: /images/EditModeVerticeModeExample.jpg
           :width: 300px
 
           none Vertices mode example.
 
-     - .. figure:: /images/Manual-Part-II-EditModeEdgeModeExample_2.5.jpg
+     - .. figure:: /images/EditModeEdgeModeExample.jpg
           :width: 300px
 
           Edges mode example.
 
-   * - .. figure:: /images/Manual-Part-II-EditModeFaceModeExample_2.5.jpg
+   * - .. figure:: /images/EditModeFaceModeExample.jpg
           :width: 300px
 
           Faces mode example.
 
-     - .. figure:: /images/Manual-Part-II-EditModeMixedModeExample_2.5.jpg
+     - .. figure:: /images/EditModeMixedModeExample.jpg
           :width: 300px
 
           Mixed mode example.

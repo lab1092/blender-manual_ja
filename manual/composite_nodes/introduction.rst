@@ -20,7 +20,7 @@ you use composition nodes to both assemble video clips together, and enhance the
    A node layout processes one image at a time, no matter what kind of input you provide.
 
 
-.. figure:: /images/Manual-Compositing-SimpleNoodle.jpg
+.. figure:: /images/Compositing-SimpleNoodle.jpg
 
    Default Composition Noodle
 
@@ -28,8 +28,8 @@ you use composition nodes to both assemble video clips together, and enhance the
 To process your image, you use nodes to import the image into Blender, change it,
 optionally merge it with other images, and finally save it.
 
-The example to the right shows the simplest noodle;
-an input node threads the camera view to an output node so it can be saved.
+The example to the right shows the simplest node setup;
+an input node links the camera view to an output node so it can be saved.
 
 
 FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Concepts;
@@ -40,25 +40,25 @@ FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Concepts;
 Accessing and Activating Nodes
 ==============================
 
-Access the :doc:`Node Editor </render/blender_render/materials/nodes/editor>` and enable
+Access the :doc:`Node Editor </editors/node_editor/index>` and enable
 *Composite Nodes* by clicking on the *Image* icon.
 
 
-.. figure:: /images/Manual-Compositing-Node_Header.jpg
+.. figure:: /images/Compositing-Node_Header.jpg
 
    Node Editor Header with Composite Nodes enabled
 
 
-.. figure:: /images/Manual-Part-VI-Using_Nodes-WindowsType.jpg
+.. figure:: /images/Using_Nodes-WindowsType.jpg
 
    Select the Node Editor window
 
 
 To activate nodes for compositing, click the *Use Nodes* checkbox.
-Blender creates a default starting noodle, consisting of two nodes threaded together.
+Blender creates a default node setup, consisting out of two nodes linked together.
 
 
-.. figure:: /images/Manual-Compositing-Do.jpg
+.. figure:: /images/Compositing-Do.jpg
 
    Use Composition Nodes
 
@@ -71,7 +71,7 @@ button area and activate the *Compositing* button located below the
 This tells Blender to composite the final image by running it through the composition node map.
 
 
-You now have your first noodle, a RenderLayer input node threaded to a Composite output node.
+You now have your first node setup, a RenderLayer input node linked to a Composite output node.
 From here, you can add and connect many :doc:`types of compositing nodes </composite_nodes/types/index>`,
 in a sort of map layout, to your heart's content (or physical memory constraints, whichever comes first).
 

@@ -5,14 +5,14 @@ The Text Editor
 
 Blender has a *Text Editor* among its windows types, accessible via the *Text Editor* button (
 
-.. figure:: /images/Manual-Part-XV-textButton.jpg
+.. figure:: /images/textButton.jpg
 
 ) of the *Window type* menu, or via :kbd:`Shift-F11`.
 
 The newly opened Text window is grey and empty, with a very simple toolbar (*Text Toolbar*).
 
 
-.. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Text-editor-Default-Toolbar.jpg
+.. figure:: /images/Extensions-Python-Text-editor-Default-Toolbar.jpg
 
    Text Toolbar.
 
@@ -23,7 +23,7 @@ creating new Text files. Once you click it, you will find that the Toolbar has c
 for good!
 
 
-.. figure:: /images/Manual-Part-XX-Manual-Extensions-Python-Text-editor-Toolbar-with-file-open.jpg
+.. figure:: /images/Extensions-Python-Text-editor-Toolbar-with-file-open.jpg
    :width: 600px
 
    Text Toolbar with a file open
@@ -89,8 +89,7 @@ Exercise
 
 Copy the text below in the Text Editor.
 
-::
-
+.. code-block:: python
 
    import bpy
    from math import radians, cos, sin
@@ -112,13 +111,13 @@ Copy the text below in the Text Editor.
    # Loop through the angles, determine x,y using polar coordinates
    # and create object
    for theta in anglesInRadians:
-   x = cursor.x + radius * cos(theta)
-   y = cursor.y + radius * sin(theta)
-   z = cursor.z
-   bpy.ops.mesh.primitive_cube_add(location=(x, y, z))
+       x = cursor.x + radius * cos(theta)
+       y = cursor.y + radius * sin(theta)
+       z = cursor.z
+       bpy.ops.mesh.primitive_cube_add(location=(x, y, z))
 
 
-Execute the script with :kbd:`Alt-P`.
+Execute the script with the *Run Script* button.
 
 You can see the result of running the above script in this video.
 

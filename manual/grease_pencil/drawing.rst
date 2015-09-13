@@ -12,7 +12,7 @@ Drawing With Grease Pencil
   Changes to these settings will affect all strokes on the current layer.
 
 
-.. figure:: /images/ManualSketchingGreasePencil.jpg
+.. figure:: /images/SketchingGreasePencil.jpg
    :width: 500px
 
    Grease Pencil Tool Shelf and Properties Panel.
@@ -144,7 +144,6 @@ The basic steps are:
 - move and reshape them
 
 
-
 Edit Mode
 ---------
 
@@ -214,7 +213,7 @@ Edit
    *View* or *Global* transform orientations,
    snap to *Increment* and
    *Proportional Editing*
-   detailed in the general :doc:`Transformations Instructions </getting_started/basics/transformations/index>`.
+   detailed in the general :doc:`Transformations Instructions </editors/3dview/transform/index>`.
 *Mirror* (:kbd:`Ctrl-M`) *Bend* (:kbd:`Shift-W`) *Shear* (:kbd:`Shift-Ctrl-Alt-S`) *To Sphere* (:kbd:`Shift-Alt-S`)
    These are similar to the equivalent mesh operations detailed in
    :doc:`Deforming Instructions </modeling/meshes/editing/deforming/index>`.

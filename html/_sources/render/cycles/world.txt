@@ -3,7 +3,7 @@
 World
 *****
 
-.. figure:: /images/Manual-Cycles-Environment-Lighting.jpg
+.. figure:: /images/Cycles-Environment-Lighting.jpg
 
    Lighting with an HDR image
 
@@ -69,11 +69,10 @@ Transparency of surfaces will be taken into account, i.e.
 a half-transparent surface will only half occlude.
 
 An alternative method of using Ambient Occlusion on a per-shader basis is to use the
-:ref:`cycles_shader_ao` shader
-(*non-shader AO node still to be implemented*).
+:ref:`cycles_shader_ao` shader.
 
 
-Settings
+Sampling
 ========
 
 Multiple Importance Sample
@@ -92,14 +91,29 @@ Below is a comparison between Multiple Importance Sample Off and On - both image
 
 .. list-table::
 
-   * - .. figure:: /images/Manual-Cycles-MIS-Off.jpg
+   * - .. figure:: /images/Cycles-MIS-Off.jpg
 
           Multiple Importance Sample Off
 
-     - .. figure:: /images/Manual-Cycles-MIS-On.jpg
+     - .. figure:: /images/Cycles-MIS-On.jpg
 
           Multiple Importance Sample On
 
+
+For interior scenes, noise can be significantly reduce by
+setting up area lamps as :doc:`light portals </render/cycles/lamps>`.
+
+.. list-table::
+
+   * - .. figure:: /images/cycles_light_portals_off.jpg
+          :width: 300px
+
+          Without Light Portals
+
+     - .. figure:: /images/cycles_light_portals_on.jpg
+          :width: 300px
+
+          With Light Portals
 
 Ray Visibility
 ==============
@@ -121,7 +135,7 @@ Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the high-r
 will also be visible in reflections.
 
 
-.. figure:: /images/Manual-Cycles-Env-Trick-Nodes.jpg
+.. figure:: /images/Cycles-Env-Trick-Nodes.jpg
    :width: 500px
 
    Nodes for the trick above

@@ -6,7 +6,7 @@ RGB node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` -->
+   | Panel:    :doc:`Node Editor </editors/node_editor/editor>` -->
                :doc:`Node Composition </composite_nodes/index>`
    | Menu:     :kbd:`Shift-A` --> :doc:`Input </composite_nodes/types/input/index>` --> RGB
 
@@ -24,7 +24,7 @@ To change the color itself, click anwhere along the rainbow Color Ramp.
 Example
 =======
 
-.. figure:: /images/Manual-Compositing-Input-RGB.jpg
+.. figure:: /images/Compositing-Input-RGB.jpg
 
 In this example, our corporate color is teal, but the bozo who made the presentation forgot.
 So, we multiply his lame black and white image with our corporate color to save him from

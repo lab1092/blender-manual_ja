@@ -19,7 +19,7 @@ features such as dotted lines and easy setup of multiple line types and edge def
 with the introduction of line style modifiers, the sky is the limit!
 
 
-.. figure:: /images/Manual-2.6-Render-Freestyle-Demo-OHACartoon.jpg
+.. figure:: /images/render-freestyle-Demo-OHACartoon.jpg
    :width: 600px
 
    A cartoon scene from `OHA Studio <http://oha-studios.com/>`__
@@ -27,7 +27,7 @@ with the introduction of line style modifiers, the sky is the limit!
    © Mechanimotion Entertainment.
 
 
-.. figure:: /images/Manual-2.6-Render-Freestyle-Demo-BluePrint.jpg
+.. figure:: /images/render-freestyle-Demo-BluePrint.jpg
    :width: 600px
 
    Blueprint render of Martin M-130 from 1935 by LightBWK. CC0. WARNING:
@@ -35,13 +35,13 @@ with the introduction of line style modifiers, the sky is the limit!
    (`File:M-130Blueprint.zip <http://wiki.blender.org/index.php/File:M-130Blueprint.zip>`__)
 
 
-.. figure:: /images/Manual-2.6-Render-Freestyle-Demo-HVACPreViz.jpg
+.. figure:: /images/render-freestyle-Demo-HVACPreViz.jpg
    :width: 600px
 
    HVAC Pre-Viz by Lee Posey. CC0 (`File:HVACPreViz.zip <http://wiki.blender.org/index.php/File:HVACPreViz.zip>`__)
 
 
-.. figure:: /images/Manual-2.6-Render-Freestyle-Demo-KitchenSet.jpg
+.. figure:: /images/render-freestyle-Demo-KitchenSet.jpg
    :width: 600px
 
    Kitchen by Vicente Carro. © AnigoAnimation
@@ -73,16 +73,18 @@ The Big Picture
    block diagram of Freestyle view map and processes
 
 
-Known Limitations and issues
-============================
+Known Limitations
+=================
 
-- FreeStyle is only available for the Blender Internal renderer.
 - Highly memory demanding: All mesh objects in a render layer are loaded at once.
-- Only faced mesh objects are supported. The following kinds of meshes are ignored.
+- Only faced mesh objects are supported. The following kinds of meshes are ignored:
+
   - Mesh faces with wire materials.
   - Mesh faces with completely transparent materials.
+  - Mesh faces with the *Cast Only* material option enabled.
+
 - Transparent faces are treated as opaque faces.
 - No edges at face intersections are detected yet.
 - Layer masks do not work with Freestyle.
 - Freestyle rendering results do not have any Z depth information.
-- Does not work with a panoramic camera.
+- Panoramic cameras are not supported.

@@ -14,7 +14,7 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,10 +30,12 @@
   
     <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
   
+
+  
     <link rel="top" title="Blender Reference Manual" href="../../index.html"/>
         <link rel="up" title="Freestyle" href="index.html"/>
-        <link rel="next" title="Viewmaps" href="viewmap.html"/>
-        <link rel="prev" title="Thickness" href="parameter_editor/line_style/thickness.html"/> 
+        <link rel="next" title="Freestyle SVG Exporter" href="export_svg.html"/>
+        <link rel="prev" title="Geometry" href="parameter_editor/line_style/geometry.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -47,9 +49,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        
+          <a href="../../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -59,8 +64,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul>
+          
+          
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../getting_started/about_blender/index.html">About Blender</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting_started/installing_blender/index.html">Installing Blender</a></li>
@@ -98,21 +104,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../modeling/empties.html">Empties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../modeling/groups.html">Group Instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../modeling/scripts.html">Scripts</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../modifiers/index.html">Modifiers</a><ul>
@@ -159,6 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../animation/basics/keying_sets.html">Keying Sets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/basics/markers.html">Markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/editors/index.html">Animation Editors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/editors/timeline.html">The Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph.html">Graph Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/editors/graph/fcurves.html">F-Curves</a></li>
@@ -184,6 +176,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../../animation/techs/lamp.html">Animating Lamps Properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/techs/camera.html">Animating Cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/performances.html">Performance</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Rendering</a><ul class="current">
@@ -257,6 +264,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../preferences/system.html">System preferences</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/startup.html">Startup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../troubleshooting/3d_view.html">3D Viewport</a></li>
@@ -279,6 +290,7 @@
 </li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -313,7 +325,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="python-scripting-mode">
 <h1>Python Scripting Mode<a class="headerlink" href="#python-scripting-mode" title="Permalink to this headline">¶</a></h1>
@@ -334,10 +346,10 @@ which takes a list of user-defined stroke shaders.</p>
 External style module files first need to be loaded in the Text Editor window. Then the
 pull-down menu within an entry of the style module stack allows you to select a module from
 the list of loaded style modules.</p>
-<div class="figure">
+<div class="figure" id="id1">
 <a class="reference internal image-reference" href="../../_images/Freestyle_python_scripting_mode.jpg"><img alt="../../_images/Freestyle_python_scripting_mode.jpg" src="../../_images/Freestyle_python_scripting_mode.jpg" style="width: 600px;" /></a>
-<p class="caption">A screen capture of a style module (cartoon.py) loaded in the Text Editor window (left),
-as well as Freestyle options in the Python Scripting mode in the Render Layers buttons (right)</p>
+<p class="caption"><span class="caption-text">A screen capture of a style module (cartoon.py) loaded in the Text Editor window (left),
+as well as Freestyle options in the Python Scripting mode in the Render Layers buttons (right)</span></p>
 </div>
 <p>Freestyle for Blender comes with a number of Python style modules that can serve as a starting
 point of your own style module writing. See also the section of the Freestyle Python API in
@@ -348,16 +360,18 @@ the Blender Python API reference manual for the full detail of style module cons
 <col width="50%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><div class="first last figure">
-<a class="reference internal image-reference" href="../../_images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg"><img alt="../../_images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg" src="../../_images/Manual-2.6-Render-Freestyle-Demo-Turning_Pages.jpg" style="width: 300px;" /></a>
-<p class="caption">By T.K. using the Python Scripting mode
-(<a class="reference external" href="http://wiki.blender.org/index.php/File:Turning_Pages.zip">File:Turning_Pages.zip</a>, CC0)</p>
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/render-freestyle-Demo-Turning_Pages.jpg"><img alt="../../_images/render-freestyle-Demo-Turning_Pages.jpg" src="../../_images/render-freestyle-Demo-Turning_Pages.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">By T.K. using the Python Scripting mode</span></p>
+<div class="legend">
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:Turning_Pages.zip">File:Turning_Pages.zip</a>, CC0)</div>
 </div>
 </td>
-<td><div class="first last figure">
+<td><div class="first last figure" id="id3">
 <a class="reference internal image-reference" href="../../_images/Sketchy_Broken_Topology.jpg"><img alt="../../_images/Sketchy_Broken_Topology.jpg" src="../../_images/Sketchy_Broken_Topology.jpg" style="width: 300px;" /></a>
-<p class="caption">By T.K. using the Python Scripting mode
-(<a class="reference external" href="http://wiki.blender.org/index.php/File:Lily_Broken_Topology.zip">File:Lily_Broken_Topology.zip</a>, CC0)</p>
+<p class="caption"><span class="caption-text">By T.K. using the Python Scripting mode</span></p>
+<div class="legend">
+(<a class="reference external" href="http://wiki.blender.org/index.php/File:Lily_Broken_Topology.zip">File:Lily_Broken_Topology.zip</a>, CC0)</div>
 </div>
 </td>
 </tr>
@@ -369,14 +383,14 @@ the Blender Python API reference manual for the full detail of style module cons
 The input of a style module is a set of feature edges called view map (ViewMap).
 The output is a set of stylized lines also referred to as strokes. A style module is
 structured as a pipeline of operations that allow for building strokes from the input edges
-within the view map. There are five kinds of operations
-(corresponding operator functions in parentheses):</p>
+within the view map.</p>
+<p>There are five kinds of operations (listed with corresponding operator functions):</p>
 <ul class="simple">
-<li>Selection (Operators.select())</li>
-<li>Chaining (Operators.chain(), Operators.bidirectional_chain())</li>
-<li>Splitting (Operators.sequential_split(), Operators.recursive_split())</li>
-<li>Sorting (Operators.sort())</li>
-<li>Stroke creation (Operators.create())</li>
+<li>Selection <code class="docutils literal"><span class="pre">Operators.select()</span></code></li>
+<li>Chaining <code class="docutils literal"><span class="pre">Operators.chain(),</span> <span class="pre">Operators.bidirectional_chain()</span></code></li>
+<li>Splitting <code class="docutils literal"><span class="pre">Operators.sequential_split(),</span> <span class="pre">Operators.recursive_split()</span></code></li>
+<li>Sorting <code class="docutils literal"><span class="pre">Operators.sort()</span></code></li>
+<li>Stroke creation <code class="docutils literal"><span class="pre">Operators.create()</span></code></li>
 </ul>
 <p>The input view map is populated with a set of ViewEdge objects. The selection operation is
 used to pick up ViewEdges of interest to artists based on user-defined selection conditions
@@ -384,10 +398,10 @@ used to pick up ViewEdges of interest to artists based on user-defined selection
 concatenating ViewEdges according to user-defined predicates and functions.
 The Chains can be further refined by splitting them into smaller pieces (e.g.,
 at points where edges make an acute turn) and selecting a fraction of them (e.g.,
-to keep only those longer than a length threshold). The sorting operation is used to arrange
-the stacking order of chains to draw one line on top of another. The chains are finally
-transformed into stylized strokes by the stroke creation operation applying a series of stroke
-shaders to individual chains.</p>
+to keep only those longer than a length threshold).
+The sorting operation is used to arrange the stacking order of chains to draw one line on top of another.
+The chains are finally transformed into stylized strokes
+by the stroke creation operation applying a series of stroke shaders to individual chains.</p>
 <p>ViewEdges, Chains and Strokes are generically referred to as one-dimensional (1D) elements.
 A 1D element is a polyline that is a series of connected straight lines.
 Vertices of 1D elements are called 0D elements in general.</p>
@@ -397,56 +411,58 @@ The active set is updated by the operators.</p>
 <div class="section" id="selection">
 <h3>Selection<a class="headerlink" href="#selection" title="Permalink to this headline">¶</a></h3>
 <p>The selection operator goes through every element of the active set and keeps only the ones
-satisfying a certain predicate. The Operators.select() method takes as the argument a unary
-predicate that works on any Interface1D that represents a 1D element. For example:</p>
+satisfying a certain predicate.
+The <code class="docutils literal"><span class="pre">Operators.select()</span></code> method takes as the argument a unary
+predicate that works on any <code class="docutils literal"><span class="pre">Interface1D</span></code> that represents a 1D element. For example:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>This selection operation uses the QuantitativeInvisibilityUP1D predicate to select only the
-visible ViewEdge (more precisely, those whose quantitative invisibility is equal to 0). The
-selection operator is intended to selectively apply the style to a fraction of the active 1D
-elements.</p>
-<p>It is noted that QuantitativeInvisibilityUP1D is a class implementing the predicate that tests
-line visibility, and the Operators.select()
+<p>This selection operation uses the <code class="docutils literal"><span class="pre">QuantitativeInvisibilityUP1D</span></code> predicate to select only the
+visible <code class="docutils literal"><span class="pre">ViewEdge</span></code> (more precisely, those whose quantitative invisibility is equal to 0).
+The selection operator is intended to selectively apply the style to a fraction of the active 1D elements.</p>
+<p>It is noted that <code class="docutils literal"><span class="pre">QuantitativeInvisibilityUP1D</span></code> is a class implementing the predicate that tests
+line visibility, and the <code class="docutils literal"><span class="pre">Operators.select()</span></code>
 method takes an instance of the predicate class as argument. The testing of the predicate for
 a given 1D element is actually done by calling the predicate instance, that is,
-by invoking the __call__ method of the predicate class. In other words, the Operators.select
-() method takes as argument a functor which in turn takes an Interface0D object as argument.
+by invoking the <code class="docutils literal"><span class="pre">__call__</span></code> method of the predicate class.
+In other words, the <code class="docutils literal"><span class="pre">Operators.select()</span></code> method takes as argument a functor
+which in turn takes an <code class="docutils literal"><span class="pre">Interface0D</span></code> object as argument.
 The Freestyle Python API employs functors extensively to implement predicates,
 as well as functions.</p>
 </div>
 <div class="section" id="chaining">
 <h3>Chaining<a class="headerlink" href="#chaining" title="Permalink to this headline">¶</a></h3>
-<p>The chaining operators act on the set of active ViewEdge objects and determine the topology of
-the future strokes. The idea is to implement an iterator to traverse the ViewMap graph by
-marching along ViewEdges. The iterator defines a chaining rule that determines the next
-ViewEdge to follow at a given vertex (see ViewEdgeIterator).
+<p>The chaining operators act on the set of active <code class="docutils literal"><span class="pre">ViewEdge</span></code> objects and determine the topology of the future strokes.
+The idea is to implement an iterator to traverse the ViewMap graph by marching along ViewEdges.
+The iterator defines a chaining rule that determines the next
+<code class="docutils literal"><span class="pre">ViewEdge</span></code> to follow at a given vertex (see <code class="docutils literal"><span class="pre">ViewEdgeIterator</span></code>).
 Several such iterators are provided as part of the Freestyle Python API
-(see ChainPredicateIterator and ChainSilhouetteIterator).
-Custom iterators can be defined by inheriting the ViewEdgeIterator class. The chaining
-operator also takes as argument a UnaryPredicate working on Interface1D as a stopping
-criterion. The chaining stops when the iterator has reached a ViewEdge satisfying this
+(see <code class="docutils literal"><span class="pre">ChainPredicateIterator</span></code> and <code class="docutils literal"><span class="pre">ChainSilhouetteIterator</span></code>).
+Custom iterators can be defined by inheriting the <code class="docutils literal"><span class="pre">ViewEdgeIterator</span></code> class.
+The chaining operator also takes as argument a UnaryPredicate working on <code class="docutils literal"><span class="pre">Interface1D</span></code> as a stopping criterion.
+The chaining stops when the iterator has reached a <code class="docutils literal"><span class="pre">ViewEdge</span></code> satisfying this
 predicate during the march along the graph.</p>
-<p>Chaining can be either unidirectional (Operators::chain()) or bidirectional
-(Operators::bidirectional_chain()). In the latter case,
-the chaining will propagate in the two directions from the starting edge.</p>
+<p>Chaining can be either unidirectional <code class="docutils literal"><span class="pre">Operators.chain()</span></code> or bidirectional <code class="docutils literal"><span class="pre">Operators.bidirectional_chain()</span></code>.
+In the latter case, the chaining will propagate in the two directions from the starting edge.</p>
 <p>The following is a code example of bidirectional chaining:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">bidirectional_chain</span><span class="p">(</span><span class="n">ChainSilhouetteIterator</span><span class="p">(),</span>
-<span class="n">NotUP1D</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">bidirectional_chain</span><span class="p">(</span>
+        <span class="n">ChainSilhouetteIterator</span><span class="p">(),</span>
+        <span class="n">NotUP1D</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
+        <span class="p">)</span>
 </pre></div>
 </div>
-<p>The chaining operator uses the ChainSilhouetteIterator as the chaining rule and stops chaining
-as soon as the iterator has come to an invisible ViewEdge.</p>
-<p>The chaining operators process the set of active ViewEdge objects in order.
-The active ViewEdges can be previously sorted using the Operators::sort() method (see below).
-It starts a chain with the first ViewEdge of the active set.
+<p>The chaining operator uses the <code class="docutils literal"><span class="pre">ChainSilhouetteIterator</span></code> as the chaining rule and stops chaining
+as soon as the iterator has come to an invisible <code class="docutils literal"><span class="pre">ViewEdge</span></code>.</p>
+<p>The chaining operators process the set of active <code class="docutils literal"><span class="pre">ViewEdge</span></code> objects in order.
+The active ViewEdges can be previously sorted using the <code class="docutils literal"><span class="pre">Operators.sort()</span></code> method (see below).
+It starts a chain with the first <code class="docutils literal"><span class="pre">ViewEdge</span></code> of the active set.
 All ViewEdges that have already been involved in the chaining process are marked
-(in the case of the example above, the time stamp of each ViewEdge is modified by default),
-in order not to process the same ViewEdge twice.
-Once the chaining reaches a ViewEdge that satisfies the stopping predicate,
+(in the case of the example above, the time stamp of each <code class="docutils literal"><span class="pre">ViewEdge</span></code> is modified by default),
+in order not to process the same <code class="docutils literal"><span class="pre">ViewEdge</span></code> twice.
+Once the chaining reaches a <code class="docutils literal"><span class="pre">ViewEdge</span></code> that satisfies the stopping predicate,
 the chain is terminated.
-Then a new chain is started from the first unmarked ViewEdge in the active set.
-This operation is repeated until the last unmarked ViewEdge of the active set was processed.
+Then a new chain is started from the first unmarked <code class="docutils literal"><span class="pre">ViewEdge</span></code> in the active set.
+This operation is repeated until the last unmarked <code class="docutils literal"><span class="pre">ViewEdge</span></code> of the active set was processed.
 At the end of the chaining operation,
 the active set is set to the Chains that have just been constructed.</p>
 </div>
@@ -454,7 +470,7 @@ the active set is set to the Chains that have just been constructed.</p>
 <h3>Splitting<a class="headerlink" href="#splitting" title="Permalink to this headline">¶</a></h3>
 <p>The splitting operation is used to refine the topology of each Chain.
 Splitting is performed either sequentially or recursively. Sequential splitting
-(Operators::sequentialSplit()) in its basic form,
+<code class="docutils literal"><span class="pre">Operators.sequentialSplit()</span></code> in its basic form,
 parses the Chain at a given arbitrary resolution and evaluates a unary predicate
 (working on 0D elements) at each point along the Chain.
 Every time the predicate is satisfied, the chain is split into two chains.
@@ -467,8 +483,8 @@ the active set of chains is set to the new chains.</p>
 A more elaborated version uses two predicates instead of one: One to determine the starting
 point of the new chain and the other to determine its ending point. This second version can
 lead to a set of Chains that are disjoint or that overlap if the two predicates are different.
-(see Operators::sequentialSplit() for more details).</p>
-<p>Recursive splitting (Operators::recursiveSplit()) evaluates a function on the 0D elements
+(see <code class="docutils literal"><span class="pre">Operators.sequentialSplit()</span></code> for more details).</p>
+<p>Recursive splitting <code class="docutils literal"><span class="pre">Operators.recursiveSplit()</span></code> evaluates a function on the 0D elements
 along the Chain at a given resolution and find the point that gives the maximum value for the
 function. The Chain is then split into two at that point.
 This process is recursively repeated on each of the two new Chains,
@@ -484,14 +500,13 @@ Chains shorter than 5 units won&#8217;t be split anymore.</p>
 </div>
 <div class="section" id="sorting">
 <h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
-<p>The sorting operator (Operators::sort()) arranges the stacking order of active 1D elements. It
-takes as argument a binary predicate used as a &#8220;smaller than&#8221; operator to order two 1D
-elements.</p>
+<p>The sorting operator <code class="docutils literal"><span class="pre">Operators.sort()</span></code> arranges the stacking order of active 1D elements.
+It takes as argument a binary predicate used as a &#8220;smaller than&#8221; operator to order two 1D elements.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">Operators</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">Length2DBP1D</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>In this code example, the sorting uses the Length2DBP1D binary predicate to sort the
-Interface1D objects in the ascending order in terms of 2D length.</p>
+<p>In this code example, the sorting uses the <code class="docutils literal"><span class="pre">Length2DBP1D</span></code> binary predicate to sort the
+<code class="docutils literal"><span class="pre">Interface1D</span></code> objects in the ascending order in terms of 2D length.</p>
 <p>The sorting is particularly useful when combined with causal density. Indeed,
 the causal density evaluates the density of the resulting image as it is modified. If we wish
 to use such a tool to decide to remove strokes whenever the local density is too high,
@@ -500,22 +515,22 @@ we would use the sorting operator to insure that the most &#8220;important&#8221
 </div>
 <div class="section" id="stroke-creation">
 <h3>Stroke creation<a class="headerlink" href="#stroke-creation" title="Permalink to this headline">¶</a></h3>
-<p>Finally, the stroke creation operator (Operators::create())
+<p>Finally, the stroke creation operator <code class="docutils literal"><span class="pre">Operators.create()</span></code>
 takes the active set of Chains as input and build Strokes. The operator takes two arguments.
-The first is a unary predicate that works on Interface1D that is designed to make a last
+The first is a unary predicate that works on <code class="docutils literal"><span class="pre">Interface1D</span></code> that is designed to make a last
 selection on the set of chains.
-A Chain that doesn&#8217;t satisfy the condition won&#8217;t lead to a Stroke. The second input is a list
-of Shaders that will be responsible for the shading of each built stroke.</p>
+A Chain that doesn&#8217;t satisfy the condition won&#8217;t lead to a Stroke.
+The second input is a list of shaders that will be responsible for the shading of each built stroke.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">shaders_list</span> <span class="o">=</span> <span class="p">[</span>
-<span class="n">SamplingShader</span><span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
-<span class="n">ConstantThicknessShader</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
-<span class="n">ConstantColorShader</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-<span class="p">]</span>
+    <span class="n">SamplingShader</span><span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
+    <span class="n">ConstantThicknessShader</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">ConstantColorShader</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">]</span>
 <span class="n">Operators</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">DensityUP1D</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">IntegrationType</span><span class="o">.</span><span class="n">MEAN</span><span class="p">),</span> <span class="n">shaders_list</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In this example,
-the DensityUP1D predicate is used to remove all Chains whose mean density is higher than 0.1.
+the <code class="docutils literal"><span class="pre">DensityUP1D</span></code> predicate is used to remove all Chains whose mean density is higher than 0.1.
 Each chain is transformed into a stroke by resampling it so as to have a point every 5 units
 and assigning to it a constant thickness of 2 units and a dark gray constant color.</p>
 </div>
@@ -525,13 +540,13 @@ and assigning to it a constant thickness of 2 units and a dark gray constant col
 even though individual style modules have a fixed pipeline structure.
 One is the sequencing of different pipeline control structures, and another is through the
 definition of functor objects that are passed as argument all along the pipeline.</p>
-<p>Different pipeline control structures can be defined by sequencing the selection, chaining,
-splitting, and sorting operations.
+<p>Different pipeline control structures can be defined by sequencing the selection,
+chaining, splitting, and sorting operations.
 The stroke creation is always the last operation that concludes a style module.</p>
 <p>Predicates, functions, chaining iterators, and stroke shaders can be defined by inheriting
 base classes and overriding appropriate methods. See the reference manual entries of the
 following base classes for more information on the user-scriptable constructs.</p>
-<ul class="simple">
+<table class="hlist"><tr><td><ul class="simple">
 <li>UnaryPredicate0D</li>
 <li>UnaryPredicate1D</li>
 <li>BinaryPredicate0D</li>
@@ -544,6 +559,8 @@ following base classes for more information on the user-scriptable constructs.</
 <li>UnaryFunction0DUnsigned</li>
 <li>UnaryFunction0DVec2f</li>
 <li>UnaryFunction0DVec3f</li>
+</ul>
+</td><td><ul class="simple">
 <li>UnaryFunction0DVectorViewShape</li>
 <li>UnaryFunction0DViewShape</li>
 <li>UnaryFunction1DDouble</li>
@@ -557,6 +574,7 @@ following base classes for more information on the user-scriptable constructs.</
 <li>ViewEdgeIterator</li>
 <li>StrokeShader</li>
 </ul>
+</td></tr></table>
 </div>
 </div>
 </div>
@@ -567,10 +585,10 @@ following base classes for more information on the user-scriptable constructs.</
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="viewmap.html" class="btn btn-neutral float-right" title="Viewmaps"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="export_svg.html" class="btn btn-neutral float-right" title="Freestyle SVG Exporter">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="parameter_editor/line_style/thickness.html" class="btn btn-neutral" title="Thickness"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="parameter_editor/line_style/geometry.html" class="btn btn-neutral" title="Geometry"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -583,7 +601,8 @@ following base classes for more information on the user-scriptable constructs.</
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -599,7 +618,7 @@ following base classes for more information on the user-scriptable constructs.</
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.1',
+            VERSION:'2.75',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

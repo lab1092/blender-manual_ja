@@ -72,7 +72,7 @@ Bounces
 Max Bounces
    Maximum number of light bounces. For best quality, this should be set to the maximum. However, in practice,
    it may be good to set it to lower values for faster rendering.
-   Setting it to maximum 1 bounce results in direct lighting.
+   Setting it to maximum 0 bounces results in direct lighting only.
 Min Bounces
    Minimum number of light bounces for each path,
    after which the integrator uses Russian Roulette to terminate paths that contribute less to the image.
@@ -160,6 +160,13 @@ Shutter
    Time between frames over which motion blur is computed. Shutter time 1.0 blurs over the length of 1 frame,
    2.0 over the length of two frames, from the previous to the next.
 
+
+.. warning::
+
+   An object modifier setup that changes mesh topology over time will cause severe problems.
+
+   Common examples of this are animated booleans, defomation before edge-split, remesh, skin or decimate modifiers.
+
 .. _render-cycles-integrator-material_settings:
 
 Material Settings
@@ -205,6 +212,14 @@ Multiple Importance Sample
 Samples
    For the branch path tracing integrator, this specifies the number of direct light samples per AA sample.
    Point lamps might need only one sample, while area lamps typically need more.
+
+Max Bounces
+   The maximum amount of bounces this light will contribute to the scene.
+
+Portal
+   Only available for Area lamps. This setting enables area lamps to function as a light portal,
+   helping to sample the environment lamp and therefore improving convergence.
+   Note that this will make the area lamp itself invisible.
 
 
 Volume Render Settings

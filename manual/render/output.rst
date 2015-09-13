@@ -6,6 +6,8 @@ Output Options
 The first step in the rendering process is to determine and set the output options.
 This includes render size, frame rate, pixel aspect ratio, output location, and file type.
 
+.. _render_output_dimensions:
+
 
 Dimensions
 ==========
@@ -29,7 +31,7 @@ Border
    :kbd:`Ctrl-Alt-B` is the shortcut to disable the border.
 
    .. note::
-   
+
       This disables the *Save Buffers* option in *Performance* and *Full Sample* option in *Anti-Aliasing*.
 
    Enabling *Crop* will crop the rendered image to the *Border* size,
@@ -51,9 +53,7 @@ Presets
 -------
 
 To make life easier the topmost menu provides some common presets.
-You can add your own or remove one with the `+` and `-` buttons:
-
-See: :term:`Video Presets`
+You can add your own or remove one with the ``+`` and ``-`` buttons:
 
 
 Output Panel

@@ -3,7 +3,7 @@
 Procedural Textures
 *******************
 
-.. figure:: /images/25-Manual-Textures-Procedural-Menu.jpg
+.. figure:: /images/Textures-Procedural-Menu.jpg
    :width: 240px
 
    The Texture Type list in the Texture panel of the Texture Buttons. (Non procedural textures darkened out.)
@@ -39,12 +39,6 @@ Common options
 
 Noise Basis
 -----------
-
-.. figure:: /images/Doc-26-Manual-Textures-Procedural-Noise-Basis.jpg
-   :width: 300px
-
-   Noise Basis list
-
 
 Each noise-based Blender texture (with the exception of Voronoi and simple noise) has a
 *Noise Basis* setting that allows the user to select which algorithm is used to

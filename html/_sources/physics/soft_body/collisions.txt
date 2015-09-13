@@ -32,15 +32,15 @@ Examples
 
 .. list-table::
 
-   * - .. figure:: /images/Blender3D_CubePlaneCollision2.gif
+   * - .. figure:: /images/CubePlaneCollision2.gif
 
           Image 2a: A Soft Body cube colliding with a plane.
 
-     - .. figure:: /images/Blender3D_CubePlaneCollision3.gif
+     - .. figure:: /images/CubePlaneCollision3.gif
 
           Image 2b: A Soft Body plane colliding with a cube - no interaction at all.
 
-     - .. figure:: /images/Blender3D_CollidingPlane_CFace.gif
+     - .. figure:: /images/CollidingPlane_CFace.gif
 
           Image 2c: Collision with CFace activated.
 
@@ -61,11 +61,11 @@ Calculating Collisions
 
 .. list-table::
 
-   * - .. figure:: /images/Blender3D_VertexPlaneCollision.gif
+   * - .. figure:: /images/VertexPlaneCollision.gif
 
           Image 3a: Visualization of the collision of a Soft Body vertex with a plane.
 
-     - .. figure:: /images/Blender3D_VertexPlaneCollision2.gif
+     - .. figure:: /images/VertexPlaneCollision2.gif
 
           Image 3b: Six Soft Body vertices with different speed.
           `Blend file <http://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__
@@ -92,7 +92,7 @@ that the fourth vertex also travels quite fast and because it is heavier it brea
 zone. The first three vertices collide OK.
 
 
-.. figure:: /images/Blender3D_SoftbodyCollidingEdges-2.49.jpg
+.. figure:: /images/softbodycollidingedges.jpg
 
    Image 3d: Also Edges and Faces can be used for the collision calculation.
 
@@ -106,7 +106,7 @@ the collision zones are not used.
 Good collisions
 ===============
 
-.. figure:: /images/Blender3D_SoftbodySolverParameters-2.49.jpg
+.. figure:: /images/softbodysolverparameters.jpg
 
    Image 4: Parameters for Soft Body calculation.
 

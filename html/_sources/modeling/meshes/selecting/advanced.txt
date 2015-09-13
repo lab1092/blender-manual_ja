@@ -9,8 +9,8 @@ The select menu in edit mode contains additional tool for selecting components:
 
 Mirror
    Select mesh items at the mirrored location.
-Linked :kbd:`Ctrl-L`
-   Selects all components that are connected to the current selection.
+Linked
+   Selects all components that are connected to the current selection. (see `Select Linked`_)
 Random
    Selects a random group of vertices, edges, or faces, based on a percentage value.
 Checker Deselect
@@ -18,10 +18,8 @@ Checker Deselect
 Select Every N Number of Vertices
    Selects vertices that are multiples of N.
 Sharp Edges
-   This option will select all edges that are between two faces forming an angle less than a given value,
-   which is asked you *via* a small pop-up dialog.
-   The lower is this angle limit, the sharper will be the selected edges.
-   At ``180``, **all** :term:`manifold` edges will be selected.
+   This tool selects all edges between two faces forming an angle greater than the angle option,
+   Where an increasing angle selects sharper edges.
 Linked Flat Faces (:kbd:`Ctrl-Shift-Alt-F`)
    Select connected faces based on a threshold of the angle between them.
    This is useful for selecting faces that are planar.
@@ -52,6 +50,31 @@ Select Faces by Sides
    Selects all faces that have a specified number of edges.
 Loose Geometry
    Select all vertices or edges that do not form part of a face.
+
+
+Select Linked
+=============
+
+.. admonition:: Reference
+   :class: refbox
+
+   | Mode:     *Edit* mode
+   | Menu:     :menuselection:`Select --> Linked`
+   | Hotkey:   :kbd:`Ctrl-L`
+
+Select parts of a mesh connected to already selected elements.
+This is often useful when a mesh has disconnected, overlapping parts,
+where isolating it any other way would be tedious.
+
+To give more control, you can also enable delimiters so the selection is
+constrained by seans, sharp-edges, materials or UV islands.
+
+.. hint::
+
+   You can also select linked data directly under the cursor,
+   using the :kbd:`L` shortcut to select or :kbd:`Shift-L` to deselect linked.
+
+   This works differently in that it uses the geometry under the cursor instead of the existing selection.
 
 
 Select Similar
@@ -155,7 +178,7 @@ or the *Edge Loop Select* option of the *Edge Specials* menu
    *and clicking on the edges* (not on the vertices).
 
 
-.. figure:: /images/Broken-Manual-Part-II-EdgeF.jpg
+.. figure:: /images/EdgeF.jpg
 
    Longitudinal and latitudinal edge loops.
 
@@ -185,7 +208,7 @@ the same can be accomplished by using :kbd:`Ctrl-Alt` to select an edge,
 which selects the face loop implicitly.
 
 
-.. figure:: /images/Manual-Part-II-EdgeFaceTools-FaceLoopSel.jpg
+.. figure:: /images/EdgeFaceTools-FaceLoopSel.jpg
 
    Face loop selection.
 
@@ -195,7 +218,7 @@ in *face* select mode.
 The loop extends perpendicular from the edge that was selected.
 
 
-.. figure:: /images/Manual-Part-II-EdgeFace-LoopingEdge-Algors-Vertex-Select.jpg
+.. figure:: /images/EdgeFace-LoopingEdge-Algors-Vertex-Select.jpg
 
    :kbd:`Alt` versus :kbd:`Ctrl-Alt` in vertex select mode.
 
@@ -234,7 +257,7 @@ or the *Edge Ring Select* option of the *Edge Specials* menu
    but this will directly select the corresponding face loop...
 
 
-.. figure:: /images/Manual-Part-II-EdgeFace-LoopingEdge-Algors-Select.jpg
+.. figure:: /images/EdgeFace-LoopingEdge-Algors-Select.jpg
 
    A selected edge loop, and a selected edge ring.
 
@@ -283,19 +306,19 @@ Note that if the selected loop of edges is not closed,
 then all connected edges on the mesh will be considered inside the loop.
 
 
-.. figure:: /images/Mesh.loop.select1.jpg
+.. figure:: /images/Mesh-loop-select1.png
    :width: 400px
 
    Loop to Region.
 
 
-.. figure:: /images/Mesh.loop.select3.jpg
+.. figure:: /images/Mesh-loop-select3.png
    :width: 400px
 
    This tool handles multiple loops fine, as you can see.
 
 
-.. figure:: /images/Mesh.loop.select5.jpg
+.. figure:: /images/Mesh-loop-select5.png
    :width: 400px
 
    This tool handles "holes" just fine as well.
@@ -313,14 +336,14 @@ Boundary Loop
    | Hotkey:   :kbd:`Ctrl-E` --> :menuselection:`Select Boundary Loop`
 
 
-*Select Boundary Loop* is the "logical inverse" of *Select Loop Inner-Region*,
+*Select Boundary Loop* does the opposite of *Select Loop Inner-Region*,
 based on all regions currently selected, it selects only the edges at the border of these regions.
 It can operate in any select mode, but will always switch to *Edge* select mode when run.
 
 All this is much more simple to illustrates with examples:
 
 
-.. figure:: /images/Mesh.region.select1.jpg
+.. figure:: /images/Mesh-region-select1.png
    :width: 400px
 
    Select Boundary Loop does the opposite and forces into Edge Select Mode

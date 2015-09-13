@@ -6,7 +6,7 @@ Time node
 .. admonition:: Reference
    :class: refbox
 
-   | Panel:    :doc:`Node Editor </render/blender_render/materials/nodes/editor>` -->
+   | Panel:    :doc:`Node Editor </editors/node_editor/editor>` -->
                :doc:`Node Composition </composite_nodes/index>`
    | Menu:     :kbd:`Shift-A` --> :doc:`Input </composite_nodes/types/input/index>` --> Time
 
@@ -56,7 +56,7 @@ In the picture below, over the course of a second of time (30 frames),
 the following time controls are made:
 
 
-.. figure:: /images/Manual-Compositing-Time.jpg
+.. figure:: /images/Compositing-Time.jpg
 
    See:
 

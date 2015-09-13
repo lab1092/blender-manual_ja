@@ -12,7 +12,7 @@
 Surfaces
 ********
 
-.. figure:: /images/Blender2.5NurbsSurface.jpg
+.. figure:: /images/NurbsSurface.jpg
 
    Surface.
 
@@ -173,7 +173,7 @@ or *Bezier*, with the same properties as for curves. And as with curves, only op
 (in the relevant direction) are affected by this setting...
 
 
-.. figure:: /images/Manual-Part-II-Surfaces-Endpoint-U-Ex.jpg
+.. figure:: /images/Surfaces-Endpoint-U-Ex.jpg
 
    Endpoint U.
 

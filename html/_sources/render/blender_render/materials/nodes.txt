@@ -44,7 +44,7 @@ tightly or add more complexity? Here is where nodes come in.
 
 
 Making this node map is accomplished by working in a
-:doc:`Node Editor window </render/blender_render/materials/nodes/editor>`.
+:doc:`Node Editor window </editors/node_editor/editor>`.
 This section covers:
 
 - Enabling Material Nodes.
@@ -58,7 +58,7 @@ FIXME(Template Unsupported: Doc:2.6/Reference/Nodes/Concepts; {{Doc:2.6/Referenc
 Accessing The Node Editor
 =========================
 
-First lets enter the :doc:`node editor </render/blender_render/materials/nodes/editor>`
+First lets enter the :doc:`node editor </editors/node_editor/editor>`
 and make sure that the node editor has the material node button (the sphere icon) pressed,
 not the composite or texture node buttons.
 
@@ -68,11 +68,11 @@ Enabling Node Materials in the Material Buttons
 
 .. list-table::
 
-   * - .. figure:: /images/25-Manual-Materials-Nodes-StartPanel.jpg
+   * - .. figure:: /images/Materials-Nodes-StartPanel.jpg
 
           Material's menu with Nodes enabled
 
-     - .. figure:: /images/25-Manual-Materials-Nodes-DefaultStart-Node.jpg
+     - .. figure:: /images/Materials-Nodes-DefaultStart-Node.jpg
 
           Default nodes
 
@@ -85,7 +85,7 @@ What you have just done is told Blender to make the material you were on to beco
 tree. Most of the panels we normally find in the material menu are now gone.
 
 
-.. figure:: /images/25-Manual-Materials-Nodes-CompositingScreen.jpg
+.. figure:: /images/Materials-Nodes-CompositingScreen.jpg
 
    Accessing the Compositing screen
 
@@ -102,11 +102,11 @@ You can also split the 3D view in the default screen in two and change one into 
 
 .. list-table::
 
-   * - .. figure:: /images/25-Manual-Materials-Nodes-StartWithMaterial.jpg
+   * - .. figure:: /images/Materials-Nodes-StartWithMaterial.jpg
 
           Material's menu with a first material added to the Node Editor
 
-     - .. figure:: /images/25-Manual-Materials-Nodes-FirstMat.jpg
+     - .. figure:: /images/Materials-Nodes-FirstMat.jpg
 
           A first material added to the noodle
 
