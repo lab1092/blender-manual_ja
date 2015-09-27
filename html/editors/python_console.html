@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python Console &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="up" title="Editors" href="index.html"/>
+        <link rel="next" title="Data System" href="../data_system/index.html"/>
+        <link rel="prev" title="File Browser" href="file_browser.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#window-controls">Window Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#interface-controls">Interface Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Editors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation">Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#image-video">Image/Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#nodes-logic">Nodes/Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#settings">Settings</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/baking.html">Baking Physics Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/opengl.html">OpenGL Render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/startup_file.html">Startup File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting/index.html">Scripting &amp; Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/recover.html">Recovering Lost Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/general_help.html">General help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../glossary/conventions.html">About this manual</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Editors</a> &raquo;</li>
+      
+    <li>Python Console</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/editors/python_console.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="python-console">
+<h1>Python Console<a class="headerlink" href="#python-console" title="Permalink to this headline">¶</a></h1>
+<p>The Python console is a quick way to execute commands,
+with access to the entire Python API, command history and auto-complete.</p>
+<p>Its a good way to explore possibilities, which can then be pasted into larger scripts.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="accessing-built-in-python-console">
+<h3>Accessing Built-in Python Console<a class="headerlink" href="#accessing-built-in-python-console" title="Permalink to this headline">¶</a></h3>
+<p>Launching the Console using mouse.</p>
+<iframe src="http://www.youtube.com/embed/Ge2Kwy5EGE0" style="border: 0; height: 345px; width: 560px">
+</iframe><p>By pressing <code class="kbd docutils literal"><span class="pre">Shift-F4</span></code> in any Blender Editor Type (3D View, Timeline etc.,)
+you can change it to a Console Editor.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Default-Console.jpg"><img alt="../_images/Extensions-Python-Console-Default-Console.jpg" src="../_images/Extensions-Python-Console-Default-Console.jpg" style="width: 600px;" /></a>
+</div>
+<p>From the screen shot above,
+you will notice that apart from the usual hot keys that are used to navigate,
+by pressing <code class="kbd docutils literal"><span class="pre">Ctrl-Spacebar</span></code> you can enable Auto-complete feature.</p>
+<p>The command prompt is typical for Python 3.x,
+the interpreter is loaded and is ready to accept commands at the prompt <code class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></code></p>
+</div>
+<div class="section" id="first-look-at-the-console-environment">
+<h3>First look at the Console Environment<a class="headerlink" href="#first-look-at-the-console-environment" title="Permalink to this headline">¶</a></h3>
+<p>To check what is loaded into the interpreter environment, type dir()
+at the prompt and execute it.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Listing-Globals.jpg"><img alt="../_images/Extensions-Python-Console-Listing-Globals.jpg" src="../_images/Extensions-Python-Console-Listing-Globals.jpg" style="width: 600px;" /></a>
+</div>
+<p>Following is a quick overview of the output</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">C</span></code></dt>
+<dd>Quick access to <code class="docutils literal"><span class="pre">bpy.context</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">D</span></code></dt>
+<dd>Quick access to <code class="docutils literal"><span class="pre">bpy.data</span></code></dd>
+<dt><code class="docutils literal"><span class="pre">bpy</span></code></dt>
+<dd>Top level Blender Python API module.</dd>
+</dl>
+</div>
+<div class="section" id="auto-completion-at-work">
+<h3>Auto Completion at work<a class="headerlink" href="#auto-completion-at-work" title="Permalink to this headline">¶</a></h3>
+<p>Now, type bpy. and then press <code class="kbd docutils literal"><span class="pre">Ctrl-Spacebar</span></code> and you will see the Console
+auto-complete feature in action.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Auto-Completion.jpg"><img alt="../_images/Extensions-Python-Console-Auto-Completion.jpg" src="../_images/Extensions-Python-Console-Auto-Completion.jpg" style="width: 600px;" /></a>
+</div>
+<p>You will notice that a list of sub-modules inside of bpy appear. These modules encapsulate all
+that we can do with Blender Python API and are very powerful tools.</p>
+<p>Lets list all the contents of bpy.app module.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-List-SubModule-Contents.jpg"><img alt="../_images/Extensions-Python-Console-List-SubModule-Contents.jpg" src="../_images/Extensions-Python-Console-List-SubModule-Contents.jpg" style="width: 600px;" /></a>
+</div>
+<p>Notice the green output above the prompt where you enabled auto-completion.
+What you see is the result of auto completion listing.
+In the above listing all are module attribute names, but if you see any name end with &#8216;(&#8216;,
+then that is a function.</p>
+<p>We will make use of this a lot to help our learning the API faster.
+Now that you got a hang of this, lets proceed to investigate some of modules in bpy.</p>
+</div>
+<div class="section" id="before-tinkering-with-the-modules">
+<h3>Before tinkering with the modules..<a class="headerlink" href="#before-tinkering-with-the-modules" title="Permalink to this headline">¶</a></h3>
+<p>If you look at the 3D Viewport in the default Blender scene, you will notice 3 objects: Cube,
+Lamp and Camera.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Default-Scene.jpg"><img alt="../_images/Extensions-Python-Console-Default-Scene.jpg" src="../_images/Extensions-Python-Console-Default-Scene.jpg" style="width: 600px;" /></a>
+</div>
+<ul class="simple">
+<li>All objects exist in a context and there can be various modes under which they are operated upon.</li>
+<li>At any instance, only one object is active and there can be more than one selected objects.</li>
+<li>All objects are data in the Blender file.</li>
+<li>There are operators/functions that create and modify these objects.</li>
+</ul>
+<p>For all the scenarios listed above (not all were listed, mind you..)
+the bpy module provides functionality to access and modify data.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bpy-context">
+<h3>bpy.context<a class="headerlink" href="#bpy-context" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Note</dt>
+<dd>For the commands below to show the proper output, make sure you have selected object(s) in the 3D view.</dd>
+</dl>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Example-bpy-context.jpg"><img alt="../_images/Extensions-Python-Console-Example-bpy-context.jpg" src="../_images/Extensions-Python-Console-Example-bpy-context.jpg" style="width: 600px;" /></a>
+</div>
+<div class="section" id="try-it-out">
+<h4>Try it out!<a class="headerlink" href="#try-it-out" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>bpy.context.mode</dt>
+<dd>Will print the current 3D View mode (Object, Edit, Sculpt etc.,)</dd>
+<dt>bpy.context.object or bpy.context.active_object</dt>
+<dd>Will give access to the active object in the 3D View</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Change x location to a value of 1</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>Move object from previous x location by 0.5 unit</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Changes x, y, z location</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Same as above</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Data type of objects location</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that is a lot of data that you have access to</p>
+<dl class="docutils">
+<dt>bpy.context.selected_objects</dt>
+<dd>Will give access to a list of all selected objects.</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">selected_objects</span>
+</pre></div>
+</div>
+<p>... then press <code class="kbd docutils literal"><span class="pre">Ctrl-Space</span></code></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">selected_objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Prints out name of first object in the list</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">object</span> <span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">selected_objects</span> <span class="k">if</span> <span class="nb">object</span> <span class="o">!=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">object</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Complex one... But this prints a list of objects not including the active object</p>
+</div>
+</div>
+<div class="section" id="bpy-data">
+<h3>bpy.data<a class="headerlink" href="#bpy-data" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">bpy.data</span></code> has functions and attributes that give you access to all the data in the
+Blender file.</p>
+<p>You can access following data in the current Blender file:
+objects, meshes, materials, textures, scenes, screens, sounds, scripts, ... etc.</p>
+<p>That&#8217;s a lot of data.</p>
+<div class="section" id="id1">
+<h4>Try it out!<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Example-bpy-data.jpg"><img alt="../_images/Extensions-Python-Console-Example-bpy-data.jpg" src="../_images/Extensions-Python-Console-Example-bpy-data.jpg" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="exercise">
+<h4>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">scenes</span><span class="p">[</span><span class="s">&#39;Scene&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">objects</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="kbd docutils literal"><span class="pre">Return</span></code> twice
+Prints the names of all objects belonging to the Blender scene with name &#8220;Scene&#8221;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">scenes</span><span class="p">[</span><span class="s">&#39;Scene&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">active_object</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Unlink the active object from the Blender scene named &#8216;Scene&#8217;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="s">&#39;Material&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shadows</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="s">&#39;Material&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shadows</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bpy-ops">
+<h3>bpy.ops<a class="headerlink" href="#bpy-ops" title="Permalink to this headline">¶</a></h3>
+<p>The tool/action system in Blender 2.5 is built around the concept of operators. These
+operators can be called directly from console or can be executed by click of a button or
+packaged in a python script. Very powerful they are..</p>
+<p>For a list of various operator categories, click here</p>
+<p>Lets create a set of five Cubes in the 3D Viewport. First,
+delete the existing Cube object by selecting it and pressing <code class="kbd docutils literal"><span class="pre">X</span></code></p>
+<div class="section" id="id2">
+<h4>Try it out!<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>The following commands are used to specify that the objects are created in layer 1.
+So first we define an array variable for later reference:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">mylayers</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="mi">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mylayers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
+<p>We create a reference to the operator that is used for creating a cube mesh primitive</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">add_cube</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">primitive_cube_add</span>
+</pre></div>
+</div>
+<p>Now in a for loop, we create the five objects like this (In the screenshot above,
+I used another method)
+Press ENTER-KEY twice after entering the command at the shell prompt.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">add_cube</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="n">index</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">layers</span><span class="o">=</span><span class="n">mylayers</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/Extensions-Python-Console-Example-bpy-ops.jpg"><img alt="../_images/Extensions-Python-Console-Example-bpy-ops.jpg" src="../_images/Extensions-Python-Console-Example-bpy-ops.jpg" style="width: 400px;" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../data_system/index.html" class="btn btn-neutral float-right" title="Data System">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="file_browser.html" class="btn btn-neutral" title="File Browser"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.76',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

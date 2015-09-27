@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Non-Linear Animation Editor &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="up" title="Editors" href="index.html"/>
+        <link rel="next" title="UV/Image Editor" href="uv_image/index.html"/>
+        <link rel="prev" title="Shape Key" href="dope_sheet/shapekey.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#window-controls">Window Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#interface-controls">Interface Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Editors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#d">3D</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#animation">Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#image-video">Image/Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#nodes-logic">Nodes/Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#settings">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/baking.html">Baking Physics Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/opengl.html">OpenGL Render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/startup_file.html">Startup File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting/index.html">Scripting &amp; Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/recover.html">Recovering Lost Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/general_help.html">General help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../glossary/conventions.html">About this manual</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Editors</a> &raquo;</li>
+      
+    <li>Non-Linear Animation Editor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/editors/nla.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="non-linear-animation-editor">
+<h1>Non-Linear Animation Editor<a class="headerlink" href="#non-linear-animation-editor" title="Permalink to this headline">¶</a></h1>
+<p>The NLA editor can manipulate and repurpose actions, without the tedium of keyframe handling.
+Its often used to make broad, significant changes to a scene&#8217;s animation, with relative ease.
+It can also repurpose, and &#8216;layer&#8217; actions, which make it easier to organize,
+and version-control your animation.</p>
+<div class="section" id="tracks">
+<h2>Tracks<a class="headerlink" href="#tracks" title="Permalink to this headline">¶</a></h2>
+<p>Tracks are the layering system of the NLA. At its most basic level,
+it can help organize strips. But it also
+layers motion much like an image editor layers pixels - the bottom layer first, to the top,
+last.</p>
+<div class="figure">
+<img alt="../_images/NLA_track.jpg" src="../_images/NLA_track.jpg" />
+</div>
+</div>
+<div class="section" id="strips">
+<h2>Strips<a class="headerlink" href="#strips" title="Permalink to this headline">¶</a></h2>
+<p>There&#8217;s three kinds of strips - Action, Transition, and Meta.
+Actions contain the actual keyframe data,
+Transitions will perform calculations between Actions,
+and Meta will group strips together as a whole.</p>
+<div class="section" id="creating-action-strips">
+<h3>Creating Action Strips<a class="headerlink" href="#creating-action-strips" title="Permalink to this headline">¶</a></h3>
+<p>Any action used by the NLA first must be turned into an Action strip. This is done so by clicking the</p>
+<div class="figure" id="id1">
+<img alt="../_images/NLA_Snowflake.jpg" src="../_images/NLA_Snowflake.jpg" />
+<p class="caption"><span class="caption-text">next to the action listed in the NLA. Alternatively, you can go to</span></p>
+</div>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     Add &#8211;&gt; Action</div>
+</div>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../_images/NLA_Action_Strip.jpg"><img alt="../_images/NLA_Action_Strip.jpg" src="../_images/NLA_Action_Strip.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Action Strip.</span></p>
+</div>
+</div>
+<div class="section" id="creating-transition-strips">
+<h3>Creating Transition Strips<a class="headerlink" href="#creating-transition-strips" title="Permalink to this headline">¶</a></h3>
+<p>Select two or more strips on the same track, and go to</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     Add &#8211;&gt; Transition</div>
+</div>
+</div>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../_images/NLA-Basics_Transition.jpg"><img alt="../_images/NLA-Basics_Transition.jpg" src="../_images/NLA-Basics_Transition.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Transition Strip.</span></p>
+</div>
+</div>
+<div class="section" id="grouping-strips-into-meta-strips">
+<h3>Grouping Strips into Meta Strips<a class="headerlink" href="#grouping-strips-into-meta-strips" title="Permalink to this headline">¶</a></h3>
+<p>If you find yourself moving a lot of strips together, you can group them into a Meta strip.
+A meta strip can be moved and duplicated like a normal strip.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     Add &#8211;&gt; Add Meta-Strips</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-G</span></code></div>
+</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../_images/NLA_meta_strips_01.jpg"><img alt="../_images/NLA_meta_strips_01.jpg" src="../_images/NLA_meta_strips_01.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Shift-select two or more strips..</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../_images/NLA_meta_strips_02.jpg"><img alt="../_images/NLA_meta_strips_02.jpg" src="../_images/NLA_meta_strips_02.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Combine them into a meta strip.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A meta strip still contains the underlying strips. You can ungroup a Meta strip.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     Add &#8211;&gt; Remove Meta-Strips</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-G</span></code></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="editing-strips">
+<h2>Editing Strips<a class="headerlink" href="#editing-strips" title="Permalink to this headline">¶</a></h2>
+<p>The contents of Action strips can be edited, but you must be in &#8216;Tweak Mode&#8217; to do so.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     View &#8211;&gt; Enter Tweak Mode</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Tab</span></code></div>
+</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../_images/NLA_strip_NLA_Mode.jpg"><img alt="../_images/NLA_strip_NLA_Mode.jpg" src="../_images/NLA_strip_NLA_Mode.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Strip in NLA mode..</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../_images/NLA_strip_EditMode.jpg"><img alt="../_images/NLA_strip_EditMode.jpg" src="../_images/NLA_strip_EditMode.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Strip in Tweak mode.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you try moving the strip, while in edit mode,
+you&#8217;ll notice that the keys will go along with it. On occasion,
+you&#8217;ll prefer the keys to remain on their original frames, regardless of where the strip is.
+To do so, hit the &#8216;unpin&#8217; icon, next to the strip.</p>
+<div class="figure" id="id8">
+<a class="reference internal image-reference" href="../_images/nla_pinned_01.jpg"><img alt="../_images/nla_pinned_01.jpg" src="../_images/nla_pinned_01.jpg" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Nla strip with pinned keys.</span></p>
+</div>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../_images/nla_pin_02.jpg"><img alt="../_images/nla_pin_02.jpg" src="../_images/nla_pin_02.jpg" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Strip moved, notice the keys move with it.</span></p>
+</div>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../_images/nla_pin_03.jpg"><img alt="../_images/nla_pin_03.jpg" src="../_images/nla_pin_03.jpg" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">The unpinned keys return to their original frames.</span></p>
+</div>
+<p>When your finished editing the strip, simply go to View &gt; Exit Tweak Mode.
+Note the default key for this is Tab.</p>
+</div>
+<div class="section" id="re-instancing-strips">
+<h2>Re-Instancing Strips<a class="headerlink" href="#re-instancing-strips" title="Permalink to this headline">¶</a></h2>
+<p>The contents&#8217; of one Action strip can be instanced multiple times. To instance another strip,
+select
+a strip, go to</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     Edit&#8211;&gt; Duplicate Strips</div>
+</div>
+</div>
+<p>Now, when any strip is tweaked, the others will change too.
+If a strip other than the original is tweaked,
+the original will turn to red.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../_images/NLA_original_strip.jpg"><img alt="../_images/NLA_original_strip.jpg" src="../_images/NLA_original_strip.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Original strip.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../_images/NLA_linked_duplicate.jpg"><img alt="../_images/NLA_linked_duplicate.jpg" src="../_images/NLA_linked_duplicate.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Duplicated strip.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../_images/NLA_linked_duplicate_edited.jpg"><img alt="../_images/NLA_linked_duplicate_edited.jpg" src="../_images/NLA_linked_duplicate_edited.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Duplicated strip being edited.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="strip-properties">
+<h2>Strip Properties<a class="headerlink" href="#strip-properties" title="Permalink to this headline">¶</a></h2>
+<p>Strip properties can be accessed via the NLA header.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     View&#8211;&gt; Properties</div>
+</div>
+</div>
+<div class="section" id="renaming-strips">
+<h3>Renaming Strips<a class="headerlink" href="#renaming-strips" title="Permalink to this headline">¶</a></h3>
+<p>All strips can be renamed, in the &#8220;Active Track&#8221; section in the Strip Properties.</p>
+<div class="figure">
+<img alt="../_images/NLA_StripRename.jpg" src="../_images/NLA_StripRename.jpg" />
+</div>
+</div>
+<div class="section" id="active-track">
+<h3>Active Track<a class="headerlink" href="#active-track" title="Permalink to this headline">¶</a></h3>
+<p>This is which track the strip currently belongs to.</p>
+<div class="figure">
+<img alt="../_images/ActiveTrack.jpg" src="../_images/ActiveTrack.jpg" />
+</div>
+</div>
+<div class="section" id="active-strip">
+<h3>Active Strip<a class="headerlink" href="#active-strip" title="Permalink to this headline">¶</a></h3>
+<p>Elements of the strip itself. An Action Strip can be either an Action Clip,
+or a Transition Clip. Note that the &#8216;Strip Extents&#8217; fields determine strictly the strip,
+and not the action.
+Also, the &#8220;Hold&#8221; value in the Extrapolation section means hold both beginning, and after.
+This can cause
+previous clips to not work, if checked.</p>
+<div class="figure">
+<img alt="../_images/ActiveStrip.jpg" src="../_images/ActiveStrip.jpg" />
+</div>
+</div>
+<div class="section" id="active-action">
+<h3>Active Action<a class="headerlink" href="#active-action" title="Permalink to this headline">¶</a></h3>
+<p>This represents the &#8216;object data&#8217; of the strip. Much like the transform values of an object.</p>
+<div class="figure">
+<img alt="../_images/ActionClip.jpg" src="../_images/ActionClip.jpg" />
+</div>
+</div>
+<div class="section" id="evaluation">
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<p>This determines the degree of influence the strip has, and over what time.</p>
+<div class="figure">
+<img alt="../_images/Evaluation.jpg" src="../_images/Evaluation.jpg" />
+</div>
+<p>If influence isn&#8217;t animated, the strips will fade linearly, during the overlap.</p>
+<div class="figure">
+<img alt="../_images/NLA_influence_strip.jpg" src="../_images/NLA_influence_strip.jpg" />
+</div>
+</div>
+</div>
+<div class="section" id="strip-modifiers">
+<h2>Strip Modifiers<a class="headerlink" href="#strip-modifiers" title="Permalink to this headline">¶</a></h2>
+<p>Like its close cousins in mesh and graph editing,
+Modifiers can stack different combinations of effects for strips.
+Obviously there will be more to come on this.</p>
+<div class="figure">
+<img alt="../_images/Modifiers.jpg" src="../_images/Modifiers.jpg" />
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="uv_image/index.html" class="btn btn-neutral float-right" title="UV/Image Editor">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dope_sheet/shapekey.html" class="btn btn-neutral" title="Shape Key"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.76',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -155,7 +155,7 @@ def text_extract_help(text, args, static_strings):
 
         # in place of more advanced formatting
         arg_text = arg_text.replace(
-                "* ani_##_test.png becomes ani_01_test.png",
+                "* 'ani_##_test.png' becomes 'ani_01_test.png'",
                 "\n   * ``ani_##_test.png`` becomes ``ani_01_test.png``"
                 )
 
@@ -186,6 +186,9 @@ def text_extract_help(text, args, static_strings):
                     write_arg(key[0] or key[1])
 
     text_rst = "".join(text_rst)
+
+    # not essential, but nice to have <word> as ``<word>``
+    text_rst = re.sub(r"([\+\-]*<[a-zA-Z0-9\(\)_\-]+>)", r"``\1``", text_rst)
 
     # ------
     # Post process (formatting)

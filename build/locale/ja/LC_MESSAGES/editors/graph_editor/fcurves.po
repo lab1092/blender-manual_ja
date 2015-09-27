@@ -1,0 +1,592 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-28 05:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:6
+msgid "F-Curves"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:8
+msgid ""
+"Once you have created keyframes for something, you can edit their "
+"corresponding curves. In Blender 2.5, IPO Curves have been replaced by "
+"FCurves, however, editing these curves is essentially still the same."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:14
+msgid "The concept of Interpolation"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:16
+msgid ""
+"When something is \"animated,\" it changes over time. In Blender, animating "
+"an object means changing one of its properties, such as its X location, or "
+"the Red channel value of its material diffuse color, and so on, during a "
+"certain amount of time."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:21
+msgid ""
+"As mentioned, Blender's fundamental unit of time is the \"frame\", which "
+"usually lasts just a fraction of a second, depending on the *frame rate* of "
+"the scene."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:24
+msgid ""
+"As animation is composed of incremental changes spanning multiple frames, "
+"usually these properties ARE NOT manually modified *frame by frame*, "
+"because:"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:27
+msgid "it would take ages!"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:28
+msgid ""
+"it would be very difficult to get smooth variations of the property (unless "
+"you compute mathematical functions and type a precise value for each frame, "
+"which would be crazy)."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:31
+msgid ""
+"This is why nearly all direct animation is done using **interpolation**."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:33
+msgid ""
+"The idea is simple: you define a few Key Frames, which are multiple frames "
+"apart. Between these keyframes, the properties' values are computed "
+"(interpolated) by Blender and filled in. Thus, the animators' workload is "
+"significantly reduced."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:41
+msgid "Example of interpolation"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:44
+msgid "For example, if you have:"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:46
+msgid "a control point of value ``0`` at frame ``0``,"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:47
+msgid "another one of value ``10`` at frame ``25``,"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:48
+msgid "linear interpolation,"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:50
+msgid "then, at frame ``5`` we get a value of ``2``."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:53
+msgid ""
+"The same goes for all intermediate frames: with just two points, you get a "
+"smooth growth from ``0`` to ``10`` along the **25 frames**. Obviously, if "
+"you'd like the frame ``15`` to have a value of ``9``, you'd have to add "
+"another control point (or keyframe)..."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:60
+msgid "Settings"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:62
+msgid ""
+"F-curves have three additional properties, which control the interpolation "
+"between points, extension behavior, and the type of handles."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:67
+msgid "Interpolation Mode"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:69
+msgid ""
+"You have three choices (:kbd:`T`, or :menuselection:`Curve --> Interpolation"
+" Mode`):"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:75
+#: ../../../manual/editors/graph_editor/fcurves.rst:122
+msgid "Constant"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:72
+msgid ""
+"There is no interpolation at all. The curve holds the value of its last "
+"keyframe, giving a discrete (stairway) \"curve\". Usually only used during "
+"the initial \"blocking\" stage in pose-to-pose animation workflows."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:80
+msgid "Constant."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:87
+#: ../../../manual/editors/graph_editor/fcurves.rst:133
+msgid "Linear"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:84
+msgid ""
+"This simple interpolation creates a straight segment between each neighbor "
+"keyframes, giving a broken line. It can be useful when using only two "
+"keyframes and the *Extrapolation* extend mode, to easily get an infinite "
+"straight line (i.e. a linear curve)."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:92
+msgid "Linear."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:98
+msgid "Bezier"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:96
+msgid ""
+"The more powerful and useful interpolation, and the default one. It gives "
+"nicely smoothed curves, i.e. smooth animations!"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:103
+msgid "Bézier."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:106
+msgid ""
+"Remember that some FCurves can only take discrete values, in which case they"
+" are always shown as if constant interpolated, whatever option you chose."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:111
+msgid "Extrapolation"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:113
+msgid "(:kbd:`Shift-E`, or :menuselection:`Channel --> Extrapolation Mode`)"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:115
+msgid ""
+"Extrapolation defines the behavior of a curve before the first and after the"
+" last keyframes."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:117
+msgid "There are two basic extrapolation modes:"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:120
+msgid ""
+"The default one, curves before their first keyframe and after their last one"
+" have a constant value (the one of these first and last keyframes)."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:127
+msgid "Constant extrapolation"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:131
+msgid ""
+"Curves ends are straight lines (linear), as defined by their first two "
+"keyframes (respectively their last two keyframes)."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:138
+msgid "Linear extrapolation"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:141
+msgid ""
+"Additional extrapolation tools (e.g. the \"Cycles\" F-Modifier) are located "
+"in the :doc:`F-Curve Modifiers </editors/graph_editor/fmodifiers>`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:146
+msgid "Handle Types"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:148
+msgid ""
+"There is another curve option quite useful for Bézier-interpolated curves. "
+"You can set the type of handle to use for the curve points :kbd:`V`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:153
+msgid "Automatic"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:152
+msgid "Keyframes are automatically interpolated"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:158
+msgid "Auto handles"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:164
+msgid "Vector"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:162
+msgid ""
+"Creates linear interpolation between keyframes. The linear segments remain "
+"if keyframe centers are moved. If handles are moved, the handle becomes "
+"Free."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:169
+msgid "Vector handles"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:174
+msgid "Aligned"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:173
+msgid "Handle maintain rotation when moved, and curve tangent is maintained"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:179
+msgid "Aligned handles"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:184
+msgid "Free"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:183
+msgid "Breaks handles tangents"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:189
+msgid "Free handles"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:194
+msgid "Auto Clamped"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:193
+msgid "Auto handles clamped to not overshoot"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:199
+msgid "Auto clamped handles"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:203
+msgid "Direction of time"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:205
+msgid ""
+"Although F-curves are very similar to :ref:`curves_bezier`, there are some "
+"important differences."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:208
+msgid ""
+"For obvious reasons, **a property represented by a Curve cannot have more "
+"than one value at a given time**, hence:"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:213
+msgid ""
+"when you move a control point ahead of a control point that was previously "
+"ahead of the point that you are moving, the two control points switch their "
+"order in the edited curve, to avoid that the curve goes back in time"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:215
+msgid "for the above reason, it's impossible to have a closed Ipo curve"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:0
+msgid "Two control points switching: the curve can't go back in time!"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:223
+msgid "Before moving the second keyframe"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:227
+msgid "After moving the second keyframe"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:230
+msgid "Editing Tools"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:232
+msgid ""
+"By default, when new channels are added, the *Graph Editor* sets them to "
+"*Edit Mode*. Selected channels can be locked by pressing :kbd:`Tab`."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:235
+msgid "Many of the hotkeys are the same as the viewport ones, for example:"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:237
+msgid ":kbd:`G` to grab"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:238
+msgid ":kbd:`R` to rotate"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:239
+msgid ":kbd:`S` to scale"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:240
+msgid ":kbd:`B` for border select/deselect"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:242
+msgid ""
+"And of course you can lock the transformation along the X (time frame) or Y "
+"(value) axises by pressing :kbd:`X` or :kbd:`Y` during transformation."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:245
+msgid ""
+"For precise control of the keyframe position and value, you can set values "
+"in the *Active Keyframe* of the Properties Region."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:249
+msgid "Transform Snapping"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:251
+msgid ""
+"When transforming keyframes with :kbd:`G`, :kbd:`R`, :kbd:`S`, the "
+"transformation can be snapped to increments."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:254
+msgid "Snap Transformation to 1.0 :kbd:`Ctrl`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:256
+msgid "Divide Transformation by 10.0 :kbd:`Shift`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:258
+msgid ""
+"Keyframes can be snapped to different properties by using the *Snap Keys* "
+"tool."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:273
+msgid "Snap Keys :kbd:`Shift-S`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:261
+msgid "Current Frame"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:262
+msgid "Snap the selected keyframes to the *Time Cursor*."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:263
+msgid "Cursor Value"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:264
+msgid "Snap the selected keyframes to the *Cursor*."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:265
+msgid "Nearest Frame"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:266
+msgid "Snap the selected keyframes to their nearest frame individually."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:267
+msgid "Nearest Second"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:268
+msgid ""
+"Snap the selected keyframes to their nearest second individually, based on "
+"the *FPS* of the scene."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:269
+msgid "Nearest Marker"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:270
+msgid "Snap the selected keyframes to their nearest marker individually."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:273
+msgid "Flatten Handles"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:272
+msgid "Flatten the *Bezier* handles for the selected keyframes."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:0
+msgid "Flatten Handles snapping example."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:281
+msgid "Before Flatten Handles."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:286
+msgid "After Flatten Handles."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:289
+msgid "Mirror"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:291
+msgid ""
+"Selected keyframes can be mirrored over different properties using the "
+"*Mirror Keys* tool."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:305
+msgid "Mirror Keys :kbd:`Shift-M`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:295
+msgid "By Times Over Current Frame"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:296
+msgid "Mirror horizontally over the *Time Cursor*."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:297
+msgid "By Values over Cursor Value"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:298
+msgid "Mirror vertically over the *Cursor*."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:299
+msgid "By Times over Time 0"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:300
+msgid "Mirror horizontally over frame 0."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:301
+msgid "By Values over Value 0"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:302
+msgid "Mirror vertically over value 0."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:305
+msgid "By Times over First Selected Marker"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:304
+msgid "Mirror horizontally the over the first selected *Marker*."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:308
+msgid "Clean Keyframes"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:310
+msgid ""
+"*Clean Keyframes* resets the keyframe tangents to their auto-clamped shape, "
+"if they have been modified. *Clean Keyframes* :kbd:`O`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:318
+msgid "FCurve before cleaning"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:323
+msgid "FCurve after cleaning"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:327
+msgid "Smoothing"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:329
+msgid ""
+"(:kbd:`Alt-O` or :menuselection:`Key --> Smooth Keys`) There is also an "
+"option to smooth the selected curves , but beware: its algorithm seems to be"
+" to divide by two the distance between each keyframe and the average linear "
+"value of the curve, without any setting, which gives quite a strong "
+"smoothing! Note that the first and last keys seem to be never modified by "
+"this tool."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:340
+msgid "FCurve before smoothing"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:345
+msgid "FCurve after smoothing"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:349
+msgid "Sampling and Baking Keyframes"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:352
+msgid "Sample Keyframes :kbd:`Shift-O`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:352
+msgid ""
+"Sampling a set a keyframes replaces interpolated values with a new keyframe "
+"for each frame."
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:359
+msgid "FCurve before sampling"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:364
+msgid "FCurve after sampling"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:368
+msgid "Bake Curves :kbd:`Alt-C`"
+msgstr ""
+
+#: ../../../manual/editors/graph_editor/fcurves.rst:367
+msgid ""
+"Baking a curve replaces it with a set of sampled points, and removes the "
+"ability to edit the curve."
+msgstr ""

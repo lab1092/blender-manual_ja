@@ -36,5 +36,5 @@ There are several methods of removing key frames
 Editing Key Frames
 ==================
 
-For editing key frames go to the :doc:`Graph Editor </animation/editors/graph>`
-or to the :doc:`Dopesheet </animation/editors/dopesheet>`
+For editing key frames go to the :doc:`Graph Editor </editors/graph_editor/introduction>`
+or to the :doc:`Dopesheet </editors/dope_sheet/dope_sheet>`

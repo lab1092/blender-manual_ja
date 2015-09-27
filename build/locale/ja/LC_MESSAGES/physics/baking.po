@@ -1,0 +1,230 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-27 05:03+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../manual/physics/baking.rst:4
+msgid "Baking Physics Simulations"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:6
+msgid ""
+":term:`Baking` refers to the act of storing or caching the results of a "
+"calculation."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:8
+msgid ""
+"It's generally recommended to bake your physics simulations before "
+"rendering. Aside from no longer needing to go through the time-consuming "
+"process of simulating again, baking can help prevent potential glitches and "
+"ensure that the outcome of the simulation remains exactly the same every "
+"time."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:17
+msgid ""
+"Most physics simulators in blender use a similar system, but not all have "
+"exactly the same settings available. All the settings are covered here, but "
+"individual physics types may not provide all these options."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:26
+msgid "Compression"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:21
+msgid ""
+"Compression level for cache files. Some physics caches can be very large "
+"(such as smoke). Blender can compress these caches in order to save space."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:24
+msgid ""
+"*Light* compression optimizes speed of compressing/decompressing operations "
+"over file size. *Heavy* compression will result in smaller cache files more "
+"than *Light*, however requires more CPU time to compress/decompress."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:33
+msgid "External"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:29
+msgid "Read and write the cache to disk using a user-specified file path."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:33
+msgid "Index Number"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:32
+msgid ""
+"This number specifies which cache should be used when the specified cache "
+"directory contains `multiple caches`_. `0` refers to the top-most cache, `1`"
+" to the second from the top, `2` to the third, and so on."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:39
+msgid "Use Lib Path"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:36
+msgid ""
+"Share the disk cache when the physics object is "
+":doc:`linked</data_system/linked_libraries>` into another blendfile."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:38
+msgid ""
+"When this option is enabled, linked versions of the object will reference "
+"the same disk cache. When disabled, linked versions of the object will use "
+"independent caches."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:42
+msgid "Start"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:42
+msgid "Frame on which to start the simulation."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:45
+msgid "End"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:45
+msgid "Frame on which to stop the simulation."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:53
+msgid "Cache Step"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:48
+msgid "Interval for storing simulation data."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:50
+msgid ""
+"Some physics systems (such as particles) allow for positions to be stored "
+"only on every nth frame, letting the positions for in-between frames be "
+"interpolated. Using a cache step greater than 1 will result in a smaller "
+"cache, but the result may differ from the original simulation."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:60
+msgid "Bake"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:58
+msgid ""
+"Start baking. Blender will become unresponsive during most baking "
+"operations. The cursor will display as a number representing the bakes' "
+"progress."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:67
+msgid "Free Bake"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:65
+msgid ""
+"Mark the baked cache as temporary. The data will still exist, but will be "
+"removed with the next object modification and frame change. This button is "
+"only available when the physics system has been baked."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:72
+msgid "Calculate To Frame"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:72
+msgid ""
+"Bake only up to the current frame. Limited by *End* frame set in the cache "
+"settings."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:78
+msgid "Current Cache to Bake"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:75
+msgid ""
+"Store any temporarily cached simulation data as a bake. Note that playing "
+"the animation will try to simulate any visible physics simulations. "
+"Depending on the physics type, this data may be temporarily cached. Normally"
+" such temporary caches are cleared when an object or setting is modified, "
+"but converting it to a bake will \"save\" it."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:84
+msgid "Bake All Dynamics"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:81
+msgid ""
+"Bake all physics systems in the scene, even those of different types. Useful"
+" for baking complex setups involving interactions between different physics "
+"types."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:84
+msgid "See :ref:`Bake <physics-bake>`"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:89
+msgid "Free All Bakes"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:87
+msgid ""
+"Free bakes of all physics systems in the scene, even those of different "
+"types."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:89
+msgid "See :ref:`Free Bake <free-physics-bake>`."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:95
+msgid "Update All To Frame"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:92
+msgid "Bake all physics systems in the scene to the current frame."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:94
+msgid "See :ref:`Calculate To Frame <calc-physics-bake-to-frame>`"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:98
+msgid "Multiple Caches"
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:100
+msgid ""
+"Blender allows for storing and managing multiple caches at once for the same"
+" physics object."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:104
+msgid "Two different caches stored simultaneously."
+msgstr ""
+
+#: ../../../manual/physics/baking.rst:106
+msgid ""
+"Caches can be added and removed with the :kbd:`+` and :kbd:`-` buttons. "
+"Renaming a cache can be done by either double clicking or pressing :kbd"
+":`Ctrl-LMB` on the desired cache."
+msgstr ""

@@ -28,16 +28,16 @@ General Principles and Tools
 
 - :doc:`Key frames </animation/basics/key_frames>`
 - :doc:`Animation Editors </animation/editors/index>`
-- :doc:`Using The Timeline </animation/editors/timeline>`
+- :doc:`Using The Timeline </editors/timeline>`
 - :doc:`Markers </animation/basics/markers>`
 
 
 The Graph Editor
 ----------------
 
-- :doc:`F-Curves </animation/editors/graph/fcurves>`
-- :doc:`Editing Curves </animation/editors/graph/fcurves>`
-- :doc:`F-Curve Modifiers </animation/editors/graph/fmodifiers>`
+- :doc:`F-Curves </editors/graph_editor/fcurves>`
+- :doc:`Editing Curves </editors/graph_editor/fcurves>`
+- :doc:`F-Curve Modifiers </editors/graph_editor/fmodifiers>`
 
 
 The Action Editor
@@ -97,14 +97,14 @@ Animation Basics
 Animation Editors
 -----------------
 
-:doc:`Timeline </animation/editors/timeline>`
+:doc:`Timeline </editors/timeline>`
    The Timeline Editor is a quick editor to set and control the time frame.
    This also has some tools for animation.
-:doc:`Graph Editor </animation/editors/graph>`
+:doc:`Graph Editor </editors/graph_editor/introduction>`
    The Graph Editor is mostly used to edit the F-Curves and Keyframes for Channels and Drivers.
-:doc:`Dope Sheet </animation/editors/dopesheet>`
+:doc:`Dope Sheet </editors/dope_sheet/dope_sheet>`
    The Dopes Sheet contains a collection of animation editors.
-:doc:`NLA Editor </animation/editors/nla>`
+:doc:`NLA Editor </editors/nla>`
    The NLA Editor is used to edit and blend Actions together.
 
 
@@ -126,7 +126,7 @@ Categories
    Rigid Bodies can simulate dynamic objects that are fairly rigid.
    Fluids, which include liquids and gasses, can be simulated, including Smoke.
    Force Fields can modify the behavior of simulations.
-:doc:`Motion Tracking </motion_tracking/index>`
+:doc:`Motion Tracking </editors/movie_clip_editor/index>`
    Motion tracking is a new technique available in Blender. It is still under development,
    and currently supports basic operations for 2D motion tracking, 3D motion tracking, and camera solution.
 `Animation Scripts <http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts#Animation_Scripts>`__

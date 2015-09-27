@@ -27,14 +27,6 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:12
-msgid ""
-"Currently **Point**, **Spot**, **Area** and **Sun** lamps are supported. "
-"Hemi lamps are not supported, and will be rendered as point and sun lamps "
-"respectively, but they may start working in the future, so it's best not to "
-"enable them to preserve compatibility."
-msgstr ""
-
 #: ../../../manual/render/cycles/lamps.rst:17
 msgid "Size"
 msgstr ""
@@ -45,66 +37,109 @@ msgid ""
 "shadows and shading."
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:22
+#: ../../../manual/render/cycles/lamps.rst:26
 msgid "Cast Shadow"
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:20
+#: ../../../manual/render/cycles/lamps.rst:24
 msgid ""
 "By disabling this option, light from lamps will not be blocked by objects "
 "in-between. This can speed up rendering by not having to trace rays to the "
 "light source."
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:25
+#: ../../../manual/render/cycles/lamps.rst:29
 msgid "Point Lamp"
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:33
+#: ../../../manual/render/cycles/lamps.rst:37
 msgid "Spot Lamp"
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:42
+#: ../../../manual/render/cycles/lamps.rst:46
 msgid "Area Lamp"
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:44
+#: ../../../manual/render/cycles/lamps.rst:48
 msgid ""
 "Area lamps emit light from a square or rectangular area with a Lambertian "
 "distribution."
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:48
+#: ../../../manual/render/cycles/lamps.rst:62
 msgid "Sun Lamp"
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:50
+#: ../../../manual/render/cycles/lamps.rst:64
 msgid ""
 "Sun lamps emit light in a given direction. Their position is not taken into "
 "account; they are always located outside of the scene, infinitely far away, "
 "and will not result in any distance falloff."
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:54
+#: ../../../manual/render/cycles/lamps.rst:68
 msgid ""
 "Because they are not located inside the scene, their strength uses different"
 " units, and should typically be set to lower values than other lights."
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:27
+#: ../../../manual/render/cycles/lamps.rst:31
 msgid ""
 "Point lamps emit light equally in all directions. By setting the *Size* "
 "larger than zero, they become spherical lamps, which give softer shadows and"
 " shading. The strength of point lamps is specified in Watts."
 msgstr ""
 
-#: ../../../manual/render/cycles/lamps.rst:35
+#: ../../../manual/render/cycles/lamps.rst:39
 msgid ""
 "Spot lamps emit light in a particular direction, inside a cone. By setting "
 "the *Size* larger than zero, they can cast softer shadows and shading. The "
 "size parameter defines the size of the cone, while the blend parameter can "
 "soften the edges of the cone."
 msgstr ""
+
+#: ../../../manual/render/cycles/lamps.rst:12
+msgid ""
+"Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported. *Hemi* "
+"lamps are not supported, and will be rendered as point and sun lamps "
+"respectively, but they may start working in the future, so it's best not to "
+"enable them to preserve compatibility."
+msgstr ""
+
+#: ../../../manual/render/cycles/lamps.rst:51
+msgid "Light Portals"
+msgstr ""
+
+#: ../../../manual/render/cycles/lamps.rst:53
+msgid ""
+"Area lamps can also function as light portals to help sample the environment"
+" light, and significantly reduce noise in interior scenes. Note that "
+"rendering with portals is usually slower, but as it converges more quickly, "
+"less samples are required."
+msgstr ""
+
+#: ../../../manual/render/cycles/lamps.rst:57
+msgid ""
+"Light portals work by enabling the Portal option, and placing areas lamps in"
+" windows, door openings, and any place where light will enter the interior."
+msgstr ""
+
+#: ../../../manual/render/cycles/lamps.rst:21
+msgid "Max Bounces"
+msgstr ""
+
+#: ../../../manual/render/cycles/lamps.rst:20
+msgid ""
+"Maximum number of times light from the lamp is allowed to :term:`bounce`. "
+"Limited by :ref:`scene-wide bounce settings <cycles-bounces>`"
+msgstr ""
+
+#~ msgid ""
+#~ "Currently **Point**, **Spot**, **Area** and **Sun** lamps are supported. "
+#~ "Hemi lamps are not supported, and will be rendered as point and sun lamps "
+#~ "respectively, but they may start working in the future, so it's best not to "
+#~ "enable them to preserve compatibility."
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Point lamps emit light equally in all directions. By setting the "

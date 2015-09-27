@@ -14,17 +14,6 @@
    basics/keying_sets.rst
    basics/markers.rst
    basics/motion_paths.rst
-   editors/index.rst
-   editors/timeline.rst
-   editors/graph.rst
-   editors/graph/fcurves.rst
-   editors/graph/fmodifiers.rst
-   editors/dopesheet.rst
-   editors/dopesheet/dopesheet.rst
-   editors/dopesheet/action.rst
-   editors/dopesheet/shapekey.rst
-   editors/dopesheet/greasepencil.rst
-   editors/nla.rst
    techs.rst
    techs/object.rst
    techs/object/constraint.rst

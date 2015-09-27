@@ -51,10 +51,10 @@ The keyframes are set values by the user.
 The *F-Curve* is used to interpolate the difference between the keyframes.
 
 The *F-Curve* has different types of interpolation and also
-:doc:`F-Curve Modifiers </animation/editors/graph/fmodifiers>`.
+:doc:`F-Curve Modifiers </editors/graph_editor/fmodifiers>`.
 
-Most the settings for the :doc:`F-Curve </animation/editors/graph/fcurves>`
-are found in the :doc:`Graph Editor </animation/editors/graph>`.
+Most the settings for the :doc:`F-Curve </editors/graph_editor/fcurves>`
+are found in the :doc:`Graph Editor </editors/graph_editor/introduction>`.
 
 
 Basic Animation
@@ -203,12 +203,12 @@ Working with Actions
 When you first animate an object by adding keyframes,
 blender creates an *Action* to record the data.
 
-*Actions* can be managed with the *Action Browser* in the :doc:`DopeSheet </animation/editors/dopesheet>`
-*Action Editor* header, or the properties region of the :doc:`NLA Editor </animation/editors/nla>`.
+*Actions* can be managed with the *Action Browser* in the :doc:`DopeSheet </editors/dope_sheet/dope_sheet>`
+*Action Editor* header, or the properties region of the :doc:`NLA Editor </editors/nla>`.
 
 If you are making multiple actions for the same object,
 press the **F** button for each action,
 this will give the actions a *Fake User* and will make blender save the unlinked actions.
 
 Objects can only use one *Action* at a time for editing,
-the :doc:`NLA Editor </animation/editors/nla>` is used to blend mutiple actions together.
+the :doc:`NLA Editor </editors/nla>` is used to blend mutiple actions together.

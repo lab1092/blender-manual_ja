@@ -31,10 +31,10 @@ Key Features
   :doc:`rigging and skinning </rigging/introduction>`,
   :doc:`animation </animation/introduction>`,
   many types of :doc:`simulations </physics/introduction>` (fluid, rigid bodies, etc),
-  :doc:`scripting </extensions/introduction>`,
+  :doc:`scripting </advanced/scripting/introduction>`,
   :doc:`rendering </render/introduction>`,
   :doc:`compositing </composite_nodes/introduction>`,
-  :doc:`VFX </motion_tracking/index>`,
+  :doc:`VFX </editors/movie_clip_editor/index>`,
   and :doc:`game creation </game_engine/introduction>`.
 - Cross platform, with an OpenGL GUI that is uniform on all major platforms (and customizable with Python scripts).
 - High quality 3D architecture enabling fast and efficient creation work-flow.

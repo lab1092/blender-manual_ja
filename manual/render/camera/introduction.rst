@@ -15,14 +15,6 @@ A scene can contain more than one camera, but only one of them will be used at a
 Add a New Camera
 ================
 
-.. admonition:: Reference
-   :class: refbox
-
-   | Mode:     *Object* mode
-   | Menu:     :menuselection:`Add --> Camera`
-   | Hotkey:   :kbd:`Shift-A` to add new.
-
-
 In *Object* mode simply press :kbd:`Shift-A` and in the pop-up menu,
 choose :menuselection:`Add --> Camera`.
 
@@ -104,7 +96,7 @@ Camera
 Sensor size
    This setting is an alternative way to control the focal-length,
    it's useful to match the camera in Blender to a physical camera & lens combination,
-   e.g. for :doc:`motion tracking </motion_tracking/index>`.
+   e.g. for :doc:`motion tracking </editors/movie_clip_editor/index>`.
 
 .. _render-camera-dof:
 
@@ -205,11 +197,11 @@ Harmonious Triangle B
 
 
 Safe Areas
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
 When this is enabled, extra dotted frames are drawn when in camera view, delimiting the area considered as
 "safe" for important elements. :doc:`More information about them in the safe areas section
-</editors/sequencer/safe_areas>`.
+</render/camera/safe_areas>`.
 
 Camera Navigation
 =================

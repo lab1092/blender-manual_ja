@@ -11,250 +11,433 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../manual/data_system/datablocks.rst:7
+#: ../../../manual/data_system/datablocks.rst:12
 msgid "Datablocks"
 msgstr "データブロック"
 
-#: ../../../manual/data_system/datablocks.rst:9
-msgid ""
-"The base unit for any blender project is the datablock. Examples of "
-"datablocks include: meshes, objects, materials and textures. Be it a simple "
-"sphere floating over a plane, or a full featured film, a project is defined "
-"by the datablocks it contains, the properties set for those datablocks, and "
-"the way the datablocks link to each other. Datablocks can reside within as "
-"many .blend files as needed for good project organization."
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:19
+#: ../../../manual/data_system/datablocks.rst:41
 msgid "Datablocks view"
 msgstr ""
 
-#: ../../../manual/data_system/datablocks.rst:22
-msgid "Types of Datablocks:"
+#: ../../../manual/data_system/datablocks.rst:14
+msgid ""
+"The base unit for any Blender project is the data-block. Examples of data-"
+"blocks include: meshes, objects, materials, textures, node-trees, scenes, "
+"texts, brushes and even screens."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:18
+msgid ""
+"For clarity, bones, sequence strips and vertex groups are **not** data-"
+"blocks, they belong to armature, scene and mesh types respectively."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:21
+msgid "Some common characteristics:"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:23
+msgid "They're the primary contents of the ``.blend`` file."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:24
-msgid "RNA"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:25
-msgid "Filename"
+msgid ""
+"They can link to each other, for reuse and instancing. *(child/parent, "
+"object/object-data, with modifiers and constraints too).*"
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:26
-msgid "File Has Unsaved Changes"
+msgid "Their names are unique."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:27
-msgid "File is Saved"
+msgid "They can be added/removed/edited/duplicated."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:28
-msgid "Cameras"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:29
-msgid "Scenes"
+msgid ""
+"They can be linked between files *(only enabled for a limited set of data-"
+"blocks)*"
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:30
-msgid "Objects"
+msgid "They can have their own animation data."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:31
-msgid "Materials"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:32
-msgid "Node Groups"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:33
-msgid "Meshes"
+msgid "They can have custom properties."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:34
-msgid "Lamps"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:35
-msgid "Libraries"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:36
-msgid "Screens"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:37
-msgid "Window Managers"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:38
-msgid "Images"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:39
-msgid "Lattices"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:40
-msgid "Curves"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:41
-msgid "Metaballs"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:42
-msgid "Vector Fonts"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:43
-msgid "Textures"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:44
-msgid "Brushes"
+msgid ""
+"When doing more complex projects managing data-blocks becomes more "
+"important, especially when inter-linking ``.blend`` files."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:45
-msgid "Worlds"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:46
-msgid "Groups"
+msgid "Users (Garbage Collection)"
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:47
-msgid "Shape Keys"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:48
-msgid "Scripts"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:49
-msgid "Texts"
+msgid ""
+"It's good to be aware of how Blender, handles data-blocks life-time, when "
+"they are freed and why."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:50
-msgid "Speakers"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:51
-msgid "Sounds"
+msgid ""
+"Blender follows the general rule that data which isn't used, will be freed."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:52
-msgid "Armatures"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:53
-msgid "Actions"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:54
-msgid "Particles"
+msgid ""
+"Its common to add and remove a lot of data while working, this has the "
+"advantage of not having to manually manage every single data-block."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:55
-msgid "Grease Pencil"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:56
-msgid "Movie Clips"
+msgid ""
+"This works by skipping zero user data-blocks when writing ``.blend`` files."
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:57
-msgid "Masks"
+msgid ""
+"While this is acceptable as default behavior, there are times when you want "
+"to save a data-block even when its unused *(typically for re-usable asset "
+"libraries).* see `Fake User`_."
 msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:61
-msgid "Copying and Linking Datablocks"
-msgstr "データブロックのコピーとリンク"
 
 #: ../../../manual/data_system/datablocks.rst:63
-msgid "It is possible to copy or link any type of datablock."
+msgid "Fake User"
 msgstr ""
 
-#: ../../../manual/data_system/datablocks.rst:91
-msgid "Copying and Linking Object Datablocks"
-msgstr "オブジェクトデータブロックのコピーとリンク"
-
-#: ../../../manual/data_system/datablocks.rst:97
-msgid "Full copy"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:102
-msgid "Linked copy"
-msgstr ""
-
-#: ../../../manual/data_system/datablocks.rst:105
-msgid "Copying and Linking other Datablocks"
-msgstr "その他のデータブロックのコピーとリンク"
-
-#: ../../../manual/data_system/datablocks.rst:115
-msgid "Unlinked Datablocks"
-msgstr "アンリンクされたデータブロック"
-
-#: ../../../manual/data_system/datablocks.rst:66
+#: ../../../manual/data_system/datablocks.rst:65
 msgid ""
-"To copy a *Scene* datablock, use *Scene* list found in the header of *User "
-"Preferences* window. The list is to the right of the menus and window "
-"workspace list. Select *ADD NEW* to make a copy of the current scene. Select"
-" *Full Copy* from the list that opened to make a copy. The current scene "
-"will be **fully** copied to the new scene."
+"Since zero user data-blocks aren't saved. There are times when you want to "
+"force the data to be kept irrespective of its users."
 msgstr ""
 
-#: ../../../manual/data_system/datablocks.rst:73
+#: ../../../manual/data_system/datablocks.rst:68
 msgid ""
-"Instead of copying **everything**, you can link datablocks by selecting "
-"*Link Objects*, to use the same *Object* datablocks linked into the two "
-"scenes, or *Link ObData*, to create separated objects sharing the same "
-"*ObData* datablocks (meshes, curves, materials, etc.). Note that if you "
-"select *Link Objects*, in fact you copy nearly nothing, as *Object* "
-"datablocks are parent of all *ObData* datablocks: nearly all modifications "
-"(object location, mesh geometry, ...) in a scene will be reflected in the "
-"other ones linked this way as well. As for *Link ObData*, it creates a "
-"\"real\" copy of the objects, but not of their child datalocks: the "
-"locations, scales and rotations of the objects will be specific to a scene, "
-"but neither their forms nor their materials, textures, ..., will be (as "
-"defined by *ObData* datablocks)."
+"If you're building a ``.blend`` file to serve as a library of things that "
+"you intend to link-to from *other* files, you'll need to make sure that they"
+" don't accidentally get deleted from the library file."
 msgstr ""
 
-#: ../../../manual/data_system/datablocks.rst:100
+#: ../../../manual/data_system/datablocks.rst:71
 msgid ""
-":kbd:`Alt-D` makes a linked copy. All datablocks but the object one are "
-"linked."
+"Do this by giving the data-blocks a *Fake User*, by pressing the *F* button "
+"next to the name of the data-block. This prevents the user count from ever "
+"becoming zero: therefore, the data-block won't be deleted. (since Blender "
+"doesn't keep track of how many other files link to this one.)"
 msgstr ""
 
-#: ../../../manual/data_system/datablocks.rst:107
+#: ../../../manual/data_system/datablocks.rst:78
+msgid "Users (Sharing)"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:80
+msgid "Many data-blocks can be shared among other data-blocks,"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:82
+msgid "Examples where sharing data is common."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:84
+msgid "Sharing textures among materials."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:85
+msgid "Sharing meshes between objects (instances)."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:86
 msgid ""
-"When an *ObData* datablock is used (linked) by more than one object, a small"
-" button with its number of linked objects (users) shows up next to its name,"
-" in its settings window (*Editing* context for meshes, curves, cameras, ...,"
-" *Shading* context, *Material* sub-context for materials, etc.). If you "
-"click on it, you create a copy of this datablock for the current object."
+"Sharing animated actions between objects, for example to make all the lights"
+" dim together."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:90
+msgid "Copying and Linking Objects Between Scenes"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:92
+msgid ""
+"Sometimes you may want to link or copy objects between scenes. This is "
+"possible by first selecting objects you want to link or copy and then using "
+"the *Make Links* and *Make Single User* items found in *Object* menu in the "
+"3D viewport header. Use *Make Links* to make links between scenes. To make a"
+" plain copy, you first make a link and then use *Make Single User* to make a"
+" stand-alone copy of the object in your current scene. Further information "
+"on working with scenes can be found :doc:`here </data_system/scenes>`."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:101
+msgid "Appending or Linking Across Files"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:103
+msgid ""
+"The content of one ``.blend`` file is easily accessed and put into your "
+"current file by using :menuselection:`File --> Append` or "
+":menuselection:`File --> Link` To find out more about how to copy or link "
+"objects across ``.blend`` files, see :doc:`linked libraries "
+"</data_system/linked_libraries>`."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:110
+msgid "Copying and Linking"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:112
+msgid "It is possible to copy or link most of Blender's data-block."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:114
+msgid "See:"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:116
+msgid ":doc:`Adding scenes </data_system/scenes>`"
 msgstr ""
 
 #: ../../../manual/data_system/datablocks.rst:117
-msgid ""
-"A datablock can become unlinked. For example a material datablock will be "
-"unlinked if the object it was linked to is deleted. If a datablock is "
-"unlinked, by default it will be deleted from the ``.blend`` file when "
-"Blender is closed. To keep an unlinked datablock in a .blend file, click the"
-" \"F\" button to the right of the object's name in the Objects and Links "
-"panel."
+msgid ":doc:`Object duplication </modeling/objects/duplication>`"
 msgstr ""
 
-#: ../../../manual/data_system/datablocks.rst:94
+#: ../../../manual/data_system/datablocks.rst:120
 msgid ""
-":kbd:`Shift-D` is used to make normal copy of the selected objects. The "
-"object and some of it's child datablocks will really be duplicated, the "
-"other children are just linked; you can define the attributes to be "
-"duplicated in *User Preferences* --> *Edit Methods*, button group *Duplicate"
-" with object:*."
+"When an *ObData* data-block is used (linked) by more than one object, a "
+"small button with its number of linked objects (users) shows up next to its "
+"name *(also visible for materials, textures, images)*. If you click on it, "
+"you create a single-user copy of this data-block for the current object."
 msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:127
+msgid "Removing Datablocks"
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:129
+msgid ""
+"As covered in `Users (Garbage Collection)`_, data-blocks are typically "
+"removed when they're no longer used."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:131
+msgid "There are some exceptions to this however."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:133
+msgid "Scenes, text, can be removed directly."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:135
+msgid ""
+"Other data-blocks such as groups and actions can be *Unlinked* from the "
+"*Outliner* context menu."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:139
+msgid ""
+"Some data (images especially) is hard to keep track of, especially since "
+"image views are counted as users."
+msgstr ""
+
+#: ../../../manual/data_system/datablocks.rst:142
+msgid ""
+"For data-blocks that can be unlinked - hold :kbd:`Shift` while pressing on "
+"the *X* button, This force-clears the user-count, so the data-block will be "
+"removed on reload."
+msgstr ""
+
+#~ msgid ""
+#~ "The base unit for any blender project is the datablock. Examples of "
+#~ "datablocks include: meshes, objects, materials and textures. Be it a simple "
+#~ "sphere floating over a plane, or a full featured film, a project is defined "
+#~ "by the datablocks it contains, the properties set for those datablocks, and "
+#~ "the way the datablocks link to each other. Datablocks can reside within as "
+#~ "many .blend files as needed for good project organization."
+#~ msgstr ""
+
+#~ msgid "Types of Datablocks:"
+#~ msgstr ""
+
+#~ msgid "RNA"
+#~ msgstr ""
+
+#~ msgid "Filename"
+#~ msgstr ""
+
+#~ msgid "File Has Unsaved Changes"
+#~ msgstr ""
+
+#~ msgid "File is Saved"
+#~ msgstr ""
+
+#~ msgid "Cameras"
+#~ msgstr ""
+
+#~ msgid "Scenes"
+#~ msgstr ""
+
+#~ msgid "Objects"
+#~ msgstr ""
+
+#~ msgid "Materials"
+#~ msgstr ""
+
+#~ msgid "Node Groups"
+#~ msgstr ""
+
+#~ msgid "Meshes"
+#~ msgstr ""
+
+#~ msgid "Lamps"
+#~ msgstr ""
+
+#~ msgid "Libraries"
+#~ msgstr ""
+
+#~ msgid "Screens"
+#~ msgstr ""
+
+#~ msgid "Window Managers"
+#~ msgstr ""
+
+#~ msgid "Images"
+#~ msgstr ""
+
+#~ msgid "Lattices"
+#~ msgstr ""
+
+#~ msgid "Curves"
+#~ msgstr ""
+
+#~ msgid "Metaballs"
+#~ msgstr ""
+
+#~ msgid "Vector Fonts"
+#~ msgstr ""
+
+#~ msgid "Textures"
+#~ msgstr ""
+
+#~ msgid "Brushes"
+#~ msgstr ""
+
+#~ msgid "Worlds"
+#~ msgstr ""
+
+#~ msgid "Groups"
+#~ msgstr ""
+
+#~ msgid "Shape Keys"
+#~ msgstr ""
+
+#~ msgid "Scripts"
+#~ msgstr ""
+
+#~ msgid "Texts"
+#~ msgstr ""
+
+#~ msgid "Speakers"
+#~ msgstr ""
+
+#~ msgid "Sounds"
+#~ msgstr ""
+
+#~ msgid "Armatures"
+#~ msgstr ""
+
+#~ msgid "Actions"
+#~ msgstr ""
+
+#~ msgid "Particles"
+#~ msgstr ""
+
+#~ msgid "Grease Pencil"
+#~ msgstr ""
+
+#~ msgid "Movie Clips"
+#~ msgstr ""
+
+#~ msgid "Masks"
+#~ msgstr ""
+
+#~ msgid "Copying and Linking Datablocks"
+#~ msgstr "データブロックのコピーとリンク"
+
+#~ msgid "It is possible to copy or link any type of datablock."
+#~ msgstr ""
+
+#~ msgid "Copying and Linking Object Datablocks"
+#~ msgstr "オブジェクトデータブロックのコピーとリンク"
+
+#~ msgid "Full copy"
+#~ msgstr ""
+
+#~ msgid "Linked copy"
+#~ msgstr ""
+
+#~ msgid "Copying and Linking other Datablocks"
+#~ msgstr "その他のデータブロックのコピーとリンク"
+
+#~ msgid "Unlinked Datablocks"
+#~ msgstr "アンリンクされたデータブロック"
+
+#~ msgid ""
+#~ "To copy a *Scene* datablock, use *Scene* list found in the header of *User "
+#~ "Preferences* window. The list is to the right of the menus and window "
+#~ "workspace list. Select *ADD NEW* to make a copy of the current scene. Select"
+#~ " *Full Copy* from the list that opened to make a copy. The current scene "
+#~ "will be **fully** copied to the new scene."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Instead of copying **everything**, you can link datablocks by selecting "
+#~ "*Link Objects*, to use the same *Object* datablocks linked into the two "
+#~ "scenes, or *Link ObData*, to create separated objects sharing the same "
+#~ "*ObData* datablocks (meshes, curves, materials, etc.). Note that if you "
+#~ "select *Link Objects*, in fact you copy nearly nothing, as *Object* "
+#~ "datablocks are parent of all *ObData* datablocks: nearly all modifications "
+#~ "(object location, mesh geometry, ...) in a scene will be reflected in the "
+#~ "other ones linked this way as well. As for *Link ObData*, it creates a "
+#~ "\"real\" copy of the objects, but not of their child datalocks: the "
+#~ "locations, scales and rotations of the objects will be specific to a scene, "
+#~ "but neither their forms nor their materials, textures, ..., will be (as "
+#~ "defined by *ObData* datablocks)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":kbd:`Alt-D` makes a linked copy. All datablocks but the object one are "
+#~ "linked."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When an *ObData* datablock is used (linked) by more than one object, a small"
+#~ " button with its number of linked objects (users) shows up next to its name,"
+#~ " in its settings window (*Editing* context for meshes, curves, cameras, ...,"
+#~ " *Shading* context, *Material* sub-context for materials, etc.). If you "
+#~ "click on it, you create a copy of this datablock for the current object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A datablock can become unlinked. For example a material datablock will be "
+#~ "unlinked if the object it was linked to is deleted. If a datablock is "
+#~ "unlinked, by default it will be deleted from the ``.blend`` file when "
+#~ "Blender is closed. To keep an unlinked datablock in a .blend file, click the"
+#~ " \"F\" button to the right of the object's name in the Objects and Links "
+#~ "panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":kbd:`Shift-D` is used to make normal copy of the selected objects. The "
+#~ "object and some of it's child datablocks will really be duplicated, the "
+#~ "other children are just linked; you can define the attributes to be "
+#~ "duplicated in *User Preferences* --> *Edit Methods*, button group *Duplicate"
+#~ " with object:*."
+#~ msgstr ""
 
 #~ msgid ""
 #~ ":kbd:`Shift-D` is used to make normal copy of the selected objects. The "

@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Buttons and Controls &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="up" title="Interface" href="index.html"/>
+        <link rel="next" title="Extended Controls" href="extended_controls.html"/>
+        <link rel="prev" title="Panels" href="panels.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#window-controls">Window Controls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#interface-controls">Interface Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#animation">Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#image-video">Image/Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#nodes-logic">Nodes/Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#settings">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/baking.html">Baking Physics Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/opengl.html">OpenGL Render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/startup_file.html">Startup File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting/index.html">Scripting &amp; Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/recover.html">Recovering Lost Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/general_help.html">General help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../glossary/conventions.html">About this manual</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Interface</a> &raquo;</li>
+      
+    <li>Buttons and Controls</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/interface/buttons_and_controls.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="buttons-and-controls">
+<h1>Buttons and Controls<a class="headerlink" href="#buttons-and-controls" title="Permalink to this headline">¶</a></h1>
+<p>Buttons and other controls can be found in almost every
+<a class="reference internal" href="../editors/index.html"><em>Window</em></a> of the Blender
+interface. The different types of controls are described below.</p>
+<div class="section" id="operation-buttons">
+<h2>Operation Buttons<a class="headerlink" href="#operation-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../_images/ConceptButtons2.jpg" src="../_images/ConceptButtons2.jpg" />
+<p class="caption"><span class="caption-text">Operation button</span></p>
+</div>
+<p>These are buttons that perform an operation when clicked with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+They can be identified by their gray color in the default color scheme.</p>
+</div>
+<div class="section" id="toggle-buttons">
+<h2>Toggle Buttons<a class="headerlink" href="#toggle-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<img alt="../_images/ConceptButtons1_1.jpg" src="../_images/ConceptButtons1_1.jpg" />
+<p class="caption"><span class="caption-text">Toggle buttons</span></p>
+</div>
+<p>Toggle buttons are typically displayed as check boxes.
+Clicking this type of button will toggle a state but will not perform any operation.</p>
+<div class="section" id="toggle-drag">
+<h3>Toggle Drag<a class="headerlink" href="#toggle-drag" title="Permalink to this headline">¶</a></h3>
+<p>To change many toggle buttons at once, you can <code class="kbd docutils literal"><span class="pre">LMB</span></code> drag over multiple buttons,
+This works for check-boxes, toggles in the outliner and layer buttons.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For layer buttons (a type of toggle button) it is often useful to hold <code class="kbd docutils literal"><span class="pre">Shift</span></code> at the same time,
+to set or clear many layers at once.</p>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="radio-buttons">
+<h2>Radio Buttons<a class="headerlink" href="#radio-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id3">
+<img alt="../_images/ConceptButtons1.jpg" src="../_images/ConceptButtons1.jpg" />
+<p class="caption"><span class="caption-text">Radio buttons</span></p>
+</div>
+<p>Radio buttons are used to choose from a small selection of &#8220;mutually exclusive&#8221; options.</p>
+</div>
+<div class="section" id="number-buttons">
+<h2>Number Buttons<a class="headerlink" href="#number-buttons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id4">
+<img alt="../_images/ConceptButtons3.jpg" src="../_images/ConceptButtons3.jpg" />
+<p class="caption"><span class="caption-text">Number buttons</span></p>
+</div>
+<p>Number buttons can be identified by their labels,
+which in most cases contains the name and a colon followed by a number.
+Number buttons can be edited in several ways:</p>
+<dl class="docutils">
+<dt>Incremental Steps</dt>
+<dd>To change the value in steps, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the small triangles on the sides of the button.</dd>
+<dt>Dragging</dt>
+<dd>To change the value in a wider range, hold down <code class="kbd docutils literal"><span class="pre">LMB</span></code> and drag the mouse to the left or right.</dd>
+<dt>Text Input</dt>
+<dd><p class="first">Press <code class="kbd docutils literal"><span class="pre">LMB</span></code> or <code class="kbd docutils literal"><span class="pre">Return</span></code> to edit the value as a text field.</p>
+<p>When entering values by hand, this button works like any other text button.</p>
+<ul class="last simple">
+<li>Press <code class="kbd docutils literal"><span class="pre">Return</span></code> to apply the change.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Esc</span></code> will cancel the value.</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="multi-value-editing">
+<h3>Multi-Value Editing<a class="headerlink" href="#multi-value-editing" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id5">
+<img alt="../_images/ui_multi_value_edit.png" src="../_images/ui_multi_value_edit.png" />
+<p class="caption"><span class="caption-text">Multi-value-editing</span></p>
+</div>
+<p>It&#8217;s often useful to edit multiple values at once (object scale or render resolution for example).</p>
+<p>This can be done by clicking on the button and dragging vertically to include buttons above/below.</p>
+<p>After the vertical motion you can drag from side to side, or release the <code class="kbd docutils literal"><span class="pre">LMB</span></code> to type in a value.</p>
+</div>
+<div class="section" id="expressions">
+<h3>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h3>
+<p>You can also enter expressions such as <code class="docutils literal"><span class="pre">3*2</span></code> instead of <code class="docutils literal"><span class="pre">6</span></code>. or <code class="docutils literal"><span class="pre">5/10+3</span></code>.
+Even constants like <code class="docutils literal"><span class="pre">pi</span></code> (3.142) or functions like <code class="docutils literal"><span class="pre">sqrt(2)</span></code> (square root of 2)
+may be used.</p>
+<p><em>These expressions are evaluated by Python; for all available math expressions see:</em>
+<a class="reference external" href="http://docs.python.org/py3k/library/math.html">math module reference</a></p>
+</div>
+<div class="section" id="units">
+<h3>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
+<p>As well as expressions, you can mix units with numbers; for this to work,
+units need to be set in the scene settings (Metric or Imperial).</p>
+<p>Examples of valid units include:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><code class="docutils literal"><span class="pre">1cm</span></code></li>
+<li><code class="docutils literal"><span class="pre">1m</span> <span class="pre">3mm</span></code></li>
+<li><code class="docutils literal"><span class="pre">1m,</span> <span class="pre">3mm</span></code></li>
+</ul>
+</td><td><ul class="simple">
+<li><code class="docutils literal"><span class="pre">2ft</span></code></li>
+<li><code class="docutils literal"><span class="pre">3ft/0.5km</span></code></li>
+<li><code class="docutils literal"><span class="pre">2.2mm</span> <span class="pre">+</span> <span class="pre">5'</span> <span class="pre">/</span> <span class="pre">3&quot;</span> <span class="pre">-</span> <span class="pre">2yards</span></code></li>
+</ul>
+</td></tr></table>
+<p><em>Note that the commas are optional.
+Notice how you can mix between metric and imperial even though the display can only show one at a time.</em></p>
+<div class="section" id="unit-names">
+<h4>Unit Names<a class="headerlink" href="#unit-names" title="Permalink to this headline">¶</a></h4>
+<p>Unit names have can be used with both long and short forms,
+here are listed recognized unit names you can use.</p>
+<p>Plurals of the names are recognized too, so <code class="docutils literal"><span class="pre">meter</span></code> and <code class="docutils literal"><span class="pre">meters</span></code> can both be used.</p>
+<table border="1" class="docutils" id="id6">
+<caption><span class="caption-text">Imperial Units</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Full Name</th>
+<th class="head">Short Name(s)</th>
+<th class="head">Scale of a Meter</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">thou</th>
+<td><code class="docutils literal"><span class="pre">mil</span></code></td>
+<td>0.0000254</td>
+</tr>
+<tr class="row-odd"><th class="stub">inch</th>
+<td><code class="docutils literal"><span class="pre">&quot;</span></code>, <code class="docutils literal"><span class="pre">in</span></code></td>
+<td>0.0254</td>
+</tr>
+<tr class="row-even"><th class="stub">foot, feet</th>
+<td><code class="docutils literal"><span class="pre">'</span></code>, <code class="docutils literal"><span class="pre">ft</span></code></td>
+<td>0.0254</td>
+</tr>
+<tr class="row-odd"><th class="stub">yard</th>
+<td><code class="docutils literal"><span class="pre">yd</span></code></td>
+<td>0.9144</td>
+</tr>
+<tr class="row-even"><th class="stub">chain</th>
+<td><code class="docutils literal"><span class="pre">ch</span></code></td>
+<td>20.1168</td>
+</tr>
+<tr class="row-odd"><th class="stub">furlong</th>
+<td><code class="docutils literal"><span class="pre">fur</span></code></td>
+<td>201.168</td>
+</tr>
+<tr class="row-even"><th class="stub">mile</th>
+<td><code class="docutils literal"><span class="pre">mi</span></code>, <code class="docutils literal"><span class="pre">m</span></code></td>
+<td>1609.344</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Metric Units</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Full Name</th>
+<th class="head">Short Name(s)</th>
+<th class="head">Scale of a Meter</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">micrometer</th>
+<td><code class="docutils literal"><span class="pre">um</span></code></td>
+<td>0.000001</td>
+</tr>
+<tr class="row-odd"><th class="stub">millimeter</th>
+<td><code class="docutils literal"><span class="pre">mm</span></code></td>
+<td>0.001</td>
+</tr>
+<tr class="row-even"><th class="stub">centimeter</th>
+<td><code class="docutils literal"><span class="pre">cm</span></code></td>
+<td>0.01</td>
+</tr>
+<tr class="row-odd"><th class="stub">decimeter</th>
+<td><code class="docutils literal"><span class="pre">dm</span></code></td>
+<td>0.1</td>
+</tr>
+<tr class="row-even"><th class="stub">meter</th>
+<td><code class="docutils literal"><span class="pre">m</span></code></td>
+<td>1.0</td>
+</tr>
+<tr class="row-odd"><th class="stub">dekameter</th>
+<td><code class="docutils literal"><span class="pre">dam</span></code></td>
+<td>10.0</td>
+</tr>
+<tr class="row-even"><th class="stub">hectometer</th>
+<td><code class="docutils literal"><span class="pre">hm</span></code></td>
+<td>100.0</td>
+</tr>
+<tr class="row-odd"><th class="stub">kilometer</th>
+<td><code class="docutils literal"><span class="pre">km</span></code></td>
+<td>1000.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="menu-buttons">
+<h2>Menu Buttons<a class="headerlink" href="#menu-buttons" title="Permalink to this headline">¶</a></h2>
+<p>Blender uses a variety of different menus for accessing options, tools and selecting data-blocks.</p>
+<div class="section" id="menu-shortcuts">
+<h3>Menu Shortcuts<a class="headerlink" href="#menu-shortcuts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Arrow keys can be used to navigate.</li>
+<li>Each menu item has an underlined character which can be pressed to activate it.</li>
+<li>Number keys or num-pad can be used to access menu items.
+(Where <code class="kbd docutils literal"><span class="pre">1</span></code> is the first menu item, <code class="kbd docutils literal"><span class="pre">2</span></code> the second... etc).</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Return</span></code> to activate the selected menu item.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Esc</span></code> to cancel the menu.</li>
+</ul>
+</div>
+<div class="section" id="header-menus">
+<h3>Header Menus<a class="headerlink" href="#header-menus" title="Permalink to this headline">¶</a></h3>
+<p>Header menus are used to configure the editor and access tools.</p>
+<p>See <a class="reference internal" href="window_system/headers.html"><em>Headers</em></a> for header options.</p>
+</div>
+<div class="section" id="pop-up-menus">
+<h3>Pop-Up Menus<a class="headerlink" href="#pop-up-menus" title="Permalink to this headline">¶</a></h3>
+<p>Pop-up menus are displayed as regular buttons, showing a range of options.
+For example, the <em>Add Modifier</em> button will produce a menu with all of the available modifiers.</p>
+<div class="figure align-center" id="id8">
+<img alt="../_images/ConceptButtons4_menue.jpg" src="../_images/ConceptButtons4_menue.jpg" />
+<p class="caption"><span class="caption-text">Modifier options</span></p>
+</div>
+</div>
+<div class="section" id="data-block-menus">
+<h3>Data-Block Menus<a class="headerlink" href="#data-block-menus" title="Permalink to this headline">¶</a></h3>
+<p>Menu buttons are used link data-blocks to each other.
+data-blocks are items like <em>Meshes</em>, <em>Objects</em>, <em>Materials</em>, <em>Textures</em>, and so on.</p>
+<p>These menu&#8217;s may show a preview and allow you to search by name since its common all items wont fit in the list.</p>
+<div class="figure align-right" id="id9">
+<img alt="../_images/ConceptButtons4_1.jpg" src="../_images/ConceptButtons4_1.jpg" />
+<p class="caption"><span class="caption-text">Datablock link menu with search</span></p>
+<div class="legend">
+<ul class="simple">
+<li>The first button (with an icon of the data-block type) opens up a menu to select an item
+by clicking <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</li>
+<li>The second button displays the name of the linked data-block which can be edited as a regular text field.</li>
+<li>The &#8220;+&#8221; button duplicates the current data-block and applies it.</li>
+<li>The &#8220;X&#8221; button clears the link.</li>
+</ul>
+</div>
+</div>
+<p>Sometimes there is a list of applied data-blocks
+(such as a list of materials used on the object). See <em>data-block link buttons</em> above.</p>
+<div class="figure align-right" id="id10">
+<img alt="../_images/ConceptButtons4.jpg" src="../_images/ConceptButtons4.jpg" />
+<p class="caption"><span class="caption-text">Datablock link buttons</span></p>
+<div class="legend">
+<ul class="simple">
+<li>To select a datablock, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on it.</li>
+<li>To add a new section (e.g. material, or particle system),
+click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the &#8220;+&#8221; button to the right of the list.</li>
+<li>To remove a section, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the &#8220;-&#8221; to the right of the list.</li>
+</ul>
+</div>
+</div>
+<p>For details on the behavior of linking data see <a class="reference internal" href="../data_system/datablocks.html"><em>data-block</em></a>.</p>
+</div>
+</div>
+<div class="section" id="common-shortcuts">
+<h2>Common Shortcuts<a class="headerlink" href="#common-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>There are shortcuts shared between many button types.</p>
+<dl class="docutils">
+<dt>While Hovering</dt>
+<dd><p class="first"><em>When the cursor is held over a button</em></p>
+<ul>
+<li><p class="first"><code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code> - copy the value of the button.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pressing <code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code> over any <a class="reference internal" href="#operation-buttons">Operation Buttons</a> copies their Python command into the clipboard
+which can be used in the Python console or in the text editor when writing scripts.</p>
+</div>
+</li>
+<li><p class="first"><code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code> - paste the value of the button.</p>
+</li>
+<li><p class="first"><code class="kbd docutils literal"><span class="pre">RMB</span></code> - open the context menu.</p>
+</li>
+<li><p class="first"><code class="kbd docutils literal"><span class="pre">Backspace</span></code> - cleare the value (sets to zero or clears a text field).</p>
+</li>
+<li><p class="first"><code class="kbd docutils literal"><span class="pre">Minus</span></code> - negate number values (multiply by <code class="docutils literal"><span class="pre">-1.0</span></code>).</p>
+</li>
+<li><p class="first"><code class="kbd docutils literal"><span class="pre">Ctrl-Wheel</span></code> - changes the value incremental steps.</p>
+<p>For pop-up option menus buttons this cycles the value.</p>
+</li>
+</ul>
+<p>Animation:</p>
+<ul class="last simple">
+<li><code class="kbd docutils literal"><span class="pre">I</span></code> - insert a keyframe.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-I</span></code> - clear the keyframe.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-Shift-I</span></code> - clear all keyframes.</li>
+<li><code class="kbd docutils literal"><span class="pre">D</span></code> - assign a driver.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-D</span></code> - clear the driver.</li>
+<li><code class="kbd docutils literal"><span class="pre">K</span></code> - add a keying set.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-K</span></code> - clear the keying-set.</li>
+</ul>
+</dd>
+<dt>While Dragging Numbers</dt>
+<dd><ul class="first last simple">
+<li><code class="kbd docutils literal"><span class="pre">Ctrl</span></code> - while dragging snap the discrete steps.</li>
+<li><code class="kbd docutils literal"><span class="pre">Shift</span></code> - gives finer control over the value.</li>
+</ul>
+</dd>
+<dt>While Editing Text</dt>
+<dd><ul class="first last simple">
+<li><code class="kbd docutils literal"><span class="pre">Home</span></code> - go to the start.</li>
+<li><code class="kbd docutils literal"><span class="pre">End</span></code> - go to the end.</li>
+<li><code class="kbd docutils literal"><span class="pre">Left</span></code>, <code class="kbd docutils literal"><span class="pre">Right</span></code> - move the cursor a single character.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-Left</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Right</span></code> - move the cursor an entire word.</li>
+<li><code class="kbd docutils literal"><span class="pre">Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">Delete</span></code> - delete characters.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-Backspace</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Delete</span></code> - delete words.</li>
+<li>Holding <code class="kbd docutils literal"><span class="pre">Shift</span></code> - while moving the cursor selects.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code> - copy the selected text.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code> - paste test at the cursor location.</li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-A</span></code> - selects all text.</li>
+</ul>
+</dd>
+<dt>All Modes</dt>
+<dd><ul class="first last simple">
+<li><code class="kbd docutils literal"><span class="pre">Esc</span></code>, <code class="kbd docutils literal"><span class="pre">RMB</span></code> - cancels.</li>
+<li><code class="kbd docutils literal"><span class="pre">Return</span></code>, <code class="kbd docutils literal"><span class="pre">LMB</span></code> - confirms.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="extended_controls.html" class="btn btn-neutral float-right" title="Extended Controls">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="panels.html" class="btn btn-neutral" title="Panels"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.76',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

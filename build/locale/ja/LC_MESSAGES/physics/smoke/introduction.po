@@ -15,83 +15,149 @@ msgstr ""
 msgid "Introduction"
 msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:9
-msgid "Development notes"
-msgstr ""
-
-#: ../../../manual/physics/smoke/introduction.rst:11
-msgid ""
-"Blender's new smoke simulation is based on the paper `Wavelet Turbulence for"
-" Fluid Simulation <http://www.cs.cornell.edu/~tedkim/wturb>`__ and "
-"associated sample code."
-msgstr ""
-
-#: ../../../manual/physics/smoke/introduction.rst:15
+#: ../../../manual/physics/smoke/introduction.rst:46
 msgid ""
 "It has been implemented in Blender by Daniel Genrich and Miika Hamalainen."
 msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:19
-msgid "Inner working"
+#: ../../../manual/physics/smoke/introduction.rst:8
+msgid ""
+"Smoke simulation is used to simulate the fluid movement of air and generate "
+"animated :term:`voxel` textures representing the density, heat, and velocity"
+" of other fluids or suspended particles (i.e. smoke) which can be used for "
+"rendering."
 msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:21
+#: ../../../manual/physics/smoke/introduction.rst:13
 msgid ""
-"The simulator uses a volumetric fluid-based model, with the end results "
-"output as voxel grids. This voxel data is visualized interactively in "
-"Blender's 3D view using custom OpenGL shading, and can be rendered using the"
-" Voxel Data texture. Blender's **smoke simulation** wraps Voxels around "
-"existing :doc:`Particles </physics/particles/index>`. It requires a "
-"particle-emitting object and a 'domain' object within which smoke is "
-"rendered."
+"Smoke and fire are emitted into a :doc:`Domain</physics/smoke/domain>` from "
+"a mesh object or particle system. Smoke movement is controlled by airflow "
+"inside the domain, which can be influenced by :doc:`smoke collision objects "
+"</physics/smoke/collisions>`. Smoke will also be affected by scene gravity "
+"and :doc:`force fields</physics/force_fields>`. Airflow inside the domain "
+"can affect other physics simulations via the smoke flow force field."
+msgstr ""
+
+#: ../../../manual/physics/smoke/introduction.rst:20
+msgid "Workflow"
+msgstr ""
+
+#: ../../../manual/physics/smoke/introduction.rst:22
+msgid ""
+"At least a :doc:`Domain object</physics/smoke/domain>` object and one "
+":doc:`Flow object </physics/smoke/flow_object>` are required to create a "
+"smoke simulation. A basic workflow looks like this:"
+msgstr ""
+
+#: ../../../manual/physics/smoke/introduction.rst:26
+msgid ""
+"Create a :doc:`Domain object</physics/smoke/domain>` that defines the bounds"
+" of the simulation volume."
+msgstr ""
+
+#: ../../../manual/physics/smoke/introduction.rst:27
+msgid ""
+"Define a :doc:`Flow object </physics/smoke/flow_object>` or objects which "
+"will emit smoke and fire."
+msgstr ""
+
+#: ../../../manual/physics/smoke/introduction.rst:28
+msgid ""
+"Set :doc:`Collision objects </physics/smoke/collisions>` to make the smoke "
+"interact with objects in the scene."
+msgstr ""
+
+#: ../../../manual/physics/smoke/introduction.rst:29
+msgid ""
+"Assign a :doc:`Volumetric material </physics/smoke/material>` to the domain "
+"object."
 msgstr ""
 
 #: ../../../manual/physics/smoke/introduction.rst:30
-msgid "This Part of the Documentation uses the 2.58 Release"
+msgid "Save the .blend."
 msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:34
-msgid "User workflow"
+#: ../../../manual/physics/smoke/introduction.rst:31
+msgid ":doc:`Bake </physics/smoke/baking>` the simulation."
 msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:36
+#: ../../../manual/physics/smoke/introduction.rst:35
 msgid ""
-"The smoke simulation is similar to the Fluid simulation: a Domain and Flow "
-"object is required to do a smoke simulation:"
+"There is a *Quick Smoke* operator which will automatically create a domain "
+"object with a basic smoke/fire material. It can be found in "
+":menuselection:`3D View --> Object --> Quick Effects --> Quick Smoke`, or in"
+" the :kbd:`Space` search box."
 msgstr ""
 
 #: ../../../manual/physics/smoke/introduction.rst:40
-msgid ""
-"set as the simulation :doc:`Domain </physics/smoke/domain>` an object that "
-"defines the bounds of the simulation volume,"
+msgid "Technical information"
 msgstr ""
 
 #: ../../../manual/physics/smoke/introduction.rst:42
 msgid ""
-"set as the :doc:`Flow object </physics/smoke/flow_object>` an object which "
-"determines where the smoke will be produced from,"
+"Blender's smoke simulation is based on the paper `Wavelet Turbulence for "
+"Fluid Simulation <http://www.cs.cornell.edu/~tedkim/wturb>`__ and associated"
+" sample code."
 msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:44
-msgid ""
-"set :doc:`Collision objects </physics/smoke/collisions>`, to make the smoke "
-"interact with objects in the scene."
-msgstr ""
+#~ msgid "Development notes"
+#~ msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:46
-msgid "assign a :doc:`Material </physics/smoke/material>` to the smoke"
-msgstr ""
+#~ msgid ""
+#~ "Blender's new smoke simulation is based on the paper `Wavelet Turbulence for"
+#~ " Fluid Simulation <http://www.cs.cornell.edu/~tedkim/wturb>`__ and "
+#~ "associated sample code."
+#~ msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:47
-msgid "save the project"
-msgstr ""
+#~ msgid "Inner working"
+#~ msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:48
-msgid ":doc:`bake </physics/smoke/baking>` the simulation"
-msgstr ""
+#~ msgid ""
+#~ "The simulator uses a volumetric fluid-based model, with the end results "
+#~ "output as voxel grids. This voxel data is visualized interactively in "
+#~ "Blender's 3D view using custom OpenGL shading, and can be rendered using the"
+#~ " Voxel Data texture. Blender's **smoke simulation** wraps Voxels around "
+#~ "existing :doc:`Particles </physics/particles/index>`. It requires a "
+#~ "particle-emitting object and a 'domain' object within which smoke is "
+#~ "rendered."
+#~ msgstr ""
 
-#: ../../../manual/physics/smoke/introduction.rst:50
-msgid ""
-"In case you are having troubles, please consult the :doc:`Appendix "
-"</physics/smoke/appendix>`"
-msgstr ""
+#~ msgid "This Part of the Documentation uses the 2.58 Release"
+#~ msgstr ""
+
+#~ msgid "User workflow"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The smoke simulation is similar to the Fluid simulation: a Domain and Flow "
+#~ "object is required to do a smoke simulation:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "set as the simulation :doc:`Domain </physics/smoke/domain>` an object that "
+#~ "defines the bounds of the simulation volume,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "set as the :doc:`Flow object </physics/smoke/flow_object>` an object which "
+#~ "determines where the smoke will be produced from,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "set :doc:`Collision objects </physics/smoke/collisions>`, to make the smoke "
+#~ "interact with objects in the scene."
+#~ msgstr ""
+
+#~ msgid "assign a :doc:`Material </physics/smoke/material>` to the smoke"
+#~ msgstr ""
+
+#~ msgid "save the project"
+#~ msgstr ""
+
+#~ msgid ":doc:`bake </physics/smoke/baking>` the simulation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case you are having troubles, please consult the :doc:`Appendix "
+#~ "</physics/smoke/appendix>`"
+#~ msgstr ""

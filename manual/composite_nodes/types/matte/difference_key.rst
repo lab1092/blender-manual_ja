@@ -4,10 +4,12 @@ Difference Key Node
 *******************
 
 .. figure:: /images/difference_node.jpg
+   :align: right
+   :width: 150px
 
    Difference Key Node
 
-This node produces a matte that isolates foreground content by comparing it with a reference background image. 
+This node produces a matte that isolates foreground content by comparing it with a reference background image.
 
 There are two inputs:
 
@@ -26,4 +28,5 @@ Image
    with its alpha channel adjusted for the keyed selection
 Matte
    a monochrome representation of the mask
+
 

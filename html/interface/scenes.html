@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scenes &mdash; Blender Reference Manual</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Blender Reference Manual" href="../index.html"/>
+        <link rel="up" title="Interface" href="index.html"/>
+        <link rel="next" title="Panels" href="panels.html"/>
+        <link rel="prev" title="Screens" href="screens.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../contents.html" class="fa fa-home"> Blender Reference Manual</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/about_blender/index.html">About Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing_blender/index.html">Installing Blender</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#window-controls">Window Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#interface-controls">Interface Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#animation">Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#image-video">Image/Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#nodes-logic">Nodes/Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#settings">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">Data System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/datablocks.html">Datablocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/scenes.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/files/index.html">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_system/linked_libraries.html">Append and Link</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/objects/index.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/curves/index.html">Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/surfaces/index.html">Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/texts/index.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/metas/index.html">Metas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modeling/groups.html">Group Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modifiers/index.html">Modifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/the_stack.html">The Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#modify">Modify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#generate">Generate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#deform">Deform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html#simulate">Simulate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">Rigging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/panels.html">Armature Panels Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/bones.html">Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/visualization.html">Armature visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/structure.html">Armature Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/selecting.html">Selecting armature&#8217;s bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing.html">Armature Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/bones.html">Editing Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/properties.html">Editing Bone Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/sketching.html">Skeleton Sketching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/armatures/editing/templating.html">Armature Templating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning.html">Skinning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/objects.html">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/obdata.html">Skinning to Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/skinning/retargeting.html">Retargeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing.html">Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/visualization.html">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/editing.html">Editing Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/pose_library.html">Pose Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/constraints.html">Applying Constraints to Bones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics.html">Inverse Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/posing/inverse_kinematics/spline_ik.html">Spline IK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigging/constraints/index.html">Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">Animation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../animation/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/key_frames.html">Key Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/actions.html">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/drivers.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/keying_sets.html">Keying Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/markers.html">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/basics/motion_paths.html">Keyframe Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs.html">Techs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object.html">Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/constraint.html">Using Constraints in Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/object/path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape.html">Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/animating.html">Animating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/shape_keys/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/shape/indirect_animation.html">Indirect Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures.html">Armatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/armatures/mocap.html">Motion Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/lamp.html">Animating Lamps Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/camera.html">Animating Cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../animation/techs/material.html">Animating Material Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/introduction.html">Introduction to Physics Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/cloth.html">Cloth Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/collision.html">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/particles/index.html">Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/force_fields.html">Force Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/using_ge.html">Converting Game Engine Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/performances.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/baking.html">Baking Physics Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">Rendering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../render/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/display.html">Displaying and Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output.html">Output Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/output/video.html">Video Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/post_process/index.html">Post Processed Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../render/opengl.html">OpenGL Render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../composite_nodes/index.html">Compositing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../composite_nodes/types/index.html">Types of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">Grease Pencil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/drawing.html">Drawing With Grease Pencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/layers_and_animation.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/converting_to_geometry.html">Converting Sketches to Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grease_pencil/ruler_and_protractor.html">Ruler and Protractor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">Game Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/introduction.html">Introduction to Game Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/screen_layout.html">Game Logic Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/logic/index.html">Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/camera/index.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/physics/index.html">Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/performance/index.html">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/python_api/index.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/blender_player.html">Standalone Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../game_engine/licensing.html">Licensing of Blender Games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">User Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/interface.html">Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/editing.html">Editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/add_ons.html">Add-ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/themes.html">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/file.html">File Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/system.html">System Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/startup_file.html">Startup File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/scripting/index.html">Scripting &amp; Extending Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/command_line.html">Command Line Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/startup.html">Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/3d_view.html">3D Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/gpu.html">Graphics Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/crash.html">Crashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/recover.html">Recovering Lost Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting/general_help.html">General help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../glossary/conventions.html">About this manual</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">About the Blender Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contribute.html">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/install/index.html">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/markup_style_guide.html">Markup Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/writing_style_guide.html">Writing Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/translations.html">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/migration.html">MediaWiki to Sphinx Migration</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender Reference Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Interface</a> &raquo;</li>
+      
+    <li>Scenes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/interface/scenes.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="scenes">
+<h1>Scenes<a class="headerlink" href="#scenes" title="Permalink to this headline">¶</a></h1>
+<p>Scenes are a very useful tool for managing your projects. The Cube model in empty space you
+see when you open Blender for the first time is the default scene.
+You can imagine scenes to be similar to tabs in your web browser. For example,
+your web browser can have many tabs open at once. The tabs could be empty,
+showing identical views of the same web page,
+showing different views of the same page or show entirely different pages altogether.
+Blender&#8217;s scenes work in much the same way. You can have an empty scene, a complete
+independent copy of your scene or a new copy that links to your original scene in a number of
+ways.</p>
+<p>You can select and create scenes with the <em>Scene selector</em> in the Info window header
+(the bar at the top of most Blender layouts, see <em>Screen and Scene selectors</em>).</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/ConceptScreens25.jpg" src="../_images/ConceptScreens25.jpg" />
+<p class="caption"><span class="caption-text">Screen and Scene selectors</span></p>
+</div>
+<div class="section" id="scene-configuration">
+<h2>Scene configuration<a class="headerlink" href="#scene-configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="adding-a-new-scene">
+<h3>Adding a new Scene<a class="headerlink" href="#adding-a-new-scene" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id2">
+<img alt="../_images/Interface-Scene-AddButton-Dialog25.jpg" src="../_images/Interface-Scene-AddButton-Dialog25.jpg" />
+<p class="caption"><span class="caption-text">Add Scene menu</span></p>
+</div>
+<p>You can add a new scene by clicking the <em>Add</em> button (<img alt="addview-button" src="../_images/Interface-Screens-AddView-Button25.jpg" />) in the scene selector option.
+When you create a new scene, you can choose between a number of options to control its contents.</p>
+<p>To choose between these options,
+it&#8217;s useful to understand the difference between <em>Objects</em> and <em>Object Data</em>.
+See <a class="reference internal" href="../modeling/objects/duplication/introduction.html"><em>Duplication</em></a>.</p>
+<p>The choices for adding a scene, therefore determine just how much of this information will be
+<em>copied from</em> the active scene to the new one, and how much will be <em>shared</em> (linked).</p>
+<dl class="docutils">
+<dt>New</dt>
+<dd>Creates an empty scene with default values.</dd>
+<dt>Copy Settings</dt>
+<dd>Creates an empty scene but also copies
+the settings from the active scene into the new one.</dd>
+<dt>Link Objects</dt>
+<dd>This option creates a new scene with the same settings and contents as the active scene.
+However, instead of copying the objects,
+the new scene contains links to the objects in the old scene.
+Therefore, changes to objects in the new scene will result in the same
+changes to the original scene, because the objects used are literally the same.
+The reverse is also true.</dd>
+<dt>Link Object Data</dt>
+<dd><p class="first">Creates new, duplicate copies of all of the objects in the currently selected scene,
+but each one of those duplicate objects will have <em>links to</em> the object-data (meshes, materials and so on)
+of the corresponding objects in the original scene.</p>
+<p>This means that you can change the position,
+orientation and size of the objects in the new scene without affecting other scenes,
+but any modifications to the object-data (meshes, materials <em>etc</em>) will also affect other scenes.
+This is because a <em>single instance of</em> the &#8220;object-data&#8221; is now being shared by all of the objects
+in all of the scenes that link to it.</p>
+<p class="last">More information at the <a class="reference internal" href="../editors/index.html"><em>Window Type</em></a> page.
+This has the effect of making a new independent copy of the object-data.</p>
+</dd>
+<dt>Full Copy</dt>
+<dd>Using this option, nothing is shared.
+This option creates a fully independent scene with copies of the active scenes contents.
+Every object in the original scene is duplicated, and a duplicate, private copy of its object-data is made as well.</dd>
+</dl>
+<p>To better understand the way Blender works with data,
+read through <a class="reference internal" href="../data_system/index.html"><em>Blender&#8217;s Library and Data System.</em></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A Brief Example</p>
+<p>Consider a bar scene in a film. You initially create the bar as a clean version,
+with everything unbroken and in its proper place.
+You then decide to create the action in a separate scene.
+The action in your scene will indicate which type of linking (if any)
+would suit your scene best.</p>
+<dl class="docutils">
+<dt>Link Objects</dt>
+<dd>Every object will be linked to the original scene.
+If you correct the placement of a wall, it will move in every scene that uses the bar as a setting.</dd>
+<dt>Link Object Data</dt>
+<dd>Will be useful when the positions of objects need to change,
+but their shape and material settings will remain constant.
+For example, chairs might stand on the floor in the &#8220;crowded bar&#8221;
+scene and up on the tables in the &#8220;we are closing&#8221; scene.
+Since the chairs don&#8217;t change form, there is no need to waste memory on exact mesh-copies.</dd>
+<dt>Full Copy</dt>
+<dd>A glass shattering on the floor will need its own copy because the mesh will change shape.</dd>
+</dl>
+<p class="last">It is not possible to do all of the above in the same scene,
+but it might help in understanding why you would link different objects in different ways.</p>
+</div>
+</div>
+<div class="section" id="deleting-a-scene">
+<h3>Deleting a Scene<a class="headerlink" href="#deleting-a-scene" title="Permalink to this headline">¶</a></h3>
+<p>You can delete a scene by using the <em>Delete datablock</em> button
+(<img alt="deleteview-button" src="../_images/Interface-Screens-DeleteView-Button25.jpg" />) from the scene selector option (see <em>Screen and Scene
+selectors</em>).</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="panels.html" class="btn btn-neutral float-right" title="Panels">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="screens.html" class="btn btn-neutral" title="Screens"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright : This page is in public domain as CC0.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.76',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

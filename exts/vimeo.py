@@ -56,7 +56,7 @@ def visit_vimeo_node(self, node):
             "border": "0",
         }
         attrs = {
-            "src": "//player.vimeo.com/video/%s" % node["id"],
+            "src": "http://player.vimeo.com/video/%s" % node["id"],
             "style": css(style),
         }
         self.body.append(self.starttag(node, "iframe", **attrs))
@@ -75,7 +75,7 @@ def visit_vimeo_node(self, node):
             "border": "0",
         }
         attrs = {
-            "src": "//player.vimeo.com/video/%s" % node["id"],
+            "src": "http://player.vimeo.com/video/%s" % node["id"],
             "style": css(style),
         }
         self.body.append(self.starttag(node, "iframe", **attrs))
@@ -127,5 +127,6 @@ def setup(app):
             vimeo,
             html=(visit_vimeo_node, depart_vimeo_node),
             latex=(nop_node, nop_node),
+            text=(nop_node, nop_node),
             )
     app.add_directive("vimeo", Vimeo)

@@ -5,7 +5,9 @@
 Filter Node
 ***********
 
-.. figure:: /images/Tutorials-NTR-ComFilter.jpg
+.. figure:: /images/composite_node_filter.png
+   :align: right
+   :width: 150px
 
    Filter node
 
